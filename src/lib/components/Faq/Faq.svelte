@@ -1,0 +1,42 @@
+<script>
+	import { getContext } from 'svelte';
+	import { faqsKey } from './FaqContainer.svelte';
+
+	export let summary;
+
+	const activeFaq = getContext(faqsKey);
+</script>
+
+<details
+	open={$activeFaq === summary}
+	on:toggle={({ target }) => {
+		$activeFaq = target.open ? summary : $activeFaq;
+	}}
+>
+	<summary>{summary}</summary>
+	<slot />
+</details>
+
+<style>
+	details {
+		margin-bottom: 2rem;
+	}
+
+	details > summary {
+		list-style: none;
+	}
+	summary::-webkit-details-marker {
+		display: none;
+	}
+
+	summary::after {
+		content: ' ►';
+	}
+	details[open] summary:after {
+		content: ' ▼';
+	}
+
+	details[open] summary ~ * {
+		animation: sweep 0.5s ease-in-out;
+	}
+</style>

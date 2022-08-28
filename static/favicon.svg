@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="192" height="192" fill="#000000" viewBox="0 0 256 256">
+<style>
+@media (prefers-color-scheme: light) { :root { filter: invert(100%); } }
+@media (prefers-color-scheme: dark) { :root { filter: none; } }
+
+
+
+</style>
+<rect width="256" height="256" fill="none">
+</rect>
+<path d="M140,80a12,12,0,1,1-12-12A12,12,0,0,1,140,80Zm92,48A104,104,0,1,1,128,24,104.2,104.2,0,0,1,232,128Zm-92,48a12,12,0,1,0-12,12A12,12,0,0,0,140,176Zm32-92a44,44,0,0,0-44-44A88,88,0,0,0,81.1,202.4,51.1,51.1,0,0,1,76,180a52,52,0,0,1,52-52A44,44,0,0,0,172,84Z">
+</path>
+
+</svg>
