@@ -1,44 +1,39 @@
-/* @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap'); */
-
-@import url('https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@300;400;500;600&display=swap');
-
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
-
-/* 300 Light , 400 Regular, 500 Medium, 600 Semibold, 700 Bold */
-
 :root {
 	/* main */
-	--primary: #b4873c;
+	--primary: hsl(38, 50%, 47%);
+	/* b4873c */
 	--primary-hover: hsl(38, 50%, 37%);
 
 	/* neutral */
 	--white: #f9f9f9;
 	--black: #1b1b1d;
 	--gray: #415058;
+	/* --- */
 
 	/* alert */
 	--success: #9bc841;
 	--error: #e03829;
 	--warning: #ecbd51;
+	/* --- */
 
 	/* font-size */
 	--font-size-small: clamp(0.9rem, 0.17vw + 0.76rem, 1rem);
 	--font-size-base: clamp(1rem, 0.34vw + 0.91rem, 1.19rem);
 	--font-size-mid: clamp(1.25rem, 0.61vw + 1.1rem, 1.58rem);
 	--font-size-large: clamp(1.56rem, 1vw + 1.31rem, 2.11rem);
-	/*  */
+	/* --- */
 
 	/* line-height */
 	--line-height-small: calc(var(--font-size-small) * 1.6);
 	--line-height-base: calc(var(--font-size-base) * 1.6);
 	--line-height-mid: calc(var(--font-size-mid) * 1.6);
 	--line-height-large: calc(var(--font-size-large) * 1.6);
-	/*  */
+	/* --- */
 
 	/* shadow */
 	--box-shadow: rgb(11 43 158 / 15%) 0px 6px 20px -6px;
 	--box-shadow-hover: rgb(11 43 158 / 15%) 0px 10px 20px -2px;
-	/*  */
+	/* --- */
 }
 
 ::selection {
@@ -47,6 +42,8 @@
 }
 
 /* TYPOGRAPHY */
+/* 300,400,500,600*/
+
 .small-text {
 	font-size: var(--font-size-small);
 	line-height: var(--line-height-small);

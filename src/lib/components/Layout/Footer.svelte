@@ -42,7 +42,6 @@
 		<li class="list-item">
 			<a href="/contact">Contact</a>
 		</li>
-		<br />
 	</ul>
 	<!-- <div class="time">Is it {time} for you?👋 Good {partOfDay} then .</div> -->
 	<div class="">2022 - Made with SvelteKit</div>

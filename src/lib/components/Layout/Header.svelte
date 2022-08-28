@@ -13,7 +13,7 @@
 	<nav>
 		<ul class="nav__list">
 			<li id="burger-nav" on:click={handleMobileIconClick}>
-				<a class="nav__list-item" href="#">
+				<a class="nav__list-item" href={'#'}>
 					<List color="var(--white)" size="32" />
 				</a>
 			</li>

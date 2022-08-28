@@ -2,7 +2,14 @@
 	import Atropos from 'atropos/svelte';
 </script>
 
-<Atropos rotateXMax={5} rotateYMax={5}>
+<Atropos
+	class="my-atropos"
+	highlight="false"
+	shadow="false"
+	rotateTouch="scroll-y"
+	rotateXMax={5}
+	rotateYMax={5}
+>
 	<div class="hero">
 		<div class="hero-text">
 			<h1 data-atropos-offset="-5">Hi! I'm Khoa</h1>
@@ -13,6 +20,11 @@
 </Atropos>
 
 <style>
+	.my-atropos {
+		/* MARGIN BOTTOM */
+		margin-bottom: 2.5rem;
+	}
+
 	.btn-seemywork {
 		background-color: var(--primary);
 		color: var(--black);
@@ -39,9 +51,6 @@
 		display: flex;
 		justify-content: center;
 		align-items: center;
-
-		/* MARGIN BOTTOM */
-		margin-bottom: 2.5rem;
 	}
 
 	.hero-text {
