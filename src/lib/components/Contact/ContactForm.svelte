@@ -1,4 +1,4 @@
-<div class="container">
+<div class="form-container base-text">
 	<form netlify class="contact" action="https://formsubmit.co/wentallout@gmail.com" method="POST">
 		<!-- hidden -->
 		<input type="hidden" name="_captcha" value="false" />
@@ -26,7 +26,7 @@
 </div>
 
 <style>
-	.container {
+	.form-container {
 		display: flex;
 		justify-content: left;
 		width: 100%;

@@ -41,7 +41,9 @@
 
 		/* COLOR */
 		background-color: var(--black);
-		color: var(--white);
+
+		--text: #f9f9f9;
+		color: var(--text);
 
 		/* SPACING */
 		margin-bottom: 2.5rem;

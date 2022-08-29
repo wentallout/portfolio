@@ -1,39 +1,38 @@
 :root {
 	/* main */
-	--primary: hsl(38, 50%, 47%);
 	/* b4873c */
+	--primary: #b4883c;
 	--primary-hover: hsl(38, 50%, 37%);
 
 	/* neutral */
 	--white: #f9f9f9;
 	--black: #1b1b1d;
 	--gray: #415058;
-	/* --- */
+
+	/* background,text */
+	--background: #f9f9f9;
+	--text: #1b1b1d;
 
 	/* alert */
 	--success: #9bc841;
 	--error: #e03829;
 	--warning: #ecbd51;
-	/* --- */
 
 	/* font-size */
 	--font-size-small: clamp(0.9rem, 0.17vw + 0.76rem, 1rem);
 	--font-size-base: clamp(1rem, 0.34vw + 0.91rem, 1.19rem);
 	--font-size-mid: clamp(1.25rem, 0.61vw + 1.1rem, 1.58rem);
 	--font-size-large: clamp(1.56rem, 1vw + 1.31rem, 2.11rem);
-	/* --- */
 
 	/* line-height */
 	--line-height-small: calc(var(--font-size-small) * 1.6);
 	--line-height-base: calc(var(--font-size-base) * 1.6);
 	--line-height-mid: calc(var(--font-size-mid) * 1.6);
 	--line-height-large: calc(var(--font-size-large) * 1.6);
-	/* --- */
 
 	/* shadow */
 	--box-shadow: rgb(11 43 158 / 15%) 0px 6px 20px -6px;
 	--box-shadow-hover: rgb(11 43 158 / 15%) 0px 10px 20px -2px;
-	/* --- */
 }
 
 ::selection {
@@ -47,21 +46,25 @@
 .small-text {
 	font-size: var(--font-size-small);
 	line-height: var(--line-height-small);
+	color: var(--text) !important;
 }
 
 .base-text {
 	font-size: var(--font-size-base);
 	line-height: var(--line-height-base);
+	color: var(--text) !important;
 }
 
 .mid-text {
 	font-size: var(--font-size-mid);
 	line-height: var(--line-height-mid);
+	color: var(--text) !important;
 }
 
 .large-text {
 	font-size: var(--font-size-large);
 	line-height: var(--line-height-large);
+	color: var(--text) !important;
 }
 /* END TYPOGRAPHY */
 
@@ -72,10 +75,6 @@
 html {
 	/* HEIGHT */
 	min-height: 101%;
-	/*  */
-
-	/* COLOR */
-	background-color: var(--white);
 	/*  */
 
 	/* DEFAULT FONT CONFIG */
@@ -142,6 +141,8 @@ h6 {
 input,
 textarea {
 	padding: 0.375rem 0.75rem;
+	color: var(--gray);
+	background-color: var(--background);
 }
 
 input {

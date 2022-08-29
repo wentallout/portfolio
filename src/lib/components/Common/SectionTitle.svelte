@@ -2,16 +2,22 @@
 	export let sectionTitle = '';
 </script>
 
-<div class="section-title small-text">
+<div class="section-title">
 	<div class="section-icon">
 		<slot />
 	</div>
-	<h2>{sectionTitle}</h2>
+	<h2 class="base-text">{sectionTitle}</h2>
 </div>
 
 <style>
 	.section-icon {
 		display: flex;
+		justify-content: left;
+		align-items: center;
+		border: 1px solid var(--black);
+		border-radius: 100%;
+		padding: 0.25rem;
+		margin-right: 0.5rem;
 	}
 
 	.section-title {
@@ -20,5 +26,6 @@
 		align-items: center;
 		margin-bottom: 2.5rem;
 		font-weight: 600;
+		color: var(--black);
 	}
 </style>

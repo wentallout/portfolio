@@ -9,7 +9,7 @@
 	function handleMouseOut(e) {
 		svgColor = 'var(--white)';
 	}
-	let isDarkMode = true;
+	let isDarkMode = false;
 
 	function handleDarkMode() {
 		isDarkMode = !isDarkMode;
@@ -73,6 +73,7 @@
 		margin-bottom: auto;
 		padding: 4px;
 		border: 1px solid var(--black);
+		border-radius: 100%;
 	}
 
 	.side-buttons:hover {

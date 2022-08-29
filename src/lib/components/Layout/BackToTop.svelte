@@ -27,12 +27,12 @@
 
 <svelte:window on:scroll={handleOnScroll} />
 
-<div class="back-to-top" on:click={goTop} class:hidden>
+<div class="bck2top" on:click={goTop} class:hidden>
 	<CaretCircleUp className="red" color="var(--primary)" size="48" weight="fill" />
 </div>
 
 <style>
-	.back-to-top {
+	.bck2top {
 		/* COLOR */
 		background-color: var(--black);
 		width: 48px;
@@ -55,14 +55,14 @@
 		/*  */
 	}
 
-	.back-to-top:hover {
+	.bck2top:hover {
 		cursor: pointer;
 		transform: scale(1.5);
 		transition: transform 0.3s;
 		filter: brightness(1.5);
 	}
 
-	.back-to-top.hidden {
+	.bck2top.hidden {
 		opacity: 0;
 		visibility: hidden;
 	}
