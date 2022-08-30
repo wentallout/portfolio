@@ -32,6 +32,6 @@ __export(stdin_exports, {
 module.exports = __toCommonJS(stdin_exports);
 const index = 1;
 const component = async () => (await Promise.resolve().then(() => __toESM(require("../entries/pages/_error.svelte.js")))).default;
-const file = "_app/immutable/components/pages/_error.svelte-380d5f7c.js";
-const imports = ["_app/immutable/components/pages/_error.svelte-380d5f7c.js", "_app/immutable/chunks/index-07386ddb.js", "_app/immutable/chunks/stores-1dde82fd.js"];
+const file = "_app/immutable/components/pages/_error.svelte-5d13fa9e.js";
+const imports = ["_app/immutable/components/pages/_error.svelte-5d13fa9e.js", "_app/immutable/chunks/index-33756b9b.js", "_app/immutable/chunks/stores-57ae0041.js", "_app/immutable/chunks/singletons-37c76419.js", "_app/immutable/chunks/index-e697de93.js"];
 const stylesheets = ["_app/immutable/assets/+error-b7c5a97f.css"];

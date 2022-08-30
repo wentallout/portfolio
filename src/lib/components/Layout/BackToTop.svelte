@@ -1,5 +1,5 @@
 <script>
-	import { CaretCircleUp } from 'phosphor-svelte';
+	import CaretCircleUp from '~icons/ph/caret-circle-up';
 
 	export let showOnPx = 150;
 	let hidden = true;
@@ -28,7 +28,7 @@
 <svelte:window on:scroll={handleOnScroll} />
 
 <div class="bck2top" on:click={goTop} class:hidden>
-	<CaretCircleUp className="red" color="var(--primary)" size="48" weight="fill" />
+	<CaretCircleUp color="var(--primary)" width="48" height="48" />
 </div>
 
 <style>

@@ -5,7 +5,7 @@
 	export let bookTitle = 'title';
 	export let bookDescription = 'description';
 
-	import { BookOpen } from 'phosphor-svelte';
+	import BookOpen from '~icons/ph/book-open';
 </script>
 
 <div class="book">

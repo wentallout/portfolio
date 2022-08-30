@@ -1,8 +1,7 @@
 <script>
+	import FigmaLogo from '~icons/ph/figma-logo';
 	import ProjectCard from '$lib/components/Project/ProjectCard.svelte';
 	import SectionTitle from '$lib/components/Common/SectionTitle.svelte';
-
-	import { FigmaLogo } from 'phosphor-svelte';
 </script>
 
 <svelte:head>
@@ -10,7 +9,7 @@
 </svelte:head>
 
 <SectionTitle sectionTitle="UI/UX">
-	<FigmaLogo size="32px" />
+	<FigmaLogo />
 </SectionTitle>
 
 <div class="projects">

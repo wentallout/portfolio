@@ -5,7 +5,7 @@ exports.handler = init({
 	assets: new Set(["favicon.svg","images/frame2corner.png","images/fuji.svg","images/khoa-biolink.png","images/rhombus_line.png"]),
 	mimeTypes: {".svg":"image/svg+xml",".png":"image/png"},
 	_: {
-		entry: {"file":"_app/immutable/start-22613e7e.js","imports":["_app/immutable/start-22613e7e.js","_app/immutable/chunks/index-07386ddb.js","_app/immutable/chunks/index-f6da9534.js","_app/immutable/chunks/preload-helper-aa6bc0ce.js"],"stylesheets":[]},
+		entry: {"file":"_app/immutable/start-cc2e3f42.js","imports":["_app/immutable/start-cc2e3f42.js","_app/immutable/chunks/preload-helper-aa6bc0ce.js","_app/immutable/chunks/index-33756b9b.js","_app/immutable/chunks/singletons-37c76419.js","_app/immutable/chunks/index-e697de93.js"],"stylesheets":[]},
 		nodes: [
 			() => Promise.resolve().then(() => require('../server/nodes/0.js')),
 			() => Promise.resolve().then(() => require('../server/nodes/1.js')),
@@ -17,55 +17,45 @@ exports.handler = init({
 		],
 		routes: [
 			{
-				type: 'page',
-				id: "",
-				pattern: /^\/$/,
-				names: [],
-				types: [],
-				errors: [1],
-				layouts: [0],
-				leaf: 2
-			},
+					id: "",
+					pattern: /^\/$/,
+					names: [],
+					types: [],
+					page: {"layouts":[0],"errors":[1],"leaf":2},
+					endpoint: null
+				},
 			{
-				type: 'page',
-				id: "contact",
-				pattern: /^\/contact\/?$/,
-				names: [],
-				types: [],
-				errors: [1],
-				layouts: [0],
-				leaf: 3
-			},
+					id: "contact",
+					pattern: /^\/contact\/?$/,
+					names: [],
+					types: [],
+					page: {"layouts":[0],"errors":[1],"leaf":3},
+					endpoint: null
+				},
 			{
-				type: 'page',
-				id: "project",
-				pattern: /^\/project\/?$/,
-				names: [],
-				types: [],
-				errors: [1],
-				layouts: [0],
-				leaf: 4
-			},
+					id: "project",
+					pattern: /^\/project\/?$/,
+					names: [],
+					types: [],
+					page: {"layouts":[0],"errors":[1],"leaf":4},
+					endpoint: null
+				},
 			{
-				type: 'page',
-				id: "resource",
-				pattern: /^\/resource\/?$/,
-				names: [],
-				types: [],
-				errors: [1],
-				layouts: [0],
-				leaf: 5
-			},
+					id: "resource",
+					pattern: /^\/resource\/?$/,
+					names: [],
+					types: [],
+					page: {"layouts":[0],"errors":[1],"leaf":5},
+					endpoint: null
+				},
 			{
-				type: 'page',
-				id: "resource/tool",
-				pattern: /^\/resource\/tool\/?$/,
-				names: [],
-				types: [],
-				errors: [1],
-				layouts: [0],
-				leaf: 6
-			}
+					id: "resource/tool",
+					pattern: /^\/resource\/tool\/?$/,
+					names: [],
+					types: [],
+					page: {"layouts":[0],"errors":[1],"leaf":6},
+					endpoint: null
+				}
 		],
 		matchers: async () => {
 			

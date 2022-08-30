@@ -3,11 +3,11 @@
 	import CustomLoading from '$lib/components/Loading/CustomLoading.svelte';
 	import { resourceData, getResource } from '$lib/stores/resourceStore.js';
 
-	import { Wrench } from 'phosphor-svelte';
+	import Wrench from '~icons/ph/wrench';
 </script>
 
 <SectionTitle sectionTitle="Tool">
-	<Wrench size="32px" />
+	<Wrench />
 </SectionTitle>
 
 <div>

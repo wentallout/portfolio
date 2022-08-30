@@ -127,7 +127,7 @@ const Atropos_svelte = (0, import_chunks.c)(($$result, $$props, $$bindings, slot
       (0, import_chunks.f)($$restProps)
     ],
     {}
-  )}${(0, import_chunks.l)("this", elRef, 0)}><span${(0, import_chunks.l)("class", cls("atropos-scale", scaleClass), 0)}><span${(0, import_chunks.l)("class", cls("atropos-rotate", rotateClass), 0)}><span${(0, import_chunks.l)("class", cls("atropos-inner", innerClass), 0)}>${slots.default ? slots.default({}) : ``}
+  )}${(0, import_chunks.j)("this", elRef, 0)}><span${(0, import_chunks.j)("class", cls("atropos-scale", scaleClass), 0)}><span${(0, import_chunks.j)("class", cls("atropos-rotate", rotateClass), 0)}><span${(0, import_chunks.j)("class", cls("atropos-inner", innerClass), 0)}>${slots.default ? slots.default({}) : ``}
         ${highlight || typeof highlight === "undefined" ? `<span class="${"atropos-highlight"}"></span>` : ``}</span>
       ${slots.rotate ? slots.rotate({}) : ``}
       ${shadow || typeof shadow === "undefined" ? `<span class="${"atropos-shadow"}"></span>` : ``}</span>
@@ -165,5 +165,11 @@ const Hero = (0, import_chunks.c)(($$result, $$props, $$bindings, slots) => {
 const Page = (0, import_chunks.c)(($$result, $$props, $$bindings, slots) => {
   return `${$$result.head += `${$$result.title = `<title>Khoa&#39;s Portfolio</title>`, ""}`, ""}
 
-${(0, import_chunks.v)(Hero, "Hero").$$render($$result, {}, {}, {})}`;
+${(0, import_chunks.v)(Hero, "Hero").$$render($$result, {}, {}, {})}
+
+<div><p>I have worked for</p></div>
+
+
+
+<div></div>`;
 });

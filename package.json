@@ -15,6 +15,7 @@
 		"ngrok": "ngrok http 4173"
 	},
 	"devDependencies": {
+		"@iconify-json/ph": "^1.1.2",
 		"@playwright/test": "^1.22.2",
 		"@sveltejs/adapter-auto": "next",
 		"@sveltejs/adapter-netlify": "^1.0.0-next.73",
@@ -23,18 +24,19 @@
 		"eslint-config-prettier": "^8.3.0",
 		"eslint-plugin-svelte3": "^4.0.0",
 		"nprogress": "^0.2.0",
-		"phosphor-svelte": "^1.2.1",
 		"prettier": "^2.6.2",
 		"prettier-plugin-svelte": "^2.7.0",
 		"svelte": "^3.44.0",
 		"svelte-check": "^2.7.1",
 		"typescript": "^4.7.2",
+		"unplugin-icons": "^0.14.8",
 		"vite": "^3.0.7"
 	},
 	"type": "module",
 	"dependencies": {
 		"@supabase/supabase-js": "^1.35.6",
 		"atropos": "^1.0.2",
-		"normalize.css": "^8.0.1"
+		"normalize.css": "^8.0.1",
+		"vite-imagetools": "^4.0.5"
 	}
 }

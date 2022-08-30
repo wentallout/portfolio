@@ -12,8 +12,6 @@ export const getResource = async () => {
 	resourceData.set(data);
 };
 
-// getResource();
-
 export const postResource = async (title, type, description, link) => {
 	const { data, error } = await supabase
 		.from('resource')

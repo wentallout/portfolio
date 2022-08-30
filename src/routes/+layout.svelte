@@ -32,8 +32,6 @@
 			NProgress.done();
 		}
 	}
-
-	import IconContext from 'phosphor-svelte/lib/IconContext';
 </script>
 
 <svelte:head>
@@ -63,21 +61,19 @@
 	</script>
 </svelte:head>
 
-<IconContext values={{ color: 'var(--black)', size: 32, mirrored: false, weight: 'regular' }}>
-	<div class="page-container">
-		<CoolFrame />
-		<BackToTop />
-		<LogoContainer />
-		<Header />
+<div class="page-container">
+	<CoolFrame />
+	<BackToTop />
+	<LogoContainer />
+	<Header />
 
-		<main class="main-content">
-			<Breadcrumb path={$page.url.pathname} />
-			<slot />
-		</main>
+	<main class="main-content">
+		<Breadcrumb path={$page.url.pathname} />
+		<slot />
+	</main>
 
-		<Footer />
-	</div>
-</IconContext>
+	<Footer />
+</div>
 
 <style>
 	.page-container {
@@ -87,7 +83,7 @@
 	}
 	.main-content {
 		min-height: calc(100vh - 70px);
-		padding: 2rem 10vw;
+		padding: 2rem 1rem;
 	}
 
 	@media (min-width: 768px) {

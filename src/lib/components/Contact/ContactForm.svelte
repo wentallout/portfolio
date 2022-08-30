@@ -6,17 +6,17 @@
 		<!-- start here -->
 
 		<div class="label">Name</div>
-		<input class="contact__input" type="text" name="name" required />
+		<input class="contact__input small-text" type="text" name="name" required />
 		<div class="label">Email</div>
 		<input
 			placeholder="username@email.com"
-			class="contact__input"
+			class="contact__input small-text"
 			type="email"
 			name="email"
 			required
 		/>
 		<div class="label">Message</div>
-		<textarea class="contact__message" required name="message" placeholder="" />
+		<textarea class="contact__message small-text" required name="message" placeholder="" />
 
 		<div class="btn-container">
 			<button class="btn btn-send" type="submit">Send</button>

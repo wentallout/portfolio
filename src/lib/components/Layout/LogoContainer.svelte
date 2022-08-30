@@ -1,41 +1,12 @@
 <script>
-	import { YinYang, Sun, Moon } from 'phosphor-svelte';
+	import YinYang from '~icons/ph/yin-yang';
 
 	let svgColor = 'var(--white)';
-
-	function handleMouseOver(e) {
-		svgColor = 'var(--primary)';
-	}
-	function handleMouseOut(e) {
-		svgColor = 'var(--white)';
-	}
-	let isDarkMode = false;
-
-	function handleDarkMode() {
-		isDarkMode = !isDarkMode;
-	}
 </script>
 
 <div class="logo-container">
 	<div class="svg-container">
-		<YinYang class="rotate" color="var(--black)" size="60" />
-	</div>
-
-	<div
-		on:mouseover={handleMouseOver}
-		on:mouseout={handleMouseOut}
-		on:focus={handleMouseOver}
-		on:blur={handleMouseOut}
-		on:click={handleDarkMode}
-		class="side-buttons"
-	>
-		<div class="darkmode-btn">
-			{#if isDarkMode}
-				<Moon size="32" color={svgColor} />
-			{:else}
-				<Sun size="32" color={svgColor} />
-			{/if}
-		</div>
+		<YinYang class="rotate" color="var(--black)" width="64" height="64" />
 	</div>
 </div>
 
@@ -64,26 +35,5 @@
 		justify-content: center;
 		align-items: center;
 		background-color: #000;
-	}
-
-	.side-buttons {
-		position: absolute;
-		right: 30px;
-		margin-top: auto;
-		margin-bottom: auto;
-		padding: 4px;
-		border: 1px solid var(--black);
-		border-radius: 100%;
-	}
-
-	.side-buttons:hover {
-		background: var(--black);
-		cursor: pointer;
-	}
-
-	.darkmode-btn {
-		width: 32px;
-		height: 32px;
-		transition: all 0.3s;
 	}
 </style>

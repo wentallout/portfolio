@@ -33,25 +33,25 @@ const SocialLinks = (0, import_chunks.c)(($$result, $$props, $$bindings, slots) 
 });
 const ContactForm_svelte_svelte_type_style_lang = "";
 const css$1 = {
-  code: ".container.svelte-18lj8vx{display:flex;justify-content:left;width:100%}.contact.svelte-18lj8vx{box-shadow:var(--box-shadow);width:100%;max-width:70rem;display:flex;flex-direction:column;padding:2rem}.contact__input.svelte-18lj8vx{border:1px solid var(--gray);margin-bottom:1rem}.contact__message.svelte-18lj8vx{margin-bottom:1rem;border:1px solid var(--gray)}.contact__input.svelte-18lj8vx:focus,.contact__message.svelte-18lj8vx:focus{border:2px solid var(--black)}.btn-send.svelte-18lj8vx{border:0;background-color:var(--primary);margin-right:1rem}.btn-send.svelte-18lj8vx:hover{background-color:hsl(38, 50%, 37%)}.btn-reset.svelte-18lj8vx{border:1px solid var(--error);color:var(--error);background-color:transparent}.btn-reset.svelte-18lj8vx:hover{background-color:var(--error);color:var(--white)}.btn-container.svelte-18lj8vx{display:flex;flex-direction:row;margin-top:2rem}",
+  code: ".form-container.svelte-sj83c{display:flex;justify-content:left;width:100%}.contact.svelte-sj83c{box-shadow:var(--box-shadow);width:100%;max-width:70rem;display:flex;flex-direction:column;padding:2rem}.contact__input.svelte-sj83c{border:1px solid var(--gray);margin-bottom:1rem}.contact__message.svelte-sj83c{margin-bottom:1rem;border:1px solid var(--gray)}.contact__input.svelte-sj83c:focus,.contact__message.svelte-sj83c:focus{border:2px solid var(--black)}.btn-send.svelte-sj83c{border:0;background-color:var(--primary);margin-right:1rem}.btn-send.svelte-sj83c:hover{background-color:hsl(38, 50%, 37%)}.btn-reset.svelte-sj83c{border:1px solid var(--error);color:var(--error);background-color:transparent}.btn-reset.svelte-sj83c:hover{background-color:var(--error);color:var(--white)}.btn-container.svelte-sj83c{display:flex;flex-direction:row;margin-top:2rem}",
   map: null
 };
 const ContactForm = (0, import_chunks.c)(($$result, $$props, $$bindings, slots) => {
   $$result.css.add(css$1);
-  return `<div class="${"container svelte-18lj8vx"}"><form class="${"contact svelte-18lj8vx"}" action="${"https://formsubmit.co/wentallout@gmail.com"}" method="${"POST"}">
+  return `<div class="${"form-container base-text svelte-sj83c"}"><form netlify class="${"contact svelte-sj83c"}" action="${"https://formsubmit.co/wentallout@gmail.com"}" method="${"POST"}">
 		<input type="${"hidden"}" name="${"_captcha"}" value="${"false"}">
 		<input type="${"hidden"}" name="${"_subject"}" value="${"New email from Khoa's website"}">
 		
 
 		<div class="${"label"}">Name</div>
-		<input class="${"contact__input svelte-18lj8vx"}" type="${"text"}" name="${"name"}" required>
+		<input class="${"contact__input svelte-sj83c"}" type="${"text"}" name="${"name"}" required>
 		<div class="${"label"}">Email</div>
-		<input placeholder="${"username@email.com"}" class="${"contact__input svelte-18lj8vx"}" type="${"email"}" name="${"email"}" required>
+		<input placeholder="${"username@email.com"}" class="${"contact__input svelte-sj83c"}" type="${"email"}" name="${"email"}" required>
 		<div class="${"label"}">Message</div>
-		<textarea class="${"contact__message svelte-18lj8vx"}" required name="${"message"}" placeholder="${""}"></textarea>
+		<textarea class="${"contact__message svelte-sj83c"}" required name="${"message"}" placeholder="${""}"></textarea>
 
-		<div class="${"btn-container svelte-18lj8vx"}"><button class="${"btn btn-send svelte-18lj8vx"}" type="${"submit"}">Send</button>
-			<button class="${"btn btn-reset svelte-18lj8vx"}" type="${"reset"}">Reset</button></div></form>
+		<div class="${"btn-container svelte-sj83c"}"><button class="${"btn btn-send svelte-sj83c"}" type="${"submit"}">Send</button>
+			<button class="${"btn btn-reset svelte-sj83c"}" type="${"reset"}">Reset</button></div></form>
 </div>`;
 });
 const _page_svelte_svelte_type_style_lang = "";

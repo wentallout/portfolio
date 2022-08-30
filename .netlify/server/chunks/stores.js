@@ -24,25 +24,34 @@ module.exports = __toCommonJS(stdin_exports);
 var import_index = require("./index.js");
 const getStores = () => {
   const stores = (0, import_index.g)("__svelte__");
-  return {
+  const readonly_stores = {
     page: {
       subscribe: stores.page.subscribe
     },
     navigating: {
       subscribe: stores.navigating.subscribe
     },
-    get preloading() {
-      console.error("stores.preloading is deprecated; use stores.navigating instead");
-      return {
-        subscribe: stores.navigating.subscribe
-      };
-    },
-    get session() {
-      removed_session();
-      return {};
-    },
     updated: stores.updated
   };
+  Object.defineProperties(readonly_stores, {
+    preloading: {
+      get() {
+        console.error("stores.preloading is deprecated; use stores.navigating instead");
+        return {
+          subscribe: stores.navigating.subscribe
+        };
+      },
+      enumerable: false
+    },
+    session: {
+      get() {
+        removed_session();
+        return {};
+      },
+      enumerable: false
+    }
+  });
+  return readonly_stores;
 };
 const page = {
   subscribe(fn) {

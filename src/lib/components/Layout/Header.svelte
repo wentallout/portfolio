@@ -1,4 +1,5 @@
 <script>
+	import List from '~icons/ph/list';
 	import { navItems } from '$lib/config.js';
 	import { page } from '$app/stores';
 
@@ -6,20 +7,24 @@
 	// Mobile menu click event handler
 	const handleMobileIconClick = () => (hideMobileMenu = !hideMobileMenu);
 
-	import { List } from 'phosphor-svelte';
+	let scrollY;
 </script>
 
+<svelte:window bind:scrollY />
 <header class="main-header base-text">
 	<nav>
 		<ul class="nav__list">
-			<li id="burger-nav" on:click={handleMobileIconClick}>
+			<li class:reduced={scrollY > 60} id="burger-nav" on:click={handleMobileIconClick}>
 				<a class="nav__list-item" href={'#'}>
-					<List color="var(--white)" size="32" />
+					<List color="var(--white)" width="32" height="32" />
 				</a>
 			</li>
 
 			{#each navItems as navItem}
-				<li class={`navbar-list${hideMobileMenu ? ' hidden-mobile' : ''}`}>
+				<li
+					class:reduced={scrollY > 60}
+					class={`navbar-list${hideMobileMenu ? ' hidden-mobile' : ''}`}
+				>
 					{#if $page.url.pathname === `${navItem.path}`}
 						<a class="nav__list-item active-page" href={navItem.path}>
 							{navItem.title}
@@ -36,16 +41,25 @@
 </header>
 
 <style>
-	.hidden-mobile {
-		display: none;
+	.reduced {
+		min-height: 2.5rem;
+		font-size: var(--font-size-small);
+		transition: all 0.3s;
 	}
 
 	.main-header {
 		max-width: 100vw;
 		color: var(--white);
 		background-color: #000;
-
 		width: 100%;
+
+		position: sticky;
+		top: 0;
+		z-index: 98;
+	}
+
+	.hidden-mobile {
+		display: none;
 	}
 
 	nav ul li {
@@ -66,7 +80,7 @@
 
 	.nav__list-item {
 		color: var(--white);
-		background-color: #000;
+		background-color: transparent;
 		width: 100%;
 		display: flex;
 		justify-content: center;

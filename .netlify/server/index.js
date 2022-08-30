@@ -46,12 +46,14 @@ __export(stdin_exports, {
 });
 module.exports = __toCommonJS(stdin_exports);
 var import_chunks = require("./chunks/index.js");
-var import_devalue = __toESM(require("devalue"));
+var import_devalue = require("devalue");
 var import_index2 = require("./chunks/index2.js");
 var cookie = __toESM(require("cookie"));
 var set_cookie_parser = __toESM(require("set-cookie-parser"));
 var _use_hashes, _script_needs_csp, _style_needs_csp, _directives, _script_src, _style_src, _nonce;
 function afterUpdate() {
+}
+function set_prerendering(value) {
 }
 const Root = (0, import_chunks.c)(($$result, $$props, $$bindings, slots) => {
   let { stores } = $$props;
@@ -59,9 +61,10 @@ const Root = (0, import_chunks.c)(($$result, $$props, $$bindings, slots) => {
   let { components } = $$props;
   let { data_0 = null } = $$props;
   let { data_1 = null } = $$props;
-  let { data_2 = null } = $$props;
   let { errors } = $$props;
-  (0, import_chunks.s)("__svelte__", stores);
+  {
+    (0, import_chunks.s)("__svelte__", stores);
+  }
   afterUpdate(stores.page.notify);
   if ($$props.stores === void 0 && $$bindings.stores && stores !== void 0)
     $$bindings.stores(stores);
@@ -73,8 +76,6 @@ const Root = (0, import_chunks.c)(($$result, $$props, $$bindings, slots) => {
     $$bindings.data_0(data_0);
   if ($$props.data_1 === void 0 && $$bindings.data_1 && data_1 !== void 0)
     $$bindings.data_1(data_1);
-  if ($$props.data_2 === void 0 && $$bindings.data_2 && data_2 !== void 0)
-    $$bindings.data_2(data_2);
   if ($$props.errors === void 0 && $$bindings.errors && errors !== void 0)
     $$bindings.errors(errors);
   {
@@ -83,13 +84,9 @@ const Root = (0, import_chunks.c)(($$result, $$props, $$bindings, slots) => {
   return `
 
 
-${components[1] ? `${(0, import_chunks.v)(components[0] || import_chunks.m, "svelte:component").$$render($$result, { data: data_0 }, {}, {
+${components[1] ? `${(0, import_chunks.v)(components[0] || import_chunks.m, "svelte:component").$$render($$result, { data: data_0, errors }, {}, {
     default: () => {
-      return `${components[2] ? `${(0, import_chunks.v)(components[1] || import_chunks.m, "svelte:component").$$render($$result, { data: data_1 }, {}, {
-        default: () => {
-          return `${(0, import_chunks.v)(components[2] || import_chunks.m, "svelte:component").$$render($$result, { data: data_2 }, {}, {})}`;
-        }
-      })}` : `${(0, import_chunks.v)(components[1] || import_chunks.m, "svelte:component").$$render($$result, { data: data_1, errors }, {}, {})}`}`;
+      return `${(0, import_chunks.v)(components[1] || import_chunks.m, "svelte:component").$$render($$result, { data: data_1, errors }, {}, {})}`;
     }
   })}` : `${(0, import_chunks.v)(components[0] || import_chunks.m, "svelte:component").$$render($$result, { data: data_0, errors }, {}, {})}`}
 
@@ -169,18 +166,32 @@ function allowed_methods(mod) {
     allowed.push("HEAD");
   return allowed;
 }
-async function render_endpoint(event, route) {
+function data_response(data) {
+  try {
+    return new Response(`window.__sveltekit_data = ${(0, import_devalue.devalue)(data)}`, {
+      headers: {
+        "content-type": "application/javascript"
+      }
+    });
+  } catch (e) {
+    const error2 = e;
+    const match = /\[(\d+)\]\.data\.(.+)/.exec(error2.path);
+    const message = match ? `${error2.message} (data.${match[2]})` : error2.message;
+    return new Response(`throw new Error(${JSON.stringify(message)})`, {
+      headers: {
+        "content-type": "application/javascript"
+      }
+    });
+  }
+}
+async function render_endpoint(event, mod) {
   const method = event.request.method;
-  const mod = await route.load();
   check_method_names(mod);
   let handler = mod[method];
   if (!handler && method === "HEAD") {
     handler = mod.GET;
   }
   if (!handler) {
-    if (event.request.headers.get("x-sveltekit-load")) {
-      return new Response(void 0, { status: 204 });
-    }
     return method_not_allowed(mod, method);
   }
   try {
@@ -569,65 +580,6 @@ class Csp {
     this.report_only_provider.add_style(content);
   }
 }
-const absolute = /^([a-z]+:)?\/?\//;
-const scheme = /^[a-z]+:/;
-function resolve(base2, path) {
-  if (scheme.test(path))
-    return path;
-  const base_match = absolute.exec(base2);
-  const path_match = absolute.exec(path);
-  if (!base_match) {
-    throw new Error(`bad base path: "${base2}"`);
-  }
-  const baseparts = path_match ? [] : base2.slice(base_match[0].length).split("/");
-  const pathparts = path_match ? path.slice(path_match[0].length).split("/") : path.split("/");
-  baseparts.pop();
-  for (let i = 0; i < pathparts.length; i += 1) {
-    const part = pathparts[i];
-    if (part === ".")
-      continue;
-    else if (part === "..")
-      baseparts.pop();
-    else
-      baseparts.push(part);
-  }
-  const prefix = path_match && path_match[0] || base_match && base_match[0] || "";
-  return `${prefix}${baseparts.join("/")}`;
-}
-function is_root_relative(path) {
-  return path[0] === "/" && path[1] !== "/";
-}
-function normalize_path(path, trailing_slash) {
-  if (path === "/" || trailing_slash === "ignore")
-    return path;
-  if (trailing_slash === "never") {
-    return path.endsWith("/") ? path.slice(0, -1) : path;
-  } else if (trailing_slash === "always" && !path.endsWith("/")) {
-    return path + "/";
-  }
-  return path;
-}
-function decode_params(params) {
-  for (const key2 in params) {
-    params[key2] = params[key2].replace(/%23/g, "#").replace(/%3[Bb]/g, ";").replace(/%2[Cc]/g, ",").replace(/%2[Ff]/g, "/").replace(/%3[Ff]/g, "?").replace(/%3[Aa]/g, ":").replace(/%40/g, "@").replace(/%26/g, "&").replace(/%3[Dd]/g, "=").replace(/%2[Bb]/g, "+").replace(/%24/g, "$");
-  }
-  return params;
-}
-class LoadURL extends URL {
-  get hash() {
-    throw new Error(
-      "url.hash is inaccessible from load. Consider accessing hash from the page store within the script tag of your component."
-    );
-  }
-}
-class PrerenderingURL extends URL {
-  get search() {
-    throw new Error("Cannot access url.search on a page with prerendering enabled");
-  }
-  get searchParams() {
-    throw new Error("Cannot access url.searchParams on a page with prerendering enabled");
-  }
-}
 const updated = {
   ...(0, import_index2.r)(false),
   check: () => false
@@ -683,7 +635,7 @@ async function render_response({
       params: event.params,
       routeId: event.routeId,
       status,
-      url: state.prerendering ? new PrerenderingURL(event.url) : event.url,
+      url: event.url,
       data
     };
     if (validation_errors) {
@@ -730,6 +682,26 @@ async function render_response({
     assets2 = segments.length > 0 ? segments.map(() => "..").join("/") : ".";
   }
   const prefixed = (path) => path.startsWith("/") ? path : `${assets2}/${path}`;
+  const serialized = { data: "", errors: "null" };
+  try {
+    serialized.data = (0, import_devalue.devalue)(branch.map(({ server_data }) => server_data));
+  } catch (e) {
+    const error3 = e;
+    const match = /\[(\d+)\]\.data\.(.+)/.exec(error3.path);
+    if (match)
+      throw new Error(`${error3.message} (data.${match[2]})`);
+    throw error3;
+  }
+  if (validation_errors) {
+    try {
+      serialized.errors = (0, import_devalue.devalue)(validation_errors);
+    } catch (e) {
+      const error3 = e;
+      if (error3.path)
+        throw new Error(`${error3.message} (errors.${error3.path})`);
+      throw error3;
+    }
+  }
   const init_app = `
 		import { set_public_env, start } from ${s(prefixed(entry.file))};
 
@@ -745,8 +717,10 @@ async function render_response({
 				status: ${status},
 				error: ${error2 && serialize_error(error2, (e) => e.stack)},
 				node_ids: [${branch.map(({ node }) => node.index).join(", ")}],
-				params: ${(0, import_devalue.default)(event.params)},
-				routeId: ${s(event.routeId)}
+				params: ${(0, import_devalue.devalue)(event.params)},
+				routeId: ${s(event.routeId)},
+				data: ${serialized.data},
+				errors: ${serialized.errors}
 			}` : "null"}
 		});
 	`;
@@ -878,51 +852,165 @@ async function render_response({
     headers
   });
 }
-async function load_server_data({ dev, event, node, parent }) {
+const absolute = /^([a-z]+:)?\/?\//;
+const scheme = /^[a-z]+:/;
+function resolve(base2, path) {
+  if (scheme.test(path))
+    return path;
+  const base_match = absolute.exec(base2);
+  const path_match = absolute.exec(path);
+  if (!base_match) {
+    throw new Error(`bad base path: "${base2}"`);
+  }
+  const baseparts = path_match ? [] : base2.slice(base_match[0].length).split("/");
+  const pathparts = path_match ? path.slice(path_match[0].length).split("/") : path.split("/");
+  baseparts.pop();
+  for (let i = 0; i < pathparts.length; i += 1) {
+    const part = pathparts[i];
+    if (part === ".")
+      continue;
+    else if (part === "..")
+      baseparts.pop();
+    else
+      baseparts.push(part);
+  }
+  const prefix = path_match && path_match[0] || base_match && base_match[0] || "";
+  return `${prefix}${baseparts.join("/")}`;
+}
+function is_root_relative(path) {
+  return path[0] === "/" && path[1] !== "/";
+}
+function normalize_path(path, trailing_slash) {
+  if (path === "/" || trailing_slash === "ignore")
+    return path;
+  if (trailing_slash === "never") {
+    return path.endsWith("/") ? path.slice(0, -1) : path;
+  } else if (trailing_slash === "always" && !path.endsWith("/")) {
+    return path + "/";
+  }
+  return path;
+}
+function decode_params(params) {
+  for (const key2 in params) {
+    params[key2] = params[key2].replace(/%23/g, "#").replace(/%3[Bb]/g, ";").replace(/%2[Cc]/g, ",").replace(/%2[Ff]/g, "/").replace(/%3[Ff]/g, "?").replace(/%3[Aa]/g, ":").replace(/%40/g, "@").replace(/%26/g, "&").replace(/%3[Dd]/g, "=").replace(/%2[Bb]/g, "+").replace(/%24/g, "$");
+  }
+  return params;
+}
+const tracked_url_properties = ["href", "pathname", "search", "searchParams", "toString", "toJSON"];
+function make_trackable(url, callback) {
+  const tracked = new URL(url);
+  for (const property of tracked_url_properties) {
+    let value = tracked[property];
+    Object.defineProperty(tracked, property, {
+      get() {
+        callback();
+        return value;
+      },
+      enumerable: true,
+      configurable: true
+    });
+  }
+  tracked[Symbol.for("nodejs.util.inspect.custom")] = (depth, opts, inspect) => {
+    return inspect(url, opts);
+  };
+  disable_hash(tracked);
+  return tracked;
+}
+function disable_hash(url) {
+  Object.defineProperty(url, "hash", {
+    get() {
+      throw new Error(
+        "Cannot access event.url.hash. Consider using `$page.url.hash` inside a component instead"
+      );
+    }
+  });
+}
+function disable_search(url) {
+  for (const property of ["search", "searchParams"]) {
+    Object.defineProperty(url, property, {
+      get() {
+        throw new Error(`Cannot access url.${property} on a page with prerendering enabled`);
+      }
+    });
+  }
+}
+async function load_server_data({ event, state, node, parent }) {
   var _a;
   if (!(node == null ? void 0 : node.server))
     return null;
-  const server_data = await ((_a = node.server.load) == null ? void 0 : _a.call(null, {
-    get clientAddress() {
-      return event.clientAddress;
+  const uses = {
+    dependencies: /* @__PURE__ */ new Set(),
+    params: /* @__PURE__ */ new Set(),
+    parent: false,
+    url: false
+  };
+  const url = make_trackable(event.url, () => {
+    uses.url = true;
+  });
+  if (state.prerendering) {
+    disable_search(url);
+  }
+  const result = await ((_a = node.server.load) == null ? void 0 : _a.call(null, {
+    ...event,
+    depends: (...deps) => {
+      for (const dep of deps) {
+        const { href } = new URL(dep, event.url);
+        uses.dependencies.add(href);
+      }
     },
-    locals: event.locals,
-    params: event.params,
-    parent,
-    platform: event.platform,
-    request: event.request,
-    routeId: event.routeId,
-    setHeaders: event.setHeaders,
-    url: event.url
+    params: new Proxy(event.params, {
+      get: (target, key2) => {
+        uses.params.add(key2);
+        return target[key2];
+      }
+    }),
+    parent: async () => {
+      uses.parent = true;
+      return parent();
+    },
+    url
   }));
-  const result = server_data ? await unwrap_promises(server_data) : null;
-  if (dev) {
-    check_serializability(result, node.server_id, "data");
-  }
-  return result;
+  const data = result ? await unwrap_promises(result) : null;
+  return {
+    type: "data",
+    data,
+    uses: {
+      dependencies: uses.dependencies.size > 0 ? Array.from(uses.dependencies) : void 0,
+      params: uses.params.size > 0 ? Array.from(uses.params) : void 0,
+      parent: uses.parent ? 1 : void 0,
+      url: uses.url ? 1 : void 0
+    }
+  };
 }
-async function load_data({ event, fetcher, node, parent, server_data_promise, state }) {
+async function load_data({ event, fetcher, node, parent, server_data_promise }) {
+  var _a2, _b;
   var _a;
-  const server_data = await server_data_promise;
+  const server_data_node = await server_data_promise;
   if (!((_a = node == null ? void 0 : node.shared) == null ? void 0 : _a.load)) {
-    return server_data;
+    return (_a2 = server_data_node == null ? void 0 : server_data_node.data) != null ? _a2 : null;
   }
-  const data = await node.shared.load.call(null, {
-    url: state.prerendering ? new PrerenderingURL(event.url) : new LoadURL(event.url),
+  const load_event = {
+    url: event.url,
     params: event.params,
-    data: server_data,
+    data: (_b = server_data_node == null ? void 0 : server_data_node.data) != null ? _b : null,
     routeId: event.routeId,
-    get session() {
-      throw new Error(
-        "session is no longer available. See https://github.com/sveltejs/kit/discussions/5883"
-      );
-    },
     fetch: fetcher,
     setHeaders: event.setHeaders,
     depends: () => {
     },
     parent
+  };
+  Object.defineProperties(load_event, {
+    session: {
+      get() {
+        throw new Error(
+          "session is no longer available. See https://github.com/sveltejs/kit/discussions/5883"
+        );
+      },
+      enumerable: false
+    }
   });
+  const data = await node.shared.load.call(null, load_event);
   return data ? unwrap_promises(data) : null;
 }
 async function unwrap_promises(object) {
@@ -931,30 +1019,6 @@ async function unwrap_promises(object) {
     unwrapped[key2] = await object[key2];
   }
   return unwrapped;
-}
-function check_serializability(value, id, path) {
-  const type = typeof value;
-  if (type === "string" || type === "boolean" || type === "number" || type === "undefined") {
-    return;
-  }
-  if (type === "object") {
-    if (!value)
-      return;
-    if (Array.isArray(value)) {
-      value.forEach((child, i) => {
-        check_serializability(child, id, `${path}[${i}]`);
-      });
-      return;
-    }
-    const tag = Object.prototype.toString.call(value);
-    if (tag === "[object Object]") {
-      for (const key2 in value) {
-        check_serializability(value[key2], id, `${path}.${key2}`);
-      }
-      return;
-    }
-  }
-  throw new Error(`${path} returned from 'load' in ${id} cannot be serialized as JSON`);
 }
 function coalesce_to_error(err) {
   return err instanceof Error || err && err.name && err.message ? err : new Error(JSON.stringify(err));
@@ -1149,8 +1213,8 @@ async function respond_with_error({ event, options, state, status, error: error2
     if (resolve_opts.ssr) {
       const default_layout = await options.manifest._.nodes[0]();
       const server_data_promise = load_server_data({
-        dev: options.dev,
         event,
+        state,
         node: default_layout,
         parent: async () => ({})
       });
@@ -1213,7 +1277,11 @@ function json(data, init2) {
     headers
   });
 }
-async function render_page(event, route, options, state, resolve_opts) {
+function compact(arr) {
+  return arr.filter((val) => val != null);
+}
+const DATA_SUFFIX = "/__data.js";
+async function render_page(event, route, page, options, state, resolve_opts) {
   var _a2, _b2, _c;
   var _a, _b;
   if (state.initiator === route) {
@@ -1226,7 +1294,7 @@ async function render_page(event, route, options, state, resolve_opts) {
     "application/json"
   ]);
   if (accept === "application/json" && event.request.method !== "GET" && event.request.method !== "HEAD") {
-    const node = await options.manifest._.nodes[route.leaf]();
+    const node = await options.manifest._.nodes[page.leaf]();
     if (node.server) {
       return handle_json_request(event, options, node.server);
     }
@@ -1234,8 +1302,8 @@ async function render_page(event, route, options, state, resolve_opts) {
   const { fetcher, fetched, cookies } = create_fetch({ event, options, state, route });
   try {
     const nodes = await Promise.all([
-      ...route.layouts.map((n) => n == void 0 ? n : options.manifest._.nodes[n]()),
-      options.manifest._.nodes[route.leaf]()
+      ...page.layouts.map((n) => n == void 0 ? n : options.manifest._.nodes[n]()),
+      options.manifest._.nodes[page.leaf]()
     ]);
     const leaf_node = nodes.at(-1);
     let status = 200;
@@ -1268,7 +1336,20 @@ async function render_page(event, route, options, state, resolve_opts) {
       }
     }
     const should_prerender_data = nodes.some((node) => node == null ? void 0 : node.server);
-    const data_pathname = `${event.url.pathname.replace(/\/$/, "")}/__data.json`;
+    const data_pathname = event.url.pathname.replace(/\/$/, "") + DATA_SUFFIX;
+    const should_prerender = (_c = (_b2 = (_a = leaf_node.shared) == null ? void 0 : _a.prerender) != null ? _b2 : (_b = leaf_node.server) == null ? void 0 : _b.prerender) != null ? _c : options.prerender.default;
+    if (should_prerender) {
+      const mod = leaf_node.server;
+      if (mod && (mod.POST || mod.PUT || mod.DELETE || mod.PATCH)) {
+        throw new Error("Cannot prerender pages that have endpoints with mutative methods");
+      }
+    } else if (state.prerendering) {
+      if (!should_prerender) {
+        return new Response(void 0, {
+          status: 204
+        });
+      }
+    }
     if (!resolve_opts.ssr) {
       return await render_response({
         branch: [],
@@ -1287,19 +1368,6 @@ async function render_page(event, route, options, state, resolve_opts) {
         resolve_opts
       });
     }
-    const should_prerender = (_c = (_b2 = (_a = leaf_node.shared) == null ? void 0 : _a.prerender) != null ? _b2 : (_b = leaf_node.server) == null ? void 0 : _b.prerender) != null ? _c : options.prerender.default;
-    if (should_prerender) {
-      const mod = leaf_node.server;
-      if (mod && (mod.POST || mod.PUT || mod.DELETE || mod.PATCH)) {
-        throw new Error("Cannot prerender pages that have endpoints with mutative methods");
-      }
-    } else if (state.prerendering) {
-      if (!should_prerender) {
-        return new Response(void 0, {
-          status: 204
-        });
-      }
-    }
     let branch = [];
     let load_error = null;
     const server_promises = nodes.map((node, i) => {
@@ -1312,13 +1380,15 @@ async function render_page(event, route, options, state, resolve_opts) {
             throw mutation_error;
           }
           return await load_server_data({
-            dev: options.dev,
             event,
+            state,
             node,
             parent: async () => {
               const data = {};
               for (let j = 0; j < i; j += 1) {
-                Object.assign(data, await server_promises[j]);
+                const parent = await server_promises[j];
+                if (parent)
+                  Object.assign(data, await parent.data);
               }
               return data;
             }
@@ -1371,12 +1441,13 @@ async function render_page(event, route, options, state, resolve_opts) {
           const error2 = normalize_error(e);
           if (error2 instanceof Redirect) {
             if (state.prerendering && should_prerender_data) {
+              const body = `window.__sveltekit_data = ${JSON.stringify({
+                type: "redirect",
+                location: error2.location
+              })}`;
               state.prerendering.dependencies.set(data_pathname, {
-                response: new Response(void 0),
-                body: JSON.stringify({
-                  type: "redirect",
-                  location: error2.location
-                })
+                response: new Response(body),
+                body
               });
             }
             return redirect_response(error2.status, error2.location);
@@ -1386,8 +1457,8 @@ async function render_page(event, route, options, state, resolve_opts) {
           }
           const status2 = error2 instanceof HttpError ? error2.status : 500;
           while (i--) {
-            if (route.errors[i]) {
-              const index = route.errors[i];
+            if (page.errors[i]) {
+              const index = page.errors[i];
               const node2 = await options.manifest._.nodes[index]();
               let j = i;
               while (!branch[j])
@@ -1421,12 +1492,13 @@ async function render_page(event, route, options, state, resolve_opts) {
       }
     }
     if (state.prerendering && should_prerender_data) {
+      const body = `window.__sveltekit_data = ${(0, import_devalue.devalue)({
+        type: "data",
+        nodes: branch.map((branch_node) => branch_node == null ? void 0 : branch_node.server_data)
+      })}`;
       state.prerendering.dependencies.set(data_pathname, {
-        response: new Response(void 0),
-        body: JSON.stringify({
-          type: "data",
-          nodes: branch.map((branch_node) => ({ data: branch_node == null ? void 0 : branch_node.server_data }))
-        })
+        response: new Response(body),
+        body
       });
     }
     return await render_response({
@@ -1501,15 +1573,6 @@ function redirect_response(status, location) {
     headers: { location }
   });
 }
-function compact(array2) {
-  const compacted = [];
-  for (const item of array2) {
-    if (item) {
-      compacted.push(item);
-    }
-  }
-  return compacted;
-}
 function exec(match, names, types, matchers) {
   const params = {};
   for (let i = 0; i < names.length; i += 1) {
@@ -1527,7 +1590,115 @@ function exec(match, names, types, matchers) {
   }
   return params;
 }
-const DATA_SUFFIX = "/__data.json";
+function once(fn) {
+  let done = false;
+  let result;
+  return () => {
+    if (done)
+      return result;
+    done = true;
+    return result = fn();
+  };
+}
+async function render_data(event, route, options, state) {
+  var _a2;
+  var _a;
+  if (!route.page) {
+    return new Response(void 0, {
+      status: 404
+    });
+  }
+  try {
+    const node_ids = [...route.page.layouts, route.page.leaf];
+    const invalidated = (_a2 = (_a = event.url.searchParams.get("__invalid")) == null ? void 0 : _a.split("").map((x) => x === "y")) != null ? _a2 : node_ids.map(() => true);
+    let aborted = false;
+    const url = new URL(event.url);
+    url.pathname = normalize_path(
+      url.pathname.slice(0, -DATA_SUFFIX.length),
+      options.trailing_slash
+    );
+    url.searchParams.delete("__invalid");
+    url.searchParams.delete("__id");
+    const new_event = { ...event, url };
+    const functions = node_ids.map((n, i) => {
+      return once(async () => {
+        try {
+          if (aborted) {
+            return {
+              type: "skip"
+            };
+          }
+          const node = n == void 0 ? n : await options.manifest._.nodes[n]();
+          return load_server_data({
+            event: new_event,
+            state,
+            node,
+            parent: async () => {
+              const data = {};
+              for (let j = 0; j < i; j += 1) {
+                const parent = await functions[j]();
+                if (parent) {
+                  Object.assign(data, parent.data);
+                }
+              }
+              return data;
+            }
+          });
+        } catch (e) {
+          aborted = true;
+          throw e;
+        }
+      });
+    });
+    const promises = functions.map(async (fn, i) => {
+      if (!invalidated[i]) {
+        return {
+          type: "skip"
+        };
+      }
+      return fn();
+    });
+    let length = promises.length;
+    const nodes = await Promise.all(
+      promises.map(
+        (p, i) => p.catch((e) => {
+          const error2 = normalize_error(e);
+          if (error2 instanceof Redirect) {
+            throw error2;
+          }
+          length = Math.min(length, i + 1);
+          if (error2 instanceof HttpError) {
+            return {
+              type: "error",
+              httperror: { ...error2 }
+            };
+          }
+          options.handle_error(error2, event);
+          return {
+            type: "error",
+            error: error_to_pojo(error2, options.get_stack)
+          };
+        })
+      )
+    );
+    const server_data = {
+      type: "data",
+      nodes: nodes.slice(0, length)
+    };
+    return data_response(server_data);
+  } catch (e) {
+    const error2 = normalize_error(e);
+    if (error2 instanceof Redirect) {
+      const server_data = {
+        type: "redirect",
+        location: error2.location
+      };
+      return data_response(server_data);
+    } else {
+      return data_response(error_to_pojo(error2, options.get_stack));
+    }
+  }
+}
 const default_transform = ({ html }) => html;
 async function respond(request, options, state) {
   var _a, _b, _c, _d;
@@ -1570,11 +1741,8 @@ async function respond(request, options, state) {
     decoded = decoded.slice(options.paths.base.length) || "/";
   }
   const is_data_request = decoded.endsWith(DATA_SUFFIX);
-  if (is_data_request) {
-    const data_suffix_length = DATA_SUFFIX.length - (options.trailing_slash === "always" ? 1 : 0);
-    decoded = decoded.slice(0, -data_suffix_length) || "/";
-    url = new URL(url.origin + url.pathname.slice(0, -data_suffix_length) + url.search);
-  }
+  if (is_data_request)
+    decoded = decoded.slice(0, -DATA_SUFFIX.length);
   if (!((_c = state.prerendering) == null ? void 0 : _c.fallback)) {
     const matchers = await options.manifest._.matchers();
     for (const candidate of options.manifest._.routes) {
@@ -1589,38 +1757,28 @@ async function respond(request, options, state) {
       }
     }
   }
-  if (route) {
-    if (route.type === "page") {
-      const normalized = normalize_path(url.pathname, options.trailing_slash);
-      if (normalized !== url.pathname && !((_d = state.prerendering) == null ? void 0 : _d.fallback)) {
-        return new Response(void 0, {
-          status: 301,
-          headers: {
-            "x-sveltekit-normalize": "1",
-            location: (normalized.startsWith("//") ? url.origin + normalized : normalized) + (url.search === "?" ? "" : url.search)
-          }
-        });
-      }
-    } else if (is_data_request) {
+  if ((route == null ? void 0 : route.page) && !is_data_request) {
+    const normalized = normalize_path(url.pathname, options.trailing_slash);
+    if (normalized !== url.pathname && !((_d = state.prerendering) == null ? void 0 : _d.fallback)) {
       return new Response(void 0, {
-        status: 404
+        status: 301,
+        headers: {
+          "x-sveltekit-normalize": "1",
+          location: (normalized.startsWith("//") ? url.origin + normalized : normalized) + (url.search === "?" ? "" : url.search)
+        }
       });
     }
   }
   const headers = {};
   const cookies = [];
+  if (state.prerendering)
+    disable_search(url);
   const event = {
-    get clientAddress() {
-      if (!state.getClientAddress) {
-        throw new Error(
-          `${"@sveltejs/adapter-netlify"} does not specify getClientAddress. Please raise an issue`
-        );
-      }
-      Object.defineProperty(event, "clientAddress", {
-        value: state.getClientAddress()
-      });
-      return event.clientAddress;
-    },
+    getClientAddress: state.getClientAddress || (() => {
+      throw new Error(
+        `${"@sveltejs/adapter-netlify"} does not specify getClientAddress. Please raise an issue`
+      );
+    }),
     locals: {},
     params,
     platform: state.platform,
@@ -1664,6 +1822,7 @@ async function respond(request, options, state) {
     }
   };
   Object.defineProperties(event, {
+    clientAddress: removed("clientAddress", "getClientAddress"),
     method: removed("method", "request.method", details),
     headers: removed("headers", "request.headers", details),
     origin: removed("origin", "url.origin"),
@@ -1712,63 +1871,14 @@ async function respond(request, options, state) {
         }
         if (route) {
           let response2;
-          if (is_data_request && route.type === "page") {
-            try {
-              let error2;
-              const promises = [...route.layouts, route.leaf].map(async (n, i) => {
-                try {
-                  if (error2)
-                    return;
-                  const node = n == void 0 ? n : await options.manifest._.nodes[n]();
-                  return {
-                    data: await load_server_data({
-                      dev: options.dev,
-                      event: event2,
-                      node,
-                      parent: async () => {
-                        const data = {};
-                        for (let j = 0; j < i; j += 1) {
-                          const parent = await promises[j];
-                          if (!parent || parent instanceof HttpError || "error" in parent) {
-                            return data;
-                          }
-                          Object.assign(data, parent.data);
-                        }
-                        return data;
-                      }
-                    })
-                  };
-                } catch (e) {
-                  error2 = normalize_error(e);
-                  if (error2 instanceof Redirect) {
-                    throw error2;
-                  }
-                  if (error2 instanceof HttpError) {
-                    return error2;
-                  }
-                  options.handle_error(error2, event2);
-                  return {
-                    error: error_to_pojo(error2, options.get_stack)
-                  };
-                }
-              });
-              response2 = json({
-                type: "data",
-                nodes: await Promise.all(promises)
-              });
-            } catch (e) {
-              const error2 = normalize_error(e);
-              if (error2 instanceof Redirect) {
-                response2 = json({
-                  type: "redirect",
-                  location: error2.location
-                });
-              } else {
-                response2 = json(error_to_pojo(error2, options.get_stack), { status: 500 });
-              }
-            }
+          if (is_data_request) {
+            response2 = await render_data(event2, route, options, state);
+          } else if (route.page) {
+            response2 = await render_page(event2, route, route.page, options, state, resolve_opts);
+          } else if (route.endpoint) {
+            response2 = await render_endpoint(event2, await route.endpoint());
           } else {
-            response2 = route.type === "endpoint" ? await render_endpoint(event2, route) : await render_page(event2, route, options, state, resolve_opts);
+            throw new Error("This should never happen");
           }
           if (!is_data_request) {
             for (const key2 in headers) {
@@ -1864,8 +1974,6 @@ function set_paths(paths) {
   base = paths.base;
   assets = paths.assets || base;
 }
-function set_prerendering(value) {
-}
 const template = ({ head, body, assets: assets2, nonce }) => '<!DOCTYPE html>\n<html lang="en">\n\n<head>\n	<meta charset="utf-8" />\n	<link rel="icon" href="' + assets2 + '/favicon.svg" />\n	<meta name="viewport" content="width=device-width, initial-scale=1" />\n	' + head + "\n</head>\n\n<body>\n	<div>" + body + "</div>\n</body>\n\n</html>";
 let read = null;
 set_paths({ "base": "", "assets": "" });
@@ -1911,16 +2019,11 @@ class Server {
       trailing_slash: "never"
     };
   }
-  init({ env }) {
+  async init({ env }) {
     const entries = Object.entries(env);
     Object.fromEntries(entries.filter(([k]) => !k.startsWith("PUBLIC_")));
     const pub = Object.fromEntries(entries.filter(([k]) => k.startsWith("PUBLIC_")));
     this.options.public_env = pub;
-  }
-  async respond(request, options = {}) {
-    if (!(request instanceof Request)) {
-      throw new Error("The first argument to server.respond must be a Request object. See https://github.com/sveltejs/kit/pull/3384 for details");
-    }
     if (!this.options.hooks) {
       const module2 = await Promise.resolve().then(() => __toESM(require("./chunks/hooks.js")));
       this.options.hooks = {
@@ -1928,6 +2031,11 @@ class Server {
         handleError: module2.handleError || (({ error: error2 }) => console.error(error2.stack)),
         externalFetch: module2.externalFetch || fetch
       };
+    }
+  }
+  async respond(request, options = {}) {
+    if (!(request instanceof Request)) {
+      throw new Error("The first argument to server.respond must be a Request object. See https://github.com/sveltejs/kit/pull/3384 for details");
     }
     return respond(request, this.options, options);
   }

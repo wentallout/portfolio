@@ -110,7 +110,7 @@ const Faq = (0, import_chunks.c)(($$result, $$props, $$bindings, slots) => {
     $$bindings.summary(summary);
   $$result.css.add(css$2);
   $$unsubscribe_activeFaq();
-  return `<details ${$activeFaq === summary ? "open" : ""} class="${"svelte-1iz31ql"}"><summary class="${"svelte-1iz31ql"}">${(0, import_chunks.h)(summary)}</summary>
+  return `<details class="${"base-text svelte-1iz31ql"}" ${$activeFaq === summary ? "open" : ""}><summary class="${"svelte-1iz31ql"}">${(0, import_chunks.h)(summary)}</summary>
 	${slots.default ? slots.default({}) : ``}
 </details>`;
 });
@@ -136,14 +136,18 @@ const BookCard = (0, import_chunks.c)(($$result, $$props, $$bindings, slots) => 
   if ($$props.bookDescription === void 0 && $$bindings.bookDescription && bookDescription !== void 0)
     $$bindings.bookDescription(bookDescription);
   $$result.css.add(css$1);
-  return `<div class="${"book svelte-q45xip"}"><img loading="${"lazy"}" decoding="${"async"}" height="${"250"}" width="${"175"}" class="${"book__thumbnail svelte-q45xip"}" alt="${"book cover"}"${(0, import_chunks.l)("src", thumbnailUrl, 0)}>
+  return `<div class="${"book svelte-q45xip"}"><img loading="${"lazy"}" decoding="${"async"}" height="${"250"}" width="${"175"}" class="${"book__thumbnail svelte-q45xip"}" alt="${"book cover"}"${(0, import_chunks.j)("src", thumbnailUrl, 0)}>
 
 	<div class="${"book__info svelte-q45xip"}"><div class="${"book-title base-text svelte-q45xip"}">${(0, import_chunks.h)(bookTitle)}</div>
 		<div class="${"book-author small-text svelte-q45xip"}">${(0, import_chunks.h)(authorName)}</div>
-		<p${(0, import_chunks.l)("title", bookDescription, 0)} class="${"book-description small-text svelte-q45xip"}">${(0, import_chunks.h)(bookDescription)}</p>
-		<a class="${"btn btn--download svelte-q45xip"}" target="${"_blank"}"${(0, import_chunks.l)("href", url, 0)}>${(0, import_chunks.v)(BookOpen, "BookOpen").$$render($$result, { size: "24px", color: "var(--primary)" }, {}, {})}</a></div>
+		<p${(0, import_chunks.j)("title", bookDescription, 0)} class="${"book-description small-text svelte-q45xip"}">${(0, import_chunks.h)(bookDescription)}</p>
+		<a class="${"btn btn--download svelte-q45xip"}" target="${"_blank"}"${(0, import_chunks.j)("href", url, 0)}>${(0, import_chunks.v)(BookOpen, "BookOpen").$$render($$result, { size: "24px", color: "var(--primary)" }, {}, {})}</a></div>
 </div>`;
 });
+const pic1 = "/_app/immutable/assets/UI Design Principles-06cd23a9.png";
+const pic2 = "/_app/immutable/assets/DesignManual-9f330e36.png";
+const pic3 = "/_app/immutable/assets/NoBSGuideUX-2d64c826.png";
+const pic4 = "/_app/immutable/assets/Sprint-bd35600d.png";
 const _page_svelte_svelte_type_style_lang = "";
 const css = {
   code: ".books.svelte-ooot52{display:flex;flex-wrap:wrap;width:100%;max-width:50rem;flex-direction:column}",
@@ -167,7 +171,7 @@ ${(0, import_chunks.v)(FaqContainer, "FaqContainer").$$render($$result, {}, {}, 
             $$result,
             {
               url: "https://1drv.ms/b/s!Ahis-4qg6dsEdTm7ECJXBuoqoxw",
-              thumbnailUrl: "https://i.imgur.com/CzS45ss.png",
+              thumbnailUrl: pic1,
               bookTitle: "UI Design Principles",
               authorName: "Michael Filipiuk",
               bookDescription: "I was making my first steps into the world of UI design, and this book has helped me tremendously."
@@ -180,7 +184,7 @@ ${(0, import_chunks.v)(FaqContainer, "FaqContainer").$$render($$result, {}, {}, 
             $$result,
             {
               url: "https://drive.google.com/uc?export=download&id=1A1UAg2p_91GjEPWk--iHzX2yf37yhXtJ",
-              thumbnailUrl: "https://i.imgur.com/iXlxf1b.png",
+              thumbnailUrl: pic2,
               bookTitle: "Design Manual",
               authorName: "AdrianK",
               bookDescription: "This one has a real project inside and taught me a lot about auto-layout and responsive constraints in Figma."
@@ -196,7 +200,7 @@ ${(0, import_chunks.v)(FaqContainer, "FaqContainer").$$render($$result, {}, {}, 
             $$result,
             {
               url: "https://1drv.ms/b/s!Ahis-4qg6dsEdpmKJyycIRPpPlA",
-              thumbnailUrl: "https://i.imgur.com/7d35IN1.png",
+              thumbnailUrl: pic3,
               bookTitle: "No Bullshit Guide To UX",
               authorName: "Michal Malewicz",
               bookDescription: "This book clears up a lot of my problems. Companies almost never have the same UX process so people like me struggle to learn the basics."
@@ -213,7 +217,7 @@ ${(0, import_chunks.v)(FaqContainer, "FaqContainer").$$render($$result, {}, {}, 
             $$result,
             {
               url: "https://1drv.ms/b/s!Ahis-4qg6dsEd0lfpvdH9cTtzRk",
-              thumbnailUrl: "https://i.imgur.com/hJmkKOy.png",
+              thumbnailUrl: pic4,
               bookTitle: "Sprint",
               authorName: "Jake Knapp",
               bookDescription: "Amazing book that should be read by every UX designer."

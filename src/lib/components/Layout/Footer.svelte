@@ -41,7 +41,7 @@
 		font-weight: 300;
 
 		/* Padding + Margin */
-		padding: 2rem 17vw;
+		padding: 2rem 1rem;
 
 		/* Position */
 		position: relative;
@@ -51,6 +51,12 @@
 
 		/* Color */
 		background-color: #000;
+	}
+
+	@media (min-width: 768px) {
+		footer {
+			padding: 2rem 17vw;
+		}
 	}
 
 	footer:before {

@@ -2,25 +2,21 @@
 	import Atropos from 'atropos/svelte';
 </script>
 
-<Atropos
-	class="my-atropos"
-	highlight="false"
-	shadow="false"
-	rotateTouch="scroll-y"
-	rotateXMax={5}
-	rotateYMax={5}
->
-	<div class="hero">
-		<div class="hero-text">
-			<h1 data-atropos-offset="-5">Hi! I'm Khoa</h1>
-			<p data-atropos-offset="-3">I code and design.</p>
-			<a data-atropos-offset="10" class="btn btn-seemywork" href="/project">See my work</a>
+<div class="atropos-container">
+	<Atropos highlight="false" shadow="false" rotateTouch="scroll-y" rotateXMax={5} rotateYMax={5}>
+		<div class="hero">
+			<div class="hero-text">
+				<h1 data-atropos-offset="-5">Hi! I'm Khoa</h1>
+				<p data-atropos-offset="-3">I code and design.</p>
+				<a data-atropos-offset="10" class="btn btn-seemywork" href="/project">See my work</a
+				>
+			</div>
 		</div>
-	</div>
-</Atropos>
+	</Atropos>
+</div>
 
 <style>
-	.my-atropos {
+	.atropos-container {
 		/* MARGIN BOTTOM */
 		margin-bottom: 2.5rem;
 	}

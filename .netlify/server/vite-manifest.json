@@ -20,7 +20,7 @@
       "_stores.js"
     ],
     "css": [
-      "_app/immutable/assets/+layout-144c07ed.css"
+      "_app/immutable/assets/+layout-928ccfeb.css"
     ]
   },
   "src/routes/+error.svelte": {
@@ -54,7 +54,7 @@
       "_index.js"
     ],
     "css": [
-      "_app/immutable/assets/+page-91d912fc.css"
+      "_app/immutable/assets/+page-33c085f8.css"
     ]
   },
   "src/routes/project/+page.svelte": {
@@ -66,7 +66,7 @@
       "_SectionTitle.js"
     ],
     "css": [
-      "_app/immutable/assets/+page-b9e80f0f.css"
+      "_app/immutable/assets/+page-6ed4f2f1.css"
     ]
   },
   "src/routes/resource/+page.svelte": {
@@ -80,6 +80,12 @@
     ],
     "css": [
       "_app/immutable/assets/+page-0286d595.css"
+    ],
+    "assets": [
+      "_app/immutable/assets/UI Design Principles-06cd23a9.png",
+      "_app/immutable/assets/DesignManual-9f330e36.png",
+      "_app/immutable/assets/NoBSGuideUX-2d64c826.png",
+      "_app/immutable/assets/Sprint-bd35600d.png"
     ]
   },
   "src/routes/resource/tool/+page.svelte": {
@@ -88,10 +94,11 @@
     "isEntry": true,
     "imports": [
       "_index.js",
+      "_SectionTitle.js",
       "_index2.js"
     ],
     "css": [
-      "_app/immutable/assets/+page-a16f965f.css"
+      "_app/immutable/assets/+page-bd0e5c0e.css"
     ]
   },
   "_index.js": {
@@ -115,7 +122,7 @@
       "_index.js"
     ],
     "css": [
-      "_app/immutable/assets/SectionTitle-b8ac3794.css"
+      "_app/immutable/assets/SectionTitle-a6c2e094.css"
     ]
   },
   ".svelte-kit/build/hooks.js": {

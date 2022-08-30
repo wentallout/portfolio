@@ -104,7 +104,7 @@ const List = (0, import_chunks.c)(($$result, $$props, $$bindings, slots) => {
     {}
   )}>${slots.default ? slots.default({}) : ``}<rect width="${"256"}" height="${"256"}" fill="${"none"}"></rect>${weight === "bold" ? `<path d="${"M228,128a12,12,0,0,1-12,12H40a12,12,0,0,1,0-24H216A12,12,0,0,1,228,128ZM40,76H216a12,12,0,0,0,0-24H40a12,12,0,0,0,0,24ZM216,180H40a12,12,0,0,0,0,24H216a12,12,0,0,0,0-24Z"}"></path>` : `${weight === "duotone" ? `<path d="${"M224,128a8,8,0,0,1-8,8H40a8,8,0,0,1,0-16H216A8,8,0,0,1,224,128ZM40,72H216a8,8,0,0,0,0-16H40a8,8,0,0,0,0,16ZM216,184H40a8,8,0,0,0,0,16H216a8,8,0,0,0,0-16Z"}"></path>` : `${weight === "fill" ? `<path d="${"M224,128a8,8,0,0,1-8,8H40a8,8,0,0,1,0-16H216A8,8,0,0,1,224,128ZM40,72H216a8,8,0,0,0,0-16H40a8,8,0,0,0,0,16ZM216,184H40a8,8,0,0,0,0,16H216a8,8,0,0,0,0-16Z"}"></path>` : `${weight === "light" ? `<path d="${"M222,128a6,6,0,0,1-6,6H40a6,6,0,0,1,0-12H216A6,6,0,0,1,222,128ZM40,70H216a6,6,0,0,0,0-12H40a6,6,0,0,0,0,12ZM216,186H40a6,6,0,0,0,0,12H216a6,6,0,0,0,0-12Z"}"></path>` : `${weight === "thin" ? `<path d="${"M220,128a4,4,0,0,1-4,4H40a4,4,0,0,1,0-8H216A4,4,0,0,1,220,128ZM40,68H216a4,4,0,0,0,0-8H40a4,4,0,0,0,0,8ZM216,188H40a4,4,0,0,0,0,8H216a4,4,0,0,0,0-8Z"}"></path>` : `${weight === "regular" ? `<path d="${"M224,128a8,8,0,0,1-8,8H40a8,8,0,0,1,0-16H216A8,8,0,0,1,224,128ZM40,72H216a8,8,0,0,0,0-16H40a8,8,0,0,0,0,16ZM216,184H40a8,8,0,0,0,0,16H216a8,8,0,0,0,0-16Z"}"></path>` : `${(0, import_chunks.h)((console.error('Unsupported icon weight. Choose from "thin", "light", "regular", "bold", "fill", or "duotone".'), ""))}`}`}`}`}`}`}</svg>`;
 });
-const Moon = (0, import_chunks.c)(($$result, $$props, $$bindings, slots) => {
+const Sun = (0, import_chunks.c)(($$result, $$props, $$bindings, slots) => {
   var _a, _b, _c;
   let $$restProps = (0, import_chunks.b)($$props, ["weight", "color", "size", "mirrored"]);
   const ctx = (0, import_chunks.g)("iconCtx") || {};
@@ -136,7 +136,7 @@ const Moon = (0, import_chunks.c)(($$result, $$props, $$bindings, slots) => {
       (0, import_chunks.f)($$restProps)
     ],
     {}
-  )}>${slots.default ? slots.default({}) : ``}<rect width="${"256"}" height="${"256"}" fill="${"none"}"></rect>${weight === "bold" ? `<path d="${"M228.1,149.1a12,12,0,0,0-11.6-8.5,11.4,11.4,0,0,0-3.3.6,80,80,0,0,1-98.3-98.4,13.5,13.5,0,0,0,.4-2.8,12,12,0,0,0-7.5-11.8,12.6,12.6,0,0,0-7.9-.4A104,104,0,1,0,228.2,156,12.5,12.5,0,0,0,228.1,149.1ZM128,208A80,80,0,0,1,88.1,58.6,104.2,104.2,0,0,0,197.4,167.9,80.4,80.4,0,0,1,128,208Z"}"></path>` : `${weight === "duotone" ? `<g opacity="${"0.2"}"><path d="${"M216.7,152.6A91.9,91.9,0,0,1,103.4,39.3h0A92,92,0,1,0,216.7,152.6Z"}"></path></g><path d="${"M224.3,150.3a8.1,8.1,0,0,0-7.8-5.7l-2.2.4A84,84,0,0,1,111,41.6a5.7,5.7,0,0,0,.3-1.8A7.9,7.9,0,0,0,101,31.7,100,100,0,1,0,224.3,154.9,7.2,7.2,0,0,0,224.3,150.3ZM128,212A84,84,0,0,1,92.8,51.7,99.9,99.9,0,0,0,204.3,163.2,84.4,84.4,0,0,1,128,212Z"}"></path>` : `${weight === "fill" ? `<path d="${"M224.3,154.9A100,100,0,1,1,101,31.7a7.9,7.9,0,0,1,10.3,8.1,5.7,5.7,0,0,1-.3,1.8A84,84,0,0,0,214.3,145l2.2-.4a8.1,8.1,0,0,1,7.8,5.7A7.2,7.2,0,0,1,224.3,154.9Z"}"></path>` : `${weight === "light" ? `<path d="${"M222.4,150.9a6.1,6.1,0,0,0-5.7-4.3h-.1l-1.7.3A86,86,0,0,1,109.1,41.1a6.8,6.8,0,0,0,.2-1.4,5.8,5.8,0,0,0-3.7-5.9,6.1,6.1,0,0,0-4-.2A98,98,0,1,0,222.4,154.3,6.5,6.5,0,0,0,222.4,150.9ZM128,214A86,86,0,0,1,95.2,48.5,98.1,98.1,0,0,0,207.5,160.8,86.1,86.1,0,0,1,128,214Z"}"></path>` : `${weight === "thin" ? `<path d="${"M220.5,151.5a4.1,4.1,0,0,0-3.9-2.9l-1.2.2A88,88,0,0,1,107.2,40.5a2.8,2.8,0,0,0,.1-.9,4,4,0,0,0-2.5-4,3.9,3.9,0,0,0-2.6-.1A96,96,0,1,0,220.5,153.8,4.5,4.5,0,0,0,220.5,151.5ZM128,216A88,88,0,0,1,97.8,45.3,96.1,96.1,0,0,0,210.7,158.2,88.3,88.3,0,0,1,128,216Z"}"></path>` : `${weight === "regular" ? `<path d="${"M224.3,150.3a8.1,8.1,0,0,0-7.8-5.7l-2.2.4A84,84,0,0,1,111,41.6a5.7,5.7,0,0,0,.3-1.8A7.9,7.9,0,0,0,101,31.7,100,100,0,1,0,224.3,154.9,7.2,7.2,0,0,0,224.3,150.3ZM128,212A84,84,0,0,1,92.8,51.7,99.9,99.9,0,0,0,204.3,163.2,84.4,84.4,0,0,1,128,212Z"}"></path>` : `${(0, import_chunks.h)((console.error('Unsupported icon weight. Choose from "thin", "light", "regular", "bold", "fill", or "duotone".'), ""))}`}`}`}`}`}`}</svg>`;
+  )}>${slots.default ? slots.default({}) : ``}<rect width="${"256"}" height="${"256"}" fill="${"none"}"></rect>${weight === "bold" ? `<path d="${"M128,56a72,72,0,1,0,72,72A72.1,72.1,0,0,0,128,56Zm0,120a48,48,0,1,1,48-48A48,48,0,0,1,128,176ZM116,28V12a12,12,0,0,1,24,0V28a12,12,0,0,1-24,0Zm74.2,37.8a12,12,0,0,1,0-17l11.3-11.3a12,12,0,0,1,17,17L207.2,65.8a12,12,0,0,1-8.5,3.5A12.2,12.2,0,0,1,190.2,65.8ZM256,128a12,12,0,0,1-12,12H228a12,12,0,0,1,0-24h16A12,12,0,0,1,256,128Zm-37.5,73.5a12,12,0,0,1,0,17A11.6,11.6,0,0,1,210,222a12,12,0,0,1-8.5-3.5l-11.3-11.3a12,12,0,0,1,17-17ZM140,228v16a12,12,0,0,1-24,0V228a12,12,0,0,1,24,0ZM65.8,190.2a12,12,0,0,1,0,17L54.5,218.5A12,12,0,0,1,46,222a11.6,11.6,0,0,1-8.5-3.5,12,12,0,0,1,0-17l11.3-11.3A12,12,0,0,1,65.8,190.2ZM28,140H12a12,12,0,0,1,0-24H28a12,12,0,0,1,0,24Zm9.5-85.5a12,12,0,0,1,17-17L65.8,48.8a12,12,0,0,1,0,17,12.2,12.2,0,0,1-8.5,3.5,12,12,0,0,1-8.5-3.5Z"}"></path>` : `${weight === "duotone" ? `<g opacity="${"0.2"}"><circle cx="${"128"}" cy="${"128"}" r="${"60"}"></circle></g><path d="${"M128,60a68,68,0,1,0,68,68A68.1,68.1,0,0,0,128,60Zm0,120a52,52,0,1,1,52-52A52,52,0,0,1,128,180ZM120,36V16a8,8,0,0,1,16,0V36a8,8,0,0,1-16,0ZM43.1,54.5A8.1,8.1,0,1,1,54.5,43.1L68.6,57.3a8,8,0,0,1,0,11.3,8.1,8.1,0,0,1-11.3,0ZM36,136H16a8,8,0,0,1,0-16H36a8,8,0,0,1,0,16Zm32.6,51.4a8,8,0,0,1,0,11.3L54.5,212.9a8.3,8.3,0,0,1-5.7,2.3,8.5,8.5,0,0,1-5.7-2.3,8.1,8.1,0,0,1,0-11.4l14.2-14.1A8,8,0,0,1,68.6,187.4ZM136,220v20a8,8,0,0,1-16,0V220a8,8,0,0,1,16,0Zm76.9-18.5a8.1,8.1,0,0,1,0,11.4,8.5,8.5,0,0,1-5.7,2.3,8.3,8.3,0,0,1-5.7-2.3l-14.1-14.2a8,8,0,0,1,11.3-11.3ZM248,128a8,8,0,0,1-8,8H220a8,8,0,0,1,0-16h20A8,8,0,0,1,248,128ZM187.4,68.6a8,8,0,0,1,0-11.3l14.1-14.2a8.1,8.1,0,0,1,11.4,11.4L198.7,68.6a8.1,8.1,0,0,1-11.3,0Z"}"></path>` : `${weight === "fill" ? `<path d="${"M196,128a68,68,0,1,1-68-68A68.1,68.1,0,0,1,196,128ZM128,44a8,8,0,0,0,8-8V16a8,8,0,0,0-16,0V36A8,8,0,0,0,128,44ZM57.3,68.6a8.1,8.1,0,0,0,11.3,0,8,8,0,0,0,0-11.3L54.5,43.1A8.1,8.1,0,1,0,43.1,54.5ZM44,128a8,8,0,0,0-8-8H16a8,8,0,0,0,0,16H36A8,8,0,0,0,44,128Zm13.3,59.4L43.1,201.5a8.1,8.1,0,0,0,0,11.4,8.5,8.5,0,0,0,5.7,2.3,8.3,8.3,0,0,0,5.7-2.3l14.1-14.2a8,8,0,0,0-11.3-11.3ZM128,212a8,8,0,0,0-8,8v20a8,8,0,0,0,16,0V220A8,8,0,0,0,128,212Zm70.7-24.6a8,8,0,0,0-11.3,11.3l14.1,14.2a8.3,8.3,0,0,0,5.7,2.3,8.5,8.5,0,0,0,5.7-2.3,8.1,8.1,0,0,0,0-11.4ZM240,120H220a8,8,0,0,0,0,16h20a8,8,0,0,0,0-16ZM193.1,70.9a7.8,7.8,0,0,0,5.6-2.3l14.2-14.1a8.1,8.1,0,0,0-11.4-11.4L187.4,57.3a8,8,0,0,0,0,11.3A7.8,7.8,0,0,0,193.1,70.9Z"}"></path>` : `${weight === "light" ? `<path d="${"M128,62a66,66,0,1,0,66,66A66.1,66.1,0,0,0,128,62Zm0,120a54,54,0,1,1,54-54A54,54,0,0,1,128,182ZM122,36V16a6,6,0,0,1,12,0V36a6,6,0,0,1-12,0ZM44.6,53A5.9,5.9,0,1,1,53,44.6L67.2,58.7a6.1,6.1,0,0,1,0,8.5,5.9,5.9,0,0,1-4.3,1.7,5.8,5.8,0,0,1-4.2-1.7ZM42,128a6,6,0,0,1-6,6H16a6,6,0,0,1,0-12H36A6,6,0,0,1,42,128Zm25.2,60.8a6.1,6.1,0,0,1,0,8.5L53,211.4a5.9,5.9,0,0,1-8.4-8.4l14.1-14.2A6.1,6.1,0,0,1,67.2,188.8ZM134,220v20a6,6,0,0,1-12,0V220a6,6,0,0,1,12,0Zm77.4-17a5.9,5.9,0,1,1-8.4,8.4l-14.2-14.1a6,6,0,0,1,8.5-8.5ZM246,128a6,6,0,0,1-6,6H220a6,6,0,0,1,0-12h20A6,6,0,0,1,246,128ZM211.4,44.6a5.8,5.8,0,0,1,0,8.4L197.3,67.2a5.8,5.8,0,0,1-4.2,1.7,5.9,5.9,0,0,1-4.3-1.7,6.1,6.1,0,0,1,0-8.5L203,44.6A5.8,5.8,0,0,1,211.4,44.6Z"}"></path>` : `${weight === "thin" ? `<path d="${"M128,64a64,64,0,1,0,64,64A64.1,64.1,0,0,0,128,64Zm0,120a56,56,0,1,1,56-56A56,56,0,0,1,128,184ZM124,36V16a4,4,0,0,1,8,0V36a4,4,0,0,1-8,0ZM46,51.6A4,4,0,1,1,51.6,46L65.8,60.1a4.2,4.2,0,0,1,0,5.7,3.9,3.9,0,0,1-2.9,1.1,3.8,3.8,0,0,1-2.8-1.1ZM40,128a4,4,0,0,1-4,4H16a4,4,0,0,1,0-8H36A4,4,0,0,1,40,128Zm25.8,62.2a4.2,4.2,0,0,1,0,5.7L51.6,210a3.8,3.8,0,0,1-2.8,1.2A3.9,3.9,0,0,1,46,210a3.9,3.9,0,0,1,0-5.6l14.1-14.2A4.2,4.2,0,0,1,65.8,190.2ZM132,220v20a4,4,0,0,1-8,0V220a4,4,0,0,1,8,0Zm78-15.6a3.9,3.9,0,0,1,0,5.6,3.9,3.9,0,0,1-2.8,1.2,3.8,3.8,0,0,1-2.8-1.2l-14.2-14.1a4,4,0,0,1,5.7-5.7ZM244,128a4,4,0,0,1-4,4H220a4,4,0,0,1,0-8h20A4,4,0,0,1,244,128ZM210,46a3.9,3.9,0,0,1,0,5.6L195.9,65.8a3.8,3.8,0,0,1-2.8,1.1,3.9,3.9,0,0,1-2.9-1.1,4.2,4.2,0,0,1,0-5.7L204.4,46A3.9,3.9,0,0,1,210,46Z"}"></path>` : `${weight === "regular" ? `<path d="${"M128,60a68,68,0,1,0,68,68A68.1,68.1,0,0,0,128,60Zm0,120a52,52,0,1,1,52-52A52,52,0,0,1,128,180ZM120,36V16a8,8,0,0,1,16,0V36a8,8,0,0,1-16,0ZM43.1,54.5A8.1,8.1,0,1,1,54.5,43.1L68.6,57.3a8,8,0,0,1,0,11.3,8.1,8.1,0,0,1-11.3,0ZM36,136H16a8,8,0,0,1,0-16H36a8,8,0,0,1,0,16Zm32.6,51.4a8,8,0,0,1,0,11.3L54.5,212.9a8.3,8.3,0,0,1-5.7,2.3,8.5,8.5,0,0,1-5.7-2.3,8.1,8.1,0,0,1,0-11.4l14.2-14.1A8,8,0,0,1,68.6,187.4ZM136,220v20a8,8,0,0,1-16,0V220a8,8,0,0,1,16,0Zm76.9-18.5a8.1,8.1,0,0,1,0,11.4,8.5,8.5,0,0,1-5.7,2.3,8.3,8.3,0,0,1-5.7-2.3l-14.1-14.2a8,8,0,0,1,11.3-11.3ZM248,128a8,8,0,0,1-8,8H220a8,8,0,0,1,0-16h20A8,8,0,0,1,248,128ZM187.4,68.6a8,8,0,0,1,0-11.3l14.1-14.2a8.1,8.1,0,0,1,11.4,11.4L198.7,68.6a8.1,8.1,0,0,1-11.3,0Z"}"></path>` : `${(0, import_chunks.h)((console.error('Unsupported icon weight. Choose from "thin", "light", "regular", "bold", "fill", or "duotone".'), ""))}`}`}`}`}`}`}</svg>`;
 });
 const YinYang = (0, import_chunks.c)(($$result, $$props, $$bindings, slots) => {
   var _a, _b, _c;
@@ -174,7 +174,7 @@ const YinYang = (0, import_chunks.c)(($$result, $$props, $$bindings, slots) => {
 });
 const BackToTop_svelte_svelte_type_style_lang = "";
 const css$6 = {
-  code: ".back-to-top.svelte-19y06vf{background-color:var(--black);width:48px;height:48px;border-radius:100%;position:fixed;right:30px;bottom:30px;z-index:99;opacity:1;transition:opacity 0.3s, visibility 0.3s;user-select:none;line-height:normal}.back-to-top.svelte-19y06vf:hover{cursor:pointer;transform:scale(1.5);transition:transform 0.3s;filter:brightness(1.5)}.back-to-top.hidden.svelte-19y06vf{opacity:0;visibility:hidden}",
+  code: ".bck2top.svelte-3yclfz{background-color:var(--black);width:48px;height:48px;border-radius:100%;position:fixed;right:30px;bottom:30px;z-index:99;opacity:1;transition:opacity 0.3s, visibility 0.3s;user-select:none;line-height:normal}.bck2top.svelte-3yclfz:hover{cursor:pointer;transform:scale(1.5);transition:transform 0.3s;filter:brightness(1.5)}.bck2top.hidden.svelte-3yclfz{opacity:0;visibility:hidden}",
   map: null
 };
 const BackToTop = (0, import_chunks.c)(($$result, $$props, $$bindings, slots) => {
@@ -184,7 +184,7 @@ const BackToTop = (0, import_chunks.c)(($$result, $$props, $$bindings, slots) =>
   $$result.css.add(css$6);
   return `
 
-<div class="${["back-to-top svelte-19y06vf", "hidden"].join(" ").trim()}">${(0, import_chunks.v)(CaretCircleUp, "CaretCircleUp").$$render(
+<div class="${["bck2top svelte-3yclfz", "hidden"].join(" ").trim()}">${(0, import_chunks.v)(CaretCircleUp, "CaretCircleUp").$$render(
     $$result,
     {
       className: "red",
@@ -199,19 +199,17 @@ const BackToTop = (0, import_chunks.c)(($$result, $$props, $$bindings, slots) =>
 });
 const Footer_svelte_svelte_type_style_lang = "";
 const css$5 = {
-  code: "footer.svelte-1vmyt2j{display:flex;flex-direction:column;justify-content:center;align-items:flex-start;font-weight:300;padding:3rem 17vw;position:relative;max-width:100vw;height:50px;background-color:#000;color:var(--white)}footer.svelte-1vmyt2j:before{background:url('/images/rhombus_line.png') repeat top center/49px 72px;content:'';position:absolute;top:0;left:0;width:100%;height:100%;opacity:0.12;z-index:1}.list.svelte-1vmyt2j{display:flex;flex-direction:row;justify-content:left;align-items:center;margin:0px;z-index:2}.list-item.svelte-1vmyt2j{display:flex;padding-left:0;padding-right:1rem}",
+  code: ".footer-container.svelte-kv5rpn{display:flex;flex-direction:column;color:var(--white) !important;font-weight:300}footer.svelte-kv5rpn{display:flex;flex-direction:column;justify-content:center;align-items:flex-start;font-weight:300;padding:2rem 17vw;position:relative;max-width:100vw;background-color:#000}footer.svelte-kv5rpn:before{background:url('/images/rhombus_line.png') repeat top center/49px 72px;content:'';position:absolute;top:0;left:0;width:100%;height:100%;opacity:0.12;z-index:1}.nav-list.svelte-kv5rpn{display:flex;flex-direction:row;justify-content:left;align-items:center;margin:0px;z-index:2;margin-bottom:1rem}.nav-list-item.svelte-kv5rpn{display:flex;padding-left:0;padding-right:1rem}",
   map: null
 };
 const Footer = (0, import_chunks.c)(($$result, $$props, $$bindings, slots) => {
-  new Date().getHours();
   $$result.css.add(css$5);
-  return `<footer class="${"small-text svelte-1vmyt2j"}"><ul class="${"list svelte-1vmyt2j"}"><li class="${"list-item svelte-1vmyt2j"}"><a href="${"/"}">Home</a></li>
-		<li class="${"list-item svelte-1vmyt2j"}"><a href="${"/project"}">Project</a></li>
-		<li class="${"list-item svelte-1vmyt2j"}"><a href="${"/resource"}">Resource</a></li>
-		<li class="${"list-item svelte-1vmyt2j"}"><a href="${"/contact"}">Contact</a></li>
-		<br></ul>
-	
-	<div class="${""}">2022 - Made with SvelteKit</div>
+  return `<footer class="${"svelte-kv5rpn"}"><div class="${"footer-container small-text svelte-kv5rpn"}"><ul class="${"nav-list svelte-kv5rpn"}"><li class="${"nav-list-item svelte-kv5rpn"}"><a href="${"/"}">Home</a></li>
+			<li class="${"nav-list-item svelte-kv5rpn"}"><a href="${"/project"}">Project</a></li>
+			<li class="${"nav-list-item svelte-kv5rpn"}"><a href="${"/resource"}">Resource</a></li>
+			<li class="${"nav-list-item svelte-kv5rpn"}"><a href="${"/contact"}">Contact</a></li></ul>
+		<div class="${""}">2022 - Made by Khoa with SvelteKit</div>
+		<div class="${""}">wentallout@gmail.com</div></div>
 </footer>`;
 });
 const navItems = [
@@ -242,11 +240,11 @@ const Header = (0, import_chunks.c)(($$result, $$props, $$bindings, slots) => {
   $$unsubscribe_page = (0, import_chunks.i)(import_stores.p, (value) => $page = value);
   $$result.css.add(css$4);
   $$unsubscribe_page();
-  return `<header class="${"main-header base-text svelte-19ksgxf"}"><nav class="${"svelte-19ksgxf"}"><ul class="${"nav__list svelte-19ksgxf"}"><li id="${"burger-nav"}" class="${"svelte-19ksgxf"}"><a class="${"nav__list-item svelte-19ksgxf"}" href="${"#"}">${(0, import_chunks.v)(List, "List").$$render($$result, { color: "var(--white)", size: "32" }, {}, {})}</a></li>
+  return `<header class="${"main-header base-text svelte-19ksgxf"}"><nav class="${"svelte-19ksgxf"}"><ul class="${"nav__list svelte-19ksgxf"}"><li id="${"burger-nav"}" class="${"svelte-19ksgxf"}"><a class="${"nav__list-item svelte-19ksgxf"}"${(0, import_chunks.j)("href", "#", 0)}>${(0, import_chunks.v)(List, "List").$$render($$result, { color: "var(--white)", size: "32" }, {}, {})}</a></li>
 
-			${(0, import_chunks.j)(navItems, (navItem) => {
-    return `<li class="${(0, import_chunks.h)((0, import_chunks.k)(`navbar-list${" hidden-mobile"}`), true) + " svelte-19ksgxf"}">${$page.url.pathname === `${navItem.path}` ? `<a class="${"nav__list-item active-page svelte-19ksgxf"}"${(0, import_chunks.l)("href", navItem.path, 0)}>${(0, import_chunks.h)(navItem.title)}
-						</a>` : `<a class="${"nav__list-item svelte-19ksgxf"}"${(0, import_chunks.l)("href", navItem.path, 0)}>${(0, import_chunks.h)(navItem.title)}
+			${(0, import_chunks.k)(navItems, (navItem) => {
+    return `<li class="${(0, import_chunks.h)((0, import_chunks.l)(`navbar-list${" hidden-mobile"}`), true) + " svelte-19ksgxf"}">${$page.url.pathname === `${navItem.path}` ? `<a class="${"nav__list-item active-page svelte-19ksgxf"}"${(0, import_chunks.j)("href", navItem.path, 0)}>${(0, import_chunks.h)(navItem.title)}
+						</a>` : `<a class="${"nav__list-item svelte-19ksgxf"}"${(0, import_chunks.j)("href", navItem.path, 0)}>${(0, import_chunks.h)(navItem.title)}
 						</a>`}
 				</li>`;
   })}</ul></nav>
@@ -274,9 +272,9 @@ const Breadcrumb = (0, import_chunks.c)(($$result, $$props, $$bindings, slots) =
       crumbs.unshift({ label: "home", href: "/" });
     }
   }
-  return `<div class="${"breadcrumb small-text svelte-2g7qdp"}">${(0, import_chunks.j)(crumbs, (c, i) => {
+  return `<div class="${"breadcrumb small-text svelte-2g7qdp"}">${(0, import_chunks.k)(crumbs, (c, i) => {
     return `${i == crumbs.length - 1 ? `<div class="${"breadcrumb__unclickable svelte-2g7qdp"}">${(0, import_chunks.h)(c.label)}
-			</div>` : `<a class="${"breadcrumb__clickable svelte-2g7qdp"}"${(0, import_chunks.l)("href", c.href, 0)}>${(0, import_chunks.h)(c.label)}</a> &gt;\xA0`}`;
+			</div>` : `<a class="${"breadcrumb__clickable svelte-2g7qdp"}"${(0, import_chunks.j)("href", c.href, 0)}>${(0, import_chunks.h)(c.label)}</a> &gt;\xA0`}`;
   })}
 </div>`;
 });
@@ -293,13 +291,13 @@ const CoolFrame = (0, import_chunks.c)(($$result, $$props, $$bindings, slots) =>
 });
 const LogoContainer_svelte_svelte_type_style_lang = "";
 const css$1 = {
-  code: ".svg-container.svelte-korc6u{display:flex;justify-content:center;align-items:center;width:60%;height:60%;background-color:transparent}@media(min-width: 768px){.svg-container.svelte-korc6u{width:100%;height:100%}}.logo-container.svelte-korc6u{position:relative;max-width:100vw;width:100%;display:flex;justify-content:center;align-items:center;background-color:#000}.side-buttons.svelte-korc6u{position:absolute;right:30px;margin-top:auto;margin-bottom:auto;padding:4px;border:1px solid var(--black)}.side-buttons.svelte-korc6u:hover{background:var(--black);cursor:pointer}.darkmode-btn.svelte-korc6u{width:32px;height:32px;transition:all 0.3s}",
+  code: ".svg-container.svelte-1t1s132{display:flex;justify-content:center;align-items:center;width:60%;height:60%;background-color:transparent}@media(min-width: 768px){.svg-container.svelte-1t1s132{width:100%;height:100%}}.logo-container.svelte-1t1s132{position:relative;max-width:100vw;width:100%;display:flex;justify-content:center;align-items:center;background-color:#000}.side-buttons.svelte-1t1s132{position:absolute;right:30px;margin-top:auto;margin-bottom:auto;padding:4px;border:1px solid var(--black);border-radius:100%}.side-buttons.svelte-1t1s132:hover{background:var(--black);cursor:pointer}.darkmode-btn.svelte-1t1s132{width:32px;height:32px;transition:all 0.3s}",
   map: null
 };
 const LogoContainer = (0, import_chunks.c)(($$result, $$props, $$bindings, slots) => {
   let svgColor = "var(--white)";
   $$result.css.add(css$1);
-  return `<div class="${"logo-container svelte-korc6u"}"><div class="${"svg-container svelte-korc6u"}">${(0, import_chunks.v)(YinYang, "YinYang").$$render(
+  return `<div class="${"logo-container svelte-1t1s132"}"><div class="${"svg-container svelte-1t1s132"}">${(0, import_chunks.v)(YinYang, "YinYang").$$render(
     $$result,
     {
       class: "rotate",
@@ -310,7 +308,7 @@ const LogoContainer = (0, import_chunks.c)(($$result, $$props, $$bindings, slots
     {}
   )}</div>
 
-	<div class="${"side-buttons svelte-korc6u"}"><div class="${"darkmode-btn svelte-korc6u"}">${`${(0, import_chunks.v)(Moon, "Moon").$$render($$result, { size: "32", color: svgColor }, {}, {})}`}</div></div>
+	<div class="${"side-buttons svelte-1t1s132"}"><div class="${"darkmode-btn svelte-1t1s132"}">${`${(0, import_chunks.v)(Sun, "Sun").$$render($$result, { size: "32", color: svgColor }, {}, {})}`}</div></div>
 </div>`;
 });
 const normalize = "";
@@ -320,7 +318,7 @@ const atropos_min = "";
 const nprogress = "";
 const _layout_svelte_svelte_type_style_lang = "";
 const css = {
-  code: ".page-container.svelte-ubysul{background-color:var(--white);display:flex;flex-direction:column}.main-content.svelte-ubysul{min-height:calc(100vh - 70px);padding:2rem 10vw}@media(min-width: 768px){.main-content.svelte-ubysul{padding:2rem 17vw}}",
+  code: ".page-container.svelte-no8e5g{background-color:var(--background);display:flex;flex-direction:column}.main-content.svelte-no8e5g{min-height:calc(100vh - 70px);padding:2rem 10vw}@media(min-width: 768px){.main-content.svelte-no8e5g{padding:2rem 17vw}}",
   map: null
 };
 const Layout = (0, import_chunks.c)(($$result, $$props, $$bindings, slots) => {
@@ -348,7 +346,20 @@ const Layout = (0, import_chunks.c)(($$result, $$props, $$bindings, slots) => {
   }
   $$unsubscribe_navigating();
   $$unsubscribe_page();
-  return `${$$result.head += `<link rel="${"preconnect"}" href="${"https://fonts.googleapis.com"}" data-svelte="svelte-l9vls8"><link rel="${"preconnect"}" href="${"https://fonts.gstatic.com"}" crossorigin data-svelte="svelte-l9vls8"><link href="${"https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap"}" rel="${"stylesheet"}" data-svelte="svelte-l9vls8">`, ""}
+  return `${$$result.head += `<link rel="${"preconnect"}" href="${"https://fonts.googleapis.com"}" data-svelte="svelte-1go0kcm"><link rel="${"preconnect"}" href="${"https://fonts.gstatic.com"}" crossorigin data-svelte="svelte-1go0kcm"><link href="${"https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap"}" rel="${"stylesheet"}" data-svelte="svelte-1go0kcm"><script data-svelte="svelte-1go0kcm">(function (h, o, t, j, a, r) {
+			h.hj =
+				h.hj ||
+				function () {
+					(h.hj.q = h.hj.q || []).push(arguments);
+				};
+			h._hjSettings = { hjid: 3069496, hjsv: 6 };
+			a = o.getElementsByTagName('head')[0];
+			r = o.createElement('script');
+			r.async = 1;
+			r.src = t + h._hjSettings.hjid + j + h._hjSettings.hjsv;
+			a.appendChild(r);
+		})(window, document, 'https://static.hotjar.com/c/hotjar-', '.js?sv=');
+	<\/script>`, ""}
 
 ${(0, import_chunks.v)(IconContext, "IconContext").$$render(
     $$result,
@@ -363,12 +374,12 @@ ${(0, import_chunks.v)(IconContext, "IconContext").$$render(
     {},
     {
       default: () => {
-        return `<div class="${"page-container svelte-ubysul"}">${(0, import_chunks.v)(CoolFrame, "CoolFrame").$$render($$result, {}, {}, {})}
+        return `<div class="${"page-container svelte-no8e5g"}">${(0, import_chunks.v)(CoolFrame, "CoolFrame").$$render($$result, {}, {}, {})}
 		${(0, import_chunks.v)(BackToTop, "BackToTop").$$render($$result, {}, {}, {})}
 		${(0, import_chunks.v)(LogoContainer, "LogoContainer").$$render($$result, {}, {}, {})}
 		${(0, import_chunks.v)(Header, "Header").$$render($$result, {}, {}, {})}
 
-		<main class="${"main-content svelte-ubysul"}">${(0, import_chunks.v)(Breadcrumb, "Breadcrumb").$$render($$result, { path: $page.url.pathname }, {}, {})}
+		<main class="${"main-content svelte-no8e5g"}">${(0, import_chunks.v)(Breadcrumb, "Breadcrumb").$$render($$result, { path: $page.url.pathname }, {}, {})}
 			${slots.default ? slots.default({}) : ``}</main>
 
 		${(0, import_chunks.v)(Footer, "Footer").$$render($$result, {}, {}, {})}</div>`;
