@@ -28,14 +28,14 @@
 		"svelte-check": "^2.7.1",
 		"typescript": "^4.7.2",
 		"unplugin-icons": "^0.14.8",
-		"vite": "^3.1.0-beta.1"
+		"vite": "^3.1.0-beta.1",
+		"vite-imagetools": "^4.0.5"
 	},
 	"type": "module",
 	"dependencies": {
 		"@supabase/supabase-js": "^1.35.6",
 		"atropos": "^1.0.2",
 		"devalue": "^3.1.2",
-		"normalize.css": "^8.0.1",
-		"vite-imagetools": "^4.0.5"
+		"normalize.css": "^8.0.1"
 	}
 }
