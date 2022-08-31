@@ -23,7 +23,7 @@ __export(stdin_exports, {
 module.exports = __toCommonJS(stdin_exports);
 var import_index = require("./index.js");
 const getStores = () => {
-  const stores = (0, import_index.g)("__svelte__");
+  const stores = (0, import_index.j)("__svelte__");
   const readonly_stores = {
     page: {
       subscribe: stores.page.subscribe

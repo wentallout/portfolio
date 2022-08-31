@@ -11,11 +11,11 @@
 </script>
 
 <svelte:window bind:scrollY />
-<header class="main-header base-text">
+<header class:reduced={scrollY > 60} class="main-header base-text">
 	<nav>
 		<ul class="nav__list">
 			<li class:reduced={scrollY > 60} id="burger-nav" on:click={handleMobileIconClick}>
-				<a class="nav__list-item" href={'#'}>
+				<a on:click|preventDefault class="nav__list-item" href={'#'}>
 					<List color="var(--white)" width="32" height="32" />
 				</a>
 			</li>
@@ -45,6 +45,14 @@
 		min-height: 2.5rem;
 		font-size: var(--font-size-small);
 		transition: all 0.3s;
+		backdrop-filter: blur(5px);
+		-webkit-backdrop-filter: blur(5px);
+		background-color: rgba(0, 0, 0, 0.7);
+	}
+	.main-header.reduced {
+		background-color: transparent;
+		backdrop-filter: blur(5px);
+		-webkit-backdrop-filter: blur(5px);
 	}
 
 	.main-header {
@@ -80,7 +88,6 @@
 
 	.nav__list-item {
 		color: var(--white);
-		background-color: transparent;
 		width: 100%;
 		display: flex;
 		justify-content: center;

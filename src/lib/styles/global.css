@@ -35,7 +35,10 @@
 	--box-shadow-hover: rgb(11 43 158 / 15%) 0px 10px 20px -2px;
 
 	/* light/dark mode */
-	color-scheme: light dark;
+	/* color-scheme: light dark; */
+
+	accent-color: var(--primary);
+	caret-color: var(--black);
 }
 
 ::selection {

@@ -44,11 +44,11 @@ const ContactForm = (0, import_chunks.c)(($$result, $$props, $$bindings, slots) 
 		
 
 		<div class="${"label"}">Name</div>
-		<input class="${"contact__input svelte-sj83c"}" type="${"text"}" name="${"name"}" required>
+		<input class="${"contact__input small-text svelte-sj83c"}" type="${"text"}" name="${"name"}" required>
 		<div class="${"label"}">Email</div>
-		<input placeholder="${"username@email.com"}" class="${"contact__input svelte-sj83c"}" type="${"email"}" name="${"email"}" required>
+		<input placeholder="${"username@email.com"}" class="${"contact__input small-text svelte-sj83c"}" type="${"email"}" name="${"email"}" required>
 		<div class="${"label"}">Message</div>
-		<textarea class="${"contact__message svelte-sj83c"}" required name="${"message"}" placeholder="${""}"></textarea>
+		<textarea class="${"contact__message small-text svelte-sj83c"}" required name="${"message"}" placeholder="${""}"></textarea>
 
 		<div class="${"btn-container svelte-sj83c"}"><button class="${"btn btn-send svelte-sj83c"}" type="${"submit"}">Send</button>
 			<button class="${"btn btn-reset svelte-sj83c"}" type="${"reset"}">Reset</button></div></form>

@@ -24,16 +24,17 @@ var import_chunks = require("../../chunks/index.js");
 var import_stores = require("../../chunks/stores.js");
 const _error_svelte_svelte_type_style_lang = "";
 const css = {
-  code: ".btn-back.svelte-87owy5{background-color:var(--primary);color:var(--black)}.btn-back.svelte-87owy5:hover{background-color:var(--primary-hover)}",
+  code: ".status.svelte-pfzc9z{color:var(--error)}.btn-back.svelte-pfzc9z{background-color:var(--primary);color:var(--black)}.btn-back.svelte-pfzc9z:hover{background-color:var(--primary-hover)}",
   map: null
 };
 const Error2 = (0, import_chunks.c)(($$result, $$props, $$bindings, slots) => {
   let $page, $$unsubscribe_page;
-  $$unsubscribe_page = (0, import_chunks.i)(import_stores.p, (value) => $page = value);
+  $$unsubscribe_page = (0, import_chunks.d)(import_stores.p, (value) => $page = value);
   $$result.css.add(css);
   $$unsubscribe_page();
-  return `<h2 class="${"error-info mix-text"}">Oops! This is awkward...</h2>
-<p>${(0, import_chunks.h)($page.status)} ${(0, import_chunks.h)($page.error.message)}</p>
+  return `<h1 class="${"large-text status svelte-pfzc9z"}">${(0, import_chunks.h)($page.status)}</h1>
+<h2 class="${"error-info mix-text"}">Oops! This is awkward...</h2>
+<p>${(0, import_chunks.h)($page.error.message)}</p>
 
-<a class="${"btn btn-back svelte-87owy5"}" href="${"/"}">Go back</a>`;
+<a class="${"btn btn-back svelte-pfzc9z"}" href="${"/"}">Go back</a>`;
 });

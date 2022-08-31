@@ -22,39 +22,17 @@ __export(stdin_exports, {
 module.exports = __toCommonJS(stdin_exports);
 var import_chunks = require("../../../chunks/index.js");
 var import_SectionTitle = require("../../../chunks/SectionTitle.js");
-const FigmaLogo = (0, import_chunks.c)(($$result, $$props, $$bindings, slots) => {
-  var _a, _b, _c;
-  let $$restProps = (0, import_chunks.b)($$props, ["weight", "color", "size", "mirrored"]);
-  const ctx = (0, import_chunks.g)("iconCtx") || {};
-  let { weight = (_a = ctx.weight) != null ? _a : "regular" } = $$props;
-  let { color = (_b = ctx.color) != null ? _b : "currentColor" } = $$props;
-  let { size = (_c = ctx.size) != null ? _c : "1em" } = $$props;
-  let { mirrored = ctx.mirrored || false } = $$props;
-  if ($$props.weight === void 0 && $$bindings.weight && weight !== void 0)
-    $$bindings.weight(weight);
-  if ($$props.color === void 0 && $$bindings.color && color !== void 0)
-    $$bindings.color(color);
-  if ($$props.size === void 0 && $$bindings.size && size !== void 0)
-    $$bindings.size(size);
-  if ($$props.mirrored === void 0 && $$bindings.mirrored && mirrored !== void 0)
-    $$bindings.mirrored(mirrored);
-  return `
-
-
-<svg${(0, import_chunks.d)(
+const Figma_logo = (0, import_chunks.c)(($$result, $$props, $$bindings, slots) => {
+  return `<svg${(0, import_chunks.b)(
     [
-      { xmlns: "http://www.w3.org/2000/svg" },
-      { width: (0, import_chunks.e)(size) },
-      { height: (0, import_chunks.e)(size) },
-      { fill: (0, import_chunks.e)(color) },
-      {
-        transform: (0, import_chunks.e)(mirrored ? "scale(-1, 1)" : void 0)
-      },
+      { preserveAspectRatio: "xMidYMid meet" },
       { viewBox: "0 0 256 256" },
-      (0, import_chunks.f)($$restProps)
+      { width: "1.2em" },
+      { height: "1.2em" },
+      (0, import_chunks.e)($$props)
     ],
     {}
-  )}>${slots.default ? slots.default({}) : ``}<rect width="${"256"}" height="${"256"}" fill="${"none"}"></rect>${weight === "bold" ? `<path d="${"M193,94a46,46,0,0,0-31-80H94A46,46,0,0,0,63,94a46,46,0,0,0,0,68,46,46,0,1,0,77,34V168.4a45.2,45.2,0,0,0,22,5.6,46,46,0,0,0,31-80Zm-9-34a22.1,22.1,0,0,1-22,22H140V38h22A22.1,22.1,0,0,1,184,60ZM72,60A22.1,22.1,0,0,1,94,38h22V82H94A22.1,22.1,0,0,1,72,60Zm0,68a22.1,22.1,0,0,1,22-22h22v44H94A22.1,22.1,0,0,1,72,128Zm44,68a22,22,0,1,1-22-22h22Zm46-46a22,22,0,0,1,0-44h0a22,22,0,0,1,0,44Z"}"></path>` : `${weight === "duotone" ? `<g opacity="${"0.2"}"><circle cx="${"162"}" cy="${"128"}" r="${"34"}"></circle><path d="${"M94,94h34V26H94a34,34,0,0,0,0,68Z"}"></path><path d="${"M60,196a34,34,0,0,0,68,0V162H94A34,34,0,0,0,60,196Z"}"></path></g><path d="${"M186.6,94A42,42,0,0,0,162,18H94A42,42,0,0,0,69.4,94a41.9,41.9,0,0,0,0,68A42,42,0,1,0,136,196V160.9A42,42,0,1,0,186.6,94ZM188,60a26.1,26.1,0,0,1-26,26H136V34h26A26.1,26.1,0,0,1,188,60ZM68,60A26.1,26.1,0,0,1,94,34h26V86H94A26.1,26.1,0,0,1,68,60Zm0,68a26.1,26.1,0,0,1,26-26h26v52H94A26.1,26.1,0,0,1,68,128Zm26,94a26,26,0,0,1,0-52h26v26A26.1,26.1,0,0,1,94,222Zm68-68a26,26,0,0,1,0-52h0a26,26,0,0,1,0,52Z"}"></path>` : `${weight === "fill" ? `<path d="${"M186.6,94A42,42,0,0,0,162,18H94A42,42,0,0,0,69.4,94a41.9,41.9,0,0,0,0,68A42,42,0,1,0,136,196V160.9A42,42,0,1,0,186.6,94ZM188,60a26.1,26.1,0,0,1-26,26H136V34h26A26.1,26.1,0,0,1,188,60Zm-26,94a26,26,0,0,1,0-52h0a26,26,0,0,1,0,52Z"}"></path>` : `${weight === "light" ? `<path d="${"M183,94a40,40,0,0,0-21-74H94A40,40,0,0,0,73,94a39.9,39.9,0,0,0,0,68,40,40,0,1,0,61,34V156.5A40,40,0,1,0,183,94Zm7-34a28.1,28.1,0,0,1-28,28H134V32h28A28.1,28.1,0,0,1,190,60ZM66,60A28.1,28.1,0,0,1,94,32h28V88H94A28.1,28.1,0,0,1,66,60Zm0,68a28.1,28.1,0,0,1,28-28h28v56H94A28.1,28.1,0,0,1,66,128Zm28,96a28,28,0,0,1,0-56h28v28A28.1,28.1,0,0,1,94,224Zm68-68a28,28,0,0,1,0-56h0a28,28,0,0,1,0,56Z"}"></path>` : `${weight === "thin" ? `<path d="${"M178.9,94A38,38,0,0,0,162,22H94A38,38,0,0,0,77.1,94a37.9,37.9,0,0,0,0,68A38,38,0,1,0,132,196V151.3A38,38,0,1,0,178.9,94ZM192,60a30,30,0,0,1-30,30H132V30h30A30.1,30.1,0,0,1,192,60ZM138.7,98a42.5,42.5,0,0,0-6.7,6.7V98ZM64,60A30.1,30.1,0,0,1,94,30h30V90H94A30,30,0,0,1,64,60ZM94,226a30,30,0,0,1,0-60h30v30A30.1,30.1,0,0,1,94,226Zm30-68H94a30,30,0,0,1,0-60h30Zm38,0a30,30,0,0,1,0-60h0a30,30,0,0,1,0,60Z"}"></path>` : `${weight === "regular" ? `<path d="${"M186.6,94A42,42,0,0,0,162,18H94A42,42,0,0,0,69.4,94a41.9,41.9,0,0,0,0,68A42,42,0,1,0,136,196V160.9A42,42,0,1,0,186.6,94ZM188,60a26.1,26.1,0,0,1-26,26H136V34h26A26.1,26.1,0,0,1,188,60ZM68,60A26.1,26.1,0,0,1,94,34h26V86H94A26.1,26.1,0,0,1,68,60Zm0,68a26.1,26.1,0,0,1,26-26h26v52H94A26.1,26.1,0,0,1,68,128Zm26,94a26,26,0,0,1,0-52h26v26A26.1,26.1,0,0,1,94,222Zm68-68a26,26,0,0,1,0-52h0a26,26,0,0,1,0,52Z"}"></path>` : `${(0, import_chunks.h)((console.error('Unsupported icon weight. Choose from "thin", "light", "regular", "bold", "fill", or "duotone".'), ""))}`}`}`}`}`}`}</svg>`;
+  )}><!-- HTML_TAG_START -->${`<path fill="currentColor" d="M186.6 94A42 42 0 0 0 162 18H94a42 42 0 0 0-24.6 76a41.9 41.9 0 0 0 0 68a42 42 0 1 0 66.6 34v-35.1A42 42 0 1 0 186.6 94Zm1.4-34a26.1 26.1 0 0 1-26 26h-26V34h26a26.1 26.1 0 0 1 26 26ZM68 60a26.1 26.1 0 0 1 26-26h26v52H94a26.1 26.1 0 0 1-26-26Zm0 68a26.1 26.1 0 0 1 26-26h26v52H94a26.1 26.1 0 0 1-26-26Zm26 94a26 26 0 0 1 0-52h26v26a26.1 26.1 0 0 1-26 26Zm68-68a26 26 0 0 1 0-52a26 26 0 0 1 0 52Z"/>`}<!-- HTML_TAG_END --></svg>`;
 });
 const ProjectCard_svelte_svelte_type_style_lang = "";
 const css = {
@@ -75,10 +53,10 @@ const ProjectCard = (0, import_chunks.c)(($$result, $$props, $$bindings, slots) 
   if ($$props.linkToDetail === void 0 && $$bindings.linkToDetail && linkToDetail !== void 0)
     $$bindings.linkToDetail(linkToDetail);
   $$result.css.add(css);
-  return `<div class="${"project svelte-a9xz7p"}"><img width="${"100%"}" height="${"auto"}" loading="${"lazy"}" decoding="${"async"}" class="${"project__thumbnail svelte-a9xz7p"}"${(0, import_chunks.j)("src", projectImage, 0)} alt="${"project thumbnail"}">
+  return `<div class="${"project svelte-a9xz7p"}"><img width="${"100%"}" height="${"auto"}" loading="${"lazy"}" decoding="${"async"}" class="${"project__thumbnail svelte-a9xz7p"}"${(0, import_chunks.f)("src", projectImage, 0)} alt="${"project thumbnail"}">
 	<div class="${"project__info svelte-a9xz7p"}"><div class="${"project__name svelte-a9xz7p"}">${(0, import_chunks.h)(projectName)}</div>
 		<div class="${"project__description small-text"}">${(0, import_chunks.h)(projectDesc)}</div>
-		<a class="${"btn btn-view svelte-a9xz7p"}"${(0, import_chunks.j)("href", linkToDetail, 0)}>View</a></div>
+		<a class="${"btn btn-view svelte-a9xz7p"}"${(0, import_chunks.f)("href", linkToDetail, 0)}>View</a></div>
 </div>`;
 });
 const Page = (0, import_chunks.c)(($$result, $$props, $$bindings, slots) => {
@@ -86,7 +64,7 @@ const Page = (0, import_chunks.c)(($$result, $$props, $$bindings, slots) => {
 
 ${(0, import_chunks.v)(import_SectionTitle.S, "SectionTitle").$$render($$result, { sectionTitle: "UI/UX" }, {}, {
     default: () => {
-      return `${(0, import_chunks.v)(FigmaLogo, "FigmaLogo").$$render($$result, { size: "32px" }, {}, {})}`;
+      return `${(0, import_chunks.v)(Figma_logo, "FigmaLogo").$$render($$result, {}, {}, {})}`;
     }
   })}
 

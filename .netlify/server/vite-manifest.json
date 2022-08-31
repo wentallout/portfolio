@@ -20,7 +20,7 @@
       "_stores.js"
     ],
     "css": [
-      "_app/immutable/assets/+layout-928ccfeb.css"
+      "_app/immutable/assets/_layout-7f7a13f8.css"
     ]
   },
   "src/routes/+error.svelte": {
@@ -32,7 +32,7 @@
       "_stores.js"
     ],
     "css": [
-      "_app/immutable/assets/+error-56c86974.css"
+      "_app/immutable/assets/_error-f48a1bb7.css"
     ]
   },
   "src/routes/+page.svelte": {
@@ -43,7 +43,7 @@
       "_index.js"
     ],
     "css": [
-      "_app/immutable/assets/+page-d2d1a92f.css"
+      "_app/immutable/assets/_page-e2e21916.css"
     ]
   },
   "src/routes/contact/+page.svelte": {
@@ -54,7 +54,7 @@
       "_index.js"
     ],
     "css": [
-      "_app/immutable/assets/+page-33c085f8.css"
+      "_app/immutable/assets/_page-33c085f8.css"
     ]
   },
   "src/routes/project/+page.svelte": {
@@ -66,7 +66,7 @@
       "_SectionTitle.js"
     ],
     "css": [
-      "_app/immutable/assets/+page-6ed4f2f1.css"
+      "_app/immutable/assets/_page-6ed4f2f1.css"
     ]
   },
   "src/routes/resource/+page.svelte": {
@@ -79,7 +79,7 @@
       "_SectionTitle.js"
     ],
     "css": [
-      "_app/immutable/assets/+page-0286d595.css"
+      "_app/immutable/assets/_page-0286d595.css"
     ],
     "assets": [
       "_app/immutable/assets/UI Design Principles-06cd23a9.png",
@@ -98,7 +98,7 @@
       "_index2.js"
     ],
     "css": [
-      "_app/immutable/assets/+page-bd0e5c0e.css"
+      "_app/immutable/assets/_page-bd0e5c0e.css"
     ]
   },
   "_index.js": {
