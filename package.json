@@ -34,6 +34,7 @@
 	"dependencies": {
 		"@supabase/supabase-js": "^1.35.6",
 		"atropos": "^1.0.2",
+		"devalue": "^3.1.2",
 		"normalize.css": "^8.0.1",
 		"vite-imagetools": "^4.0.5"
 	}
