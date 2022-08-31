@@ -52,9 +52,6 @@
 		margin-bottom: 2.5rem;
 	}
 
-	.past-clients__text {
-	}
-
 	.past-clients__logo {
 		display: flex;
 		justify-content: center;

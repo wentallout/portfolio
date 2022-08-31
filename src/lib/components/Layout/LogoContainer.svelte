@@ -1,7 +1,5 @@
 <script>
 	import YinYang from '~icons/ph/yin-yang';
-
-	let svgColor = 'var(--white)';
 </script>
 
 <div class="logo-container">
