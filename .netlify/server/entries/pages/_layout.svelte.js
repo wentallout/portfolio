@@ -249,20 +249,7 @@ const Layout = (0, import_chunks.c)(($$result, $$props, $$bindings, slots) => {
   }
   $$unsubscribe_navigating();
   $$unsubscribe_page();
-  return `${$$result.head += `<link rel="${"preconnect"}" href="${"https://fonts.googleapis.com"}" data-svelte="svelte-1go0kcm"><link rel="${"preconnect"}" href="${"https://fonts.gstatic.com"}" crossorigin data-svelte="svelte-1go0kcm"><link href="${"https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap"}" rel="${"stylesheet"}" data-svelte="svelte-1go0kcm"><script data-svelte="svelte-1go0kcm">(function (h, o, t, j, a, r) {
-			h.hj =
-				h.hj ||
-				function () {
-					(h.hj.q = h.hj.q || []).push(arguments);
-				};
-			h._hjSettings = { hjid: 3069496, hjsv: 6 };
-			a = o.getElementsByTagName('head')[0];
-			r = o.createElement('script');
-			r.async = 1;
-			r.src = t + h._hjSettings.hjid + j + h._hjSettings.hjsv;
-			a.appendChild(r);
-		})(window, document, 'https://static.hotjar.com/c/hotjar-', '.js?sv=');
-	<\/script>`, ""}
+  return `${$$result.head += `<link rel="${"preconnect"}" href="${"https://fonts.googleapis.com"}" data-svelte="svelte-l9vls8"><link rel="${"preconnect"}" href="${"https://fonts.gstatic.com"}" crossorigin data-svelte="svelte-l9vls8"><link href="${"https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap"}" rel="${"stylesheet"}" data-svelte="svelte-l9vls8">`, ""}
 
 <div class="${"page-container svelte-1gmu23n"}">${(0, import_chunks.v)(CoolFrame, "CoolFrame").$$render($$result, {}, {}, {})}
 	${(0, import_chunks.v)(BackToTop, "BackToTop").$$render($$result, {}, {}, {})}
