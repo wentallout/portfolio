@@ -31,7 +31,7 @@ const manifest = {
   assets: /* @__PURE__ */ new Set(["favicon.svg", "images/frame2corner.png", "images/fuji.svg", "images/khoa-biolink.png", "images/rhombus_line.png"]),
   mimeTypes: { ".svg": "image/svg+xml", ".png": "image/png" },
   _: {
-    entry: { "file": "_app/immutable/start-fee294dd.js", "imports": ["_app/immutable/start-fee294dd.js", "_app/immutable/chunks/preload-helper-aa6bc0ce.js", "_app/immutable/chunks/index-b6e5fdaf.js", "_app/immutable/chunks/singletons-5b79bcf4.js", "_app/immutable/chunks/index-7f48f867.js"], "stylesheets": [] },
+    entry: { "file": "_app/immutable/start-591e111c.js", "imports": ["_app/immutable/start-591e111c.js", "_app/immutable/chunks/preload-helper-aa6bc0ce.js", "_app/immutable/chunks/index-b6e5fdaf.js", "_app/immutable/chunks/singletons-3d6c77fd.js", "_app/immutable/chunks/index-7f48f867.js"], "stylesheets": [] },
     nodes: [
       () => Promise.resolve().then(() => __toESM(require("./nodes/0.js"))),
       () => Promise.resolve().then(() => __toESM(require("./nodes/1.js"))),

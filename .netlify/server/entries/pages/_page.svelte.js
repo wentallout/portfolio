@@ -166,7 +166,7 @@ const fpt = "/_app/immutable/assets/fpt-b5af5518.png";
 const nashtech = "/_app/immutable/assets/nashtech-c104f948.png";
 const _page_svelte_svelte_type_style_lang = "";
 const css = {
-  code: ".past-clients.svelte-izz2tr{width:100%;display:flex;justify-content:center;align-items:center;flex-direction:column;margin-bottom:2.5rem}.past-clients__logo.svelte-izz2tr{display:flex;justify-content:center;align-items:center;flex-direction:row}.logo.svelte-izz2tr{width:100px;height:100px;object-fit:cover;margin-left:1rem}",
+  code: ".past-clients.svelte-lpzecp{width:100%;display:flex;justify-content:center;align-items:center;flex-direction:column;margin-bottom:2.5rem}.past-clients__logo.svelte-lpzecp{display:flex;justify-content:center;align-items:center;flex-direction:row}.logo.svelte-lpzecp{width:100px;height:100px;object-fit:cover;margin-left:1rem}",
   map: null
 };
 const Page = (0, import_chunks.c)(($$result, $$props, $$bindings, slots) => {
@@ -175,9 +175,9 @@ const Page = (0, import_chunks.c)(($$result, $$props, $$bindings, slots) => {
 
 ${(0, import_chunks.v)(Hero, "Hero").$$render($$result, {}, {}, {})}
 
-<div class="${"past-clients svelte-izz2tr"}"><p class="${"past-clients__text base-text svelte-izz2tr"}">I have worked for</p>
-	<div class="${"past-clients__logo svelte-izz2tr"}"><img height="${"100"}" width="${"100"}" loading="${"lazy"}" decoding="${"async"}" class="${"logo svelte-izz2tr"}"${(0, import_chunks.f)("src", fpt, 0)} alt="${"FPT Software"}">
-		<img height="${"100"}" width="${"100"}" loading="${"lazy"}" decoding="${"async"}" class="${"logo svelte-izz2tr"}"${(0, import_chunks.f)("src", nashtech, 0)} alt="${"NashTech"}"></div></div>
+<div class="${"past-clients svelte-lpzecp"}"><p class="${"past-clients__text base-text"}">I have worked for</p>
+	<div class="${"past-clients__logo svelte-lpzecp"}"><img height="${"100"}" width="${"100"}" loading="${"lazy"}" decoding="${"async"}" class="${"logo svelte-lpzecp"}"${(0, import_chunks.f)("src", fpt, 0)} alt="${"FPT Software"}">
+		<img height="${"100"}" width="${"100"}" loading="${"lazy"}" decoding="${"async"}" class="${"logo svelte-lpzecp"}"${(0, import_chunks.f)("src", nashtech, 0)} alt="${"NashTech"}"></div></div>
 
 
 
