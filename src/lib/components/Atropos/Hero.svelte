@@ -18,7 +18,7 @@
 <style>
 	.atropos-container {
 		/* MARGIN BOTTOM */
-		margin-bottom: 2.5rem;
+		margin-bottom: var(--space-l);
 	}
 
 	.btn-seemywork {

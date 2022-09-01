@@ -40,8 +40,7 @@
 		/* Font weight */
 		font-weight: 300;
 
-		/* Padding + Margin */
-		padding: 2rem 1rem;
+		padding: var(--space-m) var(--space-xs);
 
 		/* Position */
 		position: relative;
@@ -78,12 +77,12 @@
 		align-items: center;
 		margin: 0px;
 		z-index: 2;
-		margin-bottom: 1rem;
+		margin-bottom: var(--space-l);
 	}
 
 	.nav-list-item {
 		display: flex;
 		padding-left: 0;
-		padding-right: 1rem;
+		padding-right: var(--space-xs);
 	}
 </style>

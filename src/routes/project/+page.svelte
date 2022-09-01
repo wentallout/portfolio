@@ -8,7 +8,7 @@
 	<title>Project</title>
 </svelte:head>
 
-<SectionTitle sectionTitle="UI/UX">
+<SectionTitle sectionTitle="UI + UX">
 	<FigmaLogo />
 </SectionTitle>
 

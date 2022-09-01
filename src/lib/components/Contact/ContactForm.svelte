@@ -1,5 +1,5 @@
 <div class="form-container base-text">
-	<form netlify class="contact" action="https://formsubmit.co/wentallout@gmail.com" method="POST">
+	<form netlify class="contact" action="55a8ff332d183504ae4466ce8a42e7d6" method="POST">
 		<!-- hidden -->
 		<input type="hidden" name="_captcha" value="false" />
 		<input type="hidden" name="_subject" value="New email from Khoa's website" />
@@ -39,16 +39,12 @@
 		display: flex;
 		flex-direction: column;
 
-		padding: 2rem;
+		padding: var(--space-m);
 	}
 
+	.contact__message,
 	.contact__input {
-		border: 1px solid var(--gray);
-		margin-bottom: 1rem;
-	}
-
-	.contact__message {
-		margin-bottom: 1rem;
+		margin-bottom: var(--space-s);
 		border: 1px solid var(--gray);
 	}
 
@@ -63,7 +59,7 @@
 	.btn-send {
 		border: 0;
 		background-color: var(--primary);
-		margin-right: 1rem;
+		margin-right: var(--space-xs);
 	}
 
 	.btn-send:hover {
@@ -85,6 +81,6 @@
 	.btn-container {
 		display: flex;
 		flex-direction: row;
-		margin-top: 2rem;
+		margin-top: var(--space-m);
 	}
 </style>

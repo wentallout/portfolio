@@ -15,7 +15,7 @@
 	<nav>
 		<ul class="nav__list">
 			<li class:reduced={scrollY > 60} id="burger-nav" on:click={handleMobileIconClick}>
-				<a on:click|preventDefault class="nav__list-item" href={'#'}>
+				<a class="nav__list-item" on:click|preventDefault href={'#'}>
 					<List color="var(--white)" width="32" height="32" />
 				</a>
 			</li>
@@ -72,7 +72,7 @@
 
 	nav ul li {
 		display: flex;
-		min-height: 3.5rem;
+		min-height: 4rem;
 		margin-left: 0;
 		width: 100%;
 	}

@@ -7,10 +7,10 @@
 	import BookCard from '$lib/components/Book/BookCard.svelte';
 	import SectionTitle from '$lib/components/Common/SectionTitle.svelte';
 
-	import pic1 from '$lib/assets/images/UI Design Principles.png';
-	import pic2 from '$lib/assets/images/DesignManual.png';
-	import pic3 from '$lib/assets/images/NoBSGuideUX.png';
-	import pic4 from '$lib/assets/images/Sprint.png';
+	import pic1 from '$lib/assets/images/UI Design Principles.png?h=250&webp';
+	import pic2 from '$lib/assets/images/DesignManual.png?h=250&webp';
+	import pic3 from '$lib/assets/images/NoBSGuideUX.png?h=250&webp';
+	import pic4 from '$lib/assets/images/Sprint.png?h=250&webp';
 </script>
 
 <svelte:head>

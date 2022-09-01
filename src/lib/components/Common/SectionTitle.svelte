@@ -6,7 +6,7 @@
 	<div class="section-icon">
 		<slot />
 	</div>
-	<h2 class="base-text">{sectionTitle}</h2>
+	<h2 class="large-text">{sectionTitle}</h2>
 </div>
 
 <style>
@@ -17,14 +17,14 @@
 		border: 1px solid var(--black);
 		border-radius: 100%;
 		padding: 0.25rem;
-		margin-right: 0.5rem;
+		margin-right: var(--space-xs);
 	}
 
 	.section-title {
 		display: flex;
 		justify-content: left;
 		align-items: center;
-		margin-bottom: 2.5rem;
+		margin-bottom: var(--space-l);
 		font-weight: 600;
 		color: var(--black);
 	}

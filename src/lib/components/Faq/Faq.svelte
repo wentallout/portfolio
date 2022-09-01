@@ -20,7 +20,7 @@
 
 <style>
 	details {
-		margin-bottom: 2rem;
+		margin-bottom: var(--space-l);
 	}
 
 	details > summary {

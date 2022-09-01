@@ -16,7 +16,7 @@
 		alt="project thumbnail"
 	/>
 	<div class="project__info">
-		<div class="project__name">{projectName}</div>
+		<div class="project__name mid-text">{projectName}</div>
 		<div class="project__description small-text">{projectDesc}</div>
 		<a class="btn btn-view" href={linkToDetail}>View</a>
 	</div>
@@ -34,7 +34,8 @@
 	}
 
 	.project {
-		max-width: 78rem;
+		width: 100%;
+		max-width: 80rem;
 		/* FLEX */
 		display: flex;
 		flex-direction: column;
@@ -46,7 +47,7 @@
 		color: var(--text);
 
 		/* SPACING */
-		margin-bottom: 2.5rem;
+		margin-bottom: var(--space-l);
 
 		/* SHADOW */
 		box-shadow: var(--box-shadow);
@@ -59,13 +60,12 @@
 	.project__thumbnail {
 		width: 100%;
 		height: 200px;
-		object-fit: cover;
 	}
 
 	.project__info {
 		display: flex;
 		flex-direction: column;
-		padding: 2rem;
+		padding: var(--space-m);
 	}
 
 	.project__name {

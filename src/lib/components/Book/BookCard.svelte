@@ -51,9 +51,8 @@
 		flex-direction: column;
 		justify-content: center;
 
-		/* MARGIN PADDING */
-		margin-bottom: 2.5rem;
-		padding: 2rem;
+		margin-bottom: var(--space-l);
+		padding: var(--space-m);
 
 		text-align: left;
 		color: var(--black);
@@ -69,8 +68,7 @@
 	.book__thumbnail {
 		width: 50%;
 		height: 50%;
-		object-fit: cover;
-		margin-bottom: 2rem;
+		margin-bottom: var(--space-m);
 		border: 1px solid var(--black);
 	}
 
@@ -89,7 +87,7 @@
 	}
 
 	.book-description {
-		margin-top: 1rem;
+		margin-top: var(--space-xs);
 		display: -webkit-box;
 		-webkit-line-clamp: 3;
 		-webkit-box-orient: vertical;
@@ -115,7 +113,7 @@
 			width: auto;
 			height: 250px;
 			margin-bottom: 0;
-			margin-right: 2rem;
+			margin-right: var(--space-m);
 		}
 	}
 

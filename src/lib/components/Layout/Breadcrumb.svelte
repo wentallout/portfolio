@@ -22,7 +22,7 @@
 	}
 </script>
 
-<div class="breadcrumb small-text">
+<div class="breadcrumb base-text">
 	{#each crumbs as c, i}
 		{#if i == crumbs.length - 1}
 			<div class="breadcrumb__unclickable">
@@ -36,7 +36,7 @@
 
 <style>
 	.breadcrumb {
-		margin-bottom: 2rem;
+		margin-bottom: var(--space-l);
 		font-weight: 300;
 		color: var(--gray);
 	}
@@ -47,6 +47,7 @@
 	}
 
 	.breadcrumb__clickable {
+		display: inline-flex;
 		color: var(--primary);
 	}
 

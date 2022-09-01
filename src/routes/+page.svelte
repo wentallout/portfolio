@@ -1,8 +1,8 @@
 <script>
 	import Hero from '$lib/components/Atropos/Hero.svelte';
 
-	import fpt from '$lib/assets/images/companylogo/fpt.png?width=100';
-	import nashtech from '$lib/assets/images/companylogo/nashtech.png?width=100';
+	import fpt from '$lib/assets/images/companylogo/fpt.png?w=300&h=300&webp';
+	import nashtech from '$lib/assets/images/companylogo/nashtech.png?w=300&h=300&webp';
 </script>
 
 <svelte:head>
@@ -14,24 +14,8 @@
 <div class="past-clients">
 	<p class="past-clients__text base-text">I have worked for</p>
 	<div class="past-clients__logo">
-		<img
-			height="100"
-			width="100"
-			loading="lazy"
-			decoding="async"
-			class="logo"
-			src={fpt}
-			alt="FPT Software"
-		/>
-		<img
-			height="100"
-			width="100"
-			loading="lazy"
-			decoding="async"
-			class="logo"
-			src={nashtech}
-			alt="NashTech"
-		/>
+		<img loading="lazy" decoding="async" class="logo" src={fpt} alt="FPT Software" />
+		<img loading="lazy" decoding="async" class="logo" src={nashtech} alt="NashTech" />
 	</div>
 </div>
 
@@ -49,20 +33,31 @@
 		flex-direction: column;
 
 		/* Spacing */
-		margin-bottom: 2.5rem;
+		margin-bottom: var(--space-l);
 	}
-
 	.past-clients__logo {
 		display: flex;
 		justify-content: center;
 		align-items: center;
-		flex-direction: row;
+		flex-direction: column;
+		flex-wrap: wrap;
+	}
+	@media (min-width: 768px) {
+		.past-clients__logo {
+			flex-direction: row;
+		}
 	}
 
 	.logo {
-		width: 100px;
-		height: 100px;
-		object-fit: cover;
-		margin-left: 1rem;
+		width: 200px;
+		height: 200px;
+		width: auto;
+	}
+
+	@media (min-width: 768px) {
+		.logo {
+			width: 300px;
+			height: 300px;
+		}
 	}
 </style>
