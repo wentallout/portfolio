@@ -1,5 +1,5 @@
 <div class="form-container base-text">
-	<form netlify class="contact" action="55a8ff332d183504ae4466ce8a42e7d6" method="POST">
+	<form netlify class="contact" method="POST">
 		<!-- hidden -->
 		<input type="hidden" name="_captcha" value="false" />
 		<input type="hidden" name="_subject" value="New email from Khoa's website" />
