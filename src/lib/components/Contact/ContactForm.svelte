@@ -1,10 +1,5 @@
 <div class="form-container base-text">
-	<form netlify class="contact" method="POST">
-		<!-- hidden -->
-		<input type="hidden" name="_captcha" value="false" />
-		<input type="hidden" name="_subject" value="New email from Khoa's website" />
-		<!-- start here -->
-
+	<form method="POST" data-netlify="true" name="contact" class="contact">
 		<div class="label">Name</div>
 		<input class="contact__input small-text" type="text" name="name" required />
 		<div class="label">Email</div>
