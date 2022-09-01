@@ -54,7 +54,7 @@
 
 	@media (min-width: 768px) {
 		footer {
-			padding: 2rem 17vw;
+			padding: var(--space-m) 17vw;
 		}
 	}
 

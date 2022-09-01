@@ -66,12 +66,12 @@
 	}
 	.main-content {
 		min-height: calc(100vh - 70px);
-		padding: 2rem 1rem;
+		padding: var(--space-m) 1rem;
 	}
 
 	@media (min-width: 768px) {
 		.main-content {
-			padding: 2rem 17vw;
+			padding: var(--space-m) 17vw;
 		}
 	}
 </style>
