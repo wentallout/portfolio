@@ -10,7 +10,7 @@
 		display: none;
 		pointer-events: none;
 		position: fixed;
-		z-index: 3;
+		z-index: 999;
 		top: 0;
 		left: 0;
 		width: 100%;
