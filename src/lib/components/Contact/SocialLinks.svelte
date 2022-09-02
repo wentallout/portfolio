@@ -1,27 +1,60 @@
 <script>
+	import Envelope from '~icons/ph/envelope';
+	import LinkedinLogo from '~icons/ph/linkedin-logo';
+	import FigmaLogo from '~icons/ph/figma-logo';
+	import GitHubLogo from '~icons/ph/github-logo';
+	import RedditLogo from '~icons/ph/reddit-logo';
 </script>
 
 <div class="social">
-	<a target="_blank" class="social__link" href="https://khoa.bio.link/">
-		<img class="biolink-qr" src="/images/khoa-biolink.png" alt="Khoa's Biolink" />
-	</a>
+	<div class="social__others base-text">
+		<a class="social__address" href="mailto:wentallout@gmail.com">
+			<Envelope color="var(--black)" width="32" height="32" />
+			<p>wentallout@gmail.com</p>
+		</a>
+		<a
+			class="social__address"
+			href="https://www.figma.com/team_invite/redeem/CRNTQKDT0VQTLYjw7cEogQ"
+		>
+			<LinkedinLogo color="var(--black)" width="32" height="32" />
+			<p>LinkedIn</p>
+		</a>
+
+		<a class="social__address" href="https://www.linkedin.com/in/wentallout">
+			<FigmaLogo color="var(--black)" width="32" height="32" />
+			<p>Figma</p>
+		</a>
+
+		<a class="social__address" href="https://github.com/wentallout">
+			<GitHubLogo color="var(--black)" width="32" height="32" />
+			<p>GitHub</p>
+		</a>
+
+		<a class="social__address" href="https://www.reddit.com/user/wentallout">
+			<RedditLogo color="var(--black)" width="32" height="32" />
+			<p>Reddit</p>
+		</a>
+	</div>
 </div>
 
 <style>
+	.social__address {
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+	}
+
 	.social {
 		display: flex;
 		flex-direction: column;
-		justify-content: center;
-		align-items: left;
 		width: 100%;
-	}
-
-	.biolink-qr {
-		width: 300px;
 		height: 300px;
+		margin-bottom: var(--space-m);
 	}
 
-	.biolink-qr:hover {
-		background-color: var(--primary);
+	@media (min-width: 768px) {
+		.social {
+			flex-direction: row;
+		}
 	}
 </style>

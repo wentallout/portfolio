@@ -9,7 +9,7 @@
 </svelte:head>
 
 <SectionTitle sectionTitle="UI + UX">
-	<FigmaLogo />
+	<FigmaLogo color="var(--black)" width="32" height="32" />
 </SectionTitle>
 
 <div class="projects">

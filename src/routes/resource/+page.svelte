@@ -18,7 +18,7 @@
 </svelte:head>
 
 <SectionTitle sectionTitle="Must-read">
-	<Books color="var(--black)" />
+	<Books color="var(--black)" width="32" height="32" />
 </SectionTitle>
 
 <FaqContainer>

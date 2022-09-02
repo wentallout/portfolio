@@ -7,7 +7,7 @@
 </script>
 
 <SectionTitle sectionTitle="Tool">
-	<Wrench />
+	<Wrench color="var(--black)" width="32" height="32" />
 </SectionTitle>
 
 <div>

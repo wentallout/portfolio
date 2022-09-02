@@ -1,5 +1,6 @@
 <div class="form-container base-text">
 	<form method="POST" data-netlify="true" name="contact" class="contact">
+		<input type="hidden" name="form-name" value="contact" />
 		<div class="label">Name</div>
 		<input class="contact__input small-text" type="text" name="name" required />
 		<div class="label">Email</div>
@@ -25,6 +26,7 @@
 		display: flex;
 		justify-content: left;
 		width: 100%;
+		margin-bottom: var(--space-m);
 	}
 
 	.contact {
@@ -76,6 +78,5 @@
 	.btn-container {
 		display: flex;
 		flex-direction: row;
-		margin-top: var(--space-m);
 	}
 </style>
