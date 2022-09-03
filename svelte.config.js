@@ -6,6 +6,13 @@ const config = {
 	preprocess: preprocess(),
 	kit: {
 		adapter: adapter(),
+		target: '#svelte',
+		prerender: {
+			crawl: true,
+			enabled: true,
+			force: true,
+			pages: ['*'],
+		},
 	},
 };
 

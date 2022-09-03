@@ -1,3 +1,7 @@
+<script context="module">
+	export const prerender = true;
+</script>
+
 <div class="form-container base-text">
 	<form method="POST" data-netlify="true" name="contact" class="contact">
 		<input type="hidden" name="form-name" value="contact" />
