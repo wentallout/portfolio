@@ -1,7 +1,3 @@
-<script context="module">
-	export const prerender = true;
-</script>
-
 <div class="form-container base-text">
 	<form
 		name="contact"

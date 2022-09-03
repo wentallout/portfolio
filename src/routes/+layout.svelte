@@ -32,8 +32,6 @@
 			NProgress.done();
 		}
 	}
-
-	export const prerender = true;
 </script>
 
 <svelte:head>
