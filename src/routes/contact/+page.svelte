@@ -1,7 +1,3 @@
-<script context="module">
-	export const prerender = true;
-</script>
-
 <script>
 	import SocialLinks from '$lib/components/Contact/SocialLinks.svelte';
 
