@@ -23,7 +23,7 @@ module.exports = __toCommonJS(stdin_exports);
 var import_index = require("./index.js");
 const SectionTitle_svelte_svelte_type_style_lang = "";
 const css = {
-  code: ".section-icon.svelte-8lw0n0{display:flex;justify-content:left;align-items:center;border:1px solid var(--black);border-radius:100%;padding:0.25rem;margin-right:0.5rem}.section-title.svelte-8lw0n0{display:flex;justify-content:left;align-items:center;margin-bottom:2.5rem;font-weight:600;color:var(--black)}",
+  code: ".section-icon.svelte-msyjfx{display:flex;justify-content:left;align-items:center;border:1px solid var(--black);border-radius:100%;padding:0.25rem;margin-right:var(--space-xs)}.section-title.svelte-msyjfx{display:flex;justify-content:left;align-items:center;margin-bottom:var(--space-l);font-weight:600;color:var(--black)}",
   map: null
 };
 const SectionTitle = (0, import_index.c)(($$result, $$props, $$bindings, slots) => {
@@ -31,7 +31,7 @@ const SectionTitle = (0, import_index.c)(($$result, $$props, $$bindings, slots) 
   if ($$props.sectionTitle === void 0 && $$bindings.sectionTitle && sectionTitle !== void 0)
     $$bindings.sectionTitle(sectionTitle);
   $$result.css.add(css);
-  return `<div class="${"section-title svelte-8lw0n0"}"><div class="${"section-icon svelte-8lw0n0"}">${slots.default ? slots.default({}) : ``}</div>
-	<h2 class="${"base-text"}">${(0, import_index.h)(sectionTitle)}</h2>
+  return `<div class="${"section-title svelte-msyjfx"}"><div class="${"section-icon svelte-msyjfx"}">${slots.default ? slots.default({}) : ``}</div>
+	<h2 class="${"large-text"}">${(0, import_index.h)(sectionTitle)}</h2>
 </div>`;
 });

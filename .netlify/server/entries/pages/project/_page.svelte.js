@@ -21,22 +21,11 @@ __export(stdin_exports, {
 });
 module.exports = __toCommonJS(stdin_exports);
 var import_chunks = require("../../../chunks/index.js");
+var import_figma_logo = require("../../../chunks/figma-logo.js");
 var import_SectionTitle = require("../../../chunks/SectionTitle.js");
-const Figma_logo = (0, import_chunks.c)(($$result, $$props, $$bindings, slots) => {
-  return `<svg${(0, import_chunks.b)(
-    [
-      { preserveAspectRatio: "xMidYMid meet" },
-      { viewBox: "0 0 256 256" },
-      { width: "1.2em" },
-      { height: "1.2em" },
-      (0, import_chunks.e)($$props)
-    ],
-    {}
-  )}><!-- HTML_TAG_START -->${`<path fill="currentColor" d="M186.6 94A42 42 0 0 0 162 18H94a42 42 0 0 0-24.6 76a41.9 41.9 0 0 0 0 68a42 42 0 1 0 66.6 34v-35.1A42 42 0 1 0 186.6 94Zm1.4-34a26.1 26.1 0 0 1-26 26h-26V34h26a26.1 26.1 0 0 1 26 26ZM68 60a26.1 26.1 0 0 1 26-26h26v52H94a26.1 26.1 0 0 1-26-26Zm0 68a26.1 26.1 0 0 1 26-26h26v52H94a26.1 26.1 0 0 1-26-26Zm26 94a26 26 0 0 1 0-52h26v26a26.1 26.1 0 0 1-26 26Zm68-68a26 26 0 0 1 0-52a26 26 0 0 1 0 52Z"/>`}<!-- HTML_TAG_END --></svg>`;
-});
 const ProjectCard_svelte_svelte_type_style_lang = "";
 const css = {
-  code: ".btn-view.svelte-a9xz7p{background-color:var(--primary);color:var(--black);margin-top:auto}.btn-view.svelte-a9xz7p:hover{background-color:var(--primary-hover)}.project.svelte-a9xz7p{max-width:78rem;display:flex;flex-direction:column;background-color:var(--black);--text:#f9f9f9;color:var(--text);margin-bottom:2.5rem;box-shadow:var(--box-shadow)}.project.svelte-a9xz7p:hover{box-shadow:var(--box-shadow-hover)}.project__thumbnail.svelte-a9xz7p{width:100%;height:200px;object-fit:cover}.project__info.svelte-a9xz7p{display:flex;flex-direction:column;padding:2rem}.project__name.svelte-a9xz7p{font-weight:600}@media(min-width: 992px){.project__thumbnail.svelte-a9xz7p{width:60%;height:422px}.project__info.svelte-a9xz7p{width:40%}.project.svelte-a9xz7p{flex-direction:row}}",
+  code: ".btn-view.svelte-1bqc6pg{background-color:var(--primary);color:var(--black);margin-top:auto}.btn-view.svelte-1bqc6pg:hover{background-color:var(--primary-hover)}.project.svelte-1bqc6pg{width:100%;max-width:80rem;display:flex;flex-direction:column;background-color:var(--black);--text:#f9f9f9;color:var(--text);margin-bottom:var(--space-l);box-shadow:var(--box-shadow)}.project.svelte-1bqc6pg:hover{box-shadow:var(--box-shadow-hover)}.project__thumbnail.svelte-1bqc6pg{width:100%;height:200px}.project__info.svelte-1bqc6pg{display:flex;flex-direction:column;padding:var(--space-m)}.project__name.svelte-1bqc6pg{font-weight:600}@media(min-width: 992px){.project__thumbnail.svelte-1bqc6pg{width:60%;height:422px}.project__info.svelte-1bqc6pg{width:40%}.project.svelte-1bqc6pg{flex-direction:row}}",
   map: null
 };
 const ProjectCard = (0, import_chunks.c)(($$result, $$props, $$bindings, slots) => {
@@ -53,18 +42,27 @@ const ProjectCard = (0, import_chunks.c)(($$result, $$props, $$bindings, slots) 
   if ($$props.linkToDetail === void 0 && $$bindings.linkToDetail && linkToDetail !== void 0)
     $$bindings.linkToDetail(linkToDetail);
   $$result.css.add(css);
-  return `<div class="${"project svelte-a9xz7p"}"><img width="${"100%"}" height="${"auto"}" loading="${"lazy"}" decoding="${"async"}" class="${"project__thumbnail svelte-a9xz7p"}"${(0, import_chunks.f)("src", projectImage, 0)} alt="${"project thumbnail"}">
-	<div class="${"project__info svelte-a9xz7p"}"><div class="${"project__name svelte-a9xz7p"}">${(0, import_chunks.h)(projectName)}</div>
+  return `<div class="${"project svelte-1bqc6pg"}"><img width="${"100%"}" height="${"auto"}" loading="${"lazy"}" decoding="${"async"}" class="${"project__thumbnail svelte-1bqc6pg"}"${(0, import_chunks.f)("src", projectImage, 0)} alt="${"project thumbnail"}">
+	<div class="${"project__info svelte-1bqc6pg"}"><div class="${"project__name mid-text svelte-1bqc6pg"}">${(0, import_chunks.h)(projectName)}</div>
 		<div class="${"project__description small-text"}">${(0, import_chunks.h)(projectDesc)}</div>
-		<a class="${"btn btn-view svelte-a9xz7p"}"${(0, import_chunks.f)("href", linkToDetail, 0)}>View</a></div>
+		<a class="${"btn btn-view svelte-1bqc6pg"}"${(0, import_chunks.f)("href", linkToDetail, 0)}>View</a></div>
 </div>`;
 });
 const Page = (0, import_chunks.c)(($$result, $$props, $$bindings, slots) => {
   return `${$$result.head += `${$$result.title = `<title>Project</title>`, ""}`, ""}
 
-${(0, import_chunks.v)(import_SectionTitle.S, "SectionTitle").$$render($$result, { sectionTitle: "UI/UX" }, {}, {
+${(0, import_chunks.v)(import_SectionTitle.S, "SectionTitle").$$render($$result, { sectionTitle: "UI + UX" }, {}, {
     default: () => {
-      return `${(0, import_chunks.v)(Figma_logo, "FigmaLogo").$$render($$result, {}, {}, {})}`;
+      return `${(0, import_chunks.v)(import_figma_logo.F, "FigmaLogo").$$render(
+        $$result,
+        {
+          color: "var(--black)",
+          width: "32",
+          height: "32"
+        },
+        {},
+        {}
+      )}`;
     }
   })}
 

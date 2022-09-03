@@ -20,7 +20,7 @@
       "_stores.js"
     ],
     "css": [
-      "_app/immutable/assets/+layout-7f7a13f8.css"
+      "_app/immutable/assets/+layout-4949cfd9.css"
     ]
   },
   "src/routes/+error.svelte": {
@@ -43,7 +43,7 @@
       "_index.js"
     ],
     "css": [
-      "_app/immutable/assets/+page-4f04320f.css"
+      "_app/immutable/assets/+page-79b881ec.css"
     ]
   },
   "src/routes/contact/+page.svelte": {
@@ -51,10 +51,11 @@
     "src": "src/routes/contact/+page.svelte",
     "isEntry": true,
     "imports": [
-      "_index.js"
+      "_index.js",
+      "_figma-logo.js"
     ],
     "css": [
-      "_app/immutable/assets/+page-33c085f8.css"
+      "_app/immutable/assets/+page-7d47f390.css"
     ]
   },
   "src/routes/project/+page.svelte": {
@@ -63,10 +64,11 @@
     "isEntry": true,
     "imports": [
       "_index.js",
+      "_figma-logo.js",
       "_SectionTitle.js"
     ],
     "css": [
-      "_app/immutable/assets/+page-6ed4f2f1.css"
+      "_app/immutable/assets/+page-ab86ddae.css"
     ]
   },
   "src/routes/resource/+page.svelte": {
@@ -79,13 +81,7 @@
       "_SectionTitle.js"
     ],
     "css": [
-      "_app/immutable/assets/+page-0286d595.css"
-    ],
-    "assets": [
-      "_app/immutable/assets/UI Design Principles-06cd23a9.png",
-      "_app/immutable/assets/DesignManual-9f330e36.png",
-      "_app/immutable/assets/NoBSGuideUX-2d64c826.png",
-      "_app/immutable/assets/Sprint-bd35600d.png"
+      "_app/immutable/assets/+page-d63a4792.css"
     ]
   },
   "src/routes/resource/tool/+page.svelte": {
@@ -116,13 +112,19 @@
       "_index.js"
     ]
   },
+  "_figma-logo.js": {
+    "file": "chunks/figma-logo.js",
+    "imports": [
+      "_index.js"
+    ]
+  },
   "_SectionTitle.js": {
     "file": "chunks/SectionTitle.js",
     "imports": [
       "_index.js"
     ],
     "css": [
-      "_app/immutable/assets/SectionTitle-a6c2e094.css"
+      "_app/immutable/assets/SectionTitle-7894263f.css"
     ]
   },
   ".svelte-kit/build/hooks.js": {

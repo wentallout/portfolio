@@ -67,15 +67,15 @@ const BackToTop = (0, import_chunks.c)(($$result, $$props, $$bindings, slots) =>
 });
 const Footer_svelte_svelte_type_style_lang = "";
 const css$5 = {
-  code: ".footer-container.svelte-5gjiaz{display:flex;flex-direction:column;color:var(--white) !important;font-weight:300}footer.svelte-5gjiaz{display:flex;flex-direction:column;justify-content:center;align-items:flex-start;font-weight:300;padding:2rem 1rem;position:relative;max-width:100vw;background-color:#000}@media(min-width: 768px){footer.svelte-5gjiaz{padding:2rem 17vw}}footer.svelte-5gjiaz:before{background:url('/images/rhombus_line.png') repeat top center/49px 72px;content:'';position:absolute;top:0;left:0;width:100%;height:100%;opacity:0.12;z-index:1}.nav-list.svelte-5gjiaz{display:flex;flex-direction:row;justify-content:left;align-items:center;margin:0px;z-index:2;margin-bottom:1rem}.nav-list-item.svelte-5gjiaz{display:flex;padding-left:0;padding-right:1rem}",
+  code: ".footer-container.svelte-yalwkt{display:flex;flex-direction:column;color:var(--white) !important;font-weight:300}footer.svelte-yalwkt{display:flex;flex-direction:column;justify-content:center;align-items:flex-start;font-weight:300;padding:var(--space-m) var(--space-xs);position:relative;max-width:100vw;background-color:#000}@media(min-width: 768px){footer.svelte-yalwkt{padding:var(--space-m) 17vw}}footer.svelte-yalwkt:before{background:url('/images/rhombus_line.png') repeat top center/49px 72px;content:'';position:absolute;top:0;left:0;width:100%;height:100%;opacity:0.12;z-index:1}.nav-list.svelte-yalwkt{display:flex;flex-direction:row;justify-content:left;align-items:center;margin:0px;z-index:2;margin-bottom:var(--space-l)}.nav-list-item.svelte-yalwkt{display:flex;padding-left:0;padding-right:var(--space-xs)}",
   map: null
 };
 const Footer = (0, import_chunks.c)(($$result, $$props, $$bindings, slots) => {
   $$result.css.add(css$5);
-  return `<footer class="${"svelte-5gjiaz"}"><div class="${"footer-container small-text svelte-5gjiaz"}"><ul class="${"nav-list svelte-5gjiaz"}"><li class="${"nav-list-item svelte-5gjiaz"}"><a href="${"/"}">Home</a></li>
-			<li class="${"nav-list-item svelte-5gjiaz"}"><a href="${"/project"}">Project</a></li>
-			<li class="${"nav-list-item svelte-5gjiaz"}"><a href="${"/resource"}">Resource</a></li>
-			<li class="${"nav-list-item svelte-5gjiaz"}"><a href="${"/contact"}">Contact</a></li></ul>
+  return `<footer class="${"svelte-yalwkt"}"><div class="${"footer-container small-text svelte-yalwkt"}"><ul class="${"nav-list svelte-yalwkt"}"><li class="${"nav-list-item svelte-yalwkt"}"><a href="${"/"}">Home</a></li>
+			<li class="${"nav-list-item svelte-yalwkt"}"><a href="${"/project"}">Project</a></li>
+			<li class="${"nav-list-item svelte-yalwkt"}"><a href="${"/resource"}">Resource</a></li>
+			<li class="${"nav-list-item svelte-yalwkt"}"><a href="${"/contact"}">Contact</a></li></ul>
 		<div class="${""}">2022 - Made by Khoa with SvelteKit</div>
 		<div class="${""}">wentallout@gmail.com</div></div>
 </footer>`;
@@ -112,7 +112,7 @@ const navItems = [
 ];
 const Header_svelte_svelte_type_style_lang = "";
 const css$4 = {
-  code: ".reduced.svelte-9t61oi.svelte-9t61oi{min-height:2.5rem;font-size:var(--font-size-small);transition:all 0.3s;backdrop-filter:blur(5px);-webkit-backdrop-filter:blur(5px);background-color:rgba(0, 0, 0, 0.7)}.main-header.reduced.svelte-9t61oi.svelte-9t61oi{background-color:transparent;backdrop-filter:blur(5px);-webkit-backdrop-filter:blur(5px)}.main-header.svelte-9t61oi.svelte-9t61oi{max-width:100vw;color:var(--white);background-color:#000;width:100%;position:sticky;top:0;z-index:98}.hidden-mobile.svelte-9t61oi.svelte-9t61oi{display:none}nav.svelte-9t61oi ul li.svelte-9t61oi{display:flex;min-height:3.5rem;margin-left:0;width:100%}.nav__list.svelte-9t61oi.svelte-9t61oi{display:flex;flex-direction:column;justify-content:center;align-items:center;margin:0}.nav__list-item.svelte-9t61oi.svelte-9t61oi{color:var(--white);width:100%;display:flex;justify-content:center;align-items:center;border:0.1px solid var(--black)}@media(hover: hover){.nav__list-item.svelte-9t61oi.svelte-9t61oi:hover{color:var(--black);background-color:var(--primary);transition:0.3s}}@media(min-width: 768px){.hidden-mobile.svelte-9t61oi.svelte-9t61oi{display:flex}#burger-nav.svelte-9t61oi.svelte-9t61oi{display:none}.main-header.svelte-9t61oi.svelte-9t61oi{padding-left:17vw;padding-right:17vw}.nav__list.svelte-9t61oi.svelte-9t61oi{display:flex;flex-direction:row;justify-content:space-evenly;align-items:center}.nav__list-item.svelte-9t61oi.svelte-9t61oi{width:100%}}.active-page.svelte-9t61oi.svelte-9t61oi{color:var(--primary) !important;pointer-events:none}",
+  code: ".reduced.svelte-1w23fq2.svelte-1w23fq2{min-height:2.5rem;font-size:var(--font-size-small);transition:all 0.3s;backdrop-filter:blur(5px);-webkit-backdrop-filter:blur(5px);background-color:rgba(0, 0, 0, 0.7)}.main-header.reduced.svelte-1w23fq2.svelte-1w23fq2{background-color:transparent;backdrop-filter:blur(5px);-webkit-backdrop-filter:blur(5px)}.main-header.svelte-1w23fq2.svelte-1w23fq2{max-width:100vw;color:var(--white);background-color:#000;width:100%;position:sticky;top:0;z-index:98}.hidden-mobile.svelte-1w23fq2.svelte-1w23fq2{display:none}nav.svelte-1w23fq2 ul li.svelte-1w23fq2{display:flex;min-height:4rem;margin-left:0;width:100%}.nav__list.svelte-1w23fq2.svelte-1w23fq2{display:flex;flex-direction:column;justify-content:center;align-items:center;margin:0}.nav__list-item.svelte-1w23fq2.svelte-1w23fq2{color:var(--white);width:100%;display:flex;justify-content:center;align-items:center;border:0.1px solid var(--black)}@media(hover: hover){.nav__list-item.svelte-1w23fq2.svelte-1w23fq2:hover{color:var(--black);background-color:var(--primary);transition:0.3s}}@media(min-width: 768px){.hidden-mobile.svelte-1w23fq2.svelte-1w23fq2{display:flex}#burger-nav.svelte-1w23fq2.svelte-1w23fq2{display:none}.main-header.svelte-1w23fq2.svelte-1w23fq2{padding-left:17vw;padding-right:17vw}.nav__list.svelte-1w23fq2.svelte-1w23fq2{display:flex;flex-direction:row;justify-content:space-evenly;align-items:center}.nav__list-item.svelte-1w23fq2.svelte-1w23fq2{width:100%}}.active-page.svelte-1w23fq2.svelte-1w23fq2{color:var(--primary) !important;pointer-events:none}",
   map: null
 };
 const Header = (0, import_chunks.c)(($$result, $$props, $$bindings, slots) => {
@@ -121,7 +121,7 @@ const Header = (0, import_chunks.c)(($$result, $$props, $$bindings, slots) => {
   $$result.css.add(css$4);
   $$unsubscribe_page();
   return `
-<header class="${["main-header base-text svelte-9t61oi", ""].join(" ").trim()}"><nav class="${"svelte-9t61oi"}"><ul class="${"nav__list svelte-9t61oi"}"><li id="${"burger-nav"}" class="${["svelte-9t61oi", ""].join(" ").trim()}"><a class="${"nav__list-item svelte-9t61oi"}"${(0, import_chunks.f)("href", "#", 0)}>${(0, import_chunks.v)(List, "List").$$render(
+<header class="${["main-header base-text svelte-1w23fq2", ""].join(" ").trim()}"><nav class="${"svelte-1w23fq2"}"><ul class="${"nav__list svelte-1w23fq2"}"><li id="${"burger-nav"}" class="${["svelte-1w23fq2", ""].join(" ").trim()}"><a class="${"nav__list-item svelte-1w23fq2"}"${(0, import_chunks.f)("href", "#", 0)}>${(0, import_chunks.v)(List, "List").$$render(
     $$result,
     {
       color: "var(--white)",
@@ -134,10 +134,10 @@ const Header = (0, import_chunks.c)(($$result, $$props, $$bindings, slots) => {
 
 			${(0, import_chunks.g)(navItems, (navItem) => {
     return `<li class="${[
-      (0, import_chunks.h)((0, import_chunks.i)(`navbar-list${" hidden-mobile"}`), true) + " svelte-9t61oi",
+      (0, import_chunks.h)((0, import_chunks.i)(`navbar-list${" hidden-mobile"}`), true) + " svelte-1w23fq2",
       ""
-    ].join(" ").trim()}">${$page.url.pathname === `${navItem.path}` ? `<a class="${"nav__list-item active-page svelte-9t61oi"}"${(0, import_chunks.f)("href", navItem.path, 0)}>${(0, import_chunks.h)(navItem.title)}
-						</a>` : `<a class="${"nav__list-item svelte-9t61oi"}"${(0, import_chunks.f)("href", navItem.path, 0)}>${(0, import_chunks.h)(navItem.title)}
+    ].join(" ").trim()}">${$page.url.pathname === `${navItem.path}` ? `<a class="${"nav__list-item active-page svelte-1w23fq2"}"${(0, import_chunks.f)("href", navItem.path, 0)}>${(0, import_chunks.h)(navItem.title)}
+						</a>` : `<a class="${"nav__list-item svelte-1w23fq2"}"${(0, import_chunks.f)("href", navItem.path, 0)}>${(0, import_chunks.h)(navItem.title)}
 						</a>`}
 				</li>`;
   })}</ul></nav>
@@ -145,7 +145,7 @@ const Header = (0, import_chunks.c)(($$result, $$props, $$bindings, slots) => {
 });
 const Breadcrumb_svelte_svelte_type_style_lang = "";
 const css$3 = {
-  code: ".breadcrumb.svelte-2g7qdp{margin-bottom:2rem;font-weight:300;color:var(--gray)}.breadcrumb__unclickable.svelte-2g7qdp{display:inline-block;font-weight:500}.breadcrumb__clickable.svelte-2g7qdp{color:var(--primary)}.breadcrumb__clickable.svelte-2g7qdp:hover{color:var(--primary-hover)}",
+  code: ".breadcrumb.svelte-1obt4iy{margin-bottom:var(--space-l);font-weight:300;color:var(--gray)}.breadcrumb__unclickable.svelte-1obt4iy{display:inline-block;font-weight:500}.breadcrumb__clickable.svelte-1obt4iy{display:inline-flex;color:var(--primary)}.breadcrumb__clickable.svelte-1obt4iy:hover{color:var(--primary-hover)}",
   map: null
 };
 const Breadcrumb = (0, import_chunks.c)(($$result, $$props, $$bindings, slots) => {
@@ -165,21 +165,21 @@ const Breadcrumb = (0, import_chunks.c)(($$result, $$props, $$bindings, slots) =
       crumbs.unshift({ label: "home", href: "/" });
     }
   }
-  return `<div class="${"breadcrumb small-text svelte-2g7qdp"}">${(0, import_chunks.g)(crumbs, (c, i) => {
-    return `${i == crumbs.length - 1 ? `<div class="${"breadcrumb__unclickable svelte-2g7qdp"}">${(0, import_chunks.h)(c.label)}
-			</div>` : `<a class="${"breadcrumb__clickable svelte-2g7qdp"}"${(0, import_chunks.f)("href", c.href, 0)}>${(0, import_chunks.h)(c.label)}</a> &gt;\xA0`}`;
+  return `<div class="${"breadcrumb base-text svelte-1obt4iy"}">${(0, import_chunks.g)(crumbs, (c, i) => {
+    return `${i == crumbs.length - 1 ? `<div class="${"breadcrumb__unclickable svelte-1obt4iy"}">${(0, import_chunks.h)(c.label)}
+			</div>` : `<a class="${"breadcrumb__clickable svelte-1obt4iy"}"${(0, import_chunks.f)("href", c.href, 0)}>${(0, import_chunks.h)(c.label)}</a> &gt;\xA0`}`;
   })}
 </div>`;
 });
 const CoolFrame_svelte_svelte_type_style_lang = "";
 const css$2 = {
-  code: ".frameWrap.svelte-1sfynh{display:none;pointer-events:none;position:fixed;z-index:3;top:0;left:0;width:100%;height:100%;transition:0.3s;opacity:0.5}@media(min-width: 768px){.frameWrap.svelte-1sfynh{display:block}}.frame2.svelte-1sfynh:before,.frame2.svelte-1sfynh:after,.corner.svelte-1sfynh:before,.corner.svelte-1sfynh:after{content:'';display:block;position:absolute;box-sizing:border-box;z-index:2}.frame2.svelte-1sfynh{z-index:1;top:0;bottom:0;left:0;right:0;position:absolute;box-sizing:border-box}.frame2.svelte-1sfynh:before{background:url('/images/frame2corner.png') no-repeat 0 0/100%;top:0;left:0;width:21px;height:21px}.frame2.svelte-1sfynh:after{background:url('/images/frame2corner.png') no-repeat 0 0/100%;top:0;right:0;transform:rotate(90deg);width:21px;height:21px}.corner.svelte-1sfynh:before{background:url('/images/frame2corner.png') no-repeat 0 0/100%;bottom:0;left:0;transform:rotate(-90deg);width:21px;height:21px}.corner.svelte-1sfynh:after{background:url('/images/frame2corner.png') no-repeat 0 0/100%;bottom:0;right:0;transform:rotate(180deg);width:21px;height:21px}.bar.svelte-1sfynh{position:absolute;top:4px;bottom:4px;left:21px;right:21px;border-top:1px solid var(--primary);border-bottom:1px solid var(--primary)}.bar.svelte-1sfynh:before{display:block;position:absolute;left:-17px;content:'';width:0.5px;top:16px;bottom:16px;background:var(--primary)}.bar.svelte-1sfynh:after{content:'';display:block;position:absolute;right:-17px;width:0.5px;top:16px;bottom:16px;background:var(--primary)}",
+  code: ".frameWrap.svelte-1yxf281{display:none;pointer-events:none;position:fixed;z-index:999;top:0;left:0;width:100%;height:100%;transition:0.3s;opacity:0.5}@media(min-width: 768px){.frameWrap.svelte-1yxf281{display:block}}.frame2.svelte-1yxf281:before,.frame2.svelte-1yxf281:after,.corner.svelte-1yxf281:before,.corner.svelte-1yxf281:after{content:'';display:block;position:absolute;box-sizing:border-box;z-index:2}.frame2.svelte-1yxf281{z-index:1;top:0;bottom:0;left:0;right:0;position:absolute;box-sizing:border-box}.frame2.svelte-1yxf281:before{background:url('/images/frame2corner.png') no-repeat 0 0/100%;top:0;left:0;width:21px;height:21px}.frame2.svelte-1yxf281:after{background:url('/images/frame2corner.png') no-repeat 0 0/100%;top:0;right:0;transform:rotate(90deg);width:21px;height:21px}.corner.svelte-1yxf281:before{background:url('/images/frame2corner.png') no-repeat 0 0/100%;bottom:0;left:0;transform:rotate(-90deg);width:21px;height:21px}.corner.svelte-1yxf281:after{background:url('/images/frame2corner.png') no-repeat 0 0/100%;bottom:0;right:0;transform:rotate(180deg);width:21px;height:21px}.bar.svelte-1yxf281{position:absolute;top:4px;bottom:4px;left:21px;right:21px;border-top:1px solid var(--primary);border-bottom:1px solid var(--primary)}.bar.svelte-1yxf281:before{display:block;position:absolute;left:-17px;content:'';width:0.5px;top:16px;bottom:16px;background:var(--primary)}.bar.svelte-1yxf281:after{content:'';display:block;position:absolute;right:-17px;width:0.5px;top:16px;bottom:16px;background:var(--primary)}",
   map: null
 };
 const CoolFrame = (0, import_chunks.c)(($$result, $$props, $$bindings, slots) => {
   $$result.css.add(css$2);
-  return `<div class="${"frameWrap svelte-1sfynh"}"><div class="${"frame2 svelte-1sfynh"}"><div class="${"corner svelte-1sfynh"}"></div>
-		<div class="${"bar svelte-1sfynh"}"></div></div>
+  return `<div class="${"frameWrap svelte-1yxf281"}"><div class="${"frame2 svelte-1yxf281"}"><div class="${"corner svelte-1yxf281"}"></div>
+		<div class="${"bar svelte-1yxf281"}"></div></div>
 </div>`;
 });
 const Yin_yang = (0, import_chunks.c)(($$result, $$props, $$bindings, slots) => {
@@ -221,7 +221,7 @@ const atropos_min = "";
 const nprogress = "";
 const _layout_svelte_svelte_type_style_lang = "";
 const css = {
-  code: ".page-container.svelte-1gmu23n{background-color:var(--background);display:flex;flex-direction:column}.main-content.svelte-1gmu23n{min-height:calc(100vh - 70px);padding:2rem 1rem}@media(min-width: 768px){.main-content.svelte-1gmu23n{padding:2rem 17vw}}",
+  code: ".page-container.svelte-1agzi5v{background-color:var(--background);display:flex;flex-direction:column}.main-content.svelte-1agzi5v{min-height:calc(100vh - 70px);padding:var(--space-m) 1rem}@media(min-width: 768px){.main-content.svelte-1agzi5v{padding:var(--space-m) 17vw}}",
   map: null
 };
 const Layout = (0, import_chunks.c)(($$result, $$props, $$bindings, slots) => {
@@ -236,6 +236,9 @@ const Layout = (0, import_chunks.c)(($$result, $$props, $$bindings, slots) => {
     easing: "ease",
     speed: 500
   });
+  const prerender = true;
+  if ($$props.prerender === void 0 && $$bindings.prerender && prerender !== void 0)
+    $$bindings.prerender(prerender);
   $$result.css.add(css);
   {
     {
@@ -251,12 +254,12 @@ const Layout = (0, import_chunks.c)(($$result, $$props, $$bindings, slots) => {
   $$unsubscribe_page();
   return `${$$result.head += `<link rel="${"preconnect"}" href="${"https://fonts.googleapis.com"}" data-svelte="svelte-l9vls8"><link rel="${"preconnect"}" href="${"https://fonts.gstatic.com"}" crossorigin data-svelte="svelte-l9vls8"><link href="${"https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap"}" rel="${"stylesheet"}" data-svelte="svelte-l9vls8">`, ""}
 
-<div class="${"page-container svelte-1gmu23n"}">${(0, import_chunks.v)(CoolFrame, "CoolFrame").$$render($$result, {}, {}, {})}
+<div class="${"page-container svelte-1agzi5v"}">${(0, import_chunks.v)(CoolFrame, "CoolFrame").$$render($$result, {}, {}, {})}
 	${(0, import_chunks.v)(BackToTop, "BackToTop").$$render($$result, {}, {}, {})}
 	${(0, import_chunks.v)(LogoContainer, "LogoContainer").$$render($$result, {}, {}, {})}
 	${(0, import_chunks.v)(Header, "Header").$$render($$result, {}, {}, {})}
 
-	<main class="${"main-content svelte-1gmu23n"}">${(0, import_chunks.v)(Breadcrumb, "Breadcrumb").$$render($$result, { path: $page.url.pathname }, {}, {})}
+	<main class="${"main-content svelte-1agzi5v"}">${(0, import_chunks.v)(Breadcrumb, "Breadcrumb").$$render($$result, { path: $page.url.pathname }, {}, {})}
 		${slots.default ? slots.default({}) : ``}</main>
 
 	${(0, import_chunks.v)(Footer, "Footer").$$render($$result, {}, {}, {})}

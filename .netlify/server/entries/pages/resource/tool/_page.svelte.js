@@ -67,7 +67,16 @@ const Page = (0, import_chunks.c)(($$result, $$props, $$bindings, slots) => {
   $$unsubscribe_resourceData();
   return `${(0, import_chunks.v)(import_SectionTitle.S, "SectionTitle").$$render($$result, { sectionTitle: "Tool" }, {}, {
     default: () => {
-      return `${(0, import_chunks.v)(Wrench, "Wrench").$$render($$result, {}, {}, {})}`;
+      return `${(0, import_chunks.v)(Wrench, "Wrench").$$render(
+        $$result,
+        {
+          color: "var(--black)",
+          width: "32",
+          height: "32"
+        },
+        {},
+        {}
+      )}`;
     }
   })}
 

@@ -32,6 +32,6 @@ __export(stdin_exports, {
 module.exports = __toCommonJS(stdin_exports);
 const index = 3;
 const component = async () => (await Promise.resolve().then(() => __toESM(require("../entries/pages/contact/_page.svelte.js")))).default;
-const file = "_app/immutable/components/pages/contact/_page.svelte-bc297f93.js";
-const imports = ["_app/immutable/components/pages/contact/_page.svelte-bc297f93.js", "_app/immutable/chunks/index-b6e5fdaf.js"];
-const stylesheets = ["_app/immutable/assets/+page-487c60e5.css"];
+const file = "_app/immutable/components/pages/contact/_page.svelte-92a7c28a.js";
+const imports = ["_app/immutable/components/pages/contact/_page.svelte-92a7c28a.js", "_app/immutable/chunks/index-b6e5fdaf.js", "_app/immutable/chunks/figma-logo-38bf151c.js"];
+const stylesheets = ["_app/immutable/assets/+page-f1edc2b4.css"];

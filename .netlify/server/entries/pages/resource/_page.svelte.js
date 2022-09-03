@@ -30,7 +30,7 @@ const FaqContainer = (0, import_chunks.c)(($$result, $$props, $$bindings, slots)
 });
 const Faq_svelte_svelte_type_style_lang = "";
 const css$2 = {
-  code: "details.svelte-1iz31ql.svelte-1iz31ql.svelte-1iz31ql{margin-bottom:2rem}details.svelte-1iz31ql>summary.svelte-1iz31ql.svelte-1iz31ql{list-style:none}summary.svelte-1iz31ql.svelte-1iz31ql.svelte-1iz31ql::-webkit-details-marker{display:none}summary.svelte-1iz31ql.svelte-1iz31ql.svelte-1iz31ql::after{content:' \u25BA'}details[open].svelte-1iz31ql summary.svelte-1iz31ql.svelte-1iz31ql:after{content:' \u25BC'}details[open].svelte-1iz31ql summary.svelte-1iz31ql~.svelte-1iz31ql{animation:sweep 0.5s ease-in-out}",
+  code: "details.svelte-afb222.svelte-afb222.svelte-afb222{margin-bottom:var(--space-l)}details.svelte-afb222>summary.svelte-afb222.svelte-afb222{list-style:none}summary.svelte-afb222.svelte-afb222.svelte-afb222::-webkit-details-marker{display:none}summary.svelte-afb222.svelte-afb222.svelte-afb222::after{content:' \u25BA'}details[open].svelte-afb222 summary.svelte-afb222.svelte-afb222:after{content:' \u25BC'}details[open].svelte-afb222 summary.svelte-afb222~.svelte-afb222{animation:sweep 0.5s ease-in-out}",
   map: null
 };
 const Faq = (0, import_chunks.c)(($$result, $$props, $$bindings, slots) => {
@@ -42,7 +42,7 @@ const Faq = (0, import_chunks.c)(($$result, $$props, $$bindings, slots) => {
     $$bindings.summary(summary);
   $$result.css.add(css$2);
   $$unsubscribe_activeFaq();
-  return `<details class="${"base-text svelte-1iz31ql"}" ${$activeFaq === summary ? "open" : ""}><summary class="${"svelte-1iz31ql"}">${(0, import_chunks.h)(summary)}</summary>
+  return `<details class="${"base-text svelte-afb222"}" ${$activeFaq === summary ? "open" : ""}><summary class="${"svelte-afb222"}">${(0, import_chunks.h)(summary)}</summary>
 	${slots.default ? slots.default({}) : ``}
 </details>`;
 });
@@ -72,7 +72,7 @@ const Book_open = (0, import_chunks.c)(($$result, $$props, $$bindings, slots) =>
 });
 const BookCard_svelte_svelte_type_style_lang = "";
 const css$1 = {
-  code: ".btn--download.svelte-q45xip{background-color:transparent;border:1px solid var(--primary);margin-top:auto}.btn--download.svelte-q45xip:hover{background-color:var(--black);transition:0.3s ease}.book.svelte-q45xip{width:100%;display:flex;flex-direction:column;justify-content:center;margin-bottom:2.5rem;padding:2rem;text-align:left;color:var(--black);box-shadow:var(--box-shadow)}.book.svelte-q45xip:hover{box-shadow:var(--box-shadow-hover)}.book__thumbnail.svelte-q45xip{width:50%;height:50%;object-fit:cover;margin-bottom:2rem;border:1px solid var(--black)}.book-title.svelte-q45xip{font-weight:600}.book-author.svelte-q45xip{color:var(--gray);font-weight:300}.book__info.svelte-q45xip{display:flex;flex-direction:column}.book-description.svelte-q45xip{margin-top:1rem;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}@media(min-width: 768px){.book-description.svelte-q45xip{max-width:39ch;min-height:4rem}.book__info.svelte-q45xip{height:250px}.book.svelte-q45xip{flex-direction:row;align-items:flex-start;justify-content:left}.book__thumbnail.svelte-q45xip{width:auto;height:250px;margin-bottom:0;margin-right:2rem}}@media(min-width: 992px){}",
+  code: ".btn--download.svelte-1qb7r5q{background-color:transparent;border:1px solid var(--primary);margin-top:auto}.btn--download.svelte-1qb7r5q:hover{background-color:var(--black);transition:0.3s ease}.book.svelte-1qb7r5q{width:100%;display:flex;flex-direction:column;justify-content:center;margin-bottom:var(--space-l);padding:var(--space-m);text-align:left;color:var(--black);box-shadow:var(--box-shadow)}.book.svelte-1qb7r5q:hover{box-shadow:var(--box-shadow-hover)}.book__thumbnail.svelte-1qb7r5q{width:50%;height:50%;margin-bottom:var(--space-m);border:1px solid var(--black)}.book-title.svelte-1qb7r5q{font-weight:600}.book-author.svelte-1qb7r5q{color:var(--gray);font-weight:300}.book__info.svelte-1qb7r5q{display:flex;flex-direction:column}.book-description.svelte-1qb7r5q{margin-top:var(--space-xs);display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}@media(min-width: 768px){.book-description.svelte-1qb7r5q{max-width:39ch;min-height:4rem}.book__info.svelte-1qb7r5q{height:250px}.book.svelte-1qb7r5q{flex-direction:row;align-items:flex-start;justify-content:left}.book__thumbnail.svelte-1qb7r5q{width:auto;height:250px;margin-bottom:0;margin-right:var(--space-m)}}@media(min-width: 992px){}",
   map: null
 };
 const BookCard = (0, import_chunks.c)(($$result, $$props, $$bindings, slots) => {
@@ -92,18 +92,18 @@ const BookCard = (0, import_chunks.c)(($$result, $$props, $$bindings, slots) => 
   if ($$props.bookDescription === void 0 && $$bindings.bookDescription && bookDescription !== void 0)
     $$bindings.bookDescription(bookDescription);
   $$result.css.add(css$1);
-  return `<div class="${"book svelte-q45xip"}"><img loading="${"lazy"}" decoding="${"async"}" height="${"250"}" width="${"175"}" class="${"book__thumbnail svelte-q45xip"}" alt="${"book cover"}"${(0, import_chunks.f)("src", thumbnailUrl, 0)}>
+  return `<div class="${"book svelte-1qb7r5q"}"><img loading="${"lazy"}" decoding="${"async"}" height="${"250"}" width="${"175"}" class="${"book__thumbnail svelte-1qb7r5q"}" alt="${"book cover"}"${(0, import_chunks.f)("src", thumbnailUrl, 0)}>
 
-	<div class="${"book__info svelte-q45xip"}"><div class="${"book-title base-text svelte-q45xip"}">${(0, import_chunks.h)(bookTitle)}</div>
-		<div class="${"book-author small-text svelte-q45xip"}">${(0, import_chunks.h)(authorName)}</div>
-		<p${(0, import_chunks.f)("title", bookDescription, 0)} class="${"book-description small-text svelte-q45xip"}">${(0, import_chunks.h)(bookDescription)}</p>
-		<a class="${"btn btn--download svelte-q45xip"}" target="${"_blank"}"${(0, import_chunks.f)("href", url, 0)}>${(0, import_chunks.v)(Book_open, "BookOpen").$$render($$result, { size: "24px", color: "var(--primary)" }, {}, {})}</a></div>
+	<div class="${"book__info svelte-1qb7r5q"}"><div class="${"book-title base-text svelte-1qb7r5q"}">${(0, import_chunks.h)(bookTitle)}</div>
+		<div class="${"book-author small-text svelte-1qb7r5q"}">${(0, import_chunks.h)(authorName)}</div>
+		<p${(0, import_chunks.f)("title", bookDescription, 0)} class="${"book-description small-text svelte-1qb7r5q"}">${(0, import_chunks.h)(bookDescription)}</p>
+		<a class="${"btn btn--download svelte-1qb7r5q"}" target="${"_blank"}"${(0, import_chunks.f)("href", url, 0)}>${(0, import_chunks.v)(Book_open, "BookOpen").$$render($$result, { size: "24px", color: "var(--primary)" }, {}, {})}</a></div>
 </div>`;
 });
-const pic1 = "/_app/immutable/assets/UI Design Principles-06cd23a9.png";
-const pic2 = "/_app/immutable/assets/DesignManual-9f330e36.png";
-const pic3 = "/_app/immutable/assets/NoBSGuideUX-2d64c826.png";
-const pic4 = "/_app/immutable/assets/Sprint-bd35600d.png";
+const pic1 = "/_app/immutable/assets/UI%20Design%20Principles-d749fec9.webp";
+const pic2 = "/_app/immutable/assets/DesignManual-7c3e1548.webp";
+const pic3 = "/_app/immutable/assets/NoBSGuideUX-509e0f5d.webp";
+const pic4 = "/_app/immutable/assets/Sprint-f52e7cca.webp";
 const _page_svelte_svelte_type_style_lang = "";
 const css = {
   code: ".books.svelte-ooot52{display:flex;flex-wrap:wrap;width:100%;max-width:50rem;flex-direction:column}",
@@ -115,7 +115,16 @@ const Page = (0, import_chunks.c)(($$result, $$props, $$bindings, slots) => {
 
 ${(0, import_chunks.v)(import_SectionTitle.S, "SectionTitle").$$render($$result, { sectionTitle: "Must-read" }, {}, {
     default: () => {
-      return `${(0, import_chunks.v)(Books, "Books").$$render($$result, { color: "var(--black)" }, {}, {})}`;
+      return `${(0, import_chunks.v)(Books, "Books").$$render(
+        $$result,
+        {
+          color: "var(--black)",
+          width: "32",
+          height: "32"
+        },
+        {},
+        {}
+      )}`;
     }
   })}
 
