@@ -17,7 +17,8 @@ var __copyProps = (to, from, except, desc) => {
 var __toCommonJS = (mod) => __copyProps(__defProp({}, "__esModule", { value: true }), mod);
 var stdin_exports = {};
 __export(stdin_exports, {
-  default: () => Page
+  default: () => Page,
+  prerender: () => prerender
 });
 module.exports = __toCommonJS(stdin_exports);
 var import_chunks = require("../../../chunks/index.js");
@@ -144,7 +145,7 @@ const css$1 = {
 };
 const ContactForm = (0, import_chunks.c)(($$result, $$props, $$bindings, slots) => {
   $$result.css.add(css$1);
-  return `<div class="${"form-container base-text svelte-1iq849z"}"><form method="${"POST"}" data-netlify="${"true"}" name="${"contact"}" class="${"contact svelte-1iq849z"}"><input type="${"hidden"}" name="${"form-name"}" value="${"contact"}">
+  return `<div class="${"form-container base-text svelte-1iq849z"}"><form name="${"contact"}" method="${"post"}" netlify class="${"contact svelte-1iq849z"}"><input type="${"hidden"}" name="${"form-name"}" value="${"contact"}">
 		<div class="${"label"}">Name</div>
 		<input class="${"contact__input small-text svelte-1iq849z"}" type="${"text"}" name="${"name"}" required>
 		<div class="${"label"}">Email</div>
@@ -161,6 +162,7 @@ const css = {
   code: ".container.svelte-1ipmg82{display:flex;justify-content:space-between;flex-direction:column}",
   map: null
 };
+const prerender = true;
 const Page = (0, import_chunks.c)(($$result, $$props, $$bindings, slots) => {
   $$result.css.add(css);
   return `${$$result.head += `${$$result.title = `<title>Contact</title>`, ""}`, ""}

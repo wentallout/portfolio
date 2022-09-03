@@ -5,7 +5,7 @@ exports.handler = init({
 	assets: new Set(["favicon.svg","images/frame2corner.png","images/fuji.svg","images/khoa-biolink.png","images/rhombus_line.png"]),
 	mimeTypes: {".svg":"image/svg+xml",".png":"image/png"},
 	_: {
-		entry: {"file":"_app/immutable/start-d596c34e.js","imports":["_app/immutable/start-d596c34e.js","_app/immutable/chunks/index-b6e5fdaf.js","_app/immutable/chunks/singletons-9b3db298.js","_app/immutable/chunks/index-7f48f867.js","_app/immutable/chunks/preload-helper-aa6bc0ce.js"],"stylesheets":[]},
+		entry: {"file":"_app/immutable/start-bdc2271f.js","imports":["_app/immutable/start-bdc2271f.js","_app/immutable/chunks/index-b6e5fdaf.js","_app/immutable/chunks/singletons-f9d453e3.js","_app/immutable/chunks/index-7f48f867.js","_app/immutable/chunks/preload-helper-aa6bc0ce.js"],"stylesheets":[]},
 		nodes: [
 			() => Promise.resolve().then(() => require('../server/nodes/0.js')),
 			() => Promise.resolve().then(() => require('../server/nodes/1.js')),

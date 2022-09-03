@@ -1954,7 +1954,7 @@ function set_paths(paths) {
   base = paths.base;
   assets = paths.assets || base;
 }
-const template = ({ head, body, assets: assets2, nonce }) => '<!DOCTYPE html>\n<html lang="en">\n\n<head>\n	<meta charset="utf-8" />\n	<link rel="icon" href="' + assets2 + '/favicon.svg" />\n	<meta name="viewport" content="width=device-width, initial-scale=1" />\n	' + head + "\n</head>\n\n<body>\n	<div>" + body + "</div>\n</body>\n\n</html>";
+const template = ({ head, body, assets: assets2, nonce }) => '<!DOCTYPE html>\n<html lang="en">\n\n<head>\n	<meta charset="utf-8" />\n	<link rel="icon" href="' + assets2 + '/favicon.svg" />\n	<meta name="viewport" content="width=device-width, initial-scale=1" />\n	' + head + "\n</head>\n\n<body>\n	<div>" + body + '</div>\n\n\n	<form name="contact" netlify netlify-honeypot="bot-field" hidden>\n		<input type="text" name="name" />\n		<input type="email" name="email" />\n		<textarea name="message"></textarea>\n	</form>\n</body>\n\n</html>';
 let read = null;
 set_paths({ "base": "", "assets": "" });
 let default_protocol = "https";
