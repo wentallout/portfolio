@@ -3,7 +3,7 @@
 </script>
 
 <div class="form-container base-text">
-	<form method="POST" data-netlify="true" name="contact" class="contact">
+	<form name="contact" method="post" netlify class="contact">
 		<input type="hidden" name="form-name" value="contact" />
 		<div class="label">Name</div>
 		<input class="contact__input small-text" type="text" name="name" required />
