@@ -29,7 +29,7 @@ const css = {
 };
 const Error2 = (0, import_chunks.c)(($$result, $$props, $$bindings, slots) => {
   let $page, $$unsubscribe_page;
-  $$unsubscribe_page = (0, import_chunks.d)(import_stores.p, (value) => $page = value);
+  $$unsubscribe_page = (0, import_chunks.f)(import_stores.p, (value) => $page = value);
   $$result.css.add(css);
   $$unsubscribe_page();
   return `<h1 class="${"large-text status svelte-pfzc9z"}">${(0, import_chunks.h)($page.status)}</h1>

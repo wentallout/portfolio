@@ -1,4 +1,5 @@
 <script>
+	import PWA from '$lib/components/PWA/PWA.svelte';
 	import BackToTop from './../lib/components/Layout/BackToTop.svelte';
 	import Footer from '$lib/components/Layout/Footer.svelte';
 	import Header from '$lib/components/Layout/Header.svelte';
@@ -44,6 +45,7 @@
 	/>
 </svelte:head>
 
+<PWA />
 <div class="page-container">
 	<CoolFrame />
 	<BackToTop />

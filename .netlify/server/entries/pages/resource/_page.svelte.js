@@ -37,7 +37,7 @@ const Faq = (0, import_chunks.c)(($$result, $$props, $$bindings, slots) => {
   let $activeFaq, $$unsubscribe_activeFaq;
   let { summary } = $$props;
   const activeFaq = (0, import_chunks.j)(faqsKey);
-  $$unsubscribe_activeFaq = (0, import_chunks.d)(activeFaq, (value) => $activeFaq = value);
+  $$unsubscribe_activeFaq = (0, import_chunks.f)(activeFaq, (value) => $activeFaq = value);
   if ($$props.summary === void 0 && $$bindings.summary && summary !== void 0)
     $$bindings.summary(summary);
   $$result.css.add(css$2);
@@ -47,7 +47,7 @@ const Faq = (0, import_chunks.c)(($$result, $$props, $$bindings, slots) => {
 </details>`;
 });
 const Books = (0, import_chunks.c)(($$result, $$props, $$bindings, slots) => {
-  return `<svg${(0, import_chunks.b)(
+  return `<svg${(0, import_chunks.d)(
     [
       { preserveAspectRatio: "xMidYMid meet" },
       { viewBox: "0 0 256 256" },
@@ -59,7 +59,7 @@ const Books = (0, import_chunks.c)(($$result, $$props, $$bindings, slots) => {
   )}><!-- HTML_TAG_START -->${`<path fill="currentColor" d="m233.6 195.6l-8.3-30.9L192.2 41a16 16 0 0 0-19.6-11.3L141.7 38l-1 .3A16 16 0 0 0 128 32H96a15.8 15.8 0 0 0-8 2.2a15.8 15.8 0 0 0-8-2.2H48a16 16 0 0 0-16 16v160a16 16 0 0 0 16 16h32a15.8 15.8 0 0 0 8-2.2a15.8 15.8 0 0 0 8 2.2h32a16 16 0 0 0 16-16v-99.6l19.5 72.8l8.3 30.9a16 16 0 0 0 15.5 11.9a19.9 19.9 0 0 0 4.1-.5l30.9-8.3a15.9 15.9 0 0 0 9.7-7.5a15.6 15.6 0 0 0 1.6-12.1ZM156.2 92.1l30.9-8.3l20.7 77.3l-30.9 8.3Zm20.5-46.9l6.3 23.1l-30.9 8.3l-6.3-23.1ZM128 48v120H96V48Zm-48 0v24H48V48ZM48 208V88h32v120Zm80 0H96v-24h32v24Zm90.2-8.3l-30.9 8.3l-6.3-23.2l31-8.3l6.2 23.2Z"/>`}<!-- HTML_TAG_END --></svg>`;
 });
 const Book_open = (0, import_chunks.c)(($$result, $$props, $$bindings, slots) => {
-  return `<svg${(0, import_chunks.b)(
+  return `<svg${(0, import_chunks.d)(
     [
       { preserveAspectRatio: "xMidYMid meet" },
       { viewBox: "0 0 256 256" },
@@ -92,12 +92,12 @@ const BookCard = (0, import_chunks.c)(($$result, $$props, $$bindings, slots) => 
   if ($$props.bookDescription === void 0 && $$bindings.bookDescription && bookDescription !== void 0)
     $$bindings.bookDescription(bookDescription);
   $$result.css.add(css$1);
-  return `<div class="${"book svelte-1qb7r5q"}"><img loading="${"lazy"}" decoding="${"async"}" height="${"250"}" width="${"175"}" class="${"book__thumbnail svelte-1qb7r5q"}" alt="${"book cover"}"${(0, import_chunks.f)("src", thumbnailUrl, 0)}>
+  return `<div class="${"book svelte-1qb7r5q"}"><img loading="${"lazy"}" decoding="${"async"}" height="${"250"}" width="${"175"}" class="${"book__thumbnail svelte-1qb7r5q"}" alt="${"book cover"}"${(0, import_chunks.b)("src", thumbnailUrl, 0)}>
 
 	<div class="${"book__info svelte-1qb7r5q"}"><div class="${"book-title base-text svelte-1qb7r5q"}">${(0, import_chunks.h)(bookTitle)}</div>
 		<div class="${"book-author small-text svelte-1qb7r5q"}">${(0, import_chunks.h)(authorName)}</div>
-		<p${(0, import_chunks.f)("title", bookDescription, 0)} class="${"book-description small-text svelte-1qb7r5q"}">${(0, import_chunks.h)(bookDescription)}</p>
-		<a class="${"btn btn--download svelte-1qb7r5q"}" target="${"_blank"}"${(0, import_chunks.f)("href", url, 0)}>${(0, import_chunks.v)(Book_open, "BookOpen").$$render($$result, { size: "24px", color: "var(--primary)" }, {}, {})}</a></div>
+		<p${(0, import_chunks.b)("title", bookDescription, 0)} class="${"book-description small-text svelte-1qb7r5q"}">${(0, import_chunks.h)(bookDescription)}</p>
+		<a class="${"btn btn--download svelte-1qb7r5q"}" target="${"_blank"}"${(0, import_chunks.b)("href", url, 0)}>${(0, import_chunks.v)(Book_open, "BookOpen").$$render($$result, { size: "24px", color: "var(--primary)" }, {}, {})}</a></div>
 </div>`;
 });
 const pic1 = "/_app/immutable/assets/UI%20Design%20Principles-d749fec9.webp";

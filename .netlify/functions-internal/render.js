@@ -2,10 +2,10 @@ const { init } = require('../serverless.js');
 
 exports.handler = init({
 	appDir: "_app",
-	assets: new Set(["favicon.svg","images/frame2corner.png","images/fuji.svg","images/khoa-biolink.png","images/rhombus_line.png"]),
-	mimeTypes: {".svg":"image/svg+xml",".png":"image/png"},
+	assets: new Set(["apple-touch-icon.png","browserconfig.xml","favicon.ico","favicon.svg","icon-192.png","icon-512.png","images/frame2corner.png","images/fuji.svg","images/khoa-biolink.png","images/rhombus_line.png","robots.txt","service-worker.js"]),
+	mimeTypes: {".png":"image/png",".xml":"application/xml",".ico":"image/vnd.microsoft.icon",".svg":"image/svg+xml",".txt":"text/plain"},
 	_: {
-		entry: {"file":"_app/immutable/start-bdc2271f.js","imports":["_app/immutable/start-bdc2271f.js","_app/immutable/chunks/index-b6e5fdaf.js","_app/immutable/chunks/singletons-f9d453e3.js","_app/immutable/chunks/index-7f48f867.js","_app/immutable/chunks/preload-helper-aa6bc0ce.js"],"stylesheets":[]},
+		entry: {"file":"_app/immutable/start-7b1efcc7.js","imports":["_app/immutable/start-7b1efcc7.js","_app/immutable/chunks/index-f46d1ad3.js","_app/immutable/chunks/singletons-45858f23.js","_app/immutable/chunks/index-8d58124b.js","_app/immutable/chunks/preload-helper-aa6bc0ce.js"],"stylesheets":[]},
 		nodes: [
 			() => Promise.resolve().then(() => require('../server/nodes/0.js')),
 			() => Promise.resolve().then(() => require('../server/nodes/1.js')),
@@ -25,12 +25,12 @@ exports.handler = init({
 					endpoint: null
 				},
 			{
-					id: "contact",
-					pattern: /^\/contact\/?$/,
+					id: "manifest.webmanifest",
+					pattern: /^\/manifest\.webmanifest$/,
 					names: [],
 					types: [],
-					page: {"layouts":[0],"errors":[1],"leaf":3},
-					endpoint: null
+					page: null,
+					endpoint: () => Promise.resolve().then(() => require('../server/entries/endpoints/manifest.webmanifest/_server.js'))
 				},
 			{
 					id: "project",

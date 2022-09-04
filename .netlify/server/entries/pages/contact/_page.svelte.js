@@ -17,14 +17,13 @@ var __copyProps = (to, from, except, desc) => {
 var __toCommonJS = (mod) => __copyProps(__defProp({}, "__esModule", { value: true }), mod);
 var stdin_exports = {};
 __export(stdin_exports, {
-  default: () => Page,
-  prerender: () => prerender
+  default: () => Page
 });
 module.exports = __toCommonJS(stdin_exports);
 var import_chunks = require("../../../chunks/index.js");
 var import_figma_logo = require("../../../chunks/figma-logo.js");
 const Envelope = (0, import_chunks.c)(($$result, $$props, $$bindings, slots) => {
-  return `<svg${(0, import_chunks.b)(
+  return `<svg${(0, import_chunks.d)(
     [
       { preserveAspectRatio: "xMidYMid meet" },
       { viewBox: "0 0 256 256" },
@@ -36,7 +35,7 @@ const Envelope = (0, import_chunks.c)(($$result, $$props, $$bindings, slots) => 
   )}><!-- HTML_TAG_START -->${`<path fill="currentColor" d="M224 48H32a8 8 0 0 0-8 8v136a16 16 0 0 0 16 16h176a16 16 0 0 0 16-16V56a8 8 0 0 0-8-8Zm-83.9 74L128 133.1L52.6 64h150.8Zm-41.4 6L40 181.8V74.2Zm11.8 10.9l12.1 11a8 8 0 0 0 10.8 0l12.1-11l57.9 53.1H52.6Zm46.8-10.9L216 74.2v107.6Z"/>`}<!-- HTML_TAG_END --></svg>`;
 });
 const Linkedin_logo = (0, import_chunks.c)(($$result, $$props, $$bindings, slots) => {
-  return `<svg${(0, import_chunks.b)(
+  return `<svg${(0, import_chunks.d)(
     [
       { preserveAspectRatio: "xMidYMid meet" },
       { viewBox: "0 0 256 256" },
@@ -48,7 +47,7 @@ const Linkedin_logo = (0, import_chunks.c)(($$result, $$props, $$bindings, slots
   )}><!-- HTML_TAG_START -->${`<path fill="currentColor" d="M100 80a12 12 0 1 1-12-12a12 12 0 0 1 12 12Zm128-36v168a16 16 0 0 1-16 16H44a16 16 0 0 1-16-16V44a16 16 0 0 1 16-16h168a16 16 0 0 1 16 16Zm-16 168V44H44v168ZM88 104a8 8 0 0 0-8 8v64a8 8 0 0 0 16 0v-64a8 8 0 0 0-8-8Zm60 0a36 36 0 0 0-20.2 6.2A8 8 0 0 0 112 112v64a8 8 0 0 0 16 0v-36a20 20 0 0 1 40 0v36a8 8 0 0 0 16 0v-36a36 36 0 0 0-36-36Z"/>`}<!-- HTML_TAG_END --></svg>`;
 });
 const Github_logo = (0, import_chunks.c)(($$result, $$props, $$bindings, slots) => {
-  return `<svg${(0, import_chunks.b)(
+  return `<svg${(0, import_chunks.d)(
     [
       { preserveAspectRatio: "xMidYMid meet" },
       { viewBox: "0 0 256 256" },
@@ -60,7 +59,7 @@ const Github_logo = (0, import_chunks.c)(($$result, $$props, $$bindings, slots) 
   )}><!-- HTML_TAG_START -->${`<path fill="currentColor" d="M216 216a16 16 0 0 1-16-16v-8a32.1 32.1 0 0 0-14.8-27a55.8 55.8 0 0 0 22.8-45v-8a58 58 0 0 0-7.7-28.3a59.9 59.9 0 0 0-5.4-47.7a7.8 7.8 0 0 0-6.9-4a59.7 59.7 0 0 0-48 24h-24a59.7 59.7 0 0 0-48-24a7.8 7.8 0 0 0-6.9 4a59.9 59.9 0 0 0-5.4 47.7A58 58 0 0 0 48 112v8a55.8 55.8 0 0 0 22.8 45A32.1 32.1 0 0 0 56 192v8a16 16 0 0 1-16 16a8 8 0 0 0 0 16a32.1 32.1 0 0 0 32-32v-8a16 16 0 0 1 16-16h12v40a16 16 0 0 1-16 16a8 8 0 0 0 0 16a32.1 32.1 0 0 0 32-32v-40h24v40a32.1 32.1 0 0 0 32 32a8 8 0 0 0 0-16a16 16 0 0 1-16-16v-40h12a16 16 0 0 1 16 16v8a32.1 32.1 0 0 0 32 32a8 8 0 0 0 0-16ZM64 120v-8a42.7 42.7 0 0 1 6.9-22.5a7.9 7.9 0 0 0 1.1-7.7a43.7 43.7 0 0 1 .8-33.5a43.6 43.6 0 0 1 32.3 20a8 8 0 0 0 6.7 3.7h32.4a8 8 0 0 0 6.7-3.7a43.6 43.6 0 0 1 32.3-20a43.7 43.7 0 0 1 .8 33.5a8.2 8.2 0 0 0 1.1 7.7A42.7 42.7 0 0 1 192 112v8a40 40 0 0 1-40 40h-48a40 40 0 0 1-40-40Z"/>`}<!-- HTML_TAG_END --></svg>`;
 });
 const Reddit_logo = (0, import_chunks.c)(($$result, $$props, $$bindings, slots) => {
-  return `<svg${(0, import_chunks.b)(
+  return `<svg${(0, import_chunks.d)(
     [
       { preserveAspectRatio: "xMidYMid meet" },
       { viewBox: "0 0 256 256" },
@@ -145,7 +144,7 @@ const css$1 = {
 };
 const ContactForm = (0, import_chunks.c)(($$result, $$props, $$bindings, slots) => {
   $$result.css.add(css$1);
-  return `<div class="${"form-container base-text svelte-1iq849z"}"><form name="${"contact"}" method="${"post"}" netlify class="${"contact svelte-1iq849z"}"><input type="${"hidden"}" name="${"form-name"}" value="${"contact"}">
+  return `<div class="${"form-container base-text svelte-1iq849z"}"><form name="${"contact"}" method="${"post"}" netlify-honeypot="${"bot-field"}" data-netlify="${"true"}" class="${"contact svelte-1iq849z"}"><input type="${"hidden"}" name="${"form-name"}" value="${"contact"}">
 		<div class="${"label"}">Name</div>
 		<input class="${"contact__input small-text svelte-1iq849z"}" type="${"text"}" name="${"name"}" required>
 		<div class="${"label"}">Email</div>
@@ -162,7 +161,6 @@ const css = {
   code: ".container.svelte-1ipmg82{display:flex;justify-content:space-between;flex-direction:column}",
   map: null
 };
-const prerender = true;
 const Page = (0, import_chunks.c)(($$result, $$props, $$bindings, slots) => {
   $$result.css.add(css);
   return `${$$result.head += `${$$result.title = `<title>Contact</title>`, ""}`, ""}

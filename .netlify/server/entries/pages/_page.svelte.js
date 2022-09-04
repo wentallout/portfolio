@@ -119,7 +119,7 @@ const Atropos_svelte = (0, import_chunks.c)(($$result, $$props, $$bindings, slot
     $$bindings.shadow(shadow);
   if ($$props.highlight === void 0 && $$bindings.highlight && highlight !== void 0)
     $$bindings.highlight(highlight);
-  return `<div${(0, import_chunks.b)(
+  return `<div${(0, import_chunks.d)(
     [
       {
         class: (0, import_chunks.p)(cls("atropos", className))
@@ -127,7 +127,7 @@ const Atropos_svelte = (0, import_chunks.c)(($$result, $$props, $$bindings, slot
       (0, import_chunks.e)($$restProps)
     ],
     {}
-  )}${(0, import_chunks.f)("this", elRef, 0)}><span${(0, import_chunks.f)("class", cls("atropos-scale", scaleClass), 0)}><span${(0, import_chunks.f)("class", cls("atropos-rotate", rotateClass), 0)}><span${(0, import_chunks.f)("class", cls("atropos-inner", innerClass), 0)}>${slots.default ? slots.default({}) : ``}
+  )}${(0, import_chunks.b)("this", elRef, 0)}><span${(0, import_chunks.b)("class", cls("atropos-scale", scaleClass), 0)}><span${(0, import_chunks.b)("class", cls("atropos-rotate", rotateClass), 0)}><span${(0, import_chunks.b)("class", cls("atropos-inner", innerClass), 0)}>${slots.default ? slots.default({}) : ``}
         ${highlight || typeof highlight === "undefined" ? `<span class="${"atropos-highlight"}"></span>` : ``}</span>
       ${slots.rotate ? slots.rotate({}) : ``}
       ${shadow || typeof shadow === "undefined" ? `<span class="${"atropos-shadow"}"></span>` : ``}</span>
@@ -176,8 +176,8 @@ const Page = (0, import_chunks.c)(($$result, $$props, $$bindings, slots) => {
 ${(0, import_chunks.v)(Hero, "Hero").$$render($$result, {}, {}, {})}
 
 <div class="${"past-clients svelte-12uhlh4"}"><p class="${"past-clients__text base-text"}">I have worked for</p>
-	<div class="${"past-clients__logo svelte-12uhlh4"}"><img loading="${"lazy"}" decoding="${"async"}" class="${"logo svelte-12uhlh4"}"${(0, import_chunks.f)("src", fpt, 0)} alt="${"FPT Software"}">
-		<img loading="${"lazy"}" decoding="${"async"}" class="${"logo svelte-12uhlh4"}"${(0, import_chunks.f)("src", nashtech, 0)} alt="${"NashTech"}"></div></div>
+	<div class="${"past-clients__logo svelte-12uhlh4"}"><img loading="${"lazy"}" decoding="${"async"}" class="${"logo svelte-12uhlh4"}"${(0, import_chunks.b)("src", fpt, 0)} alt="${"FPT Software"}">
+		<img loading="${"lazy"}" decoding="${"async"}" class="${"logo svelte-12uhlh4"}"${(0, import_chunks.b)("src", nashtech, 0)} alt="${"NashTech"}"></div></div>
 
 
 

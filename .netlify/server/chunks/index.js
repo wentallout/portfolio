@@ -18,11 +18,11 @@ var __toCommonJS = (mod) => __copyProps(__defProp({}, "__esModule", { value: tru
 var stdin_exports = {};
 __export(stdin_exports, {
   a: () => safe_not_equal,
-  b: () => spread,
+  b: () => add_attribute,
   c: () => create_ssr_component,
-  d: () => subscribe,
+  d: () => spread,
   e: () => escape_object,
-  f: () => add_attribute,
+  f: () => subscribe,
   g: () => each,
   h: () => escape,
   i: () => null_to_empty,

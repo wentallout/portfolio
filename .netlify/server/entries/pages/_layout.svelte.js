@@ -27,10 +27,15 @@ __export(stdin_exports, {
 });
 module.exports = __toCommonJS(stdin_exports);
 var import_chunks = require("../../chunks/index.js");
+var import_config = require("../../chunks/config.js");
 var import_stores = require("../../chunks/stores.js");
 var import_nprogress = __toESM(require("nprogress"));
+const PWA = (0, import_chunks.c)(($$result, $$props, $$bindings, slots) => {
+  const { themeColor } = import_config.w;
+  return `${$$result.head += `<meta name="${"theme-color"}"${(0, import_chunks.b)("content", themeColor, 0)} data-svelte="svelte-12k4fzg">`, ""}`;
+});
 const Caret_circle_up = (0, import_chunks.c)(($$result, $$props, $$bindings, slots) => {
-  return `<svg${(0, import_chunks.b)(
+  return `<svg${(0, import_chunks.d)(
     [
       { preserveAspectRatio: "xMidYMid meet" },
       { viewBox: "0 0 256 256" },
@@ -81,7 +86,7 @@ const Footer = (0, import_chunks.c)(($$result, $$props, $$bindings, slots) => {
 </footer>`;
 });
 const List = (0, import_chunks.c)(($$result, $$props, $$bindings, slots) => {
-  return `<svg${(0, import_chunks.b)(
+  return `<svg${(0, import_chunks.d)(
     [
       { preserveAspectRatio: "xMidYMid meet" },
       { viewBox: "0 0 256 256" },
@@ -92,24 +97,6 @@ const List = (0, import_chunks.c)(($$result, $$props, $$bindings, slots) => {
     {}
   )}><!-- HTML_TAG_START -->${`<path fill="currentColor" d="M224 128a8 8 0 0 1-8 8H40a8 8 0 0 1 0-16h176a8 8 0 0 1 8 8ZM40 72h176a8 8 0 0 0 0-16H40a8 8 0 0 0 0 16Zm176 112H40a8 8 0 0 0 0 16h176a8 8 0 0 0 0-16Z"/>`}<!-- HTML_TAG_END --></svg>`;
 });
-const navItems = [
-  {
-    title: "Home",
-    path: "/"
-  },
-  {
-    title: "Project",
-    path: "/project"
-  },
-  {
-    title: "Resource",
-    path: "/resource"
-  },
-  {
-    title: "Contact",
-    path: "/contact"
-  }
-];
 const Header_svelte_svelte_type_style_lang = "";
 const css$4 = {
   code: ".reduced.svelte-1w23fq2.svelte-1w23fq2{min-height:2.5rem;font-size:var(--font-size-small);transition:all 0.3s;backdrop-filter:blur(5px);-webkit-backdrop-filter:blur(5px);background-color:rgba(0, 0, 0, 0.7)}.main-header.reduced.svelte-1w23fq2.svelte-1w23fq2{background-color:transparent;backdrop-filter:blur(5px);-webkit-backdrop-filter:blur(5px)}.main-header.svelte-1w23fq2.svelte-1w23fq2{max-width:100vw;color:var(--white);background-color:#000;width:100%;position:sticky;top:0;z-index:98}.hidden-mobile.svelte-1w23fq2.svelte-1w23fq2{display:none}nav.svelte-1w23fq2 ul li.svelte-1w23fq2{display:flex;min-height:4rem;margin-left:0;width:100%}.nav__list.svelte-1w23fq2.svelte-1w23fq2{display:flex;flex-direction:column;justify-content:center;align-items:center;margin:0}.nav__list-item.svelte-1w23fq2.svelte-1w23fq2{color:var(--white);width:100%;display:flex;justify-content:center;align-items:center;border:0.1px solid var(--black)}@media(hover: hover){.nav__list-item.svelte-1w23fq2.svelte-1w23fq2:hover{color:var(--black);background-color:var(--primary);transition:0.3s}}@media(min-width: 768px){.hidden-mobile.svelte-1w23fq2.svelte-1w23fq2{display:flex}#burger-nav.svelte-1w23fq2.svelte-1w23fq2{display:none}.main-header.svelte-1w23fq2.svelte-1w23fq2{padding-left:17vw;padding-right:17vw}.nav__list.svelte-1w23fq2.svelte-1w23fq2{display:flex;flex-direction:row;justify-content:space-evenly;align-items:center}.nav__list-item.svelte-1w23fq2.svelte-1w23fq2{width:100%}}.active-page.svelte-1w23fq2.svelte-1w23fq2{color:var(--primary) !important;pointer-events:none}",
@@ -117,11 +104,11 @@ const css$4 = {
 };
 const Header = (0, import_chunks.c)(($$result, $$props, $$bindings, slots) => {
   let $page, $$unsubscribe_page;
-  $$unsubscribe_page = (0, import_chunks.d)(import_stores.p, (value) => $page = value);
+  $$unsubscribe_page = (0, import_chunks.f)(import_stores.p, (value) => $page = value);
   $$result.css.add(css$4);
   $$unsubscribe_page();
   return `
-<header class="${["main-header base-text svelte-1w23fq2", ""].join(" ").trim()}"><nav class="${"svelte-1w23fq2"}"><ul class="${"nav__list svelte-1w23fq2"}"><li id="${"burger-nav"}" class="${["svelte-1w23fq2", ""].join(" ").trim()}"><a class="${"nav__list-item svelte-1w23fq2"}"${(0, import_chunks.f)("href", "#", 0)}>${(0, import_chunks.v)(List, "List").$$render(
+<header class="${["main-header base-text svelte-1w23fq2", ""].join(" ").trim()}"><nav class="${"svelte-1w23fq2"}"><ul class="${"nav__list svelte-1w23fq2"}"><li id="${"burger-nav"}" class="${["svelte-1w23fq2", ""].join(" ").trim()}"><a class="${"nav__list-item svelte-1w23fq2"}"${(0, import_chunks.b)("href", "#", 0)}>${(0, import_chunks.v)(List, "List").$$render(
     $$result,
     {
       color: "var(--white)",
@@ -132,12 +119,12 @@ const Header = (0, import_chunks.c)(($$result, $$props, $$bindings, slots) => {
     {}
   )}</a></li>
 
-			${(0, import_chunks.g)(navItems, (navItem) => {
+			${(0, import_chunks.g)(import_config.n, (navItem) => {
     return `<li class="${[
       (0, import_chunks.h)((0, import_chunks.i)(`navbar-list${" hidden-mobile"}`), true) + " svelte-1w23fq2",
       ""
-    ].join(" ").trim()}">${$page.url.pathname === `${navItem.path}` ? `<a class="${"nav__list-item active-page svelte-1w23fq2"}"${(0, import_chunks.f)("href", navItem.path, 0)}>${(0, import_chunks.h)(navItem.title)}
-						</a>` : `<a class="${"nav__list-item svelte-1w23fq2"}"${(0, import_chunks.f)("href", navItem.path, 0)}>${(0, import_chunks.h)(navItem.title)}
+    ].join(" ").trim()}">${$page.url.pathname === `${navItem.path}` ? `<a class="${"nav__list-item active-page svelte-1w23fq2"}"${(0, import_chunks.b)("href", navItem.path, 0)}>${(0, import_chunks.h)(navItem.title)}
+						</a>` : `<a class="${"nav__list-item svelte-1w23fq2"}"${(0, import_chunks.b)("href", navItem.path, 0)}>${(0, import_chunks.h)(navItem.title)}
 						</a>`}
 				</li>`;
   })}</ul></nav>
@@ -167,7 +154,7 @@ const Breadcrumb = (0, import_chunks.c)(($$result, $$props, $$bindings, slots) =
   }
   return `<div class="${"breadcrumb base-text svelte-1obt4iy"}">${(0, import_chunks.g)(crumbs, (c, i) => {
     return `${i == crumbs.length - 1 ? `<div class="${"breadcrumb__unclickable svelte-1obt4iy"}">${(0, import_chunks.h)(c.label)}
-			</div>` : `<a class="${"breadcrumb__clickable svelte-1obt4iy"}"${(0, import_chunks.f)("href", c.href, 0)}>${(0, import_chunks.h)(c.label)}</a> &gt;\xA0`}`;
+			</div>` : `<a class="${"breadcrumb__clickable svelte-1obt4iy"}"${(0, import_chunks.b)("href", c.href, 0)}>${(0, import_chunks.h)(c.label)}</a> &gt;\xA0`}`;
   })}
 </div>`;
 });
@@ -183,7 +170,7 @@ const CoolFrame = (0, import_chunks.c)(($$result, $$props, $$bindings, slots) =>
 </div>`;
 });
 const Yin_yang = (0, import_chunks.c)(($$result, $$props, $$bindings, slots) => {
-  return `<svg${(0, import_chunks.b)(
+  return `<svg${(0, import_chunks.d)(
     [
       { preserveAspectRatio: "xMidYMid meet" },
       { viewBox: "0 0 256 256" },
@@ -227,8 +214,8 @@ const css = {
 const Layout = (0, import_chunks.c)(($$result, $$props, $$bindings, slots) => {
   let $navigating, $$unsubscribe_navigating;
   let $page, $$unsubscribe_page;
-  $$unsubscribe_navigating = (0, import_chunks.d)(import_stores.n, (value) => $navigating = value);
-  $$unsubscribe_page = (0, import_chunks.d)(import_stores.p, (value) => $page = value);
+  $$unsubscribe_navigating = (0, import_chunks.f)(import_stores.n, (value) => $navigating = value);
+  $$unsubscribe_page = (0, import_chunks.f)(import_stores.p, (value) => $page = value);
   import_nprogress.default.configure({
     minimum: 0.1,
     showSpinner: false,
@@ -236,9 +223,6 @@ const Layout = (0, import_chunks.c)(($$result, $$props, $$bindings, slots) => {
     easing: "ease",
     speed: 500
   });
-  const prerender = true;
-  if ($$props.prerender === void 0 && $$bindings.prerender && prerender !== void 0)
-    $$bindings.prerender(prerender);
   $$result.css.add(css);
   {
     {
@@ -254,6 +238,7 @@ const Layout = (0, import_chunks.c)(($$result, $$props, $$bindings, slots) => {
   $$unsubscribe_page();
   return `${$$result.head += `<link rel="${"preconnect"}" href="${"https://fonts.googleapis.com"}" data-svelte="svelte-l9vls8"><link rel="${"preconnect"}" href="${"https://fonts.gstatic.com"}" crossorigin data-svelte="svelte-l9vls8"><link href="${"https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap"}" rel="${"stylesheet"}" data-svelte="svelte-l9vls8">`, ""}
 
+${(0, import_chunks.v)(PWA, "PWA").$$render($$result, {}, {}, {})}
 <div class="${"page-container svelte-1agzi5v"}">${(0, import_chunks.v)(CoolFrame, "CoolFrame").$$render($$result, {}, {}, {})}
 	${(0, import_chunks.v)(BackToTop, "BackToTop").$$render($$result, {}, {}, {})}
 	${(0, import_chunks.v)(LogoContainer, "LogoContainer").$$render($$result, {}, {}, {})}

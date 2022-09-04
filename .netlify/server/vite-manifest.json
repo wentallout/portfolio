@@ -11,17 +11,31 @@
       ".svelte-kit/build/hooks.js"
     ]
   },
+  "src/routes/manifest.webmanifest/+server.js": {
+    "file": "entries/endpoints/manifest.webmanifest/_server.js",
+    "src": "src/routes/manifest.webmanifest/+server.js",
+    "isEntry": true,
+    "imports": [
+      "_config.js"
+    ]
+  },
   "src/routes/+layout.svelte": {
     "file": "entries/pages/_layout.svelte.js",
     "src": "src/routes/+layout.svelte",
     "isEntry": true,
     "imports": [
       "_index.js",
+      "_config.js",
       "_stores.js"
     ],
     "css": [
-      "_app/immutable/assets/+layout-4949cfd9.css"
+      "_app/immutable/assets/+layout-2da1df86.css"
     ]
+  },
+  "src/routes/+layout.js": {
+    "file": "entries/pages/_layout.js",
+    "src": "src/routes/+layout.js",
+    "isEntry": true
   },
   "src/routes/+error.svelte": {
     "file": "entries/pages/_error.svelte.js",
@@ -57,6 +71,11 @@
     "css": [
       "_app/immutable/assets/+page-7d47f390.css"
     ]
+  },
+  "src/routes/contact/+page.js": {
+    "file": "entries/pages/contact/_page.js",
+    "src": "src/routes/contact/+page.js",
+    "isEntry": true
   },
   "src/routes/project/+page.svelte": {
     "file": "entries/pages/project/_page.svelte.js",
@@ -105,6 +124,9 @@
     "imports": [
       "_index.js"
     ]
+  },
+  "_config.js": {
+    "file": "chunks/config.js"
   },
   "_stores.js": {
     "file": "chunks/stores.js",

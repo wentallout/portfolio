@@ -27,11 +27,13 @@ __export(stdin_exports, {
   file: () => file,
   imports: () => imports,
   index: () => index,
+  shared: () => shared,
   stylesheets: () => stylesheets
 });
 module.exports = __toCommonJS(stdin_exports);
+var shared = __toESM(require("../entries/pages/contact/_page.js"));
 const index = 3;
 const component = async () => (await Promise.resolve().then(() => __toESM(require("../entries/pages/contact/_page.svelte.js")))).default;
-const file = "_app/immutable/components/pages/contact/_page.svelte-d6d83275.js";
-const imports = ["_app/immutable/components/pages/contact/_page.svelte-d6d83275.js", "_app/immutable/chunks/index-b6e5fdaf.js", "_app/immutable/chunks/figma-logo-38bf151c.js"];
+const file = "_app/immutable/components/pages/contact/_page.svelte-a4552609.js";
+const imports = ["_app/immutable/components/pages/contact/_page.svelte-a4552609.js", "_app/immutable/chunks/index-f46d1ad3.js", "_app/immutable/chunks/figma-logo-d36fd173.js", "_app/immutable/modules/pages/contact/_page.js-344d4a79.js", "_app/immutable/chunks/_page-42553da0.js"];
 const stylesheets = ["_app/immutable/assets/+page-f1edc2b4.css"];

@@ -36,5 +36,9 @@
 	"type": "module",
 	"dependencies": {
 		"atropos": "^1.0.2"
+	},
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/wentallout/portfolio"
 	}
 }

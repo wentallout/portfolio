@@ -27,11 +27,13 @@ __export(stdin_exports, {
   file: () => file,
   imports: () => imports,
   index: () => index,
+  shared: () => shared,
   stylesheets: () => stylesheets
 });
 module.exports = __toCommonJS(stdin_exports);
+var shared = __toESM(require("../entries/pages/_layout.js"));
 const index = 0;
 const component = async () => (await Promise.resolve().then(() => __toESM(require("../entries/pages/_layout.svelte.js")))).default;
-const file = "_app/immutable/components/pages/_layout.svelte-f61a76a7.js";
-const imports = ["_app/immutable/components/pages/_layout.svelte-f61a76a7.js", "_app/immutable/chunks/index-b6e5fdaf.js", "_app/immutable/chunks/stores-d3fcd960.js", "_app/immutable/chunks/singletons-f9d453e3.js", "_app/immutable/chunks/index-7f48f867.js", "_app/immutable/chunks/_commonjsHelpers-e864563f.js"];
-const stylesheets = ["_app/immutable/assets/+layout-f3eae5cc.css"];
+const file = "_app/immutable/components/pages/_layout.svelte-d1b669ed.js";
+const imports = ["_app/immutable/components/pages/_layout.svelte-d1b669ed.js", "_app/immutable/chunks/index-f46d1ad3.js", "_app/immutable/chunks/stores-ca10b7ad.js", "_app/immutable/chunks/singletons-45858f23.js", "_app/immutable/chunks/index-8d58124b.js", "_app/immutable/chunks/_commonjsHelpers-e864563f.js", "_app/immutable/modules/pages/_layout.js-7b9cbfbc.js", "_app/immutable/chunks/_layout-8d2a742b.js"];
+const stylesheets = ["_app/immutable/assets/+layout-5dbf0a4d.css"];

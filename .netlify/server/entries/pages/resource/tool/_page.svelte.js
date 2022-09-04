@@ -50,7 +50,7 @@ const getResource = async () => {
   resourceData.set(data);
 };
 const Wrench = (0, import_chunks.c)(($$result, $$props, $$bindings, slots) => {
-  return `<svg${(0, import_chunks.b)(
+  return `<svg${(0, import_chunks.d)(
     [
       { preserveAspectRatio: "xMidYMid meet" },
       { viewBox: "0 0 256 256" },
@@ -63,7 +63,7 @@ const Wrench = (0, import_chunks.c)(($$result, $$props, $$bindings, slots) => {
 });
 const Page = (0, import_chunks.c)(($$result, $$props, $$bindings, slots) => {
   let $resourceData, $$unsubscribe_resourceData;
-  $$unsubscribe_resourceData = (0, import_chunks.d)(resourceData, (value) => $resourceData = value);
+  $$unsubscribe_resourceData = (0, import_chunks.f)(resourceData, (value) => $resourceData = value);
   $$unsubscribe_resourceData();
   return `${(0, import_chunks.v)(import_SectionTitle.S, "SectionTitle").$$render($$result, { sectionTitle: "Tool" }, {}, {
     default: () => {

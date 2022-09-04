@@ -42,10 +42,10 @@ const ProjectCard = (0, import_chunks.c)(($$result, $$props, $$bindings, slots) 
   if ($$props.linkToDetail === void 0 && $$bindings.linkToDetail && linkToDetail !== void 0)
     $$bindings.linkToDetail(linkToDetail);
   $$result.css.add(css);
-  return `<div class="${"project svelte-1bqc6pg"}"><img width="${"100%"}" height="${"auto"}" loading="${"lazy"}" decoding="${"async"}" class="${"project__thumbnail svelte-1bqc6pg"}"${(0, import_chunks.f)("src", projectImage, 0)} alt="${"project thumbnail"}">
+  return `<div class="${"project svelte-1bqc6pg"}"><img width="${"100%"}" height="${"auto"}" loading="${"lazy"}" decoding="${"async"}" class="${"project__thumbnail svelte-1bqc6pg"}"${(0, import_chunks.b)("src", projectImage, 0)} alt="${"project thumbnail"}">
 	<div class="${"project__info svelte-1bqc6pg"}"><div class="${"project__name mid-text svelte-1bqc6pg"}">${(0, import_chunks.h)(projectName)}</div>
 		<div class="${"project__description small-text"}">${(0, import_chunks.h)(projectDesc)}</div>
-		<a class="${"btn btn-view svelte-1bqc6pg"}"${(0, import_chunks.f)("href", linkToDetail, 0)}>View</a></div>
+		<a class="${"btn btn-view svelte-1bqc6pg"}"${(0, import_chunks.b)("href", linkToDetail, 0)}>View</a></div>
 </div>`;
 });
 const Page = (0, import_chunks.c)(($$result, $$props, $$bindings, slots) => {

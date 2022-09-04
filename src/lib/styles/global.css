@@ -25,7 +25,6 @@
 	--font-size-large: clamp(1.64rem, calc(1.55rem + 0.46vw), 1.88rem);
 
 	/* line-height */
-	--line-height-xs: calc(var(--font-size-xs) * 1.6);
 	--line-height-small: calc(var(--font-size-small) * 1.6);
 	--line-height-base: calc(var(--font-size-base) * 1.6);
 	--line-height-mid: calc(var(--font-size-mid) * 1.6);
@@ -47,6 +46,9 @@
 	/* misc */
 	accent-color: var(--primary);
 	caret-color: var(--black);
+
+	/* border radius */
+	--border-radius: 8px;
 }
 
 ::selection {
@@ -148,7 +150,7 @@ h6 {
 	align-items: center;
 
 	/* padding */
-	padding: 0.5rem 1.5rem;
+	padding: 12px 24px;
 
 	/* width */
 	width: -webkit-fit-content;
@@ -157,8 +159,11 @@ h6 {
 
 	transition: 0.3s;
 	font-size: var(--font-size-small);
+	line-height: var(--line-height-small);
+	font-weight: 500;
+	border: 1px solid transparent;
 
-	
+	border-radius: var(--border-radius);
 }
 
 /* INPUT */
