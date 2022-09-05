@@ -13,9 +13,6 @@
 	import twitterImageSrc from '$lib/assets/images/seo/home-twitter.jpg';
 	import featuredImageSrc from '$lib/assets/images/seo/home.jpg';
 
-	export let data;
-	const { posts } = data;
-
 	const { author, siteUrl } = website;
 
 	let title = 'Home';
