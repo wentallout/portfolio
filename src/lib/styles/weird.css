@@ -1,10 +1,10 @@
 /* -------------------------------- 🌙 DARKMODE ------------------------------- */
 
-@media (prefers-color-scheme: dark) {
+/* @media (prefers-color-scheme: dark) {
 	img {
 		filter: brightness(0.85) contrast(1.2);
 	}
-}
+} */
 
 .dark-mode {
 	--background: #121212 !important;
@@ -15,7 +15,6 @@
 
 body::-webkit-scrollbar-track {
 	box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
-
 	background-color: var(--black);
 }
 
@@ -68,24 +67,4 @@ body::-webkit-scrollbar-thumb:hover {
 #nprogress .spinner {
 	top: 20px !important;
 	right: 20px !important;
-}
-
-/* WEIRD SHAPES */
-.diamond {
-	width: 0;
-	height: 0;
-	border: 50px solid transparent;
-	border-bottom-color: var(--black);
-	position: relative;
-	top: -50px;
-}
-.diamond:after {
-	content: '';
-	position: absolute;
-	left: -50px;
-	top: 50px;
-	width: 0;
-	height: 0;
-	border: 50px solid var(--black);
-	border-top-color: red;
 }
