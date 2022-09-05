@@ -1,0 +1,174 @@
+{
+  ".svelte-kit/build/index.js": {
+    "file": "index.js",
+    "src": ".svelte-kit/build/index.js",
+    "isEntry": true,
+    "imports": [
+      "_index.js",
+      "_index2.js"
+    ],
+    "dynamicImports": [
+      ".svelte-kit/build/hooks.js"
+    ]
+  },
+  "src/routes/manifest.webmanifest/+server.js": {
+    "file": "entries/endpoints/manifest.webmanifest/_server.js",
+    "src": "src/routes/manifest.webmanifest/+server.js",
+    "isEntry": true,
+    "imports": [
+      "_config.js"
+    ]
+  },
+  "src/routes/+layout.svelte": {
+    "file": "entries/pages/_layout.svelte.js",
+    "src": "src/routes/+layout.svelte",
+    "isEntry": true,
+    "imports": [
+      "_index.js",
+      "_config.js",
+      "_stores.js"
+    ],
+    "css": [
+      "_app/immutable/assets/+layout-2da1df86.css"
+    ]
+  },
+  "src/routes/+layout.js": {
+    "file": "entries/pages/_layout.js",
+    "src": "src/routes/+layout.js",
+    "isEntry": true
+  },
+  "src/routes/+error.svelte": {
+    "file": "entries/pages/_error.svelte.js",
+    "src": "src/routes/+error.svelte",
+    "isEntry": true,
+    "imports": [
+      "_index.js",
+      "_stores.js"
+    ],
+    "css": [
+      "_app/immutable/assets/+error-f48a1bb7.css"
+    ]
+  },
+  "src/routes/+page.svelte": {
+    "file": "entries/pages/_page.svelte.js",
+    "src": "src/routes/+page.svelte",
+    "isEntry": true,
+    "imports": [
+      "_index.js",
+      "_SEO.js",
+      "_config.js"
+    ],
+    "css": [
+      "_app/immutable/assets/+page-79b881ec.css"
+    ]
+  },
+  "src/routes/contact/+page.svelte": {
+    "file": "entries/pages/contact/_page.svelte.js",
+    "src": "src/routes/contact/+page.svelte",
+    "isEntry": true,
+    "imports": [
+      "_index.js",
+      "_figma-logo.js",
+      "_SEO.js",
+      "_config.js"
+    ],
+    "css": [
+      "_app/immutable/assets/+page-7d47f390.css"
+    ]
+  },
+  "src/routes/contact/+page.js": {
+    "file": "entries/pages/contact/_page.js",
+    "src": "src/routes/contact/+page.js",
+    "isEntry": true
+  },
+  "src/routes/project/+page.svelte": {
+    "file": "entries/pages/project/_page.svelte.js",
+    "src": "src/routes/project/+page.svelte",
+    "isEntry": true,
+    "imports": [
+      "_index.js",
+      "_figma-logo.js",
+      "_SectionTitle.js"
+    ],
+    "css": [
+      "_app/immutable/assets/+page-ab86ddae.css"
+    ]
+  },
+  "src/routes/resource/+page.svelte": {
+    "file": "entries/pages/resource/_page.svelte.js",
+    "src": "src/routes/resource/+page.svelte",
+    "isEntry": true,
+    "imports": [
+      "_index.js",
+      "_index2.js",
+      "_SectionTitle.js"
+    ],
+    "css": [
+      "_app/immutable/assets/+page-d63a4792.css"
+    ]
+  },
+  "src/routes/resource/tool/+page.svelte": {
+    "file": "entries/pages/resource/tool/_page.svelte.js",
+    "src": "src/routes/resource/tool/+page.svelte",
+    "isEntry": true,
+    "imports": [
+      "_index.js",
+      "_SectionTitle.js",
+      "_index2.js"
+    ],
+    "css": [
+      "_app/immutable/assets/+page-bd0e5c0e.css"
+    ]
+  },
+  "_index.js": {
+    "file": "chunks/index.js"
+  },
+  "_index2.js": {
+    "file": "chunks/index2.js",
+    "imports": [
+      "_index.js"
+    ]
+  },
+  "_config.js": {
+    "file": "chunks/config.js"
+  },
+  "_stores.js": {
+    "file": "chunks/stores.js",
+    "imports": [
+      "_index.js"
+    ]
+  },
+  "_SEO.js": {
+    "file": "chunks/SEO.js",
+    "imports": [
+      "_index.js",
+      "_config.js"
+    ],
+    "assets": [
+      "_app/immutable/assets/home-f7ba4dd3.jpg",
+      "_app/immutable/assets/home-open-graph-1fad80fe.jpg",
+      "_app/immutable/assets/home-open-graph-square-2e611abf.jpg",
+      "_app/immutable/assets/home-twitter-f9826a1b.jpg"
+    ]
+  },
+  "_figma-logo.js": {
+    "file": "chunks/figma-logo.js",
+    "imports": [
+      "_index.js"
+    ]
+  },
+  "_SectionTitle.js": {
+    "file": "chunks/SectionTitle.js",
+    "imports": [
+      "_index.js"
+    ],
+    "css": [
+      "_app/immutable/assets/SectionTitle-7894263f.css"
+    ]
+  },
+  ".svelte-kit/build/hooks.js": {
+    "file": "chunks/hooks.js",
+    "src": ".svelte-kit/build/hooks.js",
+    "isDynamicEntry": true
+  }
+}
