@@ -15,7 +15,7 @@ worker.addEventListener('install', (event) => {
 			return cache.addAll(to_cache).then(() => {
 				worker.skipWaiting();
 			});
-		})
+		}),
 	);
 });
 
@@ -30,9 +30,9 @@ worker.addEventListener('activate', (event) => {
 						console.log('[ServiceWorker] Removing old cache', key);
 						return caches.delete(key);
 					}
-				})
-			)
-		)
+				}),
+			),
+		),
 	);
 	worker.clients.claim();
 });
@@ -47,6 +47,6 @@ self.addEventListener('fetch', (event) => {
 			return caches.open(CACHE_NAME).then((cache) => {
 				return cache.match('offline.html');
 			});
-		})
+		}),
 	);
 });

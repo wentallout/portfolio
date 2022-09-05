@@ -32,7 +32,7 @@ const website = {
 	// PWA
 	siteTitle: 'Khoa Portfolio',
 	siteShortTitle: 'Portfolio',
-	siteUrl: 'www.wentallout.tech',
+	siteUrl: 'https://www.wentallout.com',
 	icon: 'static/icon-512.png',
 	backgroundColor: '#1b1b1d',
 	themeColor: '#b4883c',

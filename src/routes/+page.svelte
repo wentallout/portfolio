@@ -3,12 +3,77 @@
 
 	import fpt from '$lib/assets/images/companylogo/fpt.png?w=300&h=300&webp';
 	import nashtech from '$lib/assets/images/companylogo/nashtech.png?w=300&h=300&webp';
+
+	// ---SEO---
+	import SEO from '$lib/components/SEO/SEO.svelte';
+	import website from '$lib/config.js';
+
+	import ogSquareImageSrc from '$lib/assets/images/seo/home-open-graph-square.jpg';
+	import ogImageSrc from '$lib/assets/images/seo/home-open-graph.jpg';
+	import twitterImageSrc from '$lib/assets/images/seo/home-twitter.jpg';
+	import featuredImageSrc from '$lib/assets/images/seo/home.jpg';
+
+	export let data;
+	const { posts } = data;
+
+	const { author, siteUrl } = website;
+
+	let title = 'Home';
+	const breadcrumbs = [
+		{
+			name: 'Home',
+			slug: '',
+		},
+	];
+	let metadescription = 'Portfolio - UIUX Designer, Web Developer Nguyen Dang Khoa';
+	const featuredImageAlt = 'Portfolio of Khoa';
+	const featuredImage = {
+		url: featuredImageSrc,
+		alt: featuredImageAlt,
+		width: 672,
+		height: 448,
+		caption: 'Home page',
+	};
+	const ogImage = {
+		url: ogImageSrc,
+		alt: featuredImageAlt,
+	};
+	const ogSquareImage = {
+		url: ogSquareImageSrc,
+		alt: featuredImageAlt,
+	};
+
+	const twitterImage = {
+		url: twitterImageSrc,
+		alt: featuredImageAlt,
+	};
+	const entityMeta = {
+		url: `${siteUrl}/`,
+		faviconWidth: 512,
+		faviconHeight: 512,
+		caption: author,
+	};
+	const seoProps = {
+		title,
+		slug: '',
+		entityMeta,
+		datePublished: '2021-07-07T14:19:33.000+0100',
+		lastUpdated: '2021-07-07T14:19:33.000+0100',
+		breadcrumbs,
+		metadescription,
+		featuredImage,
+		ogImage,
+		ogSquareImage,
+		twitterImage,
+	};
+	// ---SEO END---
 </script>
 
 <svelte:head>
 	<title>Khoa's Portfolio</title>
 </svelte:head>
 
+<SEO {...seoProps} />
 <Hero />
 
 <div class="past-clients">
@@ -18,8 +83,6 @@
 		<img loading="lazy" decoding="async" class="logo" src={nashtech} alt="NashTech" />
 	</div>
 </div>
-
-<!-- description of what your job role is, what kind of job  ou do primarily -->
 
 <div />
 

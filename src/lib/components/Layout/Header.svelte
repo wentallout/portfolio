@@ -30,7 +30,7 @@
 							{navItem.title}
 						</a>
 					{:else}
-						<a class="nav__list-item" href={navItem.path}>
+						<a on:click={handleMobileIconClick} class="nav__list-item" href={navItem.path}>
 							{navItem.title}
 						</a>
 					{/if}

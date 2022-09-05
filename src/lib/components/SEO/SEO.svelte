@@ -1,10 +1,10 @@
 <script>
 	// ADD IMAGE
-	import defaultFeaturedImage from '$lib/assets/home/home.jpg';
-	import defaultOgImage from '$lib/assets/home/home-open-graph.jpg';
-	import defaultOgSquareImage from '$lib/assets/home/home-open-graph-square.jpg';
-	import defaultTwitterImage from '$lib/assets/home/home-twitter.jpg';
-	// 
+	import defaultFeaturedImage from '$lib/assets/images/seo/home.jpg';
+	import defaultOgImage from '$lib/assets/images/seo/home-open-graph.jpg';
+	import defaultOgSquareImage from '$lib/assets/images/seo/home-open-graph-square.jpg';
+	import defaultTwitterImage from '$lib/assets/images/seo/home-twitter.jpg';
+	//
 
 	import website from '$lib/config.js';
 	import { VERTICAL_LINE_ENTITY } from '$lib/constants/entities';
