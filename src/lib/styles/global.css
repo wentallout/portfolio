@@ -111,7 +111,7 @@ html {
 }
 
 body {
-	text-rendering: optimizeLegibility;
+	text-rendering: optimizeSpeed;
 	color: var(--black);
 	margin: 0;
 	/* font-smooth: always; */

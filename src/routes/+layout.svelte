@@ -38,21 +38,7 @@
 	import '@fontsource/poppins/400.css';
 	import '@fontsource/poppins/500.css';
 	import '@fontsource/poppins/600.css';
-
-	if (typeof window !== 'undefined' && window) {
-		const googleAnalyticsId = 'G-S6P2BJCLDT';
-		window.dataLayer = window.dataLayer || [];
-		function gtag() {
-			window.dataLayer.push(arguments);
-		}
-		gtag('js', new Date());
-		gtag('config', googleAnalyticsId);
-	}
 </script>
-
-<svelte:head>
-	<script async src="https://www.googletagmanager.com/gtag/js"></script>
-</svelte:head>
 
 <PWA />
 <div class="page-container">
