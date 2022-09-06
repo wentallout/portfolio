@@ -12,12 +12,17 @@
 </script>
 
 <svelte:head>
-	<meta property="twitter:title" content="Portfolio - Nguyen Dang Khoa" />
-	{#if image}
-		<meta property="twitter:image" content={image.url} />
-	{/if}
-
 	<meta name="twitter:card" content="summary_large_image" />
+	<meta property="twitter:domain" content="wentallout.tech" />
+	<meta property="twitter:url" content="https://wentallout.tech" />
+
+	<meta name="twitter:title" content="Portfolio - Nguyen Dang Khoa" />
+
+	<meta name="twitter:description" content="Khoa's Personal Portfolio." />
+
+	{#if image}
+		<meta name="twitter:image" content={image.url} />
+	{/if}
 
 	{#if twitterUsername}
 		<meta name="twitter:creator" content={`@${twitterUsername}`} />
