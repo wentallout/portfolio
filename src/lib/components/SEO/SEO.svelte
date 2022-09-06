@@ -40,7 +40,7 @@
 	export let title;
 
 	const defaultAlt =
-		'picture of a person with long, curly hair, wearing a red had taking a picture with an analogue camera';
+		'Khoa Portfolio cover image featuring a smartphone and a pen on a black background';
 
 	// imported props with fallback defaults
 	export let featuredImage = {
