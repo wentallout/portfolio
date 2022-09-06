@@ -66,7 +66,6 @@
 	}
 
 	.btn-send:hover {
-		/* background-color: hsl(38, 50%, 47%); */
 		background-color: hsl(38, 50%, 37%);
 	}
 
