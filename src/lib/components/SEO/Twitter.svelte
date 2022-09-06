@@ -12,10 +12,13 @@
 </script>
 
 <svelte:head>
-	<meta name="twitter:card" content="summary_large_image" />
+	<meta property="twitter:title" content="Portfolio - Nguyen Dang Khoa" />
 	{#if image}
-		<meta name="twitter:image" content={image.url} />
+		<meta property="twitter:image" content={image.url} />
 	{/if}
+
+	<meta name="twitter:card" content="summary_large_image" />
+
 	{#if twitterUsername}
 		<meta name="twitter:creator" content={`@${twitterUsername}`} />
 		<meta name="twitter:site" content={`@${twitterUsername}`} />
