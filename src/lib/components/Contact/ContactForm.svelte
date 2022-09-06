@@ -1,4 +1,4 @@
-<div class="form-container base-text">
+<div class="form-container ">
 	<form
 		name="contact"
 		method="post"
@@ -7,9 +7,9 @@
 		class="contact"
 	>
 		<input type="hidden" name="form-name" value="contact" />
-		<div class="label">Name</div>
+		<div class="label base-text">Name</div>
 		<input class="contact__input small-text" type="text" name="name" required />
-		<div class="label">Email</div>
+		<div class="label base-text">Email</div>
 		<input
 			placeholder="username@email.com"
 			class="contact__input small-text"
@@ -17,7 +17,7 @@
 			name="email"
 			required
 		/>
-		<div class="label">Message</div>
+		<div class="label base-text">Message</div>
 		<textarea class="contact__message small-text" required name="message" placeholder="" />
 
 		<div class="btn-container">
@@ -37,12 +37,12 @@
 
 	.contact {
 		box-shadow: var(--box-shadow);
+		padding: var(--space-m);
+
 		width: 100%;
-		max-width: 70rem;
+		max-width: 80rem;
 		display: flex;
 		flex-direction: column;
-
-		padding: var(--space-m);
 	}
 
 	.contact__message,

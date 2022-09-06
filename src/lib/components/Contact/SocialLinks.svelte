@@ -48,8 +48,9 @@
 		display: flex;
 		flex-direction: column;
 		width: 100%;
-		height: 300px;
 		margin-bottom: var(--space-m);
+		box-shadow: var(--box-shadow);
+		padding: var(--space-m);
 	}
 
 	@media (min-width: 768px) {

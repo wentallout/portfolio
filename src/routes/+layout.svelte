@@ -33,17 +33,12 @@
 			NProgress.done();
 		}
 	}
+
+	import '@fontsource/poppins/300.css';
+	import '@fontsource/poppins/400.css';
+	import '@fontsource/poppins/500.css';
+	import '@fontsource/poppins/600.css';
 </script>
-
-<svelte:head>
-	<link rel="preconnect" href="https://fonts.googleapis.com" />
-	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-
-	<link
-		href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap"
-		rel="stylesheet"
-	/>
-</svelte:head>
 
 <PWA />
 <div class="page-container">
