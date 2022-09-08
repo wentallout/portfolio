@@ -59,6 +59,8 @@
 
 		/* BOXSHADOW */
 		box-shadow: var(--box-shadow);
+
+		border: 0.5px solid var(--black);
 	}
 
 	.book:hover {
@@ -74,6 +76,7 @@
 
 	.book-title {
 		font-weight: 600;
+		--text: var(--primary);
 	}
 
 	.book-author {

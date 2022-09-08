@@ -24,7 +24,7 @@
 		display: flex;
 		justify-content: left;
 		align-items: center;
-		margin-bottom: var(--space-l);
+		margin-bottom: var(--space-s);
 		font-weight: 600;
 		color: var(--black);
 	}

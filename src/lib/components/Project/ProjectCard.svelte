@@ -70,6 +70,7 @@
 
 	.project__name {
 		font-weight: 600;
+		--text: var(--primary);
 	}
 
 	@media (min-width: 992px) {

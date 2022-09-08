@@ -62,31 +62,31 @@
 .xs-text {
 	font-size: var(--font-size-xs);
 	line-height: var(--line-height-xs);
-	color: var(--text) !important;
+	color: var(--text);
 }
 
 .small-text {
 	font-size: var(--font-size-small);
 	line-height: var(--line-height-small);
-	color: var(--text) !important;
+	color: var(--text);
 }
 
 .base-text {
 	font-size: var(--font-size-base);
 	line-height: var(--line-height-base);
-	color: var(--text) !important;
+	color: var(--text);
 }
 
 .mid-text {
 	font-size: var(--font-size-mid);
 	line-height: var(--line-height-mid);
-	color: var(--text) !important;
+	color: var(--text);
 }
 
 .large-text {
 	font-size: var(--font-size-large);
 	line-height: var(--line-height-large);
-	color: var(--text) !important;
+	color: var(--text);
 }
 /* END TYPOGRAPHY */
 

@@ -8,13 +8,12 @@
 </script>
 
 <details
-	class="base-text"
 	open={$activeFaq === summary}
 	on:toggle={({ target }) => {
 		$activeFaq = target.open ? summary : $activeFaq;
 	}}
 >
-	<summary>{summary}</summary>
+	<summary class="base-text">{summary}</summary>
 	<slot />
 </details>
 

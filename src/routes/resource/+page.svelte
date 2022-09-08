@@ -1,23 +1,26 @@
 <script>
+	import ToolCard from '$lib/components/Resource/ToolCard.svelte';
 	import Faq from '$lib/components/Faq/Faq.svelte';
 	import FaqContainer from '$lib/components/Faq/FaqContainer.svelte';
 
 	import Books from '~icons/ph/books';
 
-	import BookCard from '$lib/components/Book/BookCard.svelte';
+	import Flask from '~icons/ph/flask';
+
+	import BookCard from '$lib/components/Resource/BookCard.svelte';
 	import SectionTitle from '$lib/components/Common/SectionTitle.svelte';
 
-	import pic1 from '$lib/assets/images/UIDesignPrinciples.png?h=250&webp';
-	import pic2 from '$lib/assets/images/DesignManual.png?h=250&webp';
-	import pic3 from '$lib/assets/images/NoBSGuideUX.png?h=250&webp';
-	import pic4 from '$lib/assets/images/Sprint.png?h=250&webp';
+	import pic1 from '$lib/assets/images/book/UIDesignPrinciples.png?h=250&webp';
+	import pic2 from '$lib/assets/images/book/DesignManual.png?h=250&webp';
+	import pic3 from '$lib/assets/images/book/NoBSGuideUX.png?h=250&webp';
+	import pic4 from '$lib/assets/images/book/Sprint.png?h=250&webp';
 </script>
 
 <svelte:head>
 	<title>Resource</title>
 </svelte:head>
 
-<SectionTitle sectionTitle="Must-read">
+<SectionTitle sectionTitle="Books">
 	<Books color="var(--black)" width="32" height="32" />
 </SectionTitle>
 
@@ -66,9 +69,18 @@
 	</Faq>
 </FaqContainer>
 
-<style>
-	/* start here */
+<SectionTitle sectionTitle="User Research">
+	<Flask color="var(--black)" width="32" height="32" />
+</SectionTitle>
+<p class="section-description small-text">
+	User research helps you understand user behaviors, needs, and motivations through various
+	qualitative and quantitative methods (interviews, observation, forms, etc). These user research
+	tools can be useful for you:
+</p>
 
+<ToolCard />
+
+<style>
 	.books {
 		display: flex;
 		flex-wrap: wrap;
@@ -77,10 +89,8 @@
 		flex-direction: column;
 	}
 
-	/* @media (min-width: 992px) {
-		.books {
-			width: 70%;
-			
-		}
-	} */
+	.section-description {
+		max-width: 60ch;
+		text-align: left;
+	}
 </style>

@@ -55,11 +55,13 @@
 		/*  */
 	}
 
-	.bck2top:hover {
-		cursor: pointer;
-		transform: scale(1.5);
-		transition: transform 0.3s;
-		filter: brightness(1.5);
+	@media (hover: hover) {
+		.bck2top:hover {
+			cursor: pointer;
+			transform: scale(1.2);
+			transition: transform 0.3s;
+			filter: brightness(1.5);
+		}
 	}
 
 	.bck2top.hidden {
