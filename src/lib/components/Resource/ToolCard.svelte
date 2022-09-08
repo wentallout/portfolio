@@ -72,6 +72,7 @@
 		flex-direction: row;
 		flex-wrap: wrap;
 		max-width: 100%;
+		gap: var(--space-m);
 	}
 
 	.tool__name {
@@ -85,8 +86,7 @@
 		width: 100%;
 		padding: var(--space-m);
 		box-shadow: var(--box-shadow);
-		margin-bottom: var(--space-m);
-		margin-right: var(--space-m);
+		border-radius: var(--border-radius);
 	}
 
 	.tool:hover {

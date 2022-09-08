@@ -61,6 +61,7 @@
 		box-shadow: var(--box-shadow);
 
 		border: 0.5px solid var(--black);
+		border-radius: var(--border-radius);
 	}
 
 	.book:hover {

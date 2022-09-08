@@ -51,6 +51,10 @@
 
 		/* SHADOW */
 		box-shadow: var(--box-shadow);
+
+		border-radius: var(--border-radius);
+
+		overflow: hidden;
 	}
 
 	.project:hover {
