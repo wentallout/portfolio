@@ -92,5 +92,7 @@
 	.section-description {
 		max-width: 60ch;
 		text-align: left;
+
+		margin-bottom: var(--space-s);
 	}
 </style>

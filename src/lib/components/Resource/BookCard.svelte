@@ -72,7 +72,6 @@
 		width: 50%;
 		height: 50%;
 		margin-bottom: var(--space-m);
-		border: 1px solid var(--black);
 	}
 
 	.book-title {
