@@ -16,7 +16,7 @@
 		<ul class="nav__list">
 			<li class:reduced={scrollY > 60} id="burger-nav" on:click={handleMobileIconClick}>
 				<a class="nav__list-item" on:click|preventDefault href={'#'}>
-					<List color="var(--white)" width="32" height="32" />
+					<List color="var(--neutral-100)" width="32" height="32" />
 				</a>
 			</li>
 
@@ -57,7 +57,7 @@
 
 	.main-header {
 		max-width: 100vw;
-		color: var(--white);
+		color: var(--neutral-100);
 		background-color: #000;
 		width: 100%;
 
@@ -87,7 +87,7 @@
 	}
 
 	.nav__list-item {
-		color: var(--white);
+		color: var(--neutral-100);
 		width: 100%;
 		display: flex;
 		justify-content: center;
@@ -96,8 +96,8 @@
 
 	@media (hover: hover) {
 		.nav__list-item:hover {
-			color: var(--black);
-			background-color: var(--primary);
+			color: var(--neutral-900);
+			background-color: var(--primary-500);
 			transition: 0.3s;
 		}
 	}
@@ -128,7 +128,7 @@
 		}
 	}
 	.active-page {
-		color: var(--primary) !important;
+		color: var(--primary-500) !important;
 		pointer-events: none;
 		position: relative;
 	}
@@ -140,7 +140,7 @@
 			width: 100%;
 			left: 0;
 			bottom: 0;
-			border-bottom: 4px solid var(--primary);
+			border-bottom: 4px solid var(--primary-500);
 		}
 	}
 </style>

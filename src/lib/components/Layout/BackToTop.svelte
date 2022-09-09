@@ -28,13 +28,13 @@
 <svelte:window on:scroll={handleOnScroll} />
 
 <div class="bck2top" on:click={goTop} class:hidden>
-	<CaretCircleUp color="var(--primary)" width="48" height="48" />
+	<CaretCircleUp color="var(--primary-500)" width="48" height="48" />
 </div>
 
 <style>
 	.bck2top {
 		/* COLOR */
-		background-color: var(--black);
+		background-color: var(--neutral-900);
 		width: 48px;
 		height: 48px;
 		border-radius: 100%;

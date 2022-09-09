@@ -4,7 +4,7 @@
 
 <div class="logo-container">
 	<div class="svg-container">
-		<YinYang class="rotate" color="var(--black)" width="64" height="64" />
+		<YinYang class="rotate" color="var(--neutral-900)" width="64" height="64" />
 	</div>
 </div>
 

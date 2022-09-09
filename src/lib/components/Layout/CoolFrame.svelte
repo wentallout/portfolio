@@ -91,8 +91,8 @@
 		bottom: 4px;
 		left: 21px;
 		right: 21px;
-		border-top: 1px solid var(--primary);
-		border-bottom: 1px solid var(--primary);
+		border-top: 1px solid var(--primary-500);
+		border-bottom: 1px solid var(--primary-500);
 	}
 
 	.bar:before {
@@ -103,7 +103,7 @@
 		width: 0.5px;
 		top: 16px;
 		bottom: 16px;
-		background: var(--primary);
+		background: var(--primary-500);
 	}
 
 	.bar:after {
@@ -114,7 +114,7 @@
 		width: 0.5px;
 		top: 16px;
 		bottom: 16px;
-		background: var(--primary);
+		background: var(--primary-500);
 	}
 	/* END */
 </style>

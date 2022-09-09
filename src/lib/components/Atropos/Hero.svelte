@@ -21,12 +21,12 @@
 	}
 
 	.btn-seemywork {
-		background-color: var(--primary);
-		color: var(--black);
+		background-color: var(--primary-500);
+		color: var(--neutral-900);
 	}
 
 	.btn-seemywork:hover {
-		background-color: var(--primary-hover);
+		background-color: var(--primary-600);
 	}
 
 	/* The hero image */
@@ -53,6 +53,6 @@
 		flex-direction: column;
 		justify-content: center;
 		align-items: center;
-		color: var(--white);
+		color: var(--neutral-100);
 	}
 </style>

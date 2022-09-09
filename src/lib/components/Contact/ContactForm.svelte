@@ -50,20 +50,20 @@
 	.contact__message,
 	.contact__input {
 		margin-bottom: var(--space-s);
-		border: 1px solid var(--gray);
+		border: 1px solid var(--neutral-700);
 	}
 
 	/* FOCUS */
 	.contact__input:focus,
 	.contact__message:focus {
-		border: 2px solid var(--black);
+		border: 2px solid var(--neutral-900);
 	}
 
 	/*  */
 
 	.btn-send {
 		border: 0;
-		background-color: var(--primary);
+		background-color: var(--primary-500);
 		margin-right: var(--space-xs);
 	}
 
@@ -79,7 +79,7 @@
 
 	.btn-reset:hover {
 		background-color: var(--error);
-		color: var(--white);
+		color: var(--neutral-100);
 	}
 
 	.btn-container {

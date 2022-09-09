@@ -38,7 +38,7 @@
 	.breadcrumb {
 		margin-bottom: var(--space-l);
 		font-weight: 300;
-		color: var(--gray);
+		color: var(--neutral-800);
 	}
 
 	.breadcrumb__unclickable {
@@ -48,10 +48,10 @@
 
 	.breadcrumb__clickable {
 		display: inline-flex;
-		color: var(--primary);
+		color: var(--primary-500);
 	}
 
 	.breadcrumb__clickable:hover {
-		color: var(--primary-hover);
+		color: var(--primary-600);
 	}
 </style>

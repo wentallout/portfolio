@@ -1,22 +1,47 @@
 :root {
-	/* main */
-	/* b4873c */
-	--primary: #b4873c;
-	--primary-hover: hsl(38, 50%, 37%);
+	/* Primary: Hú Lán Blue */
+	--primary-100: #f2faff;
+	--primary-200: #bce8fe;
+	--primary-300: #84d8f9;
+	--primary-400: #4bc7eb;
+	--primary-500: #17b0cf;
+	--primary-600: #0893a4;
+	--primary-700: #02747a;
+	--primary-800: #005050;
+	--primary-900: #002624;
 
-	/* neutral */
-	--white: #f9f9f9;
-	--black: #1b1b1d;
+	/* Accent: Miyazaki Verdant */
+	--accent-100: #f4fff2;
+	--accent-200: #cfffc6;
+	--accent-300: #aefc99;
+	--accent-400: #91f66b;
+	--accent-500: #77eb3d;
+	--accent-600: #59ba1b;
+	--accent-700: #44880c;
+	--accent-800: #2f5706;
+	--accent-900: #172602;
+
+	/* Neutral */
+	--neutral-100: #fafcfc;
+	--neutral-200: #e8ecee;
+	--neutral-300: #d6dee0;
+	--neutral-400: #c5d0d2;
+	--neutral-500: #b5c2c4;
+	--neutral-600: #8f9c9d;
+	--neutral-700: #6b7575;
+	--neutral-800: #464e4d;
+	--neutral-900: #222626;
+
+	/* alert */
+	--success: #80d926;
+	--error: #e61919;
+	--warning: #f0b042;
+
 	--gray: #415058;
 
 	/* background,text */
-	--background: #f9f9f9;
-	--text: #1b1b1d;
-
-	/* alert */
-	--success: #9bc841;
-	--error: #e03829;
-	--warning: #ecbd51;
+	--background: var(--neutral-100);
+	--text: var(--neutral-900);
 
 	/* font-size */
 	--font-size-small: clamp(0.84rem, calc(0.79rem + 0.23vw), 0.96rem);
@@ -44,19 +69,18 @@
 	--space-l: clamp(2.63rem, calc(2.48rem + 0.73vw), 3rem);
 
 	/* misc */
-	accent-color: var(--primary);
-	caret-color: var(--black);
+	accent-color: var(--primary-500);
+	caret-color: var(--neutral-900);
 
 	/* border radius */
 	--border-radius: 8px;
-
 	--border: 1px solid #e5e5e5;
-	--border-hover: 1px solid var(--black);
+	--border-hover: 1px solid var(--neutral-900);
 }
 
 ::selection {
-	color: var(--black);
-	background: var(--primary);
+	color: var(--neutral-900);
+	background: var(--primary-500);
 }
 
 /* TYPOGRAPHY */
@@ -115,7 +139,7 @@ html {
 
 body {
 	text-rendering: optimizeSpeed;
-	color: var(--black);
+	color: var(--neutral-900);
 	margin: 0;
 	/* font-smooth: always; */
 	-webkit-font-smoothing: antialiased;
@@ -167,14 +191,16 @@ h6 {
 	border: 1px solid transparent;
 
 	border-radius: var(--border-radius);
+
+	margin-right: var(--space-s);
 }
 
 /* INPUT */
 input,
 textarea {
 	padding: 0.375rem 0.75rem;
-	color: var(--gray);
-	background-color: var(--background);
+	color: var(--neutral-700);
+	background-color: var(--neutral-200);
 }
 
 input {

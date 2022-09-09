@@ -26,7 +26,7 @@
 			{bookDescription}
 		</p>
 		<a class="btn btn--download" target="_blank" href={url}>
-			<BookOpen size="24px" color="var(--primary)" />
+			<BookOpen size="24px" color="var(--primary-500)" />
 		</a>
 	</div>
 </div>
@@ -34,12 +34,12 @@
 <style>
 	.btn--download {
 		background-color: transparent;
-		border: 1px solid var(--primary);
+		border: 1px solid var(--primary-500);
 		margin-top: auto;
 	}
 
 	.btn--download:hover {
-		background-color: var(--black);
+		background-color: var(--neutral-900);
 		transition: 0.3s ease;
 	}
 
@@ -55,7 +55,7 @@
 		padding: var(--space-m);
 
 		text-align: left;
-		color: var(--black);
+		color: var(--neutral-900);
 
 		/* BOXSHADOW */
 		box-shadow: var(--box-shadow);
@@ -74,15 +74,16 @@
 		width: 50%;
 		height: 50%;
 		margin-bottom: var(--space-m);
+		border-radius: var(--border-radius);
 	}
 
 	.book-title {
 		font-weight: 600;
-		--text: var(--primary);
+		color: var(--neutral-900);
 	}
 
 	.book-author {
-		color: var(--gray);
+		color: var(--neutral-800);
 		font-weight: 300;
 	}
 
@@ -97,6 +98,7 @@
 		-webkit-line-clamp: 3;
 		-webkit-box-orient: vertical;
 		overflow: hidden;
+		color: var(--neutral-700);
 	}
 
 	@media (min-width: 768px) {

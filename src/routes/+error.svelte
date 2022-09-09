@@ -14,11 +14,11 @@
 	}
 
 	.btn-back {
-		background-color: var(--primary);
-		color: var(--black);
+		background-color: var(--primary-500);
+		color: var(--neutral-900);
 	}
 
 	.btn-back:hover {
-		background-color: var(--primary-hover);
+		background-color: var(--primary-600);
 	}
 </style>

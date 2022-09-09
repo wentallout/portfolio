@@ -15,21 +15,21 @@
 
 body::-webkit-scrollbar-track {
 	box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
-	background-color: var(--black);
+	background-color: var(--neutral-900);
 }
 
 body::-webkit-scrollbar {
 	width: 12px;
-	background-color: var(--black);
+	background-color: var(--neutral-900);
 }
 
 body::-webkit-scrollbar-thumb {
 	box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
-	background-color: var(--primary);
+	background-color: var(--primary-500);
 }
 
 body::-webkit-scrollbar-thumb:hover {
-	background-color: var(--primary-hover);
+	background-color: var(--primary-600);
 }
 
 /* ----------------------------------------------------------------------- */
@@ -49,19 +49,19 @@ body::-webkit-scrollbar-thumb:hover {
 
 /* -------------------------------- Nprogress ------------------------------- */
 #nprogress .bar {
-	background: var(--primary) !important;
+	background: var(--primary-500) !important;
 	height: 5px !important;
 }
 
 #nprogress .peg {
-	box-shadow: 0 0 10px var(--primary), 0 0 5px var(--primary) !important;
+	box-shadow: 0 0 10px var(--primary-500), 0 0 5px var(--primary-500) !important;
 }
 
 #nprogress .spinner-icon {
 	width: 24px !important;
 	height: 24px !important;
-	border-top-color: var(--primary) !important;
-	border-left-color: var(--primary) !important;
+	border-top-color: var(--primary-500) !important;
+	border-left-color: var(--primary-500) !important;
 }
 
 #nprogress .spinner {

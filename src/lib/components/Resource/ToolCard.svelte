@@ -62,7 +62,7 @@
 	}
 
 	.tool__name {
-		color: var(--primary);
+		color: var(--neutral-900);
 	}
 
 	.tool {
@@ -82,6 +82,7 @@
 	}
 
 	.tool__description {
+		color: var(--neutral-700);
 		overflow: hidden;
 		display: -webkit-box;
 		-webkit-line-clamp: 3;

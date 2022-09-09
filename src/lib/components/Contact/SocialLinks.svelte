@@ -9,29 +9,29 @@
 <div class="social">
 	<div class="social__others base-text">
 		<a class="social__address" href="mailto:wentallout@gmail.com">
-			<Envelope color="var(--black)" width="32" height="32" />
+			<Envelope color="var(--primary-600)" width="32" height="32" />
 			<p>wentallout@gmail.com</p>
 		</a>
 		<a
 			class="social__address"
 			href="https://www.figma.com/team_invite/redeem/CRNTQKDT0VQTLYjw7cEogQ"
 		>
-			<LinkedinLogo color="var(--black)" width="32" height="32" />
+			<LinkedinLogo color="var(--primary-600)" width="32" height="32" />
 			<p>LinkedIn</p>
 		</a>
 
 		<a class="social__address" href="https://www.linkedin.com/in/wentallout">
-			<FigmaLogo color="var(--black)" width="32" height="32" />
+			<FigmaLogo color="var(--primary-600)" width="32" height="32" />
 			<p>Figma</p>
 		</a>
 
 		<a class="social__address" href="https://github.com/wentallout">
-			<GitHubLogo color="var(--black)" width="32" height="32" />
+			<GitHubLogo color="var(--primary-600)" width="32" height="32" />
 			<p>GitHub</p>
 		</a>
 
 		<a class="social__address" href="https://www.reddit.com/user/wentallout">
-			<RedditLogo color="var(--black)" width="32" height="32" />
+			<RedditLogo color="var(--primary-600)" width="32" height="32" />
 			<p>Reddit</p>
 		</a>
 	</div>
@@ -52,6 +52,10 @@
 		display: flex;
 		flex-direction: row;
 		align-items: center;
+	}
+
+	.social__address p {
+		margin-left: var(--space-s);
 	}
 
 	@media (min-width: 768px) {

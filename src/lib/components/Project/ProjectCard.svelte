@@ -24,13 +24,13 @@
 
 <style>
 	.btn-view {
-		background-color: var(--primary);
-		color: var(--black);
+		background-color: var(--primary-500);
+		color: var(--neutral-900);
 		margin-top: auto;
 	}
 
 	.btn-view:hover {
-		background-color: var(--primary-hover);
+		background-color: var(--primary-600);
 	}
 
 	.project {
@@ -41,7 +41,7 @@
 		flex-direction: column;
 
 		/* COLOR */
-		background-color: var(--black);
+		background-color: var(--neutral-900);
 
 		--text: #f9f9f9;
 		color: var(--text);
@@ -76,7 +76,12 @@
 
 	.project__name {
 		font-weight: 600;
-		--text: var(--primary);
+		--text: var(--neutral-100);
+	}
+
+	.project__description {
+		--text: var(--neutral-300);
+		font-weight: 400;
 	}
 
 	@media (min-width: 992px) {

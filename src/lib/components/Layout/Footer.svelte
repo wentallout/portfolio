@@ -26,7 +26,7 @@
 	.footer-container {
 		display: flex;
 		flex-direction: column;
-		color: var(--white) !important;
+		color: var(--neutral-100);
 		font-weight: 300;
 	}
 

@@ -14,10 +14,11 @@
 		display: flex;
 		justify-content: left;
 		align-items: center;
-		border: 1px solid var(--black);
 		border-radius: 100%;
 		padding: 0.25rem;
 		margin-right: var(--space-xs);
+
+		background-color: var(--primary-200);
 	}
 
 	.section-title {
@@ -26,6 +27,6 @@
 		align-items: center;
 		margin-bottom: var(--space-s);
 		font-weight: 600;
-		color: var(--black);
+		color: var(--neutral-900);
 	}
 </style>
