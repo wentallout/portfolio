@@ -4,7 +4,7 @@
 	import { page } from '$app/stores';
 
 	let hideMobileMenu = true;
-	// Mobile menu click event handler
+
 	const handleMobileIconClick = () => (hideMobileMenu = !hideMobileMenu);
 
 	let scrollY;
@@ -130,13 +130,16 @@
 	.active-page {
 		color: var(--primary) !important;
 		pointer-events: none;
+		position: relative;
 	}
 
 	@media (min-width: 768px) {
-		.nav__list-item {
-			border-bottom: 4px solid transparent;
-		}
-		.active-page {
+		.active-page::after {
+			position: absolute;
+			content: '';
+			width: 100%;
+			left: 0;
+			bottom: 0;
 			border-bottom: 4px solid var(--primary);
 		}
 	}
