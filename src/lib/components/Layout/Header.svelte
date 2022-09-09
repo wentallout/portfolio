@@ -92,7 +92,6 @@
 		display: flex;
 		justify-content: center;
 		align-items: center;
-		border: 0.1px solid var(--black);
 	}
 
 	@media (hover: hover) {
@@ -131,5 +130,14 @@
 	.active-page {
 		color: var(--primary) !important;
 		pointer-events: none;
+	}
+
+	@media (min-width: 768px) {
+		.nav__list-item {
+			border-bottom: 4px solid transparent;
+		}
+		.active-page {
+			border-bottom: 4px solid var(--primary);
+		}
 	}
 </style>

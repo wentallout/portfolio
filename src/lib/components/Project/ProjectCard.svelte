@@ -54,6 +54,8 @@
 
 		border-radius: var(--border-radius);
 
+		border: var(--border);
+
 		overflow: hidden;
 	}
 

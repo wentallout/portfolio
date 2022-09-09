@@ -8,8 +8,7 @@
 			<div class="hero-text">
 				<h1 data-atropos-offset="-5">Hi! I'm Khoa</h1>
 				<p data-atropos-offset="-3">I code and design.</p>
-				<a data-atropos-offset="10" class="btn btn-seemywork" href="/project">See my work</a
-				>
+				<a data-atropos-offset="10" class="btn btn-seemywork" href="/project">See my work</a>
 			</div>
 		</div>
 	</Atropos>
@@ -35,7 +34,7 @@
 		/* Use "linear-gradient" to add a darken background effect to the image. This will make the text easier to read */
 		background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
 			url('/images/fuji.svg');
-
+		border-radius: var(--border-radius);
 		width: 100%;
 		height: 600px;
 

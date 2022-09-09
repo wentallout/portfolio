@@ -60,12 +60,14 @@
 		/* BOXSHADOW */
 		box-shadow: var(--box-shadow);
 
-		border: 0.5px solid var(--black);
+		border: var(--border);
 		border-radius: var(--border-radius);
 	}
 
 	.book:hover {
 		box-shadow: var(--box-shadow-hover);
+		border: var(--border-hover);
+		transition: 0.3s;
 	}
 
 	.book__thumbnail {

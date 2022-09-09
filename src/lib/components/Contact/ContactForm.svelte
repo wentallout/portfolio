@@ -36,6 +36,8 @@
 	}
 
 	.contact {
+		border-radius: var(--border-radius);
+		border: var(--border);
 		box-shadow: var(--box-shadow);
 		padding: var(--space-m);
 

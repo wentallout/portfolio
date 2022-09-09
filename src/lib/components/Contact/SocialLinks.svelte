@@ -38,12 +38,6 @@
 </div>
 
 <style>
-	.social__address {
-		display: flex;
-		flex-direction: row;
-		align-items: center;
-	}
-
 	.social {
 		display: flex;
 		flex-direction: column;
@@ -51,6 +45,13 @@
 		margin-bottom: var(--space-m);
 		box-shadow: var(--box-shadow);
 		padding: var(--space-m);
+		border-radius: var(--border-radius);
+		border: var(--border);
+	}
+	.social__address {
+		display: flex;
+		flex-direction: row;
+		align-items: center;
 	}
 
 	@media (min-width: 768px) {

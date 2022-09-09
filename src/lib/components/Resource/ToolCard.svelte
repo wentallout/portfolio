@@ -82,7 +82,7 @@
 	.tool {
 		display: flex;
 		flex-direction: column;
-		border: 0.5px solid var(--black);
+		border: var(--border);
 		width: 100%;
 		padding: var(--space-m);
 		box-shadow: var(--box-shadow);
@@ -91,6 +91,8 @@
 
 	.tool:hover {
 		box-shadow: var(--box-shadow-hover);
+		border: var(--border-hover);
+		transition: 0.3s;
 	}
 
 	.tool__description {
