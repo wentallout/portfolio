@@ -41,9 +41,7 @@
 		flex-direction: column;
 
 		/* COLOR */
-		background-color: var(--neutral-900);
-
-		--text: #f9f9f9;
+		background-color: var(--neutral-200);
 		color: var(--text);
 
 		/* SPACING */
@@ -51,11 +49,8 @@
 
 		/* SHADOW */
 		box-shadow: var(--box-shadow);
-
 		border-radius: var(--border-radius);
-
 		border: var(--border);
-
 		overflow: hidden;
 	}
 
@@ -76,11 +71,11 @@
 
 	.project__name {
 		font-weight: 600;
-		--text: var(--neutral-100);
+		color: var(--neutral-900);
 	}
 
 	.project__description {
-		--text: var(--neutral-300);
+		color: var(--neutral-700);
 		font-weight: 400;
 	}
 
