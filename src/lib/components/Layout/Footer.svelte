@@ -17,12 +17,22 @@
 				<a href="/contact">Contact</a>
 			</li>
 		</ul>
-		<div class="">2022 - Made by Khoa with SvelteKit</div>
-		<div class="">wentallout@gmail.com</div>
+		<div class="footer__other">
+			2022 - Made by Khoa with <a href="https://kit.svelte.dev">SvelteKit</a>
+		</div>
+		<div class="footer__other">wentallout@gmail.com</div>
 	</div>
 </footer>
 
 <style>
+	.footer__other {
+		z-index: 3;
+	}
+
+	.footer__other a {
+		color: var(--primary-500);
+	}
+
 	.footer-container {
 		display: flex;
 		flex-direction: column;
