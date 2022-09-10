@@ -70,7 +70,7 @@
 </FaqContainer>
 
 <SectionTitle sectionTitle="User Research">
-	<Flask color="var(--neutral-600" width="32" height="32" />
+	<Flask color="var(--primary-600)" width="32" height="32" />
 </SectionTitle>
 <p class="section-description small-text">
 	User research helps you understand user behaviors, needs, and motivations through various

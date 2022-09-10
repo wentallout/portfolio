@@ -88,7 +88,7 @@
 	}
 
 	.project__description {
-		color: var(--neutral-700);
+		color: var(--neutral-800);
 		font-weight: 400;
 	}
 

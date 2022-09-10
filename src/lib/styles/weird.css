@@ -6,11 +6,6 @@
 	}
 } */
 
-.dark-mode {
-	--background: #121212 !important;
-	--text: #f9f9f9;
-}
-
 /* -------------------------------- Scrollbar ------------------------------- */
 
 body::-webkit-scrollbar-track {

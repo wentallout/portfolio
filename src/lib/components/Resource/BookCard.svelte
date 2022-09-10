@@ -5,7 +5,7 @@
 	export let bookTitle = 'title';
 	export let bookDescription = 'description';
 
-	import BookOpen from '~icons/ph/book-open';
+	import DownloadSimple from '~icons/ph/download-simple';
 </script>
 
 <div class="book">
@@ -26,7 +26,7 @@
 			{bookDescription}
 		</p>
 		<a class="btn btn--download" target="_blank" href={url}>
-			<BookOpen size="24px" color="var(--primary-500)" />
+			<DownloadSimple size="24px" color="var(--primary-500)" />
 		</a>
 	</div>
 </div>

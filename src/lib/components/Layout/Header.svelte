@@ -47,7 +47,7 @@
 		transition: all 0.3s;
 		backdrop-filter: blur(5px);
 		-webkit-backdrop-filter: blur(5px);
-		background-color: rgba(0, 0, 0, 0.7);
+		background-color: rgba(0, 0, 0, 0.8);
 	}
 	.main-header.reduced {
 		background-color: transparent;
