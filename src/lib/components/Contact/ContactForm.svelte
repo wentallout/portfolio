@@ -7,18 +7,28 @@
 		class="contact"
 	>
 		<input type="hidden" name="form-name" value="contact" />
-		<div class="label base-text">Name</div>
-		<input class="contact__input small-text" type="text" name="name" required />
-		<div class="label base-text">Email</div>
+
+		<label for="name" class="label base-text">Name</label>
+		<input class="contact__input small-text" type="text" name="name" id="name" required />
+
+		<label for="email" class="label base-text">Email</label>
 		<input
 			placeholder="username@email.com"
 			class="contact__input small-text"
 			type="email"
 			name="email"
+			id="email"
 			required
 		/>
-		<div class="label base-text">Message</div>
-		<textarea class="contact__message small-text" required name="message" placeholder="" />
+
+		<label for="message" class="label base-text">Message</label>
+		<textarea
+			class="contact__message small-text"
+			required
+			name="message"
+			id="message"
+			placeholder=""
+		/>
 
 		<div class="btn-container">
 			<button class="btn btn-send" type="submit">Send</button>
