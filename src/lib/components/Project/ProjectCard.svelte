@@ -38,7 +38,6 @@
 	.btn-view {
 		background-color: var(--primary-500);
 		color: var(--neutral-900);
-
 		margin-right: var(--space-s);
 	}
 
