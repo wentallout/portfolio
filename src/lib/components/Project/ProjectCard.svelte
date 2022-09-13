@@ -1,10 +1,14 @@
 <script>
+	import FigmaLogo from '~icons/ph/figma-logo';
+	import ButtonWithIcon from './../Button/ButtonWithIcon.svelte';
 	export let projectName = 'name';
 	export let projectImage = 'http://fakeimg.pl/500x500';
-	export let projectDesc = 'desc';
-	export let linkToDetail = 'google.com';
-
+	export let linkToDetail = '';
 	export let linkToFigma = '';
+
+	export let who = '';
+	export let what = '';
+	export let result = '';
 </script>
 
 <div class="project">
@@ -18,16 +22,53 @@
 		alt="project thumbnail" />
 	<div class="project__info">
 		<div class="project__name mid-text">{projectName}</div>
-		<div class="project__description small-text">{projectDesc}</div>
+		<div class="project__description small-text">
+			<div class="description-section">
+				<p class="section-title">What</p>
+				<p class="section-info">{what}</p>
+			</div>
+
+			<div class="description-section">
+				<p class="section-title">Who</p>
+				<p class="section-info">{who}</p>
+			</div>
+
+			<div class="description-section">
+				<p class="section-title">Result</p>
+				<p class="section-info">{result}</p>
+			</div>
+		</div>
 
 		<div class="project__btn">
 			<a class="btn btn-view" href={linkToDetail}>Read</a>
-			<a class="btn btn-figma" href={linkToFigma}>Figma</a>
+
+			<a href={linkToFigma}>
+				<ButtonWithIcon label="Figma" border="1px solid var(--neutral-900)">
+					<FigmaLogo />
+				</ButtonWithIcon>
+			</a>
+
+			<!-- <a class="btn btn-figma">Figma</a> -->
 		</div>
 	</div>
 </div>
 
 <style>
+	.description-section {
+		display: flex;
+		flex-direction: row;
+		gap: var(--space-xs);
+	}
+
+	.section-title {
+		min-width: 20%;
+	}
+
+	.section-info {
+		text-align: left;
+		margin-right: auto;
+	}
+
 	.project {
 		width: 100%;
 		max-width: 80rem;
@@ -52,10 +93,6 @@
 		margin-top: auto;
 		display: flex;
 		justify-content: left;
-	}
-
-	.btn-figma {
-		border: 1px solid var(--neutral-900);
 	}
 
 	.btn-view {
@@ -98,7 +135,7 @@
 	@media (min-width: 992px) {
 		.project__thumbnail {
 			width: 60%;
-			height: 422px;
+			height: 420px;
 		}
 
 		.project__info {

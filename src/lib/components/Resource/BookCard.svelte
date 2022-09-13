@@ -25,7 +25,7 @@
 		<p title={bookDescription} class="book-description small-text">
 			{bookDescription}
 		</p>
-		<a target="_blank" href={url}>
+		<a class="btn-download" target="_blank" href={url}>
 			<ButtonWithIcon
 				label="Download"
 				backgroundColor="var(--neutral-200)"
@@ -38,15 +38,8 @@
 </div>
 
 <style>
-	.btn--download {
-		background-color: transparent;
-		border: 1px solid var(--primary-500);
+	.btn-download {
 		margin-top: auto;
-	}
-
-	.btn--download:hover {
-		background-color: var(--neutral-900);
-		transition: 0.3s ease;
 	}
 
 	.book {

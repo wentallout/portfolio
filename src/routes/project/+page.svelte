@@ -2,6 +2,8 @@
 	import FigmaLogo from '~icons/ph/figma-logo';
 	import ProjectCard from '$lib/components/Project/ProjectCard.svelte';
 	import SectionTitle from '$lib/components/Common/SectionTitle.svelte';
+
+	import RezaThumbnail from '$lib/assets/images/project/reza/reza-thumbnail.png';
 </script>
 
 <svelte:head>
@@ -13,6 +15,14 @@
 </SectionTitle>
 
 <div class="projects">
-	<ProjectCard projectName="Reza" projectDesc="This is Reza project" />
-	<ProjectCard projectName="Project 2: WIP" projectDesc="desc2" />
+	<ProjectCard
+		projectName="Reza"
+		projectImage={RezaThumbnail}
+		projectDesc="This is Reza project"
+		linkToFigma="https://www.figma.com/file/owUrwidb8hZbdmruKhMtyS/REZA%3A-Restaurant-Reservation-App"
+		what="Reza is a restaurant reservation app"
+		who="People who want to reserve a restaurant table online"
+		result="Persona, User Flow, Wireframe, UI, Presentation slides" />
+		
+	<ProjectCard projectName="Project 2: WIP" projectDesc="wip" />
 </div>
