@@ -18,8 +18,9 @@
 		width: 40px;
 		height: 40px;
 		background-color: #000;
-		z-index: 99;
+		z-index: 0;
 		display: hidden;
+		opacity: 0.5;
 	}
 
 	.svg-container {

@@ -1,11 +1,14 @@
+<script>
+	import PaperPlaneRight from '~icons/ph/paper-plane-right';
+</script>
+
 <div class="form-container ">
 	<form
 		name="contact"
 		method="post"
 		netlify-honeypot="bot-field"
 		data-netlify="true"
-		class="contact"
-	>
+		class="contact">
 		<input type="hidden" name="form-name" value="contact" />
 
 		<label for="name" class="label base-text">Name</label>
@@ -18,8 +21,7 @@
 			type="email"
 			name="email"
 			id="email"
-			required
-		/>
+			required />
 
 		<label for="message" class="label base-text">Message</label>
 		<textarea
@@ -27,11 +29,14 @@
 			required
 			name="message"
 			id="message"
-			placeholder=""
-		/>
+			placeholder="" />
 
 		<div class="btn-container">
-			<button class="btn btn-send" type="submit">Send</button>
+			<button class="btn btn-send" type="submit">
+				<PaperPlaneRight color="var(--neutral-900)" />
+
+				Send</button>
+
 			<button class="btn btn-reset" type="reset">Reset</button>
 		</div>
 	</form>

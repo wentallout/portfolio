@@ -4,18 +4,24 @@
 	import FigmaLogo from '~icons/ph/figma-logo';
 	import GitHubLogo from '~icons/ph/github-logo';
 	import RedditLogo from '~icons/ph/reddit-logo';
+
+	import Phone from '~icons/ph/phone';
 </script>
 
 <div class="social">
 	<div class="social__others base-text">
+		<a class="social__address" href="tel:+84929066331">
+			<Phone color="var(--primary-600)" width="32" height="32" />
+			<p>+84 929 066 331</p>
+		</a>
+
 		<a class="social__address" href="mailto:wentallout@gmail.com">
 			<Envelope color="var(--primary-600)" width="32" height="32" />
 			<p>wentallout@gmail.com</p>
 		</a>
 		<a
 			class="social__address"
-			href="https://www.figma.com/team_invite/redeem/CRNTQKDT0VQTLYjw7cEogQ"
-		>
+			href="https://www.figma.com/team_invite/redeem/CRNTQKDT0VQTLYjw7cEogQ">
 			<LinkedinLogo color="var(--primary-600)" width="32" height="32" />
 			<p>LinkedIn</p>
 		</a>

@@ -16,8 +16,7 @@
 		width="175"
 		class="book__thumbnail"
 		alt="book cover"
-		src={thumbnailUrl}
-	/>
+		src={thumbnailUrl} />
 
 	<div class="book__info">
 		<div class="book-title base-text">{bookTitle}</div>

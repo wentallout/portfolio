@@ -8,13 +8,15 @@
 	const handleMobileIconClick = () => (hideMobileMenu = !hideMobileMenu);
 
 	let scrollY;
+
+	$: console.log(scrollY);
 </script>
 
 <svelte:window bind:scrollY />
-<header class:reduced={scrollY > 60} class="main-header base-text">
+<header class:reduced={scrollY > 70} class="main-header base-text">
 	<nav>
 		<ul class="nav__list">
-			<li class:reduced={scrollY > 60} id="burger-nav" on:click={handleMobileIconClick}>
+			<li class:reduced={scrollY > 70} id="burger-nav" on:click={handleMobileIconClick}>
 				<a class="nav__list-item" on:click|preventDefault href={'#'}>
 					<List color="var(--neutral-100)" width="32" height="32" />
 				</a>
@@ -22,9 +24,8 @@
 
 			{#each navItems as navItem}
 				<li
-					class:reduced={scrollY > 60}
-					class={`navbar-list${hideMobileMenu ? ' hidden-mobile' : ''}`}
-				>
+					class:reduced={scrollY > 70}
+					class={`navbar-list${hideMobileMenu ? ' hidden-mobile' : ''}`}>
 					{#if $page.url.pathname === `${navItem.path}`}
 						<a class="nav__list-item active-page" href={navItem.path}>
 							{navItem.title}

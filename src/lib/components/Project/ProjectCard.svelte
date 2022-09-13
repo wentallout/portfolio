@@ -22,8 +22,8 @@
 		<div class="project__description small-text">{projectDesc}</div>
 
 		<div class="project__btn">
-			<a class="btn btn-view" href={linkToDetail}>View</a>
-			<a class="btn" href={linkToFigma}>Figma</a>
+			<a class="btn btn-view" href={linkToDetail}>Read</a>
+			<a class="btn btn-figma" href={linkToFigma}>Figma</a>
 		</div>
 	</div>
 </div>
@@ -33,6 +33,10 @@
 		margin-top: auto;
 		display: flex;
 		justify-content: left;
+	}
+
+	.btn-figma {
+		border: 1px solid var(--neutral-900);
 	}
 
 	.btn-view {
