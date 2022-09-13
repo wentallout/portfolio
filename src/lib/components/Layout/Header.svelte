@@ -8,8 +8,6 @@
 	const handleMobileIconClick = () => (hideMobileMenu = !hideMobileMenu);
 
 	let scrollY;
-
-	$: console.log(scrollY);
 </script>
 
 <svelte:window bind:scrollY />
