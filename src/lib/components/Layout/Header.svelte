@@ -13,10 +13,10 @@
 </script>
 
 <svelte:window bind:scrollY />
-<header class:reduced-header={scrollY > 40} class="main-header base-text">
+<header class:reduced-header={scrollY > 48} class="main-header base-text">
 	<nav>
 		<ul class="nav__list">
-			<li class:reduced-list={scrollY > 40} id="burger-nav" on:click={handleMobileIconClick}>
+			<li class:reduced-list={scrollY > 48} id="burger-nav" on:click={handleMobileIconClick}>
 				<a class="nav__list-item" on:click|preventDefault href={'#'}>
 					<List color="var(--neutral-100)" width="32" height="32" />
 				</a>
@@ -24,7 +24,7 @@
 
 			{#each navItems as navItem}
 				<li
-					class:reduced-list={scrollY > 40}
+					class:reduced-list={scrollY > 48}
 					class={`navbar-list${hideMobileMenu ? ' hidden-mobile' : ''}`}>
 					{#if $page.url.pathname === `${navItem.path}`}
 						<a class="nav__list-item active-page" href={navItem.path}>
@@ -44,7 +44,6 @@
 <style>
 	.reduced-header {
 		font-size: var(--font-size-small);
-		line-height: var(--line-height-small);
 		transition: all 0.3s;
 		background-color: rgba(0, 0, 0, 0.8) !important;
 		backdrop-filter: blur(5px);
@@ -52,7 +51,7 @@
 	}
 
 	.reduced-list {
-		min-height: 2rem;
+		min-height: 2.5rem;
 	}
 
 	.main-header {
@@ -63,6 +62,8 @@
 		position: sticky;
 		top: 0;
 		z-index: 98;
+
+		scroll-snap-align: start;
 	}
 
 	.hidden-mobile {

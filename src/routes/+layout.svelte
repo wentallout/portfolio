@@ -69,6 +69,7 @@
 		background-color: var(--background);
 		display: flex;
 		flex-direction: column;
+		scroll-snap-type: y mandatory;
 	}
 	.main-content {
 		min-height: calc(100vh - 70px);

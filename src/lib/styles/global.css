@@ -195,7 +195,11 @@ input,
 textarea {
 	padding: 0.375rem 0.75rem;
 	color: var(--neutral-700);
-	background-color: var(--neutral-200);
+}
+
+input:focus,
+textarea:focus {
+	outline: 1px solid var(--primary-500);
 }
 
 input {

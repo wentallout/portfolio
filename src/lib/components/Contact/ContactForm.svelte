@@ -68,14 +68,6 @@
 		border: 1px solid var(--neutral-700);
 	}
 
-	/* FOCUS */
-	.contact__input:focus,
-	.contact__message:focus {
-		border: 2px solid var(--neutral-900);
-	}
-
-	/*  */
-
 	.btn-send {
 		border: 0;
 		background-color: var(--primary-500);

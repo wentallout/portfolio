@@ -20,7 +20,7 @@
 		background-color: #000;
 		z-index: 0;
 		display: hidden;
-		opacity: 0.5;
+		opacity: 0.6;
 	}
 
 	.svg-container {

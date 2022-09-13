@@ -15,8 +15,7 @@
 		decoding="async"
 		class="project__thumbnail"
 		src={projectImage}
-		alt="project thumbnail"
-	/>
+		alt="project thumbnail" />
 	<div class="project__info">
 		<div class="project__name mid-text">{projectName}</div>
 		<div class="project__description small-text">{projectDesc}</div>
@@ -29,26 +28,6 @@
 </div>
 
 <style>
-	.project__btn {
-		margin-top: auto;
-		display: flex;
-		justify-content: left;
-	}
-
-	.btn-figma {
-		border: 1px solid var(--neutral-900);
-	}
-
-	.btn-view {
-		background-color: var(--primary-500);
-		color: var(--neutral-900);
-		margin-right: var(--space-s);
-	}
-
-	.btn-view:hover {
-		background-color: var(--primary-600);
-	}
-
 	.project {
 		width: 100%;
 		max-width: 80rem;
@@ -68,6 +47,27 @@
 		border-radius: var(--border-radius);
 		border: var(--border);
 		overflow: hidden;
+
+		scroll-snap-align: start;
+	}
+	.project__btn {
+		margin-top: auto;
+		display: flex;
+		justify-content: left;
+	}
+
+	.btn-figma {
+		border: 1px solid var(--neutral-900);
+	}
+
+	.btn-view {
+		background-color: var(--primary-500);
+		color: var(--neutral-900);
+		margin-right: var(--space-s);
+	}
+
+	.btn-view:hover {
+		background-color: var(--primary-600);
 	}
 
 	.project:hover {
