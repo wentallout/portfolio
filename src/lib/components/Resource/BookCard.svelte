@@ -1,4 +1,5 @@
 <script>
+	import ButtonWithIcon from './../Button/ButtonWithIcon.svelte';
 	export let url = '';
 	export let thumbnailUrl = '';
 	export let authorName = 'author';
@@ -24,8 +25,14 @@
 		<p title={bookDescription} class="book-description small-text">
 			{bookDescription}
 		</p>
-		<a class="btn btn--download" target="_blank" href={url}>
-			<DownloadSimple size="24px" color="var(--primary-500)" />
+		<a target="_blank" href={url}>
+			<ButtonWithIcon
+				label="Download"
+				backgroundColor="var(--neutral-200)"
+				labelColor="var(--primary-500)"
+				border="1px solid var(--primary-500)">
+				<DownloadSimple size="24px" color="var(--primary-500)" />
+			</ButtonWithIcon>
 		</a>
 	</div>
 </div>

@@ -47,8 +47,6 @@
 		border-radius: var(--border-radius);
 		border: var(--border);
 		overflow: hidden;
-
-		scroll-snap-align: start;
 	}
 	.project__btn {
 		margin-top: auto;
@@ -88,11 +86,13 @@
 	.project__name {
 		font-weight: 600;
 		color: var(--neutral-900);
+		margin-bottom: var(--space-xs);
 	}
 
 	.project__description {
 		color: var(--neutral-800);
 		font-weight: 400;
+		margin-bottom: var(--space-s);
 	}
 
 	@media (min-width: 992px) {

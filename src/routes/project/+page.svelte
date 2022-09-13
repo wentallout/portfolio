@@ -14,5 +14,5 @@
 
 <div class="projects">
 	<ProjectCard projectName="Reza" projectDesc="This is Reza project" />
-	<ProjectCard projectName="Project 2: WIP" />
+	<ProjectCard projectName="Project 2: WIP" projectDesc="desc2" />
 </div>

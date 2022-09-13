@@ -190,11 +190,13 @@ h6 {
 	border-radius: var(--border-radius);
 }
 
-/* INPUT */
+/* ---INPUT--- */
 input,
 textarea {
 	padding: 0.375rem 0.75rem;
 	color: var(--neutral-700);
+	margin-bottom: var(--space-s);
+	border: 1px solid var(--neutral-700);
 }
 
 input:focus,
@@ -205,8 +207,8 @@ textarea:focus {
 input {
 	height: 55px;
 }
+/* ------ */
 
-/*  */
 img {
 	object-fit: cover;
 }

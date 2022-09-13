@@ -1,4 +1,5 @@
 <script>
+	import ButtonWithIcon from './../Button/ButtonWithIcon.svelte';
 	import PaperPlaneRight from '~icons/ph/paper-plane-right';
 </script>
 
@@ -12,30 +13,24 @@
 		<input type="hidden" name="form-name" value="contact" />
 
 		<label for="name" class="label base-text">Name</label>
-		<input class="contact__input small-text" type="text" name="name" id="name" required />
+		<input class="small-text" type="text" name="name" id="name" required />
 
 		<label for="email" class="label base-text">Email</label>
 		<input
 			placeholder="username@email.com"
-			class="contact__input small-text"
+			class="small-text"
 			type="email"
 			name="email"
 			id="email"
 			required />
 
 		<label for="message" class="label base-text">Message</label>
-		<textarea
-			class="contact__message small-text"
-			required
-			name="message"
-			id="message"
-			placeholder="" />
+		<textarea class="small-text" required name="message" id="message" placeholder="" />
 
 		<div class="btn-container">
-			<button class="btn btn-send" type="submit">
+			<ButtonWithIcon label="Send" backgroundColor="var(--primary-500)">
 				<PaperPlaneRight color="var(--neutral-900)" />
-
-				Send</button>
+			</ButtonWithIcon>
 
 			<button class="btn btn-reset" type="reset">Reset</button>
 		</div>
@@ -60,22 +55,6 @@
 		max-width: 80rem;
 		display: flex;
 		flex-direction: column;
-	}
-
-	.contact__message,
-	.contact__input {
-		margin-bottom: var(--space-s);
-		border: 1px solid var(--neutral-700);
-	}
-
-	.btn-send {
-		border: 0;
-		background-color: var(--primary-500);
-		margin-right: var(--space-xs);
-	}
-
-	.btn-send:hover {
-		background-color: hsl(38, 50%, 37%);
 	}
 
 	.btn-reset {
