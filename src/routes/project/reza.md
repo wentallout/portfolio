@@ -25,10 +25,6 @@ date: '14/09/2022'
     import ds3 from '$lib/assets/images/project/reza/ds3.png';
 
 
-
-
-
-
 </script>
 
 ![]({thumbnail})
@@ -108,6 +104,10 @@ There are 5 phases to go through: **Empathize, Define, Ideate, Prototype, Test**
 
 ### Phase Two - Define
 
+#### User Persona
+
+Forming multiple user personas is important but for the scale of our project we stick to making one.
+
 ### Phase Three - Ideate
 
 From what we have brainstormed, we prioritized certain features based on impact/effort.
@@ -145,10 +145,3 @@ Team collaboration is very important in a project because when you work alone it
 
 ![learning]({l1})
 ![learning]({l2})
-
-<style>
-a 
-{
-    color: var(--accent-500);
-}
-</style>

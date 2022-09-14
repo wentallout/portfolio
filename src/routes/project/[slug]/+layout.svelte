@@ -1,5 +1,7 @@
 <script>
-	import '$lib/styles/markdown.css';
+	import MarkdownContainer from '$lib/components/Layout/MarkdownContainer.svelte';
 </script>
 
-<slot />
+<MarkdownContainer>
+	<slot />
+</MarkdownContainer>
