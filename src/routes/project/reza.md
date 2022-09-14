@@ -7,8 +7,10 @@ date: '14/09/2022'
 
 	import thumbnail from '$lib/assets/images/project/reza/reza-thumbnail.png';
     import discord from '$lib/assets/images/project/reza/discord.png';
-
     import feature from '$lib/assets/images/project/reza/feature.png';
+    import role from '$lib/assets/images/project/reza/role.png';
+
+
 </script>
 
 ![]({thumbnail})
@@ -21,27 +23,46 @@ We're living in the modern era, you're not going to look for their phone numbers
 
 You need a mobile app that can:
 
+<strong>
+
 ♦ Recommend the most trendy restaurants
 
 ♦ Show you its menu, price and past reviews,
 
 ♦ Let you reserve a table when it's available and then remind you when it's time and guide you there.
 
+</strong>
+
 ## Problem statement
 
-The reason I chose this problem for my team
+We were frustrated because table reservation apps are not as popular as food ordering apps in Vietnam. People still rely on the old ways of booking a table by phone and miss out on discounts.
+
+We look at one of our competitor apps [PasGo](https://pasgo.vn) and relized some important features are missing:
+
+<strong>
+
+♦ Cancel a table
+
+♦ Find direction
+
+♦ Let you reserve a table when it's available and then remind you when it's time and guide you there.
+
+</strong>
+
 
 ## Users & Audience
 
 ## Roles & Responsibilities
 
-I volunteered to be the team leader because I had more free time than my peers and my time management skill is decent.
+I volunteered to be the team leader because I had more free time than my peers and I'm quite confident in my time management skill.
 
-At every steps in our process I gave each members a task and a deadline. Obviously I don't expect them to finish on time since they have school/work but it's still important to estimate so that I can minimize the risk in the future.
+![]({role})
+
+At every steps in our process I gave each members a task and a deadline. Obviously I don't expect them to finish on time since they have school/work but it's still important to estimate so that **I can minimize the potential risk in the future**.
 
 ## Scope & Constraints
 
-We were given <strong>2 weeks</strong> to finish our project so I decided that we should use our limited time properly and focus only on 3 most important features: Searching, Detail, Booking
+We were given **2 weeks** to finish our project so I decided that we should use our limited time properly and focus only on 3 most important features: Searching, Detail, Booking
 
 ![]({feature})
 
@@ -54,3 +75,10 @@ We use Discord for our daily meeting and share our progress and feedback through
 ## Process
 
 ## Result
+
+<style>
+a 
+{
+    color: var(--accent-500);
+}
+</style>

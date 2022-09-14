@@ -1,4 +1,5 @@
 h2 {
+	margin-top: var(--space-l) !important;
 	font-size: var(--font-size-mid);
 	line-height: var(--line-height-mid);
 }
