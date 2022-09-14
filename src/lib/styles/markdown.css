@@ -2,7 +2,6 @@ h2 {
 	margin-top: var(--space-l) !important;
 	font-size: var(--font-size-mid);
 	line-height: var(--line-height-mid);
-	border-top: 0.5px solid var(--neutral-600);
 }
 
 h3 {
