@@ -4,27 +4,20 @@ date: '14/09/2022'
 ---
 
 <script>
-
 	import thumbnail from '$lib/assets/images/project/reza/reza-thumbnail.png';
     import discord from '$lib/assets/images/project/reza/discord.png';
     import feature from '$lib/assets/images/project/reza/feature.png';
     import role from '$lib/assets/images/project/reza/role.png';
     import goal from '$lib/assets/images/project/reza/goal.png';
-
     import userResearch from '$lib/assets/images/project/reza/userResearch.png';
-
     import persona from '$lib/assets/images/project/reza/persona.png';
-
     import c1 from '$lib/assets/images/project/reza/c1.png';
     import c2 from '$lib/assets/images/project/reza/c2.png';
     import l1 from '$lib/assets/images/project/reza/l1.png';
     import l2 from '$lib/assets/images/project/reza/l2.png';
-
     import ds1 from '$lib/assets/images/project/reza/ds1.png';
     import ds2 from '$lib/assets/images/project/reza/ds2.png';
     import ds3 from '$lib/assets/images/project/reza/ds3.png';
-
-
 </script>
 
 ![]({thumbnail})
@@ -145,3 +138,10 @@ Team collaboration is very important in a project because when you work alone it
 
 ![learning]({l1})
 ![learning]({l2})
+
+<style>
+:root
+{
+    --brand-color: #E4543B !important;
+}
+</style>
