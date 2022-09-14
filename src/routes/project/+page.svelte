@@ -18,11 +18,11 @@
 	<ProjectCard
 		projectName="Reza"
 		projectImage={RezaThumbnail}
-		projectDesc="This is Reza project"
 		linkToFigma="https://www.figma.com/file/owUrwidb8hZbdmruKhMtyS/REZA%3A-Restaurant-Reservation-App"
+		linkToDetail="/project/reza"
 		what="Reza is a restaurant reservation app"
 		who="People who want to reserve a restaurant table online"
 		result="Persona, User Flow, Wireframe, UI, Presentation slides" />
-		
-	<ProjectCard projectName="Project 2: WIP" projectDesc="wip" />
+
+	<ProjectCard projectName="Project 2: WIP" what="wip" who="wip" result="wip" />
 </div>

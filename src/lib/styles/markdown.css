@@ -1,0 +1,18 @@
+h2 {
+	font-size: var(--font-size-mid);
+	line-height: var(--line-height-mid);
+}
+
+h3 {
+	font-size: var(--font-size-base);
+	line-height: var(--line-height-base);
+}
+
+p {
+	font-size: var(--font-size-small);
+	line-height: var(--line-height-small);
+}
+
+img {
+	width: 100%;
+}

@@ -40,15 +40,13 @@
 		</div>
 
 		<div class="project__btn">
-			<a class="btn btn-view" href={linkToDetail}>Read</a>
+			<a sveltekit:prefetch class="btn btn-view" href={linkToDetail}>Read</a>
 
 			<a href={linkToFigma}>
 				<ButtonWithIcon label="Figma" border="1px solid var(--neutral-900)">
 					<FigmaLogo />
 				</ButtonWithIcon>
 			</a>
-
-			<!-- <a class="btn btn-figma">Figma</a> -->
 		</div>
 	</div>
 </div>
