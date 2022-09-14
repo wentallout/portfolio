@@ -109,7 +109,7 @@
 
 	.project__thumbnail {
 		width: 100%;
-		height: 200px;
+		height: auto;
 	}
 
 	.project__info {
@@ -133,7 +133,7 @@
 	@media (min-width: 992px) {
 		.project__thumbnail {
 			width: 60%;
-			height: 420px;
+			height: auto;
 		}
 
 		.project__info {
