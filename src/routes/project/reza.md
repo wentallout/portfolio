@@ -122,7 +122,11 @@ I wanted my team to create a simple design system before moving to phase 4.
 
 ### Phase Four - Prototype
 
-We can use Figma to create an interactive design that will be tested by potential users.
+In this phase we need to create an interactive design that will be tested by potential users in phase 5.
+
+[Link to the prototype](https://www.figma.com/proto/owUrwidb8hZbdmruKhMtyS/REZA%3A-Restaurant-Reservation-App?page-id=2%3A9&node-id=275%3A5365&viewport=549%2C-598%2C0.24&scaling=scale-down&starting-point-node-id=275%3A5365)
+
+<iframe style="border: 1px solid rgba(0, 0, 0, 0.1);" width="800" height="450" src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fproto%2FowUrwidb8hZbdmruKhMtyS%2FREZA%253A-Restaurant-Reservation-App%3Fpage-id%3D2%253A9%26node-id%3D275%253A5365%26viewport%3D549%252C-598%252C0.24%26scaling%3Dscale-down%26starting-point-node-id%3D275%253A5365" allowfullscreen></iframe>
 
 ### Phase Five - Test
 
