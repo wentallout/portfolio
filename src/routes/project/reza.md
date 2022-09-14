@@ -20,6 +20,12 @@ date: '14/09/2022'
     import l1 from '$lib/assets/images/project/reza/l1.png';
     import l2 from '$lib/assets/images/project/reza/l2.png';
 
+    import ds1 from '$lib/assets/images/project/reza/ds1.png';
+    import ds2 from '$lib/assets/images/project/reza/ds2.png';
+    import ds3 from '$lib/assets/images/project/reza/ds3.png';
+
+
+
 
 
 
@@ -84,9 +90,7 @@ At every steps in our process I gave each members a task and a deadline. Obvious
 
 ## Scope & Constraints
 
-We were given **2 weeks** to finish our project so I decided that we should use our limited time correctly, remove unnecessary ideas and focus only on 3 most important features: **Searching, Detail, Booking**.
-
-![feature]({feature})
+We were given **2 weeks** to finish our project so I decided that we should use our limited time correctly, remove unnecessary ideas and focus only on the most important features: **Searching, Detail, Booking**.
 
 I set up a meeting time for my team at 7:00 PM every Monday, Wednesday and Friday to both avoid clashing with our classes time and making sure everyone is at home and relaxed.
 
@@ -105,6 +109,16 @@ There are 5 phases to go through: **Empathize, Define, Ideate, Prototype, Test**
 ### Phase Two - Define
 
 ### Phase Three - Ideate
+
+From what we have brainstormed, we prioritized certain features based on impact/effort.
+
+![feature]({feature})
+
+I wanted my team to create a simple design system before moving to phase 4.
+
+![ds1]({ds1})
+![ds2]({ds2})
+![ds3]({ds3})
 
 ### Phase Four - Prototype
 
