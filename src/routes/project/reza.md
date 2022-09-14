@@ -16,8 +16,10 @@ date: '14/09/2022'
     import persona from '$lib/assets/images/project/reza/persona.png';
 
     import c1 from '$lib/assets/images/project/reza/c1.png';
-
     import c2 from '$lib/assets/images/project/reza/c2.png';
+    import l1 from '$lib/assets/images/project/reza/l1.png';
+    import l2 from '$lib/assets/images/project/reza/l2.png';
+
 
 
 
@@ -69,8 +71,7 @@ We look at one of our competitor apps [PasGo](https://pasgo.vn) and relized some
 
 I need to visualize the kind of user that will use this product. The persona has to represent the largest amount of users so I think a person with a paying job will be appropriate. She's busy but like to hangout with friends in a nice place sometimes.
 
-![userResearch]({userResearch})
-
+![persona]({userResearch})
 ![persona]({persona})
 
 ## Roles & Responsibilities
@@ -95,14 +96,37 @@ We use Discord for our daily meeting and share our progress and feedback through
 
 ## Process (still WIP)
 
+The Design Thinking method is a practical way to solve complex problems by finding information about the human needs.
+
+There are 5 phases to go through: **Empathize, Define, Ideate, Prototype, Test**.
+
+### Phase One - Empathize
+
+### Phase Two - Define
+
+### Phase Three - Ideate
+
+### Phase Four - Prototype
+
+We can use Figma to create an interactive design that will be tested by potential users.
+
+### Phase Five - Test
+
+Getting feedback from real users in the testing phase will give me a chance to redesign and maximize the performance of my design
+
+We skipped this phase due to time limitation but I've found a Remote Usability Testing platform that can help with this: [Maze](https://maze.co/)
+
 ## Conclusion
+
+From this case study, I've learned a lot about the process of solving problems.
+
+Team collaboration is very important in a project because when you work alone it's easy to get tunnel visioned (limited point of view). I make sure that I receive feedback from everyone in the team in order to keep improving my designs.
 
 ![conclusion]({c1})
 ![conclusion]({c2})
 
-From this case study, I've learned a lot about the process of solving problems.
-
-I found out that collaboration is very important in a project because when you work alone it's easy to get tunnel visioned (limited point of view). It's crucial that I receive feedback in order to keep improveing my designs.
+![learning]({l1})
+![learning]({l2})
 
 <style>
 a 
