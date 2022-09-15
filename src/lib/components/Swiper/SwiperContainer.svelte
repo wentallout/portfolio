@@ -20,11 +20,15 @@
 	</div>
 </div>
 <Swiper
-	style="--swiper-navigation-color: #fff;--swiper-pagination-color: #fff"
 	a11y={{ prevSlideMessage: 'Previous slide', nextSlideMessage: 'Next slide' }}
 	lazy={true}
+	breakpoints={{
+		768: {
+			slidesPerView: 2,
+		},
+	}}
 	spaceBetween={16}
-	slidesPerView={2}
+	slidesPerView={1}
 	navigation={{ enabled: true, prevEl: '.swiper-prev', nextEl: '.swiper-next' }}
 	pagination={{ clickable: true, type: 'fraction' }}
 	scrollbar={{ draggable: true }}
