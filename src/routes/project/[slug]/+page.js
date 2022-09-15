@@ -1,6 +1,6 @@
 // src/routes/blog/[slug]/+page.js
 export async function load({ params }) {
-	const post = await import(`../${params.slug}.md`);
+	const post = await import(`../${params.slug}.svx`);
 	const { title, date } = post.metadata;
 	const content = post.default;
 

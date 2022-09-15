@@ -17,6 +17,9 @@
 	// NProgress css
 	import 'nprogress/nprogress.css';
 
+	import 'swiper/css/navigation';
+	import 'swiper/css/bundle';
+
 	NProgress.configure({
 		minimum: 0.1,
 		showSpinner: false,

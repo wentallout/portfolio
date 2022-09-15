@@ -74,6 +74,8 @@
 	--border-radius: 8px;
 	--border: 1px solid #e5e5e5;
 	--border-hover: 1px solid var(--neutral-900);
+
+	--swiper-theme-color: var(--brand-color);
 }
 
 ::selection {

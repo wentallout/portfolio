@@ -18,9 +18,13 @@ date: '14/09/2022'
     import ds1 from '$lib/assets/images/project/reza/ds1.png';
     import ds2 from '$lib/assets/images/project/reza/ds2.png';
     import ds3 from '$lib/assets/images/project/reza/ds3.png';
+
+    import { SwiperSlide } from 'swiper/svelte';
+    import SwiperContainer from '$lib/components/Swiper/SwiperContainer.svelte';
+    
 </script>
 
-![]({thumbnail})
+![]({thumbnail} "thumbnail")
 
 ## Overview
 
@@ -66,14 +70,13 @@ We look at one of our competitor apps [PasGo](https://pasgo.vn) and relized some
 
 I need to visualize the kind of user that will use this product. The persona has to represent the largest amount of users so I think a person with a paying job will be appropriate. She's busy but like to hangout with friends in a nice place sometimes.
 
-![persona]({userResearch})
-![persona]({persona})
+![userResearch]({userResearch} "user research")
 
 ## Roles & Responsibilities
 
 I volunteered to be the team leader because I had more free time than my peers and I'm quite confident in my time management skill.
 
-![role]({role})
+![role]({role} "role")
 
 At every steps in our process I gave each members a task and a deadline. Obviously I don't expect them to finish on time since they have school/work but it's still important to estimate so that **I can minimize the potential risk in the future**.
 
@@ -85,7 +88,7 @@ I set up a meeting time for my team at 7:00 PM every Monday, Wednesday and Frida
 
 We use Discord for our daily meeting and share our progress and feedback through screen share.
 
-![discord]({discord})
+![discord]({discord} "discord screenshot")
 
 ## Process (still WIP)
 
@@ -97,21 +100,31 @@ There are 5 phases to go through: **Empathize, Define, Ideate, Prototype, Test**
 
 ### Phase Two - Define
 
-#### User Persona
+User Persona:
 
 Forming multiple user personas is important but for the scale of our project we stick to making one.
+
+![persona]({persona} "persona")
 
 ### Phase Three - Ideate
 
 From what we have brainstormed, we prioritized certain features based on impact/effort.
 
-![feature]({feature})
+![feature]({feature} "feature")
 
-I wanted my team to create a simple design system before moving to phase 4.
+I wanted my team to create a simple design system before moving to phase 4. This will help my team achieve the design consistency that is required in a typical project.
 
-![ds1]({ds1})
-![ds2]({ds2})
-![ds3]({ds3})
+<SwiperContainer>
+    <SwiperSlide> 
+	<img loading="lazy" decoding="async" src={ds1} alt="design system" />
+    </SwiperSlide>
+    <SwiperSlide>
+        <img loading="lazy" decoding="async" src={ds2} alt="design system" />
+    </SwiperSlide>
+    <SwiperSlide>
+         <img loading="lazy" decoding="async" src={ds3} alt="design system" />
+    </SwiperSlide>
+</SwiperContainer>
 
 ### Phase Four - Prototype
 
@@ -119,7 +132,9 @@ In this phase we need to create an interactive design that will be tested by pot
 
 [Link to the prototype](https://www.figma.com/proto/owUrwidb8hZbdmruKhMtyS/REZA%3A-Restaurant-Reservation-App?page-id=2%3A9&node-id=275%3A5365&viewport=549%2C-598%2C0.24&scaling=scale-down&starting-point-node-id=275%3A5365)
 
-<iframe style="border: 1px solid rgba(0, 0, 0, 0.1);" width="800" height="450" src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fproto%2FowUrwidb8hZbdmruKhMtyS%2FREZA%253A-Restaurant-Reservation-App%3Fpage-id%3D2%253A9%26node-id%3D275%253A5365%26viewport%3D549%252C-598%252C0.24%26scaling%3Dscale-down%26starting-point-node-id%3D275%253A5365" allowfullscreen></iframe>
+<div style="left: 0; width: 100%; height: 450px; position: relative;">
+<iframe alt="figma prototype" style="border: 1px solid rgba(0, 0, 0, 0.1);" width="800" height="450" src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fproto%2FowUrwidb8hZbdmruKhMtyS%2FREZA%253A-Restaurant-Reservation-App%3Fpage-id%3D2%253A9%26node-id%3D275%253A5365%26viewport%3D549%252C-598%252C0.24%26scaling%3Dscale-down%26starting-point-node-id%3D275%253A5365" allowfullscreen></iframe>
+</div>
 
 ### Phase Five - Test
 
@@ -133,11 +148,11 @@ From this case study, I've learned a lot about the process of solving problems.
 
 Team collaboration is very important in a project because when you work alone it's easy to get tunnel visioned (limited point of view). I make sure that I receive feedback from everyone in the team in order to keep improving my designs.
 
-![conclusion]({c1})
-![conclusion]({c2})
+![conclusion]({c1} "conclusion")
+![conclusion]({c2} "conclusion")
 
-![learning]({l1})
-![learning]({l2})
+![learning]({l1} "learning")
+![learning]({l2} "learning")
 
 <style>
 :root

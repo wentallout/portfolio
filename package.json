@@ -34,12 +34,13 @@
 		"svelte-check": "^2.9.0",
 		"unplugin-icons": "^0.14.8",
 		"vite": "^3.0.0",
-		"vite-imagetools": "^4.0.5"
+		"vite-imagetools": "^4.0.5",
+		"swiper": "^8.4.0"
 	},
 	"type": "module",
 	"dependencies": {
 		"@fontsource/poppins": "^4.5.9",
-		"atropos": "^1.0.2"
+		"atropos": "^1.0.2"	
 	},
 	"repository": {
 		"type": "git",

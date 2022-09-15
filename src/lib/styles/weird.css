@@ -64,3 +64,16 @@ body::-webkit-scrollbar-thumb:hover {
 	top: 20px !important;
 	right: 20px !important;
 }
+
+.swiper-button-next,
+.swiper-button-prev {
+	border: 1px solid black;
+	opacity: 1;
+	transition: 0.5s ease-in-out;
+	color: black;
+}
+
+.swiper-button-disabled {
+	opacity: 0.5;
+	transition: 0.5s ease-in-out;
+}
