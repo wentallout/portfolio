@@ -21,10 +21,30 @@ date: '14/09/2022'
 
     import { SwiperSlide } from 'swiper/svelte';
     import SwiperContainer from '$lib/components/Swiper/SwiperContainer.svelte';
+ 
+
+    import { onMount } from 'svelte';
+    import { browser } from '$app/environment';
+    import { Image } from '@rodneylab/sveltekit-components';
+
+    onMount(() => {
+		if (browser) {
+			document.lazyloadInstance.update();
+		}
+	});
     
 </script>
 
-![]({thumbnail} "thumbnail")
+<style>
+:root
+{
+    --brand-color: #E4543B !important;
+}
+</style>
+
+ ![]({thumbnail} "thumbnail") 
+
+<!-- <Image maxWidth="600px" width=600 height=auto alt="thumbnail"  src={thumbnail} /> -->
 
 ## Overview
 
@@ -64,7 +84,8 @@ We look at one of our competitor apps [PasGo](https://pasgo.vn) and relized some
 
 => We think we can brainstorm some ideas and design an app with more features and better UX considerations.
 
-![goal]({goal})
+![goal]({goal}) 
+
 
 ## Users & Audience
 
@@ -165,9 +186,4 @@ Team collaboration is very important in a project because when you work alone it
     </SwiperSlide>
 </SwiperContainer>
 
-<style>
-:root
-{
-    --brand-color: #E4543B !important;
-}
-</style>
+

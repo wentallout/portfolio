@@ -76,6 +76,9 @@
 	--border-hover: 1px solid var(--neutral-900);
 
 	--swiper-theme-color: var(--brand-color);
+
+	/* cool gradient */
+	--gradient: linear-gradient(210.55deg, #353a40cc -22.89%, #090a0bcc 80.51%);
 }
 
 ::selection {

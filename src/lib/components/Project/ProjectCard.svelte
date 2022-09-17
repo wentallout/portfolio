@@ -1,8 +1,8 @@
 <script>
 	import FigmaLogo from '~icons/ph/figma-logo';
 	import ButtonWithIcon from './../Button/ButtonWithIcon.svelte';
-	export let projectName = 'name';
-	export let projectImage = 'http://fakeimg.pl/500x500';
+	export let projectName = 'PlaceholderProjectName';
+	export let projectImage = 'https://fakeimg.pl/500x500';
 	export let linkToDetail = '';
 	export let linkToFigma = '';
 

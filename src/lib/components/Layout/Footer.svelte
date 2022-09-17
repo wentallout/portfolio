@@ -95,4 +95,27 @@
 		padding-left: 0;
 		padding-right: var(--space-xs);
 	}
+
+	footer {
+		--c-footer--mask-height: 10px;
+
+		position: relative;
+		margin-top: calc(var(--c-footer--mask-height) * -1);
+		-webkit-mask-image: url(/images/mask_section-bg_top.png),
+			-webkit-gradient(linear, left top, left bottom, from(#000));
+		-webkit-mask-image: url(/images/mask_section-bg_top.png), linear-gradient(#000);
+		mask-image: url(/images/mask_section-bg_top.png),
+			-webkit-gradient(linear, left top, left bottom, from(#000));
+		mask-image: url(/images/mask_section-bg_top.png), linear-gradient(#000);
+		-webkit-mask-size: auto var(--c-footer--mask-height),
+			100% calc(100% - var(--c-footer--mask-height) + 1px);
+		mask-size: auto var(--c-footer--mask-height),
+			100% calc(100% - var(--c-footer--mask-height) + 1px);
+
+		-webkit-mask-position: left top, left calc(var(--c-footer--mask-height) - 1px);
+		mask-position: left top, left calc(var(--c-footer--mask-height) - 1px);
+
+		-webkit-mask-repeat: repeat-x, no-repeat;
+		mask-repeat: repeat-x, no-repeat;
+	}
 </style>
