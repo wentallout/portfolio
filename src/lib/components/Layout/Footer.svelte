@@ -30,7 +30,7 @@
 	}
 
 	.footer__other a {
-		color: var(--primary-500);
+		color: var(--accent-500);
 	}
 
 	.footer-container {

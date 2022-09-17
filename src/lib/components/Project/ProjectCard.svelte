@@ -60,6 +60,8 @@
 
 	.section-title {
 		min-width: 20%;
+		font-weight: 500;
+		color: var(--accent-700);
 	}
 
 	.section-info {

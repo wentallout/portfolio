@@ -4,34 +4,26 @@ date: '14/09/2022'
 ---
 
 <script>
-	import thumbnail from '$lib/assets/images/project/reza/reza-thumbnail.png';
-    import discord from '$lib/assets/images/project/reza/discord.png';
-    import feature from '$lib/assets/images/project/reza/feature.png';
-    import role from '$lib/assets/images/project/reza/role.png';
-    import goal from '$lib/assets/images/project/reza/goal.png';
-    import userResearch from '$lib/assets/images/project/reza/userResearch.png';
-    import persona from '$lib/assets/images/project/reza/persona.png';
-    import c1 from '$lib/assets/images/project/reza/c1.png';
-    import c2 from '$lib/assets/images/project/reza/c2.png';
-    import l1 from '$lib/assets/images/project/reza/l1.png';
-    import l2 from '$lib/assets/images/project/reza/l2.png';
-    import ds1 from '$lib/assets/images/project/reza/ds1.png';
-    import ds2 from '$lib/assets/images/project/reza/ds2.png';
-    import ds3 from '$lib/assets/images/project/reza/ds3.png';
+	import thumbnail from '$lib/assets/images/project/reza/reza-thumbnail.png?webp';
+    import discord from '$lib/assets/images/project/reza/discord.png?webp';
+    import feature from '$lib/assets/images/project/reza/feature.png?webp';
+    import role from '$lib/assets/images/project/reza/role.png?webp';
+    import goal from '$lib/assets/images/project/reza/goal.png?webp';
+    import userResearch from '$lib/assets/images/project/reza/userResearch.png?webp';
+    import persona from '$lib/assets/images/project/reza/persona.png?webp';
+    import c1 from '$lib/assets/images/project/reza/c1.png?webp';
+    import c2 from '$lib/assets/images/project/reza/c2.png?webp';
+    import l1 from '$lib/assets/images/project/reza/l1.png?webp';
+    import l2 from '$lib/assets/images/project/reza/l2.png?webp';
+    import ds1 from '$lib/assets/images/project/reza/ds1.png?webp';
+    import ds2 from '$lib/assets/images/project/reza/ds2.png?webp';
+    import ds3 from '$lib/assets/images/project/reza/ds3.png?webp';
 
     import { SwiperSlide } from 'swiper/svelte';
     import SwiperContainer from '$lib/components/Swiper/SwiperContainer.svelte';
  
 
-    import { onMount } from 'svelte';
-    import { browser } from '$app/environment';
-    import { Image } from '@rodneylab/sveltekit-components';
-
-    onMount(() => {
-		if (browser) {
-			document.lazyloadInstance.update();
-		}
-	});
+   
     
 </script>
 
@@ -136,15 +128,15 @@ From what we have brainstormed, we prioritized certain features based on impact/
 I wanted my team to create a simple design system before moving to phase 4. This will help my team achieve the design consistency that is required in a typical project.
 
 <SwiperContainer>
-    <SwiperSlide> 
-	<img loading="lazy" decoding="async" src={ds1} alt="design system" />
+    <SwiperSlide>   
+	<img loading="lazy" decoding="async" src={ds1} alt="design system" />   
     </SwiperSlide>
     <SwiperSlide>
         <img loading="lazy" decoding="async" src={ds2} alt="design system" />
     </SwiperSlide>
-    <SwiperSlide>
-         <img loading="lazy" decoding="async" src={ds3} alt="design system" />
-    </SwiperSlide>
+    <SwiperSlide> 
+         <img loading="lazy" decoding="async" src={ds3} alt="design system" />       
+    </SwiperSlide> 
 </SwiperContainer>
 
 ### Phase Four - Prototype

@@ -1,14 +1,12 @@
 <script>
 	// import Swiper core and required modules
-	import { Navigation, Pagination, Scrollbar, A11y, Autoplay, Zoom, Lazy } from 'swiper';
+	import { Navigation, Pagination, Scrollbar, A11y, Autoplay, Lazy } from 'swiper';
 
 	import { Swiper } from 'swiper/svelte';
 
 	import CaretCircleLeft from '~icons/ph/caret-circle-left';
-
 	import CaretCircleRight from '~icons/ph/caret-circle-right';
-
-	// Import Swiper styles
+	import 'swiper/css/bundle';
 </script>
 
 <div class="swiper-btn">
@@ -25,6 +23,7 @@
 	breakpoints={{
 		768: {
 			slidesPerView: 2,
+			slidesPerGroup: 2,
 		},
 	}}
 	spaceBetween={16}
@@ -33,8 +32,7 @@
 	pagination={{ clickable: true, type: 'fraction' }}
 	scrollbar={{ draggable: true }}
 	autoplay={{ delay: 2000, disableOnInteraction: false, pauseOnMouseEnter: true }}
-	zoom={{ maxRatio: 5 }}
-	modules={[Navigation, Pagination, Scrollbar, A11y, Autoplay, Zoom, Lazy]}>
+	modules={[Navigation, Pagination, Scrollbar, A11y, Autoplay, Lazy]}>
 	<slot />
 </Swiper>
 

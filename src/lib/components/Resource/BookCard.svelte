@@ -28,7 +28,7 @@
 		<a class="btn-download" target="_blank" href={url}>
 			<ButtonWithIcon
 				label="Download"
-				backgroundColor="var(--neutral-200)"
+				backgroundColor="transparent"
 				labelColor="var(--primary-500)"
 				border="1px solid var(--primary-500)">
 				<DownloadSimple size="24px" color="var(--primary-500)" />

@@ -16,14 +16,8 @@
 	import { navigating } from '$app/stores';
 	// NProgress css
 	import 'nprogress/nprogress.css';
-	
 
 	import lazyload from 'vanilla-lazyload';
-  	import { browser } from '$app/environment';
-
-	if (browser && !document.lazyloadInstance) {
-		document.lazyloadInstance = new lazyload();
-	}
 
 	NProgress.configure({
 		minimum: 0.1,
