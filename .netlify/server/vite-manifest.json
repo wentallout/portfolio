@@ -29,7 +29,25 @@
       "_stores.js"
     ],
     "css": [
-      "_app/immutable/assets/+layout-2da1df86.css"
+      "_app/immutable/assets/_layout-dfd5ceb9.css"
+    ],
+    "assets": [
+      "_app/immutable/assets/poppins-devanagari-300-normal-d531423e.woff2",
+      "_app/immutable/assets/poppins-all-300-normal-df046399.woff",
+      "_app/immutable/assets/poppins-latin-ext-300-normal-32282e10.woff2",
+      "_app/immutable/assets/poppins-latin-300-normal-78bc3aa7.woff2",
+      "_app/immutable/assets/poppins-devanagari-400-normal-478b3ab7.woff2",
+      "_app/immutable/assets/poppins-all-400-normal-c68e1edb.woff",
+      "_app/immutable/assets/poppins-latin-ext-400-normal-cb8bdeab.woff2",
+      "_app/immutable/assets/poppins-latin-400-normal-7d93459d.woff2",
+      "_app/immutable/assets/poppins-devanagari-500-normal-721c714f.woff2",
+      "_app/immutable/assets/poppins-all-500-normal-9ec8c55c.woff",
+      "_app/immutable/assets/poppins-latin-ext-500-normal-5f9d6298.woff2",
+      "_app/immutable/assets/poppins-latin-500-normal-cd36de20.woff2",
+      "_app/immutable/assets/poppins-devanagari-600-normal-d036ece3.woff2",
+      "_app/immutable/assets/poppins-all-600-normal-952d2591.woff",
+      "_app/immutable/assets/poppins-latin-ext-600-normal-9c15f7b0.woff2",
+      "_app/immutable/assets/poppins-latin-600-normal-f4e80d9d.woff2"
     ]
   },
   "src/routes/+layout.js": {
@@ -46,7 +64,15 @@
       "_stores.js"
     ],
     "css": [
-      "_app/immutable/assets/+error-f48a1bb7.css"
+      "_app/immutable/assets/_error-48afdffb.css"
+    ]
+  },
+  "src/routes/project/[slug]/+layout.svelte": {
+    "file": "entries/pages/project/_slug_/_layout.svelte.js",
+    "src": "src/routes/project/[slug]/+layout.svelte",
+    "isEntry": true,
+    "imports": [
+      "_index.js"
     ]
   },
   "src/routes/+page.svelte": {
@@ -59,7 +85,7 @@
       "_config.js"
     ],
     "css": [
-      "_app/immutable/assets/+page-79b881ec.css"
+      "_app/immutable/assets/_page-5790cdbe.css"
     ]
   },
   "src/routes/contact/+page.svelte": {
@@ -69,11 +95,11 @@
     "imports": [
       "_index.js",
       "_figma-logo.js",
-      "_SEO.js",
-      "_config.js"
+      "_ButtonWithIcon.js",
+      "_SEO.js"
     ],
     "css": [
-      "_app/immutable/assets/+page-7d47f390.css"
+      "_app/immutable/assets/_page-70709762.css"
     ]
   },
   "src/routes/contact/+page.js": {
@@ -88,10 +114,34 @@
     "imports": [
       "_index.js",
       "_figma-logo.js",
+      "_ButtonWithIcon.js",
       "_SectionTitle.js"
     ],
     "css": [
-      "_app/immutable/assets/+page-ab86ddae.css"
+      "_app/immutable/assets/_page-f50b49ef.css"
+    ],
+    "assets": [
+      "_app/immutable/assets/reza-thumbnail-637b8ea1.png"
+    ]
+  },
+  "src/routes/project/[slug]/+page.svelte": {
+    "file": "entries/pages/project/_slug_/_page.svelte.js",
+    "src": "src/routes/project/[slug]/+page.svelte",
+    "isEntry": true,
+    "imports": [
+      "_index.js"
+    ],
+    "css": [
+      "_app/immutable/assets/_page-ac644293.css"
+    ]
+  },
+  "src/routes/project/[slug]/+page.js": {
+    "file": "entries/pages/project/_slug_/_page.js",
+    "src": "src/routes/project/[slug]/+page.js",
+    "isEntry": true,
+    "dynamicImports": [
+      "src/routes/project/coinecho.svx",
+      "src/routes/project/reza.svx"
     ]
   },
   "src/routes/resource/+page.svelte": {
@@ -101,10 +151,11 @@
     "imports": [
       "_index.js",
       "_index2.js",
+      "_ButtonWithIcon.js",
       "_SectionTitle.js"
     ],
     "css": [
-      "_app/immutable/assets/+page-d63a4792.css"
+      "_app/immutable/assets/_page-2baa754d.css"
     ]
   },
   "src/routes/resource/tool/+page.svelte": {
@@ -117,7 +168,7 @@
       "_index2.js"
     ],
     "css": [
-      "_app/immutable/assets/+page-bd0e5c0e.css"
+      "_app/immutable/assets/_page-bd0e5c0e.css"
     ]
   },
   "_index.js": {
@@ -157,18 +208,46 @@
       "_index.js"
     ]
   },
+  "_ButtonWithIcon.js": {
+    "file": "chunks/ButtonWithIcon.js",
+    "imports": [
+      "_index.js"
+    ],
+    "css": [
+      "_app/immutable/assets/ButtonWithIcon-81c69e80.css"
+    ]
+  },
   "_SectionTitle.js": {
     "file": "chunks/SectionTitle.js",
     "imports": [
       "_index.js"
     ],
     "css": [
-      "_app/immutable/assets/SectionTitle-7894263f.css"
+      "_app/immutable/assets/SectionTitle-0f12f41a.css"
     ]
   },
   ".svelte-kit/build/hooks.js": {
     "file": "chunks/hooks.js",
     "src": ".svelte-kit/build/hooks.js",
     "isDynamicEntry": true
+  },
+  "src/routes/project/coinecho.svx": {
+    "file": "chunks/coinecho.js",
+    "src": "src/routes/project/coinecho.svx",
+    "isDynamicEntry": true,
+    "imports": [
+      "_index.js"
+    ]
+  },
+  "src/routes/project/reza.svx": {
+    "file": "chunks/reza.js",
+    "src": "src/routes/project/reza.svx",
+    "isDynamicEntry": true,
+    "imports": [
+      "_index.js"
+    ],
+    "css": [
+      "_app/immutable/assets/reza-76ffcb02.css"
+    ]
   }
 }

@@ -17,8 +17,6 @@
 	// NProgress css
 	import 'nprogress/nprogress.css';
 
-	import lazyload from 'vanilla-lazyload';
-
 	NProgress.configure({
 		minimum: 0.1,
 		showSpinner: false,

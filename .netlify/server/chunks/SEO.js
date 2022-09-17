@@ -1,44 +1,12 @@
-var __create = Object.create;
-var __defProp = Object.defineProperty;
-var __getOwnPropDesc = Object.getOwnPropertyDescriptor;
-var __getOwnPropNames = Object.getOwnPropertyNames;
-var __getProtoOf = Object.getPrototypeOf;
-var __hasOwnProp = Object.prototype.hasOwnProperty;
-var __export = (target, all) => {
-  for (var name in all)
-    __defProp(target, name, { get: all[name], enumerable: true });
-};
-var __copyProps = (to, from, except, desc) => {
-  if (from && typeof from === "object" || typeof from === "function") {
-    for (let key of __getOwnPropNames(from))
-      if (!__hasOwnProp.call(to, key) && key !== except)
-        __defProp(to, key, { get: () => from[key], enumerable: !(desc = __getOwnPropDesc(from, key)) || desc.enumerable });
-  }
-  return to;
-};
-var __toESM = (mod, isNodeMode, target) => (target = mod != null ? __create(__getProtoOf(mod)) : {}, __copyProps(
-  isNodeMode || !mod || !mod.__esModule ? __defProp(target, "default", { value: mod, enumerable: true }) : target,
-  mod
-));
-var __toCommonJS = (mod) => __copyProps(__defProp({}, "__esModule", { value: true }), mod);
-var stdin_exports = {};
-__export(stdin_exports, {
-  S: () => SEO,
-  a: () => ogSquareImageSrc,
-  f: () => featuredImageSrc,
-  o: () => ogImageSrc,
-  t: () => twitterImageSrc
-});
-module.exports = __toCommonJS(stdin_exports);
-var import_index = require("./index.js");
-var import_config = require("./config.js");
-var import_object_hash = __toESM(require("object-hash"));
+import { c as create_ssr_component, b as add_attribute, h as escape, v as validate_component } from "./index.js";
+import { w as website } from "./config.js";
+import hash from "object-hash";
 const featuredImageSrc = "/_app/immutable/assets/home-f7ba4dd3.jpg";
 const ogImageSrc = "/_app/immutable/assets/home-open-graph-1fad80fe.jpg";
 const ogSquareImageSrc = "/_app/immutable/assets/home-open-graph-square-2e611abf.jpg";
 const twitterImageSrc = "/_app/immutable/assets/home-twitter-f9826a1b.jpg";
 const VERTICAL_LINE_ENTITY = "|";
-const OpenGraph = (0, import_index.c)(($$result, $$props, $$bindings, slots) => {
+const OpenGraph = create_ssr_component(($$result, $$props, $$bindings, slots) => {
   let { article = false } = $$props;
   let { datePublished } = $$props;
   let { lastUpdated } = $$props;
@@ -75,18 +43,18 @@ const OpenGraph = (0, import_index.c)(($$result, $$props, $$bindings, slots) => 
     $$bindings.siteTitle(siteTitle);
   if ($$props.url === void 0 && $$bindings.url && url !== void 0)
     $$bindings.url(url);
-  return `${$$result.head += `<meta property="${"og:site_name"}"${(0, import_index.b)("content", siteTitle, 0)} data-svelte="svelte-1jlun1z"><meta property="${"og:locale"}"${(0, import_index.b)("content", ogLanguage, 0)} data-svelte="svelte-1jlun1z"><meta property="${"og:url"}"${(0, import_index.b)("content", url, 0)} data-svelte="svelte-1jlun1z"><meta property="${"og:type"}"${(0, import_index.b)("content", article ? "article" : "website", 0)} data-svelte="svelte-1jlun1z"><meta property="${"og:title"}"${(0, import_index.b)("content", pageTitle, 0)} data-svelte="svelte-1jlun1z"><meta property="${"og:description"}"${(0, import_index.b)("content", metadescription, 0)} data-svelte="svelte-1jlun1z">${image ? `<meta property="${"og:image"}"${(0, import_index.b)("content", image.url, 0)} data-svelte="svelte-1jlun1z">
+  return `${$$result.head += `<meta property="${"og:site_name"}"${add_attribute("content", siteTitle, 0)} data-svelte="svelte-1jlun1z"><meta property="${"og:locale"}"${add_attribute("content", ogLanguage, 0)} data-svelte="svelte-1jlun1z"><meta property="${"og:url"}"${add_attribute("content", url, 0)} data-svelte="svelte-1jlun1z"><meta property="${"og:type"}"${add_attribute("content", article ? "article" : "website", 0)} data-svelte="svelte-1jlun1z"><meta property="${"og:title"}"${add_attribute("content", pageTitle, 0)} data-svelte="svelte-1jlun1z"><meta property="${"og:description"}"${add_attribute("content", metadescription, 0)} data-svelte="svelte-1jlun1z">${image ? `<meta property="${"og:image"}"${add_attribute("content", image.url, 0)} data-svelte="svelte-1jlun1z">
 		<meta property="${"og:image:width"}" content="${"1200"}" data-svelte="svelte-1jlun1z">
 		<meta property="${"og:image:height"}" content="${"627"}" data-svelte="svelte-1jlun1z">
-		<meta property="${"og:image:alt"}"${(0, import_index.b)("content", image.alt, 0)} data-svelte="svelte-1jlun1z">` : ``}${squareImage ? `<meta property="${"og:image"}"${(0, import_index.b)("content", squareImage.url, 0)} data-svelte="svelte-1jlun1z">
+		<meta property="${"og:image:alt"}"${add_attribute("content", image.alt, 0)} data-svelte="svelte-1jlun1z">` : ``}${squareImage ? `<meta property="${"og:image"}"${add_attribute("content", squareImage.url, 0)} data-svelte="svelte-1jlun1z">
 		<meta property="${"og:image:width"}" content="${"400"}" data-svelte="svelte-1jlun1z">
 		<meta property="${"og:image:height"}" content="${"400"}" data-svelte="svelte-1jlun1z">
-		<meta property="${"og:image:alt"}"${(0, import_index.b)("content", squareImage.alt, 0)} data-svelte="svelte-1jlun1z">` : ``}${article ? `<meta property="${"article:publisher"}"${(0, import_index.b)("content", facebookPage, 0)} data-svelte="svelte-1jlun1z">
-		<meta property="${"article:author"}"${(0, import_index.b)("content", facebookAuthorPage, 0)} data-svelte="svelte-1jlun1z">
-		<meta property="${"article:published_time"}"${(0, import_index.b)("content", datePublished, 0)} data-svelte="svelte-1jlun1z">
-		<meta property="${"article:modified_time"}"${(0, import_index.b)("content", lastUpdated, 0)} data-svelte="svelte-1jlun1z">` : ``}`, ""}`;
+		<meta property="${"og:image:alt"}"${add_attribute("content", squareImage.alt, 0)} data-svelte="svelte-1jlun1z">` : ``}${article ? `<meta property="${"article:publisher"}"${add_attribute("content", facebookPage, 0)} data-svelte="svelte-1jlun1z">
+		<meta property="${"article:author"}"${add_attribute("content", facebookAuthorPage, 0)} data-svelte="svelte-1jlun1z">
+		<meta property="${"article:published_time"}"${add_attribute("content", datePublished, 0)} data-svelte="svelte-1jlun1z">
+		<meta property="${"article:modified_time"}"${add_attribute("content", lastUpdated, 0)} data-svelte="svelte-1jlun1z">` : ``}`, ""}`;
 });
-const SchemaOrg = (0, import_index.c)(($$result, $$props, $$bindings, slots) => {
+const SchemaOrg = create_ssr_component(($$result, $$props, $$bindings, slots) => {
   let { article = false } = $$props;
   let { author } = $$props;
   let { breadcrumbs } = $$props;
@@ -108,7 +76,7 @@ const SchemaOrg = (0, import_index.c)(($$result, $$props, $$bindings, slots) => 
   let { tiktokUsername } = $$props;
   let { twitterUsername } = $$props;
   let { entityMeta = null } = $$props;
-  const entityHash = (0, import_object_hash.default)({ author }, { algorithm: "md5" });
+  const entityHash = hash({ author }, { algorithm: "md5" });
   const schemaOrgEntity = entityMeta !== null ? {
     "@type": ["Person", "Organization"],
     "@id": `${siteUrl}/#/schema/person/${entityHash}`,
@@ -299,7 +267,7 @@ const SchemaOrg = (0, import_index.c)(($$result, $$props, $$bindings, slots) => 
     $$bindings.entityMeta(entityMeta);
   return `${$$result.head += `<!-- HTML_TAG_START -->${jsonLdScript}<!-- HTML_TAG_END -->`, ""}`;
 });
-const Twitter = (0, import_index.c)(($$result, $$props, $$bindings, slots) => {
+const Twitter = create_ssr_component(($$result, $$props, $$bindings, slots) => {
   let { article = false } = $$props;
   let { author } = $$props;
   let { twitterUsername } = $$props;
@@ -315,13 +283,13 @@ const Twitter = (0, import_index.c)(($$result, $$props, $$bindings, slots) => {
     $$bindings.image(image);
   if ($$props.timeToRead === void 0 && $$bindings.timeToRead && timeToRead !== void 0)
     $$bindings.timeToRead(timeToRead);
-  return `${$$result.head += `<meta name="${"twitter:card"}" content="${"summary_large_image"}" data-svelte="svelte-llpzfy">${image ? `<meta name="${"twitter:image"}"${(0, import_index.b)("content", image.url, 0)} data-svelte="svelte-llpzfy">` : ``}${twitterUsername ? `<meta name="${"twitter:creator"}"${(0, import_index.b)("content", `@${twitterUsername}`, 0)} data-svelte="svelte-llpzfy">
-		<meta name="${"twitter:site"}"${(0, import_index.b)("content", `@${twitterUsername}`, 0)} data-svelte="svelte-llpzfy">` : ``}<meta name="${"twitter:label1"}" content="${"Written by"}" data-svelte="svelte-llpzfy"><meta name="${"twitter:data1"}"${(0, import_index.b)("content", author, 0)} data-svelte="svelte-llpzfy">${article && timeToRead > 0 ? `<meta name="${"twitter:label2"}" content="${"Est. reading time"}" data-svelte="svelte-llpzfy">
-		<meta name="${"twitter:data2"}"${(0, import_index.b)("content", timeToRead !== 1 ? `${timeToRead} minutes` : "1 minute", 0)} data-svelte="svelte-llpzfy">` : ``}`, ""}`;
+  return `${$$result.head += `<meta property="${"twitter:card"}" content="${"summary_large_image"}" data-svelte="svelte-vpzw1s"><meta property="${"twitter:domain"}" content="${"wentallout.tech"}" data-svelte="svelte-vpzw1s"><meta property="${"twitter:url"}" content="${"https://www.wentallout.tech"}" data-svelte="svelte-vpzw1s"><meta property="${"twitter:title"}" content="${"Portfolio - Nguyen Dang Khoa"}" data-svelte="svelte-vpzw1s"><meta property="${"twitter:description"}" content="${"Khoa's Personal Portfolio."}" data-svelte="svelte-vpzw1s">${image ? `<meta property="${"twitter:image"}"${add_attribute("content", image.url, 0)} data-svelte="svelte-vpzw1s">` : ``}${twitterUsername ? `<meta name="${"twitter:creator"}"${add_attribute("content", `@${twitterUsername}`, 0)} data-svelte="svelte-vpzw1s">
+		<meta name="${"twitter:site"}"${add_attribute("content", `@${twitterUsername}`, 0)} data-svelte="svelte-vpzw1s">` : ``}<meta name="${"twitter:label1"}" content="${"Written by"}" data-svelte="svelte-vpzw1s"><meta name="${"twitter:data1"}"${add_attribute("content", author, 0)} data-svelte="svelte-vpzw1s">${article && timeToRead > 0 ? `<meta name="${"twitter:label2"}" content="${"Est. reading time"}" data-svelte="svelte-vpzw1s">
+		<meta name="${"twitter:data2"}"${add_attribute("content", timeToRead !== 1 ? `${timeToRead} minutes` : "1 minute", 0)} data-svelte="svelte-vpzw1s">` : ``}`, ""}`;
 });
-const defaultAlt = "picture of a person with long, curly hair, wearing a red had taking a picture with an analogue camera";
-const SEO = (0, import_index.c)(($$result, $$props, $$bindings, slots) => {
-  const { author, entity, facebookAuthorPage, facebookPage, ogLanguage, siteLanguage, siteShortTitle, siteTitle, siteUrl, githubPage, linkedinProfile, telegramUsername, tiktokUsername, twitterUsername } = import_config.w;
+const defaultAlt = "Khoa Portfolio cover image featuring a smartphone and a pen on a black background";
+const SEO = create_ssr_component(($$result, $$props, $$bindings, slots) => {
+  const { author, entity, facebookAuthorPage, facebookPage, ogLanguage, siteLanguage, siteShortTitle, siteTitle, siteUrl, githubPage, linkedinProfile, telegramUsername, tiktokUsername, twitterUsername } = website;
   let { article = false } = $$props;
   let { breadcrumbs = [] } = $$props;
   let { entityMeta = null } = $$props;
@@ -423,8 +391,15 @@ const SEO = (0, import_index.c)(($$result, $$props, $$bindings, slots) => {
     $$bindings.ogSquareImage(ogSquareImage);
   if ($$props.twitterImage === void 0 && $$bindings.twitterImage && twitterImage !== void 0)
     $$bindings.twitterImage(twitterImage);
-  return `${$$result.head += `${$$result.title = `<title>${(0, import_index.h)(pageTitle)}</title>`, ""}<meta name="${"description"}"${(0, import_index.b)("content", metadescription, 0)} data-svelte="svelte-1on4akf"><meta name="${"robots"}" content="${"index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1"}" data-svelte="svelte-1on4akf"><link rel="${"canonical"}"${(0, import_index.b)("href", url, 0)} data-svelte="svelte-1on4akf">`, ""}
-${(0, import_index.v)(Twitter, "Twitter").$$render($$result, Object.assign(twitterProps), {}, {})}
-${(0, import_index.v)(OpenGraph, "OpenGraph").$$render($$result, Object.assign(openGraphProps), {}, {})}
-${(0, import_index.v)(SchemaOrg, "SchemaOrg").$$render($$result, Object.assign(schemaOrgProps), {}, {})}`;
+  return `${$$result.head += `${$$result.title = `<title>${escape(pageTitle)}</title>`, ""}<meta name="${"description"}"${add_attribute("content", metadescription, 0)} data-svelte="svelte-1on4akf"><meta name="${"robots"}" content="${"index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1"}" data-svelte="svelte-1on4akf"><link rel="${"canonical"}"${add_attribute("href", url, 0)} data-svelte="svelte-1on4akf">`, ""}
+${validate_component(Twitter, "Twitter").$$render($$result, Object.assign(twitterProps), {}, {})}
+${validate_component(OpenGraph, "OpenGraph").$$render($$result, Object.assign(openGraphProps), {}, {})}
+${validate_component(SchemaOrg, "SchemaOrg").$$render($$result, Object.assign(schemaOrgProps), {}, {})}`;
 });
+export {
+  SEO as S,
+  ogSquareImageSrc as a,
+  featuredImageSrc as f,
+  ogImageSrc as o,
+  twitterImageSrc as t
+};

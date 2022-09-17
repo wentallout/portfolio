@@ -1,50 +1,28 @@
-'use strict';
-
-Object.defineProperty(exports, '__esModule', { value: true });
-
-var require$$0$1 = require('assert');
-var require$$4 = require('net');
-var require$$2 = require('http');
-var require$$0$2 = require('stream');
-var require$$6 = require('buffer');
-var require$$0 = require('util');
-var require$$10 = require('stream/web');
-var require$$1 = require('perf_hooks');
-var require$$9 = require('util/types');
-var require$$0$3 = require('events');
-var require$$4$1 = require('tls');
-var require$$3 = require('async_hooks');
-require('console');
-var require$$3$1 = require('zlib');
-var http = require('node:http');
-require('node:https');
-require('node:zlib');
-var Stream = require('node:stream');
-var node_buffer = require('node:buffer');
-var node_util = require('node:util');
-var node_url = require('node:url');
-require('node:net');
-require('node:fs');
-require('node:path');
-var crypto = require('crypto');
-
-function _interopDefaultLegacy (e) { return e && typeof e === 'object' && 'default' in e ? e : { 'default': e }; }
-
-var require$$0__default$1 = /*#__PURE__*/_interopDefaultLegacy(require$$0$1);
-var require$$4__default = /*#__PURE__*/_interopDefaultLegacy(require$$4);
-var require$$2__default = /*#__PURE__*/_interopDefaultLegacy(require$$2);
-var require$$0__default$2 = /*#__PURE__*/_interopDefaultLegacy(require$$0$2);
-var require$$6__default = /*#__PURE__*/_interopDefaultLegacy(require$$6);
-var require$$0__default = /*#__PURE__*/_interopDefaultLegacy(require$$0);
-var require$$10__default = /*#__PURE__*/_interopDefaultLegacy(require$$10);
-var require$$1__default = /*#__PURE__*/_interopDefaultLegacy(require$$1);
-var require$$9__default = /*#__PURE__*/_interopDefaultLegacy(require$$9);
-var require$$0__default$3 = /*#__PURE__*/_interopDefaultLegacy(require$$0$3);
-var require$$4__default$1 = /*#__PURE__*/_interopDefaultLegacy(require$$4$1);
-var require$$3__default = /*#__PURE__*/_interopDefaultLegacy(require$$3);
-var require$$3__default$1 = /*#__PURE__*/_interopDefaultLegacy(require$$3$1);
-var http__default = /*#__PURE__*/_interopDefaultLegacy(http);
-var Stream__default = /*#__PURE__*/_interopDefaultLegacy(Stream);
+import require$$0$1 from 'assert';
+import require$$4 from 'net';
+import require$$2 from 'http';
+import require$$0$2, { Readable as Readable$3 } from 'stream';
+import require$$6 from 'buffer';
+import require$$0 from 'util';
+import require$$10, { ReadableStream as ReadableStream$2, TransformStream, WritableStream } from 'stream/web';
+import require$$1 from 'perf_hooks';
+import require$$9 from 'util/types';
+import require$$0$3 from 'events';
+import require$$4$1 from 'tls';
+import require$$3 from 'async_hooks';
+import 'console';
+import require$$3$1 from 'zlib';
+import http from 'node:http';
+import 'node:https';
+import 'node:zlib';
+import Stream, { PassThrough as PassThrough$1 } from 'node:stream';
+import { Buffer as Buffer$1 } from 'node:buffer';
+import { promisify, deprecate, types } from 'node:util';
+import { format } from 'node:url';
+import 'node:net';
+import 'node:fs';
+import 'node:path';
+import { webcrypto } from 'crypto';
 
 var commonjsGlobal = typeof globalThis !== 'undefined' ? globalThis : typeof window !== 'undefined' ? window : typeof global !== 'undefined' ? global : typeof self !== 'undefined' ? self : {};
 
@@ -305,14 +283,14 @@ var errors$1 = {
   BalancedPoolMissingUpstreamError
 };
 
-const assert$7 = require$$0__default$1["default"];
+const assert$7 = require$$0$1;
 const { kDestroyed: kDestroyed$1, kBodyUsed: kBodyUsed$1 } = symbols$1;
-const { IncomingMessage } = require$$2__default["default"];
-const stream$1 = require$$0__default$2["default"];
-const net$2 = require$$4__default["default"];
+const { IncomingMessage } = require$$2;
+const stream$1 = require$$0$2;
+const net$2 = require$$4;
 const { InvalidArgumentError: InvalidArgumentError$e } = errors$1;
-const { Blob: Blob$2 } = require$$6__default["default"];
-const nodeUtil = require$$0__default["default"];
+const { Blob: Blob$2 } = require$$6;
+const nodeUtil = require$$0;
 
 function nop () {}
 
@@ -640,7 +618,7 @@ function getSocketInfo (socket) {
 let ReadableStream$1;
 function ReadableStreamFrom$1 (iterable) {
   if (!ReadableStream$1) {
-    ReadableStream$1 = require$$10__default["default"].ReadableStream;
+    ReadableStream$1 = require$$10.ReadableStream;
   }
 
   if (ReadableStream$1.from) {
@@ -832,7 +810,7 @@ function requireWebidl () {
 	if (hasRequiredWebidl) return webidl_1;
 	hasRequiredWebidl = 1;
 
-	const { types } = require$$0__default["default"];
+	const { types } = require$$0;
 	const { hasOwn, toUSVString } = requireUtil();
 
 	const webidl = {};
@@ -1436,8 +1414,8 @@ function requireFile () {
 	if (hasRequiredFile) return file;
 	hasRequiredFile = 1;
 
-	const { Blob } = require$$6__default["default"];
-	const { types } = require$$0__default["default"];
+	const { Blob } = require$$6;
+	const { types } = require$$0;
 	const { kState } = requireSymbols();
 	const { isBlobLike } = requireUtil();
 	const { webidl } = requireWebidl();
@@ -1758,9 +1736,9 @@ function requireUtil () {
 	hasRequiredUtil = 1;
 
 	const { redirectStatus } = requireConstants$1();
-	const { performance } = require$$1__default["default"];
+	const { performance } = require$$1;
 	const { isBlobLike, toUSVString, ReadableStreamFrom } = util$e;
-	const assert = require$$0__default$1["default"];
+	const assert = require$$0$1;
 
 	let File;
 
@@ -2236,7 +2214,7 @@ function requireFormdata () {
 	const { kState } = requireSymbols();
 	const { File, FileLike } = requireFile();
 	const { webidl } = requireWebidl();
-	const { Blob } = require$$6__default["default"];
+	const { Blob } = require$$6;
 
 	// https://xhr.spec.whatwg.org/#formdata
 	class FormData {
@@ -2566,12 +2544,12 @@ function requireBody () {
 	const { FormData } = requireFormdata();
 	const { kState } = requireSymbols();
 	const { webidl } = requireWebidl();
-	const { Blob } = require$$6__default["default"];
+	const { Blob } = require$$6;
 	const { kBodyUsed } = symbols$1;
-	const assert = require$$0__default$1["default"];
+	const assert = require$$0$1;
 	const { NotSupportedError } = errors$1;
 	const { isErrored } = util$e;
-	const { isUint8Array, isArrayBuffer } = require$$9__default["default"];
+	const { isUint8Array, isArrayBuffer } = require$$9;
 
 	let ReadableStream;
 
@@ -2582,7 +2560,7 @@ function requireBody () {
 	// https://fetch.spec.whatwg.org/#concept-bodyinit-extract
 	function extractBody (object, keepalive = false) {
 	  if (!ReadableStream) {
-	    ReadableStream = require$$10__default["default"].ReadableStream;
+	    ReadableStream = require$$10.ReadableStream;
 	  }
 
 	  // 1. Let stream be object if object is a ReadableStream object.
@@ -2778,7 +2756,7 @@ function requireBody () {
 	function safelyExtractBody (object, keepalive = false) {
 	  if (!ReadableStream) {
 	    // istanbul ignore next
-	    ReadableStream = require$$10__default["default"].ReadableStream;
+	    ReadableStream = require$$10.ReadableStream;
 	  }
 
 	  // To safely extract a body and a `Content-Type` value from
@@ -3040,7 +3018,7 @@ const {
   InvalidArgumentError: InvalidArgumentError$d,
   NotSupportedError: NotSupportedError$1
 } = errors$1;
-const assert$6 = require$$0__default$1["default"];
+const assert$6 = require$$0$1;
 const util$c = util$e;
 
 // tokenRegExp and headerCharRegex have been lifted from
@@ -3373,7 +3351,7 @@ function processHeader (request, key, val) {
 
 var request$2 = Request$3;
 
-const EventEmitter = require$$0__default$3["default"];
+const EventEmitter = require$$0$3;
 
 class Dispatcher$2 extends EventEmitter {
   dispatch () {
@@ -3551,9 +3529,9 @@ var dispatcherBase = DispatcherBase$3;
 
 const util$b = util$e;
 const { kBodyUsed } = symbols$1;
-const assert$5 = require$$0__default$1["default"];
+const assert$5 = require$$0$1;
 const { InvalidArgumentError: InvalidArgumentError$b } = errors$1;
-const EE = require$$0__default$3["default"];
+const EE = require$$0$3;
 
 const redirectableStatusCodes = [300, 301, 302, 303, 307, 308];
 
@@ -3745,8 +3723,8 @@ function cleanRequestHeaders (headers, removeContent, unknownOrigin) {
 
 var redirect = RedirectHandler$2;
 
-const net$1 = require$$4__default["default"];
-const assert$4 = require$$0__default$1["default"];
+const net$1 = require$$4;
+const assert$4 = require$$0$1;
 const util$a = util$e;
 const { InvalidArgumentError: InvalidArgumentError$a, ConnectTimeoutError } = errors$1;
 let tls; // include tls conditionally since it is not always available
@@ -3770,7 +3748,7 @@ function buildConnector$2 ({ maxCachedSessions, socketPath, timeout, ...opts }) 
     let socket;
     if (protocol === 'https:') {
       if (!tls) {
-        tls = require$$4__default$1["default"];
+        tls = require$$4$1;
       }
       servername = servername || options.servername || util$a.getServerName(host) || null;
 
@@ -4207,8 +4185,8 @@ function requireLlhttp_simd_wasm () {
 
 /* global WebAssembly */
 
-const assert$3 = require$$0__default$1["default"];
-const net = require$$4__default["default"];
+const assert$3 = require$$0$1;
+const net = require$$4;
 const util$9 = util$e;
 const Request$2 = request$2;
 const DispatcherBase$2 = dispatcherBase;
@@ -6529,8 +6507,8 @@ var agent = Agent$1;
 
 var api$1 = {};
 
-const assert$2 = require$$0__default$1["default"];
-const { Readable: Readable$2 } = require$$0__default$2["default"];
+const assert$2 = require$$0$1;
+const { Readable: Readable$2 } = require$$0$2;
 const { RequestAbortedError: RequestAbortedError$6, NotSupportedError } = errors$1;
 const util$6 = util$e;
 const { ReadableStreamFrom, toUSVString } = util$e;
@@ -6874,7 +6852,7 @@ const {
   ResponseStatusCodeError
 } = errors$1;
 const util$5 = util$e;
-const { AsyncResource: AsyncResource$4 } = require$$3__default["default"];
+const { AsyncResource: AsyncResource$4 } = require$$3;
 const { addSignal: addSignal$4, removeSignal: removeSignal$4 } = abortSignal;
 
 class RequestHandler extends AsyncResource$4 {
@@ -7069,14 +7047,14 @@ function request$1 (opts, callback) {
 
 var apiRequest = request$1;
 
-const { finished } = require$$0__default$2["default"];
+const { finished } = require$$0$2;
 const {
   InvalidArgumentError: InvalidArgumentError$5,
   InvalidReturnValueError: InvalidReturnValueError$1,
   RequestAbortedError: RequestAbortedError$3
 } = errors$1;
 const util$4 = util$e;
-const { AsyncResource: AsyncResource$3 } = require$$3__default["default"];
+const { AsyncResource: AsyncResource$3 } = require$$3;
 const { addSignal: addSignal$3, removeSignal: removeSignal$3 } = abortSignal;
 
 class StreamHandler extends AsyncResource$3 {
@@ -7267,16 +7245,16 @@ const {
   Readable,
   Duplex,
   PassThrough
-} = require$$0__default$2["default"];
+} = require$$0$2;
 const {
   InvalidArgumentError: InvalidArgumentError$4,
   InvalidReturnValueError,
   RequestAbortedError: RequestAbortedError$2
 } = errors$1;
 const util$3 = util$e;
-const { AsyncResource: AsyncResource$2 } = require$$3__default["default"];
+const { AsyncResource: AsyncResource$2 } = require$$3;
 const { addSignal: addSignal$2, removeSignal: removeSignal$2 } = abortSignal;
-const assert$1 = require$$0__default$1["default"];
+const assert$1 = require$$0$1;
 
 const kResume = Symbol('resume');
 
@@ -7512,10 +7490,10 @@ function pipeline (opts, handler) {
 var apiPipeline = pipeline;
 
 const { InvalidArgumentError: InvalidArgumentError$3, RequestAbortedError: RequestAbortedError$1, SocketError: SocketError$1 } = errors$1;
-const { AsyncResource: AsyncResource$1 } = require$$3__default["default"];
+const { AsyncResource: AsyncResource$1 } = require$$3;
 const util$2 = util$e;
 const { addSignal: addSignal$1, removeSignal: removeSignal$1 } = abortSignal;
-const assert = require$$0__default$1["default"];
+const assert = require$$0$1;
 
 class UpgradeHandler extends AsyncResource$1 {
   constructor (opts, callback) {
@@ -7616,7 +7594,7 @@ function upgrade (opts, callback) {
 var apiUpgrade = upgrade;
 
 const { InvalidArgumentError: InvalidArgumentError$2, RequestAbortedError, SocketError } = errors$1;
-const { AsyncResource } = require$$3__default["default"];
+const { AsyncResource } = require$$3;
 const util$1 = util$e;
 const { addSignal, removeSignal } = abortSignal;
 
@@ -8279,10 +8257,10 @@ function requireResponse () {
 	const { webidl } = requireWebidl();
 	const { FormData } = requireFormdata();
 	const { kHeadersList } = symbols$1;
-	const assert = require$$0__default$1["default"];
-	const { types } = require$$0__default["default"];
+	const assert = require$$0$1;
+	const { types } = require$$0;
 
-	const ReadableStream = globalThis.ReadableStream || require$$10__default["default"].ReadableStream;
+	const ReadableStream = globalThis.ReadableStream || require$$10.ReadableStream;
 
 	// https://fetch.spec.whatwg.org/#response-class
 	class Response {
@@ -8869,7 +8847,7 @@ function requireRequest () {
 	const { kHeaders, kSignal, kState, kGuard, kRealm } = requireSymbols();
 	const { webidl } = requireWebidl();
 	const { kHeadersList } = symbols$1;
-	const assert = require$$0__default$1["default"];
+	const assert = require$$0$1;
 
 	let TransformStream;
 
@@ -9338,7 +9316,7 @@ function requireRequest () {
 
 	      // 2. Set finalBody to the result of creating a proxy for inputBody.
 	      if (!TransformStream) {
-	        TransformStream = require$$10__default["default"].TransformStream;
+	        TransformStream = require$$10.TransformStream;
 	      }
 
 	      // https://streams.spec.whatwg.org/#readablestream-create-a-proxy
@@ -9779,8 +9757,8 @@ var hasRequiredDataURL;
 function requireDataURL () {
 	if (hasRequiredDataURL) return dataURL;
 	hasRequiredDataURL = 1;
-	const assert = require$$0__default$1["default"];
-	const { atob } = require$$6__default["default"];
+	const assert = require$$0$1;
+	const { atob } = require$$6;
 
 	const encoder = new TextEncoder();
 
@@ -10355,7 +10333,7 @@ function requireFetch () {
 	} = requireResponse();
 	const { Headers } = requireHeaders();
 	const { Request, makeRequest } = requireRequest();
-	const zlib = require$$3__default$1["default"];
+	const zlib = require$$3$1;
 	const {
 	  matchRequestIntegrity,
 	  makePolicyContainer,
@@ -10381,7 +10359,7 @@ function requireFetch () {
 	  isErrorLike
 	} = requireUtil();
 	const { kState, kHeaders, kGuard, kRealm } = requireSymbols();
-	const assert = require$$0__default$1["default"];
+	const assert = require$$0$1;
 	const { safelyExtractBody, extractBody } = requireBody();
 	const {
 	  redirectStatus,
@@ -10392,11 +10370,11 @@ function requireFetch () {
 	  DOMException
 	} = requireConstants$1();
 	const { kHeadersList } = symbols$1;
-	const EE = require$$0__default$3["default"];
-	const { Readable, pipeline } = require$$0__default$2["default"];
+	const EE = require$$0$3;
+	const { Readable, pipeline } = require$$0$2;
 	const { isErrored, isReadable } = util$e;
 	const { dataURLProcessor } = requireDataURL();
-	const { TransformStream } = require$$10__default["default"];
+	const { TransformStream } = require$$10;
 
 	/** @type {import('buffer').resolveObjectURL} */
 	let resolveObjectURL;
@@ -11111,7 +11089,7 @@ function requireFetch () {
 	      return makeNetworkError('invalid path called')
 	    }
 	    case 'blob:': {
-	      resolveObjectURL = resolveObjectURL || require$$6__default["default"].resolveObjectURL;
+	      resolveObjectURL = resolveObjectURL || require$$6.resolveObjectURL;
 
 	      // 1. Run these steps, but abort when the ongoing fetch is terminated:
 	      //    1. Let blob be request’s current URL’s blob URL entry’s object.
@@ -12036,7 +12014,7 @@ function requireFetch () {
 	  // cancelAlgorithm set to cancelAlgorithm, highWaterMark set to
 	  // highWaterMark, and sizeAlgorithm set to sizeAlgorithm.
 	  if (!ReadableStream) {
-	    ReadableStream = require$$10__default["default"].ReadableStream;
+	    ReadableStream = require$$10.ReadableStream;
 	  }
 
 	  const stream = new ReadableStream(
@@ -17105,7 +17083,7 @@ const isAbortSignal = object => {
 	);
 };
 
-node_util.promisify(Stream__default["default"].pipeline);
+promisify(Stream.pipeline);
 const INTERNALS$1 = Symbol('Body internals');
 
 /**
@@ -17128,29 +17106,29 @@ class Body {
 			body = null;
 		} else if (isURLSearchParameters(body)) {
 			// Body is a URLSearchParams
-			body = node_buffer.Buffer.from(body.toString());
-		} else if (isBlob(body)) ; else if (node_buffer.Buffer.isBuffer(body)) ; else if (node_util.types.isAnyArrayBuffer(body)) {
+			body = Buffer$1.from(body.toString());
+		} else if (isBlob(body)) ; else if (Buffer$1.isBuffer(body)) ; else if (types.isAnyArrayBuffer(body)) {
 			// Body is ArrayBuffer
-			body = node_buffer.Buffer.from(body);
+			body = Buffer$1.from(body);
 		} else if (ArrayBuffer.isView(body)) {
 			// Body is ArrayBufferView
-			body = node_buffer.Buffer.from(body.buffer, body.byteOffset, body.byteLength);
-		} else if (body instanceof Stream__default["default"]) ; else if (body instanceof FormData) {
+			body = Buffer$1.from(body.buffer, body.byteOffset, body.byteLength);
+		} else if (body instanceof Stream) ; else if (body instanceof FormData) {
 			// Body is FormData
 			body = formDataToBlob(body);
 			boundary = body.type.split('=')[1];
 		} else {
 			// None of the above
 			// coerce to string then buffer
-			body = node_buffer.Buffer.from(String(body));
+			body = Buffer$1.from(String(body));
 		}
 
 		let stream = body;
 
-		if (node_buffer.Buffer.isBuffer(body)) {
-			stream = Stream__default["default"].Readable.from(body);
+		if (Buffer$1.isBuffer(body)) {
+			stream = Stream.Readable.from(body);
 		} else if (isBlob(body)) {
-			stream = Stream__default["default"].Readable.from(body.stream());
+			stream = Stream.Readable.from(body.stream());
 		}
 
 		this[INTERNALS$1] = {
@@ -17162,7 +17140,7 @@ class Body {
 		};
 		this.size = size;
 
-		if (body instanceof Stream__default["default"]) {
+		if (body instanceof Stream) {
 			body.on('error', error_ => {
 				const error = error_ instanceof FetchBaseError ?
 					error_ :
@@ -17204,7 +17182,7 @@ class Body {
 			return formData;
 		}
 
-		const {toFormData} = await Promise.resolve().then(function () { return require('./multipart-parser-729e3fb0.js'); });
+		const {toFormData} = await import('./multipart-parser-87a176ee.js');
 		return toFormData(this.body, ct);
 	}
 
@@ -17252,7 +17230,7 @@ class Body {
 	}
 }
 
-Body.prototype.buffer = node_util.deprecate(Body.prototype.buffer, 'Please use \'response.arrayBuffer()\' instead of \'response.buffer()\'', 'node-fetch#buffer');
+Body.prototype.buffer = deprecate(Body.prototype.buffer, 'Please use \'response.arrayBuffer()\' instead of \'response.buffer()\'', 'node-fetch#buffer');
 
 // In browsers, all properties are enumerable.
 Object.defineProperties(Body.prototype, {
@@ -17262,7 +17240,7 @@ Object.defineProperties(Body.prototype, {
 	blob: {enumerable: true},
 	json: {enumerable: true},
 	text: {enumerable: true},
-	data: {get: node_util.deprecate(() => {},
+	data: {get: deprecate(() => {},
 		'data doesn\'t exist, use json(), text(), arrayBuffer(), or body instead',
 		'https://github.com/node-fetch/node-fetch/issues/1000 (response)')}
 });
@@ -17289,12 +17267,12 @@ async function consumeBody(data) {
 
 	// Body is null
 	if (body === null) {
-		return node_buffer.Buffer.alloc(0);
+		return Buffer$1.alloc(0);
 	}
 
 	/* c8 ignore next 3 */
-	if (!(body instanceof Stream__default["default"])) {
-		return node_buffer.Buffer.alloc(0);
+	if (!(body instanceof Stream)) {
+		return Buffer$1.alloc(0);
 	}
 
 	// Body is stream
@@ -17321,10 +17299,10 @@ async function consumeBody(data) {
 	if (body.readableEnded === true || body._readableState.ended === true) {
 		try {
 			if (accum.every(c => typeof c === 'string')) {
-				return node_buffer.Buffer.from(accum.join(''));
+				return Buffer$1.from(accum.join(''));
 			}
 
-			return node_buffer.Buffer.concat(accum, accumBytes);
+			return Buffer$1.concat(accum, accumBytes);
 		} catch (error) {
 			throw new FetchError(`Could not create Buffer from response body for ${data.url}: ${error.message}`, 'system', error);
 		}
@@ -17352,10 +17330,10 @@ const clone = (instance, highWaterMark) => {
 
 	// Check that body is a stream and not form-data object
 	// note: we can't clone the form-data object without having it as a dependency
-	if ((body instanceof Stream__default["default"]) && (typeof body.getBoundary !== 'function')) {
+	if ((body instanceof Stream) && (typeof body.getBoundary !== 'function')) {
 		// Tee instance body
-		p1 = new Stream.PassThrough({highWaterMark});
-		p2 = new Stream.PassThrough({highWaterMark});
+		p1 = new PassThrough$1({highWaterMark});
+		p2 = new PassThrough$1({highWaterMark});
 		body.pipe(p1);
 		body.pipe(p2);
 		// Set instance body to teed body and return the other teed body
@@ -17366,7 +17344,7 @@ const clone = (instance, highWaterMark) => {
 	return body;
 };
 
-const getNonSpecFormDataBoundary = node_util.deprecate(
+const getNonSpecFormDataBoundary = deprecate(
 	body => body.getBoundary(),
 	'form-data doesn\'t follow the spec and requires special treatment. Use alternative package',
 	'https://github.com/node-fetch/node-fetch/issues/1167'
@@ -17404,7 +17382,7 @@ const extractContentType = (body, request) => {
 	}
 
 	// Body is a Buffer (Buffer, ArrayBuffer or ArrayBufferView)
-	if (node_buffer.Buffer.isBuffer(body) || node_util.types.isAnyArrayBuffer(body) || ArrayBuffer.isView(body)) {
+	if (Buffer$1.isBuffer(body) || types.isAnyArrayBuffer(body) || ArrayBuffer.isView(body)) {
 		return null;
 	}
 
@@ -17418,7 +17396,7 @@ const extractContentType = (body, request) => {
 	}
 
 	// Body is stream - can't really do much about this
-	if (body instanceof Stream__default["default"]) {
+	if (body instanceof Stream) {
 		return null;
 	}
 
@@ -17433,8 +17411,8 @@ const extractContentType = (body, request) => {
  */
 
 /* c8 ignore next 9 */
-const validateHeaderName = typeof http__default["default"].validateHeaderName === 'function' ?
-	http__default["default"].validateHeaderName :
+const validateHeaderName = typeof http.validateHeaderName === 'function' ?
+	http.validateHeaderName :
 	name => {
 		if (!/^[\^`\-\w!#$%&'*+.|~]+$/.test(name)) {
 			const error = new TypeError(`Header name must be a valid HTTP token [${name}]`);
@@ -17444,8 +17422,8 @@ const validateHeaderName = typeof http__default["default"].validateHeaderName ==
 	};
 
 /* c8 ignore next 9 */
-const validateHeaderValue = typeof http__default["default"].validateHeaderValue === 'function' ?
-	http__default["default"].validateHeaderValue :
+const validateHeaderValue = typeof http.validateHeaderValue === 'function' ?
+	http.validateHeaderValue :
 	(name, value) => {
 		if (/[^\t\u0020-\u007E\u0080-\u00FF]/.test(value)) {
 			const error = new TypeError(`Invalid character in header content ["${name}"]`);
@@ -17482,7 +17460,7 @@ class Headers extends URLSearchParams {
 			for (const [name, values] of Object.entries(raw)) {
 				result.push(...values.map(value => [name, value]));
 			}
-		} else if (init == null) ; else if (typeof init === 'object' && !node_util.types.isBoxedPrimitive(init)) {
+		} else if (init == null) ; else if (typeof init === 'object' && !types.isBoxedPrimitive(init)) {
 			const method = init[Symbol.iterator];
 			// eslint-disable-next-line no-eq-null, eqeqeq
 			if (method == null) {
@@ -17498,7 +17476,7 @@ class Headers extends URLSearchParams {
 				result = [...init]
 					.map(pair => {
 						if (
-							typeof pair !== 'object' || node_util.types.isBoxedPrimitive(pair)
+							typeof pair !== 'object' || types.isBoxedPrimitive(pair)
 						) {
 							throw new TypeError('Each header pair must be an iterable object');
 						}
@@ -17711,7 +17689,7 @@ const isRequest = object => {
 	);
 };
 
-const doBadDataWarn = node_util.deprecate(() => {},
+const doBadDataWarn = deprecate(() => {},
 	'.data is not a valid RequestInit property, use .body instead',
 	'https://github.com/node-fetch/node-fetch/issues/1000 (request)');
 
@@ -17830,7 +17808,7 @@ class Request extends Body {
 
 	/** @returns {string} */
 	get url() {
-		return node_url.format(this[INTERNALS].parsedURL);
+		return format(this[INTERNALS].parsedURL);
 	}
 
 	/** @returns {Headers} */
@@ -17914,7 +17892,7 @@ if (!globalThis.DOMException) {
 
 /** @type {Record<string, any>} */
 const globals = {
-	crypto: crypto.webcrypto,
+	crypto: webcrypto,
 	fetch,
 	Response,
 	// TODO remove the superclass as soon as Undici supports formData
@@ -17925,14 +17903,15 @@ const globals = {
 			return new Request(this.url, {
 				method: this.method,
 				headers: this.headers,
-				body: this.body && require$$0$2.Readable.from(this.body)
+				body: this.body && Readable$3.from(this.body)
 			}).formData();
 		}
 	},
 	Headers: Headers$1,
-	ReadableStream: require$$10.ReadableStream,
-	TransformStream: require$$10.TransformStream,
-	WritableStream: require$$10.WritableStream
+	ReadableStream: ReadableStream$2,
+	TransformStream,
+	WritableStream,
+	FormData
 };
 
 // exported for dev/preview and node environments
@@ -17949,5 +17928,4 @@ function installPolyfills() {
 
 installPolyfills();
 
-exports.File = File;
-exports.FormData = FormData;
+export { FormData as F, File as a };

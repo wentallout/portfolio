@@ -1,67 +1,39 @@
-var __create = Object.create;
-var __defProp = Object.defineProperty;
-var __getOwnPropDesc = Object.getOwnPropertyDescriptor;
-var __getOwnPropNames = Object.getOwnPropertyNames;
-var __getProtoOf = Object.getPrototypeOf;
-var __hasOwnProp = Object.prototype.hasOwnProperty;
-var __export = (target, all) => {
-  for (var name in all)
-    __defProp(target, name, { get: all[name], enumerable: true });
-};
-var __copyProps = (to, from, except, desc) => {
-  if (from && typeof from === "object" || typeof from === "function") {
-    for (let key of __getOwnPropNames(from))
-      if (!__hasOwnProp.call(to, key) && key !== except)
-        __defProp(to, key, { get: () => from[key], enumerable: !(desc = __getOwnPropDesc(from, key)) || desc.enumerable });
-  }
-  return to;
-};
-var __toESM = (mod, isNodeMode, target) => (target = mod != null ? __create(__getProtoOf(mod)) : {}, __copyProps(
-  isNodeMode || !mod || !mod.__esModule ? __defProp(target, "default", { value: mod, enumerable: true }) : target,
-  mod
-));
-var __toCommonJS = (mod) => __copyProps(__defProp({}, "__esModule", { value: true }), mod);
-var stdin_exports = {};
-__export(stdin_exports, {
-  default: () => Layout
+import { c as create_ssr_component, b as add_attribute, d as spread, e as escape_object, v as validate_component, f as subscribe, g as each, h as escape, i as null_to_empty } from "../../chunks/index.js";
+import { w as website, n as navItems } from "../../chunks/config.js";
+import { p as page, n as navigating } from "../../chunks/stores.js";
+import NProgress from "nprogress";
+const PWA = create_ssr_component(($$result, $$props, $$bindings, slots) => {
+  const { themeColor } = website;
+  return `${$$result.head += `<meta name="${"theme-color"}"${add_attribute("content", themeColor, 0)} data-svelte="svelte-12k4fzg">`, ""}`;
 });
-module.exports = __toCommonJS(stdin_exports);
-var import_chunks = require("../../chunks/index.js");
-var import_config = require("../../chunks/config.js");
-var import_stores = require("../../chunks/stores.js");
-var import_nprogress = __toESM(require("nprogress"));
-const PWA = (0, import_chunks.c)(($$result, $$props, $$bindings, slots) => {
-  const { themeColor } = import_config.w;
-  return `${$$result.head += `<meta name="${"theme-color"}"${(0, import_chunks.b)("content", themeColor, 0)} data-svelte="svelte-12k4fzg">`, ""}`;
-});
-const Caret_circle_up = (0, import_chunks.c)(($$result, $$props, $$bindings, slots) => {
-  return `<svg${(0, import_chunks.d)(
+const Caret_circle_up = create_ssr_component(($$result, $$props, $$bindings, slots) => {
+  return `<svg${spread(
     [
       { preserveAspectRatio: "xMidYMid meet" },
       { viewBox: "0 0 256 256" },
       { width: "1.2em" },
       { height: "1.2em" },
-      (0, import_chunks.e)($$props)
+      escape_object($$props)
     ],
     {}
   )}><!-- HTML_TAG_START -->${`<path fill="currentColor" d="M201.5 54.5a103.9 103.9 0 0 0-147 147a103.9 103.9 0 0 0 147-147Zm-11.3 135.7a88 88 0 1 1 0-124.4a87.5 87.5 0 0 1 0 124.4Zm-20.3-51.6a8 8 0 0 1-.5 11.3a8.2 8.2 0 0 1-5.4 2.1a7.9 7.9 0 0 1-5.9-2.6L128 116l-30.1 33.4a8 8 0 0 1-11.8-10.8l36-40a8 8 0 0 1 11.8 0Z"/>`}<!-- HTML_TAG_END --></svg>`;
 });
 const BackToTop_svelte_svelte_type_style_lang = "";
-const css$6 = {
-  code: ".bck2top.svelte-3yclfz{background-color:var(--black);width:48px;height:48px;border-radius:100%;position:fixed;right:30px;bottom:30px;z-index:99;opacity:1;transition:opacity 0.3s, visibility 0.3s;user-select:none;line-height:normal}.bck2top.svelte-3yclfz:hover{cursor:pointer;transform:scale(1.5);transition:transform 0.3s;filter:brightness(1.5)}.bck2top.hidden.svelte-3yclfz{opacity:0;visibility:hidden}",
+const css$7 = {
+  code: ".bck2top.svelte-pxm703{background-color:var(--neutral-900);width:48px;height:48px;border-radius:100%;position:fixed;right:30px;bottom:30px;z-index:99;opacity:1;transition:opacity 0.3s, visibility 0.3s;user-select:none;line-height:normal}@media(hover: hover){.bck2top.svelte-pxm703:hover{cursor:pointer;transform:scale(1.2);transition:transform 0.3s;filter:brightness(1.5)}}.bck2top.hidden.svelte-pxm703{opacity:0;visibility:hidden}",
   map: null
 };
-const BackToTop = (0, import_chunks.c)(($$result, $$props, $$bindings, slots) => {
+const BackToTop = create_ssr_component(($$result, $$props, $$bindings, slots) => {
   let { showOnPx = 150 } = $$props;
   if ($$props.showOnPx === void 0 && $$bindings.showOnPx && showOnPx !== void 0)
     $$bindings.showOnPx(showOnPx);
-  $$result.css.add(css$6);
+  $$result.css.add(css$7);
   return `
 
-<div class="${["bck2top svelte-3yclfz", "hidden"].join(" ").trim()}">${(0, import_chunks.v)(Caret_circle_up, "CaretCircleUp").$$render(
+<div class="${["bck2top svelte-pxm703", "hidden"].join(" ").trim()}">${validate_component(Caret_circle_up, "CaretCircleUp").$$render(
     $$result,
     {
-      color: "var(--primary)",
+      color: "var(--primary-500)",
       width: "48",
       height: "48"
     },
@@ -71,47 +43,47 @@ const BackToTop = (0, import_chunks.c)(($$result, $$props, $$bindings, slots) =>
 </div>`;
 });
 const Footer_svelte_svelte_type_style_lang = "";
-const css$5 = {
-  code: ".footer-container.svelte-yalwkt{display:flex;flex-direction:column;color:var(--white) !important;font-weight:300}footer.svelte-yalwkt{display:flex;flex-direction:column;justify-content:center;align-items:flex-start;font-weight:300;padding:var(--space-m) var(--space-xs);position:relative;max-width:100vw;background-color:#000}@media(min-width: 768px){footer.svelte-yalwkt{padding:var(--space-m) 17vw}}footer.svelte-yalwkt:before{background:url('/images/rhombus_line.png') repeat top center/49px 72px;content:'';position:absolute;top:0;left:0;width:100%;height:100%;opacity:0.12;z-index:1}.nav-list.svelte-yalwkt{display:flex;flex-direction:row;justify-content:left;align-items:center;margin:0px;z-index:2;margin-bottom:var(--space-l)}.nav-list-item.svelte-yalwkt{display:flex;padding-left:0;padding-right:var(--space-xs)}",
+const css$6 = {
+  code: ".footer__other.svelte-2xxko0.svelte-2xxko0{z-index:3}.footer__other.svelte-2xxko0 a.svelte-2xxko0{color:var(--accent-500)}.footer-container.svelte-2xxko0.svelte-2xxko0{display:flex;flex-direction:column;color:var(--neutral-100);font-weight:300}footer.svelte-2xxko0.svelte-2xxko0{display:flex;flex-direction:column;justify-content:center;align-items:flex-start;font-weight:300;padding:var(--space-m) var(--space-xs);position:relative;max-width:100vw;background-color:#000}@media(min-width: 768px){footer.svelte-2xxko0.svelte-2xxko0{padding:var(--space-m) 17vw}}footer.svelte-2xxko0.svelte-2xxko0:before{background:url('/images/rhombus_line.png') repeat top center/49px 72px;content:'';position:absolute;top:0;left:0;width:100%;height:100%;opacity:0.12;z-index:1}.nav-list.svelte-2xxko0.svelte-2xxko0{display:flex;flex-direction:row;justify-content:left;align-items:center;margin:0px;z-index:2;margin-bottom:var(--space-l)}.nav-list-item.svelte-2xxko0.svelte-2xxko0{display:flex;padding-left:0;padding-right:var(--space-xs)}footer.svelte-2xxko0.svelte-2xxko0{--c-footer--mask-height:10px;position:relative;margin-top:calc(var(--c-footer--mask-height) * -1);-webkit-mask-image:url(/images/mask_section-bg_top.png),\r\n			-webkit-gradient(linear, left top, left bottom, from(#000));-webkit-mask-image:url(/images/mask_section-bg_top.png), linear-gradient(#000);mask-image:url(/images/mask_section-bg_top.png),\r\n			-webkit-gradient(linear, left top, left bottom, from(#000));mask-image:url(/images/mask_section-bg_top.png), linear-gradient(#000);-webkit-mask-size:auto var(--c-footer--mask-height),\r\n			100% calc(100% - var(--c-footer--mask-height) + 1px);mask-size:auto var(--c-footer--mask-height),\r\n			100% calc(100% - var(--c-footer--mask-height) + 1px);-webkit-mask-position:left top, left calc(var(--c-footer--mask-height) - 1px);mask-position:left top, left calc(var(--c-footer--mask-height) - 1px);-webkit-mask-repeat:repeat-x, no-repeat;mask-repeat:repeat-x, no-repeat}",
   map: null
 };
-const Footer = (0, import_chunks.c)(($$result, $$props, $$bindings, slots) => {
-  $$result.css.add(css$5);
-  return `<footer class="${"svelte-yalwkt"}"><div class="${"footer-container small-text svelte-yalwkt"}"><ul class="${"nav-list svelte-yalwkt"}"><li class="${"nav-list-item svelte-yalwkt"}"><a href="${"/"}">Home</a></li>
-			<li class="${"nav-list-item svelte-yalwkt"}"><a href="${"/project"}">Project</a></li>
-			<li class="${"nav-list-item svelte-yalwkt"}"><a href="${"/resource"}">Resource</a></li>
-			<li class="${"nav-list-item svelte-yalwkt"}"><a href="${"/contact"}">Contact</a></li></ul>
-		<div class="${""}">2022 - Made by Khoa with SvelteKit</div>
-		<div class="${""}">wentallout@gmail.com</div></div>
+const Footer = create_ssr_component(($$result, $$props, $$bindings, slots) => {
+  $$result.css.add(css$6);
+  return `<footer class="${"svelte-2xxko0"}"><div class="${"footer-container small-text svelte-2xxko0"}"><ul class="${"nav-list svelte-2xxko0"}"><li class="${"nav-list-item svelte-2xxko0"}"><a href="${"/"}">Home</a></li>
+			<li class="${"nav-list-item svelte-2xxko0"}"><a href="${"/project"}">Project</a></li>
+			<li class="${"nav-list-item svelte-2xxko0"}"><a href="${"/resource"}">Resource</a></li>
+			<li class="${"nav-list-item svelte-2xxko0"}"><a href="${"/contact"}">Contact</a></li></ul>
+		<div class="${"footer__other svelte-2xxko0"}">2022 - Made by Khoa with <a href="${"https://kit.svelte.dev"}" class="${"svelte-2xxko0"}">SvelteKit</a></div>
+		<div class="${"footer__other svelte-2xxko0"}">wentallout@gmail.com</div></div>
 </footer>`;
 });
-const List = (0, import_chunks.c)(($$result, $$props, $$bindings, slots) => {
-  return `<svg${(0, import_chunks.d)(
+const List = create_ssr_component(($$result, $$props, $$bindings, slots) => {
+  return `<svg${spread(
     [
       { preserveAspectRatio: "xMidYMid meet" },
       { viewBox: "0 0 256 256" },
       { width: "1.2em" },
       { height: "1.2em" },
-      (0, import_chunks.e)($$props)
+      escape_object($$props)
     ],
     {}
   )}><!-- HTML_TAG_START -->${`<path fill="currentColor" d="M224 128a8 8 0 0 1-8 8H40a8 8 0 0 1 0-16h176a8 8 0 0 1 8 8ZM40 72h176a8 8 0 0 0 0-16H40a8 8 0 0 0 0 16Zm176 112H40a8 8 0 0 0 0 16h176a8 8 0 0 0 0-16Z"/>`}<!-- HTML_TAG_END --></svg>`;
 });
 const Header_svelte_svelte_type_style_lang = "";
-const css$4 = {
-  code: ".reduced.svelte-1w23fq2.svelte-1w23fq2{min-height:2.5rem;font-size:var(--font-size-small);transition:all 0.3s;backdrop-filter:blur(5px);-webkit-backdrop-filter:blur(5px);background-color:rgba(0, 0, 0, 0.7)}.main-header.reduced.svelte-1w23fq2.svelte-1w23fq2{background-color:transparent;backdrop-filter:blur(5px);-webkit-backdrop-filter:blur(5px)}.main-header.svelte-1w23fq2.svelte-1w23fq2{max-width:100vw;color:var(--white);background-color:#000;width:100%;position:sticky;top:0;z-index:98}.hidden-mobile.svelte-1w23fq2.svelte-1w23fq2{display:none}nav.svelte-1w23fq2 ul li.svelte-1w23fq2{display:flex;min-height:4rem;margin-left:0;width:100%}.nav__list.svelte-1w23fq2.svelte-1w23fq2{display:flex;flex-direction:column;justify-content:center;align-items:center;margin:0}.nav__list-item.svelte-1w23fq2.svelte-1w23fq2{color:var(--white);width:100%;display:flex;justify-content:center;align-items:center;border:0.1px solid var(--black)}@media(hover: hover){.nav__list-item.svelte-1w23fq2.svelte-1w23fq2:hover{color:var(--black);background-color:var(--primary);transition:0.3s}}@media(min-width: 768px){.hidden-mobile.svelte-1w23fq2.svelte-1w23fq2{display:flex}#burger-nav.svelte-1w23fq2.svelte-1w23fq2{display:none}.main-header.svelte-1w23fq2.svelte-1w23fq2{padding-left:17vw;padding-right:17vw}.nav__list.svelte-1w23fq2.svelte-1w23fq2{display:flex;flex-direction:row;justify-content:space-evenly;align-items:center}.nav__list-item.svelte-1w23fq2.svelte-1w23fq2{width:100%}}.active-page.svelte-1w23fq2.svelte-1w23fq2{color:var(--primary) !important;pointer-events:none}",
+const css$5 = {
+  code: ".reduced-header.svelte-1b36mnl.svelte-1b36mnl{font-size:var(--font-size-small);transition:all 0.3s;background-color:rgba(0, 0, 0, 0.8) !important;backdrop-filter:blur(5px);-webkit-backdrop-filter:blur(5px)}.reduced-list.svelte-1b36mnl.svelte-1b36mnl{min-height:2.5rem}.main-header.svelte-1b36mnl.svelte-1b36mnl{max-width:100vw;color:var(--neutral-100);background-color:#000;width:100%;position:sticky;top:0;z-index:98;scroll-snap-align:start}.hidden-mobile.svelte-1b36mnl.svelte-1b36mnl{display:none}nav.svelte-1b36mnl ul li.svelte-1b36mnl{display:flex;min-height:4rem;margin-left:0;width:100%}.nav__list.svelte-1b36mnl.svelte-1b36mnl{display:flex;flex-direction:column;justify-content:center;align-items:center;margin:0}.nav__list-item.svelte-1b36mnl.svelte-1b36mnl{color:var(--neutral-100);width:100%;display:flex;justify-content:center;align-items:center}@media(hover: hover){.nav__list-item.svelte-1b36mnl.svelte-1b36mnl:hover{color:var(--neutral-900);background-color:var(--primary-500);transition:0.3s}}@media(min-width: 768px){.hidden-mobile.svelte-1b36mnl.svelte-1b36mnl{display:flex}#burger-nav.svelte-1b36mnl.svelte-1b36mnl{display:none}.main-header.svelte-1b36mnl.svelte-1b36mnl{padding-left:17vw;padding-right:17vw}.nav__list.svelte-1b36mnl.svelte-1b36mnl{display:flex;flex-direction:row;justify-content:space-evenly;align-items:center}.nav__list-item.svelte-1b36mnl.svelte-1b36mnl{width:100%}}.active-page.svelte-1b36mnl.svelte-1b36mnl{color:var(--primary-500) !important;pointer-events:none;position:relative}@media(min-width: 768px){.active-page.svelte-1b36mnl.svelte-1b36mnl::after{position:absolute;content:'';width:100%;left:0;bottom:0;border-bottom:4px solid var(--primary-500)}}",
   map: null
 };
-const Header = (0, import_chunks.c)(($$result, $$props, $$bindings, slots) => {
+const Header = create_ssr_component(($$result, $$props, $$bindings, slots) => {
   let $page, $$unsubscribe_page;
-  $$unsubscribe_page = (0, import_chunks.f)(import_stores.p, (value) => $page = value);
-  $$result.css.add(css$4);
+  $$unsubscribe_page = subscribe(page, (value) => $page = value);
+  $$result.css.add(css$5);
   $$unsubscribe_page();
   return `
-<header class="${["main-header base-text svelte-1w23fq2", ""].join(" ").trim()}"><nav class="${"svelte-1w23fq2"}"><ul class="${"nav__list svelte-1w23fq2"}"><li id="${"burger-nav"}" class="${["svelte-1w23fq2", ""].join(" ").trim()}"><a class="${"nav__list-item svelte-1w23fq2"}"${(0, import_chunks.b)("href", "#", 0)}>${(0, import_chunks.v)(List, "List").$$render(
+<header class="${["main-header base-text svelte-1b36mnl", ""].join(" ").trim()}"><nav class="${"svelte-1b36mnl"}"><ul class="${"nav__list svelte-1b36mnl"}"><li id="${"burger-nav"}" class="${["svelte-1b36mnl", ""].join(" ").trim()}"><a class="${"nav__list-item svelte-1b36mnl"}"${add_attribute("href", "#", 0)}>${validate_component(List, "List").$$render(
     $$result,
     {
-      color: "var(--white)",
+      color: "var(--neutral-100)",
       width: "32",
       height: "32"
     },
@@ -119,28 +91,28 @@ const Header = (0, import_chunks.c)(($$result, $$props, $$bindings, slots) => {
     {}
   )}</a></li>
 
-			${(0, import_chunks.g)(import_config.n, (navItem) => {
+			${each(navItems, (navItem) => {
     return `<li class="${[
-      (0, import_chunks.h)((0, import_chunks.i)(`navbar-list${" hidden-mobile"}`), true) + " svelte-1w23fq2",
+      escape(null_to_empty(`navbar-list${" hidden-mobile"}`), true) + " svelte-1b36mnl",
       ""
-    ].join(" ").trim()}">${$page.url.pathname === `${navItem.path}` ? `<a class="${"nav__list-item active-page svelte-1w23fq2"}"${(0, import_chunks.b)("href", navItem.path, 0)}>${(0, import_chunks.h)(navItem.title)}
-						</a>` : `<a class="${"nav__list-item svelte-1w23fq2"}"${(0, import_chunks.b)("href", navItem.path, 0)}>${(0, import_chunks.h)(navItem.title)}
+    ].join(" ").trim()}">${$page.url.pathname === `${navItem.path}` ? `<a class="${"nav__list-item active-page svelte-1b36mnl"}"${add_attribute("href", navItem.path, 0)}>${escape(navItem.title)}
+						</a>` : `<a class="${"nav__list-item svelte-1b36mnl"}"${add_attribute("href", navItem.path, 0)}>${escape(navItem.title)}
 						</a>`}
 				</li>`;
   })}</ul></nav>
 </header>`;
 });
 const Breadcrumb_svelte_svelte_type_style_lang = "";
-const css$3 = {
-  code: ".breadcrumb.svelte-1obt4iy{margin-bottom:var(--space-l);font-weight:300;color:var(--gray)}.breadcrumb__unclickable.svelte-1obt4iy{display:inline-block;font-weight:500}.breadcrumb__clickable.svelte-1obt4iy{display:inline-flex;color:var(--primary)}.breadcrumb__clickable.svelte-1obt4iy:hover{color:var(--primary-hover)}",
+const css$4 = {
+  code: ".breadcrumb.svelte-cp8htt{margin-bottom:var(--space-l);font-weight:300;color:var(--neutral-800)}.breadcrumb__unclickable.svelte-cp8htt{display:inline-block;font-weight:500}.breadcrumb__clickable.svelte-cp8htt{display:inline-flex;color:var(--primary-600)}.breadcrumb__clickable.svelte-cp8htt:hover{color:var(--primary-700)}",
   map: null
 };
-const Breadcrumb = (0, import_chunks.c)(($$result, $$props, $$bindings, slots) => {
+const Breadcrumb = create_ssr_component(($$result, $$props, $$bindings, slots) => {
   let { path } = $$props;
   var crumbs;
   if ($$props.path === void 0 && $$bindings.path && path !== void 0)
     $$bindings.path(path);
-  $$result.css.add(css$3);
+  $$result.css.add(css$4);
   {
     {
       const tokens = path.split("/").filter((t) => t !== "");
@@ -152,53 +124,76 @@ const Breadcrumb = (0, import_chunks.c)(($$result, $$props, $$bindings, slots) =
       crumbs.unshift({ label: "home", href: "/" });
     }
   }
-  return `<div class="${"breadcrumb base-text svelte-1obt4iy"}">${(0, import_chunks.g)(crumbs, (c, i) => {
-    return `${i == crumbs.length - 1 ? `<div class="${"breadcrumb__unclickable svelte-1obt4iy"}">${(0, import_chunks.h)(c.label)}
-			</div>` : `<a class="${"breadcrumb__clickable svelte-1obt4iy"}"${(0, import_chunks.b)("href", c.href, 0)}>${(0, import_chunks.h)(c.label)}</a> &gt;\xA0`}`;
+  return `<div class="${"breadcrumb base-text svelte-cp8htt"}">${each(crumbs, (c, i) => {
+    return `${i == crumbs.length - 1 ? `<div class="${"breadcrumb__unclickable svelte-cp8htt"}">${escape(c.label)}
+			</div>` : `<a class="${"breadcrumb__clickable svelte-cp8htt"}"${add_attribute("href", c.href, 0)}>${escape(c.label)}</a> &gt;\xA0`}`;
   })}
 </div>`;
 });
 const CoolFrame_svelte_svelte_type_style_lang = "";
-const css$2 = {
-  code: ".frameWrap.svelte-1yxf281{display:none;pointer-events:none;position:fixed;z-index:999;top:0;left:0;width:100%;height:100%;transition:0.3s;opacity:0.5}@media(min-width: 768px){.frameWrap.svelte-1yxf281{display:block}}.frame2.svelte-1yxf281:before,.frame2.svelte-1yxf281:after,.corner.svelte-1yxf281:before,.corner.svelte-1yxf281:after{content:'';display:block;position:absolute;box-sizing:border-box;z-index:2}.frame2.svelte-1yxf281{z-index:1;top:0;bottom:0;left:0;right:0;position:absolute;box-sizing:border-box}.frame2.svelte-1yxf281:before{background:url('/images/frame2corner.png') no-repeat 0 0/100%;top:0;left:0;width:21px;height:21px}.frame2.svelte-1yxf281:after{background:url('/images/frame2corner.png') no-repeat 0 0/100%;top:0;right:0;transform:rotate(90deg);width:21px;height:21px}.corner.svelte-1yxf281:before{background:url('/images/frame2corner.png') no-repeat 0 0/100%;bottom:0;left:0;transform:rotate(-90deg);width:21px;height:21px}.corner.svelte-1yxf281:after{background:url('/images/frame2corner.png') no-repeat 0 0/100%;bottom:0;right:0;transform:rotate(180deg);width:21px;height:21px}.bar.svelte-1yxf281{position:absolute;top:4px;bottom:4px;left:21px;right:21px;border-top:1px solid var(--primary);border-bottom:1px solid var(--primary)}.bar.svelte-1yxf281:before{display:block;position:absolute;left:-17px;content:'';width:0.5px;top:16px;bottom:16px;background:var(--primary)}.bar.svelte-1yxf281:after{content:'';display:block;position:absolute;right:-17px;width:0.5px;top:16px;bottom:16px;background:var(--primary)}",
+const css$3 = {
+  code: ".frameWrap.svelte-1g3knkt{display:none;pointer-events:none;position:fixed;z-index:999;top:0;left:0;width:100%;height:100%;transition:0.3s;opacity:0.5}@media(min-width: 768px){.frameWrap.svelte-1g3knkt{display:block}}.frame2.svelte-1g3knkt:before,.frame2.svelte-1g3knkt:after,.corner.svelte-1g3knkt:before,.corner.svelte-1g3knkt:after{content:'';display:block;position:absolute;box-sizing:border-box;z-index:2}.frame2.svelte-1g3knkt{z-index:1;top:0;bottom:0;left:0;right:0;position:absolute;box-sizing:border-box}.frame2.svelte-1g3knkt:before{background:url('/images/frame2corner.png') no-repeat 0 0/100%;top:0;left:0;width:21px;height:21px}.frame2.svelte-1g3knkt:after{background:url('/images/frame2corner.png') no-repeat 0 0/100%;top:0;right:0;transform:rotate(90deg);width:21px;height:21px}.corner.svelte-1g3knkt:before{background:url('/images/frame2corner.png') no-repeat 0 0/100%;bottom:0;left:0;transform:rotate(-90deg);width:21px;height:21px}.corner.svelte-1g3knkt:after{background:url('/images/frame2corner.png') no-repeat 0 0/100%;bottom:0;right:0;transform:rotate(180deg);width:21px;height:21px}.bar.svelte-1g3knkt{position:absolute;top:4px;bottom:4px;left:21px;right:21px;border-top:1px solid var(--primary-500);border-bottom:1px solid var(--primary-500)}.bar.svelte-1g3knkt:before{display:block;position:absolute;left:-17px;content:'';width:0.5px;top:16px;bottom:16px;background:var(--primary-500)}.bar.svelte-1g3knkt:after{content:'';display:block;position:absolute;right:-17px;width:0.5px;top:16px;bottom:16px;background:var(--primary-500)}",
   map: null
 };
-const CoolFrame = (0, import_chunks.c)(($$result, $$props, $$bindings, slots) => {
-  $$result.css.add(css$2);
-  return `<div class="${"frameWrap svelte-1yxf281"}"><div class="${"frame2 svelte-1yxf281"}"><div class="${"corner svelte-1yxf281"}"></div>
-		<div class="${"bar svelte-1yxf281"}"></div></div>
+const CoolFrame = create_ssr_component(($$result, $$props, $$bindings, slots) => {
+  $$result.css.add(css$3);
+  return `<div class="${"frameWrap svelte-1g3knkt"}"><div class="${"frame2 svelte-1g3knkt"}"><div class="${"corner svelte-1g3knkt"}"></div>
+		<div class="${"bar svelte-1g3knkt"}"></div></div>
 </div>`;
 });
-const Yin_yang = (0, import_chunks.c)(($$result, $$props, $$bindings, slots) => {
-  return `<svg${(0, import_chunks.d)(
+const Marquee_svelte_svelte_type_style_lang = "";
+const css$2 = {
+  code: ".container.svelte-efh370.svelte-efh370{position:absolute;z-index:1;width:100%;max-width:100vw;font-weight:600}.marquee.svelte-efh370.svelte-efh370{--gap:0.5rem;position:relative;display:flex;overflow:hidden;user-select:none;gap:var(--gap);color:var(--primary-600)}.marquee__content.svelte-efh370.svelte-efh370{flex-shrink:0;display:flex;justify-content:space-around;gap:var(--gap);min-width:100%;animation:svelte-efh370-scroll 20s linear infinite;animation-direction:reverse}.marquee.svelte-efh370:hover .marquee__content.svelte-efh370{animation-play-state:paused}@keyframes svelte-efh370-scroll{from{transform:translateX(0)}to{transform:translateX(calc(-100% - var(--gap)))}}",
+  map: null
+};
+const Marquee = create_ssr_component(($$result, $$props, $$bindings, slots) => {
+  $$result.css.add(css$2);
+  return `<div class="${"container svelte-efh370"}"><div class="${"marquee small-text svelte-efh370"}"><ul class="${"marquee__content svelte-efh370"}"><li>Nguyen Dang Khoa</li>
+			<li>wentallout@gmail.com</li>
+			<li>+84 929 066 331</li>
+			<li>Mobile First</li>
+			<li>Responsive Design</li>
+			<li>Human-Centered Design</li></ul>
+		
+		<ul class="${"marquee__content svelte-efh370"}" aria-hidden="${"true"}"><li>Nguyen Dang Khoa</li>
+			<li>wentallout@gmail.com</li>
+			<li>+84 929 066 331</li>
+			<li>Mobile First</li>
+			<li>Responsive Design</li>
+			<li>Human-Centered Design</li></ul></div>
+</div>`;
+});
+const Yin_yang_fill = create_ssr_component(($$result, $$props, $$bindings, slots) => {
+  return `<svg${spread(
     [
       { preserveAspectRatio: "xMidYMid meet" },
       { viewBox: "0 0 256 256" },
       { width: "1.2em" },
       { height: "1.2em" },
-      (0, import_chunks.e)($$props)
+      escape_object($$props)
     ],
     {}
-  )}><!-- HTML_TAG_START -->${`<path fill="currentColor" d="M128 24a104 104 0 1 0 104 104A104.2 104.2 0 0 0 128 24ZM40 128a88.1 88.1 0 0 1 88-88a40 40 0 0 1 0 80a56 56 0 0 0-56 56a55.2 55.2 0 0 0 5.4 24A88.1 88.1 0 0 1 40 128Zm88 88a40 40 0 0 1 0-80a56 56 0 0 0 56-56a55.2 55.2 0 0 0-5.4-24A88 88 0 0 1 128 216Zm12-40a12 12 0 1 1-12-12a12 12 0 0 1 12 12Zm-24-96a12 12 0 1 1 12 12a12 12 0 0 1-12-12Z"/>`}<!-- HTML_TAG_END --></svg>`;
+  )}><!-- HTML_TAG_START -->${`<path fill="currentColor" d="M140 80a12 12 0 1 1-12-12a12 12 0 0 1 12 12Zm92 48A104 104 0 1 1 128 24a104.2 104.2 0 0 1 104 104Zm-92 48a12 12 0 1 0-12 12a12 12 0 0 0 12-12Zm32-92a44 44 0 0 0-44-44a88 88 0 0 0-46.9 162.4A51.1 51.1 0 0 1 76 180a52 52 0 0 1 52-52a44 44 0 0 0 44-44Z"/>`}<!-- HTML_TAG_END --></svg>`;
 });
 const LogoContainer_svelte_svelte_type_style_lang = "";
 const css$1 = {
-  code: ".svg-container.svelte-1cgjoob{display:flex;justify-content:center;align-items:center;width:60%;height:60%;background-color:transparent}@media(min-width: 768px){.svg-container.svelte-1cgjoob{width:100%;height:100%}}.logo-container.svelte-1cgjoob{position:relative;max-width:100vw;width:100%;display:flex;justify-content:center;align-items:center;background-color:#000}",
+  code: ".yinyang-container.svelte-w6cd2z{border-radius:100%;width:40px;height:40px;background-color:#000;z-index:0;display:hidden;opacity:0.6}.svg-container.svelte-w6cd2z{display:flex;position:relative;justify-content:center;align-items:center;width:100%;height:60%;background-color:transparent}@media(min-width: 768px){.svg-container.svelte-w6cd2z{width:100%;height:100%}}.logo-container.svelte-w6cd2z{position:relative;max-width:100vw;width:100%;display:flex;justify-content:center;align-items:center;background-color:#000;padding-top:0.5rem;padding-bottom:0.5rem}",
   map: null
 };
-const LogoContainer = (0, import_chunks.c)(($$result, $$props, $$bindings, slots) => {
+const LogoContainer = create_ssr_component(($$result, $$props, $$bindings, slots) => {
   $$result.css.add(css$1);
-  return `<div class="${"logo-container svelte-1cgjoob"}"><div class="${"svg-container svelte-1cgjoob"}">${(0, import_chunks.v)(Yin_yang, "YinYang").$$render(
+  return `<div class="${"logo-container svelte-w6cd2z"}"><div class="${"svg-container svelte-w6cd2z"}">${validate_component(Marquee, "Marquee").$$render($$result, {}, {}, {})}
+		<div class="${"yinyang-container svelte-w6cd2z"}">${validate_component(Yin_yang_fill, "YinYangFill").$$render(
     $$result,
     {
       class: "rotate",
-      color: "var(--black)",
-      width: "64",
-      height: "64"
+      color: "var(--neutral-900)",
+      width: "40",
+      height: "40"
     },
     {},
     {}
-  )}</div>
+  )}</div></div>
 </div>`;
 });
 const normalize = "";
@@ -206,17 +201,21 @@ const global = "";
 const weird = "";
 const atropos_min = "";
 const nprogress = "";
+const _300 = "";
+const _400 = "";
+const _500 = "";
+const _600 = "";
 const _layout_svelte_svelte_type_style_lang = "";
 const css = {
-  code: ".page-container.svelte-1agzi5v{background-color:var(--background);display:flex;flex-direction:column}.main-content.svelte-1agzi5v{min-height:calc(100vh - 70px);padding:var(--space-m) 1rem}@media(min-width: 768px){.main-content.svelte-1agzi5v{padding:var(--space-m) 17vw}}",
+  code: ".page-container.svelte-1kopqp9{background-color:var(--background);display:flex;flex-direction:column;scroll-snap-type:y mandatory}.main-content.svelte-1kopqp9{min-height:calc(100vh - 70px);padding:var(--space-m) 1rem}@media(min-width: 768px){.main-content.svelte-1kopqp9{padding:var(--space-m) 17vw}}",
   map: null
 };
-const Layout = (0, import_chunks.c)(($$result, $$props, $$bindings, slots) => {
+const Layout = create_ssr_component(($$result, $$props, $$bindings, slots) => {
   let $navigating, $$unsubscribe_navigating;
   let $page, $$unsubscribe_page;
-  $$unsubscribe_navigating = (0, import_chunks.f)(import_stores.n, (value) => $navigating = value);
-  $$unsubscribe_page = (0, import_chunks.f)(import_stores.p, (value) => $page = value);
-  import_nprogress.default.configure({
+  $$unsubscribe_navigating = subscribe(navigating, (value) => $navigating = value);
+  $$unsubscribe_page = subscribe(page, (value) => $page = value);
+  NProgress.configure({
     minimum: 0.1,
     showSpinner: false,
     trickle: false,
@@ -227,26 +226,30 @@ const Layout = (0, import_chunks.c)(($$result, $$props, $$bindings, slots) => {
   {
     {
       if ($navigating) {
-        import_nprogress.default.start();
+        NProgress.start();
       }
       if (!$navigating) {
-        import_nprogress.default.done();
+        NProgress.done();
       }
     }
   }
   $$unsubscribe_navigating();
   $$unsubscribe_page();
-  return `${$$result.head += `<link rel="${"preconnect"}" href="${"https://fonts.googleapis.com"}" data-svelte="svelte-l9vls8"><link rel="${"preconnect"}" href="${"https://fonts.gstatic.com"}" crossorigin data-svelte="svelte-l9vls8"><link href="${"https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap"}" rel="${"stylesheet"}" data-svelte="svelte-l9vls8">`, ""}
+  return `${$$result.head += `<meta name="${"google-site-verification"}" content="${"jDcuv7ulyNCJGJg0K24h9h6T_YqP9l5TBbv2DWOHh-w"}" data-svelte="svelte-3ls539"><script src="${"https://cdn.lr-in-prod.com/LogRocket.min.js"}" crossorigin="${"anonymous"}" data-svelte="svelte-3ls539"><\/script><script data-svelte="svelte-3ls539">window.LogRocket && window.LogRocket.init('upphcx/portfolio');
+	<\/script>`, ""}
 
-${(0, import_chunks.v)(PWA, "PWA").$$render($$result, {}, {}, {})}
-<div class="${"page-container svelte-1agzi5v"}">${(0, import_chunks.v)(CoolFrame, "CoolFrame").$$render($$result, {}, {}, {})}
-	${(0, import_chunks.v)(BackToTop, "BackToTop").$$render($$result, {}, {}, {})}
-	${(0, import_chunks.v)(LogoContainer, "LogoContainer").$$render($$result, {}, {}, {})}
-	${(0, import_chunks.v)(Header, "Header").$$render($$result, {}, {}, {})}
+${validate_component(PWA, "PWA").$$render($$result, {}, {}, {})}
+<div class="${"page-container svelte-1kopqp9"}">${validate_component(CoolFrame, "CoolFrame").$$render($$result, {}, {}, {})}
+	${validate_component(BackToTop, "BackToTop").$$render($$result, {}, {}, {})}
+	${validate_component(LogoContainer, "LogoContainer").$$render($$result, {}, {}, {})}
+	${validate_component(Header, "Header").$$render($$result, {}, {}, {})}
 
-	<main class="${"main-content svelte-1agzi5v"}">${(0, import_chunks.v)(Breadcrumb, "Breadcrumb").$$render($$result, { path: $page.url.pathname }, {}, {})}
+	<main class="${"main-content svelte-1kopqp9"}">${validate_component(Breadcrumb, "Breadcrumb").$$render($$result, { path: $page.url.pathname }, {}, {})}
 		${slots.default ? slots.default({}) : ``}</main>
 
-	${(0, import_chunks.v)(Footer, "Footer").$$render($$result, {}, {}, {})}
+	${validate_component(Footer, "Footer").$$render($$result, {}, {}, {})}
 </div>`;
 });
+export {
+  Layout as default
+};

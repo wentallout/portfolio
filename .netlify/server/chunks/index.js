@@ -1,43 +1,3 @@
-var __defProp = Object.defineProperty;
-var __getOwnPropDesc = Object.getOwnPropertyDescriptor;
-var __getOwnPropNames = Object.getOwnPropertyNames;
-var __hasOwnProp = Object.prototype.hasOwnProperty;
-var __export = (target, all) => {
-  for (var name in all)
-    __defProp(target, name, { get: all[name], enumerable: true });
-};
-var __copyProps = (to, from, except, desc) => {
-  if (from && typeof from === "object" || typeof from === "function") {
-    for (let key of __getOwnPropNames(from))
-      if (!__hasOwnProp.call(to, key) && key !== except)
-        __defProp(to, key, { get: () => from[key], enumerable: !(desc = __getOwnPropDesc(from, key)) || desc.enumerable });
-  }
-  return to;
-};
-var __toCommonJS = (mod) => __copyProps(__defProp({}, "__esModule", { value: true }), mod);
-var stdin_exports = {};
-__export(stdin_exports, {
-  a: () => safe_not_equal,
-  b: () => add_attribute,
-  c: () => create_ssr_component,
-  d: () => spread,
-  e: () => escape_object,
-  f: () => subscribe,
-  g: () => each,
-  h: () => escape,
-  i: () => null_to_empty,
-  j: () => getContext,
-  k: () => compute_rest_props,
-  l: () => createEventDispatcher,
-  m: () => missing_component,
-  n: () => noop,
-  o: () => onDestroy,
-  p: () => escape_attribute_value,
-  q: () => is_promise,
-  s: () => setContext,
-  v: () => validate_component
-});
-module.exports = __toCommonJS(stdin_exports);
 function noop() {
 }
 function is_promise(value) {
@@ -111,7 +71,67 @@ function setContext(key, context) {
 function getContext(key) {
   return get_current_component().$$.context.get(key);
 }
-Promise.resolve();
+const dirty_components = [];
+const binding_callbacks = [];
+const render_callbacks = [];
+const flush_callbacks = [];
+const resolved_promise = Promise.resolve();
+let update_scheduled = false;
+function schedule_update() {
+  if (!update_scheduled) {
+    update_scheduled = true;
+    resolved_promise.then(flush);
+  }
+}
+function tick() {
+  schedule_update();
+  return resolved_promise;
+}
+function add_render_callback(fn) {
+  render_callbacks.push(fn);
+}
+const seen_callbacks = /* @__PURE__ */ new Set();
+let flushidx = 0;
+function flush() {
+  const saved_component = current_component;
+  do {
+    while (flushidx < dirty_components.length) {
+      const component = dirty_components[flushidx];
+      flushidx++;
+      set_current_component(component);
+      update(component.$$);
+    }
+    set_current_component(null);
+    dirty_components.length = 0;
+    flushidx = 0;
+    while (binding_callbacks.length)
+      binding_callbacks.pop()();
+    for (let i = 0; i < render_callbacks.length; i += 1) {
+      const callback = render_callbacks[i];
+      if (!seen_callbacks.has(callback)) {
+        seen_callbacks.add(callback);
+        callback();
+      }
+    }
+    render_callbacks.length = 0;
+  } while (dirty_components.length);
+  while (flush_callbacks.length) {
+    flush_callbacks.pop()();
+  }
+  update_scheduled = false;
+  seen_callbacks.clear();
+  set_current_component(saved_component);
+}
+function update($$) {
+  if ($$.fragment !== null) {
+    $$.update();
+    run_all($$.before_update);
+    const dirty = $$.dirty;
+    $$.dirty = [-1];
+    $$.fragment && $$.fragment.p($$.ctx, dirty);
+    $$.after_update.forEach(add_render_callback);
+  }
+}
 const boolean_attributes = /* @__PURE__ */ new Set([
   "allowfullscreen",
   "allowpaymentrequest",
@@ -284,3 +304,25 @@ function add_attribute(name, value, boolean) {
 function style_object_to_string(style_object) {
   return Object.keys(style_object).filter((key) => style_object[key]).map((key) => `${key}: ${style_object[key]};`).join(" ");
 }
+export {
+  safe_not_equal as a,
+  add_attribute as b,
+  create_ssr_component as c,
+  spread as d,
+  escape_object as e,
+  subscribe as f,
+  each as g,
+  escape as h,
+  null_to_empty as i,
+  getContext as j,
+  compute_rest_props as k,
+  createEventDispatcher as l,
+  missing_component as m,
+  noop as n,
+  onDestroy as o,
+  escape_attribute_value as p,
+  is_promise as q,
+  setContext as s,
+  tick as t,
+  validate_component as v
+};

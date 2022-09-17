@@ -1,31 +1,29 @@
-'use strict';
-
-require('node:fs');
-require('node:path');
-var shims = require('./shims.js');
-require('assert');
-require('net');
-require('http');
-require('stream');
-require('buffer');
-require('util');
-require('stream/web');
-require('perf_hooks');
-require('util/types');
-require('events');
-require('tls');
-require('async_hooks');
-require('console');
-require('zlib');
-require('node:http');
-require('node:https');
-require('node:zlib');
-require('node:stream');
-require('node:buffer');
-require('node:util');
-require('node:url');
-require('node:net');
-require('crypto');
+import 'node:fs';
+import 'node:path';
+import { F as FormData, a as File } from './shims.js';
+import 'assert';
+import 'net';
+import 'http';
+import 'stream';
+import 'buffer';
+import 'util';
+import 'stream/web';
+import 'perf_hooks';
+import 'util/types';
+import 'events';
+import 'tls';
+import 'async_hooks';
+import 'console';
+import 'zlib';
+import 'node:http';
+import 'node:https';
+import 'node:zlib';
+import 'node:stream';
+import 'node:buffer';
+import 'node:util';
+import 'node:url';
+import 'node:net';
+import 'crypto';
 
 let s = 0;
 const S = {
@@ -379,7 +377,7 @@ async function toFormData(Body, ct) {
 	let contentType;
 	let filename;
 	const entryChunks = [];
-	const formData = new shims.FormData();
+	const formData = new FormData();
 
 	const onPartData = ui8a => {
 		entryValue += decoder.decode(ui8a, {stream: true});
@@ -390,7 +388,7 @@ async function toFormData(Body, ct) {
 	};
 
 	const appendFileToFormData = () => {
-		const file = new shims.File(entryChunks, filename, {type: contentType});
+		const file = new File(entryChunks, filename, {type: contentType});
 		formData.append(entryName, file);
 	};
 
@@ -457,4 +455,4 @@ async function toFormData(Body, ct) {
 	return formData;
 }
 
-exports.toFormData = toFormData;
+export { toFormData };
