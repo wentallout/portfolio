@@ -34,9 +34,10 @@ date: '14/09/2022'
 }
 </style>
 
- ![]({thumbnail} "thumbnail") 
 
-<!-- <Image maxWidth="600px" width=600 height=auto alt="thumbnail"  src={thumbnail} /> -->
+
+<img src={thumbnail} loading="eager" decoding="async" alt="reza thumbnail" />
+
 
 ## Overview
 
@@ -76,20 +77,20 @@ We look at one of our competitor apps [PasGo](https://pasgo.vn) and relized some
 
 => We think we can brainstorm some ideas and design an app with more features and better UX considerations.
 
-![goal]({goal}) 
+<img src={goal} loading="lazy" decoding="async" />
 
 
 ## Users & Audience
 
 I need to visualize the kind of user that will use this product. The persona has to represent the largest amount of users so I think a person with a paying job will be appropriate. She's busy but like to hangout with friends in a nice place sometimes.
 
-![userResearch]({userResearch} "user research")
+<img src={userResearch} loading="lazy" decoding="async" alt="user research" />
 
 ## Roles & Responsibilities
 
 I volunteered to be the team leader because I had more free time than my peers and I'm quite confident in my time management skill.
 
-![role]({role} "role")
+<img src={role} loading="lazy" decoding="async" />
 
 At every steps in our process I gave each members a task and a deadline. Obviously I don't expect them to finish on time since they have school/work but it's still important to estimate so that **I can minimize the potential risk in the future**.
 
@@ -101,7 +102,7 @@ I set up a meeting time for my team at 7:00 PM every Monday, Wednesday and Frida
 
 We use Discord for our daily meeting and share our progress and feedback through screen share.
 
-![discord]({discord} "discord screenshot")
+<img src={discord} loading="lazy" decoding="async" />
 
 ## Process (still WIP)
 
@@ -117,13 +118,13 @@ User Persona:
 
 Forming multiple user personas is important but for the scale of our project we stick to making one.
 
-![persona]({persona} "persona")
+<img src={persona} loading="lazy" decoding="async" />
 
 ### Phase Three - Ideate
 
 From what we have brainstormed, we prioritized certain features based on impact/effort.
 
-![feature]({feature} "feature")
+<img src={feature} loading="lazy" decoding="async" />
 
 I wanted my team to create a simple design system before moving to phase 4. This will help my team achieve the design consistency that is required in a typical project.
 
