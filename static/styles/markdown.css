@@ -5,18 +5,19 @@
 }
 
 .markdown h2 {
-	
 	border: transparent;
-	padding: 4px 4px;
+	padding: 8px 16px;
 	margin-top: var(--space-l) !important;
 	font-size: var(--font-size-mid);
 	line-height: var(--line-height-mid);
 	border-radius: 8px;
+	-webkit-border-radius: 8px;
+	-moz-border-radius: 8px;
+	-ms-border-radius: 8px;
+	-o-border-radius: 8px;
+	background: var(--brand-color);
 
-	background: rgb(255,255,255);
-	background: linear-gradient(90deg, rgba(255,255,255,1) 0%, var(--brand-color) 55%);
-	
-	
+	color:var(--neutral-100);
 }
 
 .markdown h3 {
