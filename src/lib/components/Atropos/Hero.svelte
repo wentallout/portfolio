@@ -1,4 +1,5 @@
 <script>
+	import Button from '$lib/components/Button/Button.svelte';
 	import Atropos from 'atropos/svelte';
 </script>
 
@@ -8,7 +9,9 @@
 			<div class="hero-text">
 				<h1 data-atropos-offset="-5">Hi! I'm Khoa</h1>
 				<p data-atropos-offset="-3">I code and design.</p>
-				<a data-atropos-offset="10" class="btn btn-seemywork" href="/project">See my work</a>
+				<a data-atropos-offset="10" href="/project">
+					<Button label="See my work" backgroundColor="var(--primary-500)" type="button" />
+				</a>
 			</div>
 		</div>
 	</Atropos>
@@ -18,15 +21,6 @@
 	.atropos-container {
 		/* MARGIN BOTTOM */
 		margin-bottom: var(--space-l);
-	}
-
-	.btn-seemywork {
-		background-color: var(--primary-500);
-		color: var(--neutral-900);
-	}
-
-	.btn-seemywork:hover {
-		background-color: var(--primary-600);
 	}
 
 	/* The hero image */

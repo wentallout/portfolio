@@ -132,7 +132,7 @@
       "_index.js"
     ],
     "css": [
-      "_app/immutable/assets/_page-ac644293.css"
+      "_app/immutable/assets/_page-439baacb.css"
     ]
   },
   "src/routes/project/[slug]/+page.js": {
@@ -248,6 +248,21 @@
     ],
     "css": [
       "_app/immutable/assets/reza-76ffcb02.css"
+    ],
+    "assets": [
+      "_app/immutable/assets/discord-637ed4bd.png",
+      "_app/immutable/assets/feature-4d823932.png",
+      "_app/immutable/assets/role-0fffa3b7.png",
+      "_app/immutable/assets/goal-5f9ca646.png",
+      "_app/immutable/assets/userResearch-c09d1b8e.png",
+      "_app/immutable/assets/persona-e69b4c90.png",
+      "_app/immutable/assets/c1-53d1cfac.png",
+      "_app/immutable/assets/c2-1b666066.png",
+      "_app/immutable/assets/l1-34ead108.png",
+      "_app/immutable/assets/l2-c3e4feb8.png",
+      "_app/immutable/assets/ds1-bd072927.png",
+      "_app/immutable/assets/ds2-78f8d021.png",
+      "_app/immutable/assets/ds3-86be8074.png"
     ]
   }
 }

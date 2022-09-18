@@ -4,7 +4,7 @@ date: '14/09/2022'
 ---
 
 <script>
-	import thumbnail from '$lib/assets/images/project/reza/reza-thumbnail.png';
+	import thumbnail from '$lib/assets/images/project/reza/reza-thumbnail.png?w=600&webp';
     import discord from '$lib/assets/images/project/reza/discord.png';
     import feature from '$lib/assets/images/project/reza/feature.png';
     import role from '$lib/assets/images/project/reza/role.png';

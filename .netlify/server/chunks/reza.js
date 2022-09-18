@@ -1,20 +1,20 @@
 import { c as create_ssr_component, k as compute_rest_props, l as createEventDispatcher, s as setContext, o as onDestroy, d as spread, p as escape_attribute_value, e as escape_object, b as add_attribute, t as tick, j as getContext, v as validate_component } from "./index.js";
 import { getWindow, getDocument } from "ssr-window";
 import { $, addClass, removeClass, hasClass, toggleClass, attr, removeAttr, transform, transition as transition$1, on, off, trigger, transitionEnd as transitionEnd$1, outerWidth, outerHeight, styles, offset, css as css$2, each, html, text, is, index, eq, append, prepend, next, nextAll, prev, prevAll, parent, parents, closest, find, children, filter, remove } from "dom7";
-const thumbnail = "/_app/immutable/assets/reza-thumbnail-b549afe2.webp";
-const discord = "/_app/immutable/assets/discord-a1f0d857.webp";
-const feature = "/_app/immutable/assets/feature-fa2cb245.webp";
-const role = "/_app/immutable/assets/role-3510ed48.webp";
-const goal = "/_app/immutable/assets/goal-5a37ac2e.webp";
-const userResearch = "/_app/immutable/assets/userResearch-8293eef5.webp";
-const persona = "/_app/immutable/assets/persona-58ea049b.webp";
-const c1 = "/_app/immutable/assets/c1-bd155f4b.webp";
-const c2 = "/_app/immutable/assets/c2-96f5f70d.webp";
-const l1 = "/_app/immutable/assets/l1-ec72d0e0.webp";
-const l2 = "/_app/immutable/assets/l2-5ca38d93.webp";
-const ds1 = "/_app/immutable/assets/ds1-b700b549.webp";
-const ds2 = "/_app/immutable/assets/ds2-475ca52b.webp";
-const ds3 = "/_app/immutable/assets/ds3-6dcc19e8.webp";
+const thumbnail = "/_app/immutable/assets/reza-thumbnail-d2910efa.webp";
+const discord = "/_app/immutable/assets/discord-637ed4bd.png";
+const feature = "/_app/immutable/assets/feature-4d823932.png";
+const role = "/_app/immutable/assets/role-0fffa3b7.png";
+const goal = "/_app/immutable/assets/goal-5f9ca646.png";
+const userResearch = "/_app/immutable/assets/userResearch-c09d1b8e.png";
+const persona = "/_app/immutable/assets/persona-e69b4c90.png";
+const c1 = "/_app/immutable/assets/c1-53d1cfac.png";
+const c2 = "/_app/immutable/assets/c2-1b666066.png";
+const l1 = "/_app/immutable/assets/l1-34ead108.png";
+const l2 = "/_app/immutable/assets/l2-c3e4feb8.png";
+const ds1 = "/_app/immutable/assets/ds1-bd072927.png";
+const ds2 = "/_app/immutable/assets/ds2-78f8d021.png";
+const ds3 = "/_app/immutable/assets/ds3-86be8074.png";
 const Methods = {
   addClass,
   removeClass,
@@ -5390,8 +5390,7 @@ const metadata = {
 };
 const Reza = create_ssr_component(($$result, $$props, $$bindings, slots) => {
   $$result.css.add(css);
-  return `<p><img${add_attribute("src", thumbnail, 0)} title="${"thumbnail"}"></p>
-
+  return `<img${add_attribute("src", thumbnail, 0)} loading="${"eager"}" decoding="${"async"}" alt="${"reza thumbnail"}">
 <h2>Overview</h2>
 <p>Imagine you need to quickly organize a party for your group of friends. You are not a cuisine expert or know all the cool places in the city. You opened Google and search for the nearest restaurants but you realized you don\u2019t know much about its foods, price or how to contact them to get a table.</p>
 <p>We\u2019re living in the modern era, you\u2019re not going to look for their phone numbers and call them, are you?</p>
@@ -5407,19 +5406,19 @@ const Reza = create_ssr_component(($$result, $$props, $$bindings, slots) => {
 <p>\u2666 Find directions</p>
 <p>\u2666 Give you notifications when it\u2019s almost time to eat or nearby deals.</p></strong>
 <p>=&gt; We think we can brainstorm some ideas and design an app with more features and better UX considerations.</p>
-<p><img${add_attribute("src", goal, 0)} alt="${"goal"}"></p>
+<img${add_attribute("src", goal, 0)} loading="${"lazy"}" decoding="${"async"}">
 <h2>Users &amp; Audience</h2>
 <p>I need to visualize the kind of user that will use this product. The persona has to represent the largest amount of users so I think a person with a paying job will be appropriate. She\u2019s busy but like to hangout with friends in a nice place sometimes.</p>
-<p><img${add_attribute("src", userResearch, 0)} alt="${"userResearch"}" title="${"user research"}"></p>
+<img${add_attribute("src", userResearch, 0)} loading="${"lazy"}" decoding="${"async"}" alt="${"user research"}">
 <h2>Roles &amp; Responsibilities</h2>
 <p>I volunteered to be the team leader because I had more free time than my peers and I\u2019m quite confident in my time management skill.</p>
-<p><img${add_attribute("src", role, 0)} alt="${"role"}" title="${"role"}"></p>
+<img${add_attribute("src", role, 0)} loading="${"lazy"}" decoding="${"async"}">
 <p>At every steps in our process I gave each members a task and a deadline. Obviously I don\u2019t expect them to finish on time since they have school/work but it\u2019s still important to estimate so that <strong>I can minimize the potential risk in the future</strong>.</p>
 <h2>Scope &amp; Constraints</h2>
 <p>We were given <strong>2 weeks</strong> to finish our project so I decided that we should use our limited time correctly, remove unnecessary ideas and focus only on the most important features: <strong>Searching, Detail, Booking</strong>.</p>
 <p>I set up a meeting time for my team at 7:00 PM every Monday, Wednesday and Friday to both avoid clashing with our classes time and making sure everyone is at home and relaxed.</p>
 <p>We use Discord for our daily meeting and share our progress and feedback through screen share.</p>
-<p><img${add_attribute("src", discord, 0)} alt="${"discord"}" title="${"discord screenshot"}"></p>
+<img${add_attribute("src", discord, 0)} loading="${"lazy"}" decoding="${"async"}">
 <h2>Process (still WIP)</h2>
 <p>The Design Thinking method is a practical way to solve complex problems by finding information about the human needs.</p>
 <p>There are 5 phases to go through: <strong>Empathize, Define, Ideate, Prototype, Test</strong>.</p>
@@ -5427,10 +5426,10 @@ const Reza = create_ssr_component(($$result, $$props, $$bindings, slots) => {
 <h3>Phase Two - Define</h3>
 <p>User Persona:</p>
 <p>Forming multiple user personas is important but for the scale of our project we stick to making one.</p>
-<p><img${add_attribute("src", persona, 0)} alt="${"persona"}" title="${"persona"}"></p>
+<img${add_attribute("src", persona, 0)} loading="${"lazy"}" decoding="${"async"}">
 <h3>Phase Three - Ideate</h3>
 <p>From what we have brainstormed, we prioritized certain features based on impact/effort.</p>
-<p><img${add_attribute("src", feature, 0)} alt="${"feature"}" title="${"feature"}"></p>
+<img${add_attribute("src", feature, 0)} loading="${"lazy"}" decoding="${"async"}">
 <p>I wanted my team to create a simple design system before moving to phase 4. This will help my team achieve the design consistency that is required in a typical project.</p>
 ${validate_component(SwiperContainer, "SwiperContainer").$$render($$result, {}, {}, {
     default: () => {

@@ -1,5 +1,5 @@
 <script>
-	import ButtonWithIcon from './../Button/ButtonWithIcon.svelte';
+	import Button from '$lib/components/Button/Button.svelte';
 	import PaperPlaneRight from '~icons/ph/paper-plane-right';
 </script>
 
@@ -28,9 +28,9 @@
 		<textarea class="small-text" required name="message" id="message" placeholder="" />
 
 		<div class="btn-container">
-			<ButtonWithIcon label="Send" backgroundColor="var(--primary-500)">
+			<Button label="Send" backgroundColor="var(--primary-500)">
 				<PaperPlaneRight color="var(--neutral-900)" />
-			</ButtonWithIcon>
+			</Button>
 
 			<button class="btn btn-reset" type="reset">Reset</button>
 		</div>

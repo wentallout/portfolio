@@ -1,4 +1,5 @@
 <script>
+	import SkipLink from '$lib/components/Layout/SkipLink.svelte';
 	import PWA from '$lib/components/PWA/PWA.svelte';
 	import BackToTop from './../lib/components/Layout/BackToTop.svelte';
 	import Footer from '$lib/components/Layout/Footer.svelte';
@@ -49,14 +50,16 @@
 	</script>
 </svelte:head>
 
+<SkipLink />
 <PWA />
 <div class="page-container">
 	<CoolFrame />
+
 	<BackToTop />
 	<LogoContainer />
 	<Header />
 
-	<main class="main-content">
+	<main id="#main-content" class="main-content">
 		<Breadcrumb path={$page.url.pathname} />
 		<slot />
 	</main>

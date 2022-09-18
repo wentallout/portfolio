@@ -1,6 +1,3 @@
-<script>
-</script>
-
 <footer>
 	<div class="footer-container small-text">
 		<ul class="nav-list">
@@ -18,9 +15,11 @@
 			</li>
 		</ul>
 		<div class="footer__other">
-			2022 - Made by Khoa with <a href="https://kit.svelte.dev">SvelteKit</a>
+			<p>
+				2022 - Made by Khoa with <a href="https://kit.svelte.dev">SvelteKit</a>
+			</p>
+			<a href="mailto:wentallout@gmail.com">wentallout@gmail.com</a>
 		</div>
-		<div class="footer__other">wentallout@gmail.com</div>
 	</div>
 </footer>
 

@@ -19,14 +19,14 @@
 			<Envelope color="var(--primary-600)" width="32" height="32" />
 			<p>wentallout@gmail.com</p>
 		</a>
-		<a
-			class="social__address"
-			href="https://www.figma.com/team_invite/redeem/CRNTQKDT0VQTLYjw7cEogQ">
+		<a class="social__address" href="https://www.linkedin.com/in/wentallout">
 			<LinkedinLogo color="var(--primary-600)" width="32" height="32" />
 			<p>LinkedIn</p>
 		</a>
 
-		<a class="social__address" href="https://www.linkedin.com/in/wentallout">
+		<a
+			class="social__address"
+			href="https://www.figma.com/team_invite/redeem/CRNTQKDT0VQTLYjw7cEogQ">
 			<FigmaLogo color="var(--primary-600)" width="32" height="32" />
 			<p>Figma</p>
 		</a>

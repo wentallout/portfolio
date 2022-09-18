@@ -3,7 +3,7 @@ export const manifest = {
 	assets: new Set(["apple-touch-icon.png","favicon.ico","favicon.svg","icon-192.png","icon-512.png","images/frame2corner.png","images/fuji.svg","images/khoa-biolink.png","images/mask_section-bg_top.png","images/rhombus_line.png","robots.txt","styles/markdown.css","service-worker.js"]),
 	mimeTypes: {".png":"image/png",".ico":"image/vnd.microsoft.icon",".svg":"image/svg+xml",".txt":"text/plain",".css":"text/css"},
 	_: {
-		entry: {"file":"_app/immutable/start-d14c4ed8.js","imports":["_app/immutable/start-d14c4ed8.js","_app/immutable/chunks/preload-helper-aa6bc0ce.js","_app/immutable/chunks/index-8af63517.js","_app/immutable/chunks/singletons-310a2781.js","_app/immutable/chunks/index-c3dc6353.js"],"stylesheets":[]},
+		entry: {"file":"_app/immutable/start-2cb4949c.js","imports":["_app/immutable/start-2cb4949c.js","_app/immutable/chunks/preload-helper-aa6bc0ce.js","_app/immutable/chunks/index-8af63517.js","_app/immutable/chunks/singletons-ba49e395.js","_app/immutable/chunks/index-c3dc6353.js"],"stylesheets":[]},
 		nodes: [
 			() => import('./nodes/0.js'),
 			() => import('./nodes/1.js'),

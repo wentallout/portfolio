@@ -1,6 +1,6 @@
 <script>
 	import FigmaLogo from '~icons/ph/figma-logo';
-	import ButtonWithIcon from './../Button/ButtonWithIcon.svelte';
+	import Button from '$lib/components/Button/Button.svelte';
 	export let projectName = 'PlaceholderProjectName';
 	export let projectImage = 'https://fakeimg.pl/500x500';
 	export let linkToDetail = '';
@@ -40,12 +40,17 @@
 		</div>
 
 		<div class="project__btn">
-			<a sveltekit:prefetch class="btn btn-view" href={linkToDetail}>Read</a>
+			<a sveltekit:prefetch href={linkToDetail}>
+				<Button
+					label="Read"
+					border="1px solid var(--primary-500)"
+					backgroundColor="var(--primary-500)" />
+			</a>
 
 			<a href={linkToFigma}>
-				<ButtonWithIcon label="Figma" border="1px solid var(--neutral-900)">
+				<Button label="Figma" border="1px solid var(--neutral-900)">
 					<FigmaLogo />
-				</ButtonWithIcon>
+				</Button>
 			</a>
 		</div>
 	</div>
@@ -93,16 +98,6 @@
 		margin-top: auto;
 		display: flex;
 		justify-content: left;
-	}
-
-	.btn-view {
-		background-color: var(--primary-500);
-		color: var(--neutral-900);
-		margin-right: var(--space-s);
-	}
-
-	.btn-view:hover {
-		background-color: var(--primary-600);
 	}
 
 	.project:hover {
