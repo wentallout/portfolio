@@ -8,6 +8,9 @@ const config = {
 	server: {
 		port: '3000',
 	},
+	preview: {
+		port: '4000',
+	},
 };
 
 export default config;
