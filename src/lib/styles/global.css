@@ -83,7 +83,7 @@
 
 ::selection {
 	color: var(--neutral-900);
-	background: var(--primary-500);
+	background: var(--primary-400);
 }
 
 /* TYPOGRAPHY */

@@ -43,11 +43,6 @@
 
 <svelte:head>
 	<meta name="google-site-verification" content="jDcuv7ulyNCJGJg0K24h9h6T_YqP9l5TBbv2DWOHh-w" />
-
-	<script src="https://cdn.lr-in-prod.com/LogRocket.min.js" crossorigin="anonymous"></script>
-	<script>
-		window.LogRocket && window.LogRocket.init('upphcx/portfolio');
-	</script>
 </svelte:head>
 
 <SkipLink />

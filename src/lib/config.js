@@ -32,7 +32,7 @@ const website = {
 	// PWA
 	siteTitle: 'Nguyen Dang Khoa - Portfolio',
 	siteShortTitle: 'Portfolio',
-	siteUrl: 'https://www.wentallout.com',
+	siteUrl: 'https://www.wentallout.tech',
 	icon: 'static/icon-512.png',
 	backgroundColor: '#1b1b1d',
 	themeColor: '#b4883c',
