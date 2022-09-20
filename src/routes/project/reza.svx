@@ -46,15 +46,11 @@ We're living in the modern era, you're not going to look for their phone numbers
 
 You need a mobile app that can:
 
-<strong>
+- Recommend the most trendy restaurants
+- Show you its menu, price and past reviews,
+- Let you reserve a table when it's available and then remind you when it's time and guide you there.
 
-♦ Recommend the most trendy restaurants
 
-♦ Show you its menu, price and past reviews,
-
-♦ Let you reserve a table when it's available and then remind you when it's time and guide you there.
-
-</strong>
 
 ## Problem statement
 
@@ -64,20 +60,13 @@ Our perspective: table reservation apps are not as popular as food ordering apps
 
 We look at one of our competitor apps [PasGo](https://pasgo.vn) and relized some important features are missing:
 
-<strong>
-
-♦ Cancel your order
-
-♦ Find directions
-
-♦ Give you notifications when it's almost time to eat or nearby deals.
-
-</strong>
+- Cancel your order
+- Find directions
+- Give you notifications when it's almost time to eat or nearby deals.
 
 => We think we can brainstorm some ideas and design an app with more features and better UX considerations.
 
 <img src={goal} loading="lazy" decoding="async" />
-
 
 ## Users & Audience
 

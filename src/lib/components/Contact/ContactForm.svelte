@@ -1,7 +1,13 @@
 <script>
+	import EnvelopeSimple from '~icons/ph/envelope-simple';
 	import Button from '$lib/components/Button/Button.svelte';
 	import PaperPlaneRight from '~icons/ph/paper-plane-right';
+	import SectionTitle from '$lib/components/Common/SectionTitle.svelte';
 </script>
+
+<SectionTitle sectionTitle="Contact me" let:sectionIcon>
+	<EnvelopeSimple {...sectionIcon} />
+</SectionTitle>
 
 <div class="form-container ">
 	<form

@@ -9,6 +9,10 @@ export const navItems = [
 		path: '/project',
 	},
 	{
+		title: 'Blog',
+		path: '/blog',
+	},
+	{
 		title: 'Resource',
 		path: '/resource',
 	},

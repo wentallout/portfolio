@@ -1,0 +1,10 @@
+{
+	"frontMatter.preview.host": "http://localhost:3000/",
+	"frontMatter.framework.id": "other",
+	"frontMatter.content.publicFolder": "",
+	"frontMatter.content.pageFolders": [
+		{
+			"path": "[[workspace]]"
+		}
+	]
+}

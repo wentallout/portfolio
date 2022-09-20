@@ -6,8 +6,8 @@
 	import Wrench from '~icons/ph/wrench';
 </script>
 
-<SectionTitle sectionTitle="Tool">
-	<Wrench color="var(--primary-600)" width="32" height="32" />
+<SectionTitle sectionTitle="Tool" let:sectionIcon>
+	<Wrench {...sectionIcon} />
 </SectionTitle>
 
 <div>

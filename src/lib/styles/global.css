@@ -71,7 +71,7 @@
 	caret-color: var(--neutral-900);
 
 	/* border radius */
-	--border-radius: 8px;
+	--border-radius: 10px;
 	--border: 1px solid #e5e5e5;
 	--border-hover: 1px solid var(--neutral-900);
 

@@ -5,11 +5,18 @@
 	import GitHubLogo from '~icons/ph/github-logo';
 	import RedditLogo from '~icons/ph/reddit-logo';
 
+	import Handshake from '~icons/ph/handshake';
+
 	import Phone from '~icons/ph/phone';
+	import SectionTitle from '$lib/components/Common/SectionTitle.svelte';
 </script>
 
+<SectionTitle sectionTitle="Social" let:sectionIcon>
+	<Handshake {...sectionIcon} />
+</SectionTitle>
+
 <div class="social">
-	<div class="social__others base-text">
+	<address class="social__others base-text">
 		<a class="social__address" href="tel:+84929066331">
 			<Phone color="var(--primary-600)" width="32" height="32" />
 			<p>+84 929 066 331</p>
@@ -40,7 +47,7 @@
 			<RedditLogo color="var(--primary-600)" width="32" height="32" />
 			<p>Reddit</p>
 		</a>
-	</div>
+	</address>
 </div>
 
 <style>

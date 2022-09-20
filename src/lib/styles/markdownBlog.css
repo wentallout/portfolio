@@ -1,23 +1,16 @@
-
-:root 
-{
-	--brand-color: var(--primary-500);
-}
-
 .markdown h2 {
 	border: transparent;
 	padding: 8px 16px;
 	margin-top: var(--space-l) !important;
 	font-size: var(--font-size-mid);
 	line-height: var(--line-height-mid);
-	border-radius: 8px;
-	-webkit-border-radius: 8px;
-	-moz-border-radius: 8px;
-	-ms-border-radius: 8px;
-	-o-border-radius: 8px;
-	background: var(--brand-color);
-
-	color:var(--neutral-100);
+	border-radius: var(--border-radius);
+	-webkit-border-radius: var(--border-radius);
+	-moz-border-radius: var(--border-radius);
+	-ms-border-radius: var(--border-radius);
+	-o-border-radius: var(--border-radius);
+	background: var(--primary-500);
+	color: var(--neutral-100);
 }
 
 .markdown h3 {
@@ -31,13 +24,11 @@
 	line-height: var(--line-height-small);
 }
 
-.markdown a 
-{
-    color: var(--accent-500) !important;
+.markdown a {
+	color: var(--accent-500) !important;
 	font-weight: 600;
 	font-style: italic;
 }
-
 
 .markdown img {
 	width: 100%;
@@ -54,8 +45,7 @@
 	font-weight: 500;
 }
 
-.markdown li::before
-{
+.markdown li::before {
 	content: '◆';
 	margin-right: 4px;
 }

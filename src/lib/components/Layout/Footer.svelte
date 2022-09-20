@@ -1,18 +1,15 @@
+<script>
+	import { navItems } from '$lib/config.js';
+</script>
+
 <footer>
 	<div class="footer-container small-text">
 		<ul class="nav-list">
-			<li class="nav-list-item">
-				<a href="/">Home</a>
-			</li>
-			<li class="nav-list-item">
-				<a href="/project">Project</a>
-			</li>
-			<li class="nav-list-item">
-				<a href="/resource">Resource</a>
-			</li>
-			<li class="nav-list-item">
-				<a href="/contact">Contact</a>
-			</li>
+			{#each navItems as navItem}
+				<li class="nav-list-item">
+					<a href={navItem.path}>{navItem.title}</a>
+				</li>
+			{/each}
 		</ul>
 		<div class="footer__other">
 			<p>
@@ -25,7 +22,7 @@
 
 <style>
 	.footer__other {
-		z-index: 3;
+		z-index: 2;
 	}
 
 	.footer__other a {
@@ -87,6 +84,7 @@
 		margin: 0px;
 		z-index: 2;
 		margin-bottom: var(--space-l);
+		flex-wrap: wrap;
 	}
 
 	.nav-list-item {

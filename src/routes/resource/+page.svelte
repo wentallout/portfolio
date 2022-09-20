@@ -20,8 +20,8 @@
 	<title>Resource</title>
 </svelte:head>
 
-<SectionTitle sectionTitle="Books">
-	<Books color="var(--primary-600)" width="32" height="32" />
+<SectionTitle sectionTitle="Book" let:sectionIcon>
+	<Books {...sectionIcon} />
 </SectionTitle>
 
 <FaqContainer>
@@ -65,8 +65,8 @@
 	</Faq>
 </FaqContainer>
 
-<SectionTitle sectionTitle="User Research">
-	<Flask color="var(--primary-600)" width="32" height="32" />
+<SectionTitle sectionTitle="User Research" let:sectionIcon>
+	<Flask {...sectionIcon} />
 </SectionTitle>
 <p class="section-description small-text">
 	User research helps you understand user behaviors, needs, and motivations through various
