@@ -1,23 +1,21 @@
 
-:root 
-{
-	--brand-color: var(--primary-500);
-}
+
 
 .markdown h2 {
 	border: transparent;
-	padding: 8px 16px;
 	margin-top: var(--space-l) !important;
 	font-size: var(--font-size-mid);
 	line-height: var(--line-height-mid);
-	border-radius: 8px;
-	-webkit-border-radius: 8px;
-	-moz-border-radius: 8px;
-	-ms-border-radius: 8px;
-	-o-border-radius: 8px;
-	background: var(--brand-color);
+	color:var(--accent-900);
 
-	color:var(--neutral-100);
+
+	background-position-y: 30px;
+    padding-bottom: 6px;
+	border-bottom: none;
+    background-image: url(/images/headerBottom.svg);
+    background-repeat: no-repeat;
+    background-position: 25% 105%;
+    background-size: 100% 10px;
 }
 
 .markdown h3 {
@@ -29,6 +27,13 @@
 .markdown p {
 	font-size: var(--font-size-small);
 	line-height: var(--line-height-small);
+}
+
+
+.markdown li 
+{
+	font-size: var(--font-size-small);
+    line-height: var(--line-height-small);
 }
 
 .markdown a 

@@ -16,7 +16,7 @@
 </SectionTitle>
 
 <div class="social">
-	<address class="social__others base-text">
+	<address class="social__list base-text">
 		<a class="social__address" href="tel:+84929066331">
 			<Phone color="var(--primary-600)" width="32" height="32" />
 			<p>+84 929 066 331</p>
@@ -61,10 +61,21 @@
 		border-radius: var(--border-radius);
 		border: var(--border);
 	}
+
+	.social__list {
+		width: 100%;
+	}
+
 	.social__address {
 		display: flex;
+		width: 100%;
 		flex-direction: row;
 		align-items: center;
+		border-radius: var(--border-radius);
+	}
+
+	.social__address:hover {
+		background-color: var(--neutral-300);
 	}
 
 	.social__address p {

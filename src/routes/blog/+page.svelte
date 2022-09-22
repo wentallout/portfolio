@@ -1,13 +1,10 @@
 <script>
 	import BlogListContainer from '$lib/components/Blog/BlogListContainer.svelte';
+	import SectionTitle from '$lib/components/Common/SectionTitle.svelte';
 	import BlogCard from '$lib/components/Blog/BlogCard.svelte';
 
 	import TextAa from '~icons/ph/text-aa';
-
 	import Brain from '~icons/ph/brain';
-
-	import SectionTitle from '$lib/components/Common/SectionTitle.svelte';
-
 	import Palette from '~icons/ph/palette';
 </script>
 

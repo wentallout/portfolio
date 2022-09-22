@@ -28,9 +28,9 @@ date: '14/09/2022'
 </script>
 
 <style>
-:root
+.markdown
 {
-    --brand-color: #E4543B !important;
+    --primary-500: #E4543B !important;
 }
 </style>
 
