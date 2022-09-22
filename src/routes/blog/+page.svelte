@@ -23,20 +23,22 @@
 		blogDate="20/9/2022" />
 </BlogListContainer>
 
-<SectionTitle sectionTitle="Color" let:sectionIcon>
+<!-- <SectionTitle sectionTitle="Color" let:sectionIcon>
 	<Palette {...sectionIcon} />
 </SectionTitle>
 
 <BlogListContainer>
 	<BlogCard blogTitle="wip" blogLink="/" blogDate="wip" />
 	<BlogCard blogTitle="wip" blogLink="/" blogDate="wip" />
-</BlogListContainer>
+</BlogListContainer> -->
 
 <SectionTitle sectionTitle="Tips" let:sectionIcon>
 	<Brain {...sectionIcon} />
 </SectionTitle>
 
 <BlogListContainer>
-	<BlogCard blogTitle="wip" blogLink="/" blogDate="wip" />
-	<BlogCard blogTitle="wip" blogLink="/" blogDate="wip" />
+	<BlogCard
+		blogTitle="UX Portfolio DOs and DONTs"
+		blogLink="/blog/ux-portfolio"
+		blogDate="22/09/2022" />
 </BlogListContainer>

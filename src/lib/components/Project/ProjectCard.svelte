@@ -64,7 +64,7 @@
 	}
 
 	.section-title {
-		min-width: 20%;
+		min-width: 30%;
 		font-weight: 500;
 		color: var(--accent-900);
 	}

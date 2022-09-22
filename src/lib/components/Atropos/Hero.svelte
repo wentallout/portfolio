@@ -49,4 +49,6 @@
 		align-items: center;
 		color: var(--neutral-100);
 	}
+
+	/* background: #000 url('https://chainsawman.dog/assets/img/common/deco/deco_dotbg.svg') repeat left top/20px; */
 </style>

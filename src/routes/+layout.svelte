@@ -64,19 +64,20 @@
 
 <style>
 	.page-container {
-		background-color: var(--background);
+		background: var(--neutral-100);
 		display: flex;
 		flex-direction: column;
 		scroll-snap-type: y mandatory;
 	}
 	.main-content {
+		background: var(--neutral-100);
 		min-height: calc(100vh - 70px);
-		padding: var(--space-m) 1rem;
+		margin: var(--space-m) 1rem;
 	}
 
 	@media (min-width: 768px) {
 		.main-content {
-			padding: var(--space-m) 17vw;
+			margin: var(--space-m) 17vw;
 		}
 	}
 </style>

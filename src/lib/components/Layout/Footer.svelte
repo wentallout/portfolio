@@ -23,6 +23,7 @@
 <style>
 	.footer__other {
 		z-index: 2;
+		color: var(--neutral-500);
 	}
 
 	.footer__other a {

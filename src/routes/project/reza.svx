@@ -12,6 +12,9 @@ date: '14/09/2022'
     import userResearch from '$lib/assets/images/project/reza/userResearch.png';
     import persona from '$lib/assets/images/project/reza/persona.png';
 
+    import hmw1 from '$lib/assets/images/project/reza/hmw1.png';
+
+
     import c1 from '$lib/assets/images/project/reza/c1.png';
     import c2 from '$lib/assets/images/project/reza/c2.png';
     import l1 from '$lib/assets/images/project/reza/l1.png';
@@ -20,6 +23,8 @@ date: '14/09/2022'
     import ds1 from '$lib/assets/images/project/reza/ds1.png';
     import ds2 from '$lib/assets/images/project/reza/ds2.png';
     import ds3 from '$lib/assets/images/project/reza/ds3.png';
+
+
 
     import { SwiperSlide } from 'swiper/svelte';
     import SwiperContainer from '$lib/components/Swiper/SwiperContainer.svelte';
@@ -84,7 +89,7 @@ At every steps in our process I gave each members a task and a deadline. Obvious
 
 ## Scope & Constraints
 
-We were given **2 weeks** to finish our project so I decided that we should use our limited time correctly, remove unnecessary ideas and focus only on the most important features: **Searching, Detail, Booking**.
+We were given **2 weeks** to finish our project so I decided that we should use our limited time effectively. So I tell my team to remove unnecessary ideas and focus only on the **3 most important features: Searching, Detail, Booking**.
 
 I set up a meeting time for my team at 7:00 PM every Monday, Wednesday and Friday to both avoid clashing with our classes time and making sure everyone is at home and relaxed.
 
@@ -92,23 +97,57 @@ We use Discord for our daily meeting and share our progress and feedback through
 
 <img src={discord} loading="lazy" decoding="async" />
 
-## Process (still WIP)
+## Process
 
-The Design Thinking method is a practical way to solve complex problems by finding information about the human needs.
+The **Design Thinking** method is a practical way to solve complex problems by finding information about the human needs.
 
 There are 5 phases to go through: **Empathize, Define, Ideate, Prototype, Test**.
 
-### Phase One - Empathize
+### Phase 1 - Empathize
 
-### Phase Two - Define
+In the first phase I need to understand what my potential users want to identify issues. The goal is that I can answer the challenges they face.
 
-User Persona:
+There are 3 possible ways to gather data:
+
+- Google Form online surveys.
+- Interview (Work in progress).
+- Competitive Analysis (Work in progress).
+
+#### Online Survey
+
+Using online surveys I can gather real data from students to employees. I want to know if people actually need to make reservations at a restaurant or they have some disadvantages.
+
+=> **Conclusion 1**: some people have created a restaurant table reservation by contacting the restaurant directly through their social media but that leads to long response time from the restaurant.
+
+=> **Conclusion 2**: some people went to the restaurant's location without making a reservation and were annoyed that the queue was long or there's no table left.
+
+=> **Conclusion 3**: People don't actually understand what it's like to reserve a restaurant table because they have never done it before.
+
+### Phase 2 - Define
+
+In the second phase, I need to determine our target users based on the data I've researched and identify the pattern of problems I found from the previous phase.
+
+#### User Persona:
 
 Forming multiple user personas is important but for the scale of our project we stick to making one.
 
 <img src={persona} loading="lazy" decoding="async" />
 
-### Phase Three - Ideate
+To end Phase 2 we used the **How Might We (HMW)** question method. This is the first one we came up with:
+
+<img src={hmw1} loading="lazy" decoding="async" />
+
+I made a simplified one later:
+
+- Help users check if the restaurant is full.
+- Help making a table reservation easily.
+- Help users track their reservation.
+- Help users find important info: recommended dishes and price (menu), parking lot, address, reviews
+
+
+
+
+### Phase 3 - Ideate
 
 From what we have brainstormed, we prioritized certain features based on impact/effort.
 
@@ -128,7 +167,7 @@ I wanted my team to create a simple design system before moving to phase 4. This
     </SwiperSlide> 
 </SwiperContainer>
 
-### Phase Four - Prototype
+### Phase 4 - Prototype
 
 In this phase we need to create an interactive design that will be tested by potential users in phase 5.
 
@@ -140,7 +179,7 @@ In this phase we need to create an interactive design that will be tested by pot
 </iframe>
 </div>
 
-### Phase Five - Test
+### Phase 5 - Test
 
 Getting feedback from real users in the testing phase will give me a chance to redesign and maximize the performance of my design
 
@@ -154,7 +193,7 @@ Team collaboration is very important in a project because when you work alone it
 
 <SwiperContainer>
     <SwiperSlide> 
-	<img loading="lazy" decoding="async" src={c1} alt="design system" />
+	    <img loading="lazy" decoding="async" src={c1} alt="design system" />
     </SwiperSlide>
     <SwiperSlide>
         <img loading="lazy" decoding="async" src={c2} alt="design system" />

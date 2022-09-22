@@ -7,8 +7,6 @@
 	font-size: var(--font-size-mid);
 	line-height: var(--line-height-mid);
 	color:var(--accent-900);
-
-
 	background-position-y: 30px;
     padding-bottom: 6px;
 	border-bottom: none;
@@ -22,7 +20,16 @@
 	font-size: var(--font-size-base);
 	line-height: var(--line-height-base);
 	color: var(--accent-900);
+	text-decoration: underline;
 }
+
+.markdown h4 
+{
+	font-size: var(--font-size-small);
+	line-height: var(--line-height-small);
+	font-style: italic;
+}
+
 
 .markdown p {
 	font-size: var(--font-size-small);
