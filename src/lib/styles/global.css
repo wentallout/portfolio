@@ -169,30 +169,6 @@ h6 {
 	margin: 0;
 }
 
-/* GLOBAL BUTTON */
-.btn {
-	/* flex */
-	display: flex;
-	justify-content: center;
-	align-items: center;
-
-	/* padding */
-	padding: 12px 24px;
-
-	/* width */
-	width: -webkit-fit-content;
-	width: -moz-fit-content;
-	width: fit-content;
-
-	transition: 0.3s;
-	font-size: var(--font-size-small);
-	line-height: var(--line-height-small);
-	font-weight: 500;
-	border: 1px solid transparent;
-
-	border-radius: var(--border-radius);
-}
-
 /* ---INPUT--- */
 input,
 textarea {
@@ -216,6 +192,4 @@ img {
 	object-fit: cover;
 }
 
-.btn svg {
-	margin-right: 4px;
-}
+

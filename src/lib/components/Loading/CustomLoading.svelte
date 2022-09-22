@@ -46,7 +46,7 @@
 		width: 60px;
 		height: 30px;
 		border-radius: 60px 60px 0 0;
-		background: #b4873c;
+		background: var(--primary-500);
 		animation: spinner-1 1s linear infinite;
 		transform-origin: 30px 30px;
 	}

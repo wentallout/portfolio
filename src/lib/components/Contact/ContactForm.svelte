@@ -38,7 +38,8 @@
 				<PaperPlaneRight color="var(--neutral-900)" />
 			</Button>
 
-			<button class="btn btn-reset" type="reset">Reset</button>
+			<!-- <button class="btn btn-reset" type="reset">Reset</button> -->
+			<Button label="Reset" backgroundColor="transparent" labelColor="var(--error)" type="reset" />
 		</div>
 	</form>
 </div>
@@ -63,19 +64,9 @@
 		flex-direction: column;
 	}
 
-	.btn-reset {
-		border: 1px solid var(--error);
-		color: var(--error);
-		background-color: transparent;
-	}
-
-	.btn-reset:hover {
-		background-color: var(--error);
-		color: var(--neutral-100);
-	}
-
 	.btn-container {
 		display: flex;
 		flex-direction: row;
+		gap: var(--space-xs);
 	}
 </style>

@@ -42,13 +42,31 @@
 
 <style>
 	.btn {
+		/* flex */
+		display: flex;
+		justify-content: center;
+		align-items: center;
+
+		/* padding */
+		padding: 12px 24px;
+
+		/* width */
+		width: -webkit-fit-content;
+		width: -moz-fit-content;
+		width: fit-content;
+
+		transition: 0.3s;
+		font-size: var(--font-size-small);
+		line-height: var(--line-height-small);
+		font-weight: 500;
+
 		border: 1px solid transparent;
-		margin-right: var(--space-xs);
+		border-radius: var(--border-radius);
 		overflow: hidden;
 		position: relative;
 	}
 
 	.btn:hover {
-		filter: brightness(70%);
+		filter: brightness(80%);
 	}
 </style>

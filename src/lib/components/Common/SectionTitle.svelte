@@ -22,8 +22,12 @@
 		align-items: center;
 		margin-bottom: var(--space-s);
 		font-weight: 600;
+	}
+
+	.section-title h2 {
 		color: var(--neutral-900);
 	}
+
 	.section-icon {
 		display: flex;
 		justify-content: left;

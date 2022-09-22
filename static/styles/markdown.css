@@ -47,6 +47,11 @@
 .markdown img {
 	width: 100%;
 	border: 1px solid var(--neutral-500);
+	border-radius: var(--border-radius);
+	-webkit-border-radius: var(--border-radius);
+	-moz-border-radius: var(--border-radius);
+	-ms-border-radius: var(--border-radius);
+	-o-border-radius: var(--border-radius);
 }
 
 @media (min-width: 768px) {
@@ -62,5 +67,6 @@
 .markdown li::before
 {
 	content: '◆';
+	color: var(--neutral-900);
 	margin-right: 4px;
 }

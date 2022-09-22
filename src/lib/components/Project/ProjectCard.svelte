@@ -24,17 +24,17 @@
 		<div class="project__name mid-text">{projectName}</div>
 		<div class="project__description small-text">
 			<div class="description-section">
-				<p class="section-title">What</p>
+				<p class="section-title">◆ What</p>
 				<p class="section-info">{what}</p>
 			</div>
 
 			<div class="description-section">
-				<p class="section-title">Who</p>
+				<p class="section-title">◆ Who</p>
 				<p class="section-info">{who}</p>
 			</div>
 
 			<div class="description-section">
-				<p class="section-title">Result</p>
+				<p class="section-title">◆ Result</p>
 				<p class="section-info">{result}</p>
 			</div>
 		</div>
@@ -66,7 +66,7 @@
 	.section-title {
 		min-width: 20%;
 		font-weight: 500;
-		color: var(--accent-700);
+		color: var(--accent-900);
 	}
 
 	.section-info {
@@ -97,7 +97,9 @@
 	.project__btn {
 		margin-top: auto;
 		display: flex;
+		flex-wrap: wrap;
 		justify-content: left;
+		gap: var(--space-xs);
 	}
 
 	.project:hover {

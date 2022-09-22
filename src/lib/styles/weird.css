@@ -86,6 +86,10 @@ a {
 
 /*  */
 
+.btn svg {
+	margin-right: 4px;
+}
+
 .btn .circle {
 	position: absolute;
 	background-color: var(--neutral-200);
