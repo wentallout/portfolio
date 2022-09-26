@@ -1,4 +1,6 @@
 <script>
+	import Toc from '$lib/components/Common/Toc.svelte';
+
 	export let data;
 </script>
 
@@ -9,6 +11,7 @@
 <article class="info">
 	<h1 class="large-text">{data.title}</h1>
 	<span class="small-text date">Published: {data.date}</span>
+	<Toc />
 	<svelte:component this={data.content} />
 </article>
 

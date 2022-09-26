@@ -5,3 +5,6 @@
 <MarkdownContainer>
 	<slot />
 </MarkdownContainer>
+
+<style>
+</style>

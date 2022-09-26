@@ -14,6 +14,8 @@
     background-repeat: no-repeat;
     background-position: 25% 105%;
     background-size: 100% 10px;
+
+	scroll-margin-top: 80px ;
 }
 
 .markdown h3 {
@@ -52,6 +54,7 @@
 
 
 .markdown img {
+	display:block;
 	width: 100%;
 	border: 1px solid var(--neutral-500);
 	border-radius: var(--border-radius);
@@ -59,6 +62,7 @@
 	-moz-border-radius: var(--border-radius);
 	-ms-border-radius: var(--border-radius);
 	-o-border-radius: var(--border-radius);
+	margin-bottom: var(--space-m);
 }
 
 @media (min-width: 768px) {
@@ -77,3 +81,6 @@
 	color: var(--neutral-900);
 	margin-right: 4px;
 }
+
+
+

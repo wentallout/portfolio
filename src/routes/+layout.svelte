@@ -11,6 +11,7 @@
 	import '$lib/styles/global.css';
 	import '$lib/styles/weird.css';
 	import 'atropos/css/min';
+
 	import { page } from '$app/stores';
 	// loader
 	import NProgress from 'nprogress';
@@ -58,7 +59,6 @@
 		<Breadcrumb path={$page.url.pathname} />
 		<slot />
 	</main>
-
 	<Footer />
 </div>
 

@@ -4,58 +4,50 @@ date: '14/09/2022'
 ---
 
 <script>
-	import thumbnail from '$lib/assets/images/project/reza/reza-thumbnail.png';
+	import thumbnail from '$lib/assets/images/project/reza/thumbnail.png';
     import discord from '$lib/assets/images/project/reza/discord.png';
     import feature from '$lib/assets/images/project/reza/feature.png';
     import role from '$lib/assets/images/project/reza/role.png';
     import goal from '$lib/assets/images/project/reza/goal.png';
     import userResearch from '$lib/assets/images/project/reza/userResearch.png';
     import persona from '$lib/assets/images/project/reza/persona.png';
-
     import hmw1 from '$lib/assets/images/project/reza/hmw1.png';
-
-
+    import redesign1 from '$lib/assets/images/project/reza/redesign1.png';
+    import redesign2 from '$lib/assets/images/project/reza/redesign2.gif';
+    import lofi from '$lib/assets/images/project/reza/lofi.png';
     import c1 from '$lib/assets/images/project/reza/c1.png';
     import c2 from '$lib/assets/images/project/reza/c2.png';
     import l1 from '$lib/assets/images/project/reza/l1.png';
     import l2 from '$lib/assets/images/project/reza/l2.png';
-
     import ds1 from '$lib/assets/images/project/reza/ds1.png';
     import ds2 from '$lib/assets/images/project/reza/ds2.png';
     import ds3 from '$lib/assets/images/project/reza/ds3.png';
+    import rezaIcon from '$lib/assets/images/project/reza/rezaIcon.png'
 
-
+    import reservationFlow from '$lib/assets/images/project/reza/reservationFlow.png'
+    import searchFlow from '$lib/assets/images/project/reza/searchFlow.png'
 
     import { SwiperSlide } from 'swiper/svelte';
     import SwiperContainer from '$lib/components/Swiper/SwiperContainer.svelte';
    
-    
 </script>
 
-<style>
-.markdown
-{
-    --primary-500: #E4543B !important;
-}
-</style>
 
 
 <img width="600" src={thumbnail} loading="eager" decoding="async" alt="reza thumbnail" />
+
+
 
 
 ## Overview
 
 Imagine you need to quickly organize a party for your group of friends. You are not a cuisine expert or know all the cool places in the city. You opened Google and search for the nearest restaurants but you realized you don't know much about its foods, price or how to contact them to get a table.
 
-We're living in the modern era, you're not going to look for their phone numbers and call them, are you?
-
 You need a mobile app that can:
 
 - Recommend the most trendy restaurants
 - Show you its menu, price and past reviews,
 - Let you reserve a table when it's available and then remind you when it's time and guide you there.
-
-
 
 ## Problem statement
 
@@ -73,13 +65,13 @@ We look at one of our competitor apps [PasGo](https://pasgo.vn) and relized some
 
 <img src={goal} loading="lazy" decoding="async" />
 
-## Users & Audience
+## Audience
 
 I need to visualize the kind of user that will use this product. The persona has to represent the largest amount of users so I think a person with a paying job will be appropriate. She's busy but like to hangout with friends in a nice place sometimes.
 
 <img src={userResearch} loading="lazy" decoding="async" alt="user research" />
 
-## Roles & Responsibilities
+## Responsibilities
 
 I volunteered to be the team leader because I had more free time than my peers and I'm quite confident in my time management skill.
 
@@ -87,7 +79,7 @@ I volunteered to be the team leader because I had more free time than my peers a
 
 At every steps in our process I gave each members a task and a deadline. Obviously I don't expect them to finish on time since they have school/work but it's still important to estimate so that **I can minimize the potential risk in the future**.
 
-## Scope & Constraints
+## Constraints
 
 We were given **2 weeks** to finish our project so I decided that we should use our limited time effectively. So I tell my team to remove unnecessary ideas and focus only on the **3 most important features: Searching, Detail, Booking**.
 
@@ -144,14 +136,40 @@ I made a simplified one later:
 - Help users track their reservation.
 - Help users find important info: recommended dishes and price (menu), parking lot, address, reviews
 
-
-
-
 ### Phase 3 - Ideate
 
 From what we have brainstormed, we prioritized certain features based on impact/effort.
 
-<img src={feature} loading="lazy" decoding="async" />
+<img src={feature} loading="lazy" decoding="async" alt="project main features" />
+
+#### User Flow
+
+Reservation Flow:
+
+<img src={reservationFlow} loading="lazy" decoding="async" alt="" />
+
+Search Flow:
+
+<img src={searchFlow} loading="lazy" decoding="async" alt="" />
+
+#### Low Fidelity Wireframe
+
+We quickly made some simple lofi screens for the main features I agreed on.
+
+<img src={lofi} loading="lazy" decoding="async" alt="low fidelity wireframe" />
+    
+
+    
+#### Branding
+
+I got the name from the pronunciation of "reservation" which looks like this: */ˌrezərˈvāSH(ə)n/*. I think short, 2 syllables words are the best names for your brand.
+
+I used Canva and quickly made a SVG logo for my concept mobile app. There are multiple sizes for different devices for easy exports.
+
+<img src={rezaIcon} loading="lazy" decoding="async" alt="branding" />
+
+
+#### Design System
 
 I wanted my team to create a simple design system before moving to phase 4. This will help my team achieve the design consistency that is required in a typical project.
 
@@ -169,21 +187,28 @@ I wanted my team to create a simple design system before moving to phase 4. This
 
 ### Phase 4 - Prototype
 
-In this phase we need to create an interactive design that will be tested by potential users in phase 5.
+Phase 4 is all about creating an interactive design that will be tested by potential users in phase 5.
 
 [Link to the prototype](https://www.figma.com/proto/owUrwidb8hZbdmruKhMtyS/REZA%3A-Restaurant-Reservation-App?page-id=2%3A9&node-id=275%3A5365&viewport=549%2C-598%2C0.24&scaling=scale-down&starting-point-node-id=275%3A5365)
 
-<div style="left: 0; width: 100%; height: 450px; position: relative;">
-<iframe alt="figma prototype" style="border: 1px solid rgba(0, 0, 0, 0.1);" width="100%" height="450" src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fproto%2FowUrwidb8hZbdmruKhMtyS%2FREZA%253A-Restaurant-Reservation-App%3Fpage-id%3D2%253A9%26node-id%3D275%253A5365%26viewport%3D549%252C-598%252C0.24%26scaling%3Dscale-down%26starting-point-node-id%3D275%253A5365" allowfullscreen>
-
-</iframe>
-</div>
 
 ### Phase 5 - Test
 
-Getting feedback from real users in the testing phase will give me a chance to redesign and maximize the performance of my design
+It's widely known that early, repeated testing and redesign will save time and money. We can't just work on something for months then release it without knowing how people wil react to it.
 
-We skipped this phase due to time limitation but I've found a Remote Usability Testing platform that can help with this: [Maze](https://maze.co/)
+Getting feedback from real users in the testing phase will give me a chance to redesign and maximize the performance of some flows.
+
+#### Detail Page Redesign
+
+I got some feedback from my instructors and found this one element that needs to be fixed to the top because the page could be long and we can't force users to scroll all the way back to the top.
+
+<img src={redesign1} loading="lazy" decoding="async" alt="the screen that needs redesign" />
+
+=> **My redesign:**
+
+<img src={redesign2} loading="lazy" decoding="async" alt="the solution" />
+
+There is a Remote Usability Testing service that can help with this testing phase: [Maze](https://maze.co/).
 
 ## Conclusion
 

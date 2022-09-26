@@ -47,7 +47,7 @@
 					backgroundColor="var(--primary-500)" />
 			</a>
 
-			<a href={linkToFigma}>
+			<a target="_blank" href={linkToFigma}>
 				<Button label="Figma" border="1px solid var(--neutral-900)">
 					<FigmaLogo />
 				</Button>
