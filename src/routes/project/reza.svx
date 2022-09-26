@@ -83,7 +83,9 @@ I volunteered to be the team leader because I had more free time than my peers a
 
 <img src={role} loading="lazy" decoding="async" />
 
-At every steps in our process I gave each members a task and a deadline. Obviously I don't expect them to finish on time since they have school/work but it's still important to estimate so that **I can minimize the potential risk in the future**.
+At every steps in our process I gave each members a task and a deadline. Obviously I don't expect them to finish on time since they still have school/work but it's still important to estimate so that **I can minimize the potential risk in the future**.
+
+
 
 ## Constraints
 
