@@ -40,8 +40,9 @@
 		content: '';
 	}
 
-	.toc li {
+	.toc li a {
 		font-weight: 400;
+		font-style: normal;
 	}
 
 	.toc__title {

@@ -22,10 +22,16 @@ date: '14/09/2022'
     import ds1 from '$lib/assets/images/project/reza/ds1.png';
     import ds2 from '$lib/assets/images/project/reza/ds2.png';
     import ds3 from '$lib/assets/images/project/reza/ds3.png';
-    import rezaIcon from '$lib/assets/images/project/reza/rezaIcon.png'
+    import rezaIcon from '$lib/assets/images/project/reza/rezaIcon.png';
 
-    import reservationFlow from '$lib/assets/images/project/reza/reservationFlow.png'
-    import searchFlow from '$lib/assets/images/project/reza/searchFlow.png'
+    import reservationFlow from '$lib/assets/images/project/reza/reservationFlow.png';
+    import searchFlow from '$lib/assets/images/project/reza/searchFlow.png';
+
+    import homeScreen from '$lib/assets/images/project/reza/homeScreen.png';
+    import searchScreen from '$lib/assets/images/project/reza/searchScreen.png';
+    import reservationScreen from '$lib/assets/images/project/reza/reservationScreen.png';
+    import detailScreen from '$lib/assets/images/project/reza/detailScreen.gif';
+    import notiScreen from '$lib/assets/images/project/reza/notiScreen.png';
 
     import { SwiperSlide } from 'swiper/svelte';
     import SwiperContainer from '$lib/components/Swiper/SwiperContainer.svelte';
@@ -159,7 +165,6 @@ We quickly made some simple lofi screens for the main features I agreed on.
 <img src={lofi} loading="lazy" decoding="async" alt="low fidelity wireframe" />
     
 
-    
 #### Branding
 
 I got the name from the pronunciation of "reservation" which looks like this: */ˌrezərˈvāSH(ə)n/*. I think short, 2 syllables words are the best names for your brand.
@@ -190,6 +195,38 @@ I wanted my team to create a simple design system before moving to phase 4. This
 Phase 4 is all about creating an interactive design that will be tested by potential users in phase 5.
 
 [Link to the prototype](https://www.figma.com/proto/owUrwidb8hZbdmruKhMtyS/REZA%3A-Restaurant-Reservation-App?page-id=2%3A9&node-id=275%3A5365&viewport=549%2C-598%2C0.24&scaling=scale-down&starting-point-node-id=275%3A5365)
+
+#### Home
+
+This is the screen user sees when they first open the app. I try not to overwhelm users with too much information.
+
+<img src={homeScreen} loading="lazy" decoding="async" alt="home screen UI" />
+
+#### Search
+
+This screen lets users search for a restaurant using keywords like the restaurant's name or the cuisine. The search result will be displayed in a list. You can then filter, sort your result by distance, price, rating.
+
+<img src={searchScreen} loading="lazy" decoding="async" alt="search screen UI" />
+
+#### Detail
+
+This screen shows up when user click on a restaurant from their home page or search result page.
+
+<img src={detailScreen} loading="lazy" decoding="async" alt="detail screen UI" />
+
+
+#### Reservation
+
+This screen allows users to see their booked reservations and cancel them if they want to.
+
+<img src={reservationScreen} loading="lazy" decoding="async" alt="reservation screen UI" />
+
+#### Notification
+
+Alarm users when it's time to go to the restaurant. Also it gives them good deals or discount nearby.
+
+<img src={notiScreen} loading="lazy" decoding="async" alt="notification screen UI" />
+
 
 
 ### Phase 5 - Test
