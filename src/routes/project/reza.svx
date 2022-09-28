@@ -4,6 +4,11 @@ date: '14/09/2022'
 ---
 
 <script>
+    import { SwiperSlide } from 'swiper/svelte';
+    import SwiperContainer from '$lib/components/Swiper/SwiperContainer.svelte';
+    import Image from '$lib/components/Common/Image.svelte';
+
+    //images
 	import thumbnail from '$lib/assets/images/project/reza/thumbnail.png';
     import discord from '$lib/assets/images/project/reza/discord.png';
     import feature from '$lib/assets/images/project/reza/feature.png';
@@ -23,27 +28,16 @@ date: '14/09/2022'
     import ds2 from '$lib/assets/images/project/reza/ds2.png';
     import ds3 from '$lib/assets/images/project/reza/ds3.png';
     import rezaIcon from '$lib/assets/images/project/reza/rezaIcon.png';
-
     import reservationFlow from '$lib/assets/images/project/reza/reservationFlow.png';
     import searchFlow from '$lib/assets/images/project/reza/searchFlow.png';
-
     import homeScreen from '$lib/assets/images/project/reza/homeScreen.png';
     import searchScreen from '$lib/assets/images/project/reza/searchScreen.png';
     import reservationScreen from '$lib/assets/images/project/reza/reservationScreen.png';
     import detailScreen from '$lib/assets/images/project/reza/detailScreen.gif';
     import notiScreen from '$lib/assets/images/project/reza/notiScreen.png';
-
-    import { SwiperSlide } from 'swiper/svelte';
-    import SwiperContainer from '$lib/components/Swiper/SwiperContainer.svelte';
-   
 </script>
 
-
-
-<img width="600" src={thumbnail} loading="eager" decoding="async" alt="reza thumbnail" />
-
-
-
+<Image src={thumbnail} alt="reza thumbnail" />
 
 ## Overview
 
@@ -69,23 +63,21 @@ We look at one of our competitor apps [PasGo](https://pasgo.vn) and relized some
 
 => We think we can brainstorm some ideas and design an app with more features and better UX considerations.
 
-<img src={goal} loading="lazy" decoding="async" />
+<Image src={goal} />
 
 ## Audience
 
 I need to visualize the kind of user that will use this product. The persona has to represent the largest amount of users so I think a person with a paying job will be appropriate. She's busy but like to hangout with friends in a nice place sometimes.
 
-<img src={userResearch} loading="lazy" decoding="async" alt="user research" />
+<Image src={userResearch} alt="user research" />
 
 ## Responsibilities
 
 I volunteered to be the team leader because I had more free time than my peers and I'm quite confident in my time management skill.
 
-<img src={role} loading="lazy" decoding="async" />
+<Image src={role} alt="role" />
 
 At every steps in our process I gave each members a task and a deadline. Obviously I don't expect them to finish on time since they still have school/work but it's still important to estimate so that **I can minimize the potential risk in the future**.
-
-
 
 ## Constraints
 
@@ -95,7 +87,7 @@ I set up a meeting time for my team at 7:00 PM every Monday, Wednesday and Frida
 
 We use Discord for our daily meeting and share our progress and feedback through screen share.
 
-<img src={discord} loading="lazy" decoding="async" />
+<Image src={discord} alt="discord screen" />
 
 ## Process
 
@@ -131,11 +123,11 @@ In the second phase, I need to determine our target users based on the data I've
 
 Forming multiple user personas is important but for the scale of our project we stick to making one.
 
-<img src={persona} loading="lazy" decoding="async" />
+<Image src={persona} alt="persona" />   
 
 To end Phase 2 we used the **How Might We (HMW)** question method. This is the first one we came up with:
 
-<img src={hmw1} loading="lazy" decoding="async" />
+<Image src={hmw1} alt="how might we" />
 
 I made a simplified one later:
 
@@ -148,25 +140,25 @@ I made a simplified one later:
 
 From what we have brainstormed, we prioritized certain features based on impact/effort.
 
-<img src={feature} loading="lazy" decoding="async" alt="project main features" />
+<Image src={feature} alt="project main features" />
 
 #### User Flow
 
 Reservation Flow:
 
-<img src={reservationFlow} loading="lazy" decoding="async" alt="" />
+<Image src={reservationFlow} alt="reservation flow"  />
 
 Search Flow:
 
-<img src={searchFlow} loading="lazy" decoding="async" alt="" />
+<Image src={searchFlow} alt="searchFlow"  />
 
 #### Low Fidelity Wireframe
 
 We quickly made some simple lofi screens for the main features I agreed on.
 
-<img src={lofi} loading="lazy" decoding="async" alt="low fidelity wireframe" />
-    
+<Image src={lofi} alt="low fidelity wireframe" />
 
+    
 #### Branding
 
 I got the name from the pronunciation of "reservation" which looks like this: */ˌrezərˈvāSH(ə)n/*. I think short, 2 syllables words are the best names for your brand.
@@ -175,8 +167,7 @@ I chose red as the brand color because it makes people hungry and it has this *l
 
 I used Canva and quickly made a SVG logo for my concept mobile app. There are multiple sizes for different devices for easy exports.
 
-<img src={rezaIcon} loading="lazy" decoding="async" alt="branding" />
-
+<Image src={rezaIcon} alt="branding" />
 
 #### Design System
 
@@ -184,7 +175,7 @@ I wanted my team to create a simple design system before moving to phase 4. This
 
 <SwiperContainer>
     <SwiperSlide>   
-	<img loading="lazy" decoding="async" src={ds1} alt="design system" />   
+	    <img loading="lazy" decoding="async" src={ds1} alt="design system" />   
     </SwiperSlide>
     <SwiperSlide>
         <img loading="lazy" decoding="async" src={ds2} alt="design system" />
@@ -204,34 +195,32 @@ Phase 4 is all about creating an interactive design that will be tested by poten
 
 This is the screen user sees when they first open the app. I try not to overwhelm users with too much information.
 
-<img src={homeScreen} loading="lazy" decoding="async" alt="home screen UI" />
+<Image src={homeScreen} alt="home screen UI" />
 
 #### Search
 
 This screen lets users search for a restaurant using keywords like the restaurant's name or the cuisine. The search result will be displayed in a list. You can then filter, sort your result by distance, price, rating.
 
-<img src={searchScreen} loading="lazy" decoding="async" alt="search screen UI" />
+<Image src={searchScreen} alt="search screen UI" />
 
 #### Detail
 
 This screen shows up when user click on a restaurant from their home page or search result page.
 
-<img src={detailScreen} loading="lazy" decoding="async" alt="detail screen UI" />
+<Image src={detailScreen} />
 
 
 #### Reservation
 
 This screen allows users to see their booked reservations and cancel them if they want to.
 
-<img src={reservationScreen} loading="lazy" decoding="async" alt="reservation screen UI" />
+<Image src={reservationScreen}  alt="reservation screen UI" />
 
 #### Notification
 
 Alarm users when it's time to go to the restaurant. Also it gives them good deals or discount nearby.
 
-<img src={notiScreen} loading="lazy" decoding="async" alt="notification screen UI" />
-
-
+<Image src={notiScreen}  alt="notification screen UI" />
 
 ### Phase 5 - Test
 
@@ -243,11 +232,11 @@ Getting feedback from real users in the testing phase will give me a chance to r
 
 I got some feedback from my instructors and found this one element that needs to be fixed to the top because the page could be long and we can't force users to scroll all the way back to the top.
 
-<img src={redesign1} loading="lazy" decoding="async" alt="the screen that needs redesign" />
+<Image src={redesign1} alt="the screen that needs redesign" />   
 
 => **My redesign:**
 
-<img src={redesign2} loading="lazy" decoding="async" alt="the solution" />
+<Image src={redesign2} alt="the solution" />   
 
 There is a Remote Usability Testing service that can help with this testing phase: [Maze](https://maze.co/).
 

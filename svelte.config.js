@@ -8,8 +8,8 @@ const config = {
 	preprocess: [
 		preprocess(),
 		mdsvex({
-			extensions: ['.svx'],
-		}),
+			extensions: ['.svx']
+		})
 	],
 	extensions: ['.svelte', '.svx'],
 	kit: {
@@ -18,9 +18,21 @@ const config = {
 			crawl: true,
 			enabled: true,
 			onError: 'continue',
-			entries: ['*'],
-		},
+			entries: ['*']
+		}
 	},
+	vitePlugin: {
+		experimental: {
+			inspector: true,
+			toggleKeyCombo: 'meta-shift',
+			// hold and release key to toggle inspector mode
+			holdMode: true,
+			// show or hide the inspector option
+			showToggleButton: 'always',
+			// inspector position
+			toggleButtonPos: 'top-right'
+		}
+	}
 };
 
 export default config;

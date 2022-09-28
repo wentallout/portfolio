@@ -22,7 +22,8 @@
 		linkToDetail="/project/reza"
 		what="Reza is a restaurant reservation app"
 		who="People who want to reserve a restaurant table online"
-		result="Persona, User Flow, Wireframe, Prototype, Presentation slides" />
+		result="Persona, User Flow, Wireframe, Prototype, Presentation slides"
+	/>
 
 	<!-- <ProjectCard projectName="Project 2: WIP" what="wip" who="wip" result="wip" /> -->
 </div>

@@ -4,13 +4,13 @@
 	let sectionIcon = {
 		color: 'var(--primary-600)',
 		height: 32,
-		width: 32,
+		width: 32
 	};
 </script>
 
 <div class="section-title">
 	<div class="section-icon">
-		<slot sectionIcon={sectionIcon} />
+		<slot {sectionIcon} />
 	</div>
 	<h2 class="large-text">{sectionTitle}</h2>
 </div>

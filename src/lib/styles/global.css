@@ -190,6 +190,23 @@ input {
 
 img {
 	object-fit: cover;
+	display: block;
+	font-family: sans-serif;
+	font-weight: 300;
+	height: auto;
+	line-height: 2;
+	position: relative;
+	text-align: center;
 }
 
+img::before {
+	content: "We're sorry, the image below is broken :(";
+	display: block;
+	margin-bottom: 10px;
+}
 
+img::after {
+	content: '(url: ' attr(src) ')';
+	display: block;
+	font-size: 12px;
+}
