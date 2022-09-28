@@ -6,11 +6,9 @@
 	onMount(() => {
 		headingEle = document.querySelectorAll('h2');
 
-		if (headingEle.length === 0) {
 			for (let i = 0; i < headingEle.length; i++) {
 				headingEle[i].setAttribute('id', `${headingEle[i].innerHTML}`);
 			}
-		}
 
 		headingList = Array.from(headingEle);
 	});
