@@ -95,14 +95,6 @@ html {
 	-webkit-text-size-adjust: 100%;
 }
 
-main {
-	display: block;
-}
-
-h1 {
-	margin: 0.67em 0;
-}
-
 hr {
 	box-sizing: content-box;
 	height: 0;
@@ -165,7 +157,6 @@ select,
 textarea {
 	font-family: inherit;
 	font-size: 100%;
-	/* line-height: 1.15; */
 	margin: 0;
 }
 

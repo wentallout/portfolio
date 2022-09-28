@@ -117,10 +117,6 @@
 }
 /* END TYPOGRAPHY */
 
-* {
-	box-sizing: border-box;
-}
-
 html {
 	/* HEIGHT */
 	min-height: 101%;
@@ -140,7 +136,6 @@ html {
 body {
 	text-rendering: optimizeSpeed;
 	color: var(--neutral-900);
-	margin: 0;
 }
 
 ul {
