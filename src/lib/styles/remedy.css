@@ -63,10 +63,6 @@ audio {
 	width: 100%;
 }
 
-img {
-	border-style: none;
-}
-
 svg {
 	overflow: hidden;
 }
@@ -236,10 +232,6 @@ textarea {
 ::-webkit-file-upload-button {
 	-webkit-appearance: button;
 	font: inherit;
-}
-
-details {
-	display: block;
 }
 
 summary {
