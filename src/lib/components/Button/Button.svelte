@@ -31,10 +31,10 @@
 </script>
 
 <button
+	class="btn"
+	style="background-color: {backgroundColor}; border: {border}; color: {labelColor}"
 	on:click={handleButtonEffect}
 	bind:this={btnEle}
-	style="background-color: {backgroundColor}; border: {border}; color: {labelColor}"
-	class="btn"
 	{type}
 >
 	<slot />
