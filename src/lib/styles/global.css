@@ -39,7 +39,6 @@
 
 	/* background,text */
 	--background: var(--neutral-100);
-	--text: var(--neutral-900);
 
 	/* font-size */
 	--font-size-small: clamp(0.84rem, calc(0.79rem + 0.23vw), 1rem);
@@ -90,31 +89,31 @@
 .xs-text {
 	font-size: var(--font-size-xs);
 	line-height: var(--line-height-xs);
-	color: var(--text);
+	color: var(--neutral-900);
 }
 
 .small-text {
 	font-size: var(--font-size-small);
 	line-height: var(--line-height-small);
-	color: var(--text);
+	color: var(--neutral-900);
 }
 
 .base-text {
 	font-size: var(--font-size-base);
 	line-height: var(--line-height-base);
-	color: var(--text);
+	color: var(--neutral-900);
 }
 
 .mid-text {
 	font-size: var(--font-size-mid);
 	line-height: var(--line-height-mid);
-	color: var(--text);
+	color: var(--neutral-900);
 }
 
 .large-text {
 	font-size: var(--font-size-large);
 	line-height: var(--line-height-large);
-	color: var(--text);
+	color: var(--neutral-900);
 }
 /* END TYPOGRAPHY */
 
@@ -142,9 +141,6 @@ body {
 	text-rendering: optimizeSpeed;
 	color: var(--neutral-900);
 	margin: 0;
-	/* font-smooth: always; */
-	-webkit-font-smoothing: antialiased;
-	-moz-osx-font-smoothing: grayscale;
 }
 
 ul {
@@ -173,7 +169,7 @@ h6 {
 input,
 textarea {
 	padding: 0.375rem 0.75rem;
-	color: var(--neutral-700);
+	color: var(--neutral-800) !important;
 	margin-bottom: var(--space-s);
 	border: 1px solid var(--neutral-700);
 }

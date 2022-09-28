@@ -27,7 +27,6 @@
 		"eslint-config-prettier": "^8.3.0",
 		"eslint-plugin-svelte3": "^4.0.0",
 		"mdsvex": "^0.10.6",
-		"normalize.css": "^8.0.1",
 		"nprogress": "^0.2.0",
 		"object-hash": "^3.0.0",
 		"prettier": "^2.6.2",

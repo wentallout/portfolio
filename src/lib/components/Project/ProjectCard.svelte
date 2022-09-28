@@ -19,7 +19,8 @@
 		decoding="async"
 		class="project__thumbnail"
 		src={projectImage}
-		alt="project thumbnail" />
+		alt="project thumbnail"
+	/>
 	<div class="project__info">
 		<div class="project__name mid-text">{projectName}</div>
 		<div class="project__description small-text">
@@ -44,7 +45,8 @@
 				<Button
 					label="Read"
 					border="1px solid var(--primary-500)"
-					backgroundColor="var(--primary-500)" />
+					backgroundColor="var(--primary-500)"
+				/>
 			</a>
 
 			<a target="_blank" href={linkToFigma}>
@@ -83,7 +85,7 @@
 
 		/* COLOR */
 		background-color: var(--neutral-200);
-		color: var(--text);
+		color: var(--neutral-900);
 
 		/* SPACING */
 		margin-bottom: var(--space-l);

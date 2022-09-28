@@ -35,7 +35,8 @@
 	bind:this={btnEle}
 	style="background-color: {backgroundColor}; border: {border}; color: {labelColor}"
 	class="btn"
-	type={type}>
+	{type}
+>
 	<slot />
 	{label}
 </button>
@@ -64,6 +65,8 @@
 		border-radius: var(--border-radius);
 		overflow: hidden;
 		position: relative;
+
+		cursor: pointer;
 	}
 
 	.btn:hover {
