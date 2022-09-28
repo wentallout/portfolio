@@ -2,8 +2,8 @@
 	export let src = '';
 	export let alt = '';
 
-	export let width;
-	export let height;
+	export let width = 600;
+	export let height = 'auto';
 
 	import { Lightbox } from 'svelte-lightbox';
 </script>

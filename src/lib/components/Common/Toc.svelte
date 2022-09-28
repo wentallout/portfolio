@@ -6,9 +6,10 @@
 	onMount(() => {
 		headingEle = document.querySelectorAll('h2');
 
-		//add id to each item of headingEle
-		for (let i = 0; i < headingEle.length; i++) {
-			headingEle[i].setAttribute('id', `${headingEle[i].innerHTML}`);
+		if (headingEle.length === 0) {
+			for (let i = 0; i < headingEle.length; i++) {
+				headingEle[i].setAttribute('id', `${headingEle[i].innerHTML}`);
+			}
 		}
 
 		headingList = Array.from(headingEle);

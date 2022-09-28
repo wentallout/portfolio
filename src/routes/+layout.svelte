@@ -1,4 +1,5 @@
 <script>
+	import Transition from './../lib/components/Common/Transition.svelte';
 	import SkipLink from '$lib/components/Layout/SkipLink.svelte';
 	import PWA from '$lib/components/PWA/PWA.svelte';
 	import BackToTop from './../lib/components/Layout/BackToTop.svelte';
@@ -24,7 +25,7 @@
 		showSpinner: false,
 		trickle: false,
 		easing: 'ease',
-		speed: 500,
+		speed: 500
 	});
 
 	$: {
@@ -55,10 +56,13 @@
 	<LogoContainer />
 	<Header />
 
-	<main id="#main-content" class="main-content">
-		<Breadcrumb path={$page.url.pathname} />
-		<slot />
-	</main>
+	<Transition url={$page.url}>
+		<main id="#main-content" class="main-content">
+			<Breadcrumb path={$page.url.pathname} />
+			<slot />
+		</main>
+	</Transition>
+
 	<Footer />
 </div>
 
