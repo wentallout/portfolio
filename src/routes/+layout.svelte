@@ -8,7 +8,7 @@
 	import Breadcrumb from '$lib/components/Layout/Breadcrumb.svelte';
 	import CoolFrame from '$lib/components/Layout/CoolFrame.svelte';
 	import LogoContainer from '$lib/components/Layout/LogoContainer.svelte';
-	import '$lib/styles/remedy.css';
+	import '$lib/styles/sanitize.css';
 	import '$lib/styles/global.css';
 	import '$lib/styles/weird.css';
 	import 'atropos/css/min';

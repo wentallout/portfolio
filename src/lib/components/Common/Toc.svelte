@@ -17,8 +17,8 @@
 </script>
 
 <div class="toc">
+	<div class="toc__title base-text">Table of Content</div>
 	<ul>
-		<div class="toc__title base-text">Table of Content</div>
 		{#each headingList as item}
 			<li>
 				<a href={'#' + item.innerHTML}>
@@ -42,7 +42,7 @@
 	}
 
 	.toc li a {
-		font-weight: 300;
+		font-weight: 400;
 		font-style: normal;
 		margin-bottom: var(--space-s);
 	}
@@ -57,6 +57,7 @@
 
 	.toc {
 		display: flex;
+		flex-direction: column;
 		width: 100%;
 		height: 300px;
 		overflow-y: auto;
