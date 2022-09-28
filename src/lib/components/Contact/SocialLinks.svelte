@@ -33,7 +33,8 @@
 
 		<a
 			class="social__address"
-			href="https://www.figma.com/team_invite/redeem/CRNTQKDT0VQTLYjw7cEogQ">
+			href="https://www.figma.com/team_invite/redeem/CRNTQKDT0VQTLYjw7cEogQ"
+		>
 			<FigmaLogo color="var(--primary-600)" width="32" height="32" />
 			<p>Figma</p>
 		</a>

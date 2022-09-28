@@ -206,3 +206,7 @@ img::after {
 	display: block;
 	font-size: 12px;
 }
+
+address {
+	font-style: inherit;
+}
