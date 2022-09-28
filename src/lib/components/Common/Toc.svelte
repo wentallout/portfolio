@@ -42,13 +42,15 @@
 	}
 
 	.toc li a {
-		font-weight: 400;
+		font-weight: 300;
 		font-style: normal;
+		margin-bottom: var(--space-s);
 	}
 
 	.toc__title {
+		font-weight: 500;
 		margin-bottom: var(--space-s);
-		padding: 4px;
+		padding: 4px 8px;
 		border-radius: var(--border-radius);
 		background-color: var(--neutral-200);
 	}
