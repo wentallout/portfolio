@@ -34,7 +34,6 @@
   */
 
 :where(:root) {
-	cursor: default; /* 1 */
 	overflow-wrap: break-word; /* 3 */
 	-moz-tab-size: 4; /* 4 */
 	tab-size: 4; /* 4 */

@@ -7,6 +7,8 @@ date: '20/09/2022'
     import utopia from '$lib/assets/images/blog/utopia.png';
     import utopiaOutput from '$lib/assets/images/blog/utopiaOutput.png';
 
+    import Image from '$lib/components/Common/Image.svelte';
+
 </script>
 
 ## What is type scale?
@@ -22,13 +24,13 @@ If you're like me and can't be bothered to do all the math stuff, you should use
 
 Now Utopia requires an input. You need to pick 2 font size, one for the smallest screen size and one for the biggest screen size you have. The page already has **320px width for the min viewport** and **1140px width for the max viewport**, you can keep that number if you want.
 
-![{utopia}]({utopia})
+<Image src={utopia} alt="utopia" />
 
 ### Output
 
 Utopia will generate a type scale for you using **steps**. You're gonna use these **steps** instead of fixed numbers in your designs. This is the ultimate way to make responsive typography and avoid the tedious process of defining a specific numbers for each breakpoint.
 
-![{utopiaOutput}]({utopiaOutput})
+<Image src={utopiaOutput} alt="utopia output" />
 
 ## Which type scale should I choose?
 

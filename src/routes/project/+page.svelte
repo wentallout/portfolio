@@ -2,7 +2,6 @@
 	import FigmaLogo from '~icons/ph/figma-logo';
 	import ProjectCard from '$lib/components/Project/ProjectCard.svelte';
 	import SectionTitle from '$lib/components/Common/SectionTitle.svelte';
-
 	import RezaThumbnail from '$lib/assets/images/project/reza/thumbnail.png?webp';
 </script>
 

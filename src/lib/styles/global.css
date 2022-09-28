@@ -120,7 +120,7 @@ html {
 	/*  */
 
 	/* DEFAULT FONT CONFIG */
-	font-family: 'Poppins', sans-serif, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+	font-family: 'Lexend', sans-serif, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
 		Helvetica, Arial, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
 	font-weight: 400;
 	/*  */
@@ -131,7 +131,7 @@ html {
 }
 
 body {
-	text-rendering: optimizeSpeed;
+	text-rendering: optimizeLegibility;
 	color: var(--neutral-900);
 }
 
