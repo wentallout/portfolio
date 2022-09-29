@@ -80,7 +80,6 @@
 	background: var(--primary-400);
 }
 
-/* TYPOGRAPHY */
 /* 300,400,500,600*/
 
 .xs-text {
@@ -112,7 +111,6 @@
 	line-height: var(--line-height-large);
 	color: var(--neutral-900);
 }
-/* END TYPOGRAPHY */
 
 html {
 	/* HEIGHT */
@@ -203,4 +201,8 @@ img::after {
 
 address {
 	font-style: inherit;
+}
+
+.atropos-shadow {
+	background-color: transparent !important;
 }

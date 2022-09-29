@@ -11,45 +11,47 @@
 	import SectionTitle from '$lib/components/Common/SectionTitle.svelte';
 </script>
 
-<SectionTitle sectionTitle="Social" let:sectionIcon>
-	<Handshake {...sectionIcon} />
-</SectionTitle>
+<section>
+	<SectionTitle sectionTitle="Social" let:sectionIcon>
+		<Handshake {...sectionIcon} />
+	</SectionTitle>
 
-<div class="social">
-	<address class="social__list base-text">
-		<a class="social__address" href="tel:+84929066331">
-			<Phone color="var(--primary-600)" width="32" height="32" />
-			<p>+84 929 066 331</p>
-		</a>
+	<div class="social">
+		<address class="social__list base-text">
+			<a class="social__address" href="tel:+84929066331">
+				<Phone color="var(--primary-600)" width="32" height="32" />
+				<p>+84 929 066 331</p>
+			</a>
 
-		<a class="social__address" href="mailto:wentallout@gmail.com">
-			<Envelope color="var(--primary-600)" width="32" height="32" />
-			<p>wentallout@gmail.com</p>
-		</a>
-		<a class="social__address" href="https://www.linkedin.com/in/wentallout">
-			<LinkedinLogo color="var(--primary-600)" width="32" height="32" />
-			<p>LinkedIn</p>
-		</a>
+			<a class="social__address" href="mailto:wentallout@gmail.com">
+				<Envelope color="var(--primary-600)" width="32" height="32" />
+				<p>wentallout@gmail.com</p>
+			</a>
+			<a class="social__address" href="https://www.linkedin.com/in/wentallout">
+				<LinkedinLogo color="var(--primary-600)" width="32" height="32" />
+				<p>LinkedIn</p>
+			</a>
 
-		<a
-			class="social__address"
-			href="https://www.figma.com/team_invite/redeem/CRNTQKDT0VQTLYjw7cEogQ"
-		>
-			<FigmaLogo color="var(--primary-600)" width="32" height="32" />
-			<p>Figma</p>
-		</a>
+			<a
+				class="social__address"
+				href="https://www.figma.com/team_invite/redeem/CRNTQKDT0VQTLYjw7cEogQ"
+			>
+				<FigmaLogo color="var(--primary-600)" width="32" height="32" />
+				<p>Figma</p>
+			</a>
 
-		<a class="social__address" href="https://github.com/wentallout">
-			<GitHubLogo color="var(--primary-600)" width="32" height="32" />
-			<p>GitHub</p>
-		</a>
+			<a class="social__address" href="https://github.com/wentallout">
+				<GitHubLogo color="var(--primary-600)" width="32" height="32" />
+				<p>GitHub</p>
+			</a>
 
-		<a class="social__address" href="https://www.reddit.com/user/wentallout">
-			<RedditLogo color="var(--primary-600)" width="32" height="32" />
-			<p>Reddit</p>
-		</a>
-	</address>
-</div>
+			<a class="social__address" href="https://www.reddit.com/user/wentallout">
+				<RedditLogo color="var(--primary-600)" width="32" height="32" />
+				<p>Reddit</p>
+			</a>
+		</address>
+	</div>
+</section>
 
 <style>
 	.social {

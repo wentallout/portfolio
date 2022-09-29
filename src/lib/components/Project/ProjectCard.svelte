@@ -12,15 +12,19 @@
 </script>
 
 <div class="project">
-	<img
-		width="100%"
-		height="auto"
-		loading="lazy"
-		decoding="async"
-		class="project__thumbnail"
-		src={projectImage}
-		alt="project thumbnail"
-	/>
+	<div class="project__thumbnail">
+		<!-- <img
+			width="600"
+			height="auto"
+			class="thumbnail"
+			loading="lazy"
+			decoding="async"
+			src={projectImage}
+			alt="thumbnail"
+		/> -->
+
+		<slot name="atropos"><!-- optional fallback --></slot>
+	</div>
 	<div class="project__info">
 		<div class="project__name mid-text">{projectName}</div>
 		<div class="project__description small-text">
@@ -85,6 +89,8 @@
 
 		/* COLOR */
 		background-color: var(--neutral-200);
+		backdrop-filter: blur(5px);
+
 		color: var(--neutral-900);
 
 		/* SPACING */
@@ -96,6 +102,7 @@
 		border: var(--border);
 		overflow: hidden;
 	}
+
 	.project__btn {
 		margin-top: auto;
 		display: flex;
@@ -109,8 +116,17 @@
 	}
 
 	.project__thumbnail {
+		background: transparent url('/images/dot.svg') repeat left top/20px;
 		width: 100%;
-		height: auto;
+		overflow: hidden;
+		height: 100%;
+	}
+
+	.thumbnail {
+		display: none;
+		width: 100%;
+		height: 100%;
+		border-radius: var(--border-radius);
 	}
 
 	.project__info {
@@ -132,17 +148,13 @@
 	}
 
 	@media (min-width: 992px) {
+		.project {
+			flex-direction: row;
+		}
+
 		.project__thumbnail {
 			width: 60%;
 			height: auto;
-		}
-
-		.project__info {
-			width: 40%;
-		}
-
-		.project {
-			flex-direction: row;
 		}
 	}
 </style>

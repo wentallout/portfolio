@@ -9,7 +9,7 @@
 		text-align: center;
 		background-color: var(--accent-200);
 		color: var(--neutral-900);
-		padding: 0.5rem;
+		padding: 1rem 2rem;
 		translate: 0 -100%;
 		transition: translate 150ms ease-in-out;
 		transition: background-color 0.5s;

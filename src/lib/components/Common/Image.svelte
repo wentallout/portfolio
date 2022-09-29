@@ -8,6 +8,13 @@
 	import { Lightbox } from 'svelte-lightbox';
 </script>
 
-<Lightbox title={alt} description={src} enableImageExpand="true" transitionDuration="50">
+<Lightbox
+	enableClickToClose="true"
+	imagePreset="fullscreen"
+	title={alt}
+	description={src}
+	enableImageExpand="true"
+	transitionDuration="50"
+>
 	<img {width} {height} {src} loading="lazy" decoding="async" {alt} />
 </Lightbox>

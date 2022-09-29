@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="_イヤー_1" data-name="レイヤー 1" xmlns="http://www.w3.org/2000/svg" width="21" height="21" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 21 21">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: none;
+      }
+
+      .cls-2 {
+        clip-path: url(#clippath);
+      }
+
+      .cls-3 {
+        isolation: isolate;
+      }
+    </style>
+    <clipPath id="clippath">
+      <rect class="cls-1" width="20" height="20"/>
+    </clipPath>
+  </defs>
+  <g class="cls-2">
+    <image id="dotbg.svg" class="cls-3" width="21" height="21" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABUAAAAVCAYAAACpF6WWAAAACXBIWXMAAAsSAAALEgHS3X78AAAAR0lEQVQ4T+2TMQ4AIAgDq0+i/v9rdfABgMFJLmG73ERhpCTBu7Bn1JCEaqYn3NDRen6Pcq3Q92e8XlQ9Ha3nTTSzFM8BjrcBhvZKS7CCJXsAAAAASUVORK5CYII="/>
+  </g>
+</svg>

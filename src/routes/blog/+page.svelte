@@ -12,16 +12,33 @@
 	<title>Project</title>
 </svelte:head>
 
-<SectionTitle sectionTitle="Typography" let:sectionIcon>
-	<TextAa {...sectionIcon} />
-</SectionTitle>
+<section>
+	<SectionTitle sectionTitle="Typography" let:sectionIcon>
+		<TextAa {...sectionIcon} />
+	</SectionTitle>
 
-<BlogListContainer>
-	<BlogCard
-		blogTitle="How to pick the perfect type scale for your next design"
-		blogLink="/blog/typescale"
-		blogDate="20/9/2022" />
-</BlogListContainer>
+	<BlogListContainer>
+		<BlogCard
+			blogTitle="How to pick the perfect type scale for your next design"
+			blogLink="/blog/typescale"
+			blogDate="20/09/2022"
+		/>
+	</BlogListContainer>
+</section>
+
+<section>
+	<SectionTitle sectionTitle="Tips" let:sectionIcon>
+		<Brain {...sectionIcon} />
+	</SectionTitle>
+
+	<BlogListContainer>
+		<BlogCard
+			blogTitle="UX Portfolio DOs and DONTs"
+			blogLink="/blog/ux-portfolio"
+			blogDate="22/09/2022"
+		/>
+	</BlogListContainer>
+</section>
 
 <!-- <SectionTitle sectionTitle="Color" let:sectionIcon>
 	<Palette {...sectionIcon} />
@@ -31,14 +48,3 @@
 	<BlogCard blogTitle="wip" blogLink="/" blogDate="wip" />
 	<BlogCard blogTitle="wip" blogLink="/" blogDate="wip" />
 </BlogListContainer> -->
-
-<SectionTitle sectionTitle="Tips" let:sectionIcon>
-	<Brain {...sectionIcon} />
-</SectionTitle>
-
-<BlogListContainer>
-	<BlogCard
-		blogTitle="UX Portfolio DOs and DONTs"
-		blogLink="/blog/ux-portfolio"
-		blogDate="22/09/2022" />
-</BlogListContainer>

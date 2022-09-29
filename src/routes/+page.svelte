@@ -19,8 +19,8 @@
 	const breadcrumbs = [
 		{
 			name: 'Home',
-			slug: '',
-		},
+			slug: ''
+		}
 	];
 	let metadescription = 'Portfolio - UIUX Designer, Web Developer Nguyen Dang Khoa';
 	const featuredImageAlt = 'Portfolio of Khoa';
@@ -29,26 +29,26 @@
 		alt: featuredImageAlt,
 		width: 672,
 		height: 448,
-		caption: 'Home page',
+		caption: 'Home page'
 	};
 	const ogImage = {
 		url: ogImageSrc,
-		alt: featuredImageAlt,
+		alt: featuredImageAlt
 	};
 	const ogSquareImage = {
 		url: ogSquareImageSrc,
-		alt: featuredImageAlt,
+		alt: featuredImageAlt
 	};
 
 	const twitterImage = {
 		url: twitterImageSrc,
-		alt: featuredImageAlt,
+		alt: featuredImageAlt
 	};
 	const entityMeta = {
 		url: `${siteUrl}/`,
 		faviconWidth: 512,
 		faviconHeight: 512,
-		caption: author,
+		caption: author
 	};
 	const seoProps = {
 		title,
@@ -61,7 +61,7 @@
 		featuredImage,
 		ogImage,
 		ogSquareImage,
-		twitterImage,
+		twitterImage
 	};
 	// ---SEO END---
 </script>
@@ -109,9 +109,9 @@
 	}
 
 	.logo {
+		aspect-ratio: 1/1;
 		width: 200px;
 		height: 200px;
-		width: auto;
 	}
 
 	@media (min-width: 768px) {

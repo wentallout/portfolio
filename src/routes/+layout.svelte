@@ -44,6 +44,7 @@
 
 <svelte:head>
 	<meta name="google-site-verification" content="jDcuv7ulyNCJGJg0K24h9h6T_YqP9l5TBbv2DWOHh-w" />
+	<script src="https://js.linkz.ai/?key=6335a0730c2bfd453404a973"></script>
 </svelte:head>
 
 <SkipLink />
@@ -55,7 +56,7 @@
 	<LogoContainer />
 	<Header />
 
-	<main id="#main-content" class="main-content">
+	<main id="main-content" class="main-content">
 		<Breadcrumb path={$page.url.pathname} />
 		<slot />
 	</main>
@@ -78,7 +79,7 @@
 
 	@media (min-width: 768px) {
 		.main-content {
-			margin: var(--space-m) 17vw;
+			padding: var(--space-m) 17vw;
 		}
 	}
 </style>

@@ -13,7 +13,7 @@
 			tokenPath += '/' + t;
 			return {
 				label: t,
-				href: tokenPath,
+				href: tokenPath
 			};
 		});
 
@@ -22,7 +22,7 @@
 	}
 </script>
 
-<div class="breadcrumb base-text">
+<nav class="breadcrumb base-text">
 	{#each crumbs as c, i}
 		{#if i == crumbs.length - 1}
 			<div class="breadcrumb__unclickable">
@@ -32,7 +32,7 @@
 			<a class="breadcrumb__clickable" href={c.href}>{c.label}</a> &gt;&nbsp;
 		{/if}
 	{/each}
-</div>
+</nav>
 
 <style>
 	.breadcrumb {

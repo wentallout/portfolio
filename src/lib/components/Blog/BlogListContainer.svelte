@@ -1,6 +1,6 @@
-<section class="blogs">
+<div class="blogs">
 	<slot />
-</section>
+</div>
 
 <style>
 	.blogs {
