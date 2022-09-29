@@ -13,8 +13,7 @@
 	eventsEl="body"
 	rotateXMax={20}
 	rotateYMax={20}
-	activeOffset={100}
-	stretchX={10}
+	stretchX={0}
 	stretchZ={5}
 	rotateTouch="scroll-y"
 >
