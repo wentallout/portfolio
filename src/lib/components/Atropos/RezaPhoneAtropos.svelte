@@ -1,7 +1,6 @@
 <script>
 	import Atropos from 'atropos/svelte';
 	import rezaPhoneFrame from '$lib/assets/images/project/reza/rezaPhoneFrame.png?webp';
-
 	import rezaWireframe from '$lib/assets/images/project/reza/rezaWireframe.png?webp';
 
 	import rezaPhoneFrame2 from '$lib/assets/images/project/reza/rezaPhoneFrame2.png?webp';
@@ -50,6 +49,7 @@
 	}
 
 	.reza-text {
+		z-index: -3;
 		position: absolute;
 		font-size: 200px;
 		font-weight: 600;
