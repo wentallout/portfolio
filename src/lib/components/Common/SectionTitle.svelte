@@ -21,7 +21,8 @@
 		justify-content: left;
 		align-items: center;
 		margin-bottom: var(--space-s);
-		font-weight: 600;
+		font-family: 'Aux Mono';
+		text-transform: uppercase;
 	}
 
 	.section-title h2 {
