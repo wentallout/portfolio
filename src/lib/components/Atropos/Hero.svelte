@@ -6,7 +6,7 @@
 <div class="atropos-container">
 	<Atropos highlight="false" shadow="false" rotateTouch="scroll-y" rotateXMax={5} rotateYMax={5}>
 		<div class="hero">
-			<div class="hero-text">
+			<div class="hero__text">
 				<h1 data-atropos-offset="-5">Hi! I'm Khoa</h1>
 				<p data-atropos-offset="-3">I code and design.</p>
 				<a data-atropos-offset="10" href="/project">
@@ -42,13 +42,11 @@
 		align-items: center;
 	}
 
-	.hero-text {
+	.hero__text {
 		display: flex;
 		flex-direction: column;
 		justify-content: center;
 		align-items: center;
 		color: var(--neutral-100);
 	}
-
-	/* background: #000 url('/images/dot.svg') repeat left top/20px; */
 </style>

@@ -1,0 +1,375 @@
+{
+  ".svelte-kit/build/index.js": {
+    "file": "index.js",
+    "src": ".svelte-kit/build/index.js",
+    "isEntry": true,
+    "imports": [
+      "_index.js",
+      "_index2.js"
+    ],
+    "dynamicImports": [
+      ".svelte-kit/build/hooks.js"
+    ]
+  },
+  "src/routes/manifest.webmanifest/+server.js": {
+    "file": "entries/endpoints/manifest.webmanifest/_server.js",
+    "src": "src/routes/manifest.webmanifest/+server.js",
+    "isEntry": true,
+    "imports": [
+      "_config.js"
+    ]
+  },
+  "src/routes/+layout.svelte": {
+    "file": "entries/pages/_layout.svelte.js",
+    "src": "src/routes/+layout.svelte",
+    "isEntry": true,
+    "imports": [
+      "_index.js",
+      "_config.js",
+      "_stores.js"
+    ],
+    "css": [
+      "_app/immutable/assets/_layout-844b5d1e.css"
+    ],
+    "assets": [
+      "_app/immutable/assets/lexend-all-300-normal-2a8fb41f.woff",
+      "_app/immutable/assets/lexend-latin-ext-300-normal-2f1339fa.woff2",
+      "_app/immutable/assets/lexend-latin-300-normal-1119ab28.woff2",
+      "_app/immutable/assets/lexend-all-400-normal-85ae8ef1.woff",
+      "_app/immutable/assets/lexend-latin-ext-400-normal-71646fd7.woff2",
+      "_app/immutable/assets/lexend-latin-400-normal-c752cf03.woff2",
+      "_app/immutable/assets/lexend-all-500-normal-55ce7131.woff",
+      "_app/immutable/assets/lexend-latin-ext-500-normal-3591ab38.woff2",
+      "_app/immutable/assets/lexend-latin-500-normal-fbef5c53.woff2",
+      "_app/immutable/assets/lexend-all-600-normal-ac8307ed.woff",
+      "_app/immutable/assets/lexend-latin-ext-600-normal-039ecbab.woff2",
+      "_app/immutable/assets/lexend-latin-600-normal-a8e3045e.woff2"
+    ]
+  },
+  "src/routes/+layout.js": {
+    "file": "entries/pages/_layout.js",
+    "src": "src/routes/+layout.js",
+    "isEntry": true
+  },
+  "src/routes/+error.svelte": {
+    "file": "entries/pages/_error.svelte.js",
+    "src": "src/routes/+error.svelte",
+    "isEntry": true,
+    "imports": [
+      "_index.js",
+      "_Button.js",
+      "_stores.js"
+    ],
+    "css": [
+      "_app/immutable/assets/_error-ace2f6fa.css"
+    ]
+  },
+  "src/routes/blog/[slug]/+layout.svelte": {
+    "file": "entries/pages/blog/_slug_/_layout.svelte.js",
+    "src": "src/routes/blog/[slug]/+layout.svelte",
+    "isEntry": true,
+    "imports": [
+      "_index.js",
+      "_MarkdownContainer.js"
+    ]
+  },
+  "src/routes/project/[slug]/+layout.svelte": {
+    "file": "entries/pages/project/_slug_/_layout.svelte.js",
+    "src": "src/routes/project/[slug]/+layout.svelte",
+    "isEntry": true,
+    "imports": [
+      "_index.js",
+      "_MarkdownContainer.js"
+    ]
+  },
+  "src/routes/+page.svelte": {
+    "file": "entries/pages/_page.svelte.js",
+    "src": "src/routes/+page.svelte",
+    "isEntry": true,
+    "imports": [
+      "_index.js",
+      "_Button.js",
+      "_atropos-svelte.js",
+      "_SEO.js",
+      "_config.js"
+    ],
+    "css": [
+      "_app/immutable/assets/_page-b973cbf4.css"
+    ]
+  },
+  "src/routes/blog/+page.svelte": {
+    "file": "entries/pages/blog/_page.svelte.js",
+    "src": "src/routes/blog/+page.svelte",
+    "isEntry": true,
+    "imports": [
+      "_index.js",
+      "_SectionTitle.js"
+    ],
+    "css": [
+      "_app/immutable/assets/_page-bc9cab9c.css"
+    ]
+  },
+  "src/routes/blog/[slug]/+page.svelte": {
+    "file": "entries/pages/blog/_slug_/_page.svelte.js",
+    "src": "src/routes/blog/[slug]/+page.svelte",
+    "isEntry": true,
+    "imports": [
+      "_index.js"
+    ],
+    "css": [
+      "_app/immutable/assets/_page-439baacb.css"
+    ]
+  },
+  "src/routes/blog/[slug]/+page.js": {
+    "file": "entries/pages/blog/_slug_/_page.js",
+    "src": "src/routes/blog/[slug]/+page.js",
+    "isEntry": true,
+    "imports": [
+      "_dynamic-import-helper.js"
+    ],
+    "dynamicImports": [
+      "src/routes/blog/typescale.svx",
+      "src/routes/blog/ux-portfolio.svx"
+    ]
+  },
+  "src/routes/contact/+page.svelte": {
+    "file": "entries/pages/contact/_page.svelte.js",
+    "src": "src/routes/contact/+page.svelte",
+    "isEntry": true,
+    "imports": [
+      "_index.js",
+      "_figma-logo.js",
+      "_SectionTitle.js",
+      "_Button.js",
+      "_SEO.js"
+    ],
+    "css": [
+      "_app/immutable/assets/_page-8ef288d6.css"
+    ]
+  },
+  "src/routes/contact/+page.js": {
+    "file": "entries/pages/contact/_page.js",
+    "src": "src/routes/contact/+page.js",
+    "isEntry": true
+  },
+  "src/routes/project/+page.svelte": {
+    "file": "entries/pages/project/_page.svelte.js",
+    "src": "src/routes/project/+page.svelte",
+    "isEntry": true,
+    "imports": [
+      "_index.js",
+      "_atropos-svelte.js",
+      "_figma-logo.js",
+      "_Button.js",
+      "_SectionTitle.js"
+    ],
+    "css": [
+      "_app/immutable/assets/_page-eaf05c90.css"
+    ]
+  },
+  "src/routes/project/[slug]/+page.svelte": {
+    "file": "entries/pages/project/_slug_/_page.svelte.js",
+    "src": "src/routes/project/[slug]/+page.svelte",
+    "isEntry": true,
+    "imports": [
+      "_index.js"
+    ],
+    "css": [
+      "_app/immutable/assets/_page-141d6d3d.css"
+    ]
+  },
+  "src/routes/project/[slug]/+page.js": {
+    "file": "entries/pages/project/_slug_/_page.js",
+    "src": "src/routes/project/[slug]/+page.js",
+    "isEntry": true,
+    "imports": [
+      "_dynamic-import-helper.js"
+    ],
+    "dynamicImports": [
+      "src/routes/project/coinecho.svx",
+      "src/routes/project/reza.svx"
+    ]
+  },
+  "src/routes/resource/+page.svelte": {
+    "file": "entries/pages/resource/_page.svelte.js",
+    "src": "src/routes/resource/+page.svelte",
+    "isEntry": true,
+    "imports": [
+      "_index.js",
+      "_index2.js",
+      "_Button.js",
+      "_SectionTitle.js"
+    ],
+    "css": [
+      "_app/immutable/assets/_page-2baa754d.css"
+    ]
+  },
+  "src/routes/resource/tool/+page.svelte": {
+    "file": "entries/pages/resource/tool/_page.svelte.js",
+    "src": "src/routes/resource/tool/+page.svelte",
+    "isEntry": true,
+    "imports": [
+      "_index.js",
+      "_SectionTitle.js",
+      "_index2.js"
+    ],
+    "css": [
+      "_app/immutable/assets/_page-354a0b1d.css"
+    ]
+  },
+  "_index.js": {
+    "file": "chunks/index.js"
+  },
+  "_index2.js": {
+    "file": "chunks/index2.js",
+    "imports": [
+      "_index.js"
+    ]
+  },
+  "_config.js": {
+    "file": "chunks/config.js"
+  },
+  "_stores.js": {
+    "file": "chunks/stores.js",
+    "imports": [
+      "_index.js"
+    ]
+  },
+  "_Button.js": {
+    "file": "chunks/Button.js",
+    "imports": [
+      "_index.js"
+    ],
+    "css": [
+      "_app/immutable/assets/Button-55226ca5.css"
+    ]
+  },
+  "_MarkdownContainer.js": {
+    "file": "chunks/MarkdownContainer.js",
+    "imports": [
+      "_index.js"
+    ]
+  },
+  "_SEO.js": {
+    "file": "chunks/SEO.js",
+    "imports": [
+      "_index.js",
+      "_config.js"
+    ],
+    "assets": [
+      "_app/immutable/assets/home-f7ba4dd3.jpg",
+      "_app/immutable/assets/home-open-graph-1fad80fe.jpg",
+      "_app/immutable/assets/home-open-graph-square-2e611abf.jpg",
+      "_app/immutable/assets/home-twitter-f9826a1b.jpg"
+    ]
+  },
+  "_atropos-svelte.js": {
+    "file": "chunks/atropos-svelte.js",
+    "imports": [
+      "_index.js"
+    ]
+  },
+  "_SectionTitle.js": {
+    "file": "chunks/SectionTitle.js",
+    "imports": [
+      "_index.js"
+    ],
+    "css": [
+      "_app/immutable/assets/SectionTitle-7accfe9b.css"
+    ]
+  },
+  "_dynamic-import-helper.js": {
+    "file": "chunks/dynamic-import-helper.js"
+  },
+  "_figma-logo.js": {
+    "file": "chunks/figma-logo.js",
+    "imports": [
+      "_index.js"
+    ]
+  },
+  ".svelte-kit/build/hooks.js": {
+    "file": "chunks/hooks.js",
+    "src": ".svelte-kit/build/hooks.js",
+    "isDynamicEntry": true
+  },
+  "src/routes/blog/typescale.svx": {
+    "file": "chunks/typescale.js",
+    "src": "src/routes/blog/typescale.svx",
+    "isDynamicEntry": true,
+    "imports": [
+      "_index.js",
+      "_Image.js"
+    ],
+    "assets": [
+      "_app/immutable/assets/utopia-2a8d2dc3.png",
+      "_app/immutable/assets/utopiaOutput-1b20ced1.png"
+    ]
+  },
+  "_Image.js": {
+    "file": "chunks/Image.js",
+    "imports": [
+      "_index.js",
+      "_index2.js"
+    ],
+    "css": [
+      "_app/immutable/assets/Image-6cebb8e2.css"
+    ]
+  },
+  "src/routes/blog/ux-portfolio.svx": {
+    "file": "chunks/ux-portfolio.js",
+    "src": "src/routes/blog/ux-portfolio.svx",
+    "isDynamicEntry": true,
+    "imports": [
+      "_index.js"
+    ]
+  },
+  "src/routes/project/coinecho.svx": {
+    "file": "chunks/coinecho.js",
+    "src": "src/routes/project/coinecho.svx",
+    "isDynamicEntry": true,
+    "imports": [
+      "_index.js"
+    ]
+  },
+  "src/routes/project/reza.svx": {
+    "file": "chunks/reza.js",
+    "src": "src/routes/project/reza.svx",
+    "isDynamicEntry": true,
+    "imports": [
+      "_index.js",
+      "_Image.js"
+    ],
+    "css": [
+      "_app/immutable/assets/reza-2bc4fdc8.css"
+    ],
+    "assets": [
+      "_app/immutable/assets/thumbnail-637b8ea1.png",
+      "_app/immutable/assets/discord-637ed4bd.png",
+      "_app/immutable/assets/feature-4d823932.png",
+      "_app/immutable/assets/role-0fffa3b7.png",
+      "_app/immutable/assets/plan-198692c8.png",
+      "_app/immutable/assets/goal-5f9ca646.png",
+      "_app/immutable/assets/userResearch-f5231f06.png",
+      "_app/immutable/assets/persona-e69b4c90.png",
+      "_app/immutable/assets/hmw1-0e0d8d9e.png",
+      "_app/immutable/assets/redesign1-16213858.png",
+      "_app/immutable/assets/redesign2-55600e5f.gif",
+      "_app/immutable/assets/lofi-a6397ed6.png",
+      "_app/immutable/assets/c1-53d1cfac.png",
+      "_app/immutable/assets/c2-1b666066.png",
+      "_app/immutable/assets/l1-34ead108.png",
+      "_app/immutable/assets/l2-c3e4feb8.png",
+      "_app/immutable/assets/ds1-bd072927.png",
+      "_app/immutable/assets/ds2-78f8d021.png",
+      "_app/immutable/assets/ds3-86be8074.png",
+      "_app/immutable/assets/rezaIcon-f4304dc3.png",
+      "_app/immutable/assets/reservationFlow-399f782d.png",
+      "_app/immutable/assets/searchFlow-96c5f4ff.png",
+      "_app/immutable/assets/homeScreen-0f2837c4.png",
+      "_app/immutable/assets/searchScreen-af0e46c1.png",
+      "_app/immutable/assets/reservationScreen-ad3176de.png",
+      "_app/immutable/assets/detailScreen-1cb5841e.gif",
+      "_app/immutable/assets/notiScreen-a146f3b8.png"
+    ]
+  }
+}

@@ -1,4 +1,13 @@
-@import url('/fonts/AuxMono.css');
+@font-face {
+	font-family: 'Aux Mono';
+	src: url('/fonts/AuxMono-Regular.eot');
+	src: local('Aux Mono'), local('AuxMono-Regular'),
+		url('/fonts/AuxMono-Regular.woff2') format('woff2'),
+		url('/fonts/AuxMono-Regular.woff') format('woff'),
+		url('/fonts/AuxMono-Regular.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
 
 :root {
 	/* Primary: Mimolette Orange */
