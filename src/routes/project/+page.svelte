@@ -1,4 +1,5 @@
 <script>
+	import Brain from '~icons/ph/brain';
 	import RezaPhoneAtropos from '$lib/components/Atropos/RezaPhoneAtropos.svelte';
 	import FigmaLogo from '~icons/ph/figma-logo';
 	import ProjectCard from '$lib/components/Project/ProjectCard.svelte';
@@ -12,8 +13,8 @@
 </svelte:head>
 
 <section>
-	<SectionTitle sectionTitle="UI + UX" let:sectionIcon>
-		<FigmaLogo {...sectionIcon} />
+	<SectionTitle sectionTitle="Case Study" let:sectionIcon>
+		<Brain {...sectionIcon} />
 	</SectionTitle>
 
 	<div class="projects">
@@ -33,4 +34,10 @@
 
 		<!-- <ProjectCard projectName="Project 2: WIP" what="wip" who="wip" result="wip" /> -->
 	</div>
+</section>
+
+<section>
+	<SectionTitle sectionTitle="UI" let:sectionIcon>
+		<FigmaLogo {...sectionIcon} />
+	</SectionTitle>
 </section>

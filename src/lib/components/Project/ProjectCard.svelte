@@ -2,7 +2,7 @@
 	import FigmaLogo from '~icons/ph/figma-logo';
 	import Button from '$lib/components/Button/Button.svelte';
 	export let projectName = 'PlaceholderProjectName';
-	export let projectImage = 'https://fakeimg.pl/500x500';
+	export let projectImage;
 	export let linkToDetail = '';
 	export let linkToFigma = '';
 

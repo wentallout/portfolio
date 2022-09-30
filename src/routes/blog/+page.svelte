@@ -5,6 +5,9 @@
 
 	import TextAa from '~icons/ph/text-aa';
 	import Brain from '~icons/ph/brain';
+
+	import Lightbulb from '~icons/ph/lightbulb';
+
 	import Palette from '~icons/ph/palette';
 </script>
 
@@ -28,7 +31,7 @@
 
 <section>
 	<SectionTitle sectionTitle="Tips" let:sectionIcon>
-		<Brain {...sectionIcon} />
+		<Lightbulb {...sectionIcon} />
 	</SectionTitle>
 
 	<BlogListContainer>

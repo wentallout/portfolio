@@ -1,5 +1,5 @@
 <script>
-	import Marquee from './Marquee.svelte';
+	import Marquee from '$lib/components/Layout/Marquee.svelte';
 	import YinYangFill from '~icons/ph/yin-yang-fill';
 </script>
 

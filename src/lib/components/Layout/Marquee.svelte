@@ -1,5 +1,5 @@
 <div class="container">
-	<div class="marquee small-text">
+	<div class="marquee">
 		<ul class="marquee__content">
 			<li>Nguyen Dang Khoa</li>
 			<li>wentallout@gmail.com</li>
@@ -26,7 +26,10 @@
 		z-index: 1;
 		width: 100%;
 		max-width: 100vw;
-		font-weight: 600;
+
+		/* Typography */
+		font-weight: 300;
+		font-size: var(--font-size-small);
 	}
 
 	.marquee {

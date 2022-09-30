@@ -5,7 +5,7 @@
 	import Footer from '$lib/components/Layout/Footer.svelte';
 	import Header from '$lib/components/Layout/Header.svelte';
 	import Breadcrumb from '$lib/components/Layout/Breadcrumb.svelte';
-	import CoolFrame from '$lib/components/Layout/CoolFrame.svelte';
+
 	import LogoContainer from '$lib/components/Layout/LogoContainer.svelte';
 	import '$lib/styles/sanitize.css';
 	import '$lib/styles/global.css';
@@ -50,8 +50,6 @@
 <SkipLink />
 <PWA />
 <div class="page-container">
-	<CoolFrame />
-
 	<BackToTop />
 	<LogoContainer />
 	<Header />

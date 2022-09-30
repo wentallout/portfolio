@@ -55,9 +55,7 @@
 		font-weight: 600;
 		top: 0;
 		left: -10%;
-
 		color: #e4543b;
-
 		writing-mode: vertical-rl;
 		text-orientation: sideways;
 	}
