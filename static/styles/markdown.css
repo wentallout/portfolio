@@ -3,7 +3,11 @@
 
 .markdown h2 {
 	border: transparent;
+
+	/* Spacing */
 	margin-top: var(--space-l) !important;
+	margin-bottom: var(--space-s) !important;
+
 	font-size: var(--font-size-mid);
 	line-height: var(--line-height-mid);
 	color:var(--accent-900);
@@ -14,7 +18,6 @@
     background-repeat: no-repeat;
     background-position: 25% 105%;
     background-size: 100% 10px;
-
 	scroll-margin-top: 80px ;
 }
 
@@ -23,20 +26,24 @@
 	line-height: var(--line-height-base);
 	color: var(--accent-900);
 	text-decoration: underline;
+	margin-bottom: var(--space-xs);
 }
 
 .markdown h4 
 {
 	font-size: var(--font-size-small);
 	line-height: var(--line-height-small);
-	font-style: italic;
+	color: var(--accent-700);
 }
 
 
 .markdown p {
 	font-size: var(--font-size-small);
 	line-height: var(--line-height-small);
+	margin:  0;
+	margin-bottom: var(--space-s);
 }
+
 
 
 .markdown li 
@@ -47,9 +54,15 @@
 
 .markdown a 
 {
-    color: var(--accent-500) !important;
+	color: var(--accent-500) !important;
 	font-weight: 600;
-	font-style: italic;
+	background-color: var(--neutral-200);
+	padding: 4px 8px;
+	border-radius: var(--border-radius);
+	-webkit-border-radius: var(--border-radius);
+	-moz-border-radius: var(--border-radius);
+	-ms-border-radius: var(--border-radius);
+	-o-border-radius: var(--border-radius);
 }
 
 
@@ -81,6 +94,28 @@
 	color: var(--neutral-900);
 	margin-right: 4px;
 }
+
+.markdown h4 {
+	margin-bottom: var(--space-xs);
+}
+
+.markdown h4::before
+{
+	content: '★';
+	margin-right: 4px;
+}
+
+.markdown ul
+{
+	margin-bottom: var(--space-s);
+}
+
+.markdown .swiper
+{
+	margin-bottom: var(--space-m);
+}
+
+
 
 
 

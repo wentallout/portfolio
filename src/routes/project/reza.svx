@@ -64,7 +64,7 @@ We look at one of our competitor apps [PasGo](https://pasgo.vn) and relized some
 
 => We can brainstorm some ideas and design an app with more features and better UX considerations.
 
-<Image src={goal} />
+<Image src={goal} alt="project goal" />
 
 ## Audience
 
@@ -210,7 +210,7 @@ This screen lets users search for a restaurant using keywords like the restauran
 
 This screen shows up when user click on a restaurant from their home page or search result page.
 
-<Image src={detailScreen} />
+<Image src={detailScreen} alt="detail screen" />
 
 
 #### Reservation

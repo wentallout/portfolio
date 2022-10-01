@@ -24,7 +24,13 @@
 		<BlogCard
 			blogTitle="How to pick the perfect type scale for your next design"
 			blogLink="/blog/typescale"
-			blogDate="20/09/2022"
+			blogDate="2022"
+		/>
+
+		<BlogCard
+			blogTitle="Typography best patterns"
+			blogLink="/blog/typography-best-patterns"
+			blogDate="2022"
 		/>
 	</BlogListContainer>
 </section>
@@ -38,14 +44,10 @@
 		<BlogCard
 			blogTitle="UX Portfolio DOs and DONTs"
 			blogLink="/blog/ux-portfolio"
-			blogDate="22/09/2022"
+			blogDate="2022"
 		/>
 
-		<BlogCard
-			blogTitle="Understand UX vs UI"
-			blogLink="/blog/ux-vs-ui"
-			blogDate="30/09/2022"
-		/>
+		<BlogCard blogTitle="Understand UX vs UI" blogLink="/blog/ux-vs-ui" blogDate="2022" />
 	</BlogListContainer>
 </section>
 

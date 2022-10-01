@@ -6,9 +6,9 @@
 	onMount(() => {
 		headingEle = document.querySelectorAll('h2');
 
-			for (let i = 0; i < headingEle.length; i++) {
-				headingEle[i].setAttribute('id', `${headingEle[i].innerHTML}`);
-			}
+		for (let i = 0; i < headingEle.length; i++) {
+			headingEle[i].setAttribute('id', `${headingEle[i].innerHTML}`);
+		}
 
 		headingList = Array.from(headingEle);
 	});
@@ -39,10 +39,11 @@
 		content: '';
 	}
 
-	.toc li a {
+	.toc a {
 		font-weight: 400;
 		font-style: normal;
 		margin-bottom: var(--space-s);
+		background-color: transparent;
 	}
 
 	.toc__title {
@@ -55,7 +56,8 @@
 		display: flex;
 		flex-direction: column;
 		width: 100%;
-		height: 300px;
+		min-height: 250px;
+		height: fit-content;
 		overflow-y: auto;
 		overflow-x: hidden;
 		max-width: 80rem;

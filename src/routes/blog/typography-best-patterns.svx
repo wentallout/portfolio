@@ -1,0 +1,88 @@
+---
+title: 'Typography best patterns'
+date: '01/10/2022'
+---
+
+<script>
+    import Image from '$lib/components/Common/Image.svelte';
+
+    import headingFontSizes from '$lib/assets/images/blog/headingFontSizes.png';
+</script>
+
+## Light or Dark Background?
+
+A large majority of websites favored dark on light color schemes. People use a less aggressive contrast of an off-white or even beige background with dark-gray text. The off-white is often chosen to lower contrast. If you're making a news/blog website, you might want a comfortable lengthy reading experience.
+
+Black text on a white background is a common pattern for body copy. The contrast is easy on the eyes and is, at least among these websites, the status quo.
+
+## Font Size For Headlines
+
+<Image src="{headingFontSizes}" alt="heading font sizes" />
+
+The most popular font size for headlines is **between 29 and 32 px**.
+
+```
+headline font size = body copy font size * 2.4
+```
+
+## Font Size For Body Copy
+
+The most popular font size for body copy is **between 14 and 16 px**.
+
+## Best line-height
+
+```
+line height =  body copy font size * 1.47
+```
+
+## Best line-length
+
+```
+line length = line height *  24.8
+```
+
+## Space between paragraphs
+
+```
+space between paragraphs = 1.43 * line height
+```
+
+## Characters per line
+
+The optimal number of characters per line is between 55 and 75, but 75 to 90 is more popular.
+
+## Left align is usually correct
+
+Body text is always left-aligned. Hyphenation is not used at line endings. And links are underlined and/or highlighted with bold or color, sometimes only on hover.
+
+## Some numbers on the implementation of responsive design
+
+At a display width of 500 pixels:
+- Average line height: 28 pixels
+- Average font size of body: 15 pixels
+- Average number of characters per line: 77
+
+At a display width of 700 pixels:
+- Average font size of headlines: 36 pixels
+- Average font size of body: 15.6 pixels
+- Average number of characters per line: 82.7
+
+At a display width of 950 pixels:
+- Average font size of headlines: 37.9 pixels
+- Average font size of body: 16.1 pixels
+- Average number of characters per line: 84.8
+
+At a display width of 1600 pixels:
+- Average font size of headlines: 40.7 pixels
+- Average font size of body: 16.2 pixels
+- Average number of characters per line: 86.8
+
+## Raw Data
+
+[Spreadsheet](https://docs.google.com/spreadsheets/d/1Vcehdh4SZT5RJhzZ0i-rjCRFX_HC2Lo94hbSqiqYblQ/edit#gid=1)
+
+
+
+
+
+
