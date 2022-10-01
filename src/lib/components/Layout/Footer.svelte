@@ -21,6 +21,35 @@
 </footer>
 
 <style>
+	
+
+	footer {
+		/* Flex */
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: flex-start;
+
+		/* Font weight */
+		/* font-weight: 300; */
+
+		padding: var(--space-m) var(--space-xs);
+
+		/* Position */
+		position: relative;
+
+		/* Width */
+		max-width: 100vw;
+
+		/* Color */
+		
+
+		background-image: url(/images/noise.svg);
+		background-repeat: repeat;
+
+		
+	}
+
 	.footer__other {
 		z-index: 2;
 		color: var(--neutral-500);
@@ -35,28 +64,6 @@
 		flex-direction: column;
 		color: var(--neutral-100);
 		font-weight: 300;
-	}
-
-	footer {
-		/* Flex */
-		display: flex;
-		flex-direction: column;
-		justify-content: center;
-		align-items: flex-start;
-
-		/* Font weight */
-		font-weight: 300;
-
-		padding: var(--space-m) var(--space-xs);
-
-		/* Position */
-		position: relative;
-
-		/* Width */
-		max-width: 100vw;
-
-		/* Color */
-		background-color: #000;
 	}
 
 	@media (min-width: 768px) {
@@ -86,12 +93,19 @@
 		z-index: 2;
 		margin-bottom: var(--space-l);
 		flex-wrap: wrap;
+
+		font-family: 'Yipes';
 	}
 
 	.nav-list-item {
 		display: flex;
 		padding-left: 0;
 		padding-right: var(--space-xs);
+	}
+
+	.nav-list-item a:hover
+	{
+		color: var(--primary-500);
 	}
 
 	footer {

@@ -1,0 +1,29 @@
+---
+title: Understanding UX vs UI
+date: '30/09/2022'
+---
+
+<script>
+    import Image from '$lib/components/Common/Image.svelte';
+</script>
+
+## What does a UX Designer do?
+
+UX Design always puts users needs first when considering design solutions in order to enhance customer satisfaction.
+
+- Defining a problem
+- Understanding users
+- Creating personas
+- Generating tasks & user flows
+- Creating sketches -> wireframes -> prototypes
+- Usability testing
+
+## What does a UI Designer do?
+
+UI Designers make products joyful to interact with. They focus on the visual hierarchy and patterns that give visual cues to users.
+
+- Typography
+- Color scheme
+- Iconography
+- Grids, Layout, Spacing
+- Buttons, Inputs & Forms

@@ -46,11 +46,9 @@
 	}
 
 	.toc__title {
-		font-weight: 500;
+		font-family: 'Yipes';
+		font-size: var(--font-size-base);
 		margin-bottom: var(--space-s);
-		padding: 4px 8px;
-		border-radius: var(--border-radius);
-		background-color: var(--neutral-200);
 	}
 
 	.toc {

@@ -40,6 +40,12 @@
 			blogLink="/blog/ux-portfolio"
 			blogDate="22/09/2022"
 		/>
+
+		<BlogCard
+			blogTitle="Understand UX vs UI"
+			blogLink="/blog/ux-vs-ui"
+			blogDate="30/09/2022"
+		/>
 	</BlogListContainer>
 </section>
 

@@ -75,6 +75,7 @@
 		flex-direction: row;
 		align-items: center;
 		border-radius: var(--border-radius);
+		padding: 8px 12px;
 	}
 
 	.social__address:hover {

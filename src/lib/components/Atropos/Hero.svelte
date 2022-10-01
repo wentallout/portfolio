@@ -19,11 +19,11 @@
 
 <style>
 	.atropos-container {
-		/* MARGIN BOTTOM */
+		/* Spacing */
 		margin-bottom: var(--space-l);
 	}
 
-	/* The hero image */
+	
 	.hero {
 		/* Use "linear-gradient" to add a darken background effect to the image. This will make the text easier to read */
 		background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
@@ -37,6 +37,7 @@
 		background-repeat: no-repeat;
 		background-size: cover;
 
+		/* Flexbox */
 		display: flex;
 		justify-content: center;
 		align-items: center;

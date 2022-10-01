@@ -10,7 +10,6 @@
 
 <Lightbox
 	enableClickToClose="true"
-	imagePreset="fullscreen"
 	title={alt}
 	description={src}
 	enableImageExpand="true"

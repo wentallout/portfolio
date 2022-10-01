@@ -15,7 +15,7 @@
 		border: none;
 		border-radius: 4px;
 		padding: 0.5rem;
-		text-transform: uppercase;
+		
 	}
 	:global(#main-content.dark-mode) button {
 		background-color: #0084f6;

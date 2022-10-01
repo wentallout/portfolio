@@ -116,9 +116,8 @@
 	}
 
 	.project__thumbnail {
-		background: transparent url('/images/dot.svg') repeat left top/20px;
 		width: 100%;
-		overflow: hidden;
+		overflow: visible;
 		height: 100%;
 	}
 

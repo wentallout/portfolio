@@ -21,8 +21,8 @@
 		justify-content: left;
 		align-items: center;
 		margin-bottom: var(--space-s);
-		font-family: 'Aux Mono';
-		text-transform: uppercase;
+		font-family: 'Yipes';
+		
 	}
 
 	.section-title h2 {

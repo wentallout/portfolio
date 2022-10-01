@@ -1,12 +1,10 @@
 @font-face {
-	font-family: 'Aux Mono';
-	src: url('/fonts/AuxMono-Regular.eot');
-	src: local('Aux Mono'), local('AuxMono-Regular'),
-		url('/fonts/AuxMono-Regular.woff2') format('woff2'),
-		url('/fonts/AuxMono-Regular.woff') format('woff'),
-		url('/fonts/AuxMono-Regular.ttf') format('truetype');
+	font-family: 'Yipes';
+	src: url('/fonts/Yipes-Regular.woff2') format('woff2'),
+		url('/fonts/Yipes-Regular.woff') format('woff');
 	font-weight: normal;
 	font-style: normal;
+	font-display: swap;
 }
 
 :root {
@@ -67,9 +65,6 @@
 	--box-shadow: rgb(11 43 158 / 15%) 0px 6px 20px -6px;
 	--box-shadow-hover: rgb(11 43 158 / 15%) 0px 10px 20px -2px;
 
-	/* darkmode mode */
-	/* color-scheme: light dark; */
-
 	/* spacing */
 	--space-xs: clamp(1rem, calc(0.95rem + 0.24vw), 1.13rem);
 	--space-s: clamp(1.31rem, calc(1.24rem + 0.37vw), 1.5rem);
@@ -84,6 +79,9 @@
 	--border-radius: 10px;
 	--border: 1px solid #e5e5e5;
 	--border-hover: 1px solid var(--neutral-900);
+
+	/* darkmode mode */
+	/* color-scheme: light dark; */
 }
 
 ::selection {
@@ -199,7 +197,7 @@ img {
 }
 
 img::before {
-	content: "We're sorry, the image below is broken :(";
+	content: "We're sorry, the image below is broken";
 	display: block;
 	margin-bottom: 10px;
 }
