@@ -31,7 +31,7 @@
 		flex-direction: column;
 
 		/* Spacing */
-		margin-bottom: var(--space-xl);
+		margin-bottom: var(--space-2xl);
 		gap: var(--space-m);
 	}
 

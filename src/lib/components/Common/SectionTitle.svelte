@@ -20,8 +20,15 @@
 		display: flex;
 		justify-content: left;
 		align-items: center;
-		margin-bottom: var(--space-s);
 		font-family: 'Blacker';
+
+		/* Spacing */
+		margin-bottom: var(--space-s);
+	}
+
+	
+	.section-icon {
+		margin-right: var(--space-m);
 	}
 
 	.section-title h2 {

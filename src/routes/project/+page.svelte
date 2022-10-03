@@ -41,3 +41,10 @@
 		<FigmaLogo {...sectionIcon} />
 	</SectionTitle>
 </section>
+
+<style>
+	section {
+		/* Spacing */
+		margin-bottom: var(--space-2xl);
+	}
+</style>

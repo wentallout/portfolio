@@ -6,12 +6,12 @@
 	const breadcrumbs = [
 		{
 			name: 'Home',
-			slug: '',
+			slug: ''
 		},
 		{
 			name: 'Contact',
-			slug: 'contact',
-		},
+			slug: 'contact'
+		}
 	];
 	import SEO from '$lib/components/SEO/SEO.svelte';
 	const seoProps = {
@@ -20,7 +20,7 @@
 		metadescription: 'Get in touch with Khoa - Vietnamese UI/UX Designer',
 		slug: 'contact',
 		datePublished: '2021-07-07T14:19:33.000+0100',
-		lastUpdated: '2021-07-07T14:19:33.000+0100',
+		lastUpdated: '2021-07-07T14:19:33.000+0100'
 	};
 	// ---SEO END---
 </script>
@@ -28,8 +28,13 @@
 <SEO {...seoProps} />
 
 <div class="container">
-	<ContactForm />
-	<SocialLinks />
+	<section>
+		<ContactForm />
+	</section>
+
+	<section>
+		<SocialLinks />
+	</section>
 </div>
 
 <style>
@@ -37,5 +42,9 @@
 		display: flex;
 		justify-content: space-between;
 		flex-direction: column;
+	}
+
+	section {
+		margin-bottom: var(--space-2xl);
 	}
 </style>

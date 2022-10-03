@@ -70,6 +70,9 @@
 		scroll-snap-type: y mandatory;
 	}
 	.main-content {
+		display: flex;
+		flex-direction: column;
+
 		background: var(--neutral-100);
 		min-height: calc(100vh - 70px);
 		margin: var(--space-m) 1rem;

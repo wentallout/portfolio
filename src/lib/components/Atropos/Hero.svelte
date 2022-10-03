@@ -20,7 +20,7 @@
 <style>
 	.atropos-container {
 		/* Spacing */
-		margin-bottom: var(--space-l);
+		margin-bottom: var(--space-2xl);
 	}
 
 	.hero {

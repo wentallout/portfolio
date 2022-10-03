@@ -59,3 +59,8 @@
 	<BlogCard blogTitle="wip" blogLink="/" blogDate="wip" />
 	<BlogCard blogTitle="wip" blogLink="/" blogDate="wip" />
 </BlogListContainer> -->
+<style>
+	section {
+		margin-bottom: var(--space-2xl);
+	}
+</style>

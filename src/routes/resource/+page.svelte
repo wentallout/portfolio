@@ -93,4 +93,8 @@
 		text-align: left;
 		margin-bottom: var(--space-s);
 	}
+
+	section {
+		margin-bottom: var(--space-2xl);
+	}
 </style>
