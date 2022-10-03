@@ -4,36 +4,26 @@
 	import rezaWireframe from '$lib/assets/images/project/reza/rezaWireframe.png?webp';
 
 	import rezaSplat from '$lib/assets/images/project/reza/rezaSplat.svg';
-
 </script>
 
 <Atropos
-	class="reza-phone"
-	shadow={false}
-	eventsEl="body"
+	shadow="false"
+	eventsEl=".frame"
 	rotateXMax={20}
 	rotateYMax={20}
 	stretchX={0}
 	stretchZ={5}
 	rotateTouch="scroll-y"
 >
-	<div class="frame">
-		<img data-atropos-offset="5" class="frame__image" src={rezaPhoneFrame} alt="reza homepage" />
-		<img
-			data-atropos-offset="4"
-			class="frame__image2"
-			src={rezaWireframe}
-			alt="reza wireframe"
-		/>
-		<img
-			data-atropos-offset="3"
-			class="frame__image3"
-			src={rezaSplat}
-			alt="reza splat"
-		/>	
-	</div>
+	<div class="reza-phone">
+		<div class="frame">
+			<img data-atropos-offset="5" class="frame__image" src={rezaPhoneFrame} alt="reza homepage" />
+			<img data-atropos-offset="4" class="frame__image2" src={rezaWireframe} alt="reza wireframe" />
+			<img data-atropos-offset="3" class="frame__image3" src={rezaSplat} alt="reza splat" />
+		</div>
 
-	<div data-atropos-offset="-3" class="reza-text">reza</div>
+		<div data-atropos-offset="-3" class="reza-text">reza</div>
+	</div>
 </Atropos>
 
 <style>
@@ -81,12 +71,10 @@
 		position: absolute;
 	}
 
-
-	.frame__image3
-	{
+	.frame__image3 {
 		position: absolute;
 		z-index: -1;
-		bottom:0;
+		bottom: 0;
 		left: 10%;
 		width: 500px;
 		height: 500px;

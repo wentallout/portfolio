@@ -1,7 +1,7 @@
 <script>
 	import SkipLink from '$lib/components/Layout/SkipLink.svelte';
 	import PWA from '$lib/components/PWA/PWA.svelte';
-	import BackToTop from './../lib/components/Layout/BackToTop.svelte';
+	import BackToTop from '$lib/components/Layout/BackToTop.svelte';
 	import Footer from '$lib/components/Layout/Footer.svelte';
 	import Header from '$lib/components/Layout/Header.svelte';
 	import Breadcrumb from '$lib/components/Layout/Breadcrumb.svelte';
@@ -40,7 +40,6 @@
 	import '@fontsource/lexend/400.css';
 	import '@fontsource/lexend/500.css';
 	import '@fontsource/lexend/600.css';
-	
 </script>
 
 <svelte:head>

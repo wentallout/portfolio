@@ -1,8 +1,10 @@
 <script>
+	import Expertise from '$lib/components/Home/Expertise.svelte';
+	import ToolUsed from '$lib/components/Home/ToolUsed.svelte';
 	import Hero from '$lib/components/Atropos/Hero.svelte';
 
-	import fpt from '$lib/assets/images/companylogo/fpt.png?w=300&h=300&webp';
-	import nashtech from '$lib/assets/images/companylogo/nashtech.png?w=300&h=300&webp';
+	import fpt from '$lib/assets/images/home/fpt.png?w=300&h=300&webp';
+	import nashtech from '$lib/assets/images/home/nashtech.png?w=300&h=300&webp';
 
 	// ---SEO---
 	import SEO from '$lib/components/SEO/SEO.svelte';
@@ -12,6 +14,7 @@
 	import ogImageSrc from '$lib/assets/images/seo/home-open-graph.jpg';
 	import twitterImageSrc from '$lib/assets/images/seo/home-twitter.jpg';
 	import featuredImageSrc from '$lib/assets/images/seo/home.jpg';
+	import AboutMe from '$lib/components/Home/AboutMe.svelte';
 
 	const { author, siteUrl } = website;
 
@@ -73,51 +76,58 @@
 <SEO {...seoProps} />
 <Hero />
 
-<div class="past-clients">
-	<p class="past-clients__text base-text">I have worked for</p>
-	<div class="past-clients__logo">
-		<img loading="lazy" decoding="async" class="logo" src={fpt} alt="FPT Software" />
-		<img loading="lazy" decoding="async" class="logo" src={nashtech} alt="NashTech" />
+<section class="clients">
+	<h2 class="clients__title large-text">I have worked for</h2>
+	<div class="clients__logo">
+		<img class="logo" loading="lazy" decoding="async" src={fpt} alt="FPT Software" />
+		<img class="logo" loading="lazy" decoding="async" src={nashtech} alt="NashTech" />
 	</div>
-</div>
+</section>
 
-<div />
+<Expertise />
+
+<ToolUsed />
+
+<AboutMe />
 
 <style>
-	.past-clients {
+	.clients {
 		width: 100%;
 		display: flex;
 		justify-content: center;
-		align-items: center;
+
+		align-items: flex-start;
 
 		flex-direction: column;
 
 		/* Spacing */
-		margin-bottom: var(--space-l);
+		margin-bottom: var(--space-xl);
+		gap: var(--space-m);
 	}
-	.past-clients__logo {
+	.clients__logo {
 		display: flex;
 		justify-content: center;
 		align-items: center;
 		flex-direction: column;
 		flex-wrap: wrap;
+		gap: var(--space-m);
 	}
+
+	.clients__title {
+		font-family: 'Blacker';
+	}
+
 	@media (min-width: 768px) {
-		.past-clients__logo {
+		.clients__logo {
 			flex-direction: row;
 		}
 	}
 
 	.logo {
 		aspect-ratio: 1/1;
-		width: 200px;
-		height: 200px;
-	}
+		width: 100px;
+		height: 100px;
 
-	@media (min-width: 768px) {
-		.logo {
-			width: 300px;
-			height: 300px;
-		}
+		filter: grayscale();
 	}
 </style>

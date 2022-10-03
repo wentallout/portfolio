@@ -36,7 +36,7 @@
 	}
 
 	.toc li::before {
-		content: '';
+		display: none;
 	}
 
 	.toc a {
@@ -44,10 +44,11 @@
 		font-style: normal;
 		margin-bottom: var(--space-s);
 		background-color: transparent;
+		padding: 0;
 	}
 
 	.toc__title {
-		font-family: 'Yipes';
+		font-family: 'Blacker';
 		font-size: var(--font-size-base);
 		margin-bottom: var(--space-s);
 	}

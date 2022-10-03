@@ -6,5 +6,6 @@
 		{
 			"path": "[[workspace]]"
 		}
-	]
+	],
+	"svg.preview.background": "transparent"
 }

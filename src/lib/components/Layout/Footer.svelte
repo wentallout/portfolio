@@ -21,8 +21,6 @@
 </footer>
 
 <style>
-	
-
 	footer {
 		/* Flex */
 		display: flex;
@@ -42,12 +40,9 @@
 		max-width: 100vw;
 
 		/* Color */
-		
 
 		background-image: url(/images/noise.svg);
 		background-repeat: repeat;
-
-		
 	}
 
 	.footer__other {
@@ -94,7 +89,7 @@
 		margin-bottom: var(--space-l);
 		flex-wrap: wrap;
 
-		font-family: 'Yipes';
+		font-family: 'Blacker';
 	}
 
 	.nav-list-item {
@@ -103,8 +98,7 @@
 		padding-right: var(--space-xs);
 	}
 
-	.nav-list-item a:hover
-	{
+	.nav-list-item a:hover {
 		color: var(--primary-500);
 	}
 

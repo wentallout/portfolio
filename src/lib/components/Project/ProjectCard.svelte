@@ -131,7 +131,7 @@
 	.project__info {
 		display: flex;
 		flex-direction: column;
-		padding: var(--space-m);
+		padding: var(--space-l);
 	}
 
 	.project__name {

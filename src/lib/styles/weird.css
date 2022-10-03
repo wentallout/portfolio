@@ -68,23 +68,9 @@ body::-webkit-scrollbar-thumb:hover {
 	right: 20px !important;
 }
 
-.swiper-button-next,
-.swiper-button-prev {
-	opacity: 1;
-	transition: 0.5s ease-in-out;
-}
-
-.swiper-button-disabled {
-	opacity: 0.5;
-	transition: 0.5s ease-in-out;
-}
-
-/*  */
 a {
 	transition: all 0.3s ease;
 }
-
-/*  */
 
 .btn svg {
 	margin-right: 4px;

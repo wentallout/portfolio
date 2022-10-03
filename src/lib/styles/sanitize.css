@@ -1,22 +1,9 @@
-/* Document
- * ========================================================================== */
-
-/**
- * 1. Add border box sizing in all browsers (opinionated).
- * 2. Backgrounds do not repeat by default (opinionated).
- */
-
 *,
 ::before,
 ::after {
 	box-sizing: border-box; /* 1 */
 	background-repeat: no-repeat; /* 2 */
 }
-
-/**
-  * 1. Add text decoration inheritance in all browsers (opinionated).
-  * 2. Add vertical alignment inheritance in all browsers (opinionated).
-  */
 
 ::before,
 ::after {
@@ -369,10 +356,7 @@ code,
 kbd,
 samp,
 pre {
-	font-family: ui-monospace, /* macOS 10.10+ */ 'Menlo', /* Windows 6+ */ 'Consolas',
-		/* Android 4+ */ 'Roboto Mono', /* Ubuntu 10.10+ */ 'Ubuntu Monospace',
-		/* KDE Plasma 5+ */ 'Noto Mono', /* KDE Plasma 4+ */ 'Oxygen Mono',
-		/* Linux/OpenOffice fallback */ 'Liberation Mono', /* fallback */ monospace,
-		/* macOS emoji */ 'Apple Color Emoji', /* Windows emoji */ 'Segoe UI Emoji',
-		/* Windows emoji */ 'Segoe UI Symbol', /* Linux emoji */ 'Noto Color Emoji';
+	font-family: ui-monospace, 'Menlo', 'Consolas', 'Roboto Mono', 'Ubuntu Monospace', 'Noto Mono',
+		'Oxygen Mono', 'Liberation Mono', monospace, 'Apple Color Emoji', 'Segoe UI Emoji',
+		'Segoe UI Symbol', 'Noto Color Emoji';
 }

@@ -9,7 +9,7 @@
 			<div class="hero__text">
 				<h1 data-atropos-offset="-5">Hi! I'm Khoa</h1>
 				<p data-atropos-offset="-3">I code and design.</p>
-				<a data-atropos-offset="10" href="/project">
+				<a data-atropos-offset="0" href="/project">
 					<Button label="See my work" backgroundColor="var(--primary-500)" type="button" />
 				</a>
 			</div>
@@ -23,7 +23,6 @@
 		margin-bottom: var(--space-l);
 	}
 
-	
 	.hero {
 		/* Use "linear-gradient" to add a darken background effect to the image. This will make the text easier to read */
 		background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
