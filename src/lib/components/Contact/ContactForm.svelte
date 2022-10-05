@@ -5,46 +5,53 @@
 	import SectionTitle from '$lib/components/Common/SectionTitle.svelte';
 </script>
 
-<SectionTitle sectionTitle="Contact me" let:sectionIcon>
-	<EnvelopeSimple {...sectionIcon} />
-</SectionTitle>
+<section>
+	<SectionTitle sectionTitle="Contact me" let:sectionIcon>
+		<EnvelopeSimple {...sectionIcon} />
+	</SectionTitle>
 
-<div class="form-container">
-	<form
-		name="contact"
-		method="post"
-		netlify-honeypot="bot-field"
-		data-netlify="true"
-		class="contact"
-	>
-		<input type="hidden" name="form-name" value="contact" />
+	<div class="form-container">
+		<form
+			name="contact"
+			method="post"
+			netlify-honeypot="bot-field"
+			data-netlify="true"
+			class="contact"
+		>
+			<input type="hidden" name="form-name" value="contact" />
 
-		<label for="name" class="label base-text">Name</label>
-		<input class="small-text" type="text" name="name" id="name" required />
+			<label for="name" class="label base-text">Name</label>
+			<input class="small-text" type="text" name="name" id="name" required />
 
-		<label for="email" class="label base-text">Email</label>
-		<input
-			placeholder="username@email.com"
-			class="small-text"
-			type="email"
-			name="email"
-			id="email"
-			required
-		/>
+			<label for="email" class="label base-text">Email</label>
+			<input
+				placeholder="username@email.com"
+				class="small-text"
+				type="email"
+				name="email"
+				id="email"
+				required
+			/>
 
-		<label for="message" class="label base-text">Message</label>
-		<textarea class="small-text" required name="message" id="message" placeholder="" />
+			<label for="message" class="label base-text">Message</label>
+			<textarea class="small-text" required name="message" id="message" placeholder="" />
 
-		<div class="btn-container">
-			<Button label="Send" backgroundColor="var(--primary-500)">
-				<PaperPlaneRight color="var(--neutral-900)" />
-			</Button>
+			<div class="btn-container">
+				<Button label="Send" backgroundColor="var(--primary-500)">
+					<PaperPlaneRight color="var(--neutral-900)" />
+				</Button>
 
-			<!-- <button class="btn btn-reset" type="reset">Reset</button> -->
-			<Button label="Reset" backgroundColor="transparent" labelColor="var(--error)" type="reset" />
-		</div>
-	</form>
-</div>
+				<!-- <button class="btn btn-reset" type="reset">Reset</button> -->
+				<Button
+					label="Reset"
+					backgroundColor="transparent"
+					labelColor="var(--error)"
+					type="reset"
+				/>
+			</div>
+		</form>
+	</div>
+</section>
 
 <style>
 	.form-container {

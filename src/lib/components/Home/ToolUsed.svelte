@@ -49,8 +49,6 @@
 		justify-content: center;
 		align-items: flex-start;
 
-		/* Spacing */
-		margin-bottom: var(--space-2xl);
 		gap: var(--space-m);
 	}
 	.tool__block {
@@ -73,7 +71,6 @@
 	.block__section {
 		display: flex;
 		flex-direction: column;
-		/* justify-content: center; */
 		align-items: flex-start;
 		border-radius: var(--border-radius);
 		background-color: var(--neutral-900);

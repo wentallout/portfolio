@@ -141,6 +141,8 @@ html {
 	/* SCROLL SMOOTH */
 	scroll-behavior: smooth;
 	/*  */
+
+	-webkit-font-smoothing: antialiased;
 }
 
 body {
@@ -220,4 +222,9 @@ address {
 
 .atropos-shadow {
 	background-color: transparent !important;
+}
+
+section {
+	/* Spacing */
+	margin-bottom: var(--space-xl);
 }

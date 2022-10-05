@@ -3,7 +3,7 @@
 	import Atropos from 'atropos/svelte';
 </script>
 
-<div class="atropos-container">
+<section>
 	<Atropos highlight="false" shadow="false" rotateTouch="scroll-y" rotateXMax={5} rotateYMax={5}>
 		<div class="hero">
 			<div class="hero__text">
@@ -15,14 +15,9 @@
 			</div>
 		</div>
 	</Atropos>
-</div>
+</section>
 
 <style>
-	.atropos-container {
-		/* Spacing */
-		margin-bottom: var(--space-2xl);
-	}
-
 	.hero {
 		/* Use "linear-gradient" to add a darken background effect to the image. This will make the text easier to read */
 		background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),

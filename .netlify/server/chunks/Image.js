@@ -1,6 +1,5 @@
 import { c as create_ssr_component, k as compute_rest_props, d as spread, e as escape_object, o as onDestroy, b as add_attribute, l as createEventDispatcher, h as subscribe, g as escape, v as validate_component, r as compute_slots } from "./index.js";
-import { w as writable } from "./index2.js";
-const LightboxThumbnail_svelte_svelte_type_style_lang = "";
+/* empty css                                                */import { w as writable } from "./index2.js";
 const css$5 = {
   code: "div.svelte-hpqpx9{position:static;cursor:zoom-in}.svelte-lightbox-thumbnail > *{max-width:100%;height:auto}",
   map: null
@@ -25,7 +24,6 @@ const BodyChild = create_ssr_component(($$result, $$props, $$bindings, slots) =>
   onDestroy(removeTarget);
   return `<div${spread([escape_object($$restProps)], {})}${add_attribute("this", targetElement, 0)}>${slots.default ? slots.default({}) : ``}</div>`;
 });
-const LightboxHeader_svelte_svelte_type_style_lang = "";
 const css$4 = {
   code: "div.svelte-1wskd0y{width:auto;height:3rem;display:flex;justify-content:flex-end;align-items:center}div.fullscreen.svelte-1wskd0y{position:fixed;z-index:5;top:0;left:0;right:0}button.svelte-1wskd0y{background:transparent;font-size:3rem;border:none;color:white}button.svelte-1wskd0y:hover{color:lightgray;cursor:pointer}button.svelte-1wskd0y:active{background-color:transparent}button.fullscreen.svelte-1wskd0y{filter:drop-shadow(0 0 5px black) drop-shadow(0 0 10px black)}",
   map: null
@@ -56,7 +54,6 @@ const LightboxHeader = create_ssr_component(($$result, $$props, $$bindings, slot
         </button>` : ``}
 </div>`;
 });
-const LightboxBody_svelte_svelte_type_style_lang = "";
 const css$3 = {
   code: "div.svelte-lightbox-body.svelte-1d3ym4l{position:relative;width:auto;height:auto;max-height:80vh}div.svelte-lightbox-body > *{max-width:100%;max-height:inherit;height:auto;width:auto;object-fit:contain}div.svelte-lightbox-body.scroll > *{max-height:100%}div.svelte-lightbox-body.expand > *{flex-grow:1}div.fullscreen.svelte-1d3ym4l{width:inherit;max-width:inherit;height:inherit;max-height:100%;display:flex;align-items:center;justify-content:center}div.scroll.svelte-1d3ym4l{overflow:scroll}",
   map: null
@@ -80,7 +77,6 @@ const i18n = writable({
     return `Image ${activeImage + 1} of ${imageCount}`;
   }
 });
-const LightboxFooter_svelte_svelte_type_style_lang = "";
 const css$2 = {
   code: "div.svelte-1mkm4v6{width:100%;height:auto;color:white;text-align:left;position:absolute}div.fullscreen.svelte-1mkm4v6{position:fixed;z-index:5;bottom:0;left:0;right:0;padding-left:1rem}",
   map: null
@@ -117,7 +113,6 @@ const LightboxFooter = create_ssr_component(($$result, $$props, $$bindings, slot
     ${gallery !== null ? `<p>${escape(localizedGalleryCounter)}</p>` : ``}
 </div>`;
 });
-const ModalCover_svelte_svelte_type_style_lang = "";
 const css$1 = {
   code: `div.svelte-o5rrpx{position:fixed;z-index:1000000!important;background-color:rgba(43, 39, 45, 0.87);top:0;bottom:0;left:0;right:0;overflow:hidden;width:100%;height:100%;display:flex;align-items:center;justify-content:center}div.svelte-o5rrpx::before{content:'';position:absolute;top:0;bottom:0;left:0;right:0;opacity:0;z-index:-1}div.svelte-o5rrpx::after{content:"";clear:both;display:table}`,
   map: null
@@ -131,7 +126,6 @@ const ModalCover = create_ssr_component(($$result, $$props, $$bindings, slots) =
     `}
 </div>`;
 });
-const Modal_svelte_svelte_type_style_lang = "";
 const css = {
   code: "div.svelte-1shiuhy{position:relative;max-width:100%;max-height:100%;height:auto;width:auto;background-color:transparent}.fullscreen.svelte-1shiuhy{height:inherit;width:inherit;max-height:inherit;max-width:inherit}",
   map: null
@@ -241,9 +235,6 @@ ${isVisible ? `${validate_component(BodyChild, "BodyChild").$$render($$result, {
     }
   })}` : ``}`;
 });
-const PreviousImageButton_svelte_svelte_type_style_lang = "";
-const NextImageButton_svelte_svelte_type_style_lang = "";
-const GalleryThumbnail_svelte_svelte_type_style_lang = "";
 const Image = create_ssr_component(($$result, $$props, $$bindings, slots) => {
   let { src = "" } = $$props;
   let { alt = "" } = $$props;
@@ -261,7 +252,6 @@ const Image = create_ssr_component(($$result, $$props, $$bindings, slots) => {
     $$result,
     {
       enableClickToClose: "true",
-      imagePreset: "fullscreen",
       title: alt,
       description: src,
       enableImageExpand: "true",

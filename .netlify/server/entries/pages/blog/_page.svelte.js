@@ -12,7 +12,7 @@ const BlogListContainer = create_ssr_component(($$result, $$props, $$bindings, s
 });
 const BlogCard_svelte_svelte_type_style_lang = "";
 const css = {
-  code: ".blog.svelte-1fqhhf0{display:flex;flex-direction:column;width:100%;border-radius:var(--border-radius);border:var(--border);padding:0.5rem 1rem;background-color:var(--neutral-200)}.blog.svelte-1fqhhf0:hover{border:var(--border-hover)}.blog__title.svelte-1fqhhf0{font-weight:600}.blog__date.svelte-1fqhhf0{font-weight:400;color:var(--neutral-700)}",
+  code: ".blog.svelte-1rlqzv1{display:flex;flex-direction:column;width:100%;border-radius:var(--border-radius);border:var(--border);padding:0.5rem 1rem;background-color:var(--neutral-200)}.blog.svelte-1rlqzv1:hover{border:var(--border-hover)}.blog__title.svelte-1rlqzv1{font-weight:500}.blog__date.svelte-1rlqzv1{font-weight:400;color:var(--neutral-700)}",
   map: null
 };
 const BlogCard = create_ssr_component(($$result, $$props, $$bindings, slots) => {
@@ -26,8 +26,8 @@ const BlogCard = create_ssr_component(($$result, $$props, $$bindings, slots) => 
   if ($$props.blogDate === void 0 && $$bindings.blogDate && blogDate !== void 0)
     $$bindings.blogDate(blogDate);
   $$result.css.add(css);
-  return `<a${add_attribute("href", blogLink, 0)}><div class="${"blog svelte-1fqhhf0"}"><div class="${"blog__title base-text svelte-1fqhhf0"}">${escape(blogTitle)}</div>
-		<div class="${"blog__date small-text svelte-1fqhhf0"}">${escape(blogDate)}</div></div>
+  return `<a${add_attribute("href", blogLink, 0)}><div class="${"blog svelte-1rlqzv1"}"><div class="${"blog__title base-text svelte-1rlqzv1"}">${escape(blogTitle)}</div>
+		<div class="${"blog__date small-text svelte-1rlqzv1"}">${escape(blogDate)}</div></div>
 </a>`;
 });
 const Text_aa = create_ssr_component(($$result, $$props, $$bindings, slots) => {
@@ -68,7 +68,18 @@ const Page = create_ssr_component(($$result, $$props, $$bindings, slots) => {
         {
           blogTitle: "How to pick the perfect type scale for your next design",
           blogLink: "/blog/typescale",
-          blogDate: "20/09/2022"
+          blogDate: "2022"
+        },
+        {},
+        {}
+      )}
+
+		${validate_component(BlogCard, "BlogCard").$$render(
+        $$result,
+        {
+          blogTitle: "Typography best patterns",
+          blogLink: "/blog/typography-best-patterns",
+          blogDate: "2022"
         },
         {},
         {}
@@ -89,7 +100,18 @@ const Page = create_ssr_component(($$result, $$props, $$bindings, slots) => {
         {
           blogTitle: "UX Portfolio DOs and DONTs",
           blogLink: "/blog/ux-portfolio",
-          blogDate: "22/09/2022"
+          blogDate: "2022"
+        },
+        {},
+        {}
+      )}
+
+		${validate_component(BlogCard, "BlogCard").$$render(
+        $$result,
+        {
+          blogTitle: "Understand UX vs UI",
+          blogLink: "/blog/ux-vs-ui",
+          blogDate: "2022"
         },
         {},
         {}

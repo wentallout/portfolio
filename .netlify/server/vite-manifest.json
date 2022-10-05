@@ -29,7 +29,7 @@
       "_stores.js"
     ],
     "css": [
-      "_app/immutable/assets/_layout-844b5d1e.css"
+      "_app/immutable/assets/_layout-0057a81b.css"
     ],
     "assets": [
       "_app/immutable/assets/lexend-all-300-normal-2a8fb41f.woff",
@@ -94,7 +94,15 @@
       "_config.js"
     ],
     "css": [
-      "_app/immutable/assets/_page-b973cbf4.css"
+      "_app/immutable/assets/_page-6dc7edff.css"
+    ],
+    "assets": [
+      "_app/immutable/assets/ux-36a3bc54.svg",
+      "_app/immutable/assets/designProcess-124842c8.svg",
+      "_app/immutable/assets/frontend-b1799fa6.svg",
+      "_app/immutable/assets/navigation-59b517a7.svg",
+      "_app/immutable/assets/interactive-dd63c66a.svg",
+      "_app/immutable/assets/graphicDesign-e603326c.svg"
     ]
   },
   "src/routes/blog/+page.svelte": {
@@ -106,7 +114,7 @@
       "_SectionTitle.js"
     ],
     "css": [
-      "_app/immutable/assets/_page-bc9cab9c.css"
+      "_app/immutable/assets/_page-0be8c9c1.css"
     ]
   },
   "src/routes/blog/[slug]/+page.svelte": {
@@ -129,7 +137,9 @@
     ],
     "dynamicImports": [
       "src/routes/blog/typescale.svx",
-      "src/routes/blog/ux-portfolio.svx"
+      "src/routes/blog/typography-best-patterns.svx",
+      "src/routes/blog/ux-portfolio.svx",
+      "src/routes/blog/ux-vs-ui.svx"
     ]
   },
   "src/routes/contact/+page.svelte": {
@@ -144,7 +154,7 @@
       "_SEO.js"
     ],
     "css": [
-      "_app/immutable/assets/_page-8ef288d6.css"
+      "_app/immutable/assets/_page-2445779f.css"
     ]
   },
   "src/routes/contact/+page.js": {
@@ -164,7 +174,10 @@
       "_SectionTitle.js"
     ],
     "css": [
-      "_app/immutable/assets/_page-eaf05c90.css"
+      "_app/immutable/assets/_page-1d2337cf.css"
+    ],
+    "assets": [
+      "_app/immutable/assets/rezaSplat-8323f1b6.svg"
     ]
   },
   "src/routes/project/[slug]/+page.svelte": {
@@ -175,7 +188,7 @@
       "_index.js"
     ],
     "css": [
-      "_app/immutable/assets/_page-141d6d3d.css"
+      "_app/immutable/assets/_page-690e3cf4.css"
     ]
   },
   "src/routes/project/[slug]/+page.js": {
@@ -196,12 +209,10 @@
     "isEntry": true,
     "imports": [
       "_index.js",
-      "_index2.js",
-      "_Button.js",
       "_SectionTitle.js"
     ],
     "css": [
-      "_app/immutable/assets/_page-2baa754d.css"
+      "_app/immutable/assets/_page-cc046e0e.css"
     ]
   },
   "src/routes/resource/tool/+page.svelte": {
@@ -275,7 +286,7 @@
       "_index.js"
     ],
     "css": [
-      "_app/immutable/assets/SectionTitle-7accfe9b.css"
+      "_app/immutable/assets/SectionTitle-81117ce2.css"
     ]
   },
   "_dynamic-import-helper.js": {
@@ -312,7 +323,19 @@
       "_index2.js"
     ],
     "css": [
-      "_app/immutable/assets/Image-6cebb8e2.css"
+      "_app/immutable/assets/GalleryThumbnail-6cebb8e2.css"
+    ]
+  },
+  "src/routes/blog/typography-best-patterns.svx": {
+    "file": "chunks/typography-best-patterns.js",
+    "src": "src/routes/blog/typography-best-patterns.svx",
+    "isDynamicEntry": true,
+    "imports": [
+      "_index.js",
+      "_Image.js"
+    ],
+    "assets": [
+      "_app/immutable/assets/headingFontSizes-ee4e4c93.png"
     ]
   },
   "src/routes/blog/ux-portfolio.svx": {
@@ -321,6 +344,17 @@
     "isDynamicEntry": true,
     "imports": [
       "_index.js"
+    ]
+  },
+  "src/routes/blog/ux-vs-ui.svx": {
+    "file": "chunks/ux-vs-ui.js",
+    "src": "src/routes/blog/ux-vs-ui.svx",
+    "isDynamicEntry": true,
+    "imports": [
+      "_index.js"
+    ],
+    "css": [
+      "_app/immutable/assets/GalleryThumbnail-6cebb8e2.css"
     ]
   },
   "src/routes/project/coinecho.svx": {

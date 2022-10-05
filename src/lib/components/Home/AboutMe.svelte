@@ -30,8 +30,6 @@
 		align-items: flex-start;
 		flex-direction: column;
 
-		/* Spacing */
-		margin-bottom: var(--space-2xl);
 		gap: var(--space-m);
 	}
 
@@ -51,5 +49,6 @@
 
 	.block__text {
 		max-width: 60ch;
+		color: var(--neutral-700);
 	}
 </style>

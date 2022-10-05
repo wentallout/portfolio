@@ -28,7 +28,7 @@
 	}
 
 	.blog__title {
-		font-weight: 600;
+		font-weight: 500;
 	}
 
 	.blog__date {

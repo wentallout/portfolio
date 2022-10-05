@@ -16,9 +16,10 @@ const Brain = create_ssr_component(($$result, $$props, $$bindings, slots) => {
 });
 const rezaPhoneFrame = "/_app/immutable/assets/rezaPhoneFrame-b3441282.webp";
 const rezaWireframe = "/_app/immutable/assets/rezaWireframe-e1efb416.webp";
+const rezaSplat = "/_app/immutable/assets/rezaSplat-8323f1b6.svg";
 const RezaPhoneAtropos_svelte_svelte_type_style_lang = "";
 const css$1 = {
-  code: ".frame.svelte-169ymer{display:flex;justify-content:space-evenly;align-items:center;flex-direction:row;position:relative}.reza-text.svelte-169ymer{z-index:-3;position:absolute;font-size:200px;font-weight:600;top:0;left:-10%;color:#e4543b;writing-mode:vertical-rl;text-orientation:sideways}.frame__image.svelte-169ymer{width:auto;max-height:406px}.frame__image2.svelte-169ymer{z-index:-1;top:0;right:15%;max-height:406px;width:auto;position:absolute}",
+  code: ".reza-phone.svelte-1ehnqad{background-color:transparent;overflow:hidden;height:100%;width:100%;position:relative}.frame.svelte-1ehnqad{display:flex;justify-content:space-evenly;align-items:center;flex-direction:row;position:relative;background:transparent url('/images/dot.svg') repeat left top/20px}.reza-text.svelte-1ehnqad{z-index:-3;position:absolute;font-size:200px;font-weight:600;top:0;left:-10%;color:#e4543b;writing-mode:vertical-rl;text-orientation:sideways}.frame__image.svelte-1ehnqad{width:auto;max-height:406px}.frame__image2.svelte-1ehnqad{z-index:-2;top:0;right:15%;max-height:406px;width:auto;position:absolute}.frame__image3.svelte-1ehnqad{position:absolute;z-index:-1;bottom:0;left:10%;width:500px;height:500px;opacity:0.8}",
   map: null
 };
 const RezaPhoneAtropos = create_ssr_component(($$result, $$props, $$bindings, slots) => {
@@ -26,9 +27,8 @@ const RezaPhoneAtropos = create_ssr_component(($$result, $$props, $$bindings, sl
   return `${validate_component(Atropos, "Atropos").$$render(
     $$result,
     {
-      class: "reza-phone",
-      shadow: false,
-      eventsEl: "body",
+      shadow: "false",
+      eventsEl: ".frame",
       rotateXMax: 20,
       rotateYMax: 20,
       stretchX: 0,
@@ -38,17 +38,18 @@ const RezaPhoneAtropos = create_ssr_component(($$result, $$props, $$bindings, sl
     {},
     {
       default: () => {
-        return `<div class="${"frame svelte-169ymer"}"><img data-atropos-offset="${"5"}" class="${"frame__image svelte-169ymer"}"${add_attribute("src", rezaPhoneFrame, 0)} alt="${""}">
-		<img data-atropos-offset="${"3"}" data-atropos-opacity="${"0.5;1"}" class="${"frame__image2 svelte-169ymer"}"${add_attribute("src", rezaWireframe, 0)} alt="${""}"></div>
+        return `<div class="${"reza-phone svelte-1ehnqad"}"><div class="${"frame svelte-1ehnqad"}"><img data-atropos-offset="${"5"}" class="${"frame__image svelte-1ehnqad"}"${add_attribute("src", rezaPhoneFrame, 0)} alt="${"reza homepage"}">
+			<img data-atropos-offset="${"4"}" class="${"frame__image2 svelte-1ehnqad"}"${add_attribute("src", rezaWireframe, 0)} alt="${"reza wireframe"}">
+			<img data-atropos-offset="${"3"}" class="${"frame__image3 svelte-1ehnqad"}"${add_attribute("src", rezaSplat, 0)} alt="${"reza splat"}"></div>
 
-	<div data-atropos-offset="${"-3"}" class="${"reza-text svelte-169ymer"}">reza</div>`;
+		<div data-atropos-offset="${"-3"}" class="${"reza-text svelte-1ehnqad"}">reza</div></div>`;
       }
     }
   )}`;
 });
 const ProjectCard_svelte_svelte_type_style_lang = "";
 const css = {
-  code: ".description-section.svelte-1c1rqf7{display:flex;flex-direction:row;gap:var(--space-xs)}.section-title.svelte-1c1rqf7{min-width:30%;font-weight:500;color:var(--accent-900)}.section-info.svelte-1c1rqf7{text-align:left;margin-right:auto}.project.svelte-1c1rqf7{width:100%;max-width:80rem;display:flex;flex-direction:column;background-color:var(--neutral-200);backdrop-filter:blur(5px);color:var(--neutral-900);margin-bottom:var(--space-l);box-shadow:var(--box-shadow);border-radius:var(--border-radius);border:var(--border);overflow:hidden}.project__btn.svelte-1c1rqf7{margin-top:auto;display:flex;flex-wrap:wrap;justify-content:left;gap:var(--space-xs)}.project.svelte-1c1rqf7:hover{box-shadow:var(--box-shadow-hover)}.project__thumbnail.svelte-1c1rqf7{background:transparent url('/images/dot.svg') repeat left top/20px;width:100%;overflow:hidden;height:100%}.project__info.svelte-1c1rqf7{display:flex;flex-direction:column;padding:var(--space-m)}.project__name.svelte-1c1rqf7{font-weight:600;color:var(--neutral-900);margin-bottom:var(--space-xs)}.project__description.svelte-1c1rqf7{color:var(--neutral-800);font-weight:400;margin-bottom:var(--space-s)}@media(min-width: 992px){.project.svelte-1c1rqf7{flex-direction:row}.project__thumbnail.svelte-1c1rqf7{width:60%;height:auto}}",
+  code: ".description-section.svelte-2pct36{display:flex;flex-direction:row;gap:var(--space-xs)}.section-title.svelte-2pct36{min-width:30%;font-weight:500;color:var(--accent-900)}.section-info.svelte-2pct36{text-align:left;margin-right:auto}.project.svelte-2pct36{width:100%;max-width:80rem;display:flex;flex-direction:column;background-color:var(--neutral-200);backdrop-filter:blur(5px);color:var(--neutral-900);margin-bottom:var(--space-l);box-shadow:var(--box-shadow);border-radius:var(--border-radius);border:var(--border);overflow:hidden}.project__btn.svelte-2pct36{margin-top:auto;display:flex;flex-wrap:wrap;justify-content:left;gap:var(--space-xs)}.project.svelte-2pct36:hover{box-shadow:var(--box-shadow-hover)}.project__thumbnail.svelte-2pct36{width:100%;overflow:visible;height:100%}.project__info.svelte-2pct36{display:flex;flex-direction:column;padding:var(--space-l)}.project__name.svelte-2pct36{font-weight:600;color:var(--neutral-900);margin-bottom:var(--space-xs)}.project__description.svelte-2pct36{color:var(--neutral-800);font-weight:400;margin-bottom:var(--space-s)}@media(min-width: 992px){.project.svelte-2pct36{flex-direction:row}.project__thumbnail.svelte-2pct36{width:60%;height:auto}}",
   map: null
 };
 const ProjectCard = create_ssr_component(($$result, $$props, $$bindings, slots) => {
@@ -74,20 +75,20 @@ const ProjectCard = create_ssr_component(($$result, $$props, $$bindings, slots) 
   if ($$props.result === void 0 && $$bindings.result && result !== void 0)
     $$bindings.result(result);
   $$result.css.add(css);
-  return `<div class="${"project svelte-1c1rqf7"}"><div class="${"project__thumbnail svelte-1c1rqf7"}">
+  return `<div class="${"project svelte-2pct36"}"><div class="${"project__thumbnail svelte-2pct36"}">
 
 		${slots.atropos ? slots.atropos({}) : ``}</div>
-	<div class="${"project__info svelte-1c1rqf7"}"><div class="${"project__name mid-text svelte-1c1rqf7"}">${escape(projectName)}</div>
-		<div class="${"project__description small-text svelte-1c1rqf7"}"><div class="${"description-section svelte-1c1rqf7"}"><p class="${"section-title svelte-1c1rqf7"}">\u25C6 What</p>
-				<p class="${"section-info svelte-1c1rqf7"}">${escape(what)}</p></div>
+	<div class="${"project__info svelte-2pct36"}"><div class="${"project__name mid-text svelte-2pct36"}">${escape(projectName)}</div>
+		<div class="${"project__description small-text svelte-2pct36"}"><div class="${"description-section svelte-2pct36"}"><p class="${"section-title svelte-2pct36"}">\u25C6 What</p>
+				<p class="${"section-info svelte-2pct36"}">${escape(what)}</p></div>
 
-			<div class="${"description-section svelte-1c1rqf7"}"><p class="${"section-title svelte-1c1rqf7"}">\u25C6 Who</p>
-				<p class="${"section-info svelte-1c1rqf7"}">${escape(who)}</p></div>
+			<div class="${"description-section svelte-2pct36"}"><p class="${"section-title svelte-2pct36"}">\u25C6 Who</p>
+				<p class="${"section-info svelte-2pct36"}">${escape(who)}</p></div>
 
-			<div class="${"description-section svelte-1c1rqf7"}"><p class="${"section-title svelte-1c1rqf7"}">\u25C6 Result</p>
-				<p class="${"section-info svelte-1c1rqf7"}">${escape(result)}</p></div></div>
+			<div class="${"description-section svelte-2pct36"}"><p class="${"section-title svelte-2pct36"}">\u25C6 Result</p>
+				<p class="${"section-info svelte-2pct36"}">${escape(result)}</p></div></div>
 
-		<div class="${"project__btn svelte-1c1rqf7"}"><a sveltekit:prefetch${add_attribute("href", linkToDetail, 0)}>${validate_component(Button, "Button").$$render(
+		<div class="${"project__btn svelte-2pct36"}"><a sveltekit:prefetch${add_attribute("href", linkToDetail, 0)}>${validate_component(Button, "Button").$$render(
     $$result,
     {
       label: "Read",
@@ -148,7 +149,8 @@ const Page = create_ssr_component(($$result, $$props, $$bindings, slots) => {
     default: ({ sectionIcon }) => {
       return `${validate_component(Figma_logo, "FigmaLogo").$$render($$result, Object.assign(sectionIcon), {}, {})}`;
     }
-  })}</section>`;
+  })}
+</section>`;
 });
 export {
   Page as default

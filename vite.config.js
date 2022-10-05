@@ -6,11 +6,14 @@ import { imagetools } from 'vite-imagetools';
 const config = {
 	plugins: [sveltekit(), Icons({ compiler: 'svelte' }), imagetools({ force: true })],
 	server: {
-		port: '3000',
+		port: '3000'
 	},
 	preview: {
-		port: '4000',
+		port: '4000'
 	},
+	ssr: {
+		noExternal: ['three', 'troika-three-text']
+	}
 };
 
 export default config;

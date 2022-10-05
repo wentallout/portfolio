@@ -27,14 +27,20 @@
 		gap: var(--space-m);
 	}
 
+	.block__title {
+		font-weight: 500;
+	}
+
+	.block__text {
+		color: var(--neutral-700);
+	}
+
 	.expertise {
 		display: flex;
 		flex-direction: column;
 		justify-content: center;
 		align-items: flex-start;
 
-		/* Spacing */
-		margin-bottom: var(--space-2xl);
 		gap: var(--space-m);
 	}
 

@@ -43,8 +43,5 @@
 </section>
 
 <style>
-	section {
-		/* Spacing */
-		margin-bottom: var(--space-2xl);
-	}
+	
 </style>

@@ -39,7 +39,10 @@
 		"unplugin-icons": "^0.14.10",
 		"vanilla-lazyload": "^17.8.3",
 		"vite": "^3.1.4",
-		"vite-imagetools": "^4.0.9"
+		"vite-imagetools": "^4.0.9",
+		"@threlte/core": "^4.3.2",
+		"@threlte/extras": "^4.3.0",
+		"three": "^0.145.0"
 	},
 	"type": "module",
 	"repository": {

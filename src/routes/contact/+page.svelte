@@ -27,24 +27,6 @@
 
 <SEO {...seoProps} />
 
-<div class="container">
-	<section>
-		<ContactForm />
-	</section>
+<ContactForm />
 
-	<section>
-		<SocialLinks />
-	</section>
-</div>
-
-<style>
-	.container {
-		display: flex;
-		justify-content: space-between;
-		flex-direction: column;
-	}
-
-	section {
-		margin-bottom: var(--space-2xl);
-	}
-</style>
+<SocialLinks />

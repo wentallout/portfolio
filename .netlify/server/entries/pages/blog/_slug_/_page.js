@@ -1,6 +1,6 @@
 import { _ as __variableDynamicImportRuntimeHelper } from "../../../../chunks/dynamic-import-helper.js";
 async function load({ params }) {
-  const post = await __variableDynamicImportRuntimeHelper(/* @__PURE__ */ Object.assign({ "../typescale.svx": () => import("../../../../chunks/typescale.js"), "../ux-portfolio.svx": () => import("../../../../chunks/ux-portfolio.js") }), `../${params.slug}.svx`);
+  const post = await __variableDynamicImportRuntimeHelper(/* @__PURE__ */ Object.assign({ "../typescale.svx": () => import("../../../../chunks/typescale.js"), "../typography-best-patterns.svx": () => import("../../../../chunks/typography-best-patterns.js"), "../ux-portfolio.svx": () => import("../../../../chunks/ux-portfolio.js"), "../ux-vs-ui.svx": () => import("../../../../chunks/ux-vs-ui.js") }), `../${params.slug}.svx`);
   const { title, date } = post.metadata;
   const content = post.default;
   return {

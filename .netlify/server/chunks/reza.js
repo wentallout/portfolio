@@ -4926,7 +4926,7 @@ const Reza = create_ssr_component(($$result, $$props, $$bindings, slots) => {
 <li>Find directions</li>
 <li>Give you notifications when it\u2019s almost time to eat or nearby deals.</li></ul>
 <p>=&gt; We can brainstorm some ideas and design an app with more features and better UX considerations.</p>
-${validate_component(Image, "Image").$$render($$result, { src: goal }, {}, {})}
+${validate_component(Image, "Image").$$render($$result, { src: goal, alt: "project goal" }, {}, {})}
 <h2>Audience</h2>
 <p>I need to visualize the kind of user that will use this product. The persona has to represent the largest amount of users so a person with a paying job will be appropriate. She\u2019s busy but like to hangout with friends in a nice place sometimes.</p>
 ${validate_component(Image, "Image").$$render($$result, { src: userResearch, alt: "user research" }, {}, {})}
@@ -4995,7 +4995,7 @@ ${validate_component(Image, "Image").$$render($$result, { src: searchFlow, alt: 
 ${validate_component(Image, "Image").$$render($$result, { src: lofi, alt: "low fidelity wireframe" }, {}, {})}
 <h4>Branding</h4>
 <p>I got the name from the pronunciation of \u201Creservation\u201D which looks like this: <em>/\u02CCrez\u0259r\u02C8v\u0101SH(\u0259)n/</em>. I think short, 2 syllables words are the best names for your brand.</p>
-<p>I chose red as the brand color because it makes people hungry and it has this <em>luxury</em> vibe to it. I just need to make sure the color has good contrast with text and make a lighter red to not cause eyestrain.</p>
+<p>I chose red as the brand color because it makes people hungry and it has this <em>organic, tomato vibe</em> to it. I want our brand to be <em>friendly and comfortable</em>, something that make you feel relaxed after a long day at work.</p>
 <p>I used Canva and quickly made a SVG logo for my concept mobile app. There are multiple sizes for different devices for easy exports.</p>
 ${validate_component(Image, "Image").$$render($$result, { src: rezaIcon, alt: "branding" }, {}, {})}
 <h4>Design System</h4>
@@ -5038,7 +5038,7 @@ ${validate_component(Image, "Image").$$render(
   )}
 <h4>Detail</h4>
 <p>This screen shows up when user click on a restaurant from their home page or search result page.</p>
-${validate_component(Image, "Image").$$render($$result, { src: detailScreen }, {}, {})}
+${validate_component(Image, "Image").$$render($$result, { src: detailScreen, alt: "detail screen" }, {}, {})}
 <h4>Reservation</h4>
 <p>This screen allows users to see their booked reservations and cancel them if they want to.</p>
 ${validate_component(Image, "Image").$$render(

@@ -52,17 +52,17 @@ const BackToTop = create_ssr_component(($$result, $$props, $$bindings, slots) =>
 });
 const Footer_svelte_svelte_type_style_lang = "";
 const css$5 = {
-  code: ".footer__other.svelte-x3dwsr.svelte-x3dwsr{z-index:2;color:var(--neutral-500)}.footer__other.svelte-x3dwsr a.svelte-x3dwsr{color:var(--accent-500)}.footer-container.svelte-x3dwsr.svelte-x3dwsr{display:flex;flex-direction:column;color:var(--neutral-100);font-weight:300}footer.svelte-x3dwsr.svelte-x3dwsr{display:flex;flex-direction:column;justify-content:center;align-items:flex-start;font-weight:300;padding:var(--space-m) var(--space-xs);position:relative;max-width:100vw;background-color:#000}@media(min-width: 768px){footer.svelte-x3dwsr.svelte-x3dwsr{padding:var(--space-m) 17vw}}footer.svelte-x3dwsr.svelte-x3dwsr:before{background:url('/images/rhombus_line.png') repeat top center/49px 72px;content:'';position:absolute;top:0;left:0;width:100%;height:100%;opacity:0.12;z-index:1}.nav-list.svelte-x3dwsr.svelte-x3dwsr{display:flex;flex-direction:row;justify-content:left;align-items:center;margin:0px;z-index:2;margin-bottom:var(--space-l);flex-wrap:wrap}.nav-list-item.svelte-x3dwsr.svelte-x3dwsr{display:flex;padding-left:0;padding-right:var(--space-xs)}footer.svelte-x3dwsr.svelte-x3dwsr{--c-footer--mask-height:10px;position:relative;margin-top:calc(var(--c-footer--mask-height) * -1);-webkit-mask-image:url(/images/mask_section-bg_top.png),\r\n			-webkit-gradient(linear, left top, left bottom, from(#000));-webkit-mask-image:url(/images/mask_section-bg_top.png), linear-gradient(#000);mask-image:url(/images/mask_section-bg_top.png),\r\n			-webkit-gradient(linear, left top, left bottom, from(#000));mask-image:url(/images/mask_section-bg_top.png), linear-gradient(#000);-webkit-mask-size:auto var(--c-footer--mask-height),\r\n			100% calc(100% - var(--c-footer--mask-height) + 1px);mask-size:auto var(--c-footer--mask-height),\r\n			100% calc(100% - var(--c-footer--mask-height) + 1px);-webkit-mask-position:left top, left calc(var(--c-footer--mask-height) - 1px);mask-position:left top, left calc(var(--c-footer--mask-height) - 1px);-webkit-mask-repeat:repeat-x, no-repeat;mask-repeat:repeat-x, no-repeat}",
+  code: "footer.svelte-hnc4uy.svelte-hnc4uy{display:flex;flex-direction:column;justify-content:center;align-items:flex-start;padding:var(--space-m) var(--space-xs);position:relative;max-width:100vw;background-image:url(/images/noise.svg);background-repeat:repeat}.footer__other.svelte-hnc4uy.svelte-hnc4uy{z-index:2;color:var(--neutral-500)}.footer__other.svelte-hnc4uy a.svelte-hnc4uy{color:var(--accent-500)}.footer-container.svelte-hnc4uy.svelte-hnc4uy{display:flex;flex-direction:column;color:var(--neutral-100);font-weight:300}@media(min-width: 768px){footer.svelte-hnc4uy.svelte-hnc4uy{padding:var(--space-m) 17vw}}footer.svelte-hnc4uy.svelte-hnc4uy:before{background:url('/images/rhombus_line.png') repeat top center/49px 72px;content:'';position:absolute;top:0;left:0;width:100%;height:100%;opacity:0.12;z-index:1}.nav-list.svelte-hnc4uy.svelte-hnc4uy{display:flex;flex-direction:row;justify-content:left;align-items:center;margin:0px;z-index:2;margin-bottom:var(--space-l);flex-wrap:wrap;font-family:'Blacker'}.nav-list-item.svelte-hnc4uy.svelte-hnc4uy{display:flex;padding-left:0;padding-right:var(--space-xs)}.nav-list-item.svelte-hnc4uy a.svelte-hnc4uy:hover{color:var(--primary-500)}footer.svelte-hnc4uy.svelte-hnc4uy{--c-footer--mask-height:10px;position:relative;margin-top:calc(var(--c-footer--mask-height) * -1);-webkit-mask-image:url(/images/mask_section-bg_top.png),\r\n			-webkit-gradient(linear, left top, left bottom, from(#000));-webkit-mask-image:url(/images/mask_section-bg_top.png), linear-gradient(#000);mask-image:url(/images/mask_section-bg_top.png),\r\n			-webkit-gradient(linear, left top, left bottom, from(#000));mask-image:url(/images/mask_section-bg_top.png), linear-gradient(#000);-webkit-mask-size:auto var(--c-footer--mask-height),\r\n			100% calc(100% - var(--c-footer--mask-height) + 1px);mask-size:auto var(--c-footer--mask-height),\r\n			100% calc(100% - var(--c-footer--mask-height) + 1px);-webkit-mask-position:left top, left calc(var(--c-footer--mask-height) - 1px);mask-position:left top, left calc(var(--c-footer--mask-height) - 1px);-webkit-mask-repeat:repeat-x, no-repeat;mask-repeat:repeat-x, no-repeat}",
   map: null
 };
 const Footer = create_ssr_component(($$result, $$props, $$bindings, slots) => {
   $$result.css.add(css$5);
-  return `<footer class="${"svelte-x3dwsr"}"><div class="${"footer-container small-text svelte-x3dwsr"}"><ul class="${"nav-list svelte-x3dwsr"}">${each(navItems, (navItem) => {
-    return `<li class="${"nav-list-item svelte-x3dwsr"}"><a${add_attribute("href", navItem.path, 0)}>${escape(navItem.title)}</a>
+  return `<footer class="${"svelte-hnc4uy"}"><div class="${"footer-container small-text svelte-hnc4uy"}"><ul class="${"nav-list svelte-hnc4uy"}">${each(navItems, (navItem) => {
+    return `<li class="${"nav-list-item svelte-hnc4uy"}"><a${add_attribute("href", navItem.path, 0)} class="${"svelte-hnc4uy"}">${escape(navItem.title)}</a>
 				</li>`;
   })}</ul>
-		<div class="${"footer__other svelte-x3dwsr"}"><p>2022 - Made by Khoa with <a href="${"https://kit.svelte.dev"}" class="${"svelte-x3dwsr"}">SvelteKit</a></p>
-			<a href="${"mailto:wentallout@gmail.com"}" class="${"svelte-x3dwsr"}">wentallout@gmail.com</a></div></div>
+		<div class="${"footer__other svelte-hnc4uy"}"><p>2022 - Made by Khoa with <a href="${"https://kit.svelte.dev"}" class="${"svelte-hnc4uy"}">SvelteKit</a></p>
+			<a href="${"mailto:wentallout@gmail.com"}" class="${"svelte-hnc4uy"}">wentallout@gmail.com</a></div></div>
 </footer>`;
 });
 const List = create_ssr_component(($$result, $$props, $$bindings, slots) => {
@@ -202,7 +202,7 @@ const _500 = "";
 const _600 = "";
 const _layout_svelte_svelte_type_style_lang = "";
 const css = {
-  code: ".page-container.svelte-3eeaxp{background:var(--neutral-100);display:flex;flex-direction:column;scroll-snap-type:y mandatory}.main-content.svelte-3eeaxp{background:var(--neutral-100);min-height:calc(100vh - 70px);margin:var(--space-m) 1rem}@media(min-width: 768px){.main-content.svelte-3eeaxp{padding:var(--space-m) 17vw}}",
+  code: ".page-container.svelte-1d93mcj{background:var(--neutral-100);display:flex;flex-direction:column;scroll-snap-type:y mandatory}.main-content.svelte-1d93mcj{display:flex;flex-direction:column;background:var(--neutral-100);min-height:calc(100vh - 70px);margin:var(--space-m) 1rem}@media(min-width: 768px){.main-content.svelte-1d93mcj{padding:var(--space-m) 17vw}}",
   map: null
 };
 const Layout = create_ssr_component(($$result, $$props, $$bindings, slots) => {
@@ -234,11 +234,11 @@ const Layout = create_ssr_component(($$result, $$props, $$bindings, slots) => {
 
 ${validate_component(SkipLink, "SkipLink").$$render($$result, {}, {}, {})}
 ${validate_component(PWA, "PWA").$$render($$result, {}, {}, {})}
-<div class="${"page-container svelte-3eeaxp"}">${validate_component(BackToTop, "BackToTop").$$render($$result, {}, {}, {})}
+<div class="${"page-container svelte-1d93mcj"}">${validate_component(BackToTop, "BackToTop").$$render($$result, {}, {}, {})}
 	${validate_component(LogoContainer, "LogoContainer").$$render($$result, {}, {}, {})}
 	${validate_component(Header, "Header").$$render($$result, {}, {}, {})}
 
-	<main id="${"main-content"}" class="${"main-content svelte-3eeaxp"}">${validate_component(Breadcrumb, "Breadcrumb").$$render($$result, { path: $page.url.pathname }, {}, {})}
+	<main id="${"main-content"}" class="${"main-content svelte-1d93mcj"}">${validate_component(Breadcrumb, "Breadcrumb").$$render($$result, { path: $page.url.pathname }, {}, {})}
 		${slots.default ? slots.default({}) : ``}</main>
 
 	${validate_component(Footer, "Footer").$$render($$result, {}, {}, {})}
