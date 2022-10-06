@@ -25,7 +25,7 @@
 	];
 </script>
 
-<div class="book">
+<div class="books">
 	{#each books as book}
 		<div class="book__block">
 			<CoolBook imgUrl={book.imgUrl} alt={book.name} bookUrl={book.bookUrl} />
@@ -34,11 +34,18 @@
 </div>
 
 <style>
-	.book {
+	.books {
 		width: 100%;
 		display: flex;
+		justify-content: center;
+		align-items: center;
 		flex-direction: row;
 		flex-wrap: wrap;
-		gap: var(--space-xl);
+	}
+
+	@media (min-width: 768px) {
+		.books {
+			gap: var(--space-xl);
+		}
 	}
 </style>

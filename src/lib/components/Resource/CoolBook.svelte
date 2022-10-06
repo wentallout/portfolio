@@ -42,11 +42,13 @@
 	}
 
 	.book > :first-child {
+		width: 200px;
+		height: 300px;
+
 		position: absolute;
 		top: 0;
 		left: 0;
-		width: 200px;
-		height: 300px;
+
 		transform: translateZ(25px);
 		background-color: #01060f;
 		border-radius: 0 2px 2px 0;
@@ -88,15 +90,26 @@
 	}
 
 	.book::after {
+		width: 200px;
+		height: 300px;
 		position: absolute;
 		top: 0;
 		left: 0;
 		content: ' ';
-		width: 200px;
-		height: 300px;
+
 		transform: translateZ(-25px);
 		background-color: var(--neutral-900);
 		border-radius: 0 2px 2px 0;
 		box-shadow: -10px 0 50px 10px #666;
+	}
+
+	.book {
+		scale: 0.5;
+	}
+
+	@media (min-width: 768px) {
+		.book {
+			scale: 1;
+		}
 	}
 </style>

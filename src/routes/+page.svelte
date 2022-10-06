@@ -1,18 +1,19 @@
 <script>
+	import Hero from '$lib/components/Atropos/Hero.svelte';
 	import Clients from '$lib/components/Home/Clients.svelte';
 	import Expertise from '$lib/components/Home/Expertise.svelte';
 	import ToolUsed from '$lib/components/Home/ToolUsed.svelte';
-	import Hero from '$lib/components/Atropos/Hero.svelte';
+	import AboutMe from '$lib/components/Home/AboutMe.svelte';
 
 	// ---SEO---
 	import SEO from '$lib/components/SEO/SEO.svelte';
 	import website from '$lib/config.js';
-
 	import ogSquareImageSrc from '$lib/assets/images/seo/home-open-graph-square.jpg';
 	import ogImageSrc from '$lib/assets/images/seo/home-open-graph.jpg';
 	import twitterImageSrc from '$lib/assets/images/seo/home-twitter.jpg';
 	import featuredImageSrc from '$lib/assets/images/seo/home.jpg';
-	import AboutMe from '$lib/components/Home/AboutMe.svelte';
+
+	
 
 	const { author, siteUrl } = website;
 

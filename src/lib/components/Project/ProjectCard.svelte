@@ -1,8 +1,8 @@
 <script>
 	import FigmaLogo from '~icons/ph/figma-logo';
 	import Button from '$lib/components/Button/Button.svelte';
-	export let projectName = 'PlaceholderProjectName';
-	export let projectImage;
+	export let projectName = 'insert project name here';
+	// export let projectImage;
 	export let linkToDetail = '';
 	export let linkToFigma = '';
 
@@ -45,7 +45,7 @@
 		</div>
 
 		<div class="project__btn">
-			<a sveltekit:prefetch href={linkToDetail}>
+			<a href={linkToDetail}>
 				<Button
 					label="Read"
 					border="1px solid var(--primary-500)"

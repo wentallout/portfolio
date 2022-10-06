@@ -4,6 +4,7 @@
 	let headingList = [];
 
 	onMount(() => {
+		headingEle = {};
 		headingEle = document.querySelectorAll('h2');
 
 		for (let i = 0; i < headingEle.length; i++) {

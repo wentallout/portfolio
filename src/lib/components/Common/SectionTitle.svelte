@@ -12,7 +12,7 @@
 	<div class="section-icon">
 		<slot {sectionIcon} />
 	</div>
-	<h2 class="large-text">{sectionTitle}</h2>
+	<div class="large-text">{sectionTitle}</div>
 </div>
 
 <style>
@@ -26,7 +26,6 @@
 		margin-bottom: var(--space-s);
 	}
 
-	
 	.section-icon {
 		margin-right: var(--space-m);
 	}

@@ -1,12 +1,18 @@
 import adapter from '@sveltejs/adapter-netlify';
-import preprocess from 'svelte-preprocess';
+import sveltePreprocess from 'svelte-preprocess';
+import autoprefixer from 'autoprefixer';
 
 import { mdsvex } from 'mdsvex';
 
 /** @type {import('@sveltejs/kit').Config} */
 const config = {
 	preprocess: [
-		preprocess(),
+		sveltePreprocess({
+			postcss: {
+				plugins: [autoprefixer]
+			}
+			/* Other sveltePreprocess options here, like SCSS */
+		}),
 		mdsvex({
 			extensions: ['.svx']
 		})
@@ -25,11 +31,8 @@ const config = {
 		experimental: {
 			inspector: true,
 			toggleKeyCombo: 'meta-shift',
-			// hold and release key to toggle inspector mode
 			holdMode: true,
-			// show or hide the inspector option
 			showToggleButton: 'always',
-			// inspector position
 			toggleButtonPos: 'top-right'
 		}
 	}

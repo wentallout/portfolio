@@ -9,6 +9,15 @@
 	import Lightbulb from '~icons/ph/lightbulb';
 
 	import Palette from '~icons/ph/palette';
+
+	export const load = async ({ fetch }) => {
+		const response = await fetch(`/api/blogs`);
+		const blogs = await response.json();
+
+		return {
+			blogs
+		};
+	};
 </script>
 
 <svelte:head>

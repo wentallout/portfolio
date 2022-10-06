@@ -28,13 +28,6 @@
 	-webkit-text-size-adjust: 100%; /* 6 */
 }
 
-/* Sections
-  * ========================================================================== */
-
-/**
-  * Remove the margin in all browsers (opinionated).
-  */
-
 :where(body) {
 	margin: 0;
 }
@@ -300,13 +293,6 @@
 :where(details > summary:first-of-type) {
 	display: list-item;
 }
-
-/* Accessibility
-  * ========================================================================== */
-
-/**
-  * Change the cursor on busy elements in all browsers (opinionated).
-  */
 
 :where([aria-busy='true' i]) {
 	cursor: progress;

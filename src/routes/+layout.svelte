@@ -19,6 +19,9 @@
 	// NProgress css
 	import 'nprogress/nprogress.css';
 
+	import { fade } from 'svelte/transition';
+	export let data;
+
 	NProgress.configure({
 		minimum: 0.1,
 		showSpinner: false,
@@ -44,20 +47,25 @@
 
 <svelte:head>
 	<meta name="google-site-verification" content="jDcuv7ulyNCJGJg0K24h9h6T_YqP9l5TBbv2DWOHh-w" />
-	<script src="https://js.linkz.ai/?key=6335a0730c2bfd453404a973"></script>
 </svelte:head>
 
 <SkipLink />
 <PWA />
-<div class="page-container">
+<div data-sveltekit-prefetch class="page-container">
 	<BackToTop />
 	<LogoContainer />
 	<Header />
 
-	<main id="main-content" class="main-content">
-		<Breadcrumb path={$page.url.pathname} />
-		<slot />
-	</main>
+	{#key data.currentRoute}
+		<main
+			in:fade={{ duration: 150, delay: 150 }}
+			out:fade={{ duration: 150 }}
+			id="main-content"
+			class="main-content">
+			<Breadcrumb path={$page.url.pathname} />
+			<slot />
+		</main>
+	{/key}
 
 	<Footer />
 </div>
@@ -67,7 +75,6 @@
 		background: var(--neutral-100);
 		display: flex;
 		flex-direction: column;
-		scroll-snap-type: y mandatory;
 	}
 	.main-content {
 		display: flex;

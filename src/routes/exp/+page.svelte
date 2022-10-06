@@ -13,12 +13,9 @@
 	} from '@threlte/core';
 	import { spring } from 'svelte/motion';
 
-	import { Text } from '@threlte/extras';
-
 	const scale = spring(1);
 </script>
 
-<Text text="Nguyen Dang Khoa" fontSize="30" textAlign="center" position={{ x: 0, y: 0, z: 0 }} />
 <div class="threejs">
 	<Canvas>
 		<PerspectiveCamera position={{ x: 10, y: 10, z: 10 }} fov={24}>

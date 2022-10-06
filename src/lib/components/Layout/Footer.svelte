@@ -103,7 +103,7 @@
 	}
 
 	footer {
-		--c-footer--mask-height: 10px;
+		--c-footer--mask-height: 4px;
 
 		position: relative;
 		margin-top: calc(var(--c-footer--mask-height) * -1);

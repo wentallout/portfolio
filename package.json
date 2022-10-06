@@ -20,9 +20,12 @@
 		"@sveltejs/adapter-auto": "^1.0.0-next.80",
 		"@sveltejs/adapter-netlify": "^1.0.0-next.78",
 		"@sveltejs/kit": "^1.0.0-next.505",
+		"@threlte/core": "^4.3.2",
+		"@threlte/extras": "^4.3.0",
 		"@types/nprogress": "^0.2.0",
 		"@types/object-hash": "^2.2.1",
 		"atropos": "^1.0.2",
+		"autoprefixer": "^10.4.12",
 		"eslint": "^8.24.0",
 		"eslint-config-prettier": "^8.5.0",
 		"eslint-plugin-svelte3": "^4.0.0",
@@ -36,13 +39,11 @@
 		"svelte-check": "^2.9.1",
 		"svelte-lightbox": "^1.0.2",
 		"swiper": "^8.4.2",
+		"three": "^0.145.0",
 		"unplugin-icons": "^0.14.10",
 		"vanilla-lazyload": "^17.8.3",
 		"vite": "^3.1.4",
-		"vite-imagetools": "^4.0.9",
-		"@threlte/core": "^4.3.2",
-		"@threlte/extras": "^4.3.0",
-		"three": "^0.145.0"
+		"vite-imagetools": "^4.0.9"
 	},
 	"type": "module",
 	"repository": {

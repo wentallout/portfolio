@@ -4,6 +4,7 @@
 
 <svelte:head>
 	<title>{data.title}</title>
+	<meta property="og:title" content={data.title} />
 </svelte:head>
 
 <article class="info">
