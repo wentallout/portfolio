@@ -20,7 +20,8 @@
 		display: flex;
 		justify-content: left;
 		align-items: center;
-		font-family: 'Blacker';
+		font-family: 'Recoleta Alt';
+		font-weight: 600;
 
 		/* Spacing */
 		margin-bottom: var(--space-s);

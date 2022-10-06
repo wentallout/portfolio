@@ -7,9 +7,9 @@
 	<Atropos highlight="false" shadow="false" rotateTouch="scroll-y" rotateXMax={5} rotateYMax={5}>
 		<div class="hero">
 			<div class="hero__text">
-				<h1 data-atropos-offset="-5">Hi! I'm Khoa</h1>
+				<h1 class="hi" data-atropos-offset="-5">Hi! I'm Khoa</h1>
 				<p data-atropos-offset="-3">I code and design.</p>
-				<a  data-atropos-offset="0" href="/project">
+				<a data-atropos-offset="0" href="/project">
 					<Button label="See my work" backgroundColor="var(--primary-500)" type="button" />
 				</a>
 			</div>
@@ -43,5 +43,10 @@
 		justify-content: center;
 		align-items: center;
 		color: var(--neutral-100);
+	}
+
+	.hi {
+		font-family: 'Recoleta Alt';
+		font-size: var(--font-size-large);
 	}
 </style>

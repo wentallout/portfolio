@@ -49,7 +49,8 @@
 	}
 
 	.toc__title {
-		font-family: 'Blacker';
+		font-family: 'Recoleta Alt';
+		font-weight: 600;
 		font-size: var(--font-size-base);
 		margin-bottom: var(--space-s);
 	}

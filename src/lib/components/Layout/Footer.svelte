@@ -89,7 +89,8 @@
 		margin-bottom: var(--space-l);
 		flex-wrap: wrap;
 
-		font-family: 'Blacker';
+		font-family: 'Recoleta Alt';
+		font-weight: 600;
 	}
 
 	.nav-list-item {

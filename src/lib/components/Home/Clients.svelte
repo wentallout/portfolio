@@ -33,7 +33,8 @@
 	}
 
 	.clients__title {
-		font-family: 'Blacker';
+		font-family: 'Recoleta Alt';
+		font-weight: 600;
 	}
 
 	@media (min-width: 768px) {

@@ -57,6 +57,7 @@
 	}
 
 	.expertise__title {
-		font-family: 'Blacker';
+		font-family: 'Recoleta Alt';
+		font-weight: 600;
 	}
 </style>

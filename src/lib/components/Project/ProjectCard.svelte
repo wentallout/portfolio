@@ -49,11 +49,10 @@
 				<Button
 					label="Read"
 					border="1px solid var(--primary-500)"
-					backgroundColor="var(--primary-500)"
-				/>
+					backgroundColor="var(--primary-500)" />
 			</a>
 
-			<a target="_blank" href={linkToFigma}>
+			<a rel="external" target="_blank" href={linkToFigma}>
 				<Button label="Figma" border="1px solid var(--neutral-900)">
 					<FigmaLogo />
 				</Button>
