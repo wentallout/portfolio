@@ -65,11 +65,18 @@
 	font-weight: 600;
 	background-color: var(--neutral-200);
 	padding: 4px 8px;
+	border: 1px solid transparent;
 	border-radius: var(--border-radius);
 	-webkit-border-radius: var(--border-radius);
 	-moz-border-radius: var(--border-radius);
 	-ms-border-radius: var(--border-radius);
 	-o-border-radius: var(--border-radius);
+}
+
+.markdown a:hover 
+{
+	color: var(--accent-300) !important;
+	border: 1px solid var(--neutral-900);
 }
 
 

@@ -1,6 +1,9 @@
 ---
 title: UX Portfolio DOs and DONTs
 date: '20/09/2022'
+categories:
+    - 'tips'
+    - 'portfolio'
 ---
 
 ## DO
@@ -10,8 +13,6 @@ date: '20/09/2022'
 - Show your low-fidelity: demonstrate the iteration, the thinking, not the final product. Show the cycles of assumption and validation.
 - Show you can write: simply and clearly. Don't use big words, jargon. Make sure you spellcheck everything.
 - Focus your narratives and case studies on the work you really want to be doing.
-
-
 
 ## DON'T
 

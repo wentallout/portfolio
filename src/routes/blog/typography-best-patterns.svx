@@ -1,6 +1,8 @@
 ---
 title: 'Typography best patterns'
 date: '01/10/2022'
+categories:
+ - 'typography'
 ---
 
 <script>

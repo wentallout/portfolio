@@ -10,14 +10,7 @@
 
 	import Palette from '~icons/ph/palette';
 
-	export const load = async ({ fetch }) => {
-		const response = await fetch(`/api/blogs`);
-		const blogs = await response.json();
-
-		return {
-			blogs
-		};
-	};
+	export let data;
 </script>
 
 <svelte:head>
@@ -30,17 +23,13 @@
 	</SectionTitle>
 
 	<BlogListContainer>
-		<BlogCard
-			blogTitle="How to pick the perfect type scale for your next design"
-			blogLink="/blog/typescale"
-			blogDate="2022"
-		/>
-
-		<BlogCard
-			blogTitle="Typography best patterns"
-			blogLink="/blog/typography-best-patterns"
-			blogDate="2022"
-		/>
+		{#each data.blogs as blog}
+			{#if blog.meta.categories.length}
+				{#if blog.meta.categories.includes('typography')}
+					<BlogCard blogTitle={blog.meta.title} blogLink={blog.path} blogDate={blog.meta.date} />
+				{/if}
+			{/if}
+		{/each}
 	</BlogListContainer>
 </section>
 
@@ -50,13 +39,13 @@
 	</SectionTitle>
 
 	<BlogListContainer>
-		<BlogCard
-			blogTitle="UX Portfolio DOs and DONTs"
-			blogLink="/blog/ux-portfolio"
-			blogDate="2022"
-		/>
-
-		<BlogCard blogTitle="Understand UX vs UI" blogLink="/blog/ux-vs-ui" blogDate="2022" />
+		{#each data.blogs as blog}
+			{#if blog.meta.categories.length}
+				{#if blog.meta.categories.includes('tips')}
+					<BlogCard blogTitle={blog.meta.title} blogLink={blog.path} blogDate={blog.meta.date} />
+				{/if}
+			{/if}
+		{/each}
 	</BlogListContainer>
 </section>
 

@@ -9,7 +9,18 @@
 
 <article class="info">
 	<h1 class="large-text">{data.title}</h1>
-	<span class="small-text date">Published: {data.date}</span>
+	<p class="small-text date">Published: {data.date}</p>
+
+	{#if data.categories.length}
+		<div class="category">
+			<div>Categories:</div>
+			{#each data.categories as category}
+				<a class="category__link" href="/blog/category/{category}">
+					{category}
+				</a>
+			{/each}
+		</div>
+	{/if}
 	<svelte:component this={data.content} />
 </article>
 
@@ -21,5 +32,20 @@
 	.date {
 		display: block;
 		font-weight: 300;
+	}
+
+	.category {
+		font-weight: 300;
+		color: var(--neutral-700);
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+		justify-content: flex-start;
+		align-items: center;
+		gap: var(--space-s);
+	}
+
+	.category__link {
+		display: inline-block;
 	}
 </style>

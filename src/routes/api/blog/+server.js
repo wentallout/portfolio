@@ -1,4 +1,3 @@
-// src/routes/api/Blogs/+server.js
 import { fetchMarkdownBlogs } from '$lib/utils';
 import { json } from '@sveltejs/kit';
 
