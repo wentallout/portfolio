@@ -16,6 +16,8 @@
 		align-items: center;
 		justify-content: center;
 		perspective: 600px;
+		width: fit-content;
+		height: fit-content;
 	}
 
 	@keyframes initAnimation {
@@ -104,7 +106,7 @@
 	}
 
 	.book {
-		scale: 0.5;
+		scale: 0.7;
 	}
 
 	@media (min-width: 768px) {
