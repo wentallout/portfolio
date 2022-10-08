@@ -1,3 +1,8 @@
+.markdown 
+{
+	max-width: 60ch;
+	word-wrap: break-word;
+}
 
 .markdown h1 
 {
@@ -11,16 +16,10 @@
 .markdown h2 {
 
 	color:var(--primary-800);
-
 	border: transparent;
-
-	/* Spacing */
-	margin-top: var(--space-2xl) !important;
-	margin-bottom: var(--space-s) !important;
-
 	font-size: var(--font-size-mid);
 	line-height: var(--line-height-mid);
-	font-weight: 500;
+	font-weight: 600;
 
 	
 	background-position-y: 30px;
@@ -35,13 +34,22 @@
     background-position: 25% 105%;
     background-size: 100% 10px;
 	scroll-margin-top: 80px ;
+
+	/* Spacing */
+	margin-top: var(--space-2xl) !important;
+	margin-bottom: var(--space-s) !important;
 }
 
 .markdown h3 {
+
+	font-weight: 500;
+
 	color:var(--primary-700);
 	font-size: var(--font-size-base);
 	line-height: var(--line-height-base);
 	text-decoration: underline;
+
+	/* Spacing */
 	margin-top: var(--space-xl);
 	margin-bottom: var(--space-xs);
 }
@@ -52,6 +60,10 @@
 	font-size: var(--font-size-base);
 	line-height: var(--line-height-base);
 	font-weight: 500;
+
+	/* Spacing */
+	margin-top: var(--space-l);
+	margin-bottom: var(--space-xs);
 }
 
 
@@ -61,6 +73,8 @@
 	line-height: var(--line-height-small);
 	margin:  0;
 	margin-bottom: var(--space-s);
+	/* max-width: 60ch; */
+	
 }
 
 

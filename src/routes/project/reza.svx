@@ -187,13 +187,13 @@ I wanted my team to create a simple design system before moving to phase 4. This
 
 <SwiperContainer>
     <SwiperSlide>   
-	    <img loading="lazy" decoding="async" src={ds1} alt="design system" />   
+	    <Image src={ds1} alt="design system" />   
     </SwiperSlide>
     <SwiperSlide>
-        <img loading="lazy" decoding="async" src={ds2} alt="design system" />
+        <Image src={ds2} alt="design system" />
     </SwiperSlide>
-    <SwiperSlide> 
-         <img loading="lazy" decoding="async" src={ds3} alt="design system" />       
+    <SwiperSlide>
+        <Image src={ds3} alt="design system" />       
     </SwiperSlide> 
 </SwiperContainer>
 

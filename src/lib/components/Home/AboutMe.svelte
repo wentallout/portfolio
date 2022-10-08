@@ -29,7 +29,7 @@
 		justify-content: center;
 		align-items: flex-start;
 		flex-direction: column;
-
+		max-width: 60ch;
 		gap: var(--space-m);
 	}
 
@@ -49,7 +49,6 @@
 	}
 
 	.block__text {
-		max-width: 60ch;
 		color: var(--neutral-700);
 	}
 </style>
