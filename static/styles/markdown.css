@@ -42,6 +42,7 @@
 	font-size: var(--font-size-base);
 	line-height: var(--line-height-base);
 	text-decoration: underline;
+	margin-top: var(--space-xl);
 	margin-bottom: var(--space-xs);
 }
 

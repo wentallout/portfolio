@@ -259,17 +259,17 @@ From this case study, I've learned a lot about the process of solving problems.
 Team collaboration is very important in a project because when you work alone it's easy to get tunnel visioned (limited point of view). I make sure that I receive feedback from everyone in the team in order to keep improving my designs.
 
 <SwiperContainer>
-    <SwiperSlide> 
-	    <img loading="lazy" decoding="async" src={c1} alt="design system" />
+    <SwiperSlide>
+        <Image src={c1} alt="conclusion" />
     </SwiperSlide>
     <SwiperSlide>
-        <img loading="lazy" decoding="async" src={c2} alt="design system" />
+        <Image src={c2} alt="conclusion" />
     </SwiperSlide>
     <SwiperSlide>
-         <img loading="lazy" decoding="async" src={l1} alt="design system" />
+         <Image src={l1} alt="conclusion" />
     </SwiperSlide>
-     <SwiperSlide>
-         <img loading="lazy" decoding="async" src={l2} alt="design system" />
+     <SwiperSlide>    
+         <Image src={l2} alt="conclusion" />
     </SwiperSlide>
 </SwiperContainer>
 
