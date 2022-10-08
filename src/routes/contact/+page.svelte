@@ -19,8 +19,8 @@
 		title: 'Contact',
 		metadescription: 'Get in touch with Khoa - Vietnamese UI/UX Designer',
 		slug: 'contact',
-		datePublished: '2021-07-07T14:19:33.000+0100',
-		lastUpdated: '2021-07-07T14:19:33.000+0100'
+		datePublished: '2077-07-07T14:19:33.000+0100',
+		lastUpdated: '2077-07-07T14:19:33.000+0100'
 	};
 	// ---SEO END---
 </script>

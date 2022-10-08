@@ -2,6 +2,15 @@
 title: Reza - Table reservation mobile app
 date: '14/09/2022'
 ---
+<svelte:head>
+    <style>
+        :root
+        {  
+        --primary-800 : #E4543B !important; 
+        }   
+    </style>
+</svelte:head>
+
 
 <script>
     import { SwiperSlide } from 'swiper/svelte';

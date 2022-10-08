@@ -62,6 +62,7 @@
 	}
 
 	.tool__name {
+		font-weight: 600;
 		color: var(--neutral-900);
 	}
 
@@ -87,6 +88,7 @@
 		display: -webkit-box;
 		-webkit-line-clamp: 3;
 		-webkit-box-orient: vertical;
+		font-weight: 400;
 	}
 
 	@media (min-width: 768px) {

@@ -26,7 +26,7 @@
 		<slot name="atropos"><!-- optional fallback --></slot>
 	</div>
 	<div class="project__info">
-		<div class="project__name mid-text">{projectName}</div>
+		<div class="project__name large-text">{projectName}</div>
 		<div class="project__description small-text">
 			<div class="description-section">
 				<p class="section-title">◆ What</p>
@@ -71,7 +71,7 @@
 	.section-title {
 		min-width: 30%;
 		font-weight: 500;
-		color: var(--accent-900);
+		color: var(--primary-600);
 	}
 
 	.section-info {

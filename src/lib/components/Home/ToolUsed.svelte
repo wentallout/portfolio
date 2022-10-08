@@ -74,6 +74,7 @@
 		flex-direction: column;
 		align-items: flex-start;
 		border-radius: var(--border-radius);
+		background-image: url('/images/noise2.svg');
 		background-color: var(--neutral-900);
 		padding: var(--space-m);
 	}

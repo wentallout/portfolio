@@ -12,7 +12,7 @@
 	<div class="section-icon">
 		<slot {sectionIcon} />
 	</div>
-	<div class="large-text">{sectionTitle}</div>
+	<h2 class="large-text">{sectionTitle}</h2>
 </div>
 
 <style>
@@ -32,7 +32,7 @@
 	}
 
 	.section-title h2 {
-		color: var(--neutral-900);
+		color: var(--primary-900);
 	}
 
 	.section-icon {

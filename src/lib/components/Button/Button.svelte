@@ -35,8 +35,7 @@
 	style="background-color: {backgroundColor}; border: {border}; color: {labelColor}"
 	on:click={handleButtonEffect}
 	bind:this={btnEle}
-	{type}
->
+	{type}>
 	<slot />
 	{label}
 </button>
@@ -52,8 +51,6 @@
 		padding: 12px 24px;
 
 		/* width */
-		width: -webkit-fit-content;
-		width: -moz-fit-content;
 		width: fit-content;
 
 		transition: 0.3s;

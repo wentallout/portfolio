@@ -50,7 +50,7 @@
 	--warning: #f0b042;
 
 	/* font-size */
-	--font-size-small: clamp(0.89rem, calc(0.87rem + 0.07vw), 0.94rem);
+	--font-size-small: clamp(1rem, calc(1rem + 0.07vw), 1rem);
 	--font-size-base: clamp(1.06rem, calc(1.01rem + 0.25vw), 1.25rem);
 	--font-size-mid: clamp(1.28rem, calc(1.17rem + 0.53vw), 1.67rem);
 	--font-size-large: clamp(1.53rem, calc(1.34rem + 0.94vw), 2.22rem);
@@ -106,25 +106,21 @@
 .small-text {
 	font-size: var(--font-size-small);
 	line-height: var(--line-height-small);
-	color: var(--neutral-900);
 }
 
 .base-text {
 	font-size: var(--font-size-base);
 	line-height: var(--line-height-base);
-	color: var(--neutral-900);
 }
 
 .mid-text {
 	font-size: var(--font-size-mid);
 	line-height: var(--line-height-mid);
-	color: var(--neutral-900);
 }
 
 .large-text {
 	font-size: var(--font-size-large);
 	line-height: var(--line-height-large);
-	color: var(--neutral-900);
 }
 
 html {

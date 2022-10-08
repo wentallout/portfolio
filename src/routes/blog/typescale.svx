@@ -2,7 +2,7 @@
 title: 'How to pick the perfect Type Scale for your next design'
 date: '20/09/2022'
 categories:
- - 'typography'
+    - 'typography'
 ---
 
 <script>

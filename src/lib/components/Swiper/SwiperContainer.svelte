@@ -7,11 +7,12 @@
 
 <Swiper
 	a11y={{ prevSlideMessage: 'Previous slide', nextSlideMessage: 'Next slide' }}
+	grabCursor={true}
 	breakpoints={{
 		768: {
 			slidesPerView: 2,
-			slidesPerGroup: 2,
-		},
+			slidesPerGroup: 2
+		}
 	}}
 	spaceBetween={16}
 	slidesPerView={1}

@@ -5,7 +5,7 @@
 			<h3 class="block__title base-text">Education & Background</h3>
 			<p class="block__text small-text">
 				I've studied and worked as a full-stack developer for years but never found the satisfaction
-				I needed until I discovered the art UI/UX Design in 2022. My current focus is UX design -
+				I needed until I discovered the art of UI/UX Design in 2022. My current focus is UX design -
 				providing the best user experience through research, problem-solving, flows, and wireframes.
 			</p>
 		</div>

@@ -2,7 +2,7 @@
 title: Understanding UX vs UI
 date: '30/09/2022'
 categories:
-    - 'tips'
+    - 'fundamental'
 ---
 
 <script>

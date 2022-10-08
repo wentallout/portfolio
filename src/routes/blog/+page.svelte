@@ -4,6 +4,9 @@
 	import BlogCard from '$lib/components/Blog/BlogCard.svelte';
 
 	import TextAa from '~icons/ph/text-aa';
+
+	import GraduationCap from '~icons/ph/graduation-cap';
+
 	import Brain from '~icons/ph/brain';
 
 	import Lightbulb from '~icons/ph/lightbulb';
@@ -16,6 +19,22 @@
 <svelte:head>
 	<title>Project</title>
 </svelte:head>
+
+<section>
+	<SectionTitle sectionTitle="Fundamental" let:sectionIcon>
+		<GraduationCap {...sectionIcon} />
+	</SectionTitle>
+
+	<BlogListContainer>
+		{#each data.blogs as blog}
+			{#if blog.meta.categories.length}
+				{#if blog.meta.categories.includes('fundamental')}
+					<BlogCard blogTitle={blog.meta.title} blogLink={blog.path} blogDate={blog.meta.date} />
+				{/if}
+			{/if}
+		{/each}
+	</BlogListContainer>
+</section>
 
 <section>
 	<SectionTitle sectionTitle="Typography" let:sectionIcon>

@@ -48,10 +48,10 @@
 
 	.breadcrumb__clickable {
 		display: inline-flex;
-		color: var(--primary-600);
+		color: var(--accent-600);
 	}
 
 	.breadcrumb__clickable:hover {
-		color: var(--primary-700);
+		color: var(--accent-700);
 	}
 </style>

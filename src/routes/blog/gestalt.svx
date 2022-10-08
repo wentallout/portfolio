@@ -1,0 +1,25 @@
+
+---
+title: 'Gestalt Principles of Design'
+date: '08/10/2022'
+categories:
+    - 'fundamental'
+---
+
+<script>
+    import Image from '$lib/components/Common/Image.svelte';
+</script>
+
+## 1. Law of Proximity
+
+Objects that are placed near each other will be visually group together
+
+## 2. Common Region
+
+Objects that share an area with a boundary will be visually grouped together.
+
+## 3. Law of Similarity
+
+Objects that are visually similar in size, shape and/or color will be visually grouped together, even if those objects are not near each other.
+
+## 4. 

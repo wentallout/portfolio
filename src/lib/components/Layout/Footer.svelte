@@ -28,9 +28,6 @@
 		justify-content: center;
 		align-items: flex-start;
 
-		/* Font weight */
-		/* font-weight: 300; */
-
 		padding: var(--space-m) var(--space-xs);
 
 		/* Position */
@@ -40,7 +37,7 @@
 		max-width: 100vw;
 
 		/* Color */
-
+		background-color: var(--accent-900);
 		background-image: url(/images/noise.svg);
 		background-repeat: repeat;
 	}
@@ -104,25 +101,6 @@
 	}
 
 	footer {
-		--c-footer--mask-height: 4px;
-
 		position: relative;
-		margin-top: calc(var(--c-footer--mask-height) * -1);
-		-webkit-mask-image: url(/images/mask_section-bg_top.png),
-			-webkit-gradient(linear, left top, left bottom, from(#000));
-		-webkit-mask-image: url(/images/mask_section-bg_top.png), linear-gradient(#000);
-		mask-image: url(/images/mask_section-bg_top.png),
-			-webkit-gradient(linear, left top, left bottom, from(#000));
-		mask-image: url(/images/mask_section-bg_top.png), linear-gradient(#000);
-		-webkit-mask-size: auto var(--c-footer--mask-height),
-			100% calc(100% - var(--c-footer--mask-height) + 1px);
-		mask-size: auto var(--c-footer--mask-height),
-			100% calc(100% - var(--c-footer--mask-height) + 1px);
-
-		-webkit-mask-position: left top, left calc(var(--c-footer--mask-height) - 1px);
-		mask-position: left top, left calc(var(--c-footer--mask-height) - 1px);
-
-		-webkit-mask-repeat: repeat-x, no-repeat;
-		mask-repeat: repeat-x, no-repeat;
 	}
 </style>

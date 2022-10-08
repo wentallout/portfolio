@@ -2,26 +2,35 @@
 .markdown h1 
 {
 	font-family: 'Recoleta Alt';
+	color: var(--neutral-900);
 	font-weight: 600;
+	background-image: url('/images/noise2.svg');
 }
 
 
 .markdown h2 {
+
+	color:var(--primary-800);
+
 	border: transparent;
 
 	/* Spacing */
-	margin-top: var(--space-l) !important;
+	margin-top: var(--space-2xl) !important;
 	margin-bottom: var(--space-s) !important;
 
 	font-size: var(--font-size-mid);
 	line-height: var(--line-height-mid);
 	font-weight: 500;
 
-	color:var(--accent-900);
+	
 	background-position-y: 30px;
     padding-bottom: 6px;
 	border-bottom: none;
-    background-image: url(/images/headerBottom.svg);
+    /* background-image: url(/images/headerBottom.svg); */
+
+	background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='116' height='7'%3E%3Cpath fill-rule='evenodd' fill='%23262422' d='M0 0v7h41l5.75-5.969L116 1V.031L0 0Z'/%3E%3C/svg%3E ");
+
+
     background-repeat: no-repeat;
     background-position: 25% 105%;
     background-size: 100% 10px;
@@ -29,28 +38,29 @@
 }
 
 .markdown h3 {
+	color:var(--primary-700);
 	font-size: var(--font-size-base);
 	line-height: var(--line-height-base);
-	color: var(--accent-900);
 	text-decoration: underline;
 	margin-bottom: var(--space-xs);
 }
 
 .markdown h4 
 {
-	font-size: var(--font-size-small);
-	line-height: var(--line-height-small);
-	color: var(--accent-700);
+	color:var(--primary-600);
+	font-size: var(--font-size-base);
+	line-height: var(--line-height-base);
+	font-weight: 500;
 }
 
 
 .markdown p {
+	color: var(--primary-900);
 	font-size: var(--font-size-small);
 	line-height: var(--line-height-small);
 	margin:  0;
 	margin-bottom: var(--space-s);
 }
-
 
 
 .markdown li 
@@ -61,22 +71,18 @@
 
 .markdown a 
 {
-	color: var(--accent-500) !important;
+	color: var(--accent-600) !important;
 	font-weight: 600;
-	background-color: var(--neutral-200);
+	background-color: var(--accent-100);
 	padding: 4px 8px;
 	border: 1px solid transparent;
 	border-radius: var(--border-radius);
-	-webkit-border-radius: var(--border-radius);
-	-moz-border-radius: var(--border-radius);
-	-ms-border-radius: var(--border-radius);
-	-o-border-radius: var(--border-radius);
 }
 
 .markdown a:hover 
 {
-	color: var(--accent-300) !important;
-	border: 1px solid var(--neutral-900);
+	color: var(--accent-700) !important;
+	border: 1px solid var(--accent-500);
 }
 
 
@@ -85,10 +91,6 @@
 	width: 100%;
 	border: 1px solid var(--neutral-500);
 	border-radius: var(--border-radius);
-	-webkit-border-radius: var(--border-radius);
-	-moz-border-radius: var(--border-radius);
-	-ms-border-radius: var(--border-radius);
-	-o-border-radius: var(--border-radius);
 	margin-bottom: var(--space-m);
 }
 

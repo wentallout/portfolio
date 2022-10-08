@@ -13,8 +13,6 @@
 	import twitterImageSrc from '$lib/assets/images/seo/home-twitter.jpg';
 	import featuredImageSrc from '$lib/assets/images/seo/home.jpg';
 
-	
-
 	const { author, siteUrl } = website;
 
 	let title = 'Home';
@@ -56,8 +54,8 @@
 		title,
 		slug: '',
 		entityMeta,
-		datePublished: '2021-07-07T14:19:33.000+0100',
-		lastUpdated: '2021-07-07T14:19:33.000+0100',
+		datePublished: '2077-07-07T14:19:33.000+0100',
+		lastUpdated: '2077-07-07T14:19:33.000+0100',
 		breadcrumbs,
 		metadescription,
 		featuredImage,

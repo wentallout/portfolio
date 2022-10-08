@@ -9,8 +9,8 @@
 </svelte:head>
 
 <article class="info">
-	<h1 class="large-text">{data.title}</h1>
-	<span class="small-text date">Published: {data.date}</span>
+	<h1 class="large-text project-name">{data.title}</h1>
+	<span class="small-text project-date">Published: {data.date} by Nguyen Dang Khoa</span>
 	<Toc />
 	<svelte:component this={data.content} />
 </article>
@@ -20,8 +20,9 @@
 		display: block;
 	}
 
-	.date {
+	.project-date {
 		display: block;
 		font-weight: 300;
+		color: var(--neutral-700);
 	}
 </style>

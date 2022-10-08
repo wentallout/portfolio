@@ -32,7 +32,7 @@
 	}
 
 	.blog__date {
-		font-weight: 400;
-		color: var(--neutral-700);
+		font-weight: 300;
+		color: var(--neutral-800);
 	}
 </style>

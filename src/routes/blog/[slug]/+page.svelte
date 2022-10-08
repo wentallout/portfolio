@@ -9,7 +9,7 @@
 
 <article class="info">
 	<h1 class="large-text">{data.title}</h1>
-	<p class="small-text date">Published: {data.date}</p>
+	<p class="small-text date">Published: {data.date} by Nguyen Dang Khoa</p>
 
 	{#if data.categories.length}
 		<div class="category">
@@ -32,6 +32,7 @@
 	.date {
 		display: block;
 		font-weight: 300;
+		color: var(--neutral-700);
 	}
 
 	.category {

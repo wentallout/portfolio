@@ -23,8 +23,7 @@
 			{#each navItems as navItem}
 				<li
 					class:reduced-list={scrollY > 50}
-					class={`navbar-list${hideMobileMenu ? ' hidden-mobile' : ''}`}
-				>
+					class={`navbar-list${hideMobileMenu ? ' hidden-mobile' : ''}`}>
 					{#if $page.url.pathname === `${navItem.path}`}
 						<a class="nav__list-item active-page" href={navItem.path}>
 							{navItem.title}
@@ -94,6 +93,7 @@
 	@media (hover: hover) {
 		.nav__list-item:hover {
 			color: var(--neutral-900);
+			background-image: url('/images/noise.svg');
 			background-color: var(--primary-500);
 			transition: 0.3s;
 		}

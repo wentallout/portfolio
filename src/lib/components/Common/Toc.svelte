@@ -5,7 +5,7 @@
 
 	onMount(() => {
 		headingEle = {};
-		headingEle = document.querySelectorAll('h2');
+		headingEle = document.querySelectorAll('.markdown h2');
 
 		for (let i = 0; i < headingEle.length; i++) {
 			headingEle[i].setAttribute('id', `${headingEle[i].innerHTML}`);

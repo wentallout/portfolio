@@ -16,24 +16,22 @@
 			method="post"
 			netlify-honeypot="bot-field"
 			data-netlify="true"
-			class="contact"
-		>
+			class="contact">
 			<input type="hidden" name="form-name" value="contact" />
 
-			<label for="name" class="label base-text">Name</label>
+			<label for="name" class="label small-text">Name</label>
 			<input class="small-text" type="text" name="name" id="name" required />
 
-			<label for="email" class="label base-text">Email</label>
+			<label for="email" class="label small-text">Email</label>
 			<input
 				placeholder="username@email.com"
 				class="small-text"
 				type="email"
 				name="email"
 				id="email"
-				required
-			/>
+				required />
 
-			<label for="message" class="label base-text">Message</label>
+			<label for="message" class="label small-text">Message</label>
 			<textarea class="small-text" required name="message" id="message" placeholder="" />
 
 			<div class="btn-container">
@@ -46,8 +44,7 @@
 					label="Reset"
 					backgroundColor="transparent"
 					labelColor="var(--error)"
-					type="reset"
-				/>
+					type="reset" />
 			</div>
 		</form>
 	</div>
@@ -71,6 +68,10 @@
 		max-width: 80rem;
 		display: flex;
 		flex-direction: column;
+	}
+
+	.label {
+		font-weight: 500;
 	}
 
 	.btn-container {

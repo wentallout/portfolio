@@ -33,15 +33,16 @@
 	}
 	.category__link {
 		padding: var(--space-xs);
-		border: var(--border);
 		border-radius: var(--border-radius);
 		width: fit-content;
 		background-color: var(--neutral-200);
+
+		border: 1px solid transparent;
 		color: var(--accent-500);
 	}
 
 	.category__link:hover {
-		border: var(--border-hover);
+		border: 1px solid var(--accent-500);
 		color: var(--accent-300);
 	}
 </style>
