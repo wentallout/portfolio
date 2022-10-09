@@ -86,10 +86,6 @@
 		display: flex;
 		flex-direction: column;
 
-		/* COLOR */
-		background-color: var(--neutral-200);
-		backdrop-filter: blur(5px);
-
 		color: var(--neutral-900);
 
 		/* SPACING */
@@ -120,12 +116,12 @@
 		height: 100%;
 	}
 
-	.thumbnail {
+	/* .thumbnail {
 		display: none;
 		width: 100%;
 		height: 100%;
 		border-radius: var(--border-radius);
-	}
+	} */
 
 	.project__info {
 		display: flex;

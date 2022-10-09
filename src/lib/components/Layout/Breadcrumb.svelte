@@ -38,7 +38,7 @@
 	.breadcrumb {
 		margin-bottom: var(--space-l);
 		font-weight: 300;
-		color: var(--neutral-800);
+		color: var(--accent-900);
 	}
 
 	.breadcrumb__unclickable {

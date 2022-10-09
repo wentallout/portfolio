@@ -19,8 +19,7 @@
 		width: 100%;
 		border-radius: var(--border-radius);
 		border: var(--border);
-		padding: 0.5rem 1rem;
-		background-color: var(--neutral-200);
+		padding: 1rem 2rem;
 	}
 
 	.blog:hover {

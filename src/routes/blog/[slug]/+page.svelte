@@ -8,7 +8,7 @@
 </svelte:head>
 
 <article class="info">
-	<h1 class="large-text">{data.title}</h1>
+	<h1 class="xl-text">{data.title}</h1>
 	<p class="small-text date">Published: {data.date} by Nguyen Dang Khoa</p>
 
 	{#if data.categories.length}

@@ -6,8 +6,18 @@ date: '14/09/2022'
     <style>
         :root
         {  
-        --primary-800 : #E4543B !important; 
-        }   
+        --brand-color : #E4543B !important; 
+        }
+               
+        h2 
+        {
+        color: var(--brand-color) !important;
+        }
+
+        h2:before
+        {
+            background-color: var(--brand-color);
+        }
     </style>
 </svelte:head>
 

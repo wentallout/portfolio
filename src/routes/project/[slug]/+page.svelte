@@ -6,11 +6,12 @@
 
 <svelte:head>
 	<title>{data.title}</title>
+	<meta property="og:title" content={data.title} />
 </svelte:head>
 
 <article class="info">
-	<h1 class="large-text project-name">{data.title}</h1>
-	<span class="small-text project-date">Published: {data.date} by Nguyen Dang Khoa</span>
+	<h1 class="xl-text project-name">{data.title}</h1>
+	<p class="small-text project-date">Published: {data.date} by Nguyen Dang Khoa</p>
 	<Toc />
 	<svelte:component this={data.content} />
 </article>
