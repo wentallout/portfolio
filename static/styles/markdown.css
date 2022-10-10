@@ -1,6 +1,5 @@
 .markdown 
 {
-	max-width: 60ch;
 	word-wrap: break-word;
 }
 
@@ -10,6 +9,7 @@
 	color: var(--neutral-900);
 	font-weight: 600;
 	background-image: url('/images/noise2.svg');
+	line-height: normal;
 }
 
 
@@ -18,8 +18,8 @@
 	position: relative;
 	padding-bottom: 0.7rem;
 	color:var(--primary-900);
-	font-size: var(--font-size-mid);
-	line-height: var(--line-height-mid);
+	font-size: var(--font-size-large);
+	line-height: var(--line-height-large);
 	font-weight: 600;
 	scroll-margin-top: 80px ;
 	/* Spacing */
@@ -54,8 +54,8 @@
 	position: relative;
 	font-weight: 600;
 	color:var(--brand-color);
-	font-size: var(--font-size-base);
-	line-height: var(--line-height-base);
+	font-size: var(--font-size-mid);
+	line-height: var(--line-height-mid);
 
 	/* Spacing */
 	margin-top: var(--space-xl);
@@ -82,22 +82,17 @@
 
 
 
-.markdown p {
+.markdown p, .markdown li {
 	color: var(--primary-900);
 	font-size: var(--font-size-small);
 	line-height: var(--line-height-small);
 	margin:  0;
 	margin-bottom: var(--space-s);
-	/* max-width: 60ch; */
+	max-width: 60ch; 
 	
 }
 
 
-.markdown li 
-{
-	font-size: var(--font-size-small);
-    line-height: var(--line-height-small);
-}
 
 .markdown a 
 {

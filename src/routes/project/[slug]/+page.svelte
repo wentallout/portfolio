@@ -10,7 +10,7 @@
 </svelte:head>
 
 <article class="info">
-	<h1 class="xl-text project-name">{data.title}</h1>
+	<h1 class="xl-text">{data.title}</h1>
 	<p class="small-text project-date">Published: {data.date} by Nguyen Dang Khoa</p>
 	<Toc />
 	<svelte:component this={data.content} />

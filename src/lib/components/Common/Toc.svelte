@@ -70,4 +70,8 @@
 		border: 0.5px solid var(--neutral-400);
 		margin-bottom: var(--space-l);
 	}
+
+	.toc li {
+		margin: 0;
+	}
 </style>
