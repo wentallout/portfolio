@@ -1,13 +1,14 @@
 @font-face {
 	font-family: 'Recoleta Alt';
 	src: url('/fonts/RecoletaAlt-SemiBold.eot');
-	src: local('Recoleta Alt SemiBold'), local('RecoletaAlt-SemiBold'),
+	src: local('Recoleta Alt SemiBold'),
 		url('/fonts/RecoletaAlt-SemiBold.eot?#iefix') format('embedded-opentype'),
 		url('/fonts/RecoletaAlt-SemiBold.woff2') format('woff2'),
 		url('/fonts/RecoletaAlt-SemiBold.woff') format('woff'),
 		url('/fonts/RecoletaAlt-SemiBold.ttf') format('truetype');
 	font-weight: 600;
 	font-style: normal;
+	font-display: swap;
 }
 
 :root {
