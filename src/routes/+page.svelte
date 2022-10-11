@@ -70,12 +70,9 @@
 </svelte:head>
 
 <SEO {...seoProps} />
+
 <Hero />
-
 <Clients />
-
 <Expertise />
-
 <ToolUsed />
-
 <AboutMe />

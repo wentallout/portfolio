@@ -15,21 +15,25 @@ This is Khoa's personal portfolio.
 - [x] Home
 - [ ] Project: need more projects
 - [x] Blog
-- [ ] Resource: could add more sections
-- [x] Contact: forms are working
+- [x] Resource
+- [x] Contact
 
 ### Feature
 
-- [x] Mobile Compatible
-- [x] SEO: kinda
-- [x] Routing
-- [x] Page Transition Effect
-- [x] Table of Content for blogs
-- [x] Categories for blogs
+- [ ] Content (never done)
+- [ ] 3D Elements
+- [ ] Blog: Comment
+- [ ] Blog: Search
+- [x] Blog: Categories
+- [x] Blog: ToC
 - [ ] Dark Mode
-- [ ] 3D
-- [ ] Search
-- [ ] Comment
+- [ ] SEO (almost done)
+- [x] Automatic Image Compression (webp)
+- [x] Contact: Working Form
+- [x] Mobile Compatible
+- [x] Page Transition Effect
+- [x] Routing
+- [x] Self-hosted Fonts (better than Google Fonts)
 
 ## Developing
 

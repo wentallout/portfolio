@@ -248,7 +248,7 @@ address {
 
 section {
 	/* Spacing */
-	margin-bottom: var(--space-xl);
+	margin-bottom: var(--space-2xl);
 }
 
 svg {

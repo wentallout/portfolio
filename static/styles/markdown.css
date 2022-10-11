@@ -73,6 +73,7 @@
 	/* Spacing */
 	margin-top: var(--space-l);
 	margin-bottom: var(--space-xs);
+	width: fit-content;
 }
 
 .markdown h4:before 

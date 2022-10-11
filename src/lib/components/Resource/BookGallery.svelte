@@ -1,8 +1,8 @@
 <script>
-	import UIDesignPrinciples from '$lib/assets/images/book/UIDesignPrinciples.png?w=200&h=300&webp';
-	import DesignManual from '$lib/assets/images/book/DesignManual.png?w=200&h=300&webp';
-	import NoBSGuideUX from '$lib/assets/images/book/NoBSGuideUX.png?w=200&h=300&webp';
-	import Sprint from '$lib/assets/images/book/Sprint.png?w=300&webp';
+	import UIDesignPrinciples from '$lib/assets/images/book/UIDesignPrinciples.png?w=200&h=300';
+	import DesignManual from '$lib/assets/images/book/DesignManual.png?w=200&h=300';
+	import NoBSGuideUX from '$lib/assets/images/book/NoBSGuideUX.png?w=200&h=300';
+	import Sprint from '$lib/assets/images/book/Sprint.png?w=200&h=300';
 	import CoolBook from '$lib/components/Resource/CoolBook.svelte';
 
 	let books = [

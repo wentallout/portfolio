@@ -1,6 +1,6 @@
 <script>
-	import fpt from '$lib/assets/images/home/fpt.png?w=300&h=300&webp';
-	import nashtech from '$lib/assets/images/home/nashtech.png?w=300&h=300&webp';
+	import fpt from '$lib/assets/images/home/fpt.png?w=300&h=300';
+	import nashtech from '$lib/assets/images/home/nashtech.png?w=300&h=300';
 </script>
 
 <section class="clients">

@@ -1,6 +1,6 @@
 <script>
 	import Atropos from 'atropos/svelte';
-	import rezaPhoneFrame from '$lib/assets/images/project/reza/rezaPhoneFrame.png?webp';
+	import rezaPhoneFrame from '$lib/assets/images/project/reza/rezaPhoneFrame.png';
 	import rezaSplat from '$lib/assets/images/project/reza/rezaSplat.svg';
 </script>
 

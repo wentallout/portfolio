@@ -4,7 +4,17 @@ import { imagetools } from 'vite-imagetools';
 
 /** @type {import('vite').UserConfig} */
 const config = {
-	plugins: [sveltekit(), Icons({ compiler: 'svelte' }), imagetools({ force: true })],
+	plugins: [
+		sveltekit(),
+		Icons({ compiler: 'svelte' }),
+		imagetools({
+			defaultDirectives: () => {
+				return new URLSearchParams({
+					format: 'webp'
+				});
+			}
+		})
+	],
 	server: {
 		port: '3000'
 	},

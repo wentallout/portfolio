@@ -7,7 +7,6 @@ categories:
 
 <script>
     import Image from '$lib/components/Common/Image.svelte';
-
     import headingFontSizes from '$lib/assets/images/blog/headingFontSizes.png';
 </script>
 
