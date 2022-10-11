@@ -39,10 +39,10 @@
 		}
 	}
 
-	import '@fontsource/lexend/300.css';
-	import '@fontsource/lexend/400.css';
-	import '@fontsource/lexend/500.css';
-	import '@fontsource/lexend/600.css';
+	import '@fontsource/lexend/latin-300.css';
+	import '@fontsource/lexend/latin-400.css';
+	import '@fontsource/lexend/latin-500.css';
+	import '@fontsource/lexend/latin-600.css';
 </script>
 
 <svelte:head>
