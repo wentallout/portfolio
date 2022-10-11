@@ -1,4 +1,4 @@
-import { c as create_ssr_component, k as compute_rest_props, l as createEventDispatcher, s as setContext, o as onDestroy, d as spread, p as escape_attribute_value, e as escape_object, b as add_attribute, t as tick, j as getContext, v as validate_component } from "./index.js";
+import { c as create_ssr_component, l as compute_rest_props, o as createEventDispatcher, s as setContext, p as onDestroy, d as spread, q as escape_attribute_value, e as escape_object, f as add_attribute, u as tick, k as getContext, v as validate_component } from "./index.js";
 import { getWindow, getDocument } from "ssr-window";
 import { $, addClass, removeClass, hasClass, toggleClass, attr, removeAttr, transform, transition as transition$1, on, off, trigger, transitionEnd as transitionEnd$1, outerWidth, outerHeight, styles, offset, css, each, html, text, is, index, eq, append, prepend, next, nextAll, prev, prevAll, parent, parents, closest, find, children, filter, remove } from "dom7";
 import { I as Image } from "./Image.js";
@@ -4857,6 +4857,7 @@ const SwiperContainer = create_ssr_component(($$result, $$props, $$bindings, slo
         prevSlideMessage: "Previous slide",
         nextSlideMessage: "Next slide"
       },
+      grabCursor: true,
       breakpoints: {
         768: { slidesPerView: 2, slidesPerGroup: 2 }
       },
@@ -4911,7 +4912,23 @@ const metadata = {
   "date": "14/09/2022"
 };
 const Reza = create_ssr_component(($$result, $$props, $$bindings, slots) => {
-  return `${validate_component(Image, "Image").$$render($$result, { src: thumbnail, alt: "reza thumbnail" }, {}, {})}
+  return `${$$result.head += `<style data-svelte="svelte-dt5vxv">:root
+        {  
+        --brand-color : #E4543B !important; 
+        }
+               
+        h2 
+        {
+        color: var(--brand-color) !important;
+        }
+
+        h2:before
+        {
+            background-color: var(--brand-color);
+        }</style>`, ""}
+
+
+${validate_component(Image, "Image").$$render($$result, { src: thumbnail, alt: "reza thumbnail" }, {}, {})}
 <h2>Overview</h2>
 <p>Imagine you need to organize a party for your group of friends. You are not a cuisine expert and you don\u2019t know all the cool places in the city. So you opened Google and search for the nearest restaurants. But, you realized you don\u2019t know much about its foods, price or how to contact them to get a table.</p>
 <p>You need a mobile app that can:</p>
@@ -5004,24 +5021,24 @@ ${validate_component(SwiperContainer, "SwiperContainer").$$render($$result, {}, 
     default: () => {
       return `${validate_component(Swiper_slide, "SwiperSlide").$$render($$result, {}, {}, {
         default: () => {
-          return `<img loading="${"lazy"}" decoding="${"async"}"${add_attribute("src", ds1, 0)} alt="${"design system"}">`;
+          return `${validate_component(Image, "Image").$$render($$result, { src: ds1, alt: "design system" }, {}, {})}`;
         }
       })}
     ${validate_component(Swiper_slide, "SwiperSlide").$$render($$result, {}, {}, {
         default: () => {
-          return `<img loading="${"lazy"}" decoding="${"async"}"${add_attribute("src", ds2, 0)} alt="${"design system"}">`;
+          return `${validate_component(Image, "Image").$$render($$result, { src: ds2, alt: "design system" }, {}, {})}`;
         }
       })}
     ${validate_component(Swiper_slide, "SwiperSlide").$$render($$result, {}, {}, {
         default: () => {
-          return `<img loading="${"lazy"}" decoding="${"async"}"${add_attribute("src", ds3, 0)} alt="${"design system"}">`;
+          return `${validate_component(Image, "Image").$$render($$result, { src: ds3, alt: "design system" }, {}, {})}`;
         }
       })}`;
     }
   })}
 <h3>Phase 4 - Prototype</h3>
 <p>Phase 4 is all about creating an interactive design that will be tested by potential users in phase 5.</p>
-<p><a href="${"https://www.figma.com/proto/owUrwidb8hZbdmruKhMtyS/REZA%3A-Restaurant-Reservation-App?page-id=2%3A9&node-id=275%3A5365&viewport=549%2C-598%2C0.24&scaling=scale-down&starting-point-node-id=275%3A5365"}" rel="${"nofollow"}">Link to the prototype</a></p>
+<p><a href="${"https://www.figma.com/proto/owUrwidb8hZbdmruKhMtyS/REZA%3A-Restaurant-Reservation-App?page-id=2%3A9&node-id=275%3A5365&viewport=549%2C-598%2C0.24&scaling=scale-down&starting-point-node-id=275%3A5365"}" rel="${"nofollow"}">Link to prototype</a></p>
 <h4>Home</h4>
 <p>This is the screen user sees when they first open the app. I try not to overwhelm users with too much information.</p>
 ${validate_component(Image, "Image").$$render($$result, { src: homeScreen, alt: "home screen UI" }, {}, {})}
@@ -5085,22 +5102,22 @@ ${validate_component(SwiperContainer, "SwiperContainer").$$render($$result, {}, 
     default: () => {
       return `${validate_component(Swiper_slide, "SwiperSlide").$$render($$result, {}, {}, {
         default: () => {
-          return `<img loading="${"lazy"}" decoding="${"async"}"${add_attribute("src", c1, 0)} alt="${"design system"}">`;
+          return `${validate_component(Image, "Image").$$render($$result, { src: c1, alt: "conclusion" }, {}, {})}`;
         }
       })}
     ${validate_component(Swiper_slide, "SwiperSlide").$$render($$result, {}, {}, {
         default: () => {
-          return `<img loading="${"lazy"}" decoding="${"async"}"${add_attribute("src", c2, 0)} alt="${"design system"}">`;
+          return `${validate_component(Image, "Image").$$render($$result, { src: c2, alt: "conclusion" }, {}, {})}`;
         }
       })}
     ${validate_component(Swiper_slide, "SwiperSlide").$$render($$result, {}, {}, {
         default: () => {
-          return `<img loading="${"lazy"}" decoding="${"async"}"${add_attribute("src", l1, 0)} alt="${"design system"}">`;
+          return `${validate_component(Image, "Image").$$render($$result, { src: l1, alt: "conclusion" }, {}, {})}`;
         }
       })}
      ${validate_component(Swiper_slide, "SwiperSlide").$$render($$result, {}, {}, {
         default: () => {
-          return `<img loading="${"lazy"}" decoding="${"async"}"${add_attribute("src", l2, 0)} alt="${"design system"}">`;
+          return `${validate_component(Image, "Image").$$render($$result, { src: l2, alt: "conclusion" }, {}, {})}`;
         }
       })}`;
     }

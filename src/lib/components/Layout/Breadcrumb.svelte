@@ -53,5 +53,6 @@
 
 	.breadcrumb__clickable:hover {
 		color: var(--accent-700);
+		text-decoration: underline;
 	}
 </style>

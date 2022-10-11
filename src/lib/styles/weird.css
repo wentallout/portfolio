@@ -5,8 +5,9 @@
 		filter: brightness(0.85) contrast(1.2);
 	}
 } */
-.main-content.dark-mode {
-	background-color: var(--neutral-900);
+.page-container.dark {
+	--background: #121212;
+	--text: var(--neutral-100);
 }
 
 /* -------------------------------- Scrollbar ------------------------------- */

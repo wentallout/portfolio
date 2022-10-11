@@ -1,7 +1,8 @@
 import { c as create_ssr_component } from "./index.js";
 const metadata = {
   "title": "UX Portfolio DOs and DONTs",
-  "date": "20/09/2022"
+  "date": "20/09/2022",
+  "categories": ["tips", "portfolio"]
 };
 const Ux_portfolio = create_ssr_component(($$result, $$props, $$bindings, slots) => {
   return `<h2>DO</h2>

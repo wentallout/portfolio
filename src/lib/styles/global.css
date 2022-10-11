@@ -11,6 +11,8 @@
 }
 
 :root {
+	--text: var(--neutral-900);
+	--background: #fafafa;
 	/* Primary: Mimolette Orange */
 	--primary-100: #fffcf2;
 	--primary-200: #ffebbb;

@@ -8,6 +8,29 @@
 
 This is Khoa's personal portfolio.
 
+## Progress
+
+### Page
+
+- [x] Home
+- [ ] Project: need more projects
+- [x] Blog
+- [ ] Resource: could add more sections
+- [x] Contact: forms are working
+
+### Feature
+
+- [x] Mobile Compatible
+- [x] SEO: kinda
+- [x] Routing
+- [x] Page Transition Effect
+- [x] Table of Content for blogs
+- [x] Categories for blogs
+- [ ] Dark Mode
+- [ ] 3D
+- [ ] Search
+- [ ] Comment
+
 ## Developing
 
 Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:

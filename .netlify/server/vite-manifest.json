@@ -5,7 +5,8 @@
     "isEntry": true,
     "imports": [
       "_index.js",
-      "_index2.js"
+      "_index2.js",
+      "_index3.js"
     ],
     "dynamicImports": [
       ".svelte-kit/build/hooks.js"
@@ -19,6 +20,22 @@
       "_config.js"
     ]
   },
+  "src/routes/api/blog/+server.js": {
+    "file": "entries/endpoints/api/blog/_server.js",
+    "src": "src/routes/api/blog/+server.js",
+    "isEntry": true,
+    "imports": [
+      "_index2.js"
+    ],
+    "dynamicImports": [
+      "src/routes/blog/best-ux-books.svx",
+      "src/routes/blog/gestalt.svx",
+      "src/routes/blog/typescale.svx",
+      "src/routes/blog/typography-best-patterns.svx",
+      "src/routes/blog/ux-portfolio.svx",
+      "src/routes/blog/ux-vs-ui.svx"
+    ]
+  },
   "src/routes/+layout.svelte": {
     "file": "entries/pages/_layout.svelte.js",
     "src": "src/routes/+layout.svelte",
@@ -29,7 +46,7 @@
       "_stores.js"
     ],
     "css": [
-      "_app/immutable/assets/_layout-0057a81b.css"
+      "_app/immutable/assets/_layout-6a036e0a.css"
     ],
     "assets": [
       "_app/immutable/assets/lexend-all-300-normal-2a8fb41f.woff",
@@ -61,7 +78,7 @@
       "_stores.js"
     ],
     "css": [
-      "_app/immutable/assets/_error-ace2f6fa.css"
+      "_app/immutable/assets/_error-e2c4d600.css"
     ]
   },
   "src/routes/blog/[slug]/+layout.svelte": {
@@ -94,7 +111,7 @@
       "_config.js"
     ],
     "css": [
-      "_app/immutable/assets/_page-6dc7edff.css"
+      "_app/immutable/assets/_page-88e1e847.css"
     ],
     "assets": [
       "_app/immutable/assets/ux-36a3bc54.svg",
@@ -111,11 +128,47 @@
     "isEntry": true,
     "imports": [
       "_index.js",
+      "_BlogCard.js",
       "_SectionTitle.js"
+    ]
+  },
+  "src/routes/blog/+page.js": {
+    "file": "entries/pages/blog/_page.js",
+    "src": "src/routes/blog/+page.js",
+    "isEntry": true
+  },
+  "src/routes/blog/category/+page.svelte": {
+    "file": "entries/pages/blog/category/_page.svelte.js",
+    "src": "src/routes/blog/category/+page.svelte",
+    "isEntry": true,
+    "imports": [
+      "_index.js"
     ],
     "css": [
-      "_app/immutable/assets/_page-0be8c9c1.css"
+      "_app/immutable/assets/_page-a0ecdb86.css"
     ]
+  },
+  "src/routes/blog/category/+page.js": {
+    "file": "entries/pages/blog/category/_page.js",
+    "src": "src/routes/blog/category/+page.js",
+    "isEntry": true
+  },
+  "src/routes/blog/category/[category]/+page.svelte": {
+    "file": "entries/pages/blog/category/_category_/_page.svelte.js",
+    "src": "src/routes/blog/category/[category]/+page.svelte",
+    "isEntry": true,
+    "imports": [
+      "_index.js",
+      "_BlogCard.js"
+    ],
+    "css": [
+      "_app/immutable/assets/_page-1d5e6ac3.css"
+    ]
+  },
+  "src/routes/blog/category/[category]/+page.js": {
+    "file": "entries/pages/blog/category/_category_/_page.js",
+    "src": "src/routes/blog/category/[category]/+page.js",
+    "isEntry": true
   },
   "src/routes/blog/[slug]/+page.svelte": {
     "file": "entries/pages/blog/_slug_/_page.svelte.js",
@@ -125,7 +178,7 @@
       "_index.js"
     ],
     "css": [
-      "_app/immutable/assets/_page-439baacb.css"
+      "_app/immutable/assets/_page-d2f19feb.css"
     ]
   },
   "src/routes/blog/[slug]/+page.js": {
@@ -136,6 +189,8 @@
       "_dynamic-import-helper.js"
     ],
     "dynamicImports": [
+      "src/routes/blog/best-ux-books.svx",
+      "src/routes/blog/gestalt.svx",
       "src/routes/blog/typescale.svx",
       "src/routes/blog/typography-best-patterns.svx",
       "src/routes/blog/ux-portfolio.svx",
@@ -154,13 +209,25 @@
       "_SEO.js"
     ],
     "css": [
-      "_app/immutable/assets/_page-2445779f.css"
+      "_app/immutable/assets/_page-f7d6c894.css"
     ]
   },
   "src/routes/contact/+page.js": {
     "file": "entries/pages/contact/_page.js",
     "src": "src/routes/contact/+page.js",
     "isEntry": true
+  },
+  "src/routes/exp/+page.svelte": {
+    "file": "entries/pages/exp/_page.svelte.js",
+    "src": "src/routes/exp/+page.svelte",
+    "isEntry": true,
+    "imports": [
+      "_index.js",
+      "_index3.js"
+    ],
+    "css": [
+      "_app/immutable/assets/_page-df9bbe0e.css"
+    ]
   },
   "src/routes/project/+page.svelte": {
     "file": "entries/pages/project/_page.svelte.js",
@@ -174,7 +241,7 @@
       "_SectionTitle.js"
     ],
     "css": [
-      "_app/immutable/assets/_page-1d2337cf.css"
+      "_app/immutable/assets/_page-263816cc.css"
     ],
     "assets": [
       "_app/immutable/assets/rezaSplat-8323f1b6.svg"
@@ -188,7 +255,7 @@
       "_index.js"
     ],
     "css": [
-      "_app/immutable/assets/_page-690e3cf4.css"
+      "_app/immutable/assets/_page-da79b6a0.css"
     ]
   },
   "src/routes/project/[slug]/+page.js": {
@@ -212,7 +279,7 @@
       "_SectionTitle.js"
     ],
     "css": [
-      "_app/immutable/assets/_page-cc046e0e.css"
+      "_app/immutable/assets/_page-f5877a86.css"
     ]
   },
   "src/routes/resource/tool/+page.svelte": {
@@ -222,17 +289,20 @@
     "imports": [
       "_index.js",
       "_SectionTitle.js",
-      "_index2.js"
+      "_index3.js"
     ],
     "css": [
-      "_app/immutable/assets/_page-354a0b1d.css"
+      "_app/immutable/assets/_page-14624cb0.css"
     ]
   },
   "_index.js": {
     "file": "chunks/index.js"
   },
   "_index2.js": {
-    "file": "chunks/index2.js",
+    "file": "chunks/index2.js"
+  },
+  "_index3.js": {
+    "file": "chunks/index3.js",
     "imports": [
       "_index.js"
     ]
@@ -252,7 +322,7 @@
       "_index.js"
     ],
     "css": [
-      "_app/immutable/assets/Button-55226ca5.css"
+      "_app/immutable/assets/Button-20676e40.css"
     ]
   },
   "_MarkdownContainer.js": {
@@ -280,13 +350,22 @@
       "_index.js"
     ]
   },
+  "_BlogCard.js": {
+    "file": "chunks/BlogCard.js",
+    "imports": [
+      "_index.js"
+    ],
+    "css": [
+      "_app/immutable/assets/BlogCard-0e5a2973.css"
+    ]
+  },
   "_SectionTitle.js": {
     "file": "chunks/SectionTitle.js",
     "imports": [
       "_index.js"
     ],
     "css": [
-      "_app/immutable/assets/SectionTitle-81117ce2.css"
+      "_app/immutable/assets/SectionTitle-0765bbc3.css"
     ]
   },
   "_dynamic-import-helper.js": {
@@ -303,6 +382,39 @@
     "src": ".svelte-kit/build/hooks.js",
     "isDynamicEntry": true
   },
+  "src/routes/blog/best-ux-books.svx": {
+    "file": "chunks/best-ux-books.js",
+    "src": "src/routes/blog/best-ux-books.svx",
+    "isDynamicEntry": true,
+    "imports": [
+      "_index.js",
+      "_Image.js"
+    ],
+    "assets": [
+      "_app/immutable/assets/uxBooks-8105af66.jpeg"
+    ]
+  },
+  "_Image.js": {
+    "file": "chunks/Image.js",
+    "imports": [
+      "_index.js",
+      "_index3.js"
+    ],
+    "css": [
+      "_app/immutable/assets/GalleryThumbnail-4827121f.css"
+    ]
+  },
+  "src/routes/blog/gestalt.svx": {
+    "file": "chunks/gestalt.js",
+    "src": "src/routes/blog/gestalt.svx",
+    "isDynamicEntry": true,
+    "imports": [
+      "_index.js"
+    ],
+    "css": [
+      "_app/immutable/assets/GalleryThumbnail-4827121f.css"
+    ]
+  },
   "src/routes/blog/typescale.svx": {
     "file": "chunks/typescale.js",
     "src": "src/routes/blog/typescale.svx",
@@ -314,16 +426,6 @@
     "assets": [
       "_app/immutable/assets/utopia-2a8d2dc3.png",
       "_app/immutable/assets/utopiaOutput-1b20ced1.png"
-    ]
-  },
-  "_Image.js": {
-    "file": "chunks/Image.js",
-    "imports": [
-      "_index.js",
-      "_index2.js"
-    ],
-    "css": [
-      "_app/immutable/assets/GalleryThumbnail-6cebb8e2.css"
     ]
   },
   "src/routes/blog/typography-best-patterns.svx": {
@@ -354,7 +456,7 @@
       "_index.js"
     ],
     "css": [
-      "_app/immutable/assets/GalleryThumbnail-6cebb8e2.css"
+      "_app/immutable/assets/GalleryThumbnail-4827121f.css"
     ]
   },
   "src/routes/project/coinecho.svx": {

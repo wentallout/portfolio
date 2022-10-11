@@ -1,9 +1,9 @@
-import { c as create_ssr_component, h as subscribe, g as escape, v as validate_component } from "../../chunks/index.js";
+import { c as create_ssr_component, b as subscribe, h as escape, v as validate_component } from "../../chunks/index.js";
 import { B as Button } from "../../chunks/Button.js";
 import { p as page } from "../../chunks/stores.js";
 const _error_svelte_svelte_type_style_lang = "";
 const css = {
-  code: ".status.svelte-96ketr{color:var(--error)}",
+  code: ".status.svelte-saf4nn{color:var(--error)}",
   map: null
 };
 const Error = create_ssr_component(($$result, $$props, $$bindings, slots) => {
@@ -11,7 +11,7 @@ const Error = create_ssr_component(($$result, $$props, $$bindings, slots) => {
   $$unsubscribe_page = subscribe(page, (value) => $page = value);
   $$result.css.add(css);
   $$unsubscribe_page();
-  return `<h1 class="${"large-text status svelte-96ketr"}">${escape($page.status)}</h1>
+  return `<h1 class="${"large-text status svelte-saf4nn"}">${escape($page.status)}</h1>
 <h2 class="${"error-info mix-text"}">Oops! This is awkward...</h2>
 <p>${escape($page.error.message)}</p>
 

@@ -1,7 +1,8 @@
 import { c as create_ssr_component } from "./index.js";
 /* empty css                                                */const metadata = {
   "title": "Understanding UX vs UI",
-  "date": "30/09/2022"
+  "date": "30/09/2022",
+  "categories": ["fundamental"]
 };
 const Ux_vs_ui = create_ssr_component(($$result, $$props, $$bindings, slots) => {
   return `<h2>What does a UX Designer do?</h2>

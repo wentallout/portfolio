@@ -22,4 +22,10 @@ Objects that share an area with a boundary will be visually grouped together.
 
 Objects that are visually similar in size, shape and/or color will be visually grouped together, even if those objects are not near each other.
 
-## 4. 
+## 4. Law of Continuity
+
+Objects that are ordered in a line or a curve appear to be related
+
+## 5. Law of Closure
+
+Objects that are visually incomplete will be perceived as a whole by a user

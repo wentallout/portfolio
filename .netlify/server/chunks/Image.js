@@ -1,14 +1,14 @@
-import { c as create_ssr_component, k as compute_rest_props, d as spread, e as escape_object, o as onDestroy, b as add_attribute, l as createEventDispatcher, h as subscribe, g as escape, v as validate_component, r as compute_slots } from "./index.js";
-/* empty css                                                */import { w as writable } from "./index2.js";
+import { c as create_ssr_component, l as compute_rest_props, d as spread, e as escape_object, p as onDestroy, f as add_attribute, o as createEventDispatcher, b as subscribe, h as escape, v as validate_component, A as compute_slots } from "./index.js";
+/* empty css                                                */import { w as writable } from "./index3.js";
 const css$5 = {
-  code: "div.svelte-hpqpx9{position:static;cursor:zoom-in}.svelte-lightbox-thumbnail > *{max-width:100%;height:auto}",
+  code: "div.svelte-19ej5l{position:static;cursor:zoom-in}.svelte-lightbox-thumbnail > *{max-width:100%;height:auto}",
   map: null
 };
 const LightboxThumbnail = create_ssr_component(($$result, $$props, $$bindings, slots) => {
   let $$restProps = compute_rest_props($$props, []);
   $$result.css.add(css$5);
   return `<div${spread([escape_object($$restProps)], {
-    classes: "svelte-lightbox-thumbnail svelte-hpqpx9"
+    classes: "svelte-lightbox-thumbnail svelte-19ej5l"
   })}>${slots.default ? slots.default({}) : ``}
 </div>`;
 });
@@ -25,7 +25,7 @@ const BodyChild = create_ssr_component(($$result, $$props, $$bindings, slots) =>
   return `<div${spread([escape_object($$restProps)], {})}${add_attribute("this", targetElement, 0)}>${slots.default ? slots.default({}) : ``}</div>`;
 });
 const css$4 = {
-  code: "div.svelte-1wskd0y{width:auto;height:3rem;display:flex;justify-content:flex-end;align-items:center}div.fullscreen.svelte-1wskd0y{position:fixed;z-index:5;top:0;left:0;right:0}button.svelte-1wskd0y{background:transparent;font-size:3rem;border:none;color:white}button.svelte-1wskd0y:hover{color:lightgray;cursor:pointer}button.svelte-1wskd0y:active{background-color:transparent}button.fullscreen.svelte-1wskd0y{filter:drop-shadow(0 0 5px black) drop-shadow(0 0 10px black)}",
+  code: "div.svelte-kpsnji{width:auto;height:3rem;display:flex;justify-content:flex-end;align-items:center}div.fullscreen.svelte-kpsnji{position:fixed;z-index:5;top:0;left:0;right:0}button.svelte-kpsnji{background:transparent;font-size:3rem;border:none;color:white}button.svelte-kpsnji:hover{color:lightgray;cursor:pointer}button.svelte-kpsnji:active{background-color:transparent}button.fullscreen.svelte-kpsnji{filter:drop-shadow(0 0 5px black) drop-shadow(0 0 10px black)}",
   map: null
 };
 const LightboxHeader = create_ssr_component(($$result, $$props, $$bindings, slots) => {
@@ -47,15 +47,15 @@ const LightboxHeader = create_ssr_component(($$result, $$props, $$bindings, slot
   return `
 
 <div${spread([escape_object($$restProps)], {
-    classes: (imagePreset === "fullscreen" ? "fullscreen" : "") + " svelte-1wskd0y"
+    classes: (imagePreset === "fullscreen" ? "fullscreen" : "") + " svelte-kpsnji"
   })}>${showCloseButton ? `<button${spread([escape_object(closeButtonProps)], {
-    classes: (imagePreset === "fullscreen" ? "fullscreen" : "") + " svelte-1wskd0y"
+    classes: (imagePreset === "fullscreen" ? "fullscreen" : "") + " svelte-kpsnji"
   })}>\xD7
         </button>` : ``}
 </div>`;
 });
 const css$3 = {
-  code: "div.svelte-lightbox-body.svelte-1d3ym4l{position:relative;width:auto;height:auto;max-height:80vh}div.svelte-lightbox-body > *{max-width:100%;max-height:inherit;height:auto;width:auto;object-fit:contain}div.svelte-lightbox-body.scroll > *{max-height:100%}div.svelte-lightbox-body.expand > *{flex-grow:1}div.fullscreen.svelte-1d3ym4l{width:inherit;max-width:inherit;height:inherit;max-height:100%;display:flex;align-items:center;justify-content:center}div.scroll.svelte-1d3ym4l{overflow:scroll}",
+  code: "div.svelte-lightbox-body.svelte-1n79ejy{position:relative;width:auto;height:auto;max-height:80vh}div.svelte-lightbox-body > *{max-width:100%;max-height:inherit;height:auto;width:auto;-o-object-fit:contain;object-fit:contain}div.svelte-lightbox-body.scroll > *{max-height:100%}div.svelte-lightbox-body.expand > *{flex-grow:1}div.fullscreen.svelte-1n79ejy{width:inherit;max-width:inherit;height:inherit;max-height:100%;display:flex;align-items:center;justify-content:center}div.scroll.svelte-1n79ejy{overflow:scroll}",
   map: null
 };
 const LightboxBody = create_ssr_component(($$result, $$props, $$bindings, slots) => {
@@ -67,7 +67,7 @@ const LightboxBody = create_ssr_component(($$result, $$props, $$bindings, slots)
     $$bindings.enableImageExpand(enableImageExpand);
   $$result.css.add(css$3);
   return `<div class="${[
-    "svelte-lightbox-body svelte-1d3ym4l",
+    "svelte-lightbox-body svelte-1n79ejy",
     (imagePreset === "fullscreen" ? "fullscreen" : "") + " " + (imagePreset === "scroll" ? "scroll" : "") + " " + (enableImageExpand ? "expand" : "")
   ].join(" ").trim()}">${slots.default ? slots.default({}) : ``}
 </div>`;
@@ -78,7 +78,7 @@ const i18n = writable({
   }
 });
 const css$2 = {
-  code: "div.svelte-1mkm4v6{width:100%;height:auto;color:white;text-align:left;position:absolute}div.fullscreen.svelte-1mkm4v6{position:fixed;z-index:5;bottom:0;left:0;right:0;padding-left:1rem}",
+  code: "div.svelte-13ikim{width:100%;height:auto;color:white;text-align:left;position:absolute}div.fullscreen.svelte-13ikim{position:fixed;z-index:5;bottom:0;left:0;right:0;padding-left:1rem}",
   map: null
 };
 const LightboxFooter = create_ssr_component(($$result, $$props, $$bindings, slots) => {
@@ -107,14 +107,14 @@ const LightboxFooter = create_ssr_component(($$result, $$props, $$bindings, slot
   localizedGalleryCounter = generateLocalizedGalleryCounter($i18n, gallery);
   $$unsubscribe_i18n();
   return `<div${spread([escape_object($$restProps)], {
-    classes: (imagePreset === "fullscreen" ? "fullscreen" : "") + " svelte-1mkm4v6"
+    classes: (imagePreset === "fullscreen" ? "fullscreen" : "") + " svelte-13ikim"
   })}><h2><!-- HTML_TAG_START -->${title}<!-- HTML_TAG_END --></h2>
     <h5><!-- HTML_TAG_START -->${description}<!-- HTML_TAG_END --></h5>
     ${gallery !== null ? `<p>${escape(localizedGalleryCounter)}</p>` : ``}
 </div>`;
 });
 const css$1 = {
-  code: `div.svelte-o5rrpx{position:fixed;z-index:1000000!important;background-color:rgba(43, 39, 45, 0.87);top:0;bottom:0;left:0;right:0;overflow:hidden;width:100%;height:100%;display:flex;align-items:center;justify-content:center}div.svelte-o5rrpx::before{content:'';position:absolute;top:0;bottom:0;left:0;right:0;opacity:0;z-index:-1}div.svelte-o5rrpx::after{content:"";clear:both;display:table}`,
+  code: `div.svelte-148mlhl{position:fixed;z-index:1000000!important;background-color:rgba(43, 39, 45, 0.87);top:0;bottom:0;left:0;right:0;overflow:hidden;width:100%;height:100%;display:flex;align-items:center;justify-content:center}div.svelte-148mlhl::before{content:'';position:absolute;top:0;bottom:0;left:0;right:0;opacity:0;z-index:-1}div.svelte-148mlhl::after{content:"";clear:both;display:table}`,
   map: null
 };
 const ModalCover = create_ssr_component(($$result, $$props, $$bindings, slots) => {
@@ -122,12 +122,12 @@ const ModalCover = create_ssr_component(($$result, $$props, $$bindings, slots) =
   if ($$props.transitionDuration === void 0 && $$bindings.transitionDuration && transitionDuration !== void 0)
     $$bindings.transitionDuration(transitionDuration);
   $$result.css.add(css$1);
-  return `<div class="${"svelte-o5rrpx"}">${slots.default ? slots.default({}) : `
+  return `<div class="${"svelte-148mlhl"}">${slots.default ? slots.default({}) : `
     `}
 </div>`;
 });
 const css = {
-  code: "div.svelte-1shiuhy{position:relative;max-width:100%;max-height:100%;height:auto;width:auto;background-color:transparent}.fullscreen.svelte-1shiuhy{height:inherit;width:inherit;max-height:inherit;max-width:inherit}",
+  code: "div.svelte-16p366q{position:relative;max-width:100%;max-height:100%;height:auto;width:auto;background-color:transparent}.fullscreen.svelte-16p366q{height:inherit;width:inherit;max-height:inherit;max-width:inherit}",
   map: null
 };
 const Modal = create_ssr_component(($$result, $$props, $$bindings, slots) => {
@@ -140,7 +140,7 @@ const Modal = create_ssr_component(($$result, $$props, $$bindings, slots) => {
     $$bindings.imagePreset(imagePreset);
   $$result.css.add(css);
   return `<div${spread([escape_object($$restProps)], {
-    classes: (imagePreset === "fullscreen" ? "fullscreen" : "") + " " + (imagePreset === "scroll" ? "scroll" : "") + " svelte-1shiuhy"
+    classes: (imagePreset === "fullscreen" ? "fullscreen" : "") + " " + (imagePreset === "scroll" ? "scroll" : "") + " svelte-16p366q"
   })}>${slots.default ? slots.default({}) : ``}
 </div>`;
 });
@@ -240,6 +240,7 @@ const Image = create_ssr_component(($$result, $$props, $$bindings, slots) => {
   let { alt = "" } = $$props;
   let { width = 600 } = $$props;
   let { height = "auto" } = $$props;
+  let { imagePreset = "" } = $$props;
   if ($$props.src === void 0 && $$bindings.src && src !== void 0)
     $$bindings.src(src);
   if ($$props.alt === void 0 && $$bindings.alt && alt !== void 0)
@@ -248,12 +249,15 @@ const Image = create_ssr_component(($$result, $$props, $$bindings, slots) => {
     $$bindings.width(width);
   if ($$props.height === void 0 && $$bindings.height && height !== void 0)
     $$bindings.height(height);
+  if ($$props.imagePreset === void 0 && $$bindings.imagePreset && imagePreset !== void 0)
+    $$bindings.imagePreset(imagePreset);
   return `${validate_component(Lightbox, "Lightbox").$$render(
     $$result,
     {
       enableClickToClose: "true",
       title: alt,
       description: src,
+      imagePreset,
       enableImageExpand: "true",
       transitionDuration: "50"
     },

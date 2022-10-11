@@ -3,7 +3,8 @@ import { I as Image } from "./Image.js";
 const headingFontSizes = "/_app/immutable/assets/headingFontSizes-ee4e4c93.png";
 const metadata = {
   "title": "Typography best patterns",
-  "date": "01/10/2022"
+  "date": "01/10/2022",
+  "categories": ["typography"]
 };
 const Typography_best_patterns = create_ssr_component(($$result, $$props, $$bindings, slots) => {
   return `<h2>Light or Dark Background?</h2>

@@ -1,4 +1,4 @@
-import { c as create_ssr_component, b as add_attribute, g as escape, v as validate_component } from "./index.js";
+import { c as create_ssr_component, f as add_attribute, h as escape, v as validate_component } from "./index.js";
 import { w as website } from "./config.js";
 import hash from "object-hash";
 const featuredImageSrc = "/_app/immutable/assets/home-f7ba4dd3.jpg";

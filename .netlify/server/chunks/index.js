@@ -12,6 +12,9 @@ function blank_object() {
 function run_all(fns) {
   fns.forEach(run);
 }
+function is_function(thing) {
+  return typeof thing === "function";
+}
 function safe_not_equal(a, b) {
   return a != a ? b == b : a !== b || (a && typeof a === "object" || typeof a === "function");
 }
@@ -21,6 +24,11 @@ function subscribe(store, ...callbacks) {
   }
   const unsub = store.subscribe(...callbacks);
   return unsub.unsubscribe ? () => unsub.unsubscribe() : unsub;
+}
+function get_store_value(store) {
+  let value;
+  subscribe(store, (_) => value = _)();
+  return value;
 }
 function compute_rest_props(props, keys) {
   const rest = {};
@@ -39,6 +47,37 @@ function compute_slots(slots) {
 }
 function null_to_empty(value) {
   return value == null ? "" : value;
+}
+function set_store_value(store, ret, value) {
+  store.set(value);
+  return ret;
+}
+const is_client = typeof window !== "undefined";
+let now = is_client ? () => window.performance.now() : () => Date.now();
+let raf = is_client ? (cb) => requestAnimationFrame(cb) : noop;
+const tasks = /* @__PURE__ */ new Set();
+function run_tasks(now2) {
+  tasks.forEach((task) => {
+    if (!task.c(now2)) {
+      tasks.delete(task);
+      task.f();
+    }
+  });
+  if (tasks.size !== 0)
+    raf(run_tasks);
+}
+function loop(callback) {
+  let task;
+  if (tasks.size === 0)
+    raf(run_tasks);
+  return {
+    promise: new Promise((fulfill) => {
+      tasks.add(task = { c: callback, f: fulfill });
+    }),
+    abort() {
+      tasks.delete(task);
+    }
+  };
 }
 function custom_event(type, detail, { bubbles = false, cancelable = false } = {}) {
   const e = document.createEvent("CustomEvent");
@@ -312,25 +351,31 @@ function style_object_to_string(style_object) {
   return Object.keys(style_object).filter((key) => style_object[key]).map((key) => `${key}: ${style_object[key]};`).join(" ");
 }
 export {
+  compute_slots as A,
   safe_not_equal as a,
-  add_attribute as b,
+  subscribe as b,
   create_ssr_component as c,
   spread as d,
   escape_object as e,
-  each as f,
-  escape as g,
-  subscribe as h,
-  null_to_empty as i,
-  getContext as j,
-  compute_rest_props as k,
-  createEventDispatcher as l,
+  add_attribute as f,
+  each as g,
+  escape as h,
+  is_function as i,
+  null_to_empty as j,
+  getContext as k,
+  compute_rest_props as l,
   missing_component as m,
   noop as n,
-  onDestroy as o,
-  escape_attribute_value as p,
-  is_promise as q,
-  compute_slots as r,
+  createEventDispatcher as o,
+  onDestroy as p,
+  escape_attribute_value as q,
+  run_all as r,
   setContext as s,
-  tick as t,
-  validate_component as v
+  get_store_value as t,
+  tick as u,
+  validate_component as v,
+  set_store_value as w,
+  now as x,
+  loop as y,
+  is_promise as z
 };

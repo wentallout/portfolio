@@ -4,7 +4,8 @@ const utopia = "/_app/immutable/assets/utopia-2a8d2dc3.png";
 const utopiaOutput = "/_app/immutable/assets/utopiaOutput-1b20ced1.png";
 const metadata = {
   "title": "How to pick the perfect Type Scale for your next design",
-  "date": "20/09/2022"
+  "date": "20/09/2022",
+  "categories": ["typography"]
 };
 const Typescale = create_ssr_component(($$result, $$props, $$bindings, slots) => {
   return `<h2>What is type scale?</h2>

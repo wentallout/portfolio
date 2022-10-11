@@ -33,6 +33,7 @@
 		display: block;
 		font-weight: 300;
 		color: var(--neutral-700);
+		margin: 0;
 	}
 
 	.category {
