@@ -6,7 +6,7 @@
 </script>
 
 <section class="tool">
-	<h2 class="tool__title large-text">Tools & Frameworks I use</h2>
+	<h2 class="tool__title xl-text">Tools & Frameworks I use</h2>
 
 	<div class="tool__block">
 		<div class="block__section">
@@ -35,8 +35,8 @@
 		<div class="block__section">
 			<img width="50" height="50" class="block__image" src={frontend} alt="frontend" />
 			<h3 class="block__title base-text">Frontend</h3>
-			<p class="block__text small-text">Semantic HTML + BEM CSS</p>
-			<p class="block__text small-text">Bootstrap + Material</p>
+			<p class="block__text small-text">Semantic HTML, BEM CSS</p>
+			<p class="block__text small-text">Bootstrap, Material</p>
 			<p class="block__text small-text">JS, React, Svelte</p>
 		</div>
 	</div>
@@ -47,7 +47,7 @@
 		display: flex;
 		flex-direction: column;
 		justify-content: center;
-		align-items: flex-start;
+		align-items: center;
 
 		gap: var(--space-m);
 	}

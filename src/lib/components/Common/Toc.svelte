@@ -58,7 +58,7 @@
 	.toc {
 		display: flex;
 		flex-direction: column;
-		width: 100%;
+		width: fit-content;
 		min-height: 250px;
 		height: fit-content;
 		overflow-y: auto;

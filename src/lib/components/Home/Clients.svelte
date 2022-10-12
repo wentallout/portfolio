@@ -4,7 +4,7 @@
 </script>
 
 <section class="clients">
-	<h2 class="clients__title large-text">I have worked for</h2>
+	<h2 class="clients__title xl-text">I have worked for</h2>
 	<div class="clients__logo">
 		<img class="logo" loading="lazy" decoding="async" src={fpt} alt="FPT Software" />
 		<img class="logo" loading="lazy" decoding="async" src={nashtech} alt="NashTech" />
@@ -17,7 +17,7 @@
 		display: flex;
 		justify-content: center;
 
-		align-items: flex-start;
+		align-items: center;
 
 		flex-direction: column;
 

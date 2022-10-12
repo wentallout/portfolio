@@ -1,9 +1,11 @@
 <script>
+	import SwiperContainer from '$lib/components/Swiper/SwiperContainer.svelte';
 	import UIDesignPrinciples from '$lib/assets/images/book/UIDesignPrinciples.png?w=200&h=300';
 	import DesignManual from '$lib/assets/images/book/DesignManual.png?w=200&h=300';
 	import NoBSGuideUX from '$lib/assets/images/book/NoBSGuideUX.png?w=200&h=300';
 	import Sprint from '$lib/assets/images/book/Sprint.png?w=200&h=300';
 	import CoolBook from '$lib/components/Resource/CoolBook.svelte';
+	import { SwiperSlide } from 'swiper/svelte';
 
 	let books = [
 		{
@@ -26,11 +28,19 @@
 </script>
 
 <div class="books">
-	{#each books as book}
+	<!-- {#each books as book}
 		<div class="book__block">
 			<CoolBook imgUrl={book.imgUrl} alt={book.name} bookUrl={book.bookUrl} />
 		</div>
-	{/each}
+	{/each} -->
+
+	<SwiperContainer>
+		{#each books as book}
+			<SwiperSlide>
+				<CoolBook imgUrl={book.imgUrl} alt={book.name} bookUrl={book.bookUrl} />
+			</SwiperSlide>
+		{/each}
+	</SwiperContainer>
 </div>
 
 <style>

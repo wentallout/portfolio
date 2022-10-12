@@ -1,5 +1,4 @@
 <script>
-	// import Swiper core and required modules
 	import { Pagination, Scrollbar, A11y, Autoplay } from 'swiper';
 	import { Swiper } from 'swiper/svelte';
 	import 'swiper/css/bundle';

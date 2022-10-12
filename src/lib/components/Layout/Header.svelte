@@ -14,10 +14,14 @@
 <header class:reduced-header={scrollY > 50} class="main-header base-text">
 	<nav>
 		<ul class="nav__list">
-			<li class:reduced-list={scrollY > 50} id="burger-nav" on:click={handleMobileIconClick}>
-				<a class="nav__list-item" on:click|preventDefault href={'#'}>
+			<li
+				class:reduced-list={scrollY > 50}
+				id="burger-nav"
+				on:click={handleMobileIconClick}
+				on:keyup={handleMobileIconClick}>
+				<div class="nav__list-item">
 					<List color="var(--neutral-100)" width="32" height="32" />
-				</a>
+				</div>
 			</li>
 
 			{#each navItems as navItem}
@@ -40,6 +44,10 @@
 </header>
 
 <style>
+	#burger-nav {
+		cursor: pointer;
+	}
+
 	.reduced-header {
 		font-size: var(--font-size-small);
 		/* transition: all 0.3s; */
