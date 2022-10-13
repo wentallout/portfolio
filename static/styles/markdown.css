@@ -120,6 +120,7 @@
 .markdown img {
 	display:block;
 	width: 100%;
+	height: auto;
 	border: 1px solid var(--neutral-500);
 	border-radius: var(--border-radius);
 	margin-bottom: var(--space-m);
@@ -127,7 +128,7 @@
 
 @media (min-width: 768px) {
 	.markdown img {
-		max-width: 600px;
+		max-width: 60%;
 	}
 }
 

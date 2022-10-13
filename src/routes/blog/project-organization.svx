@@ -1,0 +1,17 @@
+---
+title: 'Project Organization'
+date: '12/10/2022'
+categories:
+    - 'fundamental'
+---
+
+<script>
+import projectOrganization from '$lib/assets/images/blog/projectOrganization.png';
+import Image from '$lib/components/Common/Image.svelte';
+</script>
+
+
+## Folder Structure
+
+<Image src={projectOrganization}/>
+

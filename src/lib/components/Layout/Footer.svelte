@@ -1,5 +1,7 @@
 <script>
 	import { navItems } from '$lib/config.js';
+	import LinkedinLogo from '~icons/ph/linkedin-logo';
+	import Phone from '~icons/ph/phone';
 </script>
 
 <footer>
@@ -11,16 +13,32 @@
 				</li>
 			{/each}
 		</ul>
+		<div class="footer__social">
+			<a class="social__icon" href="tel:+84929066331">
+				<Phone width="32" height="32" color="var(--neutral-100)" />
+			</a>
+			<a class="social__icon" href="https://www.linkedin.com/in/wentallout" target="_blank">
+				<LinkedinLogo width="32" height="32" color="var(--neutral-100)" />
+			</a>
+		</div>
 		<div class="footer__other">
 			<p>
 				2022 - Made by Khoa with <a href="https://kit.svelte.dev">SvelteKit</a>
 			</p>
-			<a href="mailto:wentallout@gmail.com">wentallout@gmail.com</a>
+			<a href="mailto:wentallout@gmail.com" target="_blank">wentallout@gmail.com</a>
 		</div>
 	</div>
 </footer>
 
 <style>
+	.footer__social {
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+		z-index: 2;
+		gap: var(--space-s);
+	}
+
 	footer {
 		/* Flex */
 		display: flex;
@@ -48,7 +66,11 @@
 	}
 
 	.footer__other a {
-		color: var(--accent-500);
+		color: var(--accent-300);
+	}
+
+	.footer__other a:hover {
+		color: var(--accent-100);
 	}
 
 	.footer-container {

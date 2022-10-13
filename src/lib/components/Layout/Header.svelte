@@ -53,7 +53,6 @@
 		/* transition: all 0.3s; */
 		background-color: rgba(0, 0, 0, 0.8) !important;
 		backdrop-filter: blur(5px);
-		-webkit-backdrop-filter: blur(5px);
 	}
 
 	.reduced-list {

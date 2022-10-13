@@ -20,8 +20,6 @@
 		display: flex;
 		justify-content: left;
 		align-items: center;
-		font-family: 'Recoleta Alt';
-		font-weight: 600;
 
 		/* Spacing */
 		margin-bottom: var(--space-s);
@@ -32,7 +30,13 @@
 	}
 
 	.section-title h2 {
-		color: var(--primary-900);
+		font-family: 'Recoleta Alt';
+		font-weight: 600;
+		background-image: url('/images/noise.svg');
+		background: linear-gradient(to right, var(--primary-600), var(--primary-900));
+
+		background-clip: text;
+		color: transparent;
 	}
 
 	.section-icon {

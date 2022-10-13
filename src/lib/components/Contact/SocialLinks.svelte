@@ -1,11 +1,12 @@
 <script>
 	import Envelope from '~icons/ph/envelope';
 	import LinkedinLogo from '~icons/ph/linkedin-logo';
+	import Phone from '~icons/ph/phone';
 	import FigmaLogo from '~icons/ph/figma-logo';
 	import GitHubLogo from '~icons/ph/github-logo';
 	import RedditLogo from '~icons/ph/reddit-logo';
 	import Handshake from '~icons/ph/handshake';
-	import Phone from '~icons/ph/phone';
+
 	import SectionTitle from '$lib/components/Common/SectionTitle.svelte';
 
 	let icon = {
@@ -27,28 +28,29 @@
 				<p>+84 929 066 331</p>
 			</a>
 
-			<a class="social__address" href="mailto:wentallout@gmail.com">
+			<a class="social__address" href="mailto:wentallout@gmail.com" target="_blank">
 				<Envelope {...icon} />
 				<p>wentallout@gmail.com</p>
 			</a>
-			<a class="social__address" href="https://www.linkedin.com/in/wentallout">
+			<a class="social__address" href="https://www.linkedin.com/in/wentallout" target="_blank">
 				<LinkedinLogo {...icon} />
 				<p>LinkedIn</p>
 			</a>
 
 			<a
 				class="social__address"
-				href="https://www.figma.com/team_invite/redeem/CRNTQKDT0VQTLYjw7cEogQ">
+				href="https://www.figma.com/team_invite/redeem/CRNTQKDT0VQTLYjw7cEogQ"
+				target="_blank">
 				<FigmaLogo {...icon} />
 				<p>Figma</p>
 			</a>
 
-			<a class="social__address" href="https://github.com/wentallout">
+			<a class="social__address" href="https://github.com/wentallout" target="_blank">
 				<GitHubLogo {...icon} />
 				<p>GitHub</p>
 			</a>
 
-			<a class="social__address" href="https://www.reddit.com/user/wentallout">
+			<a class="social__address" href="https://www.reddit.com/user/wentallout" target="_blank">
 				<RedditLogo {...icon} />
 				<p>Reddit</p>
 			</a>

@@ -2,24 +2,24 @@
 export const navItems = [
 	{
 		title: 'Home',
-		path: '/',
+		path: '/'
 	},
 	{
 		title: 'Project',
-		path: '/project',
+		path: '/project'
 	},
 	{
 		title: 'Blog',
-		path: '/blog',
+		path: '/blog'
 	},
 	{
 		title: 'Resource',
-		path: '/resource',
+		path: '/resource'
 	},
 	{
 		title: 'Contact',
-		path: '/contact',
-	},
+		path: '/contact'
+	}
 ];
 
 // METADATA
@@ -34,7 +34,7 @@ const website = {
 	contactEmail: 'wentallout@gmail.com',
 
 	// PWA
-	siteTitle: 'Nguyen Dang Khoa - Portfolio',
+	siteTitle: 'Dang Khoa - Portfolio',
 	siteShortTitle: 'Portfolio',
 	siteUrl: 'https://www.wentallout.tech',
 	icon: 'static/icon-512.png',
@@ -52,7 +52,7 @@ const website = {
 	telegramUsername: 'wentallout',
 	tiktokUsername: '@wentallout',
 	twitterUsername: 'wentallout',
-	twitterUserId: '1391413398286471168',
+	twitterUserId: '1391413398286471168'
 };
 
 export { website as default };

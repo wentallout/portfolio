@@ -9,15 +9,11 @@ date: '14/09/2022'
         --brand-color : #E4543B !important; 
         }
                
-        h2 
+        .markdown h2 
         {
         color: var(--brand-color) !important;
         }
 
-        h2:before
-        {
-            background-color: var(--brand-color);
-        }
     </style>
 </svelte:head>
 
