@@ -306,19 +306,9 @@
 	cursor: pointer;
 }
 
-/*
-  * Change the cursor on disabled, not-editable, or otherwise
-  * inoperable elements in all browsers (opinionated).
-  */
-
 :where([aria-disabled='true' i], [disabled]) {
 	cursor: not-allowed;
 }
-
-/*
-  * Change the display on visually hidden accessible elements
-  * in all browsers (opinionated).
-  */
 
 :where([aria-hidden='false' i][hidden]) {
 	display: initial;
@@ -328,10 +318,6 @@
 	clip: rect(0, 0, 0, 0);
 	position: absolute;
 }
-
-/**
- * Restrict sizing to the page width in all browsers (opinionated).
- */
 
 :where(iframe, img, input, video, select, textarea) {
 	height: auto;
