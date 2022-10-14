@@ -1,13 +1,13 @@
 ---
 title: 'How to pick the perfect Type Scale for your next design'
-date: '20/09/2022'
+date: '2022-09-20'
 categories:
     - 'typography'
 ---
 
 <script>
-    import utopia from '$lib/assets/images/blog/utopia.png';
-    import utopiaOutput from '$lib/assets/images/blog/utopiaOutput.png';
+    import utopia from '$blogImages/utopia.png';
+    import utopiaOutput from '$blogImages/utopiaOutput.png';
 
     import Image from '$lib/components/Common/Image.svelte';
 

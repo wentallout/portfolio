@@ -1,6 +1,7 @@
 import adapter from '@sveltejs/adapter-netlify';
 import sveltePreprocess from 'svelte-preprocess';
 import autoprefixer from 'autoprefixer';
+import path from 'path';
 
 import { mdsvex } from 'mdsvex';
 
@@ -25,6 +26,10 @@ const config = {
 			enabled: true,
 			onError: 'continue',
 			entries: ['*']
+		},
+		alias: {
+			// this will match a file
+			$blogImages: 'src/lib/assets/images/blog'
 		}
 	},
 	vitePlugin: {

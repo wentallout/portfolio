@@ -28,11 +28,11 @@
 				<p>+84 929 066 331</p>
 			</a>
 
-			<a class="social__address" href="mailto:wentallout@gmail.com" target="_blank">
+			<a class="social__address" href="mailto:wentallout@gmail.com" target="_blank" rel="noreferrer noopener">
 				<Envelope {...icon} />
 				<p>wentallout@gmail.com</p>
 			</a>
-			<a class="social__address" href="https://www.linkedin.com/in/wentallout" target="_blank">
+			<a class="social__address" href="https://www.linkedin.com/in/wentallout" target="_blank" rel="noreferrer noopener">
 				<LinkedinLogo {...icon} />
 				<p>LinkedIn</p>
 			</a>
@@ -40,17 +40,17 @@
 			<a
 				class="social__address"
 				href="https://www.figma.com/team_invite/redeem/CRNTQKDT0VQTLYjw7cEogQ"
-				target="_blank">
+				target="_blank" rel="noreferrer noopener">
 				<FigmaLogo {...icon} />
 				<p>Figma</p>
 			</a>
 
-			<a class="social__address" href="https://github.com/wentallout" target="_blank">
+			<a class="social__address" href="https://github.com/wentallout" target="_blank" rel="noreferrer noopener">
 				<GitHubLogo {...icon} />
 				<p>GitHub</p>
 			</a>
 
-			<a class="social__address" href="https://www.reddit.com/user/wentallout" target="_blank">
+			<a class="social__address" href="https://www.reddit.com/user/wentallout" target="_blank" rel="noreferrer noopener">
 				<RedditLogo {...icon} />
 				<p>Reddit</p>
 			</a>

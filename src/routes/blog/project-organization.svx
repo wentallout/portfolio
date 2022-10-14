@@ -1,12 +1,12 @@
 ---
 title: 'Project Organization'
-date: '12/10/2022'
+date: '2022-10-12'
 categories:
     - 'fundamental'
 ---
 
 <script>
-import projectOrganization from '$lib/assets/images/blog/projectOrganization.png';
+import projectOrganization from '$blogImages/projectOrganization.png';
 import Image from '$lib/components/Common/Image.svelte';
 </script>
 

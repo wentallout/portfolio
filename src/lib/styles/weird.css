@@ -14,17 +14,19 @@
 
 body::-webkit-scrollbar-track {
 	box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
-	background-color: var(--neutral-900);
+	background-color: rgba(38, 36, 34, 0.8);
 }
 
 body::-webkit-scrollbar {
 	width: 12px;
-	background-color: var(--neutral-900);
+	background: transparent;
+	backdrop-filter: blur(5px);
 }
 
 body::-webkit-scrollbar-thumb {
 	box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
 	background-color: var(--primary-500);
+	border-radius: var(--border-radius);
 }
 
 body::-webkit-scrollbar-thumb:hover {
@@ -47,7 +49,7 @@ body::-webkit-scrollbar-thumb:hover {
 	}
 }
 
-/* -------------------------------- Nprogress ------------------------------- */
+/* -------------------------------- Nprogress START ------------------------------- */
 #nprogress .bar {
 	background: var(--primary-500) !important;
 	height: 5px !important;
@@ -68,6 +70,8 @@ body::-webkit-scrollbar-thumb:hover {
 	top: 20px !important;
 	right: 20px !important;
 }
+
+/* -------------------------------- Nprogress END ------------------------------- */
 
 a {
 	transition: all 0.3s ease;

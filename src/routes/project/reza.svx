@@ -1,6 +1,6 @@
 ---
 title: Reza - Table reservation mobile app
-date: '14/09/2022'
+date: '2022-09-14'
 ---
 <svelte:head>
     <style>

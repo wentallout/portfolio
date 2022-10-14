@@ -189,6 +189,7 @@
   */
 
 :where(button, [type='button' i], [type='reset' i], [type='submit' i]) {
+	appearance: button;
 	-webkit-appearance: button;
 }
 
@@ -224,6 +225,7 @@
   */
 
 :where([type='search' i]) {
+	appearance: textfield;
 	-webkit-appearance: textfield; /* 1 */
 	outline-offset: -2px; /* 2 */
 }
@@ -251,6 +253,7 @@
   */
 
 ::-webkit-search-decoration {
+	appearance: none;
 	-webkit-appearance: none;
 }
 
@@ -260,6 +263,7 @@
   */
 
 ::-webkit-file-upload-button {
+	appearance: button;
 	-webkit-appearance: button; /* 1 */
 	font: inherit; /* 2 */
 }
@@ -319,7 +323,7 @@
 	position: absolute;
 }
 
-:where(iframe, img, input, video, select, textarea) {
+:where(img, input, video, select, textarea) {
 	height: auto;
 	max-width: 100%;
 }

@@ -1,13 +1,13 @@
 ---
 title: 'Best UX Books to read'
-date: '07/10/2022'
+date: '2022-10-07'
 categories:
     - 'tips'
 ---
 
 <script>
     import Image from '$lib/components/Common/Image.svelte';
-     import uxBooks from '$lib/assets/images/blog/uxBooks.jpeg';
+    import uxBooks from '$blogImages/uxBooks.jpeg';
 </script>
 
 ## Roadmap

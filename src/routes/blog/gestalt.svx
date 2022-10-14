@@ -1,7 +1,6 @@
-
 ---
 title: 'Gestalt Principles of Design'
-date: '08/10/2022'
+date: '2022-10-08'
 categories:
     - 'fundamental'
 ---

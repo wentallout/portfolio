@@ -1,6 +1,6 @@
 ---
 title: Understanding UX vs UI
-date: '30/09/2022'
+date: '2022-09-30'
 categories:
     - 'fundamental'
 ---

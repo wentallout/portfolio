@@ -29,7 +29,7 @@
 		width: 100%;
 		display: flex;
 		justify-content: center;
-		align-items: center;
+		align-items: flex-start;
 		flex-direction: column;
 
 		gap: var(--space-m);

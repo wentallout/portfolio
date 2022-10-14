@@ -28,12 +28,6 @@
 </script>
 
 <div class="books">
-	<!-- {#each books as book}
-		<div class="book__block">
-			<CoolBook imgUrl={book.imgUrl} alt={book.name} bookUrl={book.bookUrl} />
-		</div>
-	{/each} -->
-
 	<SwiperContainer>
 		{#each books as book}
 			<SwiperSlide>

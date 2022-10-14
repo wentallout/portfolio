@@ -1,13 +1,13 @@
 ---
 title: 'Typography best patterns'
-date: '01/10/2022'
+date: '2022-10-01'
 categories:
     - 'typography'
 ---
 
 <script>
     import Image from '$lib/components/Common/Image.svelte';
-    import headingFontSizes from '$lib/assets/images/blog/headingFontSizes.png';
+    import headingFontSizes from '$blogImages/headingFontSizes.png';
 </script>
 
 ## Light or Dark Background?

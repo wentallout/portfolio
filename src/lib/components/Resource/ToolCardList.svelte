@@ -1,5 +1,5 @@
 <div class="tools">
-	<a class="tool" target="_blank" href="https://www.userinterviews.com/">
+	<a class="tool" target="_blank" rel="noreferrer noopener" href="https://www.userinterviews.com/">
 		<h2 class="tool__name base-text">User Interviews</h2>
 		<p class="tool__description small-text">
 			Recruit participants from a community of 125,000 members based on profession, demographics,
@@ -7,7 +7,7 @@
 		</p>
 	</a>
 
-	<a class="tool" target="_blank" href="https://appoint.ly">
+	<a class="tool" target="_blank" rel="noreferrer noopener" href="https://appoint.ly">
 		<h2 class="tool__name base-text">Appoint.ly</h2>
 		<p class="tool__description small-text">
 			A web-based scheduling tool that helps to schedule meetings quickly through the integration
@@ -15,7 +15,7 @@
 		</p>
 	</a>
 
-	<a class="tool" target="_blank" href="https://crowdsignal.com/">
+	<a class="tool" target="_blank" rel="noreferrer noopener" href="https://crowdsignal.com/">
 		<h2 class="tool__name base-text">Crowd Signal</h2>
 		<p class="tool__description small-text">
 			Collect, organize and analyze data from a variety of sources, including social media and
@@ -23,28 +23,28 @@
 		</p>
 	</a>
 
-	<a class="tool" target="_blank" href="https://www.jotform.com">
+	<a class="tool" target="_blank" rel="noreferrer noopener" href="https://www.jotform.com">
 		<h2 class="tool__name base-text">Jotform</h2>
 		<p class="tool__description small-text">
 			Create online forms, get an email for each response, collect data.
 		</p>
 	</a>
 
-	<a class="tool" target="_blank" href="https://minetime.ai/">
+	<a class="tool" target="_blank" rel="noreferrer noopener" href="https://minetime.ai/">
 		<h2 class="tool__name base-text">MineTime</h2>
 		<p class="tool__description small-text">
 			A free calendar app with smart scheduling and time analytics features.
 		</p>
 	</a>
 
-	<a class="tool" target="_blank" href="https://www.surveymonkey.com">
+	<a class="tool" target="_blank" rel="noreferrer noopener" href="https://www.surveymonkey.com">
 		<h2 class="tool__name base-text">Survey Monkey</h2>
 		<p class="tool__description small-text">
 			Online survey tool to capture the voices and opinions of the people who matter most to you.
 		</p>
 	</a>
 
-	<a class="tool" target="_blank" href="https://www.yesinsights.com/">
+	<a class="tool" target="_blank" rel="noreferrer noopener" href="https://www.yesinsights.com/">
 		<h2 class="tool__name base-text">YesInsights</h2>
 		<p class="tool__description small-text">
 			Simple one question and NPS surveys to improve your business.

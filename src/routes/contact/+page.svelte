@@ -1,4 +1,5 @@
 <script>
+	import LinkedinCard from '$lib/components/Contact/LinkedinCard.svelte';
 	import SocialLinks from '$lib/components/Contact/SocialLinks.svelte';
 	import ContactForm from '$lib/components/Contact/ContactForm.svelte';
 
@@ -25,8 +26,12 @@
 	// ---SEO END---
 </script>
 
+
+
 <SEO {...seoProps} />
 
 <ContactForm />
 
 <SocialLinks />
+
+<LinkedinCard />

@@ -14,10 +14,15 @@
 			{/each}
 		</ul>
 		<div class="footer__social">
-			<a class="social__icon" href="tel:+84929066331">
+			<a aria-label="Phone me" class="social__icon" href="tel:+84929066331">
 				<Phone width="32" height="32" color="var(--neutral-100)" />
 			</a>
-			<a class="social__icon" href="https://www.linkedin.com/in/wentallout" target="_blank">
+			<a
+				aria-label="Contact through LinkedIn"
+				class="social__icon"
+				href="https://www.linkedin.com/in/wentallout"
+				target="_blank"
+				rel="noreferrer noopener">
 				<LinkedinLogo width="32" height="32" color="var(--neutral-100)" />
 			</a>
 		</div>
@@ -25,7 +30,8 @@
 			<p>
 				2022 - Made by Khoa with <a href="https://kit.svelte.dev">SvelteKit</a>
 			</p>
-			<a href="mailto:wentallout@gmail.com" target="_blank">wentallout@gmail.com</a>
+			<a href="mailto:wentallout@gmail.com" target="_blank" rel="noreferrer noopener"
+				>wentallout@gmail.com</a>
 		</div>
 	</div>
 </footer>
