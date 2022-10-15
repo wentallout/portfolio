@@ -48,7 +48,7 @@
 		justify-content: space-around;
 		gap: var(--gap);
 		min-width: 100%;
-		animation: scroll 20s linear infinite;
+		animation: scroll 30s linear infinite;
 		animation-direction: reverse;
 	}
 

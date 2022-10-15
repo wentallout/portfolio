@@ -63,7 +63,7 @@
 
 	.tool__name {
 		font-weight: 600;
-		color: var(--neutral-900);
+		color: var(--text);
 	}
 
 	.tool {

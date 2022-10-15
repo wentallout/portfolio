@@ -1,9 +1,11 @@
 import adapter from '@sveltejs/adapter-netlify';
 import sveltePreprocess from 'svelte-preprocess';
 import autoprefixer from 'autoprefixer';
-import path from 'path';
 
 import { mdsvex } from 'mdsvex';
+
+import toc from '@jsdevtools/rehype-toc';
+import rehypeSlug from 'rehype-slug';
 
 /** @type {import('@sveltejs/kit').Config} */
 const config = {
@@ -14,9 +16,7 @@ const config = {
 			}
 			/* Other sveltePreprocess options here, like SCSS */
 		}),
-		mdsvex({
-			extensions: ['.svx']
-		})
+		mdsvex({ extensions: ['.svelte.md', '.md', '.svx'], rehypePlugins: [rehypeSlug, toc] })
 	],
 	extensions: ['.svelte', '.svx'],
 	kit: {

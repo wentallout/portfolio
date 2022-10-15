@@ -1,6 +1,5 @@
 <script>
 	import Comment from './../../../lib/components/Common/Comment.svelte';
-	import Toc from '$lib/components/Common/Toc.svelte';
 
 	export let data;
 </script>
@@ -13,7 +12,7 @@
 <article class="info">
 	<h1 class="xl-text">{data.title}</h1>
 	<p class="small-text project-date">Published: {data.date} by Nguyen Dang Khoa</p>
-	<Toc />
+
 	<svelte:component this={data.content} />
 </article>
 

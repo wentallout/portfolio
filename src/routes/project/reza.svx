@@ -6,12 +6,17 @@ date: '2022-09-14'
     <style>
         :root
         {  
-        --brand-color : #E4543B !important; 
+            --brand-color : #E4543B; 
         }
                
-        .markdown h2 
+        .markdown h2, .markdown h3, .markdown h4 
         {
-        color: var(--brand-color) !important;
+            color: var(--brand-color) !important;
+        }
+
+        .markdown h2:before, .markdown h3:before , .markdown h4:before
+        {
+            background-color: var(--brand-color);
         }
 
     </style>
@@ -53,9 +58,9 @@ date: '2022-09-14'
     import notiScreen from '$lib/assets/images/project/reza/notiScreen.png';
 </script>
 
-<Image src={thumbnail} alt="reza thumbnail" />
+## overview
 
-## Overview
+<Image src={thumbnail} alt="reza thumbnail" />
 
 Imagine you need to organize a party for your group of friends. You are not a cuisine expert and you don't know all the cool places in the city. So you opened Google and search for the nearest restaurants. But, you realized you don't know much about its foods, price or how to contact them to get a table.
 
@@ -65,7 +70,7 @@ You need a mobile app that can:
 - Show you its menu, price and past reviews,
 - Let you reserve a table when it's available and then remind you when it's time and guide you there.
 
-## Problem statement
+## problem statement
 
 Customers are frustrated when they see a long queue or full table at their favorite restaurants. Restaurants can get crowded when there is a big promo and clients may leave to find a different place to eat. That will make businesses lose money. We need an app that can reduce this frustration by making it easier for people to find interesting new restaurants that are available.
 
@@ -81,13 +86,13 @@ We look at one of our competitor apps [PasGo](https://pasgo.vn) and relized some
 
 <Image src={goal} alt="project goal" />
 
-## Audience
+## audience
 
 I need to visualize the kind of user that will use this product. The persona has to represent the largest amount of users so a person with a paying job will be appropriate. She's busy but like to hangout with friends in a nice place sometimes.
 
 <Image src={userResearch} alt="user research" />
 
-## Responsibilities
+## responsibilities
 
 I volunteered to be the team leader because I had more free time than my peers and I'm quite confident in my time management skill.
 
@@ -97,7 +102,7 @@ At every step in our process, I gave each member a task and a deadline. I don't 
 
 <Image src={plan} alt="plan" />
 
-## Constraints
+## constraints
 
 We were given **2 weeks** to finish our project so I decided that we should use our limited time effectively. So I tell my team to remove unnecessary ideas and focus only on the **3 most important features: Searching, Detail and Booking**.
 
@@ -107,13 +112,13 @@ We use Discord for our daily meetings and share our progress and feedback throug
 
 <Image src={discord} alt="discord screen" />
 
-## Process
+## process
 
 The **Design Thinking** method is a practical way to solve complex problems by finding information about the human needs.
 
 There are 5 phases to go through: **Empathize, Define, Ideate, Prototype, Test**.
 
-### Phase 1 - Empathize
+### phase 1 - empathize
 
 In the first phase, I need to understand what my potential users want to identify issues. The goal is that I can answer the challenges they face.
 
@@ -123,7 +128,7 @@ There are 3 possible ways to gather data:
 - Interview (Work in progress).
 - Competitive Analysis (Work in progress).
 
-#### Online Survey
+#### online survey
 
 Using online surveys I can gather real data from students to employees. I want to know if people actually need to make reservations at a restaurant or if they have some disadvantages.
 
@@ -133,11 +138,11 @@ Using online surveys I can gather real data from students to employees. I want t
 
 => **Conclusion 3**: People don't actually understand what it's like to reserve a restaurant table because they have never done it before.
 
-### Phase 2 - Define
+### phase 2 - define
 
 In the second phase, I need to determine our target users based on the data I've researched and identify the pattern of problems I found from the previous phase.
 
-#### User Persona:
+#### user persona
 
 Forming multiple user personas is important but for the scale of our project we stick to making one.
 
@@ -154,13 +159,13 @@ I made a simplified one later:
 - Help users track their reservation.
 - Help users find important info: recommended dishes and price (menu), parking lot, address, reviews
 
-### Phase 3 - Ideate
+### phase 3 - ideate
 
 From what we have brainstormed, we prioritized certain features based on impact/effort.
 
 <Image src={feature} alt="project main features" />
 
-#### User Flow
+#### user flow
 
 Reservation Flow:
 
@@ -170,14 +175,14 @@ Search Flow:
 
 <Image src={searchFlow} alt="searchFlow"  />
 
-#### Low Fidelity Wireframe
+#### low fidelity wireframe
 
 We quickly made some simple lofi screens for the main features we agreed on. It's highly possible that we will make wrong logical decisions in this phase so we need to get feedbacks and tweak the wireframe before phase 4.
 
 <Image src={lofi} alt="low fidelity wireframe" />
 
     
-#### Branding
+#### branding
 
 I got the name from the pronunciation of "reservation" which looks like this: */ˌrezərˈvāSH(ə)n/*. I think short, 2 syllables words are the best names for your brand.
 
@@ -187,7 +192,7 @@ I used Canva and quickly made a SVG logo for my concept mobile app. There are mu
 
 <Image src={rezaIcon} alt="branding" />
 
-#### Design System
+#### design system
 
 I wanted my team to create a simple design system before moving to phase 4. This will help my team achieve the minimum consistency that is required in a typical project.
 

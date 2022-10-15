@@ -86,7 +86,7 @@
 		display: flex;
 		flex-direction: column;
 
-		color: var(--neutral-900);
+		color: var(--text);
 
 		/* SPACING */
 		margin-bottom: var(--space-l);
@@ -131,7 +131,7 @@
 
 	.project__name {
 		font-weight: 600;
-		color: var(--neutral-900);
+		color: var(--text);
 		margin-bottom: var(--space-xs);
 	}
 

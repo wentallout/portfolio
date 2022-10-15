@@ -19,33 +19,65 @@ Having the correct mindset -> reduce the chance of getting OVERWHELMED.
 
 <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/prMuDIiFyC4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-## Step 1: Environment
+## Step 1: Clean your environment
 
-Physical: Clean your desk, do some box breathing
+Take control of your life first, make sure everything is in order.
 
-Digital: Clear up your desktop, exit every programs, tabs on your computer, delete social media apps on your phone.
+Physical environment: Clean your desk, do some box breathing
+
+Digital environment: Clear up your desktop, exit every programs, tabs on your computer, delete social media apps on your phone.
 
 ## Step 2: Brain dump
 
-Put your thoughts into the page, make a list of everthing you need to do
+Put your thoughts into the page, make a list of everthing you need to do, no order required. Something like:
 
-## Step 3: Categorize
+- Take out the trash
+- Fix the logo
+- Change the color
+- Remove unused components
+
+## Step 3: Categorize the list in step 2
+
+Use Eisenhower matrix:
+
+- 1. Do the task (very important, very urgent)
+- 2. Delete (not important, not urgent)
+- 3. Schedule (very important, not urgent)
+- 4. Delegate (very urgent, not important)
+
+Think about: what one thing, if done, would make everything else on this list easier.
+
+Or lookalike group: if a bunch of things that have the same vibe or can all be done on computer, group them.
 
 ## Step 4: Schedule
 
-If it takes more than 2 minutes, don't schedule, just do it immediately
+Start sticking your tasks on a calendar.
 
-If you think a task takes 4 hours, just estimate by double it to 8.
+Rule 1: If it takes more than 2 minutes, don't schedule, just do it immediately.
 
-#9
+Rule 2: Plan visually on a calendar.
 
-#10: Prepare to change everything
+Rule 3: Put in the calendar dates that can't be moved first. (Deadlines, birthday, holiday)
 
+Rule 4: Double your estimate time. If you think a task takes 4 hours, it means you should go for 8 hours.
+
+Rule 5: Most important to least important tasks on your calendar.
+
+Rule 6: Get ultra specific when writing what needs to be done.
+
+Rule 7: If it looks impossible, ask what would this look like if it were easy? -> then plan for that.
+
+Rule 8: Plan for average me, not me at my best.
+
+Rule 9: Focus on doing one task until completion.
+
+Rule 10: Good plan = Flexible plan. Be prepared to change everything.
 
 ## Step 5: Communicate
 
+Before you start any work, you should try communicate to stakeholders. If you're late on something, give your stakeholder a specific date.
 
-## Step 6: Just do it
+## Step 6: JUST DO IT
 
-The only way to chop a tree... is to chop.
+The only way to chop a tree... is to start chopping.
 
