@@ -15,6 +15,7 @@
 .markdown h4 {
 	scroll-margin-top: 80px;
 	text-transform: capitalize;
+	line-height: normal;
 }
 
 .markdown h2 {
@@ -220,4 +221,8 @@
 	margin-left: var(--space-xl);
 
 	color: var(--accent-500) !important;
+}
+
+.markdown ol li::before {
+	content: none;
 }

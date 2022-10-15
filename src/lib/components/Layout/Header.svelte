@@ -1,5 +1,7 @@
 <script>
 	import List from '~icons/ph/list';
+	import X from '~icons/ph/x';
+
 	import { navItems } from '$lib/config.js';
 	import { page } from '$app/stores';
 
@@ -19,9 +21,15 @@
 				id="burger-nav"
 				on:click={handleMobileIconClick}
 				on:keyup={handleMobileIconClick}>
-				<div class="nav__list-item">
-					<List color="var(--neutral-100)" width="32" height="32" />
-				</div>
+				{#if hideMobileMenu}
+					<div class="nav__list-item">
+						<List color="var(--neutral-100)" width="32" height="32" />
+					</div>
+				{:else}
+					<div class="nav__list-item">
+						<X color="var(--neutral-100)" width="32" height="32" />
+					</div>
+				{/if}
 			</li>
 
 			{#each navItems as navItem}

@@ -40,10 +40,10 @@ Put your thoughts into the page, make a list of everthing you need to do, no ord
 
 Use Eisenhower matrix:
 
-- 1. Do the task (very important, very urgent)
-- 2. Delete (not important, not urgent)
-- 3. Schedule (very important, not urgent)
-- 4. Delegate (very urgent, not important)
+1. Do the task (very important, very urgent)
+2. Delete (not important, not urgent)
+3. Schedule (very important, not urgent)
+4. Delegate (very urgent, not important)
 
 Think about: what one thing, if done, would make everything else on this list easier.
 
