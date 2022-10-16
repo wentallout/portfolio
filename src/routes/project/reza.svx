@@ -1,5 +1,5 @@
 ---
-title: Reza - Table reservation mobile app
+title: Reza - Table Reservation Mobile App
 date: '2022-09-14'
 ---
 <svelte:head>
@@ -62,6 +62,14 @@ date: '2022-09-14'
 
 <Image src={thumbnail} alt="reza thumbnail" />
 
+- Project Name: Reza
+- Project Type: Concept Mobile App
+- Role: UI/UX Designer, Team Leader
+- Software: Figma
+
+
+## Inspiration
+
 Imagine you need to organize a party for your group of friends. You are not a cuisine expert and you don't know all the cool places in the city. So you opened Google and search for the nearest restaurants. But, you realized you don't know much about its foods, price or how to contact them to get a table.
 
 You need a mobile app that can:
@@ -72,7 +80,7 @@ You need a mobile app that can:
 
 ## problem statement
 
-Customers are frustrated when they see a long queue or full table at their favorite restaurants. Restaurants can get crowded when there is a big promo and clients may leave to find a different place to eat. That will make businesses lose money. We need an app that can reduce this frustration by making it easier for people to find interesting new restaurants that are available.
+Customers are frustrated when they see a long queue or full table at their favorite restaurants. Restaurants can get crowded when there is a big promo and clients may leave to find a different place to eat => business lose money. We need an app that can reduce this frustration by making it easier for people to find interesting new restaurants that are available.
 
 Our perspective: table reservation apps are not as popular as food ordering apps in Vietnam. People still rely on the old ways of booking a table by phone and miss out on discounts.
 
@@ -82,7 +90,7 @@ We look at one of our competitor apps [PasGo](https://pasgo.vn) and relized some
 - Find directions
 - Give you notifications when it's almost time to eat or nearby deals.
 
-=> We can brainstorm some ideas and design an app with more features and better UX considerations.
+=> We brainstorm some ideas and design an app with more features and better UX considerations.
 
 <Image src={goal} alt="project goal" />
 
@@ -104,7 +112,7 @@ At every step in our process, I gave each member a task and a deadline. I don't 
 
 ## constraints
 
-We were given **2 weeks** to finish our project so I decided that we should use our limited time effectively. So I tell my team to remove unnecessary ideas and focus only on the **3 most important features: Searching, Detail and Booking**.
+We were given **2 weeks** to finish our project so I decided that we should use our limited time wisely. So I tell my team to remove unnecessary ideas and focus only on the **3 most important features: Searching, Detail and Booking**.
 
 I set up a meeting time for my team at 7:00 PM every Monday, Wednesday, and Friday.
 
@@ -184,9 +192,9 @@ We quickly made some simple lofi screens for the main features we agreed on. It'
     
 #### branding
 
-I got the name from the pronunciation of "reservation" which looks like this: */ˌrezərˈvāSH(ə)n/*. I think short, 2 syllables words are the best names for your brand.
+I got the name from the pronunciation of "reservation" which looks like this: **/ˌrezərˈvāSH(ə)n/** . I think short, 2 syllables words are the best names for your brand.
 
-I chose red as the brand color because it makes people hungry and it has this *organic, tomato vibe* to it. I want our brand to be *friendly and comfortable*, something that make you feel relaxed after a long day at work.
+I chose red as the brand color because it makes people hungry and it has this **organic, tomato vibe** to it. I want our brand to be **friendly and comfortable**, something that make you feel relaxed after a long day at work.
 
 I used Canva and quickly made a SVG logo for my concept mobile app. There are multiple sizes for different devices for easy exports.
 
@@ -208,50 +216,50 @@ I wanted my team to create a simple design system before moving to phase 4. This
     </SwiperSlide> 
 </SwiperContainer>
 
-### Phase 4 - Prototype
+### phase 4 - prototype
 
 Phase 4 is all about creating an interactive design that will be tested by potential users in phase 5.
 
 [Link to prototype](https://www.figma.com/proto/owUrwidb8hZbdmruKhMtyS/REZA%3A-Restaurant-Reservation-App?page-id=2%3A9&node-id=275%3A5365&viewport=549%2C-598%2C0.24&scaling=scale-down&starting-point-node-id=275%3A5365)
 
-#### Home
+#### home
 
 This is the screen user sees when they first open the app. I try not to overwhelm users with too much information.
 
 <Image src={homeScreen} alt="home screen UI" />
 
-#### Search
+#### search
 
 This screen lets users search for a restaurant using keywords like the restaurant's name or the cuisine. The search result will be displayed in a list. You can then filter, sort your result by distance, price, rating.
 
 <Image src={searchScreen} alt="search screen UI" />
 
-#### Detail
+#### detail
 
 This screen shows up when user click on a restaurant from their home page or search result page.
 
 <Image src={detailScreen} alt="detail screen" />
 
 
-#### Reservation
+#### reservation
 
 This screen allows users to see their booked reservations and cancel them if they want to.
 
 <Image src={reservationScreen}  alt="reservation screen UI" />
 
-#### Notification
+#### notification
 
 Alarm users when it's time to go to the restaurant. Also it gives them good deals or discount nearby.
 
 <Image src={notiScreen}  alt="notification screen UI" />
 
-### Phase 5 - Test
+### phase 5 - Test
 
 It's widely known that early, repeated testing and redesign will save time and money. We can't just work on something for months then release it without knowing how people wil react to it.
 
 Getting feedback from real users in the testing phase will give me a chance to redesign and maximize the performance of some flows.
 
-#### Detail Page Redesign
+#### detail page redesign
 
 I got some feedback from my instructors and found this one element that needs to be fixed to the top because the page could be long and we can't force users to scroll all the way back to the top.
 
@@ -263,7 +271,7 @@ I got some feedback from my instructors and found this one element that needs to
 
 There is also a Remote Usability Testing service that helps with this testing phase: [Maze](https://maze.co/).
 
-## Conclusion
+## conclusion
 
 From this case study, I've learned a lot about the process of solving problems.
 

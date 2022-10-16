@@ -17,7 +17,7 @@
 </script>
 
 <svelte:head>
-	<title>Project</title>
+	<title>Blog</title>
 </svelte:head>
 
 <section>

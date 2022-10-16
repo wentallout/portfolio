@@ -59,24 +59,24 @@ body {
 	--error: #e61919;
 	--warning: #f0b042;
 
+	--font-size-xs: clamp(0.7rem, calc(0.75rem + -0.05vw), 0.74rem);
 	--font-size-small: clamp(1rem, calc(1rem + 0.07vw), 1rem);
 	--font-size-base: clamp(1.06rem, calc(1.01rem + 0.25vw), 1.25rem);
 	--font-size-mid: clamp(1.28rem, calc(1.17rem + 0.53vw), 1.67rem);
 	--font-size-large: clamp(1.53rem, calc(1.34rem + 0.94vw), 2.22rem);
-
 	--font-size-xl: clamp(1.84rem, calc(1.53rem + 1.52vw), 2.96rem);
 	--font-size-2xl: clamp(2.2rem, calc(1.73rem + 2.36vw), 3.95rem);
 	--font-size-3xl: clamp(2.64rem, calc(1.93rem + 3.55vw), 5.26rem);
 
 	/* line-height */
+	--line-height-xs: normal;
 	--line-height-small: calc(var(--font-size-small) * 1.6);
 	--line-height-base: calc(var(--font-size-base) * 1.6);
 	--line-height-mid: calc(var(--font-size-mid) * 1.6);
-	--line-height-large: calc(var(--font-size-large) * 1.6);
-
-	--line-height-xl: calc(var(--font-size-xl) * 1.6);
-	--line-height-2xl: calc(var(--font-size-2xl) * 1.6);
-	--line-height-3xl: calc(var(--font-size-3xl) * 1.6);
+	--line-height-large: normal;
+	--line-height-xl: normal;
+	--line-height-2xl: normal;
+	--line-height-3xl: normal;
 
 	/* shadow */
 	--box-shadow: rgb(11 43 158 / 15%) 0px 6px 20px -6px;
@@ -85,12 +85,10 @@ body {
 	/* spacing */
 	--space-3xs: clamp(0.25rem, calc(0.23rem + 0.08vw), 0.31rem);
 	--space-2xs: clamp(0.56rem, calc(0.55rem + 0.08vw), 0.63rem);
-
 	--space-xs: clamp(0.81rem, calc(0.78rem + 0.17vw), 0.94rem);
 	--space-s: clamp(1.06rem, calc(1.01rem + 0.25vw), 1.25rem);
 	--space-m: clamp(1.63rem, calc(1.56rem + 0.34vw), 1.88rem);
 	--space-l: clamp(2.13rem, calc(2.02rem + 0.51vw), 2.5rem);
-
 	--space-xl: clamp(3.19rem, calc(3.03rem + 0.76vw), 3.75rem);
 	--space-2xl: clamp(4.25rem, calc(4.05rem + 1.02vw), 5rem);
 	--space-3xl: clamp(6.38rem, calc(6.07rem + 1.53vw), 7.5rem);
@@ -119,6 +117,11 @@ body {
 }
 
 /* 300,400,500,600*/
+
+.xs-text {
+	font-size: var(--font-size-xs);
+	line-height: var(--line-height-xs);
+}
 
 .small-text {
 	font-size: var(--font-size-small);

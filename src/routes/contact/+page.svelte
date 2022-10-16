@@ -25,6 +25,10 @@
 	// ---SEO END---
 </script>
 
+<svelte:head>
+	<title>Contact</title>
+</svelte:head>
+
 <SEO {...seoProps} />
 
 <ContactForm />

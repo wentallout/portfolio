@@ -16,12 +16,16 @@
 	scroll-margin-top: 80px;
 	text-transform: capitalize;
 	line-height: normal;
+	position: relative;
+	color: var(--text);
+}
+
+.markdown h2,
+.markdown h3 {
+	padding-bottom: 0.7rem;
 }
 
 .markdown h2 {
-	position: relative;
-	padding-bottom: 0.7rem;
-	color: var(--text);
 	font-size: var(--font-size-large);
 	line-height: var(--line-height-large);
 	font-weight: 600;
@@ -33,8 +37,7 @@
 }
 
 .markdown h2:before,
-.markdown h3:before,
-.markdown h4:before {
+.markdown h3:before {
 	content: '';
 	display: block;
 	position: absolute;
@@ -56,16 +59,14 @@
 }
 
 .markdown h3 {
-	padding-bottom: 0.7rem;
-	position: relative;
 	font-weight: 600;
-	color: var(--text);
 	font-size: var(--font-size-mid);
 	line-height: var(--line-height-mid);
 
 	/* Spacing */
 	margin-top: var(--space-xl);
 	margin-bottom: var(--space-xs);
+	max-width: fit-content;
 }
 
 .markdown h3:before {
@@ -86,33 +87,13 @@
 }
 
 .markdown h4 {
-	padding-bottom: 0.7rem;
-	position: relative;
-	color: var(--text);
 	font-size: var(--font-size-base);
 	line-height: var(--line-height-base);
 	font-weight: 500;
 	/* Spacing */
 	margin-top: var(--space-l);
-	margin-bottom: var(--space-xs);
+	margin-bottom: var(--space-2xs);
 	max-width: 20ch;
-}
-
-.markdown h4:before {
-	clip-path: polygon(
-		0px 3px,
-		15px 3px,
-		20px 0px,
-		80px 0px,
-		85px 3px,
-		100% 3px,
-		100% 4px,
-		85px 4px,
-		80px 7px,
-		20px 7px,
-		15px 4px,
-		0px 4px
-	);
 }
 
 .markdown p,
@@ -136,6 +117,7 @@
 
 .markdown a:hover {
 	color: var(--accent-700);
+	text-decoration: underline;
 }
 
 .markdown img {
@@ -173,16 +155,28 @@
 
 .toc {
 	display: flex;
+	flex-direction: column;
 	max-width: 60ch;
 	border-radius: var(--border-radius);
 	border: var(--border);
 	max-height: 500px;
 	overflow-y: auto;
-	margin-bottom: var(--space-l);
 	font-weight: 400 !important;
+	margin-top: var(--space-l);
+	margin-bottom: var(--space-l);
 	font-size: var(--font-size-small) !important;
 	padding: var(--space-s) var(--space-m);
 	text-transform: capitalize;
+}
+
+.toc::before {
+	content: 'Table of Contents';
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+	width: 100%;
+	font-family: 'Recoleta Alt';
+	font-size: var(--font-size-base);
 }
 
 .toc-link {
@@ -205,21 +199,18 @@
 
 .toc-link-h2 {
 	font-weight: 500 !important;
-
 	color: var(--accent-700) !important;
 }
 
 .toc-link-h3 {
 	font-weight: 400 !important;
 	margin-left: var(--space-s);
-
 	color: var(--accent-600) !important;
 }
 
 .toc-link-h4 {
 	font-weight: 300 !important;
 	margin-left: var(--space-xl);
-
 	color: var(--accent-500) !important;
 }
 

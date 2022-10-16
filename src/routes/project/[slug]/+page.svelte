@@ -1,5 +1,5 @@
 <script>
-	import Comment from './../../../lib/components/Common/Comment.svelte';
+	import Comment from '$lib/components/Common/Comment.svelte';
 
 	export let data;
 </script>
@@ -10,8 +10,8 @@
 </svelte:head>
 
 <article class="info">
-	<h1 class="xl-text">{data.title}</h1>
-	<p class="small-text project-date">Published: {data.date} by Nguyen Dang Khoa</p>
+	<h1 class="xl-text project-title">{data.title}</h1>
+	<p class="small-text project-date">Published: {data.date}</p>
 
 	<svelte:component this={data.content} />
 </article>
@@ -21,6 +21,10 @@
 <style>
 	.info {
 		display: block;
+	}
+
+	.project-title {
+		text-transform: capitalize;
 	}
 
 	.project-date {

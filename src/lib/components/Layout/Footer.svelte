@@ -27,9 +27,7 @@
 			</a>
 		</div>
 		<div class="footer__other">
-			<p>
-				2022 - Made by Khoa with <a href="https://kit.svelte.dev">SvelteKit</a>
-			</p>
+			<a href="tel:+84929066331" target="_blank" rel="noreferrer noopener">+84929066331</a>
 			<a href="mailto:wentallout@gmail.com" target="_blank" rel="noreferrer noopener"
 				>wentallout@gmail.com</a>
 		</div>
@@ -43,6 +41,7 @@
 		flex-wrap: wrap;
 		z-index: 2;
 		gap: var(--space-s);
+		margin-bottom: var(--space-s);
 	}
 
 	footer {
@@ -67,6 +66,9 @@
 	}
 
 	.footer__other {
+		display: flex;
+		flex-direction: row;
+		gap: var(--space-m);
 		z-index: 2;
 		color: var(--neutral-500);
 	}

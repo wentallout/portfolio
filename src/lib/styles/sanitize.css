@@ -323,8 +323,7 @@
 	position: absolute;
 }
 
-:where(img, input, video, select, textarea) {
-	height: auto;
+:where(input, video, select, textarea, iframe) {
 	max-width: 100%;
 }
 

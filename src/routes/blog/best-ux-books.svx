@@ -12,4 +12,4 @@ categories:
 
 ## Roadmap
 
-<Image imagePreset="scroll" src={uxBooks} alt="UX Books to read"   />
+<Image src={uxBooks} alt="UX Books to read" imagePreset="scroll"  />

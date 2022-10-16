@@ -9,7 +9,7 @@
 
 <article class="info">
 	<h1 class="xl-text">{data.title}</h1>
-	<p class="small-text date">Published: {data.date} by Nguyen Dang Khoa</p>
+	<p class="small-text date">Published: {data.date}</p>
 
 	{#if data.categories.length}
 		<div class="category">
