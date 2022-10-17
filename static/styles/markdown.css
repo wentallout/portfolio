@@ -1,5 +1,6 @@
 .markdown {
 	word-wrap: break-word;
+	position: relative;
 }
 
 .markdown h1 {
@@ -18,6 +19,21 @@
 	line-height: normal;
 	position: relative;
 	color: var(--text);
+}
+
+.markdown h2:target,
+.markdown h3:target,
+.markdown h4:target {
+	animation: flash-bg 2s;
+}
+
+@keyframes flash-bg {
+	from {
+		background-color: var(--primary-800) !important;
+	}
+	to {
+		background-color: transparent !important;
+	}
 }
 
 .markdown h3 {
@@ -180,6 +196,7 @@
 	width: 100%;
 	font-family: 'Recoleta Alt';
 	font-size: var(--font-size-base);
+	border-bottom: 1px solid var(--neutral-900);
 }
 
 .toc-link {

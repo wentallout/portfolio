@@ -1,5 +1,5 @@
 <script>
-	import Hero from '$lib/components/Atropos/Hero.svelte';
+	import Hero from '$lib/components/Home/Hero.svelte';
 	import Clients from '$lib/components/Home/Clients.svelte';
 	import Expertise from '$lib/components/Home/Expertise.svelte';
 	import ToolUsed from '$lib/components/Home/ToolUsed.svelte';

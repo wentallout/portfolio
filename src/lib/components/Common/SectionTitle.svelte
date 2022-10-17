@@ -2,7 +2,7 @@
 	export let sectionTitle = '';
 
 	let sectionIcon = {
-		color: 'var(--primary-600)',
+		color: 'var(--neutral-100)',
 		height: 32,
 		width: 32
 	};
@@ -33,7 +33,7 @@
 		font-family: 'Recoleta Alt';
 		font-weight: 600;
 		background-image: url('/images/noise.svg');
-		background: linear-gradient(to right, var(--primary-600), var(--primary-900));
+		background: linear-gradient(to right, var(--primary-500), var(--accent-500));
 
 		background-clip: text;
 		color: transparent;
@@ -45,7 +45,7 @@
 		align-items: center;
 		padding: 1rem;
 		margin-right: var(--space-xs);
-		background-color: var(--primary-200);
+		background: linear-gradient(to right, var(--primary-500), var(--accent-500));
 		clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
 	}
 </style>
