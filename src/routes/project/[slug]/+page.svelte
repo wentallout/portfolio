@@ -1,8 +1,5 @@
 <script>
-	import Comment from '$lib/components/Common/Comment.svelte';
-
 	export let data;
-
 </script>
 
 <svelte:head>
@@ -16,8 +13,6 @@
 
 	<svelte:component this={data.content} />
 </article>
-
-<Comment />
 
 <style>
 	.info {

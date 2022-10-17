@@ -10,8 +10,7 @@ const directives = {
 	'form-action': ["'self'"],
 	'frame-ancestors': ["'self'"],
 	'frame-src': [
-		"'self'",
-		'https://utteranc.es/'
+		"'self'"
 		// "https://*.stripe.com",
 		// "https://*.facebook.com",
 		// "https://*.facebook.net",
@@ -39,8 +38,7 @@ const directives = {
 	],
 	'script-src': [
 		"'self'",
-		"'unsafe-inline'",
-		'https://utteranc.es/client.js'
+		"'unsafe-inline'"
 		// 'https://*.stripe.com',
 		// 'https://*.facebook.com',
 		// 'https://*.facebook.net',

@@ -31,7 +31,7 @@ This is Khoa's personal portfolio.
 - [ ] Dark Mode
 - [ ] Content (never done)
 - [ ] Blog: Search
-- [x] Blog: Comment
+- [ ] Blog: Comment
 - [ ] 3D Elements
 
 ## Developing
