@@ -1,4 +1,5 @@
 <script>
+	import ExLink from '$lib/components/Common/ExLink.svelte';
 	import Envelope from '~icons/ph/envelope';
 	import LinkedinLogo from '~icons/ph/linkedin-logo';
 	import Phone from '~icons/ph/phone';
@@ -23,37 +24,47 @@
 
 	<div class="social">
 		<address class="social__list small-text">
-			<a class="social__address" href="tel:+84929066331">
-				<Phone {...icon} />
-				<p>+84 929 066 331</p>
-			</a>
+			<ExLink href="tel:+84929066331">
+				<div class="social__address">
+					<Phone {...icon} />
+					<p>+84 929 066 331</p>
+				</div>
+			</ExLink>
 
-			<a class="social__address" href="mailto:wentallout@gmail.com" target="_blank" rel="noreferrer noopener">
-				<Envelope {...icon} />
-				<p>wentallout@gmail.com</p>
-			</a>
-			<a class="social__address" href="https://www.linkedin.com/in/wentallout" target="_blank" rel="noreferrer noopener">
-				<LinkedinLogo {...icon} />
-				<p>LinkedIn</p>
-			</a>
+			<ExLink href="mailto:wentallout@gmail.com">
+				<div class="social__address">
+					<Envelope {...icon} />
+					<p>wentallout@gmail.com</p>
+				</div>
+			</ExLink>
 
-			<a
-				class="social__address"
-				href="https://www.figma.com/team_invite/redeem/CRNTQKDT0VQTLYjw7cEogQ"
-				target="_blank" rel="noreferrer noopener">
-				<FigmaLogo {...icon} />
-				<p>Figma</p>
-			</a>
+			<ExLink href="https://www.linkedin.com/in/wentallout">
+				<div class="social__address">
+					<LinkedinLogo {...icon} />
+					<p>LinkedIn</p>
+				</div>
+			</ExLink>
 
-			<a class="social__address" href="https://github.com/wentallout" target="_blank" rel="noreferrer noopener">
-				<GitHubLogo {...icon} />
-				<p>GitHub</p>
-			</a>
+			<ExLink href="https://www.figma.com/team_invite/redeem/CRNTQKDT0VQTLYjw7cEogQ">
+				<div class="social__address">
+					<FigmaLogo {...icon} />
+					<p>Figma</p>
+				</div>
+			</ExLink>
 
-			<a class="social__address" href="https://www.reddit.com/user/wentallout" target="_blank" rel="noreferrer noopener">
-				<RedditLogo {...icon} />
-				<p>Reddit</p>
-			</a>
+			<ExLink href="https://github.com/wentallout">
+				<div class="social__address">
+					<GitHubLogo {...icon} />
+					<p>GitHub</p>
+				</div>
+			</ExLink>
+
+			<ExLink href="https://www.reddit.com/user/wentallout">
+				<div class="social__address">
+					<RedditLogo {...icon} />
+					<p>Reddit</p>
+				</div>
+			</ExLink>
 		</address>
 	</div>
 </section>
