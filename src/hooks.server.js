@@ -36,7 +36,6 @@ const directives = {
 		// 'https://*.facebook.com',
 		// 'https://*.facebook.net',
 		// 'https://*.stripe.com',
-		// 'https://*.sentry.io',
 	],
 	'script-src': [
 		"'self'",
@@ -47,11 +46,10 @@ const directives = {
 		// 'https://*.facebook.net',
 		// 'https://hcaptcha.com',
 		// 'https://*.hcaptcha.com',
-		// 'https://*.sentry.io',
+
 		// 'https://polyfill.io',
 	],
 	'worker-src': ["'self'"],
-	// remove report-to & report-uri if you do not want to use Sentry reporting
 	'report-to': ["'csp-endpoint'"]
 };
 
