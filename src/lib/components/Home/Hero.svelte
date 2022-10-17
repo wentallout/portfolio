@@ -1,7 +1,7 @@
 <script>
 	import Button from '$lib/components/Button/Button.svelte';
 
-	import Waves from '$lib/assets/images/home/waves.webm';
+	import Waves from '$lib/assets/images/home/waves.mp4';
 </script>
 
 <section>
