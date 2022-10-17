@@ -1,12 +1,3 @@
-// https://gist.github.com/acoyfellow/d8e86979c66ebea25e1643594e38be73
-// https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP
-// https://scotthelme.co.uk/content-security-policy-an-introduction/
-// scanner: https://securityheaders.com/
-
-const PUBLIC_SENTRY_PROJECT_ID = '6716368';
-
-const PUBLIC_SENTRY_KEY = '6d2f531a9ee5498bbc0bfffc3526e842';
-
 const PUBLIC_DOMAIN = 'wentallout.tech';
 
 const directives = {
@@ -61,10 +52,7 @@ const directives = {
 	],
 	'worker-src': ["'self'"],
 	// remove report-to & report-uri if you do not want to use Sentry reporting
-	'report-to': ["'csp-endpoint'"],
-	'report-uri': [
-		`https://sentry.io/api/${PUBLIC_SENTRY_PROJECT_ID}/security/?sentry_key=${PUBLIC_SENTRY_KEY}`
-	]
+	'report-to': ["'csp-endpoint'"]
 };
 
 const csp = Object.entries(directives)
@@ -86,13 +74,6 @@ export async function handle({ event, resolve }) {
 	response.headers.set('Content-Security-Policy-Report-Only', csp);
 	// response.headers.set('Content-Security-Policy', csp);
 	response.headers.set('Strict-Transport-Security', 'max-age=31536000; includeSubDomains; preload');
-	response.headers.set(
-		'Expect-CT',
-		`max-age=86400, report-uri="https://sentry.io/api/${PUBLIC_SENTRY_PROJECT_ID}/security/?sentry_key=${PUBLIC_SENTRY_KEY}"`
-	);
-	response.headers.set(
-		'Report-To',
-		`{group: "csp-endpoint", "max_age": 10886400, "endpoints": [{"url": "https://sentry.io/api/${PUBLIC_SENTRY_PROJECT_ID}/security/?sentry_key=${PUBLIC_SENTRY_KEY}"}]}`
-	);
+
 	return response;
 }
