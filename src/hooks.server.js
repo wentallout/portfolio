@@ -19,7 +19,7 @@ const directives = {
 	'form-action': ["'self'"],
 	'frame-ancestors': ["'self'"],
 	'frame-src': [
-		// "'self'",
+		"'self'",
 		'https://utteranc.es/'
 		// "https://*.stripe.com",
 		// "https://*.facebook.com",
@@ -48,8 +48,8 @@ const directives = {
 		// 'https://*.sentry.io',
 	],
 	'script-src': [
-		// "'self'",
-		// "'unsafe-inline'",
+		"'self'",
+		"'unsafe-inline'",
 		'https://utteranc.es/client.js'
 		// 'https://*.stripe.com',
 		// 'https://*.facebook.com',
