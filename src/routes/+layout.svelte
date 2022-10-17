@@ -43,6 +43,13 @@
 	import '@fontsource/lexend/latin-400.css';
 	import '@fontsource/lexend/latin-500.css';
 	import '@fontsource/lexend/latin-600.css';
+
+	import lazyload from 'vanilla-lazyload';
+	import { browser } from '$app/environment';
+
+	if (browser && !document.lazyloadInstance) {
+		document.lazyloadInstance = new lazyload();
+	}
 </script>
 
 <svelte:head>

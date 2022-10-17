@@ -13,16 +13,6 @@
 
 <div class="project">
 	<div class="project__thumbnail">
-		<!-- <img
-			width="600"
-			height="auto"
-			class="thumbnail"
-			loading="lazy"
-			decoding="async"
-			src={projectImage}
-			alt="thumbnail"
-		/> -->
-
 		<slot name="atropos"><!-- optional fallback --></slot>
 	</div>
 	<div class="project__info">

@@ -20,9 +20,12 @@
 	color: var(--text);
 }
 
-.markdown h2,
 .markdown h3 {
 	padding-bottom: 0.7rem;
+}
+
+.markdown h2 {
+	padding-bottom: 0.9rem;
 }
 
 .markdown h2 {

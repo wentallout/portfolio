@@ -112,7 +112,7 @@ body {
 }
 
 ::selection {
-	color: var(--neutral-900);
+	color: var(--text);
 	background: var(--primary-400);
 }
 

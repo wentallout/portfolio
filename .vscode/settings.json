@@ -7,5 +7,6 @@
 			"path": "[[workspace]]"
 		}
 	],
-	"svg.preview.background": "transparent"
+	"svg.preview.background": "transparent",
+	"dotenv.enableAutocloaking": false
 }

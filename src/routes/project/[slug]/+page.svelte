@@ -2,6 +2,7 @@
 	import Comment from '$lib/components/Common/Comment.svelte';
 
 	export let data;
+
 </script>
 
 <svelte:head>

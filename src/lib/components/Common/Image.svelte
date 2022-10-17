@@ -8,6 +8,14 @@
 	export let imagePreset = 'fullscreen';
 
 	import { Lightbox } from 'svelte-lightbox';
+
+	import { onMount } from 'svelte';
+	import { browser } from '$app/environment';
+	onMount(() => {
+		if (browser) {
+			document.lazyloadInstance.update();
+		}
+	});
 </script>
 
 <figure>

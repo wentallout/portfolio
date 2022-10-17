@@ -36,14 +36,14 @@ Put your thoughts into the page, make a list of everthing you need to do, no ord
 - Change the color
 - Remove unused components
 
-## Step 3: Categorize the list in step 2
+## Step 3: Categorize the todo list
 
 Use Eisenhower matrix:
 
-1. Do the task (very important, very urgent)
-2. Delete (not important, not urgent)
-3. Schedule (very important, not urgent)
-4. Delegate (very urgent, not important)
+- Do the task (very important, very urgent)
+- Delete (not important, not urgent)
+- Schedule (very important, not urgent)
+- Delegate (very urgent, not important)
 
 Think about: what one thing, if done, would make everything else on this list easier.
 
@@ -65,7 +65,7 @@ Rule 5: Most important to least important tasks on your calendar.
 
 Rule 6: Get ultra specific when writing what needs to be done.
 
-Rule 7: If it looks impossible, ask what would this look like if it were easy? -> then plan for that.
+Rule 7: If it looks impossible, ask what would this look like if it were easy? Then plan for that.
 
 Rule 8: Plan for average me, not me at my best.
 
