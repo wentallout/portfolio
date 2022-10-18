@@ -32,9 +32,8 @@
 	.section-title h2 {
 		font-family: 'Recoleta Alt';
 		font-weight: 600;
-		background-image: url('/images/noise.svg');
-		background: linear-gradient(to right, var(--primary-500), var(--accent-500));
 
+		background: linear-gradient(to right, var(--primary-500), var(--accent-500));
 		background-clip: text;
 		color: transparent;
 	}

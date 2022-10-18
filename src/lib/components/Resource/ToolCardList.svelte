@@ -74,12 +74,11 @@
 		padding: var(--space-m);
 		box-shadow: var(--box-shadow);
 		border-radius: var(--border-radius);
+		transition: 0.3s;
 	}
 
 	.tool:hover {
 		box-shadow: var(--box-shadow-hover);
-		border: var(--border-hover);
-		transition: 0.3s;
 	}
 
 	.tool__description {

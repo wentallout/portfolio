@@ -3,15 +3,20 @@
 	import nashtech from '$lib/assets/images/home/nashtech.png?w=300&h=300';
 </script>
 
-<section class="clients">
-	<h2 class="clients__title xl-text">I have worked for</h2>
-	<div class="clients__logo">
-		<img class="logo" loading="lazy" decoding="async" src={fpt} alt="FPT Software" />
-		<img class="logo" loading="lazy" decoding="async" src={nashtech} alt="NashTech" />
+<section>
+	<div class="clients">
+		<h2 class="clients__title xl-text">I have worked for</h2>
+		<div class="clients__logo">
+			<img class="logo" loading="lazy" decoding="async" src={fpt} alt="FPT Software" />
+			<img class="logo" loading="lazy" decoding="async" src={nashtech} alt="NashTech" />
+		</div>
 	</div>
 </section>
 
 <style>
+	section {
+		padding-bottom: var(--space-2xl);
+	}
 	.clients {
 		width: 100%;
 		display: flex;

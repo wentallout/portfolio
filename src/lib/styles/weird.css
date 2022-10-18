@@ -99,3 +99,7 @@ a {
 .my-atropos {
 	height: 100%;
 }
+
+.swiper-scrollbar-drag {
+	background-color: var(--text) !important;
+}

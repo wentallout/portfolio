@@ -86,6 +86,11 @@
 		border-radius: var(--border-radius);
 		border: var(--border);
 		overflow: hidden;
+		transition: 0.3s;
+	}
+
+	.project:hover {
+		box-shadow: var(--box-shadow-hover);
 	}
 
 	.project__btn {
@@ -94,10 +99,6 @@
 		flex-wrap: wrap;
 		justify-content: left;
 		gap: var(--space-xs);
-	}
-
-	.project:hover {
-		box-shadow: var(--box-shadow-hover);
 	}
 
 	.project__thumbnail {

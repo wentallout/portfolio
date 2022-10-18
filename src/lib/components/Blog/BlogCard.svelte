@@ -20,10 +20,12 @@
 		border-radius: var(--border-radius);
 		border: var(--border);
 		padding: 1rem 2rem;
+		box-shadow: var(--box-shadow);
+		transition: 0.3s;
 	}
 
 	.blog:hover {
-		border: var(--border-hover);
+		box-shadow: var(--box-shadow-hover);
 	}
 
 	.blog__title {

@@ -75,6 +75,8 @@
 		position: sticky;
 		top: 0;
 		z-index: 98;
+
+		box-shadow: 0 2px 4px rgba(45, 35, 66, 0.35), 0 7px 13px -3px rgba(45, 35, 66, 0.25);
 	}
 
 	.hidden-mobile {

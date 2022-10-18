@@ -92,10 +92,11 @@
 		align-items: center;
 		border-radius: var(--border-radius);
 		padding: 8px 12px;
+		transition: 0.3s;
 	}
 
 	.social__address:hover {
-		background-color: var(--neutral-300);
+		box-shadow: var(--box-shadow-hover);
 	}
 
 	.social__address p {

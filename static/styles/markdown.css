@@ -24,15 +24,15 @@
 .markdown h2:target,
 .markdown h3:target,
 .markdown h4:target {
-	animation: flash-bg 2s;
+	animation: flash-bg 3s;
 }
 
 @keyframes flash-bg {
 	from {
-		background-color: var(--primary-800) !important;
+		background-color: yellow;
 	}
 	to {
-		background-color: transparent !important;
+		background-color: transparent;
 	}
 }
 
@@ -50,8 +50,8 @@
 	font-weight: 600;
 
 	/* Spacing */
-	margin-top: var(--space-2xl) !important;
-	margin-bottom: var(--space-s) !important;
+	margin-top: var(--space-3xl);
+	margin-bottom: var(--space-s);
 	font-family: 'Recoleta Alt';
 }
 
