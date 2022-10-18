@@ -13,5 +13,5 @@ import Image from '$lib/components/Common/Image.svelte';
 
 ## Folder Structure
 
-<Image src={projectOrganization}/>
+<Image src={projectOrganization} />
 

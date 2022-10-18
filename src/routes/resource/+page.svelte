@@ -2,6 +2,7 @@
 	import BookGallery from '$lib/components/Resource/BookGallery.svelte';
 	import ToolCardList from '$lib/components/Resource/ToolCardList.svelte';
 	import Books from '~icons/ph/books';
+	import HardDrives from '~icons/ph/hard-drives';
 	import Flask from '~icons/ph/flask';
 
 	import SectionTitle from '$lib/components/Common/SectionTitle.svelte';
@@ -30,6 +31,14 @@
 
 	<ToolCardList />
 </section>
+
+<section>
+	<SectionTitle sectionTitle="Other" let:sectionIcon>
+		<HardDrives {...sectionIcon} />
+	</SectionTitle>
+</section>
+
+<a href="/resource/music">Music</a>
 
 <style>
 	.section-description {

@@ -6,6 +6,7 @@ categories:
 ---
 
 <script>
+import {YouTube} from 'sveltekit-embed';
 
 </script>
 
@@ -14,10 +15,6 @@ categories:
 Doing the right work upfront -> preparing correctly -> so you can save time in the long run.
 
 Having the correct mindset -> reduce the chance of getting OVERWHELMED.
-
-## Video
-
-<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/prMuDIiFyC4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 ## Step 1: Clean your environment
 
@@ -80,4 +77,8 @@ Before you start any work, you should try communicate to stakeholders. If you're
 ## Step 6: JUST DO IT
 
 The only way to chop a tree... is to start chopping.
+
+## Video
+
+<YouTube width="300" height="300" youTubeId="prMuDIiFyC4" />
 

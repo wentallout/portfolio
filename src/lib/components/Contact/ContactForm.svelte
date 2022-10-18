@@ -39,9 +39,9 @@
 					<PaperPlaneRight color="var(--neutral-900)" />
 				</Button>
 
-				<!-- <button class="btn btn-reset" type="reset">Reset</button> -->
 				<Button
 					label="Reset"
+					border="1px solid var(--error)"
 					backgroundColor="transparent"
 					labelColor="var(--error)"
 					type="reset" />

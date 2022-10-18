@@ -42,6 +42,7 @@
 		"svelte": "^3.51.0",
 		"svelte-check": "^2.9.2",
 		"svelte-lightbox": "^1.0.2",
+		"sveltekit-embed": "^0.0.7",
 		"swiper": "^8.4.3",
 		"three": "^0.145.0",
 		"unplugin-icons": "^0.14.11",
