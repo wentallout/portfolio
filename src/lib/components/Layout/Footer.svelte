@@ -1,10 +1,13 @@
 <script>
+	import FooterDeco from '$lib/components/Layout/FooterDeco.svelte';
 	import { navItems } from '$lib/config.js';
 	import LinkedinLogo from '~icons/ph/linkedin-logo';
 	import Phone from '~icons/ph/phone';
 </script>
 
 <footer>
+	<FooterDeco />
+
 	<div class="footer-container small-text">
 		<ul class="nav-list">
 			{#each navItems as navItem}

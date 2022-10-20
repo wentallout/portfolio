@@ -32,8 +32,6 @@
 	}
 
 	.hero {
-		/* Use "linear-gradient" to add a darken background effect to the image. This will make the text easier to read */
-		/* background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)); */
 		position: relative;
 		border-radius: var(--border-radius);
 		overflow: hidden;

@@ -68,5 +68,10 @@
 
 	.btn:hover {
 		filter: brightness(80%);
+		scale: 1.15;
+	}
+
+	.btn:active {
+		scale: 0.7;
 	}
 </style>

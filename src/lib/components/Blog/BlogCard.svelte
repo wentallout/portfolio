@@ -7,8 +7,8 @@
 
 <a href={blogLink}>
 	<div class="blog">
+		<div class="blog__date xs-text">{blogDate}</div>
 		<div class="blog__title base-text">{blogTitle}</div>
-		<div class="blog__date small-text">{blogDate}</div>
 	</div>
 </a>
 
@@ -22,6 +22,8 @@
 		padding: 1rem 2rem;
 		box-shadow: var(--box-shadow);
 		transition: 0.3s;
+
+		position: relative;
 	}
 
 	.blog:hover {
@@ -33,7 +35,21 @@
 	}
 
 	.blog__date {
+		/* flex */
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-direction: row;
+
+		width: fit-content;
+		height: 20px;
+
+		/* typography */
 		font-weight: 300;
-		color: var(--neutral-800);
+		color: var(--neutral-700);
+		border: 1px solid var(--neutral-700);
+		background-color: var(--neutral-100);
+		padding: 4px 8px;
+		border-radius: var(--border-radius);
 	}
 </style>

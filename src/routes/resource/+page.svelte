@@ -36,14 +36,39 @@
 	<SectionTitle sectionTitle="Other" let:sectionIcon>
 		<HardDrives {...sectionIcon} />
 	</SectionTitle>
-</section>
 
-<a href="/resource/music">Music</a>
+	<div class="other-container">
+		<a class="other" href="/resource/music">
+			<div class="other__title large-text">Music</div>
+		</a>
+	</div>
+</section>
 
 <style>
 	.section-description {
 		max-width: 60ch;
 		text-align: left;
 		margin-bottom: var(--space-s);
+		color: var(--text);
+	}
+
+	.other-container {
+		display: flex;
+		flex-direction: column;
+	}
+
+	.other {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+
+		padding: var(--space-m);
+		box-shadow: var(--box-shadow);
+		border-radius: var(--border-radius);
+		width: 300px;
+		height: 300px;
+	}
+	.other__title {
+		font-weight: 600;
 	}
 </style>

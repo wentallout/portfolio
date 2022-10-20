@@ -1,0 +1,239 @@
+.markdown {
+	word-wrap: break-word;
+	position: relative;
+}
+
+.markdown h1 {
+	font-family: 'Recoleta Alt';
+	color: var(--text);
+	font-weight: 600;
+	line-height: normal;
+}
+
+.markdown h2,
+.markdown h3,
+.markdown h4 {
+	scroll-margin-top: 80px;
+	text-transform: capitalize;
+	line-height: normal;
+	position: relative;
+	color: var(--text);
+}
+
+.markdown h2:target,
+.markdown h3:target,
+.markdown h4:target {
+	animation: flash-bg 3s;
+}
+
+@keyframes flash-bg {
+	from {
+		background-color: yellow;
+	}
+	to {
+		background-color: transparent;
+	}
+}
+
+.markdown h3 {
+	padding-bottom: 0.7rem;
+}
+
+.markdown h2 {
+	padding-bottom: 0.9rem;
+}
+
+.markdown h2 {
+	font-size: var(--font-size-large);
+	line-height: var(--line-height-large);
+	font-weight: 600;
+
+	/* Spacing */
+	margin-top: var(--space-3xl);
+	margin-bottom: var(--space-s);
+	font-family: 'Recoleta Alt';
+}
+
+.markdown h2:before,
+.markdown h3:before {
+	content: '';
+	display: block;
+	position: absolute;
+	bottom: 0px;
+	left: 2px;
+	width: 100%;
+	height: 10px;
+	background-color: var(--text);
+	clip-path: polygon(
+		0px 0px,
+		85px 0px,
+		90px 5px,
+		100% 5px,
+		100% 6px,
+		85px 6px,
+		80px 10px,
+		0px 10px
+	);
+}
+
+.markdown h3 {
+	font-weight: 600;
+	font-size: var(--font-size-mid);
+	line-height: var(--line-height-mid);
+
+	/* Spacing */
+	margin-top: var(--space-xl);
+	margin-bottom: var(--space-xs);
+	max-width: 60ch;
+}
+
+.markdown h3:before {
+	clip-path: polygon(
+		0px 5px,
+		35px 5px,
+		40px 0px,
+		85px 0px,
+		90px 5px,
+		100% 5px,
+		100% 6px,
+		85px 6px,
+		80px 10px,
+		20px 10px,
+		15px 6px,
+		0px 6px
+	);
+}
+
+.markdown h4 {
+	font-size: var(--font-size-base);
+	line-height: var(--line-height-base);
+	font-weight: 500;
+	/* Spacing */
+	margin-top: var(--space-l);
+	margin-bottom: var(--space-2xs);
+	max-width: 20ch;
+}
+
+.markdown p,
+.markdown li {
+	color: var(--text);
+	font-size: var(--font-size-small);
+	line-height: var(--line-height-small);
+	margin: 0;
+	margin-bottom: var(--space-s);
+	max-width: 60ch;
+}
+
+.markdown li {
+	margin-bottom: 0;
+}
+
+.markdown a:not(.toc a) {
+	color: var(--accent-600);
+	font-weight: 600;
+}
+
+.markdown a:hover {
+	color: var(--accent-700);
+	text-decoration: underline;
+}
+
+.markdown img {
+	display: block;
+	width: 100%;
+	height: auto;
+	border: 1px solid var(--neutral-500);
+	border-radius: var(--border-radius);
+	margin-bottom: var(--space-m);
+}
+
+@media (min-width: 768px) {
+	.markdown img {
+		max-width: 60%;
+	}
+}
+
+.markdown li:not(.toc li) {
+	font-weight: 500;
+	margin-inline-start: var(--space-m);
+}
+
+.markdown li::before {
+	content: '◆';
+	color: var(--text);
+	margin-right: 4px;
+}
+
+.markdown ul {
+	margin-bottom: var(--space-s);
+}
+
+.markdown .swiper {
+	margin-bottom: var(--space-m);
+}
+
+.markdown ol li::before {
+	content: none;
+}
+
+.toc {
+	display: flex;
+	flex-direction: column;
+	max-width: 60ch;
+	border-radius: var(--border-radius);
+	border: var(--border);
+	max-height: 500px;
+	overflow-y: auto;
+	font-weight: 400 !important;
+	margin-top: var(--space-l);
+	margin-bottom: var(--space-l);
+	font-size: var(--font-size-small) !important;
+	padding: var(--space-s) var(--space-m);
+	text-transform: capitalize;
+}
+
+.toc::before {
+	content: 'Table of Contents';
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+	width: 100%;
+	font-family: 'Recoleta Alt';
+	font-size: var(--font-size-base);
+	border-bottom: 1px solid var(--neutral-900);
+}
+
+.toc-link {
+	font-weight: 400;
+	background-color: transparent !important;
+}
+
+.toc li:before {
+	content: none;
+}
+
+.toc a:hover {
+	filter: brightness(0.6);
+	text-decoration: underline;
+}
+
+.toc-item-h2 {
+	margin-bottom: 0.5rem !important;
+}
+
+.toc-link-h2 {
+	font-weight: 500 !important;
+	color: var(--accent-700) !important;
+}
+
+.toc-link-h3 {
+	font-weight: 400 !important;
+	margin-left: var(--space-s);
+	color: var(--accent-600) !important;
+}
+
+.toc-link-h4 {
+	font-weight: 300 !important;
+	margin-left: var(--space-xl);
+	color: var(--accent-500) !important;
+}

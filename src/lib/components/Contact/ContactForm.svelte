@@ -10,7 +10,7 @@
 		<EnvelopeSimple {...sectionIcon} />
 	</SectionTitle>
 
-	<div class="form-container">
+	<div class="form-container fancy-card">
 		<form
 			name="contact"
 			method="post"
@@ -59,9 +59,7 @@
 	}
 
 	.contact {
-		border-radius: var(--border-radius);
 		border: var(--border);
-		box-shadow: var(--box-shadow);
 		padding: var(--space-m);
 
 		width: 100%;

@@ -13,3 +13,17 @@ categories:
 ## Roadmap
 
 <Image src={uxBooks} alt="UX Books to read" imagePreset="scroll"  />
+
+## Read these first
+
+Fundamental books will give you a feel for what UX design is all about. The essential reading list includes following books:
+
+- The Design of Everyday Things by Don Norman
+- Designing for Interaction by Dan Saffer
+- 100 Things Every Designer Needs to Know about People by Susan Weinschenk
+- Dont Make Me Think: A Common Sense Approach to Web Usability by Steve Krug
+- About Face: The Essentials of Interaction Design by Alan Cooper.
+
+## Transition from Web Developer to UI/UX Designer
+
+[Link](https://xd.adobe.com/ideas/career-tips/web-developer-ux-designer-10-practical-tips-make-career-transition-happen/)

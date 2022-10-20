@@ -1,6 +1,6 @@
-<svelte:head>
-	<link rel="stylesheet" href="/styles/markdown.css" />
-</svelte:head>
+<script>
+	import '$lib/styles/markdown.css';
+</script>
 
 <div class="markdown">
 	<slot />

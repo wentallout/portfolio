@@ -89,7 +89,7 @@
 	}
 
 	.block__title {
-		background: linear-gradient(to right, var(--primary-500), var(--accent-500));
+		background: var(--gradient);
 		background-clip: text;
 		color: transparent;
 		font-weight: 500;

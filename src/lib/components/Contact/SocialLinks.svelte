@@ -77,7 +77,6 @@
 		margin-bottom: var(--space-m);
 		box-shadow: var(--box-shadow);
 		padding: var(--space-m);
-		border-radius: var(--border-radius);
 		border: var(--border);
 	}
 

@@ -33,7 +33,7 @@
 		font-family: 'Recoleta Alt';
 		font-weight: 600;
 
-		background: linear-gradient(to right, var(--primary-500), var(--accent-500));
+		background: var(--gradient);
 		background-clip: text;
 		color: transparent;
 	}
@@ -44,7 +44,7 @@
 		align-items: center;
 		padding: 1rem;
 		margin-right: var(--space-xs);
-		background: linear-gradient(to right, var(--primary-500), var(--accent-500));
+		background: var(--gradient);
 		clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
 	}
 </style>

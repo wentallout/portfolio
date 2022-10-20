@@ -83,7 +83,7 @@
 
 		/* SHADOW */
 		box-shadow: var(--box-shadow);
-		border-radius: var(--border-radius);
+
 		border: var(--border);
 		overflow: hidden;
 		transition: 0.3s;
@@ -106,13 +106,6 @@
 		overflow: visible;
 		height: 100%;
 	}
-
-	/* .thumbnail {
-		display: none;
-		width: 100%;
-		height: 100%;
-		border-radius: var(--border-radius);
-	} */
 
 	.project__info {
 		display: flex;

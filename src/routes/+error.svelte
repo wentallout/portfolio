@@ -3,16 +3,34 @@
 	import { page } from '$app/stores';
 </script>
 
-<h1 class="large-text status">{$page.status}</h1>
-<h2 class="error-info mix-text">Oops! This is awkward...</h2>
-<p>{$page.error.message}</p>
-
-<a href="/">
-	<Button label="Go back" labelColor="var(--neutral-900)" backgroundColor="var(--primary-500)" />
-</a>
+<div class="error">
+	<div class="error__block">
+		<h1 class="xxxl-text status">{$page.status}</h1>
+		<h2 class="error__info base-text">Oops! This is awkward...</h2>
+		<p class="error-message small-text">{$page.error.message}</p>
+		<a href="/">
+			<Button label="Go back" labelColor="var(--text)" backgroundColor="var(--primary-500)" />
+		</a>
+	</div>
+	<img class="error__image" width="500" height="500" src="/images/error.gif" alt="" />
+</div>
 
 <style>
+	.error {
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+		padding: var(--space-m);
+		border: var(--border);
+	}
+
 	.status {
 		color: var(--error);
+		font-weight: 600;
+	}
+
+	.error-message {
+		color: var(--neutral-600);
+		font-weight: 300;
 	}
 </style>

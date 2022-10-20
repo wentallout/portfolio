@@ -104,6 +104,8 @@ body {
 
 	/* darkmode mode */
 	/* color-scheme: light dark; */
+
+	--gradient: linear-gradient(to right, var(--primary-500), var(--accent-500));
 }
 
 #headerBottom {
@@ -178,6 +180,7 @@ html {
 
 body {
 	text-rendering: optimizeLegibility;
+	-webkit-font-smoothing: antialiased;
 	color: var(--neutral-900);
 }
 
@@ -212,6 +215,7 @@ textarea {
 	color: var(--neutral-800) !important;
 	margin-bottom: var(--space-s);
 	border: 1px solid var(--neutral-700);
+	border-radius: var(--border-radius);
 }
 
 input:focus,
