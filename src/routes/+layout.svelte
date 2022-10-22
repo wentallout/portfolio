@@ -86,11 +86,12 @@
 		display: flex;
 		flex-direction: column;
 		min-height: calc(100vh - 70px);
-		margin: var(--space-m) 0;
+		margin: var(--space-m) 1rem;
 	}
 
 	@media (min-width: 768px) {
 		.main-content {
+			margin: var(--space-m) 0;
 			padding: var(--space-m) 17vw;
 		}
 	}

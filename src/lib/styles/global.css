@@ -262,3 +262,8 @@ section {
 svg {
 	flex: none;
 }
+
+hr {
+	width: 100%;
+	border: 2px solid var(--text);
+}

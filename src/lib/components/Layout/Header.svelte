@@ -26,7 +26,7 @@
 						<List color="var(--neutral-100)" width="32" height="32" />
 					{:else}
 						<X color="var(--neutral-100)" width="32" height="32" />
-					{/if}s
+					{/if}
 				</div>
 			</li>
 
