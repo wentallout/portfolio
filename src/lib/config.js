@@ -40,6 +40,7 @@ const website = {
 	icon: 'static/icon-512.png',
 	backgroundColor: '#fcfcfa',
 	themeColor: '#e88615',
+	description: 'Nguyen Dang Khoa - Professional UI UX Design - Portfolio',
 	//
 
 	//SOCIAL
