@@ -36,10 +36,10 @@ const website = {
 	// PWA
 	siteTitle: 'Dang Khoa - Portfolio',
 	siteShortTitle: 'Portfolio',
-	siteUrl: 'https://www.wentallout.tech',
+	siteUrl: 'https://wentallout.tech',
 	icon: 'static/icon-512.png',
-	backgroundColor: '#1b1b1d',
-	themeColor: '#b4883c',
+	backgroundColor: '#fcfcfa',
+	themeColor: '#e88615',
 	//
 
 	//SOCIAL
