@@ -82,7 +82,7 @@
 
 	.side:after {
 		right: 0;
-		background: url('images/footer/bg_line_footer_right.webp') no-repeat top center/contain;
+		background: url('/images/footer/bg_line_footer_right.webp') no-repeat top center/contain;
 	}
 
 	@media (max-width: 767px) {

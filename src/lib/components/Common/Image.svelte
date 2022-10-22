@@ -3,7 +3,7 @@
 	export let alt = 'insert alt here';
 
 	export let width = 600;
-	export let height = 'auto';
+	export let height = '600';
 
 	export let imagePreset = 'fullscreen';
 

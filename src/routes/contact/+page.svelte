@@ -2,7 +2,6 @@
 	import SocialLinks from '$lib/components/Contact/SocialLinks.svelte';
 	import ContactForm from '$lib/components/Contact/ContactForm.svelte';
 
-	// ---SEO---
 	const breadcrumbs = [
 		{
 			name: 'Home',

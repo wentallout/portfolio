@@ -1,4 +1,5 @@
 <script>
+	import PageTitle from './../Common/PageTitle.svelte';
 	import EnvelopeSimple from '~icons/ph/envelope-simple';
 	import Button from '$lib/components/Button/Button.svelte';
 	import PaperPlaneRight from '~icons/ph/paper-plane-right';
@@ -6,11 +7,11 @@
 </script>
 
 <section>
-	<SectionTitle sectionTitle="Contact me" let:sectionIcon>
+	<SectionTitle sectionTitle="Email" let:sectionIcon>
 		<EnvelopeSimple {...sectionIcon} />
 	</SectionTitle>
 
-	<div class="form-container fancy-card">
+	<div class="form-container">
 		<form
 			name="contact"
 			method="post"
@@ -61,7 +62,6 @@
 	.contact {
 		border: var(--border);
 		padding: var(--space-m);
-
 		width: 100%;
 		max-width: 80rem;
 		display: flex;

@@ -28,7 +28,14 @@
 
 	.blog:hover {
 		box-shadow: var(--box-shadow-hover);
+		color: var(--primary-500);
 	}
+
+	/* .blog:hover .blog__title {
+		background: var(--gradient);
+		background-clip: text;
+		color: transparent;
+	} */
 
 	.blog__title {
 		font-weight: 500;

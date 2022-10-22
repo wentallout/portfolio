@@ -2,7 +2,7 @@
 	import { onMount } from 'svelte';
 
 	export let label = 'exampleLabel';
-	export let labelColor = 'var(--neutral-900)';
+	export let labelColor = 'var(--text)';
 	export let backgroundColor = 'transparent';
 
 	export let type = 'submit';

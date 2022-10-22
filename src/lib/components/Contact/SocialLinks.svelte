@@ -75,7 +75,6 @@
 		flex-direction: column;
 		width: 100%;
 		margin-bottom: var(--space-m);
-		box-shadow: var(--box-shadow);
 		padding: var(--space-m);
 		border: var(--border);
 	}

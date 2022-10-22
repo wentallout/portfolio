@@ -21,15 +21,13 @@
 				id="burger-nav"
 				on:click={handleMobileIconClick}
 				on:keyup={handleMobileIconClick}>
-				{#if hideMobileMenu}
-					<div class="nav__list-item">
+				<div class="nav__list-item">
+					{#if hideMobileMenu}
 						<List color="var(--neutral-100)" width="32" height="32" />
-					</div>
-				{:else}
-					<div class="nav__list-item">
+					{:else}
 						<X color="var(--neutral-100)" width="32" height="32" />
-					</div>
-				{/if}
+					{/if}s
+				</div>
 			</li>
 
 			{#each navItems as navItem}
@@ -58,7 +56,6 @@
 
 	.reduced-header {
 		font-size: var(--font-size-small);
-		/* transition: all 0.3s; */
 		background-color: rgba(0, 0, 0, 0.8) !important;
 		backdrop-filter: blur(5px);
 	}

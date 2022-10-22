@@ -81,6 +81,10 @@
 		box-shadow: var(--box-shadow-hover);
 	}
 
+	.tool:hover .tool__name {
+		color: var(--primary-500);
+	}
+
 	.tool__description {
 		color: var(--neutral-700);
 		overflow: hidden;

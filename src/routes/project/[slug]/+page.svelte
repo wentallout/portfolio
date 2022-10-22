@@ -1,4 +1,5 @@
 <script>
+	import End from '$lib/components/Common/End.svelte';
 	export let data;
 </script>
 
@@ -12,6 +13,8 @@
 	<p class="small-text project-date">Published: {data.date}</p>
 
 	<svelte:component this={data.content} />
+
+	<End />
 </article>
 
 <style>

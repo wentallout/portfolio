@@ -89,10 +89,6 @@
 		transition: 0.3s;
 	}
 
-	.project:hover {
-		box-shadow: var(--box-shadow-hover);
-	}
-
 	.project__btn {
 		margin-top: auto;
 		display: flex;

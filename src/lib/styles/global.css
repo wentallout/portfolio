@@ -1,6 +1,5 @@
 body {
 	margin: 0;
-	overflow: overlay;
 }
 
 @font-face {
@@ -19,6 +18,8 @@ body {
 :root {
 	--text: var(--neutral-900);
 	--background: #fafafa;
+	--brand-color: var(--neutral-900);
+
 	/* Primary: Mimolette Orange */
 	--primary-100: #fffcf2;
 	--primary-200: #ffebbb;
@@ -51,8 +52,6 @@ body {
 	--neutral-700: #75706d;
 	--neutral-800: #4e4a47;
 	--neutral-900: #262422;
-
-	--brand-color: var(--neutral-900);
 
 	/* alert */
 	--success: #80d926;
@@ -101,6 +100,8 @@ body {
 	--border-radius: 10px;
 	--border: 1px solid #e5e5e5;
 	--border-hover: 1px solid var(--neutral-900);
+
+	--text-shadow: 0 0 5px #000;
 
 	/* darkmode mode */
 	/* color-scheme: light dark; */
@@ -161,21 +162,16 @@ body {
 }
 
 html {
-	/* HEIGHT */
+	-webkit-font-smoothing: antialiased;
 	min-height: 101%;
-	/*  */
 
 	/* DEFAULT FONT CONFIG */
 	font-family: 'Lexend', sans-serif, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
 		Helvetica, Arial, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
 	font-weight: 400;
-	/*  */
 
 	/* SCROLL SMOOTH */
 	/* scroll-behavior: smooth; */
-	/*  */
-
-	-webkit-font-smoothing: antialiased;
 }
 
 body {
@@ -215,7 +211,6 @@ textarea {
 	color: var(--neutral-800) !important;
 	margin-bottom: var(--space-s);
 	border: 1px solid var(--neutral-700);
-	border-radius: var(--border-radius);
 }
 
 input:focus,

@@ -5,8 +5,12 @@
 	import Footer from '$lib/components/Layout/Footer.svelte';
 	import Header from '$lib/components/Layout/Header.svelte';
 	import Breadcrumb from '$lib/components/Layout/Breadcrumb.svelte';
-
 	import LogoContainer from '$lib/components/Layout/LogoContainer.svelte';
+
+	import '@fontsource/lexend/latin-300.css';
+	import '@fontsource/lexend/latin-400.css';
+	import '@fontsource/lexend/latin-500.css';
+	import '@fontsource/lexend/latin-600.css';
 	import '$lib/styles/sanitize.css';
 	import '$lib/styles/global.css';
 	import '$lib/styles/weird.css';
@@ -39,11 +43,6 @@
 		}
 	}
 
-	import '@fontsource/lexend/latin-300.css';
-	import '@fontsource/lexend/latin-400.css';
-	import '@fontsource/lexend/latin-500.css';
-	import '@fontsource/lexend/latin-600.css';
-
 	import lazyload from 'vanilla-lazyload';
 	import { browser } from '$app/environment';
 
@@ -54,6 +53,7 @@
 
 <svelte:head>
 	<meta name="google-site-verification" content="jDcuv7ulyNCJGJg0K24h9h6T_YqP9l5TBbv2DWOHh-w" />
+	<script src="//code.tidio.co/aokpqeqijw1qs1ai7dld0svb4eag53ns.js" async></script>
 </svelte:head>
 
 <SkipLink />
@@ -86,7 +86,7 @@
 		display: flex;
 		flex-direction: column;
 		min-height: calc(100vh - 70px);
-		margin: var(--space-m) 1rem;
+		margin: var(--space-m) 0;
 	}
 
 	@media (min-width: 768px) {

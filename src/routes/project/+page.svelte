@@ -17,10 +17,10 @@
 
 	<div class="projects">
 		<ProjectCard
-			projectName="Reza"
+			projectName="Reza - Reservation App"
 			linkToFigma="https://www.figma.com/proto/owUrwidb8hZbdmruKhMtyS/REZA%3A-Restaurant-Reservation-App?node-id=738%3A11894&scaling=contain&page-id=607%3A7637"
 			linkToDetail="/project/reza"
-			what="Reza is a restaurant reservation app"
+			what="Reza is an app that lets people book restaurant tables"
 			who="People who want to reserve a restaurant table online"
 			result="Persona, User Flow, Wireframe, Prototype, Presentation slides">
 			<span slot="atropos">

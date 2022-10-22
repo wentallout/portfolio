@@ -47,8 +47,8 @@
 		position: absolute;
 		font-size: 200px;
 		font-weight: 600;
-		top: 0;
-		left: -10%;
+		top: 10px;
+		left: 0;
 		color: #e4543b;
 		writing-mode: vertical-rl;
 		text-orientation: sideways;

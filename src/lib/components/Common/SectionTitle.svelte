@@ -1,4 +1,5 @@
 <script>
+	import { transform } from 'dom7';
 	export let sectionTitle = '';
 
 	let sectionIcon = {
@@ -33,9 +34,9 @@
 		font-family: 'Recoleta Alt';
 		font-weight: 600;
 
-		background: var(--gradient);
-		background-clip: text;
-		color: transparent;
+		/* background: var(--gradient);
+		background-clip: text; */
+		color: var(--text);
 	}
 
 	.section-icon {
@@ -44,7 +45,7 @@
 		align-items: center;
 		padding: 1rem;
 		margin-right: var(--space-xs);
-		background: var(--gradient);
+		background-color: var(--neutral-900);
 		clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
 	}
 </style>
