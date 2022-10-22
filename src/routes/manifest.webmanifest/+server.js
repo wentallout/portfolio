@@ -11,12 +11,12 @@ export const GET = function get({ setHeaders }) {
 		theme_color: themeColor,
 		display: 'standalone',
 		icons: [
-			{ src: '/icon-192.png', type: 'image/png', sizes: '192x192' },
-			{ src: '/icon-512.png', type: 'image/png', sizes: '512x512' },
-		],
+			{ src: '/icon-192.png', type: 'image/png', sizes: '192x192', purpose: 'maskable' },
+			{ src: '/icon-512.png', type: 'image/png', sizes: '512x512', purpose: 'maskable' }
+		]
 	};
 	setHeaders({
-		'content-type': 'application/json',
+		'content-type': 'application/json'
 	});
 	return new Response(JSON.stringify(manifest));
 };
