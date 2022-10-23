@@ -12,7 +12,7 @@
 
 		<div class="tool__block">
 			<div class="block__section">
-				<Image width="50" height="50" class="block__image" src={navigation} alt="navigation" />
+				<Image hasCaption={false} width="50" height="50" src={navigation} alt="navigation" />
 				<h3 class="block__title base-text">Prototyping</h3>
 				<p class="block__text small-text">Figma</p>
 				<p class="block__text small-text">Adobe XD</p>
@@ -20,19 +20,14 @@
 			</div>
 
 			<div class="block__section">
-				<Image
-					width="50"
-					height="50"
-					class="block__image"
-					src={graphicDesign}
-					alt="graphic design" />
+				<Image hasCaption={false} width="50" height="50" src={graphicDesign} alt="graphic design" />
 				<h3 class="block__title base-text">Design</h3>
 				<p class="block__text small-text">Illustrator</p>
 				<p class="block__text small-text">Photoshop</p>
 			</div>
 
 			<div class="block__section">
-				<Image width="50" height="50" class="block__image" src={interactive} alt="interactive" />
+				<Image hasCaption={false} width="50" height="50" src={interactive} alt="interactive" />
 				<h3 class="block__title base-text">Motion</h3>
 				<p class="block__text small-text">Lottie</p>
 				<!-- <p class="block__text small-text">After Effects</p> -->
@@ -40,7 +35,7 @@
 			</div>
 
 			<div class="block__section">
-				<Image width="50" height="50" class="block__image" src={frontend} alt="frontend" />
+				<Image hasCaption={false} width="50" height="50" src={frontend} alt="frontend" />
 				<h3 class="block__title base-text">Frontend</h3>
 				<p class="block__text small-text">Semantic HTML, BEM CSS</p>
 				<p class="block__text small-text">Bootstrap, Material</p>

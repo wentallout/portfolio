@@ -39,7 +39,8 @@ const directives = {
 	'script-src': [
 		"'self'",
 		"'unsafe-inline'",
-		'https://code.tidio.co/*'
+		'http://code.tidio.co',
+		"'nonce-3101c99666'"
 		// 'https://*.stripe.com',
 		// 'https://*.facebook.com',
 		// 'https://*.facebook.net',

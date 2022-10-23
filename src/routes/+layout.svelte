@@ -53,7 +53,10 @@
 
 <svelte:head>
 	<meta name="google-site-verification" content="jDcuv7ulyNCJGJg0K24h9h6T_YqP9l5TBbv2DWOHh-w" />
-	<script src="//code.tidio.co/aokpqeqijw1qs1ai7dld0svb4eag53ns.js" async></script>
+	<script
+		nonce="3101c99666"
+		src="//code.tidio.co/aokpqeqijw1qs1ai7dld0svb4eag53ns.js"
+		async></script>
 </svelte:head>
 
 <SkipLink />
