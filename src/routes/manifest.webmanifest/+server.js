@@ -11,8 +11,10 @@ export const GET = function get({ setHeaders }) {
 		theme_color: themeColor,
 		display: 'standalone',
 		icons: [
-			{ src: '/icon-192.png', type: 'image/png', sizes: '192x192', purpose: 'any maskable' },
-			{ src: '/icon-512.png', type: 'image/png', sizes: '512x512', purpose: 'any maskable' }
+			{ src: '/icon-192-any.png', type: 'image/png', sizes: '192x192', purpose: 'any' },
+			{ src: '/icon-512-any.png', type: 'image/png', sizes: '512x512', purpose: 'any' },
+			{ src: '/icon-192-maskable.png', type: 'image/png', sizes: '192x192', purpose: 'maskable' },
+			{ src: '/icon-512-maskable.png', type: 'image/png', sizes: '512x512', purpose: 'maskable' }
 		]
 	};
 	setHeaders({
