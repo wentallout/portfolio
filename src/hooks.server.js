@@ -74,9 +74,6 @@ export async function handle({ event, resolve }) {
 	);
 	response.headers.set('X-Content-Type-Options', 'nosniff');
 
-	/* Switch from Content-Security-Policy-Report-Only to Content-Security-Policy once you are satisifed policy is what you want
-	 * on switch comment out the Report-Only line
-	 */
 	// response.headers.set('Content-Security-Policy-Report-Only', csp);
 	response.headers.set('Content-Security-Policy', csp);
 	response.headers.set('Strict-Transport-Security', 'max-age=31536000; includeSubDomains; preload');
