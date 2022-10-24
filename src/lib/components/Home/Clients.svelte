@@ -29,7 +29,7 @@
 		display: flex;
 		justify-content: center;
 		align-items: center;
-		flex-direction: column;
+		flex-direction: row;
 		flex-wrap: wrap;
 		gap: var(--space-m);
 	}
@@ -37,12 +37,6 @@
 	.clients__title {
 		font-family: 'Recoleta Alt';
 		font-weight: 600;
-	}
-
-	@media (min-width: 768px) {
-		.clients__logo {
-			flex-direction: row;
-		}
 	}
 
 	.logo {

@@ -30,7 +30,7 @@ const config = {
 		alias: {
 			// this will match a file
 			$blogImages: 'src/lib/assets/images/blog'
-		},
+		}
 		// csp: {
 		// 	mode: 'auto',
 		// 	directives: { 'script-src': ['self'] }
