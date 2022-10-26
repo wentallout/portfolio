@@ -21,7 +21,7 @@
 		flex-direction: row;
 		flex-wrap: wrap;
 		padding: var(--space-m);
-		border: var(--border);
+		background-color: var(--bg);
 	}
 
 	.status {

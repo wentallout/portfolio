@@ -28,7 +28,7 @@
 		max-width: 100vw;
 
 		/* Typography */
-		font-weight: 300;
+		font-weight: 400;
 		font-size: var(--font-size-small);
 	}
 

@@ -31,7 +31,7 @@
 	}
 
 	.section-title h2 {
-		font-family: 'Recoleta Alt';
+		font-family: var(--fancy-font);
 		font-weight: 600;
 
 		/* background: var(--gradient);

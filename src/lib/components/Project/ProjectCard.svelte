@@ -19,18 +19,18 @@
 		<div class="project__name large-text">{projectName}</div>
 		<div class="project__description small-text">
 			<div class="description-section">
-				<p class="section-title">◆ What</p>
-				<p class="section-info">{what}</p>
+				<div class="section-title">◆ What</div>
+				<div class="section-info">{what}</div>
 			</div>
 
 			<div class="description-section">
-				<p class="section-title">◆ Who</p>
-				<p class="section-info">{who}</p>
+				<div class="section-title">◆ Who</div>
+				<div class="section-info">{who}</div>
 			</div>
 
 			<div class="description-section">
-				<p class="section-title">◆ Result</p>
-				<p class="section-info">{result}</p>
+				<div class="section-title">◆ Result</div>
+				<div class="section-info">{result}</div>
 			</div>
 		</div>
 
@@ -84,9 +84,13 @@
 		/* SHADOW */
 		box-shadow: var(--box-shadow);
 
-		border: var(--border);
 		overflow: hidden;
 		transition: 0.3s;
+
+		background-color: var(--bg);
+
+		border-radius: var(--border-radius);
+		overflow: hidden;
 	}
 
 	.project__btn {
@@ -112,13 +116,16 @@
 	.project__name {
 		font-weight: 600;
 		color: var(--text);
-		margin-bottom: var(--space-xs);
+		margin-bottom: var(--space-l);
 	}
 
 	.project__description {
 		color: var(--neutral-800);
 		font-weight: 400;
 		margin-bottom: var(--space-s);
+		display: flex;
+		flex-direction: column;
+		gap: var(--space-s);
 	}
 
 	@media (min-width: 992px) {

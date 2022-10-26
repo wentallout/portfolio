@@ -17,7 +17,8 @@ const directives = {
 	'frame-ancestors': ["'self'"],
 	'frame-src': [
 		"'self'",
-		'https://www.youtube-nocookie.com'
+		'https://www.youtube-nocookie.com',
+		'https://open.spotify.com'
 		// "https://*.stripe.com",
 		// "https://*.facebook.com",
 		// "https://*.facebook.net",

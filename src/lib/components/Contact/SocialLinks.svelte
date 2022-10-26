@@ -76,7 +76,10 @@
 		width: 100%;
 		margin-bottom: var(--space-m);
 		padding: var(--space-m);
-		border: var(--border);
+		background-color: var(--bg);
+		box-shadow: var(--box-shadow);
+		border-radius: var(--border-radius);
+		overflow: hidden;
 	}
 
 	.social__list {

@@ -57,15 +57,18 @@
 		justify-content: left;
 		width: 100%;
 		margin-bottom: var(--space-m);
+		background-color: var(--bg);
+		border-radius: var(--border-radius);
+		overflow: hidden;
 	}
 
 	.contact {
-		border: var(--border);
 		padding: var(--space-m);
 		width: 100%;
 		max-width: 80rem;
 		display: flex;
 		flex-direction: column;
+		box-shadow: var(--box-shadow);
 	}
 
 	.label {

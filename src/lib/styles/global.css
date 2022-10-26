@@ -17,8 +17,10 @@ body {
 
 :root {
 	--text: var(--neutral-900);
-	--background: #fafafa;
+	--background: hsl(214, 28%, 95%);
 	--brand-color: var(--neutral-900);
+
+	--bg: #fff;
 
 	/* Primary: Mimolette Orange */
 	--primary-100: #fffcf2;
@@ -77,11 +79,11 @@ body {
 	--line-height-2xl: normal;
 	--line-height-3xl: normal;
 
-	/* shadow */
-	--box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
-	--box-shadow-hover: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+	/* SHADOW */
+	--box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.3), 0px 1px 3px 1px rgba(0, 0, 0, 0.15);
+	--box-shadow-hover: 0px 4px 8px 3px rgba(0, 0, 0, 0.15), 0px 1px 3px rgba(0, 0, 0, 0.3);
 
-	/* spacing */
+	/* SPACING */
 	--space-3xs: clamp(0.25rem, calc(0.23rem + 0.08vw), 0.31rem);
 	--space-2xs: clamp(0.56rem, calc(0.55rem + 0.08vw), 0.63rem);
 	--space-xs: clamp(0.81rem, calc(0.78rem + 0.17vw), 0.94rem);
@@ -92,12 +94,14 @@ body {
 	--space-2xl: clamp(4.25rem, calc(4.05rem + 1.02vw), 5rem);
 	--space-3xl: clamp(6.38rem, calc(6.07rem + 1.53vw), 7.5rem);
 
-	/* misc */
+	/* MISC */
 	accent-color: var(--primary-500);
 	caret-color: var(--neutral-900);
 
-	/* border radius */
-	--border-radius: 10px;
+	/* BORDER RADIUS */
+	--border-radius: 12px;
+
+	/* BORDER */
 	--border: 1px solid #e5e5e5;
 	--border-hover: 1px solid var(--neutral-900);
 
@@ -107,6 +111,8 @@ body {
 	/* color-scheme: light dark; */
 
 	--gradient: linear-gradient(to right, var(--primary-500), var(--accent-500));
+
+	--fancy-font: 'Recoleta Alt';
 }
 
 #headerBottom {

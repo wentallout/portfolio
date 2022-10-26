@@ -7,7 +7,7 @@
 	<div class="svg-container">
 		<Marquee />
 		<div class="yinyang-container">
-			<YinYangFill class="rotate" color="var(--neutral-900)" width="40" height="40" />
+			<YinYangFill class="rotate" color="var(--neutral-900)" width="24" height="24" />
 		</div>
 	</div>
 </div>
@@ -15,8 +15,8 @@
 <style>
 	.yinyang-container {
 		border-radius: 100%;
-		width: 40px;
-		height: 40px;
+		width: 24px;
+		height: 24px;
 		background-color: #000;
 		z-index: 0;
 		display: hidden;

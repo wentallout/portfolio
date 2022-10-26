@@ -15,7 +15,7 @@
 	}
 
 	.end__text {
-		font-family: 'Recoleta Alt';
+		font-family: var(--fancy-font);
 		color: var(--text);
 	}
 </style>

@@ -1,5 +1,5 @@
 ---
-title: Understanding UX vs UI
+title: Understanding UX and UI
 date: '2022-09-30'
 categories:
     - 'fundamental'
@@ -29,3 +29,27 @@ UI Designers make products joyful to interact with. They focus on the visual hie
 - Iconography
 - Grids, Layout, Spacing
 - Buttons, Inputs & Forms
+
+## Things to remember
+
+View everything that you do as **PROBLEM SOLVING** -> Organize, Economize and Communicate.
+
+Design should serve **USER NEEDS**. Why are they here - and what do they need to do?
+
+Hierarchy is communicated **VISUALLY**. Visual priority = user priority.
+
+Information hierarchy is mainly created by **CONTRAST**. Always consider contrast before color.
+
+When in doubt, **ALIGN EVERYTHING**. Alignment creates order, flow and stability.
+
+Purposefully design all **NEGATIVE SPACE**. Give it more attention than UI elements.
+
+Primary elements should come **FORWARD**. Secondary elements should **RECEDE**. You should work to visually differentiate the two.
+
+Maximize **SIGNAL**. Minimize **NOISE**. Keep visual focus on what matters most.
+
+=> Remember that you're solving **VISUAL PROBLEMS**. Focus on that; great UX will take care of itself.
+
+
+
+

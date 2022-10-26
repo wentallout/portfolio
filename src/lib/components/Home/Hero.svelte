@@ -64,6 +64,6 @@
 	}
 
 	.hi {
-		font-family: 'Recoleta Alt';
+		font-family: var(--fancy-font);
 	}
 </style>

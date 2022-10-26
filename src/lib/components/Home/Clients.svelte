@@ -35,7 +35,7 @@
 	}
 
 	.clients__title {
-		font-family: 'Recoleta Alt';
+		font-family: var(--fancy-font);
 		font-weight: 600;
 	}
 

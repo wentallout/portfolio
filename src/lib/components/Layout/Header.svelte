@@ -10,14 +10,16 @@
 	const handleMobileIconClick = () => (hideMobileMenu = !hideMobileMenu);
 
 	let scrollY;
+
+	const scrollDistance = 70;
 </script>
 
 <svelte:window bind:scrollY />
-<header class:reduced-header={scrollY > 50} class="main-header base-text">
+<header class:reduced-header={scrollY > scrollDistance} class="main-header base-text">
 	<nav>
 		<ul class="nav__list">
 			<li
-				class:reduced-list={scrollY > 50}
+				class:reduced-list={scrollY > scrollDistance}
 				id="burger-nav"
 				on:click={handleMobileIconClick}
 				on:keyup={handleMobileIconClick}>
@@ -32,7 +34,7 @@
 
 			{#each navItems as navItem}
 				<li
-					class:reduced-list={scrollY > 50}
+					class:reduced-list={scrollY > scrollDistance}
 					class={`navbar-list${hideMobileMenu ? ' hidden-mobile' : ''}`}>
 					{#if $page.url.pathname === `${navItem.path}`}
 						<a class="nav__list-item active-page" href={navItem.path}>
@@ -62,6 +64,7 @@
 
 	.reduced-list {
 		min-height: 2.5rem;
+		transition: 0.3s;
 	}
 
 	.main-header {

@@ -87,10 +87,16 @@
 		position: relative;
 
 		padding: var(--space-m);
-		box-shadow: var(--box-shadow);
+
 		border-radius: var(--border-radius);
 		height: 300px;
 		overflow: hidden;
+
+		box-shadow: var(--box-shadow);
+	}
+
+	.other:hover {
+		box-shadow: var(--box-shadow-hover);
 	}
 
 	.other:hover .other__image {

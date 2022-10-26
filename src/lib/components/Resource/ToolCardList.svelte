@@ -69,12 +69,12 @@
 	.tool {
 		display: flex;
 		flex-direction: column;
-		border: var(--border);
 		width: 100%;
 		padding: var(--space-m);
 		box-shadow: var(--box-shadow);
 		border-radius: var(--border-radius);
 		transition: 0.3s;
+		background-color: var(--bg);
 	}
 
 	.tool:hover {

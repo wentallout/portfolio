@@ -5,20 +5,20 @@
 			<div class="block">
 				<h3 class="block__title base-text">Education & Background</h3>
 				<p class="block__text small-text">
-					I've studied and worked as a full-stack developer for years but never found the
+					I've studied and worked as a full-stack developer for years, but never found the
 					satisfaction I needed until I discovered the art of UI/UX Design in 2022. My current focus
-					is UX design - providing the best user experience through research, problem-solving, well
-					thought out flows, and wireframes.
+					is UX design - providing the best user experience through research, creating flows and
+					wireframes that solve problems.
 				</p>
 			</div>
 			<div class="block">
 				<h3 class="block__title base-text">Thought Process</h3>
 				<p class="block__text small-text">
-					There isn't a miracle solution to solve everything. Every project is unique and always
-					riddled with ambiguity and constraints. Fortunately, there's no need to reinvent the
-					wheel, I can follow industry guidelines and proven UX frameworks — beginning with a
-					discovery phase to understand the problem; followed by prototyping, validating my ideas
-					with users, and collaborating with stakeholders throughout the process. Taking these
+					There isn't a miracle method that solves everything. Every project is unique and
+					constantly riddled with ambiguity and constraints. Fortunately, there's no need to
+					reinvent the wheel, I can follow industry guidelines and proven UX frameworks — beginning
+					with a discovery phase to understand the problem; followed by prototyping, validating my
+					ideas with users, and collaborating with stakeholders throughout the process. Taking these
 					simple steps has never failed me and always leads to innovative solutions and successful
 					outcomes.
 				</p>
@@ -43,7 +43,7 @@
 	}
 
 	.about__title {
-		font-family: 'Recoleta Alt';
+		font-family: var(--fancy-font);
 		font-weight: 600;
 	}
 

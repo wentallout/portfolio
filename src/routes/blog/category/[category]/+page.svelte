@@ -19,6 +19,6 @@
 		margin-bottom: var(--space-m);
 		font-weight: 300;
 		color: var(--neutral-700);
-		font-family: 'Recoleta Alt';
+		font-family: var(--fancy-font);
 	}
 </style>

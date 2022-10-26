@@ -36,7 +36,8 @@ This is Khoa's personal portfolio.
 
 ## Developing
 
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
+1. Install dependencies with `npm install` (or `pnpm install` or `yarn`)
+2. Start a development server:
 
 ```bash
 npm run dev

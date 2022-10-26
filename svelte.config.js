@@ -4,7 +4,7 @@ import autoprefixer from 'autoprefixer';
 
 import { mdsvex } from 'mdsvex';
 
-import toc from '@jsdevtools/rehype-toc';
+import rehypeToc from '@jsdevtools/rehype-toc';
 import rehypeSlug from 'rehype-slug';
 
 /** @type {import('@sveltejs/kit').Config} */
@@ -16,7 +16,10 @@ const config = {
 			}
 			/* Other sveltePreprocess options here, like SCSS */
 		}),
-		mdsvex({ extensions: ['.svelte.md', '.md', '.svx'], rehypePlugins: [rehypeSlug, toc] })
+		mdsvex({
+			extensions: ['.svelte.md', '.md', '.svx'],
+			rehypePlugins: [rehypeSlug, rehypeToc]
+		})
 	],
 	extensions: ['.svelte', '.svx'],
 	kit: {

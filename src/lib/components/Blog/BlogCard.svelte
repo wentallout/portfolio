@@ -18,12 +18,12 @@
 		flex-direction: column;
 		width: 100%;
 		border-radius: var(--border-radius);
-		border: var(--border);
+		border: 1px solid var(--neutral-500);
 		padding: 1rem 2rem;
 		box-shadow: var(--box-shadow);
 		transition: 0.3s;
-
 		position: relative;
+		background-color: var(--bg);
 	}
 
 	.blog:hover {
@@ -55,7 +55,6 @@
 		font-weight: 300;
 		color: var(--neutral-700);
 		border: 1px solid var(--neutral-700);
-		background-color: var(--neutral-100);
 		padding: 4px 8px;
 		border-radius: var(--border-radius);
 	}

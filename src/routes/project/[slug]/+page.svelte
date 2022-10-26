@@ -1,5 +1,6 @@
 <script>
 	import End from '$lib/components/Common/End.svelte';
+
 	export let data;
 </script>
 
@@ -11,9 +12,7 @@
 <article class="info">
 	<h1 class="xl-text project-title">{data.title}</h1>
 	<p class="small-text project-date">Published: {data.date}</p>
-
 	<svelte:component this={data.content} />
-
 	<End />
 </article>
 

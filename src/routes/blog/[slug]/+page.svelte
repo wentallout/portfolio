@@ -1,5 +1,5 @@
 <script>
-	import End from './../../../lib/components/Common/End.svelte';
+	import End from '$lib/components/Common/End.svelte';
 	export let data;
 </script>
 
