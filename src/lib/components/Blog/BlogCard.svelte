@@ -18,7 +18,7 @@
 		flex-direction: column;
 		width: 100%;
 		border-radius: var(--border-radius);
-		border: 1px solid var(--neutral-500);
+
 		padding: 1rem 2rem;
 		box-shadow: var(--box-shadow);
 		transition: 0.3s;

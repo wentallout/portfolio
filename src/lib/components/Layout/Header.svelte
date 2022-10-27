@@ -11,7 +11,7 @@
 
 	let scrollY;
 
-	const scrollDistance = 70;
+	const scrollDistance = 20;
 </script>
 
 <svelte:window bind:scrollY />

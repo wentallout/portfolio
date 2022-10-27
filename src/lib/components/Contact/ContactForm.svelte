@@ -60,6 +60,7 @@
 		background-color: var(--bg);
 		border-radius: var(--border-radius);
 		overflow: hidden;
+		box-shadow: var(--box-shadow);
 	}
 
 	.contact {
@@ -68,7 +69,6 @@
 		max-width: 80rem;
 		display: flex;
 		flex-direction: column;
-		box-shadow: var(--box-shadow);
 	}
 
 	.label {

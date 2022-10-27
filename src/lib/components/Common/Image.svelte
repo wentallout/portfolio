@@ -26,7 +26,7 @@
 		{imagePreset}
 		enableImageExpand="true"
 		transitionDuration="50">
-		<img {width} {height} {src} loading="lazy" decoding="async" {alt} />
+		<img class="shim" {width} {height} {src} loading="lazy" decoding="async" {alt} />
 		{#if hasCaption}
 			<figcaption class="caption xs-text">{alt}</figcaption>
 		{/if}

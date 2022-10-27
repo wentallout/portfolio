@@ -36,7 +36,6 @@
 		border-radius: var(--border-radius);
 		width: fit-content;
 		background-color: var(--neutral-200);
-
 		border: 1px solid transparent;
 		color: var(--accent-500);
 	}

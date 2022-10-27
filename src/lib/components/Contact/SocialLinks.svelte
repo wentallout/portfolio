@@ -71,15 +71,22 @@
 
 <style>
 	.social {
+		/* FLEX */
 		display: flex;
 		flex-direction: column;
-		width: 100%;
-		margin-bottom: var(--space-m);
+
+		
 		padding: var(--space-m);
+		width: 100%;
+
+		margin-bottom: var(--space-m);
+
 		background-color: var(--bg);
-		box-shadow: var(--box-shadow);
 		border-radius: var(--border-radius);
 		overflow: hidden;
+
+		/* SHADOW */
+		box-shadow: var(--box-shadow);
 	}
 
 	.social__list {

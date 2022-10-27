@@ -19,7 +19,6 @@ body {
 	--text: var(--neutral-900);
 	--background: hsl(214, 28%, 95%);
 	--brand-color: var(--neutral-900);
-
 	--bg: #fff;
 
 	/* Primary: Mimolette Orange */
@@ -100,11 +99,6 @@ body {
 
 	/* BORDER RADIUS */
 	--border-radius: 12px;
-
-	/* BORDER */
-	--border: 1px solid #e5e5e5;
-	--border-hover: 1px solid var(--neutral-900);
-
 	--text-shadow: 0 0 5px #000;
 
 	/* darkmode mode */
@@ -270,6 +264,9 @@ svg {
 }
 
 hr {
+	height: 14px;
+	background-color: var(--text);
 	width: 100%;
-	border: 2px solid var(--text);
+	border: none;
+	clip-path: polygon(0px 7px, 100% 7px, 100% 8px, 0px 8px);
 }

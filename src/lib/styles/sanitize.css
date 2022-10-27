@@ -75,10 +75,10 @@
   * Prevent VoiceOver from ignoring list semantics in Safari (opinionated).
   */
 
-:where(nav li)::before {
+/* :where(nav li)::before {
 	content: '\200B';
 	float: left;
-}
+} */
 
 /**
   * 1. Correct the inheritance and scaling of font size in all browsers.
