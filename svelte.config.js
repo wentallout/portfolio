@@ -6,7 +6,6 @@ import { mdsvex } from 'mdsvex';
 
 import rehypeToc from '@jsdevtools/rehype-toc';
 import rehypeSlug from 'rehype-slug';
-import cssnano from 'cssnano';
 
 /** @type {import('@sveltejs/kit').Config} */
 const config = {
