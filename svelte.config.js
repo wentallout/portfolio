@@ -12,7 +12,7 @@ const config = {
 	preprocess: [
 		sveltePreprocess({
 			postcss: {
-				plugins: [autoprefixer, cssnano]
+				plugins: [autoprefixer]
 			}
 			/* Other sveltePreprocess options here, like SCSS */
 		}),
