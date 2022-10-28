@@ -1,5 +1,4 @@
 <script>
-	import { transform } from 'dom7';
 	export let sectionTitle = '';
 
 	let sectionIcon = {
