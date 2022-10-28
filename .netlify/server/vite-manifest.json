@@ -9,15 +9,7 @@
       "_index3.js"
     ],
     "dynamicImports": [
-      ".svelte-kit/build/hooks.js"
-    ]
-  },
-  "src/routes/manifest.webmanifest/+server.js": {
-    "file": "entries/endpoints/manifest.webmanifest/_server.js",
-    "src": "src/routes/manifest.webmanifest/+server.js",
-    "isEntry": true,
-    "imports": [
-      "_config.js"
+      "src/hooks.server.js"
     ]
   },
   "src/routes/api/blog/+server.js": {
@@ -30,10 +22,20 @@
     "dynamicImports": [
       "src/routes/blog/best-ux-books.svx",
       "src/routes/blog/gestalt.svx",
+      "src/routes/blog/project-organization.svx",
+      "src/routes/blog/sharp-axe-method.svx",
       "src/routes/blog/typescale.svx",
       "src/routes/blog/typography-best-patterns.svx",
       "src/routes/blog/ux-portfolio.svx",
       "src/routes/blog/ux-vs-ui.svx"
+    ]
+  },
+  "src/routes/manifest.webmanifest/+server.js": {
+    "file": "entries/endpoints/manifest.webmanifest/_server.js",
+    "src": "src/routes/manifest.webmanifest/+server.js",
+    "isEntry": true,
+    "imports": [
+      "_config.js"
     ]
   },
   "src/routes/+layout.svelte": {
@@ -43,24 +45,21 @@
     "imports": [
       "_index.js",
       "_config.js",
+      "_phone.js",
       "_stores.js"
     ],
     "css": [
-      "_app/immutable/assets/_layout-6a036e0a.css"
+      "_app/immutable/assets/_layout-f6aeeab8.css"
     ],
     "assets": [
-      "_app/immutable/assets/lexend-all-300-normal-2a8fb41f.woff",
-      "_app/immutable/assets/lexend-latin-ext-300-normal-2f1339fa.woff2",
       "_app/immutable/assets/lexend-latin-300-normal-1119ab28.woff2",
-      "_app/immutable/assets/lexend-all-400-normal-85ae8ef1.woff",
-      "_app/immutable/assets/lexend-latin-ext-400-normal-71646fd7.woff2",
+      "_app/immutable/assets/lexend-latin-300-normal-6c0d56e4.woff",
       "_app/immutable/assets/lexend-latin-400-normal-c752cf03.woff2",
-      "_app/immutable/assets/lexend-all-500-normal-55ce7131.woff",
-      "_app/immutable/assets/lexend-latin-ext-500-normal-3591ab38.woff2",
+      "_app/immutable/assets/lexend-latin-400-normal-01fc3973.woff",
       "_app/immutable/assets/lexend-latin-500-normal-fbef5c53.woff2",
-      "_app/immutable/assets/lexend-all-600-normal-ac8307ed.woff",
-      "_app/immutable/assets/lexend-latin-ext-600-normal-039ecbab.woff2",
-      "_app/immutable/assets/lexend-latin-600-normal-a8e3045e.woff2"
+      "_app/immutable/assets/lexend-latin-500-normal-7b85e569.woff",
+      "_app/immutable/assets/lexend-latin-600-normal-a8e3045e.woff2",
+      "_app/immutable/assets/lexend-latin-600-normal-16d0cdda.woff"
     ]
   },
   "src/routes/+layout.js": {
@@ -78,7 +77,7 @@
       "_stores.js"
     ],
     "css": [
-      "_app/immutable/assets/_error-e2c4d600.css"
+      "_app/immutable/assets/_error-4d0ba992.css"
     ]
   },
   "src/routes/blog/[slug]/+layout.svelte": {
@@ -106,20 +105,23 @@
     "imports": [
       "_index.js",
       "_Button.js",
-      "_atropos-svelte.js",
+      "_Image.js",
       "_SEO.js",
       "_config.js"
     ],
     "css": [
-      "_app/immutable/assets/_page-88e1e847.css"
+      "_app/immutable/assets/_page-56c5c544.css"
     ],
     "assets": [
+      "_app/immutable/assets/waves-589c59bd.mp4",
+      "_app/immutable/assets/fpt-9e418949.webp",
+      "_app/immutable/assets/nashtech-485d2d86.webp",
       "_app/immutable/assets/ux-36a3bc54.svg",
       "_app/immutable/assets/designProcess-124842c8.svg",
-      "_app/immutable/assets/frontend-b1799fa6.svg",
-      "_app/immutable/assets/navigation-59b517a7.svg",
-      "_app/immutable/assets/interactive-dd63c66a.svg",
-      "_app/immutable/assets/graphicDesign-e603326c.svg"
+      "_app/immutable/assets/frontend-fe9a0df8.svg",
+      "_app/immutable/assets/navigation-d8691831.svg",
+      "_app/immutable/assets/interactive-7503e599.svg",
+      "_app/immutable/assets/graphicDesign-85c15e57.svg"
     ]
   },
   "src/routes/blog/+page.svelte": {
@@ -145,7 +147,7 @@
       "_index.js"
     ],
     "css": [
-      "_app/immutable/assets/_page-a0ecdb86.css"
+      "_app/immutable/assets/_page-6583a5e3.css"
     ]
   },
   "src/routes/blog/category/+page.js": {
@@ -162,7 +164,7 @@
       "_BlogCard.js"
     ],
     "css": [
-      "_app/immutable/assets/_page-1d5e6ac3.css"
+      "_app/immutable/assets/_page-6f70108b.css"
     ]
   },
   "src/routes/blog/category/[category]/+page.js": {
@@ -175,10 +177,11 @@
     "src": "src/routes/blog/[slug]/+page.svelte",
     "isEntry": true,
     "imports": [
-      "_index.js"
+      "_index.js",
+      "_End.js"
     ],
     "css": [
-      "_app/immutable/assets/_page-d2f19feb.css"
+      "_app/immutable/assets/_page-5f3952d6.css"
     ]
   },
   "src/routes/blog/[slug]/+page.js": {
@@ -191,6 +194,8 @@
     "dynamicImports": [
       "src/routes/blog/best-ux-books.svx",
       "src/routes/blog/gestalt.svx",
+      "src/routes/blog/project-organization.svx",
+      "src/routes/blog/sharp-axe-method.svx",
       "src/routes/blog/typescale.svx",
       "src/routes/blog/typography-best-patterns.svx",
       "src/routes/blog/ux-portfolio.svx",
@@ -203,13 +208,14 @@
     "isEntry": true,
     "imports": [
       "_index.js",
+      "_phone.js",
       "_figma-logo.js",
       "_SectionTitle.js",
       "_Button.js",
       "_SEO.js"
     ],
     "css": [
-      "_app/immutable/assets/_page-f7d6c894.css"
+      "_app/immutable/assets/_page-5ba272e7.css"
     ]
   },
   "src/routes/contact/+page.js": {
@@ -217,33 +223,21 @@
     "src": "src/routes/contact/+page.js",
     "isEntry": true
   },
-  "src/routes/exp/+page.svelte": {
-    "file": "entries/pages/exp/_page.svelte.js",
-    "src": "src/routes/exp/+page.svelte",
-    "isEntry": true,
-    "imports": [
-      "_index.js",
-      "_index3.js"
-    ],
-    "css": [
-      "_app/immutable/assets/_page-df9bbe0e.css"
-    ]
-  },
   "src/routes/project/+page.svelte": {
     "file": "entries/pages/project/_page.svelte.js",
     "src": "src/routes/project/+page.svelte",
     "isEntry": true,
     "imports": [
       "_index.js",
-      "_atropos-svelte.js",
       "_figma-logo.js",
       "_Button.js",
       "_SectionTitle.js"
     ],
     "css": [
-      "_app/immutable/assets/_page-263816cc.css"
+      "_app/immutable/assets/_page-9ed8b1dc.css"
     ],
     "assets": [
+      "_app/immutable/assets/rezaPhoneFrame-b3441282.webp",
       "_app/immutable/assets/rezaSplat-8323f1b6.svg"
     ]
   },
@@ -252,10 +246,11 @@
     "src": "src/routes/project/[slug]/+page.svelte",
     "isEntry": true,
     "imports": [
-      "_index.js"
+      "_index.js",
+      "_End.js"
     ],
     "css": [
-      "_app/immutable/assets/_page-da79b6a0.css"
+      "_app/immutable/assets/_page-2503cca9.css"
     ]
   },
   "src/routes/project/[slug]/+page.js": {
@@ -276,10 +271,39 @@
     "isEntry": true,
     "imports": [
       "_index.js",
+      "_SwiperContainer.js",
       "_SectionTitle.js"
     ],
     "css": [
-      "_app/immutable/assets/_page-f5877a86.css"
+      "_app/immutable/assets/_page-0435df94.css"
+    ],
+    "assets": [
+      "_app/immutable/assets/UIDesignPrinciples-b17b7134.webp",
+      "_app/immutable/assets/DesignManual-c05c25d3.webp",
+      "_app/immutable/assets/NoBSGuideUX-e7df4d3b.webp",
+      "_app/immutable/assets/Sprint-e9dea67f.webp"
+    ]
+  },
+  "src/routes/resource/exp/+page.svelte": {
+    "file": "entries/pages/resource/exp/_page.svelte.js",
+    "src": "src/routes/resource/exp/+page.svelte",
+    "isEntry": true,
+    "imports": [
+      "_index.js",
+      "_index3.js"
+    ],
+    "css": [
+      "_app/immutable/assets/_page-324d5a38.css"
+    ]
+  },
+  "src/routes/resource/music/+page.svelte": {
+    "file": "entries/pages/resource/music/_page.svelte.js",
+    "src": "src/routes/resource/music/+page.svelte",
+    "isEntry": true,
+    "imports": [
+      "_index.js",
+      "_SectionTitle.js",
+      "_general-observer.js"
     ]
   },
   "src/routes/resource/tool/+page.svelte": {
@@ -288,11 +312,7 @@
     "isEntry": true,
     "imports": [
       "_index.js",
-      "_SectionTitle.js",
-      "_index3.js"
-    ],
-    "css": [
-      "_app/immutable/assets/_page-14624cb0.css"
+      "_SectionTitle.js"
     ]
   },
   "_index.js": {
@@ -316,19 +336,28 @@
       "_index.js"
     ]
   },
+  "_phone.js": {
+    "file": "chunks/phone.js",
+    "imports": [
+      "_index.js"
+    ]
+  },
   "_Button.js": {
     "file": "chunks/Button.js",
     "imports": [
       "_index.js"
     ],
     "css": [
-      "_app/immutable/assets/Button-20676e40.css"
+      "_app/immutable/assets/Button-2732090a.css"
     ]
   },
   "_MarkdownContainer.js": {
     "file": "chunks/MarkdownContainer.js",
     "imports": [
       "_index.js"
+    ],
+    "css": [
+      "_app/immutable/assets/MarkdownContainer-6191f40d.css"
     ]
   },
   "_SEO.js": {
@@ -338,16 +367,20 @@
       "_config.js"
     ],
     "assets": [
-      "_app/immutable/assets/home-f7ba4dd3.jpg",
-      "_app/immutable/assets/home-open-graph-1fad80fe.jpg",
-      "_app/immutable/assets/home-open-graph-square-2e611abf.jpg",
-      "_app/immutable/assets/home-twitter-f9826a1b.jpg"
+      "_app/immutable/assets/home-2f1ee254.webp",
+      "_app/immutable/assets/home-open-graph-c6ac3f30.webp",
+      "_app/immutable/assets/home-open-graph-square-919b0ec3.webp",
+      "_app/immutable/assets/home-twitter-59fedad9.webp"
     ]
   },
-  "_atropos-svelte.js": {
-    "file": "chunks/atropos-svelte.js",
+  "_Image.js": {
+    "file": "chunks/Image.js",
     "imports": [
-      "_index.js"
+      "_index.js",
+      "_index3.js"
+    ],
+    "css": [
+      "_app/immutable/assets/Image-9b94e835.css"
     ]
   },
   "_BlogCard.js": {
@@ -356,7 +389,7 @@
       "_index.js"
     ],
     "css": [
-      "_app/immutable/assets/BlogCard-0e5a2973.css"
+      "_app/immutable/assets/BlogCard-8d81ce05.css"
     ]
   },
   "_SectionTitle.js": {
@@ -365,7 +398,16 @@
       "_index.js"
     ],
     "css": [
-      "_app/immutable/assets/SectionTitle-0765bbc3.css"
+      "_app/immutable/assets/SectionTitle-0fe7cbf1.css"
+    ]
+  },
+  "_End.js": {
+    "file": "chunks/End.js",
+    "imports": [
+      "_index.js"
+    ],
+    "css": [
+      "_app/immutable/assets/End-c74e5b55.css"
     ]
   },
   "_dynamic-import-helper.js": {
@@ -377,9 +419,24 @@
       "_index.js"
     ]
   },
-  ".svelte-kit/build/hooks.js": {
-    "file": "chunks/hooks.js",
-    "src": ".svelte-kit/build/hooks.js",
+  "_SwiperContainer.js": {
+    "file": "chunks/SwiperContainer.js",
+    "imports": [
+      "_index.js"
+    ],
+    "css": [
+      "_app/immutable/assets/SwiperContainer-b5e75a6b.css"
+    ]
+  },
+  "_general-observer.js": {
+    "file": "chunks/general-observer.js",
+    "imports": [
+      "_index.js"
+    ]
+  },
+  "src/hooks.server.js": {
+    "file": "chunks/hooks.server.js",
+    "src": "src/hooks.server.js",
     "isDynamicEntry": true
   },
   "src/routes/blog/best-ux-books.svx": {
@@ -391,17 +448,7 @@
       "_Image.js"
     ],
     "assets": [
-      "_app/immutable/assets/uxBooks-8105af66.jpeg"
-    ]
-  },
-  "_Image.js": {
-    "file": "chunks/Image.js",
-    "imports": [
-      "_index.js",
-      "_index3.js"
-    ],
-    "css": [
-      "_app/immutable/assets/GalleryThumbnail-4827121f.css"
+      "_app/immutable/assets/uxBooks-0c8a2d19.webp"
     ]
   },
   "src/routes/blog/gestalt.svx": {
@@ -412,7 +459,28 @@
       "_index.js"
     ],
     "css": [
-      "_app/immutable/assets/GalleryThumbnail-4827121f.css"
+      "_app/immutable/assets/Image-9b94e835.css"
+    ]
+  },
+  "src/routes/blog/project-organization.svx": {
+    "file": "chunks/project-organization.js",
+    "src": "src/routes/blog/project-organization.svx",
+    "isDynamicEntry": true,
+    "imports": [
+      "_index.js",
+      "_Image.js"
+    ],
+    "assets": [
+      "_app/immutable/assets/projectOrganization-1e4b11d4.webp"
+    ]
+  },
+  "src/routes/blog/sharp-axe-method.svx": {
+    "file": "chunks/sharp-axe-method.js",
+    "src": "src/routes/blog/sharp-axe-method.svx",
+    "isDynamicEntry": true,
+    "imports": [
+      "_index.js",
+      "_general-observer.js"
     ]
   },
   "src/routes/blog/typescale.svx": {
@@ -424,8 +492,8 @@
       "_Image.js"
     ],
     "assets": [
-      "_app/immutable/assets/utopia-2a8d2dc3.png",
-      "_app/immutable/assets/utopiaOutput-1b20ced1.png"
+      "_app/immutable/assets/utopia-fd802571.webp",
+      "_app/immutable/assets/utopiaOutput-23135f74.webp"
     ]
   },
   "src/routes/blog/typography-best-patterns.svx": {
@@ -437,7 +505,7 @@
       "_Image.js"
     ],
     "assets": [
-      "_app/immutable/assets/headingFontSizes-ee4e4c93.png"
+      "_app/immutable/assets/headingFontSizes-db10fc74.webp"
     ]
   },
   "src/routes/blog/ux-portfolio.svx": {
@@ -456,7 +524,7 @@
       "_index.js"
     ],
     "css": [
-      "_app/immutable/assets/GalleryThumbnail-4827121f.css"
+      "_app/immutable/assets/Image-9b94e835.css"
     ]
   },
   "src/routes/project/coinecho.svx": {
@@ -473,39 +541,37 @@
     "isDynamicEntry": true,
     "imports": [
       "_index.js",
+      "_SwiperContainer.js",
       "_Image.js"
     ],
-    "css": [
-      "_app/immutable/assets/reza-2bc4fdc8.css"
-    ],
     "assets": [
-      "_app/immutable/assets/thumbnail-637b8ea1.png",
-      "_app/immutable/assets/discord-637ed4bd.png",
-      "_app/immutable/assets/feature-4d823932.png",
-      "_app/immutable/assets/role-0fffa3b7.png",
-      "_app/immutable/assets/plan-198692c8.png",
-      "_app/immutable/assets/goal-5f9ca646.png",
-      "_app/immutable/assets/userResearch-f5231f06.png",
-      "_app/immutable/assets/persona-e69b4c90.png",
-      "_app/immutable/assets/hmw1-0e0d8d9e.png",
-      "_app/immutable/assets/redesign1-16213858.png",
-      "_app/immutable/assets/redesign2-55600e5f.gif",
-      "_app/immutable/assets/lofi-a6397ed6.png",
-      "_app/immutable/assets/c1-53d1cfac.png",
-      "_app/immutable/assets/c2-1b666066.png",
-      "_app/immutable/assets/l1-34ead108.png",
-      "_app/immutable/assets/l2-c3e4feb8.png",
-      "_app/immutable/assets/ds1-bd072927.png",
-      "_app/immutable/assets/ds2-78f8d021.png",
-      "_app/immutable/assets/ds3-86be8074.png",
-      "_app/immutable/assets/rezaIcon-f4304dc3.png",
-      "_app/immutable/assets/reservationFlow-399f782d.png",
-      "_app/immutable/assets/searchFlow-96c5f4ff.png",
-      "_app/immutable/assets/homeScreen-0f2837c4.png",
-      "_app/immutable/assets/searchScreen-af0e46c1.png",
-      "_app/immutable/assets/reservationScreen-ad3176de.png",
-      "_app/immutable/assets/detailScreen-1cb5841e.gif",
-      "_app/immutable/assets/notiScreen-a146f3b8.png"
+      "_app/immutable/assets/thumbnail-4f6fd77f.webp",
+      "_app/immutable/assets/discord-a1f0d857.webp",
+      "_app/immutable/assets/feature-fa2cb245.webp",
+      "_app/immutable/assets/role-3510ed48.webp",
+      "_app/immutable/assets/plan-52c2f93a.webp",
+      "_app/immutable/assets/goal-5a37ac2e.webp",
+      "_app/immutable/assets/userResearch-a3eddbd1.webp",
+      "_app/immutable/assets/persona-58ea049b.webp",
+      "_app/immutable/assets/hmw1-2c866d80.webp",
+      "_app/immutable/assets/redesign1-8244fb6d.webp",
+      "_app/immutable/assets/redesign2-a3090ce4.webp",
+      "_app/immutable/assets/lofi-75e161ee.webp",
+      "_app/immutable/assets/c1-bd155f4b.webp",
+      "_app/immutable/assets/c2-96f5f70d.webp",
+      "_app/immutable/assets/l1-ec72d0e0.webp",
+      "_app/immutable/assets/l2-5ca38d93.webp",
+      "_app/immutable/assets/ds1-b700b549.webp",
+      "_app/immutable/assets/ds2-475ca52b.webp",
+      "_app/immutable/assets/ds3-6dcc19e8.webp",
+      "_app/immutable/assets/rezaIcon-5018a067.webp",
+      "_app/immutable/assets/reservationFlow-3346768f.webp",
+      "_app/immutable/assets/searchFlow-5078de97.webp",
+      "_app/immutable/assets/homeScreen-76609b90.webp",
+      "_app/immutable/assets/searchScreen-fd98dd81.webp",
+      "_app/immutable/assets/reservationScreen-b792b0af.webp",
+      "_app/immutable/assets/detailScreen-2425e03d.webp",
+      "_app/immutable/assets/notiScreen-558492e0.webp"
     ]
   }
 }

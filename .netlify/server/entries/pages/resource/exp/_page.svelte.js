@@ -1,5 +1,5 @@
-import { t as get_store_value, p as onDestroy, s as setContext, u as tick, k as getContext, c as create_ssr_component, b as subscribe, v as validate_component, w as set_store_value, f as add_attribute, o as createEventDispatcher, x as now$1, y as loop } from "../../../chunks/index.js";
-import { d as derived, w as writable, r as readable } from "../../../chunks/index3.js";
+import { w as get_store_value, o as onDestroy, s as setContext, u as tick, k as getContext, c as create_ssr_component, b as subscribe, v as validate_component, x as set_store_value, d as add_attribute, p as createEventDispatcher, y as now$1, z as loop } from "../../../../chunks/index.js";
+import { d as derived, w as writable, r as readable } from "../../../../chunks/index3.js";
 /**
  * @license
  * Copyright 2010-2022 Three.js Authors
@@ -8262,7 +8262,7 @@ const useParentSize = () => {
 };
 const Canvas_svelte_svelte_type_style_lang = "";
 const css$1 = {
-  code: "canvas.svelte-15bl8wt{display:block}",
+  code: "canvas.svelte-1pw33ks{display:block}",
   map: null
 };
 const invalidationHandlers = /* @__PURE__ */ new Set();
@@ -8347,7 +8347,7 @@ const Canvas = create_ssr_component(($$result, $$props, $$bindings, slots) => {
   $$unsubscribe_derivedSize();
   $$unsubscribe_flatStore();
   $$unsubscribe_linearStore();
-  return `<canvas class="${"svelte-15bl8wt"}"${add_attribute("this", canvas, 0)}>${``}
+  return `<canvas class="${"svelte-1pw33ks"}"${add_attribute("this", canvas, 0)}>${``}
 </canvas>`;
 });
 const useThrelteRoot = () => {
@@ -10587,7 +10587,7 @@ function spring(value, opts = {}) {
 }
 const _page_svelte_svelte_type_style_lang = "";
 const css = {
-  code: ".threejs.svelte-vc9si0{display:flex;height:500px;width:100%;border:1px solid var(--neutral-900)}",
+  code: ".threejs.svelte-bnp953{border:1px solid var(--neutral-900);display:flex;height:500px;width:100%}",
   map: null
 };
 const Page = create_ssr_component(($$result, $$props, $$bindings, slots) => {
@@ -10596,7 +10596,7 @@ const Page = create_ssr_component(($$result, $$props, $$bindings, slots) => {
   $$unsubscribe_scale = subscribe(scale, (value) => $scale = value);
   $$result.css.add(css);
   $$unsubscribe_scale();
-  return `<div class="${"threejs svelte-vc9si0"}">${validate_component(Canvas, "Canvas").$$render($$result, {}, {}, {
+  return `<div class="${"threejs svelte-bnp953"}">${validate_component(Canvas, "Canvas").$$render($$result, {}, {}, {
     default: () => {
       return `${validate_component(PerspectiveCamera, "PerspectiveCamera").$$render(
         $$result,

@@ -1,4 +1,4 @@
-import { c as create_ssr_component, d as spread, e as escape_object, v as validate_component, g as each } from "../../../chunks/index.js";
+import { c as create_ssr_component, e as spread, f as escape_object, v as validate_component, g as each } from "../../../chunks/index.js";
 import { B as BlogListContainer, a as BlogCard } from "../../../chunks/BlogCard.js";
 import { S as SectionTitle } from "../../../chunks/SectionTitle.js";
 const Text_aa = create_ssr_component(($$result, $$props, $$bindings, slots) => {
@@ -38,7 +38,7 @@ const Page = create_ssr_component(($$result, $$props, $$bindings, slots) => {
   let { data } = $$props;
   if ($$props.data === void 0 && $$bindings.data && data !== void 0)
     $$bindings.data(data);
-  return `${$$result.head += `${$$result.title = `<title>Project</title>`, ""}`, ""}
+  return `${$$result.head += `<!-- HEAD_svelte-hfp9t8_START -->${$$result.title = `<title>Blog</title>`, ""}<!-- HEAD_svelte-hfp9t8_END -->`, ""}
 
 <section>${validate_component(SectionTitle, "SectionTitle").$$render($$result, { sectionTitle: "Fundamental" }, {}, {
     default: ({ sectionIcon }) => {

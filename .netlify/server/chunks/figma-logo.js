@@ -1,4 +1,4 @@
-import { c as create_ssr_component, d as spread, e as escape_object } from "./index.js";
+import { c as create_ssr_component, e as spread, f as escape_object } from "./index.js";
 const Figma_logo = create_ssr_component(($$result, $$props, $$bindings, slots) => {
   return `<svg${spread(
     [

@@ -1,7 +1,7 @@
 import { c as create_ssr_component, g as each, h as escape } from "../../../../chunks/index.js";
 const _page_svelte_svelte_type_style_lang = "";
 const css = {
-  code: ".category.svelte-yc5quf{display:flex;flex-direction:row;flex-wrap:wrap;gap:var(--space-s)}.category__link.svelte-yc5quf{padding:var(--space-xs);border-radius:var(--border-radius);width:-moz-fit-content;width:fit-content;background-color:var(--neutral-200);border:1px solid transparent;color:var(--accent-500)}.category__link.svelte-yc5quf:hover{border:1px solid var(--accent-500);color:var(--accent-300)}",
+  code: ".category.svelte-1glbhby{display:flex;flex-direction:row;flex-wrap:wrap;gap:var(--space-s)}.category__link.svelte-1glbhby{background-color:var(--neutral-200);border:1px solid transparent;border-radius:var(--border-radius);color:var(--accent-500);padding:var(--space-xs);width:-moz-fit-content;width:fit-content}.category__link.svelte-1glbhby:hover{border:1px solid var(--accent-500);color:var(--accent-300)}",
   map: null
 };
 const Page = create_ssr_component(($$result, $$props, $$bindings, slots) => {
@@ -20,8 +20,8 @@ const Page = create_ssr_component(($$result, $$props, $$bindings, slots) => {
   if ($$props.data === void 0 && $$bindings.data && data !== void 0)
     $$bindings.data(data);
   $$result.css.add(css);
-  return `<div class="${"category svelte-yc5quf"}">${each(categories, (category) => {
-    return `<a class="${"category__link svelte-yc5quf"}" href="${"/blog/category/" + escape(category, true)}">${escape(category)}</a>`;
+  return `<div class="${"category svelte-1glbhby"}">${each(categories, (category) => {
+    return `<a class="${"category__link svelte-1glbhby"}" href="${"/blog/category/" + escape(category, true)}">${escape(category)}</a>`;
   })}
 </div>`;
 });

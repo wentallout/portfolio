@@ -1,8 +1,5 @@
 function noop() {
 }
-function is_promise(value) {
-  return value && typeof value === "object" && typeof value.then === "function";
-}
 function run(fn) {
   return fn();
 }
@@ -191,7 +188,9 @@ const boolean_attributes = /* @__PURE__ */ new Set([
   "disabled",
   "formnovalidate",
   "hidden",
+  "inert",
   "ismap",
+  "itemscope",
   "loop",
   "multiple",
   "muted",
@@ -302,7 +301,7 @@ function validate_component(component, name) {
   if (!component || !component.$$render) {
     if (name === "svelte:component")
       name += " this={...}";
-    throw new Error(`<${name}> is not a valid SSR component. You may need to review your build config to ensure that dependencies are compiled, rather than imported as pre-compiled modules`);
+    throw new Error(`<${name}> is not a valid SSR component. You may need to review your build config to ensure that dependencies are compiled, rather than imported as pre-compiled modules. Otherwise you may need to fix a <${name}>.`);
   }
   return component;
 }
@@ -351,13 +350,12 @@ function style_object_to_string(style_object) {
   return Object.keys(style_object).filter((key) => style_object[key]).map((key) => `${key}: ${style_object[key]};`).join(" ");
 }
 export {
-  compute_slots as A,
   safe_not_equal as a,
   subscribe as b,
   create_ssr_component as c,
-  spread as d,
-  escape_object as e,
-  add_attribute as f,
+  add_attribute as d,
+  spread as e,
+  escape_object as f,
   each as g,
   escape as h,
   is_function as i,
@@ -366,16 +364,16 @@ export {
   compute_rest_props as l,
   missing_component as m,
   noop as n,
-  createEventDispatcher as o,
-  onDestroy as p,
-  escape_attribute_value as q,
+  onDestroy as o,
+  createEventDispatcher as p,
+  compute_slots as q,
   run_all as r,
   setContext as s,
-  get_store_value as t,
+  escape_attribute_value as t,
   tick as u,
   validate_component as v,
-  set_store_value as w,
-  now as x,
-  loop as y,
-  is_promise as z
+  get_store_value as w,
+  set_store_value as x,
+  now as y,
+  loop as z
 };

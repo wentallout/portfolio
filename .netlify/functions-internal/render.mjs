@@ -2,10 +2,11 @@ import { init } from '../serverless.js';
 
 export const handler = init({
 	appDir: "_app",
-	assets: new Set(["apple-touch-icon.png","favicon.ico","favicon.svg","fonts/RecoletaAlt-SemiBold.eot","fonts/RecoletaAlt-SemiBold.ttf","fonts/RecoletaAlt-SemiBold.woff","fonts/RecoletaAlt-SemiBold.woff2","icon-192.png","icon-512.png","images/dot.svg","images/fuji.svg","images/headerBottom.svg","images/khoa-biolink.png","images/mask_section-bg_top.png","images/noise.svg","images/noise2.svg","images/rhombus_line.png","robots.txt","styles/markdown.css","service-worker.js"]),
-	mimeTypes: {".png":"image/png",".ico":"image/vnd.microsoft.icon",".svg":"image/svg+xml",".eot":"application/vnd.ms-fontobject",".ttf":"font/ttf",".woff":"font/woff",".woff2":"font/woff2",".txt":"text/plain",".css":"text/css"},
+	appPath: "_app",
+	assets: new Set(["apple-touch-icon.png","favicon.ico","favicon.svg","fonts/RecoletaAlt-SemiBold.eot","fonts/RecoletaAlt-SemiBold.ttf","fonts/RecoletaAlt-SemiBold.woff","fonts/RecoletaAlt-SemiBold.woff2","icon-192-any.png","icon-192-maskable.png","icon-512-any.png","icon-512-maskable.png","images/dot.svg","images/error.gif","images/exp.webp","images/headerBottom.svg","images/khoa-biolink.png","images/mask_section-bg_top.png","images/music.webp","images/noise.svg","images/noise2.svg","images/rhombus_line.png","robots.txt","service-worker.js"]),
+	mimeTypes: {".png":"image/png",".ico":"image/vnd.microsoft.icon",".svg":"image/svg+xml",".eot":"application/vnd.ms-fontobject",".ttf":"font/ttf",".woff":"font/woff",".woff2":"font/woff2",".gif":"image/gif",".webp":"image/webp",".txt":"text/plain"},
 	_: {
-		entry: {"file":"_app/immutable/start-7138e0a4.js","imports":["_app/immutable/start-7138e0a4.js","_app/immutable/chunks/preload-helper-aa6bc0ce.js","_app/immutable/chunks/index-386a9ed8.js","_app/immutable/chunks/singletons-7088e46d.js","_app/immutable/chunks/index-24f79c9d.js"],"stylesheets":[]},
+		entry: {"file":"_app/immutable/start-804d179a.js","imports":["_app/immutable/start-804d179a.js","_app/immutable/chunks/index-8295f668.js","_app/immutable/chunks/singletons-92100df6.js","_app/immutable/chunks/index-da81e281.js","_app/immutable/chunks/preload-helper-b21cceae.js"],"stylesheets":[]},
 		nodes: [
 			() => import('../server/nodes/0.js'),
 			() => import('../server/nodes/1.js'),
@@ -21,7 +22,8 @@ export const handler = init({
 			() => import('../server/nodes/11.js'),
 			() => import('../server/nodes/12.js'),
 			() => import('../server/nodes/13.js'),
-			() => import('../server/nodes/14.js')
+			() => import('../server/nodes/14.js'),
+			() => import('../server/nodes/15.js')
 		],
 		routes: [
 			

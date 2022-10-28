@@ -46,14 +46,12 @@
 		"unplugin-icons": "^0.14.12",
 		"vanilla-lazyload": "^17.8.3",
 		"vite": "^3.2.0",
-		"vite-imagetools": "^4.0.11"
+		"vite-imagetools": "^4.0.11",
+		"cssnano": "^5.1.13"
 	},
 	"type": "module",
 	"repository": {
 		"type": "git",
 		"url": "https://github.com/wentallout/portfolio"
-	},
-	"dependencies": {
-		"cssnano": "^5.1.13"
 	}
 }
