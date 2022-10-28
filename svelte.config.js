@@ -6,13 +6,14 @@ import { mdsvex } from 'mdsvex';
 
 import rehypeToc from '@jsdevtools/rehype-toc';
 import rehypeSlug from 'rehype-slug';
+import cssnanoPlugin from 'cssnano';
 
 /** @type {import('@sveltejs/kit').Config} */
 const config = {
 	preprocess: [
 		sveltePreprocess({
 			postcss: {
-				plugins: [autoprefixer]
+				plugins: [autoprefixer, cssnanoPlugin]
 			}
 			/* Other sveltePreprocess options here, like SCSS */
 		}),
