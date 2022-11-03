@@ -16,7 +16,7 @@
 	const seoProps = {
 		breadcrumbs,
 		title: 'Contact',
-		metadescription: 'Get in touch with Khoa - Vietnamese UI/UX Designer',
+		metadescription: 'Get in touch with Khoa - UI/UX Designer from Ho Chi Minh City',
 		slug: 'contact',
 		datePublished: '2077-07-07T14:19:33.000+0100',
 		lastUpdated: '2077-07-07T14:19:33.000+0100'

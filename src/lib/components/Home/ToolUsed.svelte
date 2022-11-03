@@ -49,6 +49,18 @@
 	section {
 		padding-bottom: var(--space-2xl);
 	}
+
+	.block__section {
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+		border-radius: var(--border-radius-light);
+		background-image: url('/images/noise2.svg');
+		background-color: var(--neutral-900);
+		padding: var(--space-m);
+		box-shadow: var(--box-shadow);
+	}
+
 	.tool {
 		display: flex;
 		flex-direction: column;
@@ -70,17 +82,6 @@
 	.tool__title {
 		font-family: var(--fancy-font);
 		font-weight: 600;
-	}
-
-	.block__section {
-		display: flex;
-		flex-direction: column;
-		align-items: flex-start;
-		border-radius: var(--border-radius);
-		background-image: url('/images/noise2.svg');
-		background-color: var(--neutral-900);
-		padding: var(--space-m);
-		box-shadow: var(--box-shadow);
 	}
 
 	.block__title {

@@ -26,7 +26,7 @@
 		linkedinProfile,
 		telegramUsername,
 		tiktokUsername,
-		twitterUsername,
+		twitterUsername
 	} = website;
 
 	export let article = false;
@@ -42,25 +42,24 @@
 	const defaultAlt =
 		'Khoa Portfolio cover image featuring a smartphone and a pen on a black background';
 
-	// imported props with fallback defaults
 	export let featuredImage = {
 		url: defaultFeaturedImage,
 		alt: defaultAlt,
 		width: 672,
 		height: 448,
-		caption: 'Home page',
+		caption: 'Home page'
 	};
 	export let ogImage = {
 		url: defaultOgImage,
-		alt: defaultAlt,
+		alt: defaultAlt
 	};
 	export let ogSquareImage = {
 		url: defaultOgSquareImage,
-		alt: defaultAlt,
+		alt: defaultAlt
 	};
 	export let twitterImage = {
 		url: defaultTwitterImage,
-		alt: defaultAlt,
+		alt: defaultAlt
 	};
 
 	const pageTitle = `${siteTitle} ${VERTICAL_LINE_ENTITY} ${title}`;
@@ -76,7 +75,7 @@
 		pageTitle,
 		siteTitle,
 		url,
-		...(article ? { datePublished, lastUpdated, facebookPage, facebookAuthorPage } : {}),
+		...(article ? { datePublished, lastUpdated, facebookPage, facebookAuthorPage } : {})
 	};
 	const schemaOrgProps = {
 		article,
@@ -99,14 +98,14 @@
 		linkedinProfile,
 		telegramUsername,
 		tiktokUsername,
-		twitterUsername,
+		twitterUsername
 	};
 	const twitterProps = {
 		article,
 		author,
 		twitterUsername,
 		image: twitterImage,
-		timeToRead,
+		timeToRead
 	};
 </script>
 
@@ -115,8 +114,7 @@
 	<meta name="description" content={metadescription} />
 	<meta
 		name="robots"
-		content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1"
-	/>
+		content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
 	<link rel="canonical" href={url} />
 </svelte:head>
 <Twitter {...twitterProps} />

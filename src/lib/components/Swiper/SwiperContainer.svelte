@@ -1,11 +1,10 @@
 <script>
-	import { Pagination, Scrollbar, A11y, Autoplay } from 'swiper';
+	import { Pagination, Scrollbar, Autoplay } from 'swiper';
 	import { Swiper } from 'swiper/svelte';
 	import 'swiper/css/bundle';
 </script>
 
 <Swiper
-	a11y={{ prevSlideMessage: 'Previous slide', nextSlideMessage: 'Next slide' }}
 	grabCursor={true}
 	breakpoints={{
 		768: {
@@ -18,7 +17,7 @@
 	pagination={{ clickable: true, type: 'fraction' }}
 	scrollbar={{ draggable: true }}
 	autoplay={{ delay: 2000, disableOnInteraction: false, pauseOnMouseEnter: true }}
-	modules={[Pagination, Scrollbar, A11y, Autoplay]}>
+	modules={[Pagination, Scrollbar, Autoplay]}>
 	<slot />
 </Swiper>
 

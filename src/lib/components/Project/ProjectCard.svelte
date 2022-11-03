@@ -19,17 +19,17 @@
 		<div class="project__name large-text">{projectName}</div>
 		<div class="project__description small-text">
 			<div class="description-section">
-				<div class="section-title">◆ What</div>
+				<div class="section-title">What</div>
 				<div class="section-info">{what}</div>
 			</div>
 
 			<div class="description-section">
-				<div class="section-title">◆ Who</div>
+				<div class="section-title">Who</div>
 				<div class="section-info">{who}</div>
 			</div>
 
 			<div class="description-section">
-				<div class="section-title">◆ Result</div>
+				<div class="section-title">Result</div>
 				<div class="section-info">{result}</div>
 			</div>
 		</div>
@@ -72,24 +72,23 @@
 	.project {
 		width: 100%;
 		max-width: 80rem;
+
 		/* FLEX */
 		display: flex;
 		flex-direction: column;
 
 		color: var(--text);
+		background-color: var(--bg);
 
 		/* SPACING */
 		margin-bottom: var(--space-l);
 
-		/* SHADOW */
-		box-shadow: var(--box-shadow);
-
 		overflow: hidden;
 		transition: 0.3s;
 
-		background-color: var(--bg);
+		box-shadow: var(--box-shadow);
 
-		border-radius: var(--border-radius);
+		border-radius: var(--border-radius-light);
 		overflow: hidden;
 	}
 

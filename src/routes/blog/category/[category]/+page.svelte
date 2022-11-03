@@ -17,8 +17,7 @@
 <style>
 	.result {
 		margin-bottom: var(--space-m);
-		font-weight: 300;
-		color: var(--neutral-700);
+		color: var(--neutral-800);
 		font-family: var(--fancy-font);
 	}
 </style>

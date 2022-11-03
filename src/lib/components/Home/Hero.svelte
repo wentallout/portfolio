@@ -9,7 +9,7 @@
 		<video autoplay loop muted class="hero__video" src={Waves} />
 		<div class="hero__text">
 			<h1 class="hi xxl-text">Hi! I'm Khoa</h1>
-			<p>I code and design.</p>
+			<p>I'm a Web Developer + UI/UX Desginer</p>
 			<a href="/project">
 				<Button label="See my work" backgroundColor="var(--primary-500)" type="button" />
 			</a>
@@ -28,12 +28,14 @@
 		height: 100%;
 		position: absolute;
 		overflow: hidden;
-		border-radius: var(--border-radius);
 	}
 
 	.hero {
+		/* BORDER RADIUS */
+		border-radius: var(--border-radius-light);
+
 		position: relative;
-		border-radius: var(--border-radius);
+
 		overflow: hidden;
 		width: 100%;
 		height: 600px;
@@ -44,7 +46,7 @@
 		background-repeat: no-repeat;
 		background-size: cover;
 
-		/* Flexbox */
+		/* FLEX */
 		display: flex;
 		justify-content: center;
 		align-items: center;

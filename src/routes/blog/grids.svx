@@ -1,0 +1,28 @@
+---
+title: 'Grids'
+date: '2022-10-31'
+categories:
+    - 'fundamental'
+---
+
+<script>
+
+import Image from '$lib/components/Common/Image.svelte';
+</script>
+
+
+## mobile
+
+Save this as grid styles.
+
+- Type: Stretch
+- Count: 4
+- Margin: 24
+- Gutter: 24
+- Width: auto
+
+
+
+
+ 
+

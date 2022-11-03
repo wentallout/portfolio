@@ -10,7 +10,7 @@
 
 <article class="info">
 	<h1 class="xl-text">{data.title}</h1>
-	<p class="small-text date">Published: {data.date}</p>
+	<p class="date xs-text">Published: {data.date}</p>
 
 	{#if data.categories.length}
 		<div class="category">
@@ -35,13 +35,13 @@
 	.date {
 		display: block;
 		font-weight: 300;
-		color: var(--neutral-700);
+		color: var(--neutral-800);
 		margin: 0;
 	}
 
 	.category {
 		font-weight: 300;
-		color: var(--neutral-700);
+		color: var(--neutral-800);
 		display: flex;
 		flex-direction: row;
 		flex-wrap: wrap;

@@ -58,7 +58,7 @@
 		width: 100%;
 		margin-bottom: var(--space-m);
 		background-color: var(--bg);
-		border-radius: var(--border-radius);
+		border-radius: var(--border-radius-light);
 		overflow: hidden;
 		box-shadow: var(--box-shadow);
 	}

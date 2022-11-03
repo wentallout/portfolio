@@ -5,10 +5,10 @@
 			<div class="block">
 				<h3 class="block__title base-text">Education & Background</h3>
 				<p class="block__text small-text">
-					I've studied and worked as a full-stack developer for years, but never found the
-					satisfaction I needed until I discovered the art of UI/UX Design in 2022. My current focus
-					is UX design - providing the best user experience through research, creating flows and
-					wireframes that solve problems.
+					I worked as a full-stack developer for about a year but didn't find the fulfillment I was
+					looking for until I discovered the art of UI/UX Design in 2022. My current focus is on UX
+					design, which involves conducting research and developing flows and wireframes to solve
+					pain points.
 				</p>
 			</div>
 			<div class="block">
@@ -59,6 +59,6 @@
 	}
 
 	.block__text {
-		color: var(--neutral-700);
+		color: var(--neutral-800);
 	}
 </style>

@@ -72,7 +72,7 @@
 		width: 100%;
 		padding: var(--space-m);
 		box-shadow: var(--box-shadow);
-		border-radius: var(--border-radius);
+		border-radius: var(--border-radius-light);
 		transition: 0.3s;
 		background-color: var(--bg);
 	}
@@ -86,7 +86,7 @@
 	}
 
 	.tool__description {
-		color: var(--neutral-700);
+		color: var(--neutral-800);
 		overflow: hidden;
 		display: -webkit-box;
 		-webkit-line-clamp: 3;

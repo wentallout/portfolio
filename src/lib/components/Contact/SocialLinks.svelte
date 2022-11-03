@@ -75,14 +75,13 @@
 		display: flex;
 		flex-direction: column;
 
-		
 		padding: var(--space-m);
 		width: 100%;
 
 		margin-bottom: var(--space-m);
 
 		background-color: var(--bg);
-		border-radius: var(--border-radius);
+		border-radius: var(--border-radius-light);
 		overflow: hidden;
 
 		/* SHADOW */

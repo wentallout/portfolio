@@ -42,6 +42,7 @@
 	}
 
 	.breadcrumb__unclickable {
+		pointer-events: none;
 		display: inline-block;
 		font-weight: 500;
 	}

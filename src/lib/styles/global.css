@@ -16,8 +16,10 @@ body {
 }
 
 :root {
+	--normal-font: 'Lexend';
+	--fancy-font: 'Recoleta Alt';
 	--text: var(--neutral-900);
-	--background: hsl(214, 28%, 95%);
+	--pbg: hsl(214, 28%, 95%);
 	--brand-color: var(--neutral-900);
 	--bg: #fff;
 
@@ -99,14 +101,13 @@ body {
 
 	/* BORDER RADIUS */
 	--border-radius: 12px;
+	--border-radius-light: 4px;
 	--text-shadow: 0 0 5px #000;
 
 	/* darkmode mode */
 	/* color-scheme: light dark; */
 
 	--gradient: linear-gradient(to right, var(--primary-500), var(--accent-500));
-
-	--fancy-font: 'Recoleta Alt';
 }
 
 #headerBottom {
@@ -210,7 +211,8 @@ textarea {
 	padding: 0.375rem 0.75rem;
 	color: var(--neutral-800) !important;
 	margin-bottom: var(--space-s);
-	border: 1px solid var(--neutral-700);
+	border: 0.5px solid var(--neutral-700);
+	border-radius: var(--border-radius-light);
 }
 
 input:focus,

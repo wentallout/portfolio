@@ -22,14 +22,14 @@
 			slug: ''
 		}
 	];
-	let metadescription = 'Portfolio - UIUX Designer, Web Developer Nguyen Dang Khoa';
-	const featuredImageAlt = 'Portfolio of Khoa';
+	let metadescription = 'Nguyen Dang Khoa - UI UX Designer + Web Developer. Personal Portfolio.';
+	const featuredImageAlt = 'Nguyen Dang Khoa - UI UX Designer + Web Developer';
 	const featuredImage = {
 		url: featuredImageSrc,
 		alt: featuredImageAlt,
 		width: 672,
 		height: 448,
-		caption: 'Home page'
+		caption: 'HomePage'
 	};
 	const ogImage = {
 		url: ogImageSrc,

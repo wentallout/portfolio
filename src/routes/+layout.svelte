@@ -1,11 +1,11 @@
 <script>
 	import SkipLink from '$lib/components/Layout/SkipLink.svelte';
 	import PWA from '$lib/components/PWA/PWA.svelte';
+	import LogoContainer from '$lib/components/Layout/LogoContainer.svelte';
+	import Header from '$lib/components/Layout/Header.svelte';
 	import BackToTop from '$lib/components/Layout/BackToTop.svelte';
 	import Footer from '$lib/components/Layout/Footer.svelte';
-	import Header from '$lib/components/Layout/Header.svelte';
 	import Breadcrumb from '$lib/components/Layout/Breadcrumb.svelte';
-	import LogoContainer from '$lib/components/Layout/LogoContainer.svelte';
 
 	import '@fontsource/lexend/latin-300.css';
 	import '@fontsource/lexend/latin-400.css';
@@ -82,7 +82,7 @@
 
 <style>
 	.page-container {
-		background: var(--background);
+		background: var(--pbg);
 	}
 
 	.main-content {

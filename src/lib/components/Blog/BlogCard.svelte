@@ -17,7 +17,8 @@
 		display: flex;
 		flex-direction: column;
 		width: 100%;
-		border-radius: var(--border-radius);
+
+		border-radius: var(--border-radius-light);
 
 		padding: 1rem 2rem;
 		box-shadow: var(--box-shadow);
@@ -44,18 +45,11 @@
 	.blog__date {
 		/* flex */
 		display: flex;
-		justify-content: center;
+		justify-content: left;
 		align-items: center;
 		flex-direction: row;
-
-		width: fit-content;
-		height: 20px;
-
 		/* typography */
 		font-weight: 300;
-		color: var(--neutral-700);
-		border: 1px solid var(--neutral-700);
-		padding: 4px 8px;
-		border-radius: var(--border-radius);
+		color: var(--neutral-800);
 	}
 </style>

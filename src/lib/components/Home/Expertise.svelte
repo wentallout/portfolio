@@ -1,5 +1,4 @@
 <script>
-	import UX from '$lib/assets/images/home/ux.svg';
 	import designProcess from '$lib/assets/images/home/designProcess.svg';
 </script>
 
@@ -9,13 +8,12 @@
 		<div class="expertise__block">
 			<div class="block__icon">
 				<img src={designProcess} alt="design process" width="100" height="100" />
-				<img src={UX} alt="user experience" width="100" height="100" />
 			</div>
 			<div class="block">
 				<h3 class="block__title base-text">Product Design</h3>
 				<p class="block__text small-text">
-					Experience applying UX frameworks, working in iterative cycles, and quickly testing ideas
-					to design products that match user expectations.
+					Experience using UX frameworks, working in iterative cycles, and quickly testing ideas to
+					design products that meet user expectations.
 				</p>
 			</div>
 		</div>
@@ -40,7 +38,7 @@
 	}
 
 	.block__text {
-		color: var(--neutral-700);
+		color: var(--neutral-800);
 		max-width: 60ch;
 	}
 

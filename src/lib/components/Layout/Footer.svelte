@@ -63,6 +63,8 @@
 		background-color: var(--accent-900);
 
 		background-repeat: repeat;
+		border-top-left-radius: var(--border-radius-light);
+		border-top-right-radius: var(--border-radius-light);
 	}
 
 	.footer__other {

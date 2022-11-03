@@ -10,7 +10,7 @@
 		align-items: center;
 		flex-direction: column;
 		width: 100%;
-		margin-top: var(--space-s);
+		margin-top: var(--space-3xl);
 		margin-bottom: var(--space-s);
 	}
 
@@ -18,6 +18,4 @@
 		font-family: var(--fancy-font);
 		color: var(--text);
 	}
-
-	
 </style>

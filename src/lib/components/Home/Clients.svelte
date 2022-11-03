@@ -1,4 +1,5 @@
 <script>
+	import ExLink from '$lib/components/Common/ExLink.svelte';
 	import fpt from '$lib/assets/images/home/fpt.png?w=300&h=300';
 	import nashtech from '$lib/assets/images/home/nashtech.png?w=300&h=300';
 </script>
@@ -7,8 +8,13 @@
 	<div class="clients">
 		<h2 class="clients__title xl-text">I have worked for</h2>
 		<div class="clients__logo">
-			<img class="logo" loading="lazy" decoding="async" src={fpt} alt="FPT Software" />
-			<img class="logo" loading="lazy" decoding="async" src={nashtech} alt="NashTech" />
+			<ExLink href="https://www.fpt-software.com">
+				<img class="logo" loading="lazy" decoding="async" src={fpt} alt="FPT Software" />
+			</ExLink>
+
+			<ExLink href="https://nashtechglobal.com">
+				<img class="logo" loading="lazy" decoding="async" src={nashtech} alt="NashTech" />
+			</ExLink>
 		</div>
 	</div>
 </section>
@@ -45,5 +51,10 @@
 		height: 100px;
 
 		filter: grayscale();
+		transition: 0.3s;
+	}
+
+	.logo:hover {
+		filter: none;
 	}
 </style>

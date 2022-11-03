@@ -1,21 +1,19 @@
-<div class="container">
+<div data-nosnippet class="container">
 	<div class="marquee">
 		<ul class="marquee__content">
-			<li>Nguyen Dang Khoa</li>
-			<li>wentallout@gmail.com</li>
-			<li>+84 929 066 331</li>
-			<li>Mobile First</li>
-			<li>Responsive Design</li>
-			<li>Human-Centered Design</li>
+			<li>Human-Centered</li>
+			<li>Design Thinking</li>
+			<li>Accessibility</li>
+			<li>Affordance</li>
+			<li>Responsive</li>
 		</ul>
-		<!-- Mirrors the content above -->
+
 		<ul class="marquee__content" aria-hidden="true">
-			<li>Nguyen Dang Khoa</li>
-			<li>wentallout@gmail.com</li>
-			<li>+84 929 066 331</li>
-			<li>Mobile First</li>
-			<li>Responsive Design</li>
-			<li>Human-Centered Design</li>
+			<li>Human-Centered</li>
+			<li>Design Thinking</li>
+			<li>Accessibility</li>
+			<li>Affordance</li>
+			<li>Responsive</li>
 		</ul>
 	</div>
 </div>
@@ -26,7 +24,6 @@
 		z-index: 1;
 		width: 100%;
 		max-width: 100vw;
-
 		/* Typography */
 		font-weight: 400;
 		font-size: var(--font-size-small);

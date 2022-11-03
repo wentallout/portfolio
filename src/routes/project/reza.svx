@@ -9,12 +9,12 @@ date: '2022-09-14'
             --brand-color : #E4543B; 
         }
                
-        .markdown h2, .markdown h3, .markdown h4 
+        .markdown h2, .markdown h3, 
         {
             color: var(--brand-color) !important;
         }
 
-        .markdown h2:before, .markdown h3:before , .markdown h4:before
+        .markdown h2:before, .markdown h3:before
         {
             background-color: var(--brand-color);
         }

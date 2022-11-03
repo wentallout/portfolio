@@ -80,15 +80,15 @@
 	}
 
 	.other {
+		/* FLEX */
 		display: flex;
 		justify-content: center;
 		align-items: center;
 
 		position: relative;
-
 		padding: var(--space-m);
 
-		border-radius: var(--border-radius);
+		border-radius: var(--border-radius-light);
 		height: 300px;
 		overflow: hidden;
 
