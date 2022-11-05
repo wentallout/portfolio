@@ -21,9 +21,6 @@
 </section>
 
 <style>
-	section {
-		padding-bottom: var(--space-2xl);
-	}
 	.block__icon {
 		display: flex;
 		flex-direction: row;

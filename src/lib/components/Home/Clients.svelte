@@ -20,9 +20,6 @@
 </section>
 
 <style>
-	section {
-		padding-bottom: var(--space-2xl);
-	}
 	.clients {
 		width: 100%;
 		display: flex;

@@ -1,9 +1,6 @@
 .markdown {
 	word-wrap: break-word;
 	position: relative;
-	background-color: var(--bg);
-	padding: 1rem 1rem;
-	border-radius: var(--border-radius);
 }
 
 .markdown h1 {
@@ -154,7 +151,7 @@
 	margin-bottom: var(--space-m);
 }
 
-@media (min-width: 768px) {
+@media (min-width: 992px) {
 	.markdown img {
 		max-width: 60%;
 	}
@@ -284,4 +281,41 @@ pre {
 	padding: var(--space-s) var(--space-s);
 	max-width: 60ch;
 	border-radius: var(--border-radius-light);
+}
+
+table {
+	border-collapse: collapse;
+	background-color: var(--bg);
+	box-shadow: var(--box-shadow);
+	padding: 0.5rem 1rem;
+	border: 1px solid var(--neutral-900);
+	max-width: 60ch;
+
+	border-radius: var(--border-radius-light);
+	overflow: hidden;
+}
+
+table tbody {
+	border: 1px solid var(--neutral-900);
+	max-width: 60ch;
+}
+
+table thead {
+	display: none;
+}
+
+table td {
+	border: 1px solid var(--neutral-900);
+	padding: 1rem 1.5rem;
+	max-width: 60ch;
+}
+
+/* table tr:nth-child(even) {
+	background-color: var(--neutral-200);
+} */
+
+table td:first-child {
+	font-weight: 600;
+	font-size: var(--font);
+	background-color: var(--neutral-200);
 }

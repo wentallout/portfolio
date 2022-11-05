@@ -46,10 +46,6 @@
 </section>
 
 <style>
-	section {
-		padding-bottom: var(--space-2xl);
-	}
-
 	.block__section {
 		display: flex;
 		flex-direction: column;

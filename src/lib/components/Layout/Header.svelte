@@ -58,8 +58,8 @@
 
 	.reduced-header {
 		font-size: var(--font-size-small);
-		background-color: rgba(0, 0, 0, 0.8) !important;
-		backdrop-filter: blur(5px);
+		background-color: rgba(0, 0, 0, 0.7) !important;
+		backdrop-filter: blur(1px);
 		box-shadow: 0 2px 4px rgba(45, 35, 66, 0.35), 0 7px 13px -3px rgba(45, 35, 66, 0.25);
 	}
 

@@ -47,10 +47,12 @@
 		flex-wrap: wrap;
 		justify-content: flex-start;
 		align-items: center;
-		gap: var(--space-s);
+		gap: var(--space-xs);
 	}
 
 	.category__link {
-		display: inline-block;
+		display: inline;
+		font-weight: 300 !important;
+		color: var(--accent-600);
 	}
 </style>

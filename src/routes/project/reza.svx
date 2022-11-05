@@ -62,11 +62,14 @@ date: '2022-09-14'
 
 <Image src={thumbnail} alt="reza thumbnail" />
 
-- Project Name: Reza
-- Project Type: Concept Mobile App
-- Role: UI/UX Designer, Team Leader
-- Software: Figma
-
+| |
+|-------|------|
+| Name | Reza |
+| Platform | Mobile (iOS) |
+| Duration | 2 weeks |
+| Team | 3 members |
+| Role | UI/UX Designer, Leader |
+| Software | Figma |     
 
 ## Inspiration
 

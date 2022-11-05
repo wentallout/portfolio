@@ -1,9 +1,9 @@
 <script>
 	export let data;
+	import SectionTitle from '$lib/components/Common/SectionTitle.svelte';
+	import Folder from '~icons/ph/folder';
 
 	let categories = [];
-
-	// Extract unique categories from data
 
 	data.blogs.forEach((blog) => {
 		if (blog.meta.categories.length) {
@@ -17,6 +17,10 @@
 
 	categories.sort();
 </script>
+
+<SectionTitle sectionTitle="Category" let:sectionIcon>
+	<Folder {...sectionIcon} />
+</SectionTitle>
 
 <div class="category">
 	{#each categories as category}
@@ -35,13 +39,16 @@
 		padding: var(--space-xs);
 		border-radius: var(--border-radius);
 		width: fit-content;
-		background-color: var(--neutral-200);
+		background-color: var(--bg);
+		box-shadow: var(--box-shadow);
 		border: 1px solid transparent;
 		color: var(--accent-500);
+		transition: 0.3s;
 	}
 
 	.category__link:hover {
 		border: 1px solid var(--accent-500);
-		color: var(--accent-300);
+		box-shadow: var(--box-shadow-hover);
+		text-decoration: underline;
 	}
 </style>

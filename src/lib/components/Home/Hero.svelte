@@ -18,9 +18,6 @@
 </section>
 
 <style>
-	section {
-		padding-bottom: var(--space-2xl);
-	}
 	.hero__video {
 		display: flex;
 		width: 100%;

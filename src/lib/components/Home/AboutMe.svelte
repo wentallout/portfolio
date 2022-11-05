@@ -28,10 +28,6 @@
 </section>
 
 <style>
-	section {
-		padding-bottom: var(--space-2xl);
-	}
-
 	.about {
 		width: 100%;
 		display: flex;
