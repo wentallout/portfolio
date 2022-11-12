@@ -1,6 +1,9 @@
 .markdown {
 	word-wrap: break-word;
 	position: relative;
+	background-color: var(--bg);
+	padding: var(--space-xl) var(--space-xl);
+	border-radius: var(--border-radius-light);
 }
 
 .markdown h1 {
