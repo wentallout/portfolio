@@ -13,6 +13,8 @@
 
 	import Palette from '~icons/ph/palette';
 
+	import FastForward from '~icons/ph/fast-forward';
+
 	export let data;
 </script>
 
@@ -53,6 +55,22 @@
 </section>
 
 <section>
+	<SectionTitle sectionTitle="Time Saver" let:sectionIcon>
+		<FastForward {...sectionIcon} />
+	</SectionTitle>
+
+	<BlogListContainer>
+		{#each data.blogs as blog}
+			{#if blog.meta.categories.length}
+				{#if blog.meta.categories.includes('tool')}
+					<BlogCard blogTitle={blog.meta.title} blogLink={blog.path} blogDate={blog.meta.date} />
+				{/if}
+			{/if}
+		{/each}
+	</BlogListContainer>
+</section>
+
+<section>
 	<SectionTitle sectionTitle="Tips" let:sectionIcon>
 		<Lightbulb {...sectionIcon} />
 	</SectionTitle>
@@ -68,13 +86,5 @@
 	</BlogListContainer>
 </section>
 
-<!-- <SectionTitle sectionTitle="Color" let:sectionIcon>
-	<Palette {...sectionIcon} />
-</SectionTitle>
-
-<BlogListContainer>
-	<BlogCard blogTitle="wip" blogLink="/" blogDate="wip" />
-	<BlogCard blogTitle="wip" blogLink="/" blogDate="wip" />
-</BlogListContainer> -->
 <style>
 </style>

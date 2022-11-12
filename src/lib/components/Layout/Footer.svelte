@@ -77,6 +77,7 @@
 
 	.footer__other a {
 		color: var(--accent-300);
+		transition: 0.3s;
 	}
 
 	.footer__other a:hover {
@@ -117,14 +118,17 @@
 		z-index: 2;
 		margin-bottom: var(--space-l);
 		flex-wrap: wrap;
-		font-family: var(--fancy-font);
-		font-weight: 600;
 	}
 
 	.nav-list-item {
 		display: flex;
 		padding-left: 0;
 		padding-right: var(--space-xs);
+	}
+
+	.nav-list-item a {
+		font-family: var(--fancy-font);
+		transition: 0.3s;
 	}
 
 	.nav-list-item a:hover {

@@ -1,5 +1,5 @@
 ---
-title: 'Grids'
+title: 'Master grids in Figma'
 date: '2022-10-31'
 categories:
     - 'fundamental'
@@ -10,16 +10,39 @@ categories:
 import Image from '$lib/components/Common/Image.svelte';
 </script>
 
+## preference
+
+[How to build responsive grids in Figma](https://www.wednesday.is/writing-articles/figma-how-to-build-responsive-and-scalable-grids-for-web-design)
 
 ## mobile
 
-Save this as grid styles.
-
+- Columns: 4
 - Type: Stretch
-- Count: 4
 - Margin: 24
-- Gutter: 24
-- Width: auto
+- Gutter: 16 (or 24)
+
+## tablet
+
+Same value like Mobile but 8 columns
+
+- Columns: 8
+- Type: Stretch
+- Margin: 24
+- Gutter: 16
+
+## desktop
+
+Desktop use **fixed grid** instead of **fluid** so the values look different. 
+
+No margin
+
+- Columns: 12
+- Type: Center
+- Width: 80
+- Gutter: 16
+
+
+
 
 
 

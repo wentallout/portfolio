@@ -20,12 +20,12 @@
 			projectName="Reza - Reservation App"
 			linkToFigma="https://www.figma.com/proto/owUrwidb8hZbdmruKhMtyS/REZA%3A-Restaurant-Reservation-App?node-id=738%3A11894&scaling=contain&page-id=607%3A7637"
 			linkToDetail="/project/reza"
-			what="Reza is an app that lets people book restaurant tables"
-			who="People who want to reserve a restaurant table online"
+			what="Reza is an app that lets people book restaurant tables easily."
+			who="Age 18-30, busy office workers or tourists visiting a new city."
 			result="Persona, User Flow, Wireframe, Prototype, Presentation slides">
-			<span slot="atropos">
+			<svelte:fragment slot="thumbnail">
 				<RezaPhoneAtropos />
-			</span>
+			</svelte:fragment>
 		</ProjectCard>
 
 		<!-- <ProjectCard projectName="Project 2: WIP" what="wip" who="wip" result="wip" /> -->

@@ -23,6 +23,8 @@ body {
 	--brand-color: var(--neutral-900);
 	--bg: #fff;
 
+	--text-width: 65ch;
+
 	/* Primary: Mimolette Orange */
 	--primary-100: #fffcf2;
 	--primary-200: #ffebbb;
@@ -167,7 +169,7 @@ html {
 	min-height: 101%;
 
 	/* DEFAULT FONT CONFIG */
-	font-family: 'Lexend', sans-serif, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+	font-family: var(--normal-font), sans-serif, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
 		Helvetica, Arial, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
 	font-weight: 400;
 
@@ -258,7 +260,7 @@ address {
 
 section {
 	/* Spacing */
-	margin-bottom: var(--space-2xl);
+	margin-bottom: var(--space-3xl);
 }
 
 svg {

@@ -75,10 +75,13 @@
 		border-radius: var(--border-radius-light);
 		transition: 0.3s;
 		background-color: var(--bg);
+
+		border: 1px solid transparent;
 	}
 
 	.tool:hover {
 		box-shadow: var(--box-shadow-hover);
+		border: 1px solid var(--primary-500);
 	}
 
 	.tool:hover .tool__name {

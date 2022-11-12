@@ -62,6 +62,7 @@
 		border-radius: var(--border-radius);
 		overflow: hidden;
 		position: relative;
+		box-shadow: var(--box-shadow);
 
 		cursor: pointer;
 	}
@@ -69,6 +70,7 @@
 	.btn:hover {
 		filter: brightness(80%);
 		scale: 1.15;
+		box-shadow: var(--box-shadow-hover);
 	}
 
 	.btn:active {

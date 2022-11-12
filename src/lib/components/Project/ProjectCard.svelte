@@ -13,7 +13,7 @@
 
 <div class="project">
 	<div class="project__thumbnail">
-		<slot name="atropos"><!-- optional fallback --></slot>
+		<slot name="thumbnail"><!-- optional fallback --></slot>
 	</div>
 	<div class="project__info">
 		<div class="project__name large-text">{projectName}</div>

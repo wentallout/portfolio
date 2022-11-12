@@ -7,7 +7,7 @@
 <Atropos
 	class="my-atropos"
 	shadow="false"
-	eventsEl=".frame"
+	eventsEl=".project"
 	rotateXMax={20}
 	rotateYMax={20}
 	stretchX={0}
@@ -17,9 +17,8 @@
 		<div class="frame">
 			<img data-atropos-offset="5" class="frame__image" src={rezaPhoneFrame} alt="reza homepage" />
 			<img data-atropos-offset="3" class="frame__image3" src={rezaSplat} alt="reza splat" />
+			<div data-atropos-offset="-3" class="reza-text">reza</div>
 		</div>
-
-		<div data-atropos-offset="-3" class="reza-text">reza</div>
 	</div>
 </Atropos>
 
@@ -47,7 +46,7 @@
 		position: absolute;
 		font-size: 200px;
 		font-weight: 600;
-		top: 10px;
+		top: 0;
 		left: 0;
 		color: #e4543b;
 		writing-mode: vertical-rl;

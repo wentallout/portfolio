@@ -5,7 +5,8 @@
 <style>
 	.blogs {
 		display: flex;
-		flex-direction: column;
+		flex-direction: row;
+		flex-wrap: wrap;
 		gap: var(--space-s);
 		width: 100%;
 		margin-bottom: var(--space-l);

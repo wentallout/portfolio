@@ -8,6 +8,8 @@
 	import RedditLogo from '~icons/ph/reddit-logo';
 	import Handshake from '~icons/ph/handshake';
 
+	import InstagramLogo from '~icons/ph/instagram-logo';
+
 	import SectionTitle from '$lib/components/Common/SectionTitle.svelte';
 
 	let icon = {
@@ -42,6 +44,13 @@
 				<div class="social__address">
 					<LinkedinLogo {...icon} />
 					<p>LinkedIn</p>
+				</div>
+			</ExLink>
+
+			<ExLink href="https://www.linkedin.com/in/wentallout">
+				<div class="social__address">
+					<InstagramLogo {...icon} />
+					<p>Instagram</p>
 				</div>
 			</ExLink>
 

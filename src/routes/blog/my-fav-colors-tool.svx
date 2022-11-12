@@ -1,0 +1,28 @@
+---
+title: 'My favorite color tools'
+date: '2022-11-09'
+categories:
+    - 'color'
+    - 'tool'
+---
+
+<script>
+    import Image from '$lib/components/Common/Image.svelte';
+</script>
+
+## Gradient
+
+[Gradientify](https://gradientify.com/) - carefully crafted gradients for your next projects.
+
+## Color scheme
+
+[goodpalette](https://goodpalette.io/) - beautiful color palettes for UI 
+-> Primary + Accent + Neutral.
+
+
+
+
+
+
+
+

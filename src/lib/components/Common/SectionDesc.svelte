@@ -8,7 +8,7 @@
 
 <style>
 	.section-description {
-		max-width: 60ch;
+		max-width: var(--text-width);
 		text-align: left;
 		margin-bottom: var(--space-s);
 		color: var(--text);

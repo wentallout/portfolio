@@ -76,6 +76,7 @@
 }
 
 .markdown h3 {
+	max-width: var(--text-width);
 	font-weight: 600;
 	font-size: var(--font-size-mid);
 	line-height: var(--line-height-mid);
@@ -83,7 +84,6 @@
 	/* Spacing */
 	margin-top: var(--space-xl);
 	margin-bottom: var(--space-xs);
-	max-width: 60ch;
 }
 
 .markdown h3:before {
@@ -125,7 +125,7 @@
 	line-height: var(--line-height-small);
 	margin: 0;
 	margin-bottom: var(--space-s);
-	max-width: 60ch;
+	max-width: var(--text-width);
 }
 
 .markdown li:not(.toc li) {
@@ -148,12 +148,13 @@
 	height: auto;
 	border: 1px solid var(--neutral-500);
 	border-radius: var(--border-radius-light);
-	margin-bottom: var(--space-m);
+	margin-top: var(--space-m);
+	margin-bottom: var(--space-xl);
 }
 
 @media (min-width: 992px) {
 	.markdown img {
-		max-width: 60%;
+		max-width: 70%;
 	}
 }
 
@@ -173,6 +174,7 @@
 }
 
 .markdown .swiper {
+	margin-top: var(--space-m);
 	margin-bottom: var(--space-m);
 }
 
@@ -183,7 +185,7 @@
 .toc {
 	display: flex;
 	flex-direction: column;
-	max-width: 60ch;
+	max-width: var(--text-width);
 	background-color: var(--bg);
 	max-height: 500px;
 	overflow-y: auto;
@@ -261,13 +263,13 @@ blockquote {
 	background-color: var(--bg);
 	margin: 0;
 	padding-left: var(--space-s);
-	font-style: italic;
+	font-weight: 300;
 	border-left: 1rem solid var(--neutral-900);
 	padding-top: 1rem;
 	padding-bottom: 1rem;
 	margin-bottom: var(--space-s);
 	box-shadow: var(--box-shadow);
-	max-width: 60ch;
+	max-width: var(--text-width);
 }
 
 blockquote p {
@@ -279,7 +281,7 @@ pre {
 	background-color: var(--neutral-900);
 	color: var(--neutral-100);
 	padding: var(--space-s) var(--space-s);
-	max-width: 60ch;
+	max-width: var(--text-width);
 	border-radius: var(--border-radius-light);
 }
 
@@ -289,7 +291,7 @@ table {
 	box-shadow: var(--box-shadow);
 	padding: 0.5rem 1rem;
 	border: 1px solid var(--neutral-900);
-	max-width: 60ch;
+	max-width: var(--text-width);
 
 	border-radius: var(--border-radius-light);
 	overflow: hidden;
@@ -297,7 +299,7 @@ table {
 
 table tbody {
 	border: 1px solid var(--neutral-900);
-	max-width: 60ch;
+	max-width: var(--text-width);
 }
 
 table thead {
@@ -318,4 +320,10 @@ table td:first-child {
 	font-weight: 600;
 	font-size: var(--font);
 	background-color: var(--neutral-200);
+}
+
+.swiper .svelte-lightbox-thumbnail img {
+	max-width: 100%;
+	margin-top: 0;
+	margin-bottom: 0;
 }

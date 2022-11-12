@@ -2,7 +2,7 @@
 title: 'Sharp Axe Method'
 date: '2022-10-14'
 categories:
-    - 'fundamental'
+    - 'tips'
 ---
 
 <script>
