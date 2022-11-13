@@ -3,7 +3,7 @@
 	export let alt = 'insert alt here';
 
 	export let width = 600;
-	export let height = '600';
+	export let height = 600;
 
 	export let hasCaption = true;
 
@@ -26,7 +26,8 @@
 		{imagePreset}
 		enableImageExpand="true"
 		transitionDuration="50">
-		<img {width} {height} {src} loading="lazy" decoding="async" {alt} />
+		<img class="lazy" {width} {height} {src} loading="lazy" decoding="async" {alt} />
+
 		{#if hasCaption}
 			<figcaption class="caption xs-text">{alt}</figcaption>
 		{/if}

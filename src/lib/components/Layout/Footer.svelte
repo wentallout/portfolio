@@ -28,8 +28,7 @@
 		</div>
 		<div class="footer__other">
 			<a href="tel:+84929066331" target="_blank" rel="noreferrer noopener">+84929066331</a>
-			<a href="mailto:wentallout@gmail.com" target="_blank" rel="noreferrer noopener"
-				>wentallout@gmail.com</a>
+			<a href="mailto:wentallout@gmail.com" target="_blank" rel="noreferrer noopener">Email me</a>
 		</div>
 	</div>
 </footer>

@@ -6,7 +6,7 @@
 
 <section>
 	<div class="hero">
-		<video autoplay loop muted class="hero__video" src={Waves} />
+		<video autoplay muted loop playsinline class="hero__video" src={Waves} />
 		<div class="hero__text">
 			<h1 class="hi xxl-text">Hi! I'm Khoa</h1>
 			<p>I'm a Web Developer + UI/UX Desginer</p>

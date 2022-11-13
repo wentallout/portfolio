@@ -2,8 +2,14 @@
 	word-wrap: break-word;
 	position: relative;
 	background-color: var(--bg);
-	padding: var(--space-xl) var(--space-xl);
+	padding: var(--space-s) var(--space-s);
 	border-radius: var(--border-radius-light);
+}
+
+@media (min-width: 768px) {
+	.markdown {
+		padding: var(--space-xl) var(--space-xl);
+	}
 }
 
 .markdown h1 {

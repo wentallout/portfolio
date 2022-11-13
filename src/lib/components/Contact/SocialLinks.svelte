@@ -36,7 +36,7 @@
 			<ExLink href="mailto:wentallout@gmail.com">
 				<div class="social__address">
 					<Envelope {...icon} />
-					<p>wentallout@gmail.com</p>
+					<p>Email</p>
 				</div>
 			</ExLink>
 

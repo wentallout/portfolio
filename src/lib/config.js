@@ -34,13 +34,13 @@ const website = {
 	contactEmail: 'wentallout@gmail.com',
 
 	// PWA
-	siteTitle: 'Dang Khoa - Portfolio',
+	siteTitle: 'Nguyen Dang Khoa - Portfolio',
 	siteShortTitle: 'Portfolio',
 	siteUrl: 'https://wentallout.tech',
 	icon: 'static/icon-512.png',
 	backgroundColor: '#fcfcfa',
 	themeColor: '#e88615',
-	description: 'Nguyen Dang Khoa - Professional UI UX Design - Portfolio',
+	description: 'Nguyen Dang Khoa - Professional UI/UX Designer - 2022',
 	//
 
 	//SOCIAL

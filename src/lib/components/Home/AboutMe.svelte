@@ -1,31 +1,37 @@
-<section>
-	<div class="about">
-		<h2 class="about__title xl-text">About me</h2>
-		<div class="about__block">
-			<div class="block">
-				<h3 class="block__title base-text">Education & Background</h3>
-				<p class="block__text small-text">
-					I worked as a full-stack developer for about a year but didn't find the fulfillment I was
-					looking for until I discovered the art of UI/UX Design in 2022. My current focus is on UX
-					design, which involves conducting research and developing flows and wireframes to solve
-					pain points.
-				</p>
-			</div>
-			<div class="block">
-				<h3 class="block__title base-text">Thought Process</h3>
-				<p class="block__text small-text">
-					There isn't a miracle method that solves everything. Every project is unique and
-					constantly riddled with ambiguity and constraints. Fortunately, there's no need to
-					reinvent the wheel, I can follow industry guidelines and proven UX frameworks — beginning
-					with a discovery phase to understand the problem; followed by prototyping, validating my
-					ideas with users, and collaborating with stakeholders throughout the process. Taking these
-					simple steps has never failed me and always leads to innovative solutions and successful
-					outcomes.
-				</p>
+<script>
+	import AnimatedOnScroll from '$lib/components/Common/AnimatedOnScroll.svelte';
+</script>
+
+<AnimatedOnScroll>
+	<section>
+		<div class="about">
+			<h2 class="about__title xl-text">About me</h2>
+			<div class="about__block">
+				<div class="block">
+					<h3 class="block__title base-text">Education & Background</h3>
+					<p class="block__text small-text">
+						I worked as a full-stack developer for about a year but didn't find the fulfillment I
+						was looking for until I discovered the art of UI/UX Design in 2022. My current focus is
+						on UX design, which involves conducting research and developing flows and wireframes to
+						solve pain points.
+					</p>
+				</div>
+				<div class="block">
+					<h3 class="block__title base-text">Thought Process</h3>
+					<p class="block__text small-text">
+						There isn't a miracle method that solves everything. Every project is unique and
+						constantly riddled with ambiguity and constraints. Fortunately, there's no need to
+						reinvent the wheel, I can follow industry guidelines and proven UX frameworks —
+						beginning with a discovery phase to understand the problem; followed by prototyping,
+						validating my ideas with users, and collaborating with stakeholders throughout the
+						process. Taking these simple steps has never failed me and always leads to innovative
+						solutions and successful outcomes.
+					</p>
+				</div>
 			</div>
 		</div>
-	</div>
-</section>
+	</section>
+</AnimatedOnScroll>
 
 <style>
 	.about {

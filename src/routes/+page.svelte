@@ -65,9 +65,9 @@
 	};
 </script>
 
-<svelte:head>
+<!-- <svelte:head>
 	<title>Khoa's Portfolio</title>
-</svelte:head>
+</svelte:head> -->
 
 <SEO {...seoProps} />
 
