@@ -18,6 +18,7 @@
 	<SectionTitle sectionTitle="Book" let:sectionIcon>
 		<Books {...sectionIcon} />
 	</SectionTitle>
+	<SectionDesc text="Knowledge should be free and I intend to fight for it. Oh no! You want to be the best at your job so you hide all of your secrets? Nothing is a secret on the internet my friend." />
 
 	<BookGallery />
 </section>

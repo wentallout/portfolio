@@ -1,5 +1,5 @@
 ---
-title: UX Portfolio DOs and DONTs
+title: Portfolio DOs and DONTs
 date: '2022-09-20'
 categories:
     - 'tips'

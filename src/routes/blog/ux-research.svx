@@ -1,0 +1,46 @@
+---
+title: 'UX Research'
+date: '2022-11-13'
+categories:
+    - 'ux'
+---
+
+
+## Research
+
+[UX Research Cheat Sheet](https://www.nngroup.com/articles/ux-research-cheat-sheet)
+
+[When to Use Which UX Research Methods](https://www.nngroup.com/articles/which-ux-research-methods)
+
+## Usability
+
+[Usability Testing 101](https://www.nngroup.com/articles/usability-testing-101)
+
+[Usability 101: Introduction to Usability](https://www.nngroup.com/articles/usability-101-introduction-to-usability)
+
+[10 Usability Heuristics for User Interface Design](https://www.nngroup.com/articles/ten-usability-heuristics/)
+
+## Journey Mapping
+
+[Journey Mapping 101](https://www.nngroup.com/articles/journey-mapping-101)
+
+## Empathy Mapping
+
+[Empathy Mapping: The First Step in Design Thinking](https://www.nngroup.com/articles/empathy-mapping/)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

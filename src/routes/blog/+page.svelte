@@ -39,6 +39,22 @@
 </section>
 
 <section>
+	<SectionTitle sectionTitle="UX" let:sectionIcon>
+		<Brain {...sectionIcon} />
+	</SectionTitle>
+
+	<BlogListContainer>
+		{#each data.blogs as blog}
+			{#if blog.meta.categories.length}
+				{#if blog.meta.categories.includes('ux')}
+					<BlogCard blogTitle={blog.meta.title} blogLink={blog.path} blogDate={blog.meta.date} />
+				{/if}
+			{/if}
+		{/each}
+	</BlogListContainer>
+</section>
+
+<section>
 	<SectionTitle sectionTitle="Typography" let:sectionIcon>
 		<TextAa {...sectionIcon} />
 	</SectionTitle>

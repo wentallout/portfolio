@@ -4,10 +4,16 @@
 	import DesignManual from '$lib/assets/images/book/DesignManual.png?w=200&h=300';
 	import NoBSGuideUX from '$lib/assets/images/book/NoBSGuideUX.png?w=200&h=300';
 	import Sprint from '$lib/assets/images/book/Sprint.png?w=200&h=300';
+	import JustEnoughResearch from '$lib/assets/images/book/JustEnoughResearch.png?w=200&h=300';
 	import CoolBook from '$lib/components/Resource/CoolBook.svelte';
 	import { SwiperSlide } from 'swiper/svelte';
 
 	let books = [
+		{
+			name: 'Just Enough Research',
+			imgUrl: JustEnoughResearch,
+			bookUrl: 'https://terabox.com/s/1BXO6sku01d2yUm-IGH1l-A'
+		},
 		{
 			name: 'UI Design Principles',
 			imgUrl: UIDesignPrinciples,

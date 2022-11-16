@@ -143,7 +143,14 @@
 
 .markdown a:not(.toc a) {
 	color: var(--accent-600);
-	font-weight: 600;
+	font-weight: 400;
+	padding: 4px 8px;
+	background-color: var(--accent-100);
+	border-radius: var(--border-radius);
+}
+
+.markdown a:not(.toc a)::after {
+	content: '🔗';
 }
 
 .markdown a:hover {
