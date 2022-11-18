@@ -1,5 +1,5 @@
 <script>
-	import { Pagination, Scrollbar, Autoplay } from 'swiper';
+	import { Pagination, Scrollbar, Autoplay, Mousewheel } from 'swiper';
 	import { Swiper } from 'swiper/svelte';
 	import 'swiper/css/bundle';
 </script>
@@ -16,8 +16,9 @@
 	slidesPerView={1}
 	pagination={{ clickable: true, type: 'fraction' }}
 	scrollbar={{ draggable: true }}
+	mousewheel
 	autoplay={{ delay: 2000, disableOnInteraction: false, pauseOnMouseEnter: true }}
-	modules={[Pagination, Scrollbar, Autoplay]}>
+	modules={[Pagination, Scrollbar, Autoplay, Mousewheel]}>
 	<slot />
 </Swiper>
 
