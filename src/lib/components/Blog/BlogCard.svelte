@@ -36,7 +36,7 @@
 	.blog:before {
 		position: absolute;
 		content: '';
-		background: url('/images/bg_pattern_rhombus_beta.webp') repeat top center/20px 52px;
+		background: url('/images/bg_pattern_rhombus_beta.webp') repeat top center/32px 55px;
 		top: 0;
 		right: 0;
 		width: var(--space-m);
@@ -44,7 +44,6 @@
 		z-index: 2;
 		opacity: 0;
 		transition: 0.3s;
-		border-radius: var(--border-radius-light);
 	}
 
 	.blog:hover::before {

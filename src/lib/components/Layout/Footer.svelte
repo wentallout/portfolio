@@ -26,10 +26,6 @@
 				<LinkedinLogo width="32" height="32" color="var(--neutral-100)" />
 			</a>
 		</div>
-		<div class="footer__other">
-			<a href="tel:+84929066331" target="_blank" rel="noreferrer noopener">+84929066331</a>
-			<a href="mailto:wentallout@gmail.com" target="_blank" rel="noreferrer noopener">Email me</a>
-		</div>
 	</div>
 </footer>
 
@@ -64,23 +60,6 @@
 		background-repeat: repeat;
 		border-top-left-radius: var(--border-radius-light);
 		border-top-right-radius: var(--border-radius-light);
-	}
-
-	.footer__other {
-		display: flex;
-		flex-direction: row;
-		gap: var(--space-m);
-		z-index: 2;
-		color: var(--neutral-500);
-	}
-
-	.footer__other a {
-		color: var(--accent-300);
-		transition: 0.3s;
-	}
-
-	.footer__other a:hover {
-		color: var(--accent-100);
 	}
 
 	.footer-container {

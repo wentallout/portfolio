@@ -18,19 +18,19 @@
 	<div class="project__info">
 		<div class="project__name large-text">{projectName}</div>
 		<div class="project__description small-text">
-			<div class="description-section">
-				<div class="section-title">What</div>
-				<div class="section-info">{what}</div>
+			<div class="description__section">
+				<div class="section__title">What</div>
+				<div class="section__info">{what}</div>
 			</div>
 
-			<div class="description-section">
-				<div class="section-title">Who</div>
-				<div class="section-info">{who}</div>
+			<div class="description__section">
+				<div class="section__title">Who</div>
+				<div class="section__info">{who}</div>
 			</div>
 
-			<div class="description-section">
-				<div class="section-title">Result</div>
-				<div class="section-info">{result}</div>
+			<div class="description__section">
+				<div class="section__title">Result</div>
+				<div class="section__info">{result}</div>
 			</div>
 		</div>
 
@@ -52,19 +52,20 @@
 </div>
 
 <style>
-	.description-section {
+	.description__section {
 		display: flex;
 		flex-direction: row;
-		gap: var(--space-xs);
+		gap: var(--space-s);
+		margin-bottom: var(--space-s);
 	}
 
-	.section-title {
+	.section__title {
 		min-width: 30%;
 		font-weight: 500;
 		color: var(--primary-600);
 	}
 
-	.section-info {
+	.section__info {
 		text-align: left;
 		margin-right: auto;
 	}
@@ -85,8 +86,6 @@
 
 		overflow: hidden;
 		transition: 0.3s;
-
-		box-shadow: var(--box-shadow);
 
 		border-radius: var(--border-radius-light);
 		overflow: hidden;

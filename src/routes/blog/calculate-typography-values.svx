@@ -36,7 +36,9 @@ The most popular font size for body copy is **between 14 and 16 px**.
 line height =  body copy font size * 1.5 (or 1.6)
 ```
 
-## Best letter-spacing
+## best letter spacing
+
+There's no **correct** way to achieve perfect spacing atm.
 
 [The Designer's Guide To Letter Spacing](https://www.webdesignerdepot.com/2020/07/the-designers-guide-to-letter-spacing/)
 

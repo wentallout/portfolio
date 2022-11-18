@@ -60,7 +60,6 @@
 		background-color: var(--bg);
 		border-radius: var(--border-radius-light);
 		overflow: hidden;
-		box-shadow: var(--box-shadow);
 	}
 
 	.contact {

@@ -142,7 +142,6 @@
 	}
 	.active-page {
 		color: var(--primary-500) !important;
-		pointer-events: none;
 		position: relative;
 	}
 

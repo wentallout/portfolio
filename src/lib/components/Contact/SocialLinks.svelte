@@ -54,7 +54,7 @@
 				</div>
 			</ExLink>
 
-			<ExLink href="https://www.figma.com/team_invite/redeem/CRNTQKDT0VQTLYjw7cEogQ">
+			<ExLink href="https://www.figma.com/@wentallout">
 				<div class="social__address">
 					<FigmaLogo {...icon} />
 					<p>Figma</p>
@@ -92,9 +92,6 @@
 		background-color: var(--bg);
 		border-radius: var(--border-radius-light);
 		overflow: hidden;
-
-		/* SHADOW */
-		box-shadow: var(--box-shadow);
 	}
 
 	.social__list {

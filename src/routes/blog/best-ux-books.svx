@@ -24,6 +24,29 @@ Fundamental books will give you a feel for what UX design is all about. The esse
 - Dont Make Me Think: A Common Sense Approach to Web Usability by Steve Krug
 - About Face: The Essentials of Interaction Design by Alan Cooper.
 
+## checklist
+
+### Kickstart
+
+- [ ] The Design of everyday things
+
+### Leadership and Design Management
+
+- [ ] The Making of a Manager
+
+### Working in small design team and incharge different roles
+
+- [ ] The User Experience Team of One
+- [x] Just Enough Research
+
+### Research
+
+- [ ] Observing the User Experience
+- [ ] Research methods in human-computer interaction
+
+
+
+
 ## transition from dev to designer
 
 [Link](https://xd.adobe.com/ideas/career-tips/web-developer-ux-designer-10-practical-tips-make-career-transition-happen/)

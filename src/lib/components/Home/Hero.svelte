@@ -25,6 +25,8 @@
 		height: 100%;
 		position: absolute;
 		overflow: hidden;
+
+		filter: brightness(80%);
 	}
 
 	.hero {
@@ -59,7 +61,6 @@
 		width: 100%;
 		height: 100%;
 		background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3));
-		text-shadow: 3px 4px 7px rgba(0, 0, 0, 0.8);
 	}
 
 	.hi {
