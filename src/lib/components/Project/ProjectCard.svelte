@@ -87,7 +87,7 @@
 		overflow: hidden;
 		transition: 0.3s;
 
-		border-radius: var(--border-radius-light);
+		outline: 1px solid #000;
 		overflow: hidden;
 	}
 
@@ -97,6 +97,7 @@
 		flex-wrap: wrap;
 		justify-content: left;
 		gap: var(--space-xs);
+		padding: var(--space-s) var(--space-l);
 	}
 
 	.project__thumbnail {
@@ -108,22 +109,25 @@
 	.project__info {
 		display: flex;
 		flex-direction: column;
-		padding: var(--space-l);
+		outline: 1px solid #000;
 	}
 
 	.project__name {
 		font-weight: 600;
 		color: var(--text);
-		margin-bottom: var(--space-l);
+
+		padding: var(--space-s) var(--space-l);
 	}
 
 	.project__description {
 		color: var(--neutral-800);
 		font-weight: 400;
-		margin-bottom: var(--space-s);
+
 		display: flex;
 		flex-direction: column;
 		gap: var(--space-s);
+		padding: var(--space-s) var(--space-l);
+		outline: 1px solid #000;
 	}
 
 	@media (min-width: 992px) {

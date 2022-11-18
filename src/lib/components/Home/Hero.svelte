@@ -30,9 +30,6 @@
 	}
 
 	.hero {
-		/* BORDER RADIUS */
-		border-radius: var(--border-radius-light);
-
 		position: relative;
 
 		overflow: hidden;

@@ -41,15 +41,13 @@
 		position: relative;
 		padding: var(--space-m);
 
-		border-radius: var(--border-radius-light);
 		height: 300px;
 		overflow: hidden;
-
-		box-shadow: var(--box-shadow);
+		border: 1px solid #000;
 	}
 
 	.other:hover {
-		box-shadow: var(--box-shadow-hover);
+		border: 1px solid var(--primary-500);
 	}
 
 	.other:hover .other__image {

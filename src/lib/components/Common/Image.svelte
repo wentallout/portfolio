@@ -47,7 +47,6 @@
 		width: fit-content;
 		background: rgba(0, 0, 0, 0.7);
 		color: var(--neutral-100);
-		border-radius: 5px;
 		padding: 4px 8px;
 		font-weight: 300;
 		scale: 0;

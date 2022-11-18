@@ -37,17 +37,18 @@
 	}
 	.category__link {
 		padding: var(--space-xs);
-		border-radius: var(--border-radius);
+
 		width: fit-content;
 		background-color: var(--bg);
-		box-shadow: var(--box-shadow);
-		border: 1px solid transparent;
+		border: 1px solid #000;
 		color: var(--accent-500);
 		transition: 0.3s;
 	}
 
 	.category__link:hover {
 		border: 1px solid var(--accent-500);
+		color: var(--accent-300);
+		background-color: var(--neutral-900);
 		box-shadow: var(--box-shadow-hover);
 		text-decoration: underline;
 	}

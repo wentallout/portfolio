@@ -50,11 +50,11 @@
 		display: flex;
 		flex-direction: column;
 		align-items: flex-start;
-		border-radius: var(--border-radius-light);
+
 		background-image: url('/images/noise2.svg');
 		background-color: var(--neutral-900);
 		padding: var(--space-m);
-		box-shadow: var(--box-shadow);
+		border: 1px solid #000;
 	}
 
 	.tool {

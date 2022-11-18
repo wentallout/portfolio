@@ -16,7 +16,7 @@
 	<div class="reza-phone">
 		<div class="frame">
 			<img data-atropos-offset="5" class="frame__image" src={rezaPhoneFrame} alt="reza homepage" />
-			<img data-atropos-offset="3" class="frame__image3" src={rezaSplat} alt="reza splat" />
+			<img data-atropos-offset="3" class="splat" src={rezaSplat} alt="reza splat" />
 			<div data-atropos-offset="-3" class="reza-text">reza</div>
 		</div>
 	</div>
@@ -58,11 +58,11 @@
 		height: 406px;
 	}
 
-	.frame__image3 {
+	.splat {
 		position: absolute;
 		z-index: -1;
 		top: -62px;
-		right: -83px;
+		left: 183px;
 		width: 400px;
 		height: 400px;
 		opacity: 0.8;

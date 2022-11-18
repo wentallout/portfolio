@@ -24,8 +24,8 @@
 		<Handshake {...sectionIcon} />
 	</SectionTitle>
 
-	<div class="social">
-		<address class="social__list small-text">
+	<div class="social small-text">
+		<address class="social__list">
 			<ExLink href="tel:+84929066331">
 				<div class="social__address">
 					<Phone {...icon} />
@@ -82,15 +82,16 @@
 	.social {
 		/* FLEX */
 		display: flex;
-		flex-direction: column;
+		flex-direction: row;
 
-		padding: var(--space-m);
+		/* padding: 0 var(--space-m); */
 		width: 100%;
 
 		margin-bottom: var(--space-m);
 
 		background-color: var(--bg);
-		border-radius: var(--border-radius-light);
+		border: 1px solid #000;
+		border-bottom: 0;
 		overflow: hidden;
 	}
 
@@ -100,16 +101,20 @@
 
 	.social__address {
 		display: flex;
-		width: 100%;
 		flex-direction: row;
+		flex-wrap: wrap;
+
 		align-items: center;
-		border-radius: var(--border-radius);
-		padding: 8px 12px;
+		padding: var(--space-s) var(--space-m);
+		border-bottom: 1px solid #000;
 		transition: 0.3s;
+
+		width: 100%;
 	}
 
 	.social__address:hover {
-		box-shadow: var(--box-shadow-hover);
+		background-color: var(--neutral-900);
+		color: var(--primary-500);
 	}
 
 	.social__address p {

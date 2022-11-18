@@ -12,8 +12,6 @@
 
 <style>
 	.blog {
-		border-radius: var(--border-radius-light);
-		box-shadow: var(--box-shadow);
 		background-color: var(--bg);
 		/* FLEX */
 		display: flex;
@@ -21,14 +19,15 @@
 
 		/* SIZE */
 		width: 100%;
+		height: 140px;
 
 		transition: 0.3s;
 		position: relative;
 
-		height: 140px;
-
 		position: relative;
+
 		border: 1px solid transparent;
+		outline: 1px solid #000;
 
 		padding: var(--space-s) var(--space-m);
 	}
@@ -58,8 +57,8 @@
 	}
 
 	.blog:hover {
-		box-shadow: var(--box-shadow-hover);
 		color: var(--primary-500);
+		background-color: var(--neutral-900);
 		border: 1px solid var(--primary-500);
 	}
 

@@ -71,12 +71,11 @@
 		flex-direction: column;
 		width: 100%;
 		padding: var(--space-m);
-		box-shadow: var(--box-shadow);
-		border-radius: var(--border-radius-light);
+
 		transition: 0.3s;
 		background-color: var(--bg);
 
-		border: 1px solid transparent;
+		border: 1px solid #000;
 	}
 
 	.tool:hover {

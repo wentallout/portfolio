@@ -30,15 +30,6 @@
 </footer>
 
 <style>
-	.footer__social {
-		display: flex;
-		flex-direction: row;
-		flex-wrap: wrap;
-		z-index: 2;
-		gap: var(--space-s);
-		margin-bottom: var(--space-s);
-	}
-
 	footer {
 		/* Flex */
 		display: flex;
@@ -58,8 +49,16 @@
 		background-color: var(--accent-900);
 
 		background-repeat: repeat;
-		border-top-left-radius: var(--border-radius-light);
-		border-top-right-radius: var(--border-radius-light);
+		outline: 1px solid #000;
+	}
+
+	.footer__social {
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+		z-index: 2;
+		gap: var(--space-s);
+		margin-bottom: var(--space-s);
 	}
 
 	.footer-container {
