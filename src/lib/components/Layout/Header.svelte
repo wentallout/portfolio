@@ -71,11 +71,12 @@
 	.main-header {
 		max-width: 100vw;
 		color: var(--neutral-100);
-		background-color: #000;
 		width: 100%;
 		position: sticky;
 		top: 0;
 		z-index: 98;
+
+		background-color: #0f0f0f;
 	}
 
 	.hidden-mobile {

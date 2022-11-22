@@ -16,10 +16,10 @@ import Image from '$lib/components/Common/Image.svelte';
 
 ## mobile
 
-- Columns: 4
+- Columns: 4 (or 2 if your UI is simple)
 - Type: Stretch
-- Margin: 24
-- Gutter: 16 (or 24)
+- Margin: 16px (or 24px)
+- Gutter: 16px (or 24px)
 
 ## tablet
 
@@ -27,19 +27,17 @@ Same value like Mobile but 8 columns
 
 - Columns: 8
 - Type: Stretch
-- Margin: 24
-- Gutter: 16
+- Margin: 24px
+- Gutter: 16px
 
 ## desktop
 
-Desktop use **fixed grid** instead of **fluid** so the values look different. 
-
-No margin
-
 - Columns: 12
-- Type: Center
-- Width: 80
-- Gutter: 16
+- Type: Stretch
+- Margin: 24px
+- Gutter: 16px (or 24px)
+
+
 
 
 

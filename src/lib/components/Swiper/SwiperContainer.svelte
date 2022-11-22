@@ -14,9 +14,10 @@
 	}}
 	spaceBetween={16}
 	slidesPerView={1}
-	pagination={{ clickable: true, type: 'fraction' }}
+	pagination={{ clickable: true, type: 'bullets' }}
 	scrollbar={{ draggable: true }}
 	mousewheel
+	zoom={true}
 	autoplay={{ delay: 2000, disableOnInteraction: false, pauseOnMouseEnter: true }}
 	modules={[Pagination, Scrollbar, Autoplay, Mousewheel]}>
 	<slot />

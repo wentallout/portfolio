@@ -35,7 +35,6 @@
 
 		/* background: var(--gradient);
 		background-clip: text; */
-		color: var(--text);
 	}
 
 	.section-icon {

@@ -22,7 +22,7 @@
 			linkToDetail="/project/reza"
 			what="Reza is an app that lets people book restaurant tables easily."
 			who="Age 18-30, busy office workers or tourists visiting a new city."
-			result="Persona, User Flow, Wireframe, Prototype, Presentation slides">
+			result="Persona, User Flow, Wireframe, Prototype">
 			<svelte:fragment slot="thumbnail">
 				<RezaPhoneAtropos />
 			</svelte:fragment>

@@ -23,8 +23,7 @@
 				maxPolarAngle={DEG2RAD * 80}
 				autoRotate={false}
 				enableZoom={false}
-				target={{ y: 0.5 }}
-			/>
+				target={{ y: 0.5 }} />
 		</PerspectiveCamera>
 
 		<DirectionalLight shadow position={{ x: 3, y: 10, z: 10 }} />
@@ -40,8 +39,7 @@
 				position={{ y: 0.5 }}
 				castShadow
 				geometry={new BoxBufferGeometry(1, 1, 1)}
-				material={new MeshStandardMaterial({ color: '#333333' })}
-			/>
+				material={new MeshStandardMaterial({ color: '#333333' })} />
 		</Group>
 
 		<!-- Floor -->
@@ -49,8 +47,7 @@
 			receiveShadow
 			rotation={{ x: -90 * (Math.PI / 180) }}
 			geometry={new CircleBufferGeometry(3, 72)}
-			material={new MeshStandardMaterial({ side: DoubleSide, color: 'black' })}
-		/>
+			material={new MeshStandardMaterial({ side: DoubleSide, color: 'black' })} />
 	</Canvas>
 </div>
 
@@ -59,6 +56,6 @@
 		display: flex;
 		height: 500px;
 		width: 100%;
-		border: 1px solid var(--neutral-900);
+		border: var(--border);
 	}
 </style>

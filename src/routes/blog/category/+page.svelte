@@ -37,10 +37,9 @@
 	}
 	.category__link {
 		padding: var(--space-xs);
-
 		width: fit-content;
 		background-color: var(--bg);
-		border: 1px solid #000;
+		border: var(--border);
 		color: var(--accent-500);
 		transition: 0.3s;
 	}
@@ -49,7 +48,6 @@
 		border: 1px solid var(--accent-500);
 		color: var(--accent-300);
 		background-color: var(--neutral-900);
-		box-shadow: var(--box-shadow-hover);
 		text-decoration: underline;
 	}
 </style>

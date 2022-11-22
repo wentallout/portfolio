@@ -100,11 +100,19 @@
 	height: 100%;
 }
 
+.atropos-shadow {
+	background-color: transparent !important;
+}
+
 .swiper-scrollbar-drag {
 	background-color: var(--primary-500) !important;
 }
 
 .swiper {
 	background-color: var(--bg);
-	outline: 1px solid #000;
+	outline: var(--border);
+}
+
+.swiper-pagination-bullet {
+	background-color: var(--primary-500);
 }

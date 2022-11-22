@@ -49,7 +49,7 @@
 		background-color: var(--accent-900);
 
 		background-repeat: repeat;
-		outline: 1px solid #000;
+		outline: var(--border);
 	}
 
 	.footer__social {

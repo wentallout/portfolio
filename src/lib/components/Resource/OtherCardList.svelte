@@ -43,11 +43,7 @@
 
 		height: 300px;
 		overflow: hidden;
-		border: 1px solid #000;
-	}
-
-	.other:hover {
-		border: 1px solid var(--primary-500);
+		border: var(--border);
 	}
 
 	.other:hover .other__image {

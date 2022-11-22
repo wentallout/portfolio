@@ -58,7 +58,7 @@
 		width: 100%;
 		margin-bottom: var(--space-m);
 		background-color: var(--bg);
-		outline: 1px solid #000;
+		outline: var(--border);
 		overflow: hidden;
 	}
 

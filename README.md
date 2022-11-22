@@ -29,7 +29,6 @@ This is Khoa's personal portfolio.
 - [x] Blog: ToC, Categories
 - [x] SEO
 - [ ] Dark Mode
-- [ ] Content (never done)
 - [ ] Blog: Search
 - [ ] Blog: Comment
 - [ ] 3D Elements

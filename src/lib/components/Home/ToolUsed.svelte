@@ -52,9 +52,9 @@
 		align-items: flex-start;
 
 		background-image: url('/images/noise2.svg');
-		background-color: var(--neutral-900);
+		background-color: #0f0f0f;
 		padding: var(--space-m);
-		border: 1px solid #000;
+		border: var(--border);
 	}
 
 	.tool {

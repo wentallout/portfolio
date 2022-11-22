@@ -75,12 +75,11 @@
 		transition: 0.3s;
 		background-color: var(--bg);
 
-		border: 1px solid #000;
+		border: var(--border);
 	}
 
 	.tool:hover {
 		box-shadow: var(--box-shadow-hover);
-		border: 1px solid var(--primary-500);
 	}
 
 	.tool:hover .tool__name {

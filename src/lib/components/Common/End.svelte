@@ -1,21 +1,18 @@
-<div class="end">
-	<hr />
-	<div class="end__text large-text">End</div>
-</div>
+<div class="end__text large-text">End</div>
 
 <style>
-	.end {
+	.end__text {
 		display: flex;
+		font-family: var(--fancy-font);
+		color: var(--bg);
+
 		justify-content: center;
 		align-items: center;
 		flex-direction: column;
 		width: 100%;
 		margin-top: var(--space-3xl);
 		margin-bottom: var(--space-s);
-	}
 
-	.end__text {
-		font-family: var(--fancy-font);
-		color: var(--text);
+		background-color: var(--black);
 	}
 </style>

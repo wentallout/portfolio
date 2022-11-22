@@ -1,27 +1,33 @@
-<div data-nosnippet class="container">
+<script>
+	let contentTexts = [
+		'Human-centered',
+		'Design Thinking',
+		'Accessibility',
+		'Affordance',
+		'Responsive'
+	];
+</script>
+
+<div role="marquee" data-nosnippet class="marquee-container">
 	<div class="marquee">
 		<ul class="marquee__content">
-			<li>Human-Centered</li>
-			<li>Design Thinking</li>
-			<li>Accessibility</li>
-			<li>Affordance</li>
-			<li>Responsive</li>
+			{#each contentTexts as contentText}
+				<li class="content__text">{contentText}</li>
+			{/each}
 		</ul>
 
 		<ul class="marquee__content" aria-hidden="true">
-			<li>Human-Centered</li>
-			<li>Design Thinking</li>
-			<li>Accessibility</li>
-			<li>Affordance</li>
-			<li>Responsive</li>
+			{#each contentTexts as contentText}
+				<li class="content__text">{contentText}</li>
+			{/each}
 		</ul>
 	</div>
 </div>
 
 <style>
-	.container {
-		position: absolute;
+	.marquee-container {
 		z-index: 1;
+		position: absolute;
 		width: 100%;
 		max-width: 100vw;
 		/* Typography */

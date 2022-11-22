@@ -22,7 +22,7 @@
 	}
 </script>
 
-<nav class="breadcrumb base-text">
+<nav aria-label="breadcrumb" class="breadcrumb base-text">
 	{#each crumbs as c, i}
 		{#if i == crumbs.length - 1}
 			<div class="breadcrumb__unclickable">

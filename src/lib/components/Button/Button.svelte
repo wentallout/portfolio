@@ -4,6 +4,7 @@
 	export let label = 'exampleLabel';
 	export let labelColor = 'var(--text)';
 	export let backgroundColor = 'transparent';
+	export let width = '';
 
 	export let type = 'submit';
 	export let border = '';
@@ -32,7 +33,7 @@
 
 <button
 	class="btn"
-	style="background-color: {backgroundColor}; border: {border}; color: {labelColor}"
+	style="background-color: {backgroundColor}; border: {border}; color: {labelColor};width: {width}"
 	on:click={handleButtonEffect}
 	bind:this={btnEle}
 	{type}>
@@ -48,7 +49,7 @@
 		align-items: center;
 
 		/* padding */
-		padding: 12px 24px;
+		padding: 0.75rem 1.5rem;
 
 		/* width */
 		width: fit-content;
@@ -68,6 +69,7 @@
 	.btn:hover {
 		filter: brightness(80%);
 		scale: 1.15;
+		box-shadow: var(--box-shadow-hover);
 	}
 
 	.btn:active {

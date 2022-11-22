@@ -4,12 +4,8 @@ body {
 
 @font-face {
 	font-family: 'Recoleta Alt';
-	src: url('/fonts/RecoletaAlt-SemiBold.eot');
-	src: local('Recoleta Alt SemiBold'),
-		url('/fonts/RecoletaAlt-SemiBold.eot?#iefix') format('embedded-opentype'),
-		url('/fonts/RecoletaAlt-SemiBold.woff2') format('woff2'),
-		url('/fonts/RecoletaAlt-SemiBold.woff') format('woff'),
-		url('/fonts/RecoletaAlt-SemiBold.ttf') format('truetype');
+	src: local('Recoleta Alt SemiBold'), url('/fonts/RecoletaAlt-SemiBold.woff2') format('woff2'),
+		url('/fonts/RecoletaAlt-SemiBold.woff') format('woff');
 	font-weight: 600;
 	font-style: normal;
 	font-display: swap;
@@ -22,6 +18,12 @@ body {
 	--pbg: hsl(214, 28%, 95%);
 	--brand-color: var(--neutral-900);
 	--bg: #fff;
+	--black: #000;
+
+	--swiper-theme-color: var(--primary-500) !important;
+
+	--border: 1px solid var(--black);
+	--box-shadow-hover: 6px 6px 0 0 #000;
 
 	--text-width: 65ch;
 
@@ -81,24 +83,6 @@ body {
 	--line-height-xl: normal;
 	--line-height-2xl: normal;
 	--line-height-3xl: normal;
-
-	/* SHADOW */
-	--box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.3), 0px 1px 3px 1px rgba(0, 0, 0, 0.15);
-	--box-shadow-hover: 0px 4px 8px 3px rgba(0, 0, 0, 0.15), 0px 1px 3px rgba(0, 0, 0, 0.3);
-
-	--vtmn-shadow_100: 0 0.375rem 0.375rem 0 var(--vtmn-semantic-color_shadow);
-	--vtmn-shadow_200: 0 0.75rem 0.75rem 0 var(--vtmn-semantic-color_shadow);
-	--vtmn-shadow_300: 0 1.5rem 1.5rem 0 var(--vtmn-semantic-color_shadow);
-	--vtmn-shadow_400: 0 3rem 3rem 0 var(--vtmn-semantic-color_shadow);
-
-	--shadow-100: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000),
-		var(--tw-shadow);
-	--shadow-200: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000),
-		var(--tw-shadow);
-	--shadow-300: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000),
-		var(--tw-shadow);
-	--shadow-400: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000),
-		var(--tw-shadow);
 
 	/* SPACING */
 	--space-3xs: clamp(0.25rem, calc(0.23rem + 0.08vw), 0.31rem);
@@ -230,6 +214,7 @@ textarea {
 	margin-bottom: var(--space-s);
 	border: 1px solid var(--neutral-500);
 	height: 3.5rem;
+	border-radius: var(--border-radius-light);
 }
 
 input:focus,
@@ -274,9 +259,7 @@ address {
 	font-style: inherit;
 }
 
-.atropos-shadow {
-	background-color: transparent !important;
-}
+
 
 section {
 	/* Spacing */

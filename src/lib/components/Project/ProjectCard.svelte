@@ -1,17 +1,16 @@
 <script>
 	import FigmaLogo from '~icons/ph/figma-logo';
 	import Button from '$lib/components/Button/Button.svelte';
-	export let projectName = 'insert project name here';
-	// export let projectImage;
+	export let projectName = 'projectName';
 	export let linkToDetail = '';
 	export let linkToFigma = '';
 
-	export let who = '';
-	export let what = '';
-	export let result = '';
+	export let who = 'who';
+	export let what = 'what';
+	export let result = 'result';
 </script>
 
-<div class="project">
+<a href={linkToDetail} class="project">
 	<div class="project__thumbnail">
 		<slot name="thumbnail"><!-- optional fallback --></slot>
 	</div>
@@ -49,34 +48,44 @@
 			</a>
 		</div>
 	</div>
-</div>
+</a>
 
 <style>
 	.description__section {
 		display: flex;
 		flex-direction: row;
+		justify-content: center;
+		align-items: center;
 		gap: var(--space-s);
 		margin-bottom: var(--space-s);
+		width: 100%;
+		overflow: hidden;
 	}
 
 	.section__title {
-		min-width: 30%;
+		width: 30%;
 		font-weight: 500;
 		color: var(--primary-600);
+
+		height: 100%;
 	}
 
 	.section__info {
-		text-align: left;
 		margin-right: auto;
+		display: -webkit-box;
+		-webkit-line-clamp: 2;
+		-webkit-box-orient: vertical;
+		overflow: hidden;
+		width: 100%;
 	}
 
 	.project {
-		width: 100%;
-		max-width: 80rem;
-
 		/* FLEX */
 		display: flex;
 		flex-direction: column;
+
+		width: 100%;
+		max-width: 80rem;
 
 		color: var(--text);
 		background-color: var(--bg);
@@ -87,8 +96,14 @@
 		overflow: hidden;
 		transition: 0.3s;
 
-		outline: 1px solid #000;
+		outline: var(--border);
 		overflow: hidden;
+		text-overflow: ellipsis;
+		overflow: hidden;
+	}
+
+	.project:hover {
+		box-shadow: var(--box-shadow-hover);
 	}
 
 	.project__btn {
@@ -102,14 +117,15 @@
 
 	.project__thumbnail {
 		width: 100%;
-		overflow: visible;
+		overflow: hidden;
 		height: 100%;
 	}
 
 	.project__info {
 		display: flex;
 		flex-direction: column;
-		outline: 1px solid #000;
+		outline: var(--border);
+		overflow: hidden;
 	}
 
 	.project__name {
@@ -122,12 +138,13 @@
 	.project__description {
 		color: var(--neutral-800);
 		font-weight: 400;
-
+		width: 100%;
 		display: flex;
 		flex-direction: column;
 		gap: var(--space-s);
 		padding: var(--space-s) var(--space-l);
-		outline: 1px solid #000;
+
+		width: 100%;
 	}
 
 	@media (min-width: 992px) {
@@ -136,8 +153,16 @@
 		}
 
 		.project__thumbnail {
-			width: 60%;
+			width: 50%;
 			height: auto;
+		}
+
+		.project__info {
+			width: 50%;
+		}
+
+		.project__description {
+			width: 100%;
 		}
 	}
 </style>

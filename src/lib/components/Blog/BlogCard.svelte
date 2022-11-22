@@ -27,7 +27,7 @@
 		position: relative;
 
 		border: 1px solid transparent;
-		outline: 1px solid #000;
+		outline: var(--border);
 
 		padding: var(--space-s) var(--space-m);
 	}
@@ -58,8 +58,14 @@
 
 	.blog:hover {
 		color: var(--primary-500);
+		background-image: url('/images/noise.svg');
 		background-color: var(--neutral-900);
 		border: 1px solid var(--primary-500);
+		box-shadow: var(--box-shadow-hover);
+	}
+
+	.blog:hover .blog__date {
+		color: var(--neutral-100);
 	}
 
 	/* .blog:hover .blog__title {

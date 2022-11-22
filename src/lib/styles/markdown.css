@@ -31,8 +31,7 @@
 }
 
 .markdown h2:target,
-.markdown h3:target,
-.markdown h4:target {
+.markdown h3:target {
 	animation: flash-bg 3s;
 }
 
@@ -145,9 +144,6 @@
 .markdown a:not(.toc a) {
 	color: var(--accent-600);
 	font-weight: 400;
-	padding: 4px 8px;
-	background-color: var(--accent-100);
-	border-radius: var(--border-radius);
 }
 
 .markdown a:not(.toc a)::after {
@@ -163,7 +159,7 @@
 	display: block;
 	width: 100%;
 	height: auto;
-	border: 1px solid var(--neutral-900);
+	border: var(--border);
 	margin-top: var(--space-m);
 	margin-bottom: var(--space-xl);
 }
@@ -219,7 +215,7 @@
 	font-size: var(--font-size-small) !important;
 	/* padding: var(--space-s) 0; */
 	text-transform: capitalize;
-	border: 1px solid var(--neutral-900);
+	border: var(--border);
 }
 
 .toc::before {
@@ -260,6 +256,10 @@
 	text-decoration: underline;
 }
 
+.toc-link {
+	display: flex;
+}
+
 .toc-item-h2 {
 	margin-bottom: var(--space-2xs);
 }
@@ -269,18 +269,26 @@
 }
 
 .toc-link-h2 {
-	color: var(--accent-500);
+	color: var(--accent-800);
+}
+
+.toc-link-h2:hover:after {
+	/* border-bottom-color: #000; */
+	content: '';
+	flex: 1 1;
+	border-bottom: 1px solid var(--accent-500);
+	margin: auto auto auto 0.5rem;
 }
 
 .toc-link-h3 {
 	color: var(--accent-500);
-	margin-left: var(--space-xs);
+	margin-left: var(--space-s);
 }
 
 .toc-link-h4 {
 	font-weight: 300 !important;
 	color: var(--accent-500);
-	margin-left: var(--space-m);
+	margin-left: var(--space-l);
 }
 
 blockquote {
@@ -295,7 +303,7 @@ blockquote {
 	margin-bottom: var(--space-s);
 
 	max-width: var(--text-width);
-	border: 1px solid #000;
+	border: var(--border);
 }
 
 blockquote p {
@@ -331,7 +339,7 @@ table thead {
 }
 
 table td {
-	border: 1px solid var(--neutral-900);
+	border: var(--border);
 	padding: 1rem 1.5rem;
 	max-width: 60ch;
 }

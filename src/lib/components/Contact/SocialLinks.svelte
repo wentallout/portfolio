@@ -92,7 +92,7 @@
 		background-color: var(--bg);
 		border: 1px solid #000;
 		border-bottom: 0;
-		overflow: hidden;
+		overflow: visible;
 	}
 
 	.social__list {
@@ -106,7 +106,7 @@
 
 		align-items: center;
 		padding: var(--space-s) var(--space-m);
-		border-bottom: 1px solid #000;
+		border-bottom: var(--border);
 		transition: 0.3s;
 
 		width: 100%;
@@ -115,6 +115,7 @@
 	.social__address:hover {
 		background-color: var(--neutral-900);
 		color: var(--primary-500);
+		box-shadow: var(--box-shadow-hover);
 	}
 
 	.social__address p {
