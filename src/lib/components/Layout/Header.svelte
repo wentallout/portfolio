@@ -1,18 +1,20 @@
 <script>
 	import { navItems } from '$lib/config.js';
 	import List from '~icons/ph/list';
+	import X from '~icons/ph/x';
+
 	import VanishingHeader from '$lib/components/Layout/VanishingHeader.svelte';
 	import { page } from '$app/stores';
 	import { onMount } from 'svelte';
 	let scrollY;
 
-	let navo;
+	let navOverlayEle;
 
 	function openNav() {
-		navo.style.height = '100%';
+		navOverlayEle.style.height = '100%';
 	}
 	function closeNav() {
-		navo.style.height = '0%';
+		navOverlayEle.style.height = '0%';
 	}
 </script>
 
@@ -30,7 +32,7 @@
 					</li>
 				{/each}
 
-				<li on:click={openNav} class="nav-mobile">
+				<li on:click={openNav} on:keydown={openNav} class="nav-mobile">
 					<List color="var(--neutral-100)" width="32" height="32" />
 				</li>
 			</ul>
@@ -38,8 +40,10 @@
 	</header>
 </VanishingHeader>
 
-<div bind:this={navo} class="overlay">
-	<a href="javascript:void(0)" class="closebtn" on:click={closeNav}>&times;</a>
+<div bind:this={navOverlayEle} class="overlay">
+	<div class="closebtn" on:click={closeNav} on:keydown={closeNav}>
+		<X color="var(--neutral-100)" width="32" height="32" />
+	</div>
 	<div class="overlay-content">
 		{#each navItems as navItem}
 			<a on:click={closeNav} href={navItem.path}>{navItem.title}</a>
@@ -76,7 +80,7 @@
 	}
 
 	.nav-scrolldown {
-		background-color: rgba(0, 34, 38, 0.7) !important;
+		background-color: rgba(0, 0, 0, 0.7) !important;
 		backdrop-filter: blur(1px);
 		box-shadow: 0 2px 4px rgba(45, 35, 66, 0.35), 0 7px 13px -3px rgba(45, 35, 66, 0.25);
 		color: var(--neutral-100);
@@ -143,36 +147,46 @@
 		background-color: rgb(0, 0, 0);
 		background-color: rgba(0, 0, 0, 0.9);
 		overflow-y: hidden;
-		transition: 0.5s;
+		transition: 0.2s;
 	}
 
 	.overlay-content {
 		position: relative;
-		top: 25%;
+		top: 10%;
 		width: 100%;
 		text-align: center;
 		margin-top: 30px;
 	}
 
 	.overlay a {
-		padding: 8px;
+		padding: var(--space-s);
 		text-decoration: none;
 		font-size: 36px;
-		color: #818181;
+		color: var(--neutral-600);
 		display: block;
 		transition: 0.3s;
 	}
 
 	.overlay a:hover,
 	.overlay a:focus {
-		color: #f1f1f1;
+		color: var(--primary-300);
+		outline: 1px solid var(--primary-300);
 	}
 
-	.overlay .closebtn {
+	.closebtn {
 		position: absolute;
-		top: 20px;
-		right: 45px;
-		font-size: 60px;
+		display: flex;
+		width: 100%;
+		justify-content: center;
+		align-items: center;
+		/* height: 60px; */
+		background-color: var(--primary-500);
+		top: 0;
+		cursor: pointer;
+		/* right: 45px; */
+
+		padding: var(--space-xs);
+		cursor: pointer;
 	}
 
 	@media screen and (max-height: 450px) {
@@ -181,11 +195,6 @@
 		}
 		.overlay a {
 			font-size: 20px;
-		}
-		.overlay .closebtn {
-			font-size: 40px;
-			top: 15px;
-			right: 35px;
 		}
 	}
 </style>

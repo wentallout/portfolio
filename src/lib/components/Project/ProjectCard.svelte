@@ -89,14 +89,14 @@
 	}
 
 	.info__title {
-		width: 20%;
+		width: 30%;
 		font-weight: 600;
 		max-width: 200px;
 	}
 
 	.info__description {
 		display: flex;
-		width: 80%;
+		width: 70%;
 	}
 
 	.info__btn {
@@ -107,7 +107,6 @@
 		gap: var(--space-s);
 	}
 
-	
 	@media (min-width: 992px) {
 		.project {
 			flex-direction: row;
