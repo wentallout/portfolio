@@ -1,9 +1,9 @@
 ---
-title: 'My favorite UI Kits'
-date: '2022-11-09'
+title: UI Kits
+date: 2022-11-09
 categories:
-    - 'ui'
-    - 'tool'
+    - ui
+    - tool
 ---
 
 ## IOS

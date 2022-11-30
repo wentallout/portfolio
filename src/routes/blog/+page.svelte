@@ -73,7 +73,7 @@
 </section>
 
 <section>
-	<SectionTitle sectionTitle="Time Saver" let:sectionIcon>
+	<SectionTitle sectionTitle="Freebies" let:sectionIcon>
 		<FastForward {...sectionIcon} />
 	</SectionTitle>
 

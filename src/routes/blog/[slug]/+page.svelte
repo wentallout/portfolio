@@ -1,6 +1,7 @@
 <script>
 	import End from '$lib/components/Common/End.svelte';
 	export let data;
+	import Time from 'svelte-time';
 </script>
 
 <svelte:head>
@@ -10,7 +11,7 @@
 
 <article class="info">
 	<h1 class="xl-text">{data.title}</h1>
-	<p class="date xs-text">Published: {data.date}</p>
+	<p class="date xs-text">Published: <Time relative timestamp={data.date} /></p>
 
 	{#if data.categories.length}
 		<div class="category">

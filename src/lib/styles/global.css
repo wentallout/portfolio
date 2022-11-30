@@ -7,7 +7,9 @@ body {
 	--fancy-font: 'Recoleta Alt';
 
 	--text: hsl(180, 6%, 10%);
-	--page-bg: #fafafa;
+
+	--page-bg: hsl(212, 100%, 98%);
+
 	--brand-color: var(--neutral-900);
 
 	--bg: #fff;

@@ -23,6 +23,8 @@
 		background: var(--bg);
 		border-radius: var(--border-radius);
 		padding: var(--space-m);
+
+		box-shadow: var(--box-shadow);
 	}
 
 	@media (min-width: 768px) {
