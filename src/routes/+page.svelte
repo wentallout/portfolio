@@ -1,20 +1,21 @@
 <script>
-	import Hero from '$lib/components/Home/Hero.svelte';
-	import Clients from '$lib/components/Home/Clients.svelte';
-	import Expertise from '$lib/components/Home/Expertise.svelte';
-	import ToolUsed from '$lib/components/Home/ToolUsed.svelte';
+	import Name from '$lib/components/Home/Name.svelte';
+	import FeaturedProject from '$lib/components/Home/FeaturedProject.svelte';
+	import Clients from '$lib/components/Home/MyClients.svelte';
+	import Expertise from '$lib/components/Home/MyExpertise.svelte';
+	import ToolUsed from '$lib/components/Home/MyTools.svelte';
 	import AboutMe from '$lib/components/Home/AboutMe.svelte';
 
-	// ---SEO---
+	// SEO
 	import SEO from '$lib/components/SEO/SEO.svelte';
 	import website from '$lib/config.js';
 	import ogSquareImageSrc from '$lib/assets/images/seo/home-open-graph-square.jpg';
 	import ogImageSrc from '$lib/assets/images/seo/home-open-graph.jpg';
 	import twitterImageSrc from '$lib/assets/images/seo/home-twitter.jpg';
 	import featuredImageSrc from '$lib/assets/images/seo/home.jpg';
+	// -- END SEO
 
 	const { author, siteUrl } = website;
-
 	let title = 'Home';
 	const breadcrumbs = [
 		{
@@ -70,8 +71,8 @@
 </svelte:head> -->
 
 <SEO {...seoProps} />
-
-<Hero />
+<Name />
+<FeaturedProject />
 <Clients />
 <Expertise />
 <ToolUsed />

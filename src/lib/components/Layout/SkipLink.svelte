@@ -7,17 +7,17 @@
 		left: 0;
 		right: 0;
 		text-align: center;
-		background-color: var(--accent-200);
-		color: var(--neutral-900);
-		padding: 1rem 2rem;
+		background-color: var(--accent-900);
+		color: var(--neutral-100);
+		padding: var(--space-s);
 		translate: 0 -100%;
 		transition: translate 150ms ease-in-out;
 		transition: background-color 0.5s;
-		z-index: 3;
+		z-index: 11;
 	}
 
 	.skip-link:hover {
-		background-color: var(--accent-300);
+		background-color: var(--accent-700);
 	}
 
 	.skip-link:focus {

@@ -1,159 +1,114 @@
 <script>
-	import List from '~icons/ph/list';
-	import X from '~icons/ph/x';
-
 	import { navItems } from '$lib/config.js';
+	import List from '~icons/ph/list';
+	import VanishingHeader from '$lib/components/Layout/VanishingHeader.svelte';
 	import { page } from '$app/stores';
-
-	let hideMobileMenu = true;
-
-	const handleMobileIconClick = () => (hideMobileMenu = !hideMobileMenu);
-
 	let scrollY;
-
-	const scrollDistance = 20;
 </script>
 
 <svelte:window bind:scrollY />
-<header class:reduced-header={scrollY > scrollDistance} class="main-header base-text">
-	<nav>
-		<ul class="nav__list">
-			<li
-				class:reduced-list={scrollY > scrollDistance}
-				id="burger-nav"
-				on:click={handleMobileIconClick}
-				on:keyup={handleMobileIconClick}>
-				<div class="nav__list-item">
-					{#if hideMobileMenu}
-						<List color="var(--neutral-100)" width="32" height="32" />
-					{:else}
-						<X color="var(--neutral-100)" width="32" height="32" />
-					{/if}
-				</div>
-			</li>
 
-			{#each navItems as navItem}
-				<li
-					class:reduced-list={scrollY > scrollDistance}
-					class={`navbar-list${hideMobileMenu ? ' hidden-mobile' : ''}`}>
-					{#if $page.url.pathname === `${navItem.path}`}
-						<a class="nav__list-item active-page" href={navItem.path}>
+<VanishingHeader duration="350ms" offset={50} tolerance={5}>
+	<header>
+		<nav class="nav" class:nav-scrolldown={scrollY > 0}>
+			<ul class="nav-list">
+				{#each navItems as navItem}
+					<li class:active-page={$page.url.pathname === `${navItem.path}`} class="nav-list__item">
+						<a class="item" href={navItem.path}>
 							{navItem.title}
 						</a>
-					{:else}
-						<a on:click={handleMobileIconClick} class="nav__list-item" href={navItem.path}>
-							{navItem.title}
-						</a>
-					{/if}
+					</li>
+				{/each}
+
+				<li class="nav-mobile">
+					<List color="var(--neutral-100)" width="32" height="32" />
 				</li>
-			{/each}
-		</ul>
-	</nav>
-</header>
+			</ul>
+		</nav>
+	</header>
+</VanishingHeader>
 
 <style>
-	#burger-nav {
-		cursor: pointer;
+	.active-page {
+		background-color: var(--primary-500);
+		color: var(--text);
 	}
 
-	.reduced-header {
-		font-size: var(--font-size-small);
-		background-color: rgba(0, 0, 0, 0.7) !important;
+	.active-page:hover {
+		color: var(--neutral-900) !important;
+	}
+
+	.nav-list__item:hover {
+		color: var(--primary-500);
+	}
+
+	.nav {
+		width: 100%;
+		display: flex;
+		max-width: 100vw;
+
+		/* FONT */
+		font-size: var(--font-size-base);
+		font-weight: 500;
+		color: var(--neutral-100);
+		/* --- */
+
+		background-color: var(--primary-900);
+	}
+
+	.nav-scrolldown {
+		background-color: rgba(0, 34, 38, 0.7) !important;
 		backdrop-filter: blur(1px);
 		box-shadow: 0 2px 4px rgba(45, 35, 66, 0.35), 0 7px 13px -3px rgba(45, 35, 66, 0.25);
-	}
-
-	.reduced-list {
-		min-height: 2.5rem;
-		transition: 0.3s;
-	}
-
-	.main-header {
-		max-width: 100vw;
 		color: var(--neutral-100);
-		width: 100%;
-		position: sticky;
-		top: 0;
-		z-index: 98;
-
-		background-color: #0f0f0f;
 	}
 
-	.hidden-mobile {
-		display: none;
-	}
-
-	nav ul li {
+	.nav-list {
 		display: flex;
-		min-height: 4rem;
-		margin-left: 0;
+		flex-direction: row;
 		width: 100%;
-	}
-
-	.nav__list {
-		display: flex;
-		flex-direction: column;
-		justify-content: center;
-		align-items: center;
-
 		margin: 0;
 	}
 
-	.nav__list-item {
-		color: var(--neutral-100);
+	.nav-list__item {
+		display: none;
+	}
+
+	.nav-mobile {
+		/* FLEX */
+		display: flex;
+		justify-content: center;
+		/* --- */
+
 		width: 100%;
+		padding: var(--space-xs);
+		cursor: pointer;
+	}
+
+	@media (min-width: 768px) {
+		.nav {
+			padding: 0 17vw;
+		}
+		.nav-list__item {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			width: 100%;
+
+			line-height: 1;
+		}
+
+		.nav-mobile {
+			display: none;
+		}
+	}
+
+	.item {
+		padding: var(--space-s);
 		display: flex;
 		justify-content: center;
 		align-items: center;
-	}
-
-	@media (hover: hover) {
-		.nav__list-item:hover {
-			color: var(--neutral-900);
-			background-image: url('/images/noise.svg');
-			background-color: var(--primary-500);
-			transition: 0.3s;
-		}
-	}
-
-	@media (min-width: 768px) {
-		.hidden-mobile {
-			display: flex;
-		}
-
-		#burger-nav {
-			display: none;
-		}
-
-		.main-header {
-			padding-left: 17vw;
-			padding-right: 17vw;
-		}
-
-		.nav__list {
-			display: flex;
-			flex-direction: row;
-			justify-content: space-evenly;
-			align-items: center;
-		}
-
-		.nav__list-item {
-			width: 100%;
-		}
-	}
-	.active-page {
-		color: var(--primary-500) !important;
-		position: relative;
-	}
-
-	@media (min-width: 768px) {
-		.active-page::after {
-			position: absolute;
-			content: '';
-			width: 100%;
-			left: 0;
-			bottom: 0;
-			border-bottom: 4px solid var(--primary-500);
-		}
+		width: 100%;
+		height: 100%;
 	}
 </style>

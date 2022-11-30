@@ -90,9 +90,13 @@
 		margin-bottom: var(--space-m);
 
 		background-color: var(--bg);
-		border: 1px solid #000;
+
 		border-bottom: 0;
 		overflow: visible;
+
+		border-radius: var(--border-radius);
+
+		box-shadow: var(--box-shadow);
 	}
 
 	.social__list {
@@ -106,16 +110,16 @@
 
 		align-items: center;
 		padding: var(--space-s) var(--space-m);
-		border-bottom: var(--border);
-		transition: 0.3s;
 
+		transition: 0.3s;
+		border-radius: var(--border-radius);
 		width: 100%;
+		font-weight: 500;
 	}
 
 	.social__address:hover {
 		background-color: var(--neutral-900);
 		color: var(--primary-500);
-		box-shadow: var(--box-shadow-hover);
 	}
 
 	.social__address p {

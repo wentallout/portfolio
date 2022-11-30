@@ -278,7 +278,7 @@ There is also a Remote Usability Testing service that helps with this testing ph
 
 From this case study, I've learned a lot about the process of solving problems.
 
-Team collaboration is very important in a project because when you work alone it's easy to get tunnel visioned (limited point of view). I make sure that I receive feedback from everyone in the team in order to keep improving my designs.
+Team collaboration is very important in a project because when you work alone it's easy to get tunnel visioned (limited point of view). It's important to receive feedback from everyone in the team in order to keep improving my designs.
 
 <SwiperContainer>
     <SwiperSlide>

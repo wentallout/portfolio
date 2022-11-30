@@ -37,7 +37,7 @@
 		justify-content: center;
 		align-items: flex-start;
 
-		padding: var(--space-m) var(--space-xs);
+		padding: var(--space-2xl) var(--space-xs);
 
 		/* Position */
 		position: relative;
@@ -46,10 +46,9 @@
 		max-width: 100vw;
 
 		/* Color */
-		background-color: var(--accent-900);
 
 		background-repeat: repeat;
-		outline: var(--border);
+		background-color: var(--primary-900);
 	}
 
 	.footer__social {
@@ -58,7 +57,6 @@
 		flex-wrap: wrap;
 		z-index: 2;
 		gap: var(--space-s);
-		margin-bottom: var(--space-s);
 	}
 
 	.footer-container {
@@ -70,11 +68,11 @@
 
 	@media (min-width: 768px) {
 		footer {
-			padding: var(--space-m) 17vw;
+			padding: var(--space-xl) 17vw;
 		}
 	}
 
-	footer:before {
+	/* footer:before {
 		background: url('/images/rhombus_line.png') repeat top center/49px 72px;
 		content: '';
 		position: absolute;
@@ -83,8 +81,7 @@
 		width: 100%;
 		height: 100%;
 		opacity: 0.12;
-		z-index: 1;
-	}
+	} */
 
 	.nav-list {
 		display: flex;

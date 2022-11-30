@@ -6,7 +6,7 @@
 	border-radius: var(--border-radius);
 }
 
-@media (min-width: 768px) {
+@media (min-width: 992px) {
 	.markdown {
 		padding: var(--space-xl) var(--space-3xl);
 	}
@@ -37,7 +37,7 @@
 
 @keyframes flash-bg {
 	from {
-		background-color: var(--primary-300);
+		background-color: yellow;
 	}
 	to {
 		background-color: transparent;
@@ -159,7 +159,7 @@
 	display: block;
 	width: 100%;
 	height: auto;
-	border: var(--border);
+
 	margin-top: var(--space-m);
 	margin-bottom: var(--space-xl);
 }
@@ -174,14 +174,14 @@
 	margin-inline-start: var(--space-m);
 	display: flex;
 	justify-content: flex-start;
-	align-items: center;
+	align-items: baseline;
 	gap: var(--space-3xs);
 }
 
 .markdown li:before {
 	content: '◇';
 	color: var(--text);
-	margin-right: 4px;
+	margin-right: var(--space-3xs);
 }
 
 .task-list-item:before {
@@ -202,9 +202,11 @@
 }
 
 .toc {
+	/* FLEX */
 	display: flex;
 	flex-direction: column;
-	/* width: fit-content; */
+	/* --- */
+
 	max-width: 500px;
 	background-color: var(--bg);
 	max-height: 500px;
@@ -213,9 +215,10 @@
 	margin-top: var(--space-l);
 	margin-bottom: var(--space-l);
 	font-size: var(--font-size-small) !important;
-	/* padding: var(--space-s) 0; */
+
 	text-transform: capitalize;
-	border: var(--border);
+	border-radius: var(--border-radius);
+	background-color: var(--accent-100);
 }
 
 .toc::before {
@@ -273,7 +276,6 @@
 }
 
 .toc-link-h2:hover:after {
-	/* border-bottom-color: #000; */
 	content: '';
 	flex: 1 1;
 	border-bottom: 1px solid var(--accent-500);
@@ -303,7 +305,6 @@ blockquote {
 	margin-bottom: var(--space-s);
 
 	max-width: var(--text-width);
-	border: var(--border);
 }
 
 blockquote p {
@@ -339,7 +340,6 @@ table thead {
 }
 
 table td {
-	border: var(--border);
 	padding: 1rem 1.5rem;
 	max-width: 60ch;
 }

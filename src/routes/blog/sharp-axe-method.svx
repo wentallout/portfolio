@@ -1,6 +1,6 @@
 ---
-title: 'Sharp Axe Method'
-date: '2022-10-14'
+title: Sharp Axe Method
+date: 2022-10-14
 categories:
     - 'tips'
 ---

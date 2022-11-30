@@ -51,10 +51,11 @@
 	}
 
 	.block__title {
-		font-weight: 500;
+		font-weight: 600;
 	}
 
 	.block__text {
+		font-weight: 400;
 		color: var(--neutral-800);
 	}
 </style>

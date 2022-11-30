@@ -1,5 +1,4 @@
 <script>
-	import PageTitle from './../Common/PageTitle.svelte';
 	import EnvelopeSimple from '~icons/ph/envelope-simple';
 	import Button from '$lib/components/Button/Button.svelte';
 	import PaperPlaneRight from '~icons/ph/paper-plane-right';
@@ -13,11 +12,11 @@
 
 	<div class="form-container">
 		<form
+			class="contact"
 			name="contact"
 			method="post"
 			netlify-honeypot="bot-field"
-			data-netlify="true"
-			class="contact">
+			data-netlify="true">
 			<input type="hidden" name="form-name" value="contact" />
 
 			<label for="name" class="label small-text">Name</label>
@@ -35,7 +34,7 @@
 			<label for="message" class="label small-text">Message</label>
 			<textarea class="small-text" required name="message" id="message" placeholder="" />
 
-			<div class="btn-container">
+			<div class="contact__btn">
 				<Button label="Send" backgroundColor="var(--primary-500)">
 					<PaperPlaneRight color="var(--neutral-900)" />
 				</Button>
@@ -58,8 +57,11 @@
 		width: 100%;
 		margin-bottom: var(--space-m);
 		background-color: var(--bg);
-		outline: var(--border);
+
 		overflow: hidden;
+		border-radius: var(--border-radius);
+
+		box-shadow: var(--box-shadow);
 	}
 
 	.contact {
@@ -74,7 +76,7 @@
 		font-weight: 500;
 	}
 
-	.btn-container {
+	.contact__btn {
 		display: flex;
 		flex-direction: row;
 		gap: var(--space-xs);

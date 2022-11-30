@@ -43,7 +43,7 @@
 
 		height: 300px;
 		overflow: hidden;
-		border: var(--border);
+		border-radius: var(--border-radius);
 	}
 
 	.other:hover .other__image {

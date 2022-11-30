@@ -8,7 +8,7 @@
 
 <section>
 	<div class="tool">
-		<h2 class="tool__title xl-text">Tools & Frameworks I use</h2>
+		<h2 class="tool__title xl-text">Tools I use</h2>
 
 		<div class="tool__block">
 			<div class="block__section">
@@ -39,7 +39,7 @@
 				<h3 class="block__title base-text">Frontend</h3>
 				<p class="block__text small-text">Semantic HTML, BEM CSS</p>
 				<p class="block__text small-text">Bootstrap, Material</p>
-				<p class="block__text small-text">JS, React, Svelte</p>
+				<p class="block__text small-text">JS, React, SvelteKit</p>
 			</div>
 		</div>
 	</div>
@@ -51,10 +51,10 @@
 		flex-direction: column;
 		align-items: flex-start;
 
-		background-image: url('/images/noise2.svg');
-		background-color: #0f0f0f;
-		padding: var(--space-m);
-		border: var(--border);
+		background-color: var(--bg);
+		padding: var(--space-l);
+		border-radius: var(--border-radius);
+		box-shadow: var(--box-shadow);
 	}
 
 	.tool {
@@ -81,16 +81,14 @@
 	}
 
 	.block__title {
-		background: var(--gradient);
-		background-clip: text;
-		color: transparent;
+		color: var(--primary-600);
 		font-weight: 500;
 		margin-bottom: var(--space-s);
 	}
 
 	.block__text {
-		color: var(--neutral-100);
-		font-weight: 300;
+		color: var(--neutral-900);
+		font-weight: 400;
 		margin: 0;
 	}
 </style>

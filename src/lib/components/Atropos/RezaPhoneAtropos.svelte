@@ -24,7 +24,6 @@
 
 <style>
 	.reza-phone {
-		background-color: transparent;
 		overflow: hidden;
 		height: 100%;
 		width: 100%;
@@ -37,8 +36,12 @@
 		align-items: center;
 		flex-direction: row;
 		position: relative;
-		background: transparent url('/images/dot.svg') repeat left top/20px;
+		background: radial-gradient(circle, var(--neutral-300) 10%, transparent 11%);
 		height: 100%;
+		z-index: -2;
+		background-size: 3em 3em;
+
+		opacity: 1;
 	}
 
 	.reza-text {

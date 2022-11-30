@@ -6,9 +6,6 @@
 	<div class="expertise">
 		<h2 class="expertise__title xl-text">My expertise</h2>
 		<div class="expertise__block">
-			<div class="block__icon">
-				<img src={designProcess} alt="design process" width="100" height="100" />
-			</div>
 			<div class="block">
 				<h3 class="block__title base-text">Product Design</h3>
 				<p class="block__text small-text">
@@ -21,17 +18,8 @@
 </section>
 
 <style>
-	.block__icon {
-		display: flex;
-		flex-direction: row;
-		flex-wrap: wrap;
-		justify-content: center;
-		align-items: center;
-		gap: var(--space-m);
-	}
-
 	.block__title {
-		font-weight: 500;
+		font-weight: 600;
 	}
 
 	.block__text {

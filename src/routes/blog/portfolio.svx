@@ -16,7 +16,7 @@ categories:
 
 ## DON'T
 
-- Make a PDF portfolio
+- Make a PDF portfolio -> people don't like downloading stuff.
 - Only show images of the final UI. This should be the last thing on your page.
 - Only show high-fidelity stuff.
 - Poor grammar, typos.

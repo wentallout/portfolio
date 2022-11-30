@@ -6,7 +6,7 @@
 	}
 } */
 .page-container.dark {
-	--pbg: #121212;
+	/* --page-bg: #121212; */
 	--text: var(--neutral-100);
 }
 
@@ -110,7 +110,7 @@
 
 .swiper {
 	background-color: var(--bg);
-	outline: var(--border);
+	border-radius: var(--border-radius);
 }
 
 .swiper-pagination-bullet {

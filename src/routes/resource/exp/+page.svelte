@@ -56,6 +56,6 @@
 		display: flex;
 		height: 500px;
 		width: 100%;
-		border: var(--border);
+		
 	}
 </style>

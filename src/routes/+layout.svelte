@@ -1,16 +1,19 @@
 <script>
 	import SkipLink from '$lib/components/Layout/SkipLink.svelte';
 	import PWA from '$lib/components/PWA/PWA.svelte';
-	import LogoContainer from '$lib/components/Layout/LogoContainer.svelte';
-	import Header from '$lib/components/Layout/Header.svelte';
 	import BackToTop from '$lib/components/Layout/BackToTop.svelte';
 	import Footer from '$lib/components/Layout/Footer.svelte';
+	import Header from '$lib/components/Layout/Header.svelte';
 	import Breadcrumb from '$lib/components/Layout/Breadcrumb.svelte';
 
-	import '@fontsource/lexend/latin-300.css';
-	import '@fontsource/lexend/latin-400.css';
-	import '@fontsource/lexend/latin-500.css';
-	import '@fontsource/lexend/latin-600.css';
+	// FONTS //
+	import '$lib/styles/fonts.css';
+	import '@fontsource/inter/latin-300.css';
+	import '@fontsource/inter/latin-400.css';
+	import '@fontsource/inter/latin-500.css';
+	import '@fontsource/inter/latin-600.css';
+	// FONTS END //
+
 	import '$lib/styles/sanitize.css';
 	import '$lib/styles/global.css';
 	import '$lib/styles/weird.css';
@@ -63,15 +66,15 @@
 <PWA />
 <div class="page-container" data-sveltekit-prefetch>
 	<BackToTop />
-	<LogoContainer />
+
 	<Header />
 
 	{#key data.currentRoute}
 		<main
-			in:fade={{ duration: 150, delay: 150 }}
-			out:fade={{ duration: 150 }}
+			class="main-content"
 			id="main-content"
-			class="main-content">
+			in:fade={{ duration: 150, delay: 150 }}
+			out:fade={{ duration: 150 }}>
 			<Breadcrumb path={$page.url.pathname} />
 			<slot />
 		</main>
@@ -82,20 +85,22 @@
 
 <style>
 	.page-container {
-		background: var(--pbg);
+		background: var(--page-bg);
 	}
 
 	.main-content {
 		display: flex;
 		flex-direction: column;
 		min-height: calc(100vh - 70px);
-		margin: var(--space-m) 1rem;
+
+		/* Mobile padding */
+		padding: var(--space-l) 1rem;
 	}
 
 	@media (min-width: 768px) {
 		.main-content {
-			margin: var(--space-m) 0;
-			padding: var(--space-m) 17vw;
+			/* Desktop padding */
+			padding: var(--space-l) 17vw;
 		}
 	}
 </style>

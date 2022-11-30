@@ -1,4 +1,5 @@
 <script>
+	import PageTitle from './../../lib/components/Common/PageTitle.svelte';
 	import SectionDesc from '$lib/components/Common/SectionDesc.svelte';
 	import OtherCardList from '$lib/components/Resource/OtherCardList.svelte';
 	import BookGallery from '$lib/components/Resource/BookGallery.svelte';
@@ -14,12 +15,13 @@
 	<title>Resource</title>
 </svelte:head>
 
+<PageTitle pageTitle="Resource" />
+
 <section>
 	<SectionTitle sectionTitle="Book" let:sectionIcon>
 		<Books {...sectionIcon} />
 	</SectionTitle>
-	<SectionDesc
-		text="Knowledge should be free so I'm sharing it." />
+	<SectionDesc text="Knowledge should be free so I'm sharing it." />
 
 	<BookGallery />
 </section>

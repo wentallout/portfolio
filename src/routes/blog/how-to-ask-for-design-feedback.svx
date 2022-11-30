@@ -1,0 +1,25 @@
+---
+title: 'How to ask for design feedback'
+date: '2022-11-24'
+categories:
+    - 'tips'
+---
+
+<script>
+
+import Image from '$lib/components/Common/Image.svelte';
+</script>
+
+## template
+
+
+
+
+
+
+
+
+
+
+ 
+

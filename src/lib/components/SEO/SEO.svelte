@@ -39,8 +39,7 @@
 	export let timeToRead = 0;
 	export let title;
 
-	const defaultAlt =
-		'Khoa Portfolio cover image featuring a smartphone and a pen on a black background';
+	const defaultAlt = 'cool cover image';
 
 	export let featuredImage = {
 		url: defaultFeaturedImage,

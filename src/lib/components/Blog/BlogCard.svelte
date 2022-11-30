@@ -2,34 +2,42 @@
 	export let blogLink = '';
 
 	export let blogTitle = 'blogTitle';
-	export let blogDate = 'blogDate';
+
+	export let blogDate = '';
+	import Time from 'svelte-time';
 </script>
 
 <a href={blogLink} class="blog">
-	<div class="blog__date xs-text">{blogDate}</div>
+	<div class="blog__date xs-text">
+		<Time timestamp={blogDate} />
+	</div>
 	<div class="blog__title base-text">{blogTitle}</div>
 </a>
 
 <style>
 	.blog {
-		background-color: var(--bg);
 		/* FLEX */
 		display: flex;
 		flex-direction: column;
+		/* --- */
 
 		/* SIZE */
 		width: 100%;
 		height: 140px;
+		border: 1px solid transparent;
+		padding: var(--space-s) var(--space-m);
+		/* --- */
 
+		/* OTHER */
 		transition: 0.3s;
 		position: relative;
+		border-radius: var(--border-radius);
+		overflow: hidden;
+		/* --- */
 
-		position: relative;
+		background-color: var(--bg);
 
-		border: 1px solid transparent;
-		outline: var(--border);
-
-		padding: var(--space-s) var(--space-m);
+		box-shadow: var(--box-shadow);
 	}
 
 	.blog:before {
@@ -57,46 +65,46 @@
 	}
 
 	.blog:hover {
-		color: var(--primary-500);
-		background-image: url('/images/noise.svg');
 		background-color: var(--neutral-900);
 		border: 1px solid var(--primary-500);
 		box-shadow: var(--box-shadow-hover);
+	}
+
+	.blog:hover .blog__title {
+		color: var(--primary-500);
 	}
 
 	.blog:hover .blog__date {
 		color: var(--neutral-100);
 	}
 
-	/* .blog:hover .blog__title {
-		background: var(--gradient);
-		background-clip: text;
-		color: transparent;
-	} */
-
 	.blog__title {
 		font-weight: 500;
-
 		overflow: hidden;
-		text-overflow: ellipsis;
-		display: -webkit-box;
-		-webkit-line-clamp: 2; /* number of lines to show */
-		line-clamp: 2;
-		-webkit-box-orient: vertical;
 
+		/* LINE CLAMP */
+		display: -webkit-box;
+		-webkit-line-clamp: 2;
+		-webkit-box-orient: vertical;
+		text-overflow: ellipsis;
+		/* --- */
+		color: var(--text);
 		z-index: 3;
 	}
 
 	.blog__date {
-		z-index: 3;
-
-		/* flex */
+		/* FLEX */
 		display: flex;
 		justify-content: left;
 		align-items: center;
 		flex-direction: row;
-		/* typography */
-		font-weight: 300;
+		/* --- */
+
+		/* FONT */
+		font-weight: 400;
 		color: var(--neutral-800);
+		/* --- */
+
+		z-index: 3;
 	}
 </style>

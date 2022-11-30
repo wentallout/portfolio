@@ -39,7 +39,7 @@
 		padding: var(--space-xs);
 		width: fit-content;
 		background-color: var(--bg);
-		border: var(--border);
+		
 		color: var(--accent-500);
 		transition: 0.3s;
 	}

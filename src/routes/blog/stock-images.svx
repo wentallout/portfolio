@@ -8,9 +8,9 @@ categories:
 
 ## Royalty-free
 
-[Pexels](https://www.pexels.com)
-
-[Unsplash](https://unsplash.com/)
+- [Pexels](https://www.pexels.com)
+- [Unsplash](https://unsplash.com/)
+- [Pixabay](https://pixabay.com/)
 
 ## AI
 

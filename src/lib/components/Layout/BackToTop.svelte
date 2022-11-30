@@ -1,5 +1,5 @@
 <script>
-	import CaretCircleUp from '~icons/ph/caret-circle-up';
+	import CaretUp from '~icons/ph/caret-up';
 
 	export let showOnPx = 150;
 	let hidden = true;
@@ -28,15 +28,19 @@
 <svelte:window on:scroll={handleOnScroll} />
 
 <div class="bck2top" on:click={goTop} on:keyup={goTop} class:hidden>
-	<CaretCircleUp color="var(--primary-500)" width="48" height="48" />
+	<CaretUp color="var(--primary-100)" width="32" height="32" />
 </div>
 
 <style>
 	.bck2top {
-		/* COLOR */
-		background-color: rgba(38, 36, 34, 0.8);
+		display: flex;
+		justify-content: center;
+		align-items: center;
 		width: 48px;
 		height: 48px;
+
+		/* COLOR */
+		background-color: var(--primary-500);
 		border-radius: 100%;
 		/*  */
 
@@ -56,13 +60,19 @@
 
 		backdrop-filter: blur(5px);
 	}
+	@media (min-width: 768px) {
+		.bck2top {
+			width: 64px;
+			height: 64px;
+		}
+	}
 
 	@media (hover: hover) {
 		.bck2top:hover {
 			cursor: pointer;
 			transform: scale(1.2);
 			transition: transform 0.3s;
-			filter: brightness(1.5);
+			filter: brightness(1.2);
 		}
 	}
 

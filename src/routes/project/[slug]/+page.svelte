@@ -11,7 +11,7 @@
 
 <article class="info">
 	<h1 class="xl-text project-title">{data.title}</h1>
-	<p class="small-text project-date">Project created: {data.date}</p>
+	<p class="small-text project-date">Created on: {data.date}</p>
 	<svelte:component this={data.content} />
 	<End />
 </article>

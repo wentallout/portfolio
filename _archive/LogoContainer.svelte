@@ -1,11 +1,9 @@
 <script>
-	import Marquee from '$lib/components/Layout/Marquee.svelte';
 	import YinYangFill from '~icons/ph/yin-yang-fill';
 </script>
 
 <div class="logo-container">
 	<div class="svg-container">
-		<Marquee />
 		<div class="yinyang-container">
 			<YinYangFill class="rotate" color="var(--primary-500)" width="24" height="24" />
 		</div>

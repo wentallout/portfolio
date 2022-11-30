@@ -63,7 +63,6 @@
 
 	.tool__name {
 		font-weight: 600;
-		color: var(--text);
 	}
 
 	.tool {
@@ -74,8 +73,8 @@
 
 		transition: 0.3s;
 		background-color: var(--bg);
-
-		border: var(--border);
+		box-shadow: var(--box-shadow);
+		border-radius: var(--border-radius);
 	}
 
 	.tool:hover {
@@ -97,7 +96,7 @@
 
 	@media (min-width: 768px) {
 		.tool {
-			width: 50ch;
+			width: 55ch;
 		}
 	}
 </style>

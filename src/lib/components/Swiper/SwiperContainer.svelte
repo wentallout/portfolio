@@ -2,14 +2,16 @@
 	import { Pagination, Scrollbar, Autoplay, Mousewheel } from 'swiper';
 	import { Swiper } from 'swiper/svelte';
 	import 'swiper/css/bundle';
+
+	export let slidesNumber = 2;
 </script>
 
 <Swiper
 	grabCursor={true}
 	breakpoints={{
 		768: {
-			slidesPerView: 2,
-			slidesPerGroup: 2
+			slidesPerView: slidesNumber,
+			slidesPerGroup: slidesNumber
 		}
 	}}
 	spaceBetween={16}

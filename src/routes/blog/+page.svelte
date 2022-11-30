@@ -14,6 +14,7 @@
 	import Palette from '~icons/ph/palette';
 
 	import FastForward from '~icons/ph/fast-forward';
+	import PageTitle from '$lib/components/Common/PageTitle.svelte';
 
 	export let data;
 </script>
@@ -22,6 +23,7 @@
 	<title>Blog</title>
 </svelte:head>
 
+<PageTitle pageTitle="Blog" />
 <section>
 	<SectionTitle sectionTitle="Fundamental" let:sectionIcon>
 		<GraduationCap {...sectionIcon} />
