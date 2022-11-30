@@ -1,5 +1,5 @@
 <section class="name">
-	<img class="portrait" src="images/portrait.png" alt="Khoa's face" />
+	<img height="100" width="100" class="portrait" src="images/portrait.png" alt="Khoa's face" />
 
 	<div class="info">
 		<h1 class="info__fullname xxl-text">Nguyen Dang Khoa</h1>
@@ -16,17 +16,18 @@
 		display: flex;
 		justify-content: center;
 		align-items: center;
-		flex-direction: row;
+		flex-direction: column;
 		flex-wrap: wrap;
 		gap: var(--space-l);
 
 		background: var(--bg);
 		border-radius: var(--border-radius);
-		padding: var(--space-s);
+		padding: var(--space-m);
 	}
 
 	@media (min-width: 768px) {
 		.name {
+			flex-direction: row;
 			justify-content: flex-start;
 		}
 	}
