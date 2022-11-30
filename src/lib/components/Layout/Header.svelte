@@ -3,7 +3,17 @@
 	import List from '~icons/ph/list';
 	import VanishingHeader from '$lib/components/Layout/VanishingHeader.svelte';
 	import { page } from '$app/stores';
+	import { onMount } from 'svelte';
 	let scrollY;
+
+	let navo;
+
+	function openNav() {
+		navo.style.height = '100%';
+	}
+	function closeNav() {
+		navo.style.height = '0%';
+	}
 </script>
 
 <svelte:window bind:scrollY />
@@ -20,13 +30,22 @@
 					</li>
 				{/each}
 
-				<li class="nav-mobile">
+				<li on:click={openNav} class="nav-mobile">
 					<List color="var(--neutral-100)" width="32" height="32" />
 				</li>
 			</ul>
 		</nav>
 	</header>
 </VanishingHeader>
+
+<div bind:this={navo} class="overlay">
+	<a href="javascript:void(0)" class="closebtn" on:click={closeNav}>&times;</a>
+	<div class="overlay-content">
+		{#each navItems as navItem}
+			<a on:click={closeNav} href={navItem.path}>{navItem.title}</a>
+		{/each}
+	</div>
+</div>
 
 <style>
 	.active-page {
@@ -110,5 +129,63 @@
 		align-items: center;
 		width: 100%;
 		height: 100%;
+	}
+
+	/* OVERLAY */
+
+	.overlay {
+		height: 0%;
+		width: 100%;
+		position: fixed;
+		z-index: 99;
+		top: 0;
+		left: 0;
+		background-color: rgb(0, 0, 0);
+		background-color: rgba(0, 0, 0, 0.9);
+		overflow-y: hidden;
+		transition: 0.5s;
+	}
+
+	.overlay-content {
+		position: relative;
+		top: 25%;
+		width: 100%;
+		text-align: center;
+		margin-top: 30px;
+	}
+
+	.overlay a {
+		padding: 8px;
+		text-decoration: none;
+		font-size: 36px;
+		color: #818181;
+		display: block;
+		transition: 0.3s;
+	}
+
+	.overlay a:hover,
+	.overlay a:focus {
+		color: #f1f1f1;
+	}
+
+	.overlay .closebtn {
+		position: absolute;
+		top: 20px;
+		right: 45px;
+		font-size: 60px;
+	}
+
+	@media screen and (max-height: 450px) {
+		.overlay {
+			overflow-y: auto;
+		}
+		.overlay a {
+			font-size: 20px;
+		}
+		.overlay .closebtn {
+			font-size: 40px;
+			top: 15px;
+			right: 35px;
+		}
 	}
 </style>
