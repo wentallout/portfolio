@@ -17,7 +17,7 @@
 	</div>
 
 	<div class="project__info">
-		<div class="info__project large-text">{projectName}</div>
+		<div class="info__project-name large-text">{projectName}</div>
 
 		<div class="info__section">
 			<div class="info__title">What</div>
@@ -43,7 +43,7 @@
 			</a>
 
 			<a rel="external noreferrer noopener" target="_blank" href={linkToFigma}>
-				<Button label="Figma" border="1px solid var(--neutral-900)">
+				<Button label="Figma" border="1px solid var(--text)">
 					<FigmaLogo />
 				</Button>
 			</a>
@@ -69,16 +69,18 @@
 		width: 100%;
 		height: auto;
 		overflow: hidden;
+		outline: 1px solid var(--neutral-300);
 	}
 
-	.info__project {
+	.info__project-name {
 		font-weight: 600;
+		color: var(--primary-700);
 		line-height: normal;
 		margin-bottom: var(--space-m);
 	}
 
 	.project__info {
-		padding: var(--space-l);
+		padding: var(--space-l) var(--space-xl);
 	}
 
 	.info__section {
@@ -92,11 +94,13 @@
 		width: 30%;
 		font-weight: 600;
 		max-width: 200px;
+		color: var(--primary-600);
 	}
 
 	.info__description {
 		display: flex;
 		width: 70%;
+		color: var(--neutral-800);
 	}
 
 	.info__btn {
@@ -113,11 +117,11 @@
 		}
 
 		.project__thumbnail {
-			width: 50%;
+			width: 40%;
 		}
 
 		.project__info {
-			width: 50%;
+			width: 60%;
 		}
 	}
 </style>

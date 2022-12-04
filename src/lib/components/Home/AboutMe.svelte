@@ -8,7 +8,7 @@
 					I worked as a full-stack developer for about a year but didn't find the fulfillment I was
 					looking for until I discovered the art of UI/UX Design in 2022. My current focus is on UX
 					design, which involves conducting research and developing flows and wireframes to solve
-					pain points.
+					users' pain points.
 				</p>
 			</div>
 			<div class="block">
@@ -48,6 +48,10 @@
 		flex-direction: column;
 		gap: var(--space-s);
 		max-width: 60ch;
+		background-color: var(--bg);
+		border-radius: var(--border-radius);
+		padding: var(--space-l);
+		box-shadow: var(--box-shadow);
 	}
 
 	.block__title {

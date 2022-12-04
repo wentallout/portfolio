@@ -5,7 +5,7 @@
 
 	import VanishingHeader from '$lib/components/Layout/VanishingHeader.svelte';
 	import { page } from '$app/stores';
-	import { onMount } from 'svelte';
+
 	let scrollY;
 
 	let navOverlayEle;
@@ -32,7 +32,7 @@
 					</li>
 				{/each}
 
-				<li on:click={openNav} on:keydown={openNav} class="nav-mobile">
+				<li on:click={openNav} on:keydown={openNav} class="hamburger">
 					<List color="var(--neutral-100)" width="32" height="32" />
 				</li>
 			</ul>
@@ -42,11 +42,11 @@
 
 <div bind:this={navOverlayEle} class="overlay">
 	<div class="closebtn" on:click={closeNav} on:keydown={closeNav}>
-		<X color="var(--neutral-100)" width="32" height="32" />
+		<X color="var(--primary-900)" width="32" height="32" />
 	</div>
 	<div class="overlay-content">
 		{#each navItems as navItem}
-			<a on:click={closeNav} href={navItem.path}>{navItem.title}</a>
+			<a class="overlay-item xl-text" on:click={closeNav} href={navItem.path}>{navItem.title}</a>
 		{/each}
 	</div>
 </div>
@@ -97,7 +97,7 @@
 		display: none;
 	}
 
-	.nav-mobile {
+	.hamburger {
 		/* FLEX */
 		display: flex;
 		justify-content: center;
@@ -116,12 +116,12 @@
 			display: flex;
 			justify-content: center;
 			align-items: center;
-			width: 100%;
 
+			width: 100%;
 			line-height: 1;
 		}
 
-		.nav-mobile {
+		.hamburger {
 			display: none;
 		}
 	}
@@ -144,7 +144,6 @@
 		z-index: 99;
 		top: 0;
 		left: 0;
-		background-color: rgb(0, 0, 0);
 		background-color: rgba(0, 0, 0, 0.9);
 		overflow-y: hidden;
 		transition: 0.2s;
@@ -152,38 +151,52 @@
 
 	.overlay-content {
 		position: relative;
-		top: 10%;
+		top: 60px;
+		/* text-align: center; */
+
+		display: flex;
+		flex-direction: column;
 		width: 100%;
-		text-align: center;
-		margin-top: 30px;
+		justify-content: center;
+		align-items: center;
 	}
 
-	.overlay a {
-		padding: var(--space-s);
-		text-decoration: none;
-		font-size: 36px;
+	.overlay-item {
+		padding: var(--space-s) 0;
+
 		color: var(--neutral-600);
 		display: block;
 		transition: 0.3s;
+		width: 100%;
+		padding-left: 20vw;
+
+		outline: 1px solid transparent;
+
+		/* display: flex;
+		
+		
+
+		justify-content: flex-start;
+		align-items: center; */
 	}
 
-	.overlay a:hover,
-	.overlay a:focus {
-		color: var(--primary-300);
-		outline: 1px solid var(--primary-300);
+	.overlay-item:hover,
+	.overlay-item:focus {
+		color: var(--primary-500);
+		outline: 1px solid var(--primary-500);
 	}
 
 	.closebtn {
 		position: absolute;
 		display: flex;
+
 		width: 100%;
 		justify-content: center;
 		align-items: center;
-		/* height: 60px; */
+
 		background-color: var(--primary-500);
 		top: 0;
 		cursor: pointer;
-		/* right: 45px; */
 
 		padding: var(--space-xs);
 		cursor: pointer;
@@ -192,9 +205,6 @@
 	@media screen and (max-height: 450px) {
 		.overlay {
 			overflow-y: auto;
-		}
-		.overlay a {
-			font-size: 20px;
 		}
 	}
 </style>

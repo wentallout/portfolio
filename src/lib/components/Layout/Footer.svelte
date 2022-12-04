@@ -2,6 +2,12 @@
 	import { navItems } from '$lib/config.js';
 	import LinkedinLogo from '~icons/ph/linkedin-logo';
 	import Phone from '~icons/ph/phone';
+
+	let iconColor = 'var(--neutral-100)';
+
+	function handleMouseOver(e) {
+		iconColor = 'var(--primary-500)';
+	}
 </script>
 
 <footer>
@@ -15,7 +21,7 @@
 		</ul>
 		<div class="footer__social">
 			<a aria-label="Phone me" class="social__icon" href="tel:+84929066331">
-				<Phone width="32" height="32" color="var(--neutral-100)" />
+				<Phone width="32" height="32" color={iconColor} on:mouseover={handleMouseOver} />
 			</a>
 			<a
 				aria-label="Contact through LinkedIn"

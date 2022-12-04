@@ -216,9 +216,9 @@
 	margin-bottom: var(--space-l);
 	font-size: var(--font-size-small) !important;
 
+	box-shadow: var(--box-shadow);
 	text-transform: capitalize;
 	border-radius: var(--border-radius);
-	background-color: var(--accent-100);
 }
 
 .toc::before {
@@ -255,8 +255,8 @@
 }
 
 .toc a:hover {
+	text-decoration: none;
 	filter: brightness(0.6);
-	text-decoration: underline;
 }
 
 .toc-link {
@@ -268,7 +268,7 @@
 }
 
 .toc-item-h3 {
-	margin-bottom: var(--space-3xs);
+	margin-bottom: var(--space-s);
 }
 
 .toc-link-h2 {
