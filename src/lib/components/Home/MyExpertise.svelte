@@ -1,7 +1,3 @@
-<script>
-	import designProcess from '$lib/assets/images/home/designProcess.svg';
-</script>
-
 <section>
 	<div class="expertise">
 		<h2 class="expertise__title xl-text">My expertise</h2>
@@ -18,22 +14,22 @@
 </section>
 
 <style>
-	.block__title {
-		font-weight: 600;
-	}
-
-	.block__text {
-		color: var(--neutral-800);
-		max-width: 60ch;
-	}
-
 	.expertise {
 		display: flex;
 		flex-direction: column;
 		justify-content: center;
 		align-items: flex-start;
-
 		gap: var(--space-m);
+	}
+
+	.block__title {
+		font-weight: 600;
+		color: var(--primary-600);
+	}
+
+	.block__text {
+		color: var(--neutral-800);
+		max-width: 60ch;
 	}
 
 	.expertise__block {
@@ -50,6 +46,9 @@
 		flex-direction: column;
 		justify-content: center;
 		align-items: flex-start;
+		padding: var(--space-l);
+		box-shadow: var(--box-shadow);
+		border-radius: var(--border-radius);
 	}
 
 	.expertise__title {

@@ -46,7 +46,7 @@
 	.about__block {
 		display: flex;
 		flex-direction: column;
-		gap: var(--space-s);
+		gap: var(--space-l);
 		max-width: 60ch;
 		background-color: var(--bg);
 		border-radius: var(--border-radius);
@@ -56,6 +56,7 @@
 
 	.block__title {
 		font-weight: 600;
+		color: var(--primary-600);
 	}
 
 	.block__text {

@@ -21,7 +21,7 @@
 		gap: var(--space-l);
 		background: var(--bg);
 		border-radius: var(--border-radius);
-		padding: var(--space-m);
+		padding: var(--space-l);
 		box-shadow: var(--box-shadow);
 	}
 

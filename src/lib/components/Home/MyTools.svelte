@@ -65,6 +65,7 @@
 
 		gap: var(--space-m);
 	}
+
 	.tool__block {
 		width: 100%;
 		--min: 24ch;
@@ -83,7 +84,8 @@
 	.block__title {
 		color: var(--primary-600);
 		font-weight: 500;
-		margin-bottom: var(--space-s);
+		margin-top: var(--space-m);
+		margin-bottom: var(--space-2xs);
 	}
 
 	.block__text {

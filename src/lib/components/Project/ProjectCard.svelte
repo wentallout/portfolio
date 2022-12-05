@@ -92,7 +92,7 @@
 
 	.info__title {
 		width: 30%;
-		font-weight: 600;
+		font-weight: 500;
 		max-width: 200px;
 		color: var(--primary-600);
 	}
