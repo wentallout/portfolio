@@ -27,7 +27,7 @@
 		margin-inline-start: 50%;
 		transform: translateX(-50%);
 		margin-bottom: var(--space-l);
-		border-radius: var(--border-radius);
+		border-radius: var(--border-radius-light);
 
 		animation: bg-move 5s infinite;
 	}

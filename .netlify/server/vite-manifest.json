@@ -1,0 +1,761 @@
+{
+  ".svelte-kit/build/index.js": {
+    "file": "index.js",
+    "src": ".svelte-kit/build/index.js",
+    "isEntry": true,
+    "imports": [
+      "_index.js",
+      "_index2.js",
+      "_index3.js"
+    ],
+    "dynamicImports": [
+      "src/hooks.server.js"
+    ]
+  },
+  "src/routes/api/blog/+server.js": {
+    "file": "entries/endpoints/api/blog/_server.js",
+    "src": "src/routes/api/blog/+server.js",
+    "isEntry": true,
+    "imports": [
+      "_index2.js"
+    ],
+    "dynamicImports": [
+      "src/routes/blog/best-ux-books.svx",
+      "src/routes/blog/calculate-typography-values.svx",
+      "src/routes/blog/case-study.svx",
+      "src/routes/blog/gestalt.svx",
+      "src/routes/blog/grids.svx",
+      "src/routes/blog/how-to-ask-for-design-feedback.svx",
+      "src/routes/blog/logo-design.svx",
+      "src/routes/blog/my-fav-colors-tool.svx",
+      "src/routes/blog/polish.svx",
+      "src/routes/blog/portfolio.svx",
+      "src/routes/blog/project-organization.svx",
+      "src/routes/blog/resolution-pt-px.svx",
+      "src/routes/blog/sharp-axe-method.svx",
+      "src/routes/blog/stock-images.svx",
+      "src/routes/blog/the-art-of-thinking-clearly.svx",
+      "src/routes/blog/typescale.svx",
+      "src/routes/blog/typography-impact.svx",
+      "src/routes/blog/ui-kit.svx",
+      "src/routes/blog/ux-research.svx",
+      "src/routes/blog/ux-vs-ui.svx",
+      "src/routes/blog/wth-is-wcag.svx"
+    ]
+  },
+  "src/routes/manifest.webmanifest/+server.js": {
+    "file": "entries/endpoints/manifest.webmanifest/_server.js",
+    "src": "src/routes/manifest.webmanifest/+server.js",
+    "isEntry": true,
+    "imports": [
+      "_config.js"
+    ]
+  },
+  "src/routes/+layout.svelte": {
+    "file": "entries/pages/_layout.svelte.js",
+    "src": "src/routes/+layout.svelte",
+    "isEntry": true,
+    "imports": [
+      "_index.js",
+      "_config.js",
+      "_phone.js",
+      "_stores.js"
+    ],
+    "css": [
+      "_app/immutable/assets/_layout-fded9de7.css"
+    ]
+  },
+  "src/routes/+layout.js": {
+    "file": "entries/pages/_layout.js",
+    "src": "src/routes/+layout.js",
+    "isEntry": true
+  },
+  "src/routes/+error.svelte": {
+    "file": "entries/pages/_error.svelte.js",
+    "src": "src/routes/+error.svelte",
+    "isEntry": true,
+    "imports": [
+      "_index.js",
+      "_Button.js",
+      "_stores.js"
+    ],
+    "css": [
+      "_app/immutable/assets/_error-4d0ba992.css"
+    ]
+  },
+  "src/routes/blog/[slug]/+layout.svelte": {
+    "file": "entries/pages/blog/_slug_/_layout.svelte.js",
+    "src": "src/routes/blog/[slug]/+layout.svelte",
+    "isEntry": true,
+    "imports": [
+      "_index.js",
+      "_MarkdownContainer.js"
+    ]
+  },
+  "src/routes/project/[slug]/+layout.svelte": {
+    "file": "entries/pages/project/_slug_/_layout.svelte.js",
+    "src": "src/routes/project/[slug]/+layout.svelte",
+    "isEntry": true,
+    "imports": [
+      "_index.js",
+      "_MarkdownContainer.js"
+    ]
+  },
+  "src/routes/+page.svelte": {
+    "file": "entries/pages/_page.svelte.js",
+    "src": "src/routes/+page.svelte",
+    "isEntry": true,
+    "imports": [
+      "_index.js",
+      "_ProjectCard.js",
+      "_SEO.js",
+      "_Image.js",
+      "_config.js"
+    ],
+    "css": [
+      "_app/immutable/assets/_page-7f14cb0d.css"
+    ],
+    "assets": [
+      "_app/immutable/assets/fpt-9e418949.webp",
+      "_app/immutable/assets/nashtech-485d2d86.webp",
+      "_app/immutable/assets/frontend-b188da22.svg",
+      "_app/immutable/assets/navigation-9af7f3a6.svg",
+      "_app/immutable/assets/interactive-621aac0b.svg",
+      "_app/immutable/assets/graphicDesign-46f1e6c2.svg"
+    ]
+  },
+  "src/routes/blog/+page.svelte": {
+    "file": "entries/pages/blog/_page.svelte.js",
+    "src": "src/routes/blog/+page.svelte",
+    "isEntry": true,
+    "imports": [
+      "_index.js",
+      "_BlogCard.js",
+      "_SectionTitle.js",
+      "_brain.js",
+      "_PageTitle.js"
+    ]
+  },
+  "src/routes/blog/+page.js": {
+    "file": "entries/pages/blog/_page.js",
+    "src": "src/routes/blog/+page.js",
+    "isEntry": true
+  },
+  "src/routes/blog/category/+page.svelte": {
+    "file": "entries/pages/blog/category/_page.svelte.js",
+    "src": "src/routes/blog/category/+page.svelte",
+    "isEntry": true,
+    "imports": [
+      "_index.js",
+      "_SectionTitle.js"
+    ],
+    "css": [
+      "_app/immutable/assets/_page-37b6427a.css"
+    ]
+  },
+  "src/routes/blog/category/+page.js": {
+    "file": "entries/pages/blog/category/_page.js",
+    "src": "src/routes/blog/category/+page.js",
+    "isEntry": true
+  },
+  "src/routes/blog/category/[category]/+page.svelte": {
+    "file": "entries/pages/blog/category/_category_/_page.svelte.js",
+    "src": "src/routes/blog/category/[category]/+page.svelte",
+    "isEntry": true,
+    "imports": [
+      "_index.js",
+      "_BlogCard.js"
+    ],
+    "css": [
+      "_app/immutable/assets/_page-c9fb8161.css"
+    ]
+  },
+  "src/routes/blog/category/[category]/+page.js": {
+    "file": "entries/pages/blog/category/_category_/_page.js",
+    "src": "src/routes/blog/category/[category]/+page.js",
+    "isEntry": true
+  },
+  "src/routes/blog/[slug]/+page.svelte": {
+    "file": "entries/pages/blog/_slug_/_page.svelte.js",
+    "src": "src/routes/blog/[slug]/+page.svelte",
+    "isEntry": true,
+    "imports": [
+      "_index.js",
+      "_End.js",
+      "_Time.js"
+    ],
+    "css": [
+      "_app/immutable/assets/_page-e7934d6d.css"
+    ]
+  },
+  "src/routes/blog/[slug]/+page.js": {
+    "file": "entries/pages/blog/_slug_/_page.js",
+    "src": "src/routes/blog/[slug]/+page.js",
+    "isEntry": true,
+    "imports": [
+      "_dynamic-import-helper.js"
+    ],
+    "dynamicImports": [
+      "src/routes/blog/best-ux-books.svx",
+      "src/routes/blog/calculate-typography-values.svx",
+      "src/routes/blog/case-study.svx",
+      "src/routes/blog/gestalt.svx",
+      "src/routes/blog/grids.svx",
+      "src/routes/blog/how-to-ask-for-design-feedback.svx",
+      "src/routes/blog/logo-design.svx",
+      "src/routes/blog/my-fav-colors-tool.svx",
+      "src/routes/blog/polish.svx",
+      "src/routes/blog/portfolio.svx",
+      "src/routes/blog/project-organization.svx",
+      "src/routes/blog/resolution-pt-px.svx",
+      "src/routes/blog/sharp-axe-method.svx",
+      "src/routes/blog/stock-images.svx",
+      "src/routes/blog/the-art-of-thinking-clearly.svx",
+      "src/routes/blog/typescale.svx",
+      "src/routes/blog/typography-impact.svx",
+      "src/routes/blog/ui-kit.svx",
+      "src/routes/blog/ux-research.svx",
+      "src/routes/blog/ux-vs-ui.svx",
+      "src/routes/blog/wth-is-wcag.svx"
+    ]
+  },
+  "src/routes/contact/+page.svelte": {
+    "file": "entries/pages/contact/_page.svelte.js",
+    "src": "src/routes/contact/+page.svelte",
+    "isEntry": true,
+    "imports": [
+      "_index.js",
+      "_PageTitle.js",
+      "_SEO.js",
+      "_phone.js",
+      "_figma-logo.js",
+      "_SectionTitle.js",
+      "_Button.js"
+    ],
+    "css": [
+      "_app/immutable/assets/_page-bb7fb2d0.css"
+    ]
+  },
+  "src/routes/contact/+page.js": {
+    "file": "entries/pages/contact/_page.js",
+    "src": "src/routes/contact/+page.js",
+    "isEntry": true
+  },
+  "src/routes/project/+page.svelte": {
+    "file": "entries/pages/project/_page.svelte.js",
+    "src": "src/routes/project/+page.svelte",
+    "isEntry": true,
+    "imports": [
+      "_index.js",
+      "_PageTitle.js",
+      "_brain.js",
+      "_ProjectCard.js",
+      "_figma-logo.js",
+      "_SectionTitle.js"
+    ],
+    "css": [
+      "_app/immutable/assets/_page-762f4b0f.css"
+    ]
+  },
+  "src/routes/project/[slug]/+page.svelte": {
+    "file": "entries/pages/project/_slug_/_page.svelte.js",
+    "src": "src/routes/project/[slug]/+page.svelte",
+    "isEntry": true,
+    "imports": [
+      "_index.js",
+      "_End.js",
+      "_Time.js"
+    ],
+    "css": [
+      "_app/immutable/assets/_page-6bcb4af7.css"
+    ]
+  },
+  "src/routes/project/[slug]/+page.js": {
+    "file": "entries/pages/project/_slug_/_page.js",
+    "src": "src/routes/project/[slug]/+page.js",
+    "isEntry": true,
+    "imports": [
+      "_dynamic-import-helper.js"
+    ],
+    "dynamicImports": [
+      "src/routes/project/bonta.svx",
+      "src/routes/project/reza.svx"
+    ]
+  },
+  "src/routes/resource/+page.svelte": {
+    "file": "entries/pages/resource/_page.svelte.js",
+    "src": "src/routes/resource/+page.svelte",
+    "isEntry": true,
+    "imports": [
+      "_index.js",
+      "_PageTitle.js",
+      "_SwiperContainer.js",
+      "_SectionTitle.js"
+    ],
+    "css": [
+      "_app/immutable/assets/_page-99b36b93.css"
+    ],
+    "assets": [
+      "_app/immutable/assets/UIDesignPrinciples-b17b7134.webp",
+      "_app/immutable/assets/DesignManual-c05c25d3.webp",
+      "_app/immutable/assets/NoBSGuideUX-e7df4d3b.webp",
+      "_app/immutable/assets/Sprint-e9dea67f.webp",
+      "_app/immutable/assets/JustEnoughResearch-58b6c01f.webp"
+    ]
+  },
+  "src/routes/resource/exp/+page.svelte": {
+    "file": "entries/pages/resource/exp/_page.svelte.js",
+    "src": "src/routes/resource/exp/+page.svelte",
+    "isEntry": true,
+    "imports": [
+      "_index.js",
+      "_index3.js"
+    ],
+    "css": [
+      "_app/immutable/assets/_page-cb3236e2.css"
+    ]
+  },
+  "src/routes/resource/music/+page.svelte": {
+    "file": "entries/pages/resource/music/_page.svelte.js",
+    "src": "src/routes/resource/music/+page.svelte",
+    "isEntry": true,
+    "imports": [
+      "_index.js",
+      "_SectionTitle.js",
+      "_general-observer.js"
+    ]
+  },
+  "src/routes/resource/tool/+page.svelte": {
+    "file": "entries/pages/resource/tool/_page.svelte.js",
+    "src": "src/routes/resource/tool/+page.svelte",
+    "isEntry": true,
+    "imports": [
+      "_index.js",
+      "_SectionTitle.js"
+    ]
+  },
+  "_index.js": {
+    "file": "chunks/index.js"
+  },
+  "_index2.js": {
+    "file": "chunks/index2.js"
+  },
+  "_index3.js": {
+    "file": "chunks/index3.js",
+    "imports": [
+      "_index.js"
+    ]
+  },
+  "_config.js": {
+    "file": "chunks/config.js"
+  },
+  "_stores.js": {
+    "file": "chunks/stores.js",
+    "imports": [
+      "_index.js"
+    ]
+  },
+  "_phone.js": {
+    "file": "chunks/phone.js",
+    "imports": [
+      "_index.js"
+    ]
+  },
+  "_Button.js": {
+    "file": "chunks/Button.js",
+    "imports": [
+      "_index.js"
+    ],
+    "css": [
+      "_app/immutable/assets/Button-c7dbaf0c.css"
+    ]
+  },
+  "_MarkdownContainer.js": {
+    "file": "chunks/MarkdownContainer.js",
+    "imports": [
+      "_index.js"
+    ],
+    "css": [
+      "_app/immutable/assets/MarkdownContainer-0a7aaa5a.css"
+    ]
+  },
+  "_SEO.js": {
+    "file": "chunks/SEO.js",
+    "imports": [
+      "_index.js",
+      "_config.js"
+    ],
+    "assets": [
+      "_app/immutable/assets/home-5d13417b.webp",
+      "_app/immutable/assets/home-open-graph-70c74741.webp",
+      "_app/immutable/assets/home-open-graph-square-ca17b7fe.webp",
+      "_app/immutable/assets/home-twitter-5839b30a.webp"
+    ]
+  },
+  "_ProjectCard.js": {
+    "file": "chunks/ProjectCard.js",
+    "imports": [
+      "_index.js",
+      "_Button.js",
+      "_figma-logo.js"
+    ],
+    "css": [
+      "_app/immutable/assets/ProjectCard-23fbca47.css"
+    ],
+    "assets": [
+      "_app/immutable/assets/rezaPhoneFrame-b3441282.webp",
+      "_app/immutable/assets/rezaSplat-8323f1b6.svg"
+    ]
+  },
+  "_Image.js": {
+    "file": "chunks/Image.js",
+    "imports": [
+      "_index.js",
+      "_index3.js"
+    ],
+    "css": [
+      "_app/immutable/assets/Image-96370eb5.css"
+    ]
+  },
+  "_figma-logo.js": {
+    "file": "chunks/figma-logo.js",
+    "imports": [
+      "_index.js"
+    ]
+  },
+  "_BlogCard.js": {
+    "file": "chunks/BlogCard.js",
+    "imports": [
+      "_index.js",
+      "_Time.js"
+    ],
+    "css": [
+      "_app/immutable/assets/BlogCard-ff2b1012.css"
+    ]
+  },
+  "_SectionTitle.js": {
+    "file": "chunks/SectionTitle.js",
+    "imports": [
+      "_index.js"
+    ],
+    "css": [
+      "_app/immutable/assets/SectionTitle-034272c4.css"
+    ]
+  },
+  "_brain.js": {
+    "file": "chunks/brain.js",
+    "imports": [
+      "_index.js"
+    ]
+  },
+  "_PageTitle.js": {
+    "file": "chunks/PageTitle.js",
+    "imports": [
+      "_index.js"
+    ],
+    "css": [
+      "_app/immutable/assets/PageTitle-66714c90.css"
+    ]
+  },
+  "_Time.js": {
+    "file": "chunks/Time.js",
+    "imports": [
+      "_index.js"
+    ]
+  },
+  "_End.js": {
+    "file": "chunks/End.js",
+    "imports": [
+      "_index.js"
+    ],
+    "css": [
+      "_app/immutable/assets/End-fb40b7e0.css"
+    ]
+  },
+  "_dynamic-import-helper.js": {
+    "file": "chunks/dynamic-import-helper.js"
+  },
+  "_SwiperContainer.js": {
+    "file": "chunks/SwiperContainer.js",
+    "imports": [
+      "_index.js"
+    ],
+    "css": [
+      "_app/immutable/assets/SwiperContainer-82ef200e.css"
+    ]
+  },
+  "_general-observer.js": {
+    "file": "chunks/general-observer.js",
+    "imports": [
+      "_index.js"
+    ]
+  },
+  "src/hooks.server.js": {
+    "file": "chunks/hooks.server.js",
+    "src": "src/hooks.server.js",
+    "isDynamicEntry": true
+  },
+  "src/routes/blog/best-ux-books.svx": {
+    "file": "chunks/best-ux-books.js",
+    "src": "src/routes/blog/best-ux-books.svx",
+    "isDynamicEntry": true,
+    "imports": [
+      "_index.js",
+      "_Image.js"
+    ],
+    "assets": [
+      "_app/immutable/assets/uxBooks-0c8a2d19.webp"
+    ]
+  },
+  "src/routes/blog/calculate-typography-values.svx": {
+    "file": "chunks/calculate-typography-values.js",
+    "src": "src/routes/blog/calculate-typography-values.svx",
+    "isDynamicEntry": true,
+    "imports": [
+      "_index.js",
+      "_Image.js"
+    ],
+    "assets": [
+      "_app/immutable/assets/headingFontSizes-db10fc74.webp"
+    ]
+  },
+  "src/routes/blog/case-study.svx": {
+    "file": "chunks/case-study.js",
+    "src": "src/routes/blog/case-study.svx",
+    "isDynamicEntry": true,
+    "imports": [
+      "_index.js"
+    ]
+  },
+  "src/routes/blog/gestalt.svx": {
+    "file": "chunks/gestalt.js",
+    "src": "src/routes/blog/gestalt.svx",
+    "isDynamicEntry": true,
+    "imports": [
+      "_index.js"
+    ],
+    "css": [
+      "_app/immutable/assets/Image-96370eb5.css"
+    ]
+  },
+  "src/routes/blog/grids.svx": {
+    "file": "chunks/grids.js",
+    "src": "src/routes/blog/grids.svx",
+    "isDynamicEntry": true,
+    "imports": [
+      "_index.js"
+    ],
+    "css": [
+      "_app/immutable/assets/Image-96370eb5.css"
+    ]
+  },
+  "src/routes/blog/how-to-ask-for-design-feedback.svx": {
+    "file": "chunks/how-to-ask-for-design-feedback.js",
+    "src": "src/routes/blog/how-to-ask-for-design-feedback.svx",
+    "isDynamicEntry": true,
+    "imports": [
+      "_index.js",
+      "_Image.js"
+    ],
+    "assets": [
+      "_app/immutable/assets/design-feedback-a02d3efa.webp"
+    ]
+  },
+  "src/routes/blog/logo-design.svx": {
+    "file": "chunks/logo-design.js",
+    "src": "src/routes/blog/logo-design.svx",
+    "isDynamicEntry": true,
+    "imports": [
+      "_index.js"
+    ],
+    "css": [
+      "_app/immutable/assets/Image-96370eb5.css"
+    ]
+  },
+  "src/routes/blog/my-fav-colors-tool.svx": {
+    "file": "chunks/my-fav-colors-tool.js",
+    "src": "src/routes/blog/my-fav-colors-tool.svx",
+    "isDynamicEntry": true,
+    "imports": [
+      "_index.js"
+    ],
+    "css": [
+      "_app/immutable/assets/Image-96370eb5.css"
+    ]
+  },
+  "src/routes/blog/polish.svx": {
+    "file": "chunks/polish.js",
+    "src": "src/routes/blog/polish.svx",
+    "isDynamicEntry": true,
+    "imports": [
+      "_index.js",
+      "_Image.js"
+    ],
+    "assets": [
+      "_app/immutable/assets/polishRhythm-22fe888a.webp"
+    ]
+  },
+  "src/routes/blog/portfolio.svx": {
+    "file": "chunks/portfolio.js",
+    "src": "src/routes/blog/portfolio.svx",
+    "isDynamicEntry": true,
+    "imports": [
+      "_index.js"
+    ]
+  },
+  "src/routes/blog/project-organization.svx": {
+    "file": "chunks/project-organization.js",
+    "src": "src/routes/blog/project-organization.svx",
+    "isDynamicEntry": true,
+    "imports": [
+      "_index.js",
+      "_Image.js"
+    ],
+    "assets": [
+      "_app/immutable/assets/projectOrganization-1e4b11d4.webp"
+    ]
+  },
+  "src/routes/blog/resolution-pt-px.svx": {
+    "file": "chunks/resolution-pt-px.js",
+    "src": "src/routes/blog/resolution-pt-px.svx",
+    "isDynamicEntry": true,
+    "imports": [
+      "_index.js"
+    ],
+    "css": [
+      "_app/immutable/assets/Image-96370eb5.css"
+    ]
+  },
+  "src/routes/blog/sharp-axe-method.svx": {
+    "file": "chunks/sharp-axe-method.js",
+    "src": "src/routes/blog/sharp-axe-method.svx",
+    "isDynamicEntry": true,
+    "imports": [
+      "_index.js",
+      "_general-observer.js"
+    ]
+  },
+  "src/routes/blog/stock-images.svx": {
+    "file": "chunks/stock-images.js",
+    "src": "src/routes/blog/stock-images.svx",
+    "isDynamicEntry": true,
+    "imports": [
+      "_index.js"
+    ]
+  },
+  "src/routes/blog/the-art-of-thinking-clearly.svx": {
+    "file": "chunks/the-art-of-thinking-clearly.js",
+    "src": "src/routes/blog/the-art-of-thinking-clearly.svx",
+    "isDynamicEntry": true,
+    "imports": [
+      "_index.js"
+    ]
+  },
+  "src/routes/blog/typescale.svx": {
+    "file": "chunks/typescale.js",
+    "src": "src/routes/blog/typescale.svx",
+    "isDynamicEntry": true,
+    "imports": [
+      "_index.js",
+      "_Image.js"
+    ],
+    "assets": [
+      "_app/immutable/assets/utopia-fd802571.webp",
+      "_app/immutable/assets/utopiaOutput-23135f74.webp"
+    ]
+  },
+  "src/routes/blog/typography-impact.svx": {
+    "file": "chunks/typography-impact.js",
+    "src": "src/routes/blog/typography-impact.svx",
+    "isDynamicEntry": true,
+    "imports": [
+      "_index.js",
+      "_Image.js"
+    ],
+    "assets": [
+      "_app/immutable/assets/typoDesign-260fc3c7.webp"
+    ]
+  },
+  "src/routes/blog/ui-kit.svx": {
+    "file": "chunks/ui-kit.js",
+    "src": "src/routes/blog/ui-kit.svx",
+    "isDynamicEntry": true,
+    "imports": [
+      "_index.js"
+    ]
+  },
+  "src/routes/blog/ux-research.svx": {
+    "file": "chunks/ux-research.js",
+    "src": "src/routes/blog/ux-research.svx",
+    "isDynamicEntry": true,
+    "imports": [
+      "_index.js"
+    ]
+  },
+  "src/routes/blog/ux-vs-ui.svx": {
+    "file": "chunks/ux-vs-ui.js",
+    "src": "src/routes/blog/ux-vs-ui.svx",
+    "isDynamicEntry": true,
+    "imports": [
+      "_index.js"
+    ],
+    "css": [
+      "_app/immutable/assets/Image-96370eb5.css"
+    ]
+  },
+  "src/routes/blog/wth-is-wcag.svx": {
+    "file": "chunks/wth-is-wcag.js",
+    "src": "src/routes/blog/wth-is-wcag.svx",
+    "isDynamicEntry": true,
+    "imports": [
+      "_index.js"
+    ]
+  },
+  "src/routes/project/bonta.svx": {
+    "file": "chunks/bonta.js",
+    "src": "src/routes/project/bonta.svx",
+    "isDynamicEntry": true,
+    "imports": [
+      "_index.js"
+    ]
+  },
+  "src/routes/project/reza.svx": {
+    "file": "chunks/reza.js",
+    "src": "src/routes/project/reza.svx",
+    "isDynamicEntry": true,
+    "imports": [
+      "_index.js",
+      "_SwiperContainer.js",
+      "_Image.js"
+    ],
+    "assets": [
+      "_app/immutable/assets/thumbnail-4f6fd77f.webp",
+      "_app/immutable/assets/discord-a1f0d857.webp",
+      "_app/immutable/assets/feature-fa2cb245.webp",
+      "_app/immutable/assets/role-3510ed48.webp",
+      "_app/immutable/assets/plan-52c2f93a.webp",
+      "_app/immutable/assets/goal-5a37ac2e.webp",
+      "_app/immutable/assets/userResearch-a3eddbd1.webp",
+      "_app/immutable/assets/persona-58ea049b.webp",
+      "_app/immutable/assets/hmw1-2c866d80.webp",
+      "_app/immutable/assets/redesign1-8244fb6d.webp",
+      "_app/immutable/assets/redesign2-a3090ce4.webp",
+      "_app/immutable/assets/lofi-75e161ee.webp",
+      "_app/immutable/assets/c1-bd155f4b.webp",
+      "_app/immutable/assets/c2-96f5f70d.webp",
+      "_app/immutable/assets/l1-ec72d0e0.webp",
+      "_app/immutable/assets/l2-5ca38d93.webp",
+      "_app/immutable/assets/ds1-b700b549.webp",
+      "_app/immutable/assets/ds2-475ca52b.webp",
+      "_app/immutable/assets/ds3-6dcc19e8.webp",
+      "_app/immutable/assets/rezaIcon-5018a067.webp",
+      "_app/immutable/assets/reservationFlow-3346768f.webp",
+      "_app/immutable/assets/searchFlow-5078de97.webp",
+      "_app/immutable/assets/homeScreen-76609b90.webp",
+      "_app/immutable/assets/searchScreen-fd98dd81.webp",
+      "_app/immutable/assets/reservationScreen-b792b0af.webp",
+      "_app/immutable/assets/detailScreen-2425e03d.webp",
+      "_app/immutable/assets/notiScreen-558492e0.webp"
+    ]
+  }
+}

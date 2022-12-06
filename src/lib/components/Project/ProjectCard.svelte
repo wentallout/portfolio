@@ -87,12 +87,13 @@
 		display: flex;
 		flex-direction: row;
 		flex-wrap: wrap;
-		margin-bottom: var(--space-m);
+		margin-bottom: var(--space-s);
 	}
 
 	.info__title {
 		width: 30%;
 		font-weight: 500;
+		height: 60px;
 		max-width: 200px;
 		color: var(--primary-600);
 	}

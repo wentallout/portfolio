@@ -8,9 +8,13 @@ categories:
 <script>
 
 import Image from '$lib/components/Common/Image.svelte';
+import designFeedback from '$lib/assets/images/blog/design-feedback.png'
+
 </script>
 
 ## template
+
+<Image src={designFeedback} />
 
 
 

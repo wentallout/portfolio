@@ -62,7 +62,7 @@
 	}
 
 	.tool__name {
-		font-weight: 600;
+		font-weight: 500;
 	}
 
 	.tool {

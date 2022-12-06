@@ -49,16 +49,15 @@
 		align-items: center;
 
 		/* padding */
-		padding: 0.75rem 1.5rem;
+		padding: var(--space-xs) var(--space-s);
 
 		/* width */
 		width: fit-content;
 
 		transition: 0.3s;
 		font-size: var(--font-size-small);
-		line-height: var(--line-height-small);
+		line-height: normal;
 		font-weight: 500;
-
 		border: 1px solid transparent;
 		border-radius: var(--border-radius);
 		overflow: hidden;

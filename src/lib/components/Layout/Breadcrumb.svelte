@@ -12,7 +12,7 @@
 		crumbs = tokens.map((t) => {
 			tokenPath += '/' + t;
 			return {
-				label: t,
+				label: t.replace('-', ' '),
 				href: tokenPath
 			};
 		});
@@ -22,7 +22,7 @@
 	}
 </script>
 
-<nav aria-label="breadcrumb" class="breadcrumb base-text">
+<nav aria-label="breadcrumb" id="breadcrumb" class="breadcrumb base-text">
 	{#each crumbs as c, i}
 		{#if i == crumbs.length - 1}
 			<div class="breadcrumb__unclickable">

@@ -7,10 +7,6 @@
 	import Breadcrumb from '$lib/components/Layout/Breadcrumb.svelte';
 
 	// FONTS //
-	import '@fontsource/inter/latin-300.css';
-	import '@fontsource/inter/latin-400.css';
-	import '@fontsource/inter/latin-500.css';
-	import '@fontsource/inter/latin-600.css';
 	import '$lib/styles/fonts.css';
 	// FONTS END //
 

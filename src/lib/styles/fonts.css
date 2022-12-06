@@ -8,34 +8,39 @@
 }
 
 /* NORMAL FONTS */
-@font-face {
-	font-family: 'Neue Montreal';
-	src: url('/fonts/NeueMontreal-Light.woff2') format('woff2'),
-		url('/fonts/NeueMontreal-Light.woff') format('woff');
+/* @font-face {
+	font-family: 'Mona Sans';
+	src: url('/fonts/Mona-Sans-Light.woff2') format('woff2');
 	font-weight: 300;
 	font-style: normal;
 }
 
 @font-face {
-	font-family: 'Neue Montreal';
-	src: url('/fonts/NeueMontreal-Regular.woff2') format('woff2'),
-		url('/fonts/NeueMontreal-Regular.woff') format('woff');
+	font-family: 'Mona Sans';
+	src: url('/fonts/Mona-Sans-Regular.woff2') format('woff2');
 	font-weight: 400;
 	font-style: normal;
 }
 
 @font-face {
-	font-family: 'Neue Montreal';
-	src: url('/fonts/NeueMontreal-Medium.woff2') format('woff2'),
-		url('/fonts/NeueMontreal-Medium.woff') format('woff');
+	font-family: 'Mona Sans';
+	src: url('/fonts/Mona-Sans-Medium.woff2') format('woff2');
 	font-weight: 500;
 	font-style: normal;
 }
 
 @font-face {
-	font-family: 'Neue Montreal';
-	src: url('/fonts/NeueMontreal-Bold.woff2') format('woff2'),
-		url('/fonts/NeueMontreal-Bold.woff') format('woff');
+	font-family: 'Mona Sans';
+	src: url('/fonts/Mona-Sans-Bold.woff2') format('woff2');
 	font-weight: 600;
+	font-style: normal;
+} */
+
+@font-face {
+	font-family: 'Mona Sans';
+	src: url('/fonts/Mona-Sans.woff2') format('woff2 supports variations'),
+		url('/fonts/Mona-Sans.woff2') format('woff2-variations');
+	font-weight: 300 600;
+	font-stretch: 100%;
 	font-style: normal;
 }

@@ -147,6 +147,7 @@
 		background-color: rgba(0, 0, 0, 0.9);
 		overflow-y: hidden;
 		transition: 0.2s;
+		font-weight: 500;
 	}
 
 	.overlay-content {

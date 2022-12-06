@@ -3,10 +3,10 @@ body {
 }
 
 :root {
-	--normal-font: 'Inter';
+	--normal-font: 'Mona Sans';
 	--fancy-font: 'Recoleta Alt';
 
-	--text: hsl(180, 6%, 10%);
+	--text: hsl(180, 8%, 5%);
 
 	--page-bg: hsl(210, 100%, 98%);
 
