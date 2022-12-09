@@ -14,6 +14,6 @@
 		margin-bottom: var(--space-s);
 
 		background-color: var(--primary-900);
-		border-radius: var(--border-radius);
+		border-radius: var(--border-radius-light);
 	}
 </style>

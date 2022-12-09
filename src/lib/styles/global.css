@@ -8,7 +8,7 @@ body {
 
 	--text: hsl(180, 8%, 5%);
 
-	--page-bg: hsl(210, 100%, 98%);
+	--page-bg: #f2f8ff;
 
 	--brand-color: var(--neutral-900);
 

@@ -48,6 +48,7 @@
 		align-items: flex-start;
 		padding: var(--space-l);
 		box-shadow: var(--box-shadow);
+		background-color: var(--bg);
 		border-radius: var(--border-radius-light);
 	}
 
