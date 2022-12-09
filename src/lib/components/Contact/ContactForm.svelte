@@ -59,7 +59,7 @@
 		background-color: var(--bg);
 
 		overflow: hidden;
-		border-radius: var(--border-radius);
+		border-radius: var(--border-radius-light);
 
 		box-shadow: var(--box-shadow);
 	}

@@ -53,7 +53,7 @@
 
 		background-color: var(--bg);
 		padding: var(--space-l);
-		border-radius: var(--border-radius);
+		border-radius: var(--border-radius-light);
 		box-shadow: var(--box-shadow);
 	}
 

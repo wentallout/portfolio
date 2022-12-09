@@ -59,7 +59,7 @@
 		flex-direction: column;
 
 		background-color: var(--bg);
-		border-radius: var(--border-radius);
+		border-radius: var(--border-radius-light);
 		overflow-y: hidden;
 
 		box-shadow: var(--box-shadow);
@@ -91,7 +91,8 @@
 	}
 
 	.info__title {
-		width: 30%;
+		width: fit-content;
+		margin-right: auto;
 		font-weight: 500;
 		height: 60px;
 		max-width: 200px;
@@ -99,6 +100,7 @@
 	}
 
 	.info__description {
+		margin-left: var(--space-s);
 		display: flex;
 		width: 70%;
 		color: var(--neutral-800);

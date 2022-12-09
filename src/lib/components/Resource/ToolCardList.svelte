@@ -74,7 +74,7 @@
 		transition: 0.3s;
 		background-color: var(--bg);
 		box-shadow: var(--box-shadow);
-		border-radius: var(--border-radius);
+		border-radius: var(--border-radius-light);
 	}
 
 	.tool:hover {

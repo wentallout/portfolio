@@ -48,7 +48,7 @@
 		align-items: flex-start;
 		padding: var(--space-l);
 		box-shadow: var(--box-shadow);
-		border-radius: var(--border-radius);
+		border-radius: var(--border-radius-light);
 	}
 
 	.expertise__title {

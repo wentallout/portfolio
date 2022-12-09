@@ -212,13 +212,15 @@
 	max-height: 500px;
 	overflow-y: auto;
 	font-weight: 400 !important;
-	margin-top: var(--space-l);
-	margin-bottom: var(--space-l);
+
 	font-size: var(--font-size-small) !important;
 
 	box-shadow: var(--box-shadow);
 	text-transform: capitalize;
-	border-radius: var(--border-radius);
+	border-radius: var(--border-radius-light);
+
+	margin-top: var(--space-l);
+	margin-bottom: var(--space-l);
 }
 
 .toc::before {
@@ -238,11 +240,11 @@
 
 	/* SPACING  */
 	border-bottom: 1px solid var(--neutral-900);
-	padding: var(--space-xs) var(--space-s);
+	padding: var(--space-s);
 }
 
 .toc-level-1 {
-	padding: var(--space-xs) var(--space-s);
+	padding: var(--space-s);
 }
 
 .toc-link {
@@ -273,6 +275,7 @@
 
 .toc-link-h2 {
 	color: var(--accent-800);
+	font-weight: 600;
 }
 
 .toc-link-h2:hover:after {
@@ -284,11 +287,12 @@
 
 .toc-link-h3 {
 	color: var(--accent-500);
+	font-weight: 400;
 	margin-left: var(--space-s);
 }
 
 .toc-link-h4 {
-	font-weight: 300 !important;
+	font-weight: 400 !important;
 	color: var(--accent-500);
 	margin-left: var(--space-l);
 }

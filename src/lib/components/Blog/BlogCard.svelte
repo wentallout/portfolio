@@ -31,7 +31,7 @@
 		/* OTHER */
 		transition: 0.3s;
 		position: relative;
-		border-radius: var(--border-radius);
+		border-radius: var(--border-radius-light);
 		overflow: hidden;
 		/* --- */
 

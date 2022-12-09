@@ -43,13 +43,18 @@
 
 <style>
 	.btn {
+		min-width: 150px;
+		appearance: none;
 		/* flex */
 		display: flex;
 		justify-content: center;
 		align-items: center;
 
 		/* padding */
-		padding: var(--space-xs) var(--space-s);
+		padding-left: 32px;
+		padding-right: 32px;
+		padding-top: 16px;
+		padding-bottom: 16px;
 
 		/* width */
 		width: fit-content;

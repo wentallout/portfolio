@@ -94,9 +94,10 @@
 		border-bottom: 0;
 		overflow: visible;
 
-		border-radius: var(--border-radius);
+		border-radius: var(--border-radius-light);
 
 		box-shadow: var(--box-shadow);
+		overflow: hidden;
 	}
 
 	.social__list {
@@ -112,7 +113,7 @@
 		padding: var(--space-s) var(--space-m);
 
 		transition: 0.3s;
-		border-radius: var(--border-radius);
+
 		width: 100%;
 		font-weight: 500;
 	}

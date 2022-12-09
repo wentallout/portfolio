@@ -1,20 +1,22 @@
 import adapter from '@sveltejs/adapter-netlify';
 import sveltePreprocess from 'svelte-preprocess';
-import autoprefixer from 'autoprefixer';
 
 import { mdsvex } from 'mdsvex';
 
 import rehypeToc from '@jsdevtools/rehype-toc';
 import rehypeSlug from 'rehype-slug';
-import cssnanoPlugin from 'cssnano';
+
+// const autoprefixer = require("autoprefixer");
+// import cssnanoPlugin from 'cssnano';
 
 /** @type {import('@sveltejs/kit').Config} */
 const config = {
 	preprocess: [
 		sveltePreprocess({
-			postcss: {
-				plugins: [autoprefixer, cssnanoPlugin]
-			}
+			postcss: true
+			// postcss: {
+			// 	plugins: [autoprefixer, cssnanoPlugin]
+			// }
 			/* Other sveltePreprocess options here, like SCSS */
 		}),
 		mdsvex({
@@ -31,7 +33,6 @@ const config = {
 			entries: ['*']
 		},
 		alias: {
-			// this will match a file
 			$blogImages: 'src/lib/assets/images/blog'
 		}
 		// csp: {

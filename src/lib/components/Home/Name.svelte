@@ -13,14 +13,17 @@
 
 <style>
 	.name {
+		/* FLEX */
 		display: flex;
 		justify-content: center;
 		align-items: center;
 		flex-direction: column;
 		flex-wrap: wrap;
+		/* FLEX END */
+
 		gap: var(--space-l);
 		background: var(--bg);
-		border-radius: var(--border-radius);
+		border-radius: var(--border-radius-light);
 		padding: var(--space-l);
 		box-shadow: var(--box-shadow);
 	}

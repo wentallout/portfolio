@@ -49,7 +49,7 @@
 		gap: var(--space-l);
 		max-width: 60ch;
 		background-color: var(--bg);
-		border-radius: var(--border-radius);
+		border-radius: var(--border-radius-light);
 		padding: var(--space-l);
 		box-shadow: var(--box-shadow);
 	}
