@@ -3,7 +3,7 @@ title: 'My favorite color tools'
 date: '2022-11-09'
 categories:
     - 'color'
-    - 'tool'
+    - 'freebies'
 ---
 
 <script>

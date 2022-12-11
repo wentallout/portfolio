@@ -2,8 +2,8 @@
 title: 'Where to get stock images'
 date: '2022-11-09'
 categories:
-    - 'stocks'
-    - 'tool'
+    - 'stock images'
+    - 'freebies'
 ---
 
 ## Royalty-free
@@ -11,11 +11,11 @@ categories:
 - [Pexels](https://www.pexels.com)
 - [Unsplash](https://unsplash.com/)
 - [Pixabay](https://pixabay.com/)
+- [RawPixel](https://www.rawpixel.com/)
 
 ## AI
 
 [StockAI](https://www.stockai.com/)
-
 [Craiyon](https://www.craiyon.com/) - generate images from text
 
 

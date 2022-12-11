@@ -5,6 +5,7 @@
 	import Footer from '$lib/components/Layout/Footer.svelte';
 	import Header from '$lib/components/Layout/Header.svelte';
 	import Breadcrumb from '$lib/components/Layout/Breadcrumb.svelte';
+	import CursorTrail from '$lib/components/Layout/CursorTrail.svelte';
 
 	// FONTS //
 	import '$lib/styles/fonts.css';
@@ -58,8 +59,10 @@
 		async></script> -->
 </svelte:head>
 
+<CursorTrail />
 <SkipLink />
 <PWA />
+
 <div class="page-container" data-sveltekit-prefetch>
 	<BackToTop />
 

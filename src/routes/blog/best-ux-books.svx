@@ -1,8 +1,8 @@
 ---
-title: 'Best UX Books to read'
-date: '2022-10-07'
+title: Best UX Books to read
+date: 2022-10-07
 categories:
-    - 'ux'
+    - ux
 ---
 
 <script>

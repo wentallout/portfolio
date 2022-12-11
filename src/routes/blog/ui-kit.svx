@@ -3,7 +3,7 @@ title: UI Kits
 date: 2022-11-09
 categories:
     - ui
-    - tool
+    - freebies
 ---
 
 ## IOS

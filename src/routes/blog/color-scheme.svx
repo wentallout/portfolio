@@ -1,0 +1,36 @@
+---
+title: How to come up with a color scheme
+date: 2022-12-10
+categories:
+    - color
+---
+
+## RGB vs CMYK
+
+RGB is meant for **digital** design.
+
+CYMK is meant for **print** design.
+
+## Color profiles
+
+RGB can display 16.7 million colors. sRGB is mostly used on Web and most Digital Devices
+
+## Neutral colors 
+
+Mostly background, borders, background for an image, models
+
+How? Go to [picular](https://picular.co) and type something like 'interior design' or 'forest'
+
+## Color harmony
+
+Get one base color from the logo/brand
+
+Then go to [adobe color](https://color.adobe.com/) or [colorsupplyyy.com](https://colorsupplyyy.com/app)
+
+Option 1: Monochromatic
+Option 2: Analogous close in your color scheme
+
+
+
+
+

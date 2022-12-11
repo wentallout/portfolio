@@ -80,7 +80,7 @@
 	<BlogListContainer>
 		{#each data.blogs as blog}
 			{#if blog.meta.categories.length}
-				{#if blog.meta.categories.includes('tool')}
+				{#if blog.meta.categories.includes('freebies')}
 					<BlogCard blogTitle={blog.meta.title} blogLink={blog.path} blogDate={blog.meta.date} />
 				{/if}
 			{/if}
