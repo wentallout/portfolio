@@ -21,12 +21,7 @@
 		justify-content: left;
 		align-items: center;
 
-		margin-bottom: var(--space-s);
-	}
-
-	.section-title h2 {
-		font-family: var(--fancy-font);
-		font-weight: 600;
+		margin-bottom: var(--space-m);
 	}
 
 	.title__icon {
@@ -40,6 +35,8 @@
 	}
 
 	.title__text {
+		font-family: var(--fancy-font);
+		font-weight: 600;
 		color: var(--text);
 	}
 </style>

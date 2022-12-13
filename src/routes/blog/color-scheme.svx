@@ -19,7 +19,7 @@ RGB can display 16.7 million colors. sRGB is mostly used on Web and most Digital
 
 Mostly background, borders, background for an image, models
 
-How? Go to [picular](https://picular.co) and type something like 'interior design' or 'forest'
+How? Go to [https://picular.co](https://picular.co) and type something like 'interior design' or 'forest'
 
 ## Color harmony
 

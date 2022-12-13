@@ -12,7 +12,7 @@
 
 <article class="info">
 	<h1 class="xl-text project-title">{data.title}</h1>
-	<p class="small-text project-date">Created on: <Time relative timestamp={data.date} /></p>
+	<p class="small-text project-date">Updated: <Time relative timestamp={data.date} /></p>
 	<svelte:component this={data.content} />
 	<End />
 </article>

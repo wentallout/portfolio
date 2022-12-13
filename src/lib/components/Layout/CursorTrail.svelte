@@ -6,18 +6,15 @@
 		let circles = document.querySelectorAll('.circle');
 
 		let colors = [
-			'#2db4f7',
-			'#19abf9',
-			'#0ca2fa',
-			'#1799f9',
-			'#2b8ef8',
-			'#3f83f5',
-			'#5277f0',
-			'#646aea',
-			'#745ce1',
-			'#844bd6',
-			'#9236c9',
-			'#9e11ba'
+			'#fefff2',
+			'#feffb9',
+			'#fcf67e',
+			'#f6e344',
+			'#ebc50c',
+			'#ba9104',
+			'#886201',
+			'#573a00',
+			'#261700'
 		];
 
 		circles.forEach(function (circle, index) {
@@ -56,9 +53,6 @@
 	});
 </script>
 
-<div class="circle" />
-<div class="circle" />
-<div class="circle" />
 <div class="circle" />
 <div class="circle" />
 <div class="circle" />

@@ -16,6 +16,8 @@
 	import FastForward from '~icons/ph/fast-forward';
 	import PageTitle from '$lib/components/Common/PageTitle.svelte';
 
+	import { Tabs, TabList, TabPanel, Tab } from '$lib/components/Tabs/tabs.js';
+
 	export let data;
 </script>
 
@@ -24,85 +26,143 @@
 </svelte:head>
 
 <PageTitle pageTitle="Blog" />
-<section>
-	<SectionTitle sectionTitle="Fundamental" let:sectionIcon>
-		<GraduationCap {...sectionIcon} />
-	</SectionTitle>
 
-	<BlogListContainer>
-		{#each data.blogs as blog}
-			{#if blog.meta.categories.length}
-				{#if blog.meta.categories.includes('fundamental')}
-					<BlogCard blogTitle={blog.meta.title} blogLink={blog.path} blogDate={blog.meta.date} />
-				{/if}
-			{/if}
-		{/each}
-	</BlogListContainer>
-</section>
+<Tabs>
+	<TabList>
+		<Tab>Fundamental</Tab>
+		<Tab>Tips</Tab>
+		<Tab>UX</Tab>
+		<Tab>Color</Tab>
+		<Tab>Typography</Tab>
+		<Tab>Freebies</Tab>
+	</TabList>
 
-<section>
-	<SectionTitle sectionTitle="UX" let:sectionIcon>
-		<Brain {...sectionIcon} />
-	</SectionTitle>
+	<TabPanel>
+		<section>
+			<SectionTitle sectionTitle="Fundamental" let:sectionIcon>
+				<GraduationCap {...sectionIcon} />
+			</SectionTitle>
 
-	<BlogListContainer>
-		{#each data.blogs as blog}
-			{#if blog.meta.categories.length}
-				{#if blog.meta.categories.includes('ux')}
-					<BlogCard blogTitle={blog.meta.title} blogLink={blog.path} blogDate={blog.meta.date} />
-				{/if}
-			{/if}
-		{/each}
-	</BlogListContainer>
-</section>
+			<BlogListContainer>
+				{#each data.blogs as blog}
+					{#if blog.meta.categories.length}
+						{#if blog.meta.categories.includes('fundamental')}
+							<BlogCard
+								blogTitle={blog.meta.title}
+								blogLink={blog.path}
+								blogDate={blog.meta.date} />
+						{/if}
+					{/if}
+				{/each}
+			</BlogListContainer>
+		</section>
+	</TabPanel>
 
-<section>
-	<SectionTitle sectionTitle="Typography" let:sectionIcon>
-		<TextAa {...sectionIcon} />
-	</SectionTitle>
+	<TabPanel>
+		<section>
+			<SectionTitle sectionTitle="Tips" let:sectionIcon>
+				<Lightbulb {...sectionIcon} />
+			</SectionTitle>
 
-	<BlogListContainer>
-		{#each data.blogs as blog}
-			{#if blog.meta.categories.length}
-				{#if blog.meta.categories.includes('typography')}
-					<BlogCard blogTitle={blog.meta.title} blogLink={blog.path} blogDate={blog.meta.date} />
-				{/if}
-			{/if}
-		{/each}
-	</BlogListContainer>
-</section>
+			<BlogListContainer>
+				{#each data.blogs as blog}
+					{#if blog.meta.categories.length}
+						{#if blog.meta.categories.includes('tips')}
+							<BlogCard
+								blogTitle={blog.meta.title}
+								blogLink={blog.path}
+								blogDate={blog.meta.date} />
+						{/if}
+					{/if}
+				{/each}
+			</BlogListContainer>
+		</section>
+	</TabPanel>
 
-<section>
-	<SectionTitle sectionTitle="Freebies" let:sectionIcon>
-		<FastForward {...sectionIcon} />
-	</SectionTitle>
+	<TabPanel>
+		<section>
+			<SectionTitle sectionTitle="UX" let:sectionIcon>
+				<Brain {...sectionIcon} />
+			</SectionTitle>
 
-	<BlogListContainer>
-		{#each data.blogs as blog}
-			{#if blog.meta.categories.length}
-				{#if blog.meta.categories.includes('freebies')}
-					<BlogCard blogTitle={blog.meta.title} blogLink={blog.path} blogDate={blog.meta.date} />
-				{/if}
-			{/if}
-		{/each}
-	</BlogListContainer>
-</section>
+			<BlogListContainer>
+				{#each data.blogs as blog}
+					{#if blog.meta.categories.length}
+						{#if blog.meta.categories.includes('ux')}
+							<BlogCard
+								blogTitle={blog.meta.title}
+								blogLink={blog.path}
+								blogDate={blog.meta.date} />
+						{/if}
+					{/if}
+				{/each}
+			</BlogListContainer>
+		</section>
+	</TabPanel>
 
-<section>
-	<SectionTitle sectionTitle="Tips" let:sectionIcon>
-		<Lightbulb {...sectionIcon} />
-	</SectionTitle>
+	<TabPanel>
+		<section>
+			<SectionTitle sectionTitle="Color" let:sectionIcon>
+				<Brain {...sectionIcon} />
+			</SectionTitle>
 
-	<BlogListContainer>
-		{#each data.blogs as blog}
-			{#if blog.meta.categories.length}
-				{#if blog.meta.categories.includes('tips')}
-					<BlogCard blogTitle={blog.meta.title} blogLink={blog.path} blogDate={blog.meta.date} />
-				{/if}
-			{/if}
-		{/each}
-	</BlogListContainer>
-</section>
+			<BlogListContainer>
+				{#each data.blogs as blog}
+					{#if blog.meta.categories.length}
+						{#if blog.meta.categories.includes('color')}
+							<BlogCard
+								blogTitle={blog.meta.title}
+								blogLink={blog.path}
+								blogDate={blog.meta.date} />
+						{/if}
+					{/if}
+				{/each}
+			</BlogListContainer>
+		</section>
+	</TabPanel>
+
+	<TabPanel>
+		<section>
+			<SectionTitle sectionTitle="Typography" let:sectionIcon>
+				<TextAa {...sectionIcon} />
+			</SectionTitle>
+
+			<BlogListContainer>
+				{#each data.blogs as blog}
+					{#if blog.meta.categories.length}
+						{#if blog.meta.categories.includes('typography')}
+							<BlogCard
+								blogTitle={blog.meta.title}
+								blogLink={blog.path}
+								blogDate={blog.meta.date} />
+						{/if}
+					{/if}
+				{/each}
+			</BlogListContainer>
+		</section>
+	</TabPanel>
+
+	<TabPanel>
+		<section>
+			<SectionTitle sectionTitle="Freebies" let:sectionIcon>
+				<FastForward {...sectionIcon} />
+			</SectionTitle>
+
+			<BlogListContainer>
+				{#each data.blogs as blog}
+					{#if blog.meta.categories.length}
+						{#if blog.meta.categories.includes('freebies')}
+							<BlogCard
+								blogTitle={blog.meta.title}
+								blogLink={blog.path}
+								blogDate={blog.meta.date} />
+						{/if}
+					{/if}
+				{/each}
+			</BlogListContainer>
+		</section>
+	</TabPanel>
+</Tabs>
 
 <style>
 </style>

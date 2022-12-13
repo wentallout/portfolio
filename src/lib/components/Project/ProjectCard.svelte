@@ -74,7 +74,7 @@
 
 	.info__project-name {
 		font-weight: 600;
-		color: var(--primary-900);
+		color: var(--neutral-900);
 		line-height: normal;
 		margin-bottom: var(--space-m);
 	}
@@ -96,7 +96,7 @@
 		font-weight: 500;
 		height: 60px;
 		max-width: 200px;
-		color: var(--primary-600);
+		color: var(--primary-700);
 	}
 
 	.info__description {

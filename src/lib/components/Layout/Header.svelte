@@ -153,7 +153,6 @@
 	.overlay-content {
 		position: relative;
 		top: 60px;
-		/* text-align: center; */
 
 		display: flex;
 		flex-direction: column;
@@ -165,7 +164,7 @@
 	.overlay-item {
 		padding: var(--space-s) 0;
 
-		color: var(--neutral-600);
+		color: var(--neutral-200);
 		display: block;
 		transition: 0.3s;
 		width: 100%;

@@ -6,9 +6,11 @@ body {
 	--normal-font: 'Mona Sans';
 	--fancy-font: 'Recoleta Alt';
 
-	--text: hsl(180, 8%, 5%);
+	/* --text: hsl(180, 8%, 5%); */
 
-	--page-bg: #f2f8ff;
+	--text: hsl(40, 6%, 8%);
+
+	--page-bg: #fcfcfa;
 
 	--brand-color: var(--neutral-900);
 
@@ -22,43 +24,43 @@ body {
 
 	--text-width: 65ch;
 
-	/* Primary: Fantasy Console Sky */
-	--primary-100: #f2f8ff;
-	--primary-200: #c1dfff;
-	--primary-300: #90ccfe;
-	--primary-400: #5ebefc;
-	--primary-500: #2db4f7;
-	--primary-600: #0f92c3;
-	--primary-700: #03718f;
-	--primary-800: #004c5b;
-	--primary-900: #002226;
+	/* Primary: Golden Crescent */
+	--primary-100: #fefff2;
+	--primary-200: #feffb9;
+	--primary-300: #fcf67e;
+	--primary-400: #f6e344;
+	--primary-500: #ebc50c;
+	--primary-600: #ba9104;
+	--primary-700: #886201;
+	--primary-800: #573a00;
+	--primary-900: #261700;
 
-	/* Accent: Nebula */
-	--accent-100: #fff2fe;
-	--accent-200: #febbfd;
-	--accent-300: #f080f6;
-	--accent-400: #d145e2;
-	--accent-500: #9e11ba;
-	--accent-600: #750695;
-	--accent-700: #510170;
-	--accent-800: #32004b;
-	--accent-900: #170026;
+	/* Accent: Persian Blue */
+	--accent-100: #f3f2ff;
+	--accent-200: #bdbdfe;
+	--accent-300: #858af8;
+	--accent-400: #4c5de7;
+	--accent-500: #1835c7;
+	--accent-600: #082a9f;
+	--accent-700: #022377;
+	--accent-800: #001b4e;
+	--accent-900: #000f26;
 
 	/* Neutral */
-	--neutral-100: #fafbfc;
-	--neutral-200: #e9ebed;
-	--neutral-300: #d8dcde;
-	--neutral-400: #c8cccf;
-	--neutral-500: #b8bdbf;
-	--neutral-600: #919799;
-	--neutral-700: #6b7173;
-	--neutral-800: #464c4d;
-	--neutral-900: #222626;
+	--neutral-100: #fcfcfa;
+	--neutral-200: #f0f0ec;
+	--neutral-300: #e3e3de;
+	--neutral-400: #d6d6d1;
+	--neutral-500: #c9c8c3;
+	--neutral-600: #a19f99;
+	--neutral-700: #787670;
+	--neutral-800: #4f4d49;
+	--neutral-900: #262522;
 
 	/* alert */
-	--success: #80d926;
-	--error: #e61919;
-	--warning: #f0b042;
+	--success: #a3db33;
+	--error: #ed3221;
+	--warning: #fac547;
 
 	--font-size-xs: clamp(0.7rem, calc(0.75rem + -0.05vw), 0.74rem);
 	--font-size-small: clamp(1rem, calc(1rem + 0.07vw), 1rem);

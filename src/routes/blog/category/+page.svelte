@@ -39,13 +39,13 @@
 		padding: var(--space-xs);
 		width: fit-content;
 		background-color: var(--bg);
-		
+
 		color: var(--accent-500);
 		transition: 0.3s;
+		border-radius: var(--border-radius-light);
 	}
 
 	.category__link:hover {
-		border: 1px solid var(--accent-500);
 		color: var(--accent-300);
 		background-color: var(--neutral-900);
 		text-decoration: underline;
