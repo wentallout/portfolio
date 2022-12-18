@@ -2,7 +2,7 @@
 	export let sectionTitle = '';
 
 	let sectionIcon = {
-		color: 'var(--neutral-100)',
+		color: 'var(--neutral-900)',
 		height: 32,
 		width: 32
 	};

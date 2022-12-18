@@ -35,15 +35,19 @@
 		</div>
 
 		<div class="info__btn">
-			<a class="btn__anchor" href={linkToDetail}>
+			<a
+				data-cursor-text="Read Case Study"
+				data-cursor-text-repeat="4"
+				class="btn__anchor cursor-hover-item"
+				href={linkToDetail}>
 				<Button
 					label="Read"
-					border="1px solid var(--primary-500)"
-					backgroundColor="var(--primary-500)" />
+					border="1px solid var(--primary-600)"
+					backgroundColor="var(--primary-600)" />
 			</a>
 
 			<a rel="external noreferrer noopener" target="_blank" href={linkToFigma}>
-				<Button label="Figma" border="1px solid var(--text)">
+				<Button labelColor="var(--text)" label="Figma" border="1px solid var(--text)">
 					<FigmaLogo />
 				</Button>
 			</a>
@@ -58,23 +62,21 @@
 
 		flex-direction: column;
 
-		background-color: var(--bg);
 		border-radius: var(--border-radius-light);
 		overflow-y: hidden;
 
-		box-shadow: var(--box-shadow);
+		background-color: var(--bg);
 	}
 
 	.project__thumbnail {
 		width: 100%;
 		height: auto;
 		overflow: hidden;
-		outline: 1px solid var(--neutral-300);
 	}
 
 	.info__project-name {
 		font-weight: 600;
-		color: var(--neutral-900);
+		color: var(--text);
 		line-height: normal;
 		margin-bottom: var(--space-m);
 	}
@@ -96,14 +98,14 @@
 		font-weight: 500;
 		height: 60px;
 		max-width: 200px;
-		color: var(--primary-700);
+		color: var(--primary-600);
 	}
 
 	.info__description {
 		margin-left: var(--space-s);
 		display: flex;
 		width: 70%;
-		color: var(--neutral-800);
+		color: var(--text-low);
 	}
 
 	.info__btn {

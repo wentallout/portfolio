@@ -1,4 +1,5 @@
 <script>
+	import { transform } from 'dom7';
 	import { navItems } from '$lib/config.js';
 	import List from '~icons/ph/list';
 	import X from '~icons/ph/x';
@@ -53,8 +54,8 @@
 
 <style>
 	.active-page {
-		background-color: var(--primary-500);
-		color: var(--text);
+		background-color: var(--primary-600);
+		color: var(--black);
 	}
 
 	.active-page:hover {
@@ -62,7 +63,7 @@
 	}
 
 	.nav-list__item:hover {
-		color: var(--primary-500);
+		color: var(--primary-600);
 	}
 
 	.nav {
@@ -76,7 +77,8 @@
 		color: var(--neutral-100);
 		/* --- */
 
-		background-color: var(--primary-900);
+		background-color: transparent;
+		transition: 0.3s;
 	}
 
 	.nav-scrolldown {
@@ -182,8 +184,8 @@
 
 	.overlay-item:hover,
 	.overlay-item:focus {
-		color: var(--primary-500);
-		outline: 1px solid var(--primary-500);
+		color: var(--primary-600);
+		outline: 1px solid var(--primary-600);
 	}
 
 	.closebtn {
@@ -194,7 +196,7 @@
 		justify-content: center;
 		align-items: center;
 
-		background-color: var(--primary-500);
+		background-color: var(--primary-600);
 		top: 0;
 		cursor: pointer;
 

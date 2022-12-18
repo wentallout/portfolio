@@ -33,18 +33,22 @@
 
 <style>
 	.bck2top {
+		/* FLEX */
 		display: flex;
 		justify-content: center;
 		align-items: center;
-		width: 48px;
-		height: 48px;
-
-		/* COLOR */
-		background-color: var(--primary-500);
-		border-radius: 100%;
 		/*  */
 
-		/* POSITION */
+		/* SIZE */
+		width: 48px;
+		height: 48px;
+		/*  */
+
+		/* COLOR */
+		background-color: var(--primary-600);
+		/*  */
+
+		/* POSITION FIXED ON SCREEN */
 		position: fixed;
 		right: 30px;
 		bottom: 30px;
@@ -59,6 +63,8 @@
 		/*  */
 
 		backdrop-filter: blur(5px);
+
+		clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
 	}
 	@media (min-width: 768px) {
 		.bck2top {

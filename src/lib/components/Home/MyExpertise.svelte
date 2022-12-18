@@ -30,6 +30,7 @@
 	.block__text {
 		color: var(--neutral-800);
 		max-width: 60ch;
+		color: var(--text-low);
 	}
 
 	.expertise__block {

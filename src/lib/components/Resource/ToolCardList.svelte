@@ -63,6 +63,7 @@
 
 	.tool__name {
 		font-weight: 500;
+		color: var(--text);
 	}
 
 	.tool {
@@ -82,11 +83,11 @@
 	}
 
 	.tool:hover .tool__name {
-		color: var(--primary-500);
+		color: var(--primary-600);
 	}
 
 	.tool__description {
-		color: var(--neutral-800);
+		color: var(--text-low);
 		overflow: hidden;
 		display: -webkit-box;
 		-webkit-line-clamp: 3;

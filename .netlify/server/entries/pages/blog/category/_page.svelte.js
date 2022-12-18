@@ -13,7 +13,7 @@ const Folder = create_ssr_component(($$result, $$props, $$bindings, slots) => {
 });
 const _page_svelte_svelte_type_style_lang = "";
 const css = {
-  code: ".category.svelte-14x7gc8{display:flex;flex-direction:row;flex-wrap:wrap;gap:var(--space-s)}.category__link.svelte-14x7gc8{background-color:var(--bg);color:var(--accent-500);padding:var(--space-xs);transition:.3s;width:-moz-fit-content;width:fit-content}.category__link.svelte-14x7gc8:hover{background-color:var(--neutral-900);border:1px solid var(--accent-500);color:var(--accent-300);text-decoration:underline}",
+  code: ".category.svelte-1nf1547{display:flex;flex-direction:row;flex-wrap:wrap;gap:var(--space-s)}.category__link.svelte-1nf1547{background-color:var(--bg);border-radius:var(--border-radius-light);color:var(--accent-500);padding:var(--space-xs);transition:.3s;width:-moz-fit-content;width:fit-content}.category__link.svelte-1nf1547:hover{background-color:var(--neutral-900);color:var(--accent-300);text-decoration:underline}",
   map: null
 };
 const Page = create_ssr_component(($$result, $$props, $$bindings, slots) => {
@@ -38,8 +38,8 @@ const Page = create_ssr_component(($$result, $$props, $$bindings, slots) => {
     }
   })}
 
-<div class="${"category svelte-14x7gc8"}">${each(categories, (category) => {
-    return `<a class="${"category__link svelte-14x7gc8"}" href="${"/blog/category/" + escape(category, true)}">${escape(category)}</a>`;
+<div class="${"category svelte-1nf1547"}">${each(categories, (category) => {
+    return `<a class="${"category__link svelte-1nf1547"}" href="${"/blog/category/" + escape(category, true)}">${escape(category)}</a>`;
   })}
 </div>`;
 });

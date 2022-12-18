@@ -6,7 +6,7 @@
 	let iconColor = 'var(--neutral-100)';
 
 	function handleMouseOver(e) {
-		iconColor = 'var(--primary-500)';
+		iconColor = 'var(--primary-600)';
 	}
 </script>
 
@@ -54,7 +54,7 @@
 		/* Color */
 
 		background-repeat: repeat;
-		background-color: var(--primary-900);
+		background-color: transparent;
 	}
 
 	.footer__social {
@@ -112,7 +112,7 @@
 	}
 
 	.nav-list-item a:hover {
-		color: var(--primary-500);
+		color: var(--primary-600);
 	}
 
 	footer {

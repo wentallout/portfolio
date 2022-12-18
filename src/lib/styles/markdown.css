@@ -1,7 +1,7 @@
 .markdown {
 	word-wrap: break-word;
 	position: relative;
-	background-color: var(--bg);
+
 	padding: var(--space-s) var(--space-s);
 	border-radius: var(--border-radius);
 }
@@ -208,19 +208,18 @@
 	/* --- */
 
 	max-width: 500px;
-	background-color: var(--bg);
 	max-height: 500px;
-	overflow-y: auto;
+
 	font-weight: 400 !important;
-
 	font-size: var(--font-size-small) !important;
-
 	box-shadow: var(--box-shadow);
 	text-transform: capitalize;
 	border-radius: var(--border-radius-light);
-
 	margin-top: var(--space-l);
 	margin-bottom: var(--space-l);
+
+	background-color: var(--bg);
+	overflow-y: auto;
 }
 
 .toc::before {
@@ -354,8 +353,6 @@ table td {
 
 table td:first-child {
 	font-weight: 600;
-	font-size: var(--font);
-	background-color: var(--neutral-200);
 }
 
 .swiper .svelte-lightbox-thumbnail img {

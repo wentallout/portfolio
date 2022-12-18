@@ -21,6 +21,7 @@ const Page = create_ssr_component(($$result, $$props, $$bindings, slots) => {
     return `<a class="${"category__link svelte-1p65mj6"}" href="${"/blog/category/" + escape(category, true)}">${escape(category)}
 				</a>`;
   })}</div>` : ``}
+
 	${validate_component(data.content || missing_component, "svelte:component").$$render($$result, {}, {}, {})}
 
 	${validate_component(End, "End").$$render($$result, {}, {}, {})}

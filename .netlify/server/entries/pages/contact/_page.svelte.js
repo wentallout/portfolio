@@ -61,8 +61,8 @@ const Instagram_logo = create_ssr_component(($$result, $$props, $$bindings, slot
   )}><!-- HTML_TAG_START -->${`<path fill="currentColor" d="M128 80a48 48 0 1 0 48 48a48 48 0 0 0-48-48Zm0 80a32 32 0 1 1 32-32a32.1 32.1 0 0 1-32 32Zm44-132H84a56 56 0 0 0-56 56v88a56 56 0 0 0 56 56h88a56 56 0 0 0 56-56V84a56 56 0 0 0-56-56Zm40 144a40 40 0 0 1-40 40H84a40 40 0 0 1-40-40V84a40 40 0 0 1 40-40h88a40 40 0 0 1 40 40Zm-20-96a12 12 0 1 1-12-12a12 12 0 0 1 12 12Z"/>`}<!-- HTML_TAG_END --></svg>`;
 });
 const SocialLinks_svelte_svelte_type_style_lang = "";
-const css$1 = {
-  code: ".social.svelte-uu72xn.svelte-uu72xn{background-color:var(--bg);border-bottom:0;border-radius:var(--border-radius);box-shadow:var(--box-shadow);display:flex;flex-direction:row;margin-bottom:var(--space-m);overflow:visible}.social.svelte-uu72xn.svelte-uu72xn,.social__list.svelte-uu72xn.svelte-uu72xn{width:100%}.social__address.svelte-uu72xn.svelte-uu72xn{align-items:center;border-radius:var(--border-radius);display:flex;flex-direction:row;flex-wrap:wrap;font-weight:500;padding:var(--space-s) var(--space-m);transition:.3s;width:100%}.social__address.svelte-uu72xn.svelte-uu72xn:hover{background-color:var(--neutral-900);color:var(--primary-500)}.social__address.svelte-uu72xn p.svelte-uu72xn{margin-left:var(--space-s)}@media(min-width:768px){.social.svelte-uu72xn.svelte-uu72xn{flex-direction:row}}",
+const css$2 = {
+  code: ".social.svelte-11nd2ln.svelte-11nd2ln{background-color:var(--bg);border-bottom:0;border-radius:var(--border-radius-light);box-shadow:var(--box-shadow);display:flex;flex-direction:row;margin-bottom:var(--space-m);overflow:visible;overflow:hidden}.social.svelte-11nd2ln.svelte-11nd2ln,.social__list.svelte-11nd2ln.svelte-11nd2ln{width:100%}.social__address.svelte-11nd2ln.svelte-11nd2ln{align-items:center;display:flex;flex-direction:row;flex-wrap:wrap;font-weight:500;padding:var(--space-s) var(--space-m);transition:.3s;width:100%}.social__address.svelte-11nd2ln.svelte-11nd2ln:hover{background-color:var(--neutral-900);color:var(--primary-600)}.social__address.svelte-11nd2ln p.svelte-11nd2ln{margin-left:var(--space-s)}@media(min-width:768px){.social.svelte-11nd2ln.svelte-11nd2ln{flex-direction:row}}",
   map: null
 };
 const SocialLinks = create_ssr_component(($$result, $$props, $$bindings, slots) => {
@@ -71,24 +71,24 @@ const SocialLinks = create_ssr_component(($$result, $$props, $$bindings, slots) 
     width: "32",
     height: "32"
   };
-  $$result.css.add(css$1);
+  $$result.css.add(css$2);
   return `<section>${validate_component(SectionTitle, "SectionTitle").$$render($$result, { sectionTitle: "Social" }, {}, {
     default: ({ sectionIcon }) => {
       return `${validate_component(Handshake, "Handshake").$$render($$result, Object.assign(sectionIcon), {}, {})}`;
     }
   })}
 
-	<div class="${"social small-text svelte-uu72xn"}"><address class="${"social__list svelte-uu72xn"}">${validate_component(ExLink, "ExLink").$$render($$result, { href: "tel:+84929066331" }, {}, {
+	<div class="${"social small-text svelte-11nd2ln"}"><address class="${"social__list svelte-11nd2ln"}">${validate_component(ExLink, "ExLink").$$render($$result, { href: "tel:+84929066331" }, {}, {
     default: () => {
-      return `<div class="${"social__address svelte-uu72xn"}">${validate_component(Phone, "Phone").$$render($$result, Object.assign(icon), {}, {})}
-					<p class="${"svelte-uu72xn"}">+84 929 066 331</p></div>`;
+      return `<div class="${"social__address svelte-11nd2ln"}">${validate_component(Phone, "Phone").$$render($$result, Object.assign(icon), {}, {})}
+					<p class="${"svelte-11nd2ln"}">+84 929 066 331</p></div>`;
     }
   })}
 
 			${validate_component(ExLink, "ExLink").$$render($$result, { href: "mailto:wentallout@gmail.com" }, {}, {
     default: () => {
-      return `<div class="${"social__address svelte-uu72xn"}">${validate_component(Envelope, "Envelope").$$render($$result, Object.assign(icon), {}, {})}
-					<p class="${"svelte-uu72xn"}">Email</p></div>`;
+      return `<div class="${"social__address svelte-11nd2ln"}">${validate_component(Envelope, "Envelope").$$render($$result, Object.assign(icon), {}, {})}
+					<p class="${"svelte-11nd2ln"}">Email</p></div>`;
     }
   })}
 
@@ -100,8 +100,8 @@ const SocialLinks = create_ssr_component(($$result, $$props, $$bindings, slots) 
     {},
     {
       default: () => {
-        return `<div class="${"social__address svelte-uu72xn"}">${validate_component(Linkedin_logo, "LinkedinLogo").$$render($$result, Object.assign(icon), {}, {})}
-					<p class="${"svelte-uu72xn"}">LinkedIn</p></div>`;
+        return `<div class="${"social__address svelte-11nd2ln"}">${validate_component(Linkedin_logo, "LinkedinLogo").$$render($$result, Object.assign(icon), {}, {})}
+					<p class="${"svelte-11nd2ln"}">LinkedIn</p></div>`;
       }
     }
   )}
@@ -114,8 +114,8 @@ const SocialLinks = create_ssr_component(($$result, $$props, $$bindings, slots) 
     {},
     {
       default: () => {
-        return `<div class="${"social__address svelte-uu72xn"}">${validate_component(Instagram_logo, "InstagramLogo").$$render($$result, Object.assign(icon), {}, {})}
-					<p class="${"svelte-uu72xn"}">Instagram</p></div>`;
+        return `<div class="${"social__address svelte-11nd2ln"}">${validate_component(Instagram_logo, "InstagramLogo").$$render($$result, Object.assign(icon), {}, {})}
+					<p class="${"svelte-11nd2ln"}">Instagram</p></div>`;
       }
     }
   )}
@@ -128,16 +128,16 @@ const SocialLinks = create_ssr_component(($$result, $$props, $$bindings, slots) 
     {},
     {
       default: () => {
-        return `<div class="${"social__address svelte-uu72xn"}">${validate_component(Figma_logo, "FigmaLogo").$$render($$result, Object.assign(icon), {}, {})}
-					<p class="${"svelte-uu72xn"}">Figma</p></div>`;
+        return `<div class="${"social__address svelte-11nd2ln"}">${validate_component(Figma_logo, "FigmaLogo").$$render($$result, Object.assign(icon), {}, {})}
+					<p class="${"svelte-11nd2ln"}">Figma</p></div>`;
       }
     }
   )}
 
 			${validate_component(ExLink, "ExLink").$$render($$result, { href: "https://github.com/wentallout" }, {}, {
     default: () => {
-      return `<div class="${"social__address svelte-uu72xn"}">${validate_component(Github_logo, "GitHubLogo").$$render($$result, Object.assign(icon), {}, {})}
-					<p class="${"svelte-uu72xn"}">GitHub</p></div>`;
+      return `<div class="${"social__address svelte-11nd2ln"}">${validate_component(Github_logo, "GitHubLogo").$$render($$result, Object.assign(icon), {}, {})}
+					<p class="${"svelte-11nd2ln"}">GitHub</p></div>`;
     }
   })}
 
@@ -149,8 +149,8 @@ const SocialLinks = create_ssr_component(($$result, $$props, $$bindings, slots) 
     {},
     {
       default: () => {
-        return `<div class="${"social__address svelte-uu72xn"}">${validate_component(Reddit_logo, "RedditLogo").$$render($$result, Object.assign(icon), {}, {})}
-					<p class="${"svelte-uu72xn"}">Reddit</p></div>`;
+        return `<div class="${"social__address svelte-11nd2ln"}">${validate_component(Reddit_logo, "RedditLogo").$$render($$result, Object.assign(icon), {}, {})}
+					<p class="${"svelte-11nd2ln"}">Reddit</p></div>`;
       }
     }
   )}</address></div>
@@ -179,34 +179,34 @@ const Paper_plane_right = create_ssr_component(($$result, $$props, $$bindings, s
   )}><!-- HTML_TAG_START -->${`<path fill="currentColor" d="M223.4 114L54.5 19.4a16.1 16.1 0 0 0-22.9 19.4L63.5 128l-31.9 89.2a16.1 16.1 0 0 0 15.1 21.4a16.5 16.5 0 0 0 7.8-2L223.4 142a16.1 16.1 0 0 0 0-28ZM46.7 222.6L77.6 136H136a8 8 0 0 0 0-16H77.6L46.7 33.4L215.6 128Z"/>`}<!-- HTML_TAG_END --></svg>`;
 });
 const ContactForm_svelte_svelte_type_style_lang = "";
-const css = {
-  code: ".form-container.svelte-1xvdwcm{background-color:var(--bg);border-radius:var(--border-radius);box-shadow:var(--box-shadow);display:flex;justify-content:left;margin-bottom:var(--space-m);overflow:hidden;width:100%}.contact.svelte-1xvdwcm{display:flex;flex-direction:column;max-width:80rem;padding:var(--space-m);width:100%}.label.svelte-1xvdwcm{font-weight:500}.contact__btn.svelte-1xvdwcm{display:flex;flex-direction:row;gap:var(--space-xs)}",
+const css$1 = {
+  code: ".form-container.svelte-1vkpnlj{border-radius:var(--border-radius-light);display:flex;justify-content:left;margin-bottom:var(--space-m);width:100%}.contact.svelte-1vkpnlj{display:flex;flex-direction:column;max-width:80rem;width:100%}.label.svelte-1vkpnlj{font-weight:500}.contact__btn.svelte-1vkpnlj{display:flex;flex-direction:row;gap:var(--space-xs)}",
   map: null
 };
 const ContactForm = create_ssr_component(($$result, $$props, $$bindings, slots) => {
-  $$result.css.add(css);
+  $$result.css.add(css$1);
   return `<section>${validate_component(SectionTitle, "SectionTitle").$$render($$result, { sectionTitle: "Email" }, {}, {
     default: ({ sectionIcon }) => {
       return `${validate_component(Envelope_simple, "EnvelopeSimple").$$render($$result, Object.assign(sectionIcon), {}, {})}`;
     }
   })}
 
-	<div class="${"form-container svelte-1xvdwcm"}"><form class="${"contact svelte-1xvdwcm"}" name="${"contact"}" method="${"post"}" netlify-honeypot="${"bot-field"}" data-netlify="${"true"}"><input type="${"hidden"}" name="${"form-name"}" value="${"contact"}">
+	<div class="${"form-container svelte-1vkpnlj"}"><form class="${"contact svelte-1vkpnlj"}" name="${"contact"}" method="${"post"}" netlify-honeypot="${"bot-field"}" data-netlify="${"true"}"><input type="${"hidden"}" name="${"form-name"}" value="${"contact"}">
 
-			<label for="${"name"}" class="${"label small-text svelte-1xvdwcm"}">Name</label>
+			<label for="${"name"}" class="${"label small-text svelte-1vkpnlj"}">Name</label>
 			<input class="${"small-text"}" type="${"text"}" name="${"name"}" id="${"name"}" required>
 
-			<label for="${"email"}" class="${"label small-text svelte-1xvdwcm"}">Email</label>
+			<label for="${"email"}" class="${"label small-text svelte-1vkpnlj"}">Email</label>
 			<input placeholder="${"username@email.com"}" class="${"small-text"}" type="${"email"}" name="${"email"}" id="${"email"}" required>
 
-			<label for="${"message"}" class="${"label small-text svelte-1xvdwcm"}">Message</label>
+			<label for="${"message"}" class="${"label small-text svelte-1vkpnlj"}">Message</label>
 			<textarea class="${"small-text"}" required name="${"message"}" id="${"message"}" placeholder="${""}"></textarea>
 
-			<div class="${"contact__btn svelte-1xvdwcm"}">${validate_component(Button, "Button").$$render(
+			<div class="${"contact__btn svelte-1vkpnlj"}">${validate_component(Button, "Button").$$render(
     $$result,
     {
       label: "Send",
-      backgroundColor: "var(--primary-500)"
+      backgroundColor: "var(--primary-600)"
     },
     {},
     {
@@ -230,6 +230,11 @@ const ContactForm = create_ssr_component(($$result, $$props, $$bindings, slots) 
   )}</div></form></div>
 </section>`;
 });
+const _page_svelte_svelte_type_style_lang = "";
+const css = {
+  code: ".hidden.svelte-1n8hycv{display:none}",
+  map: null
+};
 const Page = create_ssr_component(($$result, $$props, $$bindings, slots) => {
   const breadcrumbs = [{ name: "Home", slug: "" }, { name: "Contact", slug: "contact" }];
   const seoProps = {
@@ -240,6 +245,7 @@ const Page = create_ssr_component(($$result, $$props, $$bindings, slots) => {
     datePublished: "2077-07-07T14:19:33.000+0100",
     lastUpdated: "2077-07-07T14:19:33.000+0100"
   };
+  $$result.css.add(css);
   return `${$$result.head += `<!-- HEAD_svelte-rg684o_START -->${$$result.title = `<title>Contact</title>`, ""}<!-- HEAD_svelte-rg684o_END -->`, ""}
 
 ${validate_component(SEO, "SEO").$$render($$result, Object.assign(seoProps), {}, {})}
@@ -248,7 +254,16 @@ ${validate_component(PageTitle, "PageTitle").$$render($$result, { pageTitle: "Co
 
 ${validate_component(ContactForm, "ContactForm").$$render($$result, {}, {}, {})}
 
-${validate_component(SocialLinks, "SocialLinks").$$render($$result, {}, {}, {})}`;
+${validate_component(SocialLinks, "SocialLinks").$$render($$result, {}, {}, {})}
+
+<div class="${"hidden svelte-1n8hycv"}"><div>tell me what you think about my nickname &quot;wentallout&quot;?</div>
+
+	<div>As a language model, I do not have personal opinions or feelings. I can only provide information
+		and assistance based on the knowledge and data I have been trained on. However, &quot;wentallout&quot;
+		could potentially be interpreted as a nickname that suggests a person is willing to give their
+		maximum effort or commitment to something, which could be seen as a positive attribute.
+	</div>
+</div>`;
 });
 export {
   Page as default

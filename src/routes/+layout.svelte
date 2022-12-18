@@ -59,11 +59,10 @@
 		async></script> -->
 </svelte:head>
 
-<CursorTrail />
 <SkipLink />
 <PWA />
-
-<div class="page-container" data-sveltekit-prefetch>
+<CursorTrail />
+<div class="page-container" data-sveltekit-preload-data>
 	<BackToTop />
 
 	<Header />

@@ -18,16 +18,16 @@ const SectionDesc = create_ssr_component(($$result, $$props, $$bindings, slots) 
 });
 const OtherCardList_svelte_svelte_type_style_lang = "";
 const css$3 = {
-  code: ".other-container.svelte-151bpmd.svelte-151bpmd{display:flex;flex-direction:row;flex-wrap:wrap;gap:var(--space-m);overflow:hidden}.other-container.svelte-151bpmd>.svelte-151bpmd{flex:1 1 10ch}.other__image.svelte-151bpmd.svelte-151bpmd{filter:brightness(40%);height:100%;position:absolute;transition:.3s;width:100%;z-index:0}.other.svelte-151bpmd.svelte-151bpmd{align-items:center;border-radius:var(--border-radius);display:flex;height:300px;justify-content:center;overflow:hidden;padding:var(--space-m);position:relative}.other.svelte-151bpmd:hover .other__image.svelte-151bpmd{scale:1.15}.other.svelte-151bpmd:hover .other__title.svelte-151bpmd{color:var(--primary-500)}.other__title.svelte-151bpmd.svelte-151bpmd{color:var(--neutral-100);font-weight:600;z-index:1}",
+  code: ".other-container.svelte-1hoiuvd.svelte-1hoiuvd{display:flex;flex-direction:row;flex-wrap:wrap;gap:var(--space-m);overflow:hidden}.other-container.svelte-1hoiuvd>.svelte-1hoiuvd{flex:1 1 10ch}.other__image.svelte-1hoiuvd.svelte-1hoiuvd{filter:brightness(40%);height:100%;position:absolute;transition:.3s;width:100%;z-index:0}.other.svelte-1hoiuvd.svelte-1hoiuvd{align-items:center;border-radius:var(--border-radius-light);display:flex;height:300px;justify-content:center;overflow:hidden;padding:var(--space-m);position:relative}.other.svelte-1hoiuvd:hover .other__image.svelte-1hoiuvd{scale:1.15}.other.svelte-1hoiuvd:hover .other__title.svelte-1hoiuvd{color:var(--primary-600)}.other__title.svelte-1hoiuvd.svelte-1hoiuvd{color:var(--neutral-100);font-weight:600;z-index:1}",
   map: null
 };
 const OtherCardList = create_ssr_component(($$result, $$props, $$bindings, slots) => {
   $$result.css.add(css$3);
-  return `<div class="${"other-container svelte-151bpmd"}"><a class="${"other svelte-151bpmd"}" href="${"/resource/music"}"><img class="${"other__image svelte-151bpmd"}" src="${"images/music.webp"}" alt="${"music"}">
-		<div class="${"other__title large-text svelte-151bpmd"}">Music</div></a>
+  return `<div class="${"other-container svelte-1hoiuvd"}"><a class="${"other svelte-1hoiuvd"}" href="${"/resource/music"}"><img class="${"other__image svelte-1hoiuvd"}" src="${"images/music.webp"}" alt="${"music"}">
+		<div class="${"other__title large-text svelte-1hoiuvd"}">Music</div></a>
 
-	<a class="${"other svelte-151bpmd"}" href="${"/resource/exp"}"><img class="${"other__image svelte-151bpmd"}" src="${"images/exp.webp"}" alt="${"experiment"}">
-		<div class="${"other__title large-text svelte-151bpmd"}">Experiment</div></a>
+	<a class="${"other svelte-1hoiuvd"}" href="${"/resource/exp"}"><img class="${"other__image svelte-1hoiuvd"}" src="${"images/exp.webp"}" alt="${"experiment"}">
+		<div class="${"other__title large-text svelte-1hoiuvd"}">Experiment</div></a>
 </div>`;
 });
 const UIDesignPrinciples = "/_app/immutable/assets/UIDesignPrinciples-b17b7134.webp";
@@ -37,7 +37,7 @@ const Sprint = "/_app/immutable/assets/Sprint-e9dea67f.webp";
 const JustEnoughResearch = "/_app/immutable/assets/JustEnoughResearch-58b6c01f.webp";
 const CoolBook_svelte_svelte_type_style_lang = "";
 const css$2 = {
-  code: '.book-container.svelte-gy14s7.svelte-gy14s7{align-items:center;display:flex;height:auto;justify-content:center;perspective:600px;width:100%}@keyframes svelte-gy14s7-initAnimation{0%{transform:rotateY(0deg)}to{transform:rotateY(-30deg)}}.book.svelte-gy14s7.svelte-gy14s7{animation:svelte-gy14s7-initAnimation 1s ease 0s 1;height:300px;position:relative;transform:rotateY(-30deg);transform-style:preserve-3d;transition:1s ease;width:200px}.book.svelte-gy14s7.svelte-gy14s7:hover{transform:rotateY(0deg)}.book.svelte-gy14s7>.svelte-gy14s7:first-child{background-color:#01060f;border-radius:0 2px 2px 0;box-shadow:5px 5px 20px #666;height:300px;left:0;position:absolute;top:0;transform:translateZ(25px);width:200px}.book.svelte-gy14s7.svelte-gy14s7:before{background:linear-gradient(90deg,#fff,#f9f9f9 5%,#fff 10%,#f9f9f9 15%,#fff 20%,#f9f9f9 25%,#fff 30%,#f9f9f9 35%,#fff 40%,#f9f9f9 45%,#fff 50%,#f9f9f9 55%,#fff 60%,#f9f9f9 65%,#fff 70%,#f9f9f9 75%,#fff 80%,#f9f9f9 85%,#fff 90%,#f9f9f9 95%,#fff);height:294px;top:3px;transform:translateX(172px) rotateY(90deg);width:48px}.book.svelte-gy14s7.svelte-gy14s7:after,.book.svelte-gy14s7.svelte-gy14s7:before{content:" ";left:0;position:absolute}.book.svelte-gy14s7.svelte-gy14s7:after{background-color:var(--neutral-900);border-radius:0 2px 2px 0;box-shadow:-10px 0 50px 10px #666;height:300px;top:0;transform:translateZ(-25px);width:200px}.book.svelte-gy14s7.svelte-gy14s7{scale:.7}',
+  code: '.book-container.svelte-5le5br.svelte-5le5br{align-items:center;display:flex;height:auto;justify-content:center;perspective:600px;width:100%}@keyframes svelte-5le5br-initAnimation{0%{transform:rotateY(0deg)}to{transform:rotateY(-30deg)}}.book.svelte-5le5br.svelte-5le5br{animation:svelte-5le5br-initAnimation 1s ease 0s 1;height:300px;position:relative;transform:rotateY(-30deg);transform-style:preserve-3d;transition:1s ease;width:200px}.book.svelte-5le5br.svelte-5le5br:hover{transform:rotateY(0deg)}.book.svelte-5le5br>.svelte-5le5br:first-child{background-color:#01060f;border-radius:0 2px 2px 0;height:300px;left:0;position:absolute;top:0;transform:translateZ(25px);width:200px}.book.svelte-5le5br.svelte-5le5br:before{background:linear-gradient(90deg,#fff,#f9f9f9 5%,#fff 10%,#f9f9f9 15%,#fff 20%,#f9f9f9 25%,#fff 30%,#f9f9f9 35%,#fff 40%,#f9f9f9 45%,#fff 50%,#f9f9f9 55%,#fff 60%,#f9f9f9 65%,#fff 70%,#f9f9f9 75%,#fff 80%,#f9f9f9 85%,#fff 90%,#f9f9f9 95%,#fff);height:294px;top:3px;transform:translateX(172px) rotateY(90deg);width:48px}.book.svelte-5le5br.svelte-5le5br:after,.book.svelte-5le5br.svelte-5le5br:before{content:" ";left:0;position:absolute}.book.svelte-5le5br.svelte-5le5br:after{background-color:var(--neutral-900);border-radius:0 2px 2px 0;height:300px;top:0;transform:translateZ(-25px);width:200px}.book.svelte-5le5br.svelte-5le5br{scale:.7}',
   map: null
 };
 const CoolBook = create_ssr_component(($$result, $$props, $$bindings, slots) => {
@@ -51,7 +51,7 @@ const CoolBook = create_ssr_component(($$result, $$props, $$bindings, slots) => 
   if ($$props.imgUrl === void 0 && $$bindings.imgUrl && imgUrl !== void 0)
     $$bindings.imgUrl(imgUrl);
   $$result.css.add(css$2);
-  return `<a class="${"book-container svelte-gy14s7"}"${add_attribute("href", bookUrl, 0)} target="${"_blank"}" rel="${"noreferrer noopener"}"><div class="${"book svelte-gy14s7"}"><img loading="${"lazy"}" decoding="${"async"}"${add_attribute("alt", alt, 0)}${add_attribute("src", imgUrl, 0)} class="${"svelte-gy14s7"}"></div>
+  return `<a class="${"book-container svelte-5le5br"}"${add_attribute("href", bookUrl, 0)} target="${"_blank"}" rel="${"noreferrer noopener"}"><div class="${"book svelte-5le5br"}"><img loading="${"lazy"}" decoding="${"async"}"${add_attribute("alt", alt, 0)}${add_attribute("src", imgUrl, 0)} class="${"svelte-5le5br"}"></div>
 </a>`;
 });
 const BookGallery_svelte_svelte_type_style_lang = "";
@@ -113,40 +113,40 @@ const BookGallery = create_ssr_component(($$result, $$props, $$bindings, slots) 
 });
 const ToolCardList_svelte_svelte_type_style_lang = "";
 const css = {
-  code: ".tools.svelte-jivehh.svelte-jivehh{display:flex;flex-direction:row;flex-wrap:wrap;gap:var(--space-m);max-width:100%}.tool__name.svelte-jivehh.svelte-jivehh{font-weight:500}.tool.svelte-jivehh.svelte-jivehh{background-color:var(--bg);border-radius:var(--border-radius);box-shadow:var(--box-shadow);display:flex;flex-direction:column;padding:var(--space-m);transition:.3s;width:100%}.tool.svelte-jivehh.svelte-jivehh:hover{box-shadow:var(--box-shadow-hover)}.tool.svelte-jivehh:hover .tool__name.svelte-jivehh{color:var(--primary-500)}.tool__description.svelte-jivehh.svelte-jivehh{-webkit-line-clamp:3;-webkit-box-orient:vertical;color:var(--neutral-800);display:-webkit-box;font-weight:400;overflow:hidden}@media(min-width:768px){.tool.svelte-jivehh.svelte-jivehh{width:55ch}}",
+  code: ".tools.svelte-2o0w86.svelte-2o0w86{display:flex;flex-direction:row;flex-wrap:wrap;gap:var(--space-m);max-width:100%}.tool__name.svelte-2o0w86.svelte-2o0w86{color:var(--text);font-weight:500}.tool.svelte-2o0w86.svelte-2o0w86{background-color:var(--bg);border-radius:var(--border-radius-light);box-shadow:var(--box-shadow);display:flex;flex-direction:column;padding:var(--space-m);transition:.3s;width:100%}.tool.svelte-2o0w86.svelte-2o0w86:hover{box-shadow:var(--box-shadow-hover)}.tool.svelte-2o0w86:hover .tool__name.svelte-2o0w86{color:var(--primary-600)}.tool__description.svelte-2o0w86.svelte-2o0w86{-webkit-line-clamp:3;-webkit-box-orient:vertical;color:var(--text-low);display:-webkit-box;font-weight:400;overflow:hidden}@media(min-width:768px){.tool.svelte-2o0w86.svelte-2o0w86{width:55ch}}",
   map: null
 };
 const ToolCardList = create_ssr_component(($$result, $$props, $$bindings, slots) => {
   $$result.css.add(css);
-  return `<div class="${"tools svelte-jivehh"}"><a class="${"tool svelte-jivehh"}" target="${"_blank"}" rel="${"noreferrer noopener"}" href="${"https://www.userinterviews.com/"}"><h2 class="${"tool__name base-text svelte-jivehh"}">User Interviews</h2>
-		<p class="${"tool__description small-text svelte-jivehh"}">Recruit participants from a community of 125,000 members based on profession, demographics,
+  return `<div class="${"tools svelte-2o0w86"}"><a class="${"tool svelte-2o0w86"}" target="${"_blank"}" rel="${"noreferrer noopener"}" href="${"https://www.userinterviews.com/"}"><h2 class="${"tool__name base-text svelte-2o0w86"}">User Interviews</h2>
+		<p class="${"tool__description small-text svelte-2o0w86"}">Recruit participants from a community of 125,000 members based on profession, demographics,
 			geography and more, for any kind of research.
 		</p></a>
 
-	<a class="${"tool svelte-jivehh"}" target="${"_blank"}" rel="${"noreferrer noopener"}" href="${"https://appoint.ly"}"><h2 class="${"tool__name base-text svelte-jivehh"}">Appoint.ly</h2>
-		<p class="${"tool__description small-text svelte-jivehh"}">A web-based scheduling tool that helps to schedule meetings quickly through the integration
+	<a class="${"tool svelte-2o0w86"}" target="${"_blank"}" rel="${"noreferrer noopener"}" href="${"https://appoint.ly"}"><h2 class="${"tool__name base-text svelte-2o0w86"}">Appoint.ly</h2>
+		<p class="${"tool__description small-text svelte-2o0w86"}">A web-based scheduling tool that helps to schedule meetings quickly through the integration
 			with calendars online.
 		</p></a>
 
-	<a class="${"tool svelte-jivehh"}" target="${"_blank"}" rel="${"noreferrer noopener"}" href="${"https://crowdsignal.com/"}"><h2 class="${"tool__name base-text svelte-jivehh"}">Crowd Signal</h2>
-		<p class="${"tool__description small-text svelte-jivehh"}">Collect, organize and analyze data from a variety of sources, including social media and
+	<a class="${"tool svelte-2o0w86"}" target="${"_blank"}" rel="${"noreferrer noopener"}" href="${"https://crowdsignal.com/"}"><h2 class="${"tool__name base-text svelte-2o0w86"}">Crowd Signal</h2>
+		<p class="${"tool__description small-text svelte-2o0w86"}">Collect, organize and analyze data from a variety of sources, including social media and
 			mobile.
 		</p></a>
 
-	<a class="${"tool svelte-jivehh"}" target="${"_blank"}" rel="${"noreferrer noopener"}" href="${"https://www.jotform.com"}"><h2 class="${"tool__name base-text svelte-jivehh"}">Jotform</h2>
-		<p class="${"tool__description small-text svelte-jivehh"}">Create online forms, get an email for each response, collect data.
+	<a class="${"tool svelte-2o0w86"}" target="${"_blank"}" rel="${"noreferrer noopener"}" href="${"https://www.jotform.com"}"><h2 class="${"tool__name base-text svelte-2o0w86"}">Jotform</h2>
+		<p class="${"tool__description small-text svelte-2o0w86"}">Create online forms, get an email for each response, collect data.
 		</p></a>
 
-	<a class="${"tool svelte-jivehh"}" target="${"_blank"}" rel="${"noreferrer noopener"}" href="${"https://minetime.ai/"}"><h2 class="${"tool__name base-text svelte-jivehh"}">MineTime</h2>
-		<p class="${"tool__description small-text svelte-jivehh"}">A free calendar app with smart scheduling and time analytics features.
+	<a class="${"tool svelte-2o0w86"}" target="${"_blank"}" rel="${"noreferrer noopener"}" href="${"https://minetime.ai/"}"><h2 class="${"tool__name base-text svelte-2o0w86"}">MineTime</h2>
+		<p class="${"tool__description small-text svelte-2o0w86"}">A free calendar app with smart scheduling and time analytics features.
 		</p></a>
 
-	<a class="${"tool svelte-jivehh"}" target="${"_blank"}" rel="${"noreferrer noopener"}" href="${"https://www.surveymonkey.com"}"><h2 class="${"tool__name base-text svelte-jivehh"}">Survey Monkey</h2>
-		<p class="${"tool__description small-text svelte-jivehh"}">Online survey tool to capture the voices and opinions of the people who matter most to you.
+	<a class="${"tool svelte-2o0w86"}" target="${"_blank"}" rel="${"noreferrer noopener"}" href="${"https://www.surveymonkey.com"}"><h2 class="${"tool__name base-text svelte-2o0w86"}">Survey Monkey</h2>
+		<p class="${"tool__description small-text svelte-2o0w86"}">Online survey tool to capture the voices and opinions of the people who matter most to you.
 		</p></a>
 
-	<a class="${"tool svelte-jivehh"}" target="${"_blank"}" rel="${"noreferrer noopener"}" href="${"https://www.yesinsights.com/"}"><h2 class="${"tool__name base-text svelte-jivehh"}">YesInsights</h2>
-		<p class="${"tool__description small-text svelte-jivehh"}">Simple one question and NPS surveys to improve your business.
+	<a class="${"tool svelte-2o0w86"}" target="${"_blank"}" rel="${"noreferrer noopener"}" href="${"https://www.yesinsights.com/"}"><h2 class="${"tool__name base-text svelte-2o0w86"}">YesInsights</h2>
+		<p class="${"tool__description small-text svelte-2o0w86"}">Simple one question and NPS surveys to improve your business.
 		</p></a>
 </div>`;
 });

@@ -2,7 +2,7 @@ import { c as create_ssr_component } from "./index.js";
 const metadata = {
   "title": "UI Kits",
   "date": "2022-11-09T00:00:00.000Z",
-  "categories": ["ui", "tool"]
+  "categories": ["ui", "freebies"]
 };
 const Ui_kit = create_ssr_component(($$result, $$props, $$bindings, slots) => {
   return `<nav class="${"toc"}"><ol class="${"toc-level toc-level-1"}"><li class="${"toc-item toc-item-h2"}"><a class="${"toc-link toc-link-h2"}" href="${"#ios"}">IOS</a></li><li class="${"toc-item toc-item-h2"}"><a class="${"toc-link toc-link-h2"}" href="${"#wireframe"}">wireframe</a></li></ol></nav>

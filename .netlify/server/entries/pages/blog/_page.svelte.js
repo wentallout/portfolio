@@ -1,8 +1,9 @@
-import { c as create_ssr_component, e as spread, f as escape_object, v as validate_component, g as each } from "../../../chunks/index.js";
+import { c as create_ssr_component, e as spread, f as escape_object, s as setContext, p as onDestroy, k as getContext, b as subscribe, v as validate_component, g as each } from "../../../chunks/index.js";
 import { B as BlogListContainer, a as BlogCard } from "../../../chunks/BlogCard.js";
 import { S as SectionTitle } from "../../../chunks/SectionTitle.js";
 import { B as Brain } from "../../../chunks/brain.js";
 import { P as PageTitle } from "../../../chunks/PageTitle.js";
+import { w as writable } from "../../../chunks/index3.js";
 const Text_aa = create_ssr_component(($$result, $$props, $$bindings, slots) => {
   return `<svg${spread(
     [
@@ -47,6 +48,83 @@ const Fast_forward = create_ssr_component(($$result, $$props, $$bindings, slots)
     {}
   )}><!-- HTML_TAG_START -->${`<path fill="currentColor" d="m245.9 114.5l-89.2-57.3A16 16 0 0 0 132 70.7v42.6L44.7 57.2A16 16 0 0 0 20 70.7v114.6a16.1 16.1 0 0 0 8.3 14.1a16.5 16.5 0 0 0 16.4-.6l87.3-56.1v42.6a16.1 16.1 0 0 0 8.3 14.1a16.5 16.5 0 0 0 16.4-.6l89.2-57.3a16.1 16.1 0 0 0 0-27ZM36 185.3V70.7l89.2 57.3Zm112 0V70.7l89.2 57.3Z"/>`}<!-- HTML_TAG_END --></svg>`;
 });
+const Tabs_svelte_svelte_type_style_lang = "";
+const css$2 = {
+  code: ".tabs.svelte-io3g42{min-height:100vh}",
+  map: null
+};
+const TABS = {};
+const Tabs = create_ssr_component(($$result, $$props, $$bindings, slots) => {
+  const tabs = [];
+  const panels = [];
+  const selectedTab = writable(null);
+  const selectedPanel = writable(null);
+  setContext(TABS, {
+    registerTab: (tab) => {
+      tabs.push(tab);
+      selectedTab.update((current) => current || tab);
+      onDestroy(() => {
+        const i = tabs.indexOf(tab);
+        tabs.splice(i, 1);
+        selectedTab.update((current) => current === tab ? tabs[i] || tabs[tabs.length - 1] : current);
+      });
+    },
+    registerPanel: (panel) => {
+      panels.push(panel);
+      selectedPanel.update((current) => current || panel);
+      onDestroy(() => {
+        const i = panels.indexOf(panel);
+        panels.splice(i, 1);
+        selectedPanel.update((current) => current === panel ? panels[i] || panels[panels.length - 1] : current);
+      });
+    },
+    selectTab: (tab) => {
+      const i = tabs.indexOf(tab);
+      selectedTab.set(tab);
+      selectedPanel.set(panels[i]);
+    },
+    selectedTab,
+    selectedPanel
+  });
+  $$result.css.add(css$2);
+  return `<div class="${"tabs svelte-io3g42"}">${slots.default ? slots.default({}) : ``}
+</div>`;
+});
+const TabList_svelte_svelte_type_style_lang = "";
+const css$1 = {
+  code: ".tab-list.svelte-1c9nzb1{align-items:center;display:flex;flex-wrap:wrap;justify-content:flex-start;margin-bottom:var(--space-xl);width:100%}",
+  map: null
+};
+const TabList = create_ssr_component(($$result, $$props, $$bindings, slots) => {
+  $$result.css.add(css$1);
+  return `<div class="${"tab-list svelte-1c9nzb1"}">${slots.default ? slots.default({}) : ``}
+</div>`;
+});
+const TabPanel = create_ssr_component(($$result, $$props, $$bindings, slots) => {
+  let $selectedPanel, $$unsubscribe_selectedPanel;
+  const panel = {};
+  const { registerPanel, selectedPanel } = getContext(TABS);
+  $$unsubscribe_selectedPanel = subscribe(selectedPanel, (value) => $selectedPanel = value);
+  registerPanel(panel);
+  $$unsubscribe_selectedPanel();
+  return `${$selectedPanel === panel ? `${slots.default ? slots.default({}) : ``}` : ``}`;
+});
+const Tab_svelte_svelte_type_style_lang = "";
+const css = {
+  code: "button.svelte-1yw30mo{background:none;border:none;border-bottom:2px solid transparent;border-radius:0;color:var(--neutral-600);font-size:var(--font-size-large);font-weight:500;margin:0;padding:var(--space-2xs) var(--space-s)}button.svelte-1yw30mo:hover{cursor:pointer}.selected.svelte-1yw30mo{border-bottom:2px solid var(--primary-600);color:var(--primary-600);font-weight:600}",
+  map: null
+};
+const Tab = create_ssr_component(($$result, $$props, $$bindings, slots) => {
+  let $selectedTab, $$unsubscribe_selectedTab;
+  const tab = {};
+  const { registerTab, selectTab, selectedTab } = getContext(TABS);
+  $$unsubscribe_selectedTab = subscribe(selectedTab, (value) => $selectedTab = value);
+  registerTab(tab);
+  $$result.css.add(css);
+  $$unsubscribe_selectedTab();
+  return `<button class="${["svelte-1yw30mo", $selectedTab === tab ? "selected" : ""].join(" ").trim()}">${slots.default ? slots.default({}) : ``}
+</button>`;
+});
 const Page = create_ssr_component(($$result, $$props, $$bindings, slots) => {
   let { data } = $$props;
   if ($$props.data === void 0 && $$bindings.data && data !== void 0)
@@ -54,121 +132,207 @@ const Page = create_ssr_component(($$result, $$props, $$bindings, slots) => {
   return `${$$result.head += `<!-- HEAD_svelte-hfp9t8_START -->${$$result.title = `<title>Blog</title>`, ""}<!-- HEAD_svelte-hfp9t8_END -->`, ""}
 
 ${validate_component(PageTitle, "PageTitle").$$render($$result, { pageTitle: "Blog" }, {}, {})}
-<section>${validate_component(SectionTitle, "SectionTitle").$$render($$result, { sectionTitle: "Fundamental" }, {}, {
-    default: ({ sectionIcon }) => {
-      return `${validate_component(Graduation_cap, "GraduationCap").$$render($$result, Object.assign(sectionIcon), {}, {})}`;
-    }
-  })}
 
-	${validate_component(BlogListContainer, "BlogListContainer").$$render($$result, {}, {}, {
+${validate_component(Tabs, "Tabs").$$render($$result, {}, {}, {
     default: () => {
-      return `${each(data.blogs, (blog) => {
-        return `${blog.meta.categories.length ? `${blog.meta.categories.includes("fundamental") ? `${validate_component(BlogCard, "BlogCard").$$render(
-          $$result,
-          {
-            blogTitle: blog.meta.title,
-            blogLink: blog.path,
-            blogDate: blog.meta.date
-          },
-          {},
-          {}
-        )}` : ``}` : ``}`;
+      return `${validate_component(TabList, "TabList").$$render($$result, {}, {}, {
+        default: () => {
+          return `${validate_component(Tab, "Tab").$$render($$result, {}, {}, {
+            default: () => {
+              return `Fundamental`;
+            }
+          })}
+		${validate_component(Tab, "Tab").$$render($$result, {}, {}, {
+            default: () => {
+              return `Tips`;
+            }
+          })}
+		${validate_component(Tab, "Tab").$$render($$result, {}, {}, {
+            default: () => {
+              return `UX`;
+            }
+          })}
+		${validate_component(Tab, "Tab").$$render($$result, {}, {}, {
+            default: () => {
+              return `Color`;
+            }
+          })}
+		${validate_component(Tab, "Tab").$$render($$result, {}, {}, {
+            default: () => {
+              return `Typography`;
+            }
+          })}
+		${validate_component(Tab, "Tab").$$render($$result, {}, {}, {
+            default: () => {
+              return `Freebies`;
+            }
+          })}`;
+        }
+      })}
+
+	${validate_component(TabPanel, "TabPanel").$$render($$result, {}, {}, {
+        default: () => {
+          return `<section>${validate_component(SectionTitle, "SectionTitle").$$render($$result, { sectionTitle: "Fundamental" }, {}, {
+            default: ({ sectionIcon }) => {
+              return `${validate_component(Graduation_cap, "GraduationCap").$$render($$result, Object.assign(sectionIcon), {}, {})}`;
+            }
+          })}
+
+			${validate_component(BlogListContainer, "BlogListContainer").$$render($$result, {}, {}, {
+            default: () => {
+              return `${each(data.blogs, (blog) => {
+                return `${blog.meta.categories.length ? `${blog.meta.categories.includes("fundamental") ? `${validate_component(BlogCard, "BlogCard").$$render(
+                  $$result,
+                  {
+                    blogTitle: blog.meta.title,
+                    blogLink: blog.path,
+                    blogDate: blog.meta.date
+                  },
+                  {},
+                  {}
+                )}` : ``}` : ``}`;
+              })}`;
+            }
+          })}</section>`;
+        }
+      })}
+
+	${validate_component(TabPanel, "TabPanel").$$render($$result, {}, {}, {
+        default: () => {
+          return `<section>${validate_component(SectionTitle, "SectionTitle").$$render($$result, { sectionTitle: "Tips" }, {}, {
+            default: ({ sectionIcon }) => {
+              return `${validate_component(Lightbulb, "Lightbulb").$$render($$result, Object.assign(sectionIcon), {}, {})}`;
+            }
+          })}
+
+			${validate_component(BlogListContainer, "BlogListContainer").$$render($$result, {}, {}, {
+            default: () => {
+              return `${each(data.blogs, (blog) => {
+                return `${blog.meta.categories.length ? `${blog.meta.categories.includes("tips") ? `${validate_component(BlogCard, "BlogCard").$$render(
+                  $$result,
+                  {
+                    blogTitle: blog.meta.title,
+                    blogLink: blog.path,
+                    blogDate: blog.meta.date
+                  },
+                  {},
+                  {}
+                )}` : ``}` : ``}`;
+              })}`;
+            }
+          })}</section>`;
+        }
+      })}
+
+	${validate_component(TabPanel, "TabPanel").$$render($$result, {}, {}, {
+        default: () => {
+          return `<section>${validate_component(SectionTitle, "SectionTitle").$$render($$result, { sectionTitle: "UX" }, {}, {
+            default: ({ sectionIcon }) => {
+              return `${validate_component(Brain, "Brain").$$render($$result, Object.assign(sectionIcon), {}, {})}`;
+            }
+          })}
+
+			${validate_component(BlogListContainer, "BlogListContainer").$$render($$result, {}, {}, {
+            default: () => {
+              return `${each(data.blogs, (blog) => {
+                return `${blog.meta.categories.length ? `${blog.meta.categories.includes("ux") ? `${validate_component(BlogCard, "BlogCard").$$render(
+                  $$result,
+                  {
+                    blogTitle: blog.meta.title,
+                    blogLink: blog.path,
+                    blogDate: blog.meta.date
+                  },
+                  {},
+                  {}
+                )}` : ``}` : ``}`;
+              })}`;
+            }
+          })}</section>`;
+        }
+      })}
+
+	${validate_component(TabPanel, "TabPanel").$$render($$result, {}, {}, {
+        default: () => {
+          return `<section>${validate_component(SectionTitle, "SectionTitle").$$render($$result, { sectionTitle: "Color" }, {}, {
+            default: ({ sectionIcon }) => {
+              return `${validate_component(Brain, "Brain").$$render($$result, Object.assign(sectionIcon), {}, {})}`;
+            }
+          })}
+
+			${validate_component(BlogListContainer, "BlogListContainer").$$render($$result, {}, {}, {
+            default: () => {
+              return `${each(data.blogs, (blog) => {
+                return `${blog.meta.categories.length ? `${blog.meta.categories.includes("color") ? `${validate_component(BlogCard, "BlogCard").$$render(
+                  $$result,
+                  {
+                    blogTitle: blog.meta.title,
+                    blogLink: blog.path,
+                    blogDate: blog.meta.date
+                  },
+                  {},
+                  {}
+                )}` : ``}` : ``}`;
+              })}`;
+            }
+          })}</section>`;
+        }
+      })}
+
+	${validate_component(TabPanel, "TabPanel").$$render($$result, {}, {}, {
+        default: () => {
+          return `<section>${validate_component(SectionTitle, "SectionTitle").$$render($$result, { sectionTitle: "Typography" }, {}, {
+            default: ({ sectionIcon }) => {
+              return `${validate_component(Text_aa, "TextAa").$$render($$result, Object.assign(sectionIcon), {}, {})}`;
+            }
+          })}
+
+			${validate_component(BlogListContainer, "BlogListContainer").$$render($$result, {}, {}, {
+            default: () => {
+              return `${each(data.blogs, (blog) => {
+                return `${blog.meta.categories.length ? `${blog.meta.categories.includes("typography") ? `${validate_component(BlogCard, "BlogCard").$$render(
+                  $$result,
+                  {
+                    blogTitle: blog.meta.title,
+                    blogLink: blog.path,
+                    blogDate: blog.meta.date
+                  },
+                  {},
+                  {}
+                )}` : ``}` : ``}`;
+              })}`;
+            }
+          })}</section>`;
+        }
+      })}
+
+	${validate_component(TabPanel, "TabPanel").$$render($$result, {}, {}, {
+        default: () => {
+          return `<section>${validate_component(SectionTitle, "SectionTitle").$$render($$result, { sectionTitle: "Freebies" }, {}, {
+            default: ({ sectionIcon }) => {
+              return `${validate_component(Fast_forward, "FastForward").$$render($$result, Object.assign(sectionIcon), {}, {})}`;
+            }
+          })}
+
+			${validate_component(BlogListContainer, "BlogListContainer").$$render($$result, {}, {}, {
+            default: () => {
+              return `${each(data.blogs, (blog) => {
+                return `${blog.meta.categories.length ? `${blog.meta.categories.includes("freebies") ? `${validate_component(BlogCard, "BlogCard").$$render(
+                  $$result,
+                  {
+                    blogTitle: blog.meta.title,
+                    blogLink: blog.path,
+                    blogDate: blog.meta.date
+                  },
+                  {},
+                  {}
+                )}` : ``}` : ``}`;
+              })}`;
+            }
+          })}</section>`;
+        }
       })}`;
     }
-  })}</section>
-
-<section>${validate_component(SectionTitle, "SectionTitle").$$render($$result, { sectionTitle: "UX" }, {}, {
-    default: ({ sectionIcon }) => {
-      return `${validate_component(Brain, "Brain").$$render($$result, Object.assign(sectionIcon), {}, {})}`;
-    }
-  })}
-
-	${validate_component(BlogListContainer, "BlogListContainer").$$render($$result, {}, {}, {
-    default: () => {
-      return `${each(data.blogs, (blog) => {
-        return `${blog.meta.categories.length ? `${blog.meta.categories.includes("ux") ? `${validate_component(BlogCard, "BlogCard").$$render(
-          $$result,
-          {
-            blogTitle: blog.meta.title,
-            blogLink: blog.path,
-            blogDate: blog.meta.date
-          },
-          {},
-          {}
-        )}` : ``}` : ``}`;
-      })}`;
-    }
-  })}</section>
-
-<section>${validate_component(SectionTitle, "SectionTitle").$$render($$result, { sectionTitle: "Typography" }, {}, {
-    default: ({ sectionIcon }) => {
-      return `${validate_component(Text_aa, "TextAa").$$render($$result, Object.assign(sectionIcon), {}, {})}`;
-    }
-  })}
-
-	${validate_component(BlogListContainer, "BlogListContainer").$$render($$result, {}, {}, {
-    default: () => {
-      return `${each(data.blogs, (blog) => {
-        return `${blog.meta.categories.length ? `${blog.meta.categories.includes("typography") ? `${validate_component(BlogCard, "BlogCard").$$render(
-          $$result,
-          {
-            blogTitle: blog.meta.title,
-            blogLink: blog.path,
-            blogDate: blog.meta.date
-          },
-          {},
-          {}
-        )}` : ``}` : ``}`;
-      })}`;
-    }
-  })}</section>
-
-<section>${validate_component(SectionTitle, "SectionTitle").$$render($$result, { sectionTitle: "Freebies" }, {}, {
-    default: ({ sectionIcon }) => {
-      return `${validate_component(Fast_forward, "FastForward").$$render($$result, Object.assign(sectionIcon), {}, {})}`;
-    }
-  })}
-
-	${validate_component(BlogListContainer, "BlogListContainer").$$render($$result, {}, {}, {
-    default: () => {
-      return `${each(data.blogs, (blog) => {
-        return `${blog.meta.categories.length ? `${blog.meta.categories.includes("tool") ? `${validate_component(BlogCard, "BlogCard").$$render(
-          $$result,
-          {
-            blogTitle: blog.meta.title,
-            blogLink: blog.path,
-            blogDate: blog.meta.date
-          },
-          {},
-          {}
-        )}` : ``}` : ``}`;
-      })}`;
-    }
-  })}</section>
-
-<section>${validate_component(SectionTitle, "SectionTitle").$$render($$result, { sectionTitle: "Tips" }, {}, {
-    default: ({ sectionIcon }) => {
-      return `${validate_component(Lightbulb, "Lightbulb").$$render($$result, Object.assign(sectionIcon), {}, {})}`;
-    }
-  })}
-
-	${validate_component(BlogListContainer, "BlogListContainer").$$render($$result, {}, {}, {
-    default: () => {
-      return `${each(data.blogs, (blog) => {
-        return `${blog.meta.categories.length ? `${blog.meta.categories.includes("tips") ? `${validate_component(BlogCard, "BlogCard").$$render(
-          $$result,
-          {
-            blogTitle: blog.meta.title,
-            blogLink: blog.path,
-            blogDate: blog.meta.date
-          },
-          {},
-          {}
-        )}` : ``}` : ``}`;
-      })}`;
-    }
-  })}
-</section>`;
+  })}`;
 });
 export {
   Page as default

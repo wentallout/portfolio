@@ -24,11 +24,12 @@
 
 	.project-title {
 		text-transform: capitalize;
+		color: var(--brand-color);
 	}
 
 	.project-date {
 		display: block;
 		font-weight: 300;
-		color: var(--neutral-800);
+		color: var(--text-low);
 	}
 </style>

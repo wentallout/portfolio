@@ -2278,7 +2278,7 @@ function set_paths(paths) {
   base = paths.base;
   assets = paths.assets || base;
 }
-const app_template = ({ head, body, assets: assets2, nonce }) => '<!DOCTYPE html>\n<html lang="en-US">\n\n<head>\n	<meta charset="utf-8" />\n	<link rel="icon" href="' + assets2 + '/favicon.ico" sizes="any" />\n	<link rel="icon" href="' + assets2 + '/favicon.svg" type="image/svg+xml" />\n	<link rel="apple-touch-icon" href="' + assets2 + '/apple-touch-icon.png" />\n	<meta name="viewport" content="width=device-width, initial-scale=1" />\n	<link rel="manifest" crossorigin="use-credentials" href="/manifest.webmanifest" />\n	' + head + "\n</head>\n\n<body>\n	<div>" + body + '</div>\n\n\n	<form name="contact" netlify netlify-honeypot="bot-field" hidden>\n		<input type="text" name="name" />\n		<input type="email" name="email" />\n		<textarea name="message"></textarea>\n	</form>\n</body>\n\n</html>';
+const app_template = ({ head, body, assets: assets2, nonce }) => '<!DOCTYPE html>\n<html lang="en-US">\n\n<head>\n	<meta charset="utf-8" />\n	<link rel="preload" href="' + assets2 + '/fonts/Mona-Sans.woff2" as="font" type="font/woff2" crossorigin>\n	<link rel="icon" href="' + assets2 + '/favicon.ico" sizes="any" />\n	<link rel="icon" href="' + assets2 + '/favicon.svg" type="image/svg+xml" />\n	<link rel="apple-touch-icon" href="' + assets2 + '/apple-touch-icon.png" />\n	<meta name="viewport" content="width=device-width, initial-scale=1" />\n	<link rel="manifest" crossorigin="use-credentials" href="/manifest.webmanifest" />\n	' + head + "\n</head>\n\n<body>\n	<div>" + body + '</div>\n\n\n	<form name="contact" netlify netlify-honeypot="bot-field" hidden>\n		<input type="text" name="name" />\n		<input type="email" name="email" />\n		<textarea name="message"></textarea>\n	</form>\n</body>\n\n</html>';
 const error_template = ({ status, message }) => '<!DOCTYPE html>\n<html lang="en">\n	<head>\n		<meta charset="utf-8" />\n		<title>' + message + `</title>
 
 		<style>
@@ -2361,7 +2361,7 @@ class Server {
       app_template,
       app_template_contains_nonce: false,
       error_template,
-      version: "1670336062103"
+      version: "1671375524378"
     };
   }
   async init({ env }) {

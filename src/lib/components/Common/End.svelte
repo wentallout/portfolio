@@ -4,7 +4,7 @@
 	.end__text {
 		display: flex;
 		font-family: var(--fancy-font);
-		color: var(--bg);
+		color: var(--text);
 		padding: var(--space-s) 0;
 		justify-content: center;
 		align-items: center;

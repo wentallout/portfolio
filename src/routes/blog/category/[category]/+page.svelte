@@ -30,6 +30,6 @@
 	}
 
 	.result__category {
-		color: var(--primary-500);
+		color: var(--primary-600);
 	}
 </style>

@@ -5,18 +5,18 @@ import { I as Image } from "../../chunks/Image.js";
 import { w as website } from "../../chunks/config.js";
 const Name_svelte_svelte_type_style_lang = "";
 const css$5 = {
-  code: ".name.svelte-1k2a5{align-items:center;background:var(--bg);border-radius:var(--border-radius);box-shadow:var(--box-shadow);display:flex;flex-direction:column;flex-wrap:wrap;gap:var(--space-l);justify-content:center;padding:var(--space-l)}@media(min-width:768px){.name.svelte-1k2a5{flex-direction:row;justify-content:flex-start}}.info__fullname.svelte-1k2a5{color:var(--primary-600);font-family:var(--fancy-font);margin-bottom:var(--space-s)}.info__job.svelte-1k2a5{color:var(--text);font-weight:400}.portrait.svelte-1k2a5{height:100%;-o-object-fit:cover;object-fit:cover}",
+  code: ".name.svelte-8oiac2{align-items:center;background:var(--bg);border-radius:var(--border-radius-light);box-shadow:var(--box-shadow);display:flex;flex-direction:column;flex-wrap:wrap;gap:var(--space-l);justify-content:center;padding:var(--space-l)}@media(min-width:768px){.name.svelte-8oiac2{flex-direction:row;justify-content:flex-start}}.info__fullname.svelte-8oiac2{color:var(--primary-600);font-family:var(--fancy-font);margin-bottom:var(--space-s)}.info__job.svelte-8oiac2{color:var(--text);font-weight:400}.portrait.svelte-8oiac2{filter:grayscale(100);height:100%;-o-object-fit:cover;object-fit:cover}",
   map: null
 };
 const Name = create_ssr_component(($$result, $$props, $$bindings, slots) => {
   $$result.css.add(css$5);
-  return `<section class="${"name svelte-1k2a5"}"><img height="${"200"}" width="${"200"}" class="${"portrait svelte-1k2a5"}" src="${"images/portrait.png"}" alt="${"Khoa's face"}">
+  return `<section class="${"name svelte-8oiac2"}"><img height="${"200"}" width="${"200"}" class="${"portrait svelte-8oiac2"}" src="${"images/portrait.png"}" alt="${"Khoa's face"}">
 
-	<div class="${"info"}"><h1 class="${"info__fullname xxl-text svelte-1k2a5"}">Nguyen Dang Khoa</h1>
-		<div class="${"info__job small-text svelte-1k2a5"}">23 y.o, love tinkering frontends and learning new design techniques
+	<div class="${"info"}"><h1 class="${"info__fullname xxl-text svelte-8oiac2"}">Nguyen Dang Khoa</h1>
+		<div class="${"info__job small-text svelte-8oiac2"}">23 y.o, love tinkering frontends and learning new design techniques
 		</div>
-		<div class="${"info__job small-text svelte-1k2a5"}">\u{1F4F1} UI/UX Designer (Figma)</div>
-		<div class="${"info__job small-text svelte-1k2a5"}">\u{1F468}\u200D\u{1F4BB} Web Developer (JS/React/Svelte + .NET)</div></div>
+		<div class="${"info__job small-text svelte-8oiac2"}">\u{1F4F1} UI/UX Designer (Figma)</div>
+		<div class="${"info__job small-text svelte-8oiac2"}">\u{1F468}\u200D\u{1F4BB} Web Developer (JS/React/Svelte + .NET)</div></div>
 </section>`;
 });
 const FeaturedProject_svelte_svelte_type_style_lang = "";
@@ -70,14 +70,14 @@ const MyClients = create_ssr_component(($$result, $$props, $$bindings, slots) =>
 });
 const MyExpertise_svelte_svelte_type_style_lang = "";
 const css$2 = {
-  code: ".expertise.svelte-tw4gcr{align-items:flex-start;display:flex;flex-direction:column;gap:var(--space-m);justify-content:center}.block__title.svelte-tw4gcr{color:var(--primary-600);font-weight:600}.block__text.svelte-tw4gcr{color:var(--neutral-800);max-width:60ch}.expertise__block.svelte-tw4gcr{align-items:center;display:flex;flex-direction:row;flex-wrap:wrap;gap:var(--space-l);justify-content:flex-start}.block.svelte-tw4gcr{align-items:flex-start;border-radius:var(--border-radius);box-shadow:var(--box-shadow);display:flex;flex-direction:column;justify-content:center;padding:var(--space-l)}.expertise__title.svelte-tw4gcr{font-family:var(--fancy-font);font-weight:600}",
+  code: ".expertise.svelte-1s7d1fe{align-items:flex-start;display:flex;flex-direction:column;gap:var(--space-m);justify-content:center}.block__title.svelte-1s7d1fe{color:var(--primary-600);font-weight:600}.block__text.svelte-1s7d1fe{color:var(--neutral-800);color:var(--text-low);max-width:60ch}.expertise__block.svelte-1s7d1fe{align-items:center;display:flex;flex-direction:row;flex-wrap:wrap;gap:var(--space-l);justify-content:flex-start}.block.svelte-1s7d1fe{align-items:flex-start;background-color:var(--bg);border-radius:var(--border-radius-light);box-shadow:var(--box-shadow);display:flex;flex-direction:column;justify-content:center;padding:var(--space-l)}.expertise__title.svelte-1s7d1fe{font-family:var(--fancy-font);font-weight:600}",
   map: null
 };
 const MyExpertise = create_ssr_component(($$result, $$props, $$bindings, slots) => {
   $$result.css.add(css$2);
-  return `<section><div class="${"expertise svelte-tw4gcr"}"><h2 class="${"expertise__title xl-text svelte-tw4gcr"}">My expertise</h2>
-		<div class="${"expertise__block svelte-tw4gcr"}"><div class="${"block svelte-tw4gcr"}"><h3 class="${"block__title base-text svelte-tw4gcr"}">Product Design</h3>
-				<p class="${"block__text small-text svelte-tw4gcr"}">Experience using UX frameworks, working in iterative cycles, and quickly testing ideas to
+  return `<section><div class="${"expertise svelte-1s7d1fe"}"><h2 class="${"expertise__title xl-text svelte-1s7d1fe"}">My expertise</h2>
+		<div class="${"expertise__block svelte-1s7d1fe"}"><div class="${"block svelte-1s7d1fe"}"><h3 class="${"block__title base-text svelte-1s7d1fe"}">Product Design</h3>
+				<p class="${"block__text small-text svelte-1s7d1fe"}">Experience using UX frameworks, working in iterative cycles, and quickly testing ideas to
 					design products that meet user expectations.
 				</p></div></div></div>
 </section>`;
@@ -88,14 +88,14 @@ const interactive = "/_app/immutable/assets/interactive-621aac0b.svg";
 const graphicDesign = "/_app/immutable/assets/graphicDesign-46f1e6c2.svg";
 const MyTools_svelte_svelte_type_style_lang = "";
 const css$1 = {
-  code: ".block__section.svelte-1y5as3z{background-color:var(--bg);border-radius:var(--border-radius);box-shadow:var(--box-shadow);padding:var(--space-l)}.block__section.svelte-1y5as3z,.tool.svelte-1y5as3z{align-items:flex-start;display:flex;flex-direction:column}.tool.svelte-1y5as3z{gap:var(--space-m)}.tool.svelte-1y5as3z,.tool__block.svelte-1y5as3z{justify-content:center}.tool__block.svelte-1y5as3z{--min:24ch;grid-gap:var(--space-s);align-content:center;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,var(--min)),1fr));width:100%}.tool__title.svelte-1y5as3z{font-family:var(--fancy-font);font-weight:600}.block__title.svelte-1y5as3z{color:var(--primary-600);font-weight:500;margin-bottom:var(--space-2xs);margin-top:var(--space-m)}.block__text.svelte-1y5as3z{color:var(--neutral-900);font-weight:400;margin:0}",
+  code: ".block__section.svelte-xdrr87{background-color:var(--bg);border-radius:var(--border-radius-light);box-shadow:var(--box-shadow);padding:var(--space-l)}.block__section.svelte-xdrr87,.tool.svelte-xdrr87{align-items:flex-start;display:flex;flex-direction:column}.tool.svelte-xdrr87{gap:var(--space-m)}.tool.svelte-xdrr87,.tool__block.svelte-xdrr87{justify-content:center}.tool__block.svelte-xdrr87{--min:24ch;grid-gap:var(--space-s);align-content:center;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,var(--min)),1fr));width:100%}.tool__title.svelte-xdrr87{font-family:var(--fancy-font)}.block__title.svelte-xdrr87{color:var(--primary-600);font-weight:600;margin-bottom:var(--space-2xs);margin-top:var(--space-m)}.block__text.svelte-xdrr87{color:var(--text-low);font-weight:400;margin:0}",
   map: null
 };
 const MyTools = create_ssr_component(($$result, $$props, $$bindings, slots) => {
   $$result.css.add(css$1);
-  return `<section><div class="${"tool svelte-1y5as3z"}"><h2 class="${"tool__title xl-text svelte-1y5as3z"}">Tools I use</h2>
+  return `<section><div class="${"tool svelte-xdrr87"}"><h2 class="${"tool__title xl-text svelte-xdrr87"}">Tools I use</h2>
 
-		<div class="${"tool__block svelte-1y5as3z"}"><div class="${"block__section svelte-1y5as3z"}">${validate_component(Image, "Image").$$render(
+		<div class="${"tool__block svelte-xdrr87"}"><div class="${"block__section svelte-xdrr87"}">${validate_component(Image, "Image").$$render(
     $$result,
     {
       hasCaption: false,
@@ -107,12 +107,12 @@ const MyTools = create_ssr_component(($$result, $$props, $$bindings, slots) => {
     {},
     {}
   )}
-				<h3 class="${"block__title base-text svelte-1y5as3z"}">Prototyping</h3>
-				<p class="${"block__text small-text svelte-1y5as3z"}">Figma</p>
-				<p class="${"block__text small-text svelte-1y5as3z"}">Adobe XD</p>
-				<p class="${"block__text small-text svelte-1y5as3z"}">Sketch</p></div>
+				<h3 class="${"block__title base-text svelte-xdrr87"}">Prototyping</h3>
+				<p class="${"block__text small-text svelte-xdrr87"}">Figma</p>
+				<p class="${"block__text small-text svelte-xdrr87"}">Adobe XD</p>
+				<p class="${"block__text small-text svelte-xdrr87"}">Sketch</p></div>
 
-			<div class="${"block__section svelte-1y5as3z"}">${validate_component(Image, "Image").$$render(
+			<div class="${"block__section svelte-xdrr87"}">${validate_component(Image, "Image").$$render(
     $$result,
     {
       hasCaption: false,
@@ -124,11 +124,11 @@ const MyTools = create_ssr_component(($$result, $$props, $$bindings, slots) => {
     {},
     {}
   )}
-				<h3 class="${"block__title base-text svelte-1y5as3z"}">Design</h3>
-				<p class="${"block__text small-text svelte-1y5as3z"}">Illustrator</p>
-				<p class="${"block__text small-text svelte-1y5as3z"}">Photoshop</p></div>
+				<h3 class="${"block__title base-text svelte-xdrr87"}">Design</h3>
+				<p class="${"block__text small-text svelte-xdrr87"}">Illustrator</p>
+				<p class="${"block__text small-text svelte-xdrr87"}">Photoshop</p></div>
 
-			<div class="${"block__section svelte-1y5as3z"}">${validate_component(Image, "Image").$$render(
+			<div class="${"block__section svelte-xdrr87"}">${validate_component(Image, "Image").$$render(
     $$result,
     {
       hasCaption: false,
@@ -140,12 +140,12 @@ const MyTools = create_ssr_component(($$result, $$props, $$bindings, slots) => {
     {},
     {}
   )}
-				<h3 class="${"block__title base-text svelte-1y5as3z"}">Motion</h3>
-				<p class="${"block__text small-text svelte-1y5as3z"}">Lottie</p>
+				<h3 class="${"block__title base-text svelte-xdrr87"}">Motion</h3>
+				<p class="${"block__text small-text svelte-xdrr87"}">Lottie</p>
 				
-				<p class="${"block__text small-text svelte-1y5as3z"}">CSS Animations</p></div>
+				<p class="${"block__text small-text svelte-xdrr87"}">CSS Animations</p></div>
 
-			<div class="${"block__section svelte-1y5as3z"}">${validate_component(Image, "Image").$$render(
+			<div class="${"block__section svelte-xdrr87"}">${validate_component(Image, "Image").$$render(
     $$result,
     {
       hasCaption: false,
@@ -157,28 +157,28 @@ const MyTools = create_ssr_component(($$result, $$props, $$bindings, slots) => {
     {},
     {}
   )}
-				<h3 class="${"block__title base-text svelte-1y5as3z"}">Frontend</h3>
-				<p class="${"block__text small-text svelte-1y5as3z"}">Semantic HTML, BEM CSS</p>
-				<p class="${"block__text small-text svelte-1y5as3z"}">Bootstrap, Material</p>
-				<p class="${"block__text small-text svelte-1y5as3z"}">JS, React, SvelteKit</p></div></div></div>
+				<h3 class="${"block__title base-text svelte-xdrr87"}">Frontend</h3>
+				<p class="${"block__text small-text svelte-xdrr87"}">Semantic HTML, BEM CSS</p>
+				<p class="${"block__text small-text svelte-xdrr87"}">Bootstrap, Material</p>
+				<p class="${"block__text small-text svelte-xdrr87"}">JS, React, SvelteKit</p></div></div></div>
 </section>`;
 });
 const AboutMe_svelte_svelte_type_style_lang = "";
 const css = {
-  code: ".about.svelte-dfruvk{align-items:flex-start;display:flex;flex-direction:column;gap:var(--space-m);justify-content:center;width:100%}.about__title.svelte-dfruvk{font-family:var(--fancy-font);font-weight:600}.about__block.svelte-dfruvk{background-color:var(--bg);border-radius:var(--border-radius);box-shadow:var(--box-shadow);display:flex;flex-direction:column;gap:var(--space-l);max-width:60ch;padding:var(--space-l)}.block__title.svelte-dfruvk{color:var(--primary-600);font-weight:600}.block__text.svelte-dfruvk{color:var(--neutral-800);font-weight:400}",
+  code: ".about.svelte-1ati4vj{align-items:flex-start;display:flex;flex-direction:column;gap:var(--space-m);justify-content:center;width:100%}.about__title.svelte-1ati4vj{font-family:var(--fancy-font);font-weight:600}.about__block.svelte-1ati4vj{border-radius:var(--border-radius-light);display:flex;flex-direction:column;gap:var(--space-l);max-width:60ch}.block__title.svelte-1ati4vj{color:var(--primary-600);font-weight:600}.block__text.svelte-1ati4vj{color:var(--text-low);font-weight:400}",
   map: null
 };
 const AboutMe = create_ssr_component(($$result, $$props, $$bindings, slots) => {
   $$result.css.add(css);
-  return `<section><div class="${"about svelte-dfruvk"}"><h2 class="${"about__title xl-text svelte-dfruvk"}">About me</h2>
-		<div class="${"about__block svelte-dfruvk"}"><div class="${"block"}"><h3 class="${"block__title base-text svelte-dfruvk"}">Education &amp; Background</h3>
-				<p class="${"block__text small-text svelte-dfruvk"}">I worked as a full-stack developer for about a year but didn&#39;t find the fulfillment I was
+  return `<section><div class="${"about svelte-1ati4vj"}"><h2 class="${"about__title xl-text svelte-1ati4vj"}">About me</h2>
+		<div class="${"about__block svelte-1ati4vj"}"><div class="${"block"}"><h3 class="${"block__title base-text svelte-1ati4vj"}">Education &amp; Background</h3>
+				<p class="${"block__text small-text svelte-1ati4vj"}">I worked as a full-stack developer for about a year but didn&#39;t find the fulfillment I was
 					looking for until I discovered the art of UI/UX Design in 2022. My current focus is on UX
 					design, which involves conducting research and developing flows and wireframes to solve
 					users&#39; pain points.
 				</p></div>
-			<div class="${"block"}"><h3 class="${"block__title base-text svelte-dfruvk"}">Thought Process</h3>
-				<p class="${"block__text small-text svelte-dfruvk"}">There isn&#39;t a miracle method that solves everything. Every project is unique and
+			<div class="${"block"}"><h3 class="${"block__title base-text svelte-1ati4vj"}">Thought Process</h3>
+				<p class="${"block__text small-text svelte-1ati4vj"}">There isn&#39;t a miracle method that solves everything. Every project is unique and
 					constantly riddled with ambiguity and constraints. Fortunately, there&#39;s no need to
 					reinvent the wheel, I can follow industry guidelines and proven UX frameworks \u2014 beginning
 					with a discovery phase to understand the problem; followed by prototyping, validating my

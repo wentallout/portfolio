@@ -16,12 +16,13 @@
 	button {
 		background: none;
 		border: none;
-		border-bottom: 2px solid white;
+		border-bottom: 2px solid transparent;
 		border-radius: 0;
 		margin: 0;
 		color: var(--neutral-600);
-		font-weight: 600;
+		font-weight: 500;
 		font-size: var(--font-size-large);
+		padding: var(--space-2xs) var(--space-s);
 	}
 
 	button:hover {
@@ -29,7 +30,8 @@
 	}
 
 	.selected {
-		border-bottom: 2px solid var(--primary-500);
-		color: var(--primary-500);
+		border-bottom: 2px solid var(--primary-600);
+		font-weight: 600;
+		color: var(--primary-600);
 	}
 </style>

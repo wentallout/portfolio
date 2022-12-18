@@ -1,80 +1,205 @@
 <script>
+	export const ssr = false;
 	import { onMount } from 'svelte';
 
+	import gsap from 'gsap';
+	import CircleType from 'circletype';
+
+	let cursorLarge;
+	let cursorSmall;
+	let cursorText;
+	let text;
+	let hoverItems;
+
+	let mouse = {
+		x: 0,
+		y: 0
+	};
+
+	function updateCursorPosition(e) {
+		mouse.x = e.clientX;
+		mouse.y = e.clientY;
+	}
+
 	onMount(() => {
-		let coords = { x: 0, y: 0 };
-		let circles = document.querySelectorAll('.circle');
+		// window.addEventListener('mousemove', function (e) {
+		// 	mouse.x = e.clientX;
+		// 	mouse.y = e.clientY;
+		// });
 
-		let colors = [
-			'#fefff2',
-			'#feffb9',
-			'#fcf67e',
-			'#f6e344',
-			'#ebc50c',
-			'#ba9104',
-			'#886201',
-			'#573a00',
-			'#261700'
-		];
+		const cursorOuter = cursorLarge;
+		const cursorInner = cursorSmall;
+		const cursorTextContainerEl = cursorText;
+		const cursorTextEl = text;
 
-		circles.forEach(function (circle, index) {
-			circle.x = 0;
-			circle.y = 0;
-			circle.style.backgroundColor = colors[index % colors.length];
+		// let hoverItems = document.querySelectorAll('.cursor-hover-item');
+		hoverItems = document.querySelectorAll('.cursor-hover-item');
+
+		const hoverEffectDuration = 0.3;
+		let isHovered = false;
+		let initialCursorHeight;
+
+		const cursorRotationDuration = 8;
+
+		let circleType = new CircleType(cursorTextEl);
+		circleType.radius(50);
+
+		setTimeout(() => {
+			initialCursorHeight = circleType.container.style.getPropertyValue('height');
+		}, 50);
+
+		hoverItems.forEach((item) => {
+			item.addEventListener('pointerenter', handlePointerEnter);
+			item.addEventListener('pointerleave', handlePointerLeave);
 		});
 
-		window.addEventListener('mousemove', function (e) {
-			coords.x = e.clientX;
-			coords.y = e.clientY;
-		});
-
-		function animateCircles() {
-			let x = coords.x;
-			let y = coords.y;
-
-			circles.forEach(function (circle, index) {
-				circle.style.left = x - 8 + 'px';
-				circle.style.top = y - 8 + 'px';
-
-				circle.style.scale = (circles.length - index) / circles.length;
-
-				circle.x = x;
-				circle.y = y;
-
-				const nextCircle = circles[index + 1] || circles[0];
-				x += (nextCircle.x - x) * 0.3;
-				y += (nextCircle.y - y) * 0.3;
+		function updateCursor() {
+			gsap.set([cursorInner, cursorTextContainerEl], {
+				x: mouse.x,
+				y: mouse.y
 			});
 
-			requestAnimationFrame(animateCircles);
+			gsap.to(cursorOuter, {
+				duration: 0.15,
+				x: mouse.x,
+				y: mouse.y
+			});
+
+			if (!isHovered) {
+				gsap.to(cursorTextContainerEl, hoverEffectDuration * 0.5, {
+					opacity: 0
+				});
+				gsap.set(cursorTextContainerEl, {
+					rotate: 0
+				});
+			}
+
+			requestAnimationFrame(updateCursor);
 		}
 
-		animateCircles();
+		updateCursor();
+
+		function handlePointerEnter(e) {
+			isHovered = true;
+
+			const target = e.currentTarget;
+			updateCursorText(target);
+
+			gsap.set([cursorTextContainerEl, cursorTextEl], {
+				height: initialCursorHeight,
+				width: initialCursorHeight
+			});
+
+			gsap.fromTo(
+				cursorTextContainerEl,
+				{
+					rotate: 0
+				},
+				{
+					duration: cursorRotationDuration,
+					rotate: 360,
+					ease: 'none',
+					repeat: -1
+				}
+			);
+
+			gsap.to(cursorInner, hoverEffectDuration, {
+				scale: 2
+			});
+
+			gsap.fromTo(
+				cursorTextContainerEl,
+				hoverEffectDuration,
+				{
+					scale: 1.2,
+					opacity: 0
+				},
+				{
+					delay: hoverEffectDuration * 0.75,
+					scale: 1,
+					opacity: 1
+				}
+			);
+			gsap.to(cursorOuter, hoverEffectDuration, {
+				scale: 1.2,
+				opacity: 0
+			});
+		}
+
+		function handlePointerLeave() {
+			isHovered = false;
+			gsap.to([cursorInner, cursorOuter], hoverEffectDuration, {
+				scale: 1,
+				opacity: 1
+			});
+		}
+
+		function updateCursorText(textEl) {
+			const cursorTextRepeatTimes = textEl.getAttribute('data-cursor-text-repeat');
+			const cursorText = returnMultipleString(
+				textEl.getAttribute('data-cursor-text'),
+				cursorTextRepeatTimes
+			);
+
+			circleType.destroy();
+			console.log(circleType);
+
+			cursorTextEl.innerHTML = cursorText;
+			circleType = new CircleType(cursorTextEl);
+		}
+
+		function returnMultipleString(string, count) {
+			let s = '';
+			for (let i = 0; i < count; i++) {
+				s += ` ${string} `;
+			}
+			return s;
+		}
 	});
 </script>
 
-<div class="circle" />
-<div class="circle" />
-<div class="circle" />
-<div class="circle" />
-<div class="circle" />
-<div class="circle" />
-<div class="circle" />
-<div class="circle" />
-<div class="circle" />
+<svelte:window on:pointermove={updateCursorPosition} />
+
+<div class="cursor">
+	<div bind:this={cursorSmall} class="cursor--small" />
+	<div bind:this={cursorLarge} class="cursor--large" />
+	<div bind:this={cursorText} class="cursor--text">
+		<div bind:this={text} class="text">GO HERE! GO HERE! GO HERE! GO HERE!</div>
+	</div>
+</div>
 
 <style>
-	.circle {
-		height: 16px;
-		width: 16px;
-		border-radius: 100%;
-
+	.cursor .cursor--small,
+	.cursor .cursor--large,
+	.cursor .cursor--text {
 		position: fixed;
-		top: 0;
 		left: 0;
-		z-index: 20;
-
-		z-index: 1000;
+		top: 0;
+		transform: translate(-50%, -50%);
+		border-radius: 50%;
+		width: var(--cursor-size);
+		height: var(--cursor-size);
+		mix-blend-mode: difference;
 		pointer-events: none;
+		user-select: none;
+		z-index: 1000;
+	}
+	.cursor .cursor--text {
+		--cursor-size: fit-content;
+		font-size: 0.75rem;
+		color: #fff;
+		opacity: 0;
+	}
+	.cursor .cursor--text .text {
+		font-family: var(--normal-font);
+		font-weight: 400;
+	}
+	.cursor .cursor--small {
+		--cursor-size: 20px;
+		background: #fff;
+	}
+	.cursor .cursor--large {
+		--cursor-size: 60px;
+		border: 2px solid #fff;
 	}
 </style>

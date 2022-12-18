@@ -19,7 +19,7 @@ const Error = create_ssr_component(($$result, $$props, $$bindings, slots) => {
     {
       label: "Go back",
       labelColor: "var(--text)",
-      backgroundColor: "var(--primary-500)"
+      backgroundColor: "var(--primary-600)"
     },
     {},
     {}

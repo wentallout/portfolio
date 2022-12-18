@@ -3,7 +3,7 @@ import { I as Image } from "./Image.js";
 const uxBooks = "/_app/immutable/assets/uxBooks-0c8a2d19.webp";
 const metadata = {
   "title": "Best UX Books to read",
-  "date": "2022-10-07",
+  "date": "2022-10-07T00:00:00.000Z",
   "categories": ["ux"]
 };
 const Best_ux_books = create_ssr_component(($$result, $$props, $$bindings, slots) => {

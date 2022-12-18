@@ -49,5 +49,6 @@
 	.portrait {
 		object-fit: cover;
 		height: 100%;
+		filter: grayscale(100);
 	}
 </style>

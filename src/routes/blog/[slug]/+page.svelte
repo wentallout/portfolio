@@ -23,6 +23,7 @@
 			{/each}
 		</div>
 	{/if}
+
 	<svelte:component this={data.content} />
 
 	<End />

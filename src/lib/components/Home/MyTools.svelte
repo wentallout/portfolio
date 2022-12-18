@@ -78,18 +78,17 @@
 
 	.tool__title {
 		font-family: var(--fancy-font);
-		font-weight: 600;
 	}
 
 	.block__title {
 		color: var(--primary-600);
-		font-weight: 500;
+		font-weight: 600;
 		margin-top: var(--space-m);
 		margin-bottom: var(--space-2xs);
 	}
 
 	.block__text {
-		color: var(--neutral-900);
+		color: var(--text-low);
 		font-weight: 400;
 		margin: 0;
 	}

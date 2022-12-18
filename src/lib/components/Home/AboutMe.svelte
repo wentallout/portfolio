@@ -48,10 +48,8 @@
 		flex-direction: column;
 		gap: var(--space-l);
 		max-width: 60ch;
-		background-color: var(--bg);
+
 		border-radius: var(--border-radius-light);
-		padding: var(--space-l);
-		box-shadow: var(--box-shadow);
 	}
 
 	.block__title {
@@ -61,6 +59,6 @@
 
 	.block__text {
 		font-weight: 400;
-		color: var(--neutral-800);
+		color: var(--text-low);
 	}
 </style>

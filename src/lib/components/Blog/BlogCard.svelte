@@ -35,9 +35,9 @@
 		overflow: hidden;
 		/* --- */
 
-		background-color: var(--bg);
-
 		box-shadow: var(--box-shadow);
+
+		background-color: #1e1e1e;
 	}
 
 	.blog:before {
@@ -55,7 +55,7 @@
 
 	.blog:hover::before {
 		opacity: 1;
-		background-color: var(--primary-500);
+		background-color: var(--primary-600);
 	}
 
 	@media (min-width: 768px) {
@@ -66,16 +66,16 @@
 
 	.blog:hover {
 		background-color: var(--neutral-900);
-		border: 1px solid var(--primary-500);
+		border: 1px solid var(--primary-600);
 		box-shadow: var(--box-shadow-hover);
 	}
 
 	.blog:hover .blog__title {
-		color: var(--primary-500);
+		color: var(--primary-600);
 	}
 
 	.blog:hover .blog__date {
-		color: var(--neutral-100);
+		color: var(--text-low);
 	}
 
 	.blog__title {
@@ -102,7 +102,7 @@
 
 		/* FONT */
 		font-weight: 400;
-		color: var(--neutral-800);
+		color: var(--text-low);
 		/* --- */
 
 		z-index: 3;

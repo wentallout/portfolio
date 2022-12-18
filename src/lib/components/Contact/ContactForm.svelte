@@ -35,7 +35,7 @@
 			<textarea class="small-text" required name="message" id="message" placeholder="" />
 
 			<div class="contact__btn">
-				<Button label="Send" backgroundColor="var(--primary-500)">
+				<Button label="Send" backgroundColor="var(--primary-600)">
 					<PaperPlaneRight color="var(--neutral-900)" />
 				</Button>
 
@@ -56,16 +56,10 @@
 		justify-content: left;
 		width: 100%;
 		margin-bottom: var(--space-m);
-		background-color: var(--bg);
-
-		overflow: hidden;
 		border-radius: var(--border-radius-light);
-
-		box-shadow: var(--box-shadow);
 	}
 
 	.contact {
-		padding: var(--space-m);
 		width: 100%;
 		max-width: 80rem;
 		display: flex;

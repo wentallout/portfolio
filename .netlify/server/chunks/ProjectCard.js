@@ -148,7 +148,7 @@ const RezaPhoneAtropos = create_ssr_component(($$result, $$props, $$bindings, sl
 });
 const ProjectCard_svelte_svelte_type_style_lang = "";
 const css = {
-  code: ".project.svelte-m8zo4t{background-color:var(--bg);border-radius:var(--border-radius);box-shadow:var(--box-shadow);display:flex;flex-direction:column;overflow-y:hidden;width:100%}.project__thumbnail.svelte-m8zo4t{height:auto;outline:1px solid var(--neutral-300);overflow:hidden;width:100%}.info__project-name.svelte-m8zo4t{color:var(--primary-700);font-weight:600;line-height:normal;margin-bottom:var(--space-m)}.project__info.svelte-m8zo4t{padding:var(--space-l) var(--space-xl)}.info__section.svelte-m8zo4t{display:flex;flex-direction:row;flex-wrap:wrap;margin-bottom:var(--space-s)}.info__title.svelte-m8zo4t{color:var(--primary-600);font-weight:500;height:60px;max-width:200px;width:30%}.info__description.svelte-m8zo4t{color:var(--neutral-800);display:flex;width:70%}.info__btn.svelte-m8zo4t{display:flex;flex-direction:row;flex-wrap:wrap;gap:var(--space-s);margin-top:var(--space-m)}@media(min-width:992px){.project.svelte-m8zo4t{flex-direction:row}.project__thumbnail.svelte-m8zo4t{width:40%}.project__info.svelte-m8zo4t{width:60%}}",
+  code: ".project.svelte-1s452rv{background-color:var(--bg);border-radius:var(--border-radius-light);display:flex;flex-direction:column;overflow-y:hidden;width:100%}.project__thumbnail.svelte-1s452rv{height:auto;overflow:hidden;width:100%}.info__project-name.svelte-1s452rv{color:var(--text);font-weight:600;line-height:normal;margin-bottom:var(--space-m)}.project__info.svelte-1s452rv{padding:var(--space-l) var(--space-xl)}.info__section.svelte-1s452rv{display:flex;flex-direction:row;flex-wrap:wrap;margin-bottom:var(--space-s)}.info__title.svelte-1s452rv{color:var(--primary-600);font-weight:500;height:60px;margin-right:auto;max-width:200px;width:-moz-fit-content;width:fit-content}.info__description.svelte-1s452rv{color:var(--text-low);display:flex;margin-left:var(--space-s);width:70%}.info__btn.svelte-1s452rv{display:flex;flex-direction:row;flex-wrap:wrap;gap:var(--space-s);margin-top:var(--space-m)}@media(min-width:992px){.project.svelte-1s452rv{flex-direction:row}.project__thumbnail.svelte-1s452rv{width:40%}.project__info.svelte-1s452rv{width:60%}}",
   map: null
 };
 const ProjectCard = create_ssr_component(($$result, $$props, $$bindings, slots) => {
@@ -171,25 +171,25 @@ const ProjectCard = create_ssr_component(($$result, $$props, $$bindings, slots) 
   if ($$props.result === void 0 && $$bindings.result && result !== void 0)
     $$bindings.result(result);
   $$result.css.add(css);
-  return `<div class="${"project svelte-m8zo4t"}"><div class="${"project__thumbnail svelte-m8zo4t"}">${slots.default ? slots.default({}) : ``}</div>
+  return `<div class="${"project svelte-1s452rv"}"><div class="${"project__thumbnail svelte-1s452rv"}">${slots.default ? slots.default({}) : ``}</div>
 
-	<div class="${"project__info svelte-m8zo4t"}"><div class="${"info__project-name large-text svelte-m8zo4t"}">${escape(projectName)}</div>
+	<div class="${"project__info svelte-1s452rv"}"><div class="${"info__project-name large-text svelte-1s452rv"}">${escape(projectName)}</div>
 
-		<div class="${"info__section svelte-m8zo4t"}"><div class="${"info__title svelte-m8zo4t"}">What</div>
-			<div class="${"info__description svelte-m8zo4t"}">${escape(what)}</div></div>
+		<div class="${"info__section svelte-1s452rv"}"><div class="${"info__title svelte-1s452rv"}">What</div>
+			<div class="${"info__description svelte-1s452rv"}">${escape(what)}</div></div>
 
-		<div class="${"info__section svelte-m8zo4t"}"><div class="${"info__title svelte-m8zo4t"}">Who</div>
-			<div class="${"info__description svelte-m8zo4t"}">${escape(who)}</div></div>
+		<div class="${"info__section svelte-1s452rv"}"><div class="${"info__title svelte-1s452rv"}">Who</div>
+			<div class="${"info__description svelte-1s452rv"}">${escape(who)}</div></div>
 
-		<div class="${"info__section svelte-m8zo4t"}"><div class="${"info__title svelte-m8zo4t"}">Result</div>
-			<div class="${"info__description svelte-m8zo4t"}">${escape(result)}</div></div>
+		<div class="${"info__section svelte-1s452rv"}"><div class="${"info__title svelte-1s452rv"}">Result</div>
+			<div class="${"info__description svelte-1s452rv"}">${escape(result)}</div></div>
 
-		<div class="${"info__btn svelte-m8zo4t"}"><a class="${"btn__anchor"}"${add_attribute("href", linkToDetail, 0)}>${validate_component(Button, "Button").$$render(
+		<div class="${"info__btn svelte-1s452rv"}"><a data-cursor-text="${"Read Case Study"}" data-cursor-text-repeat="${"4"}" class="${"btn__anchor cursor-hover-item"}"${add_attribute("href", linkToDetail, 0)}>${validate_component(Button, "Button").$$render(
     $$result,
     {
       label: "Read",
-      border: "1px solid var(--primary-500)",
-      backgroundColor: "var(--primary-500)"
+      border: "1px solid var(--primary-600)",
+      backgroundColor: "var(--primary-600)"
     },
     {},
     {}
@@ -198,6 +198,7 @@ const ProjectCard = create_ssr_component(($$result, $$props, $$bindings, slots) 
 			<a rel="${"external noreferrer noopener"}" target="${"_blank"}"${add_attribute("href", linkToFigma, 0)}>${validate_component(Button, "Button").$$render(
     $$result,
     {
+      labelColor: "var(--text)",
       label: "Figma",
       border: "1px solid var(--text)"
     },

@@ -37,8 +37,8 @@
 			<a href={linkToDetail}>
 				<Button
 					label="Read"
-					border="1px solid var(--primary-500)"
-					backgroundColor="var(--primary-500)" />
+					border="1px solid var(--primary-600)"
+					backgroundColor="var(--primary-600)" />
 			</a>
 
 			<a rel="external noreferrer noopener" target="_blank" href={linkToFigma}>
@@ -67,7 +67,6 @@
 
 		transition: 0.3s;
 
-		
 		overflow: hidden;
 	}
 
@@ -80,7 +79,7 @@
 	.project__info {
 		display: flex;
 		flex-direction: column;
-		
+
 		overflow: hidden;
 	}
 
@@ -130,7 +129,6 @@
 		color: var(--text);
 
 		padding: var(--space-s) var(--space-l);
-		
 	}
 
 	.info_description {

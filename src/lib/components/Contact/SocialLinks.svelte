@@ -120,7 +120,7 @@
 
 	.social__address:hover {
 		background-color: var(--neutral-900);
-		color: var(--primary-500);
+		color: var(--primary-600);
 	}
 
 	.social__address p {

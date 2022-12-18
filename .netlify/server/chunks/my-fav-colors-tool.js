@@ -2,7 +2,7 @@ import { c as create_ssr_component } from "./index.js";
 /* empty css                                     */const metadata = {
   "title": "My favorite color tools",
   "date": "2022-11-09",
-  "categories": ["color", "tool"]
+  "categories": ["color", "freebies"]
 };
 const My_fav_colors_tool = create_ssr_component(($$result, $$props, $$bindings, slots) => {
   return `<nav class="${"toc"}"><ol class="${"toc-level toc-level-1"}"><li class="${"toc-item toc-item-h2"}"><a class="${"toc-link toc-link-h2"}" href="${"#gradient"}">Gradient</a></li><li class="${"toc-item toc-item-h2"}"><a class="${"toc-link toc-link-h2"}" href="${"#color-scheme"}">Color scheme</a></li></ol></nav>

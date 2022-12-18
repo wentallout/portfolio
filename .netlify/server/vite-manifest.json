@@ -23,10 +23,12 @@
       "src/routes/blog/best-ux-books.svx",
       "src/routes/blog/calculate-typography-values.svx",
       "src/routes/blog/case-study.svx",
+      "src/routes/blog/color-scheme.svx",
       "src/routes/blog/gestalt.svx",
       "src/routes/blog/grids.svx",
       "src/routes/blog/how-to-ask-for-design-feedback.svx",
       "src/routes/blog/logo-design.svx",
+      "src/routes/blog/mockups.svx",
       "src/routes/blog/my-fav-colors-tool.svx",
       "src/routes/blog/polish.svx",
       "src/routes/blog/portfolio.svx",
@@ -62,7 +64,7 @@
       "_stores.js"
     ],
     "css": [
-      "_app/immutable/assets/_layout-fded9de7.css"
+      "_app/immutable/assets/_layout-84528a83.css"
     ]
   },
   "src/routes/+layout.js": {
@@ -113,7 +115,7 @@
       "_config.js"
     ],
     "css": [
-      "_app/immutable/assets/_page-7f14cb0d.css"
+      "_app/immutable/assets/_page-34372cec.css"
     ],
     "assets": [
       "_app/immutable/assets/fpt-9e418949.webp",
@@ -133,7 +135,11 @@
       "_BlogCard.js",
       "_SectionTitle.js",
       "_brain.js",
-      "_PageTitle.js"
+      "_PageTitle.js",
+      "_index3.js"
+    ],
+    "css": [
+      "_app/immutable/assets/_page-7f14a79f.css"
     ]
   },
   "src/routes/blog/+page.js": {
@@ -150,7 +156,7 @@
       "_SectionTitle.js"
     ],
     "css": [
-      "_app/immutable/assets/_page-37b6427a.css"
+      "_app/immutable/assets/_page-44906a55.css"
     ]
   },
   "src/routes/blog/category/+page.js": {
@@ -167,7 +173,7 @@
       "_BlogCard.js"
     ],
     "css": [
-      "_app/immutable/assets/_page-c9fb8161.css"
+      "_app/immutable/assets/_page-42dd9190.css"
     ]
   },
   "src/routes/blog/category/[category]/+page.js": {
@@ -199,10 +205,12 @@
       "src/routes/blog/best-ux-books.svx",
       "src/routes/blog/calculate-typography-values.svx",
       "src/routes/blog/case-study.svx",
+      "src/routes/blog/color-scheme.svx",
       "src/routes/blog/gestalt.svx",
       "src/routes/blog/grids.svx",
       "src/routes/blog/how-to-ask-for-design-feedback.svx",
       "src/routes/blog/logo-design.svx",
+      "src/routes/blog/mockups.svx",
       "src/routes/blog/my-fav-colors-tool.svx",
       "src/routes/blog/polish.svx",
       "src/routes/blog/portfolio.svx",
@@ -233,7 +241,7 @@
       "_Button.js"
     ],
     "css": [
-      "_app/immutable/assets/_page-bb7fb2d0.css"
+      "_app/immutable/assets/_page-78fcdf75.css"
     ]
   },
   "src/routes/contact/+page.js": {
@@ -267,7 +275,7 @@
       "_Time.js"
     ],
     "css": [
-      "_app/immutable/assets/_page-6bcb4af7.css"
+      "_app/immutable/assets/_page-88180e56.css"
     ]
   },
   "src/routes/project/[slug]/+page.js": {
@@ -293,7 +301,7 @@
       "_SectionTitle.js"
     ],
     "css": [
-      "_app/immutable/assets/_page-99b36b93.css"
+      "_app/immutable/assets/_page-c6a2f5ed.css"
     ],
     "assets": [
       "_app/immutable/assets/UIDesignPrinciples-b17b7134.webp",
@@ -367,7 +375,7 @@
       "_index.js"
     ],
     "css": [
-      "_app/immutable/assets/Button-c7dbaf0c.css"
+      "_app/immutable/assets/Button-2b3c7386.css"
     ]
   },
   "_MarkdownContainer.js": {
@@ -376,7 +384,7 @@
       "_index.js"
     ],
     "css": [
-      "_app/immutable/assets/MarkdownContainer-0a7aaa5a.css"
+      "_app/immutable/assets/MarkdownContainer-979059b8.css"
     ]
   },
   "_SEO.js": {
@@ -400,7 +408,7 @@
       "_figma-logo.js"
     ],
     "css": [
-      "_app/immutable/assets/ProjectCard-23fbca47.css"
+      "_app/immutable/assets/ProjectCard-f733083e.css"
     ],
     "assets": [
       "_app/immutable/assets/rezaPhoneFrame-b3441282.webp",
@@ -430,7 +438,7 @@
       "_Time.js"
     ],
     "css": [
-      "_app/immutable/assets/BlogCard-ff2b1012.css"
+      "_app/immutable/assets/BlogCard-5150d87d.css"
     ]
   },
   "_SectionTitle.js": {
@@ -439,7 +447,7 @@
       "_index.js"
     ],
     "css": [
-      "_app/immutable/assets/SectionTitle-034272c4.css"
+      "_app/immutable/assets/SectionTitle-52bf9cca.css"
     ]
   },
   "_brain.js": {
@@ -454,7 +462,7 @@
       "_index.js"
     ],
     "css": [
-      "_app/immutable/assets/PageTitle-66714c90.css"
+      "_app/immutable/assets/PageTitle-a3df11ec.css"
     ]
   },
   "_Time.js": {
@@ -469,7 +477,7 @@
       "_index.js"
     ],
     "css": [
-      "_app/immutable/assets/End-fb40b7e0.css"
+      "_app/immutable/assets/End-75766168.css"
     ]
   },
   "_dynamic-import-helper.js": {
@@ -481,7 +489,7 @@
       "_index.js"
     ],
     "css": [
-      "_app/immutable/assets/SwiperContainer-82ef200e.css"
+      "_app/immutable/assets/SwiperContainer-9868634f.css"
     ]
   },
   "_general-observer.js": {
@@ -522,6 +530,14 @@
   "src/routes/blog/case-study.svx": {
     "file": "chunks/case-study.js",
     "src": "src/routes/blog/case-study.svx",
+    "isDynamicEntry": true,
+    "imports": [
+      "_index.js"
+    ]
+  },
+  "src/routes/blog/color-scheme.svx": {
+    "file": "chunks/color-scheme.js",
+    "src": "src/routes/blog/color-scheme.svx",
     "isDynamicEntry": true,
     "imports": [
       "_index.js"
@@ -570,6 +586,14 @@
     ],
     "css": [
       "_app/immutable/assets/Image-96370eb5.css"
+    ]
+  },
+  "src/routes/blog/mockups.svx": {
+    "file": "chunks/mockups.js",
+    "src": "src/routes/blog/mockups.svx",
+    "isDynamicEntry": true,
+    "imports": [
+      "_index.js"
     ]
   },
   "src/routes/blog/my-fav-colors-tool.svx": {

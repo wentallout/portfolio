@@ -37,6 +37,15 @@
 } */
 
 @font-face {
+	font-family: 'Adjusted Arial Fallback';
+	src: local(Arial);
+	size-adjust: 93%;
+	ascent-override: 93%;
+	descent-override: 29%;
+	line-gap-override: 0%;
+}
+
+@font-face {
 	font-family: 'Mona Sans';
 	src: url('/fonts/Mona-Sans.woff2') format('woff2 supports variations'),
 		url('/fonts/Mona-Sans.woff2') format('woff2-variations');
