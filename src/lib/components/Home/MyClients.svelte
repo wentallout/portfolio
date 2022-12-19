@@ -40,6 +40,7 @@
 	.clients__title {
 		font-family: var(--fancy-font);
 		font-weight: 600;
+		color: var(--primary-500);
 	}
 
 	.logo {

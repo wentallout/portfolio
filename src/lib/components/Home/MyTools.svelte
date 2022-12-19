@@ -78,6 +78,7 @@
 
 	.tool__title {
 		font-family: var(--fancy-font);
+		color: var(--primary-500);
 	}
 
 	.block__title {
