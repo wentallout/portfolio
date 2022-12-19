@@ -1,4 +1,5 @@
 <script>
+	import Poem from '$lib/components/Home/Poem.svelte';
 	import Name from '$lib/components/Home/Name.svelte';
 	import FeaturedProject from '$lib/components/Home/FeaturedProject.svelte';
 	import Clients from '$lib/components/Home/MyClients.svelte';
@@ -77,3 +78,4 @@
 <Expertise />
 <ToolUsed />
 <AboutMe />
+<Poem />
