@@ -5,8 +5,9 @@
 			<div class="block">
 				<h3 class="block__title base-text">Product Design</h3>
 				<p class="block__text small-text">
-					Experience using UX frameworks, working in iterative cycles, and quickly testing ideas to
-					design products that meet user expectations.
+					I have experience using UX frameworks and working in iterative cycles to design products
+					that meet user expectations. I also know how to quickly test ideas to make sure they're on
+					the right track.
 				</p>
 			</div>
 		</div>

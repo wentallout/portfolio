@@ -5,22 +5,22 @@
 			<div class="block">
 				<h3 class="block__title base-text">Education & Background</h3>
 				<p class="block__text small-text">
-					I worked as a full-stack developer for about a year but didn't find the fulfillment I was
-					looking for until I discovered the art of UI/UX Design in 2022. My current focus is on UX
-					design, which involves conducting research and developing flows and wireframes to solve
-					users' pain points.
+					I spent about a year working as a full-stack developer, but eventually I found my true
+					passion in UI/UX design. I'm currently focusing on UX design, which involves finding ways
+					to make the user experience better through research, flow development, and wireframing.
+					It's really rewarding to be able to use my skills to solve problems and improve people's
+					experiences.
 				</p>
 			</div>
 			<div class="block">
 				<h3 class="block__title base-text">Thought Process</h3>
 				<p class="block__text small-text">
-					There isn't a miracle method that solves everything. Every project is unique and
-					constantly riddled with ambiguity and constraints. Fortunately, there's no need to
-					reinvent the wheel, I can follow industry guidelines and proven UX frameworks — beginning
-					with a discovery phase to understand the problem; followed by prototyping, validating my
-					ideas with users, and collaborating with stakeholders throughout the process. Taking these
-					simple steps has never failed me and always leads to innovative solutions and successful
-					outcomes.
+					Every project is different and has its own set of challenges, but that's okay! Instead of
+					starting from scratch, I follow industry guidelines and use proven UX frameworks to guide
+					me. This usually starts with a discovery phase where I try to understand the problem, and
+					then I move on to prototyping and testing my ideas with users. It's also important to work
+					with stakeholders throughout the process. By following these steps, I've always been able
+					to come up with innovative solutions and achieve successful outcomes.
 				</p>
 			</div>
 		</div>

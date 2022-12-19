@@ -2,27 +2,6 @@
 title: Reza - Table Reservation Mobile App
 date: '2022-09-14'
 ---
-<svelte:head>
-    <style>
-        :root
-        {  
-            --brand-color : #E4543B; 
-        }
-               
-        .markdown h2, .markdown h3, 
-        {
-            color: var(--brand-color) !important;
-        }
-
-        .markdown h2:before, .markdown h3:before
-        {
-            background-color: var(--brand-color);
-        }
-
-    </style>
-</svelte:head>
-
-
 <script>
     import { SwiperSlide } from 'swiper/svelte';
     import SwiperContainer from '$lib/components/Swiper/SwiperContainer.svelte';

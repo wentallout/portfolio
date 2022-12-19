@@ -1,4 +1,4 @@
-<div class="end__text large-text">Thanks for reading.</div>
+<div class="end__text xl-text rainbow">Thanks for reading.</div>
 
 <style>
 	.end__text {
@@ -13,7 +13,6 @@
 		margin-top: var(--space-3xl);
 		margin-bottom: var(--space-s);
 
-		background-color: var(--primary-900);
 		border-radius: var(--border-radius-light);
 	}
 </style>

@@ -59,9 +59,9 @@ body {
 	--neutral-900: #232622;
 
 	/* alert */
-	--success: #a3db33;
-	--error: #ed3221;
-	--warning: #fac547;
+	--success: #2cd926;
+	--error: #e03f1f;
+	--warning: #ecb546;
 
 	--font-size-xs: clamp(0.7rem, calc(0.75rem + -0.05vw), 0.74rem);
 	--font-size-small: clamp(1rem, calc(1rem + 0.07vw), 1rem);
