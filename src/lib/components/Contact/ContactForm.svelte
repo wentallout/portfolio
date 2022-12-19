@@ -35,7 +35,7 @@
 			<textarea class="small-text" required name="message" id="message" placeholder="" />
 
 			<div class="contact__btn">
-				<Button label="Send" backgroundColor="var(--primary-600)">
+				<Button label="Send" backgroundColor="var(--primary-400)">
 					<PaperPlaneRight color="var(--neutral-900)" />
 				</Button>
 

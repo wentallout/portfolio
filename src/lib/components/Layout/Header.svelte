@@ -34,7 +34,7 @@
 				{/each}
 
 				<li on:click={openNav} on:keydown={openNav} class="hamburger">
-					<List color="var(--neutral-100)" width="32" height="32" />
+					<List color="var(--text)" width="32" height="32" />
 				</li>
 			</ul>
 		</nav>
@@ -54,7 +54,7 @@
 
 <style>
 	.active-page {
-		background-color: var(--primary-600);
+		background-color: var(--primary-400);
 		color: var(--black);
 	}
 
@@ -63,7 +63,7 @@
 	}
 
 	.nav-list__item:hover {
-		color: var(--primary-600);
+		color: var(--primary-400);
 	}
 
 	.nav {
@@ -74,7 +74,7 @@
 		/* FONT */
 		font-size: var(--font-size-base);
 		font-weight: 500;
-		color: var(--neutral-100);
+		color: var(--text);
 		/* --- */
 
 		background-color: transparent;
@@ -85,7 +85,7 @@
 		background-color: rgba(0, 0, 0, 0.7) !important;
 		backdrop-filter: blur(1px);
 		box-shadow: 0 2px 4px rgba(45, 35, 66, 0.35), 0 7px 13px -3px rgba(45, 35, 66, 0.25);
-		color: var(--neutral-100);
+		color: var(--text);
 	}
 
 	.nav-list {
@@ -184,8 +184,8 @@
 
 	.overlay-item:hover,
 	.overlay-item:focus {
-		color: var(--primary-600);
-		outline: 1px solid var(--primary-600);
+		color: var(--primary-400);
+		outline: 1px solid var(--primary-400);
 	}
 
 	.closebtn {
@@ -196,7 +196,7 @@
 		justify-content: center;
 		align-items: center;
 
-		background-color: var(--primary-600);
+		background-color: var(--primary-400);
 		top: 0;
 		cursor: pointer;
 

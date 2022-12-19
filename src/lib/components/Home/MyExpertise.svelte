@@ -24,11 +24,9 @@
 
 	.block__title {
 		font-weight: 600;
-		color: var(--primary-600);
 	}
 
 	.block__text {
-		color: var(--neutral-800);
 		max-width: 60ch;
 		color: var(--text-low);
 	}

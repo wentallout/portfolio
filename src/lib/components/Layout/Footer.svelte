@@ -2,12 +2,6 @@
 	import { navItems } from '$lib/config.js';
 	import LinkedinLogo from '~icons/ph/linkedin-logo';
 	import Phone from '~icons/ph/phone';
-
-	let iconColor = 'var(--neutral-100)';
-
-	function handleMouseOver(e) {
-		iconColor = 'var(--primary-600)';
-	}
 </script>
 
 <footer>
@@ -21,7 +15,7 @@
 		</ul>
 		<div class="footer__social">
 			<a aria-label="Phone me" class="social__icon" href="tel:+84929066331">
-				<Phone width="32" height="32" color={iconColor} on:mouseover={handleMouseOver} />
+				<Phone className="icon" width="32" height="32" color="var(--text)" />
 			</a>
 			<a
 				aria-label="Contact through LinkedIn"
@@ -29,7 +23,7 @@
 				href="https://www.linkedin.com/in/wentallout"
 				target="_blank"
 				rel="noreferrer noopener">
-				<LinkedinLogo width="32" height="32" color="var(--neutral-100)" />
+				<LinkedinLogo width="32" height="32" color="var(--text)" />
 			</a>
 		</div>
 	</div>
@@ -50,25 +44,23 @@
 
 		/* Width */
 		max-width: 100vw;
-
-		/* Color */
-
-		background-repeat: repeat;
 		background-color: transparent;
+		background-repeat: repeat;
+		background-image: url('images/diamonds.svg');
 	}
 
 	.footer__social {
 		display: flex;
 		flex-direction: row;
 		flex-wrap: wrap;
-		z-index: 2;
+
 		gap: var(--space-s);
 	}
 
 	.footer-container {
 		display: flex;
 		flex-direction: column;
-		color: var(--neutral-100);
+		color: var(--text);
 		font-weight: 300;
 	}
 
@@ -78,24 +70,13 @@
 		}
 	}
 
-	/* footer:before {
-		background: url('/images/rhombus_line.png') repeat top center/49px 72px;
-		content: '';
-		position: absolute;
-		top: 0;
-		left: 0;
-		width: 100%;
-		height: 100%;
-		opacity: 0.12;
-	} */
-
 	.nav-list {
 		display: flex;
 		flex-direction: row;
 		justify-content: left;
 		align-items: center;
 		margin: 0px;
-		z-index: 2;
+
 		margin-bottom: var(--space-l);
 		flex-wrap: wrap;
 	}
@@ -112,7 +93,7 @@
 	}
 
 	.nav-list-item a:hover {
-		color: var(--primary-600);
+		color: var(--primary-400);
 	}
 
 	footer {

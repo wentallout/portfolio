@@ -23,7 +23,7 @@
 
 		/* SIZE */
 		width: 100%;
-		height: 140px;
+		height: 144px;
 		border: 1px solid transparent;
 		padding: var(--space-s) var(--space-m);
 		/* --- */
@@ -43,7 +43,7 @@
 	.blog:before {
 		position: absolute;
 		content: '';
-		background: url('/images/bg_pattern_rhombus_beta.webp') repeat top center/32px 55px;
+		background: url('/images/diamonds.svg') center;
 		top: 0;
 		right: 0;
 		width: var(--space-m);
@@ -55,23 +55,17 @@
 
 	.blog:hover::before {
 		opacity: 1;
-		background-color: var(--primary-600);
-	}
-
-	@media (min-width: 768px) {
-		.blog {
-			width: 40%;
-		}
+		background-color: var(--primary-400);
 	}
 
 	.blog:hover {
 		background-color: var(--neutral-900);
-		border: 1px solid var(--primary-600);
+		border: 1px solid var(--primary-400);
 		box-shadow: var(--box-shadow-hover);
 	}
 
 	.blog:hover .blog__title {
-		color: var(--primary-600);
+		color: var(--primary-400);
 	}
 
 	.blog:hover .blog__date {

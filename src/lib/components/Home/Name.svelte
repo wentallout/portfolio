@@ -36,7 +36,7 @@
 	}
 
 	.info__fullname {
-		color: var(--primary-600);
+		color: var(--primary-400);
 		font-family: var(--fancy-font);
 		margin-bottom: var(--space-s);
 	}

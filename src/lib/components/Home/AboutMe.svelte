@@ -54,7 +54,7 @@
 
 	.block__title {
 		font-weight: 600;
-		color: var(--primary-600);
+		color: var(--text);
 	}
 
 	.block__text {

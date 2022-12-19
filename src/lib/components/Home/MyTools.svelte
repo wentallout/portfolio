@@ -81,7 +81,7 @@
 	}
 
 	.block__title {
-		color: var(--primary-600);
+		color: var(--text);
 		font-weight: 600;
 		margin-top: var(--space-m);
 		margin-bottom: var(--space-2xs);

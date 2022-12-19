@@ -15,7 +15,7 @@
 
 	{#if data.categories.length}
 		<div class="category">
-			<div>Categories:</div>
+			<div class="category__title">Categories:</div>
 			{#each data.categories as category}
 				<a class="category__link" href="/blog/category/{category}">
 					{category}
@@ -36,25 +36,17 @@
 
 	.date {
 		display: block;
-		font-weight: 300;
-		color: var(--neutral-800);
 		margin: 0;
+		color: var(--text-low);
 	}
-
-	.category {
-		font-weight: 300;
-		color: var(--neutral-800);
-		display: flex;
-		flex-direction: row;
-		flex-wrap: wrap;
-		justify-content: flex-start;
-		align-items: center;
-		gap: var(--space-xs);
-	}
-
-	.category__link {
+	.category__title {
 		display: inline;
-		font-weight: 300 !important;
-		color: var(--accent-600);
+		color: var(--text-low);
+	}
+	.category {
+		color: var(--text-low);
+
+		gap: var(--space-xs);
+		margin: 0;
 	}
 </style>

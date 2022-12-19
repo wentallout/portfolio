@@ -51,12 +51,12 @@
 	}
 
 	.other:hover .other__title {
-		color: var(--primary-600);
+		color: var(--primary-400);
 	}
 
 	.other__title {
 		z-index: 1;
 		font-weight: 600;
-		color: var(--neutral-100);
+		color: var(--text);
 	}
 </style>

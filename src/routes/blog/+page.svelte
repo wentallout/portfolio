@@ -103,7 +103,7 @@
 	<TabPanel>
 		<section>
 			<SectionTitle sectionTitle="Color" let:sectionIcon>
-				<Brain {...sectionIcon} />
+				<Palette {...sectionIcon} />
 			</SectionTitle>
 
 			<BlogListContainer>

@@ -45,7 +45,7 @@
 		/*  */
 
 		/* COLOR */
-		background-color: var(--primary-600);
+		background-color: var(--primary-400);
 		/*  */
 
 		/* POSITION FIXED ON SCREEN */
