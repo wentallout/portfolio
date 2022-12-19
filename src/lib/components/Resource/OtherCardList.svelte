@@ -51,7 +51,7 @@
 	}
 
 	.other:hover .other__title {
-		color: var(--primary-400);
+		color: var(--primary-500);
 	}
 
 	.other__title {

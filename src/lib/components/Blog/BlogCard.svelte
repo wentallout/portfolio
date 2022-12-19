@@ -55,17 +55,17 @@
 
 	.blog:hover::before {
 		opacity: 1;
-		background-color: var(--primary-400);
+		background-color: var(--primary-500);
 	}
 
 	.blog:hover {
 		background-color: var(--neutral-900);
-		border: 1px solid var(--primary-400);
+		border: 1px solid var(--primary-500);
 		box-shadow: var(--box-shadow-hover);
 	}
 
 	.blog:hover .blog__title {
-		color: var(--primary-400);
+		color: var(--primary-500);
 	}
 
 	.blog:hover .blog__date {

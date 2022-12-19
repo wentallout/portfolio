@@ -30,8 +30,8 @@
 	}
 
 	.selected {
-		border-bottom: 2px solid var(--primary-400);
+		border-bottom: 2px solid var(--primary-500);
 		font-weight: 600;
-		color: var(--primary-400);
+		color: var(--primary-500);
 	}
 </style>

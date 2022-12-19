@@ -42,8 +42,8 @@
 				href={linkToDetail}>
 				<Button
 					label="Read"
-					border="1px solid var(--primary-400)"
-					backgroundColor="var(--primary-400)" />
+					border="1px solid var(--primary-500)"
+					backgroundColor="var(--primary-500)" />
 			</a>
 
 			<a rel="external noreferrer noopener" target="_blank" href={linkToFigma}>
@@ -98,7 +98,7 @@
 		font-weight: 500;
 		height: 60px;
 		max-width: 200px;
-		color: var(--primary-400);
+		color: var(--primary-500);
 	}
 
 	.info__description {

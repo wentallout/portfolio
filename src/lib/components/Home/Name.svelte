@@ -2,7 +2,7 @@
 	<img height="200" width="200" class="portrait" src="images/portrait.png" alt="Khoa's face" />
 
 	<div class="info">
-		<h1 class="info__fullname xxl-text">Nguyen Dang Khoa</h1>
+		<h1 class="info__fullname xxl-text rainbow">Nguyen Dang Khoa</h1>
 		<div class="info__job small-text">
 			23 y.o, love tinkering frontends and learning new design techniques
 		</div>
@@ -36,7 +36,7 @@
 	}
 
 	.info__fullname {
-		color: var(--primary-400);
+		color: var(--primary-500);
 		font-family: var(--fancy-font);
 		margin-bottom: var(--space-s);
 	}

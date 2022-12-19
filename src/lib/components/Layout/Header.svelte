@@ -54,7 +54,7 @@
 
 <style>
 	.active-page {
-		background-color: var(--primary-400);
+		background-color: var(--primary-500);
 		color: var(--black);
 	}
 
@@ -63,7 +63,7 @@
 	}
 
 	.nav-list__item:hover {
-		color: var(--primary-400);
+		color: var(--primary-500);
 	}
 
 	.nav {
@@ -184,8 +184,8 @@
 
 	.overlay-item:hover,
 	.overlay-item:focus {
-		color: var(--primary-400);
-		outline: 1px solid var(--primary-400);
+		color: var(--primary-500);
+		outline: 1px solid var(--primary-500);
 	}
 
 	.closebtn {
@@ -196,7 +196,7 @@
 		justify-content: center;
 		align-items: center;
 
-		background-color: var(--primary-400);
+		background-color: var(--primary-500);
 		top: 0;
 		cursor: pointer;
 

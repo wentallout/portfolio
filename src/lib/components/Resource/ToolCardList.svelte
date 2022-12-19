@@ -94,7 +94,7 @@
 	}
 
 	.tool:hover .tool__name {
-		color: var(--primary-400);
+		color: var(--primary-500);
 	}
 
 	@media (min-width: 768px) {

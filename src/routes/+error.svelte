@@ -9,7 +9,7 @@
 		<h2 class="error__info base-text">Oops! This is awkward...</h2>
 		<p class="error-message small-text">{$page.error.message}</p>
 		<a href="/">
-			<Button label="Go back" labelColor="var(--text)" backgroundColor="var(--primary-400)" />
+			<Button label="Go back" labelColor="var(--text)" backgroundColor="var(--primary-500)" />
 		</a>
 	</div>
 	<img class="error__image" width="500" height="500" src="/images/error.gif" alt="" />

@@ -93,7 +93,7 @@
 	}
 
 	.nav-list-item a:hover {
-		color: var(--primary-400);
+		color: var(--primary-500);
 	}
 
 	footer {
