@@ -1,10 +1,10 @@
 <script>
 </script>
 
-<section class="poem small-text">
+<section class="poem">
 	<h2 class="poem__title xl-text">Poem</h2>
 
-	<div class="poem__content">
+	<div class="poem__content small-text">
 		<div class="content">
 			<p>I'm a UI/UX designer, the king of the screen</p>
 			<p>I make websites pop, like a can of Red Bull caffeine</p>

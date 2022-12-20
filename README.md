@@ -8,6 +8,8 @@
 
 This is Khoa's personal portfolio.
 
+Current URL: [wentallout.tech](https://wentallout.tech)
+
 ## Progress
 
 ### Page

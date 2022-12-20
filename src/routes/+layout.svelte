@@ -45,6 +45,7 @@
 
 	import lazyload from 'vanilla-lazyload';
 	import { browser } from '$app/environment';
+	import { onMount } from 'svelte';
 
 	if (browser && !document.lazyloadInstance) {
 		document.lazyloadInstance = new lazyload();
@@ -106,7 +107,7 @@
 		height: 100%;
 		background: url('/images/bg_decor_flower_l.png'), url('/images/bg_decor_line_r.png');
 		z-index: -1;
-		background-position: top 0 left 0, top 0 right 0, bottom 0 left 0, bottom 0 right 0;
+		background-position: top var(--space-xl) left 0, top var(--space-xl) right 0;
 		background-repeat: no-repeat;
 	}
 

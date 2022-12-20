@@ -19,27 +19,23 @@
 	<div class="project__info">
 		<div class="info__project-name large-text">{projectName}</div>
 
-		<div class="info__section">
+		<div class="info__section small-text">
 			<div class="info__title">What</div>
 			<div class="info__description">{what}</div>
 		</div>
 
-		<div class="info__section">
+		<div class="info__section small-text">
 			<div class="info__title">Who</div>
 			<div class="info__description">{who}</div>
 		</div>
 
-		<div class="info__section">
+		<div class="info__section small-text">
 			<div class="info__title">Result</div>
 			<div class="info__description">{result}</div>
 		</div>
 
 		<div class="info__btn">
-			<a
-				data-cursor-text="Read Case Study"
-				data-cursor-text-repeat="4"
-				class="btn__anchor cursor-hover-item"
-				href={linkToDetail}>
+			<a class="btn__anchor" href={linkToDetail}>
 				<Button
 					label="Read"
 					border="1px solid var(--primary-500)"
