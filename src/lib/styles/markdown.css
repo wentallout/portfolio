@@ -37,7 +37,7 @@
 
 @keyframes flash-bg {
 	from {
-		background-color: yellow;
+		background-color: var(--primary-500);
 	}
 	to {
 		background-color: transparent;
@@ -123,8 +123,8 @@
 	margin-bottom: var(--space-2xs);
 	max-width: 30ch;
 	padding-left: var(--space-s);
-	background-color: var(--brand-color);
-	color: var(--text);
+	background-color: var(--bg);
+	color: var(--primary-500);
 	border-radius: var(--border-radius-light);
 	clip-path: polygon(4% 0%, 100% 0%, 100% 100%, 4% 100%, 0% 50%);
 }
@@ -222,7 +222,7 @@
 
 	overflow-y: auto;
 
-	border: 1px solid var(--text);
+	background-color: var(--bg);
 }
 
 .toc::before {
@@ -230,10 +230,10 @@
 	width: 100%;
 
 	/* FONT */
-	color: var(--text);
+	color: var(--bg);
 	font-size: var(--font-size-mid);
 	font-weight: 600;
-	background-color: var(--accent-900);
+	background-color: var(--primary-500);
 
 	/* FLEX */
 	display: flex;
@@ -276,26 +276,26 @@
 }
 
 .toc-link-h2 {
-	color: var(--accent-500);
+	color: var(--text);
 	font-weight: 600;
 }
 
 .toc-link-h2:hover:after {
 	content: '';
 	flex: 1 1;
-	border-bottom: 1px solid var(--accent-500);
+	border-bottom: 1px solid var(--primary-500);
 	margin: auto auto auto 0.5rem;
 }
 
 .toc-link-h3 {
-	color: var(--accent-500);
+	color: var(--text-low);
 	font-weight: 400;
 	margin-left: var(--space-s);
 }
 
 .toc-link-h4 {
 	font-weight: 400 !important;
-	color: var(--accent-500);
+	color: var(--text-low);
 	margin-left: var(--space-l);
 }
 
