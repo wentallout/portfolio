@@ -1,0 +1,37 @@
+---
+title: How to be an effective product designer - The 6Cs of UI/UX
+date: 2022-12-21
+categories:
+    - tips
+---
+
+## Video
+
+https://www.youtube.com/watch?v=xVzOeD6s3iQ
+
+## 1. Clarity
+
+## 2. Collaboration
+
+We are part of a bigger mechanism
+
+It takes a team
+
+## 3. Communication
+
+Great designers
+
+## 4. Constraints
+
+No organizations can create everything.
+
+## 5. Compromise
+
+## 6. Consensus
+
+All of the things above should you us reach some sort of near-term consensus about how to move forward.
+
+It could be something small like a UI update to a component or something larger like what is the most important metric to measure for success for this feature.
+
+Not everyone will agree and that's perfectly fine. Effective product designers are good at asking more questions and finding anchors where your team does agree and bringing everyone back to the ultimate reason that you're doing this work in the first place.
+

@@ -284,10 +284,10 @@ hr {
 	background-clip: text;
 	-webkit-background-clip: text;
 	-webkit-text-fill-color: transparent;
-	animation: textAnimate 1s linear infinite alternate;
+	animation: rainbowTextAnimation 1s linear infinite alternate;
 }
 
-@keyframes textAnimate {
+@keyframes rainbowTextAnimation {
 	from {
 		filter: hue-rotate(0deg);
 		background-position-x: 0%;
