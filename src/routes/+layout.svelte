@@ -120,7 +120,7 @@
 		width: 100%;
 		height: 100%;
 		background: url('/images/bg_decor_line_l.png'), url('/images/bg_decor_flower_r.png');
-		background-position: bottom 0 left 0, bottom 0 right 0;
+		background-position: bottom var(--space-xl) left 0, bottom var(--space-xl) right 0;
 		background-repeat: no-repeat;
 	}
 

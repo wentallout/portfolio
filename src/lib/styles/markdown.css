@@ -242,11 +242,12 @@
 
 	/* SPACING  */
 	border-bottom: 1px solid var(--neutral-900);
-	padding: var(--space-s);
+	padding: var(--space-s) var(--space-m);
 }
 
 .toc-level-1 {
-	padding: var(--space-s);
+	margin: 0;
+	padding: var(--space-m);
 }
 
 .toc-link {

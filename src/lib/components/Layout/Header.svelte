@@ -83,8 +83,7 @@
 
 	.nav-scrolldown {
 		background-color: rgba(0, 0, 0, 0.7) !important;
-		backdrop-filter: blur(1px);
-		box-shadow: 0 2px 4px rgba(45, 35, 66, 0.35), 0 7px 13px -3px rgba(45, 35, 66, 0.25);
+		backdrop-filter: blur(5px);
 		color: var(--text);
 	}
 
@@ -147,6 +146,7 @@
 		top: 0;
 		left: 0;
 		background-color: rgba(0, 0, 0, 0.9);
+		backdrop-filter: blur(5px);
 		overflow-y: hidden;
 		transition: 0.2s;
 		font-weight: 500;

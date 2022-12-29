@@ -44,9 +44,9 @@
 
 		/* Width */
 		max-width: 100vw;
-		background-color: transparent;
+
 		background-repeat: repeat;
-		background-image: url('images/diamonds.svg');
+		background: url('/images/diamonds.svg') bottom;
 	}
 
 	.footer__social {

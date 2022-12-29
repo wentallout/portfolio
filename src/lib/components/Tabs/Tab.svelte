@@ -23,6 +23,7 @@
 		font-weight: 500;
 		font-size: var(--font-size-large);
 		padding: var(--space-2xs) var(--space-s);
+		transition: 0.3s;
 	}
 
 	button:hover {
