@@ -45,8 +45,31 @@
 		/* Width */
 		max-width: 100vw;
 
+		background: rgba(0, 0, 0, 0.8);
+	}
+
+	footer:before {
+		content: '';
+		position: absolute;
+		background: url(/images/diamonds.svg) top;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: var(--space-m);
+		z-index: 3;
 		background-repeat: repeat;
-		background: url('/images/diamonds.svg') bottom;
+	}
+
+	footer:after {
+		content: '';
+		position: absolute;
+		background: url(/images/diamonds.svg) center;
+		bottom: 0;
+		left: 0;
+		width: 100%;
+		height: var(--space-m);
+		z-index: 3;
+		background-repeat: repeat;
 	}
 
 	.footer__social {
