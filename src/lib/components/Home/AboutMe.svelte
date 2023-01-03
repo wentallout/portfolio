@@ -55,11 +55,11 @@
 
 	.block__title {
 		font-weight: 600;
-		color: var(--text);
+		color: var(--text-color);
 	}
 
 	.block__text {
 		font-weight: 400;
-		color: var(--text-low);
+		color: var(--text-color-low);
 	}
 </style>

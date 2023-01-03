@@ -37,14 +37,14 @@
 	.date {
 		display: block;
 		margin: 0;
-		color: var(--text-low);
+		color: var(--text-color-low);
 	}
 	.category__title {
 		display: inline;
-		color: var(--text-low);
+		color: var(--text-color-low);
 	}
 	.category {
-		color: var(--text-low);
+		color: var(--text-color-low);
 
 		gap: var(--space-xs);
 		margin: 0;

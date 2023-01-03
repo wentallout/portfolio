@@ -30,6 +30,6 @@
 	.project-date {
 		display: block;
 		font-weight: 300;
-		color: var(--text-low);
+		color: var(--text-color-low);
 	}
 </style>

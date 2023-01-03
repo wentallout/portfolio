@@ -57,6 +57,6 @@
 	.other__title {
 		z-index: 1;
 		font-weight: 600;
-		color: var(--text);
+		color: var(--text-color);
 	}
 </style>

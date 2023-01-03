@@ -29,7 +29,7 @@
 
 	.block__text {
 		max-width: 60ch;
-		color: var(--text-low);
+		color: var(--text-color-low);
 	}
 
 	.expertise__block {

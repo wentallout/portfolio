@@ -8,7 +8,7 @@
 		right: 0;
 		text-align: center;
 		background-color: var(--accent-900);
-		color: var(--text);
+		color: var(--text-color);
 		padding: var(--space-s);
 		translate: 0 -100%;
 		transition: translate 150ms ease-in-out;

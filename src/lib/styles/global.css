@@ -6,14 +6,14 @@ body {
 	--normal-font: 'Mona Sans', 'Adjusted Arial Fallback';
 	--fancy-font: 'Recoleta';
 
-	/* --text: hsl(180, 8%, 5%); */
+	/* --text-color: hsl(180, 8%, 5%); */
 
-	--text: hsla(0, 0%, 100%, 0.87);
-	--text-low: hsla(0, 0%, 100%, 0.6);
+	--text-color: hsla(0, 0%, 100%, 0.87);
+	--text-color-low: hsla(0, 0%, 100%, 0.6);
 
 	--page-bg: #121212;
 
-	--brand-color: var(--text);
+	--brand-color: var(--text-color);
 
 	--bg: #1e1e1e;
 	--black: #000;
@@ -103,6 +103,9 @@ body {
 
 	/* darkmode mode */
 	/* color-scheme: light dark; */
+
+	/* LineSpacing */
+	--ls: 0.006rem;
 }
 
 ::selection {
@@ -120,6 +123,7 @@ body {
 .small-text {
 	font-size: var(--font-size-small);
 	line-height: var(--line-height-small);
+	letter-spacing: var(--ls);
 }
 
 .base-text {
@@ -169,7 +173,7 @@ body {
 	text-rendering: optimizeLegibility;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
-	color: var(--text);
+	color: var(--text-color);
 }
 
 ul {
@@ -201,7 +205,7 @@ input[type='email'],
 textarea {
 	font-family: inherit;
 	padding: var(--space-xs) var(--space-xs);
-	color: var(--text) !important;
+	color: var(--text-color) !important;
 	margin-bottom: var(--space-s);
 	background-color: var(--neutral-900);
 	height: 3.5rem;
@@ -264,14 +268,14 @@ svg {
 
 hr {
 	height: 14px;
-	background-color: var(--text);
+	background-color: var(--text-color);
 	width: 100%;
 	border: none;
 	clip-path: polygon(0px 7px, 100% 7px, 100% 8px, 0px 8px);
 }
 
 .icon {
-	color: var(--text);
+	color: var(--text-color);
 }
 
 .icon:hover {

@@ -14,7 +14,7 @@
 
 .markdown h1 {
 	font-family: var(--fancy-font);
-	color: var(--text);
+	color: var(--text-color);
 	font-weight: 600;
 	line-height: normal;
 	margin-bottom: var(--space-s);
@@ -131,12 +131,13 @@
 
 .markdown p,
 .markdown li:not(.toc li) {
-	color: var(--text);
+	color: var(--text-color);
 	font-size: var(--font-size-small);
 	line-height: var(--line-height-small);
 	margin: 0;
 	margin-bottom: var(--space-s);
 	max-width: var(--text-width);
+	letter-spacing: var(--ls);
 }
 
 .markdown li:not(.toc li) {
@@ -182,7 +183,7 @@
 
 .markdown li:before {
 	content: '◇';
-	color: var(--text);
+	color: var(--text-color);
 	margin-right: var(--space-3xs);
 }
 
@@ -277,7 +278,7 @@
 }
 
 .toc-link-h2 {
-	color: var(--text);
+	color: var(--text-color);
 	font-weight: 600;
 }
 
@@ -289,14 +290,14 @@
 }
 
 .toc-link-h3 {
-	color: var(--text-low);
+	color: var(--text-color-low);
 	font-weight: 400;
 	margin-left: var(--space-s);
 }
 
 .toc-link-h4 {
 	font-weight: 400 !important;
-	color: var(--text-low);
+	color: var(--text-color-low);
 	margin-left: var(--space-l);
 }
 
@@ -321,7 +322,7 @@ blockquote p {
 
 pre {
 	background-color: var(--neutral-900);
-	color: var(--text);
+	color: var(--text-color);
 	padding: var(--space-s) var(--space-s);
 	max-width: var(--text-width);
 	border-radius: var(--border-radius-light);

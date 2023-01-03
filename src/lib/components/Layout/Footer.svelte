@@ -14,16 +14,16 @@
 			{/each}
 		</ul>
 		<div class="footer__social">
-			<a aria-label="Phone me" class="social__icon" href="tel:+84929066331">
-				<Phone className="icon" width="32" height="32" color="var(--text)" />
-			</a>
 			<a
 				aria-label="Contact through LinkedIn"
 				class="social__icon"
 				href="https://www.linkedin.com/in/wentallout"
 				target="_blank"
 				rel="noreferrer noopener">
-				<LinkedinLogo width="32" height="32" color="var(--text)" />
+				<LinkedinLogo width="32" height="32" color="var(--text-color)" />
+			</a>
+			<a aria-label="Call Khoa with phone" class="social__icon" href="tel:+84929066331">
+				<Phone className="icon" width="32" height="32" color="var(--text-color)" />
 			</a>
 		</div>
 	</div>
@@ -63,7 +63,7 @@
 	footer:after {
 		content: '';
 		position: absolute;
-		background: url(/images/diamonds.svg) center;
+		background: url(/images/diamonds.svg) bottom;
 		bottom: 0;
 		left: 0;
 		width: 100%;
@@ -83,7 +83,7 @@
 	.footer-container {
 		display: flex;
 		flex-direction: column;
-		color: var(--text);
+		color: var(--text-color);
 		font-weight: 300;
 	}
 

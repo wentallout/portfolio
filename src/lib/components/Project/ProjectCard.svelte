@@ -42,8 +42,8 @@
 					backgroundColor="var(--primary-500)" />
 			</a>
 
-			<a rel="external noreferrer noopener" target="_blank" href={linkToFigma}>
-				<Button labelColor="var(--text)" label="Figma" border="1px solid var(--text)">
+			<a class="btn__anchor" rel="external noreferrer noopener" target="_blank" href={linkToFigma}>
+				<Button labelColor="var(--text-color)" label="Figma" border="1px solid var(--text-color)">
 					<FigmaLogo />
 				</Button>
 			</a>
@@ -100,15 +100,20 @@
 		margin-left: var(--space-s);
 		display: flex;
 		width: 70%;
-		color: var(--text-low);
+		color: var(--text-color-low);
 	}
 
 	.info__btn {
 		margin-top: var(--space-m);
 		display: flex;
+		width: 100%;
 		flex-direction: row;
 		flex-wrap: wrap;
 		gap: var(--space-s);
+	}
+
+	.btn__anchor {
+		width: 100%;
 	}
 
 	@media (min-width: 992px) {
@@ -122,6 +127,10 @@
 
 		.project__info {
 			width: 60%;
+		}
+
+		.btn__anchor {
+			width: 250px;
 		}
 	}
 </style>

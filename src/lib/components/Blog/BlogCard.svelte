@@ -43,6 +43,7 @@
 	.blog:before {
 		position: absolute;
 		content: '';
+		background-size: contain;
 		background: url('/images/diamonds.svg') center;
 		top: 0;
 		right: 0;
@@ -69,7 +70,7 @@
 	}
 
 	.blog:hover .blog__date {
-		color: var(--text-low);
+		color: var(--text-color-low);
 	}
 
 	.blog__title {
@@ -82,7 +83,7 @@
 		-webkit-box-orient: vertical;
 		text-overflow: ellipsis;
 		/* --- */
-		color: var(--text);
+		color: var(--text-color);
 		z-index: 3;
 	}
 
@@ -96,7 +97,7 @@
 
 		/* FONT */
 		font-weight: 400;
-		color: var(--text-low);
+		color: var(--text-color-low);
 		/* --- */
 
 		z-index: 3;

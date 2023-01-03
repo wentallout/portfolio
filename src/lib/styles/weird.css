@@ -7,7 +7,7 @@
 } */
 .page-container.dark {
 	/* --page-bg: #121212; */
-	--text: var(--text);
+	--text-color: var(--text-color);
 }
 
 /* -------------------------------- Scrollbar ------------------------------- */
@@ -126,5 +126,3 @@
 	background: var(--primary-500);
 	pointer-events: none;
 }
-
-

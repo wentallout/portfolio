@@ -57,7 +57,7 @@
 		padding-bottom: 16px;
 
 		/* width */
-		width: fit-content;
+		width: 100%;
 
 		transition: 0.3s;
 		font-size: var(--font-size-small);
@@ -71,12 +71,10 @@
 	}
 
 	.btn:hover {
-		filter: brightness(80%);
-		scale: 1.15;
-		box-shadow: var(--box-shadow-hover);
+		filter: brightness(120%);
 	}
 
 	.btn:active {
-		scale: 0.7;
+		scale: 0.8;
 	}
 </style>

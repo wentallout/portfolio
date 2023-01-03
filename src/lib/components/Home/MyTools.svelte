@@ -82,14 +82,14 @@
 	}
 
 	.block__title {
-		color: var(--text);
+		color: var(--text-color);
 		font-weight: 600;
 		margin-top: var(--space-m);
 		margin-bottom: var(--space-2xs);
 	}
 
 	.block__text {
-		color: var(--text-low);
+		color: var(--text-color-low);
 		font-weight: 400;
 		margin: 0;
 	}

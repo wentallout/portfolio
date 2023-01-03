@@ -46,7 +46,7 @@
 		left: 0;
 		width: fit-content;
 		background: rgba(0, 0, 0, 0.7);
-		color: var(--text);
+		color: var(--text-color);
 		padding: 4px 8px;
 		font-weight: 300;
 		scale: 0;

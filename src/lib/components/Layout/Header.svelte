@@ -34,7 +34,7 @@
 				{/each}
 
 				<li on:click={openNav} on:keydown={openNav} class="hamburger">
-					<List color="var(--text)" width="32" height="32" />
+					<List color="var(--text-color)" width="32" height="32" />
 				</li>
 			</ul>
 		</nav>
@@ -74,7 +74,7 @@
 		/* FONT */
 		font-size: var(--font-size-base);
 		font-weight: 500;
-		color: var(--text);
+		color: var(--text-color);
 		/* --- */
 
 		background-color: transparent;
@@ -84,7 +84,7 @@
 	.nav-scrolldown {
 		background-color: rgba(0, 0, 0, 0.7) !important;
 		backdrop-filter: blur(5px);
-		color: var(--text);
+		color: var(--text-color);
 	}
 
 	.nav-list {

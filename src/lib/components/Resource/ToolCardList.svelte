@@ -64,11 +64,11 @@
 	.tool__name {
 		font-weight: 500;
 		margin-bottom: var(--space-xs);
-		color: var(--text);
+		color: var(--text-color);
 	}
 
 	.tool__description {
-		color: var(--text-low);
+		color: var(--text-color-low);
 		overflow: hidden;
 		display: -webkit-box;
 		-webkit-line-clamp: 3;
