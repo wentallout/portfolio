@@ -5,25 +5,24 @@ import { mdsvex } from 'mdsvex';
 
 import rehypeToc from '@jsdevtools/rehype-toc';
 import rehypeSlug from 'rehype-slug';
+import sequence from 'svelte-sequential-preprocessor';
+import { preprocessThrelte } from '@threlte/preprocess';
 
 // const autoprefixer = require("autoprefixer");
 // import cssnanoPlugin from 'cssnano';
 
 /** @type {import('@sveltejs/kit').Config} */
 const config = {
-	preprocess: [
+	preprocess: sequence([
 		sveltePreprocess({
 			postcss: true
-			// postcss: {
-			// 	plugins: [autoprefixer, cssnanoPlugin]
-			// }
-			/* Other sveltePreprocess options here, like SCSS */
 		}),
 		mdsvex({
 			extensions: ['.svelte.md', '.md', '.svx'],
 			rehypePlugins: [rehypeSlug, rehypeToc]
-		})
-	],
+		}),
+		preprocessThrelte()
+	]),
 	extensions: ['.svelte', '.svx'],
 	kit: {
 		adapter: adapter(),

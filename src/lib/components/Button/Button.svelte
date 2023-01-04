@@ -1,6 +1,4 @@
 <script>
-	import { onMount } from 'svelte';
-
 	export let label = 'exampleLabel';
 	export let labelColor = 'var(--black)';
 	export let backgroundColor = 'transparent';
@@ -10,7 +8,6 @@
 	export let border = '';
 
 	let btnEle;
-	onMount(() => {});
 
 	function handleButtonEffect(e) {
 		const x = e.pageX;
@@ -43,7 +40,6 @@
 
 <style>
 	.btn {
-		min-width: 150px;
 		appearance: none;
 		/* flex */
 		display: flex;
@@ -62,7 +58,7 @@
 		transition: 0.3s;
 		font-size: var(--font-size-small);
 		line-height: normal;
-		font-weight: 500;
+		font-weight: 600;
 		border: 1px solid transparent;
 		border-radius: var(--border-radius);
 		overflow: hidden;

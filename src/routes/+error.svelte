@@ -8,11 +8,11 @@
 		<h1 class="status">Oops! This is awkward...</h1>
 		<h2 class="error__info base-text">{$page.status}</h2>
 		<p class="error-message small-text">{$page.error.message}</p>
-		<a href="/">
+		<a class="back" href="/">
 			<Button label="Go back" labelColor="var(--bg)" backgroundColor="var(--primary-500)" />
 		</a>
 	</div>
-	<img class="error__image" width="500" height="500" src="/images/error.gif" alt="" />
+	<img class="error__image" width="50%" height="auto" src="/images/error.gif" alt="" />
 </div>
 
 <style>
@@ -23,10 +23,13 @@
 		padding: var(--space-l);
 		background-color: var(--bg);
 	}
+	.back {
+		max-width: 50%;
+	}
 
 	.status {
 		color: var(--error);
-		font-size: calc(var(--space-xl) * 2);
+		font-size: calc(var(--space-xl));
 		font-weight: 600;
 	}
 

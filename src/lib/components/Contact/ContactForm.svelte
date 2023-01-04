@@ -71,8 +71,23 @@
 	}
 
 	.contact__btn {
-		display: flex;
+		/* display: flex;
 		flex-direction: row;
-		gap: var(--space-xs);
+		flex-wrap: wrap;
+		gap: var(--space-s);
+
+		width: 100%;
+		*/
+
+		margin-top: var(--space-m);
+
+		--min: 15ch;
+		--gap: var(--space-m);
+
+		display: grid;
+		grid-gap: var(--gap);
+		/* min() with 100% prevents overflow
+  in extra narrow spaces */
+		grid-template-columns: repeat(auto-fit, minmax(min(100%, var(--min)), 1fr));
 	}
 </style>

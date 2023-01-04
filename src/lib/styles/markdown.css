@@ -135,8 +135,9 @@
 	font-size: var(--font-size-small);
 	line-height: var(--line-height-small);
 	margin: 0;
-	margin-bottom: var(--space-s);
+	margin-bottom: var(--space-m);
 	max-width: var(--text-width);
+
 	letter-spacing: var(--ls);
 }
 
@@ -162,15 +163,9 @@
 	display: block;
 	width: 100%;
 	height: auto;
-
+	aspect-ratio: 16/9;
 	margin-top: var(--space-m);
 	margin-bottom: var(--space-xl);
-}
-
-@media (min-width: 992px) {
-	.markdown img {
-		max-width: 70%;
-	}
 }
 
 .markdown li:not(.toc li) {
