@@ -11,57 +11,47 @@
 	export let result = '';
 </script>
 
-<a class="anchor" href={linkToDetail}>
-	<div class="project">
-		<div class="project__thumbnail">
-			<slot />
+<div class="project">
+	<div class="project__thumbnail">
+		<slot />
+	</div>
+
+	<div class="project__info">
+		<div class="info__project-name large-text">{projectName}</div>
+
+		<div class="info__section small-text">
+			<div class="info__title">What</div>
+			<div class="info__description">{what}</div>
 		</div>
 
-		<div class="project__info">
-			<div class="info__project-name large-text">{projectName}</div>
+		<div class="info__section small-text">
+			<div class="info__title">Who</div>
+			<div class="info__description">{who}</div>
+		</div>
 
-			<div class="info__section small-text">
-				<div class="info__title">What</div>
-				<div class="info__description">{what}</div>
-			</div>
+		<div class="info__section small-text">
+			<div class="info__title">Result</div>
+			<div class="info__description">{result}</div>
+		</div>
 
-			<div class="info__section small-text">
-				<div class="info__title">Who</div>
-				<div class="info__description">{who}</div>
-			</div>
+		<div class="info__btn">
+			<a class="btn__anchor" href={linkToDetail}>
+				<Button
+					label="Read"
+					border="1px solid var(--primary-500)"
+					backgroundColor="var(--primary-500)" />
+			</a>
 
-			<div class="info__section small-text">
-				<div class="info__title">Result</div>
-				<div class="info__description">{result}</div>
-			</div>
-
-			<div class="info__btn">
-				<a class="btn__anchor" href={linkToDetail}>
-					<Button
-						label="Read"
-						border="1px solid var(--primary-500)"
-						backgroundColor="var(--primary-500)" />
-				</a>
-
-				<a
-					class="btn__anchor"
-					rel="external noreferrer noopener"
-					target="_blank"
-					href={linkToFigma}>
-					<Button labelColor="var(--text-color)" label="Figma" border="1px solid var(--text-color)">
-						<FigmaLogo />
-					</Button>
-				</a>
-			</div>
+			<a class="btn__anchor" rel="external noreferrer noopener" target="_blank" href={linkToFigma}>
+				<Button labelColor="var(--text-color)" label="Figma" border="1px solid var(--text-color)">
+					<FigmaLogo />
+				</Button>
+			</a>
 		</div>
 	</div>
-</a>
+</div>
 
 <style>
-	.anchor {
-		display: contents;
-	}
-
 	.project {
 		display: flex;
 		width: 100%;
@@ -101,7 +91,7 @@
 	.info__title {
 		width: fit-content;
 		margin-right: auto;
-		font-weight: 500;
+		font-weight: 400;
 		height: 60px;
 		max-width: 200px;
 	}

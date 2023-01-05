@@ -2,21 +2,23 @@
 	word-wrap: break-word;
 	position: relative;
 
-	padding: var(--space-s) var(--space-s);
-	border-radius: var(--border-radius);
+	border-radius: var(--border-radius-light);
 }
 
 @media (min-width: 992px) {
 	.markdown {
+		border: 1px solid var(--neutral-900);
 		padding: var(--space-xl) var(--space-3xl);
 	}
 }
 
 .markdown h1 {
 	font-family: var(--fancy-font);
-	color: var(--text-color);
-	font-weight: 600;
-	line-height: normal;
+
+	font-size: var(--font-size-2xl);
+	line-height: var(--line-height-2xl);
+
+	text-transform: capitalize;
 	margin-bottom: var(--space-s);
 }
 
@@ -166,6 +168,7 @@
 	aspect-ratio: 16/9;
 	margin-top: var(--space-m);
 	margin-bottom: var(--space-xl);
+	max-width: 64rem;
 }
 
 .markdown li:not(.toc li) {
@@ -177,7 +180,7 @@
 }
 
 .markdown li:before {
-	content: '◇';
+	content: '◆';
 	color: var(--text-color);
 	margin-right: var(--space-3xs);
 }
@@ -227,6 +230,7 @@
 
 	/* FONT */
 	color: var(--bg);
+
 	font-size: var(--font-size-mid);
 	font-weight: 600;
 	background-color: var(--primary-500);

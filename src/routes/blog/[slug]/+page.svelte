@@ -10,7 +10,7 @@
 </svelte:head>
 
 <article class="info">
-	<h1 class="xl-text">{data.title}</h1>
+	<h1 class="rainbow">{data.title}</h1>
 	<p class="date xs-text">Published: <Time relative timestamp={data.date} /></p>
 
 	{#if data.categories.length}

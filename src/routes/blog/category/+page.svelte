@@ -41,7 +41,7 @@
 		background-color: var(--bg);
 
 		color: var(--accent-500);
-		transition: 0.3s;
+		transition: var(--transition);
 		border-radius: var(--border-radius-light);
 	}
 

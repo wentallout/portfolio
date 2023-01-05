@@ -28,7 +28,7 @@
 <svelte:window on:scroll={handleOnScroll} />
 
 <div class="bck2top" on:click={goTop} on:keyup={goTop} class:hidden>
-	<CaretUp color="var(--primary-900)" width="24" height="24" />
+	<CaretUp class="icon-black" width="24" height="24" />
 </div>
 
 <style>

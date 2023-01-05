@@ -55,7 +55,7 @@
 		/* width */
 		width: 100%;
 
-		transition: 0.3s;
+		transition: var(--transition);
 		font-size: var(--font-size-small);
 		line-height: normal;
 		font-weight: 600;

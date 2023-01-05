@@ -26,7 +26,7 @@
 <style>
 	a {
 		position: relative;
-		transition: 0.3s;
+		transition: var(--transition);
 	}
 	.tooltip {
 		display: block;
@@ -35,7 +35,7 @@
 		background: var(--black);
 		padding: 1rem;
 		z-index: 99;
-		transition: opacity 0.3s;
+		transition: opacity var(--transition);
 		border-radius: var(--border-radius-light);
 		color: var(--text);
 	}

@@ -29,49 +29,42 @@
 			<ExLink href="tel:+84929066331">
 				<div class="social__address">
 					<Phone {...icon} />
-					<p>+84 929 066 331</p>
 				</div>
 			</ExLink>
 
 			<ExLink href="mailto:wentallout@gmail.com">
 				<div class="social__address">
 					<Envelope {...icon} />
-					<p>Email</p>
 				</div>
 			</ExLink>
 
 			<ExLink href="https://www.linkedin.com/in/wentallout">
 				<div class="social__address">
 					<LinkedinLogo {...icon} />
-					<p>LinkedIn</p>
-				</div>
-			</ExLink>
-
-			<ExLink href="https://www.linkedin.com/in/wentallout">
-				<div class="social__address">
-					<InstagramLogo {...icon} />
-					<p>Instagram</p>
 				</div>
 			</ExLink>
 
 			<ExLink href="https://www.figma.com/@wentallout">
 				<div class="social__address">
 					<FigmaLogo {...icon} />
-					<p>Figma</p>
 				</div>
 			</ExLink>
 
 			<ExLink href="https://github.com/wentallout">
 				<div class="social__address">
 					<GitHubLogo {...icon} />
-					<p>GitHub</p>
+				</div>
+			</ExLink>
+
+			<ExLink href="https://www.instagram.com/wentallout/saved">
+				<div class="social__address">
+					<InstagramLogo {...icon} />
 				</div>
 			</ExLink>
 
 			<ExLink href="https://www.reddit.com/user/wentallout">
 				<div class="social__address">
 					<RedditLogo {...icon} />
-					<p>Reddit</p>
 				</div>
 			</ExLink>
 		</address>
@@ -83,48 +76,35 @@
 		/* FLEX */
 		display: flex;
 		flex-direction: row;
-
 		/* padding: 0 var(--space-m); */
 		width: 100%;
-
 		margin-bottom: var(--space-m);
-
-		background-color: var(--bg);
-
 		border-bottom: 0;
-		overflow: visible;
-
-		border-radius: var(--border-radius-light);
-
-		box-shadow: var(--box-shadow);
 		overflow: hidden;
 	}
 
 	.social__list {
-		width: 100%;
+		display: flex;
+		flex-direction: row;
+		gap: var(--space-m);
 	}
 
 	.social__address {
-		display: flex;
-		flex-direction: row;
-		flex-wrap: wrap;
-
-		align-items: center;
 		padding: var(--space-s) var(--space-m);
 
-		transition: 0.3s;
-
-		width: 100%;
-		font-weight: 500;
+		transition: var(--transition);
+		border-radius: var(--border-radius-light);
+		background-color: var(--bg);
+		width: 80px;
+		height: 80px;
+		clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+		display: flex;
+		justify-content: center;
+		align-items: center;
 	}
 
 	.social__address:hover {
-		background-color: var(--neutral-900);
-		color: var(--primary-500);
-	}
-
-	.social__address p {
-		margin-left: var(--space-s);
+		background-color: var(--neutral-800);
 	}
 
 	@media (min-width: 768px) {

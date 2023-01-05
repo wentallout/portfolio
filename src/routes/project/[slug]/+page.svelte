@@ -11,7 +11,7 @@
 </svelte:head>
 
 <article class="info">
-	<h1 class="xl-text project-title rainbow">{data.title}</h1>
+	<h1 class="rainbow">{data.title}</h1>
 	<p class="small-text project-date">Updated: <Time relative timestamp={data.date} /></p>
 	<svelte:component this={data.content} />
 	<End />
@@ -20,11 +20,6 @@
 <style>
 	.info {
 		display: block;
-	}
-
-	.project-title {
-		text-transform: capitalize;
-		color: var(--brand-color);
 	}
 
 	.project-date {

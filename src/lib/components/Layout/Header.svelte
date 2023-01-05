@@ -78,7 +78,7 @@
 		/* --- */
 
 		background-color: transparent;
-		transition: 0.3s;
+		transition: var(--transition);
 	}
 
 	.nav-scrolldown {
@@ -168,7 +168,7 @@
 
 		color: var(--neutral-200);
 		display: block;
-		transition: 0.3s;
+		transition: var(--transition);
 		width: 100%;
 		padding-left: 20vw;
 

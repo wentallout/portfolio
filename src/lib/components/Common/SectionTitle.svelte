@@ -3,8 +3,8 @@
 
 	let sectionIcon = {
 		color: 'var(--primary-500)',
-		height: 24,
-		width: 24
+		height: 32,
+		width: 32
 	};
 </script>
 
@@ -12,7 +12,7 @@
 	<div class="title__icon">
 		<slot {sectionIcon} />
 	</div>
-	<h2 class="title__text xl-text rainbow">{sectionTitle}</h2>
+	<h2 class="title__text xl-text">{sectionTitle}</h2>
 </div>
 
 <style>
@@ -30,12 +30,11 @@
 		align-items: center;
 		padding: 1rem;
 		margin-right: var(--space-xs);
-		background-color: var(--bg);
-		clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
 	}
 
 	.title__text {
 		font-family: var(--fancy-font);
+		color: var(--primary-500);
 		font-weight: 600;
 	}
 </style>

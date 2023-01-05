@@ -36,7 +36,7 @@
 
 			<div class="contact__btn">
 				<Button label="Send" backgroundColor="var(--primary-500)">
-					<PaperPlaneRight color="var(--neutral-900)" />
+					<PaperPlaneRight class="icon-black" />
 				</Button>
 
 				<Button

@@ -29,7 +29,7 @@
 		/* --- */
 
 		/* OTHER */
-		transition: 0.3s;
+		transition: var(--transition);
 		position: relative;
 		border-radius: var(--border-radius-light);
 		overflow: hidden;
@@ -51,7 +51,7 @@
 		height: 100%;
 		z-index: 2;
 		opacity: 0;
-		transition: 0.3s;
+		transition: var(--transition);
 	}
 
 	.blog:hover::before {

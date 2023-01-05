@@ -5,7 +5,7 @@
 
 <section>
 	<div class="featured">
-		<h2 class="featured__title xl-text rainbow">Featured projects</h2>
+		<h2 class="featured__title xl-text rainbow">Featured</h2>
 		<div class="projects">
 			<ProjectCard
 				projectName="Reza - Restaurant Reservation App"

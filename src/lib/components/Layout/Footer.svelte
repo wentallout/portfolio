@@ -20,10 +20,10 @@
 				href="https://www.linkedin.com/in/wentallout"
 				target="_blank"
 				rel="noreferrer noopener">
-				<LinkedinLogo width="32" height="32" color="var(--text-color)" />
+				<LinkedinLogo class="icon" width="32" height="32" color="var(--text-color)" />
 			</a>
 			<a aria-label="Call Khoa with phone" class="social__icon" href="tel:+84929066331">
-				<Phone className="icon" width="32" height="32" color="var(--text-color)" />
+				<Phone class="icon" width="32" height="32" color="var(--text-color)" />
 			</a>
 		</div>
 	</div>

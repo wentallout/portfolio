@@ -106,6 +106,9 @@ body {
 
 	/* LineSpacing */
 	--ls: 0.006rem;
+
+	/* transition */
+	--transition: 0.3s ease;
 }
 
 ::selection {
@@ -276,10 +279,19 @@ hr {
 
 .icon {
 	color: var(--text-color);
+	transition: color 0.3s ease;
 }
 
 .icon:hover {
-	color: var(--primary-600);
+	color: var(--primary-500);
+}
+
+.icon-colored {
+	color: var(--primary-500);
+}
+
+.icon-black {
+	color: var(--bg);
 }
 
 .rainbow {
@@ -288,10 +300,10 @@ hr {
 	background-clip: text;
 	-webkit-background-clip: text;
 	-webkit-text-fill-color: transparent;
-	animation: rainbowTextAnimation 1s linear infinite alternate;
+	animation: rainbowTextAni 2s linear infinite alternate;
 }
 
-@keyframes rainbowTextAnimation {
+@keyframes rainbowTextAni {
 	from {
 		filter: hue-rotate(0deg);
 		background-position-x: 0%;
