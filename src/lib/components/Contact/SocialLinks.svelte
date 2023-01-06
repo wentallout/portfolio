@@ -13,7 +13,7 @@
 	import SectionTitle from '$lib/components/Common/SectionTitle.svelte';
 
 	let icon = {
-		color: 'var(--primary-500)',
+		color: 'var(--text-color)',
 		width: '32',
 		height: '32'
 	};
@@ -85,6 +85,7 @@
 
 	.social__list {
 		display: flex;
+		flex-wrap: wrap;
 		flex-direction: row;
 		gap: var(--space-m);
 	}
@@ -104,7 +105,7 @@
 	}
 
 	.social__address:hover {
-		background-color: var(--neutral-800);
+		background-color: var(--neutral-900);
 	}
 
 	@media (min-width: 768px) {

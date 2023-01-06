@@ -282,6 +282,10 @@ hr {
 	transition: color 0.3s ease;
 }
 
+*:hover > .icon {
+	color: var(--primary-500);
+}
+
 .icon:hover {
 	color: var(--primary-500);
 }
@@ -292,6 +296,10 @@ hr {
 
 .icon-black {
 	color: var(--bg);
+}
+
+.social__address:hover svg {
+	color: var(--primary-500);
 }
 
 .rainbow {

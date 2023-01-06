@@ -19,24 +19,27 @@
 		overflow: hidden;
 		width: 100%;
 	}
-	@keyframes bg-move {
+	/* @keyframes bg-move {
 		50% {
 			background-position: bottom center;
 		}
-	}
+	} */
 
 	.title:before {
-		opacity: 0.9;
-		background: url(/images/diamonds.svg) repeat top center;
 		content: '';
 		position: absolute;
 		top: 0;
 		left: 0;
+
+		opacity: 1;
+		background: repeating-radial-gradient(circle at 0 0, transparent 0, #121212 40px),
+			repeating-linear-gradient(#1e1e1e55, #1e1e1e);
+
+		/* SIZE */
 		width: 100%;
-		/* height: 100%; */
 		height: 500px;
 		z-index: -1;
-		animation: bg-move 8s linear infinite;
+		/* animation: bg-move 8s linear infinite; */
 	}
 
 	.title__text {
