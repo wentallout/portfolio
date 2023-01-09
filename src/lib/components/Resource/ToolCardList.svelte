@@ -83,7 +83,7 @@
 		width: 100%;
 		padding: var(--space-m);
 		height: 200px;
-		transition: 0.3s;
+		transition: var(--transition);
 		background-color: var(--bg);
 		box-shadow: var(--box-shadow);
 		border-radius: var(--border-radius-light);

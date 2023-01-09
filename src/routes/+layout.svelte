@@ -65,7 +65,6 @@
 <CursorTrail />
 <div class="page-container" data-sveltekit-preload-data>
 	<BackToTop />
-
 	<Header />
 
 	{#key data.currentRoute}
@@ -91,6 +90,7 @@
 		position: relative;
 		display: flex;
 		flex-direction: column;
+
 		min-height: calc(100vh - 70px);
 
 		/* Mobile padding */
@@ -107,7 +107,7 @@
 		height: 100%;
 		background: url('/images/bg_decor_flower_l.png'), url('/images/bg_decor_line_r.png');
 		z-index: -1;
-		background-position: top var(--space-xl) left 0, top var(--space-xl) right 0;
+		background-position: top var(--space-3xl) left 0, top var(--space-3xl) right 0;
 		background-repeat: no-repeat;
 	}
 
@@ -134,7 +134,7 @@
 	@media (min-width: 768px) {
 		.main-content {
 			/* Desktop padding */
-			padding: var(--space-l) 17vw;
+			padding: var(--space-l) 20vw;
 		}
 	}
 </style>

@@ -29,7 +29,7 @@
 		position: absolute;
 		z-index: 0;
 		filter: brightness(40%);
-		transition: 0.3s;
+		transition: var(--transition);
 	}
 
 	.other {

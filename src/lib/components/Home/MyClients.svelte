@@ -49,7 +49,7 @@
 		height: 100px;
 
 		filter: grayscale();
-		transition: 0.3s;
+		transition: var(--transition);
 	}
 
 	.logo:hover {

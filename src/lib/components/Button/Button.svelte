@@ -71,6 +71,6 @@
 	}
 
 	.btn:active {
-		scale: 0.8;
+		scale: 0.9;
 	}
 </style>

@@ -4,9 +4,7 @@ body {
 
 :root {
 	--normal-font: 'Mona Sans', 'Adjusted Arial Fallback';
-	--fancy-font: 'Recoleta';
-
-	/* --text-color: hsl(180, 8%, 5%); */
+	--fancy-font: 'Fancy';
 
 	--text-color: hsla(0, 0%, 100%, 0.87);
 	--text-color-low: hsla(0, 0%, 100%, 0.6);
@@ -93,10 +91,6 @@ body {
 	--space-2xl: clamp(4.25rem, calc(4.05rem + 1.02vw), 5rem);
 	--space-3xl: clamp(6.38rem, calc(6.07rem + 1.53vw), 7.5rem);
 
-	/* MISC */
-	accent-color: var(--primary-500);
-	caret-color: var(--primary-500);
-
 	/* BORDER RADIUS */
 	--border-radius: 12px;
 	--border-radius-light: 4px;
@@ -107,8 +101,12 @@ body {
 	/* LineSpacing */
 	--ls: 0.006rem;
 
-	/* transition */
+	/* TRANSITION */
 	--transition: 0.3s ease;
+
+	/* MISC */
+	accent-color: var(--primary-500);
+	caret-color: var(--primary-500);
 }
 
 ::selection {
@@ -320,4 +318,8 @@ hr {
 		filter: hue-rotate(360deg);
 		background-position-x: 600vw;
 	}
+}
+
+[contenteditable] {
+	outline: 0px solid transparent;
 }

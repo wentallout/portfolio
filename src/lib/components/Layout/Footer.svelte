@@ -2,8 +2,12 @@
 	import { navItems } from '$lib/config.js';
 	import LinkedinLogo from '~icons/ph/linkedin-logo';
 	import Phone from '~icons/ph/phone';
+
+	let w;
+	let h;
 </script>
 
+<svelte:window bind:innerWidth={w} bind:innerHeight={h} />
 <footer>
 	<div class="footer-container small-text">
 		<ul class="nav-list">
@@ -26,10 +30,16 @@
 				<Phone class="icon" width="32" height="32" color="var(--text-color)" />
 			</a>
 		</div>
+		<div class="other-info">Screen size: {w} x {h}</div>
 	</div>
 </footer>
 
 <style>
+	.other-info {
+		margin-top: var(--space-s);
+		color: var(--text-color-low);
+	}
+
 	footer {
 		/* Flex */
 		display: flex;
@@ -45,31 +55,7 @@
 		/* Width */
 		max-width: 100vw;
 
-		background: rgba(0, 0, 0, 0.8);
-	}
-
-	footer:before {
-		content: '';
-		position: absolute;
-		background: url(/images/diamonds.svg) top;
-		top: 0;
-		left: 0;
-		width: 100%;
-		height: var(--space-m);
-		z-index: 3;
-		background-repeat: repeat;
-	}
-
-	footer:after {
-		content: '';
-		position: absolute;
-		background: url(/images/diamonds.svg) bottom;
-		bottom: 0;
-		left: 0;
-		width: 100%;
-		height: var(--space-m);
-		z-index: 3;
-		background-repeat: repeat;
+		border-top: 1px solid var(--neutral-900);
 	}
 
 	.footer__social {
@@ -89,7 +75,7 @@
 
 	@media (min-width: 768px) {
 		footer {
-			padding: var(--space-xl) 17vw;
+			padding: var(--space-xl) 20vw;
 		}
 	}
 

@@ -4,27 +4,32 @@
 </script>
 
 <div class="error">
-	<div class="error__block">
-		<h1 class="status">Oops! This is awkward...</h1>
-		<h2 class="error__info base-text">{$page.status}</h2>
-		<p class="error-message small-text">{$page.error.message}</p>
-		<a class="back" href="/">
-			<Button label="Go back" labelColor="var(--bg)" backgroundColor="var(--primary-500)" />
-		</a>
+	<h1 class="status">Oops! This is awkward...</h1>
+	<div class="error__detail">
+		<p class="message small-text">{$page.status} {$page.error.message}</p>
 	</div>
-	<img class="error__image" width="50%" height="auto" src="/images/error.gif" alt="" />
+	<a class="back" href="/">
+		<Button label="Back to Home" labelColor="var(--bg)" backgroundColor="var(--primary-500)" />
+	</a>
+
+	<img class="error__image" width="auto" height="500px" src="/images/error.gif" alt="" />
 </div>
 
 <style>
 	.error {
 		display: flex;
-		flex-direction: row;
+		flex-direction: column;
 		flex-wrap: wrap;
+		justify-content: center;
+		align-items: center;
 		padding: var(--space-l);
-		background-color: var(--bg);
 	}
 	.back {
-		max-width: 50%;
+		width: 100%;
+	}
+
+	.error__image {
+		aspect-ratio: 1/1;
 	}
 
 	.status {
@@ -33,8 +38,17 @@
 		font-weight: 600;
 	}
 
-	.error-message {
-		color: var(--neutral-600);
+	.message {
+		display: inline-block;
+		color: var(--text-color-low);
 		font-weight: 300;
+	}
+
+	.error__detail {
+		display: inline-flex;
+		flex-direction: row;
+		justify-content: center;
+		align-items: center;
+		gap: var(--space-s);
 	}
 </style>

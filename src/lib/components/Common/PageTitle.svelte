@@ -18,28 +18,26 @@
 		border-radius: var(--border-radius-light);
 		overflow: hidden;
 		width: 100%;
+
+		background: repeating-radial-gradient(circle at 0 0, transparent 0, #121212 40px),
+			repeating-linear-gradient(#1e1e1e55, #1e1e1e);
 	}
-	/* @keyframes bg-move {
-		50% {
-			background-position: bottom center;
-		}
-	} */
 
 	.title:before {
 		content: '';
 		position: absolute;
 		top: 0;
+		right: 0;
+		bottom: 0;
 		left: 0;
 
-		opacity: 1;
-		background: repeating-radial-gradient(circle at 0 0, transparent 0, #121212 40px),
-			repeating-linear-gradient(#1e1e1e55, #1e1e1e);
-
-		/* SIZE */
-		width: 100%;
-		height: 500px;
-		z-index: -1;
-		/* animation: bg-move 8s linear infinite; */
+		background: linear-gradient(
+			0deg,
+			#121212 0%,
+			rgba(18, 18, 18, 0.5) 12%,
+			rgba(18, 18, 18, 0.1) 30%,
+			rgba(18, 18, 18, 0) 40%
+		);
 	}
 
 	.title__text {

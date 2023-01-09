@@ -111,7 +111,7 @@
 
 	@media (min-width: 768px) {
 		.nav {
-			padding: 0 17vw;
+			padding: 0 20vw;
 		}
 		.nav-list__item {
 			display: flex;
