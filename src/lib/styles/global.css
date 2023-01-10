@@ -102,7 +102,7 @@ body {
 	--ls: 0.006rem;
 
 	/* TRANSITION */
-	--transition: 0.3s ease;
+	--transition: 0.3s ease-out;
 
 	/* MISC */
 	accent-color: var(--primary-500);

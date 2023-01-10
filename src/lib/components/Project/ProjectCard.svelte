@@ -39,7 +39,8 @@
 				<Button
 					label="Read"
 					border="1px solid var(--primary-500)"
-					backgroundColor="var(--primary-500)" />
+					backgroundColor="var(--primary-500)"
+					labelColor="var(--black)" />
 			</a>
 
 			<a class="btn__anchor" rel="external noreferrer noopener" target="_blank" href={linkToFigma}>

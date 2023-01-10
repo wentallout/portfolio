@@ -123,7 +123,6 @@
 	/* Spacing */
 	margin-top: var(--space-l);
 	margin-bottom: var(--space-2xs);
-	max-width: 30ch;
 	padding-left: var(--space-s);
 	background-color: var(--bg);
 	color: var(--primary-500);
@@ -148,7 +147,7 @@
 }
 
 .markdown a:not(.toc a) {
-	color: var(--accent-500);
+	color: var(--accent-400);
 	font-weight: 400;
 }
 
@@ -208,7 +207,7 @@
 	flex-direction: column;
 	/* --- */
 
-	max-width: 500px;
+	width: 100%;
 	max-height: 500px;
 
 	font-weight: 400 !important;
@@ -229,7 +228,7 @@
 	width: 100%;
 
 	/* FONT */
-	color: var(--bg);
+	color: var(--black);
 
 	font-size: var(--font-size-mid);
 	font-weight: 600;
@@ -261,43 +260,62 @@
 
 .toc a:hover {
 	text-decoration: none;
-	filter: brightness(0.6);
+	color: var(--primary-500);
 }
 
 .toc-link {
 	display: flex;
+	padding-left: var(--space-s);
 }
 
 .toc-item-h2 {
-	margin-bottom: var(--space-2xs);
+	border-left: 1px solid var(--neutral-800);
+	padding-bottom: var(--space-2xs);
 }
 
 .toc-item-h3 {
-	margin-bottom: var(--space-s);
+	border-left: 1px solid var(--neutral-800);
+	padding-bottom: var(--space-s);
+
+	margin-left: var(--space-s);
 }
 
-.toc-link-h2 {
-	color: var(--text-color);
-	font-weight: 600;
+.toc-item-h4 {
+	border-left: 1px solid var(--neutral-800);
+	padding-bottom: var(--space-3xs);
+	margin-left: var(--space-s);
 }
 
-.toc-link-h2:hover:after {
+.toc-link-h2:hover:after,
+.toc-link-h3:hover:after,
+.toc-link-h3:hover:after {
 	content: '';
 	flex: 1 1;
 	border-bottom: 1px solid var(--primary-500);
 	margin: auto auto auto 0.5rem;
 }
+.toc-link-h2 {
+	color: var(--text-color);
+	margin-bottom: var(--space-3xs);
+	font-weight: 600;
+}
 
 .toc-link-h3 {
 	color: var(--text-color-low);
+	margin-bottom: var(--space-3xs);
 	font-weight: 400;
-	margin-left: var(--space-s);
 }
 
 .toc-link-h4 {
-	font-weight: 400 !important;
+	font-weight: 400;
 	color: var(--text-color-low);
-	margin-left: var(--space-l);
+	margin-bottom: var(--space-3xs);
+}
+
+.toc-item-h2:has(.toc-link-h2:hover),
+.toc-item-h3:has(.toc-link-h3:hover),
+.toc-item-h4:has(.toc-link-h4:hover) {
+	border-left: 1px solid var(--primary-500);
 }
 
 blockquote {

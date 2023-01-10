@@ -48,16 +48,14 @@
 			<div class="word rainbow">Dang</div>
 			<div class="word rainbow">Khoa</div>
 		</div>
-		<div style="margin-bottom: var(--space-s)" contentEditable="true" class="line">
+		<div contentEditable="true" style="margin-bottom: var(--space-s)" class="line">
 			<div class="word">UI/UX</div>
 			<div class="word">Dev</div>
 		</div>
 
-		<div class="line">
-			<a href="tel:+84929066331">
-				<div class="word fancy">+84 929 066 331</div>
-			</a>
-		</div>
+		<a href="tel:+84929066331" class="line">
+			<div class="word fancy">+84 929 066 331</div>
+		</a>
 
 		<div class="line">
 			<div class="social-links">
