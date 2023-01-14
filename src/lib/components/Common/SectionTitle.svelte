@@ -3,8 +3,8 @@
 
 	let sectionIcon = {
 		color: 'var(--primary-500)',
-		height: 40,
-		width: 40
+		height: 32,
+		width: 32
 	};
 </script>
 

@@ -14,8 +14,8 @@
 
 	let icon = {
 		color: 'var(--text-color)',
-		width: '32',
-		height: '32'
+		width: '24',
+		height: '24'
 	};
 </script>
 
@@ -26,24 +26,21 @@
 
 	<div class="social small-text">
 		<address class="social__list">
-			<ExLink href="tel:+84929066331">
-				<div class="social__address">
-					<Phone {...icon} />
-				</div>
-			</ExLink>
-
-			<ExLink href="mailto:wentallout@gmail.com">
-				<div class="social__address">
-					<Envelope {...icon} />
-				</div>
-			</ExLink>
-
 			<ExLink href="https://www.linkedin.com/in/wentallout">
 				<div class="social__address">
 					<LinkedinLogo {...icon} />
 				</div>
 			</ExLink>
-
+			<ExLink href="tel:+84929066331">
+				<div class="social__address">
+					<Phone {...icon} />
+				</div>
+			</ExLink>
+			<ExLink href="mailto:wentallout@gmail.com">
+				<div class="social__address">
+					<Envelope {...icon} />
+				</div>
+			</ExLink>
 			<ExLink href="https://www.figma.com/@wentallout">
 				<div class="social__address">
 					<FigmaLogo {...icon} />

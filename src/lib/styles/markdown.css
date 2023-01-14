@@ -33,13 +33,15 @@
 }
 
 .markdown h2:target,
-.markdown h3:target {
-	animation: flash-bg 3s;
+.markdown h3:target,
+.markdown h4:target {
+	animation: flash-bg 0.3s;
 }
 
 @keyframes flash-bg {
 	from {
 		background-color: var(--primary-500);
+		color: var(--black);
 	}
 	to {
 		background-color: transparent;
@@ -226,6 +228,8 @@
 .toc::before {
 	content: 'Contents';
 	width: 100%;
+	position: sticky;
+	top: 0;
 
 	/* FONT */
 	color: var(--black);
@@ -275,7 +279,7 @@
 
 .toc-item-h3 {
 	border-left: 1px solid var(--neutral-800);
-	padding-bottom: var(--space-s);
+	padding-bottom: var(--space-2xs);
 
 	margin-left: var(--space-s);
 }

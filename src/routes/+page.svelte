@@ -2,7 +2,7 @@
 	import Name from '$lib/components/Home/Name.svelte';
 	import FeaturedProject from '$lib/components/Home/FeaturedProject.svelte';
 	import Clients from '$lib/components/Home/MyClients.svelte';
-	import Expertise from '$lib/components/Home/MyExpertise.svelte';
+
 	import ToolUsed from '$lib/components/Home/MyTools.svelte';
 	import AboutMe from '$lib/components/Home/AboutMe.svelte';
 
@@ -74,6 +74,6 @@
 <Name />
 <FeaturedProject />
 <Clients />
-<Expertise />
+
 <ToolUsed />
 <AboutMe />

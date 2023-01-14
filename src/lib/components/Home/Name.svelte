@@ -1,8 +1,9 @@
 <script>
+	import Phone from '~icons/ph/phone';
+	import ExLink from '$lib/components/Common/ExLink.svelte';
 	import Envelope from '~icons/ph/envelope';
-	import LinkedinLogo from '~icons/ph/linkedin-logo';
 
-	import ExLink from './../Common/ExLink.svelte';
+	import LinkedinLogo from '~icons/ph/linkedin-logo';
 
 	import { onMount } from 'svelte';
 	let linkEle;
@@ -43,27 +44,26 @@
 
 <section class="container">
 	<!-- <img class="name-bg" src={Galaxy} alt="galaxy" /> -->
-	<div id="text">
+	<div class="text">
 		<div contentEditable="true" class="line">
 			<div class="word rainbow">Dang</div>
 			<div class="word rainbow">Khoa</div>
 		</div>
-		<div contentEditable="true" style="margin-bottom: var(--space-s)" class="line">
+		<div contentEditable="true" class="line">
 			<div class="word">UI/UX</div>
 			<div class="word">Dev</div>
 		</div>
 
-		<a href="tel:+84929066331" class="line">
-			<div class="word fancy">+84 929 066 331</div>
-		</a>
-
-		<div class="line">
+		<div style="margin-bottom:var(--space-m)" class="line">
 			<div class="social-links">
-				<ExLink href="mailto:wentallout@gmail.com">
-					<Envelope class="icon" height="40" width="40" color="var(--text-color)" />
-				</ExLink>
 				<ExLink href="https://www.linkedin.com/in/wentallout/">
-					<LinkedinLogo class="icon" height="40" width="40" color="var(--text-color)" />
+					<LinkedinLogo class="icon" height="32" width="32" color="var(--text-color)" />
+				</ExLink>
+				<ExLink href="tel:+84929066331">
+					<Phone class="icon" height="32" width="32" color="var(--text-color)" />
+				</ExLink>
+				<ExLink href="mailto:wentallout@gmail.com">
+					<Envelope class="icon" height="32" width="32" color="var(--text-color)" />
 				</ExLink>
 			</div>
 		</div>
@@ -123,7 +123,7 @@
 		);
 	}
 
-	#text {
+	.text {
 		display: flex;
 		flex-direction: column;
 		flex-wrap: wrap;
@@ -158,7 +158,7 @@
 	.line {
 		display: flex;
 		justify-content: space-between;
-		gap: var(--space-3xs);
+		gap: var(--space-m);
 		flex-wrap: wrap;
 	}
 

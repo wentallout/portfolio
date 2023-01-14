@@ -1,7 +1,9 @@
 <script>
+	import Envelope from '~icons/ph/envelope';
 	import { navItems } from '$lib/config.js';
 	import LinkedinLogo from '~icons/ph/linkedin-logo';
 	import Phone from '~icons/ph/phone';
+	import ExLink from '$lib/components/Common/ExLink.svelte';
 
 	let w;
 	let h;
@@ -18,19 +20,17 @@
 			{/each}
 		</ul>
 		<div class="footer__social">
-			<a
-				aria-label="Contact through LinkedIn"
-				class="social__icon"
-				href="https://www.linkedin.com/in/wentallout"
-				target="_blank"
-				rel="noreferrer noopener">
-				<LinkedinLogo class="icon" width="32" height="32" color="var(--text-color)" />
-			</a>
-			<a aria-label="Call Khoa with phone" class="social__icon" href="tel:+84929066331">
-				<Phone class="icon" width="32" height="32" color="var(--text-color)" />
-			</a>
+			<ExLink href="https://www.linkedin.com/in/wentallout/">
+				<LinkedinLogo class="icon" height="32" width="32" color="var(--text-color)" />
+			</ExLink>
+			<ExLink href="tel:+84929066331">
+				<Phone class="icon" height="32" width="32" color="var(--text-color)" />
+			</ExLink>
+			<ExLink href="mailto:wentallout@gmail.com">
+				<Envelope class="icon" height="32" width="32" color="var(--text-color)" />
+			</ExLink>
 		</div>
-		<div class="other-info">Screen size: {w} x {h}</div>
+		<div class="other-info">Screen: {w} x {h}</div>
 	</div>
 </footer>
 
