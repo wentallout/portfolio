@@ -116,7 +116,7 @@
 
 		background: linear-gradient(
 			0deg,
-			#121212 0%,
+			var(--page-bg) 0%,
 			rgba(18, 18, 18, 0.5) 12%,
 			rgba(18, 18, 18, 0.1) 30%,
 			rgba(18, 18, 18, 0) 40%

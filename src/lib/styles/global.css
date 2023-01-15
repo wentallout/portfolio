@@ -9,11 +9,11 @@ body {
 	--text-color: hsla(0, 0%, 100%, 0.87);
 	--text-color-low: hsla(0, 0%, 100%, 0.6);
 
-	--page-bg: #111111;
+	--page-bg: #0f0f0f;
 
 	--brand-color: var(--text-color);
 
-	--bg: #1e1e1e;
+	--bg: hsl(0, 0%, 8%);
 	--black: #000;
 
 	--swiper-theme-color: var(--primary-500) !important;

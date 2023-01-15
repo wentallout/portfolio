@@ -166,7 +166,7 @@
 	display: block;
 	width: 100%;
 	height: auto;
-	aspect-ratio: 16/9;
+	object-fit: cover;
 	margin-top: var(--space-m);
 	margin-bottom: var(--space-xl);
 	max-width: 64rem;

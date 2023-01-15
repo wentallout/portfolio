@@ -55,7 +55,24 @@
 		/* Width */
 		max-width: 100vw;
 
-		border-top: 1px solid var(--neutral-900);
+		background-color: var(--bg);
+	}
+
+	footer::before {
+		content: '';
+		position: absolute;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		left: 0;
+
+		background: linear-gradient(
+			180deg,
+			var(--page-bg) 0%,
+			rgba(18, 18, 18, 0.5) 12%,
+			rgba(18, 18, 18, 0.1) 30%,
+			rgba(18, 18, 18, 0) 40%
+		);
 	}
 
 	.footer__social {
