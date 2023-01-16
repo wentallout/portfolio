@@ -6,7 +6,10 @@ body {
 	--normal-font: 'Mona Sans', 'Adjusted Arial Fallback';
 	--fancy-font: 'Fancy';
 
-	--text-color: hsla(0, 0%, 100%, 0.87);
+	/* --text-color: hsla(0, 0%, 100%, 0.87); */
+
+	--text-color: hsla(0, 0%, 100%, 1);
+
 	--text-color-low: hsla(0, 0%, 100%, 0.6);
 
 	--page-bg: #0f0f0f;
@@ -97,6 +100,14 @@ body {
 
 	/* darkmode mode */
 	/* color-scheme: light dark; */
+
+	/* 
+tracking-tighter	letter-spacing: -0.05em;
+tracking-tight	letter-spacing: -0.025em;
+tracking-normal	letter-spacing: 0em;
+tracking-wide	letter-spacing: 0.025em;
+tracking-wider	letter-spacing: 0.05em;
+tracking-widest	letter-spacing: 0.1em; */
 
 	/* LineSpacing */
 	--ls: 0.006rem;

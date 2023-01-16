@@ -135,13 +135,12 @@
 .markdown p,
 .markdown li:not(.toc li) {
 	color: var(--text-color);
-	font-size: var(--font-size-small);
-	line-height: var(--line-height-small);
+
+	font-size: var(--font-size-base);
+	line-height: var(--line-height-base);
 	margin: 0;
 	margin-bottom: var(--space-m);
 	max-width: var(--text-width);
-
-	letter-spacing: var(--ls);
 }
 
 .markdown li:not(.toc li) {
