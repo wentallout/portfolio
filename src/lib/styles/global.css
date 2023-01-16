@@ -135,7 +135,7 @@ tracking-widest	letter-spacing: 0.1em; */
 .small-text {
 	font-size: var(--font-size-small);
 	line-height: var(--line-height-small);
-	letter-spacing: var(--ls);
+	/* letter-spacing: var(--ls); */
 }
 
 .base-text {

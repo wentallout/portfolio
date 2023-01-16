@@ -12,7 +12,7 @@
 
 <article class="info">
 	<h1 class="rainbow">{data.title}</h1>
-	<p class="small-text project-date">Updated: <Time relative timestamp={data.date} /></p>
+	<div class="small-text project-date">Updated: <Time  relative timestamp={data.date} /></div>
 	<svelte:component this={data.content} />
 	<End />
 </article>

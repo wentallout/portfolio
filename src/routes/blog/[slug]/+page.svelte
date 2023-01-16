@@ -11,7 +11,7 @@
 
 <article class="info">
 	<h1 class="rainbow">{data.title}</h1>
-	<p class="date xs-text">Published: <Time relative timestamp={data.date} /></p>
+	<div class="date small-text">Published: <Time relative timestamp={data.date} /></div>
 
 	{#if data.categories.length}
 		<div class="category">

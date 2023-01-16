@@ -30,7 +30,7 @@
 		right: 0;
 		bottom: 0;
 		left: 0;
-
+		z-index: -1;
 		background: linear-gradient(
 			0deg,
 			var(--page-bg) 0%,
