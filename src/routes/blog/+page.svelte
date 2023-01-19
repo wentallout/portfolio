@@ -2,22 +2,15 @@
 	import BlogListContainer from '$lib/components/Blog/BlogListContainer.svelte';
 	import SectionTitle from '$lib/components/Common/SectionTitle.svelte';
 	import BlogCard from '$lib/components/Blog/BlogCard.svelte';
-
 	import TextAa from '~icons/ph/text-aa';
-
+	import Smiley from '~icons/ph/smiley';
 	import GraduationCap from '~icons/ph/graduation-cap';
-
-	import Brain from '~icons/ph/brain';
-
 	import Lightbulb from '~icons/ph/lightbulb';
-
 	import Palette from '~icons/ph/palette';
-
+	import Gift from '~icons/ph/gift';
 	import FastForward from '~icons/ph/fast-forward';
 	import PageTitle from '$lib/components/Common/PageTitle.svelte';
-
 	import { Tabs, TabList, TabPanel, Tab } from '$lib/components/Tabs/tabs.js';
-
 	export let data;
 </script>
 
@@ -82,7 +75,7 @@
 	<TabPanel>
 		<section>
 			<SectionTitle sectionTitle="UX" let:sectionIcon>
-				<Brain {...sectionIcon} />
+				<Smiley {...sectionIcon} />
 			</SectionTitle>
 
 			<BlogListContainer>
@@ -145,7 +138,7 @@
 	<TabPanel>
 		<section>
 			<SectionTitle sectionTitle="Freebies" let:sectionIcon>
-				<FastForward {...sectionIcon} />
+				<Gift {...sectionIcon} />
 			</SectionTitle>
 
 			<BlogListContainer>

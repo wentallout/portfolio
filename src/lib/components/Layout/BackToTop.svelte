@@ -1,4 +1,5 @@
 <script>
+	import { VanishingHeader } from '$lib/components/Layout/VanishingHeader.svelte';
 	import CaretUp from '~icons/ph/caret-up';
 
 	export let showOnPx = 150;
@@ -40,8 +41,8 @@
 		/*  */
 
 		/* SIZE */
-		width: 56px;
-		height: 56px;
+		width: 48px;
+		height: 48px;
 		/*  */
 
 		/* COLOR */

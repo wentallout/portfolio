@@ -4,12 +4,8 @@
 	import LinkedinLogo from '~icons/ph/linkedin-logo';
 	import Phone from '~icons/ph/phone';
 	import ExLink from '$lib/components/Common/ExLink.svelte';
-
-	let w;
-	let h;
 </script>
 
-<svelte:window bind:innerWidth={w} bind:innerHeight={h} />
 <footer>
 	<div class="footer-container small-text">
 		<ul class="nav-list">
@@ -30,7 +26,9 @@
 				<Envelope class="icon" height="32" width="32" color="var(--text-color)" />
 			</ExLink>
 		</div>
-		<div class="other-info">Screen: {w} x {h}</div>
+		<div class="other-info small-text">
+			I declare war on anybody standing in the way of what I dream for.
+		</div>
 	</div>
 </footer>
 
@@ -65,11 +63,8 @@
 		right: 0;
 		bottom: 0;
 		left: 0;
-
 		pointer-events: none;
-
 		z-index: 0;
-
 		background: linear-gradient(
 			180deg,
 			var(--page-bg) 0%,
@@ -83,7 +78,6 @@
 		display: flex;
 		flex-direction: row;
 		flex-wrap: wrap;
-
 		gap: var(--space-s);
 	}
 

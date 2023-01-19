@@ -3,7 +3,7 @@
 	import SectionDesc from '$lib/components/Common/SectionDesc.svelte';
 	import OtherCardList from '$lib/components/Resource/OtherCardList.svelte';
 	import BookGallery from '$lib/components/Resource/BookGallery.svelte';
-	import ToolCardList from '$lib/components/Resource/ToolCardList.svelte';
+	import ToolCardList from '$lib/components/Resource/ResourceCardList.svelte';
 	import Books from '~icons/ph/books';
 	import HardDrives from '~icons/ph/hard-drives';
 	import Flask from '~icons/ph/flask';

@@ -1,6 +1,6 @@
 <script>
 	import Name from '$lib/components/Home/Name.svelte';
-	import FeaturedProject from '$lib/components/Home/FeaturedProject.svelte';
+	import FeaturedProject from '$lib/components/Home/Featured.svelte';
 	import Clients from '$lib/components/Home/MyClients.svelte';
 
 	import ToolUsed from '$lib/components/Home/MyTools.svelte';

@@ -1,5 +1,4 @@
 <script>
-	// import { transform } from 'dom7';
 	import { navItems } from '$lib/config.js';
 	import List from '~icons/ph/list';
 	import X from '~icons/ph/x';
@@ -134,9 +133,11 @@
 		align-items: center;
 		width: 100%;
 		height: 100%;
+
+		transition: var(--transition);
 	}
 
-	/* OVERLAY */
+	/* ---OVERLAY--- */
 
 	.overlay {
 		height: 0%;

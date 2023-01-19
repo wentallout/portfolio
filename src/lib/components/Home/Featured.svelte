@@ -5,7 +5,12 @@
 
 <section>
 	<div class="featured">
-		<h2 class="featured__title xl-text rainbow">Featured</h2>
+		<div class="title__section">
+			<h2 class="featured__title xl-text rainbow">Featured</h2>
+			<a href="/project">
+				<div class="title__see small-text">See all</div>
+			</a>
+		</div>
 		<div class="projects">
 			<ProjectCard
 				projectName="Reza - Restaurant Reservation App"
@@ -28,6 +33,19 @@
 	}
 
 	.featured__title {
+		width: fit-content;
 		font-family: var(--fancy-font);
+	}
+
+	.title__section {
+		display: flex;
+		width: 100%;
+		flex-direction: row;
+		justify-content: space-between;
+		align-items: center;
+	}
+
+	.title__see {
+		color: var(--accent-500);
 	}
 </style>

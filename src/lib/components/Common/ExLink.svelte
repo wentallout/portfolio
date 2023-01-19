@@ -31,17 +31,16 @@
 	.tooltip {
 		opacity: 0;
 		display: none;
-
 		position: fixed;
 		background: rgba(0, 0, 0, 0.9);
 		backdrop-filter: blur(5px);
 		padding: var(--space-xs);
 		z-index: 99;
-		transition: var(--transition);
 		border-radius: var(--border-radius-light);
 		color: var(--text);
 		font-weight: 300;
 	}
+
 	a:hover .tooltip {
 		display: none;
 	}
