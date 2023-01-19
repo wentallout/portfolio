@@ -18,7 +18,7 @@
 	{href}
 	rel="external nofollow noopener noreferrer"
 	target="_blank">
-	<div class="tooltip" style="top: {tooltipY}px; left: {tooltipX}px">{href}</div>
+	<div class="tooltip small-text" style="top: {tooltipY}px; left: {tooltipX}px">{href}</div>
 
 	<slot />
 </a>
@@ -29,18 +29,26 @@
 		transition: var(--transition);
 	}
 	.tooltip {
-		display: block;
 		opacity: 0;
+		display: none;
+
 		position: fixed;
-		background: var(--black);
-		padding: 1rem;
+		background: rgba(0, 0, 0, 0.9);
+		backdrop-filter: blur(5px);
+		padding: var(--space-xs);
 		z-index: 99;
-		transition: opacity var(--transition);
+		transition: var(--transition);
 		border-radius: var(--border-radius-light);
 		color: var(--text);
+		font-weight: 300;
 	}
-
 	a:hover .tooltip {
-		opacity: 1;
+		display: none;
+	}
+	@media (min-width: 768px) {
+		a:hover .tooltip {
+			opacity: 1;
+			display: block;
+		}
 	}
 </style>

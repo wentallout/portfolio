@@ -66,6 +66,10 @@
 		bottom: 0;
 		left: 0;
 
+		pointer-events: none;
+
+		z-index: 0;
+
 		background: linear-gradient(
 			180deg,
 			var(--page-bg) 0%,
@@ -101,7 +105,7 @@
 		flex-direction: row;
 		justify-content: left;
 		align-items: center;
-		margin: 0px;
+		margin: 0;
 
 		margin-bottom: var(--space-l);
 		flex-wrap: wrap;

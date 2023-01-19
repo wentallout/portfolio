@@ -45,15 +45,6 @@
 <section class="container">
 	<!-- <img class="name-bg" src={Galaxy} alt="galaxy" /> -->
 	<div class="text">
-		<div contentEditable="true" class="line">
-			<div class="word rainbow">Dang</div>
-			<div class="word rainbow">Khoa</div>
-		</div>
-		<div contentEditable="true" class="line">
-			<div class="word">UI/UX</div>
-			<div class="word">Dev</div>
-		</div>
-
 		<div style="margin-bottom:var(--space-m)" class="line">
 			<div class="social-links">
 				<ExLink href="https://www.linkedin.com/in/wentallout/">
@@ -66,6 +57,14 @@
 					<Envelope class="icon" height="32" width="32" color="var(--text-color)" />
 				</ExLink>
 			</div>
+		</div>
+		<div contentEditable="true" class="line">
+			<div class="word rainbow">Dang</div>
+			<div class="word rainbow">Khoa</div>
+		</div>
+		<div class="line">
+			<div class="word">UI/UX</div>
+			<div class="word">Dev</div>
 		</div>
 
 		<div class="line">
@@ -99,11 +98,14 @@
 		align-items: center;
 		flex-direction: column;
 		width: 100%;
+	}
 
-		background-image: url('/images/wall.svg');
-		background-blend-mode: darken;
-		background-position: top;
-		background-repeat: repeat;
+	@media (min-width: 768px) {
+		.container {
+			background-image: url('/images/wall.svg');
+			background-position: top;
+			background-repeat: repeat;
+		}
 	}
 
 	.container:before {

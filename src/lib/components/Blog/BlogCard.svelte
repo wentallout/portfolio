@@ -44,14 +44,17 @@
 		position: absolute;
 		content: '';
 		background-size: contain;
-		background: url('/images/diamonds.svg') center;
 		top: 0;
 		right: 0;
+
 		width: var(--space-m);
 		height: 100%;
 		z-index: 2;
 		opacity: 0;
 		transition: var(--transition);
+
+		background: -webkit-linear-gradient(92deg, #95d7e3, #eb76ff);
+		animation: rainbowTextAni 2s linear infinite alternate;
 	}
 
 	.blog:hover::before {
@@ -60,7 +63,6 @@
 	}
 
 	.blog:hover {
-		background-color: var(--neutral-900);
 		border: 1px solid var(--primary-500);
 		box-shadow: var(--box-shadow-hover);
 	}
