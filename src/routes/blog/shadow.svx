@@ -1,0 +1,15 @@
+---
+title: How to make good shadows
+date: 2023-1-22
+categories:
+    - tips
+---
+
+## Figma
+
+Go to 'drop shadow'
+
+X: 0 Y:4 B: 20 S:0
+
+Opacity: #000 8%
+

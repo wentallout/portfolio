@@ -1,4 +1,5 @@
 <script>
+	import SocialButtons from '$lib/components/Contact/SocialButtons.svelte';
 	import Phone from '~icons/ph/phone';
 	import ExLink from '$lib/components/Common/ExLink.svelte';
 	import Envelope from '~icons/ph/envelope';
@@ -43,20 +44,9 @@
 </script>
 
 <section class="container">
-	<!-- <img class="name-bg" src={Galaxy} alt="galaxy" /> -->
 	<div class="text">
 		<div style="margin-bottom:var(--space-m)" class="line">
-			<div class="social-links">
-				<ExLink href="https://www.linkedin.com/in/wentallout/">
-					<LinkedinLogo class="icon" height="32" width="32" color="var(--text-color)" />
-				</ExLink>
-				<ExLink href="tel:+84929066331">
-					<Phone class="icon" height="32" width="32" color="var(--text-color)" />
-				</ExLink>
-				<ExLink href="mailto:wentallout@gmail.com">
-					<Envelope class="icon" height="32" width="32" color="var(--text-color)" />
-				</ExLink>
-			</div>
+			<SocialButtons />
 		</div>
 		<div contentEditable="true" class="line">
 			<div class="word rainbow">Dang</div>
