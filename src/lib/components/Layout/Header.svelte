@@ -1,7 +1,10 @@
 <script>
+	import SocialButtons from '$lib/components/Contact/SocialButtons.svelte';
 	import { navItems } from '$lib/config.js';
 	import List from '~icons/ph/list';
 	import X from '~icons/ph/x';
+
+	import { onMount } from 'svelte';
 
 	import VanishingHeader from '$lib/components/Layout/VanishingHeader.svelte';
 	import { page } from '$app/stores';
@@ -16,12 +19,20 @@
 	function closeNav() {
 		navOverlayEle.style.height = '0%';
 	}
+
+	let header;
+
+	onMount(() => {
+		const navigation = header;
+		const navigationHeight = navigation.offsetHeight;
+		document.documentElement.style.setProperty('--scroll-padding', navigationHeight + 'px');
+	});
 </script>
 
 <svelte:window bind:scrollY />
 
 <VanishingHeader duration="350ms" offset={50} tolerance={5}>
-	<header>
+	<header bind:this={header}>
 		<nav class="nav" class:nav-scrolldown={scrollY > 0}>
 			<ul class="nav-list">
 				{#each navItems as navItem}
@@ -48,6 +59,9 @@
 		{#each navItems as navItem}
 			<a class="overlay-item xl-text" on:click={closeNav} href={navItem.path}>{navItem.title}</a>
 		{/each}
+		<div class="overlay-item">
+			<SocialButtons />
+		</div>
 	</div>
 </div>
 
@@ -165,22 +179,24 @@
 	}
 
 	.overlay-item {
-		padding: var(--space-s) 0;
+		padding: var(--space-l) 0;
 
 		color: var(--neutral-200);
-		display: block;
-		transition: var(--transition);
+
+		/* FLEX */
+		display: flex;
+		align-items: center;
+		/* --- */
+
+		/* SIZE */
 		width: 100%;
+		height: var(--scroll-padding);
+		/* --- */
+
 		padding-left: 20vw;
-
+		padding-right: 20vw;
+		transition: var(--transition);
 		outline: 1px solid transparent;
-
-		/* display: flex;
-		
-		
-
-		justify-content: flex-start;
-		align-items: center; */
 	}
 
 	.overlay-item:hover,
@@ -194,6 +210,7 @@
 		display: flex;
 
 		width: 100%;
+		height: var(--scroll-padding);
 		justify-content: center;
 		align-items: center;
 
@@ -201,7 +218,7 @@
 		top: 0;
 		cursor: pointer;
 
-		padding: var(--space-xs);
+		/* padding: var(--space-xs); */
 		cursor: pointer;
 	}
 

@@ -14,18 +14,15 @@
 
 .markdown h1 {
 	font-family: var(--fancy-font);
-
 	font-size: var(--font-size-2xl);
 	line-height: var(--line-height-2xl);
-
 	text-transform: capitalize;
-	margin-bottom: var(--space-s);
+	margin-bottom: var(--space-m);
 }
 
 .markdown h2,
 .markdown h3,
 .markdown h4 {
-	scroll-margin-top: 80px;
 	text-transform: capitalize;
 	line-height: normal;
 	position: relative;
@@ -48,14 +45,6 @@
 	}
 }
 
-.markdown h3 {
-	padding-bottom: 0.7rem;
-}
-
-.markdown h2 {
-	padding-bottom: 0.9rem;
-}
-
 .markdown h2 {
 	font-size: var(--font-size-large);
 	line-height: var(--line-height-large);
@@ -64,10 +53,10 @@
 	margin-top: var(--space-3xl);
 	margin-bottom: var(--space-s);
 	font-family: var(--fancy-font);
+	padding-bottom: 0.9rem;
 }
 
-.markdown h2:before,
-.markdown h3:before {
+.markdown h2:before {
 	content: '';
 	display: block;
 	position: absolute;
@@ -86,6 +75,7 @@
 		80px 10px,
 		0px 10px
 	);
+	padding-bottom: 0.7rem;
 }
 
 .markdown h3 {
@@ -96,48 +86,33 @@
 
 	/* Spacing */
 	margin-top: var(--space-xl);
-	margin-bottom: var(--space-xs);
+	margin-bottom: var(--space-s);
 
 	color: var(--primary-500);
-}
 
-.markdown h3:before {
-	clip-path: polygon(
-		0px 5px,
-		35px 5px,
-		40px 0px,
-		85px 0px,
-		90px 5px,
-		100% 5px,
-		100% 6px,
-		85px 6px,
-		80px 10px,
-		20px 10px,
-		15px 6px,
-		0px 6px
-	);
+	border-bottom: 1px solid var(--primary-500);
 }
 
 .markdown h4 {
 	font-size: var(--font-size-base);
 	line-height: var(--line-height-base);
 	font-weight: 500;
-	/* Spacing */
-	margin-top: var(--space-l);
-	margin-bottom: var(--space-2xs);
-	padding-left: var(--space-s);
-	background-color: var(--bg);
+
 	color: var(--primary-500);
 	border-radius: var(--border-radius-light);
-	clip-path: polygon(4% 0%, 100% 0%, 100% 100%, 4% 100%, 0% 50%);
+
+	/* SPACING */
+	margin-top: var(--space-l);
+	margin-bottom: var(--space-2xs);
+	/* --- */
 }
 
 .markdown p,
 .markdown li:not(.toc li) {
 	color: var(--text-color);
 
-	font-size: var(--font-size-base);
-	line-height: var(--line-height-base);
+	font-size: var(--font-size-small);
+	line-height: var(--line-height-small);
 	margin: 0;
 	margin-bottom: var(--space-m);
 	max-width: var(--text-width);
@@ -201,6 +176,8 @@
 .markdown ol li::before {
 	content: none;
 }
+
+/* TOC */
 
 .toc {
 	/* FLEX */
@@ -320,6 +297,8 @@
 .toc-item-h4:has(.toc-link-h4:hover) {
 	border-left: 1px solid var(--primary-500);
 }
+
+/* --- */
 
 blockquote {
 	border-radius: var(--border-radius-light);

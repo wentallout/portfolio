@@ -3,7 +3,12 @@ const PUBLIC_DOMAIN = 'wentallout.tech';
 const directives = {
 	'base-uri': ["'self'"],
 	'child-src': ["'self'"],
-	'connect-src': ["'self'", 'ws://localhost:*', 'wss://socket.tidio.co'],
+	'connect-src': [
+		"'self'",
+		'ws://localhost:*',
+		'wss://socket.tidio.co',
+		'https://api.countapi.xyz/hit/:HOST:/:PATHNAME'
+	],
 	// 'connect-src': ["'self'", 'ws://localhost:*', 'https://hcaptcha.com', 'https://*.hcaptcha.com'],
 	'img-src': [
 		"'self'",

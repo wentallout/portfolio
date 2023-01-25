@@ -1,5 +1,5 @@
 <script>
-	import PageTitle from './../../lib/components/Common/PageTitle.svelte';
+	import PageTitle from '$lib/components/Common/PageTitle.svelte';
 	import SectionDesc from '$lib/components/Common/SectionDesc.svelte';
 	import OtherCardList from '$lib/components/Resource/OtherCardList.svelte';
 	import BookGallery from '$lib/components/Resource/BookGallery.svelte';
@@ -32,8 +32,7 @@
 	</SectionTitle>
 
 	<SectionDesc
-		text="User research helps you understand user behaviors, needs, and motivations through various
-	qualitative and quantitative methods (interviews, observation, forms, etc)." />
+		text="User research helps you understand user behaviors, needs, and motivations through various qualitative and quantitative methods (interviews, observation, forms, etc)." />
 
 	<ToolCardList />
 </section>

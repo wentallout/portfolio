@@ -91,7 +91,7 @@
 		display: flex;
 		flex-direction: column;
 
-		min-height: calc(100vh - 70px);
+		min-height: 100vh;
 
 		/* Mobile padding */
 		padding: var(--space-l) 1rem;

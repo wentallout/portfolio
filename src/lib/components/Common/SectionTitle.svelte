@@ -20,7 +20,6 @@
 		display: flex;
 		justify-content: left;
 		align-items: center;
-
 		margin-bottom: var(--space-m);
 	}
 

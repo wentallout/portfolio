@@ -1,9 +1,6 @@
 <script>
-	import Envelope from '~icons/ph/envelope';
+	import SocialButtons from '$lib/components/Contact/SocialButtons.svelte';
 	import { navItems } from '$lib/config.js';
-	import LinkedinLogo from '~icons/ph/linkedin-logo';
-	import Phone from '~icons/ph/phone';
-	import ExLink from '$lib/components/Common/ExLink.svelte';
 </script>
 
 <footer>
@@ -15,18 +12,11 @@
 				</li>
 			{/each}
 		</ul>
-		<div class="footer__social">
-			<ExLink href="https://www.linkedin.com/in/wentallout/">
-				<LinkedinLogo class="icon" height="32" width="32" color="var(--text-color)" />
-			</ExLink>
-			<ExLink href="tel:+84929066331">
-				<Phone class="icon" height="32" width="32" color="var(--text-color)" />
-			</ExLink>
-			<ExLink href="mailto:wentallout@gmail.com">
-				<Envelope class="icon" height="32" width="32" color="var(--text-color)" />
-			</ExLink>
-		</div>
-		<div class="other-info small-text">
+
+		<SocialButtons />
+
+		<div class="other-info small-text">wentallout © 2021 - 2023</div>
+		<div class="secret small-text">
 			I declare war on anybody standing in the way of what I dream for.
 		</div>
 	</div>
@@ -34,8 +24,18 @@
 
 <style>
 	.other-info {
+		user-select: none;
 		margin-top: var(--space-s);
 		color: var(--text-color-low);
+	}
+
+	.secret {
+		color: transparent;
+		transition: var(--transition);
+	}
+
+	.other-info:hover + .secret {
+		color: var(--primary-500);
 	}
 
 	footer {
@@ -74,13 +74,6 @@
 		);
 	}
 
-	.footer__social {
-		display: flex;
-		flex-direction: row;
-		flex-wrap: wrap;
-		gap: var(--space-s);
-	}
-
 	.footer-container {
 		display: flex;
 		flex-direction: column;
@@ -112,7 +105,7 @@
 	}
 
 	.nav-list-item a {
-		font-family: var(--fancy-font);
+		font-weight: 500;
 		transition: 0.3s;
 	}
 

@@ -2,6 +2,11 @@ body {
 	margin: 0;
 }
 
+html {
+	scroll-behavior: smooth;
+	scroll-padding: var(--scroll-padding);
+}
+
 :root {
 	--normal-font: 'Mona Sans', 'Adjusted Arial Fallback';
 	--fancy-font: 'Fancy';
@@ -121,7 +126,7 @@ tracking-widest	letter-spacing: 0.1em; */
 }
 
 ::selection {
-	color: var(--black);
+	color: #000;
 	background: var(--primary-500);
 }
 
@@ -219,7 +224,7 @@ textarea {
 	padding: var(--space-xs) var(--space-xs);
 	color: var(--text-color) !important;
 	margin-bottom: var(--space-s);
-	background-color: var(--neutral-900);
+	background-color: var(--black);
 	height: 3.5rem;
 	border: 0;
 	border-radius: var(--border-radius-light);
@@ -231,7 +236,7 @@ textarea:focus {
 }
 
 textarea {
-	height: 4.5rem;
+	height: 7rem;
 }
 
 /* ------ */

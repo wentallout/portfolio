@@ -1,5 +1,4 @@
 <script>
-	import { VanishingHeader } from '$lib/components/Layout/VanishingHeader.svelte';
 	import CaretUp from '~icons/ph/caret-up';
 
 	export let showOnPx = 150;
@@ -29,7 +28,7 @@
 <svelte:window on:scroll={handleOnScroll} />
 
 <div class="bck2top" on:click={goTop} on:keyup={goTop} class:hidden>
-	<CaretUp class="icon-black" width="32" height="32" />
+	<CaretUp class="icon" width="24" height="24" />
 </div>
 
 <style>
@@ -46,7 +45,7 @@
 		/*  */
 
 		/* COLOR */
-		background-color: var(--primary-500);
+		background-color: rgba(0, 0, 0, 0.5);
 		/*  */
 
 		/* POSITION FIXED ON SCREEN */

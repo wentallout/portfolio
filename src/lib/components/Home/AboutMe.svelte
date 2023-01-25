@@ -1,10 +1,11 @@
 <script>
+	import HomeSectionTitle from '$lib/components/Home/HomeSectionTitle.svelte';
 	import Chair from '$lib/components/Three/Chair.svelte';
 </script>
 
 <section>
 	<div class="about">
-		<h2 class="about__title xl-text">About me</h2>
+		<HomeSectionTitle title="About me" />
 		<div class="about__block">
 			<div class="desc">
 				<div class="block">
@@ -46,12 +47,6 @@
 		flex-direction: column;
 
 		gap: var(--space-m);
-	}
-
-	.about__title {
-		font-family: var(--fancy-font);
-		font-weight: 600;
-		color: var(--primary-500);
 	}
 
 	.about__block {

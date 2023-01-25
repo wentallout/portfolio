@@ -4,9 +4,9 @@
 </script>
 
 <div class="error">
-	<h1 class="status">Oops! This is awkward...</h1>
+	<h1 class="status">{$page.status} {$page.error.message}</h1>
 	<div class="error__detail">
-		<p class="message small-text">{$page.status} {$page.error.message}</p>
+		<p class="message small-text">Oops! Something unexpected happened.</p>
 	</div>
 	<a class="back" href="/">
 		<Button label="Back to Home" labelColor="var(--bg)" backgroundColor="var(--primary-500)" />
