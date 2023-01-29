@@ -245,17 +245,19 @@ img {
 	display: block;
 	font-family: sans-serif;
 	font-weight: 300;
-
 	line-height: 2;
 	position: relative;
 	text-align: center;
 
-	/* responsive */
+	/* RESPONSIVE */
 	object-fit: cover;
 	max-width: 100%;
 	height: auto;
+	/* --- */
 
+	/* DARK MODE */
 	filter: brightness(0.8) contrast(1.2);
+	/* --- */
 }
 
 img::before {
@@ -338,4 +340,8 @@ hr {
 
 [contenteditable] {
 	outline: 0px solid transparent;
+}
+
+.svelte-lightbox-footer h2 {
+	font-size: var(--font-size-small);
 }

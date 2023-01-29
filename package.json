@@ -56,7 +56,6 @@
 		"swiper": "^8.4.6",
 		"three": "^0.148.0",
 		"unplugin-icons": "^0.15.2",
-		"vanilla-lazyload": "^17.8.3",
 		"vite": "^4.0.4",
 		"vite-imagetools": "^4.0.17"
 	},

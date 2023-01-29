@@ -2,8 +2,8 @@
 	export let src = '';
 	export let alt = 'insert alt here';
 
-	export let width = 600;
-	export let height = 600;
+	export let width;
+	export let height;
 
 	export let hasCaption = true;
 
@@ -11,13 +11,7 @@
 
 	import { Lightbox } from 'svelte-lightbox';
 
-	import { onMount } from 'svelte';
-	import { browser } from '$app/environment';
-	onMount(() => {
-		if (browser) {
-			document.lazyloadInstance.update();
-		}
-	});
+	import { lazyLoad } from '$lib/actions/lazyLoad';
 </script>
 
 <figure>
@@ -26,8 +20,15 @@
 		{imagePreset}
 		enableImageExpand="true"
 		title={alt}
-		transitionDuration="30">
-		<img class="lazy" {width} {height} {src} loading="lazy" decoding="async" {alt} />
+		transitionDuration="5">
+		<img
+			class="lazy-img"
+			use:lazyLoad={src}
+			{width}
+			{height}
+			loading="lazy"
+			decoding="async"
+			{alt} />
 
 		{#if hasCaption}
 			<figcaption class="caption xs-text">{alt}</figcaption>
@@ -36,6 +37,13 @@
 </figure>
 
 <style>
+	.lazy-img {
+		/* LAZY LOAD */
+		opacity: 0;
+		transition: opacity 0.3s ease;
+		/* --- */
+	}
+
 	figure {
 		position: relative;
 		margin: 0;
