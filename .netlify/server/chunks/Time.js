@@ -1,4 +1,4 @@
-import { c as create_ssr_component, l as compute_rest_props, e as spread, f as escape_object, q as escape_attribute_value, h as escape } from "./index.js";
+import { c as create_ssr_component, l as compute_rest_props, e as spread, f as escape_object, q as escape_attribute_value, h as escape } from "./index3.js";
 import dayjs from "dayjs";
 import relativeTime from "dayjs/plugin/relativeTime.js";
 dayjs.extend(relativeTime);

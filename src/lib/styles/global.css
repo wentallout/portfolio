@@ -22,7 +22,7 @@ html {
 	--brand-color: var(--text-color);
 
 	--bg: hsl(0, 0%, 8%);
-	--black: #000;
+	--black: hsl(0, 0%, 3%);
 
 	--swiper-theme-color: var(--primary-500) !important;
 
@@ -36,32 +36,32 @@ html {
 	--primary-200: #befec7;
 	--primary-300: #87f891;
 	--primary-400: #50e853;
-	--primary-500: hsl(118, 76%, 45%);
+	--primary-500: #22c91c;
 	--primary-600: #17a109;
 	--primary-700: #147802;
 	--primary-800: #114f00;
 	--primary-900: #0a2600;
 
-	/* Accent: Skylla */
+	/* Accent: Clear Chill */
 	--accent-100: #f2f6ff;
-	--accent-200: #bdd4fe;
-	--accent-300: #86b5f7;
-	--accent-400: #4d95e5;
-	--accent-500: #1973c2;
-	--accent-600: #085f9b;
-	--accent-700: #024c74;
-	--accent-800: #00374d;
+	--accent-200: #bed5ff;
+	--accent-300: #88b9fd;
+	--accent-400: #53a1f7;
+	--accent-500: #1f8ded;
+	--accent-600: #0a73bb;
+	--accent-700: #025a8a;
+	--accent-800: #003e58;
 	--accent-900: #001d26;
 
 	/* Neutral */
 	--neutral-100: #fafcfb;
-	--neutral-200: #e7ede8;
-	--neutral-300: #d5ded6;
-	--neutral-400: #c3cfc4;
-	--neutral-500: #b2bfb2;
-	--neutral-600: #8e998d;
-	--neutral-700: #6a7369;
-	--neutral-800: #474d45;
+	--neutral-200: #e9edea;
+	--neutral-300: #d8ded9;
+	--neutral-400: #c8cfc8;
+	--neutral-500: #b8bfb8;
+	--neutral-600: #919991;
+	--neutral-700: #6c736b;
+	--neutral-800: #474d46;
 	--neutral-900: #232622;
 
 	/* alert */
@@ -118,7 +118,7 @@ tracking-widest	letter-spacing: 0.1em; */
 	--ls: 0.006rem;
 
 	/* TRANSITION */
-	--transition: 0.3s ease-out;
+	--transition: 0.3s ease-in-out;
 
 	/* MISC */
 	accent-color: var(--primary-500);
@@ -126,7 +126,7 @@ tracking-widest	letter-spacing: 0.1em; */
 }
 
 ::selection {
-	color: #000;
+	color: var(--black);
 	background: var(--primary-500);
 }
 

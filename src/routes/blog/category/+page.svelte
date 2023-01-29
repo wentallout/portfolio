@@ -1,4 +1,5 @@
 <script>
+	import BlogTag from '$lib/components/Common/BlogTag.svelte';
 	export let data;
 	import SectionTitle from '$lib/components/Common/SectionTitle.svelte';
 	import Folder from '~icons/ph/folder';
@@ -24,7 +25,11 @@
 
 <div class="category">
 	{#each categories as category}
-		<a class="category__link" href="/blog/category/{category}">{category}</a>
+		<a href="/blog/category/{category}">
+			<BlogTag>
+				{category}
+			</BlogTag>
+		</a>
 	{/each}
 </div>
 
@@ -34,20 +39,5 @@
 		flex-direction: row;
 		flex-wrap: wrap;
 		gap: var(--space-s);
-	}
-	.category__link {
-		padding: var(--space-xs);
-		width: fit-content;
-		background-color: var(--bg);
-
-		color: var(--accent-500);
-		transition: var(--transition);
-		border-radius: var(--border-radius-light);
-	}
-
-	.category__link:hover {
-		color: var(--accent-300);
-		background-color: var(--neutral-900);
-		text-decoration: underline;
 	}
 </style>

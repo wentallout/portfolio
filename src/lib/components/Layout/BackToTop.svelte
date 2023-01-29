@@ -40,8 +40,8 @@
 		/*  */
 
 		/* SIZE */
-		width: 48px;
-		height: 48px;
+		width: 56px;
+		height: 56px;
 		/*  */
 
 		/* COLOR */
@@ -50,8 +50,8 @@
 
 		/* POSITION FIXED ON SCREEN */
 		position: fixed;
-		right: 30px;
-		bottom: 30px;
+		right: 10px;
+		bottom: 10px;
 		z-index: 99;
 		/*  */
 

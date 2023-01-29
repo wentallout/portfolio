@@ -1,4 +1,4 @@
-import { c as create_ssr_component, l as compute_rest_props, o as createEventDispatcher, s as setContext, p as onDestroy, e as spread, q as escape_attribute_value, f as escape_object, d as add_attribute, u as is_void, w as tick, k as getContext, v as validate_component } from "./index.js";
+import { c as create_ssr_component, l as compute_rest_props, p as createEventDispatcher, s as setContext, o as onDestroy, e as spread, q as escape_attribute_value, f as escape_object, d as add_attribute, y as is_void, w as tick, k as getContext, v as validate_component } from "./index3.js";
 import { getWindow, getDocument } from "ssr-window";
 import { $, addClass, removeClass, hasClass, toggleClass, attr, removeAttr, transform, transition as transition$1, on, off, trigger, transitionEnd as transitionEnd$1, outerWidth, outerHeight, styles, offset, css, each, html, text, is, index, eq, append, prepend, next, nextAll, prev, prevAll, parent, parents, closest, find, children, filter, remove } from "dom7";
 const Methods = {
@@ -4897,7 +4897,7 @@ const SwiperContainer = create_ssr_component(($$result, $$props, $$bindings, slo
           slidesPerGroup: slidesNumber
         }
       },
-      spaceBetween: 16,
+      spaceBetween: 8,
       slidesPerView: 1,
       pagination: { clickable: true, type: "bullets" },
       scrollbar: { draggable: true },

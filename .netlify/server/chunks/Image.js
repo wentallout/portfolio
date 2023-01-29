@@ -1,5 +1,5 @@
-import { c as create_ssr_component, l as compute_rest_props, e as spread, f as escape_object, p as onDestroy, d as add_attribute, o as createEventDispatcher, b as subscribe, h as escape, v as validate_component, t as compute_slots } from "./index.js";
-/* empty css                                     */import { w as writable } from "./index3.js";
+import { c as create_ssr_component, l as compute_rest_props, e as spread, f as escape_object, o as onDestroy, d as add_attribute, p as createEventDispatcher, b as subscribe, h as escape, v as validate_component, t as compute_slots } from "./index3.js";
+/* empty css                                     */import { w as writable } from "./index2.js";
 const css$6 = {
   code: "div.svelte-ln98e9{cursor:zoom-in;position:static}.svelte-lightbox-thumbnail>*{height:auto;max-width:100%}",
   map: null
@@ -50,7 +50,7 @@ const LightboxHeader = create_ssr_component(($$result, $$props, $$bindings, slot
     classes: (imagePreset === "fullscreen" ? "fullscreen" : "") + " svelte-1qg5r72"
   })}>${showCloseButton ? `<button${spread([escape_object(closeButtonProps)], {
     classes: (imagePreset === "fullscreen" ? "fullscreen" : "") + " svelte-1qg5r72"
-  })}>\xD7
+  })}>×
         </button>` : ``}
 </div>`;
 });
@@ -194,7 +194,7 @@ const Lightbox = create_ssr_component(($$result, $$props, $$bindings, slots) => 
     $$bindings.isVisible(isVisible);
   if ($$props.programmaticController === void 0 && $$bindings.programmaticController && programmaticController !== void 0)
     $$bindings.programmaticController(programmaticController);
-  return `${$$slots.thumbnail || enableFallbackThumbnail ? `${validate_component(LightboxThumbnail, "Thumbnail").$$render($$result, Object.assign((customization == null ? void 0 : customization.thumbnailProps) || {}), {}, {
+  return `${$$slots.thumbnail || enableFallbackThumbnail ? `${validate_component(LightboxThumbnail, "Thumbnail").$$render($$result, Object.assign({}, customization?.thumbnailProps || {}), {}, {
     default: () => {
       return `${$$slots.thumbnail ? `${slots.thumbnail ? slots.thumbnail({}) : ``}` : `${slots.default ? slots.default({}) : ``}`}`;
     }
@@ -202,13 +202,14 @@ const Lightbox = create_ssr_component(($$result, $$props, $$bindings, slots) => 
 
 ${isVisible ? `${validate_component(BodyChild, "BodyChild").$$render($$result, {}, {}, {
     default: () => {
-      return `${validate_component(ModalCover, "ModalCover").$$render($$result, Object.assign({ transitionDuration }, customization.coverProps || {}), {}, {
+      return `${validate_component(ModalCover, "ModalCover").$$render($$result, Object.assign({}, { transitionDuration }, customization.coverProps || {}), {}, {
         default: () => {
-          return `${validate_component(Modal, "Modal").$$render($$result, Object.assign({ imagePreset }, { transitionDuration }, customization.lightboxProps || {}), {}, {
+          return `${validate_component(Modal, "Modal").$$render($$result, Object.assign({}, { imagePreset }, { transitionDuration }, customization.lightboxProps || {}), {}, {
             default: () => {
               return `${validate_component(LightboxHeader, "Header").$$render(
                 $$result,
                 Object.assign(
+                  {},
                   { imagePreset },
                   { showCloseButton },
                   { enableEscapeToClose },
@@ -227,7 +228,7 @@ ${isVisible ? `${validate_component(BodyChild, "BodyChild").$$render($$result, {
                 }
               })}
 
-				${validate_component(LightboxFooter, "Footer").$$render($$result, Object.assign({ imagePreset }, { title }, { description }, customization.lightboxFooterProps || {}), {}, {})}`;
+				${validate_component(LightboxFooter, "Footer").$$render($$result, Object.assign({}, { imagePreset }, { title }, { description }, customization.lightboxFooterProps || {}), {}, {})}`;
             }
           })}`;
         }
@@ -236,7 +237,7 @@ ${isVisible ? `${validate_component(BodyChild, "BodyChild").$$render($$result, {
   })}` : ``}`;
 });
 const css = {
-  code: "figure.svelte-1pj2els.svelte-1pj2els{margin:0;position:relative}.caption.svelte-1pj2els.svelte-1pj2els{-webkit-backdrop-filter:blur(5px);backdrop-filter:blur(5px);background:rgba(0,0,0,.7);bottom:0;color:var(--neutral-100);font-weight:300;left:0;padding:4px 8px;position:absolute;scale:0;transition:.3s ease-in-out;width:-moz-fit-content;width:fit-content}figure.svelte-1pj2els:hover .caption.svelte-1pj2els{scale:1}",
+  code: "figure.svelte-smivhc.svelte-smivhc{margin:0;position:relative}.caption.svelte-smivhc.svelte-smivhc{-webkit-backdrop-filter:blur(5px);backdrop-filter:blur(5px);background:rgba(0,0,0,.7);bottom:0;color:var(--text-color);font-weight:300;left:0;padding:4px 8px;position:absolute;scale:0;transition:.3s ease-in-out;width:-moz-fit-content;width:fit-content}figure.svelte-smivhc:hover .caption.svelte-smivhc{scale:1}",
   map: null
 };
 const Image = create_ssr_component(($$result, $$props, $$bindings, slots) => {
@@ -245,7 +246,7 @@ const Image = create_ssr_component(($$result, $$props, $$bindings, slots) => {
   let { width = 600 } = $$props;
   let { height = 600 } = $$props;
   let { hasCaption = true } = $$props;
-  let { imagePreset = "fullscreen" } = $$props;
+  let { imagePreset = "" } = $$props;
   if ($$props.src === void 0 && $$bindings.src && src !== void 0)
     $$bindings.src(src);
   if ($$props.alt === void 0 && $$bindings.alt && alt !== void 0)
@@ -259,20 +260,21 @@ const Image = create_ssr_component(($$result, $$props, $$bindings, slots) => {
   if ($$props.imagePreset === void 0 && $$bindings.imagePreset && imagePreset !== void 0)
     $$bindings.imagePreset(imagePreset);
   $$result.css.add(css);
-  return `<figure class="${"svelte-1pj2els"}">${validate_component(Lightbox, "Lightbox").$$render(
+  return `<figure class="${"svelte-smivhc"}">${validate_component(Lightbox, "Lightbox").$$render(
     $$result,
     {
       enableClickToClose: "true",
       imagePreset,
       enableImageExpand: "true",
-      transitionDuration: "50"
+      title: alt,
+      transitionDuration: "30"
     },
     {},
     {
       default: () => {
         return `<img class="${"lazy"}"${add_attribute("width", width, 0)}${add_attribute("height", height, 0)}${add_attribute("src", src, 0)} loading="${"lazy"}" decoding="${"async"}"${add_attribute("alt", alt, 0)}>
 
-		${hasCaption ? `<figcaption class="${"caption xs-text svelte-1pj2els"}">${escape(alt)}</figcaption>` : ``}`;
+		${hasCaption ? `<figcaption class="${"caption xs-text svelte-smivhc"}">${escape(alt)}</figcaption>` : ``}`;
       }
     }
   )}

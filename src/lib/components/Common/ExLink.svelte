@@ -1,6 +1,6 @@
 <script>
 	export let href;
-	export let ariaLabel;
+	export let ariaLabel = 'external link';
 
 	let tooltipX = 0;
 	let tooltipY = 0;
@@ -32,7 +32,7 @@
 		opacity: 0;
 		display: none;
 		position: fixed;
-		background: rgba(0, 0, 0, 0.9);
+		background: rgba(0, 0, 0, 0.5);
 		backdrop-filter: blur(5px);
 		padding: var(--space-xs);
 		z-index: 99;

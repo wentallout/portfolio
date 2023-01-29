@@ -14,7 +14,7 @@
 			slidesPerGroup: slidesNumber
 		}
 	}}
-	spaceBetween={16}
+	spaceBetween={8}
 	slidesPerView={1}
 	pagination={{ clickable: true, type: 'bullets' }}
 	scrollbar={{ draggable: true }}

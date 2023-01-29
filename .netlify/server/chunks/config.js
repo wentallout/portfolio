@@ -31,7 +31,7 @@ const website = {
   siteShortTitle: "Portfolio",
   siteUrl: "https://wentallout.tech",
   icon: "static/icon-512.png",
-  backgroundColor: "#fcfcfa",
+  backgroundColor: "#121212",
   themeColor: "#e88615",
   description: "Nguyen Dang Khoa - Vietnamese Professional UI/UX Designer since 2022",
   facebookAuthorPage: `https://www.facebook.com/${facebookAuthorPageName}`,

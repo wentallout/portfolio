@@ -1,5 +1,5 @@
-import { c as create_ssr_component, v as validate_component, d as add_attribute } from "./index.js";
-import { G as General_observer } from "./general-observer.js";
+import { c as create_ssr_component, v as validate_component, d as add_attribute } from "./index3.js";
+import { G as General_observer } from "./gist.svelte_svelte_type_style_lang.js";
 const getPadding = (aspectRatio) => {
   const config = {
     "1:1": `padding-top: 100%;`,
@@ -72,20 +72,20 @@ const Sharp_axe_method = create_ssr_component(($$result, $$props, $$bindings, sl
 
 
 
-<h2 id="${"what-is-the-sharp-axe-method"}">What is the Sharp Axe Method?</h2>
+<h2 id="${"what-is-the-sharp-axe-method"}"><a href="${"#what-is-the-sharp-axe-method"}">What is the Sharp Axe Method?</a></h2>
 <p>Doing the right work upfront -&gt; preparing correctly -&gt; so you can save time in the long run.</p>
 <p>Having the correct mindset -&gt; reduce the chance of getting OVERWHELMED.</p>
-<h2 id="${"step-1-clean-your-environment"}">Step 1: Clean your environment</h2>
+<h2 id="${"step-1-clean-your-environment"}"><a href="${"#step-1-clean-your-environment"}">Step 1: Clean your environment</a></h2>
 <p>Take control of your life first, make sure everything is in order.</p>
 <p>Physical environment: Clean your desk, do some box breathing</p>
 <p>Digital environment: Clear up your desktop, exit every programs, tabs on your computer, delete social media apps on your phone.</p>
-<h2 id="${"step-2-brain-dump"}">Step 2: Brain dump</h2>
+<h2 id="${"step-2-brain-dump"}"><a href="${"#step-2-brain-dump"}">Step 2: Brain dump</a></h2>
 <p>Put your thoughts into the page, make a list of everthing you need to do, no order required. Something like:</p>
 <ul><li>Take out the trash</li>
 <li>Fix the logo</li>
 <li>Change the color</li>
 <li>Remove unused components</li></ul>
-<h2 id="${"step-3-categorize-the-todo-list"}">Step 3: Categorize the todo list</h2>
+<h2 id="${"step-3-categorize-the-todo-list"}"><a href="${"#step-3-categorize-the-todo-list"}">Step 3: Categorize the todo list</a></h2>
 <p>Use Eisenhower matrix:</p>
 <ul><li>Do the task (very important, very urgent)</li>
 <li>Delete (not important, not urgent)</li>
@@ -93,9 +93,9 @@ const Sharp_axe_method = create_ssr_component(($$result, $$props, $$bindings, sl
 <li>Delegate (very urgent, not important)</li></ul>
 <p>Think about: what one thing, if done, would make everything else on this list easier.</p>
 <p>Or lookalike group: if a bunch of things that have the same vibe or can all be done on computer, group them.</p>
-<h2 id="${"step-4-schedule"}">Step 4: Schedule</h2>
+<h2 id="${"step-4-schedule"}"><a href="${"#step-4-schedule"}">Step 4: Schedule</a></h2>
 <p>Start sticking your tasks on a calendar.</p>
-<p>Rule 1: Don\u2019t schedule anything that will take less than two minutes; simply do it.</p>
+<p>Rule 1: Don’t schedule anything that will take less than two minutes; simply do it.</p>
 <p>Rule 2: Plan visually.</p>
 <p>Rule 3: List the non-movable calendar dates first. (Deadlines, Holidays, Birthdays)</p>
 <p>Rule 4: Double the time you estimate. If you estimate a work would take four hours, you should allocate eight.</p>
@@ -105,11 +105,11 @@ const Sharp_axe_method = create_ssr_component(($$result, $$props, $$bindings, sl
 <p>Rule 8: Plan for average me, not me at my best.</p>
 <p>Rule 9: Concentrate on finishing one activity at a time.</p>
 <p>Rule 10: Good plan = Flexible plan. Be prepared to change everything.</p>
-<h2 id="${"step-5-communicate"}">Step 5: Communicate</h2>
-<p>Before you start any work, you should try communicate to stakeholders. If you\u2019re late on something, give your stakeholder a specific date.</p>
-<h2 id="${"step-6-just-do-it"}">Step 6: JUST DO IT</h2>
-<p>The only way to chop a tree\u2026 is to start chopping.</p>
-<h2 id="${"video"}">Video</h2>
+<h2 id="${"step-5-communicate"}"><a href="${"#step-5-communicate"}">Step 5: Communicate</a></h2>
+<p>Before you start any work, you should try communicate to stakeholders. If you’re late on something, give your stakeholder a specific date.</p>
+<h2 id="${"step-6-just-do-it"}"><a href="${"#step-6-just-do-it"}">Step 6: JUST DO IT</a></h2>
+<p>The only way to chop a tree… is to start chopping.</p>
+<h2 id="${"video"}"><a href="${"#video"}">Video</a></h2>
 ${validate_component(You_tube, "YouTube").$$render(
     $$result,
     {

@@ -1,11 +1,6 @@
 <script>
 	import SocialButtons from '$lib/components/Contact/SocialButtons.svelte';
-	import Phone from '~icons/ph/phone';
 	import ExLink from '$lib/components/Common/ExLink.svelte';
-	import Envelope from '~icons/ph/envelope';
-
-	import LinkedinLogo from '~icons/ph/linkedin-logo';
-
 	import { onMount } from 'svelte';
 	let linkEle;
 	const rand = (min, max) => Math.floor(Math.random() * (max - min + 1)) + min;
@@ -66,21 +61,6 @@
 </section>
 
 <style>
-	/* .name-bg {
-		width: 100%;
-		height: 100%;
-		position: absolute;
-		top: 0;
-		left: 0;
-		z-index: -1;
-	} */
-
-	.social-links {
-		display: flex;
-		gap: var(--space-s);
-		flex-direction: row;
-	}
-
 	.container {
 		position: relative;
 		display: flex;

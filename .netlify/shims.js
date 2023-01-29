@@ -5,24 +5,25 @@ import require$$0$2 from 'stream';
 import require$$7 from 'buffer';
 import require$$0 from 'util';
 import require$$8 from 'querystring';
-import require$$14, { ReadableStream as ReadableStream$1, TransformStream, WritableStream } from 'stream/web';
+import require$$13, { ReadableStream as ReadableStream$1, TransformStream, WritableStream } from 'stream/web';
 import require$$0$3 from 'worker_threads';
 import require$$1 from 'perf_hooks';
 import require$$4$1 from 'util/types';
-import require$$12 from 'string_decoder';
+import require$$2$1 from 'url';
 import require$$0$4 from 'events';
 import require$$4$2 from 'tls';
 import require$$3 from 'async_hooks';
 import require$$1$1 from 'console';
-import require$$1$2 from 'url';
 import require$$3$1 from 'zlib';
-import { webcrypto } from 'crypto';
+import require$$6 from 'string_decoder';
+import require$$0$5, { webcrypto } from 'crypto';
+import require$$1$2 from 'diagnostics_channel';
 
 var commonjsGlobal = typeof globalThis !== 'undefined' ? globalThis : typeof window !== 'undefined' ? window : typeof global !== 'undefined' ? global : typeof self !== 'undefined' ? self : {};
 
 var undici = {};
 
-var symbols$2 = {
+var symbols$3 = {
   kClose: Symbol('close'),
   kDestroy: Symbol('destroy'),
   kDispatch: Symbol('dispatch'),
@@ -56,7 +57,7 @@ var symbols$2 = {
   kClosed: Symbol('closed'),
   kNeedDrain: Symbol('need drain'),
   kReset: Symbol('reset'),
-  kDestroyed: Symbol('destroyed'),
+  kDestroyed: Symbol.for('nodejs.stream.destroyed'),
   kMaxHeadersSize: Symbol('max headers size'),
   kRunningIdx: Symbol('running index'),
   kPendingIdx: Symbol('pending index'),
@@ -78,15 +79,15 @@ var symbols$2 = {
   kMaxResponseSize: Symbol('max response size')
 };
 
-class UndiciError$2 extends Error {
+let UndiciError$2 = class UndiciError extends Error {
   constructor (message) {
     super(message);
     this.name = 'UndiciError';
     this.code = 'UND_ERR';
   }
-}
+};
 
-class ConnectTimeoutError$1 extends UndiciError$2 {
+let ConnectTimeoutError$1 = class ConnectTimeoutError extends UndiciError$2 {
   constructor (message) {
     super(message);
     Error.captureStackTrace(this, ConnectTimeoutError$1);
@@ -94,9 +95,9 @@ class ConnectTimeoutError$1 extends UndiciError$2 {
     this.message = message || 'Connect Timeout Error';
     this.code = 'UND_ERR_CONNECT_TIMEOUT';
   }
-}
+};
 
-class HeadersTimeoutError$1 extends UndiciError$2 {
+let HeadersTimeoutError$1 = class HeadersTimeoutError extends UndiciError$2 {
   constructor (message) {
     super(message);
     Error.captureStackTrace(this, HeadersTimeoutError$1);
@@ -104,9 +105,9 @@ class HeadersTimeoutError$1 extends UndiciError$2 {
     this.message = message || 'Headers Timeout Error';
     this.code = 'UND_ERR_HEADERS_TIMEOUT';
   }
-}
+};
 
-class HeadersOverflowError$1 extends UndiciError$2 {
+let HeadersOverflowError$1 = class HeadersOverflowError extends UndiciError$2 {
   constructor (message) {
     super(message);
     Error.captureStackTrace(this, HeadersOverflowError$1);
@@ -114,9 +115,9 @@ class HeadersOverflowError$1 extends UndiciError$2 {
     this.message = message || 'Headers Overflow Error';
     this.code = 'UND_ERR_HEADERS_OVERFLOW';
   }
-}
+};
 
-class BodyTimeoutError$1 extends UndiciError$2 {
+let BodyTimeoutError$1 = class BodyTimeoutError extends UndiciError$2 {
   constructor (message) {
     super(message);
     Error.captureStackTrace(this, BodyTimeoutError$1);
@@ -124,9 +125,9 @@ class BodyTimeoutError$1 extends UndiciError$2 {
     this.message = message || 'Body Timeout Error';
     this.code = 'UND_ERR_BODY_TIMEOUT';
   }
-}
+};
 
-class ResponseStatusCodeError$1 extends UndiciError$2 {
+let ResponseStatusCodeError$1 = class ResponseStatusCodeError extends UndiciError$2 {
   constructor (message, statusCode, headers, body) {
     super(message);
     Error.captureStackTrace(this, ResponseStatusCodeError$1);
@@ -138,9 +139,9 @@ class ResponseStatusCodeError$1 extends UndiciError$2 {
     this.statusCode = statusCode;
     this.headers = headers;
   }
-}
+};
 
-class InvalidArgumentError$k extends UndiciError$2 {
+let InvalidArgumentError$k = class InvalidArgumentError extends UndiciError$2 {
   constructor (message) {
     super(message);
     Error.captureStackTrace(this, InvalidArgumentError$k);
@@ -148,9 +149,9 @@ class InvalidArgumentError$k extends UndiciError$2 {
     this.message = message || 'Invalid Argument Error';
     this.code = 'UND_ERR_INVALID_ARG';
   }
-}
+};
 
-class InvalidReturnValueError$2 extends UndiciError$2 {
+let InvalidReturnValueError$2 = class InvalidReturnValueError extends UndiciError$2 {
   constructor (message) {
     super(message);
     Error.captureStackTrace(this, InvalidReturnValueError$2);
@@ -158,9 +159,9 @@ class InvalidReturnValueError$2 extends UndiciError$2 {
     this.message = message || 'Invalid Return Value Error';
     this.code = 'UND_ERR_INVALID_RETURN_VALUE';
   }
-}
+};
 
-class RequestAbortedError$9 extends UndiciError$2 {
+let RequestAbortedError$9 = class RequestAbortedError extends UndiciError$2 {
   constructor (message) {
     super(message);
     Error.captureStackTrace(this, RequestAbortedError$9);
@@ -168,9 +169,9 @@ class RequestAbortedError$9 extends UndiciError$2 {
     this.message = message || 'Request aborted';
     this.code = 'UND_ERR_ABORTED';
   }
-}
+};
 
-class InformationalError$1 extends UndiciError$2 {
+let InformationalError$1 = class InformationalError extends UndiciError$2 {
   constructor (message) {
     super(message);
     Error.captureStackTrace(this, InformationalError$1);
@@ -178,9 +179,9 @@ class InformationalError$1 extends UndiciError$2 {
     this.message = message || 'Request information';
     this.code = 'UND_ERR_INFO';
   }
-}
+};
 
-class RequestContentLengthMismatchError$1 extends UndiciError$2 {
+let RequestContentLengthMismatchError$1 = class RequestContentLengthMismatchError extends UndiciError$2 {
   constructor (message) {
     super(message);
     Error.captureStackTrace(this, RequestContentLengthMismatchError$1);
@@ -188,9 +189,9 @@ class RequestContentLengthMismatchError$1 extends UndiciError$2 {
     this.message = message || 'Request body length does not match content-length header';
     this.code = 'UND_ERR_REQ_CONTENT_LENGTH_MISMATCH';
   }
-}
+};
 
-class ResponseContentLengthMismatchError$1 extends UndiciError$2 {
+let ResponseContentLengthMismatchError$1 = class ResponseContentLengthMismatchError extends UndiciError$2 {
   constructor (message) {
     super(message);
     Error.captureStackTrace(this, ResponseContentLengthMismatchError$1);
@@ -198,9 +199,9 @@ class ResponseContentLengthMismatchError$1 extends UndiciError$2 {
     this.message = message || 'Response body length does not match content-length header';
     this.code = 'UND_ERR_RES_CONTENT_LENGTH_MISMATCH';
   }
-}
+};
 
-class ClientDestroyedError$1 extends UndiciError$2 {
+let ClientDestroyedError$1 = class ClientDestroyedError extends UndiciError$2 {
   constructor (message) {
     super(message);
     Error.captureStackTrace(this, ClientDestroyedError$1);
@@ -208,9 +209,9 @@ class ClientDestroyedError$1 extends UndiciError$2 {
     this.message = message || 'The client is destroyed';
     this.code = 'UND_ERR_DESTROYED';
   }
-}
+};
 
-class ClientClosedError$1 extends UndiciError$2 {
+let ClientClosedError$1 = class ClientClosedError extends UndiciError$2 {
   constructor (message) {
     super(message);
     Error.captureStackTrace(this, ClientClosedError$1);
@@ -218,9 +219,9 @@ class ClientClosedError$1 extends UndiciError$2 {
     this.message = message || 'The client is closed';
     this.code = 'UND_ERR_CLOSED';
   }
-}
+};
 
-class SocketError$3 extends UndiciError$2 {
+let SocketError$3 = class SocketError extends UndiciError$2 {
   constructor (message, socket) {
     super(message);
     Error.captureStackTrace(this, SocketError$3);
@@ -229,9 +230,9 @@ class SocketError$3 extends UndiciError$2 {
     this.code = 'UND_ERR_SOCKET';
     this.socket = socket;
   }
-}
+};
 
-class NotSupportedError$2 extends UndiciError$2 {
+let NotSupportedError$2 = class NotSupportedError extends UndiciError$2 {
   constructor (message) {
     super(message);
     Error.captureStackTrace(this, NotSupportedError$2);
@@ -239,9 +240,9 @@ class NotSupportedError$2 extends UndiciError$2 {
     this.message = message || 'Not supported error';
     this.code = 'UND_ERR_NOT_SUPPORTED';
   }
-}
+};
 
-class BalancedPoolMissingUpstreamError$1 extends UndiciError$2 {
+let BalancedPoolMissingUpstreamError$1 = class BalancedPoolMissingUpstreamError extends UndiciError$2 {
   constructor (message) {
     super(message);
     Error.captureStackTrace(this, NotSupportedError$2);
@@ -249,9 +250,9 @@ class BalancedPoolMissingUpstreamError$1 extends UndiciError$2 {
     this.message = message || 'No upstream has been added to the BalancedPool';
     this.code = 'UND_ERR_BPL_MISSING_UPSTREAM';
   }
-}
+};
 
-class HTTPParserError$1 extends Error {
+let HTTPParserError$1 = class HTTPParserError extends Error {
   constructor (message, code, data) {
     super(message);
     Error.captureStackTrace(this, HTTPParserError$1);
@@ -259,9 +260,9 @@ class HTTPParserError$1 extends Error {
     this.code = code ? `HPE_${code}` : undefined;
     this.data = data ? data.toString() : undefined;
   }
-}
+};
 
-class ResponseExceededMaxSizeError$1 extends UndiciError$2 {
+let ResponseExceededMaxSizeError$1 = class ResponseExceededMaxSizeError extends UndiciError$2 {
   constructor (message) {
     super(message);
     Error.captureStackTrace(this, ResponseExceededMaxSizeError$1);
@@ -269,7 +270,7 @@ class ResponseExceededMaxSizeError$1 extends UndiciError$2 {
     this.message = message || 'Response content exceeded max size';
     this.code = 'UND_ERR_RES_EXCEEDED_MAX_SIZE';
   }
-}
+};
 
 var errors = {
   HTTPParserError: HTTPParserError$1,
@@ -294,12 +295,12 @@ var errors = {
 };
 
 const assert$7 = require$$0$1;
-const { kDestroyed: kDestroyed$1, kBodyUsed: kBodyUsed$1 } = symbols$2;
+const { kDestroyed: kDestroyed$1, kBodyUsed: kBodyUsed$1 } = symbols$3;
 const { IncomingMessage } = require$$2;
 const stream$1 = require$$0$2;
 const net$2 = require$$4;
 const { InvalidArgumentError: InvalidArgumentError$j } = errors;
-const { Blob: Blob$1 } = require$$7;
+const { Blob: Blob$2 } = require$$7;
 const nodeUtil = require$$0;
 const { stringify } = require$$8;
 
@@ -311,7 +312,7 @@ function isStream (obj) {
 
 // based on https://github.com/node-fetch/fetch-blob/blob/8ab587d34080de94140b54f07168451e7d0b655e/index.js#L229-L241 (MIT License)
 function isBlobLike (object) {
-  return (Blob$1 && object instanceof Blob$1) || (
+  return (Blob$2 && object instanceof Blob$2) || (
     object &&
     typeof object === 'object' &&
     (typeof object.stream === 'function' ||
@@ -613,7 +614,7 @@ function getSocketInfo (socket) {
 let ReadableStream;
 function ReadableStreamFrom$1 (iterable) {
   if (!ReadableStream) {
-    ReadableStream = require$$14.ReadableStream;
+    ReadableStream = require$$13.ReadableStream;
   }
 
   if (ReadableStream.from) {
@@ -647,14 +648,29 @@ function ReadableStreamFrom$1 (iterable) {
   )
 }
 
+// The chunk should be a FormData instance and contains
+// all the required methods.
 function isFormDataLike (chunk) {
-  return chunk && chunk.constructor && chunk.constructor.name === 'FormData'
+  return (chunk &&
+    chunk.constructor && chunk.constructor.name === 'FormData' &&
+    typeof chunk === 'object' &&
+      (typeof chunk.append === 'function' &&
+        typeof chunk.delete === 'function' &&
+        typeof chunk.get === 'function' &&
+        typeof chunk.getAll === 'function' &&
+        typeof chunk.has === 'function' &&
+        typeof chunk.set === 'function' &&
+        typeof chunk.entries === 'function' &&
+        typeof chunk.keys === 'function' &&
+        typeof chunk.values === 'function' &&
+        typeof chunk.forEach === 'function')
+  )
 }
 
 const kEnumerableProperty = Object.create(null);
 kEnumerableProperty.enumerable = true;
 
-var util$e = {
+var util$g = {
   kEnumerableProperty,
   nop: nop$1,
   isDisturbed,
@@ -2647,12 +2663,12 @@ function requireLib () {
 	return lib;
 }
 
-var constants$2;
-var hasRequiredConstants$1;
+var constants$4;
+var hasRequiredConstants$3;
 
-function requireConstants$1 () {
-	if (hasRequiredConstants$1) return constants$2;
-	hasRequiredConstants$1 = 1;
+function requireConstants$3 () {
+	if (hasRequiredConstants$3) return constants$4;
+	hasRequiredConstants$3 = 1;
 
 	const { MessageChannel, receiveMessageOnPort } = require$$0$3;
 
@@ -2662,6 +2678,17 @@ function requireConstants$1 () {
 
 	const redirectStatus = [301, 302, 303, 307, 308];
 
+	// https://fetch.spec.whatwg.org/#block-bad-port
+	const badPorts = [
+	  '1', '7', '9', '11', '13', '15', '17', '19', '20', '21', '22', '23', '25', '37', '42', '43', '53', '69', '77', '79',
+	  '87', '95', '101', '102', '103', '104', '109', '110', '111', '113', '115', '117', '119', '123', '135', '137',
+	  '139', '143', '161', '179', '389', '427', '465', '512', '513', '514', '515', '526', '530', '531', '532',
+	  '540', '548', '554', '556', '563', '587', '601', '636', '989', '990', '993', '995', '1719', '1720', '1723',
+	  '2049', '3659', '4045', '5060', '5061', '6000', '6566', '6665', '6666', '6667', '6668', '6669', '6697',
+	  '10080'
+	];
+
+	// https://w3c.github.io/webappsec-referrer-policy/#referrer-policies
 	const referrerPolicy = [
 	  '',
 	  'no-referrer',
@@ -2696,6 +2723,11 @@ function requireConstants$1 () {
 	  'content-language',
 	  'content-location',
 	  'content-type'
+	];
+
+	// https://fetch.spec.whatwg.org/#enumdef-requestduplex
+	const requestDuplex = [
+	  'half'
 	];
 
 	// http://fetch.spec.whatwg.org/#forbidden-method
@@ -2748,7 +2780,7 @@ function requireConstants$1 () {
 	    return receiveMessageOnPort(channel.port2).message
 	  };
 
-	constants$2 = {
+	constants$4 = {
 	  DOMException,
 	  structuredClone,
 	  subresource,
@@ -2762,21 +2794,23 @@ function requireConstants$1 () {
 	  redirectStatus,
 	  corsSafeListedMethods,
 	  nullBodyStatus,
-	  safeMethods
+	  safeMethods,
+	  badPorts,
+	  requestDuplex
 	};
-	return constants$2;
+	return constants$4;
 }
 
-var util$d;
-var hasRequiredUtil$1;
+var util$f;
+var hasRequiredUtil$3;
 
-function requireUtil$1 () {
-	if (hasRequiredUtil$1) return util$d;
-	hasRequiredUtil$1 = 1;
+function requireUtil$3 () {
+	if (hasRequiredUtil$3) return util$f;
+	hasRequiredUtil$3 = 1;
 
-	const { redirectStatus } = requireConstants$1();
+	const { redirectStatus, badPorts, referrerPolicy: referrerPolicyTokens } = requireConstants$3();
 	const { performance } = require$$1;
-	const { isBlobLike, toUSVString, ReadableStreamFrom } = util$e;
+	const { isBlobLike, toUSVString, ReadableStreamFrom } = util$g;
 	const assert = require$$0$1;
 	const { isUint8Array } = require$$4$1;
 
@@ -2789,16 +2823,6 @@ function requireUtil$1 () {
 	} catch {
 
 	}
-
-	// https://fetch.spec.whatwg.org/#block-bad-port
-	const badPorts = [
-	  '1', '7', '9', '11', '13', '15', '17', '19', '20', '21', '22', '23', '25', '37', '42', '43', '53', '69', '77', '79',
-	  '87', '95', '101', '102', '103', '104', '109', '110', '111', '113', '115', '117', '119', '123', '135', '137',
-	  '139', '143', '161', '179', '389', '427', '465', '512', '513', '514', '515', '526', '530', '531', '532',
-	  '540', '548', '554', '556', '563', '587', '601', '636', '989', '990', '993', '995', '1719', '1720', '1723',
-	  '2049', '3659', '4045', '5060', '5061', '6000', '6566', '6665', '6666', '6667', '6668', '6669', '6697',
-	  '10080'
-	];
 
 	function responseURL (response) {
 	  // https://fetch.spec.whatwg.org/#responses
@@ -2930,13 +2954,7 @@ function requireUtil$1 () {
 	    return false
 	  }
 
-	  for (const char of potentialValue) {
-	    if (!isValidHTTPToken(char)) {
-	      return false
-	    }
-	  }
-
-	  return true
+	  return isValidHTTPToken(potentialValue)
 	}
 
 	/**
@@ -2968,6 +2986,42 @@ function requireUtil$1 () {
 
 	// https://w3c.github.io/webappsec-referrer-policy/#set-requests-referrer-policy-on-redirect
 	function setRequestReferrerPolicyOnRedirect (request, actualResponse) {
+	  //  Given a request request and a response actualResponse, this algorithm
+	  //  updates request’s referrer policy according to the Referrer-Policy
+	  //  header (if any) in actualResponse.
+
+	  // 1. Let policy be the result of executing § 8.1 Parse a referrer policy
+	  // from a Referrer-Policy header on actualResponse.
+
+	  // 8.1 Parse a referrer policy from a Referrer-Policy header
+	  // 1. Let policy-tokens be the result of extracting header list values given `Referrer-Policy` and response’s header list.
+	  const { headersList } = actualResponse;
+	  // 2. Let policy be the empty string.
+	  // 3. For each token in policy-tokens, if token is a referrer policy and token is not the empty string, then set policy to token.
+	  // 4. Return policy.
+	  const policyHeader = (headersList.get('referrer-policy') ?? '').split(',');
+
+	  // Note: As the referrer-policy can contain multiple policies
+	  // separated by comma, we need to loop through all of them
+	  // and pick the first valid one.
+	  // Ref: https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Referrer-Policy#specify_a_fallback_policy
+	  let policy = '';
+	  if (policyHeader.length > 0) {
+	    // The right-most policy takes precedence.
+	    // The left-most policy is the fallback.
+	    for (let i = policyHeader.length; i !== 0; i--) {
+	      const token = policyHeader[i - 1].trim();
+	      if (referrerPolicyTokens.includes(token)) {
+	        policy = token;
+	        break
+	      }
+	    }
+	  }
+
+	  // 2. If policy is not the empty string, then set request’s referrer policy to policy.
+	  if (policy !== '') {
+	    request.referrerPolicy = policy;
+	  }
 	}
 
 	// https://fetch.spec.whatwg.org/#cross-origin-resource-policy-check
@@ -3558,48 +3612,32 @@ function requireUtil$1 () {
 	/**
 	 * @see https://fetch.spec.whatwg.org/#body-fully-read
 	 */
-	async function fullyReadBody (body, processBody, processBodyError) {
+	function fullyReadBody (body, processBody, processBodyError) {
 	  // 1. If taskDestination is null, then set taskDestination to
 	  //    the result of starting a new parallel queue.
 
-	  // 2. Let promise be the result of fully reading body as promise
-	  //    given body.
+	  // 2. Let successSteps given a byte sequence bytes be to queue a
+	  //    fetch task to run processBody given bytes, with taskDestination.
+	  const successSteps = (bytes) => queueMicrotask(() => processBody(bytes));
+
+	  // 3. Let errorSteps be to queue a fetch task to run processBodyError,
+	  //    with taskDestination.
+	  const errorSteps = (error) => queueMicrotask(() => processBodyError(error));
+
+	  // 4. Let reader be the result of getting a reader for body’s stream.
+	  //    If that threw an exception, then run errorSteps with that
+	  //    exception and return.
+	  let reader;
+
 	  try {
-	    /** @type {Uint8Array[]} */
-	    const chunks = [];
-	    let length = 0;
-
-	    const reader = body.stream.getReader();
-
-	    while (true) {
-	      const { done, value } = await reader.read();
-
-	      if (done === true) {
-	        break
-	      }
-
-	      // read-loop chunk steps
-	      assert(isUint8Array(value));
-
-	      chunks.push(value);
-	      length += value.byteLength;
-	    }
-
-	    // 3. Let fulfilledSteps given a byte sequence bytes be to queue
-	    //    a fetch task to run processBody given bytes, with
-	    //    taskDestination.
-	    const fulfilledSteps = (bytes) => queueMicrotask(() => {
-	      processBody(bytes);
-	    });
-
-	    fulfilledSteps(Buffer.concat(chunks, length));
-	  } catch (err) {
-	    // 4. Let rejectedSteps be to queue a fetch task to run
-	    //    processBodyError, with taskDestination.
-	    queueMicrotask(() => processBodyError(err));
+	    reader = body.stream.getReader();
+	  } catch (e) {
+	    errorSteps(e);
+	    return
 	  }
 
-	  // 5. React to promise with fulfilledSteps and rejectedSteps.
+	  // 5. Read all bytes from reader, given successSteps and errorSteps.
+	  readAllBytes(reader, successSteps, errorSteps);
 	}
 
 	/** @type {ReadableStream} */
@@ -3607,13 +3645,31 @@ function requireUtil$1 () {
 
 	function isReadableStreamLike (stream) {
 	  if (!ReadableStream) {
-	    ReadableStream = require$$14.ReadableStream;
+	    ReadableStream = require$$13.ReadableStream;
 	  }
 
 	  return stream instanceof ReadableStream || (
 	    stream[Symbol.toStringTag] === 'ReadableStream' &&
 	    typeof stream.tee === 'function'
 	  )
+	}
+
+	const MAXIMUM_ARGUMENT_LENGTH = 65535;
+
+	/**
+	 * @see https://infra.spec.whatwg.org/#isomorphic-decode
+	 * @param {number[]|Uint8Array} input
+	 */
+	function isomorphicDecode (input) {
+	  // 1. To isomorphic decode a byte sequence input, return a string whose code point
+	  //    length is equal to input’s length and whose code points have the same values
+	  //    as the values of input’s bytes, in the same order.
+
+	  if (input.length < MAXIMUM_ARGUMENT_LENGTH) {
+	    return String.fromCharCode(...input)
+	  }
+
+	  return input.reduce((previous, current) => previous + String.fromCharCode(current), '')
 	}
 
 	/**
@@ -3631,11 +3687,71 @@ function requireUtil$1 () {
 	}
 
 	/**
+	 * @see https://infra.spec.whatwg.org/#isomorphic-encode
+	 * @param {string} input
+	 */
+	function isomorphicEncode (input) {
+	  // 1. Assert: input contains no code points greater than U+00FF.
+	  for (let i = 0; i < input.length; i++) {
+	    assert(input.charCodeAt(i) <= 0xFF);
+	  }
+
+	  // 2. Return a byte sequence whose length is equal to input’s code
+	  //    point length and whose bytes have the same values as the
+	  //    values of input’s code points, in the same order
+	  return input
+	}
+
+	/**
+	 * @see https://streams.spec.whatwg.org/#readablestreamdefaultreader-read-all-bytes
+	 * @see https://streams.spec.whatwg.org/#read-loop
+	 * @param {ReadableStreamDefaultReader} reader
+	 * @param {(bytes: Uint8Array) => void} successSteps
+	 * @param {(error: Error) => void} failureSteps
+	 */
+	async function readAllBytes (reader, successSteps, failureSteps) {
+	  const bytes = [];
+	  let byteLength = 0;
+
+	  while (true) {
+	    let done;
+	    let chunk;
+
+	    try {
+	      ({ done, value: chunk } = await reader.read());
+	    } catch (e) {
+	      // 1. Call failureSteps with e.
+	      failureSteps(e);
+	      return
+	    }
+
+	    if (done) {
+	      // 1. Call successSteps with bytes.
+	      successSteps(Buffer.concat(bytes, byteLength));
+	      return
+	    }
+
+	    // 1. If chunk is not a Uint8Array object, call failureSteps
+	    //    with a TypeError and abort these steps.
+	    if (!isUint8Array(chunk)) {
+	      failureSteps(new TypeError('Received non-Uint8Array chunk'));
+	      return
+	    }
+
+	    // 2. Append the bytes represented by chunk to bytes.
+	    bytes.push(chunk);
+	    byteLength += chunk.length;
+
+	    // 3. Read-loop given reader, bytes, successSteps, and failureSteps.
+	  }
+	}
+
+	/**
 	 * Fetch supports node >= 16.8.0, but Object.hasOwn was added in v16.9.0.
 	 */
 	const hasOwn = Object.hasOwn || ((dict, key) => Object.prototype.hasOwnProperty.call(dict, key));
 
-	util$d = {
+	util$f = {
 	  isAborted,
 	  isCancelled,
 	  createDeferredPromise,
@@ -3672,27 +3788,30 @@ function requireUtil$1 () {
 	  fullyReadBody,
 	  bytesMatch,
 	  isReadableStreamLike,
-	  readableStreamClose
+	  readableStreamClose,
+	  isomorphicEncode,
+	  isomorphicDecode
 	};
-	return util$d;
+	return util$f;
 }
 
-var symbols$1;
-var hasRequiredSymbols$1;
+var symbols$2;
+var hasRequiredSymbols$2;
 
-function requireSymbols$1 () {
-	if (hasRequiredSymbols$1) return symbols$1;
-	hasRequiredSymbols$1 = 1;
+function requireSymbols$2 () {
+	if (hasRequiredSymbols$2) return symbols$2;
+	hasRequiredSymbols$2 = 1;
 
-	symbols$1 = {
+	symbols$2 = {
 	  kUrl: Symbol('url'),
 	  kHeaders: Symbol('headers'),
 	  kSignal: Symbol('signal'),
 	  kState: Symbol('state'),
 	  kGuard: Symbol('guard'),
-	  kRealm: Symbol('realm')
+	  kRealm: Symbol('realm'),
+	  kHeadersCaseInsensitive: Symbol('headers case insensitive')
 	};
-	return symbols$1;
+	return symbols$2;
 }
 
 var webidl_1;
@@ -3703,32 +3822,18 @@ function requireWebidl () {
 	hasRequiredWebidl = 1;
 
 	const { types } = require$$0;
-	const { hasOwn, toUSVString } = requireUtil$1();
+	const { hasOwn, toUSVString } = requireUtil$3();
 
+	/** @type {import('../../types/webidl').Webidl} */
 	const webidl = {};
 	webidl.converters = {};
 	webidl.util = {};
 	webidl.errors = {};
 
-	/**
-	 *
-	 * @param {{
-	 *   header: string
-	 *   message: string
-	 * }} message
-	 */
 	webidl.errors.exception = function (message) {
-	  throw new TypeError(`${message.header}: ${message.message}`)
+	  return new TypeError(`${message.header}: ${message.message}`)
 	};
 
-	/**
-	 * Throw an error when conversion from one type to another has failed
-	 * @param {{
-	 *   prefix: string
-	 *   argument: string
-	 *   types: string[]
-	 * }} context
-	 */
 	webidl.errors.conversionFailed = function (context) {
 	  const plural = context.types.length === 1 ? '' : ' one of';
 	  const message =
@@ -3741,19 +3846,30 @@ function requireWebidl () {
 	  })
 	};
 
-	/**
-	 * Throw an error when an invalid argument is provided
-	 * @param {{
-	 *   prefix: string
-	 *   value: string
-	 *   type: string
-	 * }} context
-	 */
 	webidl.errors.invalidArgument = function (context) {
 	  return webidl.errors.exception({
 	    header: context.prefix,
 	    message: `"${context.value}" is an invalid ${context.type}.`
 	  })
+	};
+
+	// https://webidl.spec.whatwg.org/#implements
+	webidl.brandCheck = function (V, I, opts = undefined) {
+	  if (opts?.strict !== false && !(V instanceof I)) {
+	    throw new TypeError('Illegal invocation')
+	  } else {
+	    return V?.[Symbol.toStringTag] === I.prototype[Symbol.toStringTag]
+	  }
+	};
+
+	webidl.argumentLengthCheck = function ({ length }, min, ctx) {
+	  if (length < min) {
+	    throw webidl.errors.exception({
+	      message: `${min} argument${min !== 1 ? 's' : ''} required, ` +
+	               `but${length ? ' only' : ''} ${length} found.`,
+	      ...ctx
+	    })
+	  }
 	};
 
 	// https://tc39.es/ecma262/#sec-ecmascript-data-types-and-values
@@ -3815,7 +3931,7 @@ function requireWebidl () {
 	  let x = Number(V);
 
 	  // 5. If x is −0, then set x to +0.
-	  if (Object.is(-0, x)) {
+	  if (x === 0) {
 	    x = 0;
 	  }
 
@@ -3828,10 +3944,10 @@ function requireWebidl () {
 	      x === Number.POSITIVE_INFINITY ||
 	      x === Number.NEGATIVE_INFINITY
 	    ) {
-	      webidl.errors.exception({
+	      throw webidl.errors.exception({
 	        header: 'Integer conversion',
 	        message: `Could not convert ${V} to an integer.`
-	      });
+	      })
 	    }
 
 	    // 2. Set x to IntegerPart(x).
@@ -3840,10 +3956,10 @@ function requireWebidl () {
 	    // 3. If x < lowerBound or x > upperBound, then
 	    //    throw a TypeError.
 	    if (x < lowerBound || x > upperBound) {
-	      webidl.errors.exception({
+	      throw webidl.errors.exception({
 	        header: 'Integer conversion',
 	        message: `Value must be between ${lowerBound}-${upperBound}, got ${x}.`
-	      });
+	      })
 	    }
 
 	    // 4. Return x.
@@ -3873,7 +3989,7 @@ function requireWebidl () {
 	  // 8. If x is NaN, +0, +∞, or −∞, then return +0.
 	  if (
 	    Number.isNaN(x) ||
-	    Object.is(0, x) ||
+	    (x === 0 && Object.is(0, x)) ||
 	    x === Number.POSITIVE_INFINITY ||
 	    x === Number.NEGATIVE_INFINITY
 	  ) {
@@ -3915,10 +4031,10 @@ function requireWebidl () {
 	  return (V) => {
 	    // 1. If Type(V) is not Object, throw a TypeError.
 	    if (webidl.util.Type(V) !== 'Object') {
-	      webidl.errors.exception({
+	      throw webidl.errors.exception({
 	        header: 'Sequence',
 	        message: `Value of type ${webidl.util.Type(V)} is not an Object.`
-	      });
+	      })
 	    }
 
 	    // 2. Let method be ? GetMethod(V, @@iterator).
@@ -3931,10 +4047,10 @@ function requireWebidl () {
 	      method === undefined ||
 	      typeof method.next !== 'function'
 	    ) {
-	      webidl.errors.exception({
+	      throw webidl.errors.exception({
 	        header: 'Sequence',
 	        message: 'Object is not an iterator.'
-	      });
+	      })
 	    }
 
 	    // https://webidl.spec.whatwg.org/#create-sequence-from-iterable
@@ -3957,10 +4073,10 @@ function requireWebidl () {
 	  return (O) => {
 	    // 1. If Type(O) is not Object, throw a TypeError.
 	    if (webidl.util.Type(O) !== 'Object') {
-	      webidl.errors.exception({
+	      throw webidl.errors.exception({
 	        header: 'Record',
 	        message: `Value of type ${webidl.util.Type(O)} is not an Object.`
-	      });
+	      })
 	    }
 
 	    // 2. Let result be a new empty instance of record<K, V>.
@@ -4016,26 +4132,16 @@ function requireWebidl () {
 	webidl.interfaceConverter = function (i) {
 	  return (V, opts = {}) => {
 	    if (opts.strict !== false && !(V instanceof i)) {
-	      webidl.errors.exception({
+	      throw webidl.errors.exception({
 	        header: i.name,
 	        message: `Expected ${V} to be an instance of ${i.name}.`
-	      });
+	      })
 	    }
 
 	    return V
 	  }
 	};
 
-	/**
-	 * @param {{
-	 *   key: string,
-	 *   defaultValue?: any,
-	 *   required?: boolean,
-	 *   converter: (...args: unknown[]) => unknown,
-	 *   allowedValues?: any[]
-	 * }[]} converters
-	 * @returns
-	 */
 	webidl.dictionaryConverter = function (converters) {
 	  return (dictionary) => {
 	    const type = webidl.util.Type(dictionary);
@@ -4044,10 +4150,10 @@ function requireWebidl () {
 	    if (type === 'Null' || type === 'Undefined') {
 	      return dict
 	    } else if (type !== 'Object') {
-	      webidl.errors.exception({
+	      throw webidl.errors.exception({
 	        header: 'Dictionary',
 	        message: `Expected ${dictionary} to be one of: Null, Undefined, Object.`
-	      });
+	      })
 	    }
 
 	    for (const options of converters) {
@@ -4055,10 +4161,10 @@ function requireWebidl () {
 
 	      if (required === true) {
 	        if (!hasOwn(dictionary, key)) {
-	          webidl.errors.exception({
+	          throw webidl.errors.exception({
 	            header: 'Dictionary',
 	            message: `Missing required key "${key}".`
-	          });
+	          })
 	        }
 	      }
 
@@ -4081,10 +4187,10 @@ function requireWebidl () {
 	          options.allowedValues &&
 	          !options.allowedValues.includes(value)
 	        ) {
-	          webidl.errors.exception({
+	          throw webidl.errors.exception({
 	            header: 'Dictionary',
 	            message: `${value} is not an accepted type. Expected one of ${options.allowedValues.join(', ')}.`
-	          });
+	          })
 	        }
 
 	        dict[key] = value;
@@ -4152,7 +4258,6 @@ function requireWebidl () {
 	};
 
 	// https://webidl.spec.whatwg.org/#es-USVString
-	// TODO: ensure that util.toUSVString follows webidl spec
 	webidl.converters.USVString = toUSVString;
 
 	// https://webidl.spec.whatwg.org/#es-boolean
@@ -4171,9 +4276,9 @@ function requireWebidl () {
 	};
 
 	// https://webidl.spec.whatwg.org/#es-long-long
-	webidl.converters['long long'] = function (V, opts) {
+	webidl.converters['long long'] = function (V) {
 	  // 1. Let x be ? ConvertToInt(V, 64, "signed").
-	  const x = webidl.util.ConvertToInt(V, 64, 'signed', opts);
+	  const x = webidl.util.ConvertToInt(V, 64, 'signed');
 
 	  // 2. Return the IDL long long value that represents
 	  //    the same numeric value as x.
@@ -4190,10 +4295,20 @@ function requireWebidl () {
 	  return x
 	};
 
+	// https://webidl.spec.whatwg.org/#es-unsigned-long
+	webidl.converters['unsigned long'] = function (V) {
+	  // 1. Let x be ? ConvertToInt(V, 32, "unsigned").
+	  const x = webidl.util.ConvertToInt(V, 32, 'unsigned');
+
+	  // 2. Return the IDL unsigned long value that
+	  //    represents the same numeric value as x.
+	  return x
+	};
+
 	// https://webidl.spec.whatwg.org/#es-unsigned-short
-	webidl.converters['unsigned short'] = function (V) {
+	webidl.converters['unsigned short'] = function (V, opts) {
 	  // 1. Let x be ? ConvertToInt(V, 16, "unsigned").
-	  const x = webidl.util.ConvertToInt(V, 16, 'unsigned');
+	  const x = webidl.util.ConvertToInt(V, 16, 'unsigned', opts);
 
 	  // 2. Return the IDL unsigned short value that represents
 	  //    the same numeric value as x.
@@ -4211,11 +4326,11 @@ function requireWebidl () {
 	    webidl.util.Type(V) !== 'Object' ||
 	    !types.isAnyArrayBuffer(V)
 	  ) {
-	    webidl.errors.conversionFailed({
+	    throw webidl.errors.conversionFailed({
 	      prefix: `${V}`,
 	      argument: `${V}`,
 	      types: ['ArrayBuffer']
-	    });
+	    })
 	  }
 
 	  // 2. If the conversion is not to an IDL type associated
@@ -4223,10 +4338,10 @@ function requireWebidl () {
 	  //    IsSharedArrayBuffer(V) is true, then throw a
 	  //    TypeError.
 	  if (opts.allowShared === false && types.isSharedArrayBuffer(V)) {
-	    webidl.errors.exception({
+	    throw webidl.errors.exception({
 	      header: 'ArrayBuffer',
 	      message: 'SharedArrayBuffer is not allowed.'
-	    });
+	    })
 	  }
 
 	  // 3. If the conversion is not to an IDL type associated
@@ -4251,11 +4366,11 @@ function requireWebidl () {
 	    !types.isTypedArray(V) ||
 	    V.constructor.name !== T.name
 	  ) {
-	    webidl.errors.conversionFailed({
+	    throw webidl.errors.conversionFailed({
 	      prefix: `${T.name}`,
 	      argument: `${V}`,
 	      types: [T.name]
-	    });
+	    })
 	  }
 
 	  // 3. If the conversion is not to an IDL type associated
@@ -4263,10 +4378,10 @@ function requireWebidl () {
 	  //    IsSharedArrayBuffer(V.[[ViewedArrayBuffer]]) is
 	  //    true, then throw a TypeError.
 	  if (opts.allowShared === false && types.isSharedArrayBuffer(V.buffer)) {
-	    webidl.errors.exception({
+	    throw webidl.errors.exception({
 	      header: 'ArrayBuffer',
 	      message: 'SharedArrayBuffer is not allowed.'
-	    });
+	    })
 	  }
 
 	  // 4. If the conversion is not to an IDL type associated
@@ -4284,10 +4399,10 @@ function requireWebidl () {
 	  // 1. If Type(V) is not Object, or V does not have a
 	  //    [[DataView]] internal slot, then throw a TypeError.
 	  if (webidl.util.Type(V) !== 'Object' || !types.isDataView(V)) {
-	    webidl.errors.exception({
+	    throw webidl.errors.exception({
 	      header: 'DataView',
 	      message: 'Object is not a DataView.'
-	    });
+	    })
 	  }
 
 	  // 2. If the conversion is not to an IDL type associated
@@ -4295,10 +4410,10 @@ function requireWebidl () {
 	  //    IsSharedArrayBuffer(V.[[ViewedArrayBuffer]]) is true,
 	  //    then throw a TypeError.
 	  if (opts.allowShared === false && types.isSharedArrayBuffer(V.buffer)) {
-	    webidl.errors.exception({
+	    throw webidl.errors.exception({
 	      header: 'ArrayBuffer',
 	      message: 'SharedArrayBuffer is not allowed.'
-	    });
+	    })
 	  }
 
 	  // 3. If the conversion is not to an IDL type associated
@@ -4356,9 +4471,16 @@ function requireDataURL () {
 	hasRequiredDataURL = 1;
 	const assert = require$$0$1;
 	const { atob } = require$$7;
-	const { isValidHTTPToken } = requireUtil$1();
+	const { format } = require$$2$1;
+	const { isValidHTTPToken, isomorphicDecode } = requireUtil$3();
 
 	const encoder = new TextEncoder();
+
+	// Regex
+	const HTTP_TOKEN_CODEPOINTS = /^[!#$%&'*+-.^_|~A-z0-9]+$/;
+	const HTTP_WHITESPACE_REGEX = /(\u000A|\u000D|\u0009|\u0020)/; // eslint-disable-line
+	// https://mimesniff.spec.whatwg.org/#http-quoted-string-token-code-point
+	const HTTP_QUOTED_STRING_TOKENS = /^(\u0009|\x{0020}-\x{007E}|\x{0080}-\x{00FF})+$/; // eslint-disable-line
 
 	// https://fetch.spec.whatwg.org/#data-url-processor
 	/** @param {URL} dataURL */
@@ -4410,7 +4532,6 @@ function requireDataURL () {
 	  const encodedBody = input.slice(mimeTypeLength + 1);
 
 	  // 10. Let body be the percent-decoding of encodedBody.
-	  /** @type {Uint8Array|string} */
 	  let body = stringPercentDecode(encodedBody);
 
 	  // 11. If mimeType ends with U+003B (;), followed by
@@ -4418,7 +4539,8 @@ function requireDataURL () {
 	  // case-insensitive match for "base64", then:
 	  if (/;(\u0020){0,}base64$/i.test(mimeType)) {
 	    // 1. Let stringBody be the isomorphic decode of body.
-	    const stringBody = decodeURIComponent(new TextDecoder('utf-8').decode(body));
+	    const stringBody = isomorphicDecode(body);
+
 	    // 2. Set body to the forgiving-base64 decode of
 	    // stringBody.
 	    body = forgivingBase64(stringBody);
@@ -4467,73 +4589,7 @@ function requireDataURL () {
 	 * @param {boolean} excludeFragment
 	 */
 	function URLSerializer (url, excludeFragment = false) {
-	  // 1. Let output be url’s scheme and U+003A (:) concatenated.
-	  let output = url.protocol;
-
-	  // 2. If url’s host is non-null:
-	  if (url.host.length > 0) {
-	    // 1. Append "//" to output.
-	    output += '//';
-
-	    // 2. If url includes credentials, then:
-	    if (url.username.length > 0 || url.password.length > 0) {
-	      // 1. Append url’s username to output.
-	      output += url.username;
-
-	      // 2. If url’s password is not the empty string, then append U+003A (:),
-	      // followed by url’s password, to output.
-	      if (url.password.length > 0) {
-	        output += ':' + url.password;
-	      }
-
-	      // 3. Append U+0040 (@) to output.
-	      output += '@';
-	    }
-
-	    // 3. Append url’s host, serialized, to output.
-	    output += decodeURIComponent(url.hostname);
-
-	    // 4. If url’s port is non-null, append U+003A (:) followed by url’s port,
-	    // serialized, to output.
-	    if (url.port.length > 0) {
-	      output += ':' + url.port;
-	    }
-	  }
-
-	  // 3. If url’s host is null, url does not have an opaque path,
-	  // url’s path’s size is greater than 1, and url’s path[0]
-	  // is the empty string, then append U+002F (/) followed by
-	  // U+002E (.) to output.
-	  // Note: This prevents web+demo:/.//not-a-host/ or web+demo:/path/..//not-a-host/,
-	  // when parsed and then serialized, from ending up as web+demo://not-a-host/
-	  // (they end up as web+demo:/.//not-a-host/).
-	  // Undici implementation note: url's path[0] can never be an
-	  // empty string, so we have to slightly alter what the spec says.
-	  if (
-	    url.host.length === 0 &&
-	    url.pathname.length > 1 &&
-	    url.href.slice(url.protocol.length + 1)[0] === '.'
-	  ) {
-	    output += '/.';
-	  }
-
-	  // 4. Append the result of URL path serializing url to output.
-	  output += url.pathname;
-
-	  // 5. If url’s query is non-null, append U+003F (?),
-	  // followed by url’s query, to output.
-	  if (url.search.length > 0) {
-	    output += url.search;
-	  }
-
-	  // 6. If exclude fragment is false and url’s fragment is non-null,
-	  // then append U+0023 (#), followed by url’s fragment, to output.
-	  if (excludeFragment === false && url.hash.length > 0) {
-	    output += url.hash;
-	  }
-
-	  // 7. Return output.
-	  return output
+	  return format(url, { fragment: !excludeFragment })
 	}
 
 	// https://infra.spec.whatwg.org/#collect-a-sequence-of-code-points
@@ -4638,7 +4694,7 @@ function requireDataURL () {
 	  // 4. If type is the empty string or does not solely
 	  // contain HTTP token code points, then return failure.
 	  // https://mimesniff.spec.whatwg.org/#http-token-code-point
-	  if (type.length === 0 || !/^[!#$%&'*+-.^_|~A-z0-9]+$/.test(type)) {
+	  if (type.length === 0 || !HTTP_TOKEN_CODEPOINTS.test(type)) {
 	    return 'failure'
 	  }
 
@@ -4665,7 +4721,7 @@ function requireDataURL () {
 
 	  // 9. If subtype is the empty string or does not solely
 	  // contain HTTP token code points, then return failure.
-	  if (subtype.length === 0 || !/^[!#$%&'*+-.^_|~A-z0-9]+$/.test(subtype)) {
+	  if (subtype.length === 0 || !HTTP_TOKEN_CODEPOINTS.test(subtype)) {
 	    return 'failure'
 	  }
 
@@ -4679,9 +4735,7 @@ function requireDataURL () {
 	    /** @type {Map<string, string>} */
 	    parameters: new Map(),
 	    // https://mimesniff.spec.whatwg.org/#mime-type-essence
-	    get essence () {
-	      return `${this.type}/${this.subtype}`
-	    }
+	    essence: `${type}/${subtype}`
 	  };
 
 	  // 11. While position is not past the end of input:
@@ -4693,7 +4747,7 @@ function requireDataURL () {
 	    // whitespace from input given position.
 	    collectASequenceOfCodePoints(
 	      // https://fetch.spec.whatwg.org/#http-whitespace
-	      (char) => /(\u000A|\u000D|\u0009|\u0020)/.test(char), // eslint-disable-line
+	      char => HTTP_WHITESPACE_REGEX.test(char),
 	      input,
 	      position
 	    );
@@ -4776,9 +4830,8 @@ function requireDataURL () {
 	    // then set mimeType’s parameters[parameterName] to parameterValue.
 	    if (
 	      parameterName.length !== 0 &&
-	      /^[!#$%&'*+-.^_|~A-z0-9]+$/.test(parameterName) &&
-	      // https://mimesniff.spec.whatwg.org/#http-quoted-string-token-code-point
-	      !/^(\u0009|\x{0020}-\x{007E}|\x{0080}-\x{00FF})+$/.test(parameterValue) &&  // eslint-disable-line
+	      HTTP_TOKEN_CODEPOINTS.test(parameterName) &&
+	      !HTTP_QUOTED_STRING_TOKENS.test(parameterValue) &&
 	      !mimeType.parameters.has(parameterName)
 	    ) {
 	      mimeType.parameters.set(parameterName, parameterValue);
@@ -4970,22 +5023,20 @@ function requireFile () {
 	if (hasRequiredFile) return file;
 	hasRequiredFile = 1;
 
-	const { Blob } = require$$7;
+	const { Blob, File: NativeFile } = require$$7;
 	const { types } = require$$0;
-	const { kState } = requireSymbols$1();
-	const { isBlobLike } = requireUtil$1();
+	const { kState } = requireSymbols$2();
+	const { isBlobLike } = requireUtil$3();
 	const { webidl } = requireWebidl();
 	const { parseMIMEType, serializeAMimeType } = requireDataURL();
-	const { kEnumerableProperty } = util$e;
+	const { kEnumerableProperty } = util$g;
 
 	class File extends Blob {
 	  constructor (fileBits, fileName, options = {}) {
 	    // The File constructor is invoked with two or three parameters, depending
 	    // on whether the optional dictionary parameter is used. When the File()
 	    // constructor is invoked, user agents must run the following steps:
-	    if (arguments.length < 2) {
-	      throw new TypeError('2 arguments required')
-	    }
+	    webidl.argumentLengthCheck(arguments, 2, { header: 'File constructor' });
 
 	    fileBits = webidl.converters['sequence<BlobPart>'](fileBits);
 	    fileName = webidl.converters.USVString(fileName);
@@ -5046,31 +5097,21 @@ function requireFile () {
 	  }
 
 	  get name () {
-	    if (!(this instanceof File)) {
-	      throw new TypeError('Illegal invocation')
-	    }
+	    webidl.brandCheck(this, File);
 
 	    return this[kState].name
 	  }
 
 	  get lastModified () {
-	    if (!(this instanceof File)) {
-	      throw new TypeError('Illegal invocation')
-	    }
+	    webidl.brandCheck(this, File);
 
 	    return this[kState].lastModified
 	  }
 
 	  get type () {
-	    if (!(this instanceof File)) {
-	      throw new TypeError('Illegal invocation')
-	    }
+	    webidl.brandCheck(this, File);
 
 	    return this[kState].type
-	  }
-
-	  get [Symbol.toStringTag] () {
-	    return this.constructor.name
 	  }
 	}
 
@@ -5123,65 +5164,49 @@ function requireFile () {
 	  }
 
 	  stream (...args) {
-	    if (!(this instanceof FileLike)) {
-	      throw new TypeError('Illegal invocation')
-	    }
+	    webidl.brandCheck(this, FileLike);
 
 	    return this[kState].blobLike.stream(...args)
 	  }
 
 	  arrayBuffer (...args) {
-	    if (!(this instanceof FileLike)) {
-	      throw new TypeError('Illegal invocation')
-	    }
+	    webidl.brandCheck(this, FileLike);
 
 	    return this[kState].blobLike.arrayBuffer(...args)
 	  }
 
 	  slice (...args) {
-	    if (!(this instanceof FileLike)) {
-	      throw new TypeError('Illegal invocation')
-	    }
+	    webidl.brandCheck(this, FileLike);
 
 	    return this[kState].blobLike.slice(...args)
 	  }
 
 	  text (...args) {
-	    if (!(this instanceof FileLike)) {
-	      throw new TypeError('Illegal invocation')
-	    }
+	    webidl.brandCheck(this, FileLike);
 
 	    return this[kState].blobLike.text(...args)
 	  }
 
 	  get size () {
-	    if (!(this instanceof FileLike)) {
-	      throw new TypeError('Illegal invocation')
-	    }
+	    webidl.brandCheck(this, FileLike);
 
 	    return this[kState].blobLike.size
 	  }
 
 	  get type () {
-	    if (!(this instanceof FileLike)) {
-	      throw new TypeError('Illegal invocation')
-	    }
+	    webidl.brandCheck(this, FileLike);
 
 	    return this[kState].blobLike.type
 	  }
 
 	  get name () {
-	    if (!(this instanceof FileLike)) {
-	      throw new TypeError('Illegal invocation')
-	    }
+	    webidl.brandCheck(this, FileLike);
 
 	    return this[kState].name
 	  }
 
 	  get lastModified () {
-	    if (!(this instanceof FileLike)) {
-	      throw new TypeError('Illegal invocation')
-	    }
+	    webidl.brandCheck(this, FileLike);
 
 	    return this[kState].lastModified
 	  }
@@ -5192,6 +5217,10 @@ function requireFile () {
 	}
 
 	Object.defineProperties(File.prototype, {
+	  [Symbol.toStringTag]: {
+	    value: 'File',
+	    configurable: true
+	  },
 	  name: kEnumerableProperty,
 	  lastModified: kEnumerableProperty
 	});
@@ -5323,11 +5352,14 @@ function requireFile () {
 	// rollup) will warn about circular dependencies. See:
 	// https://github.com/nodejs/undici/issues/1629
 	function isFileLike (object) {
-	  return object instanceof File || (
-	    object &&
-	    (typeof object.stream === 'function' ||
-	     typeof object.arrayBuffer === 'function') &&
-	     object[Symbol.toStringTag] === 'File'
+	  return (
+	    (NativeFile && object instanceof NativeFile) ||
+	    object instanceof File || (
+	      object &&
+	      (typeof object.stream === 'function' ||
+	      typeof object.arrayBuffer === 'function') &&
+	      object[Symbol.toStringTag] === 'File'
+	    )
 	  )
 	}
 
@@ -5342,38 +5374,33 @@ function requireFormdata () {
 	if (hasRequiredFormdata) return formdata;
 	hasRequiredFormdata = 1;
 
-	const { isBlobLike, toUSVString, makeIterator } = requireUtil$1();
-	const { kState } = requireSymbols$1();
-	const { File, FileLike, isFileLike } = requireFile();
+	const { isBlobLike, toUSVString, makeIterator } = requireUtil$3();
+	const { kState } = requireSymbols$2();
+	const { File: UndiciFile, FileLike, isFileLike } = requireFile();
 	const { webidl } = requireWebidl();
-	const { Blob } = require$$7;
+	const { Blob, File: NativeFile } = require$$7;
+
+	/** @type {globalThis['File']} */
+	const File = NativeFile ?? UndiciFile;
 
 	// https://xhr.spec.whatwg.org/#formdata
 	class FormData {
-	  static name = 'FormData'
-
 	  constructor (form) {
 	    if (form !== undefined) {
-	      webidl.errors.conversionFailed({
+	      throw webidl.errors.conversionFailed({
 	        prefix: 'FormData constructor',
 	        argument: 'Argument 1',
 	        types: ['undefined']
-	      });
+	      })
 	    }
 
 	    this[kState] = [];
 	  }
 
 	  append (name, value, filename = undefined) {
-	    if (!(this instanceof FormData)) {
-	      throw new TypeError('Illegal invocation')
-	    }
+	    webidl.brandCheck(this, FormData);
 
-	    if (arguments.length < 2) {
-	      throw new TypeError(
-	        `Failed to execute 'append' on 'FormData': 2 arguments required, but only ${arguments.length} present.`
-	      )
-	    }
+	    webidl.argumentLengthCheck(arguments, 2, { header: 'FormData.append' });
 
 	    if (arguments.length === 3 && !isBlobLike(value)) {
 	      throw new TypeError(
@@ -5400,15 +5427,9 @@ function requireFormdata () {
 	  }
 
 	  delete (name) {
-	    if (!(this instanceof FormData)) {
-	      throw new TypeError('Illegal invocation')
-	    }
+	    webidl.brandCheck(this, FormData);
 
-	    if (arguments.length < 1) {
-	      throw new TypeError(
-	        `Failed to execute 'delete' on 'FormData': 1 arguments required, but only ${arguments.length} present.`
-	      )
-	    }
+	    webidl.argumentLengthCheck(arguments, 1, { header: 'FormData.delete' });
 
 	    name = webidl.converters.USVString(name);
 
@@ -5425,15 +5446,9 @@ function requireFormdata () {
 	  }
 
 	  get (name) {
-	    if (!(this instanceof FormData)) {
-	      throw new TypeError('Illegal invocation')
-	    }
+	    webidl.brandCheck(this, FormData);
 
-	    if (arguments.length < 1) {
-	      throw new TypeError(
-	        `Failed to execute 'get' on 'FormData': 1 arguments required, but only ${arguments.length} present.`
-	      )
-	    }
+	    webidl.argumentLengthCheck(arguments, 1, { header: 'FormData.get' });
 
 	    name = webidl.converters.USVString(name);
 
@@ -5450,15 +5465,9 @@ function requireFormdata () {
 	  }
 
 	  getAll (name) {
-	    if (!(this instanceof FormData)) {
-	      throw new TypeError('Illegal invocation')
-	    }
+	    webidl.brandCheck(this, FormData);
 
-	    if (arguments.length < 1) {
-	      throw new TypeError(
-	        `Failed to execute 'getAll' on 'FormData': 1 arguments required, but only ${arguments.length} present.`
-	      )
-	    }
+	    webidl.argumentLengthCheck(arguments, 1, { header: 'FormData.getAll' });
 
 	    name = webidl.converters.USVString(name);
 
@@ -5472,15 +5481,9 @@ function requireFormdata () {
 	  }
 
 	  has (name) {
-	    if (!(this instanceof FormData)) {
-	      throw new TypeError('Illegal invocation')
-	    }
+	    webidl.brandCheck(this, FormData);
 
-	    if (arguments.length < 1) {
-	      throw new TypeError(
-	        `Failed to execute 'has' on 'FormData': 1 arguments required, but only ${arguments.length} present.`
-	      )
-	    }
+	    webidl.argumentLengthCheck(arguments, 1, { header: 'FormData.has' });
 
 	    name = webidl.converters.USVString(name);
 
@@ -5490,15 +5493,9 @@ function requireFormdata () {
 	  }
 
 	  set (name, value, filename = undefined) {
-	    if (!(this instanceof FormData)) {
-	      throw new TypeError('Illegal invocation')
-	    }
+	    webidl.brandCheck(this, FormData);
 
-	    if (arguments.length < 2) {
-	      throw new TypeError(
-	        `Failed to execute 'set' on 'FormData': 2 arguments required, but only ${arguments.length} present.`
-	      )
-	    }
+	    webidl.argumentLengthCheck(arguments, 2, { header: 'FormData.set' });
 
 	    if (arguments.length === 3 && !isBlobLike(value)) {
 	      throw new TypeError(
@@ -5538,14 +5535,8 @@ function requireFormdata () {
 	    }
 	  }
 
-	  get [Symbol.toStringTag] () {
-	    return this.constructor.name
-	  }
-
 	  entries () {
-	    if (!(this instanceof FormData)) {
-	      throw new TypeError('Illegal invocation')
-	    }
+	    webidl.brandCheck(this, FormData);
 
 	    return makeIterator(
 	      () => this[kState].map(pair => [pair.name, pair.value]),
@@ -5555,9 +5546,7 @@ function requireFormdata () {
 	  }
 
 	  keys () {
-	    if (!(this instanceof FormData)) {
-	      throw new TypeError('Illegal invocation')
-	    }
+	    webidl.brandCheck(this, FormData);
 
 	    return makeIterator(
 	      () => this[kState].map(pair => [pair.name, pair.value]),
@@ -5567,9 +5556,7 @@ function requireFormdata () {
 	  }
 
 	  values () {
-	    if (!(this instanceof FormData)) {
-	      throw new TypeError('Illegal invocation')
-	    }
+	    webidl.brandCheck(this, FormData);
 
 	    return makeIterator(
 	      () => this[kState].map(pair => [pair.name, pair.value]),
@@ -5583,15 +5570,9 @@ function requireFormdata () {
 	   * @param {unknown} thisArg
 	   */
 	  forEach (callbackFn, thisArg = globalThis) {
-	    if (!(this instanceof FormData)) {
-	      throw new TypeError('Illegal invocation')
-	    }
+	    webidl.brandCheck(this, FormData);
 
-	    if (arguments.length < 1) {
-	      throw new TypeError(
-	        `Failed to execute 'forEach' on 'FormData': 1 argument required, but only ${arguments.length} present.`
-	      )
-	    }
+	    webidl.argumentLengthCheck(arguments, 1, { header: 'FormData.forEach' });
 
 	    if (typeof callbackFn !== 'function') {
 	      throw new TypeError(
@@ -5606,6 +5587,13 @@ function requireFormdata () {
 	}
 
 	FormData.prototype[Symbol.iterator] = FormData.prototype.entries;
+
+	Object.defineProperties(FormData.prototype, {
+	  [Symbol.toStringTag]: {
+	    value: 'FormData',
+	    configurable: true
+	  }
+	});
 
 	/**
 	 * @see https://html.spec.whatwg.org/multipage/form-control-infrastructure.html#create-an-entry
@@ -5645,7 +5633,7 @@ function requireFormdata () {
 	        lastModified: value.lastModified
 	      };
 
-	      value = value instanceof File
+	      value = (NativeFile && value instanceof NativeFile) || value instanceof UndiciFile
 	        ? new File([value], filename, options)
 	        : new FileLike(value, filename, options);
 	    }
@@ -5667,28 +5655,36 @@ function requireBody () {
 	hasRequiredBody = 1;
 
 	const Busboy = requireLib();
-	const util = util$e;
-	const { ReadableStreamFrom, toUSVString, isBlobLike, isReadableStreamLike, readableStreamClose } = requireUtil$1();
+	const util = util$g;
+	const {
+	  ReadableStreamFrom,
+	  isBlobLike,
+	  isReadableStreamLike,
+	  readableStreamClose,
+	  createDeferredPromise,
+	  fullyReadBody
+	} = requireUtil$3();
 	const { FormData } = requireFormdata();
-	const { kState } = requireSymbols$1();
+	const { kState } = requireSymbols$2();
 	const { webidl } = requireWebidl();
-	const { DOMException, structuredClone } = requireConstants$1();
-	const { Blob } = require$$7;
-	const { kBodyUsed } = symbols$2;
+	const { DOMException, structuredClone } = requireConstants$3();
+	const { Blob, File: NativeFile } = require$$7;
+	const { kBodyUsed } = symbols$3;
 	const assert = require$$0$1;
-	const { isErrored } = util$e;
+	const { isErrored } = util$g;
 	const { isUint8Array, isArrayBuffer } = require$$4$1;
-	const { File } = requireFile();
-	const { StringDecoder } = require$$12;
+	const { File: UndiciFile } = requireFile();
 	const { parseMIMEType, serializeAMimeType } = requireDataURL();
 
-	/** @type {globalThis['ReadableStream']} */
-	let ReadableStream;
+	let ReadableStream = globalThis.ReadableStream;
+
+	/** @type {globalThis['File']} */
+	const File = NativeFile ?? UndiciFile;
 
 	// https://fetch.spec.whatwg.org/#concept-bodyinit-extract
 	function extractBody (object, keepalive = false) {
 	  if (!ReadableStream) {
-	    ReadableStream = require$$14.ReadableStream;
+	    ReadableStream = require$$13.ReadableStream;
 	  }
 
 	  // 1. Let stream be null.
@@ -5732,7 +5728,14 @@ function requireBody () {
 	  let type = null;
 
 	  // 10. Switch on object:
-	  if (object == null) ; else if (object instanceof URLSearchParams) {
+	  if (typeof object === 'string') {
+	    // Set source to the UTF-8 encoding of object.
+	    // Note: setting source to a Uint8Array here breaks some mocking assumptions.
+	    source = object;
+
+	    // Set type to `text/plain;charset=UTF-8`.
+	    type = 'text/plain;charset=UTF-8';
+	  } else if (object instanceof URLSearchParams) {
 	    // URLSearchParams
 
 	    // spec says to run application/x-www-form-urlencoded on body.list
@@ -5756,7 +5759,7 @@ function requireBody () {
 	    // Set source to a copy of the bytes held by object.
 	    source = new Uint8Array(object.buffer.slice(object.byteOffset, object.byteOffset + object.byteLength));
 	  } else if (util.isFormDataLike(object)) {
-	    const boundary = '----formdata-undici-' + Math.random();
+	    const boundary = `----formdata-undici-${Math.random()}`.replace('.', '').slice(0, 32);
 	    const prefix = `--${boundary}\r\nContent-Disposition: form-data`;
 
 	    /*! formdata-polyfill. MIT License. Jimmy Wärting <https://jimmy.warting.se/opensource> */
@@ -5766,41 +5769,49 @@ function requireBody () {
 
 	    // Set action to this step: run the multipart/form-data
 	    // encoding algorithm, with object’s entry list and UTF-8.
-	    action = async function * (object) {
-	      const enc = new TextEncoder();
+	    // - This ensures that the body is immutable and can't be changed afterwords
+	    // - That the content-length is calculated in advance.
+	    // - And that all parts are pre-encoded and ready to be sent.
 
-	      for (const [name, value] of object) {
-	        if (typeof value === 'string') {
-	          yield enc.encode(
-	            prefix +
-	              `; name="${escape(normalizeLinefeeds(name))}"` +
-	              `\r\n\r\n${normalizeLinefeeds(value)}\r\n`
-	          );
-	        } else {
-	          yield enc.encode(
-	            prefix +
-	              `; name="${escape(normalizeLinefeeds(name))}"` +
-	              (value.name ? `; filename="${escape(value.name)}"` : '') +
-	              '\r\n' +
-	              `Content-Type: ${
-	                value.type || 'application/octet-stream'
-	              }\r\n\r\n`
-	          );
+	    const enc = new TextEncoder();
+	    const blobParts = [];
+	    const rn = new Uint8Array([13, 10]); // '\r\n'
+	    length = 0;
 
-	          yield * value.stream();
-
-	          yield enc.encode('\r\n');
-	        }
+	    for (const [name, value] of object) {
+	      if (typeof value === 'string') {
+	        const chunk = enc.encode(prefix +
+	          `; name="${escape(normalizeLinefeeds(name))}"` +
+	          `\r\n\r\n${normalizeLinefeeds(value)}\r\n`);
+	        blobParts.push(chunk);
+	        length += chunk.byteLength;
+	      } else {
+	        const chunk = enc.encode(`${prefix}; name="${escape(normalizeLinefeeds(name))}"` +
+	          (value.name ? `; filename="${escape(value.name)}"` : '') + '\r\n' +
+	          `Content-Type: ${
+	            value.type || 'application/octet-stream'
+	          }\r\n\r\n`);
+	        blobParts.push(chunk, value, rn);
+	        length += chunk.byteLength + value.size + rn.byteLength;
 	      }
+	    }
 
-	      yield enc.encode(`--${boundary}--`);
-	    };
+	    const chunk = enc.encode(`--${boundary}--`);
+	    blobParts.push(chunk);
+	    length += chunk.byteLength;
 
 	    // Set source to object.
 	    source = object;
 
-	    // Set length to unclear, see html/6424 for improving this.
-	    // TODO
+	    action = async function * () {
+	      for (const part of blobParts) {
+	        if (part.stream) {
+	          yield * part.stream();
+	        } else {
+	          yield part;
+	        }
+	      }
+	    };
 
 	    // Set type to `multipart/form-data; boundary=`,
 	    // followed by the multipart/form-data boundary string generated
@@ -5835,17 +5846,10 @@ function requireBody () {
 
 	    stream =
 	      object instanceof ReadableStream ? object : ReadableStreamFrom(object);
-	  } else {
-	    // TODO: byte sequence?
-	    // TODO: scalar value string?
-	    // TODO: else?
-	    source = toUSVString(object);
-	    type = 'text/plain;charset=UTF-8';
 	  }
 
 	  // 11. If source is a byte sequence, then set action to a
 	  // step that returns source and length to source’s length.
-	  // TODO: What is a "byte sequence?"
 	  if (typeof source === 'string' || util.isBuffer(source)) {
 	    length = Buffer.byteLength(source);
 	  }
@@ -5894,7 +5898,7 @@ function requireBody () {
 	function safelyExtractBody (object, keepalive = false) {
 	  if (!ReadableStream) {
 	    // istanbul ignore next
-	    ReadableStream = require$$14.ReadableStream;
+	    ReadableStream = require$$13.ReadableStream;
 	  }
 
 	  // To safely extract a body and a `Content-Type` value from
@@ -5969,32 +5973,49 @@ function requireBody () {
 	  const methods = {
 	    blob () {
 	      // The blob() method steps are to return the result of
-	      // running consume body with this and Blob.
-	      return specConsumeBody(this, 'Blob', instance)
+	      // running consume body with this and the following step
+	      // given a byte sequence bytes: return a Blob whose
+	      // contents are bytes and whose type attribute is this’s
+	      // MIME type.
+	      return specConsumeBody(this, (bytes) => {
+	        let mimeType = bodyMimeType(this);
+
+	        if (mimeType === 'failure') {
+	          mimeType = '';
+	        } else if (mimeType) {
+	          mimeType = serializeAMimeType(mimeType);
+	        }
+
+	        // Return a Blob whose contents are bytes and type attribute
+	        // is mimeType.
+	        return new Blob([bytes], { type: mimeType })
+	      }, instance)
 	    },
 
 	    arrayBuffer () {
-	      // The arrayBuffer() method steps are to return the
-	      // result of running consume body with this and ArrayBuffer.
-	      return specConsumeBody(this, 'ArrayBuffer', instance)
+	      // The arrayBuffer() method steps are to return the result
+	      // of running consume body with this and the following step
+	      // given a byte sequence bytes: return a new ArrayBuffer
+	      // whose contents are bytes.
+	      return specConsumeBody(this, (bytes) => {
+	        return new Uint8Array(bytes).buffer
+	      }, instance)
 	    },
 
 	    text () {
-	      // The text() method steps are to return the result of
-	      // running consume body with this and text.
-	      return specConsumeBody(this, 'text', instance)
+	      // The text() method steps are to return the result of running
+	      // consume body with this and UTF-8 decode.
+	      return specConsumeBody(this, utf8DecodeBytes, instance)
 	    },
 
 	    json () {
-	      // The json() method steps are to return the result of
-	      // running consume body with this and JSON.
-	      return specConsumeBody(this, 'JSON', instance)
+	      // The json() method steps are to return the result of running
+	      // consume body with this and parse JSON from bytes.
+	      return specConsumeBody(this, parseJSONFromBytes, instance)
 	    },
 
 	    async formData () {
-	      if (!(this instanceof instance)) {
-	        throw new TypeError('Illegal invocation')
-	      }
+	      webidl.brandCheck(this, instance);
 
 	      throwIfAborted(this[kState]);
 
@@ -6010,10 +6031,12 @@ function requireBody () {
 	        let busboy;
 
 	        try {
-	          busboy = Busboy({ headers });
+	          busboy = Busboy({
+	            headers,
+	            defParamCharset: 'utf8'
+	          });
 	        } catch (err) {
-	          // Error due to headers:
-	          throw Object.assign(new TypeError(), { cause: err })
+	          throw new DOMException(`${err}`, 'AbortError')
 	        }
 
 	        busboy.on('field', (name, value) => {
@@ -6023,7 +6046,7 @@ function requireBody () {
 	          const { filename, encoding, mimeType } = info;
 	          const chunks = [];
 
-	          if (encoding.toLowerCase() === 'base64') {
+	          if (encoding === 'base64' || encoding.toLowerCase() === 'base64') {
 	            let base64chunk = '';
 
 	            value.on('data', (chunk) => {
@@ -6096,10 +6119,10 @@ function requireBody () {
 	        throwIfAborted(this[kState]);
 
 	        // Otherwise, throw a TypeError.
-	        webidl.errors.exception({
+	        throw webidl.errors.exception({
 	          header: `${instance.name}.formData`,
 	          message: 'Could not parse content as FormData.'
-	        });
+	        })
 	      }
 	    }
 	  };
@@ -6111,13 +6134,15 @@ function requireBody () {
 	  Object.assign(prototype.prototype, bodyMixinMethods(prototype));
 	}
 
-	// https://fetch.spec.whatwg.org/#concept-body-consume-body
-	async function specConsumeBody (object, type, instance) {
-	  if (!(object instanceof instance)) {
-	    throw new TypeError('Illegal invocation')
-	  }
+	/**
+	 * @see https://fetch.spec.whatwg.org/#concept-body-consume-body
+	 * @param {Response|Request} object
+	 * @param {(value: unknown) => unknown} convertBytesToJSValue
+	 * @param {Response|Request} instance
+	 */
+	async function specConsumeBody (object, convertBytesToJSValue, instance) {
+	  webidl.brandCheck(object, instance);
 
-	  // TODO: why is this needed?
 	  throwIfAborted(object[kState]);
 
 	  // 1. If object is unusable, then return a promise rejected
@@ -6126,71 +6151,37 @@ function requireBody () {
 	    throw new TypeError('Body is unusable')
 	  }
 
-	  // 2. Let promise be a promise resolved with an empty byte
-	  //    sequence.
-	  let promise;
+	  // 2. Let promise be a new promise.
+	  const promise = createDeferredPromise();
 
-	  // 3. If object’s body is non-null, then set promise to the
-	  //    result of fully reading body as promise given object’s
-	  //    body.
-	  if (object[kState].body != null) {
-	    promise = await fullyReadBodyAsPromise(object[kState].body);
-	  } else {
-	    // step #2
-	    promise = { size: 0, bytes: [new Uint8Array()] };
+	  // 3. Let errorSteps given error be to reject promise with error.
+	  const errorSteps = (error) => promise.reject(error);
+
+	  // 4. Let successSteps given a byte sequence data be to resolve
+	  //    promise with the result of running convertBytesToJSValue
+	  //    with data. If that threw an exception, then run errorSteps
+	  //    with that exception.
+	  const successSteps = (data) => {
+	    try {
+	      promise.resolve(convertBytesToJSValue(data));
+	    } catch (e) {
+	      errorSteps(e);
+	    }
+	  };
+
+	  // 5. If object’s body is null, then run successSteps with an
+	  //    empty byte sequence.
+	  if (object[kState].body == null) {
+	    successSteps(new Uint8Array());
+	    return promise.promise
 	  }
 
-	  // 4. Let steps be to return the result of package data with
-	  //    the first argument given, type, and object’s MIME type.
-	  const mimeType = type === 'Blob' || type === 'FormData'
-	    ? bodyMimeType(object)
-	    : undefined;
+	  // 6. Otherwise, fully read object’s body given successSteps,
+	  //    errorSteps, and object’s relevant global object.
+	  fullyReadBody(object[kState].body, successSteps, errorSteps);
 
-	  // 5. Return the result of upon fulfillment of promise given
-	  //    steps.
-	  return packageData(promise, type, mimeType)
-	}
-
-	/**
-	 * @see https://fetch.spec.whatwg.org/#concept-body-package-data
-	 * @param {{ size: number, bytes: Uint8Array[] }} bytes
-	 * @param {string} type
-	 * @param {ReturnType<typeof parseMIMEType>|undefined} mimeType
-	 */
-	function packageData ({ bytes, size }, type, mimeType) {
-	  switch (type) {
-	    case 'ArrayBuffer': {
-	      // Return a new ArrayBuffer whose contents are bytes.
-	      const uint8 = new Uint8Array(size);
-	      let offset = 0;
-
-	      for (const chunk of bytes) {
-	        uint8.set(chunk, offset);
-	        offset += chunk.byteLength;
-	      }
-
-	      return uint8.buffer
-	    }
-	    case 'Blob': {
-	      if (mimeType === 'failure') {
-	        mimeType = '';
-	      } else if (mimeType) {
-	        mimeType = serializeAMimeType(mimeType);
-	      }
-
-	      // Return a Blob whose contents are bytes and type attribute
-	      // is mimeType.
-	      return new Blob(bytes, { type: mimeType })
-	    }
-	    case 'JSON': {
-	      // Return the result of running parse JSON from bytes on bytes.
-	      return JSON.parse(utf8DecodeBytes(bytes))
-	    }
-	    case 'text': {
-	      // 1. Return the result of running UTF-8 decode on bytes.
-	      return utf8DecodeBytes(bytes)
-	    }
-	  }
+	  // 7. Return promise.
+	  return promise.promise
 	}
 
 	// https://fetch.spec.whatwg.org/#body-unusable
@@ -6201,71 +6192,38 @@ function requireBody () {
 	  return body != null && (body.stream.locked || util.isDisturbed(body.stream))
 	}
 
-	// https://fetch.spec.whatwg.org/#fully-reading-body-as-promise
-	async function fullyReadBodyAsPromise (body) {
-	  // 1. Let reader be the result of getting a reader for body’s
-	  //    stream. If that threw an exception, then return a promise
-	  //    rejected with that exception.
-	  const reader = body.stream.getReader();
-
-	  // 2. Return the result of reading all bytes from reader.
-	  /** @type {Uint8Array[]} */
-	  const bytes = [];
-	  let size = 0;
-
-	  while (true) {
-	    const { done, value } = await reader.read();
-
-	    if (done) {
-	      break
-	    }
-
-	    // https://streams.spec.whatwg.org/#read-loop
-	    // If chunk is not a Uint8Array object, reject promise with
-	    // a TypeError and abort these steps.
-	    if (!isUint8Array(value)) {
-	      throw new TypeError('Value is not a Uint8Array.')
-	    }
-
-	    bytes.push(value);
-	    size += value.byteLength;
-	  }
-
-	  return { size, bytes }
-	}
-
 	/**
 	 * @see https://encoding.spec.whatwg.org/#utf-8-decode
-	 * @param {Uint8Array[]} ioQueue
+	 * @param {Buffer} buffer
 	 */
-	function utf8DecodeBytes (ioQueue) {
-	  if (ioQueue.length === 0) {
+	function utf8DecodeBytes (buffer) {
+	  if (buffer.length === 0) {
 	    return ''
 	  }
 
-	  // 1. Let buffer be the result of peeking three bytes
-	  //    from ioQueue, converted to a byte sequence.
-	  const buffer = ioQueue[0];
+	  // 1. Let buffer be the result of peeking three bytes from
+	  //    ioQueue, converted to a byte sequence.
 
 	  // 2. If buffer is 0xEF 0xBB 0xBF, then read three
 	  //    bytes from ioQueue. (Do nothing with those bytes.)
 	  if (buffer[0] === 0xEF && buffer[1] === 0xBB && buffer[2] === 0xBF) {
-	    ioQueue[0] = ioQueue[0].subarray(3);
+	    buffer = buffer.subarray(3);
 	  }
 
 	  // 3. Process a queue with an instance of UTF-8’s
 	  //    decoder, ioQueue, output, and "replacement".
-	  const decoder = new StringDecoder('utf-8');
-	  let output = '';
-
-	  for (const chunk of ioQueue) {
-	    output += decoder.write(chunk);
-	  }
-
-	  output += decoder.end();
+	  const output = new TextDecoder().decode(buffer);
 
 	  // 4. Return output.
 	  return output
+	}
+
+	/**
+	 * @see https://infra.spec.whatwg.org/#parse-json-bytes-to-a-javascript-value
+	 * @param {Uint8Array} bytes
+	 */
+	function parseJSONFromBytes (bytes) {
+	  return JSON.parse(utf8DecodeBytes(bytes))
 	}
 
 	/**
@@ -6297,7 +6255,7 @@ const {
   NotSupportedError: NotSupportedError$1
 } = errors;
 const assert$6 = require$$0$1;
-const util$c = util$e;
+const util$e = util$g;
 
 // tokenRegExp and headerCharRegex have been lifted from
 // https://github.com/nodejs/node/blob/main/lib/_http_common.js
@@ -6345,7 +6303,7 @@ try {
   channels$1.error = { hasSubscribers: false };
 }
 
-class Request$1 {
+let Request$1 = class Request {
   constructor (origin, {
     path,
     method,
@@ -6357,6 +6315,7 @@ class Request$1 {
     upgrade,
     headersTimeout,
     bodyTimeout,
+    reset,
     throwOnError
   }, handler) {
     if (typeof path !== 'string') {
@@ -6389,6 +6348,10 @@ class Request$1 {
       throw new InvalidArgumentError$i('invalid bodyTimeout')
     }
 
+    if (reset != null && typeof reset !== 'boolean') {
+      throw new InvalidArgumentError$i('invalid reset')
+    }
+
     this.headersTimeout = headersTimeout;
 
     this.bodyTimeout = bodyTimeout;
@@ -6399,9 +6362,9 @@ class Request$1 {
 
     if (body == null) {
       this.body = null;
-    } else if (util$c.isStream(body)) {
+    } else if (util$e.isStream(body)) {
       this.body = body;
-    } else if (util$c.isBuffer(body)) {
+    } else if (util$e.isBuffer(body)) {
       this.body = body.byteLength ? body : null;
     } else if (ArrayBuffer.isView(body)) {
       this.body = body.buffer.byteLength ? Buffer.from(body.buffer, body.byteOffset, body.byteLength) : null;
@@ -6409,7 +6372,7 @@ class Request$1 {
       this.body = body.byteLength ? Buffer.from(body) : null;
     } else if (typeof body === 'string') {
       this.body = body.length ? Buffer.from(body) : null;
-    } else if (util$c.isFormDataLike(body) || util$c.isIterable(body) || util$c.isBlobLike(body)) {
+    } else if (util$e.isFormDataLike(body) || util$e.isIterable(body) || util$e.isBlobLike(body)) {
       this.body = body;
     } else {
       throw new InvalidArgumentError$i('body must be a string, a Buffer, a Readable stream, an iterable, or an async iterable')
@@ -6421,7 +6384,7 @@ class Request$1 {
 
     this.upgrade = upgrade || null;
 
-    this.path = query ? util$c.buildURL(path, query) : path;
+    this.path = query ? util$e.buildURL(path, query) : path;
 
     this.origin = origin;
 
@@ -6430,6 +6393,8 @@ class Request$1 {
       : idempotent;
 
     this.blocking = blocking == null ? false : blocking;
+
+    this.reset = reset == null ? null : reset;
 
     this.host = null;
 
@@ -6456,7 +6421,7 @@ class Request$1 {
       throw new InvalidArgumentError$i('headers must be an object or an array')
     }
 
-    if (util$c.isFormDataLike(this.body)) {
+    if (util$e.isFormDataLike(this.body)) {
       if (nodeMajor < 16 || (nodeMajor === 16 && nodeMinor < 8)) {
         throw new InvalidArgumentError$i('Form-Data bodies are only supported in node v16.8 and newer.')
       }
@@ -6471,14 +6436,14 @@ class Request$1 {
         this.headers += `content-type: ${contentType}\r\n`;
       }
       this.body = bodyStream.stream;
-    } else if (util$c.isBlobLike(body) && this.contentType == null && body.type) {
+    } else if (util$e.isBlobLike(body) && this.contentType == null && body.type) {
       this.contentType = body.type;
       this.headers += `content-type: ${body.type}\r\n`;
     }
 
-    util$c.validateHandler(handler, method, upgrade);
+    util$e.validateHandler(handler, method, upgrade);
 
-    this.servername = util$c.getServerName(this.host);
+    this.servername = util$e.getServerName(this.host);
 
     this[kHandler] = handler;
 
@@ -6561,10 +6526,19 @@ class Request$1 {
     processHeader(this, key, value);
     return this
   }
+};
+
+function processHeaderValue (key, val) {
+  if (val && (typeof val === 'object' && !Array.isArray(val))) {
+    throw new InvalidArgumentError$i(`invalid ${key} header`)
+  } else if (headerCharRegex.exec(val) !== null) {
+    throw new InvalidArgumentError$i(`invalid ${key} header`)
+  }
+  return `${key}: ${val}\r\n`
 }
 
 function processHeader (request, key, val) {
-  if (val && typeof val === 'object') {
+  if (val && (typeof val === 'object' && !Array.isArray(val))) {
     throw new InvalidArgumentError$i(`invalid ${key} header`)
   } else if (val === undefined) {
     return
@@ -6603,7 +6577,12 @@ function processHeader (request, key, val) {
     key.length === 10 &&
     key.toLowerCase() === 'connection'
   ) {
-    throw new InvalidArgumentError$i('invalid connection header')
+    const value = val.toLowerCase();
+    if (value !== 'close' && value !== 'keep-alive') {
+      throw new InvalidArgumentError$i('invalid connection header')
+    } else if (value === 'close') {
+      request.reset = true;
+    }
   } else if (
     key.length === 10 &&
     key.toLowerCase() === 'keep-alive'
@@ -6621,10 +6600,14 @@ function processHeader (request, key, val) {
     throw new NotSupportedError$1('expect header not supported')
   } else if (tokenRegExp.exec(key) === null) {
     throw new InvalidArgumentError$i('invalid header key')
-  } else if (headerCharRegex.exec(val) !== null) {
-    throw new InvalidArgumentError$i(`invalid ${key} header`)
   } else {
-    request.headers += `${key}: ${val}\r\n`;
+    if (Array.isArray(val)) {
+      for (let i = 0; i < val.length; i++) {
+        request.headers += processHeaderValue(key, val[i]);
+      }
+    } else {
+      request.headers += processHeaderValue(key, val);
+    }
   }
 }
 
@@ -6632,7 +6615,7 @@ var request$2 = Request$1;
 
 const EventEmitter = require$$0$4;
 
-class Dispatcher$2 extends EventEmitter {
+let Dispatcher$2 = class Dispatcher extends EventEmitter {
   dispatch () {
     throw new Error('not implemented')
   }
@@ -6644,7 +6627,7 @@ class Dispatcher$2 extends EventEmitter {
   destroy () {
     throw new Error('not implemented')
   }
-}
+};
 
 var dispatcher = Dispatcher$2;
 
@@ -6654,7 +6637,7 @@ const {
   ClientClosedError,
   InvalidArgumentError: InvalidArgumentError$h
 } = errors;
-const { kDestroy: kDestroy$4, kClose: kClose$6, kDispatch: kDispatch$3, kInterceptors: kInterceptors$5 } = symbols$2;
+const { kDestroy: kDestroy$4, kClose: kClose$6, kDispatch: kDispatch$3, kInterceptors: kInterceptors$5 } = symbols$3;
 
 const kDestroyed = Symbol('destroyed');
 const kClosed = Symbol('closed');
@@ -6662,7 +6645,7 @@ const kOnDestroyed = Symbol('onDestroyed');
 const kOnClosed = Symbol('onClosed');
 const kInterceptedDispatch = Symbol('Intercepted Dispatch');
 
-class DispatcherBase$4 extends Dispatcher$1 {
+let DispatcherBase$4 = class DispatcherBase extends Dispatcher$1 {
   constructor () {
     super();
 
@@ -6834,14 +6817,15 @@ class DispatcherBase$4 extends Dispatcher$1 {
       return false
     }
   }
-}
+};
 
 var dispatcherBase = DispatcherBase$4;
 
 const net$1 = require$$4;
 const assert$5 = require$$0$1;
-const util$b = util$e;
+const util$d = util$g;
 const { InvalidArgumentError: InvalidArgumentError$g, ConnectTimeoutError } = errors;
+
 let tls; // include tls conditionally since it is not always available
 
 // TODO: session re-use does not wait for the first
@@ -6849,15 +6833,73 @@ let tls; // include tls conditionally since it is not always available
 // resolve the same servername multiple times even when
 // re-use is enabled.
 
+let SessionCache;
+if (commonjsGlobal.FinalizationRegistry) {
+  SessionCache = class WeakSessionCache {
+    constructor (maxCachedSessions) {
+      this._maxCachedSessions = maxCachedSessions;
+      this._sessionCache = new Map();
+      this._sessionRegistry = new commonjsGlobal.FinalizationRegistry((key) => {
+        if (this._sessionCache.size < this._maxCachedSessions) {
+          return
+        }
+
+        const ref = this._sessionCache.get(key);
+        if (ref !== undefined && ref.deref() === undefined) {
+          this._sessionCache.delete(key);
+        }
+      });
+    }
+
+    get (sessionKey) {
+      const ref = this._sessionCache.get(sessionKey);
+      return ref ? ref.deref() : null
+    }
+
+    set (sessionKey, session) {
+      if (this._maxCachedSessions === 0) {
+        return
+      }
+
+      this._sessionCache.set(sessionKey, new WeakRef(session));
+      this._sessionRegistry.register(session, sessionKey);
+    }
+  };
+} else {
+  SessionCache = class SimpleSessionCache {
+    constructor (maxCachedSessions) {
+      this._maxCachedSessions = maxCachedSessions;
+      this._sessionCache = new Map();
+    }
+
+    get (sessionKey) {
+      return this._sessionCache.get(sessionKey)
+    }
+
+    set (sessionKey, session) {
+      if (this._maxCachedSessions === 0) {
+        return
+      }
+
+      if (this._sessionCache.size >= this._maxCachedSessions) {
+        // remove the oldest session
+        const { value: oldestKey } = this._sessionCache.keys().next();
+        this._sessionCache.delete(oldestKey);
+      }
+
+      this._sessionCache.set(sessionKey, session);
+    }
+  };
+}
+
 function buildConnector$3 ({ maxCachedSessions, socketPath, timeout, ...opts }) {
   if (maxCachedSessions != null && (!Number.isInteger(maxCachedSessions) || maxCachedSessions < 0)) {
     throw new InvalidArgumentError$g('maxCachedSessions must be a positive integer or zero')
   }
 
   const options = { path: socketPath, ...opts };
-  const sessionCache = new Map();
+  const sessionCache = new SessionCache(maxCachedSessions == null ? 100 : maxCachedSessions);
   timeout = timeout == null ? 10e3 : timeout;
-  maxCachedSessions = maxCachedSessions == null ? 100 : maxCachedSessions;
 
   return function connect ({ hostname, host, protocol, port, servername, localAddress, httpSocket }, callback) {
     let socket;
@@ -6865,7 +6907,7 @@ function buildConnector$3 ({ maxCachedSessions, socketPath, timeout, ...opts }) 
       if (!tls) {
         tls = require$$4$2;
       }
-      servername = servername || options.servername || util$b.getServerName(host) || null;
+      servername = servername || options.servername || util$d.getServerName(host) || null;
 
       const sessionKey = servername || hostname;
       const session = sessionCache.get(sessionKey) || null;
@@ -6885,24 +6927,8 @@ function buildConnector$3 ({ maxCachedSessions, socketPath, timeout, ...opts }) 
 
       socket
         .on('session', function (session) {
-          // cache is disabled
-          if (maxCachedSessions === 0) {
-            return
-          }
-
-          if (sessionCache.size >= maxCachedSessions) {
-            // remove the oldest session
-            const { value: oldestKey } = sessionCache.keys().next();
-            sessionCache.delete(oldestKey);
-          }
-
+          // TODO (fix): Can a session become invalid once established? Don't think so?
           sessionCache.set(sessionKey, session);
-        })
-        .on('error', function (err) {
-          if (sessionKey && err.code !== 'UND_ERR_INFO') {
-            // TODO (fix): Only delete for session related errors.
-            sessionCache.delete(sessionKey);
-          }
         });
     } else {
       assert$5(!httpSocket, 'httpSocket can only be sent on TLS update');
@@ -6968,12 +6994,12 @@ function setupTimeout (onConnectTimeout, timeout) {
 }
 
 function onConnectTimeout (socket) {
-  util$b.destroy(socket, new ConnectTimeoutError());
+  util$d.destroy(socket, new ConnectTimeoutError());
 }
 
 var connect$2 = buildConnector$3;
 
-var constants$1 = {};
+var constants$3 = {};
 
 var utils = {};
 
@@ -6999,11 +7025,11 @@ function requireUtils () {
 	return utils;
 }
 
-var hasRequiredConstants;
+var hasRequiredConstants$2;
 
-function requireConstants () {
-	if (hasRequiredConstants) return constants$1;
-	hasRequiredConstants = 1;
+function requireConstants$2 () {
+	if (hasRequiredConstants$2) return constants$3;
+	hasRequiredConstants$2 = 1;
 	(function (exports) {
 		Object.defineProperty(exports, "__esModule", { value: true });
 		exports.SPECIAL_HEADERS = exports.HEADER_STATE = exports.MINOR = exports.MAJOR = exports.CONNECTION_TOKEN_CHARS = exports.HEADER_CHARS = exports.TOKEN = exports.STRICT_TOKEN = exports.HEX = exports.URL_CHAR = exports.STRICT_URL_CHAR = exports.USERINFO_CHARS = exports.MARK = exports.ALPHANUM = exports.NUM = exports.HEX_MAP = exports.NUM_MAP = exports.ALPHA = exports.FINISH = exports.H_METHOD_MAP = exports.METHOD_MAP = exports.METHODS_RTSP = exports.METHODS_ICE = exports.METHODS_HTTP = exports.METHODS = exports.LENIENT_FLAGS = exports.FLAGS = exports.TYPE = exports.ERROR = void 0;
@@ -7276,12 +7302,12 @@ function requireConstants () {
 		    'upgrade': HEADER_STATE.UPGRADE,
 		};
 		
-} (constants$1));
-	return constants$1;
+} (constants$3));
+	return constants$3;
 }
 
-const util$a = util$e;
-const { kBodyUsed } = symbols$2;
+const util$c = util$g;
+const { kBodyUsed } = symbols$3;
 const assert$4 = require$$0$1;
 const { InvalidArgumentError: InvalidArgumentError$f } = errors;
 const EE = require$$0$4;
@@ -7303,13 +7329,13 @@ class BodyAsyncIterable {
   }
 }
 
-class RedirectHandler$1 {
+let RedirectHandler$1 = class RedirectHandler {
   constructor (dispatch, maxRedirections, opts, handler) {
     if (maxRedirections != null && (!Number.isInteger(maxRedirections) || maxRedirections < 0)) {
       throw new InvalidArgumentError$f('maxRedirections must be a positive number')
     }
 
-    util$a.validateHandler(handler, opts.method, opts.upgrade);
+    util$c.validateHandler(handler, opts.method, opts.upgrade);
 
     this.dispatch = dispatch;
     this.location = null;
@@ -7319,11 +7345,11 @@ class RedirectHandler$1 {
     this.handler = handler;
     this.history = [];
 
-    if (util$a.isStream(this.opts.body)) {
+    if (util$c.isStream(this.opts.body)) {
       // TODO (fix): Provide some way for the user to cache the file to e.g. /tmp
       // so that it can be dispatched again?
       // TODO (fix): Do we need 100-expect support to provide a way to do this properly?
-      if (util$a.bodyLength(this.opts.body) === 0) {
+      if (util$c.bodyLength(this.opts.body) === 0) {
         this.opts.body
           .on('data', function () {
             assert$4(false);
@@ -7345,7 +7371,7 @@ class RedirectHandler$1 {
       this.opts.body &&
       typeof this.opts.body !== 'string' &&
       !ArrayBuffer.isView(this.opts.body) &&
-      util$a.isIterable(this.opts.body)
+      util$c.isIterable(this.opts.body)
     ) {
       // TODO: Should we allow re-using iterable if !this.opts.idempotent
       // or through some other flag?
@@ -7367,7 +7393,7 @@ class RedirectHandler$1 {
   }
 
   onHeaders (statusCode, headers, resume, statusText) {
-    this.location = this.history.length >= this.maxRedirections || util$a.isDisturbed(this.opts.body)
+    this.location = this.history.length >= this.maxRedirections || util$c.isDisturbed(this.opts.body)
       ? null
       : parseLocation(statusCode, headers);
 
@@ -7379,7 +7405,7 @@ class RedirectHandler$1 {
       return this.handler.onHeaders(statusCode, headers, resume, statusText)
     }
 
-    const { origin, pathname, search } = util$a.parseURL(new URL(this.location, this.opts.origin && new URL(this.opts.path, this.opts.origin)));
+    const { origin, pathname, search } = util$c.parseURL(new URL(this.location, this.opts.origin && new URL(this.opts.path, this.opts.origin)));
     const path = search ? `${pathname}${search}` : pathname;
 
     // Remove headers referring to the original URL.
@@ -7430,7 +7456,7 @@ class RedirectHandler$1 {
       this.handler.onBodySent(chunk);
     }
   }
-}
+};
 
 function parseLocation (statusCode, headers) {
   if (redirectableStatusCodes.indexOf(statusCode) === -1) {
@@ -7521,7 +7547,7 @@ function requireLlhttp_simd_wasm () {
 
 const assert$3 = require$$0$1;
 const net = require$$4;
-const util$9 = util$e;
+const util$b = util$g;
 const Request = request$2;
 const DispatcherBase$3 = dispatcherBase;
 const {
@@ -7581,7 +7607,7 @@ const {
   kInterceptors: kInterceptors$4,
   kLocalAddress,
   kMaxResponseSize
-} = symbols$2;
+} = symbols$3;
 
 const kClosedResolve$1 = Symbol('kClosedResolve');
 
@@ -7600,7 +7626,7 @@ try {
   channels.connected = { hasSubscribers: false };
 }
 
-class Client$4 extends DispatcherBase$3 {
+let Client$4 = class Client extends DispatcherBase$3 {
   constructor (url, {
     interceptors,
     maxHeaderSize,
@@ -7713,7 +7739,7 @@ class Client$4 extends DispatcherBase$3 {
     this[kInterceptors$4] = interceptors && interceptors.Client && Array.isArray(interceptors.Client)
       ? interceptors.Client
       : [createRedirectInterceptor$1({ maxRedirections })];
-    this[kUrl$3] = util$9.parseOrigin(url);
+    this[kUrl$3] = util$b.parseOrigin(url);
     this[kConnector] = connect;
     this[kSocket] = null;
     this[kPipelining] = pipelining != null ? pipelining : 1;
@@ -7795,7 +7821,7 @@ class Client$4 extends DispatcherBase$3 {
     const request = new Request(origin, opts, handler);
 
     this[kQueue$1].push(request);
-    if (this[kResuming]) ; else if (util$9.bodyLength(request.body) == null && util$9.isIterable(request.body)) {
+    if (this[kResuming]) ; else if (util$b.bodyLength(request.body) == null && util$b.isIterable(request.body)) {
       // Wait a tick in case stream/iterator is ended in the same tick.
       this[kResuming] = 1;
       process.nextTick(resume, this);
@@ -7839,15 +7865,15 @@ class Client$4 extends DispatcherBase$3 {
       if (!this[kSocket]) {
         queueMicrotask(callback);
       } else {
-        util$9.destroy(this[kSocket].on('close', callback), err);
+        util$b.destroy(this[kSocket].on('close', callback), err);
       }
 
       resume(this);
     })
   }
-}
+};
 
-const constants = requireConstants();
+const constants$2 = requireConstants$2();
 const createRedirectInterceptor$1 = redirectInterceptor;
 const EMPTY_BUF = Buffer.alloc(0);
 
@@ -7918,9 +7944,8 @@ async function lazyllhttp () {
 }
 
 let llhttpInstance = null;
-let llhttpPromise = lazyllhttp()
-  .catch(() => {
-  });
+let llhttpPromise = lazyllhttp();
+llhttpPromise.catch();
 
 let currentParser = null;
 let currentBufferRef = null;
@@ -7936,7 +7961,7 @@ class Parser {
     assert$3(Number.isFinite(client[kMaxHeadersSize]) && client[kMaxHeadersSize] > 0);
 
     this.llhttp = exports;
-    this.ptr = this.llhttp.llhttp_alloc(constants.TYPE.RESPONSE);
+    this.ptr = this.llhttp.llhttp_alloc(constants$2.TYPE.RESPONSE);
     this.client = client;
     this.socket = socket;
     this.timeout = null;
@@ -7956,6 +7981,7 @@ class Parser {
 
     this.keepAlive = '';
     this.contentLength = '';
+    this.connection = '';
     this.maxResponseSize = client[kMaxResponseSize];
   }
 
@@ -8053,12 +8079,12 @@ class Parser {
 
       const offset = llhttp.llhttp_get_error_pos(this.ptr) - currentBufferPtr;
 
-      if (ret === constants.ERROR.PAUSED_UPGRADE) {
+      if (ret === constants$2.ERROR.PAUSED_UPGRADE) {
         this.onUpgrade(data.slice(offset));
-      } else if (ret === constants.ERROR.PAUSED) {
+      } else if (ret === constants$2.ERROR.PAUSED) {
         this.paused = true;
         socket.unshift(data.slice(offset));
-      } else if (ret !== constants.ERROR.OK) {
+      } else if (ret !== constants$2.ERROR.OK) {
         const ptr = llhttp.llhttp_get_error_reason(this.ptr);
         let message = '';
         /* istanbul ignore else: difficult to make a test case for */
@@ -8066,10 +8092,10 @@ class Parser {
           const len = new Uint8Array(llhttp.memory.buffer, ptr).indexOf(0);
           message = Buffer.from(llhttp.memory.buffer, ptr, len).toString();
         }
-        throw new HTTPParserError(message, constants.ERROR[ret], data.slice(offset))
+        throw new HTTPParserError(message, constants$2.ERROR[ret], data.slice(offset))
       }
     } catch (err) {
-      util$9.destroy(socket, err);
+      util$b.destroy(socket, err);
     }
   }
 
@@ -8131,6 +8157,8 @@ class Parser {
     const key = this.headers[len - 2];
     if (key.length === 10 && key.toString().toLowerCase() === 'keep-alive') {
       this.keepAlive += buf.toString();
+    } else if (key.length === 10 && key.toString().toLowerCase() === 'connection') {
+      this.connection += buf.toString();
     } else if (key.length === 14 && key.toString().toLowerCase() === 'content-length') {
       this.contentLength += buf.toString();
     }
@@ -8141,7 +8169,7 @@ class Parser {
   trackHeader (len) {
     this.headersSize += len;
     if (this.headersSize >= this.headersMaxSize) {
-      util$9.destroy(this.socket, new HeadersOverflowError());
+      util$b.destroy(this.socket, new HeadersOverflowError());
     }
   }
 
@@ -8186,7 +8214,7 @@ class Parser {
     try {
       request.onUpgrade(statusCode, headers, socket);
     } catch (err) {
-      util$9.destroy(socket, err);
+      util$b.destroy(socket, err);
     }
 
     resume(client);
@@ -8211,20 +8239,24 @@ class Parser {
     assert$3(this.statusCode < 200);
 
     if (statusCode === 100) {
-      util$9.destroy(socket, new SocketError$2('bad response', util$9.getSocketInfo(socket)));
+      util$b.destroy(socket, new SocketError$2('bad response', util$b.getSocketInfo(socket)));
       return -1
     }
 
     /* this can only happen if server is misbehaving */
     if (upgrade && !request.upgrade) {
-      util$9.destroy(socket, new SocketError$2('bad upgrade', util$9.getSocketInfo(socket)));
+      util$b.destroy(socket, new SocketError$2('bad upgrade', util$b.getSocketInfo(socket)));
       return -1
     }
 
     assert$3.strictEqual(this.timeoutType, TIMEOUT_HEADERS);
 
     this.statusCode = statusCode;
-    this.shouldKeepAlive = shouldKeepAlive;
+    this.shouldKeepAlive = (
+      shouldKeepAlive ||
+      // Override llhttp value which does not allow keepAlive for HEAD.
+      (request.method === 'HEAD' && !socket[kReset] && this.connection.toLowerCase() === 'keep-alive')
+    );
 
     if (this.statusCode >= 200) {
       const bodyTimeout = request.bodyTimeout != null
@@ -8254,8 +8286,8 @@ class Parser {
     this.headers = [];
     this.headersSize = 0;
 
-    if (shouldKeepAlive && client[kPipelining]) {
-      const keepAliveTimeout = this.keepAlive ? util$9.parseKeepAliveTimeout(this.keepAlive) : null;
+    if (this.shouldKeepAlive && client[kPipelining]) {
+      const keepAliveTimeout = this.keepAlive ? util$b.parseKeepAliveTimeout(this.keepAlive) : null;
 
       if (keepAliveTimeout != null) {
         const timeout = Math.min(
@@ -8279,12 +8311,11 @@ class Parser {
     try {
       pause = request.onHeaders(statusCode, headers, this.resume, statusText) === false;
     } catch (err) {
-      util$9.destroy(socket, err);
+      util$b.destroy(socket, err);
       return -1
     }
 
     if (request.method === 'HEAD') {
-      assert$3(socket[kReset]);
       return 1
     }
 
@@ -8297,7 +8328,7 @@ class Parser {
       resume(client);
     }
 
-    return pause ? constants.ERROR.PAUSED : 0
+    return pause ? constants$2.ERROR.PAUSED : 0
   }
 
   onBody (buf) {
@@ -8321,7 +8352,7 @@ class Parser {
     assert$3(statusCode >= 200);
 
     if (maxResponseSize > -1 && this.bytesRead + buf.length > maxResponseSize) {
-      util$9.destroy(socket, new ResponseExceededMaxSizeError());
+      util$b.destroy(socket, new ResponseExceededMaxSizeError());
       return -1
     }
 
@@ -8329,10 +8360,10 @@ class Parser {
 
     try {
       if (request.onData(buf) === false) {
-        return constants.ERROR.PAUSED
+        return constants$2.ERROR.PAUSED
       }
     } catch (err) {
-      util$9.destroy(socket, err);
+      util$b.destroy(socket, err);
       return -1
     }
   }
@@ -8358,6 +8389,7 @@ class Parser {
     this.bytesRead = 0;
     this.contentLength = '';
     this.keepAlive = '';
+    this.connection = '';
 
     assert$3(this.headers.length % 2 === 0);
     this.headers = [];
@@ -8369,7 +8401,7 @@ class Parser {
 
     /* istanbul ignore next: should be handled by llhttp? */
     if (request.method !== 'HEAD' && contentLength && bytesRead !== parseInt(contentLength, 10)) {
-      util$9.destroy(socket, new ResponseContentLengthMismatchError());
+      util$b.destroy(socket, new ResponseContentLengthMismatchError());
       return -1
     }
 
@@ -8384,18 +8416,18 @@ class Parser {
     if (socket[kWriting]) {
       assert$3.strictEqual(client[kRunning$3], 0);
       // Response completed before request.
-      util$9.destroy(socket, new InformationalError('reset'));
-      return constants.ERROR.PAUSED
+      util$b.destroy(socket, new InformationalError('reset'));
+      return constants$2.ERROR.PAUSED
     } else if (!shouldKeepAlive) {
-      util$9.destroy(socket, new InformationalError('reset'));
-      return constants.ERROR.PAUSED
+      util$b.destroy(socket, new InformationalError('reset'));
+      return constants$2.ERROR.PAUSED
     } else if (socket[kReset] && client[kRunning$3] === 0) {
       // Destroy socket once all requests have completed.
       // The request at the tail of the pipeline is the one
       // that requested reset and no further requests should
       // have been queued since then.
-      util$9.destroy(socket, new InformationalError('reset'));
-      return constants.ERROR.PAUSED
+      util$b.destroy(socket, new InformationalError('reset'));
+      return constants$2.ERROR.PAUSED
     } else if (client[kPipelining] === 1) {
       // We must wait a full event loop cycle to reuse this socket to make sure
       // that non-spec compliant servers are not closing the connection even if they
@@ -8414,15 +8446,15 @@ function onParserTimeout (parser) {
   if (timeoutType === TIMEOUT_HEADERS) {
     if (!socket[kWriting] || socket.writableNeedDrain || client[kRunning$3] > 1) {
       assert$3(!parser.paused, 'cannot be paused while waiting for headers');
-      util$9.destroy(socket, new HeadersTimeoutError());
+      util$b.destroy(socket, new HeadersTimeoutError());
     }
   } else if (timeoutType === TIMEOUT_BODY) {
     if (!parser.paused) {
-      util$9.destroy(socket, new BodyTimeoutError());
+      util$b.destroy(socket, new BodyTimeoutError());
     }
   } else if (timeoutType === TIMEOUT_IDLE) {
     assert$3(client[kRunning$3] === 0 && client[kKeepAliveTimeoutValue]);
-    util$9.destroy(socket, new InformationalError('socket idle timeout'));
+    util$b.destroy(socket, new InformationalError('socket idle timeout'));
   }
 }
 
@@ -8478,7 +8510,7 @@ function onSocketEnd () {
     return
   }
 
-  util$9.destroy(this, new SocketError$2('other side closed', util$9.getSocketInfo(this)));
+  util$b.destroy(this, new SocketError$2('other side closed', util$b.getSocketInfo(this)));
 }
 
 function onSocketClose () {
@@ -8492,7 +8524,7 @@ function onSocketClose () {
   this[kParser].destroy();
   this[kParser] = null;
 
-  const err = this[kError] || new SocketError$2('closed', util$9.getSocketInfo(this));
+  const err = this[kError] || new SocketError$2('closed', util$b.getSocketInfo(this));
 
   client[kSocket] = null;
 
@@ -8582,8 +8614,6 @@ async function connect$1 (client) {
 
     assert$3(socket);
 
-    client[kSocket] = socket;
-
     socket[kNoRef] = false;
     socket[kWriting] = false;
     socket[kReset] = false;
@@ -8598,6 +8628,8 @@ async function connect$1 (client) {
       .on('readable', onSocketReadable)
       .on('end', onSocketEnd)
       .on('close', onSocketClose);
+
+    client[kSocket] = socket;
 
     if (channels.connected.hasSubscribers) {
       channels.connected.publish({
@@ -8684,7 +8716,7 @@ function _resume (client, sync) {
 
     const socket = client[kSocket];
 
-    if (socket) {
+    if (socket && !socket.destroyed) {
       if (client[kSize$4] === 0) {
         if (!socket[kNoRef] && socket.unref) {
           socket.unref();
@@ -8740,7 +8772,7 @@ function _resume (client, sync) {
       client[kServerName] = request.servername;
 
       if (socket && socket.servername !== request.servername) {
-        util$9.destroy(socket, new InformationalError('servername changed'));
+        util$b.destroy(socket, new InformationalError('servername changed'));
         return
       }
     }
@@ -8751,7 +8783,7 @@ function _resume (client, sync) {
 
     if (!socket) {
       connect$1(client);
-      continue
+      return
     }
 
     if (socket.destroyed || socket[kWriting] || socket[kReset] || socket[kBlocking]) {
@@ -8772,7 +8804,7 @@ function _resume (client, sync) {
       return
     }
 
-    if (util$9.isStream(request.body) && util$9.bodyLength(request.body) === 0) {
+    if (util$b.isStream(request.body) && util$b.bodyLength(request.body) === 0) {
       request.body
         .on('data', /* istanbul ignore next */ function () {
           /* istanbul ignore next */
@@ -8782,14 +8814,14 @@ function _resume (client, sync) {
           errorRequest(client, request, err);
         })
         .on('end', function () {
-          util$9.destroy(this);
+          util$b.destroy(this);
         });
 
       request.body = null;
     }
 
     if (client[kRunning$3] > 0 &&
-      (util$9.isStream(request.body) || util$9.isAsyncIterable(request.body))) {
+      (util$b.isStream(request.body) || util$b.isAsyncIterable(request.body))) {
       // Request with stream or iterator body can error while other requests
       // are inflight and indirectly error those as well.
       // Ensure this doesn't happen by waiting for inflight
@@ -8810,7 +8842,7 @@ function _resume (client, sync) {
 }
 
 function write (client, request) {
-  const { body, method, path, host, upgrade, headers, blocking } = request;
+  const { body, method, path, host, upgrade, headers, blocking, reset } = request;
 
   // https://tools.ietf.org/html/rfc7231#section-4.3.1
   // https://tools.ietf.org/html/rfc7231#section-4.3.2
@@ -8832,7 +8864,7 @@ function write (client, request) {
     body.read(0);
   }
 
-  let contentLength = util$9.bodyLength(body);
+  let contentLength = util$b.bodyLength(body);
 
   if (contentLength === null) {
     contentLength = request.contentLength;
@@ -8866,7 +8898,7 @@ function write (client, request) {
 
       errorRequest(client, request, err || new RequestAbortedError$8());
 
-      util$9.destroy(socket, new InformationalError('aborted'));
+      util$b.destroy(socket, new InformationalError('aborted'));
     });
   } catch (err) {
     errorRequest(client, request, err);
@@ -8878,7 +8910,6 @@ function write (client, request) {
 
   if (method === 'HEAD') {
     // https://github.com/mcollina/undici/issues/258
-
     // Close after a HEAD request to interop with misbehaving servers
     // that may send a body in the response.
 
@@ -8890,6 +8921,10 @@ function write (client, request) {
     // requests on this connection.
 
     socket[kReset] = true;
+  }
+
+  if (reset != null) {
+    socket[kReset] = reset;
   }
 
   if (client[kMaxRequests] && socket[kCounter]++ >= client[kMaxRequests]) {
@@ -8910,7 +8945,7 @@ function write (client, request) {
 
   if (upgrade) {
     header += `connection: upgrade\r\nupgrade: ${upgrade}\r\n`;
-  } else if (client[kPipelining]) {
+  } else if (client[kPipelining] && !socket[kReset]) {
     header += 'connection: keep-alive\r\n';
   } else {
     header += 'connection: close\r\n';
@@ -8933,7 +8968,7 @@ function write (client, request) {
       socket.write(`${header}\r\n`, 'ascii');
     }
     request.onRequestSent();
-  } else if (util$9.isBuffer(body)) {
+  } else if (util$b.isBuffer(body)) {
     assert$3(contentLength === body.byteLength, 'buffer body must have content length');
 
     socket.cork();
@@ -8945,15 +8980,15 @@ function write (client, request) {
     if (!expectsPayload) {
       socket[kReset] = true;
     }
-  } else if (util$9.isBlobLike(body)) {
+  } else if (util$b.isBlobLike(body)) {
     if (typeof body.stream === 'function') {
       writeIterable({ body: body.stream(), client, request, socket, contentLength, header, expectsPayload });
     } else {
       writeBlob({ body, client, request, socket, contentLength, header, expectsPayload });
     }
-  } else if (util$9.isStream(body)) {
+  } else if (util$b.isStream(body)) {
     writeStream({ body, client, request, socket, contentLength, header, expectsPayload });
-  } else if (util$9.isIterable(body)) {
+  } else if (util$b.isIterable(body)) {
     writeIterable({ body, client, request, socket, contentLength, header, expectsPayload });
   } else {
     assert$3(false);
@@ -8977,7 +9012,7 @@ function writeStream ({ body, client, request, socket, contentLength, header, ex
         this.pause();
       }
     } catch (err) {
-      util$9.destroy(this, err);
+      util$b.destroy(this, err);
     }
   };
   const onDrain = function () {
@@ -9020,9 +9055,9 @@ function writeStream ({ body, client, request, socket, contentLength, header, ex
     writer.destroy(err);
 
     if (err && (err.code !== 'UND_ERR_INFO' || err.message !== 'reset')) {
-      util$9.destroy(body, err);
+      util$b.destroy(body, err);
     } else {
-      util$9.destroy(body);
+      util$b.destroy(body);
     }
   };
 
@@ -9065,7 +9100,7 @@ async function writeBlob ({ body, client, request, socket, contentLength, header
 
     resume(client);
   } catch (err) {
-    util$9.destroy(socket, err);
+    util$b.destroy(socket, err);
   }
 }
 
@@ -9244,7 +9279,7 @@ class AsyncWriter {
 
     if (err) {
       assert$3(client[kRunning$3] <= 1, 'pipeline should only contain this request');
-      util$9.destroy(socket, err);
+      util$b.destroy(socket, err);
     }
   }
 }
@@ -9376,10 +9411,10 @@ var fixedQueue = class FixedQueue {
   }
 };
 
-const { kFree: kFree$1, kConnected: kConnected$4, kPending: kPending$1, kQueued: kQueued$1, kRunning: kRunning$2, kSize: kSize$2 } = symbols$2;
+const { kFree: kFree$1, kConnected: kConnected$4, kPending: kPending$1, kQueued: kQueued$1, kRunning: kRunning$2, kSize: kSize$2 } = symbols$3;
 const kPool = Symbol('pool');
 
-class PoolStats$1 {
+let PoolStats$1 = class PoolStats {
   constructor (pool) {
     this[kPool] = pool;
   }
@@ -9407,13 +9442,13 @@ class PoolStats$1 {
   get size () {
     return this[kPool][kSize$2]
   }
-}
+};
 
 var poolStats = PoolStats$1;
 
 const DispatcherBase$2 = dispatcherBase;
 const FixedQueue = fixedQueue;
-const { kConnected: kConnected$3, kSize: kSize$1, kRunning: kRunning$1, kPending, kQueued, kBusy, kFree, kUrl: kUrl$2, kClose: kClose$4, kDestroy: kDestroy$2, kDispatch: kDispatch$1 } = symbols$2;
+const { kConnected: kConnected$3, kSize: kSize$1, kRunning: kRunning$1, kPending, kQueued, kBusy, kFree, kUrl: kUrl$2, kClose: kClose$4, kDestroy: kDestroy$2, kDispatch: kDispatch$1 } = symbols$3;
 const PoolStats = poolStats;
 
 const kClients$4 = Symbol('clients');
@@ -9429,7 +9464,7 @@ const kAddClient$2 = Symbol('add client');
 const kRemoveClient$1 = Symbol('remove client');
 const kStats = Symbol('stats');
 
-class PoolBase$2 extends DispatcherBase$2 {
+let PoolBase$2 = class PoolBase extends DispatcherBase$2 {
   constructor () {
     super();
 
@@ -9593,7 +9628,7 @@ class PoolBase$2 extends DispatcherBase$2 {
       dispatcher.destroyed !== true
     ));
   }
-}
+};
 
 var poolBase = {
   PoolBase: PoolBase$2,
@@ -9615,8 +9650,8 @@ const Client$3 = client;
 const {
   InvalidArgumentError: InvalidArgumentError$d
 } = errors;
-const util$8 = util$e;
-const { kUrl: kUrl$1, kInterceptors: kInterceptors$3 } = symbols$2;
+const util$a = util$g;
+const { kUrl: kUrl$1, kInterceptors: kInterceptors$3 } = symbols$3;
 const buildConnector$1 = connect$2;
 
 const kOptions$3 = Symbol('options');
@@ -9627,7 +9662,7 @@ function defaultFactory$2 (origin, opts) {
   return new Client$3(origin, opts)
 }
 
-class Pool$3 extends PoolBase$1 {
+let Pool$3 = class Pool extends PoolBase$1 {
   constructor (origin, {
     connections,
     factory = defaultFactory$2,
@@ -9666,8 +9701,8 @@ class Pool$3 extends PoolBase$1 {
       ? options.interceptors.Pool
       : [];
     this[kConnections] = connections || null;
-    this[kUrl$1] = util$8.parseOrigin(origin);
-    this[kOptions$3] = { ...util$8.deepClone(options), connect };
+    this[kUrl$1] = util$a.parseOrigin(origin);
+    this[kOptions$3] = { ...util$a.deepClone(options), connect };
     this[kOptions$3].interceptors = options.interceptors
       ? { ...options.interceptors }
       : undefined;
@@ -9688,7 +9723,7 @@ class Pool$3 extends PoolBase$1 {
 
     return dispatcher
   }
-}
+};
 
 var pool = Pool$3;
 
@@ -9705,8 +9740,8 @@ const {
   kGetDispatcher
 } = poolBase;
 const Pool$2 = pool;
-const { kUrl, kInterceptors: kInterceptors$2 } = symbols$2;
-const { parseOrigin } = util$e;
+const { kUrl, kInterceptors: kInterceptors$2 } = symbols$3;
+const { parseOrigin } = util$g;
 const kFactory$2 = Symbol('factory');
 
 const kOptions$2 = Symbol('options');
@@ -9883,7 +9918,7 @@ var balancedPool = BalancedPool;
 
 /* istanbul ignore file: only for Node 12 */
 
-const { kConnected: kConnected$2, kSize } = symbols$2;
+const { kConnected: kConnected$2, kSize } = symbols$3;
 
 class CompatWeakRef {
   constructor (value) {
@@ -9919,13 +9954,13 @@ var dispatcherWeakref = function () {
 };
 
 const { InvalidArgumentError: InvalidArgumentError$b } = errors;
-const { kClients: kClients$1, kRunning, kClose: kClose$3, kDestroy: kDestroy$1, kDispatch, kInterceptors: kInterceptors$1 } = symbols$2;
+const { kClients: kClients$1, kRunning, kClose: kClose$3, kDestroy: kDestroy$1, kDispatch, kInterceptors: kInterceptors$1 } = symbols$3;
 const DispatcherBase$1 = dispatcherBase;
 const Pool$1 = pool;
 const Client$2 = client;
-const util$7 = util$e;
+const util$9 = util$g;
 const createRedirectInterceptor = redirectInterceptor;
-const { WeakRef, FinalizationRegistry } = dispatcherWeakref();
+const { WeakRef: WeakRef$1, FinalizationRegistry } = dispatcherWeakref();
 
 const kOnConnect = Symbol('onConnect');
 const kOnDisconnect = Symbol('onDisconnect');
@@ -9942,7 +9977,7 @@ function defaultFactory (origin, opts) {
     : new Pool$1(origin, opts)
 }
 
-class Agent$3 extends DispatcherBase$1 {
+let Agent$3 = class Agent extends DispatcherBase$1 {
   constructor ({ factory = defaultFactory, maxRedirections = 0, connect, ...options } = {}) {
     super();
 
@@ -9966,7 +10001,7 @@ class Agent$3 extends DispatcherBase$1 {
       ? options.interceptors.Agent
       : [createRedirectInterceptor({ maxRedirections })];
 
-    this[kOptions$1] = { ...util$7.deepClone(options), connect };
+    this[kOptions$1] = { ...util$9.deepClone(options), connect };
     this[kOptions$1].interceptors = options.interceptors
       ? { ...options.interceptors }
       : undefined;
@@ -10029,7 +10064,7 @@ class Agent$3 extends DispatcherBase$1 {
         .on('disconnect', this[kOnDisconnect])
         .on('connectionError', this[kOnConnectionError]);
 
-      this[kClients$1].set(key, new WeakRef(dispatcher));
+      this[kClients$1].set(key, new WeakRef$1(dispatcher));
       this[kFinalizer].register(dispatcher, key);
     }
 
@@ -10061,7 +10096,7 @@ class Agent$3 extends DispatcherBase$1 {
 
     await Promise.all(destroyPromises);
   }
-}
+};
 
 var agent = Agent$3;
 
@@ -10070,10 +10105,10 @@ var api = {};
 const assert$2 = require$$0$1;
 const { Readable: Readable$2 } = require$$0$2;
 const { RequestAbortedError: RequestAbortedError$7, NotSupportedError } = errors;
-const util$6 = util$e;
-const { ReadableStreamFrom, toUSVString } = util$e;
+const util$8 = util$g;
+const { ReadableStreamFrom, toUSVString } = util$g;
 
-let Blob;
+let Blob$1;
 
 const kConsume = Symbol('kConsume');
 const kReading = Symbol('kReading');
@@ -10193,7 +10228,7 @@ var readable = class BodyReadable extends Readable$2 {
 
   // https://fetch.spec.whatwg.org/#dom-body-bodyused
   get bodyUsed () {
-    return util$6.isDisturbed(this)
+    return util$8.isDisturbed(this)
   }
 
   // https://fetch.spec.whatwg.org/#dom-body-body
@@ -10232,7 +10267,7 @@ function isLocked (self) {
 
 // https://fetch.spec.whatwg.org/#body-unusable
 function isUnusable (self) {
-  return util$6.isDisturbed(self) || isLocked(self)
+  return util$8.isDisturbed(self) || isLocked(self)
 }
 
 async function consume (stream, type) {
@@ -10311,10 +10346,10 @@ function consumeEnd (consume) {
 
       resolve(dst);
     } else if (type === 'blob') {
-      if (!Blob) {
-        Blob = require('buffer').Blob;
+      if (!Blob$1) {
+        Blob$1 = require('buffer').Blob;
       }
-      resolve(new Blob(body, { type: stream[kContentType] }));
+      resolve(new Blob$1(body, { type: stream[kContentType] }));
     }
 
     consumeFinish(consume);
@@ -10411,7 +10446,7 @@ const {
   RequestAbortedError: RequestAbortedError$5,
   ResponseStatusCodeError
 } = errors;
-const util$5 = util$e;
+const util$7 = util$g;
 const { AsyncResource: AsyncResource$4 } = require$$3;
 const { addSignal: addSignal$4, removeSignal: removeSignal$4 } = abortSignal;
 
@@ -10442,8 +10477,8 @@ class RequestHandler extends AsyncResource$4 {
 
       super('UNDICI_REQUEST');
     } catch (err) {
-      if (util$5.isStream(body)) {
-        util$5.destroy(body.on('error', util$5.nop), err);
+      if (util$7.isStream(body)) {
+        util$7.destroy(body.on('error', util$7.nop), err);
       }
       throw err
     }
@@ -10459,7 +10494,7 @@ class RequestHandler extends AsyncResource$4 {
     this.onInfo = onInfo || null;
     this.throwOnError = throwOnError;
 
-    if (util$5.isStream(body)) {
+    if (util$7.isStream(body)) {
       body.on('error', (err) => {
         this.onError(err);
       });
@@ -10482,19 +10517,19 @@ class RequestHandler extends AsyncResource$4 {
 
     if (statusCode < 200) {
       if (this.onInfo) {
-        const headers = this.responseHeaders === 'raw' ? util$5.parseRawHeaders(rawHeaders) : util$5.parseHeaders(rawHeaders);
+        const headers = this.responseHeaders === 'raw' ? util$7.parseRawHeaders(rawHeaders) : util$7.parseHeaders(rawHeaders);
         this.onInfo({ statusCode, headers });
       }
       return
     }
 
-    const parsedHeaders = util$5.parseHeaders(rawHeaders);
+    const parsedHeaders = util$7.parseHeaders(rawHeaders);
     const contentType = parsedHeaders['content-type'];
     const body = new Readable$1(resume, abort, contentType);
 
     this.callback = null;
     this.res = body;
-    const headers = this.responseHeaders === 'raw' ? util$5.parseRawHeaders(rawHeaders) : util$5.parseHeaders(rawHeaders);
+    const headers = this.responseHeaders === 'raw' ? util$7.parseRawHeaders(rawHeaders) : util$7.parseHeaders(rawHeaders);
 
     if (callback !== null) {
       if (this.throwOnError && statusCode >= 400) {
@@ -10525,7 +10560,7 @@ class RequestHandler extends AsyncResource$4 {
 
     removeSignal$4(this);
 
-    util$5.parseHeaders(trailers, this.trailers);
+    util$7.parseHeaders(trailers, this.trailers);
 
     res.push(null);
   }
@@ -10547,13 +10582,13 @@ class RequestHandler extends AsyncResource$4 {
       this.res = null;
       // Ensure all queued handlers are invoked before destroying res.
       queueMicrotask(() => {
-        util$5.destroy(res, err);
+        util$7.destroy(res, err);
       });
     }
 
     if (body) {
       this.body = null;
-      util$5.destroy(body, err);
+      util$7.destroy(body, err);
     }
   }
 }
@@ -10613,7 +10648,7 @@ const {
   InvalidReturnValueError: InvalidReturnValueError$1,
   RequestAbortedError: RequestAbortedError$4
 } = errors;
-const util$4 = util$e;
+const util$6 = util$g;
 const { AsyncResource: AsyncResource$3 } = require$$3;
 const { addSignal: addSignal$3, removeSignal: removeSignal$3 } = abortSignal;
 
@@ -10648,8 +10683,8 @@ class StreamHandler extends AsyncResource$3 {
 
       super('UNDICI_STREAM');
     } catch (err) {
-      if (util$4.isStream(body)) {
-        util$4.destroy(body.on('error', util$4.nop), err);
+      if (util$6.isStream(body)) {
+        util$6.destroy(body.on('error', util$6.nop), err);
       }
       throw err
     }
@@ -10665,7 +10700,7 @@ class StreamHandler extends AsyncResource$3 {
     this.body = body;
     this.onInfo = onInfo || null;
 
-    if (util$4.isStream(body)) {
+    if (util$6.isStream(body)) {
       body.on('error', (err) => {
         this.onError(err);
       });
@@ -10688,14 +10723,14 @@ class StreamHandler extends AsyncResource$3 {
 
     if (statusCode < 200) {
       if (this.onInfo) {
-        const headers = this.responseHeaders === 'raw' ? util$4.parseRawHeaders(rawHeaders) : util$4.parseHeaders(rawHeaders);
+        const headers = this.responseHeaders === 'raw' ? util$6.parseRawHeaders(rawHeaders) : util$6.parseHeaders(rawHeaders);
         this.onInfo({ statusCode, headers });
       }
       return
     }
 
     this.factory = null;
-    const headers = this.responseHeaders === 'raw' ? util$4.parseRawHeaders(rawHeaders) : util$4.parseHeaders(rawHeaders);
+    const headers = this.responseHeaders === 'raw' ? util$6.parseRawHeaders(rawHeaders) : util$6.parseHeaders(rawHeaders);
     const res = this.runInAsyncScope(factory, null, {
       statusCode,
       headers,
@@ -10719,7 +10754,7 @@ class StreamHandler extends AsyncResource$3 {
 
       this.res = null;
       if (err || !res.readable) {
-        util$4.destroy(res, err);
+        util$6.destroy(res, err);
       }
 
       this.callback = null;
@@ -10750,7 +10785,7 @@ class StreamHandler extends AsyncResource$3 {
 
     removeSignal$3(this);
 
-    this.trailers = util$4.parseHeaders(trailers);
+    this.trailers = util$6.parseHeaders(trailers);
 
     res.end();
   }
@@ -10764,7 +10799,7 @@ class StreamHandler extends AsyncResource$3 {
 
     if (res) {
       this.res = null;
-      util$4.destroy(res, err);
+      util$6.destroy(res, err);
     } else if (callback) {
       this.callback = null;
       queueMicrotask(() => {
@@ -10774,7 +10809,7 @@ class StreamHandler extends AsyncResource$3 {
 
     if (body) {
       this.body = null;
-      util$4.destroy(body, err);
+      util$6.destroy(body, err);
     }
   }
 }
@@ -10811,7 +10846,7 @@ const {
   InvalidReturnValueError,
   RequestAbortedError: RequestAbortedError$3
 } = errors;
-const util$3 = util$e;
+const util$5 = util$g;
 const { AsyncResource: AsyncResource$2 } = require$$3;
 const { addSignal: addSignal$2, removeSignal: removeSignal$2 } = abortSignal;
 const assert$1 = require$$0$1;
@@ -10893,7 +10928,7 @@ class PipelineHandler extends AsyncResource$2 {
     this.context = null;
     this.onInfo = onInfo || null;
 
-    this.req = new PipelineRequest().on('error', util$3.nop);
+    this.req = new PipelineRequest().on('error', util$5.nop);
 
     this.ret = new Duplex({
       readableObjectMode: opts.objectMode,
@@ -10925,9 +10960,9 @@ class PipelineHandler extends AsyncResource$2 {
           abort();
         }
 
-        util$3.destroy(body, err);
-        util$3.destroy(req, err);
-        util$3.destroy(res, err);
+        util$5.destroy(body, err);
+        util$5.destroy(req, err);
+        util$5.destroy(res, err);
 
         removeSignal$2(this);
 
@@ -10963,7 +10998,7 @@ class PipelineHandler extends AsyncResource$2 {
 
     if (statusCode < 200) {
       if (this.onInfo) {
-        const headers = this.responseHeaders === 'raw' ? util$3.parseRawHeaders(rawHeaders) : util$3.parseHeaders(rawHeaders);
+        const headers = this.responseHeaders === 'raw' ? util$5.parseRawHeaders(rawHeaders) : util$5.parseHeaders(rawHeaders);
         this.onInfo({ statusCode, headers });
       }
       return
@@ -10974,7 +11009,7 @@ class PipelineHandler extends AsyncResource$2 {
     let body;
     try {
       this.handler = null;
-      const headers = this.responseHeaders === 'raw' ? util$3.parseRawHeaders(rawHeaders) : util$3.parseHeaders(rawHeaders);
+      const headers = this.responseHeaders === 'raw' ? util$5.parseRawHeaders(rawHeaders) : util$5.parseHeaders(rawHeaders);
       body = this.runInAsyncScope(handler, null, {
         statusCode,
         headers,
@@ -10983,7 +11018,7 @@ class PipelineHandler extends AsyncResource$2 {
         context
       });
     } catch (err) {
-      this.res.on('error', util$3.nop);
+      this.res.on('error', util$5.nop);
       throw err
     }
 
@@ -11002,7 +11037,7 @@ class PipelineHandler extends AsyncResource$2 {
       .on('error', (err) => {
         const { ret } = this;
 
-        util$3.destroy(ret, err);
+        util$5.destroy(ret, err);
       })
       .on('end', () => {
         const { ret } = this;
@@ -11013,7 +11048,7 @@ class PipelineHandler extends AsyncResource$2 {
         const { ret } = this;
 
         if (!ret._readableState.ended) {
-          util$3.destroy(ret, new RequestAbortedError$3());
+          util$5.destroy(ret, new RequestAbortedError$3());
         }
       });
 
@@ -11033,7 +11068,7 @@ class PipelineHandler extends AsyncResource$2 {
   onError (err) {
     const { ret } = this;
     this.handler = null;
-    util$3.destroy(ret, err);
+    util$5.destroy(ret, err);
   }
 }
 
@@ -11051,7 +11086,7 @@ var apiPipeline = pipeline;
 
 const { InvalidArgumentError: InvalidArgumentError$7, RequestAbortedError: RequestAbortedError$2, SocketError: SocketError$1 } = errors;
 const { AsyncResource: AsyncResource$1 } = require$$3;
-const util$2 = util$e;
+const util$4 = util$g;
 const { addSignal: addSignal$1, removeSignal: removeSignal$1 } = abortSignal;
 const assert = require$$0$1;
 
@@ -11103,7 +11138,7 @@ class UpgradeHandler extends AsyncResource$1 {
     removeSignal$1(this);
 
     this.callback = null;
-    const headers = this.responseHeaders === 'raw' ? util$2.parseRawHeaders(rawHeaders) : util$2.parseHeaders(rawHeaders);
+    const headers = this.responseHeaders === 'raw' ? util$4.parseRawHeaders(rawHeaders) : util$4.parseHeaders(rawHeaders);
     this.runInAsyncScope(callback, null, null, {
       headers,
       socket,
@@ -11155,7 +11190,7 @@ var apiUpgrade = upgrade;
 
 const { InvalidArgumentError: InvalidArgumentError$6, RequestAbortedError: RequestAbortedError$1, SocketError } = errors;
 const { AsyncResource } = require$$3;
-const util$1 = util$e;
+const util$3 = util$g;
 const { addSignal, removeSignal } = abortSignal;
 
 class ConnectHandler extends AsyncResource {
@@ -11203,7 +11238,7 @@ class ConnectHandler extends AsyncResource {
     removeSignal(this);
 
     this.callback = null;
-    const headers = this.responseHeaders === 'raw' ? util$1.parseRawHeaders(rawHeaders) : util$1.parseHeaders(rawHeaders);
+    const headers = this.responseHeaders === 'raw' ? util$3.parseRawHeaders(rawHeaders) : util$3.parseHeaders(rawHeaders);
     this.runInAsyncScope(callback, null, null, {
       statusCode,
       headers,
@@ -11258,7 +11293,7 @@ api.connect = apiConnect;
 
 const { UndiciError: UndiciError$1 } = errors;
 
-class MockNotMatchedError$1 extends UndiciError$1 {
+let MockNotMatchedError$1 = class MockNotMatchedError extends UndiciError$1 {
   constructor (message) {
     super(message);
     Error.captureStackTrace(this, MockNotMatchedError$1);
@@ -11266,7 +11301,7 @@ class MockNotMatchedError$1 extends UndiciError$1 {
     this.message = message || 'The request does not match any registered mock dispatches';
     this.code = 'UND_MOCK_ERR_MOCK_NOT_MATCHED';
   }
-}
+};
 
 var mockErrors = {
   MockNotMatchedError: MockNotMatchedError$1
@@ -11302,8 +11337,13 @@ const {
   kOrigin: kOrigin$2,
   kGetNetConnect: kGetNetConnect$1
 } = mockSymbols;
-const { buildURL: buildURL$1, nop } = util$e;
+const { buildURL: buildURL$1, nop } = util$g;
 const { STATUS_CODES } = require$$2;
+const {
+  types: {
+    isPromise
+  }
+} = require$$0;
 
 function matchValue$1 (match, value) {
   if (typeof match === 'string') {
@@ -11535,14 +11575,27 @@ function mockDispatch (opts, handler) {
     handleReply(this[kDispatches$4]);
   }
 
-  function handleReply (mockDispatches) {
+  function handleReply (mockDispatches, _data = data) {
     // fetch's HeadersList is a 1D string array
     const optsHeaders = Array.isArray(opts.headers)
       ? buildHeadersFromArray(opts.headers)
       : opts.headers;
-    const responseData = getResponseData$1(
-      typeof data === 'function' ? data({ ...opts, headers: optsHeaders }) : data
-    );
+    const body = typeof _data === 'function'
+      ? _data({ ...opts, headers: optsHeaders })
+      : _data;
+
+    // util.types.isPromise is likely needed for jest.
+    if (isPromise(body)) {
+      // If handleReply is asynchronous, throwing an error
+      // in the callback will reject the promise, rather than
+      // synchronously throw the error, which breaks some tests.
+      // Rather, we wait for the callback to resolve if it is a
+      // promise, and then re-run handleReply with the new body.
+      body.then((newData) => handleReply(mockDispatches, newData));
+      return
+    }
+
+    const responseData = getResponseData$1(body);
     const responseHeaders = generateKeyValues(headers);
     const responseTrailers = generateKeyValues(trailers);
 
@@ -11634,7 +11687,7 @@ const {
   kMockDispatch
 } = mockSymbols;
 const { InvalidArgumentError: InvalidArgumentError$5 } = errors;
-const { buildURL } = util$e;
+const { buildURL } = util$g;
 
 /**
  * Defines the scope API for an interceptor reply
@@ -11680,7 +11733,7 @@ class MockScope {
 /**
  * Defines an interceptor for a Mock
  */
-class MockInterceptor$2 {
+let MockInterceptor$2 = class MockInterceptor {
   constructor (opts, mockDispatches) {
     if (typeof opts !== 'object') {
       throw new InvalidArgumentError$5('opts must be an object')
@@ -11824,7 +11877,7 @@ class MockInterceptor$2 {
     this[kContentLength] = true;
     return this
   }
-}
+};
 
 mockInterceptor.MockInterceptor = MockInterceptor$2;
 mockInterceptor.MockScope = MockScope;
@@ -11842,13 +11895,13 @@ const {
   kConnected: kConnected$1
 } = mockSymbols;
 const { MockInterceptor: MockInterceptor$1 } = mockInterceptor;
-const Symbols$1 = symbols$2;
+const Symbols$1 = symbols$3;
 const { InvalidArgumentError: InvalidArgumentError$4 } = errors;
 
 /**
  * MockClient provides an API that extends the Client to influence the mockDispatches.
  */
-class MockClient$1 extends Client$1 {
+let MockClient$1 = class MockClient extends Client$1 {
   constructor (origin, opts) {
     super(origin, opts);
 
@@ -11883,7 +11936,7 @@ class MockClient$1 extends Client$1 {
     this[kConnected$1] = 0;
     this[kMockAgent$1][Symbols$1.kClients].delete(this[kOrigin$1]);
   }
-}
+};
 
 var mockClient = MockClient$1;
 
@@ -11900,13 +11953,13 @@ const {
   kConnected
 } = mockSymbols;
 const { MockInterceptor } = mockInterceptor;
-const Symbols = symbols$2;
+const Symbols = symbols$3;
 const { InvalidArgumentError: InvalidArgumentError$3 } = errors;
 
 /**
  * MockPool provides an API that extends the Pool to influence the mockDispatches.
  */
-class MockPool$1 extends Pool {
+let MockPool$1 = class MockPool extends Pool {
   constructor (origin, opts) {
     super(origin, opts);
 
@@ -11941,7 +11994,7 @@ class MockPool$1 extends Pool {
     this[kConnected] = 0;
     this[kMockAgent][Symbols.kClients].delete(this[kOrigin]);
   }
-}
+};
 
 var mockPool = MockPool$1;
 
@@ -12012,7 +12065,7 @@ var pendingInterceptorsFormatter = class PendingInterceptorsFormatter {
   }
 };
 
-const { kClients } = symbols$2;
+const { kClients } = symbols$3;
 const Agent$2 = agent;
 const {
   kAgent: kAgent$1,
@@ -12182,8 +12235,8 @@ ${pendingInterceptorsFormatter.format(pending)}
 
 var mockAgent = MockAgent;
 
-const { kProxy, kClose, kDestroy, kInterceptors } = symbols$2;
-const { URL: URL$1 } = require$$1$2;
+const { kProxy, kClose, kDestroy, kInterceptors } = symbols$3;
+const { URL: URL$1 } = require$$2$1;
 const Agent$1 = agent;
 const Client = client;
 const DispatcherBase = dispatcherBase;
@@ -12235,7 +12288,7 @@ class ProxyAgent extends DispatcherBase {
 
     this[kRequestTls] = opts.requestTls;
     this[kProxyTls] = opts.proxyTls;
-    this[kProxyHeaders] = {};
+    this[kProxyHeaders] = opts.headers || {};
 
     if (opts.auth && opts.token) {
       throw new InvalidArgumentError$1('opts.auth cannot be used in combination with opts.token')
@@ -12430,14 +12483,14 @@ function requireHeaders () {
 	if (hasRequiredHeaders) return headers;
 	hasRequiredHeaders = 1;
 
-	const { kHeadersList } = symbols$2;
-	const { kGuard } = requireSymbols$1();
-	const { kEnumerableProperty } = util$e;
+	const { kHeadersList } = symbols$3;
+	const { kGuard, kHeadersCaseInsensitive } = requireSymbols$2();
+	const { kEnumerableProperty } = util$g;
 	const {
 	  makeIterator,
 	  isValidHeaderName,
 	  isValidHeaderValue
-	} = requireUtil$1();
+	} = requireUtil$3();
 	const { webidl } = requireWebidl();
 
 	const kHeadersMap = Symbol('headers map');
@@ -12466,10 +12519,10 @@ function requireHeaders () {
 	    for (const header of object) {
 	      // 1. If header does not contain exactly two items, then throw a TypeError.
 	      if (header.length !== 2) {
-	        webidl.errors.exception({
+	        throw webidl.errors.exception({
 	          header: 'Headers constructor',
 	          message: `expected name/value pair to be length 2, found ${header.length}.`
-	        });
+	        })
 	      }
 
 	      // 2. Append (header’s first item, header’s second item) to headers.
@@ -12484,15 +12537,18 @@ function requireHeaders () {
 	      headers.append(key, value);
 	    }
 	  } else {
-	    webidl.errors.conversionFailed({
+	    throw webidl.errors.conversionFailed({
 	      prefix: 'Headers constructor',
 	      argument: 'Argument 1',
 	      types: ['sequence<sequence<ByteString>>', 'record<ByteString, ByteString>']
-	    });
+	    })
 	  }
 	}
 
 	class HeadersList {
+	  /** @type {[string, string][]|null} */
+	  cookies = null
+
 	  constructor (init) {
 	    if (init instanceof HeadersList) {
 	      this[kHeadersMap] = new Map(init[kHeadersMap]);
@@ -12524,27 +12580,36 @@ function requireHeaders () {
 
 	    // 1. If list contains name, then set name to the first such
 	    //    header’s name.
-	    name = name.toLowerCase();
-	    const exists = this[kHeadersMap].get(name);
+	    const lowercaseName = name.toLowerCase();
+	    const exists = this[kHeadersMap].get(lowercaseName);
 
 	    // 2. Append (name, value) to list.
 	    if (exists) {
-	      this[kHeadersMap].set(name, `${exists}, ${value}`);
+	      this[kHeadersMap].set(lowercaseName, { name: exists.name, value: `${exists.value}, ${value}` });
 	    } else {
-	      this[kHeadersMap].set(name, `${value}`);
+	      this[kHeadersMap].set(lowercaseName, { name, value });
+	    }
+
+	    if (lowercaseName === 'set-cookie') {
+	      this.cookies ??= [];
+	      this.cookies.push([name, value]);
 	    }
 	  }
 
 	  // https://fetch.spec.whatwg.org/#concept-header-list-set
 	  set (name, value) {
 	    this[kHeadersSortedMap] = null;
-	    name = name.toLowerCase();
+	    const lowercaseName = name.toLowerCase();
+
+	    if (lowercaseName === 'set-cookie') {
+	      this.cookies = [[name, value]];
+	    }
 
 	    // 1. If list contains name, then set the value of
 	    //    the first such header to value and remove the
 	    //    others.
 	    // 2. Otherwise, append header (name, value) to list.
-	    return this[kHeadersMap].set(name, value)
+	    return this[kHeadersMap].set(lowercaseName, { name, value })
 	  }
 
 	  // https://fetch.spec.whatwg.org/#concept-header-list-delete
@@ -12552,13 +12617,16 @@ function requireHeaders () {
 	    this[kHeadersSortedMap] = null;
 
 	    name = name.toLowerCase();
+
+	    if (name === 'set-cookie') {
+	      this.cookies = null;
+	    }
+
 	    return this[kHeadersMap].delete(name)
 	  }
 
 	  // https://fetch.spec.whatwg.org/#concept-header-list-get
 	  get (name) {
-	    name = name.toLowerCase();
-
 	    // 1. If list does not contain name, then return null.
 	    if (!this.contains(name)) {
 	      return null
@@ -12567,18 +12635,25 @@ function requireHeaders () {
 	    // 2. Return the values of all headers in list whose name
 	    //    is a byte-case-insensitive match for name,
 	    //    separated from each other by 0x2C 0x20, in order.
-	    return this[kHeadersMap].get(name) ?? null
-	  }
-
-	  has (name) {
-	    name = name.toLowerCase();
-	    return this[kHeadersMap].has(name)
+	    return this[kHeadersMap].get(name.toLowerCase())?.value ?? null
 	  }
 
 	  * [Symbol.iterator] () {
-	    for (const pair of this[kHeadersMap]) {
-	      yield pair;
+	    // use the lowercased name
+	    for (const [name, { value }] of this[kHeadersMap]) {
+	      yield [name, value];
 	    }
+	  }
+
+	  get [kHeadersCaseInsensitive] () {
+	    /** @type {string[]} */
+	    const flatList = [];
+
+	    for (const { name, value } of this[kHeadersMap].values()) {
+	      flatList.push(name, value);
+	    }
+
+	    return flatList
 	  }
 	}
 
@@ -12599,21 +12674,11 @@ function requireHeaders () {
 	    }
 	  }
 
-	  get [Symbol.toStringTag] () {
-	    return this.constructor.name
-	  }
-
 	  // https://fetch.spec.whatwg.org/#dom-headers-append
 	  append (name, value) {
-	    if (!(this instanceof Headers)) {
-	      throw new TypeError('Illegal invocation')
-	    }
+	    webidl.brandCheck(this, Headers);
 
-	    if (arguments.length < 2) {
-	      throw new TypeError(
-	        `Failed to execute 'append' on 'Headers': 2 arguments required, but only ${arguments.length} present.`
-	      )
-	    }
+	    webidl.argumentLengthCheck(arguments, 2, { header: 'Headers.append' });
 
 	    name = webidl.converters.ByteString(name);
 	    value = webidl.converters.ByteString(value);
@@ -12624,17 +12689,17 @@ function requireHeaders () {
 	    // 2. If name is not a header name or value is not a
 	    //    header value, then throw a TypeError.
 	    if (!isValidHeaderName(name)) {
-	      webidl.errors.invalidArgument({
+	      throw webidl.errors.invalidArgument({
 	        prefix: 'Headers.append',
 	        value: name,
 	        type: 'header name'
-	      });
+	      })
 	    } else if (!isValidHeaderValue(value)) {
-	      webidl.errors.invalidArgument({
+	      throw webidl.errors.invalidArgument({
 	        prefix: 'Headers.append',
 	        value,
 	        type: 'header value'
-	      });
+	      })
 	    }
 
 	    // 3. If headers’s guard is "immutable", then throw a TypeError.
@@ -12656,25 +12721,19 @@ function requireHeaders () {
 
 	  // https://fetch.spec.whatwg.org/#dom-headers-delete
 	  delete (name) {
-	    if (!(this instanceof Headers)) {
-	      throw new TypeError('Illegal invocation')
-	    }
+	    webidl.brandCheck(this, Headers);
 
-	    if (arguments.length < 1) {
-	      throw new TypeError(
-	        `Failed to execute 'delete' on 'Headers': 1 argument required, but only ${arguments.length} present.`
-	      )
-	    }
+	    webidl.argumentLengthCheck(arguments, 1, { header: 'Headers.delete' });
 
 	    name = webidl.converters.ByteString(name);
 
 	    // 1. If name is not a header name, then throw a TypeError.
 	    if (!isValidHeaderName(name)) {
-	      webidl.errors.invalidArgument({
+	      throw webidl.errors.invalidArgument({
 	        prefix: 'Headers.delete',
 	        value: name,
 	        type: 'header name'
-	      });
+	      })
 	    }
 
 	    // 2. If this’s guard is "immutable", then throw a TypeError.
@@ -12705,25 +12764,19 @@ function requireHeaders () {
 
 	  // https://fetch.spec.whatwg.org/#dom-headers-get
 	  get (name) {
-	    if (!(this instanceof Headers)) {
-	      throw new TypeError('Illegal invocation')
-	    }
+	    webidl.brandCheck(this, Headers);
 
-	    if (arguments.length < 1) {
-	      throw new TypeError(
-	        `Failed to execute 'get' on 'Headers': 1 argument required, but only ${arguments.length} present.`
-	      )
-	    }
+	    webidl.argumentLengthCheck(arguments, 1, { header: 'Headers.get' });
 
 	    name = webidl.converters.ByteString(name);
 
 	    // 1. If name is not a header name, then throw a TypeError.
 	    if (!isValidHeaderName(name)) {
-	      webidl.errors.invalidArgument({
+	      throw webidl.errors.invalidArgument({
 	        prefix: 'Headers.get',
 	        value: name,
 	        type: 'header name'
-	      });
+	      })
 	    }
 
 	    // 2. Return the result of getting name from this’s header
@@ -12733,25 +12786,19 @@ function requireHeaders () {
 
 	  // https://fetch.spec.whatwg.org/#dom-headers-has
 	  has (name) {
-	    if (!(this instanceof Headers)) {
-	      throw new TypeError('Illegal invocation')
-	    }
+	    webidl.brandCheck(this, Headers);
 
-	    if (arguments.length < 1) {
-	      throw new TypeError(
-	        `Failed to execute 'has' on 'Headers': 1 argument required, but only ${arguments.length} present.`
-	      )
-	    }
+	    webidl.argumentLengthCheck(arguments, 1, { header: 'Headers.has' });
 
 	    name = webidl.converters.ByteString(name);
 
 	    // 1. If name is not a header name, then throw a TypeError.
 	    if (!isValidHeaderName(name)) {
-	      webidl.errors.invalidArgument({
+	      throw webidl.errors.invalidArgument({
 	        prefix: 'Headers.has',
 	        value: name,
 	        type: 'header name'
-	      });
+	      })
 	    }
 
 	    // 2. Return true if this’s header list contains name;
@@ -12761,15 +12808,9 @@ function requireHeaders () {
 
 	  // https://fetch.spec.whatwg.org/#dom-headers-set
 	  set (name, value) {
-	    if (!(this instanceof Headers)) {
-	      throw new TypeError('Illegal invocation')
-	    }
+	    webidl.brandCheck(this, Headers);
 
-	    if (arguments.length < 2) {
-	      throw new TypeError(
-	        `Failed to execute 'set' on 'Headers': 2 arguments required, but only ${arguments.length} present.`
-	      )
-	    }
+	    webidl.argumentLengthCheck(arguments, 2, { header: 'Headers.set' });
 
 	    name = webidl.converters.ByteString(name);
 	    value = webidl.converters.ByteString(value);
@@ -12780,17 +12821,17 @@ function requireHeaders () {
 	    // 2. If name is not a header name or value is not a
 	    //    header value, then throw a TypeError.
 	    if (!isValidHeaderName(name)) {
-	      webidl.errors.invalidArgument({
+	      throw webidl.errors.invalidArgument({
 	        prefix: 'Headers.set',
 	        value: name,
 	        type: 'header name'
-	      });
+	      })
 	    } else if (!isValidHeaderValue(value)) {
-	      webidl.errors.invalidArgument({
+	      throw webidl.errors.invalidArgument({
 	        prefix: 'Headers.set',
 	        value,
 	        type: 'header value'
-	      });
+	      })
 	    }
 
 	    // 3. If this’s guard is "immutable", then throw a TypeError.
@@ -12820,9 +12861,7 @@ function requireHeaders () {
 	  }
 
 	  keys () {
-	    if (!(this instanceof Headers)) {
-	      throw new TypeError('Illegal invocation')
-	    }
+	    webidl.brandCheck(this, Headers);
 
 	    return makeIterator(
 	      () => [...this[kHeadersSortedMap].entries()],
@@ -12832,9 +12871,7 @@ function requireHeaders () {
 	  }
 
 	  values () {
-	    if (!(this instanceof Headers)) {
-	      throw new TypeError('Illegal invocation')
-	    }
+	    webidl.brandCheck(this, Headers);
 
 	    return makeIterator(
 	      () => [...this[kHeadersSortedMap].entries()],
@@ -12844,9 +12881,7 @@ function requireHeaders () {
 	  }
 
 	  entries () {
-	    if (!(this instanceof Headers)) {
-	      throw new TypeError('Illegal invocation')
-	    }
+	    webidl.brandCheck(this, Headers);
 
 	    return makeIterator(
 	      () => [...this[kHeadersSortedMap].entries()],
@@ -12860,15 +12895,9 @@ function requireHeaders () {
 	   * @param {unknown} thisArg
 	   */
 	  forEach (callbackFn, thisArg = globalThis) {
-	    if (!(this instanceof Headers)) {
-	      throw new TypeError('Illegal invocation')
-	    }
+	    webidl.brandCheck(this, Headers);
 
-	    if (arguments.length < 1) {
-	      throw new TypeError(
-	        `Failed to execute 'forEach' on 'Headers': 1 argument required, but only ${arguments.length} present.`
-	      )
-	    }
+	    webidl.argumentLengthCheck(arguments, 1, { header: 'Headers.forEach' });
 
 	    if (typeof callbackFn !== 'function') {
 	      throw new TypeError(
@@ -12882,9 +12911,7 @@ function requireHeaders () {
 	  }
 
 	  [Symbol.for('nodejs.util.inspect.custom')] () {
-	    if (!(this instanceof Headers)) {
-	      throw new TypeError('Illegal invocation')
-	    }
+	    webidl.brandCheck(this, Headers);
 
 	    return this[kHeadersList]
 	  }
@@ -12902,7 +12929,11 @@ function requireHeaders () {
 	  values: kEnumerableProperty,
 	  entries: kEnumerableProperty,
 	  forEach: kEnumerableProperty,
-	  [Symbol.iterator]: { enumerable: false }
+	  [Symbol.iterator]: { enumerable: false },
+	  [Symbol.toStringTag]: {
+	    value: 'Headers',
+	    configurable: true
+	  }
 	});
 
 	webidl.converters.HeadersInit = function (V) {
@@ -12914,11 +12945,11 @@ function requireHeaders () {
 	    return webidl.converters['record<ByteString, ByteString>'](V)
 	  }
 
-	  webidl.errors.conversionFailed({
+	  throw webidl.errors.conversionFailed({
 	    prefix: 'Headers constructor',
 	    argument: 'Argument 1',
 	    types: ['sequence<sequence<ByteString>>', 'record<ByteString, ByteString>']
-	  });
+	  })
 	};
 
 	headers = {
@@ -12994,7 +13025,7 @@ function requireResponse () {
 
 	const { Headers, HeadersList, fill } = requireHeaders();
 	const { extractBody, cloneBody, mixinBody } = requireBody();
-	const util = util$e;
+	const util = util$g;
 	const { kEnumerableProperty } = util;
 	const {
 	  isValidReasonPhrase,
@@ -13002,23 +13033,24 @@ function requireResponse () {
 	  isAborted,
 	  isBlobLike,
 	  serializeJavascriptValueToJSONString,
-	  isErrorLike
-	} = requireUtil$1();
+	  isErrorLike,
+	  isomorphicEncode
+	} = requireUtil$3();
 	const {
 	  redirectStatus,
 	  nullBodyStatus,
 	  DOMException
-	} = requireConstants$1();
-	const { kState, kHeaders, kGuard, kRealm } = requireSymbols$1();
+	} = requireConstants$3();
+	const { kState, kHeaders, kGuard, kRealm } = requireSymbols$2();
 	const { webidl } = requireWebidl();
 	const { FormData } = requireFormdata();
 	const { getGlobalOrigin } = requireGlobal();
 	const { URLSerializer } = requireDataURL();
-	const { kHeadersList } = symbols$2;
+	const { kHeadersList } = symbols$3;
 	const assert = require$$0$1;
 	const { types } = require$$0;
 
-	const ReadableStream = globalThis.ReadableStream || require$$14.ReadableStream;
+	const ReadableStream = globalThis.ReadableStream || require$$13.ReadableStream;
 
 	// https://fetch.spec.whatwg.org/#response-class
 	class Response {
@@ -13041,11 +13073,7 @@ function requireResponse () {
 
 	  // https://fetch.spec.whatwg.org/#dom-response-json
 	  static json (data = undefined, init = {}) {
-	    if (arguments.length === 0) {
-	      throw new TypeError(
-	        'Failed to execute \'json\' on \'Response\': 1 argument required, but 0 present.'
-	      )
-	    }
+	    webidl.argumentLengthCheck(arguments, 1, { header: 'Response.json' });
 
 	    if (init !== null) {
 	      init = webidl.converters.ResponseInit(init);
@@ -13078,11 +13106,7 @@ function requireResponse () {
 	  static redirect (url, status = 302) {
 	    const relevantRealm = { settingsObject: {} };
 
-	    if (arguments.length < 1) {
-	      throw new TypeError(
-	        `Failed to execute 'redirect' on 'Response': 1 argument required, but only ${arguments.length} present.`
-	      )
-	    }
+	    webidl.argumentLengthCheck(arguments, 1, { header: 'Response.redirect' });
 
 	    url = webidl.converters.USVString(url);
 	    status = webidl.converters['unsigned short'](status);
@@ -13102,7 +13126,7 @@ function requireResponse () {
 
 	    // 3. If status is not a redirect status, then throw a RangeError.
 	    if (!redirectStatus.includes(status)) {
-	      throw new RangeError('Invalid status code')
+	      throw new RangeError('Invalid status code ' + status)
 	    }
 
 	    // 4. Let responseObject be the result of creating a Response object,
@@ -13116,8 +13140,7 @@ function requireResponse () {
 	    responseObject[kState].status = status;
 
 	    // 6. Let value be parsedURL, serialized and isomorphic encoded.
-	    // TODO: isomorphic encoded?
-	    const value = parsedURL.toString();
+	    const value = isomorphicEncode(URLSerializer(parsedURL));
 
 	    // 7. Append `Location`/value to responseObject’s response’s header list.
 	    responseObject[kState].headersList.append('location', value);
@@ -13161,15 +13184,9 @@ function requireResponse () {
 	    initializeResponse(this, init, bodyWithType);
 	  }
 
-	  get [Symbol.toStringTag] () {
-	    return this.constructor.name
-	  }
-
 	  // Returns response’s type, e.g., "cors".
 	  get type () {
-	    if (!(this instanceof Response)) {
-	      throw new TypeError('Illegal invocation')
-	    }
+	    webidl.brandCheck(this, Response);
 
 	    // The type getter steps are to return this’s response’s type.
 	    return this[kState].type
@@ -13177,9 +13194,7 @@ function requireResponse () {
 
 	  // Returns response’s URL, if it has one; otherwise the empty string.
 	  get url () {
-	    if (!(this instanceof Response)) {
-	      throw new TypeError('Illegal invocation')
-	    }
+	    webidl.brandCheck(this, Response);
 
 	    const urlList = this[kState].urlList;
 
@@ -13197,9 +13212,7 @@ function requireResponse () {
 
 	  // Returns whether response was obtained through a redirect.
 	  get redirected () {
-	    if (!(this instanceof Response)) {
-	      throw new TypeError('Illegal invocation')
-	    }
+	    webidl.brandCheck(this, Response);
 
 	    // The redirected getter steps are to return true if this’s response’s URL
 	    // list has more than one item; otherwise false.
@@ -13208,9 +13221,7 @@ function requireResponse () {
 
 	  // Returns response’s status.
 	  get status () {
-	    if (!(this instanceof Response)) {
-	      throw new TypeError('Illegal invocation')
-	    }
+	    webidl.brandCheck(this, Response);
 
 	    // The status getter steps are to return this’s response’s status.
 	    return this[kState].status
@@ -13218,9 +13229,7 @@ function requireResponse () {
 
 	  // Returns whether response’s status is an ok status.
 	  get ok () {
-	    if (!(this instanceof Response)) {
-	      throw new TypeError('Illegal invocation')
-	    }
+	    webidl.brandCheck(this, Response);
 
 	    // The ok getter steps are to return true if this’s response’s status is an
 	    // ok status; otherwise false.
@@ -13229,9 +13238,7 @@ function requireResponse () {
 
 	  // Returns response’s status message.
 	  get statusText () {
-	    if (!(this instanceof Response)) {
-	      throw new TypeError('Illegal invocation')
-	    }
+	    webidl.brandCheck(this, Response);
 
 	    // The statusText getter steps are to return this’s response’s status
 	    // message.
@@ -13240,42 +13247,34 @@ function requireResponse () {
 
 	  // Returns response’s headers as Headers.
 	  get headers () {
-	    if (!(this instanceof Response)) {
-	      throw new TypeError('Illegal invocation')
-	    }
+	    webidl.brandCheck(this, Response);
 
 	    // The headers getter steps are to return this’s headers.
 	    return this[kHeaders]
 	  }
 
 	  get body () {
-	    if (!this || !this[kState]) {
-	      throw new TypeError('Illegal invocation')
-	    }
+	    webidl.brandCheck(this, Response);
 
 	    return this[kState].body ? this[kState].body.stream : null
 	  }
 
 	  get bodyUsed () {
-	    if (!this || !this[kState]) {
-	      throw new TypeError('Illegal invocation')
-	    }
+	    webidl.brandCheck(this, Response);
 
 	    return !!this[kState].body && util.isDisturbed(this[kState].body.stream)
 	  }
 
 	  // Returns a clone of response.
 	  clone () {
-	    if (!(this instanceof Response)) {
-	      throw new TypeError('Illegal invocation')
-	    }
+	    webidl.brandCheck(this, Response);
 
 	    // 1. If this is unusable, then throw a TypeError.
 	    if (this.bodyUsed || (this.body && this.body.locked)) {
-	      webidl.errors.exception({
+	      throw webidl.errors.exception({
 	        header: 'Response.clone',
 	        message: 'Body has already been consumed.'
-	      });
+	      })
 	    }
 
 	    // 2. Let clonedResponse be the result of cloning this’s response.
@@ -13306,7 +13305,11 @@ function requireResponse () {
 	  headers: kEnumerableProperty,
 	  clone: kEnumerableProperty,
 	  body: kEnumerableProperty,
-	  bodyUsed: kEnumerableProperty
+	  bodyUsed: kEnumerableProperty,
+	  [Symbol.toStringTag]: {
+	    value: 'Response',
+	    configurable: true
+	  }
 	});
 
 	Object.defineProperties(Response, {
@@ -13456,7 +13459,7 @@ function requireResponse () {
 	  // otherwise return a network error.
 	  return isAborted(fetchParams)
 	    ? makeNetworkError(new DOMException('The operation was aborted.', 'AbortError'))
-	    : makeNetworkError(fetchParams.controller.terminated.reason)
+	    : makeNetworkError('Request was cancelled.')
 	}
 
 	// https://whatpr.org/fetch/1392.html#initialize-a-response
@@ -13496,10 +13499,10 @@ function requireResponse () {
 	  if (body) {
 	    // 1. If response's status is a null body status, then throw a TypeError.
 	    if (nullBodyStatus.includes(response.status)) {
-	      webidl.errors.exception({
+	      throw webidl.errors.exception({
 	        header: 'Response constructor',
-	        message: 'Invalid response status code.'
-	      });
+	        message: 'Invalid response status code ' + response.status
+	      })
 	    }
 
 	    // 2. Set response's body to body's body.
@@ -13507,7 +13510,7 @@ function requireResponse () {
 
 	    // 3. If body's type is non-null and response's header list does not contain
 	    //    `Content-Type`, then append (`Content-Type`, body's type) to response's header list.
-	    if (body.type != null && !response[kState].headersList.has('Content-Type')) {
+	    if (body.type != null && !response[kState].headersList.contains('Content-Type')) {
 	      response[kState].headersList.append('content-type', body.type);
 	    }
 	  }
@@ -13608,12 +13611,12 @@ function requireRequest () {
 	const { extractBody, mixinBody, cloneBody } = requireBody();
 	const { Headers, fill: fillHeaders, HeadersList } = requireHeaders();
 	const { FinalizationRegistry } = dispatcherWeakref();
-	const util = util$e;
+	const util = util$g;
 	const {
 	  isValidHTTPToken,
 	  sameOrigin,
 	  normalizeMethod
-	} = requireUtil$1();
+	} = requireUtil$3();
 	const {
 	  forbiddenMethods,
 	  corsSafeListedMethods,
@@ -13621,17 +13624,18 @@ function requireRequest () {
 	  requestRedirect,
 	  requestMode,
 	  requestCredentials,
-	  requestCache
-	} = requireConstants$1();
+	  requestCache,
+	  requestDuplex
+	} = requireConstants$3();
 	const { kEnumerableProperty } = util;
-	const { kHeaders, kSignal, kState, kGuard, kRealm } = requireSymbols$1();
+	const { kHeaders, kSignal, kState, kGuard, kRealm } = requireSymbols$2();
 	const { webidl } = requireWebidl();
 	const { getGlobalOrigin } = requireGlobal();
 	const { URLSerializer } = requireDataURL();
-	const { kHeadersList } = symbols$2;
+	const { kHeadersList } = symbols$3;
 	const assert = require$$0$1;
 
-	let TransformStream;
+	let TransformStream = globalThis.TransformStream;
 
 	const kInit = Symbol('init');
 
@@ -13647,11 +13651,7 @@ function requireRequest () {
 	      return
 	    }
 
-	    if (arguments.length < 1) {
-	      throw new TypeError(
-	        `Failed to construct 'Request': 1 argument required, but only ${arguments.length} present.`
-	      )
-	    }
+	    webidl.argumentLengthCheck(arguments, 1, { header: 'Request constructor' });
 
 	    input = webidl.converters.RequestInfo(input);
 	    init = webidl.converters.RequestInit(init);
@@ -13846,32 +13846,22 @@ function requireRequest () {
 	    // to it.
 	    if (init.referrerPolicy !== undefined) {
 	      request.referrerPolicy = init.referrerPolicy;
-	      if (!referrerPolicy.includes(request.referrerPolicy)) {
-	        throw new TypeError(
-	          `Failed to construct 'Request': The provided value '${request.referrerPolicy}' is not a valid enum value of type ReferrerPolicy.`
-	        )
-	      }
 	    }
 
 	    // 16. Let mode be init["mode"] if it exists, and fallbackMode otherwise.
 	    let mode;
 	    if (init.mode !== undefined) {
 	      mode = init.mode;
-	      if (!requestMode.includes(mode)) {
-	        throw new TypeError(
-	          `Failed to construct 'Request': The provided value '${request.mode}' is not a valid enum value of type RequestMode.`
-	        )
-	      }
 	    } else {
 	      mode = fallbackMode;
 	    }
 
 	    // 17. If mode is "navigate", then throw a TypeError.
 	    if (mode === 'navigate') {
-	      webidl.errors.exception({
+	      throw webidl.errors.exception({
 	        header: 'Request constructor',
 	        message: 'invalid request mode navigate.'
-	      });
+	      })
 	    }
 
 	    // 18. If mode is non-null, set request’s mode to mode.
@@ -13883,21 +13873,11 @@ function requireRequest () {
 	    // to it.
 	    if (init.credentials !== undefined) {
 	      request.credentials = init.credentials;
-	      if (!requestCredentials.includes(request.credentials)) {
-	        throw new TypeError(
-	          `Failed to construct 'Request': The provided value '${request.credentials}' is not a valid enum value of type RequestCredentials.`
-	        )
-	      }
 	    }
 
 	    // 18. If init["cache"] exists, then set request’s cache mode to it.
 	    if (init.cache !== undefined) {
 	      request.cache = init.cache;
-	      if (!requestCache.includes(request.cache)) {
-	        throw new TypeError(
-	          `Failed to construct 'Request': The provided value '${request.cache}' is not a valid enum value of type RequestCache.`
-	        )
-	      }
 	    }
 
 	    // 21. If request’s cache mode is "only-if-cached" and request’s mode is
@@ -13911,11 +13891,6 @@ function requireRequest () {
 	    // 22. If init["redirect"] exists, then set request’s redirect mode to it.
 	    if (init.redirect !== undefined) {
 	      request.redirect = init.redirect;
-	      if (!requestRedirect.includes(request.redirect)) {
-	        throw new TypeError(
-	          `Failed to construct 'Request': The provided value '${request.redirect}' is not a valid enum value of type RequestRedirect.`
-	        )
-	      }
 	    }
 
 	    // 23. If init["integrity"] exists, then set request’s integrity metadata to it.
@@ -13979,7 +13954,10 @@ function requireRequest () {
 	      if (signal.aborted) {
 	        ac.abort(signal.reason);
 	      } else {
-	        const abort = () => ac.abort(signal.reason);
+	        const acRef = new WeakRef(ac);
+	        const abort = function () {
+	          acRef.deref()?.abort(this.reason);
+	        };
 	        signal.addEventListener('abort', abort, { once: true });
 	        requestFinalizer.register(this, { signal, abort });
 	      }
@@ -14064,7 +14042,7 @@ function requireRequest () {
 	      // 3, If Content-Type is non-null and this’s headers’s header list does
 	      // not contain `Content-Type`, then append `Content-Type`/Content-Type to
 	      // this’s headers.
-	      if (contentType && !this[kHeaders].has('content-type')) {
+	      if (contentType && !this[kHeaders][kHeadersList].contains('content-type')) {
 	        this[kHeaders].append('content-type', contentType);
 	      }
 	    }
@@ -14108,7 +14086,7 @@ function requireRequest () {
 
 	      // 2. Set finalBody to the result of creating a proxy for inputBody.
 	      if (!TransformStream) {
-	        TransformStream = require$$14.TransformStream;
+	        TransformStream = require$$13.TransformStream;
 	      }
 
 	      // https://streams.spec.whatwg.org/#readablestream-create-a-proxy
@@ -14125,15 +14103,9 @@ function requireRequest () {
 	    this[kState].body = finalBody;
 	  }
 
-	  get [Symbol.toStringTag] () {
-	    return this.constructor.name
-	  }
-
 	  // Returns request’s HTTP method, which is "GET" by default.
 	  get method () {
-	    if (!(this instanceof Request)) {
-	      throw new TypeError('Illegal invocation')
-	    }
+	    webidl.brandCheck(this, Request);
 
 	    // The method getter steps are to return this’s request’s method.
 	    return this[kState].method
@@ -14141,9 +14113,7 @@ function requireRequest () {
 
 	  // Returns the URL of request as a string.
 	  get url () {
-	    if (!(this instanceof Request)) {
-	      throw new TypeError('Illegal invocation')
-	    }
+	    webidl.brandCheck(this, Request);
 
 	    // The url getter steps are to return this’s request’s URL, serialized.
 	    return URLSerializer(this[kState].url)
@@ -14153,9 +14123,7 @@ function requireRequest () {
 	  // Note that headers added in the network layer by the user agent will not
 	  // be accounted for in this object, e.g., the "Host" header.
 	  get headers () {
-	    if (!(this instanceof Request)) {
-	      throw new TypeError('Illegal invocation')
-	    }
+	    webidl.brandCheck(this, Request);
 
 	    // The headers getter steps are to return this’s headers.
 	    return this[kHeaders]
@@ -14164,9 +14132,7 @@ function requireRequest () {
 	  // Returns the kind of resource requested by request, e.g., "document"
 	  // or "script".
 	  get destination () {
-	    if (!(this instanceof Request)) {
-	      throw new TypeError('Illegal invocation')
-	    }
+	    webidl.brandCheck(this, Request);
 
 	    // The destination getter are to return this’s request’s destination.
 	    return this[kState].destination
@@ -14178,9 +14144,7 @@ function requireRequest () {
 	  // during fetching to determine the value of the `Referer` header of the
 	  // request being made.
 	  get referrer () {
-	    if (!(this instanceof Request)) {
-	      throw new TypeError('Illegal invocation')
-	    }
+	    webidl.brandCheck(this, Request);
 
 	    // 1. If this’s request’s referrer is "no-referrer", then return the
 	    // empty string.
@@ -14202,9 +14166,7 @@ function requireRequest () {
 	  // This is used during fetching to compute the value of the request’s
 	  // referrer.
 	  get referrerPolicy () {
-	    if (!(this instanceof Request)) {
-	      throw new TypeError('Illegal invocation')
-	    }
+	    webidl.brandCheck(this, Request);
 
 	    // The referrerPolicy getter steps are to return this’s request’s referrer policy.
 	    return this[kState].referrerPolicy
@@ -14214,9 +14176,7 @@ function requireRequest () {
 	  // whether the request will use CORS, or will be restricted to same-origin
 	  // URLs.
 	  get mode () {
-	    if (!(this instanceof Request)) {
-	      throw new TypeError('Illegal invocation')
-	    }
+	    webidl.brandCheck(this, Request);
 
 	    // The mode getter steps are to return this’s request’s mode.
 	    return this[kState].mode
@@ -14234,9 +14194,7 @@ function requireRequest () {
 	  // which is a string indicating how the request will
 	  // interact with the browser’s cache when fetching.
 	  get cache () {
-	    if (!(this instanceof Request)) {
-	      throw new TypeError('Illegal invocation')
-	    }
+	    webidl.brandCheck(this, Request);
 
 	    // The cache getter steps are to return this’s request’s cache mode.
 	    return this[kState].cache
@@ -14247,9 +14205,7 @@ function requireRequest () {
 	  // request will be handled during fetching. A request
 	  // will follow redirects by default.
 	  get redirect () {
-	    if (!(this instanceof Request)) {
-	      throw new TypeError('Illegal invocation')
-	    }
+	    webidl.brandCheck(this, Request);
 
 	    // The redirect getter steps are to return this’s request’s redirect mode.
 	    return this[kState].redirect
@@ -14259,9 +14215,7 @@ function requireRequest () {
 	  // cryptographic hash of the resource being fetched. Its value
 	  // consists of multiple hashes separated by whitespace. [SRI]
 	  get integrity () {
-	    if (!(this instanceof Request)) {
-	      throw new TypeError('Illegal invocation')
-	    }
+	    webidl.brandCheck(this, Request);
 
 	    // The integrity getter steps are to return this’s request’s integrity
 	    // metadata.
@@ -14271,9 +14225,7 @@ function requireRequest () {
 	  // Returns a boolean indicating whether or not request can outlive the
 	  // global in which it was created.
 	  get keepalive () {
-	    if (!(this instanceof Request)) {
-	      throw new TypeError('Illegal invocation')
-	    }
+	    webidl.brandCheck(this, Request);
 
 	    // The keepalive getter steps are to return this’s request’s keepalive.
 	    return this[kState].keepalive
@@ -14282,9 +14234,7 @@ function requireRequest () {
 	  // Returns a boolean indicating whether or not request is for a reload
 	  // navigation.
 	  get isReloadNavigation () {
-	    if (!(this instanceof Request)) {
-	      throw new TypeError('Illegal invocation')
-	    }
+	    webidl.brandCheck(this, Request);
 
 	    // The isReloadNavigation getter steps are to return true if this’s
 	    // request’s reload-navigation flag is set; otherwise false.
@@ -14294,9 +14244,7 @@ function requireRequest () {
 	  // Returns a boolean indicating whether or not request is for a history
 	  // navigation (a.k.a. back-foward navigation).
 	  get isHistoryNavigation () {
-	    if (!(this instanceof Request)) {
-	      throw new TypeError('Illegal invocation')
-	    }
+	    webidl.brandCheck(this, Request);
 
 	    // The isHistoryNavigation getter steps are to return true if this’s request’s
 	    // history-navigation flag is set; otherwise false.
@@ -14307,43 +14255,33 @@ function requireRequest () {
 	  // object indicating whether or not request has been aborted, and its
 	  // abort event handler.
 	  get signal () {
-	    if (!(this instanceof Request)) {
-	      throw new TypeError('Illegal invocation')
-	    }
+	    webidl.brandCheck(this, Request);
 
 	    // The signal getter steps are to return this’s signal.
 	    return this[kSignal]
 	  }
 
 	  get body () {
-	    if (!this || !this[kState]) {
-	      throw new TypeError('Illegal invocation')
-	    }
+	    webidl.brandCheck(this, Request);
 
 	    return this[kState].body ? this[kState].body.stream : null
 	  }
 
 	  get bodyUsed () {
-	    if (!this || !this[kState]) {
-	      throw new TypeError('Illegal invocation')
-	    }
+	    webidl.brandCheck(this, Request);
 
 	    return !!this[kState].body && util.isDisturbed(this[kState].body.stream)
 	  }
 
 	  get duplex () {
-	    if (!(this instanceof Request)) {
-	      throw new TypeError('Illegal invocation')
-	    }
+	    webidl.brandCheck(this, Request);
 
 	    return 'half'
 	  }
 
 	  // Returns a clone of request.
 	  clone () {
-	    if (!(this instanceof Request)) {
-	      throw new TypeError('Illegal invocation')
-	    }
+	    webidl.brandCheck(this, Request);
 
 	    // 1. If this is unusable, then throw a TypeError.
 	    if (this.bodyUsed || this.body?.locked) {
@@ -14469,7 +14407,11 @@ function requireRequest () {
 	  attribute: kEnumerableProperty,
 	  referrerPolicy: kEnumerableProperty,
 	  referrer: kEnumerableProperty,
-	  mode: kEnumerableProperty
+	  mode: kEnumerableProperty,
+	  [Symbol.toStringTag]: {
+	    value: 'Request',
+	    configurable: true
+	  }
 	});
 
 	webidl.converters.Request = webidl.interfaceConverter(
@@ -14517,45 +14459,31 @@ function requireRequest () {
 	    key: 'referrerPolicy',
 	    converter: webidl.converters.DOMString,
 	    // https://w3c.github.io/webappsec-referrer-policy/#referrer-policy
-	    allowedValues: [
-	      '', 'no-referrer', 'no-referrer-when-downgrade',
-	      'same-origin', 'origin', 'strict-origin',
-	      'origin-when-cross-origin', 'strict-origin-when-cross-origin',
-	      'unsafe-url'
-	    ]
+	    allowedValues: referrerPolicy
 	  },
 	  {
 	    key: 'mode',
 	    converter: webidl.converters.DOMString,
 	    // https://fetch.spec.whatwg.org/#concept-request-mode
-	    allowedValues: [
-	      'same-origin', 'cors', 'no-cors', 'navigate', 'websocket'
-	    ]
+	    allowedValues: requestMode
 	  },
 	  {
 	    key: 'credentials',
 	    converter: webidl.converters.DOMString,
 	    // https://fetch.spec.whatwg.org/#requestcredentials
-	    allowedValues: [
-	      'omit', 'same-origin', 'include'
-	    ]
+	    allowedValues: requestCredentials
 	  },
 	  {
 	    key: 'cache',
 	    converter: webidl.converters.DOMString,
 	    // https://fetch.spec.whatwg.org/#requestcache
-	    allowedValues: [
-	      'default', 'no-store', 'reload', 'no-cache', 'force-cache',
-	      'only-if-cached'
-	    ]
+	    allowedValues: requestCache
 	  },
 	  {
 	    key: 'redirect',
 	    converter: webidl.converters.DOMString,
 	    // https://fetch.spec.whatwg.org/#requestredirect
-	    allowedValues: [
-	      'follow', 'error', 'manual'
-	    ]
+	    allowedValues: requestRedirect
 	  },
 	  {
 	    key: 'integrity',
@@ -14581,7 +14509,7 @@ function requireRequest () {
 	  {
 	    key: 'duplex',
 	    converter: webidl.converters.DOMString,
-	    allowedValues: ['half']
+	    allowedValues: requestDuplex
 	  }
 	]);
 
@@ -14630,9 +14558,10 @@ function requireFetch () {
 	  isAborted,
 	  isErrorLike,
 	  fullyReadBody,
-	  readableStreamClose
-	} = requireUtil$1();
-	const { kState, kHeaders, kGuard, kRealm } = requireSymbols$1();
+	  readableStreamClose,
+	  isomorphicEncode
+	} = requireUtil$3();
+	const { kState, kHeaders, kGuard, kRealm, kHeadersCaseInsensitive } = requireSymbols$2();
 	const assert = require$$0$1;
 	const { safelyExtractBody } = requireBody();
 	const {
@@ -14642,19 +14571,20 @@ function requireFetch () {
 	  requestBodyHeader,
 	  subresource,
 	  DOMException
-	} = requireConstants$1();
-	const { kHeadersList } = symbols$2;
+	} = requireConstants$3();
+	const { kHeadersList } = symbols$3;
 	const EE = require$$0$4;
 	const { Readable, pipeline } = require$$0$2;
-	const { isErrored, isReadable } = util$e;
+	const { isErrored, isReadable } = util$g;
 	const { dataURLProcessor, serializeAMimeType } = requireDataURL();
-	const { TransformStream } = require$$14;
-	const { getGlobalDispatcher } = requireUndici();
+	const { TransformStream } = require$$13;
+	const { getGlobalDispatcher } = global$2;
+	const { webidl } = requireWebidl();
+	const { STATUS_CODES } = require$$2;
 
 	/** @type {import('buffer').resolveObjectURL} */
 	let resolveObjectURL;
-	/** @type {globalThis['ReadableStream']} */
-	let ReadableStream;
+	let ReadableStream = globalThis.ReadableStream;
 
 	const nodeVersion = process.versions.node.split('.');
 	const nodeMajor = Number(nodeVersion[0]);
@@ -14715,11 +14645,7 @@ function requireFetch () {
 
 	// https://fetch.spec.whatwg.org/#fetch-method
 	async function fetch (input, init = {}) {
-	  if (arguments.length < 1) {
-	    throw new TypeError(
-	      `Failed to execute 'fetch' on 'Window': 1 argument required, but only ${arguments.length} present.`
-	    )
-	  }
+	  webidl.argumentLengthCheck(arguments, 1, { header: 'globalThis.fetch' });
 
 	  // 1. Let p be a new promise.
 	  const p = createDeferredPromise();
@@ -15071,7 +14997,7 @@ function requireFetch () {
 	  }
 
 	  // 12. If request’s header list does not contain `Accept`, then:
-	  if (!request.headersList.has('accept')) {
+	  if (!request.headersList.contains('accept')) {
 	    // 1. Let value be `*/*`.
 	    const value = '*/*';
 
@@ -15094,7 +15020,7 @@ function requireFetch () {
 	  // 13. If request’s header list does not contain `Accept-Language`, then
 	  // user agents should append `Accept-Language`/an appropriate value to
 	  // request’s header list.
-	  if (!request.headersList.has('accept-language')) {
+	  if (!request.headersList.contains('accept-language')) {
 	    request.headersList.append('accept-language', '*');
 	  }
 
@@ -15302,7 +15228,7 @@ function requireFetch () {
 	    response.type === 'opaque' &&
 	    internalResponse.status === 206 &&
 	    internalResponse.rangeRequested &&
-	    !request.headers.has('range')
+	    !request.headers.contains('range')
 	  ) {
 	    response = internalResponse = makeNetworkError();
 	  }
@@ -15362,8 +15288,11 @@ function requireFetch () {
 	// https://fetch.spec.whatwg.org/#concept-scheme-fetch
 	// given a fetch params fetchParams
 	async function schemeFetch (fetchParams) {
+	  // Note: since the connection is destroyed on redirect, which sets fetchParams to a
+	  // cancelled state, we do not want this condition to trigger *unless* there have been
+	  // no redirects. See https://github.com/nodejs/undici/issues/1776
 	  // 1. If fetchParams is canceled, then return the appropriate network error for fetchParams.
-	  if (isCancelled(fetchParams)) {
+	  if (isCancelled(fetchParams) && fetchParams.request.redirectCount === 0) {
 	    return makeAppropriateNetworkError(fetchParams)
 	  }
 
@@ -15411,7 +15340,7 @@ function requireFetch () {
 	      const body = bodyWithType[0];
 
 	      // 5. Let length be body’s length, serialized and isomorphic encoded.
-	      const length = `${body.length}`;
+	      const length = isomorphicEncode(`${body.length}`);
 
 	      // 6. Let type be bodyWithType’s type if it is non-null; otherwise the empty byte sequence.
 	      const type = bodyWithType[1] ?? '';
@@ -15421,8 +15350,8 @@ function requireFetch () {
 	      const response = makeResponse({
 	        statusText: 'OK',
 	        headersList: [
-	          ['content-length', length],
-	          ['content-type', type]
+	          ['content-length', { name: 'Content-Length', value: length }],
+	          ['content-type', { name: 'Content-Type', value: type }]
 	        ]
 	      });
 
@@ -15451,7 +15380,7 @@ function requireFetch () {
 	      return makeResponse({
 	        statusText: 'OK',
 	        headersList: [
-	          ['content-type', mimeType]
+	          ['content-type', { name: 'Content-Type', value: mimeType }]
 	        ],
 	        body: safelyExtractBody(dataURLStruct.body)[0]
 	      })
@@ -15714,12 +15643,12 @@ function requireFetch () {
 	    return makeNetworkError('URL scheme must be a HTTP(S) scheme')
 	  }
 
-	  // 7. If request’s redirect count is twenty, return a network error.
+	  // 7. If request’s redirect count is 20, then return a network error.
 	  if (request.redirectCount === 20) {
 	    return makeNetworkError('redirect count exceeded')
 	  }
 
-	  // 8. Increase request’s redirect count by one.
+	  // 8. Increase request’s redirect count by 1.
 	  request.redirectCount += 1;
 
 	  // 9. If request’s mode is "cors", locationURL includes credentials, and
@@ -15774,36 +15703,44 @@ function requireFetch () {
 	    }
 	  }
 
-	  // 13. If request’s body is non-null, then set request’s body to the first return
+	  // 13. If request’s current URL’s origin is not same origin with locationURL’s
+	  //     origin, then for each headerName of CORS non-wildcard request-header name,
+	  //     delete headerName from request’s header list.
+	  if (!sameOrigin(requestCurrentURL(request), locationURL)) {
+	    // https://fetch.spec.whatwg.org/#cors-non-wildcard-request-header-name
+	    request.headersList.delete('authorization');
+	  }
+
+	  // 14. If request’s body is non-null, then set request’s body to the first return
 	  // value of safely extracting request’s body’s source.
 	  if (request.body != null) {
 	    assert(request.body.source);
 	    request.body = safelyExtractBody(request.body.source)[0];
 	  }
 
-	  // 14. Let timingInfo be fetchParams’s timing info.
+	  // 15. Let timingInfo be fetchParams’s timing info.
 	  const timingInfo = fetchParams.timingInfo;
 
-	  // 15. Set timingInfo’s redirect end time and post-redirect start time to the
+	  // 16. Set timingInfo’s redirect end time and post-redirect start time to the
 	  // coarsened shared current time given fetchParams’s cross-origin isolated
 	  // capability.
 	  timingInfo.redirectEndTime = timingInfo.postRedirectStartTime =
 	    coarsenedSharedCurrentTime(fetchParams.crossOriginIsolatedCapability);
 
-	  // 16. If timingInfo’s redirect start time is 0, then set timingInfo’s
+	  // 17. If timingInfo’s redirect start time is 0, then set timingInfo’s
 	  //  redirect start time to timingInfo’s start time.
 	  if (timingInfo.redirectStartTime === 0) {
 	    timingInfo.redirectStartTime = timingInfo.startTime;
 	  }
 
-	  // 17. Append locationURL to request’s URL list.
+	  // 18. Append locationURL to request’s URL list.
 	  request.urlList.push(locationURL);
 
-	  // 18. Invoke set request’s referrer policy on redirect on request and
+	  // 19. Invoke set request’s referrer policy on redirect on request and
 	  // actualResponse.
 	  setRequestReferrerPolicyOnRedirect(request, actualResponse);
 
-	  // 19. Return the result of running main fetch given fetchParams and true.
+	  // 20. Return the result of running main fetch given fetchParams and true.
 	  return mainFetch(fetchParams, true)
 	}
 
@@ -15871,8 +15808,7 @@ function requireFetch () {
 	  //    7. If contentLength is non-null, then set contentLengthHeaderValue to
 	  //    contentLength, serialized and isomorphic encoded.
 	  if (contentLength != null) {
-	    // TODO: isomorphic encoded
-	    contentLengthHeaderValue = String(contentLength);
+	    contentLengthHeaderValue = isomorphicEncode(`${contentLength}`);
 	  }
 
 	  //    8. If contentLengthHeaderValue is non-null, then append
@@ -15893,8 +15829,7 @@ function requireFetch () {
 	  //    `Referer`/httpRequest’s referrer, serialized and isomorphic encoded,
 	  //     to httpRequest’s header list.
 	  if (httpRequest.referrer instanceof URL) {
-	    // TODO: isomorphic encoded
-	    httpRequest.headersList.append('referer', httpRequest.referrer.href);
+	    httpRequest.headersList.append('referer', isomorphicEncode(httpRequest.referrer.href));
 	  }
 
 	  //    12. Append a request `Origin` header for httpRequest.
@@ -15906,7 +15841,7 @@ function requireFetch () {
 	  //    14. If httpRequest’s header list does not contain `User-Agent`, then
 	  //    user agents should append `User-Agent`/default `User-Agent` value to
 	  //    httpRequest’s header list.
-	  if (!httpRequest.headersList.has('user-agent')) {
+	  if (!httpRequest.headersList.contains('user-agent')) {
 	    httpRequest.headersList.append('user-agent', 'undici');
 	  }
 
@@ -15916,11 +15851,11 @@ function requireFetch () {
 	  //    httpRequest’s cache mode to "no-store".
 	  if (
 	    httpRequest.cache === 'default' &&
-	    (httpRequest.headersList.has('if-modified-since') ||
-	      httpRequest.headersList.has('if-none-match') ||
-	      httpRequest.headersList.has('if-unmodified-since') ||
-	      httpRequest.headersList.has('if-match') ||
-	      httpRequest.headersList.has('if-range'))
+	    (httpRequest.headersList.contains('if-modified-since') ||
+	      httpRequest.headersList.contains('if-none-match') ||
+	      httpRequest.headersList.contains('if-unmodified-since') ||
+	      httpRequest.headersList.contains('if-match') ||
+	      httpRequest.headersList.contains('if-range'))
 	  ) {
 	    httpRequest.cache = 'no-store';
 	  }
@@ -15932,7 +15867,7 @@ function requireFetch () {
 	  if (
 	    httpRequest.cache === 'no-cache' &&
 	    !httpRequest.preventNoCacheCacheControlHeaderModification &&
-	    !httpRequest.headersList.has('cache-control')
+	    !httpRequest.headersList.contains('cache-control')
 	  ) {
 	    httpRequest.headersList.append('cache-control', 'max-age=0');
 	  }
@@ -15941,27 +15876,27 @@ function requireFetch () {
 	  if (httpRequest.cache === 'no-store' || httpRequest.cache === 'reload') {
 	    // 1. If httpRequest’s header list does not contain `Pragma`, then append
 	    // `Pragma`/`no-cache` to httpRequest’s header list.
-	    if (!httpRequest.headersList.has('pragma')) {
+	    if (!httpRequest.headersList.contains('pragma')) {
 	      httpRequest.headersList.append('pragma', 'no-cache');
 	    }
 
 	    // 2. If httpRequest’s header list does not contain `Cache-Control`,
 	    // then append `Cache-Control`/`no-cache` to httpRequest’s header list.
-	    if (!httpRequest.headersList.has('cache-control')) {
+	    if (!httpRequest.headersList.contains('cache-control')) {
 	      httpRequest.headersList.append('cache-control', 'no-cache');
 	    }
 	  }
 
 	  //    18. If httpRequest’s header list contains `Range`, then append
 	  //    `Accept-Encoding`/`identity` to httpRequest’s header list.
-	  if (httpRequest.headersList.has('range')) {
+	  if (httpRequest.headersList.contains('range')) {
 	    httpRequest.headersList.append('accept-encoding', 'identity');
 	  }
 
 	  //    19. Modify httpRequest’s header list per HTTP. Do not append a given
 	  //    header if httpRequest’s header list contains that header’s name.
 	  //    TODO: https://github.com/whatwg/fetch/issues/1285#issuecomment-896560129
-	  if (!httpRequest.headersList.has('accept-encoding')) {
+	  if (!httpRequest.headersList.contains('accept-encoding')) {
 	    if (/^https:/.test(requestCurrentURL(httpRequest).protocol)) {
 	      httpRequest.headersList.append('accept-encoding', 'br, gzip, deflate');
 	    } else {
@@ -16031,7 +15966,7 @@ function requireFetch () {
 
 	  // 12. If httpRequest’s header list contains `Range`, then set response’s
 	  // range-requested flag.
-	  if (httpRequest.headersList.has('range')) {
+	  if (httpRequest.headersList.contains('range')) {
 	    response.rangeRequested = true;
 	  }
 
@@ -16259,12 +16194,17 @@ function requireFetch () {
 	  }
 
 	  try {
-	    const { body, status, statusText, headersList } = await dispatch({ body: requestBody });
+	    // socket is only provided for websockets
+	    const { body, status, statusText, headersList, socket } = await dispatch({ body: requestBody });
 
-	    const iterator = body[Symbol.asyncIterator]();
-	    fetchParams.controller.next = () => iterator.next();
+	    if (socket) {
+	      response = makeResponse({ status, statusText, headersList, socket });
+	    } else {
+	      const iterator = body[Symbol.asyncIterator]();
+	      fetchParams.controller.next = () => iterator.next();
 
-	    response = makeResponse({ status, statusText, headersList });
+	      response = makeResponse({ status, statusText, headersList });
+	    }
 	  } catch (err) {
 	    // 10. If aborted, then:
 	    if (err.name === 'AbortError') {
@@ -16303,7 +16243,7 @@ function requireFetch () {
 	  // cancelAlgorithm set to cancelAlgorithm, highWaterMark set to
 	  // highWaterMark, and sizeAlgorithm set to sizeAlgorithm.
 	  if (!ReadableStream) {
-	    ReadableStream = require$$14.ReadableStream;
+	    ReadableStream = require$$13.ReadableStream;
 	  }
 
 	  const stream = new ReadableStream(
@@ -16448,16 +16388,18 @@ function requireFetch () {
 
 	  async function dispatch ({ body }) {
 	    const url = requestCurrentURL(request);
-	    return new Promise((resolve, reject) => fetchParams.controller.dispatcher.dispatch(
+	    /** @type {import('../..').Agent} */
+	    const agent = fetchParams.controller.dispatcher;
+
+	    return new Promise((resolve, reject) => agent.dispatch(
 	      {
 	        path: url.pathname + url.search,
 	        origin: url.origin,
 	        method: request.method,
 	        body: fetchParams.controller.dispatcher.isMockActive ? request.body && request.body.source : body,
-	        headers: [...request.headersList].flat(),
+	        headers: request.headersList[kHeadersCaseInsensitive],
 	        maxRedirections: 0,
-	        bodyTimeout: 300_000,
-	        headersTimeout: 300_000
+	        upgrade: request.mode === 'websocket' ? 'websocket' : undefined
 	      },
 	      {
 	        body: null,
@@ -16576,6 +16518,30 @@ function requireFetch () {
 	          fetchParams.controller.terminate(error);
 
 	          reject(error);
+	        },
+
+	        onUpgrade (status, headersList, socket) {
+	          if (status !== 101) {
+	            return
+	          }
+
+	          const headers = new Headers();
+
+	          for (let n = 0; n < headersList.length; n += 2) {
+	            const key = headersList[n + 0].toString('latin1');
+	            const val = headersList[n + 1].toString('latin1');
+
+	            headers.append(key, val);
+	          }
+
+	          resolve({
+	            status,
+	            statusText: STATUS_CODES[status],
+	            headersList: headers[kHeadersList],
+	            socket
+	          });
+
+	          return true
 	        }
 	      }
 	    ))
@@ -16591,14 +16557,14 @@ function requireFetch () {
 	return fetch_1;
 }
 
-var symbols;
-var hasRequiredSymbols;
+var symbols$1;
+var hasRequiredSymbols$1;
 
-function requireSymbols () {
-	if (hasRequiredSymbols) return symbols;
-	hasRequiredSymbols = 1;
+function requireSymbols$1 () {
+	if (hasRequiredSymbols$1) return symbols$1;
+	hasRequiredSymbols$1 = 1;
 
-	symbols = {
+	symbols$1 = {
 	  kState: Symbol('FileReader state'),
 	  kResult: Symbol('FileReader result'),
 	  kError: Symbol('FileReader error'),
@@ -16606,7 +16572,7 @@ function requireSymbols () {
 	  kEvents: Symbol('FileReader events'),
 	  kAborted: Symbol('FileReader aborted')
 	};
-	return symbols;
+	return symbols$1;
 }
 
 var progressevent;
@@ -16638,25 +16604,19 @@ function requireProgressevent () {
 	  }
 
 	  get lengthComputable () {
-	    if (!(this instanceof ProgressEvent)) {
-	      throw new TypeError('Illegal invocation')
-	    }
+	    webidl.brandCheck(this, ProgressEvent);
 
 	    return this[kState].lengthComputable
 	  }
 
 	  get loaded () {
-	    if (!(this instanceof ProgressEvent)) {
-	      throw new TypeError('Illegal invocation')
-	    }
+	    webidl.brandCheck(this, ProgressEvent);
 
 	    return this[kState].loaded
 	  }
 
 	  get total () {
-	    if (!(this instanceof ProgressEvent)) {
-	      throw new TypeError('Illegal invocation')
-	    }
+	    webidl.brandCheck(this, ProgressEvent);
 
 	    return this[kState].total
 	  }
@@ -16995,12 +16955,12 @@ function requireEncoding () {
 	return encoding;
 }
 
-var util;
-var hasRequiredUtil;
+var util$2;
+var hasRequiredUtil$2;
 
-function requireUtil () {
-	if (hasRequiredUtil) return util;
-	hasRequiredUtil = 1;
+function requireUtil$2 () {
+	if (hasRequiredUtil$2) return util$2;
+	hasRequiredUtil$2 = 1;
 
 	const {
 	  kState,
@@ -17008,13 +16968,13 @@ function requireUtil () {
 	  kResult,
 	  kAborted,
 	  kLastProgressEventFired
-	} = requireSymbols();
+	} = requireSymbols$1();
 	const { ProgressEvent } = requireProgressevent();
 	const { getEncoding } = requireEncoding();
-	const { DOMException } = requireConstants$1();
+	const { DOMException } = requireConstants$3();
 	const { serializeAMimeType, parseMIMEType } = requireDataURL();
 	const { types } = require$$0;
-	const { StringDecoder } = require$$12;
+	const { StringDecoder } = require$$6;
 	const { btoa } = require$$7;
 
 	/** @type {PropertyDescriptor} */
@@ -17193,25 +17153,19 @@ function requireUtil () {
 
 	/**
 	 * @see https://w3c.github.io/FileAPI/#fire-a-progress-event
+	 * @see https://dom.spec.whatwg.org/#concept-event-fire
 	 * @param {string} e The name of the event
 	 * @param {import('./filereader').FileReader} reader
 	 */
 	function fireAProgressEvent (e, reader) {
+	  // The progress event e does not bubble. e.bubbles must be false
+	  // The progress event e is NOT cancelable. e.cancelable must be false
 	  const event = new ProgressEvent(e, {
 	    bubbles: false,
 	    cancelable: false
 	  });
 
 	  reader.dispatchEvent(event);
-	  try {
-	    // eslint-disable-next-line no-useless-call
-	    reader[`on${e}`]?.call(reader, event);
-	  } catch (err) {
-	    // Prevent the error from being swallowed
-	    queueMicrotask(() => {
-	      throw err
-	    });
-	  }
 	}
 
 	/**
@@ -17393,12 +17347,12 @@ function requireUtil () {
 	  }, new Uint8Array(size))
 	}
 
-	util = {
+	util$2 = {
 	  staticPropertyDescriptors,
 	  readOperation,
 	  fireAProgressEvent
 	};
-	return util;
+	return util$2;
 }
 
 var filereader;
@@ -17412,16 +17366,16 @@ function requireFilereader () {
 	  staticPropertyDescriptors,
 	  readOperation,
 	  fireAProgressEvent
-	} = requireUtil();
+	} = requireUtil$2();
 	const {
 	  kState,
 	  kError,
 	  kResult,
 	  kEvents,
 	  kAborted
-	} = requireSymbols();
+	} = requireSymbols$1();
 	const { webidl } = requireWebidl();
-	const { kEnumerableProperty } = util$e;
+	const { kEnumerableProperty } = util$g;
 
 	class FileReader extends EventTarget {
 	  constructor () {
@@ -17445,15 +17399,9 @@ function requireFilereader () {
 	   * @param {import('buffer').Blob} blob
 	   */
 	  readAsArrayBuffer (blob) {
-	    if (!(this instanceof FileReader)) {
-	      throw new TypeError('Illegal invocation')
-	    }
+	    webidl.brandCheck(this, FileReader);
 
-	    if (arguments.length === 0) {
-	      throw new TypeError(
-	        'Failed to execute \'readAsArrayBuffer\' on \'FileReader\': 1 argument required, but 0 present.'
-	      )
-	    }
+	    webidl.argumentLengthCheck(arguments, 1, { header: 'FileReader.readAsArrayBuffer' });
 
 	    blob = webidl.converters.Blob(blob, { strict: false });
 
@@ -17467,15 +17415,9 @@ function requireFilereader () {
 	   * @param {import('buffer').Blob} blob
 	   */
 	  readAsBinaryString (blob) {
-	    if (!(this instanceof FileReader)) {
-	      throw new TypeError('Illegal invocation')
-	    }
+	    webidl.brandCheck(this, FileReader);
 
-	    if (arguments.length === 0) {
-	      throw new TypeError(
-	        'Failed to execute \'readAsBinaryString\' on \'FileReader\': 1 argument required, but 0 present.'
-	      )
-	    }
+	    webidl.argumentLengthCheck(arguments, 1, { header: 'FileReader.readAsBinaryString' });
 
 	    blob = webidl.converters.Blob(blob, { strict: false });
 
@@ -17490,15 +17432,9 @@ function requireFilereader () {
 	   * @param {string?} encoding
 	   */
 	  readAsText (blob, encoding = undefined) {
-	    if (!(this instanceof FileReader)) {
-	      throw new TypeError('Illegal invocation')
-	    }
+	    webidl.brandCheck(this, FileReader);
 
-	    if (arguments.length === 0) {
-	      throw new TypeError(
-	        'Failed to execute \'readAsText\' on \'FileReader\': 1 argument required, but 0 present.'
-	      )
-	    }
+	    webidl.argumentLengthCheck(arguments, 1, { header: 'FileReader.readAsText' });
 
 	    blob = webidl.converters.Blob(blob, { strict: false });
 
@@ -17516,15 +17452,9 @@ function requireFilereader () {
 	   * @param {import('buffer').Blob} blob
 	   */
 	  readAsDataURL (blob) {
-	    if (!(this instanceof FileReader)) {
-	      throw new TypeError('Illegal invocation')
-	    }
+	    webidl.brandCheck(this, FileReader);
 
-	    if (arguments.length === 0) {
-	      throw new TypeError(
-	        'Failed to execute \'readAsDataURL\' on \'FileReader\': 1 argument required, but 0 present.'
-	      )
-	    }
+	    webidl.argumentLengthCheck(arguments, 1, { header: 'FileReader.readAsDataURL' });
 
 	    blob = webidl.converters.Blob(blob, { strict: false });
 
@@ -17574,9 +17504,7 @@ function requireFilereader () {
 	   * @see https://w3c.github.io/FileAPI/#dom-filereader-readystate
 	   */
 	  get readyState () {
-	    if (!(this instanceof FileReader)) {
-	      throw new TypeError('Illegal invocation')
-	    }
+	    webidl.brandCheck(this, FileReader);
 
 	    switch (this[kState]) {
 	      case 'empty': return this.EMPTY
@@ -17589,9 +17517,7 @@ function requireFilereader () {
 	   * @see https://w3c.github.io/FileAPI/#dom-filereader-result
 	   */
 	  get result () {
-	    if (!(this instanceof FileReader)) {
-	      throw new TypeError('Illegal invocation')
-	    }
+	    webidl.brandCheck(this, FileReader);
 
 	    // The result attribute’s getter, when invoked, must return
 	    // this's result.
@@ -17602,9 +17528,7 @@ function requireFilereader () {
 	   * @see https://w3c.github.io/FileAPI/#dom-filereader-error
 	   */
 	  get error () {
-	    if (!(this instanceof FileReader)) {
-	      throw new TypeError('Illegal invocation')
-	    }
+	    webidl.brandCheck(this, FileReader);
 
 	    // The error attribute’s getter, when invoked, must return
 	    // this's error.
@@ -17612,120 +17536,126 @@ function requireFilereader () {
 	  }
 
 	  get onloadend () {
-	    if (!(this instanceof FileReader)) {
-	      throw new TypeError('Illegal invocation')
-	    }
+	    webidl.brandCheck(this, FileReader);
 
 	    return this[kEvents].loadend
 	  }
 
 	  set onloadend (fn) {
-	    if (!(this instanceof FileReader)) {
-	      throw new TypeError('Illegal invocation')
+	    webidl.brandCheck(this, FileReader);
+
+	    if (this[kEvents].loadend) {
+	      this.removeEventListener('loadend', this[kEvents].loadend);
 	    }
 
 	    if (typeof fn === 'function') {
 	      this[kEvents].loadend = fn;
+	      this.addEventListener('loadend', fn);
 	    } else {
 	      this[kEvents].loadend = null;
 	    }
 	  }
 
 	  get onerror () {
-	    if (!(this instanceof FileReader)) {
-	      throw new TypeError('Illegal invocation')
-	    }
+	    webidl.brandCheck(this, FileReader);
 
 	    return this[kEvents].error
 	  }
 
 	  set onerror (fn) {
-	    if (!(this instanceof FileReader)) {
-	      throw new TypeError('Illegal invocation')
+	    webidl.brandCheck(this, FileReader);
+
+	    if (this[kEvents].error) {
+	      this.removeEventListener('error', this[kEvents].error);
 	    }
 
 	    if (typeof fn === 'function') {
 	      this[kEvents].error = fn;
+	      this.addEventListener('error', fn);
 	    } else {
 	      this[kEvents].error = null;
 	    }
 	  }
 
 	  get onloadstart () {
-	    if (!(this instanceof FileReader)) {
-	      throw new TypeError('Illegal invocation')
-	    }
+	    webidl.brandCheck(this, FileReader);
 
 	    return this[kEvents].loadstart
 	  }
 
 	  set onloadstart (fn) {
-	    if (!(this instanceof FileReader)) {
-	      throw new TypeError('Illegal invocation')
+	    webidl.brandCheck(this, FileReader);
+
+	    if (this[kEvents].loadstart) {
+	      this.removeEventListener('loadstart', this[kEvents].loadstart);
 	    }
 
 	    if (typeof fn === 'function') {
 	      this[kEvents].loadstart = fn;
+	      this.addEventListener('loadstart', fn);
 	    } else {
 	      this[kEvents].loadstart = null;
 	    }
 	  }
 
 	  get onprogress () {
-	    if (!(this instanceof FileReader)) {
-	      throw new TypeError('Illegal invocation')
-	    }
+	    webidl.brandCheck(this, FileReader);
 
 	    return this[kEvents].progress
 	  }
 
 	  set onprogress (fn) {
-	    if (!(this instanceof FileReader)) {
-	      throw new TypeError('Illegal invocation')
+	    webidl.brandCheck(this, FileReader);
+
+	    if (this[kEvents].progress) {
+	      this.removeEventListener('progress', this[kEvents].progress);
 	    }
 
 	    if (typeof fn === 'function') {
 	      this[kEvents].progress = fn;
+	      this.addEventListener('progress', fn);
 	    } else {
 	      this[kEvents].progress = null;
 	    }
 	  }
 
 	  get onload () {
-	    if (!(this instanceof FileReader)) {
-	      throw new TypeError('Illegal invocation')
-	    }
+	    webidl.brandCheck(this, FileReader);
 
 	    return this[kEvents].load
 	  }
 
 	  set onload (fn) {
-	    if (!(this instanceof FileReader)) {
-	      throw new TypeError('Illegal invocation')
+	    webidl.brandCheck(this, FileReader);
+
+	    if (this[kEvents].load) {
+	      this.removeEventListener('load', this[kEvents].load);
 	    }
 
 	    if (typeof fn === 'function') {
 	      this[kEvents].load = fn;
+	      this.addEventListener('load', fn);
 	    } else {
 	      this[kEvents].load = null;
 	    }
 	  }
 
 	  get onabort () {
-	    if (!(this instanceof FileReader)) {
-	      throw new TypeError('Illegal invocation')
-	    }
+	    webidl.brandCheck(this, FileReader);
 
 	    return this[kEvents].abort
 	  }
 
 	  set onabort (fn) {
-	    if (!(this instanceof FileReader)) {
-	      throw new TypeError('Illegal invocation')
+	    webidl.brandCheck(this, FileReader);
+
+	    if (this[kEvents].abort) {
+	      this.removeEventListener('abort', this[kEvents].abort);
 	    }
 
 	    if (typeof fn === 'function') {
 	      this[kEvents].abort = fn;
+	      this.addEventListener('abort', fn);
 	    } else {
 	      this[kEvents].abort = null;
 	    }
@@ -17777,6 +17707,2754 @@ function requireFilereader () {
 	return filereader;
 }
 
+var constants$1;
+var hasRequiredConstants$1;
+
+function requireConstants$1 () {
+	if (hasRequiredConstants$1) return constants$1;
+	hasRequiredConstants$1 = 1;
+
+	// https://wicg.github.io/cookie-store/#cookie-maximum-attribute-value-size
+	const maxAttributeValueSize = 1024;
+
+	// https://wicg.github.io/cookie-store/#cookie-maximum-name-value-pair-size
+	const maxNameValuePairSize = 4096;
+
+	constants$1 = {
+	  maxAttributeValueSize,
+	  maxNameValuePairSize
+	};
+	return constants$1;
+}
+
+var util$1;
+var hasRequiredUtil$1;
+
+function requireUtil$1 () {
+	if (hasRequiredUtil$1) return util$1;
+	hasRequiredUtil$1 = 1;
+
+	const assert = require$$0$1;
+	const { kHeadersList } = symbols$3;
+
+	function isCTLExcludingHtab (value) {
+	  if (value.length === 0) {
+	    return false
+	  }
+
+	  for (const char of value) {
+	    const code = char.charCodeAt(0);
+
+	    if (
+	      (code >= 0x00 || code <= 0x08) ||
+	      (code >= 0x0A || code <= 0x1F) ||
+	      code === 0x7F
+	    ) {
+	      return false
+	    }
+	  }
+	}
+
+	/**
+	 CHAR           = <any US-ASCII character (octets 0 - 127)>
+	 token          = 1*<any CHAR except CTLs or separators>
+	 separators     = "(" | ")" | "<" | ">" | "@"
+	                | "," | ";" | ":" | "\" | <">
+	                | "/" | "[" | "]" | "?" | "="
+	                | "{" | "}" | SP | HT
+	 * @param {string} name
+	 */
+	function validateCookieName (name) {
+	  for (const char of name) {
+	    const code = char.charCodeAt(0);
+
+	    if (
+	      (code <= 0x20 || code > 0x7F) ||
+	      char === '(' ||
+	      char === ')' ||
+	      char === '>' ||
+	      char === '<' ||
+	      char === '@' ||
+	      char === ',' ||
+	      char === ';' ||
+	      char === ':' ||
+	      char === '\\' ||
+	      char === '"' ||
+	      char === '/' ||
+	      char === '[' ||
+	      char === ']' ||
+	      char === '?' ||
+	      char === '=' ||
+	      char === '{' ||
+	      char === '}'
+	    ) {
+	      throw new Error('Invalid cookie name')
+	    }
+	  }
+	}
+
+	/**
+	 cookie-value      = *cookie-octet / ( DQUOTE *cookie-octet DQUOTE )
+	 cookie-octet      = %x21 / %x23-2B / %x2D-3A / %x3C-5B / %x5D-7E
+	                       ; US-ASCII characters excluding CTLs,
+	                       ; whitespace DQUOTE, comma, semicolon,
+	                       ; and backslash
+	 * @param {string} value
+	 */
+	function validateCookieValue (value) {
+	  for (const char of value) {
+	    const code = char.charCodeAt(0);
+
+	    if (
+	      code < 0x21 || // exclude CTLs (0-31)
+	      code === 0x22 ||
+	      code === 0x2C ||
+	      code === 0x3B ||
+	      code === 0x5C ||
+	      code > 0x7E // non-ascii
+	    ) {
+	      throw new Error('Invalid header value')
+	    }
+	  }
+	}
+
+	/**
+	 * path-value        = <any CHAR except CTLs or ";">
+	 * @param {string} path
+	 */
+	function validateCookiePath (path) {
+	  for (const char of path) {
+	    const code = char.charCodeAt(0);
+
+	    if (code < 0x21 || char === ';') {
+	      throw new Error('Invalid cookie path')
+	    }
+	  }
+	}
+
+	/**
+	 * I have no idea why these values aren't allowed to be honest,
+	 * but Deno tests these. - Khafra
+	 * @param {string} domain
+	 */
+	function validateCookieDomain (domain) {
+	  if (
+	    domain.startsWith('-') ||
+	    domain.endsWith('.') ||
+	    domain.endsWith('-')
+	  ) {
+	    throw new Error('Invalid cookie domain')
+	  }
+	}
+
+	/**
+	 * @see https://www.rfc-editor.org/rfc/rfc7231#section-7.1.1.1
+	 * @param {number|Date} date
+	  IMF-fixdate  = day-name "," SP date1 SP time-of-day SP GMT
+	  ; fixed length/zone/capitalization subset of the format
+	  ; see Section 3.3 of [RFC5322]
+
+	  day-name     = %x4D.6F.6E ; "Mon", case-sensitive
+	              / %x54.75.65 ; "Tue", case-sensitive
+	              / %x57.65.64 ; "Wed", case-sensitive
+	              / %x54.68.75 ; "Thu", case-sensitive
+	              / %x46.72.69 ; "Fri", case-sensitive
+	              / %x53.61.74 ; "Sat", case-sensitive
+	              / %x53.75.6E ; "Sun", case-sensitive
+	  date1        = day SP month SP year
+	                  ; e.g., 02 Jun 1982
+
+	  day          = 2DIGIT
+	  month        = %x4A.61.6E ; "Jan", case-sensitive
+	              / %x46.65.62 ; "Feb", case-sensitive
+	              / %x4D.61.72 ; "Mar", case-sensitive
+	              / %x41.70.72 ; "Apr", case-sensitive
+	              / %x4D.61.79 ; "May", case-sensitive
+	              / %x4A.75.6E ; "Jun", case-sensitive
+	              / %x4A.75.6C ; "Jul", case-sensitive
+	              / %x41.75.67 ; "Aug", case-sensitive
+	              / %x53.65.70 ; "Sep", case-sensitive
+	              / %x4F.63.74 ; "Oct", case-sensitive
+	              / %x4E.6F.76 ; "Nov", case-sensitive
+	              / %x44.65.63 ; "Dec", case-sensitive
+	  year         = 4DIGIT
+
+	  GMT          = %x47.4D.54 ; "GMT", case-sensitive
+
+	  time-of-day  = hour ":" minute ":" second
+	              ; 00:00:00 - 23:59:60 (leap second)
+
+	  hour         = 2DIGIT
+	  minute       = 2DIGIT
+	  second       = 2DIGIT
+	 */
+	function toIMFDate (date) {
+	  if (typeof date === 'number') {
+	    date = new Date(date);
+	  }
+
+	  const days = [
+	    'Sun', 'Mon', 'Tue', 'Wed',
+	    'Thu', 'Fri', 'Sat'
+	  ];
+
+	  const months = [
+	    'Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun',
+	    'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'
+	  ];
+
+	  const dayName = days[date.getUTCDay()];
+	  const day = date.getUTCDate().toString().padStart(2, '0');
+	  const month = months[date.getUTCMonth()];
+	  const year = date.getUTCFullYear();
+	  const hour = date.getUTCHours().toString().padStart(2, '0');
+	  const minute = date.getUTCMinutes().toString().padStart(2, '0');
+	  const second = date.getUTCSeconds().toString().padStart(2, '0');
+
+	  return `${dayName}, ${day} ${month} ${year} ${hour}:${minute}:${second} GMT`
+	}
+
+	/**
+	 max-age-av        = "Max-Age=" non-zero-digit *DIGIT
+	                       ; In practice, both expires-av and max-age-av
+	                       ; are limited to dates representable by the
+	                       ; user agent.
+	 * @param {number} maxAge
+	 */
+	function validateCookieMaxAge (maxAge) {
+	  if (maxAge < 0) {
+	    throw new Error('Invalid cookie max-age')
+	  }
+	}
+
+	/**
+	 * @see https://www.rfc-editor.org/rfc/rfc6265#section-4.1.1
+	 * @param {import('./index').Cookie} cookie
+	 */
+	function stringify (cookie) {
+	  if (cookie.name.length === 0) {
+	    return null
+	  }
+
+	  validateCookieName(cookie.name);
+	  validateCookieValue(cookie.value);
+
+	  const out = [`${cookie.name}=${cookie.value}`];
+
+	  // https://datatracker.ietf.org/doc/html/draft-ietf-httpbis-cookie-prefixes-00#section-3.1
+	  // https://datatracker.ietf.org/doc/html/draft-ietf-httpbis-cookie-prefixes-00#section-3.2
+	  if (cookie.name.startsWith('__Secure-')) {
+	    cookie.secure = true;
+	  }
+
+	  if (cookie.name.startsWith('__Host-')) {
+	    cookie.secure = true;
+	    cookie.domain = null;
+	    cookie.path = '/';
+	  }
+
+	  if (cookie.secure) {
+	    out.push('Secure');
+	  }
+
+	  if (cookie.httpOnly) {
+	    out.push('HttpOnly');
+	  }
+
+	  if (typeof cookie.maxAge === 'number') {
+	    validateCookieMaxAge(cookie.maxAge);
+	    out.push(`Max-Age=${cookie.maxAge}`);
+	  }
+
+	  if (cookie.domain) {
+	    validateCookieDomain(cookie.domain);
+	    out.push(`Domain=${cookie.domain}`);
+	  }
+
+	  if (cookie.path) {
+	    validateCookiePath(cookie.path);
+	    out.push(`Path=${cookie.path}`);
+	  }
+
+	  if (cookie.expires && cookie.expires.toString() !== 'Invalid Date') {
+	    out.push(`Expires=${toIMFDate(cookie.expires)}`);
+	  }
+
+	  if (cookie.sameSite) {
+	    out.push(`SameSite=${cookie.sameSite}`);
+	  }
+
+	  for (const part of cookie.unparsed) {
+	    if (!part.includes('=')) {
+	      throw new Error('Invalid unparsed')
+	    }
+
+	    const [key, ...value] = part.split('=');
+
+	    out.push(`${key.trim()}=${value.join('=')}`);
+	  }
+
+	  return out.join('; ')
+	}
+
+	let kHeadersListNode;
+
+	function getHeadersList (headers) {
+	  if (headers[kHeadersList]) {
+	    return headers[kHeadersList]
+	  }
+
+	  if (!kHeadersListNode) {
+	    kHeadersListNode = Object.getOwnPropertySymbols(headers).find(
+	      (symbol) => symbol.description === 'headers list'
+	    );
+
+	    assert(kHeadersListNode, 'Headers cannot be parsed');
+	  }
+
+	  const headersList = headers[kHeadersListNode];
+	  assert(headersList);
+
+	  return headersList
+	}
+
+	util$1 = {
+	  isCTLExcludingHtab,
+	  stringify,
+	  getHeadersList
+	};
+	return util$1;
+}
+
+var parse;
+var hasRequiredParse;
+
+function requireParse () {
+	if (hasRequiredParse) return parse;
+	hasRequiredParse = 1;
+
+	const { maxNameValuePairSize, maxAttributeValueSize } = requireConstants$1();
+	const { isCTLExcludingHtab } = requireUtil$1();
+	const { collectASequenceOfCodePoints } = requireDataURL();
+	const assert = require$$0$1;
+
+	/**
+	 * @description Parses the field-value attributes of a set-cookie header string.
+	 * @see https://datatracker.ietf.org/doc/html/draft-ietf-httpbis-rfc6265bis#section-5.4
+	 * @param {string} header
+	 * @returns if the header is invalid, null will be returned
+	 */
+	function parseSetCookie (header) {
+	  // 1. If the set-cookie-string contains a %x00-08 / %x0A-1F / %x7F
+	  //    character (CTL characters excluding HTAB): Abort these steps and
+	  //    ignore the set-cookie-string entirely.
+	  if (isCTLExcludingHtab(header)) {
+	    return null
+	  }
+
+	  let nameValuePair = '';
+	  let unparsedAttributes = '';
+	  let name = '';
+	  let value = '';
+
+	  // 2. If the set-cookie-string contains a %x3B (";") character:
+	  if (header.includes(';')) {
+	    // 1. The name-value-pair string consists of the characters up to,
+	    //    but not including, the first %x3B (";"), and the unparsed-
+	    //    attributes consist of the remainder of the set-cookie-string
+	    //    (including the %x3B (";") in question).
+	    const position = { position: 0 };
+
+	    nameValuePair = collectASequenceOfCodePoints((char) => char !== ';', header, position);
+	    unparsedAttributes = header.slice(position.position);
+	  } else {
+	    // Otherwise:
+
+	    // 1. The name-value-pair string consists of all the characters
+	    //    contained in the set-cookie-string, and the unparsed-
+	    //    attributes is the empty string.
+	    nameValuePair = header;
+	  }
+
+	  // 3. If the name-value-pair string lacks a %x3D ("=") character, then
+	  //    the name string is empty, and the value string is the value of
+	  //    name-value-pair.
+	  if (!nameValuePair.includes('=')) {
+	    value = nameValuePair;
+	  } else {
+	    //    Otherwise, the name string consists of the characters up to, but
+	    //    not including, the first %x3D ("=") character, and the (possibly
+	    //    empty) value string consists of the characters after the first
+	    //    %x3D ("=") character.
+	    const position = { position: 0 };
+	    name = collectASequenceOfCodePoints(
+	      (char) => char !== '=',
+	      nameValuePair,
+	      position
+	    );
+	    value = nameValuePair.slice(position.position + 1);
+	  }
+
+	  // 4. Remove any leading or trailing WSP characters from the name
+	  //    string and the value string.
+	  name = name.trim();
+	  value = value.trim();
+
+	  // 5. If the sum of the lengths of the name string and the value string
+	  //    is more than 4096 octets, abort these steps and ignore the set-
+	  //    cookie-string entirely.
+	  if (name.length + value.length > maxNameValuePairSize) {
+	    return null
+	  }
+
+	  // 6. The cookie-name is the name string, and the cookie-value is the
+	  //    value string.
+	  return {
+	    name, value, ...parseUnparsedAttributes(unparsedAttributes)
+	  }
+	}
+
+	/**
+	 * Parses the remaining attributes of a set-cookie header
+	 * @see https://datatracker.ietf.org/doc/html/draft-ietf-httpbis-rfc6265bis#section-5.4
+	 * @param {string} unparsedAttributes
+	 * @param {[Object.<string, unknown>]={}} cookieAttributeList
+	 */
+	function parseUnparsedAttributes (unparsedAttributes, cookieAttributeList = {}) {
+	  // 1. If the unparsed-attributes string is empty, skip the rest of
+	  //    these steps.
+	  if (unparsedAttributes.length === 0) {
+	    return cookieAttributeList
+	  }
+
+	  // 2. Discard the first character of the unparsed-attributes (which
+	  //    will be a %x3B (";") character).
+	  assert(unparsedAttributes[0] === ';');
+	  unparsedAttributes = unparsedAttributes.slice(1);
+
+	  let cookieAv = '';
+
+	  // 3. If the remaining unparsed-attributes contains a %x3B (";")
+	  //    character:
+	  if (unparsedAttributes.includes(';')) {
+	    // 1. Consume the characters of the unparsed-attributes up to, but
+	    //    not including, the first %x3B (";") character.
+	    cookieAv = collectASequenceOfCodePoints(
+	      (char) => char !== ';',
+	      unparsedAttributes,
+	      { position: 0 }
+	    );
+	    unparsedAttributes = unparsedAttributes.slice(cookieAv.length);
+	  } else {
+	    // Otherwise:
+
+	    // 1. Consume the remainder of the unparsed-attributes.
+	    cookieAv = unparsedAttributes;
+	    unparsedAttributes = '';
+	  }
+
+	  // Let the cookie-av string be the characters consumed in this step.
+
+	  let attributeName = '';
+	  let attributeValue = '';
+
+	  // 4. If the cookie-av string contains a %x3D ("=") character:
+	  if (cookieAv.includes('=')) {
+	    // 1. The (possibly empty) attribute-name string consists of the
+	    //    characters up to, but not including, the first %x3D ("=")
+	    //    character, and the (possibly empty) attribute-value string
+	    //    consists of the characters after the first %x3D ("=")
+	    //    character.
+	    const position = { position: 0 };
+
+	    attributeName = collectASequenceOfCodePoints(
+	      (char) => char !== '=',
+	      cookieAv,
+	      position
+	    );
+	    attributeValue = cookieAv.slice(position.position + 1);
+	  } else {
+	    // Otherwise:
+
+	    // 1. The attribute-name string consists of the entire cookie-av
+	    //    string, and the attribute-value string is empty.
+	    attributeName = cookieAv;
+	  }
+
+	  // 5. Remove any leading or trailing WSP characters from the attribute-
+	  //    name string and the attribute-value string.
+	  attributeName = attributeName.trim();
+	  attributeValue = attributeValue.trim();
+
+	  // 6. If the attribute-value is longer than 1024 octets, ignore the
+	  //    cookie-av string and return to Step 1 of this algorithm.
+	  if (attributeValue.length > maxAttributeValueSize) {
+	    return parseUnparsedAttributes(unparsedAttributes, cookieAttributeList)
+	  }
+
+	  // 7. Process the attribute-name and attribute-value according to the
+	  //    requirements in the following subsections.  (Notice that
+	  //    attributes with unrecognized attribute-names are ignored.)
+	  const attributeNameLowercase = attributeName.toLowerCase();
+
+	  // https://datatracker.ietf.org/doc/html/draft-ietf-httpbis-rfc6265bis#section-5.4.1
+	  // If the attribute-name case-insensitively matches the string
+	  // "Expires", the user agent MUST process the cookie-av as follows.
+	  if (attributeNameLowercase === 'expires') {
+	    // 1. Let the expiry-time be the result of parsing the attribute-value
+	    //    as cookie-date (see Section 5.1.1).
+	    const expiryTime = new Date(attributeValue);
+
+	    // 2. If the attribute-value failed to parse as a cookie date, ignore
+	    //    the cookie-av.
+
+	    cookieAttributeList.expires = expiryTime;
+	  } else if (attributeNameLowercase === 'max-age') {
+	    // https://datatracker.ietf.org/doc/html/draft-ietf-httpbis-rfc6265bis#section-5.4.2
+	    // If the attribute-name case-insensitively matches the string "Max-
+	    // Age", the user agent MUST process the cookie-av as follows.
+
+	    // 1. If the first character of the attribute-value is not a DIGIT or a
+	    //    "-" character, ignore the cookie-av.
+	    const charCode = attributeValue.charCodeAt(0);
+
+	    if ((charCode < 48 || charCode > 57) && attributeValue[0] !== '-') {
+	      return parseUnparsedAttributes(unparsedAttributes, cookieAttributeList)
+	    }
+
+	    // 2. If the remainder of attribute-value contains a non-DIGIT
+	    //    character, ignore the cookie-av.
+	    if (!/^\d+$/.test(attributeValue)) {
+	      return parseUnparsedAttributes(unparsedAttributes, cookieAttributeList)
+	    }
+
+	    // 3. Let delta-seconds be the attribute-value converted to an integer.
+	    const deltaSeconds = Number(attributeValue);
+
+	    // 4. Let cookie-age-limit be the maximum age of the cookie (which
+	    //    SHOULD be 400 days or less, see Section 4.1.2.2).
+
+	    // 5. Set delta-seconds to the smaller of its present value and cookie-
+	    //    age-limit.
+	    // deltaSeconds = Math.min(deltaSeconds * 1000, maxExpiresMs)
+
+	    // 6. If delta-seconds is less than or equal to zero (0), let expiry-
+	    //    time be the earliest representable date and time.  Otherwise, let
+	    //    the expiry-time be the current date and time plus delta-seconds
+	    //    seconds.
+	    // const expiryTime = deltaSeconds <= 0 ? Date.now() : Date.now() + deltaSeconds
+
+	    // 7. Append an attribute to the cookie-attribute-list with an
+	    //    attribute-name of Max-Age and an attribute-value of expiry-time.
+	    cookieAttributeList.maxAge = deltaSeconds;
+	  } else if (attributeNameLowercase === 'domain') {
+	    // https://datatracker.ietf.org/doc/html/draft-ietf-httpbis-rfc6265bis#section-5.4.3
+	    // If the attribute-name case-insensitively matches the string "Domain",
+	    // the user agent MUST process the cookie-av as follows.
+
+	    // 1. Let cookie-domain be the attribute-value.
+	    let cookieDomain = attributeValue;
+
+	    // 2. If cookie-domain starts with %x2E ("."), let cookie-domain be
+	    //    cookie-domain without its leading %x2E (".").
+	    if (cookieDomain[0] === '.') {
+	      cookieDomain = cookieDomain.slice(1);
+	    }
+
+	    // 3. Convert the cookie-domain to lower case.
+	    cookieDomain = cookieDomain.toLowerCase();
+
+	    // 4. Append an attribute to the cookie-attribute-list with an
+	    //    attribute-name of Domain and an attribute-value of cookie-domain.
+	    cookieAttributeList.domain = cookieDomain;
+	  } else if (attributeNameLowercase === 'path') {
+	    // https://datatracker.ietf.org/doc/html/draft-ietf-httpbis-rfc6265bis#section-5.4.4
+	    // If the attribute-name case-insensitively matches the string "Path",
+	    // the user agent MUST process the cookie-av as follows.
+
+	    // 1. If the attribute-value is empty or if the first character of the
+	    //    attribute-value is not %x2F ("/"):
+	    let cookiePath = '';
+	    if (attributeValue.length === 0 || attributeValue[0] !== '/') {
+	      // 1. Let cookie-path be the default-path.
+	      cookiePath = '/';
+	    } else {
+	      // Otherwise:
+
+	      // 1. Let cookie-path be the attribute-value.
+	      cookiePath = attributeValue;
+	    }
+
+	    // 2. Append an attribute to the cookie-attribute-list with an
+	    //    attribute-name of Path and an attribute-value of cookie-path.
+	    cookieAttributeList.path = cookiePath;
+	  } else if (attributeNameLowercase === 'secure') {
+	    // https://datatracker.ietf.org/doc/html/draft-ietf-httpbis-rfc6265bis#section-5.4.5
+	    // If the attribute-name case-insensitively matches the string "Secure",
+	    // the user agent MUST append an attribute to the cookie-attribute-list
+	    // with an attribute-name of Secure and an empty attribute-value.
+
+	    cookieAttributeList.secure = true;
+	  } else if (attributeNameLowercase === 'httponly') {
+	    // https://datatracker.ietf.org/doc/html/draft-ietf-httpbis-rfc6265bis#section-5.4.6
+	    // If the attribute-name case-insensitively matches the string
+	    // "HttpOnly", the user agent MUST append an attribute to the cookie-
+	    // attribute-list with an attribute-name of HttpOnly and an empty
+	    // attribute-value.
+
+	    cookieAttributeList.httpOnly = true;
+	  } else if (attributeNameLowercase === 'samesite') {
+	    // https://datatracker.ietf.org/doc/html/draft-ietf-httpbis-rfc6265bis#section-5.4.7
+	    // If the attribute-name case-insensitively matches the string
+	    // "SameSite", the user agent MUST process the cookie-av as follows:
+
+	    // 1. Let enforcement be "Default".
+	    let enforcement = 'Default';
+
+	    const attributeValueLowercase = attributeValue.toLowerCase();
+	    // 2. If cookie-av's attribute-value is a case-insensitive match for
+	    //    "None", set enforcement to "None".
+	    if (attributeValueLowercase.includes('none')) {
+	      enforcement = 'None';
+	    }
+
+	    // 3. If cookie-av's attribute-value is a case-insensitive match for
+	    //    "Strict", set enforcement to "Strict".
+	    if (attributeValueLowercase.includes('strict')) {
+	      enforcement = 'Strict';
+	    }
+
+	    // 4. If cookie-av's attribute-value is a case-insensitive match for
+	    //    "Lax", set enforcement to "Lax".
+	    if (attributeValueLowercase.includes('lax')) {
+	      enforcement = 'Lax';
+	    }
+
+	    // 5. Append an attribute to the cookie-attribute-list with an
+	    //    attribute-name of "SameSite" and an attribute-value of
+	    //    enforcement.
+	    cookieAttributeList.sameSite = enforcement;
+	  } else {
+	    cookieAttributeList.unparsed ??= [];
+
+	    cookieAttributeList.unparsed.push(`${attributeName}=${attributeValue}`);
+	  }
+
+	  // 8. Return to Step 1 of this algorithm.
+	  return parseUnparsedAttributes(unparsedAttributes, cookieAttributeList)
+	}
+
+	parse = {
+	  parseSetCookie,
+	  parseUnparsedAttributes
+	};
+	return parse;
+}
+
+var cookies;
+var hasRequiredCookies;
+
+function requireCookies () {
+	if (hasRequiredCookies) return cookies;
+	hasRequiredCookies = 1;
+
+	const { parseSetCookie } = requireParse();
+	const { stringify, getHeadersList } = requireUtil$1();
+	const { webidl } = requireWebidl();
+	const { Headers } = requireHeaders();
+
+	/**
+	 * @typedef {Object} Cookie
+	 * @property {string} name
+	 * @property {string} value
+	 * @property {Date|number|undefined} expires
+	 * @property {number|undefined} maxAge
+	 * @property {string|undefined} domain
+	 * @property {string|undefined} path
+	 * @property {boolean|undefined} secure
+	 * @property {boolean|undefined} httpOnly
+	 * @property {'Strict'|'Lax'|'None'} sameSite
+	 * @property {string[]} unparsed
+	 */
+
+	/**
+	 * @param {Headers} headers
+	 * @returns {Record<string, string>}
+	 */
+	function getCookies (headers) {
+	  webidl.argumentLengthCheck(arguments, 1, { header: 'getCookies' });
+
+	  webidl.brandCheck(headers, Headers, { strict: false });
+
+	  const cookie = headers.get('cookie');
+	  const out = {};
+
+	  if (!cookie) {
+	    return out
+	  }
+
+	  for (const piece of cookie.split(';')) {
+	    const [name, ...value] = piece.split('=');
+
+	    out[name.trim()] = value.join('=');
+	  }
+
+	  return out
+	}
+
+	/**
+	 * @param {Headers} headers
+	 * @param {string} name
+	 * @param {{ path?: string, domain?: string }|undefined} attributes
+	 * @returns {void}
+	 */
+	function deleteCookie (headers, name, attributes) {
+	  webidl.argumentLengthCheck(arguments, 2, { header: 'deleteCookie' });
+
+	  webidl.brandCheck(headers, Headers, { strict: false });
+
+	  name = webidl.converters.DOMString(name);
+	  attributes = webidl.converters.DeleteCookieAttributes(attributes);
+
+	  // Matches behavior of
+	  // https://github.com/denoland/deno_std/blob/63827b16330b82489a04614027c33b7904e08be5/http/cookie.ts#L278
+	  setCookie(headers, {
+	    name,
+	    value: '',
+	    expires: new Date(0),
+	    ...attributes
+	  });
+	}
+
+	/**
+	 * @param {Headers} headers
+	 * @returns {Cookie[]}
+	 */
+	function getSetCookies (headers) {
+	  webidl.argumentLengthCheck(arguments, 1, { header: 'getSetCookies' });
+
+	  webidl.brandCheck(headers, Headers, { strict: false });
+
+	  const cookies = getHeadersList(headers).cookies;
+
+	  if (!cookies) {
+	    return []
+	  }
+
+	  return cookies.map((pair) => parseSetCookie(pair[1]))
+	}
+
+	/**
+	 * @param {Headers} headers
+	 * @param {Cookie} cookie
+	 * @returns {void}
+	 */
+	function setCookie (headers, cookie) {
+	  webidl.argumentLengthCheck(arguments, 2, { header: 'setCookie' });
+
+	  webidl.brandCheck(headers, Headers, { strict: false });
+
+	  cookie = webidl.converters.Cookie(cookie);
+
+	  const str = stringify(cookie);
+
+	  if (str) {
+	    headers.append('Set-Cookie', stringify(cookie));
+	  }
+	}
+
+	webidl.converters.DeleteCookieAttributes = webidl.dictionaryConverter([
+	  {
+	    converter: webidl.nullableConverter(webidl.converters.DOMString),
+	    key: 'path',
+	    defaultValue: null
+	  },
+	  {
+	    converter: webidl.nullableConverter(webidl.converters.DOMString),
+	    key: 'domain',
+	    defaultValue: null
+	  }
+	]);
+
+	webidl.converters.Cookie = webidl.dictionaryConverter([
+	  {
+	    converter: webidl.converters.DOMString,
+	    key: 'name'
+	  },
+	  {
+	    converter: webidl.converters.DOMString,
+	    key: 'value'
+	  },
+	  {
+	    converter: webidl.nullableConverter((value) => {
+	      if (typeof value === 'number') {
+	        return webidl.converters['unsigned long long'](value)
+	      }
+
+	      return new Date(value)
+	    }),
+	    key: 'expires',
+	    defaultValue: null
+	  },
+	  {
+	    converter: webidl.nullableConverter(webidl.converters['long long']),
+	    key: 'maxAge',
+	    defaultValue: null
+	  },
+	  {
+	    converter: webidl.nullableConverter(webidl.converters.DOMString),
+	    key: 'domain',
+	    defaultValue: null
+	  },
+	  {
+	    converter: webidl.nullableConverter(webidl.converters.DOMString),
+	    key: 'path',
+	    defaultValue: null
+	  },
+	  {
+	    converter: webidl.nullableConverter(webidl.converters.boolean),
+	    key: 'secure',
+	    defaultValue: null
+	  },
+	  {
+	    converter: webidl.nullableConverter(webidl.converters.boolean),
+	    key: 'httpOnly',
+	    defaultValue: null
+	  },
+	  {
+	    converter: webidl.converters.USVString,
+	    key: 'sameSite',
+	    allowedValues: ['Strict', 'Lax', 'None']
+	  },
+	  {
+	    converter: webidl.sequenceConverter(webidl.converters.DOMString),
+	    key: 'unparsed',
+	    defaultValue: []
+	  }
+	]);
+
+	cookies = {
+	  getCookies,
+	  deleteCookie,
+	  getSetCookies,
+	  setCookie
+	};
+	return cookies;
+}
+
+var constants;
+var hasRequiredConstants;
+
+function requireConstants () {
+	if (hasRequiredConstants) return constants;
+	hasRequiredConstants = 1;
+
+	// This is a Globally Unique Identifier unique used
+	// to validate that the endpoint accepts websocket
+	// connections.
+	// See https://www.rfc-editor.org/rfc/rfc6455.html#section-1.3
+	const uid = '258EAFA5-E914-47DA-95CA-C5AB0DC85B11';
+
+	/** @type {PropertyDescriptor} */
+	const staticPropertyDescriptors = {
+	  enumerable: true,
+	  writable: false,
+	  configurable: false
+	};
+
+	const states = {
+	  CONNECTING: 0,
+	  OPEN: 1,
+	  CLOSING: 2,
+	  CLOSED: 3
+	};
+
+	const opcodes = {
+	  CONTINUATION: 0x0,
+	  TEXT: 0x1,
+	  BINARY: 0x2,
+	  CLOSE: 0x8,
+	  PING: 0x9,
+	  PONG: 0xA
+	};
+
+	const maxUnsigned16Bit = 2 ** 16 - 1; // 65535
+
+	const parserStates = {
+	  INFO: 0,
+	  PAYLOADLENGTH_16: 2,
+	  PAYLOADLENGTH_64: 3,
+	  READ_DATA: 4
+	};
+
+	const emptyBuffer = Buffer.allocUnsafe(0);
+
+	constants = {
+	  uid,
+	  staticPropertyDescriptors,
+	  states,
+	  opcodes,
+	  maxUnsigned16Bit,
+	  parserStates,
+	  emptyBuffer
+	};
+	return constants;
+}
+
+var symbols;
+var hasRequiredSymbols;
+
+function requireSymbols () {
+	if (hasRequiredSymbols) return symbols;
+	hasRequiredSymbols = 1;
+
+	symbols = {
+	  kWebSocketURL: Symbol('url'),
+	  kReadyState: Symbol('ready state'),
+	  kController: Symbol('controller'),
+	  kResponse: Symbol('response'),
+	  kExtensions: Symbol('extensions'),
+	  kProtocol: Symbol('protocol'),
+	  kBinaryType: Symbol('binary type'),
+	  kClosingFrame: Symbol('closing frame'),
+	  kSentClose: Symbol('sent close'),
+	  kReceivedClose: Symbol('received close'),
+	  kByteParser: Symbol('byte parser')
+	};
+	return symbols;
+}
+
+var events;
+var hasRequiredEvents;
+
+function requireEvents () {
+	if (hasRequiredEvents) return events;
+	hasRequiredEvents = 1;
+
+	const { webidl } = requireWebidl();
+	const { kEnumerableProperty } = util$g;
+	const { MessagePort } = require$$0$3;
+
+	/**
+	 * @see https://html.spec.whatwg.org/multipage/comms.html#messageevent
+	 */
+	class MessageEvent extends Event {
+	  #eventInit
+
+	  constructor (type, eventInitDict = {}) {
+	    webidl.argumentLengthCheck(arguments, 1, { header: 'MessageEvent constructor' });
+
+	    type = webidl.converters.DOMString(type);
+	    eventInitDict = webidl.converters.MessageEventInit(eventInitDict);
+
+	    super(type, eventInitDict);
+
+	    this.#eventInit = eventInitDict;
+	  }
+
+	  get data () {
+	    webidl.brandCheck(this, MessageEvent);
+
+	    return this.#eventInit.data
+	  }
+
+	  get origin () {
+	    webidl.brandCheck(this, MessageEvent);
+
+	    return this.#eventInit.origin
+	  }
+
+	  get lastEventId () {
+	    webidl.brandCheck(this, MessageEvent);
+
+	    return this.#eventInit.lastEventId
+	  }
+
+	  get source () {
+	    webidl.brandCheck(this, MessageEvent);
+
+	    return this.#eventInit.source
+	  }
+
+	  get ports () {
+	    webidl.brandCheck(this, MessageEvent);
+
+	    if (!Object.isFrozen(this.#eventInit.ports)) {
+	      Object.freeze(this.#eventInit.ports);
+	    }
+
+	    return this.#eventInit.ports
+	  }
+
+	  initMessageEvent (
+	    type,
+	    bubbles = false,
+	    cancelable = false,
+	    data = null,
+	    origin = '',
+	    lastEventId = '',
+	    source = null,
+	    ports = []
+	  ) {
+	    webidl.brandCheck(this, MessageEvent);
+
+	    webidl.argumentLengthCheck(arguments, 1, { header: 'MessageEvent.initMessageEvent' });
+
+	    return new MessageEvent(type, {
+	      bubbles, cancelable, data, origin, lastEventId, source, ports
+	    })
+	  }
+	}
+
+	/**
+	 * @see https://websockets.spec.whatwg.org/#the-closeevent-interface
+	 */
+	class CloseEvent extends Event {
+	  #eventInit
+
+	  constructor (type, eventInitDict = {}) {
+	    webidl.argumentLengthCheck(arguments, 1, { header: 'CloseEvent constructor' });
+
+	    type = webidl.converters.DOMString(type);
+	    eventInitDict = webidl.converters.CloseEventInit(eventInitDict);
+
+	    super(type, eventInitDict);
+
+	    this.#eventInit = eventInitDict;
+	  }
+
+	  get wasClean () {
+	    webidl.brandCheck(this, CloseEvent);
+
+	    return this.#eventInit.wasClean
+	  }
+
+	  get code () {
+	    webidl.brandCheck(this, CloseEvent);
+
+	    return this.#eventInit.code
+	  }
+
+	  get reason () {
+	    webidl.brandCheck(this, CloseEvent);
+
+	    return this.#eventInit.reason
+	  }
+	}
+
+	// https://html.spec.whatwg.org/multipage/webappapis.html#the-errorevent-interface
+	class ErrorEvent extends Event {
+	  #eventInit
+
+	  constructor (type, eventInitDict) {
+	    webidl.argumentLengthCheck(arguments, 1, { header: 'ErrorEvent constructor' });
+
+	    super(type, eventInitDict);
+
+	    type = webidl.converters.DOMString(type);
+	    eventInitDict = webidl.converters.ErrorEventInit(eventInitDict ?? {});
+
+	    this.#eventInit = eventInitDict;
+	  }
+
+	  get message () {
+	    webidl.brandCheck(this, ErrorEvent);
+
+	    return this.#eventInit.message
+	  }
+
+	  get filename () {
+	    webidl.brandCheck(this, ErrorEvent);
+
+	    return this.#eventInit.filename
+	  }
+
+	  get lineno () {
+	    webidl.brandCheck(this, ErrorEvent);
+
+	    return this.#eventInit.lineno
+	  }
+
+	  get colno () {
+	    webidl.brandCheck(this, ErrorEvent);
+
+	    return this.#eventInit.colno
+	  }
+
+	  get error () {
+	    webidl.brandCheck(this, ErrorEvent);
+
+	    return this.#eventInit.error
+	  }
+	}
+
+	Object.defineProperties(MessageEvent.prototype, {
+	  [Symbol.toStringTag]: {
+	    value: 'MessageEvent',
+	    configurable: true
+	  },
+	  data: kEnumerableProperty,
+	  origin: kEnumerableProperty,
+	  lastEventId: kEnumerableProperty,
+	  source: kEnumerableProperty,
+	  ports: kEnumerableProperty,
+	  initMessageEvent: kEnumerableProperty
+	});
+
+	Object.defineProperties(CloseEvent.prototype, {
+	  [Symbol.toStringTag]: {
+	    value: 'CloseEvent',
+	    configurable: true
+	  },
+	  reason: kEnumerableProperty,
+	  code: kEnumerableProperty,
+	  wasClean: kEnumerableProperty
+	});
+
+	Object.defineProperties(ErrorEvent.prototype, {
+	  [Symbol.toStringTag]: {
+	    value: 'ErrorEvent',
+	    configurable: true
+	  },
+	  message: kEnumerableProperty,
+	  filename: kEnumerableProperty,
+	  lineno: kEnumerableProperty,
+	  colno: kEnumerableProperty,
+	  error: kEnumerableProperty
+	});
+
+	webidl.converters.MessagePort = webidl.interfaceConverter(MessagePort);
+
+	webidl.converters['sequence<MessagePort>'] = webidl.sequenceConverter(
+	  webidl.converters.MessagePort
+	);
+
+	const eventInit = [
+	  {
+	    key: 'bubbles',
+	    converter: webidl.converters.boolean,
+	    defaultValue: false
+	  },
+	  {
+	    key: 'cancelable',
+	    converter: webidl.converters.boolean,
+	    defaultValue: false
+	  },
+	  {
+	    key: 'composed',
+	    converter: webidl.converters.boolean,
+	    defaultValue: false
+	  }
+	];
+
+	webidl.converters.MessageEventInit = webidl.dictionaryConverter([
+	  ...eventInit,
+	  {
+	    key: 'data',
+	    converter: webidl.converters.any,
+	    defaultValue: null
+	  },
+	  {
+	    key: 'origin',
+	    converter: webidl.converters.USVString,
+	    defaultValue: ''
+	  },
+	  {
+	    key: 'lastEventId',
+	    converter: webidl.converters.DOMString,
+	    defaultValue: ''
+	  },
+	  {
+	    key: 'source',
+	    // Node doesn't implement WindowProxy or ServiceWorker, so the only
+	    // valid value for source is a MessagePort.
+	    converter: webidl.nullableConverter(webidl.converters.MessagePort),
+	    defaultValue: null
+	  },
+	  {
+	    key: 'ports',
+	    converter: webidl.converters['sequence<MessagePort>'],
+	    get defaultValue () {
+	      return []
+	    }
+	  }
+	]);
+
+	webidl.converters.CloseEventInit = webidl.dictionaryConverter([
+	  ...eventInit,
+	  {
+	    key: 'wasClean',
+	    converter: webidl.converters.boolean,
+	    defaultValue: false
+	  },
+	  {
+	    key: 'code',
+	    converter: webidl.converters['unsigned short'],
+	    defaultValue: 0
+	  },
+	  {
+	    key: 'reason',
+	    converter: webidl.converters.USVString,
+	    defaultValue: ''
+	  }
+	]);
+
+	webidl.converters.ErrorEventInit = webidl.dictionaryConverter([
+	  ...eventInit,
+	  {
+	    key: 'message',
+	    converter: webidl.converters.DOMString,
+	    defaultValue: ''
+	  },
+	  {
+	    key: 'filename',
+	    converter: webidl.converters.USVString,
+	    defaultValue: ''
+	  },
+	  {
+	    key: 'lineno',
+	    converter: webidl.converters['unsigned long'],
+	    defaultValue: 0
+	  },
+	  {
+	    key: 'colno',
+	    converter: webidl.converters['unsigned long'],
+	    defaultValue: 0
+	  },
+	  {
+	    key: 'error',
+	    converter: webidl.converters.any
+	  }
+	]);
+
+	events = {
+	  MessageEvent,
+	  CloseEvent,
+	  ErrorEvent
+	};
+	return events;
+}
+
+var util;
+var hasRequiredUtil;
+
+function requireUtil () {
+	if (hasRequiredUtil) return util;
+	hasRequiredUtil = 1;
+
+	const { kReadyState, kController, kResponse, kBinaryType, kWebSocketURL } = requireSymbols();
+	const { states, opcodes } = requireConstants();
+	const { MessageEvent, ErrorEvent } = requireEvents();
+
+	/* globals Blob */
+
+	/**
+	 * @param {import('./websocket').WebSocket} ws
+	 */
+	function isEstablished (ws) {
+	  // If the server's response is validated as provided for above, it is
+	  // said that _The WebSocket Connection is Established_ and that the
+	  // WebSocket Connection is in the OPEN state.
+	  return ws[kReadyState] === states.OPEN
+	}
+
+	/**
+	 * @param {import('./websocket').WebSocket} ws
+	 */
+	function isClosing (ws) {
+	  // Upon either sending or receiving a Close control frame, it is said
+	  // that _The WebSocket Closing Handshake is Started_ and that the
+	  // WebSocket connection is in the CLOSING state.
+	  return ws[kReadyState] === states.CLOSING
+	}
+
+	/**
+	 * @param {import('./websocket').WebSocket} ws
+	 */
+	function isClosed (ws) {
+	  return ws[kReadyState] === states.CLOSED
+	}
+
+	/**
+	 * @see https://dom.spec.whatwg.org/#concept-event-fire
+	 * @param {string} e
+	 * @param {EventTarget} target
+	 * @param {EventInit | undefined} eventInitDict
+	 */
+	function fireEvent (e, target, eventConstructor = Event, eventInitDict) {
+	  // 1. If eventConstructor is not given, then let eventConstructor be Event.
+
+	  // 2. Let event be the result of creating an event given eventConstructor,
+	  //    in the relevant realm of target.
+	  // 3. Initialize event’s type attribute to e.
+	  const event = new eventConstructor(e, eventInitDict); // eslint-disable-line new-cap
+
+	  // 4. Initialize any other IDL attributes of event as described in the
+	  //    invocation of this algorithm.
+
+	  // 5. Return the result of dispatching event at target, with legacy target
+	  //    override flag set if set.
+	  target.dispatchEvent(event);
+	}
+
+	/**
+	 * @see https://websockets.spec.whatwg.org/#feedback-from-the-protocol
+	 * @param {import('./websocket').WebSocket} ws
+	 * @param {number} type Opcode
+	 * @param {Buffer} data application data
+	 */
+	function websocketMessageReceived (ws, type, data) {
+	  // 1. If ready state is not OPEN (1), then return.
+	  if (ws[kReadyState] !== states.OPEN) {
+	    return
+	  }
+
+	  // 2. Let dataForEvent be determined by switching on type and binary type:
+	  let dataForEvent;
+
+	  if (type === opcodes.TEXT) {
+	    // -> type indicates that the data is Text
+	    //      a new DOMString containing data
+	    try {
+	      dataForEvent = new TextDecoder('utf-8', { fatal: true }).decode(data);
+	    } catch {
+	      failWebsocketConnection(ws, 'Received invalid UTF-8 in text frame.');
+	      return
+	    }
+	  } else if (type === opcodes.BINARY) {
+	    if (ws[kBinaryType] === 'blob') {
+	      // -> type indicates that the data is Binary and binary type is "blob"
+	      //      a new Blob object, created in the relevant Realm of the WebSocket
+	      //      object, that represents data as its raw data
+	      dataForEvent = new Blob([data]);
+	    } else {
+	      // -> type indicates that the data is Binary and binary type is "arraybuffer"
+	      //      a new ArrayBuffer object, created in the relevant Realm of the
+	      //      WebSocket object, whose contents are data
+	      dataForEvent = new Uint8Array(data).buffer;
+	    }
+	  }
+
+	  // 3. Fire an event named message at the WebSocket object, using MessageEvent,
+	  //    with the origin attribute initialized to the serialization of the WebSocket
+	  //    object’s url's origin, and the data attribute initialized to dataForEvent.
+	  fireEvent('message', ws, MessageEvent, {
+	    origin: ws[kWebSocketURL].origin,
+	    data: dataForEvent
+	  });
+	}
+
+	/**
+	 * @see https://datatracker.ietf.org/doc/html/rfc6455
+	 * @see https://datatracker.ietf.org/doc/html/rfc2616
+	 * @see https://bugs.chromium.org/p/chromium/issues/detail?id=398407
+	 * @param {string} protocol
+	 */
+	function isValidSubprotocol (protocol) {
+	  // If present, this value indicates one
+	  // or more comma-separated subprotocol the client wishes to speak,
+	  // ordered by preference.  The elements that comprise this value
+	  // MUST be non-empty strings with characters in the range U+0021 to
+	  // U+007E not including separator characters as defined in
+	  // [RFC2616] and MUST all be unique strings.
+	  if (protocol.length === 0) {
+	    return false
+	  }
+
+	  for (const char of protocol) {
+	    const code = char.charCodeAt(0);
+
+	    if (
+	      code < 0x21 ||
+	      code > 0x7E ||
+	      char === '(' ||
+	      char === ')' ||
+	      char === '<' ||
+	      char === '>' ||
+	      char === '@' ||
+	      char === ',' ||
+	      char === ';' ||
+	      char === ':' ||
+	      char === '\\' ||
+	      char === '"' ||
+	      char === '/' ||
+	      char === '[' ||
+	      char === ']' ||
+	      char === '?' ||
+	      char === '=' ||
+	      char === '{' ||
+	      char === '}' ||
+	      code === 32 || // SP
+	      code === 9 // HT
+	    ) {
+	      return false
+	    }
+	  }
+
+	  return true
+	}
+
+	/**
+	 * @see https://datatracker.ietf.org/doc/html/rfc6455#section-7-4
+	 * @param {number} code
+	 */
+	function isValidStatusCode (code) {
+	  if (code >= 1000 && code < 1015) {
+	    return (
+	      code !== 1004 && // reserved
+	      code !== 1005 && // "MUST NOT be set as a status code"
+	      code !== 1006 // "MUST NOT be set as a status code"
+	    )
+	  }
+
+	  return code >= 3000 && code <= 4999
+	}
+
+	/**
+	 * @param {import('./websocket').WebSocket} ws
+	 * @param {string|undefined} reason
+	 */
+	function failWebsocketConnection (ws, reason) {
+	  const { [kController]: controller, [kResponse]: response } = ws;
+
+	  controller.abort();
+
+	  if (response?.socket && !response.socket.destroyed) {
+	    response.socket.destroy();
+	  }
+
+	  if (reason) {
+	    fireEvent('error', ws, ErrorEvent, {
+	      error: new Error(reason)
+	    });
+	  }
+	}
+
+	util = {
+	  isEstablished,
+	  isClosing,
+	  isClosed,
+	  fireEvent,
+	  isValidSubprotocol,
+	  isValidStatusCode,
+	  failWebsocketConnection,
+	  websocketMessageReceived
+	};
+	return util;
+}
+
+var frame;
+var hasRequiredFrame;
+
+function requireFrame () {
+	if (hasRequiredFrame) return frame;
+	hasRequiredFrame = 1;
+
+	const { randomBytes } = require$$0$5;
+	const { maxUnsigned16Bit } = requireConstants();
+
+	class WebsocketFrameSend {
+	  /**
+	   * @param {Buffer|undefined} data
+	   */
+	  constructor (data) {
+	    this.frameData = data;
+	    this.maskKey = randomBytes(4);
+	  }
+
+	  createFrame (opcode) {
+	    const bodyLength = this.frameData?.byteLength ?? 0;
+
+	    /** @type {number} */
+	    let payloadLength = bodyLength; // 0-125
+	    let offset = 6;
+
+	    if (bodyLength > maxUnsigned16Bit) {
+	      offset += 8; // payload length is next 8 bytes
+	      payloadLength = 127;
+	    } else if (bodyLength > 125) {
+	      offset += 2; // payload length is next 2 bytes
+	      payloadLength = 126;
+	    }
+
+	    const buffer = Buffer.allocUnsafe(bodyLength + offset);
+
+	    // Clear first 2 bytes, everything else is overwritten
+	    buffer[0] = buffer[1] = 0;
+	    buffer[0] |= 0x80; // FIN
+	    buffer[0] = (buffer[0] & 0xF0) + opcode; // opcode
+
+	    /*! ws. MIT License. Einar Otto Stangvik <einaros@gmail.com> */
+	    buffer[offset - 4] = this.maskKey[0];
+	    buffer[offset - 3] = this.maskKey[1];
+	    buffer[offset - 2] = this.maskKey[2];
+	    buffer[offset - 1] = this.maskKey[3];
+
+	    buffer[1] = payloadLength;
+
+	    if (payloadLength === 126) {
+	      new DataView(buffer.buffer).setUint16(2, bodyLength);
+	    } else if (payloadLength === 127) {
+	      // Clear extended payload length
+	      buffer[2] = buffer[3] = 0;
+	      buffer.writeUIntBE(bodyLength, 4, 6);
+	    }
+
+	    buffer[1] |= 0x80; // MASK
+
+	    // mask body
+	    for (let i = 0; i < bodyLength; i++) {
+	      buffer[offset + i] = this.frameData[i] ^ this.maskKey[i % 4];
+	    }
+
+	    return buffer
+	  }
+	}
+
+	frame = {
+	  WebsocketFrameSend
+	};
+	return frame;
+}
+
+var receiver;
+var hasRequiredReceiver;
+
+function requireReceiver () {
+	if (hasRequiredReceiver) return receiver;
+	hasRequiredReceiver = 1;
+
+	const { Writable } = require$$0$2;
+	const diagnosticsChannel = require$$1$2;
+	const { parserStates, opcodes, states, emptyBuffer } = requireConstants();
+	const { kReadyState, kSentClose, kResponse, kReceivedClose } = requireSymbols();
+	const { isValidStatusCode, failWebsocketConnection, websocketMessageReceived } = requireUtil();
+	const { WebsocketFrameSend } = requireFrame();
+
+	// This code was influenced by ws released under the MIT license.
+	// Copyright (c) 2011 Einar Otto Stangvik <einaros@gmail.com>
+	// Copyright (c) 2013 Arnout Kazemier and contributors
+	// Copyright (c) 2016 Luigi Pinca and contributors
+
+	const channels = {};
+	channels.ping = diagnosticsChannel.channel('undici:websocket:ping');
+	channels.pong = diagnosticsChannel.channel('undici:websocket:pong');
+
+	class ByteParser extends Writable {
+	  #buffers = []
+	  #byteOffset = 0
+
+	  #state = parserStates.INFO
+
+	  #info = {}
+	  #fragments = []
+
+	  constructor (ws) {
+	    super();
+
+	    this.ws = ws;
+	  }
+
+	  /**
+	   * @param {Buffer} chunk
+	   * @param {() => void} callback
+	   */
+	  _write (chunk, _, callback) {
+	    this.#buffers.push(chunk);
+	    this.#byteOffset += chunk.length;
+
+	    this.run(callback);
+	  }
+
+	  /**
+	   * Runs whenever a new chunk is received.
+	   * Callback is called whenever there are no more chunks buffering,
+	   * or not enough bytes are buffered to parse.
+	   */
+	  run (callback) {
+	    while (true) {
+	      if (this.#state === parserStates.INFO) {
+	        // If there aren't enough bytes to parse the payload length, etc.
+	        if (this.#byteOffset < 2) {
+	          return callback()
+	        }
+
+	        const buffer = this.consume(2);
+
+	        this.#info.fin = (buffer[0] & 0x80) !== 0;
+	        this.#info.opcode = buffer[0] & 0x0F;
+
+	        // If we receive a fragmented message, we use the type of the first
+	        // frame to parse the full message as binary/text, when it's terminated
+	        this.#info.originalOpcode ??= this.#info.opcode;
+
+	        this.#info.fragmented = !this.#info.fin && this.#info.opcode !== opcodes.CONTINUATION;
+
+	        if (this.#info.fragmented && this.#info.opcode !== opcodes.BINARY && this.#info.opcode !== opcodes.TEXT) {
+	          // Only text and binary frames can be fragmented
+	          failWebsocketConnection(this.ws, 'Invalid frame type was fragmented.');
+	          return
+	        }
+
+	        const payloadLength = buffer[1] & 0x7F;
+
+	        if (payloadLength <= 125) {
+	          this.#info.payloadLength = payloadLength;
+	          this.#state = parserStates.READ_DATA;
+	        } else if (payloadLength === 126) {
+	          this.#state = parserStates.PAYLOADLENGTH_16;
+	        } else if (payloadLength === 127) {
+	          this.#state = parserStates.PAYLOADLENGTH_64;
+	        }
+
+	        if (this.#info.fragmented && payloadLength > 125) {
+	          // A fragmented frame can't be fragmented itself
+	          failWebsocketConnection(this.ws, 'Fragmented frame exceeded 125 bytes.');
+	          return
+	        } else if (
+	          (this.#info.opcode === opcodes.PING ||
+	            this.#info.opcode === opcodes.PONG ||
+	            this.#info.opcode === opcodes.CLOSE) &&
+	          payloadLength > 125
+	        ) {
+	          // Control frames can have a payload length of 125 bytes MAX
+	          failWebsocketConnection(this.ws, 'Payload length for control frame exceeded 125 bytes.');
+	          return
+	        } else if (this.#info.opcode === opcodes.CLOSE) {
+	          if (payloadLength === 1) {
+	            failWebsocketConnection(this.ws, 'Received close frame with a 1-byte body.');
+	            return
+	          }
+
+	          const body = this.consume(payloadLength);
+
+	          this.#info.closeInfo = this.parseCloseBody(false, body);
+
+	          if (!this.ws[kSentClose]) {
+	            // If an endpoint receives a Close frame and did not previously send a
+	            // Close frame, the endpoint MUST send a Close frame in response.  (When
+	            // sending a Close frame in response, the endpoint typically echos the
+	            // status code it received.)
+	            const body = Buffer.allocUnsafe(2);
+	            body.writeUInt16BE(this.#info.closeInfo.code, 0);
+	            const closeFrame = new WebsocketFrameSend(body);
+
+	            this.ws[kResponse].socket.write(
+	              closeFrame.createFrame(opcodes.CLOSE),
+	              (err) => {
+	                if (!err) {
+	                  this.ws[kSentClose] = true;
+	                }
+	              }
+	            );
+	          }
+
+	          // Upon either sending or receiving a Close control frame, it is said
+	          // that _The WebSocket Closing Handshake is Started_ and that the
+	          // WebSocket connection is in the CLOSING state.
+	          this.ws[kReadyState] = states.CLOSING;
+	          this.ws[kReceivedClose] = true;
+
+	          this.end();
+
+	          return
+	        } else if (this.#info.opcode === opcodes.PING) {
+	          // Upon receipt of a Ping frame, an endpoint MUST send a Pong frame in
+	          // response, unless it already received a Close frame.
+	          // A Pong frame sent in response to a Ping frame must have identical
+	          // "Application data"
+
+	          const body = this.consume(payloadLength);
+
+	          if (!this.ws[kReceivedClose]) {
+	            const frame = new WebsocketFrameSend(body);
+
+	            this.ws[kResponse].socket.write(frame.createFrame(opcodes.PONG));
+
+	            if (channels.ping.hasSubscribers) {
+	              channels.ping.publish({
+	                payload: body
+	              });
+	            }
+	          }
+
+	          this.#state = parserStates.INFO;
+
+	          if (this.#byteOffset > 0) {
+	            continue
+	          } else {
+	            callback();
+	            return
+	          }
+	        } else if (this.#info.opcode === opcodes.PONG) {
+	          // A Pong frame MAY be sent unsolicited.  This serves as a
+	          // unidirectional heartbeat.  A response to an unsolicited Pong frame is
+	          // not expected.
+
+	          const body = this.consume(payloadLength);
+
+	          if (channels.pong.hasSubscribers) {
+	            channels.pong.publish({
+	              payload: body
+	            });
+	          }
+
+	          if (this.#byteOffset > 0) {
+	            continue
+	          } else {
+	            callback();
+	            return
+	          }
+	        }
+	      } else if (this.#state === parserStates.PAYLOADLENGTH_16) {
+	        if (this.#byteOffset < 2) {
+	          return callback()
+	        }
+
+	        const buffer = this.consume(2);
+
+	        this.#info.payloadLength = buffer.readUInt16BE(0);
+	        this.#state = parserStates.READ_DATA;
+	      } else if (this.#state === parserStates.PAYLOADLENGTH_64) {
+	        if (this.#byteOffset < 8) {
+	          return callback()
+	        }
+
+	        const buffer = this.consume(8);
+	        const upper = buffer.readUInt32BE(0);
+
+	        // 2^31 is the maxinimum bytes an arraybuffer can contain
+	        // on 32-bit systems. Although, on 64-bit systems, this is
+	        // 2^53-1 bytes.
+	        // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Errors/Invalid_array_length
+	        // https://source.chromium.org/chromium/chromium/src/+/main:v8/src/common/globals.h;drc=1946212ac0100668f14eb9e2843bdd846e510a1e;bpv=1;bpt=1;l=1275
+	        // https://source.chromium.org/chromium/chromium/src/+/main:v8/src/objects/js-array-buffer.h;l=34;drc=1946212ac0100668f14eb9e2843bdd846e510a1e
+	        if (upper > 2 ** 31 - 1) {
+	          failWebsocketConnection(this.ws, 'Received payload length > 2^31 bytes.');
+	          return
+	        }
+
+	        const lower = buffer.readUInt32BE(4);
+
+	        this.#info.payloadLength = (upper << 8) + lower;
+	        this.#state = parserStates.READ_DATA;
+	      } else if (this.#state === parserStates.READ_DATA) {
+	        if (this.#byteOffset < this.#info.payloadLength) {
+	          // If there is still more data in this chunk that needs to be read
+	          return callback()
+	        } else if (this.#byteOffset >= this.#info.payloadLength) {
+	          // If the server sent multiple frames in a single chunk
+
+	          const body = this.consume(this.#info.payloadLength);
+
+	          this.#fragments.push(body);
+
+	          // If the frame is unfragmented, or a fragmented frame was terminated,
+	          // a message was received
+	          if (!this.#info.fragmented || (this.#info.fin && this.#info.opcode === opcodes.CONTINUATION)) {
+	            const fullMessage = Buffer.concat(this.#fragments);
+
+	            websocketMessageReceived(this.ws, this.#info.originalOpcode, fullMessage);
+
+	            this.#info = {};
+	            this.#fragments.length = 0;
+	          }
+
+	          this.#state = parserStates.INFO;
+	        }
+	      }
+
+	      if (this.#byteOffset > 0) {
+	        continue
+	      } else {
+	        callback();
+	        break
+	      }
+	    }
+	  }
+
+	  /**
+	   * Take n bytes from the buffered Buffers
+	   * @param {number} n
+	   * @returns {Buffer|null}
+	   */
+	  consume (n) {
+	    if (n > this.#byteOffset) {
+	      return null
+	    } else if (n === 0) {
+	      return emptyBuffer
+	    }
+
+	    if (this.#buffers[0].length === n) {
+	      this.#byteOffset -= this.#buffers[0].length;
+	      return this.#buffers.shift()
+	    }
+
+	    const buffer = Buffer.allocUnsafe(n);
+	    let offset = 0;
+
+	    while (offset !== n) {
+	      const next = this.#buffers[0];
+	      const { length } = next;
+
+	      if (length + offset === n) {
+	        buffer.set(this.#buffers.shift(), offset);
+	        break
+	      } else if (length + offset > n) {
+	        buffer.set(next.subarray(0, n - offset), offset);
+	        this.#buffers[0] = next.subarray(n - offset);
+	        break
+	      } else {
+	        buffer.set(this.#buffers.shift(), offset);
+	        offset += next.length;
+	      }
+	    }
+
+	    this.#byteOffset -= n;
+
+	    return buffer
+	  }
+
+	  parseCloseBody (onlyCode, data) {
+	    // https://datatracker.ietf.org/doc/html/rfc6455#section-7.1.5
+	    /** @type {number|undefined} */
+	    let code;
+
+	    if (data.length >= 2) {
+	      // _The WebSocket Connection Close Code_ is
+	      // defined as the status code (Section 7.4) contained in the first Close
+	      // control frame received by the application
+	      code = data.readUInt16BE(0);
+	    }
+
+	    if (onlyCode) {
+	      if (!isValidStatusCode(code)) {
+	        return null
+	      }
+
+	      return { code }
+	    }
+
+	    // https://datatracker.ietf.org/doc/html/rfc6455#section-7.1.6
+	    /** @type {Buffer} */
+	    let reason = data.subarray(2);
+
+	    // Remove BOM
+	    if (reason[0] === 0xEF && reason[1] === 0xBB && reason[2] === 0xBF) {
+	      reason = reason.subarray(3);
+	    }
+
+	    if (code !== undefined && !isValidStatusCode(code)) {
+	      return null
+	    }
+
+	    try {
+	      // TODO: optimize this
+	      reason = new TextDecoder('utf-8', { fatal: true }).decode(reason);
+	    } catch {
+	      return null
+	    }
+
+	    return { code, reason }
+	  }
+
+	  get closingInfo () {
+	    return this.#info.closeInfo
+	  }
+	}
+
+	receiver = {
+	  ByteParser
+	};
+	return receiver;
+}
+
+var connection;
+var hasRequiredConnection;
+
+function requireConnection () {
+	if (hasRequiredConnection) return connection;
+	hasRequiredConnection = 1;
+
+	const { randomBytes, createHash } = require$$0$5;
+	const diagnosticsChannel = require$$1$2;
+	const { uid, states } = requireConstants();
+	const {
+	  kReadyState,
+	  kResponse,
+	  kExtensions,
+	  kProtocol,
+	  kSentClose,
+	  kByteParser,
+	  kReceivedClose
+	} = requireSymbols();
+	const { fireEvent, failWebsocketConnection } = requireUtil();
+	const { CloseEvent } = requireEvents();
+	const { ByteParser } = requireReceiver();
+	const { makeRequest } = requireRequest();
+	const { fetching } = requireFetch();
+	const { getGlobalDispatcher } = requireUndici();
+
+	const channels = {};
+	channels.open = diagnosticsChannel.channel('undici:websocket:open');
+	channels.close = diagnosticsChannel.channel('undici:websocket:close');
+	channels.socketError = diagnosticsChannel.channel('undici:websocket:socket_error');
+
+	/**
+	 * @see https://websockets.spec.whatwg.org/#concept-websocket-establish
+	 * @param {URL} url
+	 * @param {string|string[]} protocols
+	 * @param {import('./websocket').WebSocket} ws
+	 */
+	function establishWebSocketConnection (url, protocols, ws) {
+	  // 1. Let requestURL be a copy of url, with its scheme set to "http", if url’s
+	  //    scheme is "ws", and to "https" otherwise.
+	  const requestURL = url;
+
+	  requestURL.protocol = url.protocol === 'ws:' ? 'http:' : 'https:';
+
+	  // 2. Let request be a new request, whose URL is requestURL, client is client,
+	  //    service-workers mode is "none", referrer is "no-referrer", mode is
+	  //    "websocket", credentials mode is "include", cache mode is "no-store" ,
+	  //    and redirect mode is "error".
+	  const request = makeRequest({
+	    urlList: [requestURL],
+	    serviceWorkers: 'none',
+	    referrer: 'no-referrer',
+	    mode: 'websocket',
+	    credentials: 'include',
+	    cache: 'no-store',
+	    redirect: 'error'
+	  });
+
+	  // 3. Append (`Upgrade`, `websocket`) to request’s header list.
+	  // 4. Append (`Connection`, `Upgrade`) to request’s header list.
+	  // Note: both of these are handled by undici currently.
+	  // https://github.com/nodejs/undici/blob/68c269c4144c446f3f1220951338daef4a6b5ec4/lib/client.js#L1397
+
+	  // 5. Let keyValue be a nonce consisting of a randomly selected
+	  //    16-byte value that has been forgiving-base64-encoded and
+	  //    isomorphic encoded.
+	  const keyValue = randomBytes(16).toString('base64');
+
+	  // 6. Append (`Sec-WebSocket-Key`, keyValue) to request’s
+	  //    header list.
+	  request.headersList.append('sec-websocket-key', keyValue);
+
+	  // 7. Append (`Sec-WebSocket-Version`, `13`) to request’s
+	  //    header list.
+	  request.headersList.append('sec-websocket-version', '13');
+
+	  // 8. For each protocol in protocols, combine
+	  //    (`Sec-WebSocket-Protocol`, protocol) in request’s header
+	  //    list.
+	  for (const protocol of protocols) {
+	    request.headersList.append('sec-websocket-protocol', protocol);
+	  }
+
+	  // 9. Let permessageDeflate be a user-agent defined
+	  //    "permessage-deflate" extension header value.
+	  // https://github.com/mozilla/gecko-dev/blob/ce78234f5e653a5d3916813ff990f053510227bc/netwerk/protocol/websocket/WebSocketChannel.cpp#L2673
+	  // TODO: enable once permessage-deflate is supported
+	  const permessageDeflate = ''; // 'permessage-deflate; 15'
+
+	  // 10. Append (`Sec-WebSocket-Extensions`, permessageDeflate) to
+	  //     request’s header list.
+	  // request.headersList.append('sec-websocket-extensions', permessageDeflate)
+
+	  // 11. Fetch request with useParallelQueue set to true, and
+	  //     processResponse given response being these steps:
+	  const controller = fetching({
+	    request,
+	    useParallelQueue: true,
+	    dispatcher: getGlobalDispatcher(),
+	    processResponse (response) {
+	      // 1. If response is a network error or its status is not 101,
+	      //    fail the WebSocket connection.
+	      if (response.type === 'error' || response.status !== 101) {
+	        failWebsocketConnection(ws, 'Received network error or non-101 status code.');
+	        return
+	      }
+
+	      // 2. If protocols is not the empty list and extracting header
+	      //    list values given `Sec-WebSocket-Protocol` and response’s
+	      //    header list results in null, failure, or the empty byte
+	      //    sequence, then fail the WebSocket connection.
+	      if (protocols.length !== 0 && !response.headersList.get('Sec-WebSocket-Protocol')) {
+	        failWebsocketConnection(ws, 'Server did not respond with sent protocols.');
+	        return
+	      }
+
+	      // 3. Follow the requirements stated step 2 to step 6, inclusive,
+	      //    of the last set of steps in section 4.1 of The WebSocket
+	      //    Protocol to validate response. This either results in fail
+	      //    the WebSocket connection or the WebSocket connection is
+	      //    established.
+
+	      // 2. If the response lacks an |Upgrade| header field or the |Upgrade|
+	      //    header field contains a value that is not an ASCII case-
+	      //    insensitive match for the value "websocket", the client MUST
+	      //    _Fail the WebSocket Connection_.
+	      if (response.headersList.get('Upgrade')?.toLowerCase() !== 'websocket') {
+	        failWebsocketConnection(ws, 'Server did not set Upgrade header to "websocket".');
+	        return
+	      }
+
+	      // 3. If the response lacks a |Connection| header field or the
+	      //    |Connection| header field doesn't contain a token that is an
+	      //    ASCII case-insensitive match for the value "Upgrade", the client
+	      //    MUST _Fail the WebSocket Connection_.
+	      if (response.headersList.get('Connection')?.toLowerCase() !== 'upgrade') {
+	        failWebsocketConnection(ws, 'Server did not set Connection header to "upgrade".');
+	        return
+	      }
+
+	      // 4. If the response lacks a |Sec-WebSocket-Accept| header field or
+	      //    the |Sec-WebSocket-Accept| contains a value other than the
+	      //    base64-encoded SHA-1 of the concatenation of the |Sec-WebSocket-
+	      //    Key| (as a string, not base64-decoded) with the string "258EAFA5-
+	      //    E914-47DA-95CA-C5AB0DC85B11" but ignoring any leading and
+	      //    trailing whitespace, the client MUST _Fail the WebSocket
+	      //    Connection_.
+	      const secWSAccept = response.headersList.get('Sec-WebSocket-Accept');
+	      const digest = createHash('sha1').update(keyValue + uid).digest('base64');
+	      if (secWSAccept !== digest) {
+	        failWebsocketConnection(ws, 'Incorrect hash received in Sec-WebSocket-Accept header.');
+	        return
+	      }
+
+	      // 5. If the response includes a |Sec-WebSocket-Extensions| header
+	      //    field and this header field indicates the use of an extension
+	      //    that was not present in the client's handshake (the server has
+	      //    indicated an extension not requested by the client), the client
+	      //    MUST _Fail the WebSocket Connection_.  (The parsing of this
+	      //    header field to determine which extensions are requested is
+	      //    discussed in Section 9.1.)
+	      const secExtension = response.headersList.get('Sec-WebSocket-Extensions');
+
+	      if (secExtension !== null && secExtension !== permessageDeflate) {
+	        failWebsocketConnection(ws, 'Received different permessage-deflate than the one set.');
+	        return
+	      }
+
+	      // 6. If the response includes a |Sec-WebSocket-Protocol| header field
+	      //    and this header field indicates the use of a subprotocol that was
+	      //    not present in the client's handshake (the server has indicated a
+	      //    subprotocol not requested by the client), the client MUST _Fail
+	      //    the WebSocket Connection_.
+	      const secProtocol = response.headersList.get('Sec-WebSocket-Protocol');
+
+	      if (secProtocol !== null && secProtocol !== request.headersList.get('Sec-WebSocket-Protocol')) {
+	        failWebsocketConnection(ws, 'Protocol was not set in the opening handshake.');
+	        return
+	      }
+
+	      // processResponse is called when the "response’s header list has been received and initialized."
+	      // once this happens, the connection is open
+	      ws[kResponse] = response;
+
+	      const parser = new ByteParser(ws);
+	      response.socket.ws = ws; // TODO: use symbol
+	      ws[kByteParser] = parser;
+
+	      whenConnectionEstablished(ws);
+
+	      response.socket.on('data', onSocketData);
+	      response.socket.on('close', onSocketClose);
+	      response.socket.on('error', onSocketError);
+
+	      parser.on('drain', onParserDrain);
+	    }
+	  });
+
+	  return controller
+	}
+
+	/**
+	 * @see https://websockets.spec.whatwg.org/#feedback-from-the-protocol
+	 * @param {import('./websocket').WebSocket} ws
+	 */
+	function whenConnectionEstablished (ws) {
+	  const { [kResponse]: response } = ws;
+
+	  // 1. Change the ready state to OPEN (1).
+	  ws[kReadyState] = states.OPEN;
+
+	  // 2. Change the extensions attribute’s value to the extensions in use, if
+	  //    it is not the null value.
+	  // https://datatracker.ietf.org/doc/html/rfc6455#section-9.1
+	  const extensions = response.headersList.get('sec-websocket-extensions');
+
+	  if (extensions !== null) {
+	    ws[kExtensions] = extensions;
+	  }
+
+	  // 3. Change the protocol attribute’s value to the subprotocol in use, if
+	  //    it is not the null value.
+	  // https://datatracker.ietf.org/doc/html/rfc6455#section-1.9
+	  const protocol = response.headersList.get('sec-websocket-protocol');
+
+	  if (protocol !== null) {
+	    ws[kProtocol] = protocol;
+	  }
+
+	  // 4. Fire an event named open at the WebSocket object.
+	  fireEvent('open', ws);
+
+	  if (channels.open.hasSubscribers) {
+	    channels.open.publish({
+	      address: response.socket.address(),
+	      protocol,
+	      extensions
+	    });
+	  }
+	}
+
+	/**
+	 * @param {Buffer} chunk
+	 */
+	function onSocketData (chunk) {
+	  if (!this.ws[kByteParser].write(chunk)) {
+	    this.pause();
+	  }
+	}
+
+	function onParserDrain () {
+	  this.ws[kResponse].socket.resume();
+	}
+
+	/**
+	 * @see https://websockets.spec.whatwg.org/#feedback-from-the-protocol
+	 * @see https://datatracker.ietf.org/doc/html/rfc6455#section-7.1.4
+	 */
+	function onSocketClose () {
+	  const { ws } = this;
+
+	  // If the TCP connection was closed after the
+	  // WebSocket closing handshake was completed, the WebSocket connection
+	  // is said to have been closed _cleanly_.
+	  const wasClean = ws[kSentClose] && ws[kReceivedClose];
+
+	  let code = 1005;
+	  let reason = '';
+
+	  const result = ws[kByteParser].closingInfo;
+
+	  if (result) {
+	    code = result.code ?? 1005;
+	    reason = result.reason;
+	  } else if (!ws[kSentClose]) {
+	    // If _The WebSocket
+	    // Connection is Closed_ and no Close control frame was received by the
+	    // endpoint (such as could occur if the underlying transport connection
+	    // is lost), _The WebSocket Connection Close Code_ is considered to be
+	    // 1006.
+	    code = 1006;
+	  }
+
+	  // 1. Change the ready state to CLOSED (3).
+	  ws[kReadyState] = states.CLOSED;
+
+	  // 2. If the user agent was required to fail the WebSocket
+	  //    connection, or if the WebSocket connection was closed
+	  //    after being flagged as full, fire an event named error
+	  //    at the WebSocket object.
+	  // TODO
+
+	  // 3. Fire an event named close at the WebSocket object,
+	  //    using CloseEvent, with the wasClean attribute
+	  //    initialized to true if the connection closed cleanly
+	  //    and false otherwise, the code attribute initialized to
+	  //    the WebSocket connection close code, and the reason
+	  //    attribute initialized to the result of applying UTF-8
+	  //    decode without BOM to the WebSocket connection close
+	  //    reason.
+	  fireEvent('close', ws, CloseEvent, {
+	    wasClean, code, reason
+	  });
+
+	  if (channels.close.hasSubscribers) {
+	    channels.close.publish({
+	      websocket: ws,
+	      code,
+	      reason
+	    });
+	  }
+	}
+
+	function onSocketError (error) {
+	  const { ws } = this;
+
+	  ws[kReadyState] = states.CLOSING;
+
+	  if (channels.socketError.hasSubscribers) {
+	    channels.socketError.publish(error);
+	  }
+
+	  this.destroy();
+	}
+
+	connection = {
+	  establishWebSocketConnection
+	};
+	return connection;
+}
+
+var websocket;
+var hasRequiredWebsocket;
+
+function requireWebsocket () {
+	if (hasRequiredWebsocket) return websocket;
+	hasRequiredWebsocket = 1;
+
+	const { webidl } = requireWebidl();
+	const { DOMException } = requireConstants$3();
+	const { URLSerializer } = requireDataURL();
+	const { staticPropertyDescriptors, states, opcodes, emptyBuffer } = requireConstants();
+	const {
+	  kWebSocketURL,
+	  kReadyState,
+	  kController,
+	  kExtensions,
+	  kProtocol,
+	  kBinaryType,
+	  kResponse,
+	  kSentClose
+	} = requireSymbols();
+	const { isEstablished, isClosing, isValidSubprotocol, failWebsocketConnection } = requireUtil();
+	const { establishWebSocketConnection } = requireConnection();
+	const { WebsocketFrameSend } = requireFrame();
+	const { kEnumerableProperty, isBlobLike } = util$g;
+	const { types } = require$$0;
+
+	let experimentalWarned = false;
+
+	// https://websockets.spec.whatwg.org/#interface-definition
+	class WebSocket extends EventTarget {
+	  #events = {
+	    open: null,
+	    error: null,
+	    close: null,
+	    message: null
+	  }
+
+	  #bufferedAmount = 0
+
+	  /**
+	   * @param {string} url
+	   * @param {string|string[]} protocols
+	   */
+	  constructor (url, protocols = []) {
+	    super();
+
+	    webidl.argumentLengthCheck(arguments, 1, { header: 'WebSocket constructor' });
+
+	    if (!experimentalWarned) {
+	      experimentalWarned = true;
+	      process.emitWarning('WebSockets are experimental, expect them to change at any time.', {
+	        code: 'UNDICI-WS'
+	      });
+	    }
+
+	    url = webidl.converters.USVString(url);
+	    protocols = webidl.converters['DOMString or sequence<DOMString>'](protocols);
+
+	    // 1. Let urlRecord be the result of applying the URL parser to url.
+	    let urlRecord;
+
+	    try {
+	      urlRecord = new URL(url);
+	    } catch (e) {
+	      // 2. If urlRecord is failure, then throw a "SyntaxError" DOMException.
+	      throw new DOMException(e, 'SyntaxError')
+	    }
+
+	    // 3. If urlRecord’s scheme is not "ws" or "wss", then throw a
+	    //    "SyntaxError" DOMException.
+	    if (urlRecord.protocol !== 'ws:' && urlRecord.protocol !== 'wss:') {
+	      throw new DOMException(
+	        `Expected a ws: or wss: protocol, got ${urlRecord.protocol}`,
+	        'SyntaxError'
+	      )
+	    }
+
+	    // 4. If urlRecord’s fragment is non-null, then throw a "SyntaxError"
+	    //    DOMException.
+	    if (urlRecord.hash) {
+	      throw new DOMException('Got fragment', 'SyntaxError')
+	    }
+
+	    // 5. If protocols is a string, set protocols to a sequence consisting
+	    //    of just that string.
+	    if (typeof protocols === 'string') {
+	      protocols = [protocols];
+	    }
+
+	    // 6. If any of the values in protocols occur more than once or otherwise
+	    //    fail to match the requirements for elements that comprise the value
+	    //    of `Sec-WebSocket-Protocol` fields as defined by The WebSocket
+	    //    protocol, then throw a "SyntaxError" DOMException.
+	    if (protocols.length !== new Set(protocols.map(p => p.toLowerCase())).size) {
+	      throw new DOMException('Invalid Sec-WebSocket-Protocol value', 'SyntaxError')
+	    }
+
+	    if (protocols.length > 0 && !protocols.every(p => isValidSubprotocol(p))) {
+	      throw new DOMException('Invalid Sec-WebSocket-Protocol value', 'SyntaxError')
+	    }
+
+	    // 7. Set this's url to urlRecord.
+	    this[kWebSocketURL] = urlRecord;
+
+	    // 8. Let client be this's relevant settings object.
+
+	    // 9. Run this step in parallel:
+
+	    //    1. Establish a WebSocket connection given urlRecord, protocols,
+	    //       and client.
+	    this[kController] = establishWebSocketConnection(urlRecord, protocols, this);
+
+	    // Each WebSocket object has an associated ready state, which is a
+	    // number representing the state of the connection. Initially it must
+	    // be CONNECTING (0).
+	    this[kReadyState] = WebSocket.CONNECTING;
+
+	    // The extensions attribute must initially return the empty string.
+	    this[kExtensions] = '';
+
+	    // The protocol attribute must initially return the empty string.
+	    this[kProtocol] = '';
+
+	    // Each WebSocket object has an associated binary type, which is a
+	    // BinaryType. Initially it must be "blob".
+	    this[kBinaryType] = 'blob';
+	  }
+
+	  /**
+	   * @see https://websockets.spec.whatwg.org/#dom-websocket-close
+	   * @param {number|undefined} code
+	   * @param {string|undefined} reason
+	   */
+	  close (code = undefined, reason = undefined) {
+	    webidl.brandCheck(this, WebSocket);
+
+	    if (code !== undefined) {
+	      code = webidl.converters['unsigned short'](code, { clamp: true });
+	    }
+
+	    if (reason !== undefined) {
+	      reason = webidl.converters.USVString(reason);
+	    }
+
+	    // 1. If code is present, but is neither an integer equal to 1000 nor an
+	    //    integer in the range 3000 to 4999, inclusive, throw an
+	    //    "InvalidAccessError" DOMException.
+	    if (code !== undefined) {
+	      if (code !== 1000 && (code < 3000 || code > 4999)) {
+	        throw new DOMException('invalid code', 'InvalidAccessError')
+	      }
+	    }
+
+	    let reasonByteLength = 0;
+
+	    // 2. If reason is present, then run these substeps:
+	    if (reason !== undefined) {
+	      // 1. Let reasonBytes be the result of encoding reason.
+	      // 2. If reasonBytes is longer than 123 bytes, then throw a
+	      //    "SyntaxError" DOMException.
+	      reasonByteLength = Buffer.byteLength(reason);
+
+	      if (reasonByteLength > 123) {
+	        throw new DOMException(
+	          `Reason must be less than 123 bytes; received ${reasonByteLength}`,
+	          'SyntaxError'
+	        )
+	      }
+	    }
+
+	    // 3. Run the first matching steps from the following list:
+	    if (this[kReadyState] === WebSocket.CLOSING || this[kReadyState] === WebSocket.CLOSED) ; else if (!isEstablished(this)) {
+	      // If the WebSocket connection is not yet established
+	      // Fail the WebSocket connection and set this's ready state
+	      // to CLOSING (2).
+	      failWebsocketConnection(this, 'Connection was closed before it was established.');
+	      this[kReadyState] = WebSocket.CLOSING;
+	    } else if (!isClosing(this)) {
+	      // If the WebSocket closing handshake has not yet been started
+	      // Start the WebSocket closing handshake and set this's ready
+	      // state to CLOSING (2).
+	      // - If neither code nor reason is present, the WebSocket Close
+	      //   message must not have a body.
+	      // - If code is present, then the status code to use in the
+	      //   WebSocket Close message must be the integer given by code.
+	      // - If reason is also present, then reasonBytes must be
+	      //   provided in the Close message after the status code.
+
+	      const frame = new WebsocketFrameSend();
+
+	      // If neither code nor reason is present, the WebSocket Close
+	      // message must not have a body.
+
+	      // If code is present, then the status code to use in the
+	      // WebSocket Close message must be the integer given by code.
+	      if (code !== undefined && reason === undefined) {
+	        frame.frameData = Buffer.allocUnsafe(2);
+	        frame.frameData.writeUInt16BE(code, 0);
+	      } else if (code !== undefined && reason !== undefined) {
+	        // If reason is also present, then reasonBytes must be
+	        // provided in the Close message after the status code.
+	        frame.frameData = Buffer.allocUnsafe(2 + reasonByteLength);
+	        frame.frameData.writeUInt16BE(code, 0);
+	        // the body MAY contain UTF-8-encoded data with value /reason/
+	        frame.frameData.write(reason, 2, 'utf-8');
+	      } else {
+	        frame.frameData = emptyBuffer;
+	      }
+
+	      /** @type {import('stream').Duplex} */
+	      const socket = this[kResponse].socket;
+
+	      socket.write(frame.createFrame(opcodes.CLOSE), (err) => {
+	        if (!err) {
+	          this[kSentClose] = true;
+	        }
+	      });
+
+	      // Upon either sending or receiving a Close control frame, it is said
+	      // that _The WebSocket Closing Handshake is Started_ and that the
+	      // WebSocket connection is in the CLOSING state.
+	      this[kReadyState] = states.CLOSING;
+	    } else {
+	      // Otherwise
+	      // Set this's ready state to CLOSING (2).
+	      this[kReadyState] = WebSocket.CLOSING;
+	    }
+	  }
+
+	  /**
+	   * @see https://websockets.spec.whatwg.org/#dom-websocket-send
+	   * @param {NodeJS.TypedArray|ArrayBuffer|Blob|string} data
+	   */
+	  send (data) {
+	    webidl.brandCheck(this, WebSocket);
+
+	    webidl.argumentLengthCheck(arguments, 1, { header: 'WebSocket.send' });
+
+	    data = webidl.converters.WebSocketSendData(data);
+
+	    // 1. If this's ready state is CONNECTING, then throw an
+	    //    "InvalidStateError" DOMException.
+	    if (this[kReadyState] === WebSocket.CONNECTING) {
+	      throw new DOMException('Sent before connected.', 'InvalidStateError')
+	    }
+
+	    // 2. Run the appropriate set of steps from the following list:
+	    // https://datatracker.ietf.org/doc/html/rfc6455#section-6.1
+	    // https://datatracker.ietf.org/doc/html/rfc6455#section-5.2
+
+	    if (!isEstablished(this) || isClosing(this)) {
+	      return
+	    }
+
+	    /** @type {import('stream').Duplex} */
+	    const socket = this[kResponse].socket;
+
+	    // If data is a string
+	    if (typeof data === 'string') {
+	      // If the WebSocket connection is established and the WebSocket
+	      // closing handshake has not yet started, then the user agent
+	      // must send a WebSocket Message comprised of the data argument
+	      // using a text frame opcode; if the data cannot be sent, e.g.
+	      // because it would need to be buffered but the buffer is full,
+	      // the user agent must flag the WebSocket as full and then close
+	      // the WebSocket connection. Any invocation of this method with a
+	      // string argument that does not throw an exception must increase
+	      // the bufferedAmount attribute by the number of bytes needed to
+	      // express the argument as UTF-8.
+
+	      const value = Buffer.from(data);
+	      const frame = new WebsocketFrameSend(value);
+	      const buffer = frame.createFrame(opcodes.TEXT);
+
+	      this.#bufferedAmount += value.byteLength;
+	      socket.write(buffer, () => {
+	        this.#bufferedAmount -= value.byteLength;
+	      });
+	    } else if (types.isArrayBuffer(data)) {
+	      // If the WebSocket connection is established, and the WebSocket
+	      // closing handshake has not yet started, then the user agent must
+	      // send a WebSocket Message comprised of data using a binary frame
+	      // opcode; if the data cannot be sent, e.g. because it would need
+	      // to be buffered but the buffer is full, the user agent must flag
+	      // the WebSocket as full and then close the WebSocket connection.
+	      // The data to be sent is the data stored in the buffer described
+	      // by the ArrayBuffer object. Any invocation of this method with an
+	      // ArrayBuffer argument that does not throw an exception must
+	      // increase the bufferedAmount attribute by the length of the
+	      // ArrayBuffer in bytes.
+
+	      const value = Buffer.from(data);
+	      const frame = new WebsocketFrameSend(value);
+	      const buffer = frame.createFrame(opcodes.BINARY);
+
+	      this.#bufferedAmount += value.byteLength;
+	      socket.write(buffer, () => {
+	        this.#bufferedAmount -= value.byteLength;
+	      });
+	    } else if (ArrayBuffer.isView(data)) {
+	      // If the WebSocket connection is established, and the WebSocket
+	      // closing handshake has not yet started, then the user agent must
+	      // send a WebSocket Message comprised of data using a binary frame
+	      // opcode; if the data cannot be sent, e.g. because it would need to
+	      // be buffered but the buffer is full, the user agent must flag the
+	      // WebSocket as full and then close the WebSocket connection. The
+	      // data to be sent is the data stored in the section of the buffer
+	      // described by the ArrayBuffer object that data references. Any
+	      // invocation of this method with this kind of argument that does
+	      // not throw an exception must increase the bufferedAmount attribute
+	      // by the length of data’s buffer in bytes.
+
+	      const ab = Buffer.from(data, data.byteOffset, data.byteLength);
+
+	      const frame = new WebsocketFrameSend(ab);
+	      const buffer = frame.createFrame(opcodes.BINARY);
+
+	      this.#bufferedAmount += ab.byteLength;
+	      socket.write(buffer, () => {
+	        this.#bufferedAmount -= ab.byteLength;
+	      });
+	    } else if (isBlobLike(data)) {
+	      // If the WebSocket connection is established, and the WebSocket
+	      // closing handshake has not yet started, then the user agent must
+	      // send a WebSocket Message comprised of data using a binary frame
+	      // opcode; if the data cannot be sent, e.g. because it would need to
+	      // be buffered but the buffer is full, the user agent must flag the
+	      // WebSocket as full and then close the WebSocket connection. The data
+	      // to be sent is the raw data represented by the Blob object. Any
+	      // invocation of this method with a Blob argument that does not throw
+	      // an exception must increase the bufferedAmount attribute by the size
+	      // of the Blob object’s raw data, in bytes.
+
+	      const frame = new WebsocketFrameSend();
+
+	      data.arrayBuffer().then((ab) => {
+	        const value = Buffer.from(ab);
+	        frame.frameData = value;
+	        const buffer = frame.createFrame(opcodes.BINARY);
+
+	        this.#bufferedAmount += value.byteLength;
+	        socket.write(buffer, () => {
+	          this.#bufferedAmount -= value.byteLength;
+	        });
+	      });
+	    }
+	  }
+
+	  get readyState () {
+	    webidl.brandCheck(this, WebSocket);
+
+	    // The readyState getter steps are to return this's ready state.
+	    return this[kReadyState]
+	  }
+
+	  get bufferedAmount () {
+	    webidl.brandCheck(this, WebSocket);
+
+	    return this.#bufferedAmount
+	  }
+
+	  get url () {
+	    webidl.brandCheck(this, WebSocket);
+
+	    // The url getter steps are to return this's url, serialized.
+	    return URLSerializer(this[kWebSocketURL])
+	  }
+
+	  get extensions () {
+	    webidl.brandCheck(this, WebSocket);
+
+	    return this[kExtensions]
+	  }
+
+	  get protocol () {
+	    webidl.brandCheck(this, WebSocket);
+
+	    return this[kProtocol]
+	  }
+
+	  get onopen () {
+	    webidl.brandCheck(this, WebSocket);
+
+	    return this.#events.open
+	  }
+
+	  set onopen (fn) {
+	    webidl.brandCheck(this, WebSocket);
+
+	    if (this.#events.open) {
+	      this.removeEventListener('open', this.#events.open);
+	    }
+
+	    if (typeof fn === 'function') {
+	      this.#events.open = fn;
+	      this.addEventListener('open', fn);
+	    } else {
+	      this.#events.open = null;
+	    }
+	  }
+
+	  get onerror () {
+	    webidl.brandCheck(this, WebSocket);
+
+	    return this.#events.error
+	  }
+
+	  set onerror (fn) {
+	    webidl.brandCheck(this, WebSocket);
+
+	    if (this.#events.error) {
+	      this.removeEventListener('error', this.#events.error);
+	    }
+
+	    if (typeof fn === 'function') {
+	      this.#events.error = fn;
+	      this.addEventListener('error', fn);
+	    } else {
+	      this.#events.error = null;
+	    }
+	  }
+
+	  get onclose () {
+	    webidl.brandCheck(this, WebSocket);
+
+	    return this.#events.close
+	  }
+
+	  set onclose (fn) {
+	    webidl.brandCheck(this, WebSocket);
+
+	    if (this.#events.close) {
+	      this.removeEventListener('close', this.#events.close);
+	    }
+
+	    if (typeof fn === 'function') {
+	      this.#events.close = fn;
+	      this.addEventListener('close', fn);
+	    } else {
+	      this.#events.close = null;
+	    }
+	  }
+
+	  get onmessage () {
+	    webidl.brandCheck(this, WebSocket);
+
+	    return this.#events.message
+	  }
+
+	  set onmessage (fn) {
+	    webidl.brandCheck(this, WebSocket);
+
+	    if (this.#events.message) {
+	      this.removeEventListener('message', this.#events.message);
+	    }
+
+	    if (typeof fn === 'function') {
+	      this.#events.message = fn;
+	      this.addEventListener('message', fn);
+	    } else {
+	      this.#events.message = null;
+	    }
+	  }
+
+	  get binaryType () {
+	    webidl.brandCheck(this, WebSocket);
+
+	    return this[kBinaryType]
+	  }
+
+	  set binaryType (type) {
+	    webidl.brandCheck(this, WebSocket);
+
+	    if (type !== 'blob' && type !== 'arraybuffer') {
+	      this[kBinaryType] = 'blob';
+	    } else {
+	      this[kBinaryType] = type;
+	    }
+	  }
+	}
+
+	// https://websockets.spec.whatwg.org/#dom-websocket-connecting
+	WebSocket.CONNECTING = WebSocket.prototype.CONNECTING = states.CONNECTING;
+	// https://websockets.spec.whatwg.org/#dom-websocket-open
+	WebSocket.OPEN = WebSocket.prototype.OPEN = states.OPEN;
+	// https://websockets.spec.whatwg.org/#dom-websocket-closing
+	WebSocket.CLOSING = WebSocket.prototype.CLOSING = states.CLOSING;
+	// https://websockets.spec.whatwg.org/#dom-websocket-closed
+	WebSocket.CLOSED = WebSocket.prototype.CLOSED = states.CLOSED;
+
+	Object.defineProperties(WebSocket.prototype, {
+	  CONNECTING: staticPropertyDescriptors,
+	  OPEN: staticPropertyDescriptors,
+	  CLOSING: staticPropertyDescriptors,
+	  CLOSED: staticPropertyDescriptors,
+	  url: kEnumerableProperty,
+	  readyState: kEnumerableProperty,
+	  bufferedAmount: kEnumerableProperty,
+	  onopen: kEnumerableProperty,
+	  onerror: kEnumerableProperty,
+	  onclose: kEnumerableProperty,
+	  close: kEnumerableProperty,
+	  onmessage: kEnumerableProperty,
+	  binaryType: kEnumerableProperty,
+	  send: kEnumerableProperty,
+	  extensions: kEnumerableProperty,
+	  protocol: kEnumerableProperty,
+	  [Symbol.toStringTag]: {
+	    value: 'WebSocket',
+	    writable: false,
+	    enumerable: false,
+	    configurable: true
+	  }
+	});
+
+	Object.defineProperties(WebSocket, {
+	  CONNECTING: staticPropertyDescriptors,
+	  OPEN: staticPropertyDescriptors,
+	  CLOSING: staticPropertyDescriptors,
+	  CLOSED: staticPropertyDescriptors
+	});
+
+	webidl.converters['sequence<DOMString>'] = webidl.sequenceConverter(
+	  webidl.converters.DOMString
+	);
+
+	webidl.converters['DOMString or sequence<DOMString>'] = function (V) {
+	  if (webidl.util.Type(V) === 'Object' && Symbol.iterator in V) {
+	    return webidl.converters['sequence<DOMString>'](V)
+	  }
+
+	  return webidl.converters.DOMString(V)
+	};
+
+	webidl.converters.WebSocketSendData = function (V) {
+	  if (webidl.util.Type(V) === 'Object') {
+	    if (isBlobLike(V)) {
+	      return webidl.converters.Blob(V, { strict: false })
+	    }
+
+	    if (ArrayBuffer.isView(V) || types.isAnyArrayBuffer(V)) {
+	      return webidl.converters.BufferSource(V)
+	    }
+	  }
+
+	  return webidl.converters.USVString(V)
+	};
+
+	websocket = {
+	  WebSocket
+	};
+	return websocket;
+}
+
 var hasRequiredUndici;
 
 function requireUndici () {
@@ -17789,7 +20467,7 @@ function requireUndici () {
 	const Pool = pool;
 	const BalancedPool = balancedPool;
 	const Agent = agent;
-	const util = util$e;
+	const util = util$g;
 	const { InvalidArgumentError } = errors$1;
 	const api$1 = api;
 	const buildConnector = connect$2;
@@ -17806,6 +20484,14 @@ function requireUndici () {
 	const nodeVersion = process.versions.node.split('.');
 	const nodeMajor = Number(nodeVersion[0]);
 	const nodeMinor = Number(nodeVersion[1]);
+
+	let hasCrypto;
+	try {
+	  require('crypto');
+	  hasCrypto = true;
+	} catch {
+	  hasCrypto = false;
+	}
 
 	Object.assign(Dispatcher.prototype, api$1);
 
@@ -17902,6 +20588,21 @@ function requireUndici () {
 	  undici.getGlobalOrigin = getGlobalOrigin;
 	}
 
+	if (nodeMajor >= 16) {
+	  const { deleteCookie, getCookies, getSetCookies, setCookie } = requireCookies();
+
+	  undici.deleteCookie = deleteCookie;
+	  undici.getCookies = getCookies;
+	  undici.getSetCookies = getSetCookies;
+	  undici.setCookie = setCookie;
+	}
+
+	if (nodeMajor >= 18 && hasCrypto) {
+	  const { WebSocket } = requireWebsocket();
+
+	  undici.WebSocket = WebSocket;
+	}
+
 	undici.request = makeDispatcher(api$1.request);
 	undici.stream = makeDispatcher(api$1.stream);
 	undici.pipeline = makeDispatcher(api$1.pipeline);
@@ -17931,6 +20632,7 @@ const globals = {
 };
 
 // exported for dev/preview and node environments
+// TODO: remove this once we only support Node 18.11+ (the version multipart/form-data was added)
 function installPolyfills() {
 	for (const name in globals) {
 		Object.defineProperty(globalThis, name, {

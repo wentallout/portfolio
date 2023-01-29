@@ -3,7 +3,7 @@
 </script>
 
 <div class="title">
-	<h1 class="title__text xxl-text rainbow">{pageTitle}</h1>
+	<h1 class="title__text xxxl-text rainbow">{pageTitle}</h1>
 </div>
 
 <style>

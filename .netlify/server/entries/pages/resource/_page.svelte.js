@@ -1,42 +1,43 @@
-import { c as create_ssr_component, h as escape, d as add_attribute, v as validate_component, g as each, e as spread, f as escape_object } from "../../../chunks/index.js";
+import { c as create_ssr_component, h as escape, d as add_attribute, v as validate_component, g as each, e as spread, f as escape_object } from "../../../chunks/index3.js";
 import { P as PageTitle } from "../../../chunks/PageTitle.js";
 import { S as SwiperContainer, a as Swiper_slide } from "../../../chunks/SwiperContainer.js";
 import "ssr-window";
+import { E as ExLink } from "../../../chunks/ExLink.js";
 import { S as SectionTitle } from "../../../chunks/SectionTitle.js";
 const SectionDesc_svelte_svelte_type_style_lang = "";
-const css$4 = {
-  code: ".section-description.svelte-sqxa8f{color:var(--text);margin-bottom:var(--space-s);max-width:var(--text-width);text-align:left}",
+const css$5 = {
+  code: ".section-description.svelte-1jzsxtl{color:var(--text-color-low);margin-bottom:var(--space-l);max-width:var(--text-width);text-align:left}",
   map: null
 };
 const SectionDesc = create_ssr_component(($$result, $$props, $$bindings, slots) => {
   let { text = "" } = $$props;
   if ($$props.text === void 0 && $$bindings.text && text !== void 0)
     $$bindings.text(text);
-  $$result.css.add(css$4);
-  return `<p class="${"section-description small-text svelte-sqxa8f"}">${escape(text)}
+  $$result.css.add(css$5);
+  return `<p class="${"section-description small-text svelte-1jzsxtl"}">${escape(text)}
 </p>`;
 });
 const OtherCardList_svelte_svelte_type_style_lang = "";
-const css$3 = {
-  code: ".other-container.svelte-1hoiuvd.svelte-1hoiuvd{display:flex;flex-direction:row;flex-wrap:wrap;gap:var(--space-m);overflow:hidden}.other-container.svelte-1hoiuvd>.svelte-1hoiuvd{flex:1 1 10ch}.other__image.svelte-1hoiuvd.svelte-1hoiuvd{filter:brightness(40%);height:100%;position:absolute;transition:.3s;width:100%;z-index:0}.other.svelte-1hoiuvd.svelte-1hoiuvd{align-items:center;border-radius:var(--border-radius-light);display:flex;height:300px;justify-content:center;overflow:hidden;padding:var(--space-m);position:relative}.other.svelte-1hoiuvd:hover .other__image.svelte-1hoiuvd{scale:1.15}.other.svelte-1hoiuvd:hover .other__title.svelte-1hoiuvd{color:var(--primary-600)}.other__title.svelte-1hoiuvd.svelte-1hoiuvd{color:var(--neutral-100);font-weight:600;z-index:1}",
+const css$4 = {
+  code: ".other-container.svelte-wtsox3.svelte-wtsox3{display:flex;flex-direction:row;flex-wrap:wrap;gap:var(--space-m);overflow:hidden}.other-container.svelte-wtsox3>.svelte-wtsox3{flex:1 1 10ch}.other__image.svelte-wtsox3.svelte-wtsox3{filter:brightness(40%);height:100%;position:absolute;transition:var(--transition);width:100%;z-index:0}.other.svelte-wtsox3.svelte-wtsox3{align-items:center;border-radius:var(--border-radius-light);display:flex;height:300px;justify-content:center;overflow:hidden;padding:var(--space-m);position:relative}.other.svelte-wtsox3:hover .other__image.svelte-wtsox3{scale:1.15}.other.svelte-wtsox3:hover .other__title.svelte-wtsox3{color:var(--primary-500)}.other__title.svelte-wtsox3.svelte-wtsox3{color:var(--text-color);font-weight:600;z-index:1}",
   map: null
 };
 const OtherCardList = create_ssr_component(($$result, $$props, $$bindings, slots) => {
-  $$result.css.add(css$3);
-  return `<div class="${"other-container svelte-1hoiuvd"}"><a class="${"other svelte-1hoiuvd"}" href="${"/resource/music"}"><img class="${"other__image svelte-1hoiuvd"}" src="${"images/music.webp"}" alt="${"music"}">
-		<div class="${"other__title large-text svelte-1hoiuvd"}">Music</div></a>
+  $$result.css.add(css$4);
+  return `<div class="${"other-container svelte-wtsox3"}"><a class="${"other svelte-wtsox3"}" href="${"/resource/music"}"><img class="${"other__image svelte-wtsox3"}" src="${"images/music.webp"}" alt="${"music"}">
+		<div class="${"other__title large-text svelte-wtsox3"}">Music</div></a>
 
-	<a class="${"other svelte-1hoiuvd"}" href="${"/resource/exp"}"><img class="${"other__image svelte-1hoiuvd"}" src="${"images/exp.webp"}" alt="${"experiment"}">
-		<div class="${"other__title large-text svelte-1hoiuvd"}">Experiment</div></a>
+	<a class="${"other svelte-wtsox3"}" href="${"/resource/exp"}"><img class="${"other__image svelte-wtsox3"}" src="${"images/exp.webp"}" alt="${"experiment"}">
+		<div class="${"other__title large-text svelte-wtsox3"}">Experiment</div></a>
 </div>`;
 });
-const UIDesignPrinciples = "/_app/immutable/assets/UIDesignPrinciples-b17b7134.webp";
-const DesignManual = "/_app/immutable/assets/DesignManual-c05c25d3.webp";
-const NoBSGuideUX = "/_app/immutable/assets/NoBSGuideUX-e7df4d3b.webp";
-const Sprint = "/_app/immutable/assets/Sprint-e9dea67f.webp";
-const JustEnoughResearch = "/_app/immutable/assets/JustEnoughResearch-58b6c01f.webp";
+const UIDesignPrinciples = "/_app/immutable/assets/UIDesignPrinciples-ac851ee4.webp";
+const DesignManual = "/_app/immutable/assets/DesignManual-772d2efc.webp";
+const NoBSGuideUX = "/_app/immutable/assets/NoBSGuideUX-e53beb32.webp";
+const Sprint = "/_app/immutable/assets/Sprint-517ee615.webp";
+const JustEnoughResearch = "/_app/immutable/assets/JustEnoughResearch-696767d8.webp";
 const CoolBook_svelte_svelte_type_style_lang = "";
-const css$2 = {
+const css$3 = {
   code: '.book-container.svelte-5le5br.svelte-5le5br{align-items:center;display:flex;height:auto;justify-content:center;perspective:600px;width:100%}@keyframes svelte-5le5br-initAnimation{0%{transform:rotateY(0deg)}to{transform:rotateY(-30deg)}}.book.svelte-5le5br.svelte-5le5br{animation:svelte-5le5br-initAnimation 1s ease 0s 1;height:300px;position:relative;transform:rotateY(-30deg);transform-style:preserve-3d;transition:1s ease;width:200px}.book.svelte-5le5br.svelte-5le5br:hover{transform:rotateY(0deg)}.book.svelte-5le5br>.svelte-5le5br:first-child{background-color:#01060f;border-radius:0 2px 2px 0;height:300px;left:0;position:absolute;top:0;transform:translateZ(25px);width:200px}.book.svelte-5le5br.svelte-5le5br:before{background:linear-gradient(90deg,#fff,#f9f9f9 5%,#fff 10%,#f9f9f9 15%,#fff 20%,#f9f9f9 25%,#fff 30%,#f9f9f9 35%,#fff 40%,#f9f9f9 45%,#fff 50%,#f9f9f9 55%,#fff 60%,#f9f9f9 65%,#fff 70%,#f9f9f9 75%,#fff 80%,#f9f9f9 85%,#fff 90%,#f9f9f9 95%,#fff);height:294px;top:3px;transform:translateX(172px) rotateY(90deg);width:48px}.book.svelte-5le5br.svelte-5le5br:after,.book.svelte-5le5br.svelte-5le5br:before{content:" ";left:0;position:absolute}.book.svelte-5le5br.svelte-5le5br:after{background-color:var(--neutral-900);border-radius:0 2px 2px 0;height:300px;top:0;transform:translateZ(-25px);width:200px}.book.svelte-5le5br.svelte-5le5br{scale:.7}',
   map: null
 };
@@ -50,12 +51,12 @@ const CoolBook = create_ssr_component(($$result, $$props, $$bindings, slots) => 
     $$bindings.alt(alt);
   if ($$props.imgUrl === void 0 && $$bindings.imgUrl && imgUrl !== void 0)
     $$bindings.imgUrl(imgUrl);
-  $$result.css.add(css$2);
+  $$result.css.add(css$3);
   return `<a class="${"book-container svelte-5le5br"}"${add_attribute("href", bookUrl, 0)} target="${"_blank"}" rel="${"noreferrer noopener"}"><div class="${"book svelte-5le5br"}"><img loading="${"lazy"}" decoding="${"async"}"${add_attribute("alt", alt, 0)}${add_attribute("src", imgUrl, 0)} class="${"svelte-5le5br"}"></div>
 </a>`;
 });
 const BookGallery_svelte_svelte_type_style_lang = "";
-const css$1 = {
+const css$2 = {
   code: ".books.svelte-195ax4u{align-items:center;display:flex;flex-direction:row;flex-wrap:wrap;justify-content:center;width:100%}@media(min-width:768px){.books.svelte-195ax4u{gap:var(--space-xl)}}",
   map: null
 };
@@ -87,7 +88,7 @@ const BookGallery = create_ssr_component(($$result, $$props, $$bindings, slots) 
       bookUrl: "https://matix.li/92648755b3ce"
     }
   ];
-  $$result.css.add(css$1);
+  $$result.css.add(css$2);
   return `<div class="${"books svelte-195ax4u"}">${validate_component(SwiperContainer, "SwiperContainer").$$render($$result, {}, {}, {
     default: () => {
       return `${each(books, (book) => {
@@ -111,43 +112,112 @@ const BookGallery = create_ssr_component(($$result, $$props, $$bindings, slots) 
   })}
 </div>`;
 });
-const ToolCardList_svelte_svelte_type_style_lang = "";
-const css = {
-  code: ".tools.svelte-2o0w86.svelte-2o0w86{display:flex;flex-direction:row;flex-wrap:wrap;gap:var(--space-m);max-width:100%}.tool__name.svelte-2o0w86.svelte-2o0w86{color:var(--text);font-weight:500}.tool.svelte-2o0w86.svelte-2o0w86{background-color:var(--bg);border-radius:var(--border-radius-light);box-shadow:var(--box-shadow);display:flex;flex-direction:column;padding:var(--space-m);transition:.3s;width:100%}.tool.svelte-2o0w86.svelte-2o0w86:hover{box-shadow:var(--box-shadow-hover)}.tool.svelte-2o0w86:hover .tool__name.svelte-2o0w86{color:var(--primary-600)}.tool__description.svelte-2o0w86.svelte-2o0w86{-webkit-line-clamp:3;-webkit-box-orient:vertical;color:var(--text-low);display:-webkit-box;font-weight:400;overflow:hidden}@media(min-width:768px){.tool.svelte-2o0w86.svelte-2o0w86{width:55ch}}",
+const ResourceCard_svelte_svelte_type_style_lang = "";
+const css$1 = {
+  code: ".tool__name.svelte-gcfzsh.svelte-gcfzsh{color:var(--text-color);font-weight:500;margin-bottom:var(--space-xs)}.tool__description.svelte-gcfzsh.svelte-gcfzsh{-webkit-line-clamp:3;-webkit-box-orient:vertical;color:var(--text-color-low);display:-webkit-box;font-weight:400;margin:0;overflow:hidden}.tool.svelte-gcfzsh.svelte-gcfzsh{background-color:var(--bg);border:1px solid transparent;border-radius:var(--border-radius-light);display:flex;flex-direction:column;height:200px;padding:var(--space-m);transition:var(--transition);width:100%}.tool.svelte-gcfzsh.svelte-gcfzsh:hover{border:1px solid var(--primary-500)}.tool.svelte-gcfzsh:hover .tool__name.svelte-gcfzsh{color:var(--primary-500)}",
   map: null
 };
-const ToolCardList = create_ssr_component(($$result, $$props, $$bindings, slots) => {
+const ResourceCard = create_ssr_component(($$result, $$props, $$bindings, slots) => {
+  let { href = "" } = $$props;
+  let { name = "" } = $$props;
+  let { desc = "" } = $$props;
+  if ($$props.href === void 0 && $$bindings.href && href !== void 0)
+    $$bindings.href(href);
+  if ($$props.name === void 0 && $$bindings.name && name !== void 0)
+    $$bindings.name(name);
+  if ($$props.desc === void 0 && $$bindings.desc && desc !== void 0)
+    $$bindings.desc(desc);
+  $$result.css.add(css$1);
+  return `${validate_component(ExLink, "ExLink").$$render($$result, { href, ariaLabel: name }, {}, {
+    default: () => {
+      return `<div class="${"tool svelte-gcfzsh"}"><h2 class="${"tool__name base-text svelte-gcfzsh"}">${escape(name)}</h2>
+		<div class="${"tool__description small-text svelte-gcfzsh"}">${escape(desc)}</div></div>`;
+    }
+  })}`;
+});
+const ResourceCardList_svelte_svelte_type_style_lang = "";
+const css = {
+  code: ".tools.svelte-3b3evm{--min:40ch;--gap:var(--space-l);grid-gap:var(--gap);display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,var(--min)),1fr))}",
+  map: null
+};
+const ResourceCardList = create_ssr_component(($$result, $$props, $$bindings, slots) => {
   $$result.css.add(css);
-  return `<div class="${"tools svelte-2o0w86"}"><a class="${"tool svelte-2o0w86"}" target="${"_blank"}" rel="${"noreferrer noopener"}" href="${"https://www.userinterviews.com/"}"><h2 class="${"tool__name base-text svelte-2o0w86"}">User Interviews</h2>
-		<p class="${"tool__description small-text svelte-2o0w86"}">Recruit participants from a community of 125,000 members based on profession, demographics,
-			geography and more, for any kind of research.
-		</p></a>
+  return `<div class="${"tools svelte-3b3evm"}">${validate_component(ResourceCard, "ResourceCard").$$render(
+    $$result,
+    {
+      href: "https://www.userinterviews.com/",
+      name: "User Interviews",
+      desc: "Recruit participants from a community of 125,000 members based on profession, demographics,\r\n	geography and more, for any kind of research."
+    },
+    {},
+    {}
+  )}
 
-	<a class="${"tool svelte-2o0w86"}" target="${"_blank"}" rel="${"noreferrer noopener"}" href="${"https://appoint.ly"}"><h2 class="${"tool__name base-text svelte-2o0w86"}">Appoint.ly</h2>
-		<p class="${"tool__description small-text svelte-2o0w86"}">A web-based scheduling tool that helps to schedule meetings quickly through the integration
-			with calendars online.
-		</p></a>
+	${validate_component(ResourceCard, "ResourceCard").$$render(
+    $$result,
+    {
+      href: "https://appoint.ly",
+      name: "Appoint.ly",
+      desc: "A web-based scheduling tool that helps to schedule meetings quickly through the integration with calendars online."
+    },
+    {},
+    {}
+  )}
 
-	<a class="${"tool svelte-2o0w86"}" target="${"_blank"}" rel="${"noreferrer noopener"}" href="${"https://crowdsignal.com/"}"><h2 class="${"tool__name base-text svelte-2o0w86"}">Crowd Signal</h2>
-		<p class="${"tool__description small-text svelte-2o0w86"}">Collect, organize and analyze data from a variety of sources, including social media and
-			mobile.
-		</p></a>
+	${validate_component(ResourceCard, "ResourceCard").$$render(
+    $$result,
+    {
+      href: "https://crowdsignal.com",
+      name: "Crowd Signal",
+      desc: "Collect, organize and analyze data from a variety of sources, including social media."
+    },
+    {},
+    {}
+  )}
 
-	<a class="${"tool svelte-2o0w86"}" target="${"_blank"}" rel="${"noreferrer noopener"}" href="${"https://www.jotform.com"}"><h2 class="${"tool__name base-text svelte-2o0w86"}">Jotform</h2>
-		<p class="${"tool__description small-text svelte-2o0w86"}">Create online forms, get an email for each response, collect data.
-		</p></a>
+	${validate_component(ResourceCard, "ResourceCard").$$render(
+    $$result,
+    {
+      href: "https://www.jotform.com",
+      name: "Jotform",
+      desc: "Create online forms, get an email for each response, collect data."
+    },
+    {},
+    {}
+  )}
 
-	<a class="${"tool svelte-2o0w86"}" target="${"_blank"}" rel="${"noreferrer noopener"}" href="${"https://minetime.ai/"}"><h2 class="${"tool__name base-text svelte-2o0w86"}">MineTime</h2>
-		<p class="${"tool__description small-text svelte-2o0w86"}">A free calendar app with smart scheduling and time analytics features.
-		</p></a>
+	${validate_component(ResourceCard, "ResourceCard").$$render(
+    $$result,
+    {
+      href: "https://minetime.ai",
+      name: "MineTime",
+      desc: "A free calendar app with smart scheduling and time analytics features."
+    },
+    {},
+    {}
+  )}
 
-	<a class="${"tool svelte-2o0w86"}" target="${"_blank"}" rel="${"noreferrer noopener"}" href="${"https://www.surveymonkey.com"}"><h2 class="${"tool__name base-text svelte-2o0w86"}">Survey Monkey</h2>
-		<p class="${"tool__description small-text svelte-2o0w86"}">Online survey tool to capture the voices and opinions of the people who matter most to you.
-		</p></a>
+	${validate_component(ResourceCard, "ResourceCard").$$render(
+    $$result,
+    {
+      href: "https://www.surveymonkey.com",
+      name: "Survey Monkey",
+      desc: "Online survey tool to capture the voices and opinions of the people who matter most to you."
+    },
+    {},
+    {}
+  )}
 
-	<a class="${"tool svelte-2o0w86"}" target="${"_blank"}" rel="${"noreferrer noopener"}" href="${"https://www.yesinsights.com/"}"><h2 class="${"tool__name base-text svelte-2o0w86"}">YesInsights</h2>
-		<p class="${"tool__description small-text svelte-2o0w86"}">Simple one question and NPS surveys to improve your business.
-		</p></a>
+	${validate_component(ResourceCard, "ResourceCard").$$render(
+    $$result,
+    {
+      href: "https://www.yesinsights.com",
+      name: "YesInsights",
+      desc: "Simple one question and NPS surveys to improve your business."
+    },
+    {},
+    {}
+  )}
 </div>`;
 });
 const Books = create_ssr_component(($$result, $$props, $$bindings, slots) => {
@@ -190,7 +260,7 @@ ${validate_component(PageTitle, "PageTitle").$$render($$result, { pageTitle: "Re
 
 <section>${validate_component(SectionTitle, "SectionTitle").$$render($$result, { sectionTitle: "Book" }, {}, {
     default: ({ sectionIcon }) => {
-      return `${validate_component(Books, "Books").$$render($$result, Object.assign(sectionIcon), {}, {})}`;
+      return `${validate_component(Books, "Books").$$render($$result, Object.assign({}, sectionIcon), {}, {})}`;
     }
   })}
 	${validate_component(SectionDesc, "SectionDesc").$$render(
@@ -206,24 +276,24 @@ ${validate_component(PageTitle, "PageTitle").$$render($$result, { pageTitle: "Re
 
 <section>${validate_component(SectionTitle, "SectionTitle").$$render($$result, { sectionTitle: "User Research Tool" }, {}, {
     default: ({ sectionIcon }) => {
-      return `${validate_component(Flask, "Flask").$$render($$result, Object.assign(sectionIcon), {}, {})}`;
+      return `${validate_component(Flask, "Flask").$$render($$result, Object.assign({}, sectionIcon), {}, {})}`;
     }
   })}
 
 	${validate_component(SectionDesc, "SectionDesc").$$render(
     $$result,
     {
-      text: "User research helps you understand user behaviors, needs, and motivations through various\r\n	qualitative and quantitative methods (interviews, observation, forms, etc)."
+      text: "User research helps you understand user behaviors, needs, and motivations through various qualitative and quantitative methods (interviews, observation, forms, etc)."
     },
     {},
     {}
   )}
 
-	${validate_component(ToolCardList, "ToolCardList").$$render($$result, {}, {}, {})}</section>
+	${validate_component(ResourceCardList, "ToolCardList").$$render($$result, {}, {}, {})}</section>
 
 <section>${validate_component(SectionTitle, "SectionTitle").$$render($$result, { sectionTitle: "Other" }, {}, {
     default: ({ sectionIcon }) => {
-      return `${validate_component(Hard_drives, "HardDrives").$$render($$result, Object.assign(sectionIcon), {}, {})}`;
+      return `${validate_component(Hard_drives, "HardDrives").$$render($$result, Object.assign({}, sectionIcon), {}, {})}`;
     }
   })}
 

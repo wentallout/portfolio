@@ -1,8 +1,8 @@
 ---
-title: Best UX Books to read
-date: 2022-10-07
+title: Best UX Design Books you should read in 2023 + Download Links
+date: 2023-1-26
 categories:
-    - ux
+    - freebies
 ---
 
 <script>
@@ -28,24 +28,67 @@ Fundamental books will give you a feel for what UX design is all about. The esse
 
 ### Kickstart
 
-- [ ] The Design of everyday things
+- [ ] [The Design of Everyday Things](https://j2team.dev/go/4b4f1ff7)
+
+### Working in small design team
+
+- [ ] [The User Experience Team of One](https://j2c.cc/ee71037e)
+- [ ] [Just Enough Research](https://j2c.cc/af120f8c)
 
 ### Leadership and Design Management
 
-- [ ] The Making of a Manager
+- [ ] [The Making of a Manager](https://j2c.cc/4179ef92)
 
-### Working in small design team and incharge different roles
+### Into Product Management
 
-- [ ] The User Experience Team of One
-- [x] Just Enough Research
+- [ ] [Insprired](https://j2c.cc/512ef863)
+- [ ] [Zero To One](https://j2c.cc/97fe1456)
+
+### Want to learn basic Visual Design
+
+- [ ] [The non designer Design book](https://j2c.cc/cd9c0e0b)
+- [ ] [Universal Principles of Design](https://j2c.cc/9a27cc3d)
+
+### Design that influences human behaviors
+
+- [ ] [Hooked](https://j2c.cc/66be98a9)
+- [ ] [100 Things Every Designer Needs to know about people](https://j2c.cc/4b4f1ff7)
+
+### Usability
+
+- [ ] [Dont Make Me Think](https://j2c.cc/03c4fe47)
+- [ ] [Measuring the User Experience](https://j2c.cc/08ada380)
+
+### Win design challenge for UX job
+
+- [ ] [Solving Product Design exercises](https://j2c.cc/9a27cc3d)
+
+### Understand the core of UX
+
+#### Human Computer Interaction
+
+- [ ] [Interaction Design](https://j2c.cc/1d076e42)
+- [ ] [About face](https://j2c.cc/56fc3357)
+
+#### Strategic UX
+
+- [ ] [The Elements of User Experience](https://j2c.cc/da94438d)
+
+### Information Architecture
+
+- [ ] [Information Architecture](https://j2c.cc/505371ce)
+- [ ] [DesigningTheSearchExperience](https://j2c.cc/e3176fa7)
 
 ### Research
 
-- [ ] Observing the User Experience
-- [ ] Research methods in human-computer interaction
+- [ ] [Observing the User Experience](https://j2c.cc/f4f2fda4)
+- [ ] [Research methods in human-computer interaction](https://j2c.cc/e2f78a67)
 
+### Run a UX Project
 
-
+- [ ] [Project Guide to UX Design](https://j2c.cc/3850ea57)
+- [ ] [Sprint](https://j2c.cc/c51f4121)
+- [ ] [UX for lean startups](https://j2c.cc/7ac8d5c2)
 
 ## transition from dev to designer
 

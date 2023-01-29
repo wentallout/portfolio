@@ -1,14 +1,8 @@
 <script>
 	import BlogListContainer from '$lib/components/Blog/BlogListContainer.svelte';
-	import SectionTitle from '$lib/components/Common/SectionTitle.svelte';
+
 	import BlogCard from '$lib/components/Blog/BlogCard.svelte';
-	import TextAa from '~icons/ph/text-aa';
-	import Smiley from '~icons/ph/smiley';
-	import GraduationCap from '~icons/ph/graduation-cap';
-	import Lightbulb from '~icons/ph/lightbulb';
-	import Palette from '~icons/ph/palette';
-	import Gift from '~icons/ph/gift';
-	import FastForward from '~icons/ph/fast-forward';
+
 	import PageTitle from '$lib/components/Common/PageTitle.svelte';
 	import { Tabs, TabList, TabPanel, Tab } from '$lib/components/Tabs/tabs.js';
 	export let data;
@@ -32,10 +26,6 @@
 
 	<TabPanel>
 		<section>
-			<SectionTitle sectionTitle="Fundamental" let:sectionIcon>
-				<GraduationCap {...sectionIcon} />
-			</SectionTitle>
-
 			<BlogListContainer>
 				{#each data.blogs as blog}
 					{#if blog.meta.categories.length}
@@ -53,10 +43,6 @@
 
 	<TabPanel>
 		<section>
-			<SectionTitle sectionTitle="Tips" let:sectionIcon>
-				<Lightbulb {...sectionIcon} />
-			</SectionTitle>
-
 			<BlogListContainer>
 				{#each data.blogs as blog}
 					{#if blog.meta.categories.length}
@@ -74,10 +60,6 @@
 
 	<TabPanel>
 		<section>
-			<SectionTitle sectionTitle="UX" let:sectionIcon>
-				<Smiley {...sectionIcon} />
-			</SectionTitle>
-
 			<BlogListContainer>
 				{#each data.blogs as blog}
 					{#if blog.meta.categories.length}
@@ -95,10 +77,6 @@
 
 	<TabPanel>
 		<section>
-			<SectionTitle sectionTitle="Color" let:sectionIcon>
-				<Palette {...sectionIcon} />
-			</SectionTitle>
-
 			<BlogListContainer>
 				{#each data.blogs as blog}
 					{#if blog.meta.categories.length}
@@ -116,10 +94,6 @@
 
 	<TabPanel>
 		<section>
-			<SectionTitle sectionTitle="Typography" let:sectionIcon>
-				<TextAa {...sectionIcon} />
-			</SectionTitle>
-
 			<BlogListContainer>
 				{#each data.blogs as blog}
 					{#if blog.meta.categories.length}
@@ -137,10 +111,6 @@
 
 	<TabPanel>
 		<section>
-			<SectionTitle sectionTitle="Freebies" let:sectionIcon>
-				<Gift {...sectionIcon} />
-			</SectionTitle>
-
 			<BlogListContainer>
 				{#each data.blogs as blog}
 					{#if blog.meta.categories.length}

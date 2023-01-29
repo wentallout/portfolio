@@ -1,8 +1,8 @@
 ---
-title: 'Calculate typography values'
-date: '2022-10-01'
+title: Calculate typography values
+date: 2022-10-01
 categories:
-    - 'typography'
+    - typography
 ---
 
 <script>

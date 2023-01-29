@@ -1,21 +1,11 @@
-import { c as create_ssr_component, e as spread, f as escape_object, v as validate_component } from "../../../chunks/index.js";
+import { c as create_ssr_component, e as spread, f as escape_object, v as validate_component } from "../../../chunks/index3.js";
 import { P as PageTitle } from "../../../chunks/PageTitle.js";
-import { E as ExLink, S as SEO } from "../../../chunks/SEO.js";
-import { P as Phone, L as Linkedin_logo } from "../../../chunks/phone.js";
+import { E as ExLink } from "../../../chunks/ExLink.js";
+import { L as Linkedin_logo, P as Phone, E as Envelope } from "../../../chunks/linkedin-logo.js";
 import { F as Figma_logo } from "../../../chunks/figma-logo.js";
 import { S as SectionTitle } from "../../../chunks/SectionTitle.js";
 import { B as Button } from "../../../chunks/Button.js";
-const Envelope = create_ssr_component(($$result, $$props, $$bindings, slots) => {
-  return `<svg${spread(
-    [
-      { viewBox: "0 0 256 256" },
-      { width: "1.2em" },
-      { height: "1.2em" },
-      escape_object($$props)
-    ],
-    {}
-  )}><!-- HTML_TAG_START -->${`<path fill="currentColor" d="M224 48H32a8 8 0 0 0-8 8v136a16 16 0 0 0 16 16h176a16 16 0 0 0 16-16V56a8 8 0 0 0-8-8Zm-83.9 74L128 133.1L52.6 64h150.8Zm-41.4 6L40 181.8V74.2Zm11.8 10.9l12.1 11a8 8 0 0 0 10.8 0l12.1-11l57.9 53.1H52.6Zm46.8-10.9L216 74.2v107.6Z"/>`}<!-- HTML_TAG_END --></svg>`;
-});
+import { S as SEO } from "../../../chunks/SEO.js";
 const Github_logo = create_ssr_component(($$result, $$props, $$bindings, slots) => {
   return `<svg${spread(
     [
@@ -62,64 +52,44 @@ const Instagram_logo = create_ssr_component(($$result, $$props, $$bindings, slot
 });
 const SocialLinks_svelte_svelte_type_style_lang = "";
 const css$2 = {
-  code: ".social.svelte-11nd2ln.svelte-11nd2ln{background-color:var(--bg);border-bottom:0;border-radius:var(--border-radius-light);box-shadow:var(--box-shadow);display:flex;flex-direction:row;margin-bottom:var(--space-m);overflow:visible;overflow:hidden}.social.svelte-11nd2ln.svelte-11nd2ln,.social__list.svelte-11nd2ln.svelte-11nd2ln{width:100%}.social__address.svelte-11nd2ln.svelte-11nd2ln{align-items:center;display:flex;flex-direction:row;flex-wrap:wrap;font-weight:500;padding:var(--space-s) var(--space-m);transition:.3s;width:100%}.social__address.svelte-11nd2ln.svelte-11nd2ln:hover{background-color:var(--neutral-900);color:var(--primary-600)}.social__address.svelte-11nd2ln p.svelte-11nd2ln{margin-left:var(--space-s)}@media(min-width:768px){.social.svelte-11nd2ln.svelte-11nd2ln{flex-direction:row}}",
+  code: ".social.svelte-1wzvukr{border-bottom:0;margin-bottom:var(--space-m);overflow:hidden;width:100%}.social.svelte-1wzvukr,.social__list.svelte-1wzvukr{display:flex;flex-direction:row}.social__list.svelte-1wzvukr{flex-wrap:wrap;gap:var(--space-m)}.social__address.svelte-1wzvukr{align-items:center;background-color:var(--bg);border-radius:var(--border-radius-light);-webkit-clip-path:polygon(50% 0,100% 50%,50% 100%,0 50%);clip-path:polygon(50% 0,100% 50%,50% 100%,0 50%);display:flex;height:80px;justify-content:center;padding:var(--space-s) var(--space-m);transition:var(--transition);width:80px}.social__address.svelte-1wzvukr:hover{background-color:var(--neutral-900)}@media(min-width:768px){.social.svelte-1wzvukr{flex-direction:row}}",
   map: null
 };
 const SocialLinks = create_ssr_component(($$result, $$props, $$bindings, slots) => {
   let icon = {
-    color: "var(--primary-600)",
-    width: "32",
-    height: "32"
+    color: "var(--text-color)",
+    width: "24",
+    height: "24"
   };
   $$result.css.add(css$2);
   return `<section>${validate_component(SectionTitle, "SectionTitle").$$render($$result, { sectionTitle: "Social" }, {}, {
     default: ({ sectionIcon }) => {
-      return `${validate_component(Handshake, "Handshake").$$render($$result, Object.assign(sectionIcon), {}, {})}`;
+      return `${validate_component(Handshake, "Handshake").$$render($$result, Object.assign({}, sectionIcon), {}, {})}`;
     }
   })}
 
-	<div class="${"social small-text svelte-11nd2ln"}"><address class="${"social__list svelte-11nd2ln"}">${validate_component(ExLink, "ExLink").$$render($$result, { href: "tel:+84929066331" }, {}, {
+	<div class="${"social small-text svelte-1wzvukr"}"><address class="${"social__list svelte-1wzvukr"}">${validate_component(ExLink, "ExLink").$$render(
+    $$result,
+    {
+      href: "https://www.linkedin.com/in/wentallout"
+    },
+    {},
+    {
+      default: () => {
+        return `<div class="${"social__address svelte-1wzvukr"}">${validate_component(Linkedin_logo, "LinkedinLogo").$$render($$result, Object.assign({}, icon), {}, {})}</div>`;
+      }
+    }
+  )}
+			${validate_component(ExLink, "ExLink").$$render($$result, { href: "tel:+84929066331" }, {}, {
     default: () => {
-      return `<div class="${"social__address svelte-11nd2ln"}">${validate_component(Phone, "Phone").$$render($$result, Object.assign(icon), {}, {})}
-					<p class="${"svelte-11nd2ln"}">+84 929 066 331</p></div>`;
+      return `<div class="${"social__address svelte-1wzvukr"}">${validate_component(Phone, "Phone").$$render($$result, Object.assign({}, icon), {}, {})}</div>`;
     }
   })}
-
 			${validate_component(ExLink, "ExLink").$$render($$result, { href: "mailto:wentallout@gmail.com" }, {}, {
     default: () => {
-      return `<div class="${"social__address svelte-11nd2ln"}">${validate_component(Envelope, "Envelope").$$render($$result, Object.assign(icon), {}, {})}
-					<p class="${"svelte-11nd2ln"}">Email</p></div>`;
+      return `<div class="${"social__address svelte-1wzvukr"}">${validate_component(Envelope, "Envelope").$$render($$result, Object.assign({}, icon), {}, {})}</div>`;
     }
   })}
-
-			${validate_component(ExLink, "ExLink").$$render(
-    $$result,
-    {
-      href: "https://www.linkedin.com/in/wentallout"
-    },
-    {},
-    {
-      default: () => {
-        return `<div class="${"social__address svelte-11nd2ln"}">${validate_component(Linkedin_logo, "LinkedinLogo").$$render($$result, Object.assign(icon), {}, {})}
-					<p class="${"svelte-11nd2ln"}">LinkedIn</p></div>`;
-      }
-    }
-  )}
-
-			${validate_component(ExLink, "ExLink").$$render(
-    $$result,
-    {
-      href: "https://www.linkedin.com/in/wentallout"
-    },
-    {},
-    {
-      default: () => {
-        return `<div class="${"social__address svelte-11nd2ln"}">${validate_component(Instagram_logo, "InstagramLogo").$$render($$result, Object.assign(icon), {}, {})}
-					<p class="${"svelte-11nd2ln"}">Instagram</p></div>`;
-      }
-    }
-  )}
-
 			${validate_component(ExLink, "ExLink").$$render(
     $$result,
     {
@@ -128,18 +98,29 @@ const SocialLinks = create_ssr_component(($$result, $$props, $$bindings, slots) 
     {},
     {
       default: () => {
-        return `<div class="${"social__address svelte-11nd2ln"}">${validate_component(Figma_logo, "FigmaLogo").$$render($$result, Object.assign(icon), {}, {})}
-					<p class="${"svelte-11nd2ln"}">Figma</p></div>`;
+        return `<div class="${"social__address svelte-1wzvukr"}">${validate_component(Figma_logo, "FigmaLogo").$$render($$result, Object.assign({}, icon), {}, {})}</div>`;
       }
     }
   )}
 
 			${validate_component(ExLink, "ExLink").$$render($$result, { href: "https://github.com/wentallout" }, {}, {
     default: () => {
-      return `<div class="${"social__address svelte-11nd2ln"}">${validate_component(Github_logo, "GitHubLogo").$$render($$result, Object.assign(icon), {}, {})}
-					<p class="${"svelte-11nd2ln"}">GitHub</p></div>`;
+      return `<div class="${"social__address svelte-1wzvukr"}">${validate_component(Github_logo, "GitHubLogo").$$render($$result, Object.assign({}, icon), {}, {})}</div>`;
     }
   })}
+
+			${validate_component(ExLink, "ExLink").$$render(
+    $$result,
+    {
+      href: "https://www.instagram.com/wentallout/saved"
+    },
+    {},
+    {
+      default: () => {
+        return `<div class="${"social__address svelte-1wzvukr"}">${validate_component(Instagram_logo, "InstagramLogo").$$render($$result, Object.assign({}, icon), {}, {})}</div>`;
+      }
+    }
+  )}
 
 			${validate_component(ExLink, "ExLink").$$render(
     $$result,
@@ -149,8 +130,7 @@ const SocialLinks = create_ssr_component(($$result, $$props, $$bindings, slots) 
     {},
     {
       default: () => {
-        return `<div class="${"social__address svelte-11nd2ln"}">${validate_component(Reddit_logo, "RedditLogo").$$render($$result, Object.assign(icon), {}, {})}
-					<p class="${"svelte-11nd2ln"}">Reddit</p></div>`;
+        return `<div class="${"social__address svelte-1wzvukr"}">${validate_component(Reddit_logo, "RedditLogo").$$render($$result, Object.assign({}, icon), {}, {})}</div>`;
       }
     }
   )}</address></div>
@@ -180,38 +160,38 @@ const Paper_plane_right = create_ssr_component(($$result, $$props, $$bindings, s
 });
 const ContactForm_svelte_svelte_type_style_lang = "";
 const css$1 = {
-  code: ".form-container.svelte-1vkpnlj{border-radius:var(--border-radius-light);display:flex;justify-content:left;margin-bottom:var(--space-m);width:100%}.contact.svelte-1vkpnlj{display:flex;flex-direction:column;max-width:80rem;width:100%}.label.svelte-1vkpnlj{font-weight:500}.contact__btn.svelte-1vkpnlj{display:flex;flex-direction:row;gap:var(--space-xs)}",
+  code: ".form-container.svelte-b8phnv{border-radius:var(--border-radius-light);display:flex;justify-content:left;margin-bottom:var(--space-m);width:100%}.contact.svelte-b8phnv{display:flex;flex-direction:column;max-width:80rem;width:100%}.label.svelte-b8phnv{font-weight:500}.contact__btn.svelte-b8phnv{--min:15ch;--gap:var(--space-m);grid-gap:var(--gap);display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,var(--min)),1fr));margin-top:var(--space-m)}",
   map: null
 };
 const ContactForm = create_ssr_component(($$result, $$props, $$bindings, slots) => {
   $$result.css.add(css$1);
   return `<section>${validate_component(SectionTitle, "SectionTitle").$$render($$result, { sectionTitle: "Email" }, {}, {
     default: ({ sectionIcon }) => {
-      return `${validate_component(Envelope_simple, "EnvelopeSimple").$$render($$result, Object.assign(sectionIcon), {}, {})}`;
+      return `${validate_component(Envelope_simple, "EnvelopeSimple").$$render($$result, Object.assign({}, sectionIcon), {}, {})}`;
     }
   })}
 
-	<div class="${"form-container svelte-1vkpnlj"}"><form class="${"contact svelte-1vkpnlj"}" name="${"contact"}" method="${"post"}" netlify-honeypot="${"bot-field"}" data-netlify="${"true"}"><input type="${"hidden"}" name="${"form-name"}" value="${"contact"}">
+	<div class="${"form-container svelte-b8phnv"}"><form class="${"contact svelte-b8phnv"}" name="${"contact"}" method="${"post"}" netlify-honeypot="${"bot-field"}" data-netlify="${"true"}"><input type="${"hidden"}" name="${"form-name"}" value="${"contact"}">
 
-			<label for="${"name"}" class="${"label small-text svelte-1vkpnlj"}">Name</label>
+			<label for="${"name"}" class="${"label small-text svelte-b8phnv"}">Name</label>
 			<input class="${"small-text"}" type="${"text"}" name="${"name"}" id="${"name"}" required>
 
-			<label for="${"email"}" class="${"label small-text svelte-1vkpnlj"}">Email</label>
+			<label for="${"email"}" class="${"label small-text svelte-b8phnv"}">Email</label>
 			<input placeholder="${"username@email.com"}" class="${"small-text"}" type="${"email"}" name="${"email"}" id="${"email"}" required>
 
-			<label for="${"message"}" class="${"label small-text svelte-1vkpnlj"}">Message</label>
+			<label for="${"message"}" class="${"label small-text svelte-b8phnv"}">Message</label>
 			<textarea class="${"small-text"}" required name="${"message"}" id="${"message"}" placeholder="${""}"></textarea>
 
-			<div class="${"contact__btn svelte-1vkpnlj"}">${validate_component(Button, "Button").$$render(
+			<div class="${"contact__btn svelte-b8phnv"}">${validate_component(Button, "Button").$$render(
     $$result,
     {
       label: "Send",
-      backgroundColor: "var(--primary-600)"
+      backgroundColor: "var(--primary-500)"
     },
     {},
     {
       default: () => {
-        return `${validate_component(Paper_plane_right, "PaperPlaneRight").$$render($$result, { color: "var(--neutral-900)" }, {}, {})}`;
+        return `${validate_component(Paper_plane_right, "PaperPlaneRight").$$render($$result, { class: "icon-black" }, {}, {})}`;
       }
     }
   )}
@@ -248,7 +228,7 @@ const Page = create_ssr_component(($$result, $$props, $$bindings, slots) => {
   $$result.css.add(css);
   return `${$$result.head += `<!-- HEAD_svelte-rg684o_START -->${$$result.title = `<title>Contact</title>`, ""}<!-- HEAD_svelte-rg684o_END -->`, ""}
 
-${validate_component(SEO, "SEO").$$render($$result, Object.assign(seoProps), {}, {})}
+${validate_component(SEO, "SEO").$$render($$result, Object.assign({}, seoProps), {}, {})}
 
 ${validate_component(PageTitle, "PageTitle").$$render($$result, { pageTitle: "Contact" }, {}, {})}
 

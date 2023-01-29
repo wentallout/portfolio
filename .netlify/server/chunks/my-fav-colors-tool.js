@@ -1,4 +1,4 @@
-import { c as create_ssr_component } from "./index.js";
+import { c as create_ssr_component } from "./index3.js";
 /* empty css                                     */const metadata = {
   "title": "My favorite color tools",
   "date": "2022-11-09",
@@ -9,10 +9,10 @@ const My_fav_colors_tool = create_ssr_component(($$result, $$props, $$bindings, 
 
 
 
-<h2 id="${"gradient"}">Gradient</h2>
-<p><a href="${"https://gradientify.com/"}" rel="${"nofollow"}">Gradientify</a> - carefully crafted gradients for your next projects.</p>
-<h2 id="${"color-scheme"}">Color scheme</h2>
-<p><a href="${"https://goodpalette.io/"}" rel="${"nofollow"}">goodpalette</a> - beautiful color palettes for UI
+<h2 id="${"gradient"}"><a href="${"#gradient"}">Gradient</a></h2>
+<p><a href="${"https://gradientify.com/"}" rel="${"nofollow noopener noreferrer external"}" target="${"_blank"}">Gradientify</a> - carefully crafted gradients for your next projects.</p>
+<h2 id="${"color-scheme"}"><a href="${"#color-scheme"}">Color scheme</a></h2>
+<p><a href="${"https://goodpalette.io/"}" rel="${"nofollow noopener noreferrer external"}" target="${"_blank"}">goodpalette</a> - beautiful color palettes for UI
 -&gt; Primary + Accent + Neutral.</p>`;
 });
 export {

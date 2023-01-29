@@ -1,4 +1,4 @@
-import { c as create_ssr_component, l as compute_rest_props, o as createEventDispatcher, p as onDestroy, e as spread, q as escape_attribute_value, f as escape_object, d as add_attribute, v as validate_component, h as escape } from "./index.js";
+import { c as create_ssr_component, l as compute_rest_props, p as createEventDispatcher, o as onDestroy, e as spread, q as escape_attribute_value, f as escape_object, d as add_attribute, v as validate_component, h as escape } from "./index3.js";
 import { B as Button } from "./Button.js";
 import { F as Figma_logo } from "./figma-logo.js";
 const Atropos_svelte = create_ssr_component(($$result, $$props, $$bindings, slots) => {
@@ -115,7 +115,7 @@ const Atropos_svelte = create_ssr_component(($$result, $$props, $$bindings, slot
   ${slots.root ? slots.root({}) : ``}</div>`;
 });
 const Atropos = Atropos_svelte;
-const rezaPhoneFrame = "/_app/immutable/assets/rezaPhoneFrame-b3441282.webp";
+const rezaPhoneFrame = "/_app/immutable/assets/rezaPhoneFrame-f61992a2.webp";
 const rezaSplat = "/_app/immutable/assets/rezaSplat-8323f1b6.svg";
 const RezaPhoneAtropos_svelte_svelte_type_style_lang = "";
 const css$1 = {
@@ -148,7 +148,7 @@ const RezaPhoneAtropos = create_ssr_component(($$result, $$props, $$bindings, sl
 });
 const ProjectCard_svelte_svelte_type_style_lang = "";
 const css = {
-  code: ".project.svelte-1s452rv{background-color:var(--bg);border-radius:var(--border-radius-light);display:flex;flex-direction:column;overflow-y:hidden;width:100%}.project__thumbnail.svelte-1s452rv{height:auto;overflow:hidden;width:100%}.info__project-name.svelte-1s452rv{color:var(--text);font-weight:600;line-height:normal;margin-bottom:var(--space-m)}.project__info.svelte-1s452rv{padding:var(--space-l) var(--space-xl)}.info__section.svelte-1s452rv{display:flex;flex-direction:row;flex-wrap:wrap;margin-bottom:var(--space-s)}.info__title.svelte-1s452rv{color:var(--primary-600);font-weight:500;height:60px;margin-right:auto;max-width:200px;width:-moz-fit-content;width:fit-content}.info__description.svelte-1s452rv{color:var(--text-low);display:flex;margin-left:var(--space-s);width:70%}.info__btn.svelte-1s452rv{display:flex;flex-direction:row;flex-wrap:wrap;gap:var(--space-s);margin-top:var(--space-m)}@media(min-width:992px){.project.svelte-1s452rv{flex-direction:row}.project__thumbnail.svelte-1s452rv{width:40%}.project__info.svelte-1s452rv{width:60%}}",
+  code: ".project.svelte-1pi5reu{background-color:var(--bg);border-radius:var(--border-radius-light);display:flex;flex-direction:column;overflow-y:hidden;width:100%}.project__thumbnail.svelte-1pi5reu{height:auto;overflow:hidden;width:100%}.info__project-name.svelte-1pi5reu{color:var(--primary-500);font-weight:600;line-height:normal;margin-bottom:var(--space-m)}.project__info.svelte-1pi5reu{padding:var(--space-l) var(--space-xl)}.info__section.svelte-1pi5reu{display:flex;flex-direction:row;flex-wrap:wrap;margin-bottom:var(--space-s)}.info__title.svelte-1pi5reu{font-weight:400;height:60px;margin-right:auto;max-width:200px;width:-moz-fit-content;width:fit-content}.info__description.svelte-1pi5reu{color:var(--text-color-low);display:flex;margin-left:var(--space-s);width:70%}.info__btn.svelte-1pi5reu{--min:15ch;--gap:1rem;grid-gap:var(--gap);display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,var(--min)),1fr));margin-top:var(--space-m)}.btn__anchor.svelte-1pi5reu{width:100%}@media(min-width:992px){.project.svelte-1pi5reu{flex-direction:row}.project__thumbnail.svelte-1pi5reu{width:40%}.project__info.svelte-1pi5reu{width:60%}}",
   map: null
 };
 const ProjectCard = create_ssr_component(($$result, $$props, $$bindings, slots) => {
@@ -171,36 +171,37 @@ const ProjectCard = create_ssr_component(($$result, $$props, $$bindings, slots) 
   if ($$props.result === void 0 && $$bindings.result && result !== void 0)
     $$bindings.result(result);
   $$result.css.add(css);
-  return `<div class="${"project svelte-1s452rv"}"><div class="${"project__thumbnail svelte-1s452rv"}">${slots.default ? slots.default({}) : ``}</div>
+  return `<div class="${"project svelte-1pi5reu"}"><div class="${"project__thumbnail svelte-1pi5reu"}">${slots.default ? slots.default({}) : ``}</div>
 
-	<div class="${"project__info svelte-1s452rv"}"><div class="${"info__project-name large-text svelte-1s452rv"}">${escape(projectName)}</div>
+	<div class="${"project__info svelte-1pi5reu"}"><div class="${"info__project-name large-text svelte-1pi5reu"}">${escape(projectName)}</div>
 
-		<div class="${"info__section svelte-1s452rv"}"><div class="${"info__title svelte-1s452rv"}">What</div>
-			<div class="${"info__description svelte-1s452rv"}">${escape(what)}</div></div>
+		<div class="${"info__section small-text svelte-1pi5reu"}"><div class="${"info__title svelte-1pi5reu"}">What</div>
+			<div class="${"info__description svelte-1pi5reu"}">${escape(what)}</div></div>
 
-		<div class="${"info__section svelte-1s452rv"}"><div class="${"info__title svelte-1s452rv"}">Who</div>
-			<div class="${"info__description svelte-1s452rv"}">${escape(who)}</div></div>
+		<div class="${"info__section small-text svelte-1pi5reu"}"><div class="${"info__title svelte-1pi5reu"}">Who</div>
+			<div class="${"info__description svelte-1pi5reu"}">${escape(who)}</div></div>
 
-		<div class="${"info__section svelte-1s452rv"}"><div class="${"info__title svelte-1s452rv"}">Result</div>
-			<div class="${"info__description svelte-1s452rv"}">${escape(result)}</div></div>
+		<div class="${"info__section small-text svelte-1pi5reu"}"><div class="${"info__title svelte-1pi5reu"}">Result</div>
+			<div class="${"info__description svelte-1pi5reu"}">${escape(result)}</div></div>
 
-		<div class="${"info__btn svelte-1s452rv"}"><a data-cursor-text="${"Read Case Study"}" data-cursor-text-repeat="${"4"}" class="${"btn__anchor cursor-hover-item"}"${add_attribute("href", linkToDetail, 0)}>${validate_component(Button, "Button").$$render(
+		<div class="${"info__btn svelte-1pi5reu"}"><a class="${"btn__anchor svelte-1pi5reu"}"${add_attribute("href", linkToDetail, 0)}>${validate_component(Button, "Button").$$render(
     $$result,
     {
       label: "Read",
-      border: "1px solid var(--primary-600)",
-      backgroundColor: "var(--primary-600)"
+      border: "1px solid var(--primary-500)",
+      backgroundColor: "var(--primary-500)",
+      labelColor: "var(--black)"
     },
     {},
     {}
   )}</a>
 
-			<a rel="${"external noreferrer noopener"}" target="${"_blank"}"${add_attribute("href", linkToFigma, 0)}>${validate_component(Button, "Button").$$render(
+			<a class="${"btn__anchor svelte-1pi5reu"}" rel="${"external noreferrer noopener"}" target="${"_blank"}"${add_attribute("href", linkToFigma, 0)}>${validate_component(Button, "Button").$$render(
     $$result,
     {
-      labelColor: "var(--text)",
+      labelColor: "var(--text-color)",
       label: "Figma",
-      border: "1px solid var(--text)"
+      border: "1px solid var(--text-color)"
     },
     {},
     {

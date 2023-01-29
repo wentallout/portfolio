@@ -1,7 +1,7 @@
-import { k as getContext } from "./index.js";
+import { k as getContext } from "./index3.js";
 const getStores = () => {
   const stores = getContext("__svelte__");
-  const readonly_stores = {
+  return {
     page: {
       subscribe: stores.page.subscribe
     },
@@ -10,25 +10,6 @@ const getStores = () => {
     },
     updated: stores.updated
   };
-  Object.defineProperties(readonly_stores, {
-    preloading: {
-      get() {
-        console.error("stores.preloading is deprecated; use stores.navigating instead");
-        return {
-          subscribe: stores.navigating.subscribe
-        };
-      },
-      enumerable: false
-    },
-    session: {
-      get() {
-        removed_session();
-        return {};
-      },
-      enumerable: false
-    }
-  });
-  return readonly_stores;
 };
 const page = {
   subscribe(fn) {
@@ -42,11 +23,6 @@ const navigating = {
     return store.subscribe(fn);
   }
 };
-function removed_session() {
-  throw new Error(
-    "stores.session is no longer available. See https://github.com/sveltejs/kit/discussions/5883"
-  );
-}
 export {
   navigating as n,
   page as p

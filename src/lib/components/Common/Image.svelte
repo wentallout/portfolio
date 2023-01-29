@@ -7,7 +7,7 @@
 
 	export let hasCaption = true;
 
-	export let imagePreset = 'fullscreen';
+	export let imagePreset = '';
 
 	import { Lightbox } from 'svelte-lightbox';
 
@@ -25,7 +25,8 @@
 		enableClickToClose="true"
 		{imagePreset}
 		enableImageExpand="true"
-		transitionDuration="50">
+		title={alt}
+		transitionDuration="30">
 		<img class="lazy" {width} {height} {src} loading="lazy" decoding="async" {alt} />
 
 		{#if hasCaption}

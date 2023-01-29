@@ -1,19 +1,10 @@
-import { c as create_ssr_component, d as add_attribute, h as escape, v as validate_component } from "./index.js";
+import { c as create_ssr_component, d as add_attribute, h as escape, v as validate_component } from "./index3.js";
 import { w as website } from "./config.js";
 import hash from "object-hash";
-const ExLink = create_ssr_component(($$result, $$props, $$bindings, slots) => {
-  let { href } = $$props;
-  let { ariaLabel } = $$props;
-  if ($$props.href === void 0 && $$bindings.href && href !== void 0)
-    $$bindings.href(href);
-  if ($$props.ariaLabel === void 0 && $$bindings.ariaLabel && ariaLabel !== void 0)
-    $$bindings.ariaLabel(ariaLabel);
-  return `<a${add_attribute("aria-label", ariaLabel, 0)}${add_attribute("href", href, 0)} rel="${"external nofollow noopener noreferrer"}" target="${"_blank"}">${slots.default ? slots.default({}) : ``}</a>`;
-});
-const featuredImageSrc = "/_app/immutable/assets/home-5d13417b.webp";
-const ogImageSrc = "/_app/immutable/assets/home-open-graph-70c74741.webp";
-const ogSquareImageSrc = "/_app/immutable/assets/home-open-graph-square-ca17b7fe.webp";
-const twitterImageSrc = "/_app/immutable/assets/home-twitter-5839b30a.webp";
+const featuredImageSrc = "/_app/immutable/assets/home-7915633f.webp";
+const ogImageSrc = "/_app/immutable/assets/home-open-graph-46f12069.webp";
+const ogSquareImageSrc = "/_app/immutable/assets/home-open-graph-square-00a8fdd0.webp";
+const twitterImageSrc = "/_app/immutable/assets/home-twitter-8e52014d.webp";
 const VERTICAL_LINE_ENTITY = "|";
 const OpenGraph = create_ssr_component(($$result, $$props, $$bindings, slots) => {
   let { article = false } = $$props;
@@ -401,12 +392,11 @@ const SEO = create_ssr_component(($$result, $$props, $$bindings, slots) => {
   if ($$props.twitterImage === void 0 && $$bindings.twitterImage && twitterImage !== void 0)
     $$bindings.twitterImage(twitterImage);
   return `${$$result.head += `<!-- HEAD_svelte-1su8vcs_START -->${$$result.title = `<title>${escape(pageTitle)}</title>`, ""}<meta name="${"description"}"${add_attribute("content", metadescription, 0)}><meta name="${"robots"}" content="${"index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1"}"><link rel="${"canonical"}"${add_attribute("href", url, 0)}><!-- HEAD_svelte-1su8vcs_END -->`, ""}
-${validate_component(Twitter, "Twitter").$$render($$result, Object.assign(twitterProps), {}, {})}
-${validate_component(OpenGraph, "OpenGraph").$$render($$result, Object.assign(openGraphProps), {}, {})}
-${validate_component(SchemaOrg, "SchemaOrg").$$render($$result, Object.assign(schemaOrgProps), {}, {})}`;
+${validate_component(Twitter, "Twitter").$$render($$result, Object.assign({}, twitterProps), {}, {})}
+${validate_component(OpenGraph, "OpenGraph").$$render($$result, Object.assign({}, openGraphProps), {}, {})}
+${validate_component(SchemaOrg, "SchemaOrg").$$render($$result, Object.assign({}, schemaOrgProps), {}, {})}`;
 });
 export {
-  ExLink as E,
   SEO as S,
   ogSquareImageSrc as a,
   featuredImageSrc as f,

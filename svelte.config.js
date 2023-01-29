@@ -5,6 +5,9 @@ import { mdsvex } from 'mdsvex';
 
 import rehypeToc from '@jsdevtools/rehype-toc';
 import rehypeSlug from 'rehype-slug';
+import rehypeExternalLinks from 'rehype-external-links';
+import rehypeAutolinkHeadings from 'rehype-autolink-headings';
+
 import sequence from 'svelte-sequential-preprocessor';
 import { preprocessThrelte } from '@threlte/preprocess';
 
@@ -19,7 +22,15 @@ const config = {
 		}),
 		mdsvex({
 			extensions: ['.svelte.md', '.md', '.svx'],
-			rehypePlugins: [rehypeSlug, rehypeToc]
+			rehypePlugins: [
+				rehypeSlug,
+				rehypeToc,
+				[
+					rehypeExternalLinks,
+					{ rel: ['nofollow', 'noopener', 'noreferrer', 'external'], target: '_blank' }
+				],
+				[rehypeAutolinkHeadings, { behavior: 'wrap' }]
+			]
 		}),
 		preprocessThrelte()
 	]),

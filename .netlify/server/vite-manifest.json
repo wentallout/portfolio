@@ -1,15 +1,12 @@
 {
-  ".svelte-kit/build/index.js": {
+  "node_modules/@sveltejs/kit/src/runtime/server/index.js": {
     "file": "index.js",
-    "src": ".svelte-kit/build/index.js",
+    "src": "node_modules/@sveltejs/kit/src/runtime/server/index.js",
     "isEntry": true,
     "imports": [
       "_index.js",
       "_index2.js",
-      "_index3.js"
-    ],
-    "dynamicImports": [
-      "src/hooks.server.js"
+      "_internal.js"
     ]
   },
   "src/routes/api/blog/+server.js": {
@@ -17,32 +14,38 @@
     "src": "src/routes/api/blog/+server.js",
     "isEntry": true,
     "imports": [
-      "_index2.js"
+      "_index.js"
     ],
     "dynamicImports": [
+      "src/routes/blog/6c.svx",
+      "src/routes/blog/ai-tools.svx",
       "src/routes/blog/best-ux-books.svx",
       "src/routes/blog/calculate-typography-values.svx",
       "src/routes/blog/case-study.svx",
       "src/routes/blog/color-scheme.svx",
+      "src/routes/blog/fluency.svx",
+      "src/routes/blog/free-stuff.svx",
       "src/routes/blog/gestalt.svx",
       "src/routes/blog/grids.svx",
       "src/routes/blog/how-to-ask-for-design-feedback.svx",
       "src/routes/blog/logo-design.svx",
       "src/routes/blog/mockups.svx",
       "src/routes/blog/my-fav-colors-tool.svx",
+      "src/routes/blog/personal-brand.svx",
       "src/routes/blog/polish.svx",
       "src/routes/blog/portfolio.svx",
       "src/routes/blog/project-organization.svx",
       "src/routes/blog/resolution-pt-px.svx",
+      "src/routes/blog/shadow.svx",
       "src/routes/blog/sharp-axe-method.svx",
-      "src/routes/blog/stock-images.svx",
       "src/routes/blog/the-art-of-thinking-clearly.svx",
       "src/routes/blog/typescale.svx",
       "src/routes/blog/typography-impact.svx",
       "src/routes/blog/ui-kit.svx",
       "src/routes/blog/ux-research.svx",
       "src/routes/blog/ux-vs-ui.svx",
-      "src/routes/blog/wth-is-wcag.svx"
+      "src/routes/blog/ux.svx",
+      "src/routes/blog/what-is-wcag.svx"
     ]
   },
   "src/routes/manifest.webmanifest/+server.js": {
@@ -58,13 +61,13 @@
     "src": "src/routes/+layout.svelte",
     "isEntry": true,
     "imports": [
-      "_index.js",
+      "_index3.js",
       "_config.js",
-      "_phone.js",
+      "_SocialButtons.js",
       "_stores.js"
     ],
     "css": [
-      "_app/immutable/assets/_layout-84528a83.css"
+      "_app/immutable/assets/_layout-7ab8795a.css"
     ]
   },
   "src/routes/+layout.js": {
@@ -77,12 +80,12 @@
     "src": "src/routes/+error.svelte",
     "isEntry": true,
     "imports": [
-      "_index.js",
+      "_index3.js",
       "_Button.js",
       "_stores.js"
     ],
     "css": [
-      "_app/immutable/assets/_error-4d0ba992.css"
+      "_app/immutable/assets/_error-12593b50.css"
     ]
   },
   "src/routes/blog/[slug]/+layout.svelte": {
@@ -90,7 +93,7 @@
     "src": "src/routes/blog/[slug]/+layout.svelte",
     "isEntry": true,
     "imports": [
-      "_index.js",
+      "_index3.js",
       "_MarkdownContainer.js"
     ]
   },
@@ -99,7 +102,7 @@
     "src": "src/routes/project/[slug]/+layout.svelte",
     "isEntry": true,
     "imports": [
-      "_index.js",
+      "_index3.js",
       "_MarkdownContainer.js"
     ]
   },
@@ -108,22 +111,25 @@
     "src": "src/routes/+page.svelte",
     "isEntry": true,
     "imports": [
-      "_index.js",
+      "_index3.js",
+      "_SocialButtons.js",
+      "_ExLink.js",
       "_ProjectCard.js",
-      "_SEO.js",
       "_Image.js",
+      "_GLTF.js",
+      "_SEO.js",
       "_config.js"
     ],
     "css": [
-      "_app/immutable/assets/_page-34372cec.css"
+      "_app/immutable/assets/_page-16e26d00.css"
     ],
     "assets": [
-      "_app/immutable/assets/fpt-9e418949.webp",
-      "_app/immutable/assets/nashtech-485d2d86.webp",
-      "_app/immutable/assets/frontend-b188da22.svg",
-      "_app/immutable/assets/navigation-9af7f3a6.svg",
-      "_app/immutable/assets/interactive-621aac0b.svg",
-      "_app/immutable/assets/graphicDesign-46f1e6c2.svg"
+      "_app/immutable/assets/fpt-3c33bfe5.webp",
+      "_app/immutable/assets/nashtech-93cf1358.webp",
+      "_app/immutable/assets/frontend-8f9110d0.svg",
+      "_app/immutable/assets/navigation-54f2c665.svg",
+      "_app/immutable/assets/interactive-3178016c.svg",
+      "_app/immutable/assets/graphicDesign-674b0dc6.svg"
     ]
   },
   "src/routes/blog/+page.svelte": {
@@ -131,15 +137,13 @@
     "src": "src/routes/blog/+page.svelte",
     "isEntry": true,
     "imports": [
-      "_index.js",
+      "_index3.js",
       "_BlogCard.js",
-      "_SectionTitle.js",
-      "_brain.js",
       "_PageTitle.js",
-      "_index3.js"
+      "_index2.js"
     ],
     "css": [
-      "_app/immutable/assets/_page-7f14a79f.css"
+      "_app/immutable/assets/_page-38216b75.css"
     ]
   },
   "src/routes/blog/+page.js": {
@@ -152,11 +156,12 @@
     "src": "src/routes/blog/category/+page.svelte",
     "isEntry": true,
     "imports": [
-      "_index.js",
+      "_index3.js",
+      "_BlogTag.js",
       "_SectionTitle.js"
     ],
     "css": [
-      "_app/immutable/assets/_page-44906a55.css"
+      "_app/immutable/assets/_page-c3c69ae9.css"
     ]
   },
   "src/routes/blog/category/+page.js": {
@@ -169,11 +174,11 @@
     "src": "src/routes/blog/category/[category]/+page.svelte",
     "isEntry": true,
     "imports": [
-      "_index.js",
+      "_index3.js",
       "_BlogCard.js"
     ],
     "css": [
-      "_app/immutable/assets/_page-42dd9190.css"
+      "_app/immutable/assets/_page-c9fb8161.css"
     ]
   },
   "src/routes/blog/category/[category]/+page.js": {
@@ -186,12 +191,13 @@
     "src": "src/routes/blog/[slug]/+page.svelte",
     "isEntry": true,
     "imports": [
-      "_index.js",
+      "_index3.js",
+      "_BlogTag.js",
       "_End.js",
       "_Time.js"
     ],
     "css": [
-      "_app/immutable/assets/_page-e7934d6d.css"
+      "_app/immutable/assets/_page-e153be28.css"
     ]
   },
   "src/routes/blog/[slug]/+page.js": {
@@ -202,29 +208,35 @@
       "_dynamic-import-helper.js"
     ],
     "dynamicImports": [
+      "src/routes/blog/6c.svx",
+      "src/routes/blog/ai-tools.svx",
       "src/routes/blog/best-ux-books.svx",
       "src/routes/blog/calculate-typography-values.svx",
       "src/routes/blog/case-study.svx",
       "src/routes/blog/color-scheme.svx",
+      "src/routes/blog/fluency.svx",
+      "src/routes/blog/free-stuff.svx",
       "src/routes/blog/gestalt.svx",
       "src/routes/blog/grids.svx",
       "src/routes/blog/how-to-ask-for-design-feedback.svx",
       "src/routes/blog/logo-design.svx",
       "src/routes/blog/mockups.svx",
       "src/routes/blog/my-fav-colors-tool.svx",
+      "src/routes/blog/personal-brand.svx",
       "src/routes/blog/polish.svx",
       "src/routes/blog/portfolio.svx",
       "src/routes/blog/project-organization.svx",
       "src/routes/blog/resolution-pt-px.svx",
+      "src/routes/blog/shadow.svx",
       "src/routes/blog/sharp-axe-method.svx",
-      "src/routes/blog/stock-images.svx",
       "src/routes/blog/the-art-of-thinking-clearly.svx",
       "src/routes/blog/typescale.svx",
       "src/routes/blog/typography-impact.svx",
       "src/routes/blog/ui-kit.svx",
       "src/routes/blog/ux-research.svx",
       "src/routes/blog/ux-vs-ui.svx",
-      "src/routes/blog/wth-is-wcag.svx"
+      "src/routes/blog/ux.svx",
+      "src/routes/blog/what-is-wcag.svx"
     ]
   },
   "src/routes/contact/+page.svelte": {
@@ -232,16 +244,17 @@
     "src": "src/routes/contact/+page.svelte",
     "isEntry": true,
     "imports": [
-      "_index.js",
+      "_index3.js",
       "_PageTitle.js",
-      "_SEO.js",
-      "_phone.js",
+      "_ExLink.js",
+      "_linkedin-logo.js",
       "_figma-logo.js",
       "_SectionTitle.js",
-      "_Button.js"
+      "_Button.js",
+      "_SEO.js"
     ],
     "css": [
-      "_app/immutable/assets/_page-78fcdf75.css"
+      "_app/immutable/assets/_page-56496263.css"
     ]
   },
   "src/routes/contact/+page.js": {
@@ -254,9 +267,8 @@
     "src": "src/routes/project/+page.svelte",
     "isEntry": true,
     "imports": [
-      "_index.js",
+      "_index3.js",
       "_PageTitle.js",
-      "_brain.js",
       "_ProjectCard.js",
       "_figma-logo.js",
       "_SectionTitle.js"
@@ -270,12 +282,12 @@
     "src": "src/routes/project/[slug]/+page.svelte",
     "isEntry": true,
     "imports": [
-      "_index.js",
+      "_index3.js",
       "_End.js",
       "_Time.js"
     ],
     "css": [
-      "_app/immutable/assets/_page-88180e56.css"
+      "_app/immutable/assets/_page-f785134e.css"
     ]
   },
   "src/routes/project/[slug]/+page.js": {
@@ -295,20 +307,21 @@
     "src": "src/routes/resource/+page.svelte",
     "isEntry": true,
     "imports": [
-      "_index.js",
+      "_index3.js",
       "_PageTitle.js",
       "_SwiperContainer.js",
+      "_ExLink.js",
       "_SectionTitle.js"
     ],
     "css": [
-      "_app/immutable/assets/_page-c6a2f5ed.css"
+      "_app/immutable/assets/_page-4e2c5d27.css"
     ],
     "assets": [
-      "_app/immutable/assets/UIDesignPrinciples-b17b7134.webp",
-      "_app/immutable/assets/DesignManual-c05c25d3.webp",
-      "_app/immutable/assets/NoBSGuideUX-e7df4d3b.webp",
-      "_app/immutable/assets/Sprint-e9dea67f.webp",
-      "_app/immutable/assets/JustEnoughResearch-58b6c01f.webp"
+      "_app/immutable/assets/UIDesignPrinciples-ac851ee4.webp",
+      "_app/immutable/assets/DesignManual-772d2efc.webp",
+      "_app/immutable/assets/NoBSGuideUX-e53beb32.webp",
+      "_app/immutable/assets/Sprint-517ee615.webp",
+      "_app/immutable/assets/JustEnoughResearch-696767d8.webp"
     ]
   },
   "src/routes/resource/exp/+page.svelte": {
@@ -316,11 +329,11 @@
     "src": "src/routes/resource/exp/+page.svelte",
     "isEntry": true,
     "imports": [
-      "_index.js",
-      "_index3.js"
+      "_index3.js",
+      "_GLTF.js"
     ],
     "css": [
-      "_app/immutable/assets/_page-cb3236e2.css"
+      "_app/immutable/assets/_page-c0b25636.css"
     ]
   },
   "src/routes/resource/music/+page.svelte": {
@@ -328,9 +341,9 @@
     "src": "src/routes/resource/music/+page.svelte",
     "isEntry": true,
     "imports": [
-      "_index.js",
+      "_index3.js",
       "_SectionTitle.js",
-      "_general-observer.js"
+      "_gist.svelte_svelte_type_style_lang.js"
     ]
   },
   "src/routes/resource/tool/+page.svelte": {
@@ -338,164 +351,34 @@
     "src": "src/routes/resource/tool/+page.svelte",
     "isEntry": true,
     "imports": [
-      "_index.js",
+      "_index3.js",
       "_SectionTitle.js"
+    ]
+  },
+  ".svelte-kit/generated/server/internal.js": {
+    "file": "internal.js",
+    "src": ".svelte-kit/generated/server/internal.js",
+    "isEntry": true,
+    "imports": [
+      "_internal.js"
     ]
   },
   "_index.js": {
     "file": "chunks/index.js"
   },
   "_index2.js": {
-    "file": "chunks/index2.js"
-  },
-  "_index3.js": {
-    "file": "chunks/index3.js",
+    "file": "chunks/index2.js",
     "imports": [
-      "_index.js"
+      "_index3.js"
     ]
   },
-  "_config.js": {
-    "file": "chunks/config.js"
-  },
-  "_stores.js": {
-    "file": "chunks/stores.js",
+  "_internal.js": {
+    "file": "chunks/internal.js",
     "imports": [
-      "_index.js"
-    ]
-  },
-  "_phone.js": {
-    "file": "chunks/phone.js",
-    "imports": [
-      "_index.js"
-    ]
-  },
-  "_Button.js": {
-    "file": "chunks/Button.js",
-    "imports": [
-      "_index.js"
-    ],
-    "css": [
-      "_app/immutable/assets/Button-2b3c7386.css"
-    ]
-  },
-  "_MarkdownContainer.js": {
-    "file": "chunks/MarkdownContainer.js",
-    "imports": [
-      "_index.js"
-    ],
-    "css": [
-      "_app/immutable/assets/MarkdownContainer-979059b8.css"
-    ]
-  },
-  "_SEO.js": {
-    "file": "chunks/SEO.js",
-    "imports": [
-      "_index.js",
-      "_config.js"
-    ],
-    "assets": [
-      "_app/immutable/assets/home-5d13417b.webp",
-      "_app/immutable/assets/home-open-graph-70c74741.webp",
-      "_app/immutable/assets/home-open-graph-square-ca17b7fe.webp",
-      "_app/immutable/assets/home-twitter-5839b30a.webp"
-    ]
-  },
-  "_ProjectCard.js": {
-    "file": "chunks/ProjectCard.js",
-    "imports": [
-      "_index.js",
-      "_Button.js",
-      "_figma-logo.js"
-    ],
-    "css": [
-      "_app/immutable/assets/ProjectCard-f733083e.css"
-    ],
-    "assets": [
-      "_app/immutable/assets/rezaPhoneFrame-b3441282.webp",
-      "_app/immutable/assets/rezaSplat-8323f1b6.svg"
-    ]
-  },
-  "_Image.js": {
-    "file": "chunks/Image.js",
-    "imports": [
-      "_index.js",
       "_index3.js"
     ],
-    "css": [
-      "_app/immutable/assets/Image-96370eb5.css"
-    ]
-  },
-  "_figma-logo.js": {
-    "file": "chunks/figma-logo.js",
-    "imports": [
-      "_index.js"
-    ]
-  },
-  "_BlogCard.js": {
-    "file": "chunks/BlogCard.js",
-    "imports": [
-      "_index.js",
-      "_Time.js"
-    ],
-    "css": [
-      "_app/immutable/assets/BlogCard-5150d87d.css"
-    ]
-  },
-  "_SectionTitle.js": {
-    "file": "chunks/SectionTitle.js",
-    "imports": [
-      "_index.js"
-    ],
-    "css": [
-      "_app/immutable/assets/SectionTitle-52bf9cca.css"
-    ]
-  },
-  "_brain.js": {
-    "file": "chunks/brain.js",
-    "imports": [
-      "_index.js"
-    ]
-  },
-  "_PageTitle.js": {
-    "file": "chunks/PageTitle.js",
-    "imports": [
-      "_index.js"
-    ],
-    "css": [
-      "_app/immutable/assets/PageTitle-a3df11ec.css"
-    ]
-  },
-  "_Time.js": {
-    "file": "chunks/Time.js",
-    "imports": [
-      "_index.js"
-    ]
-  },
-  "_End.js": {
-    "file": "chunks/End.js",
-    "imports": [
-      "_index.js"
-    ],
-    "css": [
-      "_app/immutable/assets/End-75766168.css"
-    ]
-  },
-  "_dynamic-import-helper.js": {
-    "file": "chunks/dynamic-import-helper.js"
-  },
-  "_SwiperContainer.js": {
-    "file": "chunks/SwiperContainer.js",
-    "imports": [
-      "_index.js"
-    ],
-    "css": [
-      "_app/immutable/assets/SwiperContainer-9868634f.css"
-    ]
-  },
-  "_general-observer.js": {
-    "file": "chunks/general-observer.js",
-    "imports": [
-      "_index.js"
+    "dynamicImports": [
+      "src/hooks.server.js"
     ]
   },
   "src/hooks.server.js": {
@@ -503,16 +386,35 @@
     "src": "src/hooks.server.js",
     "isDynamicEntry": true
   },
+  "_index3.js": {
+    "file": "chunks/index3.js"
+  },
+  "src/routes/blog/6c.svx": {
+    "file": "chunks/6c.js",
+    "src": "src/routes/blog/6c.svx",
+    "isDynamicEntry": true,
+    "imports": [
+      "_index3.js"
+    ]
+  },
+  "src/routes/blog/ai-tools.svx": {
+    "file": "chunks/ai-tools.js",
+    "src": "src/routes/blog/ai-tools.svx",
+    "isDynamicEntry": true,
+    "imports": [
+      "_index3.js"
+    ]
+  },
   "src/routes/blog/best-ux-books.svx": {
     "file": "chunks/best-ux-books.js",
     "src": "src/routes/blog/best-ux-books.svx",
     "isDynamicEntry": true,
     "imports": [
-      "_index.js",
+      "_index3.js",
       "_Image.js"
     ],
     "assets": [
-      "_app/immutable/assets/uxBooks-0c8a2d19.webp"
+      "_app/immutable/assets/uxBooks-68c26640.webp"
     ]
   },
   "src/routes/blog/calculate-typography-values.svx": {
@@ -520,11 +422,11 @@
     "src": "src/routes/blog/calculate-typography-values.svx",
     "isDynamicEntry": true,
     "imports": [
-      "_index.js",
+      "_index3.js",
       "_Image.js"
     ],
     "assets": [
-      "_app/immutable/assets/headingFontSizes-db10fc74.webp"
+      "_app/immutable/assets/headingFontSizes-094cb572.webp"
     ]
   },
   "src/routes/blog/case-study.svx": {
@@ -532,7 +434,7 @@
     "src": "src/routes/blog/case-study.svx",
     "isDynamicEntry": true,
     "imports": [
-      "_index.js"
+      "_index3.js"
     ]
   },
   "src/routes/blog/color-scheme.svx": {
@@ -540,7 +442,23 @@
     "src": "src/routes/blog/color-scheme.svx",
     "isDynamicEntry": true,
     "imports": [
-      "_index.js"
+      "_index3.js"
+    ]
+  },
+  "src/routes/blog/fluency.svx": {
+    "file": "chunks/fluency.js",
+    "src": "src/routes/blog/fluency.svx",
+    "isDynamicEntry": true,
+    "imports": [
+      "_index3.js"
+    ]
+  },
+  "src/routes/blog/free-stuff.svx": {
+    "file": "chunks/free-stuff.js",
+    "src": "src/routes/blog/free-stuff.svx",
+    "isDynamicEntry": true,
+    "imports": [
+      "_index3.js"
     ]
   },
   "src/routes/blog/gestalt.svx": {
@@ -548,10 +466,10 @@
     "src": "src/routes/blog/gestalt.svx",
     "isDynamicEntry": true,
     "imports": [
-      "_index.js"
+      "_index3.js"
     ],
     "css": [
-      "_app/immutable/assets/Image-96370eb5.css"
+      "_app/immutable/assets/Image-f2d8da55.css"
     ]
   },
   "src/routes/blog/grids.svx": {
@@ -559,10 +477,10 @@
     "src": "src/routes/blog/grids.svx",
     "isDynamicEntry": true,
     "imports": [
-      "_index.js"
+      "_index3.js"
     ],
     "css": [
-      "_app/immutable/assets/Image-96370eb5.css"
+      "_app/immutable/assets/Image-f2d8da55.css"
     ]
   },
   "src/routes/blog/how-to-ask-for-design-feedback.svx": {
@@ -570,11 +488,11 @@
     "src": "src/routes/blog/how-to-ask-for-design-feedback.svx",
     "isDynamicEntry": true,
     "imports": [
-      "_index.js",
+      "_index3.js",
       "_Image.js"
     ],
     "assets": [
-      "_app/immutable/assets/design-feedback-a02d3efa.webp"
+      "_app/immutable/assets/design-feedback-655e4871.webp"
     ]
   },
   "src/routes/blog/logo-design.svx": {
@@ -582,10 +500,10 @@
     "src": "src/routes/blog/logo-design.svx",
     "isDynamicEntry": true,
     "imports": [
-      "_index.js"
+      "_index3.js"
     ],
     "css": [
-      "_app/immutable/assets/Image-96370eb5.css"
+      "_app/immutable/assets/Image-f2d8da55.css"
     ]
   },
   "src/routes/blog/mockups.svx": {
@@ -593,7 +511,7 @@
     "src": "src/routes/blog/mockups.svx",
     "isDynamicEntry": true,
     "imports": [
-      "_index.js"
+      "_index3.js"
     ]
   },
   "src/routes/blog/my-fav-colors-tool.svx": {
@@ -601,10 +519,18 @@
     "src": "src/routes/blog/my-fav-colors-tool.svx",
     "isDynamicEntry": true,
     "imports": [
-      "_index.js"
+      "_index3.js"
     ],
     "css": [
-      "_app/immutable/assets/Image-96370eb5.css"
+      "_app/immutable/assets/Image-f2d8da55.css"
+    ]
+  },
+  "src/routes/blog/personal-brand.svx": {
+    "file": "chunks/personal-brand.js",
+    "src": "src/routes/blog/personal-brand.svx",
+    "isDynamicEntry": true,
+    "imports": [
+      "_index3.js"
     ]
   },
   "src/routes/blog/polish.svx": {
@@ -612,11 +538,11 @@
     "src": "src/routes/blog/polish.svx",
     "isDynamicEntry": true,
     "imports": [
-      "_index.js",
+      "_index3.js",
       "_Image.js"
     ],
     "assets": [
-      "_app/immutable/assets/polishRhythm-22fe888a.webp"
+      "_app/immutable/assets/polishRhythm-7364e448.webp"
     ]
   },
   "src/routes/blog/portfolio.svx": {
@@ -624,7 +550,7 @@
     "src": "src/routes/blog/portfolio.svx",
     "isDynamicEntry": true,
     "imports": [
-      "_index.js"
+      "_index3.js"
     ]
   },
   "src/routes/blog/project-organization.svx": {
@@ -632,11 +558,11 @@
     "src": "src/routes/blog/project-organization.svx",
     "isDynamicEntry": true,
     "imports": [
-      "_index.js",
+      "_index3.js",
       "_Image.js"
     ],
     "assets": [
-      "_app/immutable/assets/projectOrganization-1e4b11d4.webp"
+      "_app/immutable/assets/projectOrganization-9bf5fb23.webp"
     ]
   },
   "src/routes/blog/resolution-pt-px.svx": {
@@ -644,10 +570,18 @@
     "src": "src/routes/blog/resolution-pt-px.svx",
     "isDynamicEntry": true,
     "imports": [
-      "_index.js"
+      "_index3.js"
     ],
     "css": [
-      "_app/immutable/assets/Image-96370eb5.css"
+      "_app/immutable/assets/Image-f2d8da55.css"
+    ]
+  },
+  "src/routes/blog/shadow.svx": {
+    "file": "chunks/shadow.js",
+    "src": "src/routes/blog/shadow.svx",
+    "isDynamicEntry": true,
+    "imports": [
+      "_index3.js"
     ]
   },
   "src/routes/blog/sharp-axe-method.svx": {
@@ -655,16 +589,8 @@
     "src": "src/routes/blog/sharp-axe-method.svx",
     "isDynamicEntry": true,
     "imports": [
-      "_index.js",
-      "_general-observer.js"
-    ]
-  },
-  "src/routes/blog/stock-images.svx": {
-    "file": "chunks/stock-images.js",
-    "src": "src/routes/blog/stock-images.svx",
-    "isDynamicEntry": true,
-    "imports": [
-      "_index.js"
+      "_index3.js",
+      "_gist.svelte_svelte_type_style_lang.js"
     ]
   },
   "src/routes/blog/the-art-of-thinking-clearly.svx": {
@@ -672,7 +598,7 @@
     "src": "src/routes/blog/the-art-of-thinking-clearly.svx",
     "isDynamicEntry": true,
     "imports": [
-      "_index.js"
+      "_index3.js"
     ]
   },
   "src/routes/blog/typescale.svx": {
@@ -680,12 +606,12 @@
     "src": "src/routes/blog/typescale.svx",
     "isDynamicEntry": true,
     "imports": [
-      "_index.js",
+      "_index3.js",
       "_Image.js"
     ],
     "assets": [
-      "_app/immutable/assets/utopia-fd802571.webp",
-      "_app/immutable/assets/utopiaOutput-23135f74.webp"
+      "_app/immutable/assets/utopia-29280d6a.webp",
+      "_app/immutable/assets/utopiaOutput-2e3a96db.webp"
     ]
   },
   "src/routes/blog/typography-impact.svx": {
@@ -693,11 +619,11 @@
     "src": "src/routes/blog/typography-impact.svx",
     "isDynamicEntry": true,
     "imports": [
-      "_index.js",
+      "_index3.js",
       "_Image.js"
     ],
     "assets": [
-      "_app/immutable/assets/typoDesign-260fc3c7.webp"
+      "_app/immutable/assets/typoDesign-355e288b.webp"
     ]
   },
   "src/routes/blog/ui-kit.svx": {
@@ -705,7 +631,7 @@
     "src": "src/routes/blog/ui-kit.svx",
     "isDynamicEntry": true,
     "imports": [
-      "_index.js"
+      "_index3.js"
     ]
   },
   "src/routes/blog/ux-research.svx": {
@@ -713,7 +639,7 @@
     "src": "src/routes/blog/ux-research.svx",
     "isDynamicEntry": true,
     "imports": [
-      "_index.js"
+      "_index3.js"
     ]
   },
   "src/routes/blog/ux-vs-ui.svx": {
@@ -721,26 +647,196 @@
     "src": "src/routes/blog/ux-vs-ui.svx",
     "isDynamicEntry": true,
     "imports": [
-      "_index.js"
+      "_index3.js"
     ],
     "css": [
-      "_app/immutable/assets/Image-96370eb5.css"
+      "_app/immutable/assets/Image-f2d8da55.css"
     ]
   },
-  "src/routes/blog/wth-is-wcag.svx": {
-    "file": "chunks/wth-is-wcag.js",
-    "src": "src/routes/blog/wth-is-wcag.svx",
+  "src/routes/blog/ux.svx": {
+    "file": "chunks/ux.js",
+    "src": "src/routes/blog/ux.svx",
     "isDynamicEntry": true,
     "imports": [
-      "_index.js"
+      "_index3.js"
     ]
+  },
+  "src/routes/blog/what-is-wcag.svx": {
+    "file": "chunks/what-is-wcag.js",
+    "src": "src/routes/blog/what-is-wcag.svx",
+    "isDynamicEntry": true,
+    "imports": [
+      "_index3.js"
+    ]
+  },
+  "_config.js": {
+    "file": "chunks/config.js"
+  },
+  "_SocialButtons.js": {
+    "file": "chunks/SocialButtons.js",
+    "imports": [
+      "_index3.js",
+      "_linkedin-logo.js",
+      "_ExLink.js"
+    ],
+    "css": [
+      "_app/immutable/assets/SocialButtons-579090bb.css"
+    ]
+  },
+  "_stores.js": {
+    "file": "chunks/stores.js",
+    "imports": [
+      "_index3.js"
+    ]
+  },
+  "_linkedin-logo.js": {
+    "file": "chunks/linkedin-logo.js",
+    "imports": [
+      "_index3.js"
+    ]
+  },
+  "_ExLink.js": {
+    "file": "chunks/ExLink.js",
+    "imports": [
+      "_index3.js"
+    ],
+    "css": [
+      "_app/immutable/assets/ExLink-eb6f608c.css"
+    ]
+  },
+  "_Button.js": {
+    "file": "chunks/Button.js",
+    "imports": [
+      "_index3.js"
+    ],
+    "css": [
+      "_app/immutable/assets/Button-aa9f3bdd.css"
+    ]
+  },
+  "_MarkdownContainer.js": {
+    "file": "chunks/MarkdownContainer.js",
+    "imports": [
+      "_index3.js"
+    ],
+    "css": [
+      "_app/immutable/assets/MarkdownContainer-fe419064.css"
+    ]
+  },
+  "_ProjectCard.js": {
+    "file": "chunks/ProjectCard.js",
+    "imports": [
+      "_index3.js",
+      "_Button.js",
+      "_figma-logo.js"
+    ],
+    "css": [
+      "_app/immutable/assets/ProjectCard-435d8a1a.css"
+    ],
+    "assets": [
+      "_app/immutable/assets/rezaPhoneFrame-f61992a2.webp",
+      "_app/immutable/assets/rezaSplat-8323f1b6.svg"
+    ]
+  },
+  "_Image.js": {
+    "file": "chunks/Image.js",
+    "imports": [
+      "_index3.js",
+      "_index2.js"
+    ],
+    "css": [
+      "_app/immutable/assets/Image-f2d8da55.css"
+    ]
+  },
+  "_GLTF.js": {
+    "file": "chunks/GLTF.js",
+    "imports": [
+      "_index3.js",
+      "_index2.js"
+    ],
+    "css": [
+      "_app/immutable/assets/GLTF-04833804.css"
+    ]
+  },
+  "_SEO.js": {
+    "file": "chunks/SEO.js",
+    "imports": [
+      "_index3.js",
+      "_config.js"
+    ],
+    "assets": [
+      "_app/immutable/assets/home-7915633f.webp",
+      "_app/immutable/assets/home-open-graph-46f12069.webp",
+      "_app/immutable/assets/home-open-graph-square-00a8fdd0.webp",
+      "_app/immutable/assets/home-twitter-8e52014d.webp"
+    ]
+  },
+  "_figma-logo.js": {
+    "file": "chunks/figma-logo.js",
+    "imports": [
+      "_index3.js"
+    ]
+  },
+  "_BlogCard.js": {
+    "file": "chunks/BlogCard.js",
+    "imports": [
+      "_index3.js",
+      "_Time.js"
+    ],
+    "css": [
+      "_app/immutable/assets/BlogCard-db3d25d4.css"
+    ]
+  },
+  "_PageTitle.js": {
+    "file": "chunks/PageTitle.js",
+    "imports": [
+      "_index3.js"
+    ],
+    "css": [
+      "_app/immutable/assets/PageTitle-9927f06e.css"
+    ]
+  },
+  "_Time.js": {
+    "file": "chunks/Time.js",
+    "imports": [
+      "_index3.js"
+    ]
+  },
+  "_BlogTag.js": {
+    "file": "chunks/BlogTag.js",
+    "imports": [
+      "_index3.js"
+    ],
+    "css": [
+      "_app/immutable/assets/BlogTag-4419fe13.css"
+    ]
+  },
+  "_SectionTitle.js": {
+    "file": "chunks/SectionTitle.js",
+    "imports": [
+      "_index3.js"
+    ],
+    "css": [
+      "_app/immutable/assets/SectionTitle-6fec9199.css"
+    ]
+  },
+  "_End.js": {
+    "file": "chunks/End.js",
+    "imports": [
+      "_index3.js"
+    ],
+    "css": [
+      "_app/immutable/assets/End-9ab3a312.css"
+    ]
+  },
+  "_dynamic-import-helper.js": {
+    "file": "chunks/dynamic-import-helper.js"
   },
   "src/routes/project/bonta.svx": {
     "file": "chunks/bonta.js",
     "src": "src/routes/project/bonta.svx",
     "isDynamicEntry": true,
     "imports": [
-      "_index.js"
+      "_index3.js"
     ]
   },
   "src/routes/project/reza.svx": {
@@ -748,38 +844,56 @@
     "src": "src/routes/project/reza.svx",
     "isDynamicEntry": true,
     "imports": [
-      "_index.js",
+      "_index3.js",
       "_SwiperContainer.js",
       "_Image.js"
     ],
     "assets": [
-      "_app/immutable/assets/thumbnail-4f6fd77f.webp",
-      "_app/immutable/assets/discord-a1f0d857.webp",
-      "_app/immutable/assets/feature-fa2cb245.webp",
-      "_app/immutable/assets/role-3510ed48.webp",
-      "_app/immutable/assets/plan-52c2f93a.webp",
-      "_app/immutable/assets/goal-5a37ac2e.webp",
-      "_app/immutable/assets/userResearch-a3eddbd1.webp",
-      "_app/immutable/assets/persona-58ea049b.webp",
-      "_app/immutable/assets/hmw1-2c866d80.webp",
-      "_app/immutable/assets/redesign1-8244fb6d.webp",
-      "_app/immutable/assets/redesign2-a3090ce4.webp",
-      "_app/immutable/assets/lofi-75e161ee.webp",
-      "_app/immutable/assets/c1-bd155f4b.webp",
-      "_app/immutable/assets/c2-96f5f70d.webp",
-      "_app/immutable/assets/l1-ec72d0e0.webp",
-      "_app/immutable/assets/l2-5ca38d93.webp",
-      "_app/immutable/assets/ds1-b700b549.webp",
-      "_app/immutable/assets/ds2-475ca52b.webp",
-      "_app/immutable/assets/ds3-6dcc19e8.webp",
-      "_app/immutable/assets/rezaIcon-5018a067.webp",
-      "_app/immutable/assets/reservationFlow-3346768f.webp",
-      "_app/immutable/assets/searchFlow-5078de97.webp",
-      "_app/immutable/assets/homeScreen-76609b90.webp",
-      "_app/immutable/assets/searchScreen-fd98dd81.webp",
-      "_app/immutable/assets/reservationScreen-b792b0af.webp",
-      "_app/immutable/assets/detailScreen-2425e03d.webp",
-      "_app/immutable/assets/notiScreen-558492e0.webp"
+      "_app/immutable/assets/thumbnail-85e2ab98.webp",
+      "_app/immutable/assets/discord-f9f9277a.webp",
+      "_app/immutable/assets/feature-a33d32e9.webp",
+      "_app/immutable/assets/role-4406eaa3.webp",
+      "_app/immutable/assets/plan-b5acf984.webp",
+      "_app/immutable/assets/goal-c7be7e34.webp",
+      "_app/immutable/assets/userResearch-e9df2b0d.webp",
+      "_app/immutable/assets/persona-81831f75.webp",
+      "_app/immutable/assets/hmw1-aac89101.webp",
+      "_app/immutable/assets/redesign1-fd91a795.webp",
+      "_app/immutable/assets/redesign2-3252e0b5.webp",
+      "_app/immutable/assets/lofi-dd0659da.webp",
+      "_app/immutable/assets/c1-e9cce02a.webp",
+      "_app/immutable/assets/c2-dabf091f.webp",
+      "_app/immutable/assets/l1-286eb5fb.webp",
+      "_app/immutable/assets/l2-d71c6fdb.webp",
+      "_app/immutable/assets/ds1-768f7189.webp",
+      "_app/immutable/assets/ds2-f580e509.webp",
+      "_app/immutable/assets/ds3-271ce949.webp",
+      "_app/immutable/assets/rezaIcon-fa9cdf60.webp",
+      "_app/immutable/assets/reservationFlow-95894527.webp",
+      "_app/immutable/assets/searchFlow-b9b64416.webp",
+      "_app/immutable/assets/homeScreen-76600a01.webp",
+      "_app/immutable/assets/searchScreen-63a85453.webp",
+      "_app/immutable/assets/reservationScreen-80cba618.webp",
+      "_app/immutable/assets/detailScreen-12d124ff.webp",
+      "_app/immutable/assets/notiScreen-1e82ea5e.webp"
+    ]
+  },
+  "_SwiperContainer.js": {
+    "file": "chunks/SwiperContainer.js",
+    "imports": [
+      "_index3.js"
+    ],
+    "css": [
+      "_app/immutable/assets/SwiperContainer-6d518e94.css"
+    ]
+  },
+  "_gist.svelte_svelte_type_style_lang.js": {
+    "file": "chunks/gist.svelte_svelte_type_style_lang.js",
+    "imports": [
+      "_index3.js"
+    ],
+    "css": [
+      "_app/immutable/assets/gist-ca7a22b4.css"
     ]
   }
 }

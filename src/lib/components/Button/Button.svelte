@@ -40,37 +40,40 @@
 
 <style>
 	.btn {
-		appearance: none;
-		/* flex */
+		/* FLEX */
 		display: flex;
 		justify-content: center;
 		align-items: center;
+		/* --- */
 
-		/* padding */
-		padding-left: 32px;
-		padding-right: 32px;
-		padding-top: 16px;
-		padding-bottom: 16px;
+		/* PADDING */
+		padding-left: 2rem;
+		padding-right: 2rem;
+		padding-top: 1rem;
+		padding-bottom: 1rem;
+		/* --- */
 
-		/* width */
+		/* WIDTH */
 		width: 100%;
 
-		transition: var(--transition);
-		font-size: var(--font-size-small);
-		line-height: normal;
+		/* FONT */
 		font-weight: 600;
+		line-height: normal;
+		font-size: var(--font-size-small);
+		/* --- */
+
+		appearance: none;
+
 		border: 1px solid transparent;
 		border-radius: var(--border-radius);
 		overflow: hidden;
 		position: relative;
 		cursor: pointer;
+		transition: var(--transition);
 	}
 
 	.btn:hover {
 		filter: brightness(120%);
-	}
-
-	.btn:active {
-		scale: 0.9;
+		
 	}
 </style>

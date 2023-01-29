@@ -1,4 +1,5 @@
-import { c as create_ssr_component, e as spread, f as escape_object, v as validate_component, g as each, h as escape } from "../../../../chunks/index.js";
+import { c as create_ssr_component, e as spread, f as escape_object, v as validate_component, g as each, h as escape } from "../../../../chunks/index3.js";
+import { B as BlogTag } from "../../../../chunks/BlogTag.js";
 import { S as SectionTitle } from "../../../../chunks/SectionTitle.js";
 const Folder = create_ssr_component(($$result, $$props, $$bindings, slots) => {
   return `<svg${spread(
@@ -13,7 +14,7 @@ const Folder = create_ssr_component(($$result, $$props, $$bindings, slots) => {
 });
 const _page_svelte_svelte_type_style_lang = "";
 const css = {
-  code: ".category.svelte-1nf1547{display:flex;flex-direction:row;flex-wrap:wrap;gap:var(--space-s)}.category__link.svelte-1nf1547{background-color:var(--bg);border-radius:var(--border-radius-light);color:var(--accent-500);padding:var(--space-xs);transition:.3s;width:-moz-fit-content;width:fit-content}.category__link.svelte-1nf1547:hover{background-color:var(--neutral-900);color:var(--accent-300);text-decoration:underline}",
+  code: ".category.svelte-1fxjn7a{display:flex;flex-direction:row;flex-wrap:wrap;gap:var(--space-s)}",
   map: null
 };
 const Page = create_ssr_component(($$result, $$props, $$bindings, slots) => {
@@ -34,12 +35,18 @@ const Page = create_ssr_component(($$result, $$props, $$bindings, slots) => {
   $$result.css.add(css);
   return `${validate_component(SectionTitle, "SectionTitle").$$render($$result, { sectionTitle: "Category" }, {}, {
     default: ({ sectionIcon }) => {
-      return `${validate_component(Folder, "Folder").$$render($$result, Object.assign(sectionIcon), {}, {})}`;
+      return `${validate_component(Folder, "Folder").$$render($$result, Object.assign({}, sectionIcon), {}, {})}`;
     }
   })}
 
-<div class="${"category svelte-1nf1547"}">${each(categories, (category) => {
-    return `<a class="${"category__link svelte-1nf1547"}" href="${"/blog/category/" + escape(category, true)}">${escape(category)}</a>`;
+<div class="${"category svelte-1fxjn7a"}">${each(categories, (category) => {
+    return `<a href="${"/blog/category/" + escape(category, true)}">${validate_component(BlogTag, "BlogTag").$$render($$result, {}, {}, {
+      default: () => {
+        return `${escape(category)}
+			`;
+      }
+    })}
+		</a>`;
   })}
 </div>`;
 });

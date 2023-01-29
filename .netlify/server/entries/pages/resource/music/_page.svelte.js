@@ -1,6 +1,6 @@
-import { c as create_ssr_component, e as spread, f as escape_object, v as validate_component, d as add_attribute } from "../../../../chunks/index.js";
+import { c as create_ssr_component, e as spread, f as escape_object, v as validate_component, d as add_attribute } from "../../../../chunks/index3.js";
 import { S as SectionTitle } from "../../../../chunks/SectionTitle.js";
-import { G as General_observer } from "../../../../chunks/general-observer.js";
+import { G as General_observer } from "../../../../chunks/gist.svelte_svelte_type_style_lang.js";
 const Music_notes = create_ssr_component(($$result, $$props, $$bindings, slots) => {
   return `<svg${spread(
     [
@@ -31,7 +31,7 @@ const Spotify = create_ssr_component(($$result, $$props, $$bindings, slots) => {
 const Page = create_ssr_component(($$result, $$props, $$bindings, slots) => {
   return `${validate_component(SectionTitle, "SectionTitle").$$render($$result, { sectionTitle: "Music" }, {}, {
     default: ({ sectionIcon }) => {
-      return `${validate_component(Music_notes, "MusicNotes").$$render($$result, Object.assign(sectionIcon), {}, {})}`;
+      return `${validate_component(Music_notes, "MusicNotes").$$render($$result, Object.assign({}, sectionIcon), {}, {})}`;
     }
   })}
 

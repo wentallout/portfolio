@@ -12,7 +12,7 @@
 	<div class="title__icon">
 		<slot {sectionIcon} />
 	</div>
-	<h2 class="title__text xl-text">{sectionTitle}</h2>
+	<h2 class="title__text xxl-text">{sectionTitle}</h2>
 </div>
 
 <style>

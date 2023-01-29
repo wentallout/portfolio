@@ -8,7 +8,7 @@
 	registerTab(tab);
 </script>
 
-<button class:selected={$selectedTab === tab} on:click={() => selectTab(tab)}>
+<button class="large-text" class:selected={$selectedTab === tab} on:click={() => selectTab(tab)}>
 	<slot />
 </button>
 
@@ -20,10 +20,10 @@
 		border-radius: 0;
 		margin: 0;
 		color: var(--neutral-600);
-		font-weight: 500;
-		font-size: var(--font-size-large);
+
 		padding: var(--space-2xs) var(--space-s);
 		transition: var(--transition);
+		font-family: 'Fancy';
 	}
 
 	button:hover {

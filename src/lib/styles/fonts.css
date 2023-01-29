@@ -1,7 +1,7 @@
 @font-face {
 	font-family: 'Fancy';
-	src: url('/fonts/BaradigBold.woff2') format('woff2');
-	font-weight: 600;
+	src: url('/fonts/Beaufort.woff2') format('woff2');
+	font-weight: normal;
 	font-style: normal;
 	font-display: swap;
 }

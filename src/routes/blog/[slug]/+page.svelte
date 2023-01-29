@@ -1,4 +1,5 @@
 <script>
+	import BlogTag from '$lib/components/Common/BlogTag.svelte';
 	import End from '$lib/components/Common/End.svelte';
 	export let data;
 	import Time from 'svelte-time';
@@ -17,8 +18,10 @@
 		<div class="category">
 			<div class="category__title">Categories:</div>
 			{#each data.categories as category}
-				<a class="category__link" href="/blog/category/{category}">
-					{category}
+				<a class="blog-tag" href="/blog/category/{category}">
+					<BlogTag>
+						{category}
+					</BlogTag>
 				</a>
 			{/each}
 		</div>
@@ -30,6 +33,10 @@
 </article>
 
 <style>
+	.blog-tag:after {
+		content: none !important;
+	}
+
 	.info {
 		display: block;
 	}

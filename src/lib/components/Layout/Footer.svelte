@@ -53,7 +53,7 @@
 		/* Width */
 		max-width: 100vw;
 
-		background-color: var(--bg);
+		background-color: var(--black);
 	}
 
 	footer::before {

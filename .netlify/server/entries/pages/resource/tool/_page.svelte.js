@@ -1,4 +1,4 @@
-import { c as create_ssr_component, e as spread, f as escape_object, v as validate_component } from "../../../../chunks/index.js";
+import { c as create_ssr_component, e as spread, f as escape_object, v as validate_component } from "../../../../chunks/index3.js";
 import { S as SectionTitle } from "../../../../chunks/SectionTitle.js";
 const Wrench = create_ssr_component(($$result, $$props, $$bindings, slots) => {
   return `<svg${spread(
@@ -14,7 +14,7 @@ const Wrench = create_ssr_component(($$result, $$props, $$bindings, slots) => {
 const Page = create_ssr_component(($$result, $$props, $$bindings, slots) => {
   return `${validate_component(SectionTitle, "SectionTitle").$$render($$result, { sectionTitle: "Tool" }, {}, {
     default: ({ sectionIcon }) => {
-      return `${validate_component(Wrench, "Wrench").$$render($$result, Object.assign(sectionIcon), {}, {})}`;
+      return `${validate_component(Wrench, "Wrench").$$render($$result, Object.assign({}, sectionIcon), {}, {})}`;
     }
   })}
 

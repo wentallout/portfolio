@@ -1,0 +1,12 @@
+---
+title: AI Design Tools
+date: 2023-01-28
+categories:
+    - freebies
+---
+
+## Resource list
+
+This one awesome website will leads you to amazing tools
+
+[AI Design Resource](https://aidesignresource.com/)
