@@ -1,26 +1,15 @@
 <script>
 	export let src = '';
 	export let alt = 'insert alt here';
-
-	export let width;
-	export let height;
-
-	export let hasCaption = true;
-
-	export let imagePreset = '';
-
-	import { Lightbox } from 'svelte-lightbox';
+	export let width = 'auto';
+	export let height = 480;
 
 	import { lazyLoad } from '$lib/actions/lazyLoad';
+	import ExLink from '$lib/components/Common/ExLink.svelte';
 </script>
 
-<figure>
-	<Lightbox
-		enableClickToClose="true"
-		{imagePreset}
-		enableImageExpand="true"
-		title={alt}
-		transitionDuration="5">
+<ExLink href={src}>
+	<figure>
 		<img
 			class="lazy-img"
 			use:lazyLoad={src}
@@ -30,17 +19,15 @@
 			decoding="async"
 			{alt} />
 
-		{#if hasCaption}
-			<figcaption class="caption xs-text">{alt}</figcaption>
-		{/if}
-	</Lightbox>
-</figure>
+		<figcaption class="caption xs-text">{alt}</figcaption>
+	</figure>
+</ExLink>
 
 <style>
 	.lazy-img {
 		/* LAZY LOAD */
 		opacity: 0;
-		transition: opacity 0.3s ease;
+		transition: opacity 0.1s ease;
 		/* --- */
 	}
 

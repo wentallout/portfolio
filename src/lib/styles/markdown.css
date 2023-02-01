@@ -5,13 +5,6 @@
 	border-radius: var(--border-radius-light);
 }
 
-@media (min-width: 992px) {
-	.markdown {
-		border: 1px solid var(--neutral-900);
-		padding: var(--space-xl) var(--space-3xl);
-	}
-}
-
 .markdown h1 {
 	font-family: var(--fancy-font);
 	font-size: var(--font-size-2xl);
@@ -45,9 +38,13 @@
 	}
 }
 
+.markdown h2:first-child {
+	margin-top: 0;
+}
+
 .markdown h2 {
 	/* SPACING */
-	margin-top: calc(var(--space-3xl)+var(--space-l));
+	margin-top: calc(var(--space-3xl));
 	margin-bottom: var(--space-s);
 	/* --- */
 
@@ -127,25 +124,35 @@
 	margin-bottom: 0;
 }
 
-.markdown a:not(.toc a, .markdown h2 a, .markdown h3 a, .markdown h4 a, .markdown h5 a)::after {
+.markdown
+	a:not(
+		.toc a,
+		.markdown h2 a,
+		.markdown h3 a,
+		.markdown h4 a,
+		.markdown h5 a,
+		.markdown a:has(img)
+	)::after {
 	content: '🔗';
 }
-.markdown a:not(.toc a, .markdown h2 a, .markdown h3 a, .markdown h4 a, .markdown h5 a) {
+.markdown
+	a:not(
+		.toc a,
+		.markdown h2 a,
+		.markdown h3 a,
+		.markdown h4 a,
+		.markdown h5 a,
+		.markdown a:has(img)
+	) {
 	color: var(--accent-500);
 }
 
-.markdown a:hover {
-	filter: brightness(1.5);
-}
-
-.markdown img:not(.swiper img) {
-	display: block;
-	width: 100%;
+.markdown img {
+	max-width: 100%;
 	height: auto;
 	object-fit: cover;
 	margin-top: var(--space-m);
 	margin-bottom: var(--space-xl);
-	max-width: 64rem;
 }
 
 .markdown li:not(.toc li) {
@@ -171,8 +178,14 @@
 }
 
 .markdown .swiper {
+	max-width: 100%;
+	height: auto;
 	margin-top: var(--space-m);
 	margin-bottom: var(--space-m);
+}
+
+.markdown .swiper img {
+	width: 100%;
 }
 
 .markdown ol li::before {
@@ -180,128 +193,6 @@
 }
 
 /* TOC */
-
-.toc {
-	/* FLEX */
-	display: flex;
-	flex-direction: column;
-	/* --- */
-
-	width: 100%;
-	max-height: 500px;
-
-	font-weight: 400 !important;
-	font-size: var(--font-size-small) !important;
-
-	text-transform: capitalize;
-	border-radius: var(--border-radius-light);
-	margin-top: var(--space-l);
-	margin-bottom: var(--space-l);
-
-	overflow-y: auto;
-
-	background-color: var(--bg);
-}
-
-.toc::before {
-	content: 'Contents';
-	background-color: var(--primary-500);
-	opacity: 0.8;
-
-	width: 100%;
-	position: sticky;
-	top: 0;
-
-	/* FONT */
-	color: var(--black);
-	font-family: 'Fancy';
-	font-size: var(--font-size-mid);
-	font-weight: 600;
-	/* --- */
-
-	/* FLEX */
-	display: flex;
-	justify-content: flex-start;
-	align-items: center;
-
-	/* SPACING  */
-	border-bottom: 1px solid var(--neutral-900);
-	padding: var(--space-xs) var(--space-m);
-}
-
-.toc-level-1 {
-	margin: 0;
-	padding: var(--space-m);
-}
-
-.toc-link {
-	font-weight: 400;
-	background-color: transparent !important;
-}
-
-.toc li:before {
-	content: none;
-}
-
-.toc a:hover {
-	text-decoration: none;
-	color: var(--primary-500);
-}
-
-.toc-link {
-	display: flex;
-	padding-left: var(--space-s);
-}
-
-.toc-item-h2 {
-	border-left: 1px solid var(--neutral-800);
-	padding-bottom: var(--space-2xs);
-}
-
-.toc-item-h3 {
-	border-left: 1px solid var(--neutral-800);
-	padding-bottom: var(--space-2xs);
-
-	margin-left: var(--space-s);
-}
-
-.toc-item-h4 {
-	border-left: 1px solid var(--neutral-800);
-	padding-bottom: var(--space-3xs);
-	margin-left: var(--space-s);
-}
-
-.toc-link-h2:hover:after,
-.toc-link-h3:hover:after,
-.toc-link-h3:hover:after {
-	content: '';
-	flex: 1 1;
-	border-bottom: 1px solid var(--primary-500);
-	margin: auto auto auto 0.5rem;
-}
-.toc-link-h2 {
-	color: var(--text-color);
-	margin-bottom: var(--space-3xs);
-	font-weight: 600;
-}
-
-.toc-link-h3 {
-	color: var(--text-color-low);
-	margin-bottom: var(--space-3xs);
-	font-weight: 400;
-}
-
-.toc-link-h4 {
-	font-weight: 400;
-	color: var(--text-color-low);
-	margin-bottom: var(--space-3xs);
-}
-
-.toc-item-h2:has(.toc-link-h2:hover),
-.toc-item-h3:has(.toc-link-h3:hover),
-.toc-item-h4:has(.toc-link-h4:hover) {
-	border-left: 1px solid var(--primary-500);
-}
 
 /* --- */
 
@@ -335,11 +226,11 @@ pre {
 table {
 	border-collapse: collapse;
 	background-color: var(--bg);
-	padding: 0.5rem 1rem;
+	padding: var(--space-s);
 	border: 1px solid var(--neutral-900);
 	max-width: var(--text-width);
 
-	overflow: hidden;
+	overflow: auto;
 }
 
 table tbody {
@@ -353,7 +244,6 @@ table thead {
 
 table td {
 	padding: 1rem 1.5rem;
-	max-width: 60ch;
 }
 
 /* table tr:nth-child(even) {
@@ -369,3 +259,11 @@ table td:first-child {
 	margin-top: 0;
 	margin-bottom: 0;
 } */
+
+aside.toc > nav > ul > li {
+	text-transform: capitalize;
+}
+
+aside.toc > nav > ul > li:before {
+	content: none;
+}

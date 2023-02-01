@@ -13,6 +13,7 @@
 		margin-top: var(--space-3xl);
 		margin-bottom: var(--space-s);
 
-		border-radius: var(--border-radius-light);
+		border-top: 1px solid var(--text-color);
+		border-top-style: double;
 	}
 </style>

@@ -1,5 +1,5 @@
 <script>
-	import End from '$lib/components/Common/End.svelte';
+	import ContentContainer from '$lib/components/Common/ContentContainer.svelte';
 
 	export let data;
 	import Time from 'svelte-time';
@@ -12,9 +12,10 @@
 
 <article class="info">
 	<h1 class="rainbow">{data.title}</h1>
-	<div class="small-text project-date">Updated: <Time  relative timestamp={data.date} /></div>
-	<svelte:component this={data.content} />
-	<End />
+	<div class="small-text project-date">Updated: <Time relative timestamp={data.date} /></div>
+	<ContentContainer>
+		<svelte:component this={data.content} />
+	</ContentContainer>
 </article>
 
 <style>

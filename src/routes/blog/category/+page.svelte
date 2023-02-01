@@ -1,5 +1,5 @@
 <script>
-	import BlogTag from '$lib/components/Common/BlogTag.svelte';
+	import BlogTag from '$lib/components/Common/Tag.svelte';
 	export let data;
 	import SectionTitle from '$lib/components/Common/SectionTitle.svelte';
 	import Folder from '~icons/ph/folder';

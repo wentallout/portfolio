@@ -1,0 +1,23 @@
+---
+title: Figma plugins
+date: 2022-01-30
+categories:
+    - freebies
+---
+
+
+## Shadow
+
+Create realistic shadow
+ 
+[SmoothShadow](https://www.figma.com/community/plugin/788830704169694737/SmoothShadow)
+
+## Components Management
+
+[PropStar](https://www.figma.com/community/plugin/1116018586739867857/Propstar)
+
+## Stylish
+
+Tilting your screens to present your work
+
+[Skewdat](https://www.figma.com/community/plugin/741472919529947576/SkewDat)

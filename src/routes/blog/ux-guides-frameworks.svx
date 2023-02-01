@@ -1,0 +1,30 @@
+---
+title: 'UX Research and Frameworks'
+date: '2023-01-30'
+categories:
+    - 'freebies'
+---
+
+1. [Playbooks for UX Designers](https://askplaybook.com/)
+
+2. [Usability Heuristic Frameworks](https://lnkd.in/ei7nb6Ug).
+
+3. [Behavior Change Strategies](https://www.makeit.tools/).
+
+4. [User Research Prioritization](https://lnkd.in/eArMRQnw).
+
+5. [UX Methods Resource Kit](https://lnkd.in/eshvKWuK).
+
+6. [Seer Framework](https://lnkd.in/eWvQTipj).
+
+7. [Product Vision Mind Map](https://lnkd.in/eFJsAZXM).
+
+8. [Product Prioritization Framework](https://lnkd.in/eQpHwjdQ).
+
+9. [Sensible Futures Framework](https://lnkd.in/eCZ6P3VG).
+
+10. [UX Research Templates](https://lnkd.in/eh_k_YYH),
+
+11. [UX templates and frameworks](https://untools.co/),
+
+12. [Design review meetings framework](https://lnkd.in/eG-GUv6a).

@@ -3,7 +3,7 @@ import sveltePreprocess from 'svelte-preprocess';
 
 import { mdsvex } from 'mdsvex';
 
-import rehypeToc from '@jsdevtools/rehype-toc';
+// import rehypeToc from '@jsdevtools/rehype-toc';
 import rehypeSlug from 'rehype-slug';
 import rehypeExternalLinks from 'rehype-external-links';
 import rehypeAutolinkHeadings from 'rehype-autolink-headings';
@@ -24,7 +24,7 @@ const config = {
 			extensions: ['.svelte.md', '.md', '.svx'],
 			rehypePlugins: [
 				rehypeSlug,
-				rehypeToc,
+				// rehypeToc,
 				[
 					rehypeExternalLinks,
 					{ rel: ['nofollow', 'noopener', 'noreferrer', 'external'], target: '_blank' }

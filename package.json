@@ -47,7 +47,6 @@
 		"sharp": "^0.31.3",
 		"svelte": "^3.55.1",
 		"svelte-check": "^3.0.3",
-		"svelte-lightbox": "^1.1.0",
 		"svelte-preprocess": "^5.0.1",
 		"svelte-sequential-preprocessor": "^0.0.7",
 		"svelte-sitemap": "^2.5.4",
@@ -63,5 +62,8 @@
 	"repository": {
 		"type": "git",
 		"url": "https://github.com/wentallout/portfolio"
+	},
+	"dependencies": {
+		"svelte-toc": "^0.5.2"
 	}
 }

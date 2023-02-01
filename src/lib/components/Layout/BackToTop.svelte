@@ -28,7 +28,7 @@
 <svelte:window on:scroll={handleOnScroll} />
 
 <div class="bck2top" on:click={goTop} on:keyup={goTop} class:hidden>
-	<CaretUp class="icon" width="24" height="24" />
+	<CaretUp width="24" height="24" color="var(--black)" />
 </div>
 
 <style>
@@ -37,21 +37,21 @@
 		display: flex;
 		justify-content: center;
 		align-items: center;
-		/*  */
+		/* --- */
 
 		/* SIZE */
 		width: 56px;
 		height: 56px;
-		/*  */
+		/* --- */
 
 		/* COLOR */
-		background-color: rgba(0, 0, 0, 0.5);
-		/*  */
+		background-color: var(--primary-500);
+		/* --- */
 
 		/* POSITION FIXED ON SCREEN */
 		position: fixed;
-		right: 10px;
-		bottom: 10px;
+		right: var(--space-s);
+		bottom: var(--space-s);
 		z-index: 99;
 		/*  */
 

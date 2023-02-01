@@ -116,6 +116,7 @@
 		background-repeat: no-repeat;
 	}
 
+	/* TARGET MOBILE SCREENS TO HIDE DECORATIONS */
 	@media (max-width: 991px) {
 		.main-content:after,
 		.main-content:before {

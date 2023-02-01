@@ -12,10 +12,8 @@ export const lazyLoad = (image, src) => {
 	};
 	const observer = new IntersectionObserver((entries) => {
 		if (entries[0].isIntersecting) {
-			console.log('an image has loaded'); // console log for REPL
 			image.src = src; // replace placeholder src with the image src on observe
 			if (image.complete) {
-				// check if instantly loaded
 				loaded();
 			} else {
 				image.addEventListener('load', loaded); // if the image isn't loaded yet, add an event listener
