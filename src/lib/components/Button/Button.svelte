@@ -70,10 +70,16 @@
 		position: relative;
 		cursor: pointer;
 		transition: var(--transition);
+
+		/* make sure the text doesn't wrap */
+		white-space:nowrap;
+		overflow:hidden;
+
+		/* weird */
+		outline-color: transparent;
 	}
 
 	.btn:hover {
 		filter: brightness(120%);
-		
 	}
 </style>

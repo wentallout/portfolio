@@ -1,0 +1,51 @@
+---
+title: Don't use pure black and white in your design
+date: 2023-2-2
+categories:
+    - color
+---
+
+## Pure White Alternatives (#FFFFFF)
+
+they all kinda look the same to be honest.
+
+```js
+#F5F5FA
+#F0F0F5
+#EBEBF0
+#E6E6EB
+#E1E1E5
+
+#F9F4F4
+#F5F0F0
+#F0EBEB
+#EBE6E6
+#E5E1E1
+```
+
+## Pure Black Alternatives (#000000)
+
+Pure black is a MASSIVE UI Crime. Please change.
+
+```js
+#1F1F29
+#17171F
+#13131A
+#101014
+#0C0C0F
+
+#291F1F
+#1F1717
+#1A1313
+#141010
+#0F0C0C
+```
+
+
+
+
+
+
+
+
+

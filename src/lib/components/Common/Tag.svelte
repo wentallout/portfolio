@@ -1,7 +1,5 @@
 <script>
-	
 </script>
-
 
 <div class="small-text tag">
 	<slot />
@@ -17,7 +15,7 @@
 		padding-top: var(--space-3xs);
 		padding-bottom: var(--space-3xs);
 		line-height: normal;
-		background: var(--bg);
+		background: var(--black-400);
 		border-radius: var(--border-radius);
 		color: var(--text-color-low);
 		transition: var(--transition);

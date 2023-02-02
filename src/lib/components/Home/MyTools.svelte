@@ -51,7 +51,7 @@
 		flex-direction: column;
 		align-items: flex-start;
 
-		background-color: var(--bg);
+		background-color: var(--black-400);
 		padding: var(--space-l);
 		border-radius: var(--border-radius-light);
 		box-shadow: var(--box-shadow);

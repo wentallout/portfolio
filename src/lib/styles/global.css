@@ -3,8 +3,8 @@ body {
 }
 
 html {
+	scroll-padding: var(--scroll-padding, 60px);
 	scroll-behavior: smooth;
-	scroll-padding: var(--scroll-padding);
 }
 
 :root {
@@ -17,7 +17,13 @@ html {
 
 	--text-color-low: hsla(0, 0%, 100%, 0.6);
 
-	--page-bg: #0f0f0f;
+	--black-100: #1f1f29;
+	--black-200: #17171f;
+	--black-300: #13131a;
+	--black-400: #101014;
+	--black-500: #0c0c0f;
+
+	--page-bg: var(--black-500);
 
 	--brand-color: var(--text-color);
 
@@ -64,7 +70,7 @@ html {
 	--neutral-800: #474d46;
 	--neutral-900: #232622;
 
-	/* alert */
+	/* system color */
 	--success: #2cd926;
 	--error: #e03f1f;
 	--warning: #ecb546;
@@ -224,7 +230,7 @@ textarea {
 	padding: var(--space-xs) var(--space-xs);
 	color: var(--text-color) !important;
 	margin-bottom: var(--space-s);
-	background-color: var(--black);
+	background-color: var(--black-400);
 	height: 3.5rem;
 	border: 0;
 	border-radius: var(--border-radius-light);
@@ -311,7 +317,7 @@ hr {
 }
 
 .icon-black {
-	color: var(--bg);
+	color: var(--black-400);
 }
 
 .social__address:hover svg {
@@ -341,5 +347,3 @@ hr {
 [contenteditable] {
 	outline: 0px solid transparent;
 }
-
-

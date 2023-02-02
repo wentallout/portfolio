@@ -1,7 +1,6 @@
 .markdown {
 	word-wrap: break-word;
 	position: relative;
-
 	border-radius: var(--border-radius-light);
 }
 
@@ -192,13 +191,9 @@
 	content: none;
 }
 
-/* TOC */
-
-/* --- */
-
 blockquote {
 	border-radius: var(--border-radius-light);
-	background-color: var(--bg);
+	background-color: var(--black-400);
 	margin: 0;
 	padding-left: var(--space-s);
 	font-weight: 300;
@@ -216,16 +211,15 @@ blockquote p {
 }
 
 pre {
-	background-color: var(--neutral-900);
+	background-color: var(--black);
 	color: var(--text-color);
 	padding: var(--space-s) var(--space-s);
-	max-width: var(--text-width);
 	border-radius: var(--border-radius-light);
 }
 
 table {
 	border-collapse: collapse;
-	background-color: var(--bg);
+	background-color: var(--black-400);
 	padding: var(--space-s);
 	border: 1px solid var(--neutral-900);
 	max-width: var(--text-width);
@@ -266,4 +260,13 @@ aside.toc > nav > ul > li {
 
 aside.toc > nav > ul > li:before {
 	content: none;
+}
+
+:where(h1, h2, h3, h4) {
+	scroll-margin-top: var(--scroll-padding);
+}
+
+:where(aside.toc > button) {
+	width: 40px;
+	height: 40px;
 }

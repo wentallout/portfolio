@@ -20,11 +20,11 @@
 		navOverlayEle.style.height = '0%';
 	}
 
-	let header;
+	let headerEle;
 
 	onMount(() => {
-		const navigation = header;
-		const navigationHeight = navigation.offsetHeight;
+		const navigationHeight = headerEle.offsetHeight;
+
 		document.documentElement.style.setProperty('--scroll-padding', navigationHeight + 'px');
 	});
 </script>
@@ -32,7 +32,7 @@
 <svelte:window bind:scrollY />
 
 <VanishingHeader duration="350ms" offset={50} tolerance={5}>
-	<header bind:this={header}>
+	<header bind:this={headerEle}>
 		<nav class="nav" class:nav-scrolldown={scrollY > 0}>
 			<ul class="nav-list">
 				{#each navItems as navItem}

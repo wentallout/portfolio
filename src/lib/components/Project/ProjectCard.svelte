@@ -62,7 +62,7 @@
 		border-radius: var(--border-radius-light);
 		overflow-y: hidden;
 
-		background-color: var(--bg);
+		background-color: var(--black-400);
 	}
 
 	.project__thumbnail {

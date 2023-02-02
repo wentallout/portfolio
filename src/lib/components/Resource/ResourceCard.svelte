@@ -39,7 +39,7 @@
 		padding: var(--space-m);
 		height: 200px;
 		transition: var(--transition);
-		background-color: var(--bg);
+		background-color: var(--black-400);
 		border: 1px solid transparent;
 		border-radius: var(--border-radius-light);
 	}

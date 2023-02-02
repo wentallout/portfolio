@@ -24,16 +24,16 @@ Current URL: [wentallout.tech](https://wentallout.tech)
 
 - [x] Fonts: Self-hosted + subset (better than Google Fonts)
 - [x] Images: Compressed and Converted (webp)
-- [x] Routing (by default)
+- [x] Routing (SvelteKit by default)
 - [x] Page Transition: Fade Effect + Loading Bar
 - [x] Responsiveness: Mobile Compatible
 - [x] Contact: Working Form
-- [x] Blog: ToC, Categories
 - [x] SEO
-- [ ] Dark Mode
+- [x] Dark Mode (by default)
+- [x] Blog: Table of Contents, Categories
 - [ ] Blog: Search
 - [ ] Blog: Comment
-- [ ] 3D Elements
+- [x] Some 3D Elements
 
 ## Developing
 

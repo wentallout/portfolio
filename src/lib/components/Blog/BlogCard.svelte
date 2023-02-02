@@ -37,7 +37,7 @@
 
 		box-shadow: var(--box-shadow);
 
-		background-color: var(--bg);
+		background-color: var(--black-400);
 	}
 
 	.blog:before {

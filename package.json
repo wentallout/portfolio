@@ -51,6 +51,7 @@
 		"svelte-sequential-preprocessor": "^0.0.7",
 		"svelte-sitemap": "^2.5.4",
 		"svelte-time": "^0.7.1",
+		"svelte-toc": "^0.5.2",
 		"sveltekit-embed": "^0.0.11",
 		"swiper": "^8.4.6",
 		"three": "^0.148.0",
@@ -62,8 +63,5 @@
 	"repository": {
 		"type": "git",
 		"url": "https://github.com/wentallout/portfolio"
-	},
-	"dependencies": {
-		"svelte-toc": "^0.5.2"
 	}
 }

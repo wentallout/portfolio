@@ -18,9 +18,6 @@
 		border-radius: var(--border-radius-light);
 		overflow: hidden;
 		width: 100%;
-
-		background: repeating-radial-gradient(circle at 0 0, transparent 0, #121212 40px),
-			repeating-linear-gradient(#1e1e1e55, #1e1e1e);
 	}
 
 	.title:before {
@@ -33,7 +30,7 @@
 
 		background: linear-gradient(
 			0deg,
-			var(--page-bg) 0%,
+			var(--black-500) 0%,
 			rgba(18, 18, 18, 0.5) 12%,
 			rgba(18, 18, 18, 0.1) 30%,
 			rgba(18, 18, 18, 0) 40%
@@ -50,7 +47,7 @@
 
 		background: linear-gradient(
 			180deg,
-			var(--page-bg) 0%,
+			var(--black-400) 0%,
 			rgba(18, 18, 18, 0.5) 12%,
 			rgba(18, 18, 18, 0.1) 30%,
 			rgba(18, 18, 18, 0) 40%

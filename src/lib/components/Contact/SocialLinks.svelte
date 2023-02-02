@@ -92,7 +92,7 @@
 
 		transition: var(--transition);
 		border-radius: var(--border-radius-light);
-		background-color: var(--bg);
+		background-color: var(--black-400);
 		width: 80px;
 		height: 80px;
 		clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);

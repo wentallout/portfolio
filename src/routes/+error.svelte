@@ -9,7 +9,10 @@
 		<p class="message small-text">Oops! Something unexpected happened.</p>
 	</div>
 	<a class="back" href="/">
-		<Button label="Back to Home" labelColor="var(--bg)" backgroundColor="var(--primary-500)" />
+		<Button
+			label="Back to Home"
+			labelColor="var(--black-500)"
+			backgroundColor="var(--primary-500)" />
 	</a>
 
 	<img class="error__image" width="auto" height="500px" src="/images/error.gif" alt="" />

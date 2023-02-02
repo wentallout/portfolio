@@ -24,6 +24,3 @@
 	modules={[Pagination, Scrollbar, Autoplay, Mousewheel]}>
 	<slot />
 </Swiper>
-
-<style>
-</style>

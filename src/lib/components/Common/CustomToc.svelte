@@ -5,6 +5,7 @@
 
 <Toc
 	breakpoint="992"
+	flashClickedHeadingsFor="0"
 	--toc-width="240px"
 	--toc-padding="var(--space-m)"
 	--toc-font-size="var(--font-size-small)"
@@ -14,19 +15,19 @@
 	--toc-li-padding="var(--space-2xs) 0"
 	--toc-active-bg="transparent"
 	--toc-active-color="var(--primary-500)"
-	--toc-desktop-bg="var(--bg)"
+	--toc-desktop-bg="var(--black-400)"
 	--toc-desktop-sticky-top="var(--scroll-padding)"
 	--toc-li-border-radius="0"
 	--toc-mobile-btn-border-radius="100%"
-	--toc-mobile-bg="var(--bg)"
+	--toc-mobile-bg="var(--black-400)"
 	--toc-mobile-btn-bg="var(--primary-500)"
-	--toc-mobile-btn-padding="var(-space-s)">
+	--toc-mobile-btn-padding="var(-space-m)">
 	<span class="toc-title mid-text" slot="title">
 		<ListBullets color="var(--text-color)" width="24" height="24" />
 		Contents</span>
 
 	<span slot="open-toc-icon">
-		<ListBullets color="var(--bg)" width="24" height="24" />
+		<ListBullets color="var(--black-500)" width="24" height="24" />
 	</span>
 </Toc>
 

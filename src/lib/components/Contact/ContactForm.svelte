@@ -90,4 +90,8 @@
   in extra narrow spaces */
 		grid-template-columns: repeat(auto-fit, minmax(min(100%, var(--min)), 1fr));
 	}
+
+	input {
+		margin-bottom: var(--space-m);
+	}
 </style>

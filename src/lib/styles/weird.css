@@ -102,7 +102,7 @@
 }
 
 .swiper {
-	background-color: var(--bg);
+	background-color: var(--black-400);
 	border-radius: var(--border-radius-light);
 }
 
