@@ -45,7 +45,7 @@ Step 4: Add colors for Error (red), Success, Status Color (use a tint)
 [0to255.com](https://0to255.com)
 
 A more modern tool
-[](https://hihayk.github.io/scale)
+[hihayk.github.io/scale](https://hihayk.github.io/scale)
 
 You can change the darkness/lightness
 For 50%/60% lightness
