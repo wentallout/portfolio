@@ -8,7 +8,6 @@
 	flashClickedHeadingsFor="0"
 	--toc-max-height="80vh"
 	--toc-font-size="var(--font-size-small)"
-	--toc-width="240px"
 	--toc-padding="var(--space-m)"
 	--toc-li-border-radius="0"
 	--toc-li-hover-bg="transparent"

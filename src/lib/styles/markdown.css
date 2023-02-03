@@ -259,3 +259,7 @@ aside.toc > nav > ul > li:before {
 	width: 100%;
 	height: auto;
 }
+
+aside.toc.desktop {
+	border-radius: var(--border-radius-light);
+}
