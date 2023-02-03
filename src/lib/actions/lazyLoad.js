@@ -1,4 +1,3 @@
-// See how the options work here: https://developer.mozilla.org/en-US/docs/Web/API/Intersection_Observer_API
 let options = {
 	root: null,
 	rootMargin: '0px',
@@ -7,7 +6,7 @@ let options = {
 
 export const lazyLoad = (image, src) => {
 	const loaded = () => {
-		//image.classList.add('visible')                          // doesn't work in REPL
+		//image.classList.add('visible')
 		image.style.opacity = '1'; // REPL hack to apply loading animation
 	};
 	const observer = new IntersectionObserver((entries) => {

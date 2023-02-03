@@ -211,7 +211,7 @@ table {
 	background-color: var(--black-400);
 	padding: var(--space-s);
 	border: 1px solid var(--neutral-900);
-	max-width: var(--text-width);
+	max-width: fit-content;
 
 	overflow: auto;
 }
