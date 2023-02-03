@@ -2,6 +2,30 @@ body {
 	margin: 0;
 }
 
+@font-face {
+	font-family: 'Inter';
+	src: url('/fonts/Inter.woff2') format('woff2 supports variations'),
+		url('/fonts/Inter.woff2') format('woff2-variations');
+	font-weight: 300 600;
+	font-stretch: 100%;
+	font-style: normal;
+	font-display: swap;
+}
+@font-face {
+	font-family: 'Fancy';
+	src: url('/fonts/Lora.woff2') format('woff2');
+	font-weight: normal;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'fallback';
+	size-adjust: 107%;
+	ascent-override: 90%;
+	src: local('Arial');
+}
+
 html {
 	scroll-padding: var(--scroll-padding, 60px);
 	scroll-behavior: smooth;

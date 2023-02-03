@@ -7,10 +7,6 @@
 	import Breadcrumb from '$lib/components/Layout/Breadcrumb.svelte';
 	import CursorTrail from '$lib/components/Layout/CursorTrail.svelte';
 
-	// FONTS //
-	import '$lib/styles/fonts.css';
-	// FONTS END //
-
 	import '$lib/styles/sanitize.css';
 	import '$lib/styles/global.css';
 	import '$lib/styles/weird.css';
