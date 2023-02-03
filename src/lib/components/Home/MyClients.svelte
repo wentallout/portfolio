@@ -2,11 +2,12 @@
 	import ExLink from '$lib/components/Common/ExLink.svelte';
 	import fpt from '$lib/assets/images/home/fpt.png?w=300&h=300';
 	import nashtech from '$lib/assets/images/home/nashtech.png?w=300&h=300';
+	import HomeSectionTitle from '$lib/components/Home/HomeSectionTitle.svelte';
 </script>
 
 <section>
 	<div class="clients">
-		<h2 class="clients__title xl-text">I have worked for</h2>
+		<HomeSectionTitle title="Worked at" />
 		<div class="clients__logo">
 			<ExLink href="https://www.fpt-software.com">
 				<img class="logo" loading="lazy" decoding="async" src={fpt} alt="FPT Software" />
@@ -35,12 +36,6 @@
 		flex-direction: row;
 		flex-wrap: wrap;
 		gap: var(--space-m);
-	}
-
-	.clients__title {
-		font-family: var(--fancy-font);
-		font-weight: 600;
-		color: var(--primary-500);
 	}
 
 	.logo {

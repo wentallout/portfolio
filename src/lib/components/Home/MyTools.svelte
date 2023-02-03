@@ -1,4 +1,5 @@
 <script>
+	import HomeSectionTitle from '$lib/components/Home/HomeSectionTitle.svelte';
 	import frontend from '$lib/assets/images/home/frontend.svg';
 	import navigation from '$lib/assets/images/home/navigation.svg';
 	import interactive from '$lib/assets/images/home/interactive.svg';
@@ -8,7 +9,7 @@
 
 <section>
 	<div class="tool">
-		<h2 class="tool__title xl-text">Tools I use</h2>
+		<HomeSectionTitle title="My tools" />
 
 		<div class="tool__block">
 			<div class="block__section">
@@ -74,11 +75,6 @@
 		grid-template-columns: repeat(auto-fit, minmax(min(100%, var(--min)), 1fr));
 		justify-content: center;
 		align-content: center;
-	}
-
-	.tool__title {
-		font-family: var(--fancy-font);
-		color: var(--primary-500);
 	}
 
 	.block__title {

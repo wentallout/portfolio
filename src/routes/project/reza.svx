@@ -186,9 +186,9 @@ I used Canva and quickly made a SVG logo for my concept mobile app. There are mu
 
 I wanted my team to create a simple design system before moving to phase 4. This will help my team achieve the minimum consistency that is required in a typical project.
 
-	    <Image src={ds1} alt="design system" />   
-        <Image src={ds2} alt="design system" />
-        <Image src={ds3} alt="design system" />    
+<Image src={ds1} alt="design system" />   
+<Image src={ds2} alt="design system" /> 
+<Image src={ds3} alt="design system" />    
 
 
 ### phase 4 - prototype

@@ -1,8 +1,6 @@
 <script>
 	export let blogLink = '';
-
 	export let blogTitle = 'blogTitle';
-
 	export let blogDate = '';
 	import Time from 'svelte-time';
 </script>

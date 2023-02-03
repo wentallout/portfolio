@@ -1,6 +1,6 @@
 <script>
 	import HomeSectionTitle from '$lib/components/Home/HomeSectionTitle.svelte';
-	import Chair from '$lib/components/Three/Chair.svelte';
+	
 </script>
 
 <section>
@@ -31,9 +31,7 @@
 					</p>
 				</div>
 			</div>
-			<div class="thumb">
-				<Chair />
-			</div>
+			
 		</div>
 	</div>
 </section>
@@ -45,15 +43,16 @@
 		justify-content: center;
 		align-items: flex-start;
 		flex-direction: column;
-
-		gap: var(--space-m);
 	}
 
 	.about__block {
 		display: flex;
 		flex-direction: row;
+
+		align-items: center;
+		gap: var(--space-s);
 		flex-wrap: wrap;
-		gap: var(--space-l);
+
 		width: 100%;
 
 		border-radius: var(--border-radius-light);
@@ -68,7 +67,7 @@
 		display: flex;
 		flex-direction: column;
 		gap: var(--space-m);
-		max-width: 60ch;
+		max-width: var(--text-width);
 	}
 
 	.block__text {
@@ -76,19 +75,12 @@
 		color: var(--text-color-low);
 	}
 
-	.thumb {
-		margin-left: auto;
+	.chair {
+		display: flex;
+		justify-content: center;
+		align-items: center;
 		width: 100%;
-		height: auto;
-		aspect-ratio: 16 / 9;
-
-		border-radius: var(--border-radius-light);
-	}
-
-	@media (min-width: 768px) {
-		.thumb {
-			width: 500px;
-			height: 500px;
-		}
+		height: 500px;
+		background-color: var(--black-400);
 	}
 </style>

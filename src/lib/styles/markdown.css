@@ -176,17 +176,6 @@
 	margin-bottom: var(--space-s);
 }
 
-.markdown .swiper {
-	max-width: 100%;
-	height: auto;
-	margin-top: var(--space-m);
-	margin-bottom: var(--space-m);
-}
-
-.markdown .swiper img {
-	width: 100%;
-}
-
 .markdown ol li::before {
 	content: none;
 }
@@ -248,12 +237,6 @@ table td:first-child {
 	font-weight: 600;
 }
 
-/* .markdown .swiper .svelte-lightbox-thumbnail img {
-	max-width: 100%;
-	margin-top: 0;
-	margin-bottom: 0;
-} */
-
 aside.toc > nav > ul > li {
 	text-transform: capitalize;
 }
@@ -269,4 +252,13 @@ aside.toc > nav > ul > li:before {
 :where(aside.toc > button) {
 	width: 40px;
 	height: 40px;
+}
+
+.markdown img {
+	width: 100%;
+	height: auto;
+}
+
+:is(h2, h3, h4):not(.toc-exclude) {
+	font-size: var(--font-size-small) !important;
 }

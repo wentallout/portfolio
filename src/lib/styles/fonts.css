@@ -1,53 +1,22 @@
 @font-face {
 	font-family: 'Fancy';
-	src: url('/fonts/Beaufort.woff2') format('woff2');
+	src: url('/fonts/Lora.woff2') format('woff2');
 	font-weight: normal;
 	font-style: normal;
 	font-display: swap;
 }
 
-/* NORMAL FONTS */
-/* @font-face {
-	font-family: 'Mona Sans';
-	src: url('/fonts/Mona-Sans-Light.woff2') format('woff2');
-	font-weight: 300;
-	font-style: normal;
+@font-face {
+	font-family: 'fallback';
+	size-adjust: 107%;
+	ascent-override: 90%;
+	src: local('Arial');
 }
 
 @font-face {
-	font-family: 'Mona Sans';
-	src: url('/fonts/Mona-Sans-Regular.woff2') format('woff2');
-	font-weight: 400;
-	font-style: normal;
-}
-
-@font-face {
-	font-family: 'Mona Sans';
-	src: url('/fonts/Mona-Sans-Medium.woff2') format('woff2');
-	font-weight: 500;
-	font-style: normal;
-}
-
-@font-face {
-	font-family: 'Mona Sans';
-	src: url('/fonts/Mona-Sans-Bold.woff2') format('woff2');
-	font-weight: 600;
-	font-style: normal;
-} */
-
-@font-face {
-	font-family: 'Adjusted Arial Fallback';
-	src: local(Arial);
-	size-adjust: 93%;
-	ascent-override: 93%;
-	descent-override: 29%;
-	line-gap-override: 0%;
-}
-
-@font-face {
-	font-family: 'Mona Sans';
-	src: url('/fonts/Mona-Sans.woff2') format('woff2 supports variations'),
-		url('/fonts/Mona-Sans.woff2') format('woff2-variations');
+	font-family: 'Inter';
+	src: url('/fonts/Inter.woff2') format('woff2 supports variations'),
+		url('/fonts/Inter.woff2') format('woff2-variations');
 	font-weight: 300 600;
 	font-stretch: 100%;
 	font-style: normal;

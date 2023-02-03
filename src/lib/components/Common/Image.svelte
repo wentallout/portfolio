@@ -1,7 +1,7 @@
 <script>
 	export let src = '';
 	export let alt = 'insert alt here';
-	export let width = 'auto';
+	export let width = 480;
 	export let height = 480;
 
 	import { lazyLoad } from '$lib/actions/lazyLoad';

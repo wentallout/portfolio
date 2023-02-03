@@ -14,10 +14,12 @@ categories:
 
 [Gradientify](https://gradientify.com/) - carefully crafted gradients for your next projects.
 
-## Color scheme
+## Color scheme generator
 
 [goodpalette](https://goodpalette.io/) - beautiful color palettes for UI 
 -> Primary + Accent + Neutral.
+
+[Colormind.io](http://colormind.io)
 
 
 

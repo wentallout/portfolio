@@ -9,5 +9,6 @@
 	.home-section {
 		color: var(--primary-500);
 		font-family: var(--fancy-font);
+		margin-bottom: var(--space-m);
 	}
 </style>

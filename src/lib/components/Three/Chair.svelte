@@ -1,17 +1,41 @@
 <script>
-	import { T, Canvas, DirectionalLight, PerspectiveCamera, OrbitControls } from '@threlte/core';
+	import { Canvas } from '@threlte/core';
 
-	import { GLTF } from '@threlte/extras';
-	import { Fog } from '@threlte/core';
+	import {
+		DirectionalLight,
+		Group,
+		Object3DInstance,
+		PerspectiveCamera,
+		useFrame
+	} from '@threlte/core';
+	import { Environment, useGltf } from '@threlte/extras';
+	import type { Material, Object3D } from 'three';
+
+	let rotation = 0;
+	useFrame(() => {
+		rotation += 0.01;
+	});
+
+	const { gltf } = useGltf<{
+		nodes: {
+			'node_damagedHelmet_-6514': Object3D;
+		};
+		materials: {
+			Material_MR: Material;
+		};
+	}>('/models/chair.gltf');
+	$: helmet = $gltf?.nodes['node_damagedHelmet_-6514'];
+
+	//  <GLTF url="/3d/plastic_monobloc_chair_01_4k.gltf" />
 </script>
 
 <Canvas>
-	<Fog color={'#dddddd'} />
-	<PerspectiveCamera lookAt={{ x: 3, y: 3, z: 3 }} position={{ x: -3, y: 5, z: 10 }} fov={10}>
-		<OrbitControls enableZoom={false} autoRotate enableDamping controls />
-	</PerspectiveCamera>
-
+	<Environment path="/hdr/" files="shanghai_riverside_1k.hdr" />
+	<PerspectiveCamera position={{ z: 10 }} fov={20} />
 	<DirectionalLight position={{ y: 10, z: 10 }} />
-
-	<GLTF url="/3d/plastic_monobloc_chair_01_4k.gltf" />
+	<Group rotation={{ y: rotation }}>
+		{#if helmet}
+			<Object3DInstance object={helmet} />
+		{/if}
+	</Group>
 </Canvas>

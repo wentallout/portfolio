@@ -3,7 +3,6 @@ import sveltePreprocess from 'svelte-preprocess';
 
 import { mdsvex } from 'mdsvex';
 
-// import rehypeToc from '@jsdevtools/rehype-toc';
 import rehypeSlug from 'rehype-slug';
 import rehypeExternalLinks from 'rehype-external-links';
 import rehypeAutolinkHeadings from 'rehype-autolink-headings';
@@ -11,8 +10,6 @@ import rehypeAutolinkHeadings from 'rehype-autolink-headings';
 import sequence from 'svelte-sequential-preprocessor';
 import { preprocessThrelte } from '@threlte/preprocess';
 
-// const autoprefixer = require("autoprefixer");
-// import cssnanoPlugin from 'cssnano';
 
 /** @type {import('@sveltejs/kit').Config} */
 const config = {

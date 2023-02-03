@@ -24,6 +24,7 @@
 		"@threlte/core": "^5.0.8",
 		"@threlte/extras": "^4.9.3",
 		"@threlte/preprocess": "^0.0.2",
+		"@types/three": "^0.149.0",
 		"atropos": "^1.0.2",
 		"autoprefixer": "^10.4.13",
 		"circletype": "^2.3.0",
