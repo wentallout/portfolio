@@ -25,6 +25,7 @@
 
 <style>
 	a {
+		display: contents;
 		position: relative;
 		transition: var(--transition);
 	}
