@@ -29,11 +29,8 @@ make sure it's relevant to the job
 ## Common mistakes
 
 - showing only the end design is SUPER WRONG -> you need to show your design process in detail. What makes you choose this component, why you use the pattern, color, font types
-
 - case study not tailored to the role.
-
 - No problem statement mentioned. Example: trying to improve the customer experience cuz people keeps quitting the app 
-
 - Spelling error, alignment, spacing, blurry images.
 
 

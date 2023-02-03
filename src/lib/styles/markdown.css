@@ -155,11 +155,13 @@
 }
 
 .markdown li:not(.toc li) {
-	margin-inline-start: var(--space-m);
 	display: flex;
 	justify-content: flex-start;
 	align-items: baseline;
 	gap: var(--space-3xs);
+	margin-bottom: var(--space-3xs);
+	background-color: var(--black-300);
+	padding: 4px;
 }
 
 .markdown li:before {
@@ -210,9 +212,8 @@ table {
 	border-collapse: collapse;
 	background-color: var(--black-400);
 	padding: var(--space-s);
-	border: 1px solid var(--neutral-900);
+	border: 1px solid var(--black-300);
 	max-width: fit-content;
-
 	overflow: auto;
 }
 
