@@ -258,7 +258,3 @@ aside.toc > nav > ul > li:before {
 	width: 100%;
 	height: auto;
 }
-
-:is(h2, h3, h4):not(.toc-exclude) {
-	font-size: var(--font-size-small) !important;
-}
