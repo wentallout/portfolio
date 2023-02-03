@@ -25,10 +25,7 @@
 
 <style>
 	.lazy-img {
-		/* LAZY LOAD */
 		opacity: 0;
-		transition: opacity 0.1s ease;
-		/* --- */
 	}
 
 	figure {
