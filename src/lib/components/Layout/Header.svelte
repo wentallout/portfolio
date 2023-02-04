@@ -8,6 +8,7 @@
 
 	import VanishingHeader from '$lib/components/Layout/VanishingHeader.svelte';
 	import { page } from '$app/stores';
+	import { fade } from 'svelte/transition';
 
 	let scrollY;
 
@@ -67,12 +68,7 @@
 
 <style>
 	.active-page {
-		background-color: var(--primary-500);
-		color: var(--black);
-	}
-
-	.active-page:hover {
-		color: var(--neutral-900) !important;
+		color: var(--primary-500);
 	}
 
 	.nav-list__item:hover {

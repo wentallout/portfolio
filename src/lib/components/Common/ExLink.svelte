@@ -1,6 +1,6 @@
 <script>
 	export let href;
-	export let ariaLabel = 'external link';
+	export let ariaLabel = '';
 
 	let tooltipX = 0;
 	let tooltipY = 0;
@@ -18,8 +18,9 @@
 	{href}
 	rel="external nofollow noopener noreferrer"
 	target="_blank">
-	<div class="tooltip small-text" style="top: {tooltipY}px; left: {tooltipX}px">{href}</div>
-
+	{#if ariaLabel != ''}
+		<div class="tooltip small-text" style="top: {tooltipY}px; left: {tooltipX}px">{ariaLabel}</div>
+	{/if}
 	<slot />
 </a>
 

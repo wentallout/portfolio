@@ -20,10 +20,8 @@
 		border-radius: 0;
 		margin: 0;
 		color: var(--neutral-600);
-
 		padding: var(--space-2xs) var(--space-s);
 		transition: var(--transition);
-		font-family: 'Fancy';
 	}
 
 	button:hover {

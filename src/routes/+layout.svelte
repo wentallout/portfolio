@@ -15,7 +15,8 @@
 	// loader
 	import NProgress from 'nprogress';
 	import { navigating } from '$app/stores';
-	// NProgress css
+
+	
 	import 'nprogress/nprogress.css';
 
 	import { fade } from 'svelte/transition';
@@ -23,8 +24,8 @@
 
 	NProgress.configure({
 		minimum: 0.1,
-		showSpinner: false,
-		trickle: false,
+		showSpinner: true,
+		trickle: true,
 		easing: 'ease',
 		speed: 500
 	});

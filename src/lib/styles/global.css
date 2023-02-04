@@ -13,7 +13,7 @@ body {
 }
 @font-face {
 	font-family: 'Fancy';
-	src: url('/fonts/Lora.woff2') format('woff2');
+	src: url('/fonts/LibreBaskerville.woff2') format('woff2');
 	font-weight: normal;
 	font-style: normal;
 	font-display: swap;
@@ -32,7 +32,7 @@ html {
 }
 
 :root {
-	--normal-font: 'Inter', 'fallback';
+	--normal-font: 'Inter';
 	--fancy-font: 'Fancy';
 
 	/* --text-color: hsla(0, 0%, 100%, 0.87); */
@@ -208,8 +208,8 @@ html {
 	min-height: 101vh;
 
 	/* DEFAULT FONT CONFIG */
-	font-family: var(--normal-font), sans-serif, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
-		Helvetica, Arial, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
+	font-family: var(--normal-font), 'fallback', sans-serif, -apple-system, BlinkMacSystemFont,
+		'Segoe UI', Roboto, Helvetica, Arial, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
 	font-weight: 400;
 
 	/* SCROLL SMOOTH */
@@ -273,34 +273,19 @@ textarea {
 
 img {
 	display: block;
-	font-family: sans-serif;
-	font-weight: 300;
-	line-height: 2;
-	position: relative;
-	text-align: center;
 
 	/* RESPONSIVE */
 	object-fit: cover;
-	max-width: 100%;
 	height: auto;
 	/* --- */
 
+	position: relative;
+
 	/* DARK MODE */
 	filter: brightness(0.8) contrast(1.2);
+	max-width: 100%;
 	/* --- */
 }
-
-/* img::before {
-	content: "We're sorry, the image below is broken";
-	display: block;
-	margin-bottom: 10px;
-}
-
-img::after {
-	content: '(url: ' attr(src) ')';
-	display: block;
-	font-size: 12px;
-} */
 
 address {
 	font-style: inherit;

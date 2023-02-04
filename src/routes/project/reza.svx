@@ -39,7 +39,7 @@ date: '2022-09-14'
 
 ## overview
 
-<Image src={thumbnail} alt="reza thumbnail" />
+<Image loading="eager" src={thumbnail} alt="reza thumbnail" />
 
 | |
 |-------|------|
