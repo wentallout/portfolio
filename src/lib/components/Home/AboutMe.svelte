@@ -1,6 +1,5 @@
 <script>
 	import HomeSectionTitle from '$lib/components/Home/HomeSectionTitle.svelte';
-	
 </script>
 
 <section>
@@ -31,7 +30,6 @@
 					</p>
 				</div>
 			</div>
-			
 		</div>
 	</div>
 </section>
@@ -73,14 +71,5 @@
 	.block__text {
 		font-weight: 400;
 		color: var(--text-color-low);
-	}
-
-	.chair {
-		display: flex;
-		justify-content: center;
-		align-items: center;
-		width: 100%;
-		height: 500px;
-		background-color: var(--black-400);
 	}
 </style>
