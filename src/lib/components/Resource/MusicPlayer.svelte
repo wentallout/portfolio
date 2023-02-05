@@ -50,6 +50,8 @@
 	}
 
 	onMount(() => {
+		console.log(playing);
+		audioElement.pause();
 		audioElement.addEventListener('timeupdate', function () {
 			currentTime = audioElement.currentTime;
 			// remainingTime = audioElement.duration - audioElement.currentTime;
@@ -62,8 +64,7 @@
 	<audio
 		on:ended={next}
 		src={'/ringtones/' + $musicList[currentSongIndex].audio}
-		bind:this={audioElement}
-		autoplay="false" />
+		bind:this={audioElement} />
 	<div class="player">
 		<div class="current">
 			<div class="info">

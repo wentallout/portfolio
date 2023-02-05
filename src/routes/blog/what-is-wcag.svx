@@ -5,6 +5,10 @@ categories:
     - 'fundamental'
 ---
 
+## Checklist 
+
+https://thisiswcag.com/
+
 ## WCAG
 WCAG is short for "Web Content Accessibility Guidelines". These are guidelines for web content creators (people that make websites and web apps) on how to make sure that their content or application is usable and accessible by everyone. A good intro on WCAG can be found at MDN. In some countries, it's even mandatory for certain sites to adhere to these guidelines.
 
