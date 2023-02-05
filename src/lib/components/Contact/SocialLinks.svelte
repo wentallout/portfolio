@@ -102,7 +102,7 @@
 	}
 
 	.social__address:hover {
-		background-color: var(--neutral-900);
+		background-color: var(--black-100);
 	}
 
 	@media (min-width: 768px) {

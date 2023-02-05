@@ -16,7 +16,7 @@ const config = {
 		})
 	],
 	server: {
-		port: '3000'
+		port: '6969'
 	},
 	preview: {
 		port: '4000'

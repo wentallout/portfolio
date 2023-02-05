@@ -4,41 +4,42 @@
 </script>
 
 <div class="error">
-	<h1 class="status">{$page.status} {$page.error.message}</h1>
+	<img class="error__image" width="240" height="240" src="/images/error.gif" alt="" />
+	<h1 class="status xxxl-text">{$page.status} {$page.error.message}</h1>
 	<div class="error__detail">
 		<p class="message small-text">Oops! Something unexpected happened.</p>
 	</div>
-	<a class="back" href="/">
+
+	<div>
 		<Button
 			label="Back to Home"
 			labelColor="var(--black-500)"
 			backgroundColor="var(--primary-500)" />
-	</a>
-
-	<img class="error__image" width="auto" height="500px" src="/images/error.gif" alt="" />
+	</div>
 </div>
 
 <style>
 	.error {
 		display: flex;
 		flex-direction: column;
-		flex-wrap: wrap;
+		flex-wrap: nowrap;
 		justify-content: center;
 		align-items: center;
 		padding: var(--space-l);
-	}
-	.back {
-		width: 100%;
+		background-color: var(--black-400);
+		border-radius: var(--border-radius-light);
 	}
 
 	.error__image {
-		aspect-ratio: 1/1;
+		width: 240px;
+		height: 240px;
 	}
 
 	.status {
 		color: var(--error);
-		font-size: calc(var(--space-xl));
 		font-weight: 600;
+		font-family: 'Fancy';
+		text-align: center;
 	}
 
 	.message {
@@ -48,7 +49,7 @@
 	}
 
 	.error__detail {
-		display: inline-flex;
+		display: flex;
 		flex-direction: row;
 		justify-content: center;
 		align-items: center;

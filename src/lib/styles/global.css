@@ -11,6 +11,7 @@ body {
 	font-style: normal;
 	font-display: swap;
 }
+
 @font-face {
 	font-family: 'Fancy';
 	src: url('/fonts/LibreBaskerville.woff2') format('woff2');
@@ -130,8 +131,8 @@ html {
 	--space-3xl: clamp(6.38rem, calc(6.07rem + 1.53vw), 7.5rem);
 
 	/* BORDER RADIUS */
-	--border-radius: 12px;
-	--border-radius-light: 6px;
+	--border-radius: 16px;
+	--border-radius-light: 8px;
 
 	/* darkmode mode */
 	/* color-scheme: light dark; */
@@ -355,4 +356,8 @@ hr {
 
 [contenteditable] {
 	outline: 0px solid transparent;
+}
+
+.embed {
+	margin-bottom: var(--space-s);
 }

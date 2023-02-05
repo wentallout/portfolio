@@ -55,6 +55,7 @@
 
 		/* WIDTH */
 		width: 100%;
+		max-width: 640px;
 
 		/* FONT */
 		font-weight: 600;
@@ -72,8 +73,8 @@
 		transition: var(--transition);
 
 		/* make sure the text doesn't wrap */
-		white-space:nowrap;
-		overflow:hidden;
+		white-space: nowrap;
+		overflow: hidden;
 
 		/* weird */
 		outline-color: transparent;
