@@ -62,7 +62,8 @@
 
 <div class="player">
 	<audio
-		on:ended={next}
+		autoplay="false"
+		onended={next}
 		src={'/ringtones/' + $musicList[currentSongIndex].audio}
 		bind:this={audioElement} />
 	<div class="player">
