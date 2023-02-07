@@ -1,4 +1,5 @@
 <script>
+	import Input from '$lib/components/Input/Input.svelte';
 	import EnvelopeSimple from '~icons/ph/envelope-simple';
 	import Button from '$lib/components/Button/Button.svelte';
 	import PaperPlaneRight from '~icons/ph/paper-plane-right';
@@ -68,6 +69,7 @@
 
 	.label {
 		font-weight: 500;
+		margin-bottom: var(--space-3xs);
 	}
 
 	.contact__btn {

@@ -8,7 +8,6 @@
 
 	import VanishingHeader from '$lib/components/Layout/VanishingHeader.svelte';
 	import { page } from '$app/stores';
-	import { fade } from 'svelte/transition';
 
 	let scrollY;
 
@@ -58,7 +57,12 @@
 	</div>
 	<div class="overlay-content">
 		{#each navItems as navItem}
-			<a class="overlay-item xl-text" on:click={closeNav} href={navItem.path}>{navItem.title}</a>
+			<a
+				class:active-page={$page.url.pathname === `${navItem.path}`}
+				class="overlay-item xl-text"
+				on:click={closeNav}
+				href={navItem.path}>
+				{navItem.title}</a>
 		{/each}
 		<div class="overlay-item">
 			<SocialButtons />
@@ -68,7 +72,7 @@
 
 <style>
 	.active-page {
-		color: var(--primary-500);
+		color: var(--primary-500) !important;
 	}
 
 	.nav-list__item:hover {
@@ -160,7 +164,7 @@
 		backdrop-filter: blur(5px);
 		overflow-y: hidden;
 		transition: 0.2s;
-		font-weight: 500;
+		font-weight: 300;
 	}
 
 	.overlay-content {
@@ -193,12 +197,12 @@
 		padding-right: 20vw;
 		transition: var(--transition);
 		outline: 1px solid transparent;
+		font-weight: 400;
 	}
 
 	.overlay-item:hover,
 	.overlay-item:focus {
-		color: var(--primary-500);
-		outline: 1px solid var(--primary-500);
+		background-color: var(--black-500);
 	}
 
 	.closebtn {

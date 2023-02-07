@@ -33,7 +33,7 @@
 		overflow: hidden;
 		/* --- */
 
-		box-shadow: var(--box-shadow);
+		
 
 		background-color: var(--black-400);
 	}
@@ -62,7 +62,7 @@
 
 	.blog:hover {
 		border: 1px solid var(--primary-500);
-		box-shadow: var(--box-shadow-hover);
+		
 	}
 
 	.blog:hover .blog__title {

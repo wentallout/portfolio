@@ -1,8 +1,10 @@
 <script>
+	import Marquee from '$lib/components/Common/Marquee.svelte';
 	import SocialButtons from '$lib/components/Contact/SocialButtons.svelte';
 	import { navItems } from '$lib/config.js';
 </script>
 
+<Marquee />
 <footer>
 	<div class="footer-container small-text">
 		<ul class="nav-list">
@@ -15,7 +17,7 @@
 
 		<SocialButtons />
 
-		<div class="other-info small-text">wentallout © 2021 - 2023</div>
+		<div class="other-info small-text">Powered by SvelteKit @wentallout</div>
 		<div class="secret small-text">
 			I declare war on anybody standing in the way of what I dream for.
 		</div>

@@ -38,17 +38,18 @@
 	.breadcrumb {
 		margin-top: var(--space-xl);
 		margin-bottom: var(--space-l);
-		font-weight: 300;
-		color: var(--text-color-low);
+
+		color: var(--text-color);
 	}
 
 	.breadcrumb__unclickable {
 		pointer-events: none;
 		display: inline-block;
-		font-weight: 500;
+		font-weight: 600;
 	}
 
 	.breadcrumb__clickable {
+		font-weight: 300;
 		display: inline-flex;
 		color: var(--accent-500);
 	}

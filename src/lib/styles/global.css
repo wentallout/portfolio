@@ -14,7 +14,7 @@ body {
 
 @font-face {
 	font-family: 'Fancy';
-	src: url('/fonts/LibreBaskerville.woff2') format('woff2');
+	src: url('/fonts/MK.woff2') format('woff2');
 	font-weight: normal;
 	font-style: normal;
 	font-display: swap;
@@ -56,9 +56,6 @@ html {
 	--black: hsl(0, 0%, 3%);
 
 	--swiper-theme-color: var(--primary-500) !important;
-
-	--box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.06);
-	--box-shadow-hover: 0px 10px 15px -3px rgba(0, 0, 0, 0.1), 0px 4px 6px -2px rgba(0, 0, 0, 0.05);
 
 	--text-width: 65ch;
 
@@ -259,6 +256,7 @@ textarea {
 	height: 3.5rem;
 	border: 0;
 	border-radius: var(--border-radius-light);
+	transition: var(--transition);
 }
 
 input:focus,
