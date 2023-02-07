@@ -30,7 +30,7 @@
 	} = website;
 
 	export let article = false;
-	const breadcrumbs = [
+	export let breadcrumbs = [
 		{
 			name: 'Home',
 			slug: ''

@@ -52,7 +52,7 @@
 		entityMeta,
 		datePublished: '2077-07-07T14:19:33.000+0100',
 		lastUpdated: '2077-07-07T14:19:33.000+0100',
-		breadcrumbs,
+
 		metadescription,
 		featuredImage,
 		ogImage,
