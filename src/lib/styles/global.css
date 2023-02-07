@@ -3,7 +3,7 @@ body {
 }
 
 @font-face {
-	font-family: 'Inter';
+	font-family: 'Normal';
 	src: url('/fonts/Inter.woff2') format('woff2 supports variations'),
 		url('/fonts/Inter.woff2') format('woff2-variations');
 	font-weight: 300 600;
@@ -33,7 +33,7 @@ html {
 }
 
 :root {
-	--normal-font: 'Inter';
+	--normal-font: 'Normal';
 	--fancy-font: 'Fancy';
 
 	/* --text-color: hsla(0, 0%, 100%, 0.87); */

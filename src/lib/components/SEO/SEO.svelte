@@ -30,7 +30,28 @@
 	} = website;
 
 	export let article = false;
-	export let breadcrumbs = [];
+	const breadcrumbs = [
+		{
+			name: 'Home',
+			slug: ''
+		},
+		{
+			name: 'Project',
+			slug: 'project'
+		},
+		{
+			name: 'Blog',
+			slug: 'blog'
+		},
+		{
+			name: 'Resource',
+			slug: 'resource'
+		},
+		{
+			name: 'Contact',
+			slug: 'contact'
+		}
+	];
 	export let entityMeta = null;
 	export let lastUpdated;
 	export let datePublished;

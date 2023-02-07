@@ -17,12 +17,7 @@
 
 	const { author, siteUrl } = website;
 	let title = 'Home';
-	const breadcrumbs = [
-		{
-			name: 'Home',
-			slug: ''
-		}
-	];
+
 	let metadescription = 'Nguyen Dang Khoa - UI UX Designer + Web Developer. Personal Portfolio.';
 	const featuredImageAlt = 'Nguyen Dang Khoa - UI UX Designer + Web Developer';
 	const featuredImage = {
