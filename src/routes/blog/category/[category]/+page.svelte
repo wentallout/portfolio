@@ -26,7 +26,7 @@
 	}
 
 	.result__title {
-		color: var(--neutral-900);
+		color: var(--text-color-low);
 	}
 
 	.result__category {

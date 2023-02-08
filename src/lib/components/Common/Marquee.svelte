@@ -34,9 +34,10 @@
 		width: 100%;
 		max-width: 100vw;
 
-		font-weight: 500;
+		font-weight: 300;
 		font-size: var(--font-size-small);
 		line-height: normal;
+		position: relative;
 	}
 
 	.marquee {
@@ -46,8 +47,8 @@
 		overflow: hidden;
 		user-select: none;
 		gap: var(--gap);
-		background-color: var(--primary-500);
-		color: var(--black-500);
+		background-color: var(--black-400);
+		color: var(--primary-500);
 	}
 
 	.marquee__content {
@@ -57,7 +58,7 @@
 		justify-content: space-around;
 		gap: var(--gap);
 		min-width: 100%;
-		animation: scroll 30s linear infinite;
+		animation: scroll 20s linear infinite;
 		animation-direction: reverse;
 	}
 

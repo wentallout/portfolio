@@ -21,7 +21,7 @@
 
 		/* SIZE */
 		width: 100%;
-		height: 144px;
+		height: 120px;
 		border: 1px solid transparent;
 		padding: var(--space-s) var(--space-m);
 		/* --- */
@@ -32,8 +32,6 @@
 		border-radius: var(--border-radius-light);
 		overflow: hidden;
 		/* --- */
-
-		
 
 		background-color: var(--black-400);
 	}
@@ -62,7 +60,6 @@
 
 	.blog:hover {
 		border: 1px solid var(--primary-500);
-		
 	}
 
 	.blog:hover .blog__title {

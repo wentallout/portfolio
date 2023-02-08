@@ -55,10 +55,10 @@
 		/* Width */
 		max-width: 100vw;
 
-		background-color: var(--black);
+		background-color: var(--black-300);
 	}
 
-	footer::before {
+	footer::after {
 		content: '';
 		position: absolute;
 		top: 0;
@@ -68,7 +68,7 @@
 		pointer-events: none;
 		z-index: 0;
 		background: linear-gradient(
-			180deg,
+			0deg,
 			var(--page-bg) 0%,
 			rgba(18, 18, 18, 0.5) 12%,
 			rgba(18, 18, 18, 0.1) 30%,
