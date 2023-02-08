@@ -1,30 +1,40 @@
 ---
 title: 'UX Research and Frameworks'
-date: '2023-01-30'
+date: '2023-02-08'
 categories:
-    - 'freebies'
+    - 'ux'
 ---
 
-1. [Playbooks for UX Designers](https://askplaybook.com/)
+## Guides
 
-2. [Usability Heuristic Frameworks](https://lnkd.in/ei7nb6Ug).
+- [Playbooks for UX Designers](https://askplaybook.com/)
+- [Usability Heuristic Frameworks](https://lnkd.in/ei7nb6Ug)
+- [Behavior Change Strategies](https://www.makeit.tools/)
+- [User Research Prioritization](https://lnkd.in/eArMRQnw)
+- [UX Methods Resource Kit](https://lnkd.in/eshvKWuK)
+- [Seer Framework](https://lnkd.in/eWvQTipj)
+- [Product Vision Mind Map](https://lnkd.in/eFJsAZXM)
+- [Product Prioritization Framework](https://lnkd.in/eQpHwjdQ)
+- [Sensible Futures Framework](https://lnkd.in/eCZ6P3VG)
+- [UX Research Templates](https://lnkd.in/eh_k_YYH)
+- [UX templates and frameworks](https://untools.co/)
+- [Design review meetings framework](https://lnkd.in/eG-GUv6a)
 
-3. [Behavior Change Strategies](https://www.makeit.tools/).
+## Research
 
-4. [User Research Prioritization](https://lnkd.in/eArMRQnw).
+- [UX Research Cheat Sheet](https://www.nngroup.com/articles/ux-research-cheat-sheet)
+- [When to Use Which UX Research Methods](https://www.nngroup.com/articles/which-ux-research-methods)
 
-5. [UX Methods Resource Kit](https://lnkd.in/eshvKWuK).
+## Usability
 
-6. [Seer Framework](https://lnkd.in/eWvQTipj).
+- [Usability Testing 101](https://www.nngroup.com/articles/usability-testing-101)
+- [Usability 101: Introduction to Usability](https://www.nngroup.com/articles/usability-101-introduction-to-usability)
+- [10 Usability Heuristics for User Interface Design](https://www.nngroup.com/articles/ten-usability-heuristics/)
 
-7. [Product Vision Mind Map](https://lnkd.in/eFJsAZXM).
+## Journey Mapping
 
-8. [Product Prioritization Framework](https://lnkd.in/eQpHwjdQ).
+- [Journey Mapping 101](https://www.nngroup.com/articles/journey-mapping-101)
 
-9. [Sensible Futures Framework](https://lnkd.in/eCZ6P3VG).
+## Empathy Mapping
 
-10. [UX Research Templates](https://lnkd.in/eh_k_YYH),
-
-11. [UX templates and frameworks](https://untools.co/),
-
-12. [Design review meetings framework](https://lnkd.in/eG-GUv6a).
+- [Empathy Mapping: The First Step in Design Thinking](https://www.nngroup.com/articles/empathy-mapping/)

@@ -5,8 +5,13 @@ categories:
     - freebies
 ---
 
-## Resource list
+## All-in-one
 
 This one awesome website will leads you to amazing tools
 
-[AI Design Resource](https://aidesignresource.com/)
+-[AI Design Resource](https://aidesignresource.com/)
+
+## List
+
+- [StockAI](https://www.stockai.com)
+- [Craiyon](https://www.craiyon.com) - generate images from text

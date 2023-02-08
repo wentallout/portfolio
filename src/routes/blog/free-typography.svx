@@ -1,0 +1,17 @@
+---
+title: 'Free Font Resources'
+date: '2023-02-08'
+categories:
+    - 'freebies'
+---
+
+## Typography
+
+- [Google Fonts](https://fonts.google.com)
+- [Dafont](https://dafont.com)
+- [Font Squirrel](https://fontsquirrel.com)
+- [FontShare](https://fontshare.com)
+- [Cufon Fonts](https://cufonfonts.com)
+- [Font Space](https://fontspace.com)
+- [Font Bundles](https://fontbundles.net/free-fonts)
+- [URban Fonts](https://urbanfonts.com)

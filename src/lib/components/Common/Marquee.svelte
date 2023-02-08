@@ -34,7 +34,7 @@
 		width: 100%;
 		max-width: 100vw;
 
-		font-weight: 600;
+		font-weight: 500;
 		font-size: var(--font-size-small);
 		line-height: normal;
 	}

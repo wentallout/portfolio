@@ -18,6 +18,7 @@
 	--toc-desktop-bg="var(--black-400)"
 	--toc-desktop-sticky-top="var(--scroll-padding)"
 	--toc-mobile-bottom="100px"
+	--toc-active-font-weight="600"
 	--toc-mobile-btn-border-radius="100%"
 	--toc-mobile-bg="var(--black-400)"
 	--toc-mobile-btn-bg="var(--primary-500)"

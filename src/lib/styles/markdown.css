@@ -160,8 +160,6 @@
 	align-items: baseline;
 	gap: var(--space-3xs);
 	margin-bottom: var(--space-3xs);
-	background-color: var(--black-300);
-	padding: 4px;
 }
 
 .markdown li:before {
@@ -262,4 +260,17 @@ aside.toc > nav > ul > li:before {
 
 aside.toc.desktop {
 	border-radius: var(--border-radius-light);
+}
+
+/* aside.toc > nav > ul > li {
+	color: var(--text-color-low);
+} */
+
+:where(aside.toc > nav > ul > li) {
+	color: var(--text-color-low);
+	font-weight: 300;
+}
+
+:where(aside.toc > nav > ul > li.active) {
+	color: var(--primary-500);
 }

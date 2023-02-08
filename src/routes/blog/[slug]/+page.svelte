@@ -18,7 +18,7 @@
 		<div class="category">
 			<div class="category__title">Categories:</div>
 			{#each data.categories as category}
-				<a class="content-tag" href="/content/category/{category}">
+				<a class="content-tag" href="/blog/category/{category}">
 					<Tag>
 						{category}
 					</Tag>
