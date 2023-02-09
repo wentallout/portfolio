@@ -74,7 +74,7 @@
 		right: 0;
 		bottom: 0;
 		left: 0;
-		z-index: -1;
+		z-index: 0;
 		background: linear-gradient(
 			0deg,
 			var(--page-bg) 0%,
@@ -82,6 +82,7 @@
 			rgba(18, 18, 18, 0.1) 30%,
 			rgba(18, 18, 18, 0) 40%
 		);
+		pointer-events: none;
 	}
 
 	.text {

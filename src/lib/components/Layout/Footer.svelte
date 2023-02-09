@@ -85,7 +85,7 @@
 
 	@media (min-width: 768px) {
 		footer {
-			padding: var(--space-xl) 20vw;
+			padding: var(--space-xl) var(--page-padding);
 		}
 	}
 
