@@ -11,10 +11,12 @@
 	</div>
 
 	<div>
-		<Button
-			label="Back to Home"
-			labelColor="var(--black-500)"
-			backgroundColor="var(--primary-500)" />
+		<a rel="external" href="/">
+			<Button
+				label="Back to Home"
+				labelColor="var(--black-500)"
+				backgroundColor="var(--primary-500)" />
+		</a>
 	</div>
 </div>
 
@@ -26,8 +28,6 @@
 		justify-content: center;
 		align-items: center;
 		padding: var(--space-l);
-		background-color: var(--black-400);
-		border-radius: var(--border-radius-light);
 	}
 
 	.error__image {

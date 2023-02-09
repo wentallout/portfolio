@@ -14,4 +14,4 @@ categories:
 - [Cufon Fonts](https://cufonfonts.com)
 - [Font Space](https://fontspace.com)
 - [Font Bundles](https://fontbundles.net/free-fonts)
-- [URban Fonts](https://urbanfonts.com)
+- [Urban Fonts](https://urbanfonts.com)
