@@ -47,6 +47,15 @@
 </section>
 
 <style>
+	.tool {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: flex-start;
+
+		gap: var(--space-m);
+		
+	}
 	.block__section {
 		display: flex;
 		flex-direction: column;
@@ -55,16 +64,6 @@
 		background-color: var(--black-400);
 		padding: var(--space-l);
 		border-radius: var(--border-radius-light);
-	
-	}
-
-	.tool {
-		display: flex;
-		flex-direction: column;
-		justify-content: center;
-		align-items: flex-start;
-
-		gap: var(--space-m);
 	}
 
 	.tool__block {

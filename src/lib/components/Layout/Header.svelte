@@ -124,7 +124,7 @@
 
 	@media (min-width: 768px) {
 		.nav {
-			padding: 0 20vw;
+			padding: 0 var(--page-padding);
 		}
 		.nav-list__item {
 			display: flex;
@@ -193,8 +193,8 @@
 		height: var(--scroll-padding);
 		/* --- */
 
-		padding-left: 20vw;
-		padding-right: 20vw;
+		padding-left: var(--page-padding);
+		padding-right: var(--page-padding);
 		transition: var(--transition);
 		outline: 1px solid transparent;
 		font-weight: 400;

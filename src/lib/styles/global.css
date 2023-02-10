@@ -49,6 +49,7 @@ html {
 	--black-500: #0c0c0f;
 
 	--page-bg: var(--black-500);
+	--page-padding: 20vw;
 
 	--brand-color: var(--text-color);
 
@@ -292,6 +293,7 @@ address {
 
 section {
 	/* Spacing */
+	max-width: 80rem;
 	margin-bottom: calc(var(--space-3xl)+var(--space-l));
 }
 

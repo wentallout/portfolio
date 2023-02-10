@@ -1,5 +1,4 @@
 <script>
-	import Input from '$lib/components/Input/Input.svelte';
 	import EnvelopeSimple from '~icons/ph/envelope-simple';
 	import Button from '$lib/components/Button/Button.svelte';
 	import PaperPlaneRight from '~icons/ph/paper-plane-right';
@@ -62,7 +61,7 @@
 
 	.contact {
 		width: 100%;
-		max-width: 80rem;
+		
 		display: flex;
 		flex-direction: column;
 	}

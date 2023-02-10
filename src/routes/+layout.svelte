@@ -16,7 +16,6 @@
 	import NProgress from 'nprogress';
 	import { navigating } from '$app/stores';
 
-	
 	import 'nprogress/nprogress.css';
 
 	import { fade } from 'svelte/transition';
@@ -122,8 +121,7 @@
 
 	@media (min-width: 768px) {
 		.main-content {
-			/* Desktop padding */
-			padding: var(--space-l) 20vw;
+			padding: var(--space-l) var(--page-padding);
 		}
 	}
 </style>

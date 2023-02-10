@@ -21,6 +21,7 @@
 
 		/* SIZE */
 		width: 100%;
+
 		height: 120px;
 		border: 1px solid transparent;
 		padding: var(--space-s) var(--space-m);
