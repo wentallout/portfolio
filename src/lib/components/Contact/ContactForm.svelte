@@ -41,9 +41,9 @@
 
 				<Button
 					label="Reset"
-					border="1px solid var(--error)"
+					border="1px solid red"
 					backgroundColor="transparent"
-					labelColor="var(--error)"
+					labelColor="red"
 					type="reset" />
 			</div>
 		</form>
@@ -61,7 +61,7 @@
 
 	.contact {
 		width: 100%;
-		
+
 		display: flex;
 		flex-direction: column;
 	}

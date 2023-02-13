@@ -37,7 +37,7 @@
 		background: rgba(0, 0, 0, 0.9);
 		backdrop-filter: blur(5px);
 		padding: var(--space-xs);
-		z-index: 99;
+
 		border-radius: var(--border-radius-light);
 		color: var(--text);
 		font-weight: 300;

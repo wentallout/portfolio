@@ -52,7 +52,7 @@
 		position: fixed;
 		right: var(--space-s);
 		bottom: var(--space-s);
-		z-index: 99;
+		z-index: var(--z-index-max);
 		/*  */
 
 		/* OTHER */

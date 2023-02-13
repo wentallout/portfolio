@@ -1,9 +1,12 @@
 <script>
 	export let src = '';
-	export let alt = 'alt';
+
 	export let width;
 	export let height;
 	export let loading = 'lazy';
+
+	// SEO
+	export let alt = 'alt';
 
 	import { lazyLoad } from '$lib/actions/lazyLoad';
 	import ExLink from '$lib/components/Common/ExLink.svelte';

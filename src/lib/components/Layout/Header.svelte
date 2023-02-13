@@ -157,7 +157,7 @@
 		height: 0%;
 		width: 100%;
 		position: fixed;
-		z-index: 99;
+		z-index: var(--z-index-max);
 		top: 0;
 		left: 0;
 		background-color: rgba(0, 0, 0, 0.9);

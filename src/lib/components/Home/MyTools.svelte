@@ -1,10 +1,10 @@
 <script>
+	import SVG from '$lib/components/Common/SVG.svelte';
 	import HomeSectionTitle from '$lib/components/Home/HomeSectionTitle.svelte';
 	import frontend from '$lib/assets/images/home/frontend.svg';
 	import navigation from '$lib/assets/images/home/navigation.svg';
 	import interactive from '$lib/assets/images/home/interactive.svg';
 	import graphicDesign from '$lib/assets/images/home/graphicDesign.svg';
-	import Image from '$lib/components/Common/Image.svelte';
 </script>
 
 <section>
@@ -13,7 +13,8 @@
 
 		<div class="tool__block">
 			<div class="block__section">
-				<Image width="50" height="50" src={navigation} alt="navigation" />
+				<SVG width="80" height="80" src={navigation} alt="navigation" />
+
 				<h3 class="block__title base-text">Prototyping</h3>
 				<p class="block__text small-text">Figma</p>
 				<p class="block__text small-text">Adobe XD</p>
@@ -21,22 +22,24 @@
 			</div>
 
 			<div class="block__section">
-				<Image width="50" height="50" src={graphicDesign} alt="graphic design" />
+				<SVG width="80" height="80" src={graphicDesign} alt="graphic design" />
+
 				<h3 class="block__title base-text">Design</h3>
 				<p class="block__text small-text">Illustrator</p>
 				<p class="block__text small-text">Photoshop</p>
 			</div>
 
 			<div class="block__section">
-				<Image width="50" height="50" src={interactive} alt="interactive" />
+				<SVG width="80" height="80" src={interactive} alt="interactive" />
+
 				<h3 class="block__title base-text">Motion</h3>
 				<p class="block__text small-text">Lottie</p>
-				<!-- <p class="block__text small-text">After Effects</p> -->
 				<p class="block__text small-text">CSS Animations</p>
 			</div>
 
 			<div class="block__section">
-				<Image width="50" height="50" src={frontend} alt="frontend" />
+				<SVG width="80" height="80" src={frontend} alt="frontend" />
+
 				<h3 class="block__title base-text">Frontend</h3>
 				<p class="block__text small-text">HTML, CSS (BEM)</p>
 				<p class="block__text small-text">Bootstrap, Material</p>
@@ -54,7 +57,6 @@
 		align-items: flex-start;
 
 		gap: var(--space-m);
-		
 	}
 	.block__section {
 		display: flex;

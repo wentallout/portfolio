@@ -42,11 +42,11 @@ html {
 
 	--text-color-low: hsla(0, 0%, 100%, 0.6);
 
-	--black-100: #1f1f29;
-	--black-200: #17171f;
-	--black-300: #13131a;
-	--black-400: #101014;
-	--black-500: #0c0c0f;
+	--black-100: hsl(0, 0%, 12%);
+	--black-200: hsl(0, 0%, 10%);
+	--black-300: hsl(0, 0%, 8%);
+	--black-400: hsl(0, 0%, 6%);
+	--black-500: hsl(0, 0%, 4%);
 
 	--page-bg: var(--black-500);
 	--page-padding: 20vw;
@@ -60,43 +60,38 @@ html {
 
 	--text-width: 65ch;
 
-	/* Primary: Felwood Leaves */
-	--primary-100: #f2fff5;
-	--primary-200: #befec7;
-	--primary-300: #87f891;
-	--primary-400: #50e853;
-	--primary-500: #22c91c;
-	--primary-600: #17a109;
-	--primary-700: #147802;
-	--primary-800: #114f00;
-	--primary-900: #0a2600;
+	/* Primary: Nacho Cheese */
+	--primary-100: #fffff2;
+	--primary-200: #fff8b6;
+	--primary-300: #ffeb79;
+	--primary-400: #ffd63d;
+	--primary-500: #ffbb00;
+	--primary-600: #c98800;
+	--primary-700: #935a00;
+	--primary-800: #5c3400;
+	--primary-900: #261300;
 
-	/* Accent: Clear Chill */
-	--accent-100: #f2f6ff;
-	--accent-200: #bed5ff;
-	--accent-300: #88b9fd;
-	--accent-400: #53a1f7;
-	--accent-500: #1f8ded;
-	--accent-600: #0a73bb;
-	--accent-700: #025a8a;
-	--accent-800: #003e58;
-	--accent-900: #001d26;
+	/* Accent: Battery Charged Blue */
+	--accent-100: #f2f9ff;
+	--accent-200: #bce3fe;
+	--accent-300: #83d0fa;
+	--accent-400: #4abeee;
+	--accent-500: #15a9d6;
+	--accent-600: #078eaa;
+	--accent-700: #02707e;
+	--accent-800: #004d52;
+	--accent-900: #002626;
 
 	/* Neutral */
-	--neutral-100: #fafcfb;
-	--neutral-200: #e9edea;
-	--neutral-300: #d8ded9;
-	--neutral-400: #c8cfc8;
-	--neutral-500: #b8bfb8;
-	--neutral-600: #919991;
-	--neutral-700: #6c736b;
-	--neutral-800: #474d46;
-	--neutral-900: #232622;
-
-	/* system color */
-	--success: #2cd926;
-	--error: #e03f1f;
-	--warning: #ecb546;
+	--neutral-100: #fcfcfa;
+	--neutral-200: #f0f0eb;
+	--neutral-300: #e3e2dc;
+	--neutral-400: #d6d5ce;
+	--neutral-500: #c9c7bf;
+	--neutral-600: #a19e97;
+	--neutral-700: #78756f;
+	--neutral-800: #4f4c48;
+	--neutral-900: #262522;
 
 	--font-size-xs: clamp(0.7rem, calc(0.75rem + -0.05vw), 0.74rem);
 	--font-size-small: clamp(1rem, calc(1rem + 0.07vw), 1rem);
@@ -152,6 +147,8 @@ tracking-widest	letter-spacing: 0.1em; */
 	/* MISC */
 	accent-color: var(--primary-500);
 	caret-color: var(--primary-500);
+
+	--z-index-max: 99;
 }
 
 ::selection {

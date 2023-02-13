@@ -30,11 +30,10 @@
 
 <style>
 	.container {
-		z-index: 1;
 		width: 100%;
 		max-width: 100vw;
 
-		font-weight: 300;
+		font-weight: 600;
 		font-size: var(--font-size-small);
 		line-height: normal;
 		position: relative;

@@ -17,7 +17,9 @@
 
 		<SocialButtons />
 
-		<div class="other-info small-text">Powered by SvelteKit @wentallout</div>
+		<div class="other-info small-text">
+			Copyright © 2022-2023 Nguyen Dang Khoa - All Rights Reserved.
+		</div>
 		<div class="secret small-text">
 			I declare war on anybody standing in the way of what I dream for.
 		</div>
@@ -55,7 +57,7 @@
 		/* Width */
 		max-width: 100vw;
 
-		background-color: var(--black-300);
+		background-color: var(--black-400);
 	}
 
 	footer::after {
