@@ -1,16 +1,15 @@
 <script>
+	import HomeSectionTitle from '$lib/components/Home/HomeSectionTitle.svelte';
 	import RezaPhoneAtropos from '$lib/components/Atropos/RezaPhoneAtropos.svelte';
 	import ProjectCard from '$lib/components/Project/ProjectCard.svelte';
 </script>
 
 <section>
 	<div class="featured">
-		<div class="title__section">
-			<h2 class="featured__title xl-text rainbow">Featured projects</h2>
-			<a href="/project">
-				<div class="title__see small-text">See all</div>
-			</a>
-		</div>
+		<a href="/project">
+			<HomeSectionTitle title="Featured projects" extraClass="rainbow" />
+		</a>
+
 		<div class="projects">
 			<ProjectCard
 				projectName="Reza - Restaurant Reservation App"
@@ -30,22 +29,5 @@
 		display: flex;
 		flex-direction: column;
 		gap: var(--space-m);
-	}
-
-	.featured__title {
-		width: fit-content;
-		font-family: var(--fancy-font);
-	}
-
-	.title__section {
-		display: flex;
-		width: 100%;
-		flex-direction: row;
-		justify-content: space-between;
-		align-items: center;
-	}
-
-	.title__see {
-		color: var(--accent-500);
 	}
 </style>

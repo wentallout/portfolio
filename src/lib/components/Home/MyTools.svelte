@@ -73,7 +73,7 @@
 
 	.tool__block {
 		width: 100%;
-		--min: 24ch;
+		--min: 20ch;
 		display: grid;
 		grid-gap: var(--space-s);
 		grid-template-columns: repeat(auto-fit, minmax(min(100%, var(--min)), 1fr));
