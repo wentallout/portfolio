@@ -1,4 +1,5 @@
 <script>
+	import SaosContainer from '$lib/components/Common/SaosContainer.svelte';
 	import SVG from '$lib/components/Common/SVG.svelte';
 	import HomeSectionTitle from '$lib/components/Home/HomeSectionTitle.svelte';
 	import frontend from '$lib/assets/images/home/frontend.svg';
@@ -7,47 +8,49 @@
 	import graphicDesign from '$lib/assets/images/home/graphicDesign.svg';
 </script>
 
-<section>
-	<div class="tool">
-		<HomeSectionTitle title="My tools" />
+<SaosContainer>
+	<section>
+		<div class="tool">
+			<HomeSectionTitle title="My tools" />
 
-		<div class="tool__block">
-			<div class="block__section">
-				<SVG width="80" height="80" src={navigation} alt="navigation" />
+			<div class="tool__block">
+				<div class="block__section">
+					<SVG width="80" height="80" src={navigation} alt="navigation" />
 
-				<h3 class="block__title base-text">Prototyping</h3>
-				<p class="block__text small-text">Figma</p>
-				<p class="block__text small-text">Adobe XD</p>
-				<p class="block__text small-text">Sketch</p>
-			</div>
+					<h3 class="block__title base-text">Prototyping</h3>
+					<p class="block__text small-text">Figma</p>
+					<p class="block__text small-text">Adobe XD</p>
+					<p class="block__text small-text">Sketch</p>
+				</div>
 
-			<div class="block__section">
-				<SVG width="80" height="80" src={graphicDesign} alt="graphic design" />
+				<div class="block__section">
+					<SVG width="80" height="80" src={graphicDesign} alt="graphic design" />
 
-				<h3 class="block__title base-text">Design</h3>
-				<p class="block__text small-text">Illustrator</p>
-				<p class="block__text small-text">Photoshop</p>
-			</div>
+					<h3 class="block__title base-text">Design</h3>
+					<p class="block__text small-text">Illustrator</p>
+					<p class="block__text small-text">Photoshop</p>
+				</div>
 
-			<div class="block__section">
-				<SVG width="80" height="80" src={interactive} alt="interactive" />
+				<div class="block__section">
+					<SVG width="80" height="80" src={interactive} alt="interactive" />
 
-				<h3 class="block__title base-text">Motion</h3>
-				<p class="block__text small-text">Lottie</p>
-				<p class="block__text small-text">CSS Animations</p>
-			</div>
+					<h3 class="block__title base-text">Motion</h3>
+					<p class="block__text small-text">Lottie</p>
+					<p class="block__text small-text">CSS Animations</p>
+				</div>
 
-			<div class="block__section">
-				<SVG width="80" height="80" src={frontend} alt="frontend" />
+				<div class="block__section">
+					<SVG width="80" height="80" src={frontend} alt="frontend" />
 
-				<h3 class="block__title base-text">Frontend</h3>
-				<p class="block__text small-text">HTML, CSS (BEM)</p>
-				<p class="block__text small-text">Bootstrap, Material</p>
-				<p class="block__text small-text">JS, React, SvelteKit</p>
+					<h3 class="block__title base-text">Frontend</h3>
+					<p class="block__text small-text">HTML, CSS (BEM)</p>
+					<p class="block__text small-text">Bootstrap, Material</p>
+					<p class="block__text small-text">JS, React, SvelteKit</p>
+				</div>
 			</div>
 		</div>
-	</div>
-</section>
+	</section>
+</SaosContainer>
 
 <style>
 	.tool {

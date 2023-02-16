@@ -15,7 +15,7 @@
 		<FileAudio {...sectionIcon} />
 	</SectionTitle>
 	<SectionDesc
-		text="Custom made by Khoa for your phone ringtones. Intros are removed. Download enabled." />
+		text="Custom ringtones made by Khoa for your phone. Intros are removed. Free download enabled." />
 
 	<MusicPlayer />
 </section>

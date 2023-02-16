@@ -37,10 +37,6 @@
   * `article` contexts in Chrome, Edge, Firefox, and Safari.
   */
 
-:where(h1) {
-	margin: 0.67em 0;
-}
-
 /* Grouping content
   * ========================================================================== */
 
@@ -325,13 +321,4 @@
 
 :where(input, video, select, textarea, iframe) {
 	max-width: 100%;
-}
-
-code,
-kbd,
-samp,
-pre {
-	font-family: ui-monospace, 'Menlo', 'Consolas', 'Roboto Mono', 'Ubuntu Monospace', 'Noto Mono',
-		'Oxygen Mono', 'Liberation Mono', monospace, 'Apple Color Emoji', 'Segoe UI Emoji',
-		'Segoe UI Symbol', 'Noto Color Emoji';
 }

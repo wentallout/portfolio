@@ -54,5 +54,6 @@
 		justify-content: center;
 		align-items: center;
 		gap: var(--space-s);
+		margin-bottom: var(--space-m);
 	}
 </style>

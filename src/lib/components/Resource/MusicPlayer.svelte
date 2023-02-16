@@ -6,28 +6,38 @@
 	import SkipBack from '~icons/ph/skip-back';
 	import SkipForward from '~icons/ph/skip-forward';
 	import Pause from '~icons/ph/pause';
+	import SpeakerHigh from '~icons/ph/speaker-high';
 
 	let currentSongIndex = 0;
 	let playing = false;
 
+	// audioEle
 	let duration;
 	let currentTime;
-	let audioElement;
+	let volume = 0.6;
+
+	//
+	let audioEle;
+	let volumeEle;
+	let positionEle;
 
 	function playMusic() {
 		playing = true;
-		audioElement.play();
+		audioEle.play();
 	}
 
 	function pauseMusic() {
 		playing = false;
-		audioElement.pause();
+		audioEle.pause();
 	}
 
-	function formatTime(time) {
-		const date = new Date(time * 1000);
-		const minutes = `0${date.getUTCMinutes()}`.slice(-2);
-		const seconds = `0${date.getUTCSeconds()}`.slice(-2);
+	function format(seconds) {
+		if (isNaN(seconds)) return '...';
+
+		const minutes = Math.floor(seconds / 60);
+		seconds = Math.floor(seconds % 60);
+		if (seconds < 10) seconds = '0' + seconds;
+
 		return `${minutes}:${seconds}`;
 	}
 
@@ -50,30 +60,35 @@
 	}
 
 	onMount(() => {
-		console.log(playing);
-		audioElement.pause();
-		audioElement.addEventListener('timeupdate', function () {
-			currentTime = audioElement.currentTime;
-			// remainingTime = audioElement.duration - audioElement.currentTime;
-			duration = audioElement.duration;
+		audioEle.pause();
+
+		volumeEle.addEventListener('input', () => {
+			volume = volumeEle.value / 100;
+		});
+
+		positionEle.addEventListener('input', () => {
+			currentTime = duration * (positionEle.value / 100);
 		});
 	});
 </script>
 
 <div class="player">
 	<audio
+		bind:currentTime
+		bind:duration
+		bind:volume
 		autoplay="false"
 		onended={next}
 		src={'/ringtones/' + $musicList[currentSongIndex].audio}
-		bind:this={audioElement} />
+		bind:this={audioEle} />
 	<div class="player">
 		<div class="current">
 			<div class="info">
 				<div class="info__name xxl-text">{$musicList[currentSongIndex].name}</div>
 
 				<div class="song-time">
-					<div class="current-time xl-text">{formatTime(currentTime)}</div>
-					<div class="duration xl-text">{formatTime(duration)}</div>
+					<div class="current-time xl-text">{format(currentTime)}</div>
+					<div class="duration xl-text">{format(duration)}</div>
 				</div>
 			</div>
 			<div class="controls">
@@ -95,6 +110,24 @@
 					<SkipForward width="24" height="24" color="var(--text-color)" />
 				</button>
 			</div>
+			<div class="volume">
+				<SpeakerHigh width="24" height="24" color="var(--text-color)" />
+				<input
+					bind:this={volumeEle}
+					type="range"
+					id="volume-control"
+					min="0"
+					max="100"
+					value={volume * 100} />
+			</div>
+		</div>
+
+		<div class="position">
+			<input
+				bind:this={positionEle}
+				class="position__input"
+				type="range"
+				value={(currentTime / duration) * 100 || 0} />
 		</div>
 
 		<div class="song-list">
@@ -117,9 +150,28 @@
 </div>
 
 <style>
+	.position {
+		display: flex;
+		flex-direction: row;
+		width: 100%;
+		padding: var(--space-s);
+	}
+
+	.position__input {
+		width: 100%;
+		transition: 0.3s;
+	}
+
+	.volume {
+		display: flex;
+
+		align-items: center;
+		gap: var(--space-s);
+	}
+
 	.current-time {
 		font-weight: 300;
-		color: var(--neutral-600);
+		color: var(--primary-500);
 	}
 
 	.info__name {
@@ -176,6 +228,7 @@
 		flex-direction: column;
 		align-items: center;
 		width: 100%;
+		margin-bottom: var(--space-xl);
 	}
 
 	.mp-btn-small {

@@ -7,8 +7,9 @@
 		left: 0;
 		right: 0;
 		text-align: center;
-		background-color: var(--accent-900);
+		background-color: var(--black-400);
 		color: var(--text-color);
+		font-weight: 600;
 		padding: var(--space-s);
 		translate: 0 -100%;
 		transition: translate 150ms ease-in-out;
@@ -17,7 +18,7 @@
 	}
 
 	.skip-link:hover {
-		background-color: var(--accent-700);
+		background-color: var(--black-300);
 	}
 
 	.skip-link:focus {

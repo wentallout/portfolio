@@ -1,4 +1,4 @@
-<div data-nosnippet class="container">
+<div class="container">
 	<div class="marquee">
 		<ul class="marquee__content">
 			<li>User-centered design</li>
@@ -41,18 +41,21 @@
 
 	.marquee {
 		--gap: 0.5rem;
+
 		position: relative;
 		display: flex;
 		overflow: hidden;
 		user-select: none;
 		gap: var(--gap);
-		background-color: var(--black-400);
+		background-color: var(--black-300);
 		color: var(--primary-500);
+		padding: var(--space-xs) 0;
 	}
 
 	.marquee__content {
 		--gap: 0.5rem;
 		flex-shrink: 0;
+
 		display: flex;
 		justify-content: space-around;
 		gap: var(--gap);

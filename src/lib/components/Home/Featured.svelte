@@ -6,7 +6,7 @@
 <section>
 	<div class="featured">
 		<div class="title__section">
-			<h2 class="featured__title xl-text rainbow">Featured</h2>
+			<h2 class="featured__title xl-text rainbow">Featured projects</h2>
 			<a href="/project">
 				<div class="title__see small-text">See all</div>
 			</a>
