@@ -11,12 +11,8 @@
 </svelte:head>
 
 <article class="info">
-	<h1 class="rainbow">{data.title}</h1>
-	<div class="date small-text">Published: <Time relative timestamp={data.date} /></div>
-
 	{#if data.categories.length}
 		<div class="category">
-			<div class="category__title">Categories:</div>
 			{#each data.categories as category}
 				<a class="content-tag" href="/blog/category/{category}">
 					<Tag>
@@ -26,6 +22,8 @@
 			{/each}
 		</div>
 	{/if}
+	<h1 class="rainbow">{data.title}</h1>
+	<div class="date small-text">Published: <Time relative timestamp={data.date} /></div>
 
 	<ContentContainer>
 		<svelte:component this={data.content} />

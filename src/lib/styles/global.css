@@ -71,27 +71,31 @@ html {
 	--primary-800: #5c3400;
 	--primary-900: #261300;
 
-	/* Accent: Battery Charged Blue */
-	--accent-100: #f2f9ff;
-	--accent-200: #bce3fe;
-	--accent-300: #83d0fa;
-	--accent-400: #4abeee;
-	--accent-500: #15a9d6;
-	--accent-600: #078eaa;
-	--accent-700: #02707e;
-	--accent-800: #004d52;
-	--accent-900: #002626;
+	/* Accent: Bluetiful */
+	--accent-100: #f2f3ff;
+	--accent-200: #c5caff;
+	--accent-300: #96a5fb;
+	--accent-400: #6683f3;
+	--accent-500: #3664e3;
+	--accent-600: #164ab4;
+	--accent-700: #093885;
+	--accent-800: #042855;
+	--accent-900: #021426;
 
 	/* Neutral */
 	--neutral-100: #fcfcfa;
-	--neutral-200: #f0f0eb;
-	--neutral-300: #e3e2dc;
-	--neutral-400: #d6d5ce;
-	--neutral-500: #c9c7bf;
-	--neutral-600: #a19e97;
-	--neutral-700: #78756f;
+	--neutral-200: #f0efea;
+	--neutral-300: #e3e2da;
+	--neutral-400: #d6d4ca;
+	--neutral-500: #c9c6bb;
+	--neutral-600: #a19d94;
+	--neutral-700: #78746e;
 	--neutral-800: #4f4c48;
 	--neutral-900: #262522;
+
+	--success: #a7dd3c;
+	--error: #ee3b2b;
+	--warning: #ffc94d;
 
 	--font-size-xs: clamp(0.7rem, calc(0.75rem + -0.05vw), 0.74rem);
 	--font-size-small: clamp(1rem, calc(1rem + 0.07vw), 1rem);

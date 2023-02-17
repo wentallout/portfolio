@@ -19,6 +19,7 @@
 	import 'nprogress/nprogress.css';
 
 	import { fade } from 'svelte/transition';
+	import CursorTrail from '$lib/components/Layout/CursorTrail.svelte';
 	export let data;
 
 	NProgress.configure({
@@ -49,24 +50,25 @@
 
 <SkipLink />
 <PWA />
+<CursorTrail>
+	<div class="page-container">
+		<BackToTop />
+		<Header />
 
-<div class="page-container">
-	<BackToTop />
-	<Header />
+		{#key data.currentRoute}
+			<main
+				class="main-content"
+				id="main-content"
+				in:fade={{ duration: 150, delay: 150 }}
+				out:fade={{ duration: 150 }}>
+				<Breadcrumb path={$page.url.pathname} />
+				<slot />
+			</main>
+		{/key}
 
-	{#key data.currentRoute}
-		<main
-			class="main-content"
-			id="main-content"
-			in:fade={{ duration: 150, delay: 150 }}
-			out:fade={{ duration: 150 }}>
-			<Breadcrumb path={$page.url.pathname} />
-			<slot />
-		</main>
-	{/key}
-
-	<Footer />
-</div>
+		<Footer />
+	</div>
+</CursorTrail>
 
 <style>
 	.page-container {

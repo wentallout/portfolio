@@ -8,7 +8,7 @@
 <style>
 	.tag {
 		display: inline-block;
-		font-weight: 500;
+		font-weight: 300;
 		width: fit-content;
 		padding-left: var(--space-2xs);
 		padding-right: var(--space-2xs);
@@ -21,8 +21,13 @@
 		transition: var(--transition);
 	}
 
+	.tag:before {
+		content: '#';
+	}
+
 	.tag:hover {
 		background: var(--primary-500);
 		color: var(--black);
+		font-weight: 600;
 	}
 </style>

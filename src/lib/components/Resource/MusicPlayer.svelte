@@ -14,7 +14,7 @@
 	// audioEle
 	let duration;
 	let currentTime;
-	let volume = 0.6;
+	let volume = 0.4;
 
 	//
 	let audioEle;

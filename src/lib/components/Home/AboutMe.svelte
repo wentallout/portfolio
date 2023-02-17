@@ -51,7 +51,7 @@
 		flex-direction: row;
 
 		align-items: center;
-		gap: var(--space-s);
+
 		flex-wrap: wrap;
 
 		width: 100%;
@@ -62,13 +62,13 @@
 	.block__title {
 		font-weight: 600;
 		color: var(--text-color);
-		margin-bottom: var(--space-s);
+		margin-bottom: var(--space-xs);
 	}
 
 	.desc {
 		display: flex;
 		flex-direction: column;
-		gap: var(--space-m);
+		gap: var(--space-xl);
 		max-width: var(--text-width);
 	}
 

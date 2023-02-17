@@ -6,6 +6,7 @@
 	import navigation from '$lib/assets/images/home/navigation.svg';
 	import interactive from '$lib/assets/images/home/interactive.svg';
 	import graphicDesign from '$lib/assets/images/home/graphicDesign.svg';
+	import Atropos from 'atropos/svelte';
 </script>
 
 <SaosContainer>
@@ -14,39 +15,49 @@
 			<HomeSectionTitle title="My tools" />
 
 			<div class="tool__block">
-				<div class="block__section">
-					<SVG width="80" height="80" src={navigation} alt="navigation" />
+				<Atropos rotateTouch="scroll-y">
+					<div class="block__section">
+						<SVG width="80" height="80" src={navigation} alt="navigation" />
 
-					<h3 class="block__title base-text">Prototyping</h3>
-					<p class="block__text small-text">Figma</p>
-					<p class="block__text small-text">Adobe XD</p>
-					<p class="block__text small-text">Sketch</p>
-				</div>
+						<h3 class="block__title base-text">Prototyping</h3>
+						<p class="block__text small-text">Figma</p>
+						<p class="block__text small-text">Adobe XD</p>
+						<p class="block__text small-text">Sketch</p>
+					</div>
+				</Atropos>
 
-				<div class="block__section">
-					<SVG width="80" height="80" src={graphicDesign} alt="graphic design" />
+				<Atropos rotateTouch="scroll-y">
+					<div class="block__section">
+						<SVG width="80" height="80" src={graphicDesign} alt="graphic design" />
 
-					<h3 class="block__title base-text">Design</h3>
-					<p class="block__text small-text">Illustrator</p>
-					<p class="block__text small-text">Photoshop</p>
-				</div>
+						<h3 class="block__title base-text">Design</h3>
+						<p class="block__text small-text">Illustrator</p>
+						<p class="block__text small-text">Photoshop</p>
+						<p class="block__text small-text">Canva</p>
+					</div>
+				</Atropos>
 
-				<div class="block__section">
-					<SVG width="80" height="80" src={interactive} alt="interactive" />
+				<Atropos rotateTouch="scroll-y">
+					<div class="block__section">
+						<SVG width="80" height="80" src={interactive} alt="interactive" />
 
-					<h3 class="block__title base-text">Motion</h3>
-					<p class="block__text small-text">Lottie</p>
-					<p class="block__text small-text">CSS Animations</p>
-				</div>
+						<h3 class="block__title base-text">Motion</h3>
+						<p class="block__text small-text">Lottie</p>
+						<p class="block__text small-text">Three.js</p>
+						<p class="block__text small-text">CSS Animations</p>
+					</div>
+				</Atropos>
 
-				<div class="block__section">
-					<SVG width="80" height="80" src={frontend} alt="frontend" />
+				<Atropos rotateTouch="scroll-y">
+					<div class="block__section">
+						<SVG width="80" height="80" src={frontend} alt="frontend" />
 
-					<h3 class="block__title base-text">Frontend</h3>
-					<p class="block__text small-text">HTML, CSS (BEM)</p>
-					<p class="block__text small-text">Bootstrap, Material</p>
-					<p class="block__text small-text">JS, React, SvelteKit</p>
-				</div>
+						<h3 class="block__title base-text">Frontend</h3>
+						<p class="block__text small-text">HTML, CSS, JS</p>
+						<p class="block__text small-text">Bootstrap, Material</p>
+						<p class="block__text small-text">React, SvelteKit</p>
+					</div>
+				</Atropos>
 			</div>
 		</div>
 	</section>
@@ -69,6 +80,7 @@
 		background-color: var(--black-400);
 		padding: var(--space-l);
 		border-radius: var(--border-radius-light);
+		overflow: hidden;
 	}
 
 	.tool__block {

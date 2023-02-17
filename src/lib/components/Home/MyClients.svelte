@@ -43,8 +43,8 @@
 
 	.logo {
 		aspect-ratio: 1/1;
-		width: 100px;
-		height: 100px;
+		width: 160px;
+		height: 160px;
 
 		filter: grayscale();
 		transition: var(--transition);

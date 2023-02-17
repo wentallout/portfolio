@@ -86,13 +86,14 @@
 		display: flex;
 		flex-direction: row;
 		flex-wrap: wrap;
+		gap: var(--space-s);
 		margin-bottom: var(--space-s);
 	}
 
 	.info__title {
-		width: fit-content;
-		margin-right: auto;
-		font-weight: 400;
+		width: var(--space-xl);
+		/* margin-right: auto; */
+		font-weight: 500;
 		height: 60px;
 		max-width: 200px;
 	}

@@ -4,6 +4,7 @@
 	import SocialButtons from '$lib/components/Contact/SocialButtons.svelte';
 	import ExLink from '$lib/components/Common/ExLink.svelte';
 	import { onMount } from 'svelte';
+	import Atropos from 'atropos/svelte';
 	let linkEle;
 	const rand = (min, max) => Math.floor(Math.random() * (max - min + 1)) + min;
 
@@ -61,32 +62,6 @@
 		align-items: center;
 		flex-direction: column;
 		width: 100%;
-	}
-
-	@media (min-width: 768px) {
-		.container {
-			background-image: url('/images/wall.svg');
-			background-position: top;
-			background-repeat: repeat;
-		}
-	}
-
-	.container:before {
-		content: '';
-		position: absolute;
-		top: 0;
-		right: 0;
-		bottom: 0;
-		left: 0;
-		z-index: 0;
-		background: linear-gradient(
-			0deg,
-			var(--page-bg) 0%,
-			rgba(18, 18, 18, 0.5) 12%,
-			rgba(18, 18, 18, 0.1) 30%,
-			rgba(18, 18, 18, 0) 40%
-		);
-		pointer-events: none;
 	}
 
 	.text {

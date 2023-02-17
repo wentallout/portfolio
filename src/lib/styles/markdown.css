@@ -75,8 +75,8 @@
 
 .markdown h4 {
 	/* SPACING */
-	margin-top: var(--space-l);
-	margin-bottom: var(--space-s);
+	margin-top: var(--space-m);
+	margin-bottom: var(--space-xs);
 	/* --- */
 
 	/* FONT */
@@ -150,8 +150,8 @@
 	max-width: 100%;
 	height: auto;
 	object-fit: cover;
-	margin-top: var(--space-m);
-	margin-bottom: var(--space-xl);
+	margin-top: var(--space-s);
+	margin-bottom: var(--space-s);
 }
 
 .markdown li:not(.toc li) {
@@ -273,4 +273,8 @@ aside.toc.desktop {
 
 :where(aside.toc > nav > ul > li.active) {
 	color: var(--primary-500);
+}
+
+aside.toc > nav {
+	max-width: 240px;
 }

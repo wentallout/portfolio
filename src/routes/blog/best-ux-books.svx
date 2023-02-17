@@ -28,67 +28,67 @@ Fundamental books will give you a feel for what UX design is all about. The esse
 
 ### Kickstart
 
-- [ ] [The Design of Everyday Things](https://j2team.dev/go/4b4f1ff7)
+- [ ] The Design of Everyday Things
 
 ### Working in small design team
 
-- [ ] [The User Experience Team of One](https://j2c.cc/ee71037e)
-- [ ] [Just Enough Research](https://j2c.cc/af120f8c)
+- [ ] The User Experience Team of One
+- [ ] Just Enough Research
 
 ### Leadership and Design Management
 
-- [ ] [The Making of a Manager](https://j2c.cc/4179ef92)
+- [ ] The Making of a Manager
 
 ### Into Product Management
 
-- [ ] [Insprired](https://j2c.cc/512ef863)
-- [ ] [Zero To One](https://j2c.cc/97fe1456)
+- [ ] Insprired
+- [ ] Zero To One
 
 ### Want to learn basic Visual Design
 
-- [ ] [The non designer Design book](https://j2c.cc/cd9c0e0b)
-- [ ] [Universal Principles of Design](https://j2c.cc/9a27cc3d)
+- [ ] The non designer Design book
+- [ ] Universal Principles of Design
 
 ### Design that influences human behaviors
 
-- [ ] [Hooked](https://j2c.cc/66be98a9)
-- [ ] [100 Things Every Designer Needs to know about people](https://j2c.cc/4b4f1ff7)
+- [ ] Hooked
+- [ ] 100 Things Every Designer Needs to know about people
 
 ### Usability
 
-- [ ] [Dont Make Me Think](https://j2c.cc/03c4fe47)
-- [ ] [Measuring the User Experience](https://j2c.cc/08ada380)
+- [ ] Dont Make Me Think
+- [ ] Measuring the User Experience
 
 ### Win design challenge for UX job
 
-- [ ] [Solving Product Design exercises](https://j2c.cc/9a27cc3d)
+- [ ] Solving Product Design exercises
 
 ### Understand the core of UX
 
 #### Human Computer Interaction
 
-- [ ] [Interaction Design](https://j2c.cc/1d076e42)
-- [ ] [About face](https://j2c.cc/56fc3357)
+- [ ] Interaction Design
+- [ ] About face
 
 #### Strategic UX
 
-- [ ] [The Elements of User Experience](https://j2c.cc/da94438d)
+- [ ] The Elements of User Experience
 
 ### Information Architecture
 
-- [ ] [Information Architecture](https://j2c.cc/505371ce)
-- [ ] [DesigningTheSearchExperience](https://j2c.cc/e3176fa7)
+- [ ] Information Architecture
+- [ ] DesigningTheSearchExperience
 
 ### Research
 
-- [ ] [Observing the User Experience](https://j2c.cc/f4f2fda4)
-- [ ] [Research methods in human-computer interaction](https://j2c.cc/e2f78a67)
+- [ ] Observing the User Experience
+- [ ] Research methods in human-computer interaction
 
 ### Run a UX Project
 
-- [ ] [Project Guide to UX Design](https://j2c.cc/3850ea57)
-- [ ] [Sprint](https://j2c.cc/c51f4121)
-- [ ] [UX for lean startups](https://j2c.cc/7ac8d5c2)
+- [ ] Project Guide to UX Design
+- [ ] Sprint
+- [ ] UX for lean startups
 
 ## transition from dev to designer
 

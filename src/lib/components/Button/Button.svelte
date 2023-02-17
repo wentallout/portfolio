@@ -45,14 +45,14 @@
 
 <style>
 	.glow-effect {
-		--glow-line-color: #fff;
-		--glow-line-thickness: 2px;
+		--glow-line-color: var(--neutral-100);
+		--glow-line-thickness: 0.4px;
 		--glow-line-length: 20px;
-		--glow-blur-color: #fff;
+		--glow-blur-color: var(--neutral-100);
 		--glow-blur-size: 5px;
 		--glow-offset: 10px;
 		--animation-speed: 1200ms;
-		/* do not change, used for calculations */
+
 		--container-offset: 100px;
 		position: relative;
 	}
@@ -74,7 +74,7 @@
 		y: calc((var(--container-offset) / 2) + calc(var(--glow-offset) / -2));
 		rx: var(--border-radius);
 		fill: transparent;
-		stroke: black;
+
 		stroke-width: 5px;
 		stroke-dasharray: var(--glow-line-length) calc(50px - var(--glow-line-length));
 	}
@@ -148,5 +148,9 @@
 
 		/* weird */
 		outline-color: transparent;
+	}
+
+	.btn:hover {
+		filter: brightness(1.2);
 	}
 </style>

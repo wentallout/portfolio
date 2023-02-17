@@ -4,15 +4,7 @@
 	import rezaSplat from '$lib/assets/images/project/reza/rezaSplat.svg';
 </script>
 
-<Atropos
-	class="my-atropos"
-	shadow="false"
-	eventsEl=".project"
-	rotateXMax={20}
-	rotateYMax={20}
-	stretchX={0}
-	stretchZ={5}
-	rotateTouch="scroll-y">
+<Atropos class="my-atropos" shadow="false" eventsEl="body" rotateTouch="scroll-y">
 	<div class="reza-phone">
 		<div class="frame">
 			<img data-atropos-offset="5" class="frame__image" src={rezaPhoneFrame} alt="reza homepage" />
