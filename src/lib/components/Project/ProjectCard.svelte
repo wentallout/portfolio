@@ -94,7 +94,7 @@
 		width: var(--space-xl);
 		/* margin-right: auto; */
 		font-weight: 500;
-		height: 60px;
+
 		max-width: 200px;
 	}
 

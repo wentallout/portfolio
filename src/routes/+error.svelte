@@ -40,6 +40,7 @@
 		font-weight: 600;
 		font-family: 'Fancy';
 		text-align: center;
+		text-shadow: 0 0 80px var(--error);
 	}
 
 	.message {

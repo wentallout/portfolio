@@ -14,7 +14,7 @@
 					left: `${clientX}px`,
 					top: `${clientY}px`
 				},
-				{ duration: 500, fill: 'forwards' }
+				{ duration: 0, fill: 'forwards' }
 			);
 		};
 	});
@@ -45,20 +45,22 @@
 		/* background-color: var(--neutral-100); */
 		mix-blend-mode: difference;
 		pointer-events: none;
-		height: 44px;
+		height: 16px;
 		aspect-ratio: 1;
 		position: fixed;
 		left: 50%;
 		top: 50%;
 		translate: -50% -50%;
 		border-radius: 50%;
-		border: 0.1px solid var(--neutral-100);
+		background-color: transparent;
 
 		/* animation: rotate 20s infinite; */
 		opacity: 1;
 
 		/* filter: blur(16px); */
 		z-index: 99;
+
+		box-shadow: 0 0 44px var(--primary-500);
 	}
 
 	@media (min-width: 992px) {

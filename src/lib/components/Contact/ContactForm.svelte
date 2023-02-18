@@ -41,9 +41,9 @@
 
 				<Button
 					label="Reset"
-					border="1px solid var(--warning)"
+					border="1px solid var(--error)"
 					backgroundColor="transparent"
-					labelColor="var(--warning)"
+					labelColor="var(--error)"
 					type="reset" />
 			</div>
 		</form>
