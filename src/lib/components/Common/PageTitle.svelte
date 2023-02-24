@@ -3,7 +3,7 @@
 </script>
 
 <div class="title">
-	<h1 class="title__text xxxl-text rainbow">{pageTitle}</h1>
+	<h1 class="xxxl-text title__text rainbow">{pageTitle}</h1>
 </div>
 
 <style>
@@ -15,19 +15,9 @@
 		/*  */
 		position: relative;
 		margin-bottom: var(--space-3xl);
-
 		overflow: hidden;
 		width: 100%;
-
 		background-color: transparent;
-
-		background-image: linear-gradient(135deg, var(--black-500) 25%, transparent 25%),
-			linear-gradient(225deg, var(--black-500) 25%, transparent 25%),
-			linear-gradient(45deg, var(--black-500) 25%, transparent 25%),
-			linear-gradient(315deg, var(--black-500) 25%, var(--black-400) 25%);
-		background-position: 40px 0, 40px 0, 0 0, 0 0;
-		background-size: 40px 40px;
-		background-repeat: repeat;
 	}
 
 	.title:before {

@@ -1,10 +1,8 @@
 <script>
-	import SaosContainer from '$lib/components/Common/SaosContainer.svelte';
-
 	import SocialButtons from '$lib/components/Contact/SocialButtons.svelte';
 	import ExLink from '$lib/components/Common/ExLink.svelte';
 	import { onMount } from 'svelte';
-	import Atropos from 'atropos/svelte';
+
 	let linkEle;
 	const rand = (min, max) => Math.floor(Math.random() * (max - min + 1)) + min;
 
@@ -30,29 +28,27 @@
 	});
 </script>
 
-<SaosContainer>
-	<section class="container">
-		<div class="text">
-			<div style="margin-bottom:var(--space-m)" class="line">
-				<SocialButtons />
-			</div>
-			<div contentEditable="true" class="line">
-				<div class="word rainbow">Dang</div>
-				<div class="word rainbow">Khoa</div>
-			</div>
-			<div class="line">
-				<div class="word">UI/UX</div>
-				<div class="word">Dev</div>
-			</div>
-
-			<div class="line">
-				<ExLink href="https://www.linkedin.com/in/wentallout/">
-					<div bind:this={linkEle} id="channel-link" class="word fancy">→Resume</div>
-				</ExLink>
-			</div>
+<section class="container">
+	<div class="text">
+		<div style="margin-bottom:var(--space-m)" class="line">
+			<SocialButtons />
 		</div>
-	</section>
-</SaosContainer>
+		<div contentEditable="true" class="line">
+			<div class="word rainbow">Dang</div>
+			<div class="word rainbow">Khoa</div>
+		</div>
+		<div class="line">
+			<div class="word">UI/UX</div>
+			<div class="word">Dev</div>
+		</div>
+
+		<div class="line">
+			<ExLink href="https://www.linkedin.com/in/wentallout/">
+				<div bind:this={linkEle} id="channel-link" class="word fancy">→Resume</div>
+			</ExLink>
+		</div>
+	</div>
+</section>
 
 <style>
 	.container {

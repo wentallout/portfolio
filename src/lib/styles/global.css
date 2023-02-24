@@ -42,11 +42,13 @@ html {
 
 	--text-color-low: hsla(0, 0%, 100%, 0.6);
 
-	--black-100: hsl(0, 0%, 12%);
-	--black-200: hsl(0, 0%, 10%);
-	--black-300: hsl(0, 0%, 8%);
-	--black-400: hsl(0, 0%, 6%);
-	--black-500: hsl(0, 0%, 4%);
+	--black-100: hsl(0, 0%, 11%);
+	--black-200: hsl(0, 0%, 9%);
+	--black-300: hsl(0, 0%, 7%);
+	--black-400: hsl(0, 0%, 5%);
+	--black-500: hsl(0, 0%, 3%);
+
+	/* hsl(240, 5%, 7%) */
 
 	--page-bg: var(--black-500);
 	--page-padding: 20vw;
@@ -61,15 +63,15 @@ html {
 	--text-width: 65ch;
 
 	/* Primary: Nacho Cheese */
-	--primary-100: #fffff2;
-	--primary-200: #fff8b6;
-	--primary-300: #ffeb79;
-	--primary-400: #ffd63d;
-	--primary-500: #ffbb00;
-	--primary-600: #c98800;
-	--primary-700: #935a00;
-	--primary-800: #5c3400;
-	--primary-900: #261300;
+	--primary-100: hsl(60, 100%, 97%);
+	--primary-200: hsl(54, 100%, 86%);
+	--primary-300: hsl(51, 100%, 74%);
+	--primary-400: hsl(47, 100%, 62%);
+	--primary-500: hsl(44, 100%, 50%);
+	--primary-600: hsl(41, 100%, 39%);
+	--primary-700: hsl(37, 100%, 29%);
+	--primary-800: hsl(34, 100%, 18%);
+	--primary-900: hsl(30, 100%, 7%);
 
 	/* Accent: Bluetiful */
 	--accent-100: #f2f3ff;
@@ -83,19 +85,20 @@ html {
 	--accent-900: #021426;
 
 	/* Neutral */
-	--neutral-100: #fcfcfa;
-	--neutral-200: #f0efea;
-	--neutral-300: #e3e2da;
-	--neutral-400: #d6d4ca;
-	--neutral-500: #c9c6bb;
-	--neutral-600: #a19d94;
-	--neutral-700: #78746e;
-	--neutral-800: #4f4c48;
-	--neutral-900: #262522;
+	--neutral-100: hsl(60, 25%, 98%);
+	--neutral-200: hsl(50, 17%, 93%);
+	--neutral-300: hsl(53, 14%, 87%);
+	--neutral-400: hsl(50, 13%, 82%);
+	--neutral-500: hsl(47, 11%, 76%);
+	--neutral-600: hsl(42, 6%, 61%);
+	--neutral-700: hsl(36, 4%, 45%);
+	--neutral-800: hsl(34, 5%, 30%);
+	--neutral-900: hsl(45, 6%, 14%);
 
-	--success: #a7dd3c;
-	--error: #ee3b2b;
-	--warning: #ffc94d;
+	--success: #55ed55;
+	--info: #07d9f9;
+	--warning: #ffd932;
+	--error: #ff4c49;
 
 	--font-size-xs: clamp(0.7rem, calc(0.75rem + -0.05vw), 0.74rem);
 	--font-size-small: clamp(1rem, calc(1rem + 0.07vw), 1rem);
@@ -134,14 +137,6 @@ html {
 	/* darkmode mode */
 	/* color-scheme: light dark; */
 
-	/* 
-tracking-tighter	letter-spacing: -0.05em;
-tracking-tight	letter-spacing: -0.025em;
-tracking-normal	letter-spacing: 0em;
-tracking-wide	letter-spacing: 0.025em;
-tracking-wider	letter-spacing: 0.05em;
-tracking-widest	letter-spacing: 0.1em; */
-
 	/* TRANSITION */
 	--transition: 0.3s ease-in-out;
 
@@ -150,6 +145,13 @@ tracking-widest	letter-spacing: 0.1em; */
 	caret-color: var(--primary-500);
 
 	--z-index-max: 99;
+
+	--tracking-0: 0em;
+	--tracking-1: -0.05em;
+	--tracking-2: -0.025em;
+	--tracking-3: 0.025em;
+	--tracking-4: 0.05em;
+	--tracking-5: 0.1em;
 }
 
 ::selection {
@@ -167,7 +169,6 @@ tracking-widest	letter-spacing: 0.1em; */
 .small-text {
 	font-size: var(--font-size-small);
 	line-height: var(--line-height-small);
-	/* letter-spacing: var(--ls); */
 }
 
 .base-text {
@@ -215,7 +216,7 @@ html {
 
 body {
 	text-rendering: optimizeLegibility;
-	-webkit-font-smoothing: antialiased;
+
 	-moz-osx-font-smoothing: grayscale;
 	color: var(--text-color);
 }

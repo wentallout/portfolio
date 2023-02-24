@@ -4,6 +4,8 @@
 
 [![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/wentallout/portfolio)
 
+[![Open in Visual Studio Code](https://open.vscode.dev/badges/open-in-vscode.svg)](https://open.vscode.dev/wentallout/portfolio)
+
 ## What is this?
 
 This is Khoa's personal portfolio.

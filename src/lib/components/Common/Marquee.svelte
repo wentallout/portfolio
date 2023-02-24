@@ -47,7 +47,7 @@
 		overflow: hidden;
 		user-select: none;
 		gap: var(--gap);
-		background-color: var(--black-300);
+		background-color: var(--black);
 		color: var(--primary-500);
 		padding: var(--space-xs) 0;
 	}

@@ -37,7 +37,7 @@ date: '2022-09-14'
     import notiScreen from '$lib/assets/images/project/reza/notiScreen.png';
 </script>
 
-## overview
+## Overview
 
 <Image loading="eager" src={thumbnail} alt="reza thumbnail" />
 
@@ -60,11 +60,11 @@ You need a mobile app that can:
 - Show you its menu, price and past reviews,
 - Let you reserve a table when it's available and then remind you when it's time and guide you there.
 
-## problem statement
+## Problem statement
 
 Customers are frustrated when they see a long queue or full table at their favorite restaurants. Restaurants can get crowded when there is a big promo and clients may leave to find a different place to eat => business lose money. We need an app that can reduce this frustration by making it easier for people to find interesting new restaurants that are available.
 
-Our perspective: table reservation apps are not as popular as food ordering apps in Vietnam. People still rely on the old ways of booking a table by phone and miss out on discounts.
+Our vision: table reservation apps are not as popular as food ordering apps in Vietnam. People still rely on the old ways of booking a table by phone and miss out on discounts.
 
 We look at one of our competitor apps [PasGo](https://pasgo.vn) and relized some important features are missing:
 
@@ -76,13 +76,13 @@ We look at one of our competitor apps [PasGo](https://pasgo.vn) and relized some
 
 <Image src={goal} alt="project goal" />
 
-## audience
+## Audience
 
 I need to visualize the kind of user that will use this product. The persona has to represent the largest amount of users so a person with a paying job will be appropriate. She's busy but like to hangout with friends in a nice place sometimes.
 
 <Image src={userResearch} alt="user research" />
 
-## responsibilities
+## Responsibilities
 
 I volunteered to be the team leader because I had more free time than my peers and I'm quite confident in my time management skill.
 
@@ -92,7 +92,7 @@ At every step in our process, I gave each member a task and a deadline. I don't 
 
 <Image src={plan} alt="plan" />
 
-## constraints
+## Constraints
 
 We were given **2 weeks** to finish our project so I decided that we should use our limited time wisely. So I tell my team to remove unnecessary ideas and focus only on the **3 most important features: Searching, Detail and Booking**.
 
@@ -102,7 +102,7 @@ We use Discord for our daily meetings and share our progress and feedback throug
 
 <Image src={discord} alt="discord screen" />
 
-## process
+## Process
 
 The **Design Thinking** method is a practical way to solve complex problems by finding information about the human needs.
 
@@ -118,7 +118,7 @@ There are 3 possible ways to gather data:
 - Interview (Work in progress).
 - Competitive Analysis (Work in progress).
 
-#### online survey
+#### Online survey
 
 Using online surveys I can gather real data from students to employees. I want to know if people actually need to make reservations at a restaurant or if they have some disadvantages.
 
@@ -172,7 +172,7 @@ We quickly made some simple lofi screens for the main features we agreed on. It'
 <Image src={lofi} alt="low fidelity wireframe" />
 
     
-#### branding
+#### Branding
 
 I got the name from the pronunciation of "reservation" which looks like this: **/ˌrezərˈvāSH(ə)n/** . I think short, 2 syllables words are the best names for your brand.
 
@@ -182,7 +182,7 @@ I used Canva and quickly made a SVG logo for my concept mobile app. There are mu
 
 <Image src={rezaIcon} alt="branding" />
 
-#### design system
+#### Design System
 
 I wanted my team to create a simple design system before moving to phase 4. This will help my team achieve the minimum consistency that is required in a typical project.
 
@@ -246,15 +246,15 @@ I got some feedback from my instructors and found this one element that needs to
 
 There is also a Remote Usability Testing service that helps with this testing phase: [Maze](https://maze.co/).
 
-## conclusion
+## Conclusion
 
 From this case study, I've learned a lot about the process of solving problems.
 
 Team collaboration is very important in a project because when you work alone it's easy to get tunnel visioned (limited point of view). It's important to receive feedback from everyone in the team in order to keep improving my designs.
 
-        <Image src={c1} alt="conclusion" />
-        <Image src={c2} alt="conclusion" />
-         <Image src={l1} alt="conclusion" />
-         <Image src={l2} alt="conclusion" />
+<Image src={c1} alt="conclusion" />
+<Image src={c2} alt="conclusion" />
+<Image src={l1} alt="conclusion" />
+<Image src={l2} alt="conclusion" />
 
 

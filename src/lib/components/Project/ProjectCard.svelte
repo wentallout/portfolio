@@ -53,6 +53,12 @@
 </div>
 
 <style>
+	.info__section {
+		display: flex;
+		flex-direction: row;
+		gap: var(--space-s);
+	}
+
 	.project {
 		display: flex;
 		width: 100%;
@@ -92,14 +98,11 @@
 
 	.info__title {
 		width: var(--space-xl);
-		/* margin-right: auto; */
 		font-weight: 500;
-
 		max-width: 200px;
 	}
 
 	.info__description {
-		margin-left: var(--space-s);
 		display: flex;
 		width: 70%;
 		color: var(--text-color-low);
