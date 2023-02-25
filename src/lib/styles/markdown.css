@@ -96,7 +96,7 @@
 	background-color: var(--primary-500);
 	clip-path: polygon(
 		0px 0px,
-	85px 0px,
+		85px 0px,
 		90px 5px,
 		100% 5px,
 		100% 6px,
@@ -146,10 +146,6 @@
 }
 
 .markdown img {
-	max-width: 100%;
-	height: auto;
-	object-fit: cover;
-	margin-top: var(--space-s);
 	margin-bottom: var(--space-s);
 	border-radius: var(--border-radius-light);
 }

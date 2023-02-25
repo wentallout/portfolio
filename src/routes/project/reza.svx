@@ -209,7 +209,7 @@ This screen lets users search for a restaurant using keywords like the restauran
 
 <Image src={searchScreen} alt="search screen UI" />
 
-#### detail
+#### Detail
 
 This screen shows up when user click on a restaurant from their home page or search result page.
 

@@ -13,7 +13,7 @@
 	import ogImageSrc from '$lib/assets/images/seo/home-open-graph.jpg';
 	import twitterImageSrc from '$lib/assets/images/seo/home-twitter.jpg';
 	import featuredImageSrc from '$lib/assets/images/seo/home.jpg';
-	// -- END SEO
+	//  END SEO
 
 	const { author, siteUrl } = website;
 	let title = 'Home';

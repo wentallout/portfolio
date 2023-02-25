@@ -45,7 +45,7 @@
 		/* background-color: var(--neutral-100); */
 		mix-blend-mode: difference;
 		pointer-events: none;
-		height: 16px;
+		height: 8px;
 		aspect-ratio: 1;
 		position: fixed;
 		left: 50%;

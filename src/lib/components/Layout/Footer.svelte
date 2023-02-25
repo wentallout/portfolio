@@ -59,10 +59,10 @@
 
 		background-color: var(--black-400);
 
-		background-image: linear-gradient(135deg, var(--black-400) 25%, transparent 25%),
-			linear-gradient(225deg, var(--black-400) 25%, transparent 25%),
-			linear-gradient(45deg, var(--black-400) 25%, transparent 25%),
-			linear-gradient(315deg, var(--black-400) 25%, var(--black-300) 25%);
+		background-image: linear-gradient(135deg, var(--black-500) 25%, transparent 25%),
+			linear-gradient(225deg, var(--black-500) 25%, transparent 25%),
+			linear-gradient(45deg, var(--black-500) 25%, transparent 25%),
+			linear-gradient(315deg, var(--black-500) 25%, var(--black-400) 25%);
 		background-position: 40px 0, 40px 0, 0 0, 0 0;
 		background-size: 40px 40px;
 		background-repeat: repeat;

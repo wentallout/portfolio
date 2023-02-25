@@ -1,4 +1,5 @@
 <script>
+	import Rain from '$lib/components/Layout/Rain.svelte';
 	import SkipLink from '$lib/components/Layout/SkipLink.svelte';
 	import PWA from '$lib/components/PWA/PWA.svelte';
 	import BackToTop from '$lib/components/Layout/BackToTop.svelte';
@@ -50,6 +51,7 @@
 
 <SkipLink />
 <PWA />
+
 <CursorTrail>
 	<div class="page-container">
 		<BackToTop />
@@ -61,6 +63,7 @@
 				id="main-content"
 				in:fade={{ duration: 150, delay: 150 }}
 				out:fade={{ duration: 150 }}>
+				<Rain />
 				<Breadcrumb path={$page.url.pathname} />
 				<slot />
 			</main>
@@ -94,7 +97,7 @@
 		left: 0;
 		width: 100%;
 		height: 100%;
-		background: url('/images/bg_decor_flower_l.png'), url('/images/bg_decor_line_r.png');
+		background: url('/images/bg_decor_flower_l.png'), url('/images/bg_decor_flower_r.png');
 		z-index: -1;
 		background-position: top var(--space-3xl) left 0, top var(--space-3xl) right 0;
 		background-repeat: no-repeat;
@@ -108,7 +111,7 @@
 		right: 0;
 		width: 100%;
 		height: 100%;
-		background: url('/images/bg_decor_line_l.png'), url('/images/bg_decor_flower_r.png');
+		background: url('/images/bg_decor_line_l.png'), url('/images/bg_decor_line_r.png');
 		background-position: bottom var(--space-xl) left 0, bottom var(--space-xl) right 0;
 		background-repeat: no-repeat;
 	}

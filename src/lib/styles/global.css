@@ -42,11 +42,11 @@ html {
 
 	--text-color-low: hsla(0, 0%, 100%, 0.6);
 
-	--black-100: hsl(0, 0%, 11%);
-	--black-200: hsl(0, 0%, 9%);
-	--black-300: hsl(0, 0%, 7%);
-	--black-400: hsl(0, 0%, 5%);
-	--black-500: hsl(0, 0%, 3%);
+	--black-100: hsl(180, 4%, 13%);
+	--black-200: hsl(180, 4%, 11%);
+	--black-300: hsl(180, 4%, 9%);
+	--black-400: hsl(180, 4%, 7%);
+	--black-500: hsl(180, 4%, 5%);
 
 	/* hsl(240, 5%, 7%) */
 
@@ -56,7 +56,7 @@ html {
 	--brand-color: var(--text-color);
 
 	--bg: hsl(0, 0%, 8%);
-	--black: hsl(0, 0%, 3%);
+	--black: hsl(0, 0%, 0%);
 
 	--swiper-theme-color: var(--primary-500) !important;
 

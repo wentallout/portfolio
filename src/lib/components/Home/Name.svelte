@@ -34,12 +34,12 @@
 			<SocialButtons />
 		</div>
 		<div contentEditable="true" class="line">
-			<div class="word rainbow">Dang</div>
-			<div class="word rainbow">Khoa</div>
+			<div class="word rainbow">&lt;Dang</div>
+			<div class="word rainbow">Khoa/&gt;</div>
 		</div>
 		<div class="line">
 			<div class="word">UI/UX</div>
-			<div class="word">Dev</div>
+			<div class="word">Frontend</div>
 		</div>
 
 		<div class="line">
