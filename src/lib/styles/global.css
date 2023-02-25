@@ -36,8 +36,6 @@ html {
 	--normal-font: 'Normal';
 	--fancy-font: 'Fancy';
 
-	/* --text-color: hsla(0, 0%, 100%, 0.87); */
-
 	--text-color: hsla(0, 0%, 100%, 0.9);
 
 	--text-color-low: hsla(0, 0%, 100%, 0.6);
@@ -47,8 +45,6 @@ html {
 	--black-300: hsl(180, 4%, 9%);
 	--black-400: hsl(180, 4%, 7%);
 	--black-500: hsl(180, 4%, 5%);
-
-	/* hsl(240, 5%, 7%) */
 
 	--page-bg: var(--black-500);
 	--page-padding: 20vw;

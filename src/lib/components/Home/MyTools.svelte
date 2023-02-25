@@ -72,15 +72,22 @@
 
 		gap: var(--space-m);
 	}
+
 	.block__section {
 		display: flex;
 		flex-direction: column;
-		align-items: flex-start;
+		align-items: center;
 
 		background-color: var(--black-400);
 		padding: var(--space-l);
 		border-radius: var(--border-radius-light);
 		overflow: hidden;
+	}
+
+	@media (min-width: 992px) {
+		.block__section {
+			align-items: flex-start;
+		}
 	}
 
 	.tool__block {

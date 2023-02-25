@@ -37,6 +37,7 @@
 		"eslint": "^8.33.0",
 		"eslint-config-prettier": "^8.6.0",
 		"eslint-plugin-svelte3": "^4.0.0",
+		"gsap": "^3.11.4",
 		"imagetools-core": "^3.3.1",
 		"mdsvex": "^0.10.6",
 		"node-html-parser": "^6.1.4",

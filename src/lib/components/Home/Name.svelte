@@ -34,8 +34,7 @@
 			<SocialButtons />
 		</div>
 		<div contentEditable="true" class="line">
-			<div class="word rainbow">&lt;Dang</div>
-			<div class="word rainbow">Khoa/&gt;</div>
+			<div class="word">Dang Khoa</div>
 		</div>
 		<div class="line">
 			<div class="word">UI/UX</div>
@@ -108,6 +107,10 @@
 		margin: 0rem;
 		text-transform: uppercase;
 		transition: opacity 250ms ease;
+	}
+
+	.fancy {
+		color: var(--primary-500);
 	}
 
 	.fancy:hover {
