@@ -66,7 +66,6 @@
 </svelte:head> -->
 
 <SEO {...seoProps} />
-<Name />
 <FeaturedProject />
 <Clients />
 

@@ -15,7 +15,7 @@
 @font-face {
 	font-family: 'Fancy';
 	src: url('/fonts/MK.woff2') format('woff2');
-	font-weight: normal;
+
 	font-style: normal;
 	font-display: swap;
 }
@@ -40,10 +40,10 @@ html {
 
 	--text-color-low: hsla(0, 0%, 100%, 0.6);
 
-	--black-100: hsl(180, 4%, 13%);
+	--black-100: hsl(180, 3%, 13%);
 	--black-200: hsl(180, 4%, 11%);
 	--black-300: hsl(180, 4%, 9%);
-	--black-400: hsl(180, 4%, 7%);
+	--black-400: hsl(180, 6%, 7%);
 	--black-500: hsl(180, 4%, 5%);
 
 	--page-bg: var(--black-500);

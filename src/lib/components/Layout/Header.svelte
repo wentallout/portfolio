@@ -82,7 +82,6 @@
 	.nav {
 		width: 100%;
 		display: flex;
-		max-width: 100vw;
 
 		/* FONT */
 		font-size: var(--font-size-base);
@@ -90,7 +89,6 @@
 		color: var(--text-color);
 		/* --- */
 
-		background-color: transparent;
 		transition: var(--transition);
 	}
 
@@ -104,6 +102,7 @@
 		display: flex;
 		flex-direction: row;
 		width: 100%;
+
 		margin: 0;
 	}
 
@@ -117,7 +116,8 @@
 		justify-content: center;
 		/* --- */
 
-		width: 100%;
+		width: 100vw;
+		max-width: 100vw;
 		padding: var(--space-xs);
 		cursor: pointer;
 	}
@@ -197,12 +197,12 @@
 		padding-right: var(--page-padding);
 		transition: var(--transition);
 		outline: 1px solid transparent;
-		font-weight: 400;
+		font-weight: 600;
 	}
 
 	.overlay-item:hover,
 	.overlay-item:focus {
-		background-color: var(--black-500);
+		background: var(--black);
 	}
 
 	.closebtn {

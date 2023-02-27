@@ -1,0 +1,105 @@
+<script>
+	import SocialButtons from '$lib/components/Contact/SocialButtons.svelte';
+
+	import YinYang from '~icons/ph/yin-yang-fill';
+
+	let videoEle;
+
+	let rewindInterval;
+
+	function handleTimeUpdate() {
+		if (videoEle.currentTime > videoEle.duration + 0.1) {
+			videoEle.pause();
+			videoEle.currentTime = videoEle.duration;
+			rewindInterval = setInterval(() => {
+				videoEle.currentTime -= 0.1;
+				if (videoEle.currentTime <= 0) {
+					clearInterval(rewindInterval);
+					videoEle.play();
+				}
+			}, 10);
+		}
+	}
+</script>
+
+<div class="cover">
+	<video bind:this={videoEle} class="video" on:timeupdate={handleTimeUpdate} autoplay muted loop>
+		<source src="/videos/city.mp4" type="video/mp4" />
+	</video>
+	<div class="cover__logo">
+		<YinYang class="yinyang" width="72" height="72" color="var(--primary-500)" />
+	</div>
+	<div class="cover__btn">
+		<SocialButtons style="flex-direction:column" />
+	</div>
+</div>
+
+<style>
+	:global(.yinyang) {
+		filter: drop-shadow(0px 0px 10px var(--primary-500));
+		animation: rotate 3s linear infinite;
+	}
+
+	@keyframes rotate {
+		from {
+			transform: rotate(0deg);
+		}
+		to {
+			transform: rotate(360deg);
+		}
+	}
+
+	.cover__logo {
+		position: absolute;
+		top: 50%; /* position the top  edge of the element at the middle of the parent */
+		left: 50%; /* position the left edge of the element at the middle of the parent */
+
+		transform: translate(-50%, -50%);
+	}
+
+	.cover {
+		display: flex;
+		position: relative;
+		width: 100%;
+		height: 300px;
+		background-color: red;
+	}
+
+	.cover__btn {
+		width: 100%;
+		position: absolute;
+		display: flex;
+		justify-content: flex-end;
+		bottom: var(--space-s);
+		padding-right: 1rem;
+		left: 0;
+	}
+
+	.cover::after {
+		pointer-events: none;
+		content: '';
+		position: absolute;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		left: 0;
+
+		background: linear-gradient(
+			0deg,
+			var(--page-bg) 0%,
+			rgba(0, 0, 0, 0.5) 12%,
+			rgba(0, 0, 0, 0.1) 30%,
+			rgba(0, 0, 0, 0) 40%
+		);
+	}
+
+	.video {
+		position: absolute;
+		left: 0;
+		top: 0;
+		height: 100%;
+		width: 100%;
+		object-fit: cover;
+		filter: brightness(50%);
+	}
+</style>

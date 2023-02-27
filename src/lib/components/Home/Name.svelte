@@ -1,5 +1,4 @@
 <script>
-	import SocialButtons from '$lib/components/Contact/SocialButtons.svelte';
 	import ExLink from '$lib/components/Common/ExLink.svelte';
 	import { onMount } from 'svelte';
 
@@ -28,46 +27,48 @@
 	});
 </script>
 
-<section class="container">
-	<div class="text">
-		<div style="margin-bottom:var(--space-m)" class="line">
-			<SocialButtons />
-		</div>
-		<div contentEditable="true" class="line">
-			<div class="word">Dang Khoa</div>
+<div class="container">
+	<div contentEditable="true" class="text">
+		<div class="line">
+			<div class="word word--bold">Dang Khoa</div>
+			<div class="word">1999</div>
 		</div>
 		<div class="line">
-			<div class="word">UI/UX</div>
+			<div class="word word--bold">UI/UX</div>
+			<div class="word">Backend</div>
 			<div class="word">Frontend</div>
 		</div>
-
 		<div class="line">
+			<div class="word word--bold">Ho Chi Minh</div>
+			<div class="word">2023</div>
+		</div>
+
+		<div class="line ">
 			<ExLink href="https://www.linkedin.com/in/wentallout/">
-				<div bind:this={linkEle} id="channel-link" class="word fancy">→Resume</div>
+				<div bind:this={linkEle} id="channel-link" class="word fancy word--bold">→Resume</div>
 			</ExLink>
 		</div>
 	</div>
-</section>
+</div>
 
 <style>
 	.container {
 		position: relative;
 		display: flex;
-		justify-content: center;
-		align-items: center;
+		align-items: flex-start;
 		flex-direction: column;
 		width: 100%;
+		margin-bottom: var(--space-xl);
 	}
 
 	.text {
 		display: flex;
+		width: 100%;
 		flex-direction: column;
 		flex-wrap: wrap;
-		gap: var(--space-3xs);
-		width: max-content;
-		max-width: 100%;
+		gap: var(--space-s);
+
 		background-color: var(--page-bg);
-		padding: var(--space-m);
 	}
 
 	@keyframes float {
@@ -99,13 +100,12 @@
 	}
 
 	.word {
-		color: var(--text-color);
+		color: var(--text-color-low);
 
-		font-size: var(--font-size-2xl);
-		font-weight: 600;
+		font-size: var(--font-size-xl);
+		font-weight: 300;
 
 		margin: 0rem;
-		text-transform: uppercase;
 		transition: opacity 250ms ease;
 	}
 
@@ -115,5 +115,8 @@
 
 	.fancy:hover {
 		color: var(--primary-500);
+	}
+	.word--bold {
+		font-weight: 600;
 	}
 </style>

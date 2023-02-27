@@ -53,15 +53,14 @@
 <style>
 	.form-container {
 		display: flex;
-		justify-content: left;
-		width: 100%;
+		flex-wrap: wrap;
+		justify-content: flex-start;
 		margin-bottom: var(--space-m);
 		border-radius: var(--border-radius-light);
 	}
 
 	.contact {
 		width: 100%;
-
 		display: flex;
 		flex-direction: column;
 	}
@@ -72,24 +71,17 @@
 	}
 
 	.contact__btn {
-		/* display: flex;
-		flex-direction: row;
-		flex-wrap: wrap;
-		gap: var(--space-s);
-
 		width: 100%;
-		*/
-
 		margin-top: var(--space-m);
 
 		--min: 15ch;
-		--gap: var(--space-m);
+		--gap: var(--space-s);
 
 		display: grid;
 		grid-gap: var(--gap);
-		/* min() with 100% prevents overflow
-  in extra narrow spaces */
+
 		grid-template-columns: repeat(auto-fit, minmax(min(100%, var(--min)), 1fr));
+		overflow: hidden;
 	}
 
 	input {

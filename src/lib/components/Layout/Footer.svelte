@@ -17,9 +17,7 @@
 
 		<SocialButtons />
 
-		<div class="other-info small-text">
-			Copyright © 2022-2023 Nguyen Dang Khoa - All Rights Reserved.
-		</div>
+		<div class="other-info small-text">Copyright © 2022-2023 - All Rights Reserved.</div>
 		<div class="secret small-text">
 			I declare war on anybody standing in the way of what I dream for.
 		</div>

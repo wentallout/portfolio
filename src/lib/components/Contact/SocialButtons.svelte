@@ -5,9 +5,11 @@
 
 	import LinkedinLogo from '~icons/ph/linkedin-logo';
 	import InstagramLogo from '~icons/ph/instagram-logo';
+
+	export let style = '';
 </script>
 
-<div class="social-links">
+<div {style} class="social-links">
 	<ExLink href="https://www.linkedin.com/in/wentallout">
 		<LinkedinLogo class="icon" height="32" width="32" color="var(--text-color)" />
 	</ExLink>

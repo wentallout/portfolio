@@ -38,23 +38,22 @@
 	.breadcrumb {
 		margin-top: var(--space-xl);
 		margin-bottom: var(--space-l);
-
-		color: var(--text-color);
 	}
 
 	.breadcrumb__unclickable {
 		pointer-events: none;
 		display: inline-block;
 		font-weight: 600;
+		color: var(--text-color);
 	}
 
 	.breadcrumb__clickable {
 		font-weight: 300;
 		display: inline-flex;
-		color: var(--accent-500);
+		color: var(--text-color-low);
 	}
 
 	.breadcrumb__clickable:hover {
-		color: var(--accent-300);
+		color: var(--primary-500);
 	}
 </style>

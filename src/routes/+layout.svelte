@@ -1,5 +1,5 @@
 <script>
-	import Rain from '$lib/components/Layout/Rain.svelte';
+	import Cover from '$lib/components/Layout/Cover.svelte';
 	import SkipLink from '$lib/components/Layout/SkipLink.svelte';
 	import PWA from '$lib/components/PWA/PWA.svelte';
 	import BackToTop from '$lib/components/Layout/BackToTop.svelte';
@@ -51,7 +51,7 @@
 
 <SkipLink />
 <PWA />
-
+<Cover />
 <div class="page-container">
 	<BackToTop />
 	<Header />
@@ -62,7 +62,6 @@
 			id="main-content"
 			in:fade={{ duration: 150, delay: 150 }}
 			out:fade={{ duration: 150 }}>
-			<Rain />
 			<Breadcrumb path={$page.url.pathname} />
 			<slot />
 		</main>

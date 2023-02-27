@@ -20,9 +20,11 @@
 						<SVG width="80" height="80" src={navigation} alt="navigation" />
 
 						<h3 class="block__title base-text">Prototyping</h3>
-						<p class="block__text small-text">Figma</p>
-						<p class="block__text small-text">Adobe XD</p>
-						<p class="block__text small-text">Sketch</p>
+						<div class="section__text">
+							<p class="block__text small-text">Figma</p>
+							<p class="block__text small-text">Adobe XD</p>
+							<p class="block__text small-text">Sketch</p>
+						</div>
 					</div>
 				</Atropos>
 
@@ -31,9 +33,11 @@
 						<SVG width="80" height="80" src={graphicDesign} alt="graphic design" />
 
 						<h3 class="block__title base-text">Design</h3>
-						<p class="block__text small-text">Illustrator</p>
-						<p class="block__text small-text">Photoshop</p>
-						<p class="block__text small-text">Canva</p>
+						<div class="section__text">
+							<p class="block__text small-text">Illustrator</p>
+							<p class="block__text small-text">Photoshop</p>
+							<p class="block__text small-text">Canva</p>
+						</div>
 					</div>
 				</Atropos>
 
@@ -42,9 +46,11 @@
 						<SVG width="80" height="80" src={interactive} alt="interactive" />
 
 						<h3 class="block__title base-text">Motion</h3>
-						<p class="block__text small-text">Lottie</p>
-						<p class="block__text small-text">Three.js</p>
-						<p class="block__text small-text">CSS Animations</p>
+						<div class="section__text">
+							<p class="block__text small-text">Lottie</p>
+							<p class="block__text small-text">Three.js</p>
+							<p class="block__text small-text">CSS Animations</p>
+						</div>
 					</div>
 				</Atropos>
 
@@ -53,9 +59,11 @@
 						<SVG width="80" height="80" src={frontend} alt="frontend" />
 
 						<h3 class="block__title base-text">Frontend</h3>
-						<p class="block__text small-text">HTML, CSS, JS</p>
-						<p class="block__text small-text">Bootstrap, Material</p>
-						<p class="block__text small-text">React, SvelteKit</p>
+						<div class="section__text">
+							<p class="block__text small-text">HTML, CSS, JS</p>
+							<p class="block__text small-text">Bootstrap, Material</p>
+							<p class="block__text small-text">React, SvelteKit</p>
+						</div>
 					</div>
 				</Atropos>
 			</div>
@@ -64,6 +72,10 @@
 </SaosContainer>
 
 <style>
+	.section__text {
+		text-align: left;
+	}
+
 	.tool {
 		display: flex;
 		flex-direction: column;
