@@ -62,7 +62,7 @@
 		position: relative;
 		width: 100%;
 		height: 300px;
-		background-color: red;
+		background-color: var(--black-500);
 	}
 
 	.cover__btn {
