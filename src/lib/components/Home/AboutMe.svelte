@@ -1,5 +1,4 @@
 <script>
-	import Name from '$lib/components/Home/Name.svelte';
 	import HomeSectionTitle from '$lib/components/Home/HomeSectionTitle.svelte';
 	import SaosContainer from '$lib/components/Common/SaosContainer.svelte';
 </script>
@@ -8,7 +7,7 @@
 	<section>
 		<div class="about">
 			<HomeSectionTitle title="About me" />
-			<Name />
+
 			<div class="about__block">
 				<div class="desc">
 					<div class="block">

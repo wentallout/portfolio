@@ -85,8 +85,9 @@
 
 		/* FONT */
 		font-size: var(--font-size-base);
-		font-weight: 500;
+		font-weight: 600;
 		color: var(--text-color);
+
 		/* --- */
 
 		transition: var(--transition);
@@ -147,7 +148,6 @@
 		align-items: center;
 		width: 100%;
 		height: 100%;
-
 		transition: var(--transition);
 	}
 

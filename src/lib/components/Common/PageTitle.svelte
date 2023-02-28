@@ -14,7 +14,7 @@
 		align-items: center;
 		/*  */
 		position: relative;
-		margin-bottom: var(--space-3xl);
+		margin-bottom: var(--space-2xl);
 		overflow: hidden;
 
 		background-color: transparent;
@@ -22,8 +22,6 @@
 
 	.title__text {
 		font-family: var(--fancy-font);
-		padding-top: var(--space-xl);
-		padding-bottom: var(--space-xl);
 		color: var(--text-color);
 	}
 </style>

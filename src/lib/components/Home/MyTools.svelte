@@ -17,10 +17,11 @@
 			<div class="tool__block">
 				<Atropos rotateTouch="scroll-y">
 					<div class="block__section">
-						<SVG width="80" height="80" src={navigation} alt="navigation" />
-
-						<h3 class="block__title base-text">Prototyping</h3>
+						<div class="section__svg">
+							<SVG width="120" height="120" src={navigation} alt="navigation" />
+						</div>
 						<div class="section__text">
+							<h3 class="block__title base-text">Prototyping</h3>
 							<p class="block__text small-text">Figma</p>
 							<p class="block__text small-text">Adobe XD</p>
 							<p class="block__text small-text">Sketch</p>
@@ -30,10 +31,11 @@
 
 				<Atropos rotateTouch="scroll-y">
 					<div class="block__section">
-						<SVG width="80" height="80" src={graphicDesign} alt="graphic design" />
-
-						<h3 class="block__title base-text">Design</h3>
+						<div class="section__svg">
+							<SVG width="120" height="120" src={graphicDesign} alt="graphic design" />
+						</div>
 						<div class="section__text">
+							<h3 class="block__title base-text">Design</h3>
 							<p class="block__text small-text">Illustrator</p>
 							<p class="block__text small-text">Photoshop</p>
 							<p class="block__text small-text">Canva</p>
@@ -43,10 +45,11 @@
 
 				<Atropos rotateTouch="scroll-y">
 					<div class="block__section">
-						<SVG width="80" height="80" src={interactive} alt="interactive" />
-
-						<h3 class="block__title base-text">Motion</h3>
+						<div class="section__svg">
+							<SVG width="120" height="120" src={interactive} alt="interactive" />
+						</div>
 						<div class="section__text">
+							<h3 class="block__title base-text">Motion</h3>
 							<p class="block__text small-text">Lottie</p>
 							<p class="block__text small-text">Three.js</p>
 							<p class="block__text small-text">CSS Animations</p>
@@ -56,10 +59,11 @@
 
 				<Atropos rotateTouch="scroll-y">
 					<div class="block__section">
-						<SVG width="80" height="80" src={frontend} alt="frontend" />
-
-						<h3 class="block__title base-text">Frontend</h3>
+						<div class="section__svg">
+							<SVG width="120" height="120" src={frontend} alt="frontend" />
+						</div>
 						<div class="section__text">
+							<h3 class="block__title base-text">Frontend</h3>
 							<p class="block__text small-text">HTML, CSS, JS</p>
 							<p class="block__text small-text">Bootstrap, Material</p>
 							<p class="block__text small-text">React, SvelteKit</p>
@@ -72,7 +76,17 @@
 </SaosContainer>
 
 <style>
+	.section__svg {
+		width: 100%;
+		height: 100%;
+		position: absolute;
+		top: 0;
+		right: -64%;
+		opacity: 0.1;
+	}
+
 	.section__text {
+		width: 100%;
 		text-align: left;
 	}
 
@@ -89,6 +103,7 @@
 		display: flex;
 		flex-direction: column;
 		align-items: center;
+		position: relative;
 
 		background-color: var(--black-400);
 		padding: var(--space-l);

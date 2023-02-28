@@ -4,26 +4,10 @@
 	import YinYang from '~icons/ph/yin-yang-fill';
 
 	let videoEle;
-
-	let rewindInterval;
-
-	function handleTimeUpdate() {
-		if (videoEle.currentTime > videoEle.duration + 0.1) {
-			videoEle.pause();
-			videoEle.currentTime = videoEle.duration;
-			rewindInterval = setInterval(() => {
-				videoEle.currentTime -= 0.1;
-				if (videoEle.currentTime <= 0) {
-					clearInterval(rewindInterval);
-					videoEle.play();
-				}
-			}, 10);
-		}
-	}
 </script>
 
 <div class="cover">
-	<video bind:this={videoEle} class="video" on:timeupdate={handleTimeUpdate} autoplay muted loop>
+	<video bind:this={videoEle} class="video" autoplay muted loop>
 		<source src="/videos/city.mp4" type="video/mp4" />
 	</video>
 	<div class="cover__logo">

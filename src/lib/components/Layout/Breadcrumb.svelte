@@ -25,9 +25,11 @@
 <nav aria-label="breadcrumb" id="breadcrumb" class="breadcrumb base-text">
 	{#each crumbs as c, i}
 		{#if i == crumbs.length - 1}
-			<div class="breadcrumb__unclickable">
-				{c.label}
-			</div>
+			{#if c.label !== 'home'}
+				<div class="breadcrumb__unclickable">
+					{c.label}
+				</div>
+			{/if}
 		{:else}
 			<a class="breadcrumb__clickable" href={c.href}>{c.label}</a> /&nbsp;
 		{/if}
@@ -50,7 +52,7 @@
 	.breadcrumb__clickable {
 		font-weight: 300;
 		display: inline-flex;
-		color: var(--text-color-low);
+		color: var(--accent-500);
 	}
 
 	.breadcrumb__clickable:hover {

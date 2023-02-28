@@ -2,9 +2,9 @@
 	export let sectionTitle = '';
 
 	let sectionIcon = {
-		color: 'var(--primary-500)',
-		height: 32,
-		width: 32
+		color: 'var(--black-500)',
+		height: 24,
+		width: 24
 	};
 </script>
 
@@ -21,19 +21,20 @@
 		justify-content: left;
 		align-items: center;
 		margin-bottom: var(--space-m);
+		gap: var(--space-s);
 	}
 
 	.title__icon {
 		display: flex;
 		justify-content: left;
 		align-items: center;
-		padding: 1rem;
-		margin-right: var(--space-xs);
+		background-color: var(--primary-500);
+		padding: var(--space-s);
+		clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
 	}
 
 	.title__text {
 		font-family: var(--fancy-font);
 		color: var(--primary-500);
-		font-weight: 600;
 	}
 </style>
