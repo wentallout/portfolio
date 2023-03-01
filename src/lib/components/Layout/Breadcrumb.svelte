@@ -45,8 +45,8 @@
 	.breadcrumb__unclickable {
 		pointer-events: none;
 		display: inline-block;
-		font-weight: 600;
-		color: var(--text-color);
+		font-weight: 300;
+		color: var(--text-color-low);
 	}
 
 	.breadcrumb__clickable {

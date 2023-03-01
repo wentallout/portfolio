@@ -103,7 +103,7 @@
 
 .swiper {
 	background-color: var(--black-400);
-	border-radius: var(--border-radius-light);
+	border-radius: var(--border-radius);
 }
 
 .swiper-pagination-bullet {
@@ -187,5 +187,3 @@
 .svelte-lightbox-footer h2 {
 	font-size: var(--font-size-small);
 }
-
-

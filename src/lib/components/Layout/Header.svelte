@@ -85,7 +85,7 @@
 
 		/* FONT */
 		font-size: var(--font-size-base);
-		font-weight: 600;
+		font-weight: 500;
 		color: var(--text-color);
 
 		/* --- */

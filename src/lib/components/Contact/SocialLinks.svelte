@@ -91,7 +91,7 @@
 		padding: var(--space-s) var(--space-m);
 
 		transition: var(--transition);
-		border-radius: var(--border-radius-light);
+
 		background-color: var(--black-400);
 		width: 80px;
 		height: 80px;

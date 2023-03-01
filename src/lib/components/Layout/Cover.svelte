@@ -35,9 +35,8 @@
 
 	.cover__logo {
 		position: absolute;
-		top: 50%; /* position the top  edge of the element at the middle of the parent */
-		left: 50%; /* position the left edge of the element at the middle of the parent */
-
+		top: 50%;
+		left: 50%;
 		transform: translate(-50%, -50%);
 	}
 

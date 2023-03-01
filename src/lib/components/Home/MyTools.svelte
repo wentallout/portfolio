@@ -77,11 +77,9 @@
 
 <style>
 	.section__svg {
-		width: 100%;
-		height: 100%;
 		position: absolute;
 		top: 0;
-		right: -64%;
+		right: -10%;
 		opacity: 0.1;
 	}
 
@@ -107,7 +105,7 @@
 
 		background-color: var(--black-400);
 		padding: var(--space-l);
-		border-radius: var(--border-radius-light);
+		border-radius: var(--border-radius);
 		overflow: hidden;
 	}
 

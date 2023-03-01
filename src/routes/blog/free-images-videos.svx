@@ -1,5 +1,5 @@
 ---
-title: Free Images and Videos you need for your design
+title: Free Stock Images and Videos you need for your design
 date: 2023-1-22
 categories:
     - freebies
@@ -19,7 +19,9 @@ categories:
 - [Mixkit](https://mixkit.co) - New free resource for high-quality stock videos.
 - [RawPixel](https://www.rawpixel.com)
 
-## Other:
+## Everything you need:
+
+- [Awesome Stock Resources](https://github.com/neutraltone/awesome-stock-resources)
 
 
 

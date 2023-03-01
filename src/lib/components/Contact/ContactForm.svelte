@@ -51,12 +51,15 @@
 </section>
 
 <style>
+	section {
+		overflow: hidden;
+	}
+
 	.form-container {
 		display: flex;
 		flex-wrap: wrap;
 		justify-content: flex-start;
 		margin-bottom: var(--space-m);
-		border-radius: var(--border-radius-light);
 	}
 
 	.contact {
@@ -81,7 +84,6 @@
 		grid-gap: var(--gap);
 
 		grid-template-columns: repeat(auto-fit, minmax(min(100%, var(--min)), 1fr));
-		overflow: hidden;
 	}
 
 	input {

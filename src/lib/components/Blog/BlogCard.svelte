@@ -21,20 +21,20 @@
 
 		/* SIZE */
 		width: 100%;
-
 		height: 120px;
-		border: 1px solid transparent;
-		padding: var(--space-s) var(--space-m);
+
+		padding: var(--space-s);
 		/* --- */
 
 		/* OTHER */
 		transition: var(--transition);
 		position: relative;
-		border-radius: var(--border-radius-light);
+		border-radius: var(--border-radius);
 		overflow: hidden;
 		/* --- */
 
 		background-color: var(--black-400);
+		border: 1px solid transparent;
 	}
 
 	.blog:before {

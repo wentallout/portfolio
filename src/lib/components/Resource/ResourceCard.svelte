@@ -41,7 +41,7 @@
 		transition: var(--transition);
 		background-color: var(--black-400);
 		border: 1px solid transparent;
-		border-radius: var(--border-radius-light);
+		border-radius: var(--border-radius);
 	}
 
 	.tool:hover {

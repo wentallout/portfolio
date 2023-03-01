@@ -53,7 +53,6 @@
 		align-items: center;
 		flex-wrap: wrap;
 		width: 100%;
-		border-radius: var(--border-radius-light);
 	}
 
 	.block__title {

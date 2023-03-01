@@ -128,7 +128,7 @@ html {
 
 	/* BORDER RADIUS */
 	--border-radius: 16px;
-	--border-radius-light: 8px;
+	--border-radius-light: calc(var(--border-radius) / 2);
 
 	/* darkmode mode */
 	/* color-scheme: light dark; */

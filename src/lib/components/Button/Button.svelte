@@ -72,7 +72,7 @@
 		height: calc(100% - var(--container-offset) + var(--glow-offset));
 		x: calc((var(--container-offset) / 2) + calc(var(--glow-offset) / -2));
 		y: calc((var(--container-offset) / 2) + calc(var(--glow-offset) / -2));
-		rx: var(--border-radius);
+		rx: var(--border-radius-light);
 		fill: transparent;
 
 		stroke-width: 5px;
@@ -138,7 +138,7 @@
 		appearance: none;
 
 		border: 1px solid transparent;
-		border-radius: var(--border-radius);
+		border-radius: var(--border-radius-light);
 
 		cursor: pointer;
 		transition: var(--transition);

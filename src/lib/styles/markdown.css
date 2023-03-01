@@ -1,7 +1,6 @@
 .markdown {
-	word-wrap: break-word;
+	overflow-wrap: break-word;
 	position: relative;
-	border-radius: var(--border-radius-light);
 }
 
 .markdown h1 {
@@ -147,7 +146,7 @@
 
 .markdown img {
 	margin-bottom: var(--space-s);
-	border-radius: var(--border-radius-light);
+	border-radius: var(--border-radius);
 }
 
 .markdown li:not(.toc li) {
@@ -177,7 +176,7 @@
 }
 
 blockquote {
-	border-radius: var(--border-radius-light);
+	border-radius: var(--border-radius);
 	background-color: var(--black-400);
 
 	padding: var(--space-s) var(--space-xs);
@@ -197,7 +196,7 @@ pre {
 	background-color: var(--black);
 	color: var(--text-color);
 	padding: var(--space-s) var(--space-s);
-	border-radius: var(--border-radius-light);
+	border-radius: var(--border-radius);
 }
 
 table {
@@ -253,7 +252,7 @@ aside.toc > nav > ul > li:before {
 }
 
 aside.toc.desktop {
-	border-radius: var(--border-radius-light);
+	border-radius: var(--border-radius);
 }
 
 /* aside.toc > nav > ul > li {

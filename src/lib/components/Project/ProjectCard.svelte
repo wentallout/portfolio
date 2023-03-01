@@ -53,19 +53,13 @@
 </div>
 
 <style>
-	.info__section {
-		display: flex;
-		flex-direction: row;
-		gap: var(--space-s);
-	}
-
 	.project {
 		display: flex;
 		width: 100%;
 
 		flex-direction: column;
 
-		border-radius: var(--border-radius-light);
+		border-radius: var(--border-radius);
 		overflow-y: hidden;
 
 		background-color: var(--black-400);
@@ -85,7 +79,7 @@
 	}
 
 	.project__info {
-		padding: var(--space-l) var(--space-xl);
+		padding: var(--space-xl);
 	}
 
 	.info__section {
@@ -111,18 +105,11 @@
 	.info__btn {
 		margin-top: var(--space-m);
 
-		/* display: flex;
-		flex-direction: row;
-		flex-wrap: wrap;
-		gap: var(--space-s); */
-
 		--min: 15ch;
-		--gap: 1rem;
+		--gap: var(--space-s);
 
 		display: grid;
 		grid-gap: var(--gap);
-		/* min() with 100% prevents overflow
-  in extra narrow spaces */
 		grid-template-columns: repeat(auto-fit, minmax(min(100%, var(--min)), 1fr));
 	}
 

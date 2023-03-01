@@ -260,7 +260,7 @@
 		align-items: center;
 		width: 100%;
 		background-color: var(--black-400);
-		border-radius: var(--border-radius-light);
+		border-radius: var(--border-radius);
 		overflow: hidden;
 	}
 
