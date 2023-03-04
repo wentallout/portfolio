@@ -16,6 +16,18 @@
 </ExLink>
 
 <style>
+	.tool {
+		display: flex;
+		flex-direction: column;
+		width: 100%;
+		padding: var(--space-m);
+		height: 200px;
+		transition: var(--transition);
+		background-color: var(--bg-400);
+		border: 1px solid transparent;
+		border-radius: var(--border-radius);
+		box-shadow: var(--box-shadow-1);
+	}
 	.tool__name {
 		font-weight: 500;
 		margin-bottom: var(--space-xs);
@@ -30,18 +42,6 @@
 		-webkit-box-orient: vertical;
 		font-weight: 400;
 		margin: 0;
-	}
-
-	.tool {
-		display: flex;
-		flex-direction: column;
-		width: 100%;
-		padding: var(--space-m);
-		height: 200px;
-		transition: var(--transition);
-		background-color: var(--black-400);
-		border: 1px solid transparent;
-		border-radius: var(--border-radius);
 	}
 
 	.tool:hover {

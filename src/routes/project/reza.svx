@@ -128,11 +128,11 @@ Using online surveys I can gather real data from students to employees. I want t
 
 => **Conclusion 3**: People don't actually understand what it's like to reserve a restaurant table because they have never done it before.
 
-### phase 2 - define
+### Phase 2 - Define
 
 In the second phase, I need to determine our target users based on the data I've researched and identify the pattern of problems I found from the previous phase.
 
-#### user persona
+#### Persona
 
 Forming multiple user personas is important but for the scale of our project we stick to making one.
 
@@ -149,13 +149,13 @@ I made a simplified one later:
 - Help users track their reservation.
 - Help users find important info: recommended dishes and price (menu), parking lot, address, reviews
 
-### phase 3 - ideate
+### Phase 3 - Ideate
 
 From what we have brainstormed, we prioritized certain features based on impact/effort.
 
 <Image src={feature} alt="project main features" />
 
-#### user flow
+#### User Flow
 
 Reservation Flow:
 
@@ -191,19 +191,19 @@ I wanted my team to create a simple design system before moving to phase 4. This
 <Image src={ds3} alt="design system" />    
 
 
-### phase 4 - prototype
+### Phase 4 - Prototype
 
 Phase 4 is all about creating an interactive design that will be tested by potential users in phase 5.
 
 [Link to prototype](https://www.figma.com/proto/owUrwidb8hZbdmruKhMtyS/REZA%3A-Restaurant-Reservation-App?page-id=2%3A9&node-id=275%3A5365&viewport=549%2C-598%2C0.24&scaling=scale-down&starting-point-node-id=275%3A5365)
 
-#### home
+#### Home
 
 This is the screen user sees when they first open the app. I try not to overwhelm users with too much information.
 
 <Image src={homeScreen} alt="home screen UI" />
 
-#### search
+#### Search
 
 This screen lets users search for a restaurant using keywords like the restaurant's name or the cuisine. The search result will be displayed in a list. You can then filter, sort your result by distance, price, rating.
 
@@ -215,26 +215,25 @@ This screen shows up when user click on a restaurant from their home page or sea
 
 <Image src={detailScreen} alt="detail screen" />
 
-
-#### reservation
+#### Reservation
 
 This screen allows users to see their booked reservations and cancel them if they want to.
 
 <Image src={reservationScreen}  alt="reservation screen UI" />
 
-#### notification
+#### Notification
 
 Alarm users when it's time to go to the restaurant. Also it gives them good deals or discount nearby.
 
 <Image src={notiScreen}  alt="notification screen UI" />
 
-### phase 5 - Test
+### Phase 5 - Test
 
 It's widely known that early, repeated testing and redesign will save time and money. We can't just work on something for months then release it without knowing how people wil react to it.
 
 Getting feedback from real users in the testing phase will give me a chance to redesign and maximize the performance of some flows.
 
-#### detail page redesign
+#### Detail Page Redesign
 
 I got some feedback from my instructors and found this one element that needs to be fixed to the top because the page could be long and we can't force users to scroll all the way back to the top.
 

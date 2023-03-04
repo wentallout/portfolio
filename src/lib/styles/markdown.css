@@ -51,8 +51,19 @@
 	font-size: var(--font-size-xl);
 	line-height: var(--line-height-xl);
 	/* --- */
+	display: flex;
+	flex-direction: row;
+}
 
-	padding-bottom: 1.5rem;
+.markdown h2:after {
+	content: '';
+	flex: 1 1;
+	border-bottom: 1px solid inherit;
+	margin: auto;
+}
+
+.markdown h2:after {
+	margin-left: 10px;
 }
 
 .markdown h3 {
@@ -82,28 +93,6 @@
 	font-size: var(--font-size-base);
 	line-height: var(--line-height-base);
 	/* --- */
-}
-
-.markdown h2:before {
-	content: '';
-	display: block;
-	position: absolute;
-	bottom: 0px;
-	left: 2px;
-	width: 100%;
-	height: 10px;
-	background-color: var(--primary-500);
-	clip-path: polygon(
-		0px 0px,
-		85px 0px,
-		90px 5px,
-		100% 5px,
-		100% 6px,
-		85px 6px,
-		80px 10px,
-		0px 10px
-	);
-	padding-bottom: 0.9rem;
 }
 
 .markdown p,
@@ -150,10 +139,6 @@
 }
 
 .markdown li:not(.toc li) {
-	display: flex;
-	justify-content: flex-start;
-	align-items: baseline;
-	gap: var(--space-3xs);
 	margin-bottom: var(--space-3xs);
 }
 
@@ -177,7 +162,7 @@
 
 blockquote {
 	border-radius: var(--border-radius);
-	background-color: var(--black-400);
+	background-color: var(--bg-400);
 
 	padding: var(--space-s) var(--space-xs);
 	font-weight: 300;
@@ -201,9 +186,9 @@ pre {
 
 table {
 	border-collapse: collapse;
-	background-color: var(--black-400);
+	background-color: var(--bg-400);
 	padding: var(--space-s);
-	border: 1px solid var(--black-300);
+	border: 1px solid var(--bg-300);
 	max-width: fit-content;
 	overflow: auto;
 }

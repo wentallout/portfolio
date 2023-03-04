@@ -62,7 +62,9 @@
 		border-radius: var(--border-radius);
 		overflow-y: hidden;
 
-		background-color: var(--black-400);
+		background-color: var(--bg-400);
+
+		box-shadow: var(--box-shadow-1);
 	}
 
 	.project__thumbnail {
@@ -73,7 +75,7 @@
 
 	.info__project-name {
 		font-weight: 600;
-		color: var(--primary-500);
+		color: var(--text-color);
 		line-height: normal;
 		margin-bottom: var(--space-m);
 	}
@@ -129,9 +131,5 @@
 		.project__info {
 			width: 60%;
 		}
-
-		/* .btn__anchor {
-			width: 250px;
-		} */
 	}
 </style>

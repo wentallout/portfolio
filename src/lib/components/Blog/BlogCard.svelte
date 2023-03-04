@@ -33,8 +33,10 @@
 		overflow: hidden;
 		/* --- */
 
-		background-color: var(--black-400);
+		background-color: var(--bg-400);
 		border: 1px solid transparent;
+
+		box-shadow: var(--box-shadow-1);
 	}
 
 	.blog:before {
@@ -46,7 +48,6 @@
 
 		width: var(--space-m);
 		height: 100%;
-		z-index: 2;
 		opacity: 0;
 		transition: var(--transition);
 
@@ -82,7 +83,6 @@
 		text-overflow: ellipsis;
 		/* --- */
 		color: var(--text-color);
-		z-index: 3;
 	}
 
 	.blog__date {
@@ -97,7 +97,5 @@
 		font-weight: 400;
 		color: var(--text-color-low);
 		/* --- */
-
-		z-index: 3;
 	}
 </style>

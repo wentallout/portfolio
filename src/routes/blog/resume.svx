@@ -1,11 +1,11 @@
 ---
-title: Resume tips
+title: How to write "resume"
 date: 2023-02-04
 categories:
     - 'tips'
 ---
 
-## 8 Myths
+## Tips
 
 - Same resume **WONT** work for all types of different jobs. Tailor your resume to the company.
 - DO NOT include your entire work history. Make sure it's related to your job first.
@@ -34,7 +34,6 @@ His resume is bland, it could be improved with a bit of color.
 ## Good Resume example
 
 
-
 Jacob states his full name.
 He mentions his level of expertise, i.e. “junior front-end developer”.
 Jacob describes each of his roles and the different responsibilities he's had in the work experience section.
@@ -44,4 +43,6 @@ Jacob specifies the timeframe of his course in the education section. Here, he a
 He included where he’s currently based, his email, and links to his LinkedIn and GitHub profiles in the contacts section.
 He chose an easy-to-follow layout, with clearly separated sections and headings in bigger font.
 He added a touch of color, making the whole page look more lively but still professional.
-Jacob didn’t include a photo of himself.
+Jacob didn't include a photo of himself.
+
+

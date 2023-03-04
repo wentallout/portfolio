@@ -33,29 +33,23 @@ html {
 }
 
 :root {
+	/* TYPOGRAPHY */
 	--normal-font: 'Normal';
 	--fancy-font: 'Fancy';
-
 	--text-color: hsla(0, 0%, 100%, 0.9);
-
 	--text-color-low: hsla(0, 0%, 100%, 0.6);
+	/* --- */
 
-	--black-100: hsl(180, 3%, 13%);
-	--black-200: hsl(180, 4%, 11%);
-	--black-300: hsl(180, 4%, 9%);
-	--black-400: hsl(180, 6%, 7%);
-	--black-500: hsl(180, 4%, 5%);
-
-	--page-bg: var(--black-500);
-	--page-padding: 20vw;
-
-	--brand-color: var(--text-color);
-
-	--bg: hsl(0, 0%, 8%);
 	--black: hsl(0, 0%, 0%);
+	--bg-100: hsl(180, 3%, 13%);
+	--bg-200: hsl(180, 4%, 11%);
+	--bg-300: hsl(180, 4%, 9%);
+	--bg-400: hsl(180, 6%, 7%);
+	--bg-500: hsl(180, 4%, 5%);
 
+	--page-bg: var(--bg-500);
+	--page-padding: 20vw;
 	--swiper-theme-color: var(--primary-500) !important;
-
 	--text-width: 65ch;
 
 	/* Primary: Nacho Cheese */
@@ -63,7 +57,7 @@ html {
 	--primary-200: hsl(54, 100%, 86%);
 	--primary-300: hsl(51, 100%, 74%);
 	--primary-400: hsl(47, 100%, 62%);
-	--primary-500: hsl(44, 100%, 50%);
+	--primary-500: #ffbb00;
 	--primary-600: hsl(41, 100%, 39%);
 	--primary-700: hsl(37, 100%, 29%);
 	--primary-800: hsl(34, 100%, 18%);
@@ -139,15 +133,18 @@ html {
 	/* MISC */
 	accent-color: var(--primary-500);
 	caret-color: var(--primary-500);
-
 	--z-index-max: 99;
-
 	--tracking-0: 0em;
 	--tracking-1: -0.05em;
 	--tracking-2: -0.025em;
 	--tracking-3: 0.025em;
 	--tracking-4: 0.05em;
 	--tracking-5: 0.1em;
+
+	--box-shadow-1: inset 0 0 0.5px 1px hsla(0, 0%, 100%, 0.075),
+		/* shadow ring 👇 */ 0 0 0 1px hsla(0, 0%, 0%, 0.05),
+		/* multiple soft shadows 👇 */ 0 0.3px 0.4px hsla(0, 0%, 0%, 0.02),
+		0 0.9px 1.5px hsla(0, 0%, 0%, 0.045), 0 3.5px 6px hsla(0, 0%, 0%, 0.09);
 }
 
 ::selection {
@@ -238,7 +235,7 @@ textarea {
 	padding: var(--space-xs) var(--space-xs);
 	color: var(--text-color) !important;
 	margin-bottom: var(--space-s);
-	background-color: var(--black-400);
+	background-color: var(--bg-400);
 	height: 3.5rem;
 	border: 0;
 	border-radius: var(--border-radius-light);
@@ -312,7 +309,7 @@ hr {
 }
 
 .icon-black {
-	color: var(--black-400);
+	color: var(--bg-400);
 }
 
 .social__address:hover svg {

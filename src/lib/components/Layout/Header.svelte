@@ -75,8 +75,20 @@
 		color: var(--primary-500) !important;
 	}
 
+	.nav-list__item {
+		transition: var(--transition);
+	}
+
 	.nav-list__item:hover {
-		color: var(--primary-500);
+		scale: 1.2;
+	}
+
+	.nav-list:hover .nav-list__item:not(:hover) {
+		opacity: 0.3;
+	}
+
+	.overlay-content:hover .overlay-item:not(:hover) {
+		opacity: 0.3;
 	}
 
 	.nav {

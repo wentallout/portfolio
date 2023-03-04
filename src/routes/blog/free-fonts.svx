@@ -5,9 +5,12 @@ categories:
     - 'freebies'
 ---
 
-## Typography
+## The OG Google
 
 - [Google Fonts](https://fonts.google.com)
+
+## Others
+
 - [Dafont](https://dafont.com)
 - [Font Squirrel](https://fontsquirrel.com)
 - [FontShare](https://fontshare.com)

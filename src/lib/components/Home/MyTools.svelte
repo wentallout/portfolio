@@ -93,8 +93,6 @@
 		flex-direction: column;
 		justify-content: center;
 		align-items: flex-start;
-
-		gap: var(--space-m);
 	}
 
 	.block__section {
@@ -103,10 +101,11 @@
 		align-items: center;
 		position: relative;
 
-		background-color: var(--black-400);
+		background-color: var(--bg-400);
 		padding: var(--space-l);
 		border-radius: var(--border-radius);
 		overflow: hidden;
+		box-shadow: var(--box-shadow-1);
 	}
 
 	@media (min-width: 992px) {

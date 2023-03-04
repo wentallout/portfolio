@@ -102,7 +102,7 @@
 					</button>
 				{:else}
 					<button class="mp-btn play-btn" on:click={playMusic}>
-						<PlayFill width="24" height="24" color="var(--black-500)" />
+						<PlayFill width="24" height="24" color="var(--bg-500)" />
 					</button>
 				{/if}
 
@@ -192,7 +192,7 @@
 		top: 50%;
 		right: 0%;
 		transform: translate(-50%, -50%);
-		background-color: var(--black-500);
+		background-color: var(--bg-500);
 		width: 40px;
 		height: 40px;
 		display: flex;
@@ -239,7 +239,7 @@
 		width: 80px;
 		height: 80px;
 		clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
-		background-color: var(--black-100);
+		background-color: var(--bg-100);
 		border: 0;
 		transition: var(--transition);
 	}
@@ -259,7 +259,7 @@
 		justify-content: center;
 		align-items: center;
 		width: 100%;
-		background-color: var(--black-400);
+		background-color: var(--bg-400);
 		border-radius: var(--border-radius);
 		overflow: hidden;
 	}
@@ -267,7 +267,7 @@
 	.song-list {
 		display: flex;
 		flex-direction: column;
-		background-color: var(--black-300);
+		background-color: var(--bg-300);
 		width: 100%;
 	}
 
@@ -285,7 +285,7 @@
 
 	.song-active .song-name {
 		font-weight: 600;
-		color: var(--black-500);
+		color: var(--bg-500);
 	}
 
 	.song {

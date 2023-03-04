@@ -10,9 +10,11 @@
 	<video bind:this={videoEle} class="video" autoplay muted loop>
 		<source src="/videos/city.mp4" type="video/mp4" />
 	</video>
-	<div class="cover__logo">
+
+	<a href="/" class="cover__logo">
 		<YinYang class="yinyang" width="72" height="72" color="var(--primary-500)" />
-	</div>
+	</a>
+
 	<div class="cover__btn">
 		<SocialButtons style="flex-direction:column" />
 	</div>
@@ -38,6 +40,12 @@
 		top: 50%;
 		left: 50%;
 		transform: translate(-50%, -50%);
+		z-index: 1;
+		transition: var(--transition);
+	}
+
+	.cover__logo:hover {
+		filter: brightness(1.2);
 	}
 
 	.cover {
@@ -45,7 +53,7 @@
 		position: relative;
 		width: 100%;
 		height: 300px;
-		background-color: var(--black-500);
+		background-color: var(--bg-500);
 	}
 
 	.cover__btn {

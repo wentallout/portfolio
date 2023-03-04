@@ -2,7 +2,7 @@
 /* Scrollbar */
 
 ::-webkit-scrollbar {
-	background-color: var(--black-400);
+	background-color: var(--bg-400);
 }
 ::-webkit-scrollbar-button {
 	display: none;
@@ -102,7 +102,7 @@
 }
 
 .swiper {
-	background-color: var(--black-400);
+	background-color: var(--bg-400);
 	border-radius: var(--border-radius);
 }
 

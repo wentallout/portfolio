@@ -28,6 +28,5 @@
 	.featured {
 		display: flex;
 		flex-direction: column;
-		gap: var(--space-m);
 	}
 </style>

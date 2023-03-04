@@ -15,7 +15,7 @@
 		padding-top: var(--space-3xs);
 		padding-bottom: var(--space-3xs);
 		line-height: normal;
-		background: var(--black-400);
+		background: var(--bg-400);
 		border-radius: var(--border-radius);
 		color: var(--text-color-low);
 		transition: var(--transition);

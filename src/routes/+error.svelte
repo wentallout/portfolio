@@ -14,7 +14,7 @@
 		<a rel="external" href="/">
 			<Button
 				label="Back to Home"
-				labelColor="var(--black-500)"
+				labelColor="var(--bg-500)"
 				backgroundColor="var(--primary-500)" />
 		</a>
 	</div>

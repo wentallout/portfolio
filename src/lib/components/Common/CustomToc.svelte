@@ -13,8 +13,8 @@
 	--toc-li-hover-bg="transparent"
 	--toc-active-color="var(--primary-500)"
 	--toc-li-hover-color="var(--primary-500)"
-	--toc-desktop-bg="var(--black-400)"
-	--toc-mobile-bg="var(--black-400)"
+	--toc-desktop-bg="var(--bg-400)"
+	--toc-mobile-bg="var(--bg-400)"
 	--toc-mobile-btn-bg="var(--primary-500)"
 	--toc-li-padding="var(--space-2xs) 0"
 	--toc-active-bg="transparent"
@@ -28,7 +28,7 @@
 		Contents</span>
 
 	<span slot="open-toc-icon">
-		<ListBullets color="var(--black-500)" width="24" height="24" />
+		<ListBullets color="var(--bg-500)" width="24" height="24" />
 	</span>
 </Toc>
 

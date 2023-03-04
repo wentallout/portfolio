@@ -30,7 +30,6 @@
 		justify-content: center;
 		align-items: flex-start;
 		flex-direction: column;
-		gap: var(--space-m);
 	}
 	.clients__logo {
 		display: flex;

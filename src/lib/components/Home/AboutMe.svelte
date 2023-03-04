@@ -7,7 +7,6 @@
 	<section>
 		<div class="about">
 			<HomeSectionTitle title="About me" />
-
 			<div class="about__block">
 				<div class="desc">
 					<div class="block">

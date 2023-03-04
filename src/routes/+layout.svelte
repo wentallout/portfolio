@@ -98,6 +98,7 @@
 		z-index: -1;
 		background-position: top var(--space-3xl) left 0, top var(--space-3xl) right 0;
 		background-repeat: no-repeat;
+		filter: grayscale(100%);
 	}
 
 	.main-content:after {

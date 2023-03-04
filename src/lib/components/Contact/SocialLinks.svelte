@@ -92,7 +92,7 @@
 
 		transition: var(--transition);
 
-		background-color: var(--black-400);
+		background-color: var(--bg-400);
 		width: 80px;
 		height: 80px;
 		clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
@@ -102,7 +102,7 @@
 	}
 
 	.social__address:hover {
-		background-color: var(--black-100);
+		background-color: var(--bg-100);
 	}
 
 	@media (min-width: 768px) {
