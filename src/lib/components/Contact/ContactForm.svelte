@@ -51,10 +51,6 @@
 </section>
 
 <style>
-	section {
-		overflow: hidden;
-	}
-
 	.form-container {
 		display: flex;
 		flex-wrap: wrap;

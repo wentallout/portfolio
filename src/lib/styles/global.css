@@ -36,16 +36,18 @@ html {
 	/* TYPOGRAPHY */
 	--normal-font: 'Normal';
 	--fancy-font: 'Fancy';
-	--text-color: hsla(0, 0%, 100%, 0.9);
-	--text-color-low: hsla(0, 0%, 100%, 0.6);
+	--text-color: hsla(0, 0%, 100%, 87%);
+	--text-color-low: hsla(0, 0%, 100%, 60%);
+	--text-color-disabled: hsla(0, 0%, 100%, 38%);
 	/* --- */
 
 	--black: hsl(0, 0%, 0%);
-	--bg-100: hsl(180, 3%, 13%);
-	--bg-200: hsl(180, 4%, 11%);
-	--bg-300: hsl(180, 4%, 9%);
-	--bg-400: hsl(180, 6%, 7%);
-	--bg-500: hsl(180, 4%, 5%);
+
+	--bg-100: hsl(0, 0%, 14%);
+	--bg-200: hsl(0, 0%, 12%);
+	--bg-300: hsl(0, 0%, 10%);
+	--bg-400: hsl(0, 0%, 8%);
+	--bg-500: hsl(0, 0%, 6%);
 
 	--page-bg: var(--bg-500);
 	--page-padding: 20vw;
@@ -141,10 +143,19 @@ html {
 	--tracking-4: 0.05em;
 	--tracking-5: 0.1em;
 
-	--box-shadow-1: inset 0 0 0.5px 1px hsla(0, 0%, 100%, 0.075),
-		/* shadow ring 👇 */ 0 0 0 1px hsla(0, 0%, 0%, 0.05),
-		/* multiple soft shadows 👇 */ 0 0.3px 0.4px hsla(0, 0%, 0%, 0.02),
-		0 0.9px 1.5px hsla(0, 0%, 0%, 0.045), 0 3.5px 6px hsla(0, 0%, 0%, 0.09);
+	--box-shadow-1: 0px 2px 1px rgba(0, 0, 0, 0.04), 0px 1px 5px rgba(0, 0, 0, 0.12);
+
+	--box-shadow-2: 0px 2px 2px rgba(0, 0, 0, 0.14), 0px 3px 1px rgba(0, 0, 0, 0.12),
+		0px 1px 5px rgba(0, 0, 0, 0.2);
+
+	--box-shadow-3: 0px 4px 5px rgba(0, 0, 0, 0.14), 0px 1px 10px rgba(0, 0, 0, 0.12),
+		0px 2px 4px rgba(0, 0, 0, 0.2);
+
+	--box-shadow-4: 0px 3px 5px rgba(0, 0, 0, 0.14), 0px 1px 18px rgba(0, 0, 0, 0.12),
+		0px 3px 5px rgba(0, 0, 0, 0.2);
+
+	--box-shadow-5: 0px 8px 9px rgba(0, 0, 0, 0.14), 0px 3px 14px rgba(0, 0, 0, 0.12),
+		0px 5px 5px rgba(0, 0, 0, 0.2);
 }
 
 ::selection {

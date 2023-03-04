@@ -52,7 +52,7 @@
 	.breadcrumb__clickable {
 		font-weight: 300;
 		display: inline-flex;
-		color: var(--accent-500);
+		color: var(--accent-300);
 	}
 
 	.breadcrumb__clickable:hover {

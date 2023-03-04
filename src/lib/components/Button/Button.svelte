@@ -29,88 +29,16 @@
 </script>
 
 <button
-	class="btn glow-effect"
+	class="btn"
 	style="background-color: {backgroundColor}; border: {border}; color: {labelColor};width: {width}"
 	on:click={handleButtonEffect}
 	bind:this={btnEle}
 	{type}>
 	<slot />
 	{label}
-
-	<svg class="glow-container">
-		<rect pathLength="100" stroke-linecap="round" class="glow-blur" />
-		<rect pathLength="100" stroke-linecap="round" class="glow-line" />
-	</svg>
 </button>
 
 <style>
-	.glow-effect {
-		--glow-line-color: var(--neutral-100);
-		--glow-line-thickness: 0.4px;
-		--glow-line-length: 20px;
-		--glow-blur-color: var(--neutral-100);
-		--glow-blur-size: 5px;
-		--glow-offset: 10px;
-		--animation-speed: 1200ms;
-
-		--container-offset: 100px;
-		position: relative;
-	}
-
-	.glow-container {
-		pointer-events: none;
-		position: absolute;
-		inset: calc(var(--container-offset) / -2);
-		width: calc(100% + var(--container-offset));
-		height: calc(100% + var(--container-offset));
-		opacity: 0;
-	}
-
-	.glow-blur,
-	.glow-line {
-		width: calc(100% - var(--container-offset) + var(--glow-offset));
-		height: calc(100% - var(--container-offset) + var(--glow-offset));
-		x: calc((var(--container-offset) / 2) + calc(var(--glow-offset) / -2));
-		y: calc((var(--container-offset) / 2) + calc(var(--glow-offset) / -2));
-		rx: var(--border-radius-light);
-		fill: transparent;
-
-		stroke-width: 5px;
-		stroke-dasharray: var(--glow-line-length) calc(50px - var(--glow-line-length));
-	}
-
-	.glow-effect:is(:hover, :focus) :is(.glow-line, .glow-blur) {
-		stroke-dashoffset: -80px;
-		transition: stroke-dashoffset var(--animation-speed) ease-in;
-	}
-
-	.glow-line {
-		stroke: var(--glow-line-color);
-		stroke-width: var(--glow-line-thickness);
-	}
-
-	.glow-blur {
-		filter: blur(var(--glow-blur-size));
-		stroke: var(--glow-blur-color);
-		stroke-width: var(--glow-blur-size);
-	}
-
-	@keyframes glow-visibility {
-		0%,
-		100% {
-			opacity: 0;
-		}
-
-		25%,
-		75% {
-			opacity: 1;
-		}
-	}
-
-	.glow-effect:is(:hover, :focus) .glow-container {
-		animation: glow-visibility ease-in-out var(--animation-speed);
-	}
-
 	.btn {
 		/* FLEX */
 		display: flex;
@@ -152,5 +80,6 @@
 
 	.btn:hover {
 		filter: brightness(1.2);
+		box-shadow: 0 0 5px var(--text-color);
 	}
 </style>
