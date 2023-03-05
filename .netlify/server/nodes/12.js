@@ -2,7 +2,7 @@
 
 export const index = 12;
 export const component = async () => (await import('../entries/pages/resource/_page.svelte.js')).default;
-export const file = '_app/immutable/components/pages/resource/_page.svelte-6c7ca993.js';
-export const imports = ["_app/immutable/components/pages/resource/_page.svelte-6c7ca993.js","_app/immutable/chunks/index-9b2adc1a.js","_app/immutable/chunks/PageTitle-9615ab3c.js","_app/immutable/chunks/SwiperContainer-989655d1.js","_app/immutable/chunks/ExLink-00f7dabc.js","_app/immutable/chunks/SectionTitle-2197f2a5.js"];
-export const stylesheets = ["_app/immutable/assets/_page-4bf47540.css","_app/immutable/assets/PageTitle-40adaef5.css","_app/immutable/assets/SwiperContainer-144780f3.css","_app/immutable/assets/ExLink-c70bfabc.css","_app/immutable/assets/SectionTitle-b1de269e.css"];
+export const file = '_app/immutable/components/pages/resource/_page.svelte-8e1d9896.js';
+export const imports = ["_app/immutable/components/pages/resource/_page.svelte-8e1d9896.js","_app/immutable/chunks/index-97804da4.js","_app/immutable/chunks/PageTitle-16873b8a.js","_app/immutable/chunks/SectionDesc-6ff44f1f.js","_app/immutable/chunks/core-95d71c40.js","_app/immutable/chunks/ExLink-e5cdf74f.js","_app/immutable/chunks/SectionTitle-88ca477b.js"];
+export const stylesheets = ["_app/immutable/assets/_page-322f0614.css","_app/immutable/assets/PageTitle-ad923b2a.css","_app/immutable/assets/SectionDesc-cb8d3a13.css","_app/immutable/assets/ExLink-dd2bb24a.css","_app/immutable/assets/SectionTitle-71aae3ad.css"];
 export const fonts = [];

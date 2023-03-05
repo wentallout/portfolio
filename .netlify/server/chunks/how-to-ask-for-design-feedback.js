@@ -7,11 +7,7 @@ const metadata = {
   "categories": ["tips"]
 };
 const How_to_ask_for_design_feedback = create_ssr_component(($$result, $$props, $$bindings, slots) => {
-  return `<nav class="${"toc"}"><ol class="${"toc-level toc-level-1"}"><li class="${"toc-item toc-item-h2"}"><a class="${"toc-link toc-link-h2"}" href="${"#template"}">template</a></li></ol></nav>
-
-
-
-<h2 id="${"template"}"><a href="${"#template"}">template</a></h2>
+  return `<h2 id="${"template"}"><a href="${"#template"}">template</a></h2>
 ${validate_component(Image, "Image").$$render($$result, { src: designFeedback }, {}, {})}`;
 });
 export {

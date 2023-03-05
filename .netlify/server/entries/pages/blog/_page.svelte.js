@@ -1,4 +1,4 @@
-import { c as create_ssr_component, s as setContext, o as onDestroy, k as getContext, b as subscribe, v as validate_component, g as each } from "../../../chunks/index3.js";
+import { c as create_ssr_component, s as setContext, p as onDestroy, k as getContext, b as subscribe, v as validate_component, g as each } from "../../../chunks/index3.js";
 import { B as BlogListContainer, a as BlogCard } from "../../../chunks/BlogCard.js";
 import { P as PageTitle } from "../../../chunks/PageTitle.js";
 import { w as writable } from "../../../chunks/index2.js";
@@ -46,12 +46,12 @@ const Tabs = create_ssr_component(($$result, $$props, $$bindings, slots) => {
 });
 const TabList_svelte_svelte_type_style_lang = "";
 const css$1 = {
-  code: ".tab-list.svelte-1c9nzb1{align-items:center;display:flex;flex-wrap:wrap;justify-content:flex-start;margin-bottom:var(--space-xl);width:100%}",
+  code: ".tab-list.svelte-1egsl2i{align-items:center;display:flex;flex-wrap:wrap;justify-content:space-between;margin-bottom:var(--space-xl);width:100%}",
   map: null
 };
 const TabList = create_ssr_component(($$result, $$props, $$bindings, slots) => {
   $$result.css.add(css$1);
-  return `<div class="${"tab-list svelte-1c9nzb1"}">${slots.default ? slots.default({}) : ``}
+  return `<div class="${"tab-list svelte-1egsl2i"}">${slots.default ? slots.default({}) : ``}
 </div>`;
 });
 const TabPanel = create_ssr_component(($$result, $$props, $$bindings, slots) => {
@@ -65,7 +65,7 @@ const TabPanel = create_ssr_component(($$result, $$props, $$bindings, slots) => 
 });
 const Tab_svelte_svelte_type_style_lang = "";
 const css = {
-  code: "button.svelte-rclk9a{background:none;border:none;border-bottom:2px solid transparent;border-radius:0;color:var(--neutral-600);font-family:Fancy;margin:0;padding:var(--space-2xs) var(--space-s);transition:var(--transition)}button.svelte-rclk9a:hover{cursor:pointer}.selected.svelte-rclk9a{border-bottom:2px solid var(--primary-500);color:var(--primary-500);font-weight:600}",
+  code: "button.svelte-1zrway{background:none;border:none;border-bottom:2px solid transparent;border-radius:0;color:var(--neutral-600);margin:0;padding:var(--space-2xs) var(--space-s);transition:var(--transition)}button.svelte-1zrway:hover{cursor:pointer}.selected.svelte-1zrway{border-bottom:2px solid var(--primary-500);color:var(--primary-500);font-weight:600}",
   map: null
 };
 const Tab = create_ssr_component(($$result, $$props, $$bindings, slots) => {
@@ -76,7 +76,7 @@ const Tab = create_ssr_component(($$result, $$props, $$bindings, slots) => {
   registerTab(tab);
   $$result.css.add(css);
   $$unsubscribe_selectedTab();
-  return `<button class="${["large-text svelte-rclk9a", $selectedTab === tab ? "selected" : ""].join(" ").trim()}">${slots.default ? slots.default({}) : ``}
+  return `<button class="${["large-text svelte-1zrway", $selectedTab === tab ? "selected" : ""].join(" ").trim()}">${slots.default ? slots.default({}) : ``}
 </button>`;
 });
 const Page = create_ssr_component(($$result, $$props, $$bindings, slots) => {

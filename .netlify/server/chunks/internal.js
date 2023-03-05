@@ -64,7 +64,7 @@ ${components[1] ? `${validate_component(components[0] || missing_component, "sve
 ${``}`;
 });
 set_paths({ "base": "", "assets": "" });
-set_version("1674984186633");
+set_version("1678013747771");
 const options = {
   csp: { "mode": "auto", "directives": { "upgrade-insecure-requests": false, "block-all-mixed-content": false }, "reportOnly": { "upgrade-insecure-requests": false, "block-all-mixed-content": false } },
   csrf_check_origin: true,
@@ -74,7 +74,7 @@ const options = {
   root: Root,
   service_worker: true,
   templates: {
-    app: ({ head, body, assets: assets2, nonce, env }) => '<!DOCTYPE html>\n<html lang="en-US">\n\n<head>\n	<meta charset="utf-8" />\n	<link rel="preload" href="' + assets2 + '/fonts/Mona-Sans.woff2" as="font" type="font/woff2" crossorigin>\n	<link rel="icon" href="' + assets2 + '/favicon.ico" sizes="any" />\n	<link rel="icon" href="' + assets2 + '/favicon.svg" type="image/svg+xml" />\n	<link rel="apple-touch-icon" href="' + assets2 + '/apple-touch-icon.png" />\n	<meta name="viewport" content="width=device-width, initial-scale=1" />\n	<link rel="manifest" crossorigin="use-credentials" href="/manifest.webmanifest" />\n	' + head + "\n</head>\n\n<body>\n	<div>" + body + '</div>\n\n\n	<form name="contact" netlify netlify-honeypot="bot-field" hidden>\n		<input type="text" name="name" />\n		<input type="email" name="email" />\n		<textarea name="message"></textarea>\n	</form>\n</body>\n\n</html>',
+    app: ({ head, body, assets: assets2, nonce, env }) => '<!DOCTYPE html>\n<html lang="en-US">\n\n<head>\n	<meta charset="utf-8" />\n	<link rel="preload" href="' + assets2 + '/fonts/Inter.woff2" as="font" type="font/woff2" crossorigin>\n	<link rel="icon" href="' + assets2 + '/favicon.ico" sizes="any" />\n	<link rel="icon" href="' + assets2 + '/favicon.svg" type="image/svg+xml" />\n	<link rel="apple-touch-icon" href="' + assets2 + '/apple-touch-icon.png" />\n	<meta name="viewport" content="width=device-width, initial-scale=1" />\n	<link rel="manifest" crossorigin="use-credentials" href="/manifest.webmanifest" />\n	' + head + '\n</head>\n\n<body data-sveltekit-preload-data="hover">\n	<div>' + body + '</div>\n\n\n	<form name="contact" netlify netlify-honeypot="bot-field" hidden>\n		<input type="text" name="name" />\n		<input type="email" name="email" />\n		<textarea name="message"></textarea>\n	</form>\n</body>\n\n</html>',
     error: ({ status, message }) => '<!DOCTYPE html>\n<html lang="en">\n	<head>\n		<meta charset="utf-8" />\n		<title>' + message + `</title>
 
 		<style>

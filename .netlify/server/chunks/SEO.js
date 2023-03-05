@@ -291,7 +291,13 @@ const defaultAlt = "cool cover image";
 const SEO = create_ssr_component(($$result, $$props, $$bindings, slots) => {
   const { author, entity, facebookAuthorPage, facebookPage, ogLanguage, siteLanguage, siteShortTitle, siteTitle, siteUrl, githubPage, linkedinProfile, telegramUsername, tiktokUsername, twitterUsername } = website;
   let { article = false } = $$props;
-  let { breadcrumbs = [] } = $$props;
+  let { breadcrumbs = [
+    { name: "Home", slug: "" },
+    { name: "Project", slug: "project" },
+    { name: "Blog", slug: "blog" },
+    { name: "Resource", slug: "resource" },
+    { name: "Contact", slug: "contact" }
+  ] } = $$props;
   let { entityMeta = null } = $$props;
   let { lastUpdated } = $$props;
   let { datePublished } = $$props;

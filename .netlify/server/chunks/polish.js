@@ -7,11 +7,7 @@ const metadata = {
   "categories": ["tips"]
 };
 const Polish = create_ssr_component(($$result, $$props, $$bindings, slots) => {
-  return `<nav class="${"toc"}"><ol class="${"toc-level toc-level-1"}"><li class="${"toc-item toc-item-h2"}"><a class="${"toc-link toc-link-h2"}" href="${"#polish-the-right-thing"}">polish the right thing</a></li><li class="${"toc-item toc-item-h2"}"><a class="${"toc-link toc-link-h2"}" href="${"#dont-polish-too-early"}">don’t polish too early</a></li><li class="${"toc-item toc-item-h2"}"><a class="${"toc-link toc-link-h2"}" href="${"#dont-polish-too-late"}">don’t polish too late</a></li><li class="${"toc-item toc-item-h2"}"><a class="${"toc-link toc-link-h2"}" href="${"#just-right"}">just right</a></li><li class="${"toc-item toc-item-h2"}"><a class="${"toc-link toc-link-h2"}" href="${"#constant-polish"}">constant polish</a></li></ol></nav>
-
-
-
-<h2 id="${"polish-the-right-thing"}"><a href="${"#polish-the-right-thing"}">polish the right thing</a></h2>
+  return `<h2 id="${"polish-the-right-thing"}"><a href="${"#polish-the-right-thing"}">polish the right thing</a></h2>
 <p>You need user feedback to really know where to spend most of your polish efforts. My artist father dropped this bomb of wisdom that’s stuck with me all these years:</p>
 <blockquote><p>Don’t bother making changes that are just different but not better.</p></blockquote>
 <p>It’s completely normal for people to get hung up on tiny things. Way more users thanked me for this little bit of polish than had complained before!</p>

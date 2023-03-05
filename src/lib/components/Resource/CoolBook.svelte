@@ -16,7 +16,7 @@
 		align-items: center;
 		justify-content: center;
 		perspective: 600px;
-		width: 100%;
+		width: 300px;
 		height: auto;
 	}
 

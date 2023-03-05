@@ -1,5 +1,5 @@
 import { c as create_ssr_component, e as spread, f as escape_object, v as validate_component, g as each, h as escape } from "../../../../chunks/index3.js";
-import { B as BlogTag } from "../../../../chunks/BlogTag.js";
+import { T as Tag } from "../../../../chunks/Tag.js";
 import { S as SectionTitle } from "../../../../chunks/SectionTitle.js";
 const Folder = create_ssr_component(($$result, $$props, $$bindings, slots) => {
   return `<svg${spread(
@@ -40,7 +40,7 @@ const Page = create_ssr_component(($$result, $$props, $$bindings, slots) => {
   })}
 
 <div class="${"category svelte-1fxjn7a"}">${each(categories, (category) => {
-    return `<a href="${"/blog/category/" + escape(category, true)}">${validate_component(BlogTag, "BlogTag").$$render($$result, {}, {}, {
+    return `<a href="${"/blog/category/" + escape(category, true)}">${validate_component(Tag, "BlogTag").$$render($$result, {}, {}, {
       default: () => {
         return `${escape(category)}
 			`;

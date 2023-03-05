@@ -5,11 +5,12 @@ const metadata = {
   "categories": ["freebies"]
 };
 const Ai_tools = create_ssr_component(($$result, $$props, $$bindings, slots) => {
-  return `<nav class="${"toc"}"><ol class="${"toc-level toc-level-1"}"><li class="${"toc-item toc-item-h2"}"><a class="${"toc-link toc-link-h2"}" href="${"#resource-list"}">Resource list</a></li></ol></nav>
-
-<h2 id="${"resource-list"}"><a href="${"#resource-list"}">Resource list</a></h2>
+  return `<h2 id="${"all-in-one"}"><a href="${"#all-in-one"}">All-in-one</a></h2>
 <p>This one awesome website will leads you to amazing tools</p>
-<p><a href="${"https://aidesignresource.com/"}" rel="${"nofollow noopener noreferrer external"}" target="${"_blank"}">AI Design Resource</a></p>`;
+<p>-<a href="${"https://aidesignresource.com/"}" rel="${"nofollow noopener noreferrer external"}" target="${"_blank"}">AI Design Resource</a></p>
+<h2 id="${"list"}"><a href="${"#list"}">List</a></h2>
+<ul><li><a href="${"https://www.stockai.com"}" rel="${"nofollow noopener noreferrer external"}" target="${"_blank"}">StockAI</a></li>
+<li><a href="${"https://www.craiyon.com"}" rel="${"nofollow noopener noreferrer external"}" target="${"_blank"}">Craiyon</a> - generate images from text</li></ul>`;
 });
 export {
   Ai_tools as default,

@@ -7,11 +7,7 @@ const metadata = {
   "categories": ["fundamental"]
 };
 const Project_organization = create_ssr_component(($$result, $$props, $$bindings, slots) => {
-  return `<nav class="${"toc"}"><ol class="${"toc-level toc-level-1"}"><li class="${"toc-item toc-item-h2"}"><a class="${"toc-link toc-link-h2"}" href="${"#folder-structure"}">folder structure</a></li></ol></nav>
-
-
-
-<h2 id="${"folder-structure"}"><a href="${"#folder-structure"}">folder structure</a></h2>
+  return `<h2 id="${"folder-structure"}"><a href="${"#folder-structure"}">folder structure</a></h2>
 ${validate_component(Image, "Image").$$render($$result, { src: projectOrganization }, {}, {})}`;
 });
 export {

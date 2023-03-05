@@ -5,9 +5,7 @@ const metadata = {
   "categories": ["tips"]
 };
 const _6c = create_ssr_component(($$result, $$props, $$bindings, slots) => {
-  return `<nav class="${"toc"}"><ol class="${"toc-level toc-level-1"}"><li class="${"toc-item toc-item-h2"}"><a class="${"toc-link toc-link-h2"}" href="${"#video"}">Video</a></li><li class="${"toc-item toc-item-h2"}"><a class="${"toc-link toc-link-h2"}" href="${"#1-clarity"}">1. Clarity</a></li><li class="${"toc-item toc-item-h2"}"><a class="${"toc-link toc-link-h2"}" href="${"#2-collaboration"}">2. Collaboration</a></li><li class="${"toc-item toc-item-h2"}"><a class="${"toc-link toc-link-h2"}" href="${"#3-communication"}">3. Communication</a></li><li class="${"toc-item toc-item-h2"}"><a class="${"toc-link toc-link-h2"}" href="${"#4-constraints"}">4. Constraints</a></li><li class="${"toc-item toc-item-h2"}"><a class="${"toc-link toc-link-h2"}" href="${"#5-compromise"}">5. Compromise</a></li><li class="${"toc-item toc-item-h2"}"><a class="${"toc-link toc-link-h2"}" href="${"#6-consensus"}">6. Consensus</a></li></ol></nav>
-
-<h2 id="${"video"}"><a href="${"#video"}">Video</a></h2>
+  return `<h2 id="${"video"}"><a href="${"#video"}">Video</a></h2>
 <p><a href="${"https://www.youtube.com/watch?v=xVzOeD6s3iQ"}" rel="${"nofollow noopener noreferrer external"}" target="${"_blank"}">https://www.youtube.com/watch?v=xVzOeD6s3iQ</a></p>
 <h2 id="${"1-clarity"}"><a href="${"#1-clarity"}">1. Clarity</a></h2>
 <h2 id="${"2-collaboration"}"><a href="${"#2-collaboration"}">2. Collaboration</a></h2>

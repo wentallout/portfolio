@@ -1,7 +1,8 @@
 import { c as create_ssr_component, e as spread, f as escape_object, v as validate_component } from "../../../chunks/index3.js";
 import { P as PageTitle } from "../../../chunks/PageTitle.js";
-import { P as ProjectCard, R as RezaPhoneAtropos } from "../../../chunks/ProjectCard.js";
+import { t as thumbnail } from "../../../chunks/thumbnail.js";
 import { F as Figma_logo } from "../../../chunks/figma-logo.js";
+import { P as ProjectCard } from "../../../chunks/ProjectCard.js";
 import { S as SectionTitle } from "../../../chunks/SectionTitle.js";
 const Brain = create_ssr_component(($$result, $$props, $$bindings, slots) => {
   return `<svg${spread(
@@ -39,14 +40,11 @@ ${validate_component(PageTitle, "PageTitle").$$render($$result, { pageTitle: "Pr
       linkToFigma: "https://www.figma.com/file/owUrwidb8hZbdmruKhMtyS/REZA%3A-Restaurant-Reservation-App?node-id=2%3A9&t=a8W16CMSWgxzoLKB-1",
       what: "Reza is an app that lets people book restaurant tables easily.",
       who: "Age 18-30, busy office workers or tourists visiting a new city.",
-      result: "Persona, User Flow, Wireframe, Prototype"
+      result: "Persona, User Flow, Wireframe, Prototype",
+      thumbnail
     },
     {},
-    {
-      default: () => {
-        return `${validate_component(RezaPhoneAtropos, "RezaPhoneAtropos").$$render($$result, {}, {}, {})}`;
-      }
-    }
+    {}
   )}</div></section>
 
 <section>${validate_component(SectionTitle, "SectionTitle").$$render($$result, { sectionTitle: "UI" }, {}, {

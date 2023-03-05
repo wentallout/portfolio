@@ -3,7 +3,7 @@ title: Reza - Table Reservation Mobile App
 date: '2022-09-14'
 ---
 <script>
-    import { SwiperSlide } from 'swiper/svelte';
+   
    
     import Image from '$lib/components/Common/Image.svelte';
 

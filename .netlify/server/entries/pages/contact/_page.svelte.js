@@ -1,7 +1,7 @@
 import { c as create_ssr_component, e as spread, f as escape_object, v as validate_component } from "../../../chunks/index3.js";
 import { P as PageTitle } from "../../../chunks/PageTitle.js";
 import { E as ExLink } from "../../../chunks/ExLink.js";
-import { L as Linkedin_logo, P as Phone, E as Envelope } from "../../../chunks/linkedin-logo.js";
+import { L as Linkedin_logo, P as Phone, E as Envelope, I as Instagram_logo } from "../../../chunks/instagram-logo.js";
 import { F as Figma_logo } from "../../../chunks/figma-logo.js";
 import { S as SectionTitle } from "../../../chunks/SectionTitle.js";
 import { B as Button } from "../../../chunks/Button.js";
@@ -39,20 +39,9 @@ const Handshake = create_ssr_component(($$result, $$props, $$bindings, slots) =>
     {}
   )}><!-- HTML_TAG_START -->${`<path fill="currentColor" d="m251.3 107.2l-24.6-47.1a16 16 0 0 0-21.3-6.9l-23.3 11.7h-16.4l-33-15a16.6 16.6 0 0 0-11-.8L73 63.3L50.6 52.1a16.1 16.1 0 0 0-21.3 7L4.7 106.2a16 16 0 0 0-1.1 12.3a16.3 16.3 0 0 0 8.1 9.4l24 12l54 42.2a15.2 15.2 0 0 0 6 2.9l58 14.5a15.8 15.8 0 0 0 3.8.5a16.5 16.5 0 0 0 11.4-4.7l36.8-36.8h.1c0-.1.1-.1.1-.2h.2l14.9-17.7l23.3-11.7a15.8 15.8 0 0 0 8.1-9.3a16.2 16.2 0 0 0-1.1-12.4ZM198.7 142l-38-27.6a8 8 0 0 0-9.5.1l-12.8 9.6a24.3 24.3 0 0 1-28.8 0l-5.4-4.1l39.1-39.1h35.9l27.2 52.2ZM43.5 66.5l17.6 8.8l-24.6 47.1l-17.6-8.8Zm114 117.5l-57.9-14.5l-49.4-38.6l27.2-52.2l48.7-14.2l7.7 3.5l-1.8 1.5l-39.1 39.2a15.9 15.9 0 0 0 1.7 24.1l5.4 4.1a40.2 40.2 0 0 0 48 0l8.1-6.1l31.6 23Zm79.6-69.4l-17.6 8.9l-24.6-47.1l17.6-8.9l24.6 47.1ZM119.8 214.8a8.1 8.1 0 0 1-7.8 6.1a6.3 6.3 0 0 1-1.9-.3l-30.2-7.5a15.7 15.7 0 0 1-6.6-3.5L50.8 190a7.9 7.9 0 1 1 10.4-12l22.6 19.6l30.1 7.5a8.1 8.1 0 0 1 5.9 9.7Z"/>`}<!-- HTML_TAG_END --></svg>`;
 });
-const Instagram_logo = create_ssr_component(($$result, $$props, $$bindings, slots) => {
-  return `<svg${spread(
-    [
-      { viewBox: "0 0 256 256" },
-      { width: "1.2em" },
-      { height: "1.2em" },
-      escape_object($$props)
-    ],
-    {}
-  )}><!-- HTML_TAG_START -->${`<path fill="currentColor" d="M128 80a48 48 0 1 0 48 48a48 48 0 0 0-48-48Zm0 80a32 32 0 1 1 32-32a32.1 32.1 0 0 1-32 32Zm44-132H84a56 56 0 0 0-56 56v88a56 56 0 0 0 56 56h88a56 56 0 0 0 56-56V84a56 56 0 0 0-56-56Zm40 144a40 40 0 0 1-40 40H84a40 40 0 0 1-40-40V84a40 40 0 0 1 40-40h88a40 40 0 0 1 40 40Zm-20-96a12 12 0 1 1-12-12a12 12 0 0 1 12 12Z"/>`}<!-- HTML_TAG_END --></svg>`;
-});
 const SocialLinks_svelte_svelte_type_style_lang = "";
 const css$2 = {
-  code: ".social.svelte-1wzvukr{border-bottom:0;margin-bottom:var(--space-m);overflow:hidden;width:100%}.social.svelte-1wzvukr,.social__list.svelte-1wzvukr{display:flex;flex-direction:row}.social__list.svelte-1wzvukr{flex-wrap:wrap;gap:var(--space-m)}.social__address.svelte-1wzvukr{align-items:center;background-color:var(--bg);border-radius:var(--border-radius-light);-webkit-clip-path:polygon(50% 0,100% 50%,50% 100%,0 50%);clip-path:polygon(50% 0,100% 50%,50% 100%,0 50%);display:flex;height:80px;justify-content:center;padding:var(--space-s) var(--space-m);transition:var(--transition);width:80px}.social__address.svelte-1wzvukr:hover{background-color:var(--neutral-900)}@media(min-width:768px){.social.svelte-1wzvukr{flex-direction:row}}",
+  code: ".social.svelte-ayjcvu{border-bottom:0;margin-bottom:var(--space-m);overflow:hidden;width:100%}.social.svelte-ayjcvu,.social__list.svelte-ayjcvu{display:flex;flex-direction:row}.social__list.svelte-ayjcvu{flex-wrap:wrap;gap:var(--space-m)}.social__address.svelte-ayjcvu{align-items:center;background-color:var(--bg-400);-webkit-clip-path:polygon(50% 0,100% 50%,50% 100%,0 50%);clip-path:polygon(50% 0,100% 50%,50% 100%,0 50%);display:flex;height:80px;justify-content:center;padding:var(--space-s) var(--space-m);transition:var(--transition);width:80px}.social__address.svelte-ayjcvu:hover{background-color:var(--bg-100)}@media(min-width:768px){.social.svelte-ayjcvu{flex-direction:row}}",
   map: null
 };
 const SocialLinks = create_ssr_component(($$result, $$props, $$bindings, slots) => {
@@ -68,7 +57,7 @@ const SocialLinks = create_ssr_component(($$result, $$props, $$bindings, slots) 
     }
   })}
 
-	<div class="${"social small-text svelte-1wzvukr"}"><address class="${"social__list svelte-1wzvukr"}">${validate_component(ExLink, "ExLink").$$render(
+	<div class="${"social small-text svelte-ayjcvu"}"><address class="${"social__list svelte-ayjcvu"}">${validate_component(ExLink, "ExLink").$$render(
     $$result,
     {
       href: "https://www.linkedin.com/in/wentallout"
@@ -76,18 +65,18 @@ const SocialLinks = create_ssr_component(($$result, $$props, $$bindings, slots) 
     {},
     {
       default: () => {
-        return `<div class="${"social__address svelte-1wzvukr"}">${validate_component(Linkedin_logo, "LinkedinLogo").$$render($$result, Object.assign({}, icon), {}, {})}</div>`;
+        return `<div class="${"social__address svelte-ayjcvu"}">${validate_component(Linkedin_logo, "LinkedinLogo").$$render($$result, Object.assign({}, icon), {}, {})}</div>`;
       }
     }
   )}
 			${validate_component(ExLink, "ExLink").$$render($$result, { href: "tel:+84929066331" }, {}, {
     default: () => {
-      return `<div class="${"social__address svelte-1wzvukr"}">${validate_component(Phone, "Phone").$$render($$result, Object.assign({}, icon), {}, {})}</div>`;
+      return `<div class="${"social__address svelte-ayjcvu"}">${validate_component(Phone, "Phone").$$render($$result, Object.assign({}, icon), {}, {})}</div>`;
     }
   })}
 			${validate_component(ExLink, "ExLink").$$render($$result, { href: "mailto:wentallout@gmail.com" }, {}, {
     default: () => {
-      return `<div class="${"social__address svelte-1wzvukr"}">${validate_component(Envelope, "Envelope").$$render($$result, Object.assign({}, icon), {}, {})}</div>`;
+      return `<div class="${"social__address svelte-ayjcvu"}">${validate_component(Envelope, "Envelope").$$render($$result, Object.assign({}, icon), {}, {})}</div>`;
     }
   })}
 			${validate_component(ExLink, "ExLink").$$render(
@@ -98,14 +87,14 @@ const SocialLinks = create_ssr_component(($$result, $$props, $$bindings, slots) 
     {},
     {
       default: () => {
-        return `<div class="${"social__address svelte-1wzvukr"}">${validate_component(Figma_logo, "FigmaLogo").$$render($$result, Object.assign({}, icon), {}, {})}</div>`;
+        return `<div class="${"social__address svelte-ayjcvu"}">${validate_component(Figma_logo, "FigmaLogo").$$render($$result, Object.assign({}, icon), {}, {})}</div>`;
       }
     }
   )}
 
 			${validate_component(ExLink, "ExLink").$$render($$result, { href: "https://github.com/wentallout" }, {}, {
     default: () => {
-      return `<div class="${"social__address svelte-1wzvukr"}">${validate_component(Github_logo, "GitHubLogo").$$render($$result, Object.assign({}, icon), {}, {})}</div>`;
+      return `<div class="${"social__address svelte-ayjcvu"}">${validate_component(Github_logo, "GitHubLogo").$$render($$result, Object.assign({}, icon), {}, {})}</div>`;
     }
   })}
 
@@ -117,7 +106,7 @@ const SocialLinks = create_ssr_component(($$result, $$props, $$bindings, slots) 
     {},
     {
       default: () => {
-        return `<div class="${"social__address svelte-1wzvukr"}">${validate_component(Instagram_logo, "InstagramLogo").$$render($$result, Object.assign({}, icon), {}, {})}</div>`;
+        return `<div class="${"social__address svelte-ayjcvu"}">${validate_component(Instagram_logo, "InstagramLogo").$$render($$result, Object.assign({}, icon), {}, {})}</div>`;
       }
     }
   )}
@@ -130,7 +119,7 @@ const SocialLinks = create_ssr_component(($$result, $$props, $$bindings, slots) 
     {},
     {
       default: () => {
-        return `<div class="${"social__address svelte-1wzvukr"}">${validate_component(Reddit_logo, "RedditLogo").$$render($$result, Object.assign({}, icon), {}, {})}</div>`;
+        return `<div class="${"social__address svelte-ayjcvu"}">${validate_component(Reddit_logo, "RedditLogo").$$render($$result, Object.assign({}, icon), {}, {})}</div>`;
       }
     }
   )}</address></div>
@@ -160,7 +149,7 @@ const Paper_plane_right = create_ssr_component(($$result, $$props, $$bindings, s
 });
 const ContactForm_svelte_svelte_type_style_lang = "";
 const css$1 = {
-  code: ".form-container.svelte-b8phnv{border-radius:var(--border-radius-light);display:flex;justify-content:left;margin-bottom:var(--space-m);width:100%}.contact.svelte-b8phnv{display:flex;flex-direction:column;max-width:80rem;width:100%}.label.svelte-b8phnv{font-weight:500}.contact__btn.svelte-b8phnv{--min:15ch;--gap:var(--space-m);grid-gap:var(--gap);display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,var(--min)),1fr));margin-top:var(--space-m)}",
+  code: ".form-container.svelte-b80a9d{display:flex;flex-wrap:wrap;justify-content:flex-start;margin-bottom:var(--space-m)}.contact.svelte-b80a9d{display:flex;flex-direction:column;width:100%}.label.svelte-b80a9d{font-weight:500;margin-bottom:var(--space-3xs)}.contact__btn.svelte-b80a9d{--min:15ch;--gap:var(--space-s);grid-gap:var(--gap);display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,var(--min)),1fr));margin-top:var(--space-m);width:100%}input.svelte-b80a9d{margin-bottom:var(--space-m)}",
   map: null
 };
 const ContactForm = create_ssr_component(($$result, $$props, $$bindings, slots) => {
@@ -171,18 +160,18 @@ const ContactForm = create_ssr_component(($$result, $$props, $$bindings, slots) 
     }
   })}
 
-	<div class="${"form-container svelte-b8phnv"}"><form class="${"contact svelte-b8phnv"}" name="${"contact"}" method="${"post"}" netlify-honeypot="${"bot-field"}" data-netlify="${"true"}"><input type="${"hidden"}" name="${"form-name"}" value="${"contact"}">
+	<div class="${"form-container svelte-b80a9d"}"><form class="${"contact svelte-b80a9d"}" name="${"contact"}" method="${"post"}" netlify-honeypot="${"bot-field"}" data-netlify="${"true"}"><input type="${"hidden"}" name="${"form-name"}" value="${"contact"}" class="${"svelte-b80a9d"}">
 
-			<label for="${"name"}" class="${"label small-text svelte-b8phnv"}">Name</label>
-			<input class="${"small-text"}" type="${"text"}" name="${"name"}" id="${"name"}" required>
+			<label for="${"name"}" class="${"label small-text svelte-b80a9d"}">Name</label>
+			<input class="${"small-text svelte-b80a9d"}" type="${"text"}" name="${"name"}" id="${"name"}" required>
 
-			<label for="${"email"}" class="${"label small-text svelte-b8phnv"}">Email</label>
-			<input placeholder="${"username@email.com"}" class="${"small-text"}" type="${"email"}" name="${"email"}" id="${"email"}" required>
+			<label for="${"email"}" class="${"label small-text svelte-b80a9d"}">Email</label>
+			<input placeholder="${"username@email.com"}" class="${"small-text svelte-b80a9d"}" type="${"email"}" name="${"email"}" id="${"email"}" required>
 
-			<label for="${"message"}" class="${"label small-text svelte-b8phnv"}">Message</label>
+			<label for="${"message"}" class="${"label small-text svelte-b80a9d"}">Message</label>
 			<textarea class="${"small-text"}" required name="${"message"}" id="${"message"}" placeholder="${""}"></textarea>
 
-			<div class="${"contact__btn svelte-b8phnv"}">${validate_component(Button, "Button").$$render(
+			<div class="${"contact__btn svelte-b80a9d"}">${validate_component(Button, "Button").$$render(
     $$result,
     {
       label: "Send",

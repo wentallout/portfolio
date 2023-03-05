@@ -68,11 +68,7 @@ const metadata = {
   "categories": ["tips"]
 };
 const Sharp_axe_method = create_ssr_component(($$result, $$props, $$bindings, slots) => {
-  return `<nav class="${"toc"}"><ol class="${"toc-level toc-level-1"}"><li class="${"toc-item toc-item-h2"}"><a class="${"toc-link toc-link-h2"}" href="${"#what-is-the-sharp-axe-method"}">What is the Sharp Axe Method?</a></li><li class="${"toc-item toc-item-h2"}"><a class="${"toc-link toc-link-h2"}" href="${"#step-1-clean-your-environment"}">Step 1: Clean your environment</a></li><li class="${"toc-item toc-item-h2"}"><a class="${"toc-link toc-link-h2"}" href="${"#step-2-brain-dump"}">Step 2: Brain dump</a></li><li class="${"toc-item toc-item-h2"}"><a class="${"toc-link toc-link-h2"}" href="${"#step-3-categorize-the-todo-list"}">Step 3: Categorize the todo list</a></li><li class="${"toc-item toc-item-h2"}"><a class="${"toc-link toc-link-h2"}" href="${"#step-4-schedule"}">Step 4: Schedule</a></li><li class="${"toc-item toc-item-h2"}"><a class="${"toc-link toc-link-h2"}" href="${"#step-5-communicate"}">Step 5: Communicate</a></li><li class="${"toc-item toc-item-h2"}"><a class="${"toc-link toc-link-h2"}" href="${"#step-6-just-do-it"}">Step 6: JUST DO IT</a></li><li class="${"toc-item toc-item-h2"}"><a class="${"toc-link toc-link-h2"}" href="${"#video"}">Video</a></li></ol></nav>
-
-
-
-<h2 id="${"what-is-the-sharp-axe-method"}"><a href="${"#what-is-the-sharp-axe-method"}">What is the Sharp Axe Method?</a></h2>
+  return `<h2 id="${"what-is-the-sharp-axe-method"}"><a href="${"#what-is-the-sharp-axe-method"}">What is the Sharp Axe Method?</a></h2>
 <p>Doing the right work upfront -&gt; preparing correctly -&gt; so you can save time in the long run.</p>
 <p>Having the correct mindset -&gt; reduce the chance of getting OVERWHELMED.</p>
 <h2 id="${"step-1-clean-your-environment"}"><a href="${"#step-1-clean-your-environment"}">Step 1: Clean your environment</a></h2>

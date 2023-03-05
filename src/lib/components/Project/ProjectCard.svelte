@@ -2,134 +2,113 @@
 	import Button from '$lib/components/Button/Button.svelte';
 	import FigmaLogo from '~icons/ph/figma-logo';
 	export let linkToDetail = '';
-	export let linkToFigma = '';
 
+	import Atropos from 'atropos/svelte';
 	export let projectName = '';
 
 	export let what = '';
 	export let who = '';
 	export let result = '';
+
+	export let thumbnail;
 </script>
 
-<div class="project">
-	<div class="project__thumbnail">
-		<slot />
-	</div>
+<Atropos rotateTouch="scroll-y" rotateXMax="5" rotateYMax="5">
+	<a href={linkToDetail} class="project">
+		<img class="project__thumbnail" src={thumbnail} alt="" />
 
-	<div class="project__info">
-		<div class="info__project-name large-text">{projectName}</div>
+		<div class="project__info">
+			<div class="name mid-text">{projectName}</div>
 
-		<div class="info__section small-text">
-			<div class="info__title">What</div>
-			<div class="info__description">{what}</div>
+			<div class="info">
+				<div class="info__section">
+					<div class="section__label">What</div>
+					<div class="setion__desc">{what}</div>
+				</div>
+
+				<div class="info__section">
+					<div class="section__label">Who</div>
+					<div class="setion__desc">{who}</div>
+				</div>
+
+				<div class="info__section">
+					<div class="section__label">Result</div>
+					<div class="setion__desc">{result}</div>
+				</div>
+			</div>
 		</div>
-
-		<div class="info__section small-text">
-			<div class="info__title">Who</div>
-			<div class="info__description">{who}</div>
-		</div>
-
-		<div class="info__section small-text">
-			<div class="info__title">Result</div>
-			<div class="info__description">{result}</div>
-		</div>
-
-		<div class="info__btn">
-			<a class="btn__anchor" href={linkToDetail}>
-				<Button
-					label="Read"
-					border="1px solid var(--primary-500)"
-					backgroundColor="var(--primary-500)"
-					labelColor="var(--black)" />
-			</a>
-
-			<a class="btn__anchor" rel="external noreferrer noopener" target="_blank" href={linkToFigma}>
-				<Button labelColor="var(--text-color)" label="Figma" border="1px solid var(--text-color)">
-					<FigmaLogo />
-				</Button>
-			</a>
-		</div>
-	</div>
-</div>
+	</a>
+</Atropos>
 
 <style>
-	.project {
+	.info {
 		display: flex;
-		width: 100%;
-
 		flex-direction: column;
-
-		border-radius: var(--border-radius);
-		overflow-y: hidden;
-
-		background-color: var(--bg-400);
-
-		box-shadow: var(--box-shadow-1);
+		gap: var(--space-m);
+		height: auto;
 	}
 
-	.project__thumbnail {
+	.project {
 		width: 100%;
-		height: auto;
+		display: flex;
+		flex-direction: column;
+		border-radius: var(--border-radius);
+		background-color: var(--bg-400);
+		border: 1px solid transparent;
+		transition: var(--transition);
 		overflow: hidden;
 	}
 
-	.info__project-name {
-		font-weight: 600;
-		color: var(--text-color);
-		line-height: normal;
-		margin-bottom: var(--space-m);
+	.project__info {
+		display: flex;
+		flex-grow: 2;
+
+		flex-direction: column;
+
+		padding: var(--space-m) var(--space-l);
+		gap: var(--space-m);
+		color: var(--text-color-low);
 	}
 
-	.project__info {
-		padding: var(--space-xl);
+	.project:hover {
+		border: 1px solid var(--primary-500);
+	}
+
+	.name {
+		color: var(--primary-500);
+		font-weight: 600;
+	}
+
+	.project__thumbnail {
+		height: 300px;
+		aspect-ratio: 1/1;
+		margin-bottom: auto;
+		background-color: var(--bg-500);
 	}
 
 	.info__section {
 		display: flex;
-		flex-direction: row;
-		flex-wrap: wrap;
-		gap: var(--space-s);
-		margin-bottom: var(--space-s);
+		flex-direction: column;
+		gap: var(--space-xs);
 	}
 
-	.info__title {
-		width: var(--space-xl);
-		font-weight: 500;
-		max-width: 200px;
-	}
-
-	.info__description {
-		display: flex;
-		width: 70%;
-		color: var(--text-color-low);
-	}
-
-	.info__btn {
-		margin-top: var(--space-m);
-
-		--min: 15ch;
-		--gap: var(--space-s);
-
-		display: grid;
-		grid-gap: var(--gap);
-		grid-template-columns: repeat(auto-fit, minmax(min(100%, var(--min)), 1fr));
-	}
-
-	.btn__anchor {
-		width: 100%;
-	}
-
-	@media (min-width: 992px) {
+	@media (min-width: 768px) {
 		.project {
 			flex-direction: row;
 		}
 
-		.project__thumbnail {
-			width: 40%;
+		.info__section {
+			flex-direction: row;
+			gap: var(--space-m);
 		}
+	}
 
-		.project__info {
-			width: 60%;
-		}
+	.section__label {
+		font-weight: 600;
+		min-width: 10%;
+	}
+
+	.section__desc {
+		max-width: var(--text-width);
 	}
 </style>

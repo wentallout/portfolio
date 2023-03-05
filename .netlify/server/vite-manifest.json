@@ -19,30 +19,43 @@
     "dynamicImports": [
       "src/routes/blog/6c.svx",
       "src/routes/blog/ai-tools.svx",
+      "src/routes/blog/atomic-habits.svx",
       "src/routes/blog/best-ux-books.svx",
       "src/routes/blog/calculate-typography-values.svx",
       "src/routes/blog/case-study.svx",
       "src/routes/blog/color-scheme.svx",
+      "src/routes/blog/dont-use-pure-black-and-white.svx",
+      "src/routes/blog/figma-plugins.svx",
       "src/routes/blog/fluency.svx",
-      "src/routes/blog/free-stuff.svx",
+      "src/routes/blog/free-3d.svx",
+      "src/routes/blog/free-colors.svx",
+      "src/routes/blog/free-fonts.svx",
+      "src/routes/blog/free-icons.svx",
+      "src/routes/blog/free-illustrations.svx",
+      "src/routes/blog/free-images-videos.svx",
+      "src/routes/blog/free-mockups.svx",
+      "src/routes/blog/free-music.svx",
+      "src/routes/blog/free-tools.svx",
       "src/routes/blog/gestalt.svx",
       "src/routes/blog/grids.svx",
       "src/routes/blog/how-to-ask-for-design-feedback.svx",
+      "src/routes/blog/inspiration.svx",
       "src/routes/blog/logo-design.svx",
-      "src/routes/blog/mockups.svx",
       "src/routes/blog/my-fav-colors-tool.svx",
       "src/routes/blog/personal-brand.svx",
       "src/routes/blog/polish.svx",
       "src/routes/blog/portfolio.svx",
       "src/routes/blog/project-organization.svx",
+      "src/routes/blog/questions-to-ask-customer-before-design.svx",
       "src/routes/blog/resolution-pt-px.svx",
+      "src/routes/blog/resume.svx",
       "src/routes/blog/shadow.svx",
       "src/routes/blog/sharp-axe-method.svx",
       "src/routes/blog/the-art-of-thinking-clearly.svx",
       "src/routes/blog/typescale.svx",
       "src/routes/blog/typography-impact.svx",
       "src/routes/blog/ui-kit.svx",
-      "src/routes/blog/ux-research.svx",
+      "src/routes/blog/ux-guides-frameworks.svx",
       "src/routes/blog/ux-vs-ui.svx",
       "src/routes/blog/ux.svx",
       "src/routes/blog/what-is-wcag.svx"
@@ -62,12 +75,13 @@
     "isEntry": true,
     "imports": [
       "_index3.js",
+      "_instagram-logo.js",
+      "_ExLink.js",
       "_config.js",
-      "_SocialButtons.js",
       "_stores.js"
     ],
     "css": [
-      "_app/immutable/assets/_layout-7ab8795a.css"
+      "_app/immutable/assets/_layout-cb53a33d.css"
     ]
   },
   "src/routes/+layout.js": {
@@ -85,7 +99,7 @@
       "_stores.js"
     ],
     "css": [
-      "_app/immutable/assets/_error-12593b50.css"
+      "_app/immutable/assets/_error-fc0d1a69.css"
     ]
   },
   "src/routes/blog/[slug]/+layout.svelte": {
@@ -112,16 +126,13 @@
     "isEntry": true,
     "imports": [
       "_index3.js",
-      "_SocialButtons.js",
-      "_ExLink.js",
       "_ProjectCard.js",
-      "_Image.js",
-      "_GLTF.js",
+      "_ExLink.js",
       "_SEO.js",
       "_config.js"
     ],
     "css": [
-      "_app/immutable/assets/_page-16e26d00.css"
+      "_app/immutable/assets/_page-4e211d68.css"
     ],
     "assets": [
       "_app/immutable/assets/fpt-3c33bfe5.webp",
@@ -143,7 +154,7 @@
       "_index2.js"
     ],
     "css": [
-      "_app/immutable/assets/_page-38216b75.css"
+      "_app/immutable/assets/_page-2c97330e.css"
     ]
   },
   "src/routes/blog/+page.js": {
@@ -157,7 +168,7 @@
     "isEntry": true,
     "imports": [
       "_index3.js",
-      "_BlogTag.js",
+      "_Tag.js",
       "_SectionTitle.js"
     ],
     "css": [
@@ -178,7 +189,7 @@
       "_BlogCard.js"
     ],
     "css": [
-      "_app/immutable/assets/_page-c9fb8161.css"
+      "_app/immutable/assets/_page-a5c26c2a.css"
     ]
   },
   "src/routes/blog/category/[category]/+page.js": {
@@ -192,12 +203,12 @@
     "isEntry": true,
     "imports": [
       "_index3.js",
-      "_BlogTag.js",
-      "_End.js",
+      "_ContentContainer.js",
+      "_Tag.js",
       "_Time.js"
     ],
     "css": [
-      "_app/immutable/assets/_page-e153be28.css"
+      "_app/immutable/assets/_page-5ef313c3.css"
     ]
   },
   "src/routes/blog/[slug]/+page.js": {
@@ -210,30 +221,43 @@
     "dynamicImports": [
       "src/routes/blog/6c.svx",
       "src/routes/blog/ai-tools.svx",
+      "src/routes/blog/atomic-habits.svx",
       "src/routes/blog/best-ux-books.svx",
       "src/routes/blog/calculate-typography-values.svx",
       "src/routes/blog/case-study.svx",
       "src/routes/blog/color-scheme.svx",
+      "src/routes/blog/dont-use-pure-black-and-white.svx",
+      "src/routes/blog/figma-plugins.svx",
       "src/routes/blog/fluency.svx",
-      "src/routes/blog/free-stuff.svx",
+      "src/routes/blog/free-3d.svx",
+      "src/routes/blog/free-colors.svx",
+      "src/routes/blog/free-fonts.svx",
+      "src/routes/blog/free-icons.svx",
+      "src/routes/blog/free-illustrations.svx",
+      "src/routes/blog/free-images-videos.svx",
+      "src/routes/blog/free-mockups.svx",
+      "src/routes/blog/free-music.svx",
+      "src/routes/blog/free-tools.svx",
       "src/routes/blog/gestalt.svx",
       "src/routes/blog/grids.svx",
       "src/routes/blog/how-to-ask-for-design-feedback.svx",
+      "src/routes/blog/inspiration.svx",
       "src/routes/blog/logo-design.svx",
-      "src/routes/blog/mockups.svx",
       "src/routes/blog/my-fav-colors-tool.svx",
       "src/routes/blog/personal-brand.svx",
       "src/routes/blog/polish.svx",
       "src/routes/blog/portfolio.svx",
       "src/routes/blog/project-organization.svx",
+      "src/routes/blog/questions-to-ask-customer-before-design.svx",
       "src/routes/blog/resolution-pt-px.svx",
+      "src/routes/blog/resume.svx",
       "src/routes/blog/shadow.svx",
       "src/routes/blog/sharp-axe-method.svx",
       "src/routes/blog/the-art-of-thinking-clearly.svx",
       "src/routes/blog/typescale.svx",
       "src/routes/blog/typography-impact.svx",
       "src/routes/blog/ui-kit.svx",
-      "src/routes/blog/ux-research.svx",
+      "src/routes/blog/ux-guides-frameworks.svx",
       "src/routes/blog/ux-vs-ui.svx",
       "src/routes/blog/ux.svx",
       "src/routes/blog/what-is-wcag.svx"
@@ -247,14 +271,14 @@
       "_index3.js",
       "_PageTitle.js",
       "_ExLink.js",
-      "_linkedin-logo.js",
+      "_instagram-logo.js",
       "_figma-logo.js",
       "_SectionTitle.js",
       "_Button.js",
       "_SEO.js"
     ],
     "css": [
-      "_app/immutable/assets/_page-56496263.css"
+      "_app/immutable/assets/_page-34e4db35.css"
     ]
   },
   "src/routes/contact/+page.js": {
@@ -269,8 +293,9 @@
     "imports": [
       "_index3.js",
       "_PageTitle.js",
-      "_ProjectCard.js",
+      "_thumbnail.js",
       "_figma-logo.js",
+      "_ProjectCard.js",
       "_SectionTitle.js"
     ],
     "css": [
@@ -283,11 +308,11 @@
     "isEntry": true,
     "imports": [
       "_index3.js",
-      "_End.js",
+      "_ContentContainer.js",
       "_Time.js"
     ],
     "css": [
-      "_app/immutable/assets/_page-f785134e.css"
+      "_app/immutable/assets/_page-06a5df6d.css"
     ]
   },
   "src/routes/project/[slug]/+page.js": {
@@ -309,12 +334,13 @@
     "imports": [
       "_index3.js",
       "_PageTitle.js",
-      "_SwiperContainer.js",
+      "_SectionDesc.js",
+      "_core.js",
       "_ExLink.js",
       "_SectionTitle.js"
     ],
     "css": [
-      "_app/immutable/assets/_page-4e2c5d27.css"
+      "_app/immutable/assets/_page-0547cc73.css"
     ],
     "assets": [
       "_app/immutable/assets/UIDesignPrinciples-ac851ee4.webp",
@@ -330,10 +356,10 @@
     "isEntry": true,
     "imports": [
       "_index3.js",
-      "_GLTF.js"
+      "_index2.js"
     ],
     "css": [
-      "_app/immutable/assets/_page-c0b25636.css"
+      "_app/immutable/assets/_page-cb3236e2.css"
     ]
   },
   "src/routes/resource/music/+page.svelte": {
@@ -342,8 +368,13 @@
     "isEntry": true,
     "imports": [
       "_index3.js",
+      "_SectionDesc.js",
       "_SectionTitle.js",
-      "_gist.svelte_svelte_type_style_lang.js"
+      "_gist.svelte_svelte_type_style_lang.js",
+      "_index2.js"
+    ],
+    "css": [
+      "_app/immutable/assets/_page-cb3a8b16.css"
     ]
   },
   "src/routes/resource/tool/+page.svelte": {
@@ -405,6 +436,14 @@
       "_index3.js"
     ]
   },
+  "src/routes/blog/atomic-habits.svx": {
+    "file": "chunks/atomic-habits.js",
+    "src": "src/routes/blog/atomic-habits.svx",
+    "isDynamicEntry": true,
+    "imports": [
+      "_index3.js"
+    ]
+  },
   "src/routes/blog/best-ux-books.svx": {
     "file": "chunks/best-ux-books.js",
     "src": "src/routes/blog/best-ux-books.svx",
@@ -445,6 +484,22 @@
       "_index3.js"
     ]
   },
+  "src/routes/blog/dont-use-pure-black-and-white.svx": {
+    "file": "chunks/dont-use-pure-black-and-white.js",
+    "src": "src/routes/blog/dont-use-pure-black-and-white.svx",
+    "isDynamicEntry": true,
+    "imports": [
+      "_index3.js"
+    ]
+  },
+  "src/routes/blog/figma-plugins.svx": {
+    "file": "chunks/figma-plugins.js",
+    "src": "src/routes/blog/figma-plugins.svx",
+    "isDynamicEntry": true,
+    "imports": [
+      "_index3.js"
+    ]
+  },
   "src/routes/blog/fluency.svx": {
     "file": "chunks/fluency.js",
     "src": "src/routes/blog/fluency.svx",
@@ -453,9 +508,73 @@
       "_index3.js"
     ]
   },
-  "src/routes/blog/free-stuff.svx": {
-    "file": "chunks/free-stuff.js",
-    "src": "src/routes/blog/free-stuff.svx",
+  "src/routes/blog/free-3d.svx": {
+    "file": "chunks/free-3d.js",
+    "src": "src/routes/blog/free-3d.svx",
+    "isDynamicEntry": true,
+    "imports": [
+      "_index3.js"
+    ]
+  },
+  "src/routes/blog/free-colors.svx": {
+    "file": "chunks/free-colors.js",
+    "src": "src/routes/blog/free-colors.svx",
+    "isDynamicEntry": true,
+    "imports": [
+      "_index3.js"
+    ]
+  },
+  "src/routes/blog/free-fonts.svx": {
+    "file": "chunks/free-fonts.js",
+    "src": "src/routes/blog/free-fonts.svx",
+    "isDynamicEntry": true,
+    "imports": [
+      "_index3.js"
+    ]
+  },
+  "src/routes/blog/free-icons.svx": {
+    "file": "chunks/free-icons.js",
+    "src": "src/routes/blog/free-icons.svx",
+    "isDynamicEntry": true,
+    "imports": [
+      "_index3.js"
+    ]
+  },
+  "src/routes/blog/free-illustrations.svx": {
+    "file": "chunks/free-illustrations.js",
+    "src": "src/routes/blog/free-illustrations.svx",
+    "isDynamicEntry": true,
+    "imports": [
+      "_index3.js"
+    ]
+  },
+  "src/routes/blog/free-images-videos.svx": {
+    "file": "chunks/free-images-videos.js",
+    "src": "src/routes/blog/free-images-videos.svx",
+    "isDynamicEntry": true,
+    "imports": [
+      "_index3.js"
+    ]
+  },
+  "src/routes/blog/free-mockups.svx": {
+    "file": "chunks/free-mockups.js",
+    "src": "src/routes/blog/free-mockups.svx",
+    "isDynamicEntry": true,
+    "imports": [
+      "_index3.js"
+    ]
+  },
+  "src/routes/blog/free-music.svx": {
+    "file": "chunks/free-music.js",
+    "src": "src/routes/blog/free-music.svx",
+    "isDynamicEntry": true,
+    "imports": [
+      "_index3.js"
+    ]
+  },
+  "src/routes/blog/free-tools.svx": {
+    "file": "chunks/free-tools.js",
+    "src": "src/routes/blog/free-tools.svx",
     "isDynamicEntry": true,
     "imports": [
       "_index3.js"
@@ -469,7 +588,8 @@
       "_index3.js"
     ],
     "css": [
-      "_app/immutable/assets/Image-f2d8da55.css"
+      "_app/immutable/assets/ExLink-fab4cde0.css",
+      "_app/immutable/assets/Image-6c6940b1.css"
     ]
   },
   "src/routes/blog/grids.svx": {
@@ -480,7 +600,8 @@
       "_index3.js"
     ],
     "css": [
-      "_app/immutable/assets/Image-f2d8da55.css"
+      "_app/immutable/assets/ExLink-fab4cde0.css",
+      "_app/immutable/assets/Image-6c6940b1.css"
     ]
   },
   "src/routes/blog/how-to-ask-for-design-feedback.svx": {
@@ -495,6 +616,14 @@
       "_app/immutable/assets/design-feedback-655e4871.webp"
     ]
   },
+  "src/routes/blog/inspiration.svx": {
+    "file": "chunks/inspiration.js",
+    "src": "src/routes/blog/inspiration.svx",
+    "isDynamicEntry": true,
+    "imports": [
+      "_index3.js"
+    ]
+  },
   "src/routes/blog/logo-design.svx": {
     "file": "chunks/logo-design.js",
     "src": "src/routes/blog/logo-design.svx",
@@ -503,15 +632,8 @@
       "_index3.js"
     ],
     "css": [
-      "_app/immutable/assets/Image-f2d8da55.css"
-    ]
-  },
-  "src/routes/blog/mockups.svx": {
-    "file": "chunks/mockups.js",
-    "src": "src/routes/blog/mockups.svx",
-    "isDynamicEntry": true,
-    "imports": [
-      "_index3.js"
+      "_app/immutable/assets/ExLink-fab4cde0.css",
+      "_app/immutable/assets/Image-6c6940b1.css"
     ]
   },
   "src/routes/blog/my-fav-colors-tool.svx": {
@@ -522,7 +644,8 @@
       "_index3.js"
     ],
     "css": [
-      "_app/immutable/assets/Image-f2d8da55.css"
+      "_app/immutable/assets/ExLink-fab4cde0.css",
+      "_app/immutable/assets/Image-6c6940b1.css"
     ]
   },
   "src/routes/blog/personal-brand.svx": {
@@ -565,6 +688,14 @@
       "_app/immutable/assets/projectOrganization-9bf5fb23.webp"
     ]
   },
+  "src/routes/blog/questions-to-ask-customer-before-design.svx": {
+    "file": "chunks/questions-to-ask-customer-before-design.js",
+    "src": "src/routes/blog/questions-to-ask-customer-before-design.svx",
+    "isDynamicEntry": true,
+    "imports": [
+      "_index3.js"
+    ]
+  },
   "src/routes/blog/resolution-pt-px.svx": {
     "file": "chunks/resolution-pt-px.js",
     "src": "src/routes/blog/resolution-pt-px.svx",
@@ -573,7 +704,16 @@
       "_index3.js"
     ],
     "css": [
-      "_app/immutable/assets/Image-f2d8da55.css"
+      "_app/immutable/assets/ExLink-fab4cde0.css",
+      "_app/immutable/assets/Image-6c6940b1.css"
+    ]
+  },
+  "src/routes/blog/resume.svx": {
+    "file": "chunks/resume.js",
+    "src": "src/routes/blog/resume.svx",
+    "isDynamicEntry": true,
+    "imports": [
+      "_index3.js"
     ]
   },
   "src/routes/blog/shadow.svx": {
@@ -634,9 +774,9 @@
       "_index3.js"
     ]
   },
-  "src/routes/blog/ux-research.svx": {
-    "file": "chunks/ux-research.js",
-    "src": "src/routes/blog/ux-research.svx",
+  "src/routes/blog/ux-guides-frameworks.svx": {
+    "file": "chunks/ux-guides-frameworks.js",
+    "src": "src/routes/blog/ux-guides-frameworks.svx",
     "isDynamicEntry": true,
     "imports": [
       "_index3.js"
@@ -650,7 +790,8 @@
       "_index3.js"
     ],
     "css": [
-      "_app/immutable/assets/Image-f2d8da55.css"
+      "_app/immutable/assets/ExLink-fab4cde0.css",
+      "_app/immutable/assets/Image-6c6940b1.css"
     ]
   },
   "src/routes/blog/ux.svx": {
@@ -672,25 +813,8 @@
   "_config.js": {
     "file": "chunks/config.js"
   },
-  "_SocialButtons.js": {
-    "file": "chunks/SocialButtons.js",
-    "imports": [
-      "_index3.js",
-      "_linkedin-logo.js",
-      "_ExLink.js"
-    ],
-    "css": [
-      "_app/immutable/assets/SocialButtons-579090bb.css"
-    ]
-  },
-  "_stores.js": {
-    "file": "chunks/stores.js",
-    "imports": [
-      "_index3.js"
-    ]
-  },
-  "_linkedin-logo.js": {
-    "file": "chunks/linkedin-logo.js",
+  "_instagram-logo.js": {
+    "file": "chunks/instagram-logo.js",
     "imports": [
       "_index3.js"
     ]
@@ -701,7 +825,13 @@
       "_index3.js"
     ],
     "css": [
-      "_app/immutable/assets/ExLink-eb6f608c.css"
+      "_app/immutable/assets/ExLink-fab4cde0.css"
+    ]
+  },
+  "_stores.js": {
+    "file": "chunks/stores.js",
+    "imports": [
+      "_index3.js"
     ]
   },
   "_Button.js": {
@@ -710,7 +840,7 @@
       "_index3.js"
     ],
     "css": [
-      "_app/immutable/assets/Button-aa9f3bdd.css"
+      "_app/immutable/assets/Button-6eeaa673.css"
     ]
   },
   "_MarkdownContainer.js": {
@@ -719,7 +849,7 @@
       "_index3.js"
     ],
     "css": [
-      "_app/immutable/assets/MarkdownContainer-fe419064.css"
+      "_app/immutable/assets/MarkdownContainer-775916ea.css"
     ]
   },
   "_ProjectCard.js": {
@@ -730,31 +860,7 @@
       "_figma-logo.js"
     ],
     "css": [
-      "_app/immutable/assets/ProjectCard-435d8a1a.css"
-    ],
-    "assets": [
-      "_app/immutable/assets/rezaPhoneFrame-f61992a2.webp",
-      "_app/immutable/assets/rezaSplat-8323f1b6.svg"
-    ]
-  },
-  "_Image.js": {
-    "file": "chunks/Image.js",
-    "imports": [
-      "_index3.js",
-      "_index2.js"
-    ],
-    "css": [
-      "_app/immutable/assets/Image-f2d8da55.css"
-    ]
-  },
-  "_GLTF.js": {
-    "file": "chunks/GLTF.js",
-    "imports": [
-      "_index3.js",
-      "_index2.js"
-    ],
-    "css": [
-      "_app/immutable/assets/GLTF-04833804.css"
+      "_app/immutable/assets/ProjectCard-36feebc1.css"
     ]
   },
   "_SEO.js": {
@@ -783,7 +889,7 @@
       "_Time.js"
     ],
     "css": [
-      "_app/immutable/assets/BlogCard-db3d25d4.css"
+      "_app/immutable/assets/BlogCard-6fa650fb.css"
     ]
   },
   "_PageTitle.js": {
@@ -792,7 +898,7 @@
       "_index3.js"
     ],
     "css": [
-      "_app/immutable/assets/PageTitle-9927f06e.css"
+      "_app/immutable/assets/PageTitle-af97f47b.css"
     ]
   },
   "_Time.js": {
@@ -801,13 +907,13 @@
       "_index3.js"
     ]
   },
-  "_BlogTag.js": {
-    "file": "chunks/BlogTag.js",
+  "_Tag.js": {
+    "file": "chunks/Tag.js",
     "imports": [
       "_index3.js"
     ],
     "css": [
-      "_app/immutable/assets/BlogTag-4419fe13.css"
+      "_app/immutable/assets/Tag-7cb5b179.css"
     ]
   },
   "_SectionTitle.js": {
@@ -816,20 +922,26 @@
       "_index3.js"
     ],
     "css": [
-      "_app/immutable/assets/SectionTitle-6fec9199.css"
+      "_app/immutable/assets/SectionTitle-9bba7d4f.css"
     ]
   },
-  "_End.js": {
-    "file": "chunks/End.js",
+  "_ContentContainer.js": {
+    "file": "chunks/ContentContainer.js",
     "imports": [
       "_index3.js"
     ],
     "css": [
-      "_app/immutable/assets/End-9ab3a312.css"
+      "_app/immutable/assets/ContentContainer-27f12f8c.css"
     ]
   },
   "_dynamic-import-helper.js": {
     "file": "chunks/dynamic-import-helper.js"
+  },
+  "_thumbnail.js": {
+    "file": "chunks/thumbnail.js",
+    "assets": [
+      "_app/immutable/assets/thumbnail-85e2ab98.webp"
+    ]
   },
   "src/routes/project/bonta.svx": {
     "file": "chunks/bonta.js",
@@ -845,11 +957,11 @@
     "isDynamicEntry": true,
     "imports": [
       "_index3.js",
-      "_SwiperContainer.js",
-      "_Image.js"
+      "_core.js",
+      "_Image.js",
+      "_thumbnail.js"
     ],
     "assets": [
-      "_app/immutable/assets/thumbnail-85e2ab98.webp",
       "_app/immutable/assets/discord-f9f9277a.webp",
       "_app/immutable/assets/feature-a33d32e9.webp",
       "_app/immutable/assets/role-4406eaa3.webp",
@@ -878,14 +990,17 @@
       "_app/immutable/assets/notiScreen-1e82ea5e.webp"
     ]
   },
-  "_SwiperContainer.js": {
-    "file": "chunks/SwiperContainer.js",
+  "_SectionDesc.js": {
+    "file": "chunks/SectionDesc.js",
     "imports": [
       "_index3.js"
     ],
     "css": [
-      "_app/immutable/assets/SwiperContainer-6d518e94.css"
+      "_app/immutable/assets/SectionDesc-0e076ad9.css"
     ]
+  },
+  "_core.js": {
+    "file": "chunks/core.js"
   },
   "_gist.svelte_svelte_type_style_lang.js": {
     "file": "chunks/gist.svelte_svelte_type_style_lang.js",
@@ -894,6 +1009,16 @@
     ],
     "css": [
       "_app/immutable/assets/gist-ca7a22b4.css"
+    ]
+  },
+  "_Image.js": {
+    "file": "chunks/Image.js",
+    "imports": [
+      "_index3.js",
+      "_ExLink.js"
+    ],
+    "css": [
+      "_app/immutable/assets/Image-6c6940b1.css"
     ]
   }
 }

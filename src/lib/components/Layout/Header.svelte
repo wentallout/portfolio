@@ -79,16 +79,12 @@
 		transition: var(--transition);
 	}
 
-	.nav-list__item:hover {
-		scale: 1.2;
-	}
-
 	.nav-list:hover .nav-list__item:not(:hover) {
-		opacity: 0.3;
+		opacity: 0.6;
 	}
 
 	.overlay-content:hover .overlay-item:not(:hover) {
-		opacity: 0.3;
+		opacity: 0.6;
 	}
 
 	.nav {

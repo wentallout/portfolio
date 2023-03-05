@@ -97,19 +97,6 @@
 	background-color: transparent !important;
 }
 
-.swiper-scrollbar-drag {
-	background-color: var(--primary-500) !important;
-}
-
-.swiper {
-	background-color: var(--bg-400);
-	border-radius: var(--border-radius);
-}
-
-.swiper-pagination-bullet {
-	background-color: var(--primary-500);
-}
-
 /* NAME */
 
 .fancy span {

@@ -1,15 +1,11 @@
 import { c as create_ssr_component } from "./index3.js";
-/* empty css                                     */const metadata = {
+/* empty css                                      *//* empty css                                     */const metadata = {
   "title": "Resolution, pt and px",
   "date": "2022-10-31",
   "categories": ["fundamental"]
 };
 const Resolution_pt_px = create_ssr_component(($$result, $$props, $$bindings, slots) => {
-  return `<nav class="${"toc"}"><ol class="${"toc-level toc-level-1"}"><li class="${"toc-item toc-item-h2"}"><a class="${"toc-link toc-link-h2"}" href="${"#summary"}">summary</a></li><li class="${"toc-item toc-item-h2"}"><a class="${"toc-link toc-link-h2"}" href="${"#tips-and-tricks-to-design-with-your-resolution-in-mind"}">tips and tricks to design with your resolution in mind</a><ol class="${"toc-level toc-level-2"}"><li class="${"toc-item toc-item-h3"}"><a class="${"toc-link toc-link-h3"}" href="${"#photoshop"}">Photoshop</a></li></ol></li></ol></nav>
-
-
-
-<h2 id="${"summary"}"><a href="${"#summary"}">summary</a></h2>
+  return `<h2 id="${"summary"}"><a href="${"#summary"}">summary</a></h2>
 <p>Point (pt) is a measurement of space regardless of the screen Resolution</p>
 <p>Always design at 1x where <strong>1pt = 1px</strong>.</p>
 <p>Typography, spacing and all vector-based elements adapt to higher pixel density per default.</p>

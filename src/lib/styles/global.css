@@ -41,17 +41,17 @@ html {
 	--text-color-disabled: hsla(0, 0%, 100%, 38%);
 	/* --- */
 
-	--black: hsl(0, 0%, 0%);
+	--black: hsl(0, 0%, 3%);
 
-	--bg-100: hsl(0, 0%, 14%);
-	--bg-200: hsl(0, 0%, 12%);
-	--bg-300: hsl(0, 0%, 10%);
-	--bg-400: hsl(0, 0%, 8%);
-	--bg-500: hsl(0, 0%, 6%);
+	--bg-100: hsl(0, 0%, 15%);
+	--bg-200: hsl(0, 0%, 13%);
+	--bg-300: hsl(0, 0%, 11%);
+	--bg-400: hsl(0, 0%, 9%);
+	--bg-500: hsl(0, 0%, 7%);
 
 	--page-bg: var(--bg-500);
 	--page-padding: 20vw;
-	--swiper-theme-color: var(--primary-500) !important;
+
 	--text-width: 65ch;
 
 	/* Primary: Nacho Cheese */
@@ -81,7 +81,7 @@ html {
 	--neutral-200: hsl(50, 17%, 93%);
 	--neutral-300: hsl(53, 14%, 87%);
 	--neutral-400: hsl(50, 13%, 82%);
-	--neutral-500: hsl(47, 11%, 76%);
+	--neutral-500: #c9c6bb;
 	--neutral-600: hsl(42, 6%, 61%);
 	--neutral-700: hsl(36, 4%, 45%);
 	--neutral-800: hsl(34, 5%, 30%);
@@ -266,14 +266,11 @@ textarea {
 
 img {
 	display: block;
-
 	/* RESPONSIVE */
 	object-fit: cover;
 	height: auto;
 	/* --- */
-
 	position: relative;
-
 	/* DARK MODE */
 	filter: brightness(0.8) contrast(1.2);
 	max-width: 100%;

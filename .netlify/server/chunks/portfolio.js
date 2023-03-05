@@ -5,9 +5,7 @@ const metadata = {
   "categories": ["tips", "portfolio"]
 };
 const Portfolio = create_ssr_component(($$result, $$props, $$bindings, slots) => {
-  return `<nav class="${"toc"}"><ol class="${"toc-level toc-level-1"}"><li class="${"toc-item toc-item-h2"}"><a class="${"toc-link toc-link-h2"}" href="${"#do"}">DO</a></li><li class="${"toc-item toc-item-h2"}"><a class="${"toc-link toc-link-h2"}" href="${"#dont"}">DON’T</a></li></ol></nav>
-
-<h2 id="${"do"}"><a href="${"#do"}">DO</a></h2>
+  return `<h2 id="${"do"}"><a href="${"#do"}">DO</a></h2>
 <ul><li>Make sure your portfolio is a custom responsive website, not a PDF or PNG. <strong>Don’t bother with Behance, Dribbble</strong></li>
 <li>Show your work: Whiteboard, sketches, personas, task/process flows, wireframes, etc.</li>
 <li>Show your low-fidelity: demonstrate the iteration, the thinking, not the final product. Show the cycles of assumption and validation.</li>

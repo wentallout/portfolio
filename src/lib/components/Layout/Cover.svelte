@@ -1,6 +1,6 @@
 <script>
 	import SocialButtons from '$lib/components/Contact/SocialButtons.svelte';
-
+	import { onMount } from 'svelte';
 	import YinYang from '~icons/ph/yin-yang-fill';
 
 	let videoEle;
@@ -16,7 +16,7 @@
 	</a>
 
 	<div class="cover__btn">
-		<SocialButtons style="flex-direction:column" />
+		<SocialButtons />
 	</div>
 </div>
 
@@ -60,10 +60,11 @@
 		width: 100%;
 		position: absolute;
 		display: flex;
-		justify-content: flex-end;
+		justify-content: center;
 		bottom: var(--space-s);
 		padding-right: 1rem;
 		left: 0;
+		z-index: 2;
 	}
 
 	.cover::after {

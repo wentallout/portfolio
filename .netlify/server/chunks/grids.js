@@ -1,15 +1,11 @@
 import { c as create_ssr_component } from "./index3.js";
-/* empty css                                     */const metadata = {
+/* empty css                                      *//* empty css                                     */const metadata = {
   "title": "Grids",
   "date": "2022-10-31",
   "categories": ["fundamental"]
 };
 const Grids = create_ssr_component(($$result, $$props, $$bindings, slots) => {
-  return `<nav class="${"toc"}"><ol class="${"toc-level toc-level-1"}"><li class="${"toc-item toc-item-h2"}"><a class="${"toc-link toc-link-h2"}" href="${"#types-of-grids"}">types of Grids</a><ol class="${"toc-level toc-level-2"}"><li class="${"toc-item toc-item-h3"}"><a class="${"toc-link toc-link-h3"}" href="${"#column-grid"}">Column Grid</a></li><li class="${"toc-item toc-item-h3"}"><a class="${"toc-link toc-link-h3"}" href="${"#modular-grid"}">Modular Grid</a></li><li class="${"toc-item toc-item-h3"}"><a class="${"toc-link toc-link-h3"}" href="${"#hierarchical-grid"}">Hierarchical Grid</a></li><li class="${"toc-item toc-item-h3"}"><a class="${"toc-link toc-link-h3"}" href="${"#baseline-grid"}">Baseline Grid</a></li><li class="${"toc-item toc-item-h3"}"><a class="${"toc-link toc-link-h3"}" href="${"#alternative-axial-grid"}">Alternative: Axial Grid</a></li><li class="${"toc-item toc-item-h3"}"><a class="${"toc-link toc-link-h3"}" href="${"#alternative-diagonal-grid"}">Alternative: Diagonal Grid</a></li><li class="${"toc-item toc-item-h3"}"><a class="${"toc-link toc-link-h3"}" href="${"#alternative-radial-grid"}">Alternative: Radial Grid</a></li></ol></li><li class="${"toc-item toc-item-h2"}"><a class="${"toc-link toc-link-h2"}" href="${"#preference"}">preference</a></li><li class="${"toc-item toc-item-h2"}"><a class="${"toc-link toc-link-h2"}" href="${"#mobile"}">mobile</a></li><li class="${"toc-item toc-item-h2"}"><a class="${"toc-link toc-link-h2"}" href="${"#tablet"}">tablet</a></li><li class="${"toc-item toc-item-h2"}"><a class="${"toc-link toc-link-h2"}" href="${"#desktop"}">desktop</a></li></ol></nav>
-
-
-
-<h2 id="${"types-of-grids"}"><a href="${"#types-of-grids"}">types of Grids</a></h2>
+  return `<h2 id="${"types-of-grids"}"><a href="${"#types-of-grids"}">types of Grids</a></h2>
 <h3 id="${"column-grid"}"><a href="${"#column-grid"}">Column Grid</a></h3>
 <h3 id="${"modular-grid"}"><a href="${"#modular-grid"}">Modular Grid</a></h3>
 <h3 id="${"hierarchical-grid"}"><a href="${"#hierarchical-grid"}">Hierarchical Grid</a></h3>

@@ -7,11 +7,7 @@ const metadata = {
   "categories": ["typography"]
 };
 const Typography_impact = create_ssr_component(($$result, $$props, $$bindings, slots) => {
-  return `<nav class="${"toc"}"><ol class="${"toc-level toc-level-1"}"><li class="${"toc-item toc-item-h2"}"><a class="${"toc-link toc-link-h2"}" href="${"#typography-serves-functional-purpose"}">Typography serves functional purpose</a></li><li class="${"toc-item toc-item-h2"}"><a class="${"toc-link toc-link-h2"}" href="${"#typography-creates-emotional-impact"}">Typography creates emotional impact</a></li></ol></nav>
-
-
-
-<h2 id="${"typography-serves-functional-purpose"}"><a href="${"#typography-serves-functional-purpose"}">Typography serves functional purpose</a></h2>
+  return `<h2 id="${"typography-serves-functional-purpose"}"><a href="${"#typography-serves-functional-purpose"}">Typography serves functional purpose</a></h2>
 <p>Appropriate typography choices create:</p>
 <ul><li>Readability</li>
 <li>Accessibility</li>

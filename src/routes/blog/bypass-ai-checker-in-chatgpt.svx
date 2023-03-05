@@ -1,0 +1,14 @@
+---
+title: How to bypass AI Checker while using ChatGPT
+date: 2023-03-05
+categories:
+    - tips
+---
+
+## Type this before doing your prompts
+
+"When it comes to writing content, two factors are crucial, "perplexity" and "burstiness." Perplexity measures the complexity of text. Separately, burstiness compares the variations of sentences. Humans tend to write with greater burstiness, for example, with some longer or complex sentences alongside shorter ones. AI sentences tend to be more uniform. Therefore, when writing the following content I am going to ask you to create, I need it to have a good amount of perplexity and burstiness. Do you understand?"
+
+## Then type this
+
+Using the concepts written previously, rewrite this article wtih a high degree of perplexity and burstiness

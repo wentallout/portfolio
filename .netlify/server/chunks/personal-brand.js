@@ -5,9 +5,7 @@ const metadata = {
   "categories": ["tips"]
 };
 const Personal_brand = create_ssr_component(($$result, $$props, $$bindings, slots) => {
-  return `<nav class="${"toc"}"><ol class="${"toc-level toc-level-1"}"><li class="${"toc-item toc-item-h2"}"><a class="${"toc-link toc-link-h2"}" href="${"#1-figuring-out-who-you-are"}">1. Figuring Out Who You Are</a></li><li class="${"toc-item toc-item-h2"}"><a class="${"toc-link toc-link-h2"}" href="${"#2-setting-your-goals"}">2. Setting your Goals</a></li><li class="${"toc-item toc-item-h2"}"><a class="${"toc-link toc-link-h2"}" href="${"#3-defining-your-target-audience"}">3. Defining your Target Audience</a></li><li class="${"toc-item toc-item-h2"}"><a class="${"toc-link toc-link-h2"}" href="${"#4-developing-your-voice"}">4. Developing your Voice</a></li><li class="${"toc-item toc-item-h2"}"><a class="${"toc-link toc-link-h2"}" href="${"#5-creating-your-visual-personal-brand"}">5. Creating your Visual Personal Brand</a></li><li class="${"toc-item toc-item-h2"}"><a class="${"toc-link toc-link-h2"}" href="${"#6-choosing-the-right-medium-for-communication"}">6. Choosing the Right Medium for Communication</a></li><li class="${"toc-item toc-item-h2"}"><a class="${"toc-link toc-link-h2"}" href="${"#7-maintaining-your-brand"}">7. Maintaining your Brand</a></li></ol></nav>
-
-<p>Here are some of the best approaches to creating a personal brand. We recommend you to start applying them in this order:</p>
+  return `<p>Here are some of the best approaches to creating a personal brand. We recommend you to start applying them in this order:</p>
 <h2 id="${"1-figuring-out-who-you-are"}"><a href="${"#1-figuring-out-who-you-are"}">1. Figuring Out Who You Are</a></h2>
 <p>The secret to creating a successful personal brand is reflecting on who you are and what value you add to the market.</p>
 <p>The word “personal” is by no means accidental. Personal brand can be used as an opportunity to share your passions, interests, and experiences of learning things. Sure, what you do is important, but it’s the why that really gets people interested!</p>

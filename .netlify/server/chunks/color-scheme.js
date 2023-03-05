@@ -5,9 +5,7 @@ const metadata = {
   "categories": ["color"]
 };
 const Color_scheme = create_ssr_component(($$result, $$props, $$bindings, slots) => {
-  return `<nav class="${"toc"}"><ol class="${"toc-level toc-level-1"}"><li class="${"toc-item toc-item-h2"}"><a class="${"toc-link toc-link-h2"}" href="${"#rgb-vs-cmyk"}">RGB vs CMYK</a></li><li class="${"toc-item toc-item-h2"}"><a class="${"toc-link toc-link-h2"}" href="${"#color-profiles"}">Color profiles</a></li><li class="${"toc-item toc-item-h2"}"><a class="${"toc-link toc-link-h2"}" href="${"#neutral-colors"}">Neutral colors</a></li><li class="${"toc-item toc-item-h2"}"><a class="${"toc-link toc-link-h2"}" href="${"#color-harmony"}">Color harmony</a></li><li class="${"toc-item toc-item-h2"}"><a class="${"toc-link toc-link-h2"}" href="${"#4-steps"}">4 Steps</a></li><li class="${"toc-item toc-item-h2"}"><a class="${"toc-link toc-link-h2"}" href="${"#color-scale"}">Color scale</a></li><li class="${"toc-item toc-item-h2"}"><a class="${"toc-link toc-link-h2"}" href="${"#always-wireframe-your-design-in-greyscale-first"}">Always wireframe your design in greyscale first</a></li><li class="${"toc-item toc-item-h2"}"><a class="${"toc-link toc-link-h2"}" href="${"#chrome-extension"}">Chrome extension</a></li><li class="${"toc-item toc-item-h2"}"><a class="${"toc-link toc-link-h2"}" href="${"#web-tool-for-color-scheme"}">Web Tool for color scheme</a><ol class="${"toc-level toc-level-2"}"><li class="${"toc-item toc-item-h3"}"><a class="${"toc-link toc-link-h3"}" href="${"#inspiration"}">Inspiration</a></li><li class="${"toc-item toc-item-h3"}"><a class="${"toc-link toc-link-h3"}" href="${"#gradient-tools"}">Gradient tools</a></li></ol></li></ol></nav>
-
-<h2 id="${"rgb-vs-cmyk"}"><a href="${"#rgb-vs-cmyk"}">RGB vs CMYK</a></h2>
+  return `<h2 id="${"rgb-vs-cmyk"}"><a href="${"#rgb-vs-cmyk"}">RGB vs CMYK</a></h2>
 <p>RGB is meant for <strong>digital</strong> design.</p>
 <p>CYMK is meant for <strong>print</strong> design.</p>
 <h2 id="${"color-profiles"}"><a href="${"#color-profiles"}">Color profiles</a></h2>
@@ -28,7 +26,7 @@ Option 2: Analogous close in your color scheme</p>
 <h2 id="${"color-scale"}"><a href="${"#color-scale"}">Color scale</a></h2>
 <p><a href="${"https://0to255.com"}" rel="${"nofollow noopener noreferrer external"}" target="${"_blank"}">0to255.com</a></p>
 <p>A more modern tool
-<a href="${"https://hihayk.github.io/scale"}" rel="${"nofollow noopener noreferrer external"}" target="${"_blank"}"></a></p>
+<a href="${"https://hihayk.github.io/scale"}" rel="${"nofollow noopener noreferrer external"}" target="${"_blank"}">hihayk.github.io/scale</a></p>
 <p>You can change the darkness/lightness
 For 50%/60% lightness
 use 50% for darkness</p>

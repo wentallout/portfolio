@@ -8,11 +8,7 @@ const metadata = {
   "categories": ["typography"]
 };
 const Typescale = create_ssr_component(($$result, $$props, $$bindings, slots) => {
-  return `<nav class="${"toc"}"><ol class="${"toc-level toc-level-1"}"><li class="${"toc-item toc-item-h2"}"><a class="${"toc-link toc-link-h2"}" href="${"#what-is-type-scale"}">What is type scale?</a></li><li class="${"toc-item toc-item-h2"}"><a class="${"toc-link toc-link-h2"}" href="${"#how-to-generate-a-type-scale"}">How to generate a type scale?</a><ol class="${"toc-level toc-level-2"}"><li class="${"toc-item toc-item-h3"}"><a class="${"toc-link toc-link-h3"}" href="${"#input"}">Input</a></li><li class="${"toc-item toc-item-h3"}"><a class="${"toc-link toc-link-h3"}" href="${"#output"}">Output</a></li></ol></li><li class="${"toc-item toc-item-h2"}"><a class="${"toc-link toc-link-h2"}" href="${"#which-type-scale-should-i-choose"}">Which type scale should I choose?</a></li></ol></nav>
-
-
-
-<h2 id="${"what-is-type-scale"}"><a href="${"#what-is-type-scale"}">What is type scale?</a></h2>
+  return `<h2 id="${"what-is-type-scale"}"><a href="${"#what-is-type-scale"}">What is type scale?</a></h2>
 <p>A type scale is a collection of font sizes that are in visual harmony. A typographer chooses sizes from a typographic scale in the same way that a musician chooses notes from a musical scale.</p>
 <h2 id="${"how-to-generate-a-type-scale"}"><a href="${"#how-to-generate-a-type-scale"}">How to generate a type scale?</a></h2>
 <p>If you’re like me and can’t be bothered to do all the math stuff, you should use a website that calculate and generate a type scale for you.

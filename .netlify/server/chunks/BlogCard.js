@@ -12,7 +12,7 @@ const BlogListContainer = create_ssr_component(($$result, $$props, $$bindings, s
 });
 const BlogCard_svelte_svelte_type_style_lang = "";
 const css = {
-  code: '.blog.svelte-1ms5me2.svelte-1ms5me2{background-color:var(--bg);border:1px solid transparent;border-radius:var(--border-radius-light);box-shadow:var(--box-shadow);display:flex;flex-direction:column;height:144px;overflow:hidden;padding:var(--space-s) var(--space-m);position:relative;width:100%}.blog.svelte-1ms5me2.svelte-1ms5me2,.blog.svelte-1ms5me2.svelte-1ms5me2:before{transition:var(--transition)}.blog.svelte-1ms5me2.svelte-1ms5me2:before{animation:rainbowTextAni 2s linear infinite alternate;background-size:contain;background:-webkit-linear-gradient(92deg,#95d7e3,#eb76ff);content:"";height:100%;opacity:0;position:absolute;right:0;top:0;width:var(--space-m);z-index:2}.blog.svelte-1ms5me2.svelte-1ms5me2:hover:before{background-color:var(--primary-500);opacity:1}.blog.svelte-1ms5me2.svelte-1ms5me2:hover{border:1px solid var(--primary-500);box-shadow:var(--box-shadow-hover)}.blog.svelte-1ms5me2:hover .blog__title.svelte-1ms5me2{color:var(--primary-500)}.blog.svelte-1ms5me2:hover .blog__date.svelte-1ms5me2{color:var(--text-color-low)}.blog__title.svelte-1ms5me2.svelte-1ms5me2{-webkit-line-clamp:2;-webkit-box-orient:vertical;color:var(--text-color);display:-webkit-box;font-weight:500;overflow:hidden;text-overflow:ellipsis;z-index:3}.blog__date.svelte-1ms5me2.svelte-1ms5me2{align-items:center;color:var(--text-color-low);display:flex;flex-direction:row;font-weight:400;justify-content:left;z-index:3}',
+  code: '.blog.svelte-1v3djdi.svelte-1v3djdi{background-color:var(--bg-400);border:1px solid transparent;border-radius:var(--border-radius);box-shadow:var(--box-shadow-1);display:flex;flex-direction:column;height:120px;overflow:hidden;padding:var(--space-s);position:relative;width:100%}.blog.svelte-1v3djdi.svelte-1v3djdi,.blog.svelte-1v3djdi.svelte-1v3djdi:before{transition:var(--transition)}.blog.svelte-1v3djdi.svelte-1v3djdi:before{animation:rainbowTextAni 2s linear infinite alternate;background-size:contain;background:-webkit-linear-gradient(92deg,#95d7e3,#eb76ff);content:"";height:100%;opacity:0;position:absolute;right:0;top:0;width:var(--space-m)}.blog.svelte-1v3djdi.svelte-1v3djdi:hover:before{background-color:var(--primary-500);opacity:1}.blog.svelte-1v3djdi.svelte-1v3djdi:hover{border:1px solid var(--primary-500)}.blog.svelte-1v3djdi:hover .blog__title.svelte-1v3djdi{color:var(--primary-500)}.blog.svelte-1v3djdi:hover .blog__date.svelte-1v3djdi{color:var(--text-color-low)}.blog__title.svelte-1v3djdi.svelte-1v3djdi{-webkit-line-clamp:2;-webkit-box-orient:vertical;color:var(--text-color);display:-webkit-box;font-weight:500;overflow:hidden;text-overflow:ellipsis}.blog__date.svelte-1v3djdi.svelte-1v3djdi{align-items:center;color:var(--text-color-low);display:flex;flex-direction:row;font-weight:400;justify-content:left}',
   map: null
 };
 const BlogCard = create_ssr_component(($$result, $$props, $$bindings, slots) => {
@@ -26,8 +26,8 @@ const BlogCard = create_ssr_component(($$result, $$props, $$bindings, slots) => 
   if ($$props.blogDate === void 0 && $$bindings.blogDate && blogDate !== void 0)
     $$bindings.blogDate(blogDate);
   $$result.css.add(css);
-  return `<a${add_attribute("href", blogLink, 0)} class="${"blog svelte-1ms5me2"}"><div class="${"blog__date xs-text svelte-1ms5me2"}">${validate_component(Time, "Time").$$render($$result, { timestamp: blogDate }, {}, {})}</div>
-	<div class="${"blog__title base-text svelte-1ms5me2"}">${escape(blogTitle)}</div>
+  return `<a${add_attribute("href", blogLink, 0)} class="${"blog svelte-1v3djdi"}"><div class="${"blog__date xs-text svelte-1v3djdi"}">${validate_component(Time, "Time").$$render($$result, { timestamp: blogDate }, {}, {})}</div>
+	<div class="${"blog__title base-text svelte-1v3djdi"}">${escape(blogTitle)}</div>
 </a>`;
 });
 export {

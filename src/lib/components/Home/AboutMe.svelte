@@ -22,13 +22,9 @@
 					<div class="block">
 						<div class="block__title base-text">Thought Process</div>
 						<div class="block__text small-text">
-							Every project is different and has its own set of challenges, but that's okay! Instead
-							of starting from scratch, I follow industry guidelines and use proven UX frameworks to
-							guide me. This usually starts with a discovery phase where I try to understand the
-							problem, and then I move on to prototyping and testing my ideas with users. It's also
-							important to work with stakeholders throughout the process. By following these steps,
-							I've always been able to come up with innovative solutions and achieve successful
-							outcomes.
+							I use industry guidelines and proven UX frameworks to tackle unique project
+							challenges. The process includes discovery, prototyping, and user testing while
+							collaborating with stakeholders to achieve successful outcomes.
 						</div>
 					</div>
 				</div>

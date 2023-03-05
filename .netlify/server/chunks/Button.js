@@ -1,7 +1,7 @@
 import { c as create_ssr_component, h as escape, d as add_attribute } from "./index3.js";
 const Button_svelte_svelte_type_style_lang = "";
 const css = {
-  code: ".btn.svelte-txu3vt{align-items:center;-webkit-appearance:none;-moz-appearance:none;appearance:none;border:1px solid transparent;border-radius:var(--border-radius);cursor:pointer;display:flex;font-size:var(--font-size-small);font-weight:600;justify-content:center;line-height:normal;overflow:hidden;padding:1rem 2rem;position:relative;transition:var(--transition);width:100%}.btn.svelte-txu3vt:hover{filter:brightness(120%)}",
+  code: ".btn.svelte-1fu8gpy{align-items:center;-webkit-appearance:none;-moz-appearance:none;appearance:none;border:1px solid transparent;border-radius:var(--border-radius-light);cursor:pointer;display:flex;font-size:var(--font-size-small);font-weight:600;justify-content:center;line-height:normal;max-width:640px;outline-color:transparent;padding:1rem 2rem;transition:var(--transition);white-space:nowrap;width:100%}.btn.svelte-1fu8gpy:hover{box-shadow:0 0 5px var(--text-color);filter:brightness(1.2)}",
   map: null
 };
 const Button = create_ssr_component(($$result, $$props, $$bindings, slots) => {
@@ -25,7 +25,7 @@ const Button = create_ssr_component(($$result, $$props, $$bindings, slots) => {
   if ($$props.border === void 0 && $$bindings.border && border !== void 0)
     $$bindings.border(border);
   $$result.css.add(css);
-  return `<button class="${"btn svelte-txu3vt"}" style="${"background-color: " + escape(backgroundColor, true) + "; border: " + escape(border, true) + "; color: " + escape(labelColor, true) + ";width: " + escape(width, true)}"${add_attribute("type", type, 0)}${add_attribute("this", btnEle, 0)}>${slots.default ? slots.default({}) : ``}
+  return `<button class="${"btn svelte-1fu8gpy"}" style="${"background-color: " + escape(backgroundColor, true) + "; border: " + escape(border, true) + "; color: " + escape(labelColor, true) + ";width: " + escape(width, true)}"${add_attribute("type", type, 0)}${add_attribute("this", btnEle, 0)}>${slots.default ? slots.default({}) : ``}
 	${escape(label)}
 </button>`;
 });

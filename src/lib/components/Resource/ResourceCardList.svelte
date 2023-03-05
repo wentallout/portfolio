@@ -25,11 +25,6 @@
 		desc="Create online forms, get an email for each response, collect data." />
 
 	<ResourceCard
-		href="https://minetime.ai"
-		name="MineTime"
-		desc="A free calendar app with smart scheduling and time analytics features." />
-
-	<ResourceCard
 		href="https://www.surveymonkey.com"
 		name="Survey Monkey"
 		desc="Online survey tool to capture the voices and opinions of the people who matter most to you." />

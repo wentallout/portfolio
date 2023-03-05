@@ -33,15 +33,14 @@
 		width: 100%;
 		max-width: 100vw;
 
-		font-weight: 600;
+		font-weight: 400;
 		font-size: var(--font-size-small);
 		line-height: normal;
 		position: relative;
 	}
 
 	.marquee {
-		--gap: 0.5rem;
-
+		--gap: var(--space-3xl);
 		position: relative;
 		display: flex;
 		overflow: hidden;
@@ -53,9 +52,7 @@
 	}
 
 	.marquee__content {
-		--gap: 0.5rem;
 		flex-shrink: 0;
-
 		display: flex;
 		justify-content: space-around;
 		gap: var(--gap);

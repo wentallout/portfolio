@@ -5,9 +5,7 @@ const metadata = {
   "categories": ["tips"]
 };
 const Fluency = create_ssr_component(($$result, $$props, $$bindings, slots) => {
-  return `<nav class="${"toc"}"><ol class="${"toc-level toc-level-1"}"><li class="${"toc-item toc-item-h2"}"><a class="${"toc-link toc-link-h2"}" href="${"#video"}">Video</a></li><li class="${"toc-item toc-item-h2"}"><a class="${"toc-link toc-link-h2"}" href="${"#verbal-fluency"}">Verbal fluency</a></li><li class="${"toc-item toc-item-h2"}"><a class="${"toc-link toc-link-h2"}" href="${"#3-steps-to-sounding-smart"}">3 steps to sounding smart</a></li><li class="${"toc-item toc-item-h2"}"><a class="${"toc-link toc-link-h2"}" href="${"#fas-test-for-verbal-fluency"}">FAS Test for verbal fluency</a></li><li class="${"toc-item toc-item-h2"}"><a class="${"toc-link toc-link-h2"}" href="${"#how-to-increase-verbal-fluency"}">How to increase verbal fluency</a></li></ol></nav>
-
-<h2 id="${"video"}"><a href="${"#video"}">Video</a></h2>
+  return `<h2 id="${"video"}"><a href="${"#video"}">Video</a></h2>
 <p><a href="${"https://www.youtube.com/watch?v=slivVd9hQlU"}" rel="${"nofollow noopener noreferrer external"}" target="${"_blank"}">https://www.youtube.com/watch?v=slivVd9hQlU</a></p>
 <h2 id="${"verbal-fluency"}"><a href="${"#verbal-fluency"}">Verbal fluency</a></h2>
 <p>Fluency: How fast you can access it to express information.</p>
