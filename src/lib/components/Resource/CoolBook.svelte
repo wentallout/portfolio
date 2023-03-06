@@ -1,14 +1,13 @@
 <script>
-	export let bookUrl = '';
 	export let alt = '';
 	export let imgUrl = '';
 </script>
 
-<a class="book-container" href={bookUrl} target="_blank" rel="noreferrer noopener">
+<div class="book-container" target="_blank" rel="noreferrer noopener">
 	<div class="book">
 		<img loading="lazy" decoding="async" {alt} src={imgUrl} />
 	</div>
-</a>
+</div>
 
 <style>
 	.book-container {

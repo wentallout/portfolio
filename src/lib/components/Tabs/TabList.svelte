@@ -8,9 +8,8 @@
 
 		margin-bottom: var(--space-xl);
 		display: flex;
-		justify-content: space-between;
+		justify-content: flex-start;
 		align-items: center;
 		flex-wrap: wrap;
-		
 	}
 </style>

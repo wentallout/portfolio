@@ -32,7 +32,7 @@
 <svelte:window bind:scrollY />
 
 <VanishingHeader duration="350ms" offset={50} tolerance={5}>
-	<header bind:this={headerEle}>
+	<header class="header" bind:this={headerEle}>
 		<nav class="nav" class:nav-scrolldown={scrollY > 0}>
 			<ul class="nav-list">
 				{#each navItems as navItem}
@@ -76,16 +76,16 @@
 	}
 
 	.nav-list__item {
-		transition: var(--transition);
+		transition: 0.3s;
 	}
 
-	.nav-list:hover .nav-list__item:not(:hover) {
-		opacity: 0.6;
+	/* .nav-list:hover .nav-list__item:not(:hover) {
+		opacity: 0.8;
 	}
 
 	.overlay-content:hover .overlay-item:not(:hover) {
-		opacity: 0.6;
-	}
+		opacity: 0.8;
+	} */
 
 	.nav {
 		width: 100%;

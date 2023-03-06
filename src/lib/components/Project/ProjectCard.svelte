@@ -65,7 +65,7 @@
 
 		flex-direction: column;
 
-		padding: var(--space-m) var(--space-l);
+		padding: var(--space-m) var(--space-xl);
 		gap: var(--space-m);
 		color: var(--text-color-low);
 	}
@@ -75,7 +75,7 @@
 	}
 
 	.name {
-		color: var(--primary-500);
+		color: var(--text-color);
 		font-weight: 600;
 	}
 

@@ -33,7 +33,7 @@
 
 <div class="books">
 	{#each books as book}
-		<CoolBook imgUrl={book.imgUrl} alt={book.name} bookUrl={book.bookUrl} />
+		<CoolBook imgUrl={book.imgUrl} alt={book.name} />
 	{/each}
 </div>
 
@@ -41,14 +41,13 @@
 	.books {
 		width: 100%;
 		display: flex;
-
 		flex-direction: row;
 		flex-wrap: wrap;
 	}
 
 	@media (min-width: 768px) {
 		.books {
-			gap: var(--space-xl);
+			gap: var(--space-m);
 		}
 	}
 </style>

@@ -21,7 +21,7 @@
 	<SectionTitle sectionTitle="Book" let:sectionIcon>
 		<Books {...sectionIcon} />
 	</SectionTitle>
-	<SectionDesc text="Knowledge should be free so I'm sharing it." />
+	<SectionDesc text="Here are some of my favorite books" />
 
 	<BookGallery />
 </section>

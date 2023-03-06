@@ -93,5 +93,6 @@
 		width: 100%;
 		object-fit: cover;
 		filter: brightness(50%);
+		transition: var(--transition);
 	}
 </style>
