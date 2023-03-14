@@ -108,7 +108,7 @@ The **Design Thinking** method is a practical way to solve complex problems by f
 
 There are 5 phases to go through: **Empathize, Define, Ideate, Prototype, Test**.
 
-### phase 1 - empathize
+### Phase 1 - empathize
 
 In the first phase, I need to understand what my potential users want to identify issues. The goal is that I can answer the challenges they face.
 
@@ -165,9 +165,9 @@ Search Flow:
 
 <Image src={searchFlow} alt="searchFlow"  />
 
-#### low fidelity wireframe
+#### Low Fidelity wireframe
 
-We quickly made some simple lofi screens for the main features we agreed on. It's highly possible that we will make wrong logical decisions in this phase so we need to get feedbacks and tweak the wireframe before phase 4.
+We made lofi screens for the main features we agreed on. It's highly possible that we will make wrong logical decisions in this phase so we need to get feedbacks and tweak the wireframe before phase 4.
 
 <Image src={lofi} alt="low fidelity wireframe" />
 

@@ -30,6 +30,7 @@
 		z-index: 0;
 		filter: brightness(40%);
 		transition: var(--transition);
+		object-fit: cover;
 	}
 
 	.other {

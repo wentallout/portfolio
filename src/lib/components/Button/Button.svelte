@@ -82,4 +82,8 @@
 		filter: brightness(1.2);
 		box-shadow: 0 0 5px var(--text-color);
 	}
+
+	.btn:focus-visible {
+		outline: 4px dashed var(--primary-500);
+	}
 </style>

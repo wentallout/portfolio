@@ -45,7 +45,6 @@
 	margin-bottom: var(--space-s);
 	/* --- */
 	padding: var(--space-3xs);
-
 	padding-left: var(--space-xs);
 
 	/* FONT */
@@ -60,6 +59,8 @@
 	display: flex;
 	flex-direction: row;
 	align-items: center;
+
+	border-radius: var(--border-radius-light);
 }
 
 .markdown h2:after {
@@ -132,7 +133,7 @@
 
 .markdown img {
 	margin-bottom: var(--space-s);
-	border-radius: var(--border-radius);
+	border-radius: var(--border-radius-light);
 }
 
 .markdown li:not(.toc li) {
@@ -229,8 +230,10 @@ aside.toc > nav > ul > li:before {
 }
 
 .markdown img {
-	width: 100%;
+	max-width: 100%;
 	height: auto;
+	margin-left: auto;
+	margin-right: auto;
 }
 
 aside.toc.desktop {

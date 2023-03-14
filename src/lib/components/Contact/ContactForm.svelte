@@ -1,4 +1,6 @@
 <script>
+	import TextArea from './../Input/TextArea.svelte';
+	import TextInput from '$lib/components/Input/TextInput.svelte';
 	import EnvelopeSimple from '~icons/ph/envelope-simple';
 	import Button from '$lib/components/Button/Button.svelte';
 	import PaperPlaneRight from '~icons/ph/paper-plane-right';
@@ -19,20 +21,11 @@
 			data-netlify="true">
 			<input type="hidden" name="form-name" value="contact" />
 
-			<label for="name" class="label small-text">Name</label>
-			<input class="small-text" type="text" name="name" id="name" required />
+			<TextInput type="text" label="Name" />
 
-			<label for="email" class="label small-text">Email</label>
-			<input
-				placeholder="username@email.com"
-				class="small-text"
-				type="email"
-				name="email"
-				id="email"
-				required />
+			<TextInput type="email" label="Email" />
 
-			<label for="message" class="label small-text">Message</label>
-			<textarea class="small-text" required name="message" id="message" placeholder="" />
+			<TextArea label="Message" placeholder="Something you want to tell me. Ex: jobs, ideas" />
 
 			<div class="contact__btn">
 				<Button label="Send" backgroundColor="var(--primary-500)">
@@ -64,11 +57,6 @@
 		flex-direction: column;
 	}
 
-	.label {
-		font-weight: 500;
-		margin-bottom: var(--space-3xs);
-	}
-
 	.contact__btn {
 		width: 100%;
 		margin-top: var(--space-m);
@@ -80,9 +68,5 @@
 		grid-gap: var(--gap);
 
 		grid-template-columns: repeat(auto-fit, minmax(min(100%, var(--min)), 1fr));
-	}
-
-	input {
-		margin-bottom: var(--space-m);
 	}
 </style>

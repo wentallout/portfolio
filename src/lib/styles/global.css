@@ -238,43 +238,16 @@ a:active {
 	color: inherit;
 }
 
-/* ---INPUT--- */
-input[type='text'],
-input[type='email'],
-textarea {
-	font-family: inherit;
-	padding: var(--space-xs) var(--space-xs);
-	color: var(--text-color) !important;
-	margin-bottom: var(--space-s);
-	background-color: var(--bg-400);
-	height: 3.5rem;
-	border: 0;
-	border-radius: var(--border-radius-light);
-	transition: var(--transition);
-}
-
-input:focus,
-textarea:focus {
-	outline: 1px solid var(--primary-500);
-}
-
-textarea {
-	height: 7rem;
-}
-
-/* ------ */
-
 img {
 	display: block;
 	/* RESPONSIVE */
-	object-fit: cover;
+	object-fit: contain;
+
+	max-width: 100%;
 	height: auto;
-	/* --- */
-	position: relative;
+
 	/* DARK MODE */
 	filter: brightness(0.8) contrast(1.2);
-	max-width: 100%;
-	/* --- */
 }
 
 address {

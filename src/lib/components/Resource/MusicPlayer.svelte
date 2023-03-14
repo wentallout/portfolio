@@ -7,19 +7,22 @@
 	import SkipForward from '~icons/ph/skip-forward';
 	import Pause from '~icons/ph/pause';
 	import SpeakerHigh from '~icons/ph/speaker-high';
+	import SpeakerX from '~icons/ph/speaker-x';
 
 	let currentSongIndex = 0;
 	let playing = false;
-
-	// audioEle
 	let duration;
 	let currentTime;
 	let volume = 0.4;
-
-	//
 	let audioEle;
 	let volumeEle;
 	let positionEle;
+	let muted;
+	let muteIcon;
+
+	function mute() {
+		muted = !muted;
+	}
 
 	function playMusic() {
 		playing = true;
@@ -35,7 +38,9 @@
 		if (isNaN(seconds)) return '...';
 
 		const minutes = Math.floor(seconds / 60);
+
 		seconds = Math.floor(seconds % 60);
+
 		if (seconds < 10) seconds = '0' + seconds;
 
 		return `${minutes}:${seconds}`;
@@ -74,6 +79,7 @@
 
 <div class="player">
 	<audio
+		bind:muted
 		bind:currentTime
 		bind:duration
 		bind:volume
@@ -90,6 +96,32 @@
 					<div class="current-time xl-text">{format(currentTime)}</div>
 					<div class="duration xl-text">{format(duration)}</div>
 				</div>
+			</div>
+		</div>
+		<div class="position">
+			<input
+				bind:this={positionEle}
+				class="position__input"
+				type="range"
+				value={(currentTime / duration) * 100 || 0} />
+		</div>
+
+		<div class="volume-and-control">
+			<div class="volume">
+				<button class="mute__btn" on:click={mute} on:keydown={mute}>
+					{#if muted}
+						<SpeakerX width="24" height="24" color="var(--text-color-low)" />
+					{:else}
+						<SpeakerHigh width="24" height="24" color="var(--text-color)" />
+					{/if}
+				</button>
+				<input
+					bind:this={volumeEle}
+					type="range"
+					id="volume-control"
+					min="0"
+					max="100"
+					value={volume * 100} />
 			</div>
 			<div class="controls">
 				<button class="mp-btn mp-btn-small" on:click={prev}>
@@ -110,24 +142,6 @@
 					<SkipForward width="24" height="24" color="var(--text-color)" />
 				</button>
 			</div>
-			<div class="volume">
-				<SpeakerHigh width="24" height="24" color="var(--text-color)" />
-				<input
-					bind:this={volumeEle}
-					type="range"
-					id="volume-control"
-					min="0"
-					max="100"
-					value={volume * 100} />
-			</div>
-		</div>
-
-		<div class="position">
-			<input
-				bind:this={positionEle}
-				class="position__input"
-				type="range"
-				value={(currentTime / duration) * 100 || 0} />
 		</div>
 
 		<div class="song-list">
@@ -150,6 +164,21 @@
 </div>
 
 <style>
+	.volume-and-control {
+		position: relative;
+		display: flex;
+		flex-direction: row;
+		width: 100%;
+		justify-content: center;
+		align-items: center;
+		flex-wrap: wrap;
+	}
+
+	.mute__btn {
+		all: unset;
+		cursor: pointer;
+	}
+
 	.position {
 		display: flex;
 		flex-direction: row;
@@ -163,8 +192,9 @@
 	}
 
 	.volume {
+		position: absolute;
+		left: var(--space-l);
 		display: flex;
-
 		align-items: center;
 		gap: var(--space-s);
 	}

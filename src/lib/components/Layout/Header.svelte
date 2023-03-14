@@ -177,7 +177,7 @@
 
 	.overlay-content {
 		position: relative;
-		top: 60px;
+		top: var(--scroll-padding);
 
 		display: flex;
 		flex-direction: column;
@@ -205,11 +205,12 @@
 		padding-right: var(--page-padding);
 		transition: var(--transition);
 		outline: 1px solid transparent;
-		font-weight: 600;
+		font-weight: 500;
 	}
 
 	.overlay-item:hover,
 	.overlay-item:focus {
+		font-weight: 600;
 		background: var(--black);
 	}
 
