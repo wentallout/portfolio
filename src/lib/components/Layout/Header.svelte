@@ -33,7 +33,7 @@
 
 <VanishingHeader duration="350ms" offset={50} tolerance={5}>
 	<header class="header" bind:this={headerEle}>
-		<nav class="nav" class:nav-scrolldown={scrollY > 0}>
+		<nav aria-label="primary menu" class="nav" class:nav-scrolldown={scrollY > 0}>
 			<ul class="nav-list">
 				{#each navItems as navItem}
 					<li class:active-page={$page.url.pathname === `${navItem.path}`} class="nav-list__item">
@@ -73,6 +73,10 @@
 <style>
 	.active-page {
 		color: var(--primary-500) !important;
+	}
+
+	.overlay .active-page::before {
+		content: '▶';
 	}
 
 	.nav-list__item:hover {

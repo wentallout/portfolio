@@ -1,4 +1,5 @@
 <script>
+	import ExLink from '$lib/components/Common/ExLink.svelte';
 	import Marquee from '$lib/components/Common/Marquee.svelte';
 	import SocialButtons from '$lib/components/Contact/SocialButtons.svelte';
 	import { navItems } from '$lib/config.js';
@@ -7,17 +8,36 @@
 <Marquee />
 <footer>
 	<div class="footer-container small-text">
-		<ul class="nav-list">
-			{#each navItems as navItem}
-				<li class="nav-list-item">
-					<a href={navItem.path}>{navItem.title}</a>
-				</li>
-			{/each}
-		</ul>
+		<div class="list-container">
+			<div class="list">
+				<div class="list__title">Browse</div>
+				<ul class="nav-list">
+					{#each navItems as navItem}
+						<li class="nav-list-item">
+							<a href={navItem.path}>{navItem.title}</a>
+						</li>
+					{/each}
+				</ul>
+			</div>
+			<div class="list">
+				<div class="list__title">Contact</div>
+				<ul class="nav-list">
+					<li class="nav-list-item">
+						<div>Ho Chi Minh City, Vietnam</div>
+					</li>
+					<li class="nav-list-item focus">
+						<ExLink href="mailto:wentallout@gmail.com">wentallout@gmail.com</ExLink>
+					</li>
+					<li class="nav-list-item focus">
+						<ExLink href="tel:+84929066331">+84 929 066 331</ExLink>
+					</li>
+				</ul>
+			</div>
+		</div>
 
 		<SocialButtons />
 
-		<div class="other-info small-text">Copyright © 2022-2023 - All Rights Reserved.</div>
+		<div class="other-info small-text">Copyright © 2023</div>
 		<div class="secret small-text">
 			I declare war on anybody standing in the way of what I dream for.
 		</div>
@@ -25,6 +45,28 @@
 </footer>
 
 <style>
+	.focus {
+		color: var(--accent-500);
+	}
+
+	.list-container {
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+		flex-wrap: wrap;
+	}
+
+	.list {
+		display: flex;
+		flex-direction: column;
+		gap: var(--space-m);
+	}
+
+	.list__title {
+		font-family: 'Fancy';
+		font-size: var(--font-size-base);
+	}
+
 	.other-info {
 		user-select: none;
 		margin-top: var(--space-s);
@@ -99,13 +141,13 @@
 
 	.nav-list {
 		display: flex;
-		flex-direction: row;
+		flex-direction: column;
 		justify-content: left;
-		align-items: center;
+		align-items: flex-start;
 		margin: 0;
-
 		margin-bottom: var(--space-l);
 		flex-wrap: wrap;
+		gap: var(--space-2xs);
 	}
 
 	.nav-list-item {
@@ -115,8 +157,9 @@
 	}
 
 	.nav-list-item a {
-		font-weight: 500;
+		font-weight: 400;
 		transition: 0.3s;
+		color: var(--text-color-low);
 	}
 
 	.nav-list-item a:hover {

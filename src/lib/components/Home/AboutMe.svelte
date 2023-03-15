@@ -24,7 +24,8 @@
 						<div class="block__text small-text">
 							I use industry guidelines and proven UX frameworks to tackle unique project
 							challenges. The process includes discovery, prototyping, and user testing while
-							collaborating with stakeholders to achieve successful outcomes.
+							collaborating with stakeholders to achieve successful outcomes. Removing unnecessary
+							steps in user flows is also important.
 						</div>
 					</div>
 				</div>
@@ -64,6 +65,7 @@
 
 	.block__text {
 		font-weight: 400;
+
 		color: var(--text-color-low);
 	}
 

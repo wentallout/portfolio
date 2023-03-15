@@ -39,8 +39,9 @@
 </section>
 
 <style>
-	/* .intro-container {
-	} */
+	.intro-container {
+		user-select: none;
+	}
 
 	.bar__name {
 		display: flex;
@@ -52,7 +53,6 @@
 	}
 
 	.bar__button {
-		border: 1px solid var(--black);
 		height: 100%;
 		aspect-ratio: 1/1;
 		position: absolute;
@@ -81,6 +81,9 @@
 		padding: var(--space-2xs);
 		background-color: var(--primary-500);
 		color: var(--bg-500);
+		border-top-left-radius: var(--border-radius-light);
+		border-top-right-radius: var(--border-radius-light);
+		overflow: hidden;
 	}
 
 	.intro {
@@ -95,7 +98,7 @@
 
 	.intro__block {
 		display: flex;
-		padding: var(--space-s) var(--space-xl);
+		padding: var(--space-m) var(--space-xl);
 		flex-direction: column;
 		position: relative;
 	}
@@ -116,13 +119,9 @@
 	}
 
 	.other {
-		opacity: 0;
 		color: var(--text-color-low);
 		max-width: var(--text-width);
 		transition: var(--transition);
 		margin-bottom: var(--space-s);
-	}
-	.intro:hover .other {
-		opacity: 1;
 	}
 </style>
