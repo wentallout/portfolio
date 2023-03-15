@@ -8,7 +8,7 @@
 </script>
 
 <section>
-	<SectionTitle sectionTitle="Email" let:sectionIcon>
+	<SectionTitle sectionTitle="Get in touch" let:sectionIcon>
 		<EnvelopeSimple {...sectionIcon} />
 	</SectionTitle>
 
@@ -21,9 +21,9 @@
 			data-netlify="true">
 			<input type="hidden" name="form-name" value="contact" />
 
-			<TextInput type="text" label="Name" />
+			<TextInput type="text" label="Name" placeholder="John Doe" />
 
-			<TextInput type="email" label="Email" />
+			<TextInput type="email" label="Email" placeholder="username@email.com" />
 
 			<TextArea label="Message" placeholder="Something you want to tell me. Ex: jobs, ideas" />
 

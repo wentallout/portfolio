@@ -20,7 +20,7 @@
 
 <style>
 	.project-name {
-		color: var(--text-color);
+		color: var(--primary-500);
 	}
 
 	.info {

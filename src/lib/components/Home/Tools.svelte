@@ -2,19 +2,33 @@
 	import SaosContainer from '$lib/components/Common/SaosContainer.svelte';
 	import SVG from '$lib/components/Common/SVG.svelte';
 	import HomeSectionTitle from '$lib/components/Home/HomeSectionTitle.svelte';
+	import Atropos from 'atropos/svelte';
+
 	import frontend from '$lib/assets/images/home/frontend.svg';
 	import navigation from '$lib/assets/images/home/navigation.svg';
-	import interactive from '$lib/assets/images/home/interactive.svg';
 	import graphicDesign from '$lib/assets/images/home/graphicDesign.svg';
-	import Atropos from 'atropos/svelte';
+	import process from '$lib/assets/images/home/process.svg';
 </script>
 
 <SaosContainer>
 	<section>
 		<div class="tool">
-			<HomeSectionTitle title="My tools" />
+			<HomeSectionTitle title="Tools" />
 
 			<div class="tool__block">
+				<Atropos rotateTouch="scroll-y">
+					<div class="block__section">
+						<div class="section__svg">
+							<SVG width="120" height="120" src={process} alt="process" />
+						</div>
+						<div class="section__text">
+							<h3 class="block__title base-text">UX Frameworks</h3>
+							<p class="block__text small-text">Design Thinking</p>
+							<p class="block__text small-text">Double Diamond</p>
+							<p class="block__text small-text">UX Honeycomb</p>
+						</div>
+					</div>
+				</Atropos>
 				<Atropos rotateTouch="scroll-y">
 					<div class="block__section">
 						<div class="section__svg">
@@ -39,20 +53,6 @@
 							<p class="block__text small-text">Illustrator</p>
 							<p class="block__text small-text">Photoshop</p>
 							<p class="block__text small-text">Canva</p>
-						</div>
-					</div>
-				</Atropos>
-
-				<Atropos rotateTouch="scroll-y">
-					<div class="block__section">
-						<div class="section__svg">
-							<SVG width="120" height="120" src={interactive} alt="interactive" />
-						</div>
-						<div class="section__text">
-							<h3 class="block__title base-text">Motion</h3>
-							<p class="block__text small-text">Lottie</p>
-							<p class="block__text small-text">Three.js</p>
-							<p class="block__text small-text">CSS Animations</p>
 						</div>
 					</div>
 				</Atropos>

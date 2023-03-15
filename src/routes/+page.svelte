@@ -1,8 +1,10 @@
 <script>
+	import Intro from '$lib/components/Home/Intro.svelte';
+	import GetInTouch from '$lib/components/Home/GetInTouch.svelte';
 	import FeaturedProject from '$lib/components/Home/Featured.svelte';
 	import Clients from '$lib/components/Home/MyClients.svelte';
 
-	import ToolUsed from '$lib/components/Home/MyTools.svelte';
+	import Tools from '$lib/components/Home/Tools.svelte';
 	import AboutMe from '$lib/components/Home/AboutMe.svelte';
 
 	// SEO
@@ -65,8 +67,9 @@
 </svelte:head> -->
 
 <SEO {...seoProps} />
+<Intro />
 <FeaturedProject />
-<Clients />
-
-<ToolUsed />
+<Tools />
 <AboutMe />
+<Clients />
+<GetInTouch />

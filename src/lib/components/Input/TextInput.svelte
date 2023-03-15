@@ -1,10 +1,11 @@
 <script>
 	export let label = 'label';
 	export let type = 'text';
+	export let placeholder = '';
 </script>
 
 <label for={label} class="label small-text">{label}</label>
-<input class="input small-text" {type} name={label} id={label} required />
+<input {placeholder} class="input small-text" {type} name={label} id={label} required />
 
 <style>
 	.label {

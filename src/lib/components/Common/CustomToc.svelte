@@ -7,7 +7,7 @@
 	breakpoint="992"
 	flashClickedHeadingsFor="0"
 	--toc-max-height="80vh"
-	--toc-font-size="var(--font-size-small)"
+	--toc-font-size="var(--font-size-s)"
 	--toc-padding="var(--space-m)"
 	--toc-li-border-radius="0"
 	--toc-li-hover-bg="transparent"
@@ -33,6 +33,10 @@
 </Toc>
 
 <style>
+	:global(.toc ::-webkit-scrollbar) {
+		width: 8px;
+	}
+
 	.toc-title {
 		display: flex;
 		align-items: center;

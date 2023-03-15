@@ -18,6 +18,7 @@
 	border-bottom: 2px solid var(--border-color);
 	border-right: 2px solid var(--border-color);
 	transition: background 0.3s;
+	width: 1px;
 }
 ::-webkit-scrollbar-thumb:hover {
 	background-color: var(--primary-300);
@@ -25,9 +26,7 @@
 ::-webkit-scrollbar-corner {
 	display: none;
 }
-::-webkit-resizer {
-	display: none;
-}
+
 /* ----------------------------------------------------------------------- */
 
 .rotate {
@@ -72,16 +71,6 @@
 	margin-right: 4px;
 }
 
-.btn .circle {
-	position: absolute;
-	background-color: var(--neutral-200);
-	width: 100px;
-	height: 100px;
-	border-radius: 50%;
-	transform: translate(-50%, -50%) scale(0);
-	animation: scale 0.5s ease-out;
-}
-
 @keyframes scale {
 	to {
 		transform: translate(-50%, -50%) scale(3);
@@ -93,9 +82,9 @@
 	height: 100%;
 }
 
-.atropos-shadow {
+/* .atropos-shadow {
 	background-color: transparent !important;
-}
+} */
 
 /* NAME */
 

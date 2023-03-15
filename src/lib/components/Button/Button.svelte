@@ -8,30 +8,11 @@
 	export let border = '';
 
 	let btnEle;
-
-	function handleButtonEffect(e) {
-		const x = e.pageX;
-		const y = e.pageY;
-
-		const buttonTop = e.target.offsetTop;
-		const buttonLeft = e.target.offsetLeft;
-
-		const xInside = x - buttonLeft;
-		const yInside = y - buttonTop;
-
-		const circle = window.document.createElement('span');
-		circle.classList.add('circle');
-		circle.style.top = yInside + 'px';
-		circle.style.left = xInside + 'px';
-		this.appendChild(circle);
-		setTimeout(() => circle.remove(), 500);
-	}
 </script>
 
 <button
 	class="btn"
 	style="background-color: {backgroundColor}; border: {border}; color: {labelColor};width: {width}"
-	on:click={handleButtonEffect}
 	bind:this={btnEle}
 	{type}>
 	<slot />

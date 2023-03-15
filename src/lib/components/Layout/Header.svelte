@@ -75,14 +75,17 @@
 		color: var(--primary-500) !important;
 	}
 
-	.nav-list__item {
-		transition: 0.3s;
+	.nav-list__item:hover {
+		font-weight: 600;
 	}
 
-	/* .nav-list:hover .nav-list__item:not(:hover) {
-		opacity: 0.8;
+	.nav-list:hover .nav-list__item:not(:hover) {
+		color: var(--text-color-low);
+		font-size: var(--font-size-small);
+		font-weight: 300;
 	}
 
+	/*
 	.overlay-content:hover .overlay-item:not(:hover) {
 		opacity: 0.8;
 	} */
