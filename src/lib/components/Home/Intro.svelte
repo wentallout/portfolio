@@ -1,4 +1,5 @@
 <script>
+	import Button from '$lib/components/Button/Button.svelte';
 	import Atropos from 'atropos/svelte';
 	import TerminalWindow from '~icons/ph/terminal-window';
 
@@ -11,21 +12,21 @@
 </script>
 
 <section bind:this={introEle} class="intro-container">
-	<Atropos rotateTouch="scroll-y" rotateXMax="2" rotateYMax="2">
+	<Atropos rotateTouch="scroll-y" rotateXMax="2" rotateYMax="2" activeOffset="10" highlight="false">
 		<div class="window-bar">
 			<div class="bar__name small-text">
-				<TerminalWindow width="24" height="24" color="var(--black)" /> cmd.exe
+				<TerminalWindow width="24" height="24" color="var(--text-color)" />vietnam/khoa.exe
 			</div>
 			<div class="bar__button" on:click={close} on:keydown={close}>
-				<X width="24" height="24" color="var(--black)" />
+				<X width="24" height="24" color="var(--text-color)" />
 			</div>
 		</div>
 		<div class="intro">
 			<div class="intro__block">
-				<div class="name xxl-text">
+				<div data-atropos-offset="2" class="name xxl-text">
 					Khoa is a <span class="focus">UI/UX Designer</span>
 				</div>
-				<div class="mission small-text">
+				<div data-atropos-offset="1" class="mission small-text">
 					Focused on creating useful and accessible products that have real value and improve
 					people's lives.
 				</div>
@@ -33,12 +34,25 @@
 					Former <span class="focus">backend developer</span>. Based in Ho Chi Minh City, Vietnam.
 				</div>
 				<div class="other small-text">Loves A.I and electronic music.</div>
+
+				<a class="intro__btn" href="/project">
+					<Button
+						label="View all case studies"
+						labelColor="var(--bg-500)"
+						backgroundColor="var(--primary-500)" />
+				</a>
 			</div>
 		</div>
 	</Atropos>
 </section>
 
 <style>
+	.intro__btn {
+		margin-top: var(--space-l);
+		display: flex;
+		width: 100%;
+	}
+
 	.intro-container {
 		user-select: none;
 	}
@@ -48,19 +62,27 @@
 		flex-direction: row;
 		justify-content: center;
 		align-items: center;
-		gap: 4px;
-		color: var(--black);
+		gap: 12px;
+		color: var(--text-color);
 	}
 
 	.bar__button {
+		/* SIZE */
 		height: 100%;
 		aspect-ratio: 1/1;
+		/* --- */
+
+		/* POSITION */
 		position: absolute;
 		top: 0;
 		right: 0;
+		/* --- */
+
+		/* FLEX */
 		display: flex;
 		justify-content: center;
 		align-items: center;
+		/* --- */
 	}
 
 	.bar__button:hover {
@@ -70,8 +92,7 @@
 
 	.window-bar {
 		position: relative;
-		border: 1px solid var(--primary-500);
-		border-bottom: 0;
+
 		width: 100%;
 		display: flex;
 		flex-direction: row;
@@ -79,21 +100,24 @@
 		justify-content: space-between;
 		align-items: center;
 		padding: var(--space-2xs);
-		background-color: var(--primary-500);
-		color: var(--bg-500);
+		background-color: var(--bg-300);
+		color: var(--text-color);
 		border-top-left-radius: var(--border-radius-light);
 		border-top-right-radius: var(--border-radius-light);
 		overflow: hidden;
+		border-bottom: 1px solid var(--text-color);
 	}
 
 	.intro {
-		border: 1px solid var(--primary-500);
 		display: flex;
+		flex-direction: column;
 		justify-content: center;
 		align-items: center;
-
-		background-color: var(--black);
+		background-color: var(--bg-400);
 		position: relative;
+
+		border-bottom-left-radius: var(--border-radius);
+		border-bottom-right-radius: var(--border-radius);
 	}
 
 	.intro__block {

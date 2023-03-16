@@ -37,9 +37,9 @@
 
 		<SocialButtons />
 
-		<div class="other-info small-text">Copyright © 2023</div>
-		<div class="secret small-text">
-			I declare war on anybody standing in the way of what I dream for.
+		<div class="other">
+			<div class="other-info small-text">Copyright © 2023</div>
+			<div class="other-info small-text">Privacy Policy</div>
 		</div>
 	</div>
 </footer>
@@ -52,7 +52,7 @@
 	.list-container {
 		display: flex;
 		flex-direction: row;
-		justify-content: space-between;
+		gap: var(--space-m);
 		flex-wrap: wrap;
 	}
 
@@ -73,15 +73,6 @@
 		color: var(--text-color-low);
 	}
 
-	.secret {
-		color: transparent;
-		transition: var(--transition);
-	}
-
-	.other-info:hover + .secret {
-		color: var(--primary-500);
-	}
-
 	footer {
 		/* Flex */
 		display: flex;
@@ -99,31 +90,15 @@
 
 		background-color: var(--bg-400);
 
+		--bg-value: 100px;
+
 		background-image: linear-gradient(135deg, var(--bg-500) 25%, transparent 25%),
 			linear-gradient(225deg, var(--bg-500) 25%, transparent 25%),
 			linear-gradient(45deg, var(--bg-500) 25%, transparent 25%),
-			linear-gradient(315deg, var(--bg-500) 25%, var(--bg-400) 25%);
-		background-position: 40px 0, 40px 0, 0 0, 0 0;
-		background-size: 40px 40px;
+			linear-gradient(315deg, var(--bg-500) 25%, var(--black) 25%);
+		background-position: var(--bg-value) 0, var(--bg-value) 0, 0 0, 0 0;
+		background-size: var(--bg-value) var(--bg-value);
 		background-repeat: repeat;
-	}
-
-	footer::after {
-		content: '';
-		position: absolute;
-		top: 0;
-		right: 0;
-		bottom: 0;
-		left: 0;
-		pointer-events: none;
-
-		background: linear-gradient(
-			0deg,
-			var(--page-bg) 0%,
-			rgba(18, 18, 18, 0.5) 12%,
-			rgba(18, 18, 18, 0.1) 30%,
-			rgba(18, 18, 18, 0) 40%
-		);
 	}
 
 	.footer-container {
@@ -131,6 +106,7 @@
 		flex-direction: column;
 		color: var(--text-color);
 		font-weight: 300;
+		width: 100%;
 	}
 
 	@media (min-width: 768px) {
@@ -168,5 +144,11 @@
 
 	footer {
 		position: relative;
+	}
+
+	.other {
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
 	}
 </style>

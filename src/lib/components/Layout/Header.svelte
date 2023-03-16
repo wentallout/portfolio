@@ -76,16 +76,15 @@
 	}
 
 	.overlay .active-page::before {
-		content: '▶';
+		content: '🡆';
 	}
 
 	.nav-list__item:hover {
 		font-weight: 600;
+		scale: 1.2;
 	}
 
 	.nav-list:hover .nav-list__item:not(:hover) {
-		color: var(--text-color-low);
-		font-size: var(--font-size-small);
 		font-weight: 300;
 	}
 
@@ -95,15 +94,13 @@
 	} */
 
 	.nav {
-		width: 100%;
-		display: flex;
-
 		/* FONT */
 		font-size: var(--font-size-base);
 		font-weight: 500;
 		color: var(--text-color);
-
 		/* --- */
+		width: 100%;
+		display: flex;
 
 		transition: var(--transition);
 	}
@@ -196,7 +193,7 @@
 	.overlay-item {
 		padding: var(--space-l) 0;
 
-		color: var(--neutral-200);
+		color: var(--text-color);
 
 		/* FLEX */
 		display: flex;

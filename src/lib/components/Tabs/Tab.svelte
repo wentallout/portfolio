@@ -20,7 +20,7 @@
 		border-bottom: 2px solid transparent;
 		border-radius: 0;
 		margin: 0;
-		color: var(--neutral-600);
+		color: var(--text-color-low);
 		padding: var(--space-2xs) var(--space-s);
 		transition: var(--transition);
 	}

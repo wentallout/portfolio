@@ -3,44 +3,49 @@
 	import FigmaLogo from '~icons/ph/figma-logo';
 	export let linkToDetail = '';
 
-	import Atropos from 'atropos/svelte';
 	export let projectName = '';
 
 	export let what = '';
-	export let who = '';
+
 	export let result = '';
 
 	export let thumbnail;
 </script>
 
-<Atropos rotateTouch="scroll-y" rotateXMax="5" rotateYMax="5">
-	<a href={linkToDetail} class="project">
-		<img class="project__thumbnail" src={thumbnail} alt="" />
+<a href={linkToDetail} class="project">
+	<img class="project__thumbnail" src={thumbnail} alt="" />
 
-		<div class="project__info">
-			<div class="name mid-text">{projectName}</div>
+	<div class="project__info">
+		<div class="name mid-text">{projectName}</div>
 
-			<div class="info">
-				<div class="info__section">
-					<div class="section__label">What</div>
-					<div class="setion__desc">{what}</div>
-				</div>
+		<div class="info">
+			<div class="info__section">
+				<div class="section__label">What</div>
+				<div class="section__desc">{what}</div>
+			</div>
 
-				<div class="info__section">
-					<div class="section__label">Who</div>
-					<div class="setion__desc">{who}</div>
-				</div>
+			<div class="info__section">
+				<div class="section__label">Output</div>
+				<div class="section__desc">{result}</div>
+			</div>
 
-				<div class="info__section">
-					<div class="section__label">Result</div>
-					<div class="setion__desc">{result}</div>
-				</div>
+			<div class="info__btn">
+				<a href={linkToDetail}>
+					<Button backgroundColor="var(--primary-500)" label="Read Case Study" />
+				</a>
 			</div>
 		</div>
-	</a>
-</Atropos>
+	</div>
+</a>
 
 <style>
+	.info__btn {
+		display: flex;
+		flex-direction: row;
+		gap: var(--space-s);
+		margin-top: auto;
+	}
+
 	.info {
 		display: flex;
 		flex-direction: column;
@@ -57,6 +62,10 @@
 		border: 1px solid transparent;
 		transition: var(--transition);
 		overflow: hidden;
+	}
+
+	.project:hover .name {
+		color: var(--primary-500);
 	}
 
 	.project__info {
@@ -83,6 +92,7 @@
 		height: 300px;
 		aspect-ratio: 1/1;
 		margin-bottom: auto;
+		object-fit: cover;
 		background-color: var(--bg-500);
 	}
 

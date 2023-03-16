@@ -1,18 +1,16 @@
 <script>
 	import SocialButtons from '$lib/components/Contact/SocialButtons.svelte';
-	import { onMount } from 'svelte';
-	import YinYang from '~icons/ph/yin-yang-fill';
 
-	let videoEle;
+	import YinYang from '~icons/ph/yin-yang-fill';
 </script>
 
 <div class="cover">
-	<video bind:this={videoEle} class="video" autoplay muted loop>
+	<video class="video" autoplay muted loop>
 		<source src="/videos/city.mp4" type="video/mp4" />
 	</video>
 
 	<a href="/" class="cover__logo">
-		<YinYang class="yinyang" width="72" height="72" color="var(--primary-500)" />
+		<YinYang class="yinyang" width="72" height="72" color="var(--text-color)" />
 	</a>
 
 	<div class="cover__btn">
@@ -22,7 +20,7 @@
 
 <style>
 	:global(.yinyang) {
-		filter: drop-shadow(0px 0px 10px var(--primary-500));
+		filter: drop-shadow(0px 0px 10px var(--text-color));
 		animation: rotate 3s linear infinite;
 	}
 

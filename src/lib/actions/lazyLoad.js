@@ -1,7 +1,7 @@
 let options = {
 	root: null,
-	rootMargin: '0px',
-	threshold: 0
+	rootMargin: '1000px',
+	threshold: 0.2
 };
 
 export const lazyLoad = (image, src) => {

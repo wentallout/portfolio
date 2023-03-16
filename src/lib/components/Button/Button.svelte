@@ -36,7 +36,6 @@
 
 		/* WIDTH */
 		width: 100%;
-		max-width: 640px;
 
 		/* FONT */
 		font-weight: 600;

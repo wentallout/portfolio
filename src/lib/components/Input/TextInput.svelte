@@ -14,14 +14,23 @@
 	}
 
 	.input {
-		font-family: inherit;
-		padding: var(--space-xs) var(--space-xs);
-		color: var(--text-color) !important;
-		margin-bottom: var(--space-s);
 		background-color: var(--bg-400);
+
+		/* FONT */
+		font-family: inherit;
+		color: var(--text-color) !important;
+		/* --- */
+
+		/* SPACING */
+		padding: var(--space-xs) var(--space-xs);
+		margin-bottom: var(--space-s);
+		/* --- */
+
 		height: 3.5rem;
 		border: 0;
 		border-radius: var(--border-radius-light);
+
+		/* OTHER */
 		transition: var(--transition);
 	}
 
