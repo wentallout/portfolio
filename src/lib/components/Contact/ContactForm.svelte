@@ -28,7 +28,7 @@
 			<TextArea label="Message" placeholder="Something you want to tell me. Ex: jobs, ideas" />
 
 			<div class="contact__btn">
-				<Button label="Send" backgroundColor="var(--primary-500)">
+				<Button label="Send message (I'll reply)" backgroundColor="var(--primary-500)">
 					<PaperPlaneRight class="icon-black" />
 				</Button>
 

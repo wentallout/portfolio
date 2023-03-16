@@ -27,8 +27,8 @@
 					Khoa is a <span class="focus">UI/UX Designer</span>
 				</div>
 				<div data-atropos-offset="1" class="mission small-text">
-					Focused on creating useful and accessible products that have real value and improve
-					people's lives.
+					My goal is to create practical and user-friendly products that bring real value and
+					enhance people's lives.
 				</div>
 				<div class="other small-text">
 					Former <span class="focus">backend developer</span>. Based in Ho Chi Minh City, Vietnam.

@@ -12,7 +12,7 @@
 
 <button
 	class="btn"
-	style="background-color: {backgroundColor}; border: {border}; color: {labelColor};width: {width}"
+	style="background-color: {backgroundColor}; border: {border}; color: {labelColor};width: {width}; --glow-color:{backgroundColor}"
 	bind:this={btnEle}
 	{type}>
 	<slot />
@@ -56,11 +56,13 @@
 
 		/* weird */
 		outline-color: transparent;
+
+		text-transform: capitalize;
 	}
 
 	.btn:hover {
 		filter: brightness(1.2);
-		box-shadow: 0 0 5px var(--text-color);
+		box-shadow: 0 0 5px var(--glow-color);
 	}
 
 	.btn:focus-visible {
