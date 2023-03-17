@@ -15,7 +15,7 @@
 		"ngrok": "ngrok http 4173"
 	},
 	"devDependencies": {
-		"@iconify-json/ph": "^1.1.4",
+		"@iconify-json/ph": "^1.1.5",
 		"@jsdevtools/rehype-toc": "^3.0.2",
 		"@playwright/test": "^1.31.2",
 		"@ronilaukkarinen/stylelint-a11y": "^1.2.7",
@@ -28,8 +28,7 @@
 		"@threlte/preprocess": "^0.0.2",
 		"@types/three": "^0.149.0",
 		"atropos": "^1.0.2",
-		"autoprefixer": "^10.4.13",
-		"circletype": "^2.3.0",
+		"autoprefixer": "^10.4.14",
 		"cssnano": "^5.1.15",
 		"eslint": "^8.35.0",
 		"eslint-config-prettier": "^8.6.0",
@@ -66,7 +65,7 @@
 		"sveltekit-embed": "^0.0.12",
 		"three": "^0.150.1",
 		"unplugin-icons": "^0.15.3",
-		"vite": "^4.1.4",
+		"vite": "^4.2.0",
 		"vite-imagetools": "^4.0.18"
 	},
 	"type": "module",

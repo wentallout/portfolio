@@ -1,5 +1,5 @@
 <script>
-	import TextArea from './../Input/TextArea.svelte';
+	import TextArea from '$lib/components/Input/TextArea.svelte';
 	import TextInput from '$lib/components/Input/TextInput.svelte';
 	import EnvelopeSimple from '~icons/ph/envelope-simple';
 	import Button from '$lib/components/Button/Button.svelte';
@@ -61,7 +61,7 @@
 		width: 100%;
 		margin-top: var(--space-m);
 
-		--min: 15ch;
+		--min: 20ch;
 		--gap: var(--space-s);
 
 		display: grid;

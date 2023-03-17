@@ -33,13 +33,19 @@
 		opacity: 0;
 		padding: 4px 8px;
 		font-size: var(--font-size-xs);
+
+		/* POSITION */
 		position: absolute;
 		left: 0;
 		bottom: 0;
+		/* --- */
+
 		background-color: rgba(0, 0, 0, 0.8);
 		width: fit-content;
 
+		/* OTHER */
 		transition: var(--transition);
+		/* --- */
 	}
 	.image-with-caption:hover .caption {
 		opacity: 1;

@@ -6,7 +6,7 @@
 <section>
 	<div class="featured">
 		<a href="/project">
-			<HomeSectionTitle title="Featured" extraClass="rainbow" />
+			<HomeSectionTitle title="Featured" />
 		</a>
 
 		<ProjectCardList />
