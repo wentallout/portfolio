@@ -47,45 +47,43 @@ html {
 	--bg-200: hsl(212, 27%, 12%);
 	--bg-300: hsl(212, 27%, 11%);
 	--bg-400: hsl(212, 27%, 10%);
-	--bg-500: #070b0d;
+	--bg-500: hsl(200, 30%, 4%);
 
 	--page-bg: var(--bg-500);
 	--page-padding: 20vw;
 
 	--text-width: 65ch;
 
-	/* Primary: Nacho Cheese */
-	--primary-100: hsl(60, 100%, 97%);
-	--primary-200: hsl(54, 100%, 86%);
-	--primary-300: hsl(51, 100%, 74%);
-	--primary-400: hsl(47, 100%, 62%);
-	--primary-500: #ffbb00;
-	--primary-600: hsl(41, 100%, 39%);
-	--primary-700: hsl(37, 100%, 29%);
-	--primary-800: hsl(34, 100%, 18%);
-	--primary-900: hsl(30, 100%, 7%);
+	--primary-100: #fffff2;
+	--primary-200: #fff8b9;
+	--primary-300: #fdea7f;
+	--primary-400: #fad445;
+	--primary-500: #f2b50c;
+	--primary-600: #bf8204;
+	--primary-700: #8c5701;
+	--primary-800: #593200;
+	--primary-900: #261300;
 
-	/* Accent: Bluetiful */
-	--accent-100: #f2f3ff;
-	--accent-200: #c5caff;
-	--accent-300: #96a5fb;
-	--accent-400: #6683f3;
-	--accent-500: #3664e3;
-	--accent-600: #164ab4;
-	--accent-700: #093885;
-	--accent-800: #042855;
-	--accent-900: #021426;
+	--accent-100: #f2f9ff;
+	--accent-200: #bde4fe;
+	--accent-300: #86d1fa;
+	--accent-400: #4ec0ef;
+	--accent-500: #1aacd9;
+	--accent-600: #0990ac;
+	--accent-700: #027180;
+	--accent-800: #004e53;
+	--accent-900: #002626;
 
 	/* Neutral */
-	--neutral-100: hsl(60, 25%, 98%);
-	--neutral-200: hsl(50, 17%, 93%);
-	--neutral-300: hsl(53, 14%, 87%);
-	--neutral-400: hsl(50, 13%, 82%);
-	--neutral-500: #c9c6bb;
-	--neutral-600: hsl(42, 6%, 61%);
-	--neutral-700: hsl(36, 4%, 45%);
-	--neutral-800: hsl(34, 5%, 30%);
-	--neutral-900: hsl(45, 6%, 14%);
+	--neutral-100: #fcfcfa;
+	--neutral-200: #ecece8;
+	--neutral-300: #dbdbd7;
+	--neutral-400: #cbcac6;
+	--neutral-500: #bab9b5;
+	--neutral-600: #95938e;
+	--neutral-700: #706e69;
+	--neutral-800: #4b4945;
+	--neutral-900: #262522;
 
 	--success: #55ed55;
 	--info: #07d9f9;

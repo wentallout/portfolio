@@ -15,7 +15,10 @@
 	<Atropos rotateTouch="scroll-y" rotateXMax="2" rotateYMax="2" activeOffset="10" highlight="false">
 		<div class="window-bar">
 			<div class="bar__name small-text">
-				<TerminalWindow width="24" height="24" color="var(--text-color)" />vietnam/khoa.exe
+				<TerminalWindow
+					width="24"
+					height="24"
+					color="var(--text-color)" />C:\windows\system32\khoa.exe
 			</div>
 			<div class="bar__button" on:click={close} on:keydown={close}>
 				<X width="24" height="24" color="var(--text-color)" />
