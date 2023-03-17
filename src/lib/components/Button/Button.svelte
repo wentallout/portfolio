@@ -1,6 +1,6 @@
 <script>
 	export let label = 'exampleLabel';
-	export let labelColor = 'var(--black)';
+	export let labelColor = 'var(--bg-500)';
 	export let backgroundColor = 'transparent';
 	export let width = '';
 

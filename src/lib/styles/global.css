@@ -29,7 +29,7 @@
 
 html {
 	scroll-padding: var(--scroll-padding, 60px);
-	scroll-behavior: smooth;
+	scroll-behavior: auto;
 }
 
 :root {
@@ -213,9 +213,6 @@ html {
 	font-family: var(--normal-font), 'fallback', sans-serif, -apple-system, BlinkMacSystemFont,
 		'Segoe UI', Roboto, Helvetica, Arial, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
 	font-weight: 400;
-
-	/* SCROLL SMOOTH */
-	/* scroll-behavior: smooth; */
 }
 
 body {
@@ -241,7 +238,6 @@ a:active {
 img {
 	display: block;
 	/* RESPONSIVE */
-	object-fit: contain;
 
 	max-width: 100%;
 	height: auto;

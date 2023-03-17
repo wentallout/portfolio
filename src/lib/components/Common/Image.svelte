@@ -1,24 +1,19 @@
 <script>
 	export let src = '';
-
+	export let alt = '';
 	export let width;
 	export let height;
+
 	export let loading = 'lazy';
+	export let decoding = 'async';
 
-	import { page } from '$app/stores';
-
-	// SEO
-	export let alt = 'alt';
-
-	import { lazyLoad } from '$lib/actions/lazyLoad';
 	import ExLink from '$lib/components/Common/ExLink.svelte';
 </script>
 
 <ExLink href={src} aria-label={alt}>
 	<div class="image-with-caption">
-		{#key page.path}
-			<img class="lazy-img" use:lazyLoad={src} {width} {height} {loading} decoding="async" {alt} />
-		{/key}
+		<img {src} {width} {height} {loading} {decoding} alt="Image of {alt}" />
+
 		<div class="caption">{alt}</div>
 	</div>
 </ExLink>
@@ -26,11 +21,7 @@
 <style>
 	img {
 		margin-bottom: 0;
-		transition: var(--transition);
-	}
-
-	.lazy-img {
-		opacity: 0;
+		transition: all 0.3s ease;
 	}
 
 	.image-with-caption {
