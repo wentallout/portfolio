@@ -163,3 +163,7 @@
 .svelte-lightbox-footer h2 {
 	font-size: var(--font-size-small);
 }
+
+.sidebar-content {
+	background-color: var(--primary-500) !important;
+}

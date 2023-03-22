@@ -4,35 +4,38 @@
 </script>
 
 <div class="error">
-	<img class="error__image" width="240" height="240" src="/images/error.gif" alt="" />
-	<h1 class="status xxxl-text">{$page.status} {$page.error.message}</h1>
-	<div class="error__detail">
-		<p class="message small-text">Oops! Something unexpected happened.</p>
-	</div>
-
 	<div>
-		<a rel="external" href="/">
-			<Button
-				label="Back to Home"
-				labelColor="var(--bg-500)"
-				backgroundColor="var(--primary-500)" />
-		</a>
+		<h1 class="status xxxl-text">{$page.status} {$page.error.message}</h1>
+		<div class="error__detail">
+			<p class="message small-text">Oops! Something unexpected happened.</p>
+		</div>
+
+		<div>
+			<a rel="external" href="/">
+				<Button
+					label="Take Me Home"
+					labelColor="var(--bg-500)"
+					backgroundColor="var(--primary-500)" />
+			</a>
+		</div>
 	</div>
+	<img class="error__image" src="/images/error.gif" alt="" />
 </div>
 
 <style>
 	.error {
 		display: flex;
-		flex-direction: column;
-		flex-wrap: nowrap;
+		flex-direction: row;
+		flex-wrap: wrap;
 		justify-content: center;
 		align-items: center;
 		padding: var(--space-l);
+		gap: var(--space-l);
 	}
 
 	.error__image {
-		width: 240px;
-		height: 240px;
+		width: 500px;
+		height: 500px;
 	}
 
 	.status {

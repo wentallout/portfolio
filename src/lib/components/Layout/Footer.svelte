@@ -3,6 +3,10 @@
 	import Marquee from '$lib/components/Common/Marquee.svelte';
 	import { navItems } from '$lib/config.js';
 	import YinYang from '~icons/ph/yin-yang-fill';
+
+	import LinkedinLogo from '~icons/ph/linkedin-logo';
+	import InstagramLogo from '~icons/ph/instagram-logo';
+	import GitHubLogo from '~icons/ph/github-logo';
 </script>
 
 <Marquee />
@@ -52,13 +56,20 @@
 				<div class="list__title">Social</div>
 				<ul class="nav-list">
 					<li class="nav-list__item">
-						<ExLink href="https://www.linkedin.com/in/wentallout">Linkedin</ExLink>
+						<ExLink href="https://www.linkedin.com/in/wentallout">
+							<LinkedinLogo width="24" height="24" />Linkedin</ExLink>
 					</li>
 					<li class="nav-list__item">
-						<ExLink href="https://www.instagram.com/wentallout/saved">Instagram</ExLink>
+						<ExLink href="https://www.instagram.com/wentallout/saved">
+							<InstagramLogo width="24" height="24" />
+							Instagram
+						</ExLink>
 					</li>
 					<li class="nav-list__item">
-						<ExLink href="https://github.com/wentallout">GitHub</ExLink>
+						<ExLink href="https://github.com/wentallout">
+							<GitHubLogo width="24" height="24" />
+							GitHub
+						</ExLink>
 					</li>
 				</ul>
 			</div>
@@ -168,6 +179,7 @@
 		font-weight: 400;
 		transition: 0.3s;
 		color: var(--text-color-low);
+		gap: var(--space-3xs);
 	}
 
 	.nav-list__item a:hover {

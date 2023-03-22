@@ -96,7 +96,6 @@
 .markdown p,
 .markdown li:not(.toc li) {
 	color: var(--text-color);
-
 	font-size: var(--font-size-small);
 	line-height: var(--line-height-small);
 	margin: 0;
@@ -104,8 +103,25 @@
 	max-width: var(--text-width);
 }
 
+.markdown ul {
+	border-left: 4px solid var(--text-color);
+}
+
 .markdown li:not(.toc li) {
 	margin-bottom: 0;
+	padding-left: 1ch;
+	list-style-position: inside;
+}
+
+.markdown li::marker {
+	content: counter(list-item) '. ';
+	color: var(--text-color);
+	font-size: inherit;
+	font-weight: 600;
+}
+
+.toc li::marker {
+	content: none;
 }
 
 .markdown
@@ -138,12 +154,6 @@
 
 .markdown li:not(.toc li) {
 	margin-bottom: var(--space-3xs);
-}
-
-.markdown li:before {
-	content: '◆';
-	color: var(--text-color);
-	margin-right: var(--space-3xs);
 }
 
 .task-list-item:before {
@@ -211,10 +221,6 @@ table td {
 table td:first-child {
 	font-weight: 600;
 }
-
-/* aside.toc > nav > ul > li {
-	text-transform: capitalize;
-} */
 
 aside.toc > nav > ul > li:before {
 	content: none;

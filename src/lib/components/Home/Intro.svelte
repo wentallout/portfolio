@@ -108,7 +108,6 @@
 		border-top-left-radius: var(--border-radius-light);
 		border-top-right-radius: var(--border-radius-light);
 		overflow: hidden;
-		border-bottom: 1px solid var(--text-color);
 	}
 
 	.intro {

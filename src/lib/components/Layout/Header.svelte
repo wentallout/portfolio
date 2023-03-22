@@ -75,10 +75,6 @@
 		color: var(--primary-500) !important;
 	}
 
-	.overlay .active-page::before {
-		content: '🡆';
-	}
-
 	.nav-list__item:hover {
 		font-weight: 600;
 		scale: 1.2;

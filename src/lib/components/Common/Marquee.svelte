@@ -4,26 +4,20 @@
 			<li>User-centered design</li>
 			<li>Usability</li>
 			<li>Information Architecture</li>
-			<li>Interaction Design</li>
-			<li>User Testing</li>
 			<li>Accessibility</li>
 			<li>Responsive Design</li>
 			<li>Visual design</li>
-			<li>Content strategy</li>
-			<li>Prototyping</li>
+			<li>Wireframe</li>
 		</ul>
 
 		<ul class="marquee__content" aria-hidden="true">
 			<li>User-centered design</li>
 			<li>Usability</li>
 			<li>Information Architecture</li>
-			<li>Interaction Design</li>
-			<li>User Testing</li>
 			<li>Accessibility</li>
 			<li>Responsive Design</li>
 			<li>Visual design</li>
-			<li>Content strategy</li>
-			<li>Prototyping</li>
+			<li>Wireframe</li>
 		</ul>
 	</div>
 </div>
