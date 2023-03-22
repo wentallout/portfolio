@@ -3,10 +3,11 @@
 	import Marquee from '$lib/components/Common/Marquee.svelte';
 	import { navItems } from '$lib/config.js';
 	import YinYang from '~icons/ph/yin-yang-fill';
-
+	import Envelope from '~icons/ph/envelope';
 	import LinkedinLogo from '~icons/ph/linkedin-logo';
 	import InstagramLogo from '~icons/ph/instagram-logo';
 	import GitHubLogo from '~icons/ph/github-logo';
+	import Phone from '~icons/ph/phone';
 </script>
 
 <Marquee />
@@ -16,16 +17,9 @@
 			<div class="list">
 				<div class="list__title">About me</div>
 				<ul class="nav-list">
-					<li class="nav_list__item">
-						<div>
-							<YinYang class="yinyang" width="40" height="40" color="var(--text-color)" />
-						</div>
-					</li>
 					<li class="nav-list__item">
-						<div>
-							A one-manned web design agency in Ho Chi Minh City, Vietnam that designs superb
-							affordable websites and apps for small businesses and non-profits alike.
-						</div>
+						A one-manned web design agency in Ho Chi Minh City, Vietnam that designs superb
+						affordable websites and apps for small businesses and non-profits alike.
 					</li>
 				</ul>
 			</div>
@@ -44,10 +38,14 @@
 				<div class="list__title">Contact</div>
 				<ul class="nav-list">
 					<li class="nav-list__item">
-						<ExLink href="mailto:wentallout@gmail.com">wentallout@gmail.com</ExLink>
+						<ExLink href="mailto:wentallout@gmail.com">
+							<Envelope width="24" height="24" />
+							wentallout@gmail.com</ExLink>
 					</li>
 					<li class="nav-list__item">
-						<ExLink href="tel:+84929066331">+84 929 066 331</ExLink>
+						<ExLink href="tel:+84929066331">
+							<Phone width="24" height="24" />
+							+84929066331</ExLink>
 					</li>
 				</ul>
 			</div>
