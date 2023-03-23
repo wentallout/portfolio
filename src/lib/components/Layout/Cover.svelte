@@ -15,9 +15,13 @@
 	</a>
 
 	<div class="cover__btn">
-		<a href="tel:+84929066331" class="">
-			<Phone />
-			+84 929 066 331</a>
+		<ExLink href="tel:+84929066331">
+			<div class="name base-text">
+				<Phone />
+				+84 929 066 331
+			</div>
+		</ExLink>
+
 		<ExLink href="mailto:wentallout@gmail.com">
 			<div class="name base-text">
 				<Envelope />
@@ -73,7 +77,6 @@
 
 	.cover__btn {
 		width: 100%;
-
 		position: absolute;
 		display: flex;
 		justify-content: center;
@@ -82,6 +85,9 @@
 		left: 0;
 		z-index: 2;
 		transition: var(--transition);
+		gap: var(--space-m);
+		flex-direction: row;
+		flex-wrap: wrap;
 	}
 
 	.cover::after {
