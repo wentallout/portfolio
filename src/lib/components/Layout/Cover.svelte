@@ -120,10 +120,9 @@
 	}
 
 	.name {
-		font-family: 'Normal';
 		user-select: none;
 
 		transition: var(--transition);
-		font-weight: 600;
+		font-weight: 400;
 	}
 </style>

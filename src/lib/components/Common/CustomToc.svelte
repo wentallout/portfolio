@@ -19,7 +19,7 @@
 	--toc-active-color="var(--primary-500)"
 	--toc-active-bg="transparent"
 	--toc-active-font-weight="600"
-	--activeHeadingScrollOffset="0"
+	--activeHeadingScrollOffset="var(--scroll-padding)"
 	--toc-desktop-sticky-top="var(--scroll-padding)"
 	--toc-mobile-bottom="100px"
 	--toc-mobile-btn-border-radius="100%"

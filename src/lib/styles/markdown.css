@@ -226,10 +226,6 @@ aside.toc > nav > ul > li:before {
 	content: none;
 }
 
-:where(h1, h2, h3, h4) {
-	scroll-margin-top: var(--scroll-padding);
-}
-
 :where(aside.toc > button) {
 	width: 40px;
 	height: 40px;
