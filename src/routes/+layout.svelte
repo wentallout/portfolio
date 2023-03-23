@@ -79,20 +79,6 @@
 		z-index: 1;
 	}
 
-	.main-content:before {
-		content: '';
-		position: absolute;
-		top: 0;
-		left: 0;
-		width: 100%;
-		height: 100%;
-		background: url('/images/bg_decor_flower_l.png'), url('/images/bg_decor_flower_r.png');
-		z-index: -1;
-		background-position: top var(--space-3xl) left 0, top var(--space-3xl) right 0;
-		background-repeat: no-repeat;
-		filter: grayscale(100%);
-	}
-
 	.main-content:after {
 		z-index: -1;
 		content: '';

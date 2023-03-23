@@ -1,7 +1,8 @@
 <script>
-	import SocialButtons from '$lib/components/Contact/SocialButtons.svelte';
-
+	import Phone from '~icons/ph/phone';
 	import YinYang from '~icons/ph/yin-yang-fill';
+	import Envelope from '~icons/ph/envelope';
+	import ExLink from '$lib/components/Common/ExLink.svelte';
 </script>
 
 <div class="cover">
@@ -10,17 +11,25 @@
 	</video>
 
 	<a href="/" class="cover__logo">
-		<YinYang class="yinyang" width="72" height="72" color="var(--text-color)" />
+		<YinYang class="yinyang" width="100%" height="100%" color="var(--primary-500)" />
 	</a>
 
 	<div class="cover__btn">
-		<SocialButtons />
+		<a href="tel:+84929066331" class="">
+			<Phone />
+			+84 929 066 331</a>
+		<ExLink href="mailto:wentallout@gmail.com">
+			<div class="name base-text">
+				<Envelope />
+				wentallout@gmail.com
+			</div>
+		</ExLink>
 	</div>
 </div>
 
 <style>
 	:global(.yinyang) {
-		filter: drop-shadow(0px 0px 10px var(--text-color));
+		filter: drop-shadow(0px 0px 10px var(--primary-500));
 		animation: rotate 3s linear infinite;
 	}
 
@@ -40,6 +49,8 @@
 		transform: translate(-50%, -50%);
 		z-index: 1;
 		transition: var(--transition);
+		width: var(--space-2xl);
+		aspect-ratio: 1/1;
 	}
 
 	.cover__logo:hover {
@@ -50,12 +61,19 @@
 		display: flex;
 		position: relative;
 		width: 100%;
-		height: 300px;
+		height: 240px;
 		background-color: var(--bg-500);
+	}
+
+	@media (min-width: 768px) {
+		.cover {
+			height: 300px;
+		}
 	}
 
 	.cover__btn {
 		width: 100%;
+
 		position: absolute;
 		display: flex;
 		justify-content: center;
@@ -63,6 +81,7 @@
 		padding-right: 1rem;
 		left: 0;
 		z-index: 2;
+		transition: var(--transition);
 	}
 
 	.cover::after {
@@ -92,5 +111,13 @@
 		object-fit: cover;
 		filter: brightness(50%);
 		transition: var(--transition);
+	}
+
+	.name {
+		font-family: 'Normal';
+		user-select: none;
+
+		transition: var(--transition);
+		font-weight: 600;
 	}
 </style>

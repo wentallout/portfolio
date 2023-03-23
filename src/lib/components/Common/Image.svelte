@@ -22,6 +22,7 @@
 	img {
 		margin-bottom: 0;
 		transition: all 0.3s ease;
+		user-select: none;
 	}
 
 	.image-with-caption {

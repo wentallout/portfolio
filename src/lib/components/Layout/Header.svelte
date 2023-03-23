@@ -64,7 +64,7 @@
 				href={navItem.path}>
 				{navItem.title}</a>
 		{/each}
-		<div class="overlay-item">
+		<div class="overlay-item social">
 			<SocialButtons />
 		</div>
 	</div>
@@ -235,5 +235,10 @@
 		.overlay {
 			overflow-y: auto;
 		}
+	}
+
+	.social {
+		border-top: 1px solid var(--text-color-disabled);
+		padding-top: var(--space-2xl);
 	}
 </style>

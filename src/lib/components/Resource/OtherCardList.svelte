@@ -49,6 +49,19 @@
 		box-shadow: var(--box-shadow-1);
 	}
 
+	.other:before {
+		position: absolute;
+		display: block;
+		content: '';
+		background-repeat: repeat;
+		background-image: url(/images/ptn1.svg);
+		background-color: rgba(0, 0, 0, 0.6);
+		background-size: 4px;
+		width: 100%;
+		height: 100%;
+		opacity: 0.5;
+	}
+
 	.other:hover .other__image {
 		scale: 1.15;
 	}
