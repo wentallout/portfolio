@@ -35,7 +35,7 @@
 
 <style>
 	:global(.toc ::-webkit-scrollbar) {
-		width: 8px;
+		width: 12px;
 	}
 
 	.toc-title {

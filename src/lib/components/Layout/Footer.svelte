@@ -1,8 +1,9 @@
 <script>
+	import FooterEnd from '$lib/components/Layout/FooterEnd.svelte';
 	import ExLink from '$lib/components/Common/ExLink.svelte';
 	import Marquee from '$lib/components/Common/Marquee.svelte';
 	import { navItems } from '$lib/config.js';
-	import YinYang from '~icons/ph/yin-yang-fill';
+
 	import Envelope from '~icons/ph/envelope';
 	import LinkedinLogo from '~icons/ph/linkedin-logo';
 	import InstagramLogo from '~icons/ph/instagram-logo';
@@ -23,6 +24,7 @@
 					</li>
 				</ul>
 			</div>
+
 			<div class="list">
 				<div class="list__title">Browse</div>
 				<ul class="nav-list">
@@ -73,30 +75,21 @@
 			</div>
 		</div>
 
-		<!-- <SocialButtons /> -->
-
-		<div class="other">
-			<div class="other-info small-text">© wentallout. All rights reserved.</div>
-
-			<ExLink href="/doc/privacy-policy.pdf">
-				<div class="other-info small-text">Privacy Policy</div>
-			</ExLink>
-		</div>
+		<FooterEnd />
 	</div>
 </footer>
 
 <style>
 	.list-container {
-		display: flex;
-		flex-direction: column;
-		gap: var(--space-m);
-		flex-wrap: wrap;
-	}
+		overflow: hidden;
+		--min: 20ch;
+		--gap: var(--space-l);
 
-	@media (min-width: 768px) {
-		.list-container {
-			flex-direction: row;
-		}
+		display: grid;
+		grid-gap: var(--gap);
+		/* min() with 100% prevents overflow
+  in extra narrow spaces */
+		grid-template-columns: repeat(auto-fit, minmax(min(100%, var(--min)), 1fr));
 	}
 
 	.list {
@@ -108,12 +101,6 @@
 	.list__title {
 		font-family: 'Fancy';
 		font-size: var(--font-size-base);
-	}
-
-	.other-info {
-		user-select: none;
-		margin-top: var(--space-s);
-		color: var(--text-color-low);
 	}
 
 	footer {
@@ -182,15 +169,5 @@
 
 	.nav-list__item a:hover {
 		color: var(--primary-500);
-	}
-
-	footer {
-		position: relative;
-	}
-
-	.other {
-		display: flex;
-		flex-direction: row;
-		justify-content: space-between;
 	}
 </style>

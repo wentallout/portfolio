@@ -7,7 +7,7 @@
 
 <a href={blogLink} class="blog">
 	<div class="blog__date xs-text">
-		<Time timestamp={blogDate} />
+		<Time timestamp={blogDate} relative />
 	</div>
 	<div class="blog__title base-text">{blogTitle}</div>
 </a>
@@ -37,27 +37,6 @@
 		border: 1px solid transparent;
 
 		box-shadow: var(--box-shadow-1);
-	}
-
-	.blog:before {
-		position: absolute;
-		content: '';
-		background-size: contain;
-		top: 0;
-		right: 0;
-
-		width: var(--space-m);
-		height: 100%;
-		opacity: 0;
-		transition: var(--transition);
-
-		background: -webkit-linear-gradient(92deg, #95d7e3, #eb76ff);
-		animation: rainbowTextAni 2s linear infinite alternate;
-	}
-
-	.blog:hover::before {
-		opacity: 1;
-		background-color: var(--primary-500);
 	}
 
 	.blog:hover {

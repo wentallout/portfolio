@@ -18,14 +18,12 @@
 		<ExLink href="tel:+84929066331">
 			<div class="name base-text">
 				<Phone />
-				+84 929 066 331
 			</div>
 		</ExLink>
 
 		<ExLink href="mailto:wentallout@gmail.com">
 			<div class="name base-text">
 				<Envelope />
-				wentallout@gmail.com
 			</div>
 		</ExLink>
 	</div>
@@ -121,7 +119,6 @@
 
 	.name {
 		user-select: none;
-
 		transition: var(--transition);
 		font-weight: 400;
 	}
