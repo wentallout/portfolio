@@ -60,6 +60,8 @@
 		width: 100%;
 		height: 100%;
 		opacity: 0.5;
+
+		z-index: 2;
 	}
 
 	.other:hover .other__image {
@@ -71,7 +73,7 @@
 	}
 
 	.other__title {
-		z-index: 1;
+		z-index: 3;
 		font-weight: 600;
 		color: var(--text-color);
 	}

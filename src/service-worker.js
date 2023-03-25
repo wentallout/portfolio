@@ -21,7 +21,6 @@ worker.addEventListener('activate', (event) => {
 			Promise.all(
 				keys.map((key) => {
 					if (key !== CACHE_NAME) {
-						console.log('[ServiceWorker] Removing old cache', key);
 						return caches.delete(key);
 					}
 				})

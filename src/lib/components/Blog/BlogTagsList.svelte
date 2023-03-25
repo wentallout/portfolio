@@ -1,8 +1,6 @@
 <script>
-	import Tag from '$lib/components/Common/Tag.svelte';
 	export let data;
-	import SectionTitle from '$lib/components/Common/SectionTitle.svelte';
-	import Folder from '~icons/ph/folder';
+	import Tag from '$lib/components/Common/Tag.svelte';
 
 	let categories = [];
 
@@ -15,13 +13,7 @@
 			});
 		}
 	});
-
-	categories.sort();
 </script>
-
-<SectionTitle sectionTitle="Category" let:sectionIcon>
-	<Folder {...sectionIcon} />
-</SectionTitle>
 
 <div class="category">
 	{#each categories as category}
@@ -39,5 +31,6 @@
 		flex-direction: row;
 		flex-wrap: wrap;
 		gap: var(--space-s);
+		margin-bottom: var(--space-m);
 	}
 </style>

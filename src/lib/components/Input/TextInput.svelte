@@ -1,11 +1,23 @@
 <script>
-	export let label = 'label';
+	export let label = '';
 	export let type = 'text';
 	export let placeholder = '';
+	export let value = '';
 </script>
 
-<label for={label} class="label small-text">{label}</label>
-<input {placeholder} class="input small-text" {type} name={label} id={label} required />
+{#if label != ''}
+	<label for={label} class="label small-text">{label}</label>
+{/if}
+
+<input
+	{placeholder}
+	class="input small-text"
+	{type}
+	name={label}
+	id={label}
+	required
+	on:input
+	{value} />
 
 <style>
 	.label {

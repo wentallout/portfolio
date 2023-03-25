@@ -3,13 +3,11 @@
 	import BlogListContainer from '$lib/components/Blog/BlogListContainer.svelte';
 
 	export let data;
-
-	console.log(data);
 </script>
 
 <div class="result large-text">
-	<span class="result__title"> Posts about </span>
-	<span class="result__category">{data.category}</span>
+	<span class="result__title">Posts about </span>
+	<span class="result__category">#{data.category}</span>
 </div>
 <BlogListContainer>
 	{#each data.blogs as blog}

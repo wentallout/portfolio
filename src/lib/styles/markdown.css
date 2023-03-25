@@ -63,10 +63,6 @@
 	border-radius: var(--border-radius-light);
 }
 
-.markdown h2:after {
-	margin-left: 10px;
-}
-
 .markdown h3 {
 	/* SPACING */
 	margin-top: var(--space-xl);
@@ -78,6 +74,8 @@
 	font-size: var(--font-size-mid);
 	line-height: var(--line-height-mid);
 	/* --- */
+
+	border-bottom: 1px solid inherit;
 }
 
 .markdown h4 {

@@ -1,11 +1,27 @@
 <script>
+	import TextInput from '$lib/components/Input/TextInput.svelte';
 	import BlogListContainer from '$lib/components/Blog/BlogListContainer.svelte';
-
 	import BlogCard from '$lib/components/Blog/BlogCard.svelte';
-
 	import PageTitle from '$lib/components/Common/PageTitle.svelte';
-	import { Tabs, TabList, TabPanel, Tab } from '$lib/components/Tabs/tabs.js';
+	import BlogTagsList from '$lib/components/Blog/BlogTagsList.svelte';
+
 	export let data;
+
+	let allBlogs = data.blogs;
+
+	import { onMount } from 'svelte';
+
+	let searchTerm = '';
+	let filteredBlogs = [];
+
+	onMount(() => {
+		filteredBlogs = [...allBlogs];
+	});
+
+	function handleSearchInput(event) {
+		searchTerm = event.target.value.toLowerCase();
+		filteredBlogs = allBlogs.filter((blog) => blog.meta.title.toLowerCase().includes(searchTerm));
+	}
 </script>
 
 <svelte:head>
@@ -14,118 +30,29 @@
 
 <PageTitle pageTitle="Blog" />
 
-<Tabs>
-	<TabList>
-		<Tab>Fundamental</Tab>
-		<Tab>Tips</Tab>
-		<Tab>UX</Tab>
-		<Tab>Color</Tab>
-		<Tab>Typography</Tab>
-		<Tab>Freebies</Tab>
-	</TabList>
+<TextInput bind:value={searchTerm} placeholder="Search blogs..." on:input={handleSearchInput} />
 
-	<TabPanel>
-		<section>
-			<BlogListContainer>
-				{#each data.blogs as blog}
-					{#if blog.meta.categories.length}
-						{#if blog.meta.categories.includes('fundamental')}
-							<BlogCard
-								blogTitle={blog.meta.title}
-								blogLink={blog.path}
-								blogDate={blog.meta.date} />
-						{/if}
-					{/if}
-				{/each}
-			</BlogListContainer>
-		</section>
-	</TabPanel>
-
-	<TabPanel>
-		<section>
-			<BlogListContainer>
-				{#each data.blogs as blog}
-					{#if blog.meta.categories.length}
-						{#if blog.meta.categories.includes('tips')}
-							<BlogCard
-								blogTitle={blog.meta.title}
-								blogLink={blog.path}
-								blogDate={blog.meta.date} />
-						{/if}
-					{/if}
-				{/each}
-			</BlogListContainer>
-		</section>
-	</TabPanel>
-
-	<TabPanel>
-		<section>
-			<BlogListContainer>
-				{#each data.blogs as blog}
-					{#if blog.meta.categories.length}
-						{#if blog.meta.categories.includes('ux')}
-							<BlogCard
-								blogTitle={blog.meta.title}
-								blogLink={blog.path}
-								blogDate={blog.meta.date} />
-						{/if}
-					{/if}
-				{/each}
-			</BlogListContainer>
-		</section>
-	</TabPanel>
-
-	<TabPanel>
-		<section>
-			<BlogListContainer>
-				{#each data.blogs as blog}
-					{#if blog.meta.categories.length}
-						{#if blog.meta.categories.includes('color')}
-							<BlogCard
-								blogTitle={blog.meta.title}
-								blogLink={blog.path}
-								blogDate={blog.meta.date} />
-						{/if}
-					{/if}
-				{/each}
-			</BlogListContainer>
-		</section>
-	</TabPanel>
-
-	<TabPanel>
-		<section>
-			<BlogListContainer>
-				{#each data.blogs as blog}
-					{#if blog.meta.categories.length}
-						{#if blog.meta.categories.includes('typography')}
-							<BlogCard
-								blogTitle={blog.meta.title}
-								blogLink={blog.path}
-								blogDate={blog.meta.date} />
-						{/if}
-					{/if}
-				{/each}
-			</BlogListContainer>
-		</section>
-	</TabPanel>
-
-	<TabPanel>
-		<section>
-			<BlogListContainer>
-				{#each data.blogs as blog}
-					{#if blog.meta.categories.length}
-						{#if blog.meta.categories.includes('freebies')}
-							<BlogCard
-								blogTitle={blog.meta.title}
-								blogLink={blog.path}
-								blogDate={blog.meta.date} />
-						{/if}
-					{/if}
-				{/each}
-			</BlogListContainer>
-		</section>
-	</TabPanel>
-</Tabs>
+<section class="blog-list">
+	<BlogTagsList {data} />
+	<BlogListContainer>
+		{#if filteredBlogs.length === 0}
+			<div class="not-found small-text">No blogs found.</div>
+		{:else}
+			{#each filteredBlogs as blog}
+				<BlogCard blogTitle={blog.meta.title} blogLink={blog.path} blogDate={blog.meta.date} />
+			{/each}
+		{/if}
+	</BlogListContainer>
+</section>
 
 <style>
+	.blog-list {
+		margin-top: var(--space-m);
+		min-height: 100vh;
+	}
+
+	.not-found {
+		padding: var(--space-s) 0;
+		color: var(--text-color-low);
+	}
 </style>
