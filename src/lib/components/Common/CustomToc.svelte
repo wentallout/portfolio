@@ -7,7 +7,7 @@
 	breakpoint="992"
 	flashClickedHeadingsFor="0"
 	--toc-max-height="80vh"
-	--toc-font-size="var(--font-size-s)"
+	--toc-font-size="calc(var(--font-size-small)*90/100)"
 	--toc-padding="var(--space-m)"
 	--toc-li-border-radius="0"
 	--toc-li-hover-bg="transparent"
