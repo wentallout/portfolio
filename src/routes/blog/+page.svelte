@@ -5,6 +5,8 @@
 	import PageTitle from '$lib/components/Common/PageTitle.svelte';
 	import BlogTagsList from '$lib/components/Blog/BlogTagsList.svelte';
 
+	import { paginate, DarkPaginationNav } from 'svelte-paginate';
+
 	export let data;
 
 	let allBlogs = data.blogs;
@@ -13,15 +15,21 @@
 
 	let searchTerm = '';
 	let filteredBlogs = [];
+	let items = [];
 
 	onMount(() => {
 		filteredBlogs = [...allBlogs];
+		items = [...allBlogs];
 	});
 
 	function handleSearchInput(event) {
 		searchTerm = event.target.value.toLowerCase();
 		filteredBlogs = allBlogs.filter((blog) => blog.meta.title.toLowerCase().includes(searchTerm));
 	}
+
+	let currentPage = 1;
+	let pageSize = 8;
+	$: paginatedItems = paginate({ items, pageSize, currentPage });
 </script>
 
 <svelte:head>
@@ -34,18 +42,46 @@
 
 <section class="blog-list">
 	<BlogTagsList {data} />
+	{#if filteredBlogs.length != 0}
+		<DarkPaginationNav
+			totalItems={items.length}
+			{pageSize}
+			{currentPage}
+			limit={1}
+			showStepOptions={true}
+			on:setPage={(e) => (currentPage = e.detail.page)} />
+	{/if}
 	<BlogListContainer>
 		{#if filteredBlogs.length === 0}
 			<div class="not-found small-text">No blogs found.</div>
 		{:else}
-			{#each filteredBlogs as blog}
-				<BlogCard blogTitle={blog.meta.title} blogLink={blog.path} blogDate={blog.meta.date} />
+			{#each paginatedItems as item}
+				<BlogCard blogTitle={item.meta.title} blogLink={item.path} blogDate={item.meta.date} />
 			{/each}
 		{/if}
 	</BlogListContainer>
+	{#if filteredBlogs.length != 0}
+		<DarkPaginationNav
+			totalItems={items.length}
+			{pageSize}
+			{currentPage}
+			limit={1}
+			showStepOptions={true}
+			on:setPage={(e) => (currentPage = e.detail.page)} />
+	{/if}
 </section>
 
 <style>
+	:global(.pagination-nav) {
+		background-color: var(--bg-400) !important;
+		border-radius: var(--border-radius-light) !important;
+		box-shadow: var(--box-shadow-1) !important;
+	}
+
+	:global(.dark-pagination-nav .option.active) {
+		color: var(--primary-500) !important;
+	}
+
 	.blog-list {
 		margin-top: var(--space-m);
 		min-height: 100vh;

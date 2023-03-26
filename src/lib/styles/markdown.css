@@ -238,21 +238,14 @@ aside.toc > nav > ul > li:before {
 	object-fit: contain;
 }
 
-aside.toc.desktop {
-	border-radius: var(--border-radius);
-}
-
-/* aside.toc > nav > ul > li {
-	color: var(--text-color-low);
-} */
-
 :where(aside.toc > nav > ul > li) {
 	color: var(--text-color-low);
 	font-weight: 300;
 }
 
-:where(aside.toc > nav > ul > li.active) {
-	color: var(--primary-500);
+:where(aside.toc > nav > ol > li.active) {
+	border-left: 2px solid var(--primary-500) !important;
+	padding-left: 4px !important;
 }
 
 aside.toc > nav {

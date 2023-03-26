@@ -4,17 +4,21 @@
 
 [![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/wentallout/portfolio)
 
-[![Open in Visual Studio Code](https://open.vscode.dev/badges/open-in-vscode.svg)](https://open.vscode.dev/wentallout/portfolio)
+[Open in Visual Studio Code](https://open.vscode.dev/wentallout/portfolio)
 
 ## What is this?
 
-This is Khoa's personal portfolio.
+This is Khoa's personal portfolio+blog. Built using SvelteKit.
 
 Current URL: [wentallout.tech](https://wentallout.tech)
 
+## What makes this special?
+
+It's just incredibly fast compared to other framework-based websites and has great SEO out-of-the-box. You won't need a backend or CMS though, the blog posts are just markdown files you can store on your computer. Imported images are converted to webp to optimize loading speed.
+
 ## Progress
 
-### Page
+### Pages
 
 - [x] Home
 - [ ] Project: need more projects
@@ -22,20 +26,24 @@ Current URL: [wentallout.tech](https://wentallout.tech)
 - [x] Resource
 - [x] Contact
 
-### Feature
+### Features
 
-- [x] Fonts: Self-hosted + subset (better than Google Fonts)
-- [x] Images: Compressed and Converted (webp)
-- [x] Routing (SvelteKit by default)
+- [x] Fonts: Self-hosted + Subset
+- [x] Images: Compressed and Converted (webp) + Native Lazy Loading
+- [x] Routing (built-in)
 - [x] Page Transition: Fade Effect + Loading Bar
 - [x] Responsiveness: Mobile Compatible
-- [x] Contact: Working Form
+- [x] Contact: Working on Netlify
 - [x] SEO
-- [x] Dark Mode (by default)
-- [x] Blog: Table of Contents, Categories
-- [ ] Blog: Search
+- [x] Dark Mode (default)
+
+---
+
+- [x] Blog: Dynamic Table of Contents
+- [x] Blog: Tags/Categories
+- [x] Blog: Search
+- [x] Blog: Pagination
 - [ ] Blog: Comment
-- [x] Some 3D Elements
 
 ## Developing
 

@@ -1,43 +1,12 @@
 <script>
-	import Tag from '$lib/components/Common/Tag.svelte';
 	export let data;
 	import SectionTitle from '$lib/components/Common/SectionTitle.svelte';
 	import Folder from '~icons/ph/folder';
-
-	let categories = [];
-
-	data.blogs.forEach((blog) => {
-		if (blog.meta.categories.length) {
-			blog.meta.categories.forEach((category) => {
-				if (!categories.includes(category)) {
-					categories.push(category);
-				}
-			});
-		}
-	});
-
-	categories.sort();
+	import BlogTagsList from '$lib/components/Blog/BlogTagsList.svelte';
 </script>
 
 <SectionTitle sectionTitle="Category" let:sectionIcon>
 	<Folder {...sectionIcon} />
 </SectionTitle>
 
-<div class="category">
-	{#each categories as category}
-		<a href="/blog/category/{category}">
-			<Tag>
-				{category}
-			</Tag>
-		</a>
-	{/each}
-</div>
-
-<style>
-	.category {
-		display: flex;
-		flex-direction: row;
-		flex-wrap: wrap;
-		gap: var(--space-s);
-	}
-</style>
+<BlogTagsList {data} />

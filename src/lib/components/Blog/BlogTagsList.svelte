@@ -2,21 +2,13 @@
 	export let data;
 	import Tag from '$lib/components/Common/Tag.svelte';
 
-	let categories = [];
+	const categories = new Set(data.blogs.flatMap((blog) => blog.meta.categories));
 
-	data.blogs.forEach((blog) => {
-		if (blog.meta.categories.length) {
-			blog.meta.categories.forEach((category) => {
-				if (!categories.includes(category)) {
-					categories.push(category);
-				}
-			});
-		}
-	});
+	let uniqueCategories = Array.from(categories);
 </script>
 
 <div class="category">
-	{#each categories as category}
+	{#each uniqueCategories as category}
 		<a href="/blog/category/{category}">
 			<Tag>
 				{category}
