@@ -15,7 +15,7 @@
 	<title>Resource</title>
 </svelte:head>
 
-<PageTitle pageTitle="Resource" />
+<PageTitle pageTitle="Resource" decoImageUrl="/images/resource.svg" />
 
 <section>
 	<SectionTitle sectionTitle="Book" let:sectionIcon>

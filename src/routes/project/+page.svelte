@@ -11,7 +11,7 @@
 	<title>Project</title>
 </svelte:head>
 
-<PageTitle pageTitle="Project" />
+<PageTitle pageTitle="Project" decoImageUrl="/images/project.svg" />
 
 <section>
 	<SectionTitle sectionTitle="Case Study" let:sectionIcon>

@@ -36,7 +36,7 @@
 	<title>Blog</title>
 </svelte:head>
 
-<PageTitle pageTitle="Blog" />
+<PageTitle pageTitle="Blog" decoImageUrl="/images/blog.svg" />
 
 <TextInput bind:value={searchTerm} placeholder="Search blogs..." on:input={handleSearchInput} />
 

@@ -1,5 +1,5 @@
 <script>
-	import PageTitle from './../../lib/components/Common/PageTitle.svelte';
+	import PageTitle from '$lib/components/Common/PageTitle.svelte';
 	import SocialLinks from '$lib/components/Contact/SocialLinks.svelte';
 	import ContactForm from '$lib/components/Contact/ContactForm.svelte';
 
@@ -31,7 +31,7 @@
 
 <SEO {...seoProps} />
 
-<PageTitle pageTitle="Contact" />
+<PageTitle pageTitle="Contact" decoImageUrl="/images/contact.svg" />
 
 <ContactForm />
 
