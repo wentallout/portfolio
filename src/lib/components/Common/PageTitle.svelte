@@ -1,6 +1,5 @@
 <script>
 	export let pageTitle = 'pageTitle';
-
 	export let decoImageUrl = '';
 </script>
 
@@ -22,6 +21,8 @@
 
 		width: 130%;
 		height: 130%;
+
+		filter: invert(6%) sepia(25%) saturate(915%) hue-rotate(172deg) brightness(95%) contrast(92%);
 	}
 
 	.title {

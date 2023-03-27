@@ -36,9 +36,10 @@ html {
 	/* TYPOGRAPHY */
 	--normal-font: 'Normal';
 	--fancy-font: 'Fancy';
-	--text-color: hsla(0, 0%, 100%, 87%);
-	--text-color-low: hsla(0, 0%, 100%, 60%);
-	--text-color-disabled: hsla(0, 0%, 100%, 38%);
+
+	--text-color: hsl(0, 0%, 87%);
+	--text-color-low: #abb5bf;
+	--text-color-disabled: hsl(249, 4%, 50%);
 	/* --- */
 
 	--black: hsl(200, 30%, 2%);
@@ -47,13 +48,14 @@ html {
 	--bg-200: hsl(212, 27%, 14%);
 	--bg-300: hsl(212, 27%, 12%);
 	--bg-400: hsl(212, 27%, 10%);
-	--bg-500: hsl(200, 30%, 4%);
+	--bg-500: hsl(210, 45%, 4%);
 
 	--page-bg: var(--bg-500);
 	--page-padding: 20vw;
 
 	--text-width: 65ch;
 
+	/* Primary: Rucksack Tan */
 	--primary-100: #fffff2;
 	--primary-200: #fff8b9;
 	--primary-300: #fdea7f;
@@ -64,26 +66,27 @@ html {
 	--primary-800: #593200;
 	--primary-900: #261300;
 
-	--accent-100: #f2f9ff;
-	--accent-200: #bde4fe;
-	--accent-300: #86d1fa;
-	--accent-400: #4ec0ef;
-	--accent-500: #1aacd9;
-	--accent-600: #0990ac;
-	--accent-700: #027180;
-	--accent-800: #004e53;
-	--accent-900: #002626;
+	/* Accent: Chun-Li Blue */
+	--accent-100: #f2f3ff;
+	--accent-200: #bcc2fe;
+	--accent-300: #8596fa;
+	--accent-400: #4c6eef;
+	--accent-500: #184bd9;
+	--accent-600: #083dac;
+	--accent-700: #023280;
+	--accent-800: #002553;
+	--accent-900: #001326;
 
 	/* Neutral */
 	--neutral-100: #fcfcfa;
-	--neutral-200: #ecece8;
-	--neutral-300: #dbdbd7;
-	--neutral-400: #cbcac6;
-	--neutral-500: #bab9b5;
-	--neutral-600: #95938e;
-	--neutral-700: #706e69;
-	--neutral-800: #4b4945;
-	--neutral-900: #262522;
+	--neutral-200: #ebeae4;
+	--neutral-300: #d9d7cf;
+	--neutral-400: #c7c4ba;
+	--neutral-500: #b5b1a7;
+	--neutral-600: #918d85;
+	--neutral-700: #6e6a64;
+	--neutral-800: #4a4743;
+	--neutral-900: #262422;
 
 	--success: #55ed55;
 	--info: #07d9f9;

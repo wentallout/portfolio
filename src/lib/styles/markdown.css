@@ -19,22 +19,6 @@
 	color: var(--primary-500);
 }
 
-.markdown h2:target,
-.markdown h3:target,
-.markdown h4:target {
-	animation: flash-bg 0.3s;
-}
-
-@keyframes flash-bg {
-	from {
-		background-color: var(--primary-500);
-		color: var(--black);
-	}
-	to {
-		background-color: transparent;
-	}
-}
-
 .markdown h2:first-child {
 	margin-top: 0;
 }
@@ -51,7 +35,6 @@
 	font-family: var(--fancy-font);
 	font-size: var(--font-size-large);
 	line-height: var(--line-height-large);
-
 	background-color: var(--primary-500);
 	color: var(--bg-500);
 	/* --- */
@@ -61,6 +44,8 @@
 	align-items: center;
 
 	border-radius: var(--border-radius-light);
+
+	background: linear-gradient(to right, var(--primary-500), var(--primary-600), var(--primary-700));
 }
 
 .markdown h3 {
@@ -241,11 +226,6 @@ aside.toc > nav > ul > li:before {
 :where(aside.toc > nav > ul > li) {
 	color: var(--text-color-low);
 	font-weight: 300;
-}
-
-:where(aside.toc > nav > ol > li.active) {
-	border-left: 2px solid var(--primary-500) !important;
-	padding-left: 4px !important;
 }
 
 aside.toc > nav {
