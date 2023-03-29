@@ -13,7 +13,7 @@
 	<a href="/" class="cover__logo">
 		<YinYang class="yinyang" width="100%" height="100%" color="var(--text-color)" />
 	</a>
-	<img class="logo__alter" src="images/wentallout.svg" alt="alternative logo" />
+	<img class="logo__alter" src="/images/wentallout.svg" alt="alternative logo" />
 
 	<div class="cover__btn">
 		<ExLink href="tel:+84929066331">

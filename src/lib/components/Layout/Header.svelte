@@ -53,7 +53,7 @@
 
 <div bind:this={navOverlayEle} class="overlay">
 	<div class="closebtn" on:click={closeNav} on:keydown={closeNav}>
-		<X color="var(--primary-900)" width="32" height="32" />
+		<X color="var(--bg-500)" width="32" height="32" />
 	</div>
 	<div class="overlay-content">
 		{#each navItems as navItem}
