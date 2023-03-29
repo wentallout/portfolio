@@ -1,9 +1,9 @@
 <script>
 	// ADD IMAGE
-	import defaultFeaturedImage from '$lib/assets/images/seo/home.jpg';
-	import defaultOgImage from '$lib/assets/images/seo/home-open-graph.jpg';
-	import defaultOgSquareImage from '$lib/assets/images/seo/home-open-graph-square.jpg';
-	import defaultTwitterImage from '$lib/assets/images/seo/home-twitter.jpg';
+	import defaultFeaturedImage from '$lib/assets/images/seo/1344x896.png';
+	import defaultOgImage from '$lib/assets/images/seo/1200x627.png';
+	import defaultOgSquareImage from '$lib/assets/images/seo/400x400.png';
+	import defaultTwitterImage from '$lib/assets/images/seo/800x418.png';
 	//
 
 	import website from '$lib/config.js';
