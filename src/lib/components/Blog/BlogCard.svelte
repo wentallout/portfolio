@@ -51,6 +51,14 @@
 		background-color: var(--bg-300);
 	}
 
+	.icon {
+		transition: var(--transition);
+	}
+
+	.blog:hover .icon {
+		padding-right: 5%;
+	}
+
 	.blog:hover .blog__date {
 		color: var(--text-color-low);
 	}

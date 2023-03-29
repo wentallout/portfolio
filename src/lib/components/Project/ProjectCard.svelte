@@ -29,11 +29,11 @@
 				<div class="section__desc">{result}</div>
 			</div>
 
-			<div class="info__btn">
+			<!-- <div class="info__btn">
 				<a href={linkToDetail}>
 					<Button backgroundColor="var(--primary-500)" label="Read Case Study" />
 				</a>
-			</div>
+			</div> -->
 		</div>
 	</div>
 </a>

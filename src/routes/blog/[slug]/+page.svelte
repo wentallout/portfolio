@@ -1,4 +1,5 @@
 <script>
+	import Line from '$lib/components/Common/Line.svelte';
 	import ContentContainer from '$lib/components/Common/ContentContainer.svelte';
 	import Tag from '$lib/components/Common/Tag.svelte';
 	export let data;
@@ -22,8 +23,10 @@
 			{/each}
 		</div>
 	{/if}
-	<h1 class="rainbow">{data.title}</h1>
 	<div class="date small-text">Published: <Time relative timestamp={data.date} /></div>
+	<h1 class="rainbow">{data.title}</h1>
+
+	<Line />
 
 	<ContentContainer>
 		<svelte:component this={data.content} />
@@ -44,14 +47,11 @@
 		margin: 0;
 		color: var(--text-color-low);
 	}
-	.category__title {
-		display: inline;
-		color: var(--text-color-low);
-	}
+
 	.category {
 		color: var(--text-color-low);
-
 		gap: var(--space-xs);
 		margin: 0;
+		margin-bottom: var(--space-s);
 	}
 </style>

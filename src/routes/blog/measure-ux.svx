@@ -1,5 +1,5 @@
 ---
-title: 'Measuring UX'
+title: 'Measure UX'
 date: '2023-03-27'
 categories:
     - 'ux'
@@ -49,7 +49,9 @@ After they've completed the tasks, how do users feel about the experience?
 
 ### System Usability Scale 
 
-1: Strongly disagree -2,3,4- 5: Strongly agree
+1: Strongly disagree 
+2,3,4
+5: Strongly agree
 
 1. I think that I would like to use this system frequently
 2. I found the system unnecessarily complex

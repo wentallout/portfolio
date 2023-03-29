@@ -1,8 +1,9 @@
 <script>
+	import ButtonX from '$lib/components/Button/Button.svelte';
 	import TextArea from '$lib/components/Input/TextArea.svelte';
 	import TextInput from '$lib/components/Input/TextInput.svelte';
 	import EnvelopeSimple from '~icons/ph/envelope-simple';
-	import Button from '$lib/components/Button/Button.svelte';
+
 	import PaperPlaneRight from '~icons/ph/paper-plane-right';
 	import SectionTitle from '$lib/components/Common/SectionTitle.svelte';
 </script>
@@ -28,11 +29,11 @@
 			<TextArea label="Message" placeholder="Something you want to tell me. Ex: jobs, ideas" />
 
 			<div class="contact__btn">
-				<Button label="Send message (I'll reply)" backgroundColor="var(--primary-500)">
+				<ButtonX label="Send message (I'll reply)" backgroundColor="var(--primary-500)">
 					<PaperPlaneRight class="icon-black" />
-				</Button>
+				</ButtonX>
 
-				<Button
+				<ButtonX
 					label="Reset"
 					border="1px solid var(--error)"
 					backgroundColor="transparent"

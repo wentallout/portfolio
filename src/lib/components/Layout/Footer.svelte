@@ -19,8 +19,8 @@
 				<div class="list__title">About me</div>
 				<ul class="nav-list">
 					<li class="nav-list__item">
-						A one-manned web design agency in Ho Chi Minh City, Vietnam that designs superb
-						affordable websites and apps for small businesses and non-profits alike.
+						A one-manned design agency in Ho Chi Minh City, Vietnam that designs superb affordable
+						websites and apps for small businesses and non-profits alike.
 					</li>
 				</ul>
 			</div>
@@ -47,7 +47,7 @@
 					<li class="nav-list__item">
 						<ExLink href="tel:+84929066331">
 							<Phone width="24" height="24" />
-							+84929066331</ExLink>
+							+84 929066331</ExLink>
 					</li>
 				</ul>
 			</div>
@@ -87,8 +87,7 @@
 
 		display: grid;
 		grid-gap: var(--gap);
-		/* min() with 100% prevents overflow
-  in extra narrow spaces */
+
 		grid-template-columns: repeat(auto-fit, minmax(min(100%, var(--min)), 1fr));
 	}
 
@@ -101,6 +100,8 @@
 	.list__title {
 		font-family: 'Fancy';
 		font-size: var(--font-size-base);
+
+		border-bottom: 1px solid var(--text-color-disabled);
 	}
 
 	footer {
@@ -118,17 +119,7 @@
 		/* Width */
 		max-width: 100vw;
 
-		background-color: var(--bg-400);
-
-		--bg-value: 100px;
-
-		background-image: linear-gradient(135deg, var(--bg-500) 25%, transparent 25%),
-			linear-gradient(225deg, var(--bg-500) 25%, transparent 25%),
-			linear-gradient(45deg, var(--bg-500) 25%, transparent 25%),
-			linear-gradient(315deg, var(--bg-500) 25%, var(--black) 25%);
-		background-position: var(--bg-value) 0, var(--bg-value) 0, 0 0, 0 0;
-		background-size: var(--bg-value) var(--bg-value);
-		background-repeat: repeat;
+		background-color: var(--black);
 	}
 
 	.footer-container {

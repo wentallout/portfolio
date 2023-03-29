@@ -26,7 +26,7 @@
 	--toc-mobile-bottom="100px"
 	--toc-mobile-btn-border-radius="100%"
 	--toc-mobile-btn-padding="var(-space-m)">
-	<span class="toc-title mid-text" slot="title">
+	<span class="toc-title base-text" slot="title">
 		<ListBullets color="var(--text-color)" width="24" height="24" />
 		Contents</span>
 
@@ -45,5 +45,6 @@
 		align-items: center;
 		gap: var(--space-xs);
 		font-family: 'Fancy';
+		border-bottom: 1px solid var(--text-color-disabled);
 	}
 </style>

@@ -10,10 +10,8 @@
 		display: inline-block;
 		font-weight: 300;
 		width: fit-content;
-		padding-left: var(--space-2xs);
-		padding-right: var(--space-2xs);
-		padding-top: var(--space-3xs);
-		padding-bottom: var(--space-3xs);
+
+		padding: 6px 12px;
 		line-height: normal;
 		background: var(--bg-400);
 		border-radius: var(--border-radius);

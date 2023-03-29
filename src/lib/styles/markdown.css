@@ -16,7 +16,6 @@
 .markdown h4 {
 	line-height: 120%;
 	position: relative;
-	color: var(--primary-500);
 }
 
 .markdown h2:first-child {
@@ -45,7 +44,7 @@
 
 	border-radius: var(--border-radius-light);
 
-	background: linear-gradient(to right, var(--primary-500), var(--primary-600), var(--primary-700));
+	background: linear-gradient(to right, var(--primary-500), var(--primary-600));
 }
 
 .markdown h3 {
@@ -58,12 +57,14 @@
 	font-weight: 600;
 	font-size: var(--font-size-mid);
 	line-height: var(--line-height-mid);
+	color: var(--primary-500);
 	/* --- */
 
 	border-bottom: 1px solid inherit;
 }
 
 .markdown h4 {
+	color: var(--primary-500);
 	/* SPACING */
 	margin-top: var(--space-m);
 	margin-bottom: var(--space-xs);

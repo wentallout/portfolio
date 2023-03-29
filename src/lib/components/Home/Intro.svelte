@@ -33,7 +33,8 @@
 
 				<a class="intro__btn" href="/project">
 					<Button
-						label="View all case studies"
+						width="100%"
+						label="View case studies"
 						labelColor="var(--bg-500)"
 						backgroundColor="var(--primary-500)" />
 				</a>
@@ -134,13 +135,6 @@
 	.mission {
 		color: var(--text-color-low);
 		max-width: var(--text-width);
-		margin-bottom: var(--space-s);
-	}
-
-	.other {
-		color: var(--text-color-low);
-		max-width: var(--text-width);
-		transition: var(--transition);
 		margin-bottom: var(--space-s);
 	}
 </style>

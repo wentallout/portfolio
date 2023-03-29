@@ -1,36 +1,33 @@
 <script>
 	import Button from '$lib/components/Button/Button.svelte';
+
 	import { page } from '$app/stores';
 </script>
 
 <div class="error">
-	<div>
-		<h1 class="status xxxl-text">{$page.status} {$page.error.message}</h1>
-		<div class="error__detail">
-			<p class="message small-text">Oops! Something unexpected happened.</p>
-		</div>
-
-		<div>
-			<a rel="external" href="/">
-				<Button
-					label="Take Me Home"
-					labelColor="var(--bg-500)"
-					backgroundColor="var(--primary-500)" />
-			</a>
+	<h1 class="status xxxl-text">{$page.status} {$page.error.message}</h1>
+	<div class="error__detail">
+		<div class="message small-text">
+			Oops! Something unexpected happened. Moving back after 3 seconds...
 		</div>
 	</div>
+
+	<a rel="external" href="/">
+		<Button label="Take Me Home" labelColor="var(--bg-500)" backgroundColor="var(--primary-500)" />
+	</a>
+
 	<img class="error__image" src="/images/error.gif" alt="" />
 </div>
 
 <style>
 	.error {
 		display: flex;
-		flex-direction: row;
+		flex-direction: column;
 		flex-wrap: wrap;
 		justify-content: center;
 		align-items: center;
 		padding: var(--space-l);
-		gap: var(--space-l);
+		gap: var(--space-m);
 	}
 
 	.error__image {

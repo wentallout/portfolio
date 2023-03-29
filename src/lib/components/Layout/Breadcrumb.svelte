@@ -38,7 +38,7 @@
 
 <style>
 	.breadcrumb {
-		margin-top: var(--space-xl);
+		margin-top: var(--space-s);
 		margin-bottom: var(--space-l);
 	}
 

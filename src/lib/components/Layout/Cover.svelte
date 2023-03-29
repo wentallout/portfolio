@@ -11,28 +11,55 @@
 	</video>
 
 	<a href="/" class="cover__logo">
-		<YinYang class="yinyang" width="100%" height="100%" color="var(--primary-500)" />
+		<YinYang class="yinyang" width="100%" height="100%" color="var(--text-color)" />
 	</a>
+	<img class="logo__alter" src="images/wentallout.svg" alt="alternative logo" />
 
 	<div class="cover__btn">
 		<ExLink href="tel:+84929066331">
-			<div class="name base-text">
+			<div class="contact">
 				<Phone />
+
+				<div class="contact__value small-text">+84 929066331</div>
 			</div>
 		</ExLink>
 
 		<ExLink href="mailto:wentallout@gmail.com">
-			<div class="name base-text">
+			<div class="contact">
 				<Envelope />
+				<div class="contact__value small-text">wentallout@gmail.com</div>
 			</div>
 		</ExLink>
 	</div>
 </div>
 
 <style>
+	.logo__alter {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+
+		transition: var(--transition);
+		width: 10%;
+		min-width: 80px;
+	}
+
 	:global(.yinyang) {
-		filter: drop-shadow(0px 0px 10px var(--primary-500));
+		filter: drop-shadow(0px 0px 10px var(--text-color));
 		animation: rotate 3s linear infinite;
+		opacity: 0.5;
+		transition: var(--transition);
+	}
+
+	:global(.yinyang:hover) {
+		color: var(--primary-500);
+		filter: drop-shadow(0px 0px 10px var(--primary-500));
+		opacity: 1;
+	}
+
+	.cover__logo:hover + .logo__alter {
+		opacity: 0;
 	}
 
 	@keyframes rotate {
@@ -117,9 +144,25 @@
 		transition: var(--transition);
 	}
 
-	.name {
+	.contact {
 		user-select: none;
 		transition: var(--transition);
 		font-weight: 400;
+		display: flex;
+		flex-direction: row;
+
+		align-items: center;
+		gap: 4px;
+	}
+
+	.contact__value {
+		display: none;
+		color: var(--text-color-low);
+	}
+
+	@media (min-width: 992px) {
+		.contact__value {
+			display: block;
+		}
 	}
 </style>

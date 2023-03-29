@@ -210,7 +210,7 @@
 
 	.duration {
 		font-weight: 300;
-		color: var(--neutral-900);
+		color: var(--color-text-low);
 	}
 
 	.controls {

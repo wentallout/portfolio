@@ -1,23 +1,21 @@
 <div class="container">
 	<div class="marquee">
 		<ul class="marquee__content">
-			<li>User-centered design</li>
+			<li>Design Thinking</li>
 			<li>Usability</li>
-			<li>Information Architecture</li>
 			<li>Accessibility</li>
-			<li>Responsive Design</li>
-			<li>Visual design</li>
+			<li>Information Architecture</li>
 			<li>Wireframe</li>
+			<li>Responsive Design</li>
 		</ul>
 
 		<ul class="marquee__content" aria-hidden="true">
-			<li>User-centered design</li>
+			<li>Design Thinking</li>
 			<li>Usability</li>
-			<li>Information Architecture</li>
 			<li>Accessibility</li>
-			<li>Responsive Design</li>
-			<li>Visual design</li>
+			<li>Information Architecture</li>
 			<li>Wireframe</li>
+			<li>Responsive Design</li>
 		</ul>
 	</div>
 </div>

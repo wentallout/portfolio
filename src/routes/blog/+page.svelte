@@ -73,9 +73,13 @@
 
 <style>
 	:global(.pagination-nav) {
-		background-color: var(--bg-400) !important;
+		background-color: transparent !important;
 		border-radius: var(--border-radius-light) !important;
-		box-shadow: var(--box-shadow-1) !important;
+		box-shadow: none !important;
+	}
+
+	:global(.dark-pagination-nav .option) {
+		color: var(--text-color-low) !important;
 	}
 
 	:global(.dark-pagination-nav .option.active) {

@@ -4,7 +4,7 @@ export const navItems = [
 		path: '/'
 	},
 	{
-		title: 'Project',
+		title: 'Projects',
 		path: '/project'
 	},
 	{
@@ -34,7 +34,7 @@ const website = {
 
 	// PWA
 	siteTitle: 'Nguyen Dang Khoa - UI/UX Designer',
-	siteShortTitle: 'Portfolio',
+	siteShortTitle: 'Portfolio of Khoa',
 	siteUrl: 'https://wentallout.tech',
 	icon: 'static/icon-512.png',
 	backgroundColor: '#121212',
