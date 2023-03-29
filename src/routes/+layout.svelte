@@ -39,8 +39,27 @@
 			NProgress.done();
 		}
 	}
+
+	// SEO
+	import SEO from '$lib/components/SEO/SEO.svelte';
+	import website from '$lib/config.js';
+	//  END SEO
+
+	const { author, siteUrl } = website;
+
+	const entityMeta = {
+		url: `${siteUrl}/`,
+		faviconWidth: 512,
+		faviconHeight: 512,
+		caption: author
+	};
+	const seoProps = {
+		slug: '',
+		entityMeta
+	};
 </script>
 
+<SEO {...seoProps} />
 <SkipLink />
 <PWA />
 <Cover />

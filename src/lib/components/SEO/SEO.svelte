@@ -12,6 +12,15 @@
 	import SchemaOrg from './SchemaOrg.svelte';
 	import Twitter from './Twitter.svelte';
 
+	export let entityMeta = null;
+	export let lastUpdated = new Date();
+	export let datePublished = new Date();
+	export let metadescription;
+	export let slug;
+	export let timeToRead = 0;
+	export let title;
+	const defaultAlt = 'cool cover image';
+
 	const {
 		author,
 		entity,
@@ -52,15 +61,6 @@
 			slug: 'contact'
 		}
 	];
-	export let entityMeta = null;
-	export let lastUpdated;
-	export let datePublished;
-	export let metadescription;
-	export let slug;
-	export let timeToRead = 0;
-	export let title;
-
-	const defaultAlt = 'cool cover image';
 
 	export let featuredImage = {
 		url: defaultFeaturedImage,
