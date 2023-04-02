@@ -140,7 +140,7 @@
 		height: 100%;
 		width: 100%;
 		object-fit: cover;
-		filter: brightness(50%);
+		filter: brightness(60%);
 		transition: var(--transition);
 	}
 

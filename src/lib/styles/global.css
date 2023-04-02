@@ -46,9 +46,9 @@ html {
 
 	--bg-100: hsl(212, 27%, 16%);
 	--bg-200: hsl(212, 27%, 14%);
-	--bg-300: hsl(212, 27%, 12%);
-	--bg-400: hsl(212, 27%, 10%);
-	--bg-500: hsl(210, 45%, 4%);
+	--bg-300: #1e242c;
+	--bg-400: #12181f;
+	--bg-500: #060b10;
 
 	--page-bg: var(--bg-500);
 	--page-padding: 20vw;
@@ -320,4 +320,13 @@ hr {
 
 .embed {
 	margin-bottom: var(--space-s);
+}
+
+::placeholder {
+	color: var(--text-color-low);
+}
+
+label:has(+ input:focus),
+label:has(+ textarea:focus) {
+	color: var(--primary-500);
 }

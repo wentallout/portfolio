@@ -8,7 +8,6 @@
 {#if label != ''}
 	<label for={label} class="label small-text">{label}</label>
 {/if}
-
 <input
 	{placeholder}
 	class="input small-text"
@@ -34,7 +33,7 @@
 		/* --- */
 
 		/* SPACING */
-		padding: var(--space-xs) var(--space-xs);
+		padding: var(--space-xs);
 		margin-bottom: var(--space-s);
 		/* --- */
 
@@ -48,5 +47,6 @@
 
 	.input:focus-visible {
 		outline: 1px solid var(--primary-500);
+		filter: drop-shadow(0px 0px 4px var(--primary-500));
 	}
 </style>

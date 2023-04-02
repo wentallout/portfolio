@@ -1,5 +1,5 @@
 <script>
-	import ButtonX from '$lib/components/Button/Button.svelte';
+	import Button from '$lib/components/Button/Button.svelte';
 	import TextArea from '$lib/components/Input/TextArea.svelte';
 	import TextInput from '$lib/components/Input/TextInput.svelte';
 	import EnvelopeSimple from '~icons/ph/envelope-simple';
@@ -22,21 +22,21 @@
 			data-netlify="true">
 			<input type="hidden" name="form-name" value="contact" />
 
-			<TextInput type="text" label="Name" placeholder="John Doe" />
+			<TextInput type="text" label="Name" placeholder="Enter your name here" />
 
 			<TextInput type="email" label="Email" placeholder="username@email.com" />
 
 			<TextArea label="Message" placeholder="Something you want to tell me. Ex: jobs, ideas" />
 
 			<div class="contact__btn">
-				<ButtonX label="Send message (I'll reply)" backgroundColor="var(--primary-500)">
+				<Button label="Send message (I'll reply)" backgroundColor="var(--primary-500)">
 					<PaperPlaneRight class="icon-black" />
-				</ButtonX>
+				</Button>
 
-				<ButtonX
+				<Button
 					label="Reset"
-					border="1px solid var(--error)"
-					backgroundColor="transparent"
+					borderColor="var(--error)"
+					backgroundColor="var(--bg-500)"
 					labelColor="var(--error)"
 					type="reset" />
 			</div>
@@ -62,7 +62,7 @@
 		width: 100%;
 		margin-top: var(--space-m);
 
-		--min: 20ch;
+		--min: 30ch;
 		--gap: var(--space-s);
 
 		display: grid;

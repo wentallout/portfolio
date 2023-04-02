@@ -180,13 +180,13 @@ table {
 	border-collapse: collapse;
 	background-color: var(--bg-400);
 	padding: var(--space-s);
-	border: 1px solid var(--bg-300);
+
 	max-width: fit-content;
 	overflow: auto;
+	border-radius: var(--border-radius-light);
 }
 
 table tbody {
-	border: 1px solid var(--text-color);
 	max-width: var(--text-width);
 }
 

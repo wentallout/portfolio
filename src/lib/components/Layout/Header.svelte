@@ -36,14 +36,14 @@
 		<nav aria-label="primary menu" class="nav" class:nav-scrolldown={scrollY > 0}>
 			<ul class="nav-list">
 				{#each navItems as navItem}
-					<li class:active-page={$page.url.pathname === `${navItem.path}`} class="nav-list__item">
+					<li class="nav-list__item" class:active-page={$page.url.pathname === `${navItem.path}`}>
 						<a class="item" href={navItem.path}>
 							{navItem.title}
 						</a>
 					</li>
 				{/each}
 
-				<li on:click={openNav} on:keydown={openNav} class="hamburger">
+				<li class="hamburger" on:click={openNav} on:keydown={openNav}>
 					<List color="var(--text-color)" width="32" height="32" />
 				</li>
 			</ul>
@@ -58,8 +58,8 @@
 	<div class="overlay-content">
 		{#each navItems as navItem}
 			<a
-				class:active-page={$page.url.pathname === `${navItem.path}`}
 				class="overlay-item xl-text"
+				class:active-page={$page.url.pathname === `${navItem.path}`}
 				on:click={closeNav}
 				href={navItem.path}>
 				{navItem.title}</a>
@@ -74,20 +74,6 @@
 	.active-page {
 		color: var(--primary-500) !important;
 	}
-
-	.nav-list__item:hover {
-		font-weight: 600;
-		scale: 1.2;
-	}
-
-	.nav-list:hover .nav-list__item:not(:hover) {
-		font-weight: 300;
-	}
-
-	/*
-	.overlay-content:hover .overlay-item:not(:hover) {
-		opacity: 0.8;
-	} */
 
 	.nav {
 		/* FONT */
@@ -117,6 +103,12 @@
 
 	.nav-list__item {
 		display: none;
+		transition: var(--transition);
+	}
+
+	.nav-list__item:hover {
+		font-weight: 600;
+		scale: 1.2;
 	}
 
 	.hamburger {

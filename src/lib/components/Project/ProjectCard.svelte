@@ -59,7 +59,7 @@
 		flex-direction: column;
 		border-radius: var(--border-radius);
 		background-color: var(--bg-400);
-		border: 1px solid transparent;
+
 		transition: var(--transition);
 		overflow: hidden;
 	}
@@ -80,7 +80,8 @@
 	}
 
 	.project:hover {
-		border: 1px solid var(--primary-500);
+		outline: 1px solid var(--primary-500);
+		filter: drop-shadow(0px 0px 4px var(--primary-500));
 	}
 
 	.name {

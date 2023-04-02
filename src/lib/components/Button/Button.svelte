@@ -5,10 +5,12 @@
 	export let width = '';
 
 	export let type = 'submit';
-	export let border = '';
+
+	export let borderColor = backgroundColor;
+	export let border = `1px solid ${borderColor}`;
 </script>
 
-<button {type} class="pushable" style="--glow-color:{backgroundColor}; width:{width}">
+<button {type} class="pushable" style="--glow-color:{borderColor}; width:{width}">
 	<span class="shadow" />
 	<span class="edge" />
 	<span
@@ -63,7 +65,7 @@
 		color: white;
 
 		will-change: transform;
-		transform: translateY(-4px);
+		transform: translateY(-2px);
 		transition: transform 600ms cubic-bezier(0.3, 0.7, 0.4, 1);
 		text-transform: capitalize;
 

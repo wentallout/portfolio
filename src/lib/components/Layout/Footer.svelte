@@ -26,29 +26,13 @@
 			</div>
 
 			<div class="list">
-				<div class="list__title">Browse</div>
+				<div class="list__title">Navigate</div>
 				<ul class="nav-list">
 					{#each navItems as navItem}
 						<li class="nav-list__item">
 							<a href={navItem.path}>{navItem.title}</a>
 						</li>
 					{/each}
-				</ul>
-			</div>
-
-			<div class="list">
-				<div class="list__title">Contact</div>
-				<ul class="nav-list">
-					<li class="nav-list__item">
-						<ExLink href="mailto:wentallout@gmail.com">
-							<Envelope width="24" height="24" />
-							wentallout@gmail.com</ExLink>
-					</li>
-					<li class="nav-list__item">
-						<ExLink href="tel:+84929066331">
-							<Phone width="24" height="24" />
-							+84 929066331</ExLink>
-					</li>
 				</ul>
 			</div>
 
@@ -70,6 +54,22 @@
 							<GitHubLogo width="24" height="24" />
 							GitHub
 						</ExLink>
+					</li>
+				</ul>
+			</div>
+
+			<div class="list">
+				<div class="list__title">Contact</div>
+				<ul class="nav-list">
+					<li class="nav-list__item">
+						<ExLink href="mailto:wentallout@gmail.com">
+							<Envelope width="24" height="24" />
+							wentallout@gmail.com</ExLink>
+					</li>
+					<li class="nav-list__item">
+						<ExLink href="tel:+84929066331">
+							<Phone width="24" height="24" />
+							+84 929066331</ExLink>
 					</li>
 				</ul>
 			</div>
@@ -99,9 +99,12 @@
 
 	.list__title {
 		font-family: 'Fancy';
+		color: var(--text-color);
 		font-size: var(--font-size-base);
 
-		border-bottom: 1px solid var(--text-color-disabled);
+		border-style: solid;
+		border-width: 0 0 4px 0;
+		border-image: linear-gradient(to right, var(--text-color-disabled), transparent) 1 0%;
 	}
 
 	footer {

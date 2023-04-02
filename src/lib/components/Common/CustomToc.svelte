@@ -43,8 +43,11 @@
 	.toc-title {
 		display: flex;
 		align-items: center;
-		gap: var(--space-xs);
+		gap: var(--space-2xs);
 		font-family: 'Fancy';
-		border-bottom: 1px solid var(--text-color-disabled);
+
+		border-style: solid;
+		border-width: 0 0 4px 0;
+		border-image: linear-gradient(to right, var(--text-color-disabled), transparent) 1 0%;
 	}
 </style>
