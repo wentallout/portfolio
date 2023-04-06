@@ -5,7 +5,7 @@
 	export let decoImageUrl = '';
 </script>
 
-<div class="title">
+<div class="title full-width">
 	{#if decoImageUrl != ''}
 		<img class="title__deco" alt="decoration for title" src={decoImageUrl} />
 	{/if}

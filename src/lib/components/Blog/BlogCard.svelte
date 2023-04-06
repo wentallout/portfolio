@@ -5,19 +5,44 @@
 	import Time from 'svelte-time';
 
 	import CaretRight from '~icons/ph/caret-right';
+
+	export let blogTags = ['cat1', 'cat2'];
+
+	export let hasTags = true;
 </script>
 
 <a href={blogLink} class="blog">
-	<div class="blog__info">
+	<article class="blog__info">
+		{#if hasTags}
+			<div class="tags">
+				{#each blogTags as tag}
+					<span class="tag xs-text">
+						#{tag}
+					</span>
+				{/each}
+			</div>
+		{/if}
+
 		<div class="blog__title base-text">{blogTitle}</div>
 		<div class="blog__date xs-text">
 			<Time timestamp={blogDate} relative />
 		</div>
-	</div>
+	</article>
 	<div class="icon"><CaretRight color="var(--text-color)" /></div>
 </a>
 
 <style>
+	.tags {
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+		gap: var(--space-xs);
+	}
+
+	.tag {
+		color: var(--accent-500);
+	}
+
 	.blog__info {
 		display: flex;
 		flex-direction: column;

@@ -6,10 +6,6 @@
 </script>
 
 <SaosContainer>
-	<ContactForm />
-
 	<Faq />
+	<ContactForm />
 </SaosContainer>
-
-<style>
-</style>

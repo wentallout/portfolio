@@ -53,6 +53,6 @@
 	}
 
 	details[open] .answer {
-		outline: 1px solid var(--text-color);
+		outline: 0.1px solid var(--bg-300);
 	}
 </style>

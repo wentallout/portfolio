@@ -13,7 +13,7 @@
 <SaosContainer>
 	<section>
 		<div class="tool">
-			<HomeSectionTitle title="Tools" />
+			<HomeSectionTitle title="What I Use" />
 
 			<div class="tool__block">
 				<Atropos rotateTouch="scroll-y">

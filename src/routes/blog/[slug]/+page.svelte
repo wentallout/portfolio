@@ -1,4 +1,5 @@
 <script>
+	import SEO from '$lib/components/SEO/SEO.svelte';
 	import Line from '$lib/components/Common/Line.svelte';
 	import ContentContainer from '$lib/components/Common/ContentContainer.svelte';
 	import Tag from '$lib/components/Common/Tag.svelte';
@@ -6,10 +7,7 @@
 	import Time from 'svelte-time';
 </script>
 
-<svelte:head>
-	<title>{data.title}</title>
-	<meta property="og:title" content={data.title} />
-</svelte:head>
+<SEO title={data.title} />
 
 <article class="info">
 	{#if data.categories.length}
@@ -24,7 +22,7 @@
 		</div>
 	{/if}
 	<div class="date small-text">Published: <Time relative timestamp={data.date} /></div>
-	<h1 class="rainbow">{data.title}</h1>
+	<h1>{data.title}</h1>
 
 	<Line />
 

@@ -9,6 +9,7 @@
 	line-height: var(--line-height-2xl);
 	text-transform: capitalize;
 	margin-bottom: var(--space-m);
+	color: var(--text-color);
 }
 
 .markdown h2,

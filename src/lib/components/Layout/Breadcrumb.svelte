@@ -22,19 +22,19 @@
 	}
 </script>
 
-<nav aria-label="breadcrumb" id="breadcrumb" class="breadcrumb base-text">
-	{#each crumbs as c, i}
-		{#if i == crumbs.length - 1}
-			{#if c.label !== 'home'}
+{#if path !== '/'}
+	<nav aria-label="breadcrumb" id="breadcrumb" class="breadcrumb base-text">
+		{#each crumbs as c, i}
+			{#if i == crumbs.length - 1}
 				<div class="breadcrumb__unclickable">
 					{c.label}
 				</div>
+			{:else}
+				<a class="breadcrumb__clickable" href={c.href}>{c.label}</a> /&nbsp;
 			{/if}
-		{:else}
-			<a class="breadcrumb__clickable" href={c.href}>{c.label}</a> /&nbsp;
-		{/if}
-	{/each}
-</nav>
+		{/each}
+	</nav>
+{/if}
 
 <style>
 	.breadcrumb {

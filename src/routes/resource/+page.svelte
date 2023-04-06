@@ -9,11 +9,27 @@
 	import Flask from '~icons/ph/flask';
 
 	import SectionTitle from '$lib/components/Common/SectionTitle.svelte';
+
+	import SEO from '$lib/components/SEO/SEO.svelte';
+	const breadcrumbs = [
+		{
+			name: 'Home',
+			slug: ''
+		},
+		{
+			name: 'Resource',
+			slug: 'resource'
+		}
+	];
+	const seoProps = {
+		breadcrumbs,
+		title: 'Resource',
+		metadescription: 'Read what Khoa have learned',
+		slug: 'resource'
+	};
 </script>
 
-<svelte:head>
-	<title>Resource</title>
-</svelte:head>
+<SEO {...seoProps} />
 
 <PageTitle pageTitle="Resource" decoImageUrl="/images/resource.svg" />
 

@@ -5,12 +5,27 @@
 
 	// import FigmaLogo from '~icons/ph/figma-logo';
 	import SectionTitle from '$lib/components/Common/SectionTitle.svelte';
+
+	import SEO from '$lib/components/SEO/SEO.svelte';
+	const breadcrumbs = [
+		{
+			name: 'Home',
+			slug: ''
+		},
+		{
+			name: 'Project',
+			slug: 'project'
+		}
+	];
+	const seoProps = {
+		breadcrumbs,
+		title: 'Project',
+		metadescription: 'Look at projects made by Khoa',
+		slug: 'project'
+	};
 </script>
 
-<svelte:head>
-	<title>Project</title>
-</svelte:head>
-
+<SEO {...seoProps} />
 <PageTitle pageTitle="Project" decoImageUrl="/images/project.svg" />
 
 <section>

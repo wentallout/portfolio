@@ -9,6 +9,8 @@
 	import InstagramLogo from '~icons/ph/instagram-logo';
 	import GitHubLogo from '~icons/ph/github-logo';
 	import Phone from '~icons/ph/phone';
+
+	import MapPin from '~icons/ph/map-pin';
 </script>
 
 <Marquee />
@@ -61,6 +63,12 @@
 			<div class="list">
 				<div class="list__title">Contact</div>
 				<ul class="nav-list">
+					<li class="nav-list__item">
+						<ExLink href="https://goo.gl/maps/GLt6uhYWwU91fXz49">
+							<MapPin width="24" height="24" />
+							District 5, Ho Chi Minh City</ExLink>
+					</li>
+
 					<li class="nav-list__item">
 						<ExLink href="mailto:wentallout@gmail.com">
 							<Envelope width="24" height="24" />
@@ -123,6 +131,8 @@
 		max-width: 100vw;
 
 		background-color: var(--black);
+
+		background: linear-gradient(0deg, var(--bg-300) 0%, var(--bg-500) 100%);
 	}
 
 	.footer-container {
@@ -161,7 +171,7 @@
 		gap: var(--space-3xs);
 	}
 
-	.nav-list__item a:hover {
+	.nav-list__item:hover {
 		color: var(--primary-500);
 	}
 </style>

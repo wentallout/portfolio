@@ -1,9 +1,12 @@
 <script>
+	import SEO from '$lib/components/SEO/SEO.svelte';
 	import TextInput from '$lib/components/Input/TextInput.svelte';
 	import BlogListContainer from '$lib/components/Blog/BlogListContainer.svelte';
 	import BlogCard from '$lib/components/Blog/BlogCard.svelte';
 	import PageTitle from '$lib/components/Common/PageTitle.svelte';
 	import BlogTagsList from '$lib/components/Blog/BlogTagsList.svelte';
+
+	import MiniSearch from 'minisearch';
 
 	import { paginate, DarkPaginationNav } from 'svelte-paginate';
 
@@ -16,32 +19,64 @@
 	let searchTerm = '';
 	let filteredBlogs = [];
 	let items = [];
+	let currentPage = 1;
+	let pageSize = 8;
+
+	let autoSuggest;
+
+	let miniSearch = new MiniSearch({
+		fields: ['meta.title'],
+		storeFields: ['meta', 'path'],
+		idField: 'meta.title',
+		extractField: (document, fieldName) => {
+			return fieldName.split('.').reduce((doc, key) => doc && doc[key], document);
+		},
+		searchOptions: {
+			fuzzy: 2
+		}
+	});
 
 	onMount(() => {
 		filteredBlogs = [...allBlogs];
+
 		items = [...allBlogs];
+		miniSearch.addAll(filteredBlogs);
 	});
 
 	function handleSearchInput(event) {
+		// SEARCH
 		searchTerm = event.target.value.toLowerCase();
-		filteredBlogs = allBlogs.filter((blog) => blog.meta.title.toLowerCase().includes(searchTerm));
+		filteredBlogs = miniSearch.search(searchTerm);
+
+		if (searchTerm === '') {
+			filteredBlogs = [...allBlogs];
+		}
+		currentPage = 1;
+		// ---
+
+		// AUTO SUGGEST
+		let suggestData = miniSearch.autoSuggest(searchTerm, { fuzzy: 0.2 });
+		autoSuggest = suggestData.map((item) => item.suggestion);
+		// ---
 	}
 
-	let currentPage = 1;
-	let pageSize = 8;
+	$: items = filteredBlogs;
 	$: paginatedItems = paginate({ items, pageSize, currentPage });
 </script>
 
-<svelte:head>
-	<title>Blog</title>
-</svelte:head>
+<SEO title="Blog" />
 
 <PageTitle pageTitle="Blog" decoImageUrl="/images/blog.svg" />
 
-<TextInput bind:value={searchTerm} placeholder="Search blogs..." on:input={handleSearchInput} />
+<TextInput
+	autoSuggestList={autoSuggest}
+	bind:value={searchTerm}
+	placeholder="Search blogs..."
+	on:input={handleSearchInput} />
 
 <section class="blog-list">
 	<BlogTagsList {data} />
+
 	{#if filteredBlogs.length != 0}
 		<DarkPaginationNav
 			totalItems={items.length}
@@ -51,15 +86,21 @@
 			showStepOptions={true}
 			on:setPage={(e) => (currentPage = e.detail.page)} />
 	{/if}
+
 	<BlogListContainer>
 		{#if filteredBlogs.length === 0}
 			<div class="not-found small-text">No blogs found.</div>
 		{:else}
 			{#each paginatedItems as item}
-				<BlogCard blogTitle={item.meta.title} blogLink={item.path} blogDate={item.meta.date} />
+				<BlogCard
+					blogTitle={item.meta.title}
+					blogLink={item.path}
+					blogDate={item.meta.date}
+					blogTags={item.meta.categories} />
 			{/each}
 		{/if}
 	</BlogListContainer>
+
 	{#if filteredBlogs.length != 0}
 		<DarkPaginationNav
 			totalItems={items.length}

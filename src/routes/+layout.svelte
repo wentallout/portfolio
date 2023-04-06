@@ -55,7 +55,8 @@
 	};
 	const seoProps = {
 		slug: '',
-		entityMeta
+		entityMeta,
+		title: 'something'
 	};
 </script>
 
@@ -93,8 +94,8 @@
 
 		min-height: 100vh;
 
-		/* Mobile padding */
-		padding: var(--space-l) 1rem;
+		/* Responsive Padding */
+		padding: 0 var(--page-padding);
 		z-index: 1;
 	}
 
@@ -116,12 +117,6 @@
 		.main-content:after,
 		.main-content:before {
 			display: none;
-		}
-	}
-
-	@media (min-width: 768px) {
-		.main-content {
-			padding: var(--space-l) var(--page-padding);
 		}
 	}
 </style>

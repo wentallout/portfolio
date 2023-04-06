@@ -4,6 +4,8 @@
 	import TextInput from '$lib/components/Input/TextInput.svelte';
 	import EnvelopeSimple from '~icons/ph/envelope-simple';
 
+	import ArrowCounterClockwise from '~icons/ph/arrow-counter-clockwise';
+
 	import PaperPlaneRight from '~icons/ph/paper-plane-right';
 	import SectionTitle from '$lib/components/Common/SectionTitle.svelte';
 </script>
@@ -29,8 +31,8 @@
 			<TextArea label="Message" placeholder="Something you want to tell me. Ex: jobs, ideas" />
 
 			<div class="contact__btn">
-				<Button label="Send message (I'll reply)" backgroundColor="var(--primary-500)">
-					<PaperPlaneRight class="icon-black" />
+				<Button label="Send message" backgroundColor="var(--primary-500)">
+					<PaperPlaneRight color="var(--bg-500)" width="24" height="24" />
 				</Button>
 
 				<Button
@@ -38,7 +40,9 @@
 					borderColor="var(--error)"
 					backgroundColor="var(--bg-500)"
 					labelColor="var(--error)"
-					type="reset" />
+					type="reset"
+					><ArrowCounterClockwise color="var(--error)" width="24" height="24" />
+				</Button>
 			</div>
 		</form>
 	</div>

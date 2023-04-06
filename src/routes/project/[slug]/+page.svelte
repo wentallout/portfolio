@@ -13,7 +13,7 @@
 
 <article class="info">
 	<div class="small-text project-date">Updated: <Time relative timestamp={data.date} /></div>
-	<h1 class="project-name">{data.title}</h1>
+	<h1>{data.title}</h1>
 	<Line />
 	<ContentContainer>
 		<svelte:component this={data.content} />
@@ -21,10 +21,6 @@
 </article>
 
 <style>
-	.project-name {
-		color: var(--primary-500);
-	}
-
 	.info {
 		display: block;
 	}

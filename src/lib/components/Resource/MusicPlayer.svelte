@@ -326,7 +326,7 @@
 	}
 
 	.song:hover {
-		background-color: var(--primary-900);
+		background-color: var(--bg-400);
 		cursor: pointer;
 	}
 </style>

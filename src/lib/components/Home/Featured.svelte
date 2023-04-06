@@ -5,11 +5,8 @@
 
 <section>
 	<div class="featured">
-		<a href="/project">
-			<HomeSectionTitle title="Featured" />
-		</a>
-
-		<ProjectCardList />
+		<HomeSectionTitle title="Featured" />
+		<ProjectCardList hasMoreButton={true} />
 	</div>
 </section>
 

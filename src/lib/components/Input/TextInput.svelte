@@ -3,12 +3,17 @@
 	export let type = 'text';
 	export let placeholder = '';
 	export let value = '';
+
+	export let autoSuggestList = [];
+
+	$: autoSuggestList;
 </script>
 
 {#if label != ''}
 	<label for={label} class="label small-text">{label}</label>
 {/if}
 <input
+	list="search"
 	{placeholder}
 	class="input small-text"
 	{type}
@@ -17,11 +22,27 @@
 	required
 	on:input
 	{value} />
+<datalist id="search">
+	{#each autoSuggestList as item}
+		<option>{item}</option>
+	{/each}
+</datalist>
 
 <style>
 	.label {
 		font-weight: 500;
 		margin-bottom: var(--space-3xs);
+	}
+
+	datalist option {
+		padding: 0.3em 1em;
+		color: var(--text-color);
+		background-color: var(--bg-400) !important;
+		cursor: pointer;
+	}
+
+	datalist {
+		background-color: var(--bg-400) !important;
 	}
 
 	.input {

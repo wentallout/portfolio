@@ -19,17 +19,10 @@
 	const seoProps = {
 		breadcrumbs,
 		title: 'Contact',
-		metadescription: 'Get in touch with Khoa - UI/UX Designer from Ho Chi Minh City',
-		slug: 'contact',
-		datePublished: '2077-07-07T14:19:33.000+0100',
-		lastUpdated: '2077-07-07T14:19:33.000+0100'
+		metadescription: 'Get in touch with Khoa.',
+		slug: 'contact'
 	};
-	// ---SEO END---
 </script>
-
-<svelte:head>
-	<title>Contact</title>
-</svelte:head>
 
 <SEO {...seoProps} />
 

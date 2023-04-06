@@ -11,7 +11,11 @@
 </div>
 <BlogListContainer>
 	{#each data.blogs as blog}
-		<BlogCard blogTitle={blog.meta.title} blogLink={blog.path} blogDate={blog.meta.date} />
+		<BlogCard
+			blogTitle={blog.meta.title}
+			blogLink={blog.path}
+			blogDate={blog.meta.date}
+			hasTags={false} />
 	{/each}
 </BlogListContainer>
 

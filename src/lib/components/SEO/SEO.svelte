@@ -7,10 +7,10 @@
 	//
 
 	import website from '$lib/config.js';
-	import { VERTICAL_LINE_ENTITY } from '$lib/constants/entities';
-	import OpenGraph from './OpenGraph.svelte';
-	import SchemaOrg from './SchemaOrg.svelte';
-	import Twitter from './Twitter.svelte';
+	import { DIAMOND_ENTITY } from '$lib/constants/entities';
+	import OpenGraph from '$lib/components/SEO/OpenGraph.svelte';
+	import SchemaOrg from '$lib/components/SEO/SchemaOrg.svelte';
+	import Twitter from '$lib/components/SEO/Twitter.svelte';
 
 	export let entityMeta = null;
 	export let lastUpdated = new Date();
@@ -18,7 +18,8 @@
 	export let metadescription;
 	export let slug;
 	export let timeToRead = 0;
-	export let title;
+	export let title = '';
+
 	const defaultAlt = 'cool cover image';
 
 	const {
@@ -37,6 +38,9 @@
 		tiktokUsername,
 		twitterUsername
 	} = website;
+
+	const pageTitle = `${title} ${DIAMOND_ENTITY} ${siteTitle}`;
+	const url = `${siteUrl}/${slug}`;
 
 	export let article = false;
 	export let breadcrumbs = [
@@ -82,8 +86,6 @@
 		alt: defaultAlt
 	};
 
-	const pageTitle = `${siteTitle} ${VERTICAL_LINE_ENTITY} ${title}`;
-	const url = `${siteUrl}/${slug}`;
 	const openGraphProps = {
 		article,
 		datePublished,

@@ -1,16 +1,11 @@
 <script>
 	import ExLink from '$lib/components/Common/ExLink.svelte';
-	import Envelope from '~icons/ph/envelope';
-
-	import Phone from '~icons/ph/phone';
 	import FigmaLogo from '~icons/ph/figma-logo';
 	import RedditLogo from '~icons/ph/reddit-logo';
 	import Handshake from '~icons/ph/handshake';
-
 	import LinkedinLogo from '~icons/ph/linkedin-logo';
 	import InstagramLogo from '~icons/ph/instagram-logo';
 	import GitHubLogo from '~icons/ph/github-logo';
-
 	import SectionTitle from '$lib/components/Common/SectionTitle.svelte';
 
 	let icon = {
@@ -30,16 +25,6 @@
 			<ExLink href="https://www.linkedin.com/in/wentallout">
 				<div class="social__address">
 					<LinkedinLogo {...icon} />
-				</div>
-			</ExLink>
-			<ExLink href="tel:+84929066331">
-				<div class="social__address">
-					<Phone {...icon} />
-				</div>
-			</ExLink>
-			<ExLink href="mailto:wentallout@gmail.com">
-				<div class="social__address">
-					<Envelope {...icon} />
 				</div>
 			</ExLink>
 			<ExLink href="https://www.figma.com/@wentallout">

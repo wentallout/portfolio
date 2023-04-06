@@ -12,33 +12,52 @@
 	export let thumbnail;
 </script>
 
-<a href={linkToDetail} class="project">
-	<img class="project__thumbnail" src={thumbnail} alt="" />
+<a href={linkToDetail}>
+	<article class="project">
+		<img class="project__thumbnail" src={thumbnail} alt="" />
 
-	<div class="project__info">
-		<div class="name mid-text">{projectName}</div>
-
-		<div class="info">
-			<div class="info__section">
-				<div class="section__label">What</div>
-				<div class="section__desc">{what}</div>
+		<div class="project__info">
+			<div class="title">
+				<div class="year xs-text">2022</div>
+				<div class="name mid-text">{projectName}</div>
 			</div>
 
-			<div class="info__section">
-				<div class="section__label">Output</div>
-				<div class="section__desc">{result}</div>
-			</div>
+			<div class="info">
+				<div class="info__section">
+					<div class="section__label">What</div>
+					<div class="section__desc">{what}</div>
+				</div>
 
-			<!-- <div class="info__btn">
+				<div class="info__section">
+					<div class="section__label">Output</div>
+					<div class="section__desc">{result}</div>
+				</div>
+
+				<!-- <div class="info__btn">
 				<a href={linkToDetail}>
 					<Button backgroundColor="var(--primary-500)" label="Read Case Study" />
 				</a>
 			</div> -->
+			</div>
 		</div>
-	</div>
+	</article>
 </a>
 
 <style>
+	.title {
+		display: flex;
+		justify-content: flex-start;
+		flex-direction: column;
+	}
+
+	.year {
+		width: fit-content;
+
+		border-radius: var(--border-radius-light);
+		line-height: normal;
+		color: var(--text-color-low);
+	}
+
 	.info__btn {
 		display: flex;
 		flex-direction: row;
@@ -49,7 +68,7 @@
 	.info {
 		display: flex;
 		flex-direction: column;
-		gap: var(--space-m);
+		gap: var(--space-xs);
 		height: auto;
 	}
 
@@ -64,8 +83,8 @@
 		overflow: hidden;
 	}
 
-	.project:hover .name {
-		color: var(--primary-500);
+	.project:hover {
+		background-color: var(--bg-300);
 	}
 
 	.project__info {
