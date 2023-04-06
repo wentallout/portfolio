@@ -1,6 +1,6 @@
 import { writable } from 'svelte/store';
 
-export let musicList = writable([
+export const musicList = writable([
 	{
 		audio: 'PerfectGirl.mp3',
 		name: 'Perfect Girl'
