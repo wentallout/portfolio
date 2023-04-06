@@ -1,8 +1,6 @@
 version = 1
 
+exclude_patterns = [".netlify/**"]
+
 [[analyzers]]
 name = "javascript"
-
-exclude_patterns = [
-  ".netlify/**"
-]
