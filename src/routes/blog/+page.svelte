@@ -32,7 +32,7 @@
 			return fieldName.split('.').reduce((doc, key) => doc && doc[key], document);
 		},
 		searchOptions: {
-			fuzzy: 2
+			fuzzy: 3
 		}
 	});
 
