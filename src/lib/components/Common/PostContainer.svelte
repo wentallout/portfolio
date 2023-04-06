@@ -3,27 +3,28 @@
 	import CustomToc from '$lib/components/Common/CustomToc.svelte';
 </script>
 
-<div class="content-container">
-	<div class="content">
+<div class="post-container">
+	<div class="post-content">
 		<slot />
-		<End />
 	</div>
 
 	<CustomToc />
 </div>
+<End />
 
 <style>
-	.content-container {
+	.post-container {
 		display: flex;
 		flex-direction: row;
 
 		align-items: flex-start;
 		margin-top: var(--space-3xl);
 		justify-content: space-between;
-		gap: var(--space-xl);
+		gap: var(--space-m);
 	}
-	.content {
+	.post-content {
 		display: flex;
 		flex-direction: column;
+		width: 100%;
 	}
 </style>

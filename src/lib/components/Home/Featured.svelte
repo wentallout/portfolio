@@ -5,7 +5,7 @@
 
 <section>
 	<div class="featured">
-		<HomeSectionTitle title="Featured" />
+		<HomeSectionTitle title="Featured Projects" />
 		<ProjectCardList hasMoreButton={true} />
 	</div>
 </section>

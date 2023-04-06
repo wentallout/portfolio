@@ -1,6 +1,6 @@
 <script>
 	import Line from '$lib/components/Common/Line.svelte';
-	import ContentContainer from '$lib/components/Common/ContentContainer.svelte';
+	import PostContainer from '$lib/components/Common/PostContainer.svelte';
 
 	export let data;
 	import Time from 'svelte-time';
@@ -15,9 +15,9 @@
 	<div class="small-text project-date">Updated: <Time relative timestamp={data.date} /></div>
 	<h1>{data.title}</h1>
 	<Line />
-	<ContentContainer>
+	<PostContainer>
 		<svelte:component this={data.content} />
-	</ContentContainer>
+	</PostContainer>
 </article>
 
 <style>

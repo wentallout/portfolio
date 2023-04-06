@@ -1,7 +1,7 @@
 <script>
 	import SEO from '$lib/components/SEO/SEO.svelte';
 	import Line from '$lib/components/Common/Line.svelte';
-	import ContentContainer from '$lib/components/Common/ContentContainer.svelte';
+	import PostContainer from '$lib/components/Common/PostContainer.svelte';
 	import Tag from '$lib/components/Common/Tag.svelte';
 	export let data;
 	import Time from 'svelte-time';
@@ -22,13 +22,14 @@
 		</div>
 	{/if}
 	<div class="date small-text">Published: <Time relative timestamp={data.date} /></div>
+
 	<h1>{data.title}</h1>
 
 	<Line />
 
-	<ContentContainer>
+	<PostContainer>
 		<svelte:component this={data.content} />
-	</ContentContainer>
+	</PostContainer>
 </article>
 
 <style>

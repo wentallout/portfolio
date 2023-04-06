@@ -7,9 +7,10 @@ import rehypeSlug from 'rehype-slug';
 import rehypeExternalLinks from 'rehype-external-links';
 import rehypeAutolinkHeadings from 'rehype-autolink-headings';
 
+import readingTime from 'remark-reading-time';
+
 import sequence from 'svelte-sequential-preprocessor';
 import { preprocessThrelte } from '@threlte/preprocess';
-
 
 /** @type {import('@sveltejs/kit').Config} */
 const config = {
@@ -21,13 +22,13 @@ const config = {
 			extensions: ['.svelte.md', '.md', '.svx'],
 			rehypePlugins: [
 				rehypeSlug,
-				// rehypeToc,
 				[
 					rehypeExternalLinks,
 					{ rel: ['nofollow', 'noopener', 'noreferrer', 'external'], target: '_blank' }
 				],
 				[rehypeAutolinkHeadings, { behavior: 'wrap' }]
-			]
+			],
+			remarkPlugins: [readingTime]
 		}),
 		preprocessThrelte()
 	]),
