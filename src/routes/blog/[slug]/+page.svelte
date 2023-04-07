@@ -5,11 +5,13 @@
 	import Tag from '$lib/components/Common/Tag.svelte';
 	export let data;
 	import Time from 'svelte-time';
+
+	let article;
 </script>
 
 <SEO title={data.title} />
 
-<article class="info">
+<article bind:this={article} class="info">
 	{#if data.categories.length}
 		<div class="category">
 			{#each data.categories as category}

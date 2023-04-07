@@ -1,4 +1,5 @@
 <script>
+	import ScrollProgressBar from '$lib/components/Common/ScrollProgressBar.svelte';
 	import Cover from '$lib/components/Layout/Cover.svelte';
 	import SkipLink from '$lib/components/Layout/SkipLink.svelte';
 	import PWA from '$lib/components/PWA/PWA.svelte';
@@ -61,6 +62,7 @@
 </script>
 
 <SEO {...seoProps} />
+<ScrollProgressBar />
 <SkipLink />
 <PWA />
 <Cover />

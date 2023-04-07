@@ -3,13 +3,13 @@
 	import ExLink from '$lib/components/Common/ExLink.svelte';
 </script>
 
-<div class="end">
-	<div class="end__text small-text">
-		Copyright {`${COPYRIGHT_ENTITY}`} 1999-2023 wentallout, All Rights Reserved. 全力を尽くす.
+<div class="end xs-text">
+	<div class="end__text">
+		Copyright {`${COPYRIGHT_ENTITY}`} 2023 wentallout, All Rights Reserved. 全力を尽くす.
 	</div>
 
 	<ExLink href="/doc/privacy-policy.pdf">
-		<div class="end__text small-text">Privacy Policy</div>
+		<div class="end__text">Privacy Policy</div>
 	</ExLink>
 </div>
 
@@ -18,6 +18,7 @@
 		display: flex;
 		flex-direction: row;
 		justify-content: space-between;
+		align-items: center;
 		flex-wrap: wrap;
 	}
 	.end__text {
@@ -27,6 +28,6 @@
 	}
 
 	.end__text:hover {
-		filter: brightness(1.2);
+		color: var(--primary-500);
 	}
 </style>

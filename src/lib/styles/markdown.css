@@ -28,24 +28,21 @@
 	margin-top: calc(var(--space-3xl));
 	margin-bottom: var(--space-s);
 	/* --- */
-	padding: var(--space-3xs);
-	padding-left: var(--space-xs);
 
 	/* FONT */
 	font-family: var(--fancy-font);
 	font-size: var(--font-size-large);
 	line-height: var(--line-height-large);
-	background-color: var(--primary-500);
-	color: var(--bg-500);
+
+	color: var(--primary-500);
 	/* --- */
 
 	display: flex;
 	flex-direction: row;
 	align-items: center;
 
-	border-radius: var(--border-radius-light);
-
-	background: linear-gradient(to right, var(--primary-500), var(--primary-600));
+	border-bottom: 4px solid transparent;
+	border-image: linear-gradient(to right, var(--primary-500), transparent) 1 0%;
 }
 
 .markdown h3 {
@@ -89,7 +86,10 @@
 }
 
 .markdown ul {
-	border-left: 4px solid var(--text-color);
+	/* border-left: 4px solid var(--text-color); */
+
+	border-left: 4px solid transparent;
+	border-image: linear-gradient(to bottom, var(--text-color), transparent) 1 1;
 }
 
 .markdown li:not(.toc li) {

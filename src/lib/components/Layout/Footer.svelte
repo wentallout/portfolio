@@ -110,8 +110,7 @@
 		color: var(--text-color);
 		font-size: var(--font-size-base);
 
-		border-style: solid;
-		border-width: 0 0 4px 0;
+		border-bottom: 4px solid transparent;
 		border-image: linear-gradient(to right, var(--text-color-disabled), transparent) 1 0%;
 	}
 

@@ -9,6 +9,7 @@
 
 <style>
 	a {
+		font-size: inherit;
 		display: contents;
 		position: relative;
 	}
