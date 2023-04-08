@@ -100,6 +100,8 @@
 		}
 	}
 
+	
+
 	.cover__btn {
 		width: 100%;
 		position: absolute;

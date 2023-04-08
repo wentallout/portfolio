@@ -4,7 +4,6 @@
 	import { onMount } from 'svelte';
 	let scrollY;
 	let innerHeight;
-	let percentage;
 
 	const updateProgressBar = () => {
 		const scrollPosition = scrollY;
@@ -38,9 +37,7 @@
 <svelte:window on:scroll={updateProgressBar} bind:scrollY bind:innerHeight />
 
 <div class="scroll-progress-bar">
-	<div class="progress {isGlowing ? 'glowing' : ''}" style="width: {progress}%">
-		<div bind:this={percentage} class="percentage xs-text">{progress}%</div>
-	</div>
+	<div class="progress {isGlowing ? 'glowing' : ''}" style="width: {progress}%" />
 </div>
 
 <style>
@@ -53,8 +50,7 @@
 			box-shadow: 0 0 8px var(--primary-500);
 		}
 		to {
-			box-shadow: 0 0 8px var(--accent-500);
-			box-shadow: none;
+			box-shadow: 0 0 4px var(--accent-500);
 		}
 	}
 
@@ -66,13 +62,6 @@
 		height: 2px;
 
 		z-index: var(--z-index-max);
-	}
-
-	.percentage {
-		position: absolute;
-		bottom: 2px;
-		left: 0;
-		background-color: var(--black);
 	}
 
 	.progress {
