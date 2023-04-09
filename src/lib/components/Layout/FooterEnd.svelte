@@ -5,7 +5,8 @@
 
 <div class="end xs-text">
 	<div class="end__text">
-		Copyright {`${COPYRIGHT_ENTITY}`} 2023 wentallout, All Rights Reserved. 全力を尽くす.
+		Copyright {`${COPYRIGHT_ENTITY}`} 2023 全力を尽くす, All Rights Reserved. Built with SvelteKit by
+		Khoa.
 	</div>
 
 	<ExLink href="/doc/privacy-policy.pdf">

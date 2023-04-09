@@ -9,26 +9,34 @@
 	$: autoSuggestList;
 </script>
 
-{#if label != ''}
-	<label for={label} class="label small-text">{label}</label>
-{/if}
-<input
-	list="search"
-	{placeholder}
-	class="input small-text"
-	{type}
-	name={label}
-	id={label}
-	required
-	on:input
-	{value} />
-<datalist id="search">
-	{#each autoSuggestList as item}
-		<option>{item}</option>
-	{/each}
-</datalist>
+<div class="input-container">
+	{#if label != ''}
+		<label for={label} class="label small-text">{label}</label>
+	{/if}
+	<input
+		list="search"
+		{placeholder}
+		class="input small-text"
+		{type}
+		name={label}
+		id={label}
+		required
+		on:input
+		{value} />
+	<datalist id="search">
+		{#each autoSuggestList as item}
+			<option>{item}</option>
+		{/each}
+	</datalist>
+</div>
 
 <style>
+	.input-container {
+		display: flex;
+		width: 100%;
+		flex-direction: column;
+	}
+
 	.label {
 		font-weight: 500;
 		margin-bottom: var(--space-3xs);
@@ -57,6 +65,8 @@
 		padding: var(--space-xs);
 		margin-bottom: var(--space-s);
 		/* --- */
+
+		width: 100%;
 
 		height: 3.5rem;
 		border: 0;

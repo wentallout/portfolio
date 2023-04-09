@@ -3,12 +3,7 @@ const PUBLIC_DOMAIN = 'wentallout.tech';
 const directives = {
 	'base-uri': ["'self'"],
 	'child-src': ["'self'"],
-	'connect-src': [
-		"'self'",
-		'ws://localhost:*',
-		'wss://socket.tidio.co',
-		'https://api.countapi.xyz/hit/:HOST:/:PATHNAME'
-	],
+	'connect-src': ["'self'", 'ws://localhost:*'],
 	// 'connect-src': ["'self'", 'ws://localhost:*', 'https://hcaptcha.com', 'https://*.hcaptcha.com'],
 	'img-src': [
 		"'self'",
@@ -17,7 +12,7 @@ const directives = {
 		'https://*.amazonaws.com',
 		'https://twemoji.maxcdn.com'
 	],
-	'font-src': ["'self'", 'data:', 'https://widget-v4.tidiochat.com', 'https://*.cloudfront.net'],
+	'font-src': ["'self'", 'data:', 'https://*.cloudfront.net'],
 	'form-action': ["'self'"],
 	'frame-ancestors': ["'self'"],
 	'frame-src': [
@@ -31,7 +26,7 @@ const directives = {
 		// 'https://*.hcaptcha.com',
 	],
 	'manifest-src': ["'self'"],
-	'media-src': ["'self'", 'data:', 'https://*.cloudfront.net', 'https://*.tidiochat.com'],
+	'media-src': ["'self'", 'data:', 'https://*.cloudfront.net'],
 	'object-src': ["'none'"],
 	'style-src': ["'self'", "'unsafe-inline'", 'https://*.cloudfront.net'],
 	// 'style-src': ["'self'", "'unsafe-inline'", 'https://hcaptcha.com', 'https://*.hcaptcha.com'],
@@ -51,9 +46,8 @@ const directives = {
 	],
 	'script-src': [
 		"'self'",
-		"'unsafe-inline'",
-		'http://code.tidio.co',
-		'https://widget-v4.tidiochat.com'
+		"'unsafe-inline'"
+
 		// 'https://*.stripe.com',
 		// 'https://*.facebook.com',
 		// 'https://*.facebook.net',

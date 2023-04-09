@@ -2,7 +2,7 @@
 /* Scrollbar */
 
 ::-webkit-scrollbar {
-	background-color: var(--black);
+	background-color: var(--bg-500);
 }
 ::-webkit-scrollbar-button {
 	display: none;
@@ -14,6 +14,7 @@
 	display: none;
 }
 ::-webkit-scrollbar-thumb {
+	border-radius: var(--border-radius-light);
 	background-color: var(--neutral-500);
 }
 ::-webkit-scrollbar-thumb:hover {

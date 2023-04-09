@@ -4,12 +4,10 @@
 
 	export let data;
 	import Time from 'svelte-time';
+	import SEO from '$lib/components/SEO/SEO.svelte';
 </script>
 
-<svelte:head>
-	<title>{data.title}</title>
-	<meta property="og:title" content={data.title} />
-</svelte:head>
+<SEO title={data.title} />
 
 <article class="info">
 	<div class="small-text project-date">Updated: <Time relative timestamp={data.date} /></div>

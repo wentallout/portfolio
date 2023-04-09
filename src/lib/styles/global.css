@@ -50,6 +50,8 @@ html {
 	--bg-400: hsl(212, 27%, 10%);
 	--bg-500: hsl(210, 45%, 4%);
 
+	--max-width: 80rem;
+
 	--page-bg: var(--bg-500);
 
 	--text-width: 65ch;
@@ -162,7 +164,7 @@ html {
 
 @media (min-width: 768px) {
 	:root {
-		--page-padding: 20vw;
+		--page-padding: 18vw;
 	}
 }
 
@@ -260,7 +262,7 @@ address {
 
 section {
 	/* Spacing */
-	max-width: 80rem;
+	max-width: var(--max-width);
 	margin-bottom: calc(var(--space-3xl) * 2);
 }
 

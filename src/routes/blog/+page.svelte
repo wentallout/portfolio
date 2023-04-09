@@ -68,13 +68,12 @@
 
 <PageTitle pageTitle="Blog" decoImageUrl="/images/blog.svg" />
 
-<TextInput
-	autoSuggestList={autoSuggest}
-	bind:value={searchTerm}
-	placeholder="Search blogs..."
-	on:input={handleSearchInput} />
-
 <section class="blog-list">
+	<TextInput
+		autoSuggestList={autoSuggest}
+		bind:value={searchTerm}
+		placeholder="Search blogs..."
+		on:input={handleSearchInput} />
 	<BlogTagsList {data} />
 
 	{#if filteredBlogs.length != 0}

@@ -2,14 +2,38 @@
 	import Button from '$lib/components/Button/Button.svelte';
 
 	import { page } from '$app/stores';
+	import { onMount } from 'svelte';
+
+	onMount(() => {
+		switch ($page.status) {
+			case 404:
+				customMessage =
+					"Oops! The page you're looking for cannot be found. Please check the URL or try searching for what you need.";
+				break;
+			case 403:
+				customMessage =
+					"Sorry, you don't have permission to access this page. Please contact the website administrator for assistance.";
+				break;
+			case 500:
+				customMessage =
+					"We're sorry, something went wrong. Our team has been notified and will work to fix the problem as soon as possible.";
+				break;
+			case 503:
+				customMessage =
+					'Our servers are currently down for maintenance. We apologize for any inconvenience and will be back up and running shortly.';
+				break;
+			default:
+				customMessage = 'An unexpected error occurred. Please try again later.';
+		}
+	});
+
+	let customMessage = '';
 </script>
 
 <div class="error">
 	<h1 class="status xxxl-text">{$page.status} {$page.error.message}</h1>
 	<div class="error__detail">
-		<div class="message small-text">
-			Oops! Something unexpected happened. Moving back after 3 seconds...
-		</div>
+		<div class="message small-text">{customMessage}</div>
 	</div>
 
 	<a rel="external" href="/">
@@ -46,6 +70,7 @@
 		display: inline-block;
 		color: var(--text-color-low);
 		font-weight: 300;
+		max-width: var(--text-width);
 	}
 
 	.error__detail {

@@ -16,14 +16,14 @@
 			</div>
 
 			<div class="intro__btn">
-				<a href="/project">
+				<a class="btn" href="/project">
 					<Button
 						label="See Full Portfolio"
 						labelColor="var(--bg-500)"
 						backgroundColor="var(--primary-500)" />
 				</a>
 
-				<a href="/contact">
+				<a class="btn" href="/contact">
 					<Button
 						label="Contact"
 						labelColor="var(--text-color)"
@@ -71,11 +71,22 @@
 	}
 	.intro__btn {
 		margin-top: var(--space-l);
-		display: flex;
-		justify-content: flex-start;
-		align-items: center;
+
+		margin-top: var(--space-m);
 		width: 100%;
-		gap: var(--space-s);
-		flex-wrap: wrap;
+
+		max-width: var(--max-width);
+
+		--min: 30ch;
+		--gap: var(--space-s);
+
+		display: grid;
+		grid-gap: var(--gap);
+
+		grid-template-columns: repeat(auto-fit, minmax(min(100%, var(--min)), 1fr));
+	}
+
+	.btn {
+		display: contents;
 	}
 </style>

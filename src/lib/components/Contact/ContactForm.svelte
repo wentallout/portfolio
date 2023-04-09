@@ -63,8 +63,10 @@
 	}
 
 	.contact__btn {
-		width: 100%;
+
 		margin-top: var(--space-m);
+		width: 100%;
+		
 
 		--min: 30ch;
 		--gap: var(--space-s);

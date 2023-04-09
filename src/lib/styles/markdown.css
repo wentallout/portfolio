@@ -86,8 +86,6 @@
 }
 
 .markdown ul {
-	/* border-left: 4px solid var(--text-color); */
-
 	border-left: 4px solid transparent;
 	border-image: linear-gradient(to bottom, var(--text-color), transparent) 1 1;
 }
