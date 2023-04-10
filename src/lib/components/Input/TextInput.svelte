@@ -43,9 +43,6 @@
 	}
 
 	datalist option {
-		padding: 0.3em 1em;
-		color: var(--text-color);
-		background-color: var(--bg-400) !important;
 		cursor: pointer;
 	}
 

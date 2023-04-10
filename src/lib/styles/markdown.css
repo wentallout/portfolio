@@ -17,6 +17,7 @@
 .markdown h4 {
 	line-height: 120%;
 	position: relative;
+	color: var(--text-color);
 }
 
 .markdown h2:first-child {
@@ -33,16 +34,11 @@
 	font-family: var(--fancy-font);
 	font-size: var(--font-size-large);
 	line-height: var(--line-height-large);
-
-	color: var(--primary-500);
+	color: var(--text-color);
 	/* --- */
 
-	display: flex;
-	flex-direction: row;
-	align-items: center;
-
 	border-bottom: 4px solid transparent;
-	border-image: linear-gradient(to right, var(--primary-500), transparent) 1 0%;
+	border-image: linear-gradient(to right, var(--text-color), transparent) 1 0%;
 }
 
 .markdown h3 {
@@ -55,14 +51,13 @@
 	font-weight: 600;
 	font-size: var(--font-size-mid);
 	line-height: var(--line-height-mid);
-	color: var(--primary-500);
+
 	/* --- */
 
 	border-bottom: 1px solid inherit;
 }
 
 .markdown h4 {
-	color: var(--primary-500);
 	/* SPACING */
 	margin-top: var(--space-m);
 	margin-bottom: var(--space-xs);

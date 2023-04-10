@@ -78,5 +78,19 @@ export async function handle({ event, resolve }) {
 	response.headers.set('Content-Security-Policy', csp);
 	response.headers.set('Strict-Transport-Security', 'max-age=31536000; includeSubDomains; preload');
 
+	const route = event.url;
+
+	// CHECK SPEED
+	let start = performance.now();
+	let end = performance.now();
+	let responseTime = end - start;
+	if (responseTime > 2000) {
+		console.log(`🐢 ${route} took ${responseTime.toFixed(2)} ms`);
+	}
+	if (responseTime < 1000) {
+		console.log(`🚀 ${route} took ${responseTime.toFixed(2)} ms`);
+	}
+	// --- END
+
 	return response;
 }
