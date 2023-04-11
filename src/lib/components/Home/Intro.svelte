@@ -86,6 +86,12 @@
 		grid-template-columns: repeat(auto-fit, minmax(min(100%, var(--min)), 1fr));
 	}
 
+	@media (min-width: 768px) {
+		.intro__btn {
+			display: block;
+		}
+	}
+
 	.btn {
 		display: contents;
 	}

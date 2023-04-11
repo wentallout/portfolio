@@ -23,8 +23,8 @@
 
 		width: 130%;
 		height: 130%;
-
-		filter: invert(6%) sepia(25%) saturate(915%) hue-rotate(172deg) brightness(95%) contrast(92%);
+		opacity: 0.5;
+		/* filter: invert(6%) sepia(25%) saturate(915%) hue-rotate(172deg) brightness(95%) contrast(92%); */
 	}
 
 	.title {

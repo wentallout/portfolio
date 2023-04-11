@@ -61,7 +61,7 @@
 	};
 </script>
 
-<SEO {...seoProps} />
+<!-- <SEO {...seoProps} /> -->
 <ScrollProgressBar />
 <SkipLink />
 <PWA />
