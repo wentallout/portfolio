@@ -5,341 +5,48 @@ categories:
     - 'psychology'
 ---
 
-## Why you should visit cemeteries (Survivorship Bias)
+## [Lesson 1] Why you should visit cemeteries  (Survivorship Bias)
 
 Sometimes, we see famous rock stars on TV, in magazines, and online, and we think they're very successful. But what we don't see are the many musicians who didn't make it big and ended up in the graveyard of failed musicians. The same goes for authors, entrepreneurs, athletes, and others. The media usually only shows successful people, so we might think that success is easy to achieve. But in reality, it's not. It's important to remember that there are many more failures than successes, and we shouldn't be fooled by survivorship bias. It's like when we hear about a friend's start-up company, we might think it will be the next big thing, but most start-ups fail. We should be skeptical of success stories and remember that there are many unsuccessful ones too. It's important to look at the whole picture and not just what's in the spotlight.
 
-## Does Harvard make you smarter? (Swimmer’s Body Illusion)
+## [Lesson 2] Does Harvard make you smarter?  (Swimmer’s Body Illusion)
 
 Sometimes we think that doing certain things will make us better or happier, but that's not always true. For example, just because someone is good at swimming doesn't mean swimming will make them good. It's like when people say that using makeup will make you beautiful, but really, models are already pretty and that's why they advertise makeup. It's the same with going to fancy schools or getting a big job - it's not always because of the school or job itself, but because of other reasons. And sometimes people say you should try to be happier, but really, being happy is something that comes from inside you. So, be careful when you're told to do certain things - look at yourself honestly and decide what's best for you.
 
-## Why you see shapes in the clouds (Clustering Illusion)
+## [Lesson 3] Why you see shapes in the clouds (Clustering Illusion)
 
 Sometimes our brains like to find patterns in things that may not really be there. For example, people have claimed to see messages from the supernatural in tape recordings, faces of religious figures in food, and even human-like formations on other planets. But often, these patterns are just coincidences or tricks of the mind. Our brains are wired to look for patterns and rules, even in random or noisy data. It's important to be skeptical and not jump to conclusions when we think we've found a pattern. Sometimes things may seem too good to be true, and it's always a good idea to seek the help of experts, like mathematicians, to test the data statistically. So, next time you think you've found a pattern, remember to question it and not always believe everything you see or hear!
 
 
-## if 50 million people say something foolish, it is still foolish (Social Proof)
+## [Lesson 4] If 50 million people say something foolish, it is still foolish (Social Proof)
 
-You are on your way to a concert. At an intersection, you encounter a group of
-people, all staring at the sky. Without even thinking about it, you peer upwards
-too. Why? Social proof. In the middle of the concert, when the soloist is displaying
-absolute mastery, someone begins to clap and suddenly the whole room joins in.
-You do, too. Why? Social proof. After the concert you go to the coat check to pick
-up your coat. You watch how the people in front of you place a coin on a plate,
-even though, officially, the service is included in the ticket price. What do you do?
-You probably leave a tip as well.
-
-Social proof, sometimes roughly termed the herd instinct, dictates that
-individuals feel they are behaving correctly when they act the same as other
-people. In other words, the more people who follow a certain idea, the better
-(truer) we deem the idea to be. And the more people who display a certain
-behaviour the more appropriate this behaviour is judged to be by others. This is,
-of course, absurd.
-Social proof is the evil behind bubbles and stock market panic. It exists in
-fashion, management techniques, hobbies, religion and diets. It can paralyse
-whole cultures, such as when sects commit collective suicide.
-
-Why do we act like this? Well, in the past, following others was a good survival
-strategy. Suppose that 50,000 years ago, you were travelling around the
-Serengeti with your hunter-gatherer friends, and suddenly they all bolted. What
-would you have done? Would you have stayed put, scratching your head, and
-weighing up whether what you were looking at was a lion or something that just
-looked like a lion but was in fact a harmless animal that could serve as a great
-protein source? No, you would have sprinted after your friends. Later on, when
-you were safe, you could have reflected on what the ‘lion' had actually been.
-Those who acted differently from the group – and I am sure there were some –
-exited the gene pool. We are the direct descendants of those who copied the
-others' behaviour. This pattern is so deeply rooted in us that we still use it today,
-even when it offers no survival advantage, which is most of the time.
-
-Only a few cases come to mind where social proof is of value. For example, if you find
-yourself hungry in a foreign city and don't know a good restaurant, it makes sense
-to pick the one that's full of locals. In other words, you copy the locals' behaviour.
+Social proof is when people feel that they should act the same as others around them. This can happen in many situations, like when you see a group of people staring at the sky and you look up too, or when everyone starts clapping at a concert and you join in. Sometimes people even do things that don't make sense, like leaving a tip at a coat check even though it's not necessary. This happens because we have a natural instinct to follow what others are doing, even if it's not always the right thing to do. It can be used in advertising and by people who want to convince others to believe or do something. But it's important to be skeptical and think for ourselves, even if lots of people are saying or doing something. Just because many people do something doesn't mean it's always the best or right thing to do.
 
 
-The advertising industry benefits greatly from our weakness for social proof.
-This works well when a situation is unclear (such as deciding among various car
-makes, cleaning products, beauty products etc. with no obvious advantages or
-disadvantages), and where people ‘like you and me' appear.
-So, be sceptical whenever a company claims its product is better because it is
-‘the most popular'. How is a product better simply because it sells the most units?
+## [Lesson 5] Why you should forget the past (Sunk Cost Fallacy)
 
-And remember novelist W. Somerset Maugham's wise words: ‘If 50 million
-people say something foolish, it is still foolish.'
+Sometimes, we make mistakes by thinking that we should continue doing something just because we've already spent a lot of time, money, or effort on it. This is called the sunk cost fallacy. It's like when we went to see a movie that we didn't like, but we didn't want to leave because we already paid for the tickets. Or when a company keeps spending money on an advertising campaign that's not working, just because they've already invested a lot of money in it. Even in relationships, people sometimes stay in bad situations because they've already invested so much time and energy. But it's important to remember that what matters most is how something will be in the future, not how much we've already spent on it.
 
 
-## Why you should forget the past
+## [Lesson 6] Don't accept free drinks (Reciprocity)
 
+Reciprocity is when people feel obliged to give or do something in return for receiving a gift or favor. It's a powerful social norm that can be used by individuals, organizations, and even companies to influence others. For example, you may have encountered people from the Hare Krishna sect at airports who offer you a flower as a gift and then ask for a donation. Many NGOs and philanthropic organizations also use similar tactics, such as sending gifts or postcards to encourage donations. Reciprocity can be a positive force for cooperation and economic growth, but it can also lead to unwanted obligations and even retaliation. It's important to be aware of the influence of reciprocity and make conscious decisions about when to accept or decline gifts or favors.
 
+## [Lesson 7] Beware the special case (Confirmation Bias (Part 1))
 
-## Don't accept free drinks
+Confirmation bias is when we only pay attention to information that agrees with what we already believe, and ignore anything that contradicts it. It can happen when we're trying to lose weight, make decisions in business, or even solve puzzles. For example, if someone believes a diet is working, they might only notice when they lose weight and ignore when they don't. It's important to be aware of this bias and actively look for evidence that challenges our beliefs, just like Charles Darwin did. In an experiment, a clever student was able to figure out a rule by deliberately trying to find evidence that disproved their initial theory. It's important to avoid confirmation bias because it can affect our lives in big ways.
 
-Reciprocity
-Not so long ago, you may have come across disciples of the Hare Krishna sect
-floating around in saffron-coloured robes as you hurried to catch a flight or a train
-to your destination. A member of the sect presented you with a small flower and a
-smile. If you're like most people, you took the flower, if only not to be rude. If you
-tried to refuse, you would have heard a gentle ‘Take it, this is our gift to you.' If
-you wanted to dispose of the flower in the next trashcan, you found that there
-were already a few there. But that was not the end. Just as your bad conscience
-started to tug at you, another disciple of Krishna approached you, this time asking
-for a donation. In many cases, this plea was successful – and so pervasive that
-many airports banned the sect from the premises.
-Psychologist Robert Cialdini can explain the success of this and other such
-campaigns. He has studied the phenomenon of reciprocity and has established
-that people have extreme difficulty being in another person's debt.
-Many NGOs and philanthropic organisations use exactly the same techniques:
-first give, then take. Last week, a conservation organisation sent me an envelope
-full of postcards featuring all sorts of idyllic landscapes. The accompanying letter
-assured me that the postcards were a gift to be kept, whether or not I decided to
-donate to their organisation. Even though I understood the tactic, it took a little
-willpower and ruthlessness to throw them in the trash.
-Unfortunately, this kind of gentle blackmail – you could also call it corruption –
-is widespread. A supplier of screws invites a potential customer to join him at a
-big sports game. A month later, it's time to order screws. The desire not to be in
-debt is so strong that the buyer gives in and places an order with his new friend.
-It is also an ancient technique. We find reciprocity in all species whose food
-supplies are subject to high fluctuations. Suppose you are a hunter-gatherer. One
-day you are lucky and kill a deer. You can't possibly eat all of it in a day, and
-refrigerators are still a few centuries away. You decide to share the deer with the
-group, which ensures that you will benefit from others' spoils when your haul is
-less impressive. The bellies of your buddies serve as your refrigerator.
-Reciprocity is a very useful survival strategy, a form of risk management.
-Without it, humanity – and countless species of animal – would be long extinct. It
-is at the core of cooperation between people who are not related to each other
-and a necessary ingredient for economic growth and wealth creation. There
-would be no global economy without it – there would be no economy at all. That's
-the good side of reciprocity.
+## [Lesson 8] Murder your darlings (Confirmation Bias 2)
 
-But there is also an ugly side of reciprocity: retaliation. Revenge breeds
-counter-revenge and you soon find yourself in a full-scale war. Jesus preached
-that we should break this cycle by turning the other cheek, which proves very
-difficult to do. So compelling is the pull of reciprocity even when the stakes are far
-less high.
+People tend to believe what they already think is true, and ignore information that challenges those beliefs. This is called confirmation bias, and it happens when we only pay attention to things that support what we already believe and ignore anything that goes against it. This can happen in many areas of life, like when we think all people are good or all people are bad, or when we believe in things like astrology or economics without really questioning them. It's also common in religion, philosophy, and business journalism. Even on the internet, we tend to only look at websites and news that support our views, making it hard to see other perspectives. To fight against confirmation bias, we should try to look for evidence that challenges our beliefs, even if it's hard to let go of ideas we like.
 
-Several years ago, a couple invited me and my wife to dinner. We had known
-this couple casually for quite some time. They were nice, but far from entertaining.
-We couldn't think of a good excuse to refuse, so we accepted. Things played out
-exactly as we had imagined: the dinner party was beyond tedious. Nevertheless,
-we felt obliged to invite them to our home a few months later. The constraint of
-reciprocity had now presented us with two wearisome evenings. And, lo and
-behold, a few weeks later a follow-up invitation from them arrived. I wonder how
-many dinner parties have been endured in the name of reciprocity, even if the participants would have preferred to drop out of the vicious cycle years ago.
+## [Lesson 9] Don't bow to authority (Authority Bias)
 
-In much the same way, if someone approaches you in the supermarket,
-whether to offer you a taste of wine, a chunk of cheese or a handful of olives, my
-best advice is to refuse their offer - unless you want to end up with a refrigerator
-full of stuff you don't even like.
+Sometimes people who are considered important, like doctors, scientists, or CEOs, can make mistakes or give bad advice. They may act like they know everything and should not be questioned, but that's not always true. For example, even economists could not predict a big financial problem in 2008. There was a famous experiment where people were told to hurt someone because an authority figure told them to, and most of them did it without questioning. Even pilots now learn to talk to their co-pilots and not just follow orders blindly. So, it's important to think for ourselves and not just believe everything authority figures say.
 
-## Beware the special case 
+## [Lesson 10] Leave your supermodel friends at home (Contrast Effect)
 
-Confirmation Bias (Part 1)
-Gil wants to lose weight. He selects a particular diet and checks his progress on
-the scales every morning. If he has lost weight, he pats himself on the back and
-considers the diet a success. If he has gained weight, he writes it off as a normal
-fluctuation and forgets about it. For months, he lives under the illusion that the diet
-is working, even though his weight remains constant. Gil is a victim of the
-confirmation bias – albeit a harmless form of it.
-The confirmation bias is the mother of all misconceptions. It is the tendency to
-interpret new information so that it becomes compatible with our existing theories,
-beliefs and convictions. In other words, we filter out any new information that
-contradicts our existing views (‘disconfirming evidence'). This is a dangerous
-practice. ‘Facts do not cease to exist because they are ignored,' said writer
-Aldous Huxley. However, we do exactly that, as super-investor Warren Buffett
-knows: ‘What the human being is best at doing, is interpreting all new information
-so that their prior conclusions remain intact.'
-The confirmation bias is alive and well in the business world. One example: an
-executive team decides on a new strategy. The team enthusiastically celebrates
-any sign that the strategy is a success. Everywhere the executives look, they see
-plenty of confirming evidence, while indications to the contrary remain unseen or
-are quickly dismissed as ‘exceptions' or ‘special cases'. They have become blind
-to disconfirming evidence.
-What can you do? If the word ‘exception' crops up, prick up your ears. Often it
-hides the presence of disconfirming evidence. It pays to listen to Charles Darwin:
-from his youth, he set out systematically to fight the confirmation bias. Whenever
-observations contradicted his theory, he took them very seriously and noted them
-down immediately. He knew that the brain actively ‘forgets' disconfirming
-evidence after a short time. The more correct he judged his theory to be, the more
-actively he looked for contradictions.
-The following experiment shows how much effort it takes to question your own
-theory. A professor presented his students with the number sequence 2–4–6.
-They had to calculate the underlying rule that the professor had written on the
-back of a sheet of paper. The students had to provide the next number in the
-sequence, to which the professor would reply ‘fits the rule' or ‘does not fit the
-rule'. The students could guess as many numbers as they wanted, but could try to
-identify the rule only once. Most students suggested 8 as the next number, and
-the professor replied: ‘Fits the rule.' To be sure, they tried 10, 12 and 14. The
-professor replied each time: ‘Fits the rule.' The students concluded that: ‘The rule
-is to add two to the last number.' The professor shook his head: ‘That is not the
-rule.'
-One shrewd student tried a different approach. He tested out the number -2.
-The professor said ‘Does not fit the rule.' ‘Seven?' he asked. ‘Fits the rule.' The
-student tried all sorts of numbers -24, 9, -43?. . .?Apparently he had an idea, and
-he was trying to find a flaw with it. Only when he could no longer find a counterexample, the student said: ‘The rule is this: the next number must be higher than
-the previous one.' The professor turned over the sheet of paper, and this was
-exactly what he'd written down.
-What distinguished the resourceful student from the others? While the majority
-of students sought merely to confirm their theories, he tried to find fault with his,
-consciously looking for disconfirming evidence. You might think: ‘Good for him,
-but not the end of the world for the others.' However, falling for the confirmation
-bias is not a petty intellectual offence. How it affects our lives will be revealed in
-the next chapter.
-
-## Murder your darlings
-
-Confirmation Bias (Part 2)
-In the previous chapter, we met the father of all fallacies, the confirmation bias.
-We are forced to establish beliefs about the world, our lives, the economy,
-investments, our careers and more. We deal mostly in assumptions, and the more
-nebulous these are, the stronger the confirmation bias. Whether you go through
-life believing that ‘people are inherently good' or ‘people are inherently bad', you
-will find daily proof to support your case. Both parties, the philanthropists and the
-misanthropes, simply filter disconfirming evidence (evidence to the contrary) and
-focus instead on the do-gooders and dictators who support their worldviews.
-Astrologers and economists operate on the same principle. They utter
-prophecies so vague that any event can substantiate them: ‘In the coming weeks
-you will experience sadness,' or ‘in the medium term, the pressure on the dollar
-will increase.' But what is the medium term? What will cause the dollar to
-depreciate? And, depreciation measured against what – gold, yen, pesos, wheat,
-residential property in Manhattan, the average price of a hot dog?
-Religious and philosophical beliefs represent an excellent breeding ground for
-the confirmation bias. Here, in soft, spongy terrain, it grows wild and free. For
-example, worshippers always find evidence for God's existence, even though he
-never shows himself overtly – except to illiterates in the desert and in isolated
-mountain villages. It is never to the masses in, say, Frankfurt or New York.
-Counter-arguments are dismissed by the faithful, demonstrating just how powerful
-the confirmation bias is.
-No professionals suffer more from the confirmation bias than business
-journalists. Often, they formulate an easy theory, pad it out with two or three
-pieces of ‘evidence' and call it a day. For example: ‘Google is so successful
-because the company nurtures a culture of creativity.' Once this idea is on paper,
-the journalist corroborates it by mentioning a few other prosperous companies
-that foster ingenuity. Rarely does the writer seek out disconfirming evidence,
-which in this instance would be struggling businesses that live and breathe
-creativity or, conversely, flourishing firms that are utterly uncreative. Both groups
-have plenty of members, but the journalist simply ignores them. If he or she were
-to mention just one, the storyline would be ruined.
-Self-help and get-rich-quick books are further examples of blinkered
-storytelling. Their shrewd authors collect piles of proof to pump up the most banal
-of theories, such as ‘meditation is the key to happiness.' Any reader seeking
-disconfirming evidence does so in vain: nowhere in these books do we see
-people who lead fulfilled lives without meditation, or those who, despite
-meditation, are still sad.
-The Internet is particularly fertile ground for the confirmation bias. To stay
-informed, we browse news sites and blogs, forgetting that our favoured pages
-mirror our existing values, be they liberal, conservative or somewhere in between.
-Moreover, a lot of sites now tailor content to personal interests and browsing
-history, causing new and divergent opinions to vanish from the radar altogether.
-We inevitably land in communities of like-minded people, further reinforcing our
-convictions – and the confirmation bias.
-Literary critic Arthur Quiller-Couch had a memorable motto: ‘Murder your
-darlings.' This was his advice to writers who struggled with cutting cherished but
-redundant sentences. Quiller-Couch's appeal is not just for hesitant hacks, but for
-all of us who suffer from the deafening silence of assent. To fight against the
-confirmation bias, try writing down your beliefs – whether in terms of worldview,
-investments, marriage, healthcare, diet, career strategies – and set out to find
-disconfirming evidence. Axeing beliefs that feel like old friends is hard work, but
-imperative.
-
-## Don't bow to authority
-
-Authority Bias
-
-The first book of the Bible explains what happens when we disobey a great
-authority: we get ejected from paradise. This is also what less celestial authorities
-would have us believe - political pundits, scientists, doctors, CEOs, economists,
-government heads, sports commentators, consultants and stock market gurus.
-
-Up until 1900 it was discernibly wiser for patients to avoid doctor's
-visits; too often the ‘treatment' only worsened the illness, due to poor hygiene and
-folk practices such as bloodletting.
-
-Psychologist Stanley Milgram demonstrated the authority bias most clearly in
-an experiment in 1961. His subjects were instructed to administer ever-increasing
-electrical shocks to a person sitting on the other side of a pane of glass. They
-were told to start with 15 volts, then 30V, 45V and so on, until they reached the
-maximum – a lethal dose of 450V. In reality, no electrical current was actually
-flowing; Milgram used an actor to play the role of victim, but those charged with
-administering the shocks didn't know that. The results were, well, shocking: as
-the person in the other room wailed and writhed in pain, and the subject
-administering the shock wanted to stop, the professor would say, ‘Keep going, the
-experiment depends on it.' The majority of people continued with the
-electrocution. More than half of the participants went all the way up to maximum
-voltage – out of sheer obedience to authority.
-
-Many companies are light years from this sort of foresight. Especially at risk are
-firms with domineering CEOs, where employees are likely to keep their ‘lesser'
-opinions to themselves – much to the detriment of the business.
-Authorities crave recognition and constantly find ways to reinforce their status.
-Doctors and researchers sport white coats. Bank directors don suits and ties.
-Kings wear crowns. Members of the military wield rank badges. Today, even
-more symbols and props are used to signal expertise: from appearances on talk
-shows and on the covers of magazines, to book tours and their own Wikipedia
-entries. Authority changes much like fashion does, and society follows it just as
-much.
-
-In conclusion: whenever you are about to make a decision, think about which
-authority figures might be exerting an influence on your reasoning. And when you
-encounter one in the flesh, do your best to challenge him or her.
-
-## Leave your supermodel friends at home
-
-Contrast Effect
-
-In his book Influence, Robert Cialdini tells the story of two brothers, Sid and
-Harry, who ran a clothing store in 1930s America. Sid was in charge of sales and
-Harry led the tailoring department. Whenever Sid noticed that the customers who
-stood before the mirror really liked their suits, he became a little hard of hearing.
-He would call to his brother: ‘Harry, how much for this suit?' Harry would look up
-from his cutting table and shout back: ‘For that beautiful cotton suit, $42.' (This
-was a completely inflated price at that time.) Sid would pretend he hadn't
-understood: ‘How much?' Harry would yell again: ‘Forty-two dollars!' Sid would
-then turn to his customer and report: ‘He says $22.' At this point, the customer
-would have quickly put the money on the table and hastened from the store with
-the suit before poor Sid noticed his ‘mistake'.
-
-Maybe you know the following experiment from your schooldays: take two
-buckets. Fill the first with lukewarm water and the second with ice water. Dip your
-right hand into the ice water for one minute. Then put both hands into the
-lukewarm water. What do you notice? The lukewarm water feels as it should to
-the left hand but piping hot to the right hand.
-
-Both of these stories epitomise the contrast effect: we judge something to be
-beautiful, expensive or large if we have something ugly, cheap or small in front of
-us. We have difficulty with absolute judgements.
-The contrast effect is a common misconception. You order leather seats for
-your new car because compared to the $60,000 price tag on the car, $3,000
-seems a pittance. All industries that offer upgrade options exploit this illusion.
-The contrast effect is at work in other places, too. Experiments show that
-people are willing to walk an extra ten minutes to save $10 on food. But those
-same people wouldn't dream of walking ten minutes to save $10 on a thousanddollar suit. An irrational move because ten minutes is ten minutes, and $10 is
-$10. Logically, you should walk back in both cases or not at all.
-Without the contrast effect, the discount business would be completely
-untenable. A product that has been reduced from $100 to $70 seems better value
-than a product that has always cost $70. The starting price should play no role.
-The other day an investor told me: ‘The share is a great value because it's 50 per
-cent below the peak price.' I shook my head. A share price is never ‘low' or ‘high'.
-It is what it is, and the only thing that matters is whether it goes up or down from
-that point.
-When we encounter contrasts, we react like birds to a gunshot: we jump up and
-get moving. Our weak spot: we don't notice small, gradual changes. A magician
-can make your watch vanish because, when he presses on one part of your body,
-you don't notice the lighter touch on your wrist as he relieves you of your Rolex.
-Similarly, we fail to notice how our money disappears. It constantly loses its
-value, but we do not notice because inflation happens over time. If it were
-imposed on us in the form of a brutal tax (and basically that's what it is), we would
-be outraged.
-
-The contrast effect can ruin your whole life: a charming woman marries a fairly
-average man. But because her parents were awful people, the ordinary man
-appears to be a prince.
-
-One final thought: bombarded by advertisements featuring supermodels, we
-now perceive beautiful people as only moderately attractive. If you are seeking a
-partner, never go out in the company of your supermodel friends. People will find
-you less attractive than you really are. Go alone or, better yet, take two ugly
-friends.
-
+Sometimes, people's judgment can be influenced by the things they see or experience before making a decision. For example, in a story about two brothers who sell suits, one of them pretends to misunderstand the price of a suit to make it seem cheaper to the customer. This is called the contrast effect. It's like when you put one hand in cold water and the other in hot water, then put them both in lukewarm water - the lukewarm water feels different to each hand. This effect can also happen when we compare prices or value of things. For example, we might think a discounted item is a better deal compared to its original price, even if it's still expensive. It's important to be aware of the contrast effect and not let it influence our decisions too much.
 
 
 
