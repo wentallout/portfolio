@@ -18,7 +18,8 @@ const directives = {
 	'frame-src': [
 		"'self'",
 		'https://www.youtube-nocookie.com',
-		'https://open.spotify.com'
+		'https://open.spotify.com',
+		'https://my.spline.design'
 		// "https://*.stripe.com",
 		// "https://*.facebook.com",
 		// "https://*.facebook.net",
@@ -46,8 +47,9 @@ const directives = {
 	],
 	'script-src': [
 		"'self'",
-		"'unsafe-inline'"
-
+		"'unsafe-inline'",
+		'https://unpkg.com',
+		'https://my.spline.design'
 		// 'https://*.stripe.com',
 		// 'https://*.facebook.com',
 		// 'https://*.facebook.net',

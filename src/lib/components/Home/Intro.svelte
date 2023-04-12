@@ -6,6 +6,13 @@
 
 <section bind:this={introEle} class="intro-container full-width">
 	<div class="intro">
+		<div class="intro__model">
+			<iframe
+				src="https://my.spline.design/untitled-2cc9162d423383eefcb6068a8fab068b/"
+				frameborder="0"
+				height="100%" />
+		</div>
+
 		<div class="intro__block">
 			<div class="name xxl-text">
 				Khoa is a <span class="focus">UI/UX Designer</span>
@@ -36,6 +43,32 @@
 </section>
 
 <style>
+	.intro__model {
+		overflow: hidden;
+		position: absolute;
+		height: 100vh;
+		width: 100%;
+		top: 0;
+		left: 0;
+	}
+
+	iframe {
+		width: 50vw;
+		position: absolute;
+		z-index: -1;
+		top: 0;
+		right: 0;
+		overflow: visible;
+		opacity: 0.5;
+	}
+
+	@media (min-width: 992px) {
+		iframe {
+			opacity: 1;
+			z-index: 2;
+		}
+	}
+
 	.intro-container {
 		user-select: none;
 	}
@@ -46,6 +79,7 @@
 
 		/* background-color: var(--bg-400); */
 		position: relative;
+		overflow: visible;
 	}
 
 	.intro__block {

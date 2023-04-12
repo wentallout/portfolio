@@ -10,7 +10,6 @@ import rehypeAutolinkHeadings from 'rehype-autolink-headings';
 import readingTime from 'remark-reading-time';
 
 import sequence from 'svelte-sequential-preprocessor';
-import { preprocessThrelte } from '@threlte/preprocess';
 
 /** @type {import('@sveltejs/kit').Config} */
 const config = {
@@ -29,8 +28,7 @@ const config = {
 				[rehypeAutolinkHeadings, { behavior: 'wrap' }]
 			],
 			remarkPlugins: [readingTime]
-		}),
-		preprocessThrelte()
+		})
 	]),
 	extensions: ['.svelte', '.svx'],
 	kit: {

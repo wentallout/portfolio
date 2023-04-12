@@ -5,9 +5,7 @@ categories:
     - 'psychology'
 ---
 
-## Why we prefer a wrong map to no map at all
-
-Availability Bias
+## Why we prefer a wrong map to no map at all (Availability Bias)
 
 ‘Smoking can't be that bad for you: my grandfather smoked three packs of
 cigarettes a day and lived to be more than 100.' Or: ‘Manhattan is really safe. I
