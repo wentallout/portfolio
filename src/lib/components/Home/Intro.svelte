@@ -53,7 +53,7 @@
 	}
 
 	iframe {
-		width: 50vw;
+		width: 100vw;
 		position: absolute;
 		z-index: -1;
 		top: 0;
@@ -64,6 +64,7 @@
 
 	@media (min-width: 992px) {
 		iframe {
+			width: 50vw;
 			opacity: 1;
 			z-index: 2;
 		}
