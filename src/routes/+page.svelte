@@ -1,5 +1,5 @@
 <script>
-	import Intro from '$lib/components/Home/Intro.svelte';
+	import Hero from '$lib/components/Home/Hero.svelte';
 	import GetInTouch from '$lib/components/Home/GetInTouch.svelte';
 	import FeaturedProject from '$lib/components/Home/Featured.svelte';
 	import Clients from '$lib/components/Home/MyClients.svelte';
@@ -23,7 +23,7 @@
 </script>
 
 <SEO {...seoProps} />
-<Intro />
+<Hero />
 <FeaturedProject />
 <WhatIUse />
 <AboutMe />

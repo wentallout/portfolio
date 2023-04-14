@@ -1,28 +1,33 @@
 <script>
 	import Button from '$lib/components/Button/Button.svelte';
 
-	let introEle;
+	let heroEle;
 </script>
 
-<section bind:this={introEle} class="intro-container full-width">
-	<div class="intro">
-		<div class="intro__model">
+<section bind:this={heroEle} class="hero-container full-width">
+	<div class="hero">
+		<div class="hero__model">
 			<iframe
+				title="spline"
+				loading="lazy"
 				src="https://my.spline.design/untitled-2cc9162d423383eefcb6068a8fab068b/"
 				frameborder="0"
 				height="100%" />
 		</div>
 
-		<div class="intro__block">
+		<div class="hero__block">
 			<div class="name xxl-text">
-				Khoa is a <span class="focus">UI/UX Designer</span>
+				Khoa is a
+
+				<span class="focus">UI/UX Designer</span>
+				<span class="focus focus-low text-focus-in">Frontend Developer</span>
 			</div>
 			<div class="mission small-text">
 				I create practical and user-friendly products that bring real value and enhance people's
 				lives.
 			</div>
 
-			<div class="intro__btn">
+			<div class="hero__btn">
 				<a class="btn" href="/project">
 					<Button
 						label="See Full Portfolio"
@@ -43,7 +48,7 @@
 </section>
 
 <style>
-	.intro__model {
+	.hero__model {
 		overflow: hidden;
 		position: absolute;
 		height: 100vh;
@@ -70,11 +75,11 @@
 		}
 	}
 
-	.intro-container {
+	.hero-container {
 		user-select: none;
 	}
 
-	.intro {
+	.hero {
 		display: flex;
 		flex-direction: column;
 
@@ -83,7 +88,7 @@
 		overflow: visible;
 	}
 
-	.intro__block {
+	.hero__block {
 		display: flex;
 		padding: var(--space-3xl) var(--page-padding);
 		flex-direction: column;
@@ -96,7 +101,11 @@
 	}
 
 	.focus {
+		display: block;
 		color: var(--primary-500);
+	}
+	.focus-low {
+		color: var(--text-color-disabled);
 	}
 
 	.mission {
@@ -104,7 +113,7 @@
 		max-width: var(--text-width);
 		margin-bottom: var(--space-s);
 	}
-	.intro__btn {
+	.hero__btn {
 		margin-top: var(--space-l);
 
 		margin-top: var(--space-m);
@@ -122,12 +131,27 @@
 	}
 
 	@media (min-width: 768px) {
-		.intro__btn {
+		.hero__btn {
 			display: block;
 		}
 	}
 
 	.btn {
 		display: contents;
+	}
+
+	.text-focus-in {
+		animation: text-focus-in 3s cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
+	}
+
+	@keyframes text-focus-in {
+		0% {
+			filter: blur(12px);
+			opacity: 0;
+		}
+		100% {
+			filter: blur(0px);
+			opacity: 1;
+		}
 	}
 </style>

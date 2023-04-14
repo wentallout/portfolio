@@ -31,54 +31,75 @@
 </script>
 
 <div class="error">
-	<h1 class="status xxxl-text">{$page.status} {$page.error.message}</h1>
-	<div class="error__detail">
-		<div class="message small-text">{customMessage}</div>
+	<div class="error__box">
+		<div class="error__info">
+			<div class="status">
+				{$page.status}
+			</div>
+			<h1 class="xxxl-text">{$page.error.message}</h1>
+			<div class="detail small-text">
+				{customMessage}
+			</div>
+			<a rel="external" href="/">
+				<Button
+					label="Take Me Home"
+					labelColor="var(--bg-500)"
+					backgroundColor="var(--primary-500)" />
+			</a>
+		</div>
+		<img class="error__image" src="/images/error.gif" alt="" />
 	</div>
-
-	<a rel="external" href="/">
-		<Button label="Take Me Home" labelColor="var(--bg-500)" backgroundColor="var(--primary-500)" />
-	</a>
-
-	<img class="error__image" src="/images/error.gif" alt="" />
 </div>
 
 <style>
+	.error__box {
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+		gap: var(--space-l);
+	}
+
+	.error__info {
+		display: flex;
+		flex-direction: column;
+		justify-content: flex-start;
+		color: var(--text-color-low);
+	}
+
+	.status {
+		font-size: calc(var(--font-size-3xl) * 2);
+	}
+
 	.error {
 		display: flex;
 		flex-direction: column;
 		flex-wrap: wrap;
-		justify-content: center;
-		align-items: center;
-		padding: var(--space-l);
+		justify-content: flex-start;
+		align-items: flex-start;
+
 		gap: var(--space-m);
 	}
 
 	.error__image {
-		width: 500px;
-		height: 500px;
+		width: 300px;
+		height: 300px;
 	}
 
 	.status {
 		color: var(--error);
 		font-weight: 600;
-		font-family: 'Fancy';
-		text-align: center;
 	}
 
-	.message {
-		display: inline-block;
-		color: var(--text-color-low);
-		font-weight: 300;
-		max-width: var(--text-width);
-	}
-
-	.error__detail {
+	.detail {
 		display: flex;
 		flex-direction: row;
 		justify-content: center;
 		align-items: center;
 		gap: var(--space-s);
 		margin-bottom: var(--space-m);
+		display: inline-block;
+		color: var(--text-color-low);
+		font-weight: 300;
+		max-width: var(--text-width);
 	}
 </style>
