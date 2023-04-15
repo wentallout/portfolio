@@ -8,8 +8,10 @@
 
 	import { Spotify } from 'sveltekit-embed';
 	import MusicPlayer from '$lib/components/Resource/MusicPlayer.svelte';
+	import PageTitle from '$lib/components/Common/PageTitle.svelte';
 </script>
 
+<PageTitle pageTitle="Music" />
 <section>
 	<SectionTitle sectionTitle="Ringtone" let:sectionIcon>
 		<FileAudio {...sectionIcon} />

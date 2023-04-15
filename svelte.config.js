@@ -1,13 +1,9 @@
 import adapter from '@sveltejs/adapter-netlify';
 import sveltePreprocess from 'svelte-preprocess';
-
 import { mdsvex } from 'mdsvex';
-
 import rehypeSlug from 'rehype-slug';
 import rehypeExternalLinks from 'rehype-external-links';
 import rehypeAutolinkHeadings from 'rehype-autolink-headings';
-
-import readingTime from 'remark-reading-time';
 
 import sequence from 'svelte-sequential-preprocessor';
 
@@ -26,8 +22,7 @@ const config = {
 					{ rel: ['nofollow', 'noopener', 'noreferrer', 'external'], target: '_blank' }
 				],
 				[rehypeAutolinkHeadings, { behavior: 'wrap' }]
-			],
-			remarkPlugins: [readingTime]
+			]
 		})
 	]),
 	extensions: ['.svelte', '.svx'],

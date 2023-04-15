@@ -104,7 +104,7 @@
 		gap: var(--space-xs);
 	}
 
-	@media (min-width: 768px) {
+	@media (min-width: 992px) {
 		.project {
 			flex-direction: row;
 		}

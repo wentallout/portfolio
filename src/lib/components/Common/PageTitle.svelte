@@ -10,7 +10,6 @@
 		<img class="title__deco" alt="decoration for title" src={decoImageUrl} />
 	{/if}
 	<h1 class="xxxl-text title__text">{pageTitle}</h1>
-	<Line />
 </div>
 
 <style>

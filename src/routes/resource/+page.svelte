@@ -8,8 +8,6 @@
 	import HardDrives from '~icons/ph/hard-drives';
 	import Flask from '~icons/ph/flask';
 
-		
-
 	import SectionTitle from '$lib/components/Common/SectionTitle.svelte';
 
 	import SEO from '$lib/components/SEO/SEO.svelte';
@@ -31,12 +29,7 @@
 	};
 </script>
 
-
-
-
 <SEO {...seoProps} />
-
-
 
 <PageTitle pageTitle="Resource" decoImageUrl="/images/resource.svg" />
 
