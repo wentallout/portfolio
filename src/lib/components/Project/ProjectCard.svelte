@@ -1,12 +1,7 @@
 <script>
-	import Button from '$lib/components/Button/Button.svelte';
-	import FigmaLogo from '~icons/ph/figma-logo';
 	export let linkToDetail = '';
-
 	export let projectName = '';
-
 	export let what = '';
-
 	export let result = '';
 
 	export let thumbnail;
@@ -24,7 +19,7 @@
 
 			<div class="info">
 				<div class="info__section">
-					<div class="section__label">What</div>
+					<div class="section__label">What?</div>
 					<div class="section__desc">{what}</div>
 				</div>
 
@@ -32,12 +27,6 @@
 					<div class="section__label">Output</div>
 					<div class="section__desc">{result}</div>
 				</div>
-
-				<!-- <div class="info__btn">
-				<a href={linkToDetail}>
-					<Button backgroundColor="var(--primary-500)" label="Read Case Study" />
-				</a>
-			</div> -->
 			</div>
 		</div>
 	</article>
@@ -56,13 +45,6 @@
 		border-radius: var(--border-radius-light);
 		line-height: normal;
 		color: var(--text-color-low);
-	}
-
-	.info__btn {
-		display: flex;
-		flex-direction: row;
-		gap: var(--space-s);
-		margin-top: auto;
 	}
 
 	.info {

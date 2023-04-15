@@ -1,6 +1,8 @@
 <script>
 	export let path;
 
+	export let id;
+
 	var crumbs;
 
 	$: {
@@ -22,7 +24,7 @@
 	}
 </script>
 
-{#if path !== '/'}
+{#if path !== '/' && id !== null}
 	<nav aria-label="breadcrumb" id="breadcrumb" class="breadcrumb base-text">
 		{#each crumbs as c, i}
 			{#if i == crumbs.length - 1}

@@ -38,7 +38,7 @@
 							<h3 class="block__title base-text">Prototyping</h3>
 							<p class="block__text small-text">Figma</p>
 							<p class="block__text small-text">Adobe XD</p>
-							<p class="block__text small-text">Sketch</p>
+							<p class="block__text small-text">...</p>
 						</div>
 					</div>
 				</Atropos>
@@ -50,9 +50,9 @@
 						</div>
 						<div class="section__text">
 							<h3 class="block__title base-text">Design</h3>
+							<p class="block__text small-text">Canva</p>
 							<p class="block__text small-text">Illustrator</p>
 							<p class="block__text small-text">Photoshop</p>
-							<p class="block__text small-text">Canva</p>
 						</div>
 					</div>
 				</Atropos>

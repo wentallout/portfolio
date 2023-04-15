@@ -40,28 +40,8 @@
 			NProgress.done();
 		}
 	}
-
-	// SEO
-	import SEO from '$lib/components/SEO/SEO.svelte';
-	import website from '$lib/config.js';
-	//  END SEO
-
-	const { author, siteUrl } = website;
-
-	const entityMeta = {
-		url: `${siteUrl}/`,
-		faviconWidth: 512,
-		faviconHeight: 512,
-		caption: author
-	};
-	const seoProps = {
-		slug: '',
-		entityMeta,
-		title: 'something'
-	};
 </script>
 
-<!-- <SEO {...seoProps} /> -->
 <ScrollProgressBar />
 <SkipLink />
 <PWA />
@@ -76,7 +56,7 @@
 			id="main-content"
 			in:fade={{ duration: 150, delay: 150 }}
 			out:fade={{ duration: 150 }}>
-			<Breadcrumb path={$page.url.pathname} />
+			<Breadcrumb path={$page.url.pathname} id={$page.route.id} />
 			<slot />
 		</main>
 	{/key}

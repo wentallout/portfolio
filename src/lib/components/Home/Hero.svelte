@@ -18,9 +18,8 @@
 		<div class="hero__block">
 			<div class="name xxl-text">
 				Khoa is a
-
 				<span class="focus">UI/UX Designer</span>
-				<span class="focus focus-low text-focus-in">Frontend Developer</span>
+				<span class="focus focus-low text-focus-in">+ Frontend Developer</span>
 			</div>
 			<div class="mission small-text">
 				I create practical and user-friendly products that bring real value and enhance people's
@@ -132,7 +131,8 @@
 
 	@media (min-width: 768px) {
 		.hero__btn {
-			display: block;
+			display: flex;
+			gap: var(--space-s);
 		}
 	}
 
