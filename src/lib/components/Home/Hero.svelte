@@ -63,7 +63,7 @@
 		top: 0;
 		right: 0;
 		overflow: visible;
-		opacity: 0.5;
+		opacity: 0.2;
 	}
 
 	@media (min-width: 992px) {
