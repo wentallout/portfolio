@@ -1,13 +1,11 @@
 <script>
-	import Line from '$lib/components/Common/Line.svelte';
-
 	export let pageTitle = 'pageTitle';
 	export let decoImageUrl = '';
 </script>
 
 <div class="title full-width">
 	{#if decoImageUrl != ''}
-		<img class="title__deco" alt="decoration for title" src={decoImageUrl} />
+		<div class="title__deco" style="background-image: url({decoImageUrl})" />
 	{/if}
 	<h1 class="xxxl-text title__text">{pageTitle}</h1>
 </div>
@@ -16,14 +14,16 @@
 	.title__deco {
 		z-index: 1;
 		position: absolute;
-		top: 50%;
-		left: 50%;
-		transform: translate(-50%, -50%);
 
-		width: 130%;
-		height: 130%;
-		opacity: 0.5;
-		/* filter: invert(6%) sepia(25%) saturate(915%) hue-rotate(172deg) brightness(95%) contrast(92%); */
+		top: 0;
+		left: 0;
+
+		width: 100%;
+		height: 100%;
+		opacity: 0.3;
+		background-repeat: repeat;
+		background-size: contain;
+		overflow: visible;
 	}
 
 	.title {

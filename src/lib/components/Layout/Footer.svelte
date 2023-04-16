@@ -21,8 +21,8 @@
 				<div class="list__title">About me</div>
 				<ul class="nav-list">
 					<li class="nav-list__item">
-						A one-manned design agency in Ho Chi Minh City, Vietnam that designs superb affordable
-						websites and apps for small businesses and non-profits alike.
+						Designer in Ho Chi Minh City, Vietnam that designs superb affordable websites and apps
+						for small businesses and non-profits alike.
 					</li>
 				</ul>
 			</div>

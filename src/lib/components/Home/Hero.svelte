@@ -24,6 +24,9 @@
 			<div class="mission small-text">
 				I create practical and user-friendly products that bring real value and enhance people's
 				lives.
+				<a class="link" href="/about">
+					<span>More about me</span>
+				</a>
 			</div>
 
 			<div class="hero__btn">
@@ -47,6 +50,11 @@
 </section>
 
 <style>
+	.link {
+		color: var(--accent-500);
+		text-decoration: underline;
+	}
+
 	.hero__model {
 		overflow: hidden;
 		position: absolute;

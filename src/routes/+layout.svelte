@@ -81,7 +81,7 @@
 		z-index: 1;
 	}
 
-	.main-content:after {
+	/* .main-content:after {
 		z-index: -1;
 		content: '';
 		position: absolute;
@@ -92,7 +92,7 @@
 		background: url('/images/bg_decor_line_l.png'), url('/images/bg_decor_line_r.png');
 		background-position: bottom var(--space-xl) left 0, bottom var(--space-xl) right 0;
 		background-repeat: no-repeat;
-	}
+	} */
 
 	/* TARGET MOBILE SCREENS TO HIDE DECORATIONS */
 	@media (max-width: 991px) {

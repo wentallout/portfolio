@@ -16,36 +16,36 @@ Current URL: [wentallout.tech](https://wentallout.tech)
 
 It's just incredibly fast compared to other framework-based websites and has great SEO out-of-the-box. You won't need a backend or CMS though, the blog posts are just markdown files you can store on your computer. Imported images are converted to webp to optimize loading speed.
 
-## Progress
+## 🏆 Progress
 
 ### Pages
 
-- [x] Home
-- [ ] Project: need more projects
-- [x] Blog
-- [x] Resource
-- [x] Contact
+- ✅ Home
+- Project: need more projects
+- ✅ Blog
+- ✅ Resource
+- ✅ Contact
 
 ### Features
 
-- [x] Fonts: Self-hosted + Subset
-- [x] Images: Compressed and Converted (webp) + Native Lazy Loading
-- [x] Routing (built-in)
-- [x] Page Transition: Fade Effect + Loading Bar
-- [x] Responsiveness: Mobile Compatible
-- [x] Contact: Working on Netlify
-- [x] SEO
-- [x] Dark Mode (default)
+- ✅ Fonts: Self-hosted + Subset
+- ✅ Images: Compressed and Converted into webp + Native Lazy Loading
+- ✅ Routing (built-in)
+- ✅ Page Transition: Fade Effect + Loading Bar
+- ✅ Responsiveness: Mobile Compatible
+- ✅ Contact: using Netlify Form
+- ✅ Good SEO
+- ✅ Dark Mode (by default)
 
 ---
 
-- [x] Blog: Dynamic Table of Contents
-- [x] Blog: Tags/Categories
-- [x] Blog: Search
-- [x] Blog: Pagination
-- [ ] Blog: Comment
+- ✅ Blog: Dynamic Table of Contents
+- ✅ Blog: Tags/Categories
+- ✅ Blog: Search
+- ✅ Blog: Pagination
+- Blog: Comment
 
-## Developing
+## 💻 Developing
 
 1. Install dependencies with `npm install` (or `pnpm install` or `yarn`)
 2. Start a development server:
@@ -53,3 +53,55 @@ It's just incredibly fast compared to other framework-based websites and has gre
 ```bash
 npm run dev
 ```
+
+## 🎓 Learn Svelte checklist
+
+https://learn.svelte.dev/tutorial
+
+### Part 1: Basic Svelte
+
+- ✅ Introduction
+- ✅ Reactivity (Updating arrays and objects is kinda confusing)
+- Props
+- Logic
+- Events
+- Bindings
+- Lifecycle
+- Stores
+
+### Part 2: Advanced Svelte
+
+- Motion
+- Transitions
+- Animations
+- Actions
+- Advanced bindings
+- Classes and styles
+- Component composition
+- Context API
+- Special elements
+- Module context
+- Miscellaneous
+- ✅ Next steps
+
+### Part 3: Basic SvelteKit
+
+- ✅ Introduction
+- Routing
+- Loading data
+- Headers and cookies
+- Shared modules
+- Forms
+- API routes
+- Stores
+- ✅ Errors and redirects
+
+### Part 4: Advanced SvelteKit
+
+- Hooks
+- Page options
+- Link options
+- Advanced routing
+- Advanced loading
+- Environment variables
+- ✅ Conclusion
