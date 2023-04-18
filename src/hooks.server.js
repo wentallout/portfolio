@@ -20,7 +20,7 @@ const directives = {
 		'https://www.youtube-nocookie.com',
 		'https://open.spotify.com',
 		'https://my.spline.design',
-		'https://utteranc.es'
+		'utteranc.es'
 		// "https://*.stripe.com",
 		// "https://*.facebook.com",
 		// "https://*.facebook.net",
@@ -50,7 +50,7 @@ const directives = {
 		"'self'",
 		"'unsafe-inline'",
 		'https://unpkg.com',
-		'https://utteranc.es/client.js',
+		'utteranc.es',
 		'https://my.spline.design'
 		// 'https://*.stripe.com',
 		// 'https://*.facebook.com',
@@ -78,8 +78,9 @@ export async function handle({ event, resolve }) {
 	);
 	response.headers.set('X-Content-Type-Options', 'nosniff');
 
-	// response.headers.set('Content-Security-Policy-Report-Only', csp);
-	response.headers.set('Content-Security-Policy', csp);
+	response.headers.set('Content-Security-Policy-Report-Only', csp);
+
+	// response.headers.set('Content-Security-Policy', csp);
 	response.headers.set('Strict-Transport-Security', 'max-age=31536000; includeSubDomains; preload');
 
 	// CHECK SPEED

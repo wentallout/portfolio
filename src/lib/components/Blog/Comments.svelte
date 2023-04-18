@@ -1,10 +1,8 @@
-<!-- Comments.svelte -->
 <script>
 	import { onMount } from 'svelte';
 
 	const siteTheme = 'github-dark';
 
-	// An object with all the utterances options I want
 	const options = {
 		src: 'https://utteranc.es/client.js',
 		repo: 'wentallout/portfolio',
@@ -28,4 +26,5 @@
 	});
 </script>
 
+<noscript>JavaScript must be enabled to leave comments.</noscript>
 <div id="utterances-comments" />
