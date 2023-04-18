@@ -38,7 +38,7 @@
 			<div class="detail small-text">
 				{customMessage}
 			</div>
-			<a rel="external" href="/">
+			<a class="back" rel="external" href="/">
 				<Button
 					label="Take Me Home"
 					labelColor="var(--bg-500)"
@@ -49,6 +49,10 @@
 </div>
 
 <style>
+	.back {
+		width: fit-content;
+	}
+
 	.error__box {
 		display: flex;
 		flex-direction: row;
