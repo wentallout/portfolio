@@ -1,6 +1,6 @@
 <script>
 	import { Utterances } from '@codewithshin/svelte-utterances';
-	let reponame = 'portfolio';
+	let reponame = 'wentallout/portfolio';
 	let issueTerm = 'pathname';
 	let label = 'comments';
 	let theme = 'github-dark';
