@@ -20,7 +20,7 @@ const directives = {
 		'https://www.youtube-nocookie.com',
 		'https://open.spotify.com',
 		'https://my.spline.design',
-		'utteranc.es'
+		'https://utteranc.es/'
 		// "https://*.stripe.com",
 		// "https://*.facebook.com",
 		// "https://*.facebook.net",
@@ -50,7 +50,7 @@ const directives = {
 		"'self'",
 		"'unsafe-inline'",
 		'https://unpkg.com',
-		'utteranc.es',
+		'https://utteranc.es/',
 		'https://my.spline.design'
 		// 'https://*.stripe.com',
 		// 'https://*.facebook.com',

@@ -10,7 +10,7 @@
 		crossorigin: 'anonymous',
 		theme: siteTheme,
 		async: '',
-		'issue-term': 'pathname'
+		'issue-term': 'url'
 	};
 
 	onMount(() => {
