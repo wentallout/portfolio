@@ -1,4 +1,5 @@
 <script>
+	import PageTransition from '$lib/components/Layout/PageTransition.svelte';
 	import ScrollProgressBar from '$lib/components/Common/ScrollProgressBar.svelte';
 	import Cover from '$lib/components/Layout/Cover.svelte';
 	import SkipLink from '$lib/components/Layout/SkipLink.svelte';
@@ -19,8 +20,6 @@
 	import { navigating } from '$app/stores';
 
 	import 'nprogress/nprogress.css';
-
-	import { fade } from 'svelte/transition';
 
 	export let data;
 
@@ -50,16 +49,12 @@
 	<BackToTop />
 	<Header />
 
-	{#key data.currentRoute}
-		<main
-			class="main-content"
-			id="main-content"
-			in:fade={{ duration: 150, delay: 150 }}
-			out:fade={{ duration: 150 }}>
+	<PageTransition {data}>
+		<main class="main-content" id="main-content">
 			<Breadcrumb path={$page.url.pathname} id={$page.route.id} />
 			<slot />
 		</main>
-	{/key}
+	</PageTransition>
 
 	<Footer />
 </div>

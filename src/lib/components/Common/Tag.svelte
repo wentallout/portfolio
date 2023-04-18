@@ -8,14 +8,15 @@
 <style>
 	.tag {
 		display: inline-block;
-		font-weight: 300;
+		font-weight: 500;
 		width: fit-content;
 
-		padding: 6px 12px;
+		border-radius: var(--border-radius-light);
+		padding: 8px 14px;
 		line-height: normal;
 		background: var(--bg-400);
-		border-radius: var(--border-radius);
-		color: var(--text-color-low);
+
+		color: var(--text-color);
 		transition: var(--transition);
 	}
 
@@ -24,8 +25,7 @@
 	}
 
 	.tag:hover {
-		background: var(--primary-500);
+		background: var(--accent-400);
 		color: var(--black);
-		font-weight: 600;
 	}
 </style>

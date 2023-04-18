@@ -38,6 +38,8 @@
 	color: var(--text-color);
 	/* --- */
 
+	padding-bottom: var(--space-3xs);
+
 	border-bottom: 4px solid transparent;
 	border-image: linear-gradient(to right, var(--text-color), transparent) 1 0%;
 }

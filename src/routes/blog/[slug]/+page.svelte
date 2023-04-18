@@ -1,4 +1,5 @@
 <script>
+	import Comments from '$lib/components/Blog/Comments.svelte';
 	import SEO from '$lib/components/SEO/SEO.svelte';
 	import Line from '$lib/components/Common/Line.svelte';
 	import PostContainer from '$lib/components/Common/PostContainer.svelte';
@@ -23,15 +24,19 @@
 			{/each}
 		</div>
 	{/if}
-	<div class="date small-text">Published: <Time relative timestamp={data.date} /></div>
+	<div class="date small-text">
+		<strong>Published:</strong>
+		<Time relative timestamp={data.date} />
+	</div>
 
 	<h1>{data.title}</h1>
-
 	<Line />
 
 	<PostContainer>
 		<svelte:component this={data.content} />
 	</PostContainer>
+
+	<Comments />
 </article>
 
 <style>
