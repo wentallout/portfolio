@@ -1,32 +1,17 @@
-<!-- Comments.svelte -->
 <script>
-	import { onMount } from 'svelte';
-
-	// Translate the user's dark mode preference to a theme
-	const siteTheme = 'github-dark';
-
-	// An object with all the utterances options I want
-	const options = {
-		src: 'https://utteranc.es/client.js',
-		repo: 'wentallout/portfolio',
-		label: 'comments',
-		crossorigin: 'anonymous',
-		theme: siteTheme,
-		async: '',
-		'issue-term': 'pathname'
-	};
-
-	onMount(() => {
-		const utteranceScript = document.createElement('script');
-		const targetTag = document.getElementById('utterances-comments');
-
-		// Loop over the options & apply each property as an attribute
-		for (const prop in options) {
-			utteranceScript.setAttribute(prop, options[prop]);
-		}
-
-		targetTag.appendChild(utteranceScript);
-	});
+	import { Utterances } from '@codewithshin/svelte-utterances';
+	let reponame = 'portfolio';
+	let issueTerm = 'pathname';
+	let label = 'comments';
+	let theme = 'github-dark';
 </script>
 
-<div id="utterances-comments" />
+<div class="comment">
+	<Utterances {reponame} {issueTerm} {label} {theme} />
+</div>
+
+<style>
+	.comment {
+		display: block;
+	}
+</style>
