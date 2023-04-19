@@ -75,30 +75,39 @@
 </section>
 
 <style>
+	.about {
+		display: flex;
+		flex-direction: column;
+
+		padding: var(--space-l) 0;
+	}
+
+	.about__info {
+		display: flex;
+
+		flex-direction: column;
+		border-bottom: 1px solid var(--text-color-low);
+
+		padding-top: var(--space-s);
+		padding-bottom: var(--space-3xl);
+	}
+
+	@media (min-width: 992px) {
+		.about__info {
+			flex-direction: row;
+		}
+	}
+
 	.info__title {
 		font-weight: 600;
 		color: var(--text-color);
+		width: 100%;
+		max-width: 400px;
 	}
 
 	.info__description {
 		color: var(--text-color-low);
-	}
 
-	.about__info {
-		--min: 20ch;
-		--gap: var(--space-s);
-
-		display: grid;
-		grid-gap: var(--gap);
-
-		grid-template-columns: repeat(auto-fit, minmax(min(100%, var(--min)), 1fr));
-	}
-
-	.about {
-		margin: 0 auto;
-		display: flex;
-		flex-direction: column;
-		gap: var(--space-xl);
-		padding: var(--space-l) 0;
+		max-width: var(--text-width);
 	}
 </style>
