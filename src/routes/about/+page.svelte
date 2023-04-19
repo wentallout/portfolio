@@ -86,7 +86,7 @@
 		display: flex;
 
 		flex-direction: column;
-		border-bottom: 1px solid var(--text-color-low);
+		border-bottom: 1px solid var(--text-color-disabled);
 
 		padding-top: var(--space-s);
 		padding-bottom: var(--space-3xl);

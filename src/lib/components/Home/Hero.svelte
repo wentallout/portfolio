@@ -71,10 +71,12 @@
 		right: 0;
 		overflow: visible;
 		opacity: 0.2;
+		display: none;
 	}
 
 	@media (min-width: 992px) {
 		iframe {
+			display: block;
 			width: 50vw;
 			opacity: 1;
 			z-index: 2;

@@ -75,6 +75,10 @@
 		color: var(--primary-500) !important;
 	}
 
+	.overlay-item.active-page:after {
+		content: '   ◆';
+	}
+
 	.nav {
 		/* FONT */
 		font-size: var(--font-size-base);
@@ -103,7 +107,6 @@
 
 	.nav-list__item {
 		display: none;
-		transition: var(--transition);
 	}
 
 	.nav-list__item:hover {
