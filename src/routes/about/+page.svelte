@@ -44,12 +44,13 @@
 	<div class="about__info">
 		<div class="info__title base-text">My value</div>
 		<div class="info__description small-text">
-			I bring a unique blend of frontend development and design expertise, creating optimized
-			designs based on user behavior and market trends. I work closely with businesses to create
-			designs that align with their brand and user needs, driving engagement and achieving business
-			success. In conclusion, I'm a skilled UI/UX Designer committed to delivering exceptional
-			designs that captivate users and drive results. I look forward to partnering with you to
-			achieve your digital goals.
+			As a UI/UX designer with a frontend background, I bring a unique blend of creative design
+			skills and technical expertise. I am passionate about crafting intuitive and delightful user
+			experiences, rooted in research-driven insights and iterative design processes. With a keen
+			eye for detail, I create polished and pixel-perfect user interfaces, bridging the gap between
+			design and development. I am a strong communicator, team player, and skilled in
+			industry-leading design tools. I am confident that my passion for UI/UX design and
+			collaborative mindset make me a valuable asset to any team.
 		</div>
 	</div>
 
@@ -71,29 +72,9 @@
 			Mainly to showcase my projects and occasionally share my knowledge.
 		</div>
 	</div>
-	<div class="about__para small-text">
-		<div class="">
-			As a UI/UX designer with a frontend background, I bring a unique blend of creative design
-			skills and technical expertise. I am passionate about crafting intuitive and delightful user
-			experiences, rooted in research-driven insights and iterative design processes. With a keen
-			eye for detail, I create polished and pixel-perfect user interfaces, bridging the gap between
-			design and development. I am a strong communicator, team player, and skilled in
-			industry-leading design tools. I am confident that my passion for UI/UX design and
-			collaborative mindset make me a valuable asset to any team.
-		</div>
-	</div>
 </section>
 
 <style>
-	.about__para {
-		color: var(--text-color-low);
-		max-width: var(--text-width);
-
-		display: flex;
-		flex-direction: column;
-		gap: var(--space-s);
-	}
-
 	.info__title {
 		font-weight: 600;
 		color: var(--text-color);
