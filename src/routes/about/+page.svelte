@@ -84,7 +84,7 @@
 
 	.about__info {
 		display: flex;
-
+		gap: var(--space-s);
 		flex-direction: column;
 		border-bottom: 1px solid var(--text-color-disabled);
 
@@ -101,13 +101,12 @@
 	.info__title {
 		font-weight: 600;
 		color: var(--text-color);
-		width: 100%;
-		max-width: 400px;
+		width: 400px;
 	}
 
 	.info__description {
 		color: var(--text-color-low);
-
+		width: 100%;
 		max-width: var(--text-width);
 	}
 </style>

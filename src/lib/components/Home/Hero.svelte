@@ -6,14 +6,14 @@
 
 <section bind:this={heroEle} class="hero-container full-width">
 	<div class="hero">
-		<div class="hero__model">
+		<!-- <div class="hero__model">
 			<iframe
 				title="spline"
 				loading="lazy"
 				src="https://my.spline.design/untitled-2cc9162d423383eefcb6068a8fab068b/"
 				frameborder="0"
 				height="100%" />
-		</div>
+		</div> -->
 
 		<div class="hero__block">
 			<div class="name xxl-text">
