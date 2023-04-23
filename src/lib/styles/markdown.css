@@ -131,7 +131,9 @@
 		.markdown h5 a,
 		.markdown a:has(img)
 	) {
-	color: var(--accent-300);
+	color: var(--accent-500);
+	text-decoration: underline;
+	text-decoration-skip-ink: none;
 }
 
 .markdown img {

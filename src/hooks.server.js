@@ -20,7 +20,7 @@ const directives = {
 		'https://www.youtube-nocookie.com',
 		'https://open.spotify.com',
 		'https://my.spline.design',
-		'https://utteranc.es/'
+		'https://giscus.app'
 		// "https://*.stripe.com",
 		// "https://*.facebook.com",
 		// "https://*.facebook.net",

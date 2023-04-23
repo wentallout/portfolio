@@ -16,7 +16,7 @@
 		</div> -->
 
 		<div class="hero__block">
-			<div class="name xxl-text">
+			<div class="hero__name xxl-text">
 				Khoa is a
 				<span class="focus">UI/UX Designer</span>
 				<span class="focus focus-low text-focus-in">+ Frontend Developer</span>
@@ -24,7 +24,7 @@
 			<div class="mission small-text">
 				I create practical and user-friendly products that bring real value and enhance people's
 				lives.
-				<a class="link" href="/about">
+				<a class="hero__link underline" href="/about">
 					<span>Read more</span>
 				</a>
 			</div>
@@ -50,7 +50,7 @@
 </section>
 
 <style>
-	.link {
+	.hero__link {
 		color: var(--accent-500);
 	}
 
@@ -91,7 +91,6 @@
 		display: flex;
 		flex-direction: column;
 
-		/* background-color: var(--bg-400); */
 		position: relative;
 		overflow: visible;
 	}
@@ -103,7 +102,7 @@
 		position: relative;
 	}
 
-	.name {
+	.hero__name {
 		font-family: 'Fancy';
 		margin-bottom: var(--space-l);
 	}

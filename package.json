@@ -15,6 +15,7 @@
 		"ngrok": "ngrok http 4173"
 	},
 	"devDependencies": {
+		"@giscus/svelte": "^2.2.8",
 		"@iconify-json/ph": "^1.1.5",
 		"@playwright/test": "^1.32.2",
 		"@ronilaukkarinen/stylelint-a11y": "^1.2.7",

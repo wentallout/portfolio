@@ -48,7 +48,7 @@
 	:global(.yinyang) {
 		filter: drop-shadow(0px 0px 10px var(--text-color));
 		animation: rotate 3s linear infinite;
-		opacity: 0.5;
+		opacity: 0.3;
 		transition: var(--transition);
 	}
 
@@ -99,8 +99,6 @@
 			height: 300px;
 		}
 	}
-
-	
 
 	.cover__btn {
 		width: 100%;

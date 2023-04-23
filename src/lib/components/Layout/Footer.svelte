@@ -1,90 +1,91 @@
 <script>
+	import NotAI from '$lib/components/Layout/NotAI.svelte';
 	import FooterEnd from '$lib/components/Layout/FooterEnd.svelte';
 	import ExLink from '$lib/components/Common/ExLink.svelte';
 	import Marquee from '$lib/components/Common/Marquee.svelte';
 	import { navItems } from '$lib/config.js';
 
+	// ICONS
 	import Envelope from '~icons/ph/envelope';
 	import LinkedinLogo from '~icons/ph/linkedin-logo';
 	import InstagramLogo from '~icons/ph/instagram-logo';
 	import GitHubLogo from '~icons/ph/github-logo';
 	import Phone from '~icons/ph/phone';
-
 	import MapPin from '~icons/ph/map-pin';
 </script>
 
 <Marquee />
-<footer>
-	<div class="footer-container small-text">
-		<div class="list-container">
-			<div class="list">
-				<div class="list__title">About me</div>
-				<ul class="nav-list">
-					<li class="nav-list__item">
-						Designer in Ho Chi Minh City, Vietnam that designs superb affordable websites and apps
-						for small businesses and non-profits alike.
-					</li>
-				</ul>
-			</div>
 
-			<div class="list">
-				<div class="list__title">Navigate</div>
-				<ul class="nav-list">
-					{#each navItems as navItem}
-						<li class="nav-list__item">
-							<a href={navItem.path}>{navItem.title}</a>
-						</li>
-					{/each}
-				</ul>
-			</div>
-
-			<div class="list">
-				<div class="list__title">Social</div>
-				<ul class="nav-list">
-					<li class="nav-list__item">
-						<ExLink href="https://www.linkedin.com/in/wentallout">
-							<LinkedinLogo width="24" height="24" />Linkedin</ExLink>
-					</li>
-					<li class="nav-list__item">
-						<ExLink href="https://www.instagram.com/wentallout/saved">
-							<InstagramLogo width="24" height="24" />
-							Instagram
-						</ExLink>
-					</li>
-					<li class="nav-list__item">
-						<ExLink href="https://github.com/wentallout">
-							<GitHubLogo width="24" height="24" />
-							GitHub
-						</ExLink>
-					</li>
-				</ul>
-			</div>
-
-			<div class="list">
-				<div class="list__title">Contact</div>
-				<ul class="nav-list">
-					<li class="nav-list__item">
-						<ExLink href="https://goo.gl/maps/GLt6uhYWwU91fXz49">
-							<MapPin width="24" height="24" />
-							District 5, Ho Chi Minh City</ExLink>
-					</li>
-
-					<li class="nav-list__item">
-						<ExLink href="mailto:wentallout@gmail.com">
-							<Envelope width="24" height="24" />
-							wentallout@gmail.com</ExLink>
-					</li>
-					<li class="nav-list__item">
-						<ExLink href="tel:+84929066331">
-							<Phone width="24" height="24" />
-							+84 929066331</ExLink>
-					</li>
-				</ul>
-			</div>
+<footer class="footer small-text">
+	<div class="list-container">
+		<div class="list">
+			<div class="list__title">About me</div>
+			<ul class="nav-list">
+				<li class="nav-list__item">
+					Designer in Ho Chi Minh City, Vietnam that designs superb affordable websites and apps for
+					small businesses and non-profits alike.
+				</li>
+			</ul>
 		</div>
 
-		<FooterEnd />
+		<div class="list">
+			<div class="list__title">Navigate</div>
+			<ul class="nav-list">
+				{#each navItems as navItem}
+					<li class="nav-list__item">
+						<a href={navItem.path}>{navItem.title}</a>
+					</li>
+				{/each}
+			</ul>
+		</div>
+
+		<div class="list">
+			<div class="list__title">Social</div>
+			<ul class="nav-list">
+				<li class="nav-list__item">
+					<ExLink href="https://www.linkedin.com/in/wentallout">
+						<LinkedinLogo width="24" height="24" />Linkedin</ExLink>
+				</li>
+				<li class="nav-list__item">
+					<ExLink href="https://www.instagram.com/wentallout/saved">
+						<InstagramLogo width="24" height="24" />
+						Instagram
+					</ExLink>
+				</li>
+				<li class="nav-list__item">
+					<ExLink href="https://github.com/wentallout">
+						<GitHubLogo width="24" height="24" />
+						GitHub
+					</ExLink>
+				</li>
+			</ul>
+		</div>
+
+		<div class="list">
+			<div class="list__title">Contact</div>
+			<ul class="nav-list">
+				<li class="nav-list__item">
+					<ExLink href="https://goo.gl/maps/GLt6uhYWwU91fXz49">
+						<MapPin width="24" height="24" />
+						Ho Chi Minh City</ExLink>
+				</li>
+
+				<li class="nav-list__item">
+					<ExLink href="mailto:wentallout@gmail.com">
+						<Envelope width="24" height="24" />
+						wentallout@gmail.com</ExLink>
+				</li>
+				<li class="nav-list__item">
+					<ExLink href="tel:+84929066331">
+						<Phone width="24" height="24" />
+						+84 929066331</ExLink>
+				</li>
+			</ul>
+		</div>
 	</div>
+
+	<NotAI />
+	<FooterEnd />
 </footer>
 
 <style>
@@ -114,38 +115,18 @@
 		border-image: linear-gradient(to right, var(--text-color-disabled), transparent) 1 0%;
 	}
 
-	footer {
-		/* Flex */
+	.footer {
 		display: flex;
 		flex-direction: column;
-		justify-content: center;
-		align-items: flex-start;
+		width: 100%;
 
-		padding: var(--space-2xl) var(--space-xs);
-
+		padding: var(--space-xl) var(--page-padding);
 		/* Position */
 		position: relative;
-
 		/* Width */
 		max-width: 100vw;
 
-		background-color: var(--black);
-
 		background: linear-gradient(0deg, var(--bg-300) 0%, var(--bg-500) 100%);
-	}
-
-	.footer-container {
-		display: flex;
-		flex-direction: column;
-		color: var(--text-color);
-		font-weight: 300;
-		width: 100%;
-	}
-
-	@media (min-width: 768px) {
-		footer {
-			padding: var(--space-xl) var(--page-padding);
-		}
 	}
 
 	.nav-list {

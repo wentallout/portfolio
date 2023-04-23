@@ -32,7 +32,7 @@
 					{c.label}
 				</div>
 			{:else}
-				<a class="breadcrumb__clickable" href={c.href}>{c.label}</a> /&nbsp;
+				<a class="breadcrumb__clickable underline" href={c.href}>{c.label}</a> /&nbsp;
 			{/if}
 		{/each}
 	</nav>

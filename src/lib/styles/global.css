@@ -173,6 +173,11 @@ html {
 	background: var(--primary-500);
 }
 
+.underline {
+	text-decoration: underline;
+	text-decoration-skip-ink: none;
+}
+
 /* 300,400,500,600*/
 
 .xs-text {

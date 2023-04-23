@@ -21,7 +21,7 @@ It's just incredibly fast compared to other framework-based websites and has gre
 ### Pages
 
 - ✅ Home
-- Project: need more projects
+- Project: need at least 3 projects
 - ✅ Blog
 - ✅ Resource
 - ✅ Contact
@@ -61,10 +61,15 @@ https://learn.svelte.dev/tutorial
 ### Part 1: Basic Svelte
 
 - ✅ Introduction
-- ✅ Reactivity (Updating arrays and objects is kinda confusing)
-- Props
-- Logic
+- ✅ Reactivity
+    + `Updating arrays and objects`
+- ✅ Props
+    + remember `spread props`
+- ✅ Logic
+    + `keyed each` and `await`
 - Events
+    + `inline handlers` is bad, don't use
+    + `Component events` -> can't understand
 - Bindings
 - Lifecycle
 - Stores
