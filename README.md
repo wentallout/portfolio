@@ -6,44 +6,44 @@
 
 [Open in Visual Studio Code](https://open.vscode.dev/wentallout/portfolio)
 
-## What is this?
+## ❓ What is this?
 
 This is Khoa's personal portfolio+blog. Built using SvelteKit.
 
 Current URL: [wentallout.tech](https://wentallout.tech)
 
-## What makes this special?
+## 🤩 What makes this special?
 
-It's just incredibly fast compared to other framework-based websites and has great SEO out-of-the-box. You won't need a backend or CMS though, the blog posts are just markdown files you can store on your computer. Imported images are converted to webp to optimize loading speed.
+It's incredibly fast compared to other framework-based websites and has great SEO out-of-the-box. You won't need a backend or CMS though, the blog posts are just markdown files you can store on your computer. All imported images are converted to `webp` to optimize loading speed.
 
 ## 🏆 Progress
 
 ### Pages
 
 - ✅ Home
-- Project: need at least 3 projects
+- ❌ Project: need at least 3 projects
 - ✅ Blog
 - ✅ Resource
 - ✅ Contact
 
 ### Features
 
-- ✅ Fonts: Self-hosted + Subset
+- ✅ Fonts: Self-hosted + Subset (https://www.npmjs.com/package/glyphhanger)
 - ✅ Images: Compressed and Converted into webp + Native Lazy Loading
-- ✅ Routing (built-in)
+- ✅ Routing
 - ✅ Page Transition: Fade Effect + Loading Bar
-- ✅ Responsiveness: Mobile Compatible
-- ✅ Contact: using Netlify Form
-- ✅ Good SEO
-- ✅ Dark Mode (by default)
+- ✅ Responsive
+- ✅ Contact: Netlify Form
+- ✅ SEO 100/100
+- ✅ Dark Mode
 
 ---
 
 - ✅ Blog: Dynamic Table of Contents
-- ✅ Blog: Tags/Categories
 - ✅ Blog: Search
+- ✅ Blog: Tags/Categories
 - ✅ Blog: Pagination
-- Blog: Comment
+- ✅ Blog: Comment (https://github.com/giscus/giscus-component - https://giscus.app)
 
 ## 💻 Developing
 
@@ -62,14 +62,14 @@ https://learn.svelte.dev/tutorial
 
 - ✅ Introduction
 - ✅ Reactivity
-    + `Updating arrays and objects`
+  - `Updating arrays and objects`
 - ✅ Props
-    + remember `spread props`
+  - remember `spread props`
 - ✅ Logic
-    + `keyed each` and `await`
+  - `keyed each` and `await`
 - Events
-    + `inline handlers` is bad, don't use
-    + `Component events` -> can't understand
+  - `inline handlers` is bad, don't use
+  - `Component events` -> can't understand
 - Bindings
 - Lifecycle
 - Stores

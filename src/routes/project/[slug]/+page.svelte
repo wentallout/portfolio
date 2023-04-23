@@ -5,6 +5,7 @@
 	export let data;
 	import Time from 'svelte-time';
 	import SEO from '$lib/components/SEO/SEO.svelte';
+	import Comments from '$lib/components/Blog/Comments.svelte';
 </script>
 
 <SEO title={data.title} />
@@ -16,6 +17,8 @@
 	<PostContainer>
 		<svelte:component this={data.content} />
 	</PostContainer>
+
+	<Comments category="Projects" />
 </article>
 
 <style>

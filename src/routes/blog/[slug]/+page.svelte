@@ -36,7 +36,7 @@
 		<svelte:component this={data.content} />
 	</PostContainer>
 
-	<Comments />
+	<Comments category="Blogs" />
 </article>
 
 <style>

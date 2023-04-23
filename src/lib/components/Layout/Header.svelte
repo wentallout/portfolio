@@ -76,7 +76,8 @@
 	}
 
 	.overlay-item.active-page:after {
-		content: '   ◆';
+		content: '◆';
+		margin-left: auto;
 	}
 
 	.nav {
@@ -88,7 +89,7 @@
 		width: 100%;
 		display: flex;
 
-		transition: var(--transition);
+		transition: ease-in-out 0.1s;
 	}
 
 	.nav-scrolldown {
@@ -166,7 +167,7 @@
 		background-color: rgba(0, 0, 0, 0.9);
 		backdrop-filter: blur(5px);
 		overflow-y: hidden;
-		transition: 0.2s;
+		transition: var(--transition);
 		font-weight: 300;
 	}
 
@@ -198,7 +199,7 @@
 
 		padding-left: var(--page-padding);
 		padding-right: var(--page-padding);
-		transition: var(--transition);
+
 		outline: 1px solid transparent;
 		font-weight: 500;
 	}

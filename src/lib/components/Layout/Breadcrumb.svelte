@@ -25,7 +25,7 @@
 </script>
 
 {#if path !== '/' && id !== null}
-	<nav aria-label="breadcrumb" id="breadcrumb" class="breadcrumb base-text">
+	<nav aria-label="breadcrumb" id="breadcrumb" class="breadcrumb small-text">
 		{#each crumbs as c, i}
 			{#if i == crumbs.length - 1}
 				<div class="breadcrumb__unclickable">
