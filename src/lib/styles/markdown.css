@@ -67,7 +67,7 @@
 	/* --- */
 
 	/* FONT */
-	font-weight: 500;
+	font-weight: 600;
 	font-size: var(--font-size-base);
 	line-height: var(--line-height-base);
 	/* --- */
@@ -175,7 +175,6 @@ blockquote p {
 }
 
 pre {
-	background-color: var(--black);
 	color: var(--text-color);
 	padding: var(--space-s) var(--space-s);
 	border-radius: var(--border-radius);

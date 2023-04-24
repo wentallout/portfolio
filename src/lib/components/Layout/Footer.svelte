@@ -14,8 +14,6 @@
 	import MapPin from '~icons/ph/map-pin';
 </script>
 
-<Marquee />
-
 <footer class="footer small-text">
 	<div class="list-container">
 		<div class="list">
@@ -87,8 +85,22 @@
 	<NotAI />
 	<FooterEnd />
 </footer>
+<Marquee />
 
 <style>
+	.footer {
+		display: flex;
+		flex-direction: column;
+		width: 100%;
+
+		padding: var(--space-xl) var(--page-padding);
+		/* Position */
+		position: relative;
+		/* Width */
+		max-width: 100vw;
+
+		background: linear-gradient(0deg, var(--bg-300) 0%, var(--bg-500) 100%);
+	}
 	.list-container {
 		overflow: hidden;
 		--min: 20ch;
@@ -113,20 +125,6 @@
 
 		border-bottom: 4px solid transparent;
 		border-image: linear-gradient(to right, var(--text-color-disabled), transparent) 1 0%;
-	}
-
-	.footer {
-		display: flex;
-		flex-direction: column;
-		width: 100%;
-
-		padding: var(--space-xl) var(--page-padding);
-		/* Position */
-		position: relative;
-		/* Width */
-		max-width: 100vw;
-
-		background: linear-gradient(0deg, var(--bg-300) 0%, var(--bg-500) 100%);
 	}
 
 	.nav-list {

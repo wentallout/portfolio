@@ -1,4 +1,5 @@
 <script>
+	import ScrollBar from '$lib/components/Layout/ScrollBar.svelte';
 	import PageTransition from '$lib/components/Layout/PageTransition.svelte';
 	import ScrollProgressBar from '$lib/components/Common/ScrollProgressBar.svelte';
 	import Cover from '$lib/components/Layout/Cover.svelte';
@@ -41,6 +42,7 @@
 	}
 </script>
 
+<ScrollBar />
 <ScrollProgressBar />
 <SkipLink />
 <PWA />
@@ -60,8 +62,8 @@
 </div>
 
 <style>
-	.page-container {
-		background: var(--page-bg);
+	:global(body) {
+		background-color: var(--page-bg);
 	}
 
 	.main-content {

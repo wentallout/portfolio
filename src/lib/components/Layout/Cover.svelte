@@ -19,21 +19,25 @@
 		<ExLink href="tel:+84929066331">
 			<div class="contact">
 				<Phone />
-
-				<div class="contact__value small-text">+84 929066331</div>
 			</div>
 		</ExLink>
 
 		<ExLink href="mailto:wentallout@gmail.com">
 			<div class="contact">
 				<Envelope />
-				<div class="contact__value small-text">wentallout@gmail.com</div>
 			</div>
 		</ExLink>
 	</div>
 </div>
 
 <style>
+	.cover {
+		display: flex;
+		position: relative;
+		width: 100%;
+		height: 240px;
+		background-color: var(--bg-500);
+	}
 	.logo__alter {
 		position: absolute;
 		top: 50%;
@@ -86,14 +90,6 @@
 		filter: brightness(1.2);
 	}
 
-	.cover {
-		display: flex;
-		position: relative;
-		width: 100%;
-		height: 240px;
-		background-color: var(--bg-500);
-	}
-
 	@media (min-width: 768px) {
 		.cover {
 			height: 300px;
@@ -119,18 +115,18 @@
 		pointer-events: none;
 		content: '';
 		position: absolute;
-		top: 0;
-		right: 0;
-		bottom: 0;
-		left: 0;
+
+		inset: 0;
 
 		background: linear-gradient(
 			0deg,
 			var(--page-bg) 0%,
-			rgba(0, 0, 0, 0.5) 12%,
+			rgba(0, 0, 0, 0.7) 12%,
 			rgba(0, 0, 0, 0.1) 30%,
 			rgba(0, 0, 0, 0) 40%
 		);
+
+		clip-path: polygon(50% 0%, 100% 0, 100% 70%, 50% 100%, 0 70%, 0 0);
 	}
 
 	.video {
@@ -142,6 +138,8 @@
 		object-fit: cover;
 		filter: brightness(40%);
 		transition: var(--transition);
+
+		clip-path: polygon(50% 0%, 100% 0, 100% 60%, 50% 100%, 0 60%, 0 0);
 	}
 
 	.contact {

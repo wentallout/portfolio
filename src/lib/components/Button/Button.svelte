@@ -30,7 +30,15 @@
 		cursor: pointer;
 		outline-offset: 4px;
 		transition: filter 250ms;
+		width: 100%;
 	}
+
+	@media (min-width: 992px) {
+		.pushable {
+			width: fit-content;
+		}
+	}
+
 	.shadow {
 		position: absolute;
 		top: 0;
@@ -57,7 +65,11 @@
 		filter: brightness(0.8);
 	}
 	.front {
-		display: block;
+		display: flex;
+		flex-direction: row;
+		flex-wrap: nowrap;
+		align-items: center;
+		gap: 4px;
 		position: relative;
 		padding: 12px 42px;
 		border-radius: var(--border-radius-light);

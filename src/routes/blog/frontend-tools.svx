@@ -7,5 +7,7 @@ categories:
 
 ## Best Gradient Generator
 
-When you try to create gradients across a wide range of hues, you often will see a gray dead zone in the middle of your gradient. This tool solve that: https://www.learnui.design/tools/gradient-generator.html
+When you try to create gradients across a wide range of hues, you often will see a gray dead zone in the middle of your gradient.
+
+This tool solve that: https://www.learnui.design/tools/gradient-generator.html
 

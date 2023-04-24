@@ -28,9 +28,14 @@
 
 <style>
 	.more {
-		display: flex;
-		justify-content: center;
-		align-items: center;
+		--min: 30ch;
+		--gap: var(--space-s);
+
+		display: grid;
+		grid-gap: var(--gap);
+
+		grid-template-columns: repeat(auto-fit, minmax(min(100%, var(--min)), 1fr));
+		width: 100%;
 	}
 
 	.projects {

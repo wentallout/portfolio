@@ -46,13 +46,12 @@ html {
 
 	--bg-100: hsl(212, 27%, 16%);
 	--bg-200: hsl(212, 27%, 14%);
-	--bg-300: hsl(212, 27%, 12%);
+	--bg-300: #161e27;
 	--bg-400: hsl(212, 27%, 10%);
-	--bg-500: hsl(210, 45%, 4%);
+	--bg-500: #060a0f;
+	--page-bg: var(--bg-500);
 
 	--max-width: 80rem;
-
-	--page-bg: var(--bg-500);
 
 	--text-width: 70ch;
 
@@ -165,6 +164,12 @@ html {
 @media (min-width: 768px) {
 	:root {
 		--page-padding: 18vw;
+	}
+}
+
+@media (min-width: 992px) {
+	:root {
+		--page-padding: 20vw;
 	}
 }
 

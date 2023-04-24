@@ -7,7 +7,6 @@
 	import BlogTagsList from '$lib/components/Blog/BlogTagsList.svelte';
 
 	import MiniSearch from 'minisearch';
-
 	import { paginate, DarkPaginationNav } from 'svelte-paginate';
 
 	export let data;
@@ -20,7 +19,7 @@
 	let filteredBlogs = [];
 	let items = [];
 	let currentPage = 1;
-	let pageSize = 8;
+	let pageSize = 16;
 
 	let autoSuggest;
 
@@ -63,6 +62,8 @@
 	$: items = filteredBlogs;
 	$: paginatedItems = paginate({ items, pageSize, currentPage });
 </script>
+
+
 
 <SEO title="Blog" />
 

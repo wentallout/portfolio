@@ -32,7 +32,7 @@
 
 			<div class="contact__btn">
 				<Button label="Send message" backgroundColor="var(--primary-500)">
-					<PaperPlaneRight color="var(--bg-500)" width="24" height="24" />
+					<PaperPlaneRight color="var(--bg-500)" width="16" height="16" />
 				</Button>
 
 				<Button
@@ -41,7 +41,7 @@
 					backgroundColor="var(--bg-500)"
 					labelColor="var(--error)"
 					type="reset"
-					><ArrowCounterClockwise color="var(--error)" width="24" height="24" />
+					><ArrowCounterClockwise color="var(--error)" width="16" height="16" />
 				</Button>
 			</div>
 		</form>
@@ -63,10 +63,8 @@
 	}
 
 	.contact__btn {
-
 		margin-top: var(--space-m);
 		width: 100%;
-		
 
 		--min: 30ch;
 		--gap: var(--space-s);
@@ -75,5 +73,12 @@
 		grid-gap: var(--gap);
 
 		grid-template-columns: repeat(auto-fit, minmax(min(100%, var(--min)), 1fr));
+	}
+
+	@media (min-width: 992px) {
+		.contact__btn {
+			display: flex;
+			gap: var(--space-s);
+		}
 	}
 </style>

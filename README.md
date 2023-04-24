@@ -104,8 +104,10 @@ https://learn.svelte.dev/tutorial
 ### Part 4: Advanced SvelteKit
 
 - Hooks
-- Page options
-- Link options
+- ✅ Page options
+- ✅ Link options
+  - `data-sveltekit-preload-data`
+  - `data-sveltekit-reload`
 - Advanced routing
 - Advanced loading
 - Environment variables
