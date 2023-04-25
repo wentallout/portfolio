@@ -137,28 +137,28 @@
 		height: 100%;
 		width: 100%;
 		object-fit: cover;
-		object-position: center;
+
 		filter: brightness(40%);
 		transition: var(--transition);
 	}
 
 	@media (min-width: 768px) {
 		.video {
-			animation: updown 30s ease-in-out infinite;
+			animation: updown 30s ease-in-out;
 		}
 	}
 
 	@keyframes updown {
 		0% {
-			object-position: bottom;
-		}
-
-		50% {
 			object-position: top;
 		}
 
-		100% {
+		50% {
 			object-position: bottom;
+		}
+
+		100% {
+			object-position: top;
 		}
 	}
 
