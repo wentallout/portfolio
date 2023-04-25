@@ -7,7 +7,6 @@
 	//
 
 	import website from '$lib/config.js';
-	import { DIAMOND_ENTITY } from '$lib/constants/entities';
 	import OpenGraph from '$lib/components/SEO/OpenGraph.svelte';
 	import SchemaOrg from '$lib/components/SEO/SchemaOrg.svelte';
 	import Twitter from '$lib/components/SEO/Twitter.svelte';
@@ -39,7 +38,7 @@
 		twitterUsername
 	} = website;
 
-	const pageTitle = `${title} ${DIAMOND_ENTITY} ${siteTitle}`;
+	const pageTitle = `${title} - ${siteTitle}`;
 	const url = `${siteUrl}/${slug}`;
 
 	export let article = false;

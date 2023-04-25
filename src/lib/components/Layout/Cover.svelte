@@ -2,18 +2,20 @@
 	import Phone from '~icons/ph/phone';
 	import YinYang from '~icons/ph/yin-yang-fill';
 	import Envelope from '~icons/ph/envelope';
+
 	import ExLink from '$lib/components/Common/ExLink.svelte';
 </script>
 
 <div class="cover">
 	<video class="video" autoplay muted loop>
-		<source src="/videos/city.mp4" type="video/mp4" />
+		<source src="/videos/city.mp4" type="video/webm" />
 	</video>
 
 	<a href="/" class="cover__logo">
 		<YinYang class="yinyang" width="100%" height="100%" color="var(--text-color)" />
 	</a>
-	<img class="logo__alter" src="/images/wentallout.svg" alt="alternative logo" />
+
+	<div class="logo__alter">{'[' + 'wentallout' + ']'}</div>
 
 	<div class="cover__btn">
 		<ExLink href="tel:+84929066331">
@@ -43,10 +45,11 @@
 		top: 50%;
 		left: 50%;
 		transform: translate(-50%, -50%);
-
 		transition: var(--transition);
-		width: 10%;
-		min-width: 80px;
+		font-weight: 600;
+		line-height: normal;
+		font-size: var(--font-size-mid);
+		color: var(--text-color);
 	}
 
 	:global(.yinyang) {
@@ -125,8 +128,6 @@
 			rgba(0, 0, 0, 0.1) 30%,
 			rgba(0, 0, 0, 0) 40%
 		);
-
-		clip-path: polygon(50% 0%, 100% 0, 100% 70%, 50% 100%, 0 70%, 0 0);
 	}
 
 	.video {
@@ -136,10 +137,29 @@
 		height: 100%;
 		width: 100%;
 		object-fit: cover;
+		object-position: center;
 		filter: brightness(40%);
 		transition: var(--transition);
+	}
 
-		clip-path: polygon(50% 0%, 100% 0, 100% 60%, 50% 100%, 0 60%, 0 0);
+	@media (min-width: 768px) {
+		.video {
+			animation: updown 30s ease-in-out infinite;
+		}
+	}
+
+	@keyframes updown {
+		0% {
+			object-position: bottom;
+		}
+
+		50% {
+			object-position: top;
+		}
+
+		100% {
+			object-position: bottom;
+		}
 	}
 
 	.contact {
@@ -151,16 +171,5 @@
 
 		align-items: center;
 		gap: 4px;
-	}
-
-	.contact__value {
-		display: none;
-		color: var(--text-color-low);
-	}
-
-	@media (min-width: 992px) {
-		.contact__value {
-			display: block;
-		}
 	}
 </style>

@@ -69,6 +69,7 @@
 		flex-direction: row;
 		flex-wrap: nowrap;
 		align-items: center;
+		justify-content: center;
 		gap: 4px;
 		position: relative;
 		padding: 12px 42px;

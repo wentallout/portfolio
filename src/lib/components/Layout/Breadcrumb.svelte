@@ -1,9 +1,7 @@
 <script>
 	export let path;
-
 	export let id;
-
-	var crumbs;
+	let crumbs;
 
 	$: {
 		// Remove zero-length tokens.

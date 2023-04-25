@@ -66,19 +66,8 @@
 		margin-top: var(--space-m);
 		width: 100%;
 
-		--min: 30ch;
-		--gap: var(--space-s);
-
-		display: grid;
-		grid-gap: var(--gap);
-
-		grid-template-columns: repeat(auto-fit, minmax(min(100%, var(--min)), 1fr));
-	}
-
-	@media (min-width: 992px) {
-		.contact__btn {
-			display: flex;
-			gap: var(--space-s);
-		}
+		display: flex;
+		flex-wrap: wrap;
+		gap: var(--space-s);
 	}
 </style>
