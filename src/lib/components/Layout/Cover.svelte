@@ -8,7 +8,7 @@
 
 <div class="cover">
 	<video class="video" autoplay muted loop>
-		<source src="/videos/city.mp4" type="video/webm" />
+		<source src="/videos/city.webm" type="video/webm" />
 	</video>
 
 	<a href="/" class="cover__logo">
