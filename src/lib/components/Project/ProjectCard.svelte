@@ -4,16 +4,17 @@
 	export let what = '';
 	export let result = '';
 
+	export let year = '';
 	export let thumbnail;
 </script>
 
 <a href={linkToDetail}>
 	<article class="project">
+		<div class="year xs-text">{year}</div>
 		<img class="project__thumbnail" src={thumbnail} alt="" />
 
 		<div class="project__info">
 			<div class="title">
-				<div class="year xs-text">2022</div>
 				<div class="name mid-text">{projectName}</div>
 			</div>
 
@@ -39,14 +40,6 @@
 		flex-direction: column;
 	}
 
-	.year {
-		width: fit-content;
-
-		border-radius: var(--border-radius-light);
-		line-height: normal;
-		color: var(--text-color-low);
-	}
-
 	.info {
 		display: flex;
 		flex-direction: column;
@@ -55,18 +48,22 @@
 	}
 
 	.project {
+		position: relative;
 		width: 100%;
 		display: flex;
 		flex-direction: column;
 		border-radius: var(--border-radius);
-		background-color: var(--bg-400);
 
 		transition: var(--transition);
 		overflow: hidden;
+		border: 1px solid var(--bg-400);
+
+		outline: 1px solid var(--bg-400);
+		outline-offset: 4px;
 	}
 
 	.project:hover {
-		background-color: var(--bg-300);
+		background-color: var(--bg-400);
 	}
 
 	.project__info {
@@ -74,15 +71,10 @@
 		flex-grow: 2;
 
 		flex-direction: column;
-
+		position: relative;
 		padding: var(--space-m) var(--space-xl);
 		gap: var(--space-m);
 		color: var(--text-color-low);
-	}
-
-	.project:hover {
-		outline: 1px solid var(--primary-500);
-		filter: drop-shadow(0px 0px 4px var(--primary-500));
 	}
 
 	.name {
@@ -95,7 +87,11 @@
 		aspect-ratio: 1/1;
 		margin-bottom: auto;
 		object-fit: cover;
-		background-color: var(--bg-500);
+		background-color: transparent;
+		position: relative;
+		padding: 8px;
+
+		border-radius: var(--border-radius);
 	}
 
 	.info__section {
@@ -122,5 +118,27 @@
 
 	.section__desc {
 		max-width: var(--text-width);
+	}
+
+	.year {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: fit-content;
+
+		line-height: normal;
+		color: var(--text-color);
+		font-weight: 300;
+
+		background-color: rgba(0, 0, 0, 0.8);
+		backdrop-filter: blur(5px);
+
+		padding: 8px;
+		z-index: 3;
+
+		flex-direction: column;
+
+		/* writing-mode: vertical-rl;
+		text-orientation: upright; */
 	}
 </style>

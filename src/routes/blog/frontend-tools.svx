@@ -5,9 +5,25 @@ categories:
     - freebies
 ---
 
-## Best Gradient Generator
+## Gradient Generator
 
 When you try to create gradients across a wide range of hues, you often will see a gray dead zone in the middle of your gradient.
 
 This tool solve that: https://www.learnui.design/tools/gradient-generator.html
 
+## Background generator
+
+- SVG bg generator
+https://bgjar.com/
+
+## Layout Generator:
+
+- Flex + Grid: https://layout.bradwoods.io/
+
+## Illustration: 
+
+https://iradesign.io/illustrations
+
+## CSS Animation:
+
+https://animista.net/

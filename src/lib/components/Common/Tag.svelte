@@ -26,7 +26,7 @@
 	}
 
 	.tag:hover {
-		background: var(--accent-400);
+		background: var(--primary-400);
 		color: var(--bg-500);
 	}
 </style>

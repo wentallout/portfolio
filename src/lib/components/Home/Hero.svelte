@@ -16,19 +16,19 @@
 				I create practical and user-friendly products that bring real value and enhance people's
 				lives.
 				<a class="hero__link underline" href="/about">
-					<span>Read more</span>
+					<span>More</span>
 				</a>
 			</div>
 
 			<div class="hero__btn">
-				<a class="btn" href="/project">
+				<a href="/project">
 					<Button
 						label="See Full Portfolio"
 						labelColor="var(--bg-500)"
 						backgroundColor="var(--primary-500)" />
 				</a>
 
-				<a class="btn" href="/contact">
+				<a href="/contact">
 					<Button
 						label="Contact"
 						labelColor="var(--text-color)"
@@ -42,7 +42,11 @@
 
 <style>
 	.hero__link {
-		color: var(--accent-500);
+		color: var(--primary-500);
+	}
+
+	.hero__btn a {
+		display: contents;
 	}
 
 	.hero {
@@ -70,7 +74,8 @@
 		color: var(--primary-500);
 	}
 	.focus-low {
-		color: var(--text-color-disabled);
+		color: transparent;
+		-webkit-text-stroke: 1px var(--text-color-low);
 	}
 
 	.hero__text {
@@ -85,10 +90,6 @@
 		display: flex;
 		gap: var(--space-s);
 		flex-wrap: wrap;
-	}
-
-	.btn {
-		display: contents;
 	}
 
 	.text-focus-in {

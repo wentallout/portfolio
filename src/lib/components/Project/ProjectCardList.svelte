@@ -10,6 +10,7 @@
 
 <div class="projects">
 	<ProjectCard
+		year="2022"
 		projectName="Reza - Restaurant Reservation App"
 		linkToDetail="project/reza"
 		what="Reza is an app that lets people book restaurant tables easily."
@@ -20,7 +21,7 @@
 	{#if hasMoreButton}
 		<div class="more">
 			<a href="/project">
-				<Button backgroundColor="var(--primary-500)" label="See full portfolio" />
+				<Button backgroundColor="var(--primary-500)" label="See all projects" />
 			</a>
 		</div>
 	{/if}
@@ -28,14 +29,14 @@
 
 <style>
 	.more {
-		--min: 30ch;
-		--gap: var(--space-s);
-
-		display: grid;
-		grid-gap: var(--gap);
-
-		grid-template-columns: repeat(auto-fit, minmax(min(100%, var(--min)), 1fr));
+		display: flex;
+		justify-content: center;
+		align-items: center;
 		width: 100%;
+	}
+
+	.more a {
+		display: contents;
 	}
 
 	.projects {

@@ -100,6 +100,8 @@
 		max-width: 100vw;
 
 		background: linear-gradient(0deg, var(--bg-300) 0%, var(--bg-500) 100%);
+
+		border-top: 1px solid var(--bg-400);
 	}
 	.list-container {
 		overflow: hidden;

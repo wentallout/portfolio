@@ -131,14 +131,9 @@
 		.markdown h5 a,
 		.markdown a:has(img)
 	) {
-	color: var(--accent-500);
+	color: var(--primary-500);
 	text-decoration: underline;
 	text-decoration-skip-ink: none;
-}
-
-.markdown img {
-	margin-bottom: var(--space-s);
-	border-radius: var(--border-radius-light);
 }
 
 .markdown li:not(.toc li) {
@@ -222,10 +217,19 @@ aside.toc > nav > ul > li:before {
 .markdown img {
 	display: block;
 	max-width: 100%;
-	height: auto;
+
 	margin-left: auto;
 	margin-right: auto;
 	object-fit: contain;
+
+	width: 100%;
+	aspect-ratio: 16/9;
+
+	margin-bottom: var(--space-s);
+	border-radius: var(--border-radius-light);
+
+	background-color: var(--bg-400);
+	border: 1px solid var(--bg-400);
 }
 
 :where(aside.toc > nav > ul > li) {

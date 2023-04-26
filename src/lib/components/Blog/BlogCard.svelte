@@ -40,7 +40,7 @@
 	}
 
 	.tag {
-		color: var(--accent-500);
+		color: var(--primary-500);
 	}
 
 	.blog__info {

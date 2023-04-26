@@ -137,7 +137,7 @@
 		height: 100%;
 		width: 100%;
 		object-fit: cover;
-
+		object-position: top;
 		filter: brightness(40%);
 		transition: var(--transition);
 	}

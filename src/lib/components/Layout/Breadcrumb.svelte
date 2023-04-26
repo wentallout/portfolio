@@ -3,6 +3,8 @@
 	export let id;
 	let crumbs;
 
+	import CaretRight from '~icons/ph/caret-right';
+
 	$: {
 		// Remove zero-length tokens.
 		const tokens = path.split('/').filter((t) => t !== '');
@@ -30,7 +32,10 @@
 					{c.label}
 				</div>
 			{:else}
-				<a class="breadcrumb__clickable underline" href={c.href}>{c.label}</a> /&nbsp;
+				<a class="breadcrumb__clickable underline" href={c.href}>{c.label}</a>
+				<CaretRight width="16" height="16" />
+
+				<!-- /&nbsp; -->
 			{/if}
 		{/each}
 	</nav>
@@ -38,6 +43,13 @@
 
 <style>
 	.breadcrumb {
+		/* FLEX */
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		gap: 0.25rem;
+
+		/* SPACING */
 		margin-top: var(--space-s);
 		margin-bottom: var(--space-l);
 	}
@@ -52,7 +64,7 @@
 	.breadcrumb__clickable {
 		font-weight: 300;
 		display: inline-flex;
-		color: var(--accent-300);
+		color: var(--primary-500);
 	}
 
 	.breadcrumb__clickable:hover {
