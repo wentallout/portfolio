@@ -32,22 +32,6 @@
 </a>
 
 <style>
-	.tags {
-		display: flex;
-		flex-direction: row;
-		flex-wrap: wrap;
-		gap: var(--space-xs);
-	}
-
-	.tag {
-		color: var(--primary-500);
-	}
-
-	.blog__info {
-		display: flex;
-		flex-direction: column;
-	}
-
 	.blog {
 		/* FLEX */
 		display: flex;
@@ -68,12 +52,37 @@
 		overflow: hidden;
 		/* --- */
 
-		border-bottom: 1px solid var(--bg-400);
 		box-shadow: var(--box-shadow-1);
+
+		border-right: 1px solid var(--bg-400);
+
+		border-bottom: 1px solid var(--bg-400);
+	}
+
+	@media (min-width: 992px) {
+		.blog {
+			width: 50%;
+		}
 	}
 
 	.blog:hover {
 		background-color: var(--bg-300);
+	}
+
+	.tags {
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+		gap: var(--space-xs);
+	}
+
+	.tag {
+		color: var(--primary-500);
+	}
+
+	.blog__info {
+		display: flex;
+		flex-direction: column;
 	}
 
 	.icon {
@@ -95,7 +104,7 @@
 
 		/* LINE CLAMP */
 		display: -webkit-box;
-		-webkit-line-clamp: 2;
+		-webkit-line-clamp: 1;
 		-webkit-box-orient: vertical;
 		text-overflow: ellipsis;
 		/* --- */

@@ -1,30 +1,18 @@
 <div class="scrollbar" />
 
 <style global>
-	.scrollbar {
-		display: none;
+	::-webkit-scrollbar {
+		width: 16px;
+		height: 16px;
 	}
 
-	::-webkit-scrollbar {
-		background-color: var(--bg-500);
-	}
-	::-webkit-scrollbar-button {
-		display: none;
-	}
-	::-webkit-scrollbar-track {
-		display: none;
-	}
-	::-webkit-scrollbar-track-piece {
-		display: none;
-	}
 	::-webkit-scrollbar-thumb {
-		border-radius: var(--border-radius-light);
-		background-color: var(--neutral-500);
+		background: #434343;
+		border-radius: 16px;
+		box-shadow: inset 2px 2px 2px hsla(0, 0%, 100%, 0.25), inset -2px -2px 2px rgba(0, 0, 0, 0.25);
 	}
-	::-webkit-scrollbar-thumb:hover {
-		background-color: var(--neutral-400);
-	}
-	::-webkit-scrollbar-corner {
-		display: none;
+
+	::-webkit-scrollbar-track {
+		background: linear-gradient(90deg, #434343, #434343 1px, #111 0, #111);
 	}
 </style>

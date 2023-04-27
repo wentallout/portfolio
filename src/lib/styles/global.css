@@ -2,7 +2,7 @@
 	margin: 0;
 }
 
-@font-face {
+/* @font-face {
 	font-family: 'Normal';
 	src: url('/fonts/Inter.woff2') format('woff2 supports variations'),
 		url('/fonts/Inter.woff2') format('woff2-variations');
@@ -10,6 +10,17 @@
 	font-stretch: 100%;
 	font-style: normal;
 	font-display: swap;
+} */
+
+@font-face {
+	font-family: 'Normal';
+	src: url('/fonts/InterNew.woff2') format('woff2');
+
+	font-weight: 300 600;
+
+	font-style: normal;
+	font-display: swap;
+	font-named-instance: 'Regular';
 }
 
 @font-face {
@@ -30,9 +41,25 @@ html {
 	scroll-padding: var(--scroll-padding, 60px);
 	scroll-behavior: auto;
 	overflow-x: hidden;
+
+	-webkit-font-smoothing: antialiased;
+	min-height: 101vh;
+
+	/* DEFAULT FONT CONFIG */
+	font-family: var(--normal-font), 'fallback', sans-serif, -apple-system, BlinkMacSystemFont,
+		'Segoe UI', Roboto, Helvetica, Arial, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
+	font-weight: 400;
+}
+
+@supports (font-variation-settings: normal) {
+	html {
+		font-feature-settings: 'calt', 'tnum', 'frac', 'case', 'ccmp', 'ss02' 0, 'ss03' 0, 'ordn',
+			'cpsp';
+	}
 }
 
 :root {
+	text-underline-offset: 4px;
 	/* TYPOGRAPHY */
 	--normal-font: 'Normal';
 	--fancy-font: 'Fancy';
@@ -103,6 +130,8 @@ html {
 	--line-height-3xl: 120%;
 
 	/* SPACING */
+	--page-padding: 1.5rem;
+
 	--space-3xs: clamp(0.25rem, calc(0.23rem + 0.08vw), 0.31rem);
 	--space-2xs: clamp(0.56rem, calc(0.55rem + 0.08vw), 0.63rem);
 	--space-xs: clamp(0.81rem, calc(0.78rem + 0.17vw), 0.94rem);
@@ -141,8 +170,6 @@ html {
 
 	--box-shadow-5: 0px 8px 9px rgba(0, 0, 0, 0.14), 0px 3px 14px rgba(0, 0, 0, 0.12),
 		0px 5px 5px rgba(0, 0, 0, 0.2);
-
-	--page-padding: 1rem;
 
 	/* 6	0.043
 7	0.032
@@ -184,11 +211,13 @@ html {
 .underline {
 	text-decoration: underline;
 	text-decoration-skip-ink: none;
-	text-underline-offset: 4px;
 }
 
 .underline:hover {
-	color: var(--primary-400);
+	text-decoration: underline;
+	text-decoration-skip-ink: none;
+	text-underline-offset: 2px;
+	font-weight: 600;
 }
 
 /* 300,400,500,600*/
@@ -238,21 +267,12 @@ html {
 	line-height: var(--line-height-3xl);
 }
 
-html {
-	-webkit-font-smoothing: antialiased;
-	min-height: 101vh;
-
-	/* DEFAULT FONT CONFIG */
-	font-family: var(--normal-font), 'fallback', sans-serif, -apple-system, BlinkMacSystemFont,
-		'Segoe UI', Roboto, Helvetica, Arial, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
-	font-weight: 400;
-}
-
 body {
 	text-rendering: optimizeLegibility;
 
 	-moz-osx-font-smoothing: grayscale;
 	color: var(--text-color);
+	scrollbar-gutter: stable;
 }
 
 ul {

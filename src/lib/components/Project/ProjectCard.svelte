@@ -6,6 +6,8 @@
 
 	export let year = '';
 	export let thumbnail;
+
+	import ArrowRight from '~icons/ph/arrow-right';
 </script>
 
 <a href={linkToDetail}>
@@ -18,9 +20,9 @@
 				<div class="name mid-text">{projectName}</div>
 			</div>
 
-			<div class="info">
+			<div class="info small-text">
 				<div class="info__section">
-					<div class="section__label">What?</div>
+					<div class="section__label">Intro</div>
 					<div class="section__desc">{what}</div>
 				</div>
 
@@ -29,11 +31,31 @@
 					<div class="section__desc">{result}</div>
 				</div>
 			</div>
+
+			<div class="indicator small-text">
+				<ArrowRight color="inherit" width="24" height="24" />Read Case Study
+			</div>
 		</div>
 	</article>
 </a>
 
 <style>
+	.indicator {
+		margin-top: auto;
+		font-weight: 600;
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		gap: var(--space-xs);
+		color: var(--text-color);
+		transition: var(--transition);
+	}
+
+	.project:hover .indicator {
+		padding-left: 0.5rem;
+		color: var(--primary-500);
+	}
+
 	.title {
 		display: flex;
 		justify-content: flex-start;
@@ -112,7 +134,7 @@
 	}
 
 	.section__label {
-		font-weight: 600;
+		font-weight: 500;
 		min-width: 10%;
 	}
 

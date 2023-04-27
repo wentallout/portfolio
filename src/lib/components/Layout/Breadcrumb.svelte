@@ -68,6 +68,7 @@
 	}
 
 	.breadcrumb__clickable:hover {
-		color: var(--primary-500);
+		color: var(--primary-300);
+		text-underline-offset: 2px;
 	}
 </style>

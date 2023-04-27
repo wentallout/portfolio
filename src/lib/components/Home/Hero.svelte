@@ -82,6 +82,7 @@
 		color: var(--text-color-low);
 		max-width: var(--text-width);
 		margin-bottom: var(--space-s);
+		text-wrap: balance;
 	}
 	.hero__btn {
 		margin-top: var(--space-l);

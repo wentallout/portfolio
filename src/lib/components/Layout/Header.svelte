@@ -1,13 +1,13 @@
 <script>
 	import SocialButtons from '$lib/components/Contact/SocialButtons.svelte';
 	import { navItems } from '$lib/config.js';
+	import { onMount } from 'svelte';
+	import { page } from '$app/stores';
+
 	import List from '~icons/ph/list';
 	import X from '~icons/ph/x';
 
-	import { onMount } from 'svelte';
-
 	import VanishingHeader from '$lib/components/Layout/VanishingHeader.svelte';
-	import { page } from '$app/stores';
 
 	let scrollY;
 
@@ -31,7 +31,7 @@
 
 <svelte:window bind:scrollY />
 
-<VanishingHeader duration="350ms" offset={50} tolerance={5}>
+<VanishingHeader duration="300ms" offset={50} tolerance={5}>
 	<header class="header" bind:this={headerEle}>
 		<nav aria-label="primary menu" class="nav" class:nav-scrolldown={scrollY > 0}>
 			<ul class="nav-list">
