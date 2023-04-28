@@ -42,7 +42,7 @@
 <style>
 	.indicator {
 		margin-top: auto;
-		font-weight: 600;
+		font-weight: 400;
 		display: flex;
 		flex-direction: row;
 		align-items: center;

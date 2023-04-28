@@ -11,7 +11,55 @@ This one awesome website will leads you to amazing tools
 
 -[AI Design Resource](https://aidesignresource.com/)
 
-## List
+## Images-related
 
 - [StockAI](https://www.stockai.com)
 - [Craiyon](https://www.craiyon.com) - generate images from text
+- cutout.pro - both video and images
+- designer.microsoft.com
+- https://thumbnail.ai free youtube thumbnails
+
+- https://mage.space
+
+
+## Youtube-related
+
+https://www.you-tldr.com
+
+https://www.youtube.com/watch?v=yOQ9cljJ5jE
+
+
+## Anti-anti A.I
+
+gptminus1.com
+
+
+## Alternative way to use A.I
+
+- https://perplexity.ai - provides source for its information too
+
+## Video-related
+
+- https://oxolo.com
+
+## Cooking-related
+
+https://video2recipe.com
+
+## Prompts-related
+
+https://promptvibes.com
+
+https://promptvine.com
+
+## Business-related
+
+https://aiforbiz.co
+
+## Document-related
+
+https://chatdoc.com
+
+## Trip-related
+
+https://journeyplan.co
