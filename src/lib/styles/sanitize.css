@@ -11,15 +11,6 @@
 	vertical-align: inherit; /* 2 */
 }
 
-/**
-  * 1. Use the default cursor in all browsers (opinionated).
-  * 2. Change the line height in all browsers (opinionated).
-  * 3. Breaks words to prevent overflow in all browsers (opinionated).
-  * 4. Use a 4-space tab width in all browsers (opinionated).
-  * 5. Remove the grey highlight on links in iOS (opinionated).
-  * 6. Prevent adjustments of font size after orientation changes in iOS.
-  */
-
 :where(:root) {
 	overflow-wrap: break-word; /* 3 */
 	-moz-tab-size: 4; /* 4 */
@@ -82,12 +73,6 @@
   * 3. Prevent overflow of the container in all browsers (opinionated).
   */
 
-:where(pre) {
-	font-family: monospace, monospace; /* 1 */
-	font-size: 1em; /* 2 */
-	overflow: auto; /* 3 */
-}
-
 /* Text-level semantics
   * ========================================================================== */
 
@@ -107,20 +92,6 @@
 :where(b, strong) {
 	font-weight: bolder;
 }
-
-/**
-  * 1. Correct the inheritance and scaling of font size in all browsers.
-  * 2. Correct the odd `em` font sizing in all browsers.
-  */
-
-:where(code, kbd, samp) {
-	font-family: monospace, monospace; /* 1 */
-	font-size: 1em; /* 2 */
-}
-
-/**
-  * Add the correct font size in all browsers.
-  */
 
 :where(small) {
 	font-size: 80%;
@@ -196,10 +167,6 @@
 :where(fieldset) {
 	border: 1px solid #a0a0a0;
 }
-
-/**
-  * Add the correct vertical alignment in Chrome, Edge, and Firefox.
-  */
 
 :where(progress) {
 	vertical-align: baseline;
@@ -297,10 +264,6 @@
 :where([aria-busy='true' i]) {
 	cursor: progress;
 }
-
-/*
-  * Change the cursor on control elements in all browsers (opinionated).
-  */
 
 :where([aria-controls]) {
 	cursor: pointer;

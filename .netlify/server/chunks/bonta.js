@@ -1,12 +1,9 @@
-import { c as create_ssr_component } from "./index3.js";
+import { c as create_ssr_component } from './index3.js';
 const metadata = {
-  "title": "Bonta",
-  "date": "2022-12-03T00:00:00.000Z"
+	title: 'Bonta',
+	date: '2022-12-03T00:00:00.000Z'
 };
 const Bonta = create_ssr_component(($$result, $$props, $$bindings, slots) => {
-  return ``;
+	return ``;
 });
-export {
-  Bonta as default,
-  metadata
-};
+export { Bonta as default, metadata };

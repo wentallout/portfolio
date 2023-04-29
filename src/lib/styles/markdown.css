@@ -1,3 +1,5 @@
+@import url(prism.css);
+
 .markdown {
 	overflow-wrap: break-word;
 	position: relative;
@@ -153,12 +155,11 @@
 }
 
 blockquote {
-	border-radius: var(--border-radius);
-	background-color: var(--bg-400);
+	background-color: var(--black);
 
-	padding: var(--space-s) var(--space-xs);
+	padding: var(--space-xs);
 	font-weight: 300;
-	border-left: var(--space-xs) solid var(--primary-500);
+	border-left: 4px solid var(--primary-500);
 	margin-top: var(--space-s);
 	margin-bottom: var(--space-s);
 	max-width: var(--text-width);
@@ -166,13 +167,16 @@ blockquote {
 
 blockquote p {
 	margin: 0 !important;
-	color: var(--primary-600) !important;
+	color: var(--primary-500) !important;
 }
 
 pre {
 	color: var(--text-color);
 	padding: var(--space-s) var(--space-s);
 	border-radius: var(--border-radius);
+	overflow: auto;
+	max-width: var(--text-width);
+	border: 1px solid var(--bg-400);
 }
 
 table {
@@ -230,6 +234,10 @@ aside.toc > nav > ul > li:before {
 
 	background-color: var(--bg-400);
 	border: 1px solid var(--bg-400);
+}
+
+.markdown img:hover {
+	cursor: zoom-in;
 }
 
 :where(aside.toc > nav > ul > li) {

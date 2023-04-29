@@ -9,8 +9,6 @@
 	<Wrench {...sectionIcon} />
 </SectionTitle>
 
-
-
 <!-- <div>
 	{#await getResource()}
 		{#each $resourceData as resource (resource.id)}

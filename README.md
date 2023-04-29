@@ -8,42 +8,51 @@
 
 ## ❓ What is this?
 
-This is Khoa's personal portfolio+blog. Built using SvelteKit.
+This is a portfolio/blog. Built using SvelteKit. Hosted on Netlify.
 
-Current URL: [wentallout.tech](https://wentallout.tech)
+My portfolio URL: [wentallout.tech](https://wentallout.tech)
 
 ## 🤩 What makes this special?
 
-It's incredibly fast compared to other framework-based websites and has great SEO out-of-the-box. You won't need a backend or CMS though, the blog posts are just markdown files you can store on your computer. All imported images are converted to `webp` to optimize loading speed.
+It's incredibly fast compared to other framework-based websites and has great SEO out-of-the-box. You won't need a backend or CMS though, the blog posts are just markdown files you can store on your computer (see `routes/blog`). All imported images are automatically converted to `webp` and lazy loaded to optimize loading speed. Visitors can also comment on your blogs using GitHub discussion (you might want to customize `Comments.svelte` component so that it works on your repo)
 
 ## 🏆 Progress
 
 ### Pages
 
 - ✅ Home
-- ❌ Project: need at least 3 projects
+- ❌ Project: can add more projects
 - ✅ Blog
 - ✅ Resource
 - ✅ Contact
 
 ### Features
 
-- ✅ Fonts: Self-hosted + Subset (https://www.npmjs.com/package/glyphhanger)
-- ✅ Images: Compressed and Converted into webp + Native Lazy Loading
+- ✅ Fonts
+  - Self-hosted + Subset using [glyphhanger](https://www.npmjs.com/package/glyphhanger)
+  - font-family: [Inter](https://rsms.me/inter/)
+- ✅ Images
+  - Compressed and Converted into webp
+  - Native Lazy Loading using `loading = 'lazy'`
 - ✅ Routing
-- ✅ Page Transition: Fade Effect + Loading Bar
-- ✅ Responsive
-- ✅ Contact: Netlify Form
+- ✅ Page Transition:
+  - Fly Effect from `svelte/transiton`
+  - Loading Bar from [nprogress](https://www.npmjs.com/package/nprogress)
+- ✅ Contact Page
+  - Netlify Form
 - ✅ SEO 100/100
+- ✅ Responsive
 - ✅ Dark Mode
 
 ---
 
-- ✅ Blog: Dynamic Table of Contents
+- ✅ Blog: Automatic Table of Contents
+- ✅ Blog: Code Highlight
+  - Choose themes here: [prism-themes](https://github.com/PrismJS/prism-themes) then paste into `styles/prism.css`
 - ✅ Blog: Search
 - ✅ Blog: Tags/Categories
 - ✅ Blog: Pagination
-- ✅ Blog: Comment (https://github.com/giscus/giscus-component - https://giscus.app)
+- ✅ Blog: Comment (https://github.com/giscus/giscus-component | https://giscus.app)
 
 ## 💻 Developing
 
@@ -54,9 +63,9 @@ It's incredibly fast compared to other framework-based websites and has great SE
 npm run dev
 ```
 
-## 🎓 Learn Svelte checklist
+## 🎓 Svelte checklist
 
-https://learn.svelte.dev/tutorial
+Learn Svelte here: https://learn.svelte.dev/tutorial
 
 ### Part 1: Basic Svelte
 

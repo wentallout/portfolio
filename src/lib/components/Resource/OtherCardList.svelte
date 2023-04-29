@@ -15,7 +15,8 @@
 		display: flex;
 		flex-direction: row;
 		flex-wrap: wrap;
-		gap: var(--space-m);
+		border-left: 1px solid var(--bg-400);
+		border-top: 1px solid var(--bg-400);
 		overflow: hidden;
 	}
 
@@ -44,9 +45,9 @@
 
 		height: 300px;
 		overflow: hidden;
-		border-radius: var(--border-radius);
 
-		box-shadow: var(--box-shadow-1);
+		border-right: 1px solid var(--bg-400);
+		border-bottom: 1px solid var(--bg-400);
 	}
 
 	.other:before {

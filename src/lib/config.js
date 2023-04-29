@@ -33,13 +33,13 @@ const website = {
 	contactEmail: 'wentallout@gmail.com',
 
 	// PWA
-	siteTitle: 'Khoa - UI/UX Designer',
-	siteShortTitle: 'Portfolio of Khoa',
+	siteTitle: 'Khoa, the Designer',
+	siteShortTitle: 'Portfolio built using SvelteKit',
 	siteUrl: 'https://wentallout.tech',
 	icon: 'static/icon-512.png',
 	backgroundColor: '#121212',
-	themeColor: '#e88615',
-	description: 'Khoa - Vietnamese Professional UI/UX Designer since 2022',
+	themeColor: '#ffbb00',
+	description: 'Nguyen Dang Khoa - Professional UI/UX Designer and Frontend Developer since 2022',
 	//
 
 	//SOCIAL

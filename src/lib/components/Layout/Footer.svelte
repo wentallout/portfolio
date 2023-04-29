@@ -38,23 +38,13 @@
 		</div>
 
 		<div class="list">
-			<div class="list__title">Social</div>
+			<div class="list__title">Other</div>
 			<ul class="nav-list">
 				<li class="nav-list__item">
-					<ExLink href="https://www.linkedin.com/in/wentallout">
-						<LinkedinLogo width="24" height="24" />Linkedin</ExLink>
+					<a href="/resource/music">Music</a>
 				</li>
 				<li class="nav-list__item">
-					<ExLink href="https://www.instagram.com/wentallout/saved">
-						<InstagramLogo width="24" height="24" />
-						Instagram
-					</ExLink>
-				</li>
-				<li class="nav-list__item">
-					<ExLink href="https://github.com/wentallout">
-						<GitHubLogo width="24" height="24" />
-						GitHub
-					</ExLink>
+					<a href="/rss.xml">RSS</a>
 				</li>
 			</ul>
 		</div>
@@ -77,6 +67,22 @@
 					<ExLink href="tel:+84929066331">
 						<Phone width="24" height="24" />
 						+84 929066331</ExLink>
+				</li>
+				<li class="nav-list__item">
+					<ExLink href="https://www.linkedin.com/in/wentallout">
+						<LinkedinLogo width="24" height="24" />Linkedin</ExLink>
+				</li>
+				<li class="nav-list__item">
+					<ExLink href="https://www.instagram.com/wentallout/saved">
+						<InstagramLogo width="24" height="24" />
+						Instagram
+					</ExLink>
+				</li>
+				<li class="nav-list__item">
+					<ExLink href="https://github.com/wentallout">
+						<GitHubLogo width="24" height="24" />
+						GitHub
+					</ExLink>
 				</li>
 			</ul>
 		</div>
@@ -105,7 +111,7 @@
 	}
 	.list-container {
 		overflow: hidden;
-		--min: 20ch;
+		--min: 10ch;
 		--gap: var(--space-l);
 
 		display: grid;

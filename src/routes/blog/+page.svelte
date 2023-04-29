@@ -63,8 +63,6 @@
 	$: paginatedItems = paginate({ items, pageSize, currentPage });
 </script>
 
-
-
 <SEO title="Blog" />
 
 <PageTitle pageTitle="Blog" decoImageUrl="/images/blog.svg" />

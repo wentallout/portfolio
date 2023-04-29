@@ -6,18 +6,25 @@
 	font-family: 'Normal';
 	src: url('/fonts/Inter.woff2') format('woff2 supports variations'),
 		url('/fonts/Inter.woff2') format('woff2-variations');
-	font-weight: 300 600;
-	font-stretch: 100%;
+	
+	
 	font-style: normal;
 	font-display: swap;
 } */
+
+@supports (font-variation-settings: normal) {
+	html {
+		font-feature-settings: 'calt', 'tnum', 'frac', 'case', 'ccmp', 'ss02' 0, 'ss03' 0, 'ordn',
+			'cpsp';
+	}
+}
 
 @font-face {
 	font-family: 'Normal';
 	src: url('/fonts/Inter.woff2') format('woff2');
 
 	font-weight: 300 600;
-
+	font-stretch: normal;
 	font-style: normal;
 	font-display: swap;
 	font-named-instance: 'Regular';
@@ -49,13 +56,6 @@ html {
 	font-family: var(--normal-font), 'fallback', sans-serif, -apple-system, BlinkMacSystemFont,
 		'Segoe UI', Roboto, Helvetica, Arial, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
 	font-weight: 400;
-}
-
-@supports (font-variation-settings: normal) {
-	html {
-		font-feature-settings: 'calt', 'tnum', 'frac', 'case', 'ccmp', 'ss02' 0, 'ss03' 0, 'ordn',
-			'cpsp';
-	}
 }
 
 :root {
@@ -211,13 +211,13 @@ html {
 .underline {
 	text-decoration: underline;
 	text-decoration-skip-ink: none;
+	transition: var(--transition);
 }
 
 .underline:hover {
 	text-decoration: underline;
 	text-decoration-skip-ink: none;
 	text-underline-offset: 2px;
-	font-weight: 600;
 }
 
 /* 300,400,500,600*/

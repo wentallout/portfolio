@@ -1,4 +1,2 @@
 const prerender = true;
-export {
-  prerender
-};
+export { prerender };

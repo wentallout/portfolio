@@ -94,7 +94,7 @@
 	}
 
 	.text-focus-in {
-		animation: text-focus-in 3s cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
+		animation: text-focus-in 2s cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
 	}
 
 	@keyframes text-focus-in {

@@ -14,8 +14,8 @@
 	<span class="shadow" />
 	<span class="edge" />
 	<span
-		style="background-color: {backgroundColor}; border: {border}; color: {labelColor};"
-		class="front">
+		class="front"
+		style="background-color: {backgroundColor}; border: {border}; color: {labelColor};">
 		<slot />
 		{label}
 	</span>

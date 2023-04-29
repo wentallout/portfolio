@@ -8,6 +8,7 @@
 	import X from '~icons/ph/x';
 
 	import VanishingHeader from '$lib/components/Layout/VanishingHeader.svelte';
+	import ThemeToggle from '$lib/components/Theme/ThemeToggle.svelte';
 
 	let scrollY;
 
@@ -48,6 +49,8 @@
 				</li>
 			</ul>
 		</nav>
+
+		<ThemeToggle />
 	</header>
 </VanishingHeader>
 
@@ -236,5 +239,9 @@
 	.social {
 		border-top: 1px solid var(--text-color-disabled);
 		padding-top: var(--space-2xl);
+	}
+
+	.header {
+		position: relative;
 	}
 </style>

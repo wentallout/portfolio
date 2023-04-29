@@ -1,11 +1,11 @@
-import { c as create_ssr_component } from "./index3.js";
+import { c as create_ssr_component } from './index3.js';
 const metadata = {
-  "title": "The Art of Thinking Clearly",
-  "date": "2022-11-26",
-  "categories": ["psychology"]
+	title: 'The Art of Thinking Clearly',
+	date: '2022-11-26',
+	categories: ['psychology']
 };
 const The_art_of_thinking_clearly = create_ssr_component(($$result, $$props, $$bindings, slots) => {
-  return `<h2 id="${"4-if-50-million-people-say-something-foolish-it-is-still-foolish"}"><a href="${"#4-if-50-million-people-say-something-foolish-it-is-still-foolish"}">4. if 50 million people say something foolish, it is still foolish</a></h2>
+	return `<h2 id="${'4-if-50-million-people-say-something-foolish-it-is-still-foolish'}"><a href="${'#4-if-50-million-people-say-something-foolish-it-is-still-foolish'}">4. if 50 million people say something foolish, it is still foolish</a></h2>
 <p>You are on your way to a concert. At an intersection, you encounter a group of
 people, all staring at the sky. Without even thinking about it, you peer upwards
 too. Why? Social proof. In the middle of the concert, when the soloist is displaying
@@ -46,7 +46,7 @@ So, be sceptical whenever a company claims its product is better because it is
 ‘the most popular’. How is a product better simply because it sells the most units?</p>
 <p>And remember novelist W. Somerset Maugham’s wise words: ‘If 50 million
 people say something foolish, it is still foolish.’</p>
-<h2 id="${"5-why-you-should-forget-the-past"}"><a href="${"#5-why-you-should-forget-the-past"}">5. why you should forget the past</a></h2>
+<h2 id="${'5-why-you-should-forget-the-past'}"><a href="${'#5-why-you-should-forget-the-past'}">5. why you should forget the past</a></h2>
 <p>The film was dire. After an hour, I whispered to my wife: ‘Come on, let’s go home.’
 She replied: ‘No way. We’re not throwing away $30.’ ‘That’s no reason to stay,’ I
 protested. ‘The money’s already gone. This is the sunk cost fallacy at work – a
@@ -96,7 +96,7 @@ Of course, there may be good reasons to continue investing in something to
 finalise it. But beware of doing so for the wrong reasons, such as to justify nonrecoverable investments. Rational decision-making requires you to forget about
 the costs incurred to date. No matter how much you have already invested, only
 your assessment of the future costs and benefits counts.</p>
-<h2 id="${"6-dont-accept-free-drinks"}"><a href="${"#6-dont-accept-free-drinks"}">6. don’t accept free drinks</a></h2>
+<h2 id="${'6-dont-accept-free-drinks'}"><a href="${'#6-dont-accept-free-drinks'}">6. don’t accept free drinks</a></h2>
 <p>Reciprocity
 Not so long ago, you may have come across disciples of the Hare Krishna sect
 floating around in saffron-coloured robes as you hurried to catch a flight or a train
@@ -151,7 +151,7 @@ participants would have preferred to drop out of the vicious cycle years ago.</p
 whether to offer you a taste of wine, a chunk of cheese or a handful of olives, my
 best advice is to refuse their offer – unless you want to end up with a refrigerator
 full of stuff you don’t even like.</p>
-<h2 id="${"7-beware-the-special-case"}"><a href="${"#7-beware-the-special-case"}">7. beware the special case</a></h2>
+<h2 id="${'7-beware-the-special-case'}"><a href="${'#7-beware-the-special-case'}">7. beware the special case</a></h2>
 <p>Confirmation Bias (Part 1)
 Gil wants to lose weight. He selects a particular diet and checks his progress on
 the scales every morning. If he has lost weight, he pats himself on the back and
@@ -203,7 +203,7 @@ consciously looking for disconfirming evidence. You might think: ‘Good for him
 but not the end of the world for the others.’ However, falling for the confirmation
 bias is not a petty intellectual offence. How it affects our lives will be revealed in
 the next chapter.</p>
-<h2 id="${"8-murder-your-darlings"}"><a href="${"#8-murder-your-darlings"}">8. murder your darlings</a></h2>
+<h2 id="${'8-murder-your-darlings'}"><a href="${'#8-murder-your-darlings'}">8. murder your darlings</a></h2>
 <p>Confirmation Bias (Part 2)
 In the previous chapter, we met the father of all fallacies, the confirmation bias.
 We are forced to establish beliefs about the world, our lives, the economy,
@@ -257,7 +257,7 @@ confirmation bias, try writing down your beliefs – whether in terms of worldvi
 investments, marriage, healthcare, diet, career strategies – and set out to find
 disconfirming evidence. Axeing beliefs that feel like old friends is hard work, but
 imperative.</p>
-<h2 id="${"9-dont-bow-to-authority"}"><a href="${"#9-dont-bow-to-authority"}">9. don’t bow to authority</a></h2>
+<h2 id="${'9-dont-bow-to-authority'}"><a href="${'#9-dont-bow-to-authority'}">9. don’t bow to authority</a></h2>
 <p>Authority Bias</p>
 <p>The first book of the Bible explains what happens when we disobey a great
 authority: we get ejected from paradise. This is also what less celestial authorities
@@ -291,7 +291,7 @@ much.</p>
 <p>In conclusion: whenever you are about to make a decision, think about which
 authority figures might be exerting an influence on your reasoning. And when you
 encounter one in the flesh, do your best to challenge him or her.</p>
-<h2 id="${"leave-your-supermodel-friends-at-home"}"><a href="${"#leave-your-supermodel-friends-at-home"}">LEAVE YOUR SUPERMODEL FRIENDS AT HOME</a></h2>
+<h2 id="${'leave-your-supermodel-friends-at-home'}"><a href="${'#leave-your-supermodel-friends-at-home'}">LEAVE YOUR SUPERMODEL FRIENDS AT HOME</a></h2>
 <p>Contrast Effect</p>
 <p>In his book Influence, Robert Cialdini tells the story of two brothers, Sid and
 Harry, who ran a clothing store in 1930s America. Sid was in charge of sales and
@@ -342,7 +342,7 @@ now perceive beautiful people as only moderately attractive. If you are seeking 
 partner, never go out in the company of your supermodel friends. People will find
 you less attractive than you really are. Go alone or, better yet, take two ugly
 friends.</p>
-<h2 id="${"11-why-we-prefer-a-wrong-map-to-no-map-at-all"}"><a href="${"#11-why-we-prefer-a-wrong-map-to-no-map-at-all"}">11. why we prefer a wrong map to no map at all</a></h2>
+<h2 id="${'11-why-we-prefer-a-wrong-map-to-no-map-at-all'}"><a href="${'#11-why-we-prefer-a-wrong-map-to-no-map-at-all'}">11. why we prefer a wrong map to no map at all</a></h2>
 <p>Availability Bias</p>
 <p>‘Smoking can’t be that bad for you: my grandfather smoked three packs of
 cigarettes a day and lived to be more than 100.’ Or: ‘Manhattan is really safe. I
@@ -387,7 +387,7 @@ recipes. They make decisions based on this information rather than on more
 relevant but harder to obtain information – often with disastrous results.</p>
 <p>It is as if you were in a foreign city without a map, and then pulled out one for your home town and simply used that.We prefer wrong information to no information. Thus, the availability bias has presented the banks with billions in losses.</p>
 <p>Solution: Fend it off by spending time with people who think differently than you think – people whose experiences and expertise are different than yours. We require others’ input to overcome the availability bias.</p>
-<h2 id="${"12-why-no-pain-no-gain-should-set-alarm-bells-ringing"}"><a href="${"#12-why-no-pain-no-gain-should-set-alarm-bells-ringing"}">12. WHY ‘NO PAIN, NO GAIN’ SHOULD SET ALARM BELLS RINGING</a></h2>
+<h2 id="${'12-why-no-pain-no-gain-should-set-alarm-bells-ringing'}"><a href="${'#12-why-no-pain-no-gain-should-set-alarm-bells-ringing'}">12. WHY ‘NO PAIN, NO GAIN’ SHOULD SET ALARM BELLS RINGING</a></h2>
 <p>The It’ll-Get-Worse-Before-It-Gets-Better Fallacy</p>
 <p>A few years ago, I was on vacation in Corsica and fell sick. The symptoms were
 new to me, and the pain was growing by the day. Eventually I decided to seek
@@ -440,7 +440,7 @@ then improve. For example, a career change requires time and often incorporates
 loss of pay. The reorganisation of a business also takes time. But in all these
 cases, we can see relatively quickly if the measures are working. The milestones
 are clear and verifiable. Look to these rather than to the heavens.</p>
-<h2 id="${"13-even-true-stories-are-fairytales"}"><a href="${"#13-even-true-stories-are-fairytales"}">13. EVEN TRUE STORIES ARE FAIRYTALES</a></h2>
+<h2 id="${'13-even-true-stories-are-fairytales'}"><a href="${'#13-even-true-stories-are-fairytales'}">13. EVEN TRUE STORIES ARE FAIRYTALES</a></h2>
 <p>Story Bias</p>
 <p>Life is a muddle, as intricate as a Gordian knot. Imagine that an invisible Martian
 decides to follow you around with an equally invisible notebook, recording what
@@ -498,7 +498,7 @@ elements featured in the story, such as when ‘explaining’ a financial crisis
 ‘cause’ of war. The real issue with stories: they give us a false sense of
 understanding, which inevitably leads us to take bigger risks and urges us to take
 a stroll on thin ice.</p>
-<h2 id="${"14-why-you-should-keep-a-diary"}"><a href="${"#14-why-you-should-keep-a-diary"}">14. WHY YOU SHOULD KEEP A DIARY</a></h2>
+<h2 id="${'14-why-you-should-keep-a-diary'}"><a href="${'#14-why-you-should-keep-a-diary'}">14. WHY YOU SHOULD KEEP A DIARY</a></h2>
 <p>Hindsight Bias</p>
 <p>I came across the diaries of my great-uncle recently. In 1932, he emigrated from a
 tiny Swiss village to Paris to seek his fortune in the movie industry. In August
@@ -547,7 +547,7 @@ read newspapers from five, ten or twenty years ago. This will give you a much
 better sense of just how unpredictable the world is. </p>
 <p>Hindsight may provide temporary comfort to those overwhelmed by complexity, but as for providing
 deeper revelations about how the world works, you’ll benefit by looking elsewhere.</p>
-<h2 id="${"15-why-you-systematically-overestimate-your-knowledge-and-abilities"}"><a href="${"#15-why-you-systematically-overestimate-your-knowledge-and-abilities"}">15. WHY YOU SYSTEMATICALLY OVERESTIMATE YOUR KNOWLEDGE AND ABILITIES</a></h2>
+<h2 id="${'15-why-you-systematically-overestimate-your-knowledge-and-abilities'}"><a href="${'#15-why-you-systematically-overestimate-your-knowledge-and-abilities'}">15. WHY YOU SYSTEMATICALLY OVERESTIMATE YOUR KNOWLEDGE AND ABILITIES</a></h2>
 <p>Overconfidence Effect</p>
 <p>My favourite musician, Johann Sebastian Bach, was anything but a one-hit
 wonder. He composed numerous works. How many there were I will reveal at the
@@ -607,7 +607,7 @@ the situation somewhat realistically.</p>
 <p>Back to the question from the beginning: Johann Sebastian Bach composed
 1127 works that survived to this day. He may have composed considerably more,
 but they are lost</p>
-<h2 id="${"16-dont-take-news-anchors-seriously"}"><a href="${"#16-dont-take-news-anchors-seriously"}">16. DON’T TAKE NEWS ANCHORS SERIOUSLY</a></h2>
+<h2 id="${'16-dont-take-news-anchors-seriously'}"><a href="${'#16-dont-take-news-anchors-seriously'}">16. DON’T TAKE NEWS ANCHORS SERIOUSLY</a></h2>
 <p>Chauffeur Knowledge</p>
 <p>After receiving the Nobel Prize for Physics in 1918, Max Planck went on tour
 across Germany. Wherever he was invited, he delivered the same lecture on new
@@ -654,7 +654,7 @@ close to certain as any prediction that you can make. You have to figure out
 where you’ve got an edge. And you’ve got to play within your own circle of
 competence.’</p>
 <p>In conclusion: be on the lookout for chauffeur knowledge. Do not confuse the company spokesperson, the ringmaster, the newscaster, the schmoozer, the verbiage vendor or the cliché generator with those who possess true knowledge. How do you recognise the difference There is a clear indicator: true experts recognise the limits of what they know and what they do not know. If they find themselves outside their circle of competence, they keep quiet or simply say, ‘I don’t know.’ This they utter unapologetically, even with a certain pride. From chauffeurs, we hear every line except this.</p>
-<h2 id="${"17-you-control-less-than-you-think"}"><a href="${"#17-you-control-less-than-you-think"}">17. YOU CONTROL LESS THAN YOU THINK</a></h2>
+<h2 id="${'17-you-control-less-than-you-think'}"><a href="${'#17-you-control-less-than-you-think'}">17. YOU CONTROL LESS THAN YOU THINK</a></h2>
 <p>Illusion of Control</p>
 <p>Every day, shortly before nine o’clock, a man with a red hat stands in a square
 and begins to wave his cap around wildly. After five minutes he disappears. One
@@ -717,7 +717,7 @@ Do not think you command your way through life like a Roman emperor. Rather,
 you are the man with the red hat. Therefore, focus on the few things of importance
 that you can really influence. </p>
 <p>For everything else: que sera, sera.</p>
-<h2 id="${"18-never-pay-your-lawyer-by-the-hour"}"><a href="${"#18-never-pay-your-lawyer-by-the-hour"}">18. never pay your lawyer by the hour</a></h2>
+<h2 id="${'18-never-pay-your-lawyer-by-the-hour'}"><a href="${'#18-never-pay-your-lawyer-by-the-hour'}">18. never pay your lawyer by the hour</a></h2>
 <p>Incentive Super-Response Tendency</p>
 <p>To control a rat infestation, French colonial rulers in Hanoi in the nineteenth
 century passed a law: for every dead rat handed in to the authorities, the catcher
@@ -771,7 +771,7 @@ need a haircut.’</p>
 person’s or an organisation’s behaviour confounds you, ask yourself what
 incentive might lie behind it. I guarantee you that you’ll be able to explain 90% of
 the cases this way. What makes up the remaining 10%? Passion, idiocy, psychosis or malice.</p>
-<h2 id="${"19-the-dubious-efficacy-of-doctors-consultants-and-psychotherapists"}"><a href="${"#19-the-dubious-efficacy-of-doctors-consultants-and-psychotherapists"}">19. THE DUBIOUS EFFICACY OF DOCTORS, CONSULTANTS AND PSYCHOTHERAPISTS</a></h2>
+<h2 id="${'19-the-dubious-efficacy-of-doctors-consultants-and-psychotherapists'}"><a href="${'#19-the-dubious-efficacy-of-doctors-consultants-and-psychotherapists'}">19. THE DUBIOUS EFFICACY OF DOCTORS, CONSULTANTS AND PSYCHOTHERAPISTS</a></h2>
 <p>Regression to Mean
 His back pain was sometimes better, sometimes worse. There were days when
 he felt like he could move mountains, and those when he could barely move.
@@ -817,7 +817,7 @@ coincidentally – achieve the highest and lowest scores. Thus, the teacher conc
 <p>In conclusion: when you hear stories such as: ‘I was sick, went to the doctor,
 and got better a few days later’ or ‘the company had a bad year, so we got a
 consultant in and now the results are back to normal’, look out for our old friend, the regression-to-mean error</p>
-<h2 id="${"20-never-judge-a-decision-by-its-outcome"}"><a href="${"#20-never-judge-a-decision-by-its-outcome"}">20. never judge a decision by its outcome</a></h2>
+<h2 id="${'20-never-judge-a-decision-by-its-outcome'}"><a href="${'#20-never-judge-a-decision-by-its-outcome'}">20. never judge a decision by its outcome</a></h2>
 <p>Outcome Bias</p>
 <p>A quick hypothesis: say one million monkeys speculate on the stock market. They
 buy and sell stocks like crazy and, of course, completely at random. What
@@ -867,7 +867,7 @@ on the basis of the outcomes would be not only negligent but also unethical.</p>
 randomness or ‘external factors’ play a role. A bad result does not automatically
 indicate a bad decision and vice versa. So rather than tearing your hair out about
 a wrong decision, or applauding yourself for one that may have only coincidentally led to success, remember why you chose what you did. Were your reasons rational and understandable? Then you would do well to stick with that method, even if you didn’t strike lucky last time.</p>
-<h2 id="${"22-less-is-more"}"><a href="${"#22-less-is-more"}">22. less is more</a></h2>
+<h2 id="${'22-less-is-more'}"><a href="${'#22-less-is-more'}">22. less is more</a></h2>
 <p>The Paradox of Choice</p>
 <p>I’ve counted and researched: my local grocery store stocks 48 varieties of
 yogurt, 134 types of red wine, 64 different cleaning products and a grand total of
@@ -900,7 +900,7 @@ answer is: you cannot. The more choice you have, the more unsure and therefore
 dissatisfied you are afterward.</p>
 <p>So, what can you do? Think carefully about what you want before you inspect existing offers. Write down these criteria and stick to them rigidly. Also, realise that you can never make a perfect decision. Aiming for this, given the flood of possibilities, is a form of irrational perfectionism. Instead, learn to love a ‘good’
 choice. Yes, even in terms of life partners. Only the best will do? In this age of unlimited variety, rather the opposite is true: ‘good enough’ is the new optimum(except, of course, for you and me).</p>
-<h2 id="${"22-you-like-me-you-really-really-like-me"}"><a href="${"#22-you-like-me-you-really-really-like-me"}">22. you like me, you really really like me</a></h2>
+<h2 id="${'22-you-like-me-you-really-really-like-me'}"><a href="${'#22-you-like-me-you-really-really-like-me'}">22. you like me, you really really like me</a></h2>
 <p>Liking Bias</p>
 <p>Kevin has just bought two boxes of fine Margaux. He rarely drinks wine – not even Bordeaux – but the sales assistant was so nice, not fake or pushy, just really
 likeable. So he bought them.</p>
@@ -956,7 +956,7 @@ us – the buyer and me – were die-hard 470 dinghy fans. From that moment on, 
 liked me; I was a friend. So the deal was sealed. Amiability works better than
 bribery.’</p>
 <p>So, if you are a salesperson, make buyers think you like them, even if this means outright flattery. And if you are a consumer, always judge a product independent of who is selling it. Banish the salespeople from your mind, or rather, pretend you don’t like them.</p>
-<h2 id="${"23-dont-cling-to-things"}"><a href="${"#23-dont-cling-to-things"}">23. DON’T CLING TO THINGS</a></h2>
+<h2 id="${'23-dont-cling-to-things'}"><a href="${'#23-dont-cling-to-things'}">23. DON’T CLING TO THINGS</a></h2>
 <p>Endowment Effect</p>
 <p>The BMW gleamed in the parking lot of the used-car dealership. Although it had a
 few miles on the odometer, it looked in perfect condition. I know a little about used
@@ -999,7 +999,7 @@ disappointment can be much bigger – irrationally. Either you get the job or yo
 don’t; nothing else should matter.</p>
 <p>In conclusion: don’t cling to things. Consider your property something that the
 ‘universe’ (whatever you believe this to be) has bestowed on you temporarily. Keep in mind that it can recoup this (or more) in the blink of an eye.</p>
-<h2 id="${"24-the-inevitability-of-unlikely-events-coincidence"}"><a href="${"#24-the-inevitability-of-unlikely-events-coincidence"}">24. THE INEVITABILITY OF UNLIKELY EVENTS: Coincidence</a></h2>
+<h2 id="${'24-the-inevitability-of-unlikely-events-coincidence'}"><a href="${'#24-the-inevitability-of-unlikely-events-coincidence'}">24. THE INEVITABILITY OF UNLIKELY EVENTS: Coincidence</a></h2>
 <p>At 7.15p.m. on 1 March 1950, the fifteen members of the church choir in Beatrice,
 Nebraska were scheduled to meet for rehearsal. For various reasons, they were
 all running behind. The minister’s family was delayed because his wife still had to
@@ -1054,7 +1054,7 @@ cannot be compensated by a negative probability.</p>
 <p>In sum: let’s not get too excited. Improbable coincidences are precisely that:
 rare but very possible events. It’s not surprising when they finally happen. What
 would be more surprising would be if they never came to be.</p>
-<h2 id="${"25-the-calamity-of-conformity"}"><a href="${"#25-the-calamity-of-conformity"}">25. THE CALAMITY OF CONFORMITY</a></h2>
+<h2 id="${'25-the-calamity-of-conformity'}"><a href="${'#25-the-calamity-of-conformity'}">25. THE CALAMITY OF CONFORMITY</a></h2>
 <p>Groupthink</p>
 <p>Have you ever bitten your tongue in a meeting? Surely. You sit there, say nothing
 and nod along to proposals. After all, you don’t want to be the (eternal) naysayer.
@@ -1110,7 +1110,7 @@ even if your team does not like it. Question tacit assumptions, even if you risk
 expulsion from the warm nest. And, if you lead a group, appoint someone as
 devil’s advocate. She will not be the most popular member of the team, but she
 might be the most important.</p>
-<h2 id="${"26-why-youll-soon-be-playing-megatrillions"}"><a href="${"#26-why-youll-soon-be-playing-megatrillions"}">26. WHY YOU’LL SOON BE PLAYING MEGATRILLIONS</a></h2>
+<h2 id="${'26-why-youll-soon-be-playing-megatrillions'}"><a href="${'#26-why-youll-soon-be-playing-megatrillions'}">26. WHY YOU’LL SOON BE PLAYING MEGATRILLIONS</a></h2>
 <p>Neglect of Probability
 Two games of chance: in the first, you can win $10 million, and in the second,
 $10,000. Which do you play? If you win the first game, it changes your life
@@ -1175,7 +1175,7 @@ radioactivity), the less reassuring a reduction in risk seems to us. Two
 researchers at the University of Chicago have shown that people are equally
 afraid of a 99% chance as they are of a 1% chance of contamination by toxic
 chemicals. An irrational response, but a common one.</p>
-<h2 id="${"27-scarcity-error"}"><a href="${"#27-scarcity-error"}">27. Scarcity Error</a></h2>
+<h2 id="${'27-scarcity-error'}"><a href="${'#27-scarcity-error'}">27. Scarcity Error</a></h2>
 <p>Coffee at a friend’s house. We sat trying to make conversation while her three
 children grappled with one another on the floor. Suddenly I remembered that I
 had brought some glass marbles with me – a whole bag full. I spilled them out on
@@ -1231,7 +1231,7 @@ teenagers – just because it’s illegal to drink below the age of 21.</p>
 Assess products and services solely on the basis of their price and benefits. It
 should be of no importance if an item is disappearing fast, nor if any doctors from
 London take an interest.</p>
-<h2 id="${"28-base-rate-neglect"}"><a href="${"#28-base-rate-neglect"}">28. Base-Rate Neglect</a></h2>
+<h2 id="${'28-base-rate-neglect'}"><a href="${'#28-base-rate-neglect'}">28. Base-Rate Neglect</a></h2>
 <p>Mark is a thin man from Germany with glasses who likes to listen to Mozart.
 Which is more likely? That Mark is A) a truck driver or B) a professor of literature
 in Frankfurt. Most will bet on B, which is wrong. Germany has 10,000 times more
@@ -1285,7 +1285,7 @@ is less than 0.1%. No matter how smart and ambitious you are, the most likely
 scenario is that you will end up in middle management.’ With this, I earn shocked
 looks, and tell myself that I have made a small contribution toward mitigating their
 future mid-life crises.</p>
-<h2 id="${"29-gamblers-fallacy"}"><a href="${"#29-gamblers-fallacy"}">29. Gambler’s Fallacy</a></h2>
+<h2 id="${'29-gamblers-fallacy'}"><a href="${'#29-gamblers-fallacy'}">29. Gambler’s Fallacy</a></h2>
 <p>In the summer of 1913, something incredible happened in Monte Carlo. Crowds
 gathered around a roulette table and could not believe their eyes. The ball had
 landed on black twenty times in a row. Many players took advantage of the
@@ -1343,7 +1343,7 @@ your health, events are often interrelated. What has already happened has an
 influence on what will happen. As comforting an idea as it is, there is simply no
 balancing force out there for independent events. ‘What goes around, comes
 around’ simply does not exist.</p>
-<h2 id="${"30-the-anchor"}"><a href="${"#30-the-anchor"}">30 The Anchor</a></h2>
+<h2 id="${'30-the-anchor'}"><a href="${'#30-the-anchor'}">30 The Anchor</a></h2>
 <p>When was Abraham Lincoln born? If you don’t know the year off the top of your
 head, and your smartphone battery has just died, how do you answer this?
 Perhaps you know that he was president during the Civil War in the 1860s and
@@ -1398,7 +1398,4 @@ quote, Mr. So-and-So: we’ve just completed a similar project for one of your
 competitors and it was in the range of five million dollars.’ The anchor was
 dropped: the price negotiations started at exactly five million</p>`;
 });
-export {
-  The_art_of_thinking_clearly as default,
-  metadata
-};
+export { The_art_of_thinking_clearly as default, metadata };

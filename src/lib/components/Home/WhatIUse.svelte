@@ -38,7 +38,7 @@
 							<h3 class="block__title base-text">Prototyping</h3>
 							<p class="block__text small-text">Figma</p>
 							<p class="block__text small-text">Adobe XD</p>
-							<p class="block__text small-text">...</p>
+							<p class="block__text small-text" />
 						</div>
 					</div>
 				</Atropos>
@@ -93,6 +93,19 @@
 		flex-direction: column;
 		justify-content: center;
 		align-items: flex-start;
+		overflow: visible;
+	}
+	.tool__block {
+		width: 100%;
+		--min: 20ch;
+		display: grid;
+
+		grid-template-columns: repeat(auto-fit, minmax(min(100%, var(--min)), 1fr));
+		justify-content: center;
+		align-content: center;
+
+		border-left: 1px solid var(--bg-400);
+		border-top: 1px solid var(--bg-400);
 	}
 
 	.block__section {
@@ -101,27 +114,25 @@
 		align-items: center;
 		position: relative;
 
-		background-color: var(--bg-400);
 		padding: var(--space-l);
-		border-radius: var(--border-radius);
-		overflow: hidden;
+
 		box-shadow: var(--box-shadow-1);
+		min-height: 230px;
+
+		border-right: 1px solid var(--bg-400);
+		border-bottom: 1px solid var(--bg-400);
+
+		overflow: visible;
+	}
+
+	.block__section:hover {
+		background-color: var(--bg-400);
 	}
 
 	@media (min-width: 992px) {
 		.block__section {
 			align-items: flex-start;
 		}
-	}
-
-	.tool__block {
-		width: 100%;
-		--min: 20ch;
-		display: grid;
-		grid-gap: var(--space-s);
-		grid-template-columns: repeat(auto-fit, minmax(min(100%, var(--min)), 1fr));
-		justify-content: center;
-		align-content: center;
 	}
 
 	.block__title {

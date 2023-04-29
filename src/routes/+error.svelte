@@ -50,14 +50,14 @@
 
 <style>
 	.back {
-		width: fit-content;
+		text-align: center;
 	}
 
 	.error__box {
 		display: flex;
 		flex-direction: row;
 		flex-wrap: wrap;
-		gap: var(--space-l);
+		gap: var(--space-m);
 	}
 	.error__info {
 		display: flex;

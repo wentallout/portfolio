@@ -74,7 +74,6 @@
 		width: 100%;
 		display: flex;
 		flex-direction: column;
-		border-radius: var(--border-radius);
 
 		transition: var(--transition);
 		overflow: hidden;

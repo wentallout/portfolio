@@ -24,71 +24,71 @@ Fundamental books will give you a feel for what UX design is all about. The esse
 - Dont Make Me Think: A Common Sense Approach to Web Usability by Steve Krug
 - About Face: The Essentials of Interaction Design by Alan Cooper.
 
-## checklist
+## Checklist
 
 ### Kickstart
 
-- [ ] The Design of Everyday Things
+* [ ] The Design of Everyday Things
 
 ### Working in small design team
 
-- [ ] The User Experience Team of One
-- [ ] Just Enough Research
+* [ ] The User Experience Team of One
+* [ ] Just Enough Research
 
 ### Leadership and Design Management
 
-- [ ] The Making of a Manager
+* [ ] The Making of a Manager
 
 ### Into Product Management
 
-- [ ] Insprired
-- [ ] Zero To One
+* [ ] Insprired
+* [ ] Zero To One
 
 ### Want to learn basic Visual Design
 
-- [ ] The non designer Design book
-- [ ] Universal Principles of Design
+* [ ] The non designer Design book
+* [ ] Universal Principles of Design
 
 ### Design that influences human behaviors
 
-- [ ] Hooked
-- [ ] 100 Things Every Designer Needs to know about people
+* [ ] Hooked
+* [ ] 100 Things Every Designer Needs to know about people
 
 ### Usability
 
-- [ ] Dont Make Me Think
-- [ ] Measuring the User Experience
+* [ ] Dont Make Me Think
+* [ ] Measuring the User Experience
 
 ### Win design challenge for UX job
 
-- [ ] Solving Product Design exercises
+* [ ] Solving Product Design exercises
 
 ### Understand the core of UX
 
 #### Human Computer Interaction
 
-- [ ] Interaction Design
-- [ ] About face
+* [ ] Interaction Design
+* [ ] About face
 
 #### Strategic UX
 
-- [ ] The Elements of User Experience
+* [ ] The Elements of User Experience
 
 ### Information Architecture
 
-- [ ] Information Architecture
-- [ ] DesigningTheSearchExperience
+* [ ] Information Architecture
+* [ ] DesigningTheSearchExperience
 
 ### Research
 
-- [ ] Observing the User Experience
-- [ ] Research methods in human-computer interaction
+* [ ] Observing the User Experience
+* [ ] Research methods in human-computer interaction
 
 ### Run a UX Project
 
-- [ ] Project Guide to UX Design
-- [ ] Sprint
-- [ ] UX for lean startups
+* [ ] Project Guide to UX Design
+* [ ] Sprint
+* [ ] UX for lean startups
 
 ## transition from dev to designer
 

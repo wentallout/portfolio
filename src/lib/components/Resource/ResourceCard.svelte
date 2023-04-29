@@ -23,10 +23,13 @@
 		padding: var(--space-m);
 		height: 200px;
 		transition: var(--transition);
-		background-color: var(--bg-400);
+
 		border: 1px solid transparent;
-		border-radius: var(--border-radius);
+
 		box-shadow: var(--box-shadow-1);
+
+		border-right: 1px solid var(--bg-400);
+		border-bottom: 1px solid var(--bg-400);
 	}
 	.tool__name {
 		font-weight: 500;
