@@ -22,7 +22,7 @@
 			method="POST"
 			data-netlify="true"
 			data-netlify-recaptcha="true">
-			<!-- <input type="hidden" name="form-name" value="contact" /> -->
+			<input type="hidden" name="form-name" value="contact" />
 
 			<TextInput type="text" label="Name" placeholder="Enter your name here" />
 
