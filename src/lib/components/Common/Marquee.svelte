@@ -38,8 +38,8 @@
 		overflow: hidden;
 		user-select: none;
 		gap: var(--gap);
-		background-color: var(--bg-500);
-		color: var(--primary-500);
+		background-color: #000;
+		color: var(--colorPrimary);
 		padding: var(--space-xs) 0;
 	}
 

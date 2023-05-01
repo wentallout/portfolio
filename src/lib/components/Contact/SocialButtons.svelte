@@ -11,19 +11,19 @@
 
 <div {style} class="social-links">
 	<ExLink href="tel:+84929066331">
-		<Phone class="icon" height="32" width="32" color="var(--text-color)" />
+		<Phone class="icon" height="32" width="32" color="var(--colorText)" />
 	</ExLink>
 	<ExLink href="mailto:wentallout@gmail.com">
-		<Envelope class="icon" height="32" width="32" color="var(--text-color)" />
+		<Envelope class="icon" height="32" width="32" color="var(--colorText)" />
 	</ExLink>
 	<ExLink href="https://www.linkedin.com/in/wentallout">
-		<LinkedinLogo class="icon" height="32" width="32" color="var(--text-color)" />
+		<LinkedinLogo class="icon" height="32" width="32" color="var(--colorText)" />
 	</ExLink>
 	<ExLink href="https://www.instagram.com/wentallout">
-		<InstagramLogo class="icon" height="32" width="32" color="var(--text-color)" />
+		<InstagramLogo class="icon" height="32" width="32" color="var(--colorText)" />
 	</ExLink>
 	<ExLink href="https://github.com/wentallout">
-		<GitHubLogo class="icon" height="32" width="32" color="var(--text-color)" />
+		<GitHubLogo class="icon" height="32" width="32" color="var(--colorText)" />
 	</ExLink>
 </div>
 

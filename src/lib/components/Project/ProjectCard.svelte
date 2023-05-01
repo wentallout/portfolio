@@ -40,20 +40,28 @@
 </a>
 
 <style>
-	.indicator {
-		margin-top: auto;
-		font-weight: 400;
+	.project {
+		position: relative;
+		width: 100%;
 		display: flex;
-		flex-direction: row;
-		align-items: center;
-		gap: var(--space-xs);
-		color: var(--text-color);
+		flex-direction: column;
+
 		transition: var(--transition);
+		overflow: hidden;
+		border: 1px solid var(--colorTextQuaternary);
+
+		outline: 1px solid var(--colorTextQuaternary);
+		outline-offset: 4px;
+		box-shadow: var(--boxShadow);
+	}
+	.project:hover {
+		background-color: var(--colorBgElevated);
+		transform: scale(1.1);
 	}
 
 	.project:hover .indicator {
 		padding-left: 0.5rem;
-		color: var(--primary-500);
+		color: var(--colorPrimary);
 	}
 
 	.title {
@@ -69,25 +77,6 @@
 		height: auto;
 	}
 
-	.project {
-		position: relative;
-		width: 100%;
-		display: flex;
-		flex-direction: column;
-		border-radius: var(--border-radius);
-
-		transition: var(--transition);
-		overflow: hidden;
-		border: 1px solid var(--bg-400);
-
-		outline: 1px solid var(--bg-400);
-		outline-offset: 4px;
-	}
-
-	.project:hover {
-		background-color: var(--bg-400);
-	}
-
 	.project__info {
 		display: flex;
 		flex-grow: 2;
@@ -96,11 +85,11 @@
 		position: relative;
 		padding: var(--space-m) var(--space-xl);
 		gap: var(--space-m);
-		color: var(--text-color-low);
+		color: var(--colorTextSecondary);
 	}
 
 	.name {
-		color: var(--text-color);
+		color: var(--colorText);
 		font-weight: 600;
 	}
 
@@ -149,7 +138,7 @@
 		width: fit-content;
 
 		line-height: normal;
-		color: var(--text-color);
+		color: #fff;
 		font-weight: 300;
 
 		background-color: rgba(0, 0, 0, 0.8);
@@ -159,8 +148,16 @@
 		z-index: 3;
 
 		flex-direction: column;
+	}
 
-		/* writing-mode: vertical-rl;
-		text-orientation: upright; */
+	.indicator {
+		margin-top: auto;
+		font-weight: 400;
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		gap: var(--space-xs);
+		color: var(--colorText);
+		transition: var(--transition);
 	}
 </style>

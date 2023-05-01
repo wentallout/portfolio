@@ -47,10 +47,10 @@
 
 	@keyframes glow {
 		from {
-			box-shadow: 0 0 8px var(--primary-500);
+			box-shadow: 0 0 8px var(--colorPrimary);
 		}
 		to {
-			box-shadow: 0 0 4px var(--primary-700);
+			box-shadow: 0 0 4px var(--colorPrimary-700);
 		}
 	}
 

@@ -28,10 +28,10 @@
 	}
 
 	.result__title {
-		color: var(--text-color-low);
+		color: var(--colorTextSecondary);
 	}
 
 	.result__category {
-		color: var(--primary-500);
+		color: var(--colorPrimary);
 	}
 </style>

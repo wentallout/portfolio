@@ -3,6 +3,10 @@
 		<img class="other__image" src="images/music.webp" alt="music" />
 		<div class="other__title large-text">Music</div>
 	</a>
+	<a class="other" href="/resource/tool">
+		<img class="other__image" src="images/tool.webp" alt="tool" />
+		<div class="other__title large-text">Tool</div>
+	</a>
 
 	<a class="other" href="/resource/exp">
 		<img class="other__image" src="images/exp.webp" alt="experiment" />
@@ -15,8 +19,9 @@
 		display: flex;
 		flex-direction: row;
 		flex-wrap: wrap;
-		gap: var(--space-m);
+
 		overflow: hidden;
+		gap: 1rem;
 	}
 
 	.other-container > * {
@@ -44,9 +49,8 @@
 
 		height: 300px;
 		overflow: hidden;
-		border-radius: var(--border-radius);
 
-		box-shadow: var(--box-shadow-1);
+		border: 1px solid var(--colorTextQuaternary);
 	}
 
 	.other:before {
@@ -55,26 +59,26 @@
 		content: '';
 		background-repeat: repeat;
 		background-image: url(/images/ptn1.svg);
-		background-color: rgba(0, 0, 0, 0.6);
+		background-color: rgba(0, 0, 0, 0.2);
 		background-size: 4px;
 		width: 100%;
 		height: 100%;
-		opacity: 0.5;
+		opacity: 0.3;
 
 		z-index: 2;
 	}
 
 	.other:hover .other__image {
-		scale: 1.15;
+		scale: 1.1;
 	}
 
 	.other:hover .other__title {
-		color: var(--primary-500);
+		color: var(--colorPrimary);
 	}
 
 	.other__title {
 		z-index: 3;
 		font-weight: 600;
-		color: var(--text-color);
+		color: #fff;
 	}
 </style>

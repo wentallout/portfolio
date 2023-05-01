@@ -2,7 +2,7 @@
 	export let sectionTitle = '';
 
 	let sectionIcon = {
-		color: 'var(--text-color)',
+		color: 'var(--colorText)',
 		height: 24,
 		width: 24
 	};
@@ -26,15 +26,18 @@
 
 	.title__icon {
 		display: flex;
-		justify-content: left;
+		justify-content: center;
 		align-items: center;
-		padding: var(--space-s);
-		clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
-		background-color: var(--bg-400);
+
+		padding: var(--space-xs);
+
+		background-color: var(--colorTextQuaternary);
+
+		border-radius: 100%;
 	}
 
 	.title__text {
 		font-family: var(--fancy-font);
-		color: var(--text-color);
+		color: var(--colorText);
 	}
 </style>

@@ -37,21 +37,11 @@
 
 <style>
 	.tools {
-		/* display: flex;
-		flex-direction: row;
-		flex-wrap: wrap;
-		justify-content: space-between;
-		align-items: stretch;
-		max-width: 100%;
-		gap: var(--space-l); */
-
 		--min: 40ch;
-		--gap: var(--space-l);
 
 		display: grid;
-		grid-gap: var(--gap);
-		/* min() with 100% prevents overflow
-  in extra narrow spaces */
+		grid-gap: 1rem;
+
 		grid-template-columns: repeat(auto-fit, minmax(min(100%, var(--min)), 1fr));
 	}
 </style>

@@ -7,7 +7,7 @@
 
 <style>
 	.home-section {
-		color: var(--text-color);
+		color: var(--colorText);
 		font-family: var(--fancy-font);
 		margin-bottom: var(--space-xl);
 	}

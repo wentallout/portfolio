@@ -7,9 +7,9 @@
 		left: 0;
 		right: 0;
 
-		background-color: var(--primary-500);
+		background-color: var(--colorPrimary);
 		opacity: 0.9;
-		color: var(--bg-500);
+		color: var(--colorTextSecondary);
 		font-weight: 600;
 		padding: var(--space-s);
 		translate: 0 -100%;
@@ -23,7 +23,7 @@
 	}
 
 	.skip-link:hover {
-		background-color: var(--primary-400);
+		background-color: var(--colorPrimary-400);
 	}
 
 	.skip-link:focus {

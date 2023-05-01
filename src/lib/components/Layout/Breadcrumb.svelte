@@ -58,17 +58,17 @@
 		pointer-events: none;
 		display: inline-block;
 		font-weight: 300;
-		color: var(--text-color-low);
+		color: var(--colorTextSecondary);
 	}
 
 	.breadcrumb__clickable {
 		font-weight: 300;
 		display: inline-flex;
-		color: var(--primary-500);
+		color: var(--colorPrimary);
 	}
 
 	.breadcrumb__clickable:hover {
-		color: var(--primary-300);
+		color: var(--colorPrimary-300);
 		text-underline-offset: 2px;
 	}
 </style>

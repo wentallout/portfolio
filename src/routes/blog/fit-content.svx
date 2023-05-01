@@ -1,0 +1,22 @@
+---
+title: How to use fit-content in CSS
+date: 2023-04-29
+categories:
+    - frontend
+---
+
+## Introduction
+
+The keyword `fit-content` will make an element width equal to its content based on specific conditions.
+
+## Figure And Image
+
+```css
+figure {
+    width: fit-content;
+    margin: 0 auto;
+    background: #fff;
+    padding: 1rem;
+    border-radius: 10px;
+}
+```

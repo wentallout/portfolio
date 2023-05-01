@@ -15,7 +15,7 @@
 
 <style>
 	summary:hover {
-		background-color: var(--bg-400);
+		background-color: var(--colorTextQuaternary);
 	}
 
 	summary {
@@ -38,7 +38,7 @@
 	}
 
 	.answer {
-		color: var(--text-color-low);
+		color: var(--colorTextSecondary);
 		max-width: var(--text-width);
 		padding: var(--space-s);
 	}
@@ -48,11 +48,11 @@
 	}
 
 	details[open] {
-		/* outline: 1px solid var(--text-color); */
+		/* outline: 1px solid var(--colorText); */
 		margin-bottom: var(--space-s);
 	}
 
 	details[open] .answer {
-		outline: 0.1px solid var(--bg-300);
+		outline: 0.1px solid var(--surface-1);
 	}
 </style>

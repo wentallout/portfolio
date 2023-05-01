@@ -6,7 +6,7 @@
 	<h1 class="text-large">PRIVACY POLICY</h1>
 
 	<a href="/doc/privacy-policy.pdf">
-		<Button label="Read Privacy Policy" backgroundColor="var(--primary-500)" />
+		<Button label="Read Privacy Policy" backgroundColor="var(--colorPrimary)" />
 	</a>
 </div>
 
@@ -18,6 +18,6 @@
 		height: 500px;
 		align-items: center;
 		justify-content: center;
-		border: 1px dotted var(--text-color);
+		border: 1px dotted var(--colorText);
 	}
 </style>

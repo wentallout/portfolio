@@ -1,0 +1,73 @@
+:root {
+	/* SYSTEM */
+	--colorSuccess: #49aa19;
+	--colorWarning: #d89614;
+	--colorError: #dc4446;
+	--colorInfo: #1668dc;
+
+	--boxShadow: 0 6px 16px 0 rgba(0, 0, 0, 0.08), 0 3px 6px -4px rgba(0, 0, 0, 0.12),
+		0 9px 28px 8px rgba(0, 0, 0, 0.05);
+}
+
+[color-scheme='light'] {
+	color-scheme: light;
+
+	/* PRIMARY */
+	--colorPrimary: #ffbb00;
+	--colorPrimaryHover: #ffcd29;
+	--colorPrimaryActive: #d99800;
+
+	/* TEXT */
+	--colorText: rgba(0, 0, 0, 0.88);
+	--colorTextSecondary: rgba(0, 0, 0, 0.65);
+	--colorTextTertiary: rgba(0, 0, 0, 0.45);
+	--colorTextQuaternary: rgba(0, 0, 0, 0.25);
+
+	/* BACKGROUND */
+	--colorBgElevated: #fff;
+	--colorBgContainer: #fff;
+	--colorBgLayout: #f5f5f5;
+
+	/* OTHER */
+	--smooth-border: linear-gradient(
+		0deg,
+		var(--colorBgLayout) 0%,
+		rgba(255, 255, 255, 0.1) 12%,
+		rgba(255, 255, 255, 0.1) 30%,
+		rgba(255, 255, 255, 0) 40%
+	);
+}
+
+[color-scheme='dark'] {
+	color-scheme: dark;
+
+	/* PRIMARY */
+	--colorPrimary: #dca203;
+	--colorPrimaryHover: #e8bb27;
+	--colorPrimaryActive: #ad8107;
+
+	/* TEXT */
+	--colorText: rgba(255, 255, 255, 0.85);
+	--colorTextSecondary: rgba(255, 255, 255, 0.65);
+	--colorTextTertiary: rgba(255, 255, 255, 0.45);
+	--colorTextQuaternary: rgba(255, 255, 255, 0.25);
+
+	/* BACKGROUND */
+	--colorBgElevated: #1f1f1f;
+	--colorBgContainer: #141414;
+	--colorBgLayout: #121212;
+
+	/* OTHER */
+	--smooth-border: linear-gradient(
+		0deg,
+		var(--colorBgLayout) 0%,
+		rgba(0, 0, 0, 0.1) 12%,
+		rgba(0, 0, 0, 0.1) 30%,
+		rgba(0, 0, 0, 0) 40%
+	);
+}
+
+body {
+	background: var(--colorBgLayout);
+	transition: background 1.1s;
+}

@@ -29,6 +29,6 @@
 	.project-date {
 		display: block;
 		font-weight: 300;
-		color: var(--text-color-low);
+		color: var(--colorTextSecondary);
 	}
 </style>

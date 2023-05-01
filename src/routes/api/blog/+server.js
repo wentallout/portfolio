@@ -9,4 +9,4 @@ export const GET = async () => {
 	});
 
 	return json(sortedBlogs);
-}; 
+};

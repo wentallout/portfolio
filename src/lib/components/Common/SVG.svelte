@@ -1,11 +1,11 @@
 <script>
 	export let src = '';
-	export let alt = '';
+
 	export let width;
 	export let height;
-	export let style = '';
-	export let loading = 'lazy';
-	export let decoding = 'async';
+	// export let fill = 'var(--colorText)';
+
+	export let alt = '';
 </script>
 
-<img {src} {width} {height} {style} {loading} {decoding} alt="SVG of {alt}" />
+<img {src} {width} {height} loading="lazy" decoding="async" alt="SVG of {alt}" />

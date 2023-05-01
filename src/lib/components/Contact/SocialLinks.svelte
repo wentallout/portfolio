@@ -9,7 +9,7 @@
 	import SectionTitle from '$lib/components/Common/SectionTitle.svelte';
 
 	let icon = {
-		color: 'var(--text-color)',
+		color: 'var(--colorText)',
 		width: '24',
 		height: '24'
 	};
@@ -78,7 +78,7 @@
 
 		transition: var(--transition);
 
-		background-color: var(--bg-400);
+		background-color: var(--colorTextQuaternary);
 		width: 80px;
 		height: 80px;
 		clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
@@ -88,7 +88,7 @@
 	}
 
 	.social__address:hover {
-		background-color: var(--bg-100);
+		background-color: var(--colorText);
 	}
 
 	@media (min-width: 768px) {

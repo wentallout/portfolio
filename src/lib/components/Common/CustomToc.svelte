@@ -11,15 +11,15 @@
 	--toc-padding="var(--space-m)"
 	--toc-li-border-radius="0"
 	--toc-li-hover-bg="transparent"
-	--toc-li-hover-color="var(--primary-500)"
+	--toc-li-hover-color="var(--colorPrimary)"
 	--toc-desktop-bg="transparent"
-	--toc-mobile-bg="var(--bg-400)"
-	--toc-mobile-btn-bg="var(--primary-500)"
+	--toc-mobile-bg="var(--colorTextQuaternary)"
+	--toc-mobile-btn-bg="var(--colorPrimary)"
 	--toc-li-padding="var(--space-2xs) 0"
-	--toc-li-color="var(--text-color-low)"
-	--toc-active-color="var(--primary-500)"
+	--toc-li-color="var(--colorTextSecondary)"
+	--toc-active-color="var(--colorPrimary)"
 	--toc-active-bg="transparent"
-	--toc-active-font-weight="600"
+	--toc-active-font-weight="400"
 	--toc-active-border-radius="0"
 	--activeHeadingScrollOffset="var(--scroll-padding)"
 	--toc-desktop-sticky-top="var(--scroll-padding)"
@@ -27,11 +27,11 @@
 	--toc-mobile-btn-border-radius="100%"
 	--toc-mobile-btn-padding="var(-space-m)">
 	<span class="toc-title base-text" slot="title">
-		<ListBullets color="var(--text-color)" width="24" height="24" />
+		<ListBullets color="var(--colorText)" width="24" height="24" />
 		Contents</span>
 
 	<span slot="open-toc-icon">
-		<ListBullets color="var(--bg-500)" width="24" height="24" />
+		<ListBullets color="var(--colorTextSecondary)" width="24" height="24" />
 	</span>
 </Toc>
 
@@ -44,10 +44,10 @@
 		display: flex;
 		align-items: center;
 		gap: var(--space-2xs);
-		font-family: 'Fancy';
+		font-family: var(--fancy-font);
 
 		border-style: solid;
 		border-width: 0 0 4px 0;
-		border-image: linear-gradient(to right, var(--text-color-disabled), transparent) 1 0%;
+		border-image: linear-gradient(to right, var(--colorTextTertiary), transparent) 1 0%;
 	}
 </style>

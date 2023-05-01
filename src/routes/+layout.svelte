@@ -1,6 +1,7 @@
 <script>
 	import ScrollBar from '$lib/components/Layout/ScrollBar.svelte';
-	import PageTransition from '$lib/components/Layout/PageTransition.svelte';
+	import ProgressBar from '$lib/components/Transition/ProgressBar.svelte';
+	import PageTransition from '$lib/components/Transition/PageTransition.svelte';
 	import ScrollProgressBar from '$lib/components/Common/ScrollProgressBar.svelte';
 	import Cover from '$lib/components/Layout/Cover.svelte';
 	import SkipLink from '$lib/components/Layout/SkipLink.svelte';
@@ -16,34 +17,18 @@
 	import 'atropos/css/min';
 
 	import { page } from '$app/stores';
-	// loader
-	import NProgress from 'nprogress';
-	import { navigating } from '$app/stores';
-
-	import 'nprogress/nprogress.css';
+	import ThemeToggle from '$lib/components/Theme/ThemeToggle.svelte';
 
 	export let data;
-
-	NProgress.configure({
-		minimum: 0.1,
-		showSpinner: true,
-		trickle: true,
-		easing: 'ease',
-		speed: 500
-	});
-
-	$: {
-		if ($navigating) {
-			NProgress.start();
-		}
-		if (!$navigating) {
-			NProgress.done();
-		}
-	}
 </script>
 
+<!-- MISC -->
+<ProgressBar />
 <ScrollBar />
 <ScrollProgressBar />
+<ThemeToggle />
+<!--  -->
+
 <SkipLink />
 <PWA />
 <Cover />
@@ -62,9 +47,7 @@
 </div>
 
 <style>
-	:global(body) {
-		background-color: var(--page-bg);
-	}
+	
 
 	.main-content {
 		position: relative;

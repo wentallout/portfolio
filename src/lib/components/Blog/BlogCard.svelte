@@ -28,7 +28,7 @@
 			<Time timestamp={blogDate} relative />
 		</div>
 	</article>
-	<div class="icon"><CaretRight color="var(--text-color)" /></div>
+	<div class="icon"><CaretRight color="var(--colorText)" /></div>
 </a>
 
 <style>
@@ -52,21 +52,21 @@
 		overflow: hidden;
 		/* --- */
 
-		box-shadow: var(--box-shadow-1);
+		outline: 1px solid var(--colorTextQuaternary);
 
-		border-right: 1px solid var(--bg-400);
-
-		border-bottom: 1px solid var(--bg-400);
+		box-shadow: var(--boxShadow);
 	}
 
-	@media (min-width: 992px) {
+	/* @media (min-width: 992px) {
 		.blog {
 			width: 50%;
 		}
-	}
+	} */
 
 	.blog:hover {
-		background-color: var(--bg-300);
+		background-color: var(--colorBgElevated);
+		transform: scale(1.1);
+		z-index: 2;
 	}
 
 	.tags {
@@ -77,7 +77,7 @@
 	}
 
 	.tag {
-		color: var(--primary-500);
+		color: var(--colorPrimary);
 	}
 
 	.blog__info {
@@ -89,18 +89,10 @@
 		transition: var(--transition);
 	}
 
-	.blog:hover .icon {
-		padding-right: 5%;
-	}
-
-	.blog:hover .blog__date {
-		color: var(--text-color-low);
-	}
-
 	.blog__title {
 		font-weight: 500;
 		overflow: hidden;
-		color: var(--text-color);
+		color: var(--colorText);
 
 		/* LINE CLAMP */
 		display: -webkit-box;
@@ -120,7 +112,7 @@
 
 		/* FONT */
 		font-weight: 400;
-		color: var(--text-color-low);
+		color: var(--colorTextSecondary);
 		/* --- */
 	}
 </style>

@@ -16,19 +16,17 @@
 		height: 7rem;
 		font-family: inherit;
 		padding: var(--space-xs);
-		color: var(--text-color) !important;
+		color: var(--colorText) !important;
 		margin-bottom: var(--space-s);
 		background-color: transparent;
-		border: 0;
-		border-radius: var(--border-radius-light);
+		border: 1px solid var(--colorTextQuaternary);
+
 		transition: outline 0.3s;
 		resize: vertical;
-
-		background-color: var(--bg-400);
 	}
 
 	.textarea:focus-visible {
-		outline: 1px solid var(--primary-500);
-		filter: drop-shadow(0px 0px 4px var(--primary-500));
+		outline: 1px solid var(--colorPrimary);
+		box-shadow: 0px 0px 4px var(--colorPrimary);
 	}
 </style>

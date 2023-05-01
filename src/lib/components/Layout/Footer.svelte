@@ -38,23 +38,13 @@
 		</div>
 
 		<div class="list">
-			<div class="list__title">Social</div>
+			<div class="list__title">Other</div>
 			<ul class="nav-list">
 				<li class="nav-list__item">
-					<ExLink href="https://www.linkedin.com/in/wentallout">
-						<LinkedinLogo width="24" height="24" />Linkedin</ExLink>
+					<a href="/resource/music">Music</a>
 				</li>
 				<li class="nav-list__item">
-					<ExLink href="https://www.instagram.com/wentallout/saved">
-						<InstagramLogo width="24" height="24" />
-						Instagram
-					</ExLink>
-				</li>
-				<li class="nav-list__item">
-					<ExLink href="https://github.com/wentallout">
-						<GitHubLogo width="24" height="24" />
-						GitHub
-					</ExLink>
+					<a href="/rss.xml">RSS</a>
 				</li>
 			</ul>
 		</div>
@@ -78,6 +68,22 @@
 						<Phone width="24" height="24" />
 						+84 929066331</ExLink>
 				</li>
+				<li class="nav-list__item">
+					<ExLink href="https://www.linkedin.com/in/wentallout">
+						<LinkedinLogo width="24" height="24" />Linkedin</ExLink>
+				</li>
+				<li class="nav-list__item">
+					<ExLink href="https://www.instagram.com/wentallout/saved">
+						<InstagramLogo width="24" height="24" />
+						Instagram
+					</ExLink>
+				</li>
+				<li class="nav-list__item">
+					<ExLink href="https://github.com/wentallout">
+						<GitHubLogo width="24" height="24" />
+						GitHub
+					</ExLink>
+				</li>
 			</ul>
 		</div>
 	</div>
@@ -99,9 +105,9 @@
 		/* Width */
 		max-width: 100vw;
 
-		background: linear-gradient(0deg, var(--bg-300) 0%, var(--bg-500) 100%);
+		background: linear-gradient(0deg, var(--colorBgContainer) 0%, var(--colorBgElevated) 100%);
 
-		border-top: 1px solid var(--bg-400);
+		border-top: 1px solid var(--colorTextQuaternary);
 	}
 	.list-container {
 		overflow: hidden;
@@ -122,11 +128,11 @@
 
 	.list__title {
 		font-family: 'Fancy';
-		color: var(--text-color);
+		color: var(--colorText);
 		font-size: var(--font-size-base);
 
 		border-bottom: 4px solid transparent;
-		border-image: linear-gradient(to right, var(--text-color-disabled), transparent) 1 0%;
+		border-image: linear-gradient(to right, var(--colorTextTertiary), transparent) 1 0%;
 	}
 
 	.nav-list {
@@ -147,11 +153,11 @@
 		max-width: 30ch;
 		font-weight: 400;
 		transition: 0.3s;
-		color: var(--text-color-low);
+		color: var(--colorTextSecondary);
 		gap: var(--space-3xs);
 	}
 
 	.nav-list__item:hover {
-		color: var(--primary-500);
+		color: var(--colorPrimary);
 	}
 </style>

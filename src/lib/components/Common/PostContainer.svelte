@@ -1,5 +1,5 @@
 <script>
-	import End from '$lib/components/Common/End.svelte';
+	import End from '$lib/components/Common/ThankYou.svelte';
 	import CustomToc from '$lib/components/Common/CustomToc.svelte';
 </script>
 
@@ -25,6 +25,6 @@
 	.post-content {
 		display: flex;
 		flex-direction: column;
-		width: 100%;
+		 width: 100%; 
 	}
 </style>

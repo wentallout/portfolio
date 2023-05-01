@@ -24,16 +24,17 @@
 				<a href="/project">
 					<Button
 						label="See Full Portfolio"
-						labelColor="var(--bg-500)"
-						backgroundColor="var(--primary-500)" />
+						labelColor="#000"
+						backgroundColor="var(--colorPrimary)"
+						glowColor="var(--colorPrimary)" />
 				</a>
 
 				<a href="/contact">
 					<Button
 						label="Contact"
-						labelColor="var(--text-color)"
-						backgroundColor="var(--bg-400)"
-						borderColor="var(--text-color)" />
+						labelColor="var(--colorText)"
+						backgroundColor="var(--colorTextQuaternary)"
+						borderColor="var(--colorText)" />
 				</a>
 			</div>
 		</div>
@@ -42,7 +43,7 @@
 
 <style>
 	.hero__link {
-		color: var(--primary-500);
+		color: var(--colorPrimary);
 	}
 
 	.hero__btn a {
@@ -65,21 +66,20 @@
 	}
 
 	.hero__name {
-		font-family: 'Fancy';
+		font-family: var(--fancy-font);
 		margin-bottom: var(--space-l);
 	}
 
 	.focus {
 		display: block;
-		color: var(--primary-500);
+		color: var(--colorPrimary);
 	}
 	.focus-low {
-		color: transparent;
-		-webkit-text-stroke: 1px var(--text-color-low);
+		color: var(--colorTextQuaternary);
 	}
 
 	.hero__text {
-		color: var(--text-color-low);
+		color: var(--colorTextSecondary);
 		max-width: var(--text-width);
 		margin-bottom: var(--space-s);
 		text-wrap: balance;
@@ -94,7 +94,7 @@
 	}
 
 	.text-focus-in {
-		animation: text-focus-in 3s cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
+		animation: text-focus-in 2s cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
 	}
 
 	@keyframes text-focus-in {

@@ -110,9 +110,9 @@
 			<div class="volume">
 				<button class="mute__btn" on:click={mute} on:keydown={mute}>
 					{#if muted}
-						<SpeakerX width="24" height="24" color="var(--text-color-low)" />
+						<SpeakerX width="24" height="24" color="var(--colorTextSecondary)" />
 					{:else}
-						<SpeakerHigh width="24" height="24" color="var(--text-color)" />
+						<SpeakerHigh width="24" height="24" color="var(--colorText)" />
 					{/if}
 				</button>
 				<input
@@ -125,21 +125,21 @@
 			</div>
 			<div class="controls">
 				<button class="mp-btn mp-btn-small" on:click={prev}>
-					<SkipBack width="24" height="24" color="var(--text-color)" />
+					<SkipBack width="24" height="24" color="var(--colorText)" />
 				</button>
 
 				{#if playing}
 					<button class="mp-btn" on:click={pauseMusic}>
-						<Pause width="24" height="24" color="var(--text-color)" />
+						<Pause width="24" height="24" color="var(--colorText)" />
 					</button>
 				{:else}
 					<button class="mp-btn play-btn" on:click={playMusic}>
-						<PlayFill width="24" height="24" color="var(--bg-500)" />
+						<PlayFill width="24" height="24" color="var(--colorTextSecondary)" />
 					</button>
 				{/if}
 
 				<button class="mp-btn mp-btn-small" on:click={next}>
-					<SkipForward width="24" height="24" color="var(--text-color)" />
+					<SkipForward width="24" height="24" color="var(--colorText)" />
 				</button>
 			</div>
 		</div>
@@ -155,7 +155,7 @@
 						class="download"
 						href={'/ringtones/' + $musicList[i].audio}
 						download={$musicList[i].audio}>
-						<Download width="16" height="16" color="var(--text-color)" />
+						<Download width="16" height="16" color="var(--colorText)" />
 					</a>
 				</div>
 			{/each}
@@ -201,7 +201,7 @@
 
 	.current-time {
 		font-weight: 300;
-		color: var(--primary-500);
+		color: var(--colorPrimary);
 	}
 
 	.info__name {
@@ -222,7 +222,7 @@
 		top: 50%;
 		right: 0%;
 		transform: translate(-50%, -50%);
-		background-color: var(--bg-500);
+		background-color: var(--colorTextSecondary);
 		width: 40px;
 		height: 40px;
 		display: flex;
@@ -269,7 +269,7 @@
 		width: 80px;
 		height: 80px;
 		clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
-		background-color: var(--bg-100);
+		background-color: var(--colorText);
 		border: 0;
 		transition: var(--transition);
 	}
@@ -280,7 +280,7 @@
 	}
 
 	.play-btn {
-		background-color: var(--primary-500);
+		background-color: var(--colorPrimary);
 	}
 
 	.player {
@@ -289,7 +289,7 @@
 		justify-content: center;
 		align-items: center;
 		width: 100%;
-		background-color: var(--bg-400);
+		background-color: var(--colorTextQuaternary);
 		border-radius: var(--border-radius);
 		overflow: hidden;
 	}
@@ -297,7 +297,7 @@
 	.song-list {
 		display: flex;
 		flex-direction: column;
-		background-color: var(--bg-300);
+		background-color: var(--surface-1);
 		width: 100%;
 	}
 
@@ -305,17 +305,17 @@
 		padding: var(--space-s) var(--space-l);
 
 		position: relative;
-		background: var(--primary-500);
+		background: var(--colorPrimary);
 	}
 
 	.song-name {
 		font-weight: 300;
-		color: var(--text-color);
+		color: var(--colorText);
 	}
 
 	.song-active .song-name {
 		font-weight: 600;
-		color: var(--bg-500);
+		color: var(--colorTextSecondary);
 	}
 
 	.song {
@@ -326,7 +326,7 @@
 	}
 
 	.song:hover {
-		background-color: var(--bg-400);
+		background-color: var(--colorTextQuaternary);
 		cursor: pointer;
 	}
 </style>

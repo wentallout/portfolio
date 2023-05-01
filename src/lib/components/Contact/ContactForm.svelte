@@ -31,17 +31,20 @@
 			<TextArea label="Message" placeholder="Something you want to tell me. Ex: jobs, ideas" />
 
 			<div class="contact__btn">
-				<Button label="Send message" backgroundColor="var(--primary-500)">
-					<PaperPlaneRight color="var(--bg-500)" width="16" height="16" />
+				<Button
+					label="Send message"
+					backgroundColor="var(--colorPrimary)"
+					glowColor="var(--colorPrimary)">
+					<PaperPlaneRight color="#000" width="16" height="16" />
 				</Button>
 
 				<Button
 					label="Reset"
-					borderColor="var(--error)"
-					backgroundColor="var(--bg-500)"
-					labelColor="var(--error)"
+					borderColor="var(--colorError)"
+					backgroundColor="transparent"
+					labelColor="var(--colorError)"
 					type="reset"
-					><ArrowCounterClockwise color="var(--error)" width="16" height="16" />
+					><ArrowCounterClockwise color="var(--colorError)" width="16" height="16" />
 				</Button>
 			</div>
 		</form>
