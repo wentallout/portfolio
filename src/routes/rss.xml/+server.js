@@ -1,4 +1,5 @@
 import config from '$lib/config';
+export const prerender = true;
 
 export async function GET({ fetch }) {
 	const response = await fetch('api/blog');

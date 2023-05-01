@@ -1,5 +1,6 @@
 <script>
 	import SocialButtons from '$lib/components/Contact/SocialButtons.svelte';
+
 	import { navItems } from '$lib/config.js';
 	import { onMount } from 'svelte';
 	import { page } from '$app/stores';
@@ -8,7 +9,6 @@
 	import X from '~icons/ph/x';
 
 	import VanishingHeader from '$lib/components/Layout/VanishingHeader.svelte';
-	import ThemeToggle from '$lib/components/Theme/ThemeToggle.svelte';
 
 	let scrollY;
 
@@ -45,18 +45,16 @@
 				{/each}
 
 				<li class="hamburger" on:click={openNav} on:keydown={openNav}>
-					<List color="var(--text-color)" width="32" height="32" />
+					<List color="var(--colorText)" width="32" height="32" />
 				</li>
 			</ul>
 		</nav>
-
-		<ThemeToggle />
 	</header>
 </VanishingHeader>
 
 <div bind:this={navOverlayEle} class="overlay">
 	<div class="closebtn" on:click={closeNav} on:keydown={closeNav}>
-		<X color="var(--bg-500)" width="32" height="32" />
+		<X color="var(--colorTextSecondary)" width="32" height="32" />
 	</div>
 	<div class="overlay-content">
 		{#each navItems as navItem}
@@ -75,11 +73,16 @@
 
 <style>
 	.active-page {
-		color: var(--primary-500) !important;
+		color: var(--colorPrimary) !important;
+	}
+
+	.active-page:hover {
+		user-select: none;
+		cursor: not-allowed;
 	}
 
 	.overlay-item.active-page:after {
-		content: '◆';
+		content: '⏴';
 		margin-left: auto;
 	}
 
@@ -87,7 +90,7 @@
 		/* FONT */
 		font-size: var(--font-size-base);
 		font-weight: 500;
-		color: var(--text-color);
+		color: var(--colorText);
 		/* --- */
 		width: 100%;
 		display: flex;
@@ -98,7 +101,7 @@
 	.nav-scrolldown {
 		background-color: rgba(0, 0, 0, 0.7) !important;
 		backdrop-filter: blur(5px);
-		color: var(--text-color);
+		color: #fff;
 	}
 
 	.nav-list {
@@ -115,7 +118,7 @@
 
 	.nav-list__item:hover {
 		font-weight: 600;
-		scale: 1.2;
+		scale: 1.1;
 	}
 
 	.hamburger {
@@ -167,7 +170,8 @@
 		z-index: var(--z-index-max);
 		top: 0;
 		left: 0;
-		background-color: rgba(0, 0, 0, 0.9);
+		background-color: rgba(0, 0, 0, 0.8);
+
 		backdrop-filter: blur(5px);
 		overflow-y: hidden;
 		transition: var(--transition);
@@ -188,7 +192,7 @@
 	.overlay-item {
 		padding: var(--space-l) 0;
 
-		color: var(--text-color);
+		color: var(--colorText);
 
 		/* FLEX */
 		display: flex;
@@ -210,7 +214,7 @@
 	.overlay-item:hover,
 	.overlay-item:focus {
 		font-weight: 600;
-		background: var(--black);
+		background: var(--colorBgElevated);
 	}
 
 	.closebtn {
@@ -222,7 +226,7 @@
 		justify-content: center;
 		align-items: center;
 
-		background-color: var(--primary-500);
+		background-color: var(--colorPrimary);
 		top: 0;
 		cursor: pointer;
 
@@ -237,7 +241,7 @@
 	}
 
 	.social {
-		border-top: 1px solid var(--text-color-disabled);
+		border-top: 1px solid var(--colorTextTertiary);
 		padding-top: var(--space-2xl);
 	}
 

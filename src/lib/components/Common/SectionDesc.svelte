@@ -11,6 +11,6 @@
 		max-width: var(--text-width);
 		text-align: left;
 		margin-bottom: var(--space-l);
-		color: var(--text-color-low);
+		color: var(--colorTextSecondary);
 	}
 </style>

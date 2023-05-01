@@ -118,11 +118,11 @@
 	}
 
 	:global(.dark-pagination-nav .option) {
-		color: var(--text-color-low) !important;
+		color: var(--colorTextSecondary) !important;
 	}
 
 	:global(.dark-pagination-nav .option.active) {
-		color: var(--primary-500) !important;
+		color: var(--colorPrimary) !important;
 	}
 
 	.blog-list {
@@ -132,6 +132,6 @@
 
 	.not-found {
 		padding: var(--space-s) 0;
-		color: var(--text-color-low);
+		color: var(--colorTextSecondary);
 	}
 </style>

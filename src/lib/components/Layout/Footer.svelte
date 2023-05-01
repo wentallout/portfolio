@@ -105,13 +105,13 @@
 		/* Width */
 		max-width: 100vw;
 
-		background: linear-gradient(0deg, var(--bg-300) 0%, var(--bg-500) 100%);
+		background: linear-gradient(0deg, var(--colorBgContainer) 0%, var(--colorBgElevated) 100%);
 
-		border-top: 1px solid var(--bg-400);
+		border-top: 1px solid var(--colorTextQuaternary);
 	}
 	.list-container {
 		overflow: hidden;
-		--min: 10ch;
+		--min: 20ch;
 		--gap: var(--space-l);
 
 		display: grid;
@@ -128,11 +128,11 @@
 
 	.list__title {
 		font-family: 'Fancy';
-		color: var(--text-color);
+		color: var(--colorText);
 		font-size: var(--font-size-base);
 
 		border-bottom: 4px solid transparent;
-		border-image: linear-gradient(to right, var(--text-color-disabled), transparent) 1 0%;
+		border-image: linear-gradient(to right, var(--colorTextTertiary), transparent) 1 0%;
 	}
 
 	.nav-list {
@@ -153,11 +153,11 @@
 		max-width: 30ch;
 		font-weight: 400;
 		transition: 0.3s;
-		color: var(--text-color-low);
+		color: var(--colorTextSecondary);
 		gap: var(--space-3xs);
 	}
 
 	.nav-list__item:hover {
-		color: var(--primary-500);
+		color: var(--colorPrimary);
 	}
 </style>

@@ -25,10 +25,10 @@
 	.end__text {
 		user-select: none;
 		margin-top: var(--space-s);
-		color: var(--text-color-low);
+		color: var(--colorTextSecondary);
 	}
 
 	.end__text:hover {
-		color: var(--primary-500);
+		color: var(--colorPrimary);
 	}
 </style>

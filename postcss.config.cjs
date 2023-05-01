@@ -7,7 +7,7 @@ const config = {
 		autoprefixer,
 		cssnano,
 		postcssPresetEnv({
-			stage: 3,
+			stage: 5,
 			features: {
 				'nesting-rules': true,
 				'custom-media-queries': true,

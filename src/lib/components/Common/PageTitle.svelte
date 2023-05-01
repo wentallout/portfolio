@@ -7,19 +7,31 @@
 	{#if decoImageUrl != ''}
 		<img class="title__deco" src={decoImageUrl} alt="page title" />
 	{/if}
+
 	<h1 class="xxxl-text title__text">{pageTitle}</h1>
 </div>
 
 <style>
+	/* .clone__text {
+		position: absolute;
+		font-family: var(--fancy-font);
+
+		transform: translateY(-10px);
+
+		color: transparent;
+		-webkit-text-stroke: 1px var(--colorTextSecondary);
+		opacity: 0.2;
+	} */
+
 	.title__deco {
 		z-index: 1;
 
 		position: absolute;
-		top: 50%;
+		top: 0;
 		left: 50%;
 		transform: translateY(-50%) translateX(-50%);
-
-		height: 170%;
+		height: var(--font-size-xl);
+		width: auto;
 		opacity: 0.5;
 		user-select: none;
 	}
@@ -40,7 +52,7 @@
 
 	.title__text {
 		font-family: var(--fancy-font);
-		color: var(--text-color);
+		color: var(--colorText);
 		z-index: 2;
 	}
 </style>

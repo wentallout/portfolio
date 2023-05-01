@@ -17,6 +17,7 @@
 	import 'atropos/css/min';
 
 	import { page } from '$app/stores';
+	import ThemeToggle from '$lib/components/Theme/ThemeToggle.svelte';
 
 	export let data;
 </script>
@@ -25,6 +26,7 @@
 <ProgressBar />
 <ScrollBar />
 <ScrollProgressBar />
+<ThemeToggle />
 <!--  -->
 
 <SkipLink />
@@ -45,9 +47,7 @@
 </div>
 
 <style>
-	:global(body) {
-		background-color: var(--page-bg);
-	}
+	
 
 	.main-content {
 		position: relative;

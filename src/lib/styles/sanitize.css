@@ -67,19 +67,6 @@
 	float: left;
 } */
 
-/**
-  * 1. Correct the inheritance and scaling of font size in all browsers.
-  * 2. Correct the odd `em` font sizing in all browsers.
-  * 3. Prevent overflow of the container in all browsers (opinionated).
-  */
-
-/* Text-level semantics
-  * ========================================================================== */
-
-/**
-  * Add the correct text decoration in Safari.
-  */
-
 :where(abbr[title]) {
 	text-decoration: underline;
 	text-decoration: underline dotted;
@@ -124,23 +111,11 @@
 	fill: currentColor;
 }
 
-/* Tabular data
-  * ========================================================================== */
-
-/**
-  * 1. Collapse border spacing in all browsers (opinionated).
-  * 2. Correct table border color inheritance in all Chrome, Edge, and Safari.
-  * 3. Remove text indentation from table contents in Chrome, Edge, and Safari.
-  */
-
 :where(table) {
 	border-collapse: collapse; /* 1 */
 	border-color: inherit; /* 2 */
 	text-indent: 0; /* 3 */
 }
-
-/* Forms
-  * ========================================================================== */
 
 /**
   * Remove the margin on controls in Safari.

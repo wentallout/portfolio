@@ -14,19 +14,19 @@
 
 /* -------------------------------- Nprogress START ------------------------------- */
 #nprogress .bar {
-	background: var(--primary-500) !important;
+	background: var(--colorPrimary) !important;
 	height: 5px !important;
 }
 
 #nprogress .peg {
-	box-shadow: 0 0 10px var(--primary-500), 0 0 5px var(--primary-500) !important;
+	box-shadow: 0 0 10px var(--colorPrimary), 0 0 5px var(--colorPrimary) !important;
 }
 
 #nprogress .spinner-icon {
 	width: 24px !important;
 	height: 24px !important;
-	border-top-color: var(--primary-500) !important;
-	border-left-color: var(--primary-500) !important;
+	border-top-color: var(--colorPrimary) !important;
+	border-left-color: var(--colorPrimary) !important;
 }
 
 #nprogress .spinner {
@@ -45,10 +45,6 @@
 		transform: translate(-50%, -50%) scale(3);
 		opacity: 0;
 	}
-}
-
-.my-atropos {
-	height: 100%;
 }
 
 .svelte-lightbox-footer h2 {

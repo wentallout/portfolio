@@ -10,6 +10,8 @@ import sequence from 'svelte-sequential-preprocessor';
 
 import remarkGfm from 'remark-gfm';
 
+import rehypeWidont from 'rehype-widont';
+
 // torch_eYAF6gD0idBcJcmEPVyxVRVmuAHTrcP9mV8s7vTl
 
 /** @type {import('@sveltejs/kit').Config} */
@@ -27,7 +29,8 @@ const config = {
 					rehypeExternalLinks,
 					{ rel: ['nofollow', 'noopener', 'noreferrer', 'external'], target: '_blank' }
 				],
-				[rehypeAutolinkHeadings, { behavior: 'wrap' }]
+				[rehypeAutolinkHeadings, { behavior: 'wrap' }],
+				rehypeWidont
 			]
 		})
 	]),

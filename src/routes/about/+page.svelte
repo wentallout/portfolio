@@ -86,7 +86,7 @@
 		display: flex;
 		gap: var(--space-s);
 		flex-direction: column;
-		border-bottom: 1px solid var(--text-color-disabled);
+		border-bottom: 1px solid var(--colorTextTertiary);
 
 		padding-top: var(--space-s);
 		padding-bottom: var(--space-3xl);
@@ -100,12 +100,12 @@
 
 	.info__title {
 		font-weight: 600;
-		color: var(--text-color);
+		color: var(--colorText);
 		width: 400px;
 	}
 
 	.info__description {
-		color: var(--text-color-low);
+		color: var(--colorTextSecondary);
 		width: 100%;
 		max-width: var(--text-width);
 	}

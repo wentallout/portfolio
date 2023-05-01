@@ -10,7 +10,7 @@
 			<div class="about__block">
 				<div class="desc">
 					<div class="block">
-						<div class="block__title base-text">Education & Background</div>
+						<div class="block__title base-text">Background</div>
 						<div class="block__text small-text">
 							I spent about a year working as a full-stack developer, but eventually I found my true
 							passion in UI/UX design. I'm currently focusing on UX design, which involves finding
@@ -53,7 +53,7 @@
 
 	.block__title {
 		font-weight: 600;
-		color: var(--text-color);
+		color: var(--colorText);
 	}
 
 	.desc {
@@ -66,7 +66,7 @@
 	.block__text {
 		font-weight: 400;
 
-		color: var(--text-color-low);
+		color: var(--colorTextSecondary);
 	}
 
 	.block {

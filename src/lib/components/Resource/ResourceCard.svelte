@@ -24,21 +24,16 @@
 		height: 200px;
 		transition: var(--transition);
 
-		border: 1px solid transparent;
-
-		box-shadow: var(--box-shadow-1);
-
-		border-right: 1px solid var(--bg-400);
-		border-bottom: 1px solid var(--bg-400);
+		outline: 1px solid var(--colorTextQuaternary);
 	}
 	.tool__name {
 		font-weight: 500;
 		margin-bottom: var(--space-xs);
-		color: var(--text-color);
+		color: var(--colorText);
 	}
 
 	.tool__description {
-		color: var(--text-color-low);
+		color: var(--colorTextSecondary);
 		overflow: hidden;
 		display: -webkit-box;
 		-webkit-line-clamp: 3;
@@ -48,10 +43,10 @@
 	}
 
 	.tool:hover {
-		border: 1px solid var(--primary-500);
+		border: 1px solid var(--colorPrimary);
 	}
 
 	.tool:hover .tool__name {
-		color: var(--primary-500);
+		color: var(--colorPrimary);
 	}
 </style>

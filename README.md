@@ -8,13 +8,15 @@
 
 ## ❓ What is this?
 
-This is a portfolio/blog. Built using SvelteKit. Hosted on Netlify.
+This is a portfolio/blog built using SvelteKit. Hosted on Netlify.
 
 My portfolio URL: [wentallout.tech](https://wentallout.tech)
 
 ## 🤩 What makes this special?
 
-It's incredibly fast compared to other framework-based websites and has great SEO out-of-the-box. You won't need a backend or CMS though, the blog posts are just markdown files you can store on your computer (see `routes/blog`). All imported images are automatically converted to `webp` and lazy loaded to optimize loading speed. Visitors can also comment on your blogs using GitHub discussion (you might want to customize `Comments.svelte` component so that it works on your repo)
+- A website made with SvelteKit is just incredibly even compared to other framework-based websites and has great SEO out-of-the-box. You won't need a backend or CMS though, the blog posts are just markdown files you can store on your computer (see `routes/blog`).
+- All imported images are automatically converted to `webp` and lazy loaded to optimize loading speed.
+- Visitors can also comment on your blogs using GitHub discussion (you might want to customize `Comments.svelte` component so that it works on your repo)
 
 ## 🏆 Progress
 
@@ -32,7 +34,7 @@ It's incredibly fast compared to other framework-based websites and has great SE
   - Self-hosted + Subset using [glyphhanger](https://www.npmjs.com/package/glyphhanger)
   - font-family: [Inter](https://rsms.me/inter/)
 - ✅ Images
-  - Compressed and Converted into webp
+  - Compressed and Converted into `webp`
   - Native Lazy Loading using `loading = 'lazy'`
 - ✅ Routing
 - ✅ Page Transition:
@@ -42,7 +44,7 @@ It's incredibly fast compared to other framework-based websites and has great SE
   - Netlify Form
 - ✅ SEO 100/100
 - ✅ Responsive
-- ✅ Dark Mode
+- ✅ Dark/Light Mode Toggle (I need to work on lightmode hex colors tho)
 
 ---
 

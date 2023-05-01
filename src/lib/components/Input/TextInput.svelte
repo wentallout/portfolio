@@ -47,15 +47,17 @@
 	}
 
 	datalist {
-		background-color: var(--bg-400) !important;
+		background-color: var(--colorTextQuaternary) !important;
 	}
 
 	.input {
-		background-color: var(--bg-400);
+		border: 1px solid var(--colorTextQuaternary);
+
+		background-color: transparent;
 
 		/* FONT */
 		font-family: inherit;
-		color: var(--text-color) !important;
+		color: var(--colorText) !important;
 		/* --- */
 
 		/* SPACING */
@@ -64,17 +66,14 @@
 		/* --- */
 
 		width: 100%;
-
 		height: 3.5rem;
-		border: 0;
-		border-radius: var(--border-radius-light);
 
 		/* OTHER */
 		transition: var(--transition);
 	}
 
 	.input:focus-visible {
-		outline: 1px solid var(--primary-500);
-		filter: drop-shadow(0px 0px 4px var(--primary-500));
+		outline: 1px solid var(--colorPrimary);
+		box-shadow: 0px 0px 4px var(--colorPrimary);
 	}
 </style>

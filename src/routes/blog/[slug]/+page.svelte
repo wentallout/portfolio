@@ -51,11 +51,11 @@
 	.date {
 		display: block;
 		margin: 0;
-		color: var(--text-color-low);
+		color: var(--colorTextSecondary);
 	}
 
 	.category {
-		color: var(--text-color-low);
+		color: var(--colorTextSecondary);
 		gap: var(--space-xs);
 		margin: 0;
 		margin-bottom: var(--space-s);

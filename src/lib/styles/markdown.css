@@ -12,7 +12,7 @@
 	line-height: var(--line-height-2xl);
 	text-transform: capitalize;
 	margin-bottom: var(--space-l);
-	color: var(--text-color);
+	color: var(--colorText);
 }
 
 .markdown h2,
@@ -20,7 +20,7 @@
 .markdown h4 {
 	line-height: 120%;
 	position: relative;
-	color: var(--text-color);
+	color: var(--colorText);
 }
 
 .markdown h2:first-child {
@@ -37,13 +37,13 @@
 	font-family: var(--fancy-font);
 	font-size: var(--font-size-large);
 	line-height: var(--line-height-large);
-	color: var(--text-color);
+	color: var(--colorText);
 	/* --- */
 
 	padding-bottom: var(--space-3xs);
 
 	border-bottom: 4px solid transparent;
-	border-image: linear-gradient(to right, var(--text-color), transparent) 1 0%;
+	border-image: linear-gradient(to right, var(--colorText), transparent) 1 0%;
 }
 
 .markdown h3 {
@@ -77,7 +77,7 @@
 
 .markdown p,
 .markdown li:not(.toc li) {
-	color: var(--text-color);
+	color: var(--colorText);
 	font-size: var(--font-size-small);
 	line-height: var(--line-height-small);
 	margin: 0;
@@ -87,7 +87,7 @@
 
 .markdown ul {
 	border-left: 4px solid transparent;
-	border-image: linear-gradient(to bottom, var(--text-color), transparent) 1 1;
+	border-image: linear-gradient(to bottom, var(--colorText), transparent) 1 1;
 }
 
 .markdown li:not(.toc li) {
@@ -98,7 +98,7 @@
 
 .markdown li::marker {
 	content: counter(list-item) '. ';
-	color: var(--text-color);
+	color: var(--colorText);
 	font-size: inherit;
 	font-weight: 600;
 }
@@ -133,7 +133,7 @@
 		.markdown h5 a,
 		.markdown a:has(img)
 	) {
-	color: var(--primary-500);
+	color: var(--colorPrimary);
 	text-decoration: underline;
 	text-decoration-skip-ink: none;
 }
@@ -155,11 +155,11 @@
 }
 
 blockquote {
-	background-color: var(--black);
+	background-color: var(--colorBgElevated);
 
 	padding: var(--space-xs);
 	font-weight: 300;
-	border-left: 4px solid var(--primary-500);
+	border-left: 4px solid var(--colorPrimary);
 	margin-top: var(--space-s);
 	margin-bottom: var(--space-s);
 	max-width: var(--text-width);
@@ -167,21 +167,21 @@ blockquote {
 
 blockquote p {
 	margin: 0 !important;
-	color: var(--primary-500) !important;
+	color: var(--colorPrimary) !important;
 }
 
 pre {
-	color: var(--text-color);
+	color: var(--colorText);
 	padding: var(--space-s) var(--space-s);
 	border-radius: var(--border-radius);
 	overflow: auto;
 	max-width: var(--text-width);
-	border: 1px solid var(--bg-400);
+	border: 1px solid var(--colorText);
 }
 
 table {
 	border-collapse: collapse;
-	background-color: var(--bg-400);
+	background-color: var(--colorTextQuaternary);
 	padding: var(--space-s);
 
 	max-width: fit-content;
@@ -232,8 +232,8 @@ aside.toc > nav > ul > li:before {
 	margin-bottom: var(--space-s);
 	border-radius: var(--border-radius-light);
 
-	background-color: var(--bg-400);
-	border: 1px solid var(--bg-400);
+	background-color: var(--colorTextQuaternary);
+	border: 1px solid var(--colorTextQuaternary);
 }
 
 .markdown img:hover {
@@ -241,7 +241,7 @@ aside.toc > nav > ul > li:before {
 }
 
 :where(aside.toc > nav > ul > li) {
-	color: var(--text-color-low);
+	color: var(--colorTextSecondary);
 	font-weight: 300;
 }
 

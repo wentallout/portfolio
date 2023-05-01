@@ -1,0 +1,37 @@
+---
+title: How to subset fonts to optimize performance
+date: 2023-04-29
+categories:
+    - frontend
+---
+
+## Introduction
+
+Read this first:
+
+https://barrd.dev/article/create-a-variable-font-subset-for-smaller-file-size/
+
+## Python Commands
+
+```python
+python -m pip install fonttools
+```
+
+
+```python
+python -m pip install brotli
+```
+
+
+```python
+pyftsubset Inter-VariableFont.ttf 
+  --unicodes="U+0020-007F, U+2000-206F, U+2070-209F, U+20A0-20CF, U+2100-214F, U+2200-22FF, U+FB00-FB4F, U+2190-21BB" 
+  --layout-features="*" 
+  --flavor="woff2" 
+  --output-file="Inter.var.woff2"
+```
+
+## Get font info
+
+https://wakamaifondue.com/
+

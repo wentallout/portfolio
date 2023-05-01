@@ -14,19 +14,18 @@
 		border-radius: var(--border-radius-light);
 		padding: 8px 12px;
 		line-height: normal;
-		background: var(--bg-400);
+		background: var(--accent);
 
-		color: var(--text-color-low);
+		color: var(--colorPrimary);
+		border: 1px solid var(--colorTextQuaternary);
 		transition: var(--transition);
 	}
 
 	.tag:before {
 		content: '#';
-		font-weight: 600;
 	}
 
 	.tag:hover {
-		background: var(--primary-400);
-		color: var(--bg-500);
+		background: var(--colorBgElevated);
 	}
 </style>

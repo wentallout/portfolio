@@ -7,18 +7,19 @@
 	<link rel="icon" href="%sveltekit.assets%/favicon.ico" sizes="any" />
 	<link rel="icon" href="%sveltekit.assets%/favicon.svg" type="image/svg+xml" />
 	<link rel="apple-touch-icon" href="%sveltekit.assets%/apple-touch-icon.png" />
+	<link rel="alternate" type="application/atom+xml" href="/rss.xml" />
 	<meta name="viewport" content="width=device-width, initial-scale=1" />
 	<link rel="manifest" crossorigin="use-credentials" href="/manifest.webmanifest" />
+
 	%sveltekit.head%
 
 	<script type="module">
 		const theme = localStorage.getItem('color-scheme');
-		console.log("oyo" + theme);
 
 		theme
 			? document.documentElement.setAttribute('color-scheme', theme)
 			: localStorage.setItem('color-scheme', 'dark')
-		console.log("aya" + theme);
+
 	</script>
 </head>
 

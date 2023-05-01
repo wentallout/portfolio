@@ -98,7 +98,7 @@
 		content: ' ';
 
 		transform: translateZ(-25px);
-		background-color: var(--bg-500);
+		background-color: var(--colorTextSecondary);
 		border-radius: 0 2px 2px 0;
 	}
 
