@@ -16,7 +16,7 @@
 				I create practical and user-friendly products that bring real value and enhance people's
 				lives.
 				<a class="hero__link underline" href="/about">
-					<span>More</span>
+					<span>More about Khoa</span>
 				</a>
 			</div>
 
@@ -43,6 +43,7 @@
 
 <style>
 	.hero__link {
+		display: block;
 		color: var(--colorPrimary);
 	}
 

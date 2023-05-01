@@ -19,10 +19,10 @@
 		<form
 			class="contact"
 			name="contact"
-			method="post"
-			netlify-honeypot="bot-field"
-			data-netlify="true">
-			<input type="hidden" name="form-name" value="contact" />
+			method="POST"
+			data-netlify="true"
+			data-netlify-recaptcha="true">
+			<!-- <input type="hidden" name="form-name" value="contact" /> -->
 
 			<TextInput type="text" label="Name" placeholder="Enter your name here" />
 

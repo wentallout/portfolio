@@ -1,6 +1,6 @@
 <div class="notai">
 	<a href="https://notbyai.fyi">
-		<img src="/images/notai.svg" alt="written by human, not by AI" />
+		<img width="132" height="42" src="/images/notai.svg" alt="written by human, not by AI" />
 	</a>
 </div>
 

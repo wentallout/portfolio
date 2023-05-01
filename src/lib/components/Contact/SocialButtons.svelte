@@ -10,19 +10,19 @@
 </script>
 
 <div {style} class="social-links">
-	<ExLink href="tel:+84929066331">
+	<ExLink ariaLabel="phone number" href="tel:+84929066331">
 		<Phone class="icon" height="32" width="32" color="var(--colorText)" />
 	</ExLink>
-	<ExLink href="mailto:wentallout@gmail.com">
+	<ExLink ariaLabel="email" href="mailto:wentallout@gmail.com">
 		<Envelope class="icon" height="32" width="32" color="var(--colorText)" />
 	</ExLink>
-	<ExLink href="https://www.linkedin.com/in/wentallout">
+	<ExLink ariaLabel="linkedin" href="https://www.linkedin.com/in/wentallout">
 		<LinkedinLogo class="icon" height="32" width="32" color="var(--colorText)" />
 	</ExLink>
-	<ExLink href="https://www.instagram.com/wentallout">
+	<ExLink ariaLabel="instagram" href="https://www.instagram.com/wentallout">
 		<InstagramLogo class="icon" height="32" width="32" color="var(--colorText)" />
 	</ExLink>
-	<ExLink href="https://github.com/wentallout">
+	<ExLink ariaLabel="github" href="https://github.com/wentallout">
 		<GitHubLogo class="icon" height="32" width="32" color="var(--colorText)" />
 	</ExLink>
 </div>
