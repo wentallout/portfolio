@@ -21,20 +21,20 @@
 		</video>
 	{/if}
 
-	<a href="/" class="cover__logo">
+	<a aria-label="home" href="/" class="cover__logo">
 		<YinYang class="yinyang" width="100%" height="100%" color="var(--colorText)" />
 	</a>
 
 	<div class="logo__alter">{'[' + 'wentallout' + ']'}</div>
 
 	<div class="cover__btn">
-		<ExLink href="tel:+84929066331">
+		<ExLink ariaLabel="phone number" href="tel:+84929066331">
 			<div class="contact">
 				<Phone />
 			</div>
 		</ExLink>
 
-		<ExLink href="mailto:wentallout@gmail.com">
+		<ExLink ariaLabel="email" href="mailto:wentallout@gmail.com">
 			<div class="contact">
 				<Envelope />
 			</div>

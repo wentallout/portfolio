@@ -8,8 +8,8 @@
 		right: 0;
 
 		background-color: var(--colorPrimary);
-		opacity: 0.9;
-		color: var(--colorTextSecondary);
+
+		color: #000;
 		font-weight: 600;
 		padding: var(--space-s);
 		translate: 0 -100%;
