@@ -138,7 +138,7 @@
 		width: fit-content;
 
 		line-height: normal;
-		color: #fff;
+		color: var(--colorWhite);
 		font-weight: 300;
 
 		background-color: rgba(0, 0, 0, 0.8);

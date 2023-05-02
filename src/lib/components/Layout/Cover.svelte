@@ -59,7 +59,7 @@
 		font-weight: 600;
 		line-height: normal;
 		font-size: var(--font-size-mid);
-		color: var(--colorText);
+		color: var(--colorWhite);
 		z-index: 3;
 		user-select: none;
 	}
@@ -143,7 +143,7 @@
 		width: 100%;
 		object-fit: cover;
 		object-position: top;
-		/* filter: brightness(80%); */
+		filter: brightness(70%);
 		transition: var(--transition);
 	}
 

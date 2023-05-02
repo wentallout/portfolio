@@ -33,7 +33,7 @@
 					label="Send message"
 					backgroundColor="var(--colorPrimary)"
 					glowColor="var(--colorPrimary)">
-					<PaperPlaneRight color="#000" width="16" height="16" />
+					<PaperPlaneRight color="var(--colorBlack)" width="16" height="16" />
 				</Button>
 
 				<Button

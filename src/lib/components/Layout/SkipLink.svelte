@@ -9,7 +9,7 @@
 
 		background-color: var(--colorPrimary);
 
-		color: #000;
+		color: var(--colorBlack);
 		font-weight: 600;
 		padding: var(--space-s);
 		translate: 0 -100%;

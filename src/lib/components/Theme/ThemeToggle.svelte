@@ -11,16 +11,16 @@
 <button class="toggle" on:click={toggleTheme} aria-label="Toggle theme">
 	{#if $theme === 'dark'}
 		<div in:fly={{ y: 10 }} class="toggle__icon">
-			<Sun color="var(--colorText)" width="24" height="24" />
+			<Sun class="icon" color="var(--colorWhite)" width="24" height="24" />
 		</div>
 	{:else}
-		<div in:fly={{ y: -10 }} class="toggle__icon">
-			<Moon color="var(--colorText)" width="24" height="24" />
+		<div class="toggle__icon" in:fly={{ y: -10 }}>
+			<Moon class="icon" color="var(--colorWhite)" width="24" height="24" />
 		</div>
 	{/if}
 </button>
 
-<style lang="postcss">
+<style>
 	.toggle {
 		padding: var(--space-xs);
 		background: none;
@@ -37,6 +37,10 @@
 		flex-direction: column;
 		justify-content: center;
 		align-items: center;
+	}
+
+	.toggle__icon {
+		color: var(--colorPrimaryHover);
 	}
 
 	.toggle:hover {

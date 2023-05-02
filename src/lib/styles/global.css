@@ -31,8 +31,6 @@ html {
 	accent-color: var(--colorPrimary);
 	caret-color: var(--colorPrimary);
 	--z-index-max: 99;
-
-	
 }
 
 .underline {
@@ -87,17 +85,20 @@ svg {
 }
 
 .icon {
-	color: var(--colorText);
 	transition: color 0.3s ease;
 }
 
-*:hover > .icon {
-	color: var(--colorPrimary);
+.icon {
+	filter: drop-shadow(0px 0px 10px var(--colorWhite));
 }
 
-.icon:hover {
-	color: var(--colorPrimary);
+*:hover > .icon {
+	color: inherit;
 }
+
+/* .icon:hover {
+	color: var(--colorPrimary);
+} */
 
 .social__address:hover svg {
 	color: var(--colorPrimary);

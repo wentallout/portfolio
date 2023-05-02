@@ -79,6 +79,6 @@
 	.other__title {
 		z-index: 3;
 		font-weight: 600;
-		color: #fff;
+		color: var(--colorWhite);
 	}
 </style>
