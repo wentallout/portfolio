@@ -48,9 +48,9 @@
 
 		transition: var(--transition);
 		overflow: hidden;
-		border: 1px solid var(--colorTextQuaternary);
+		border: 1px solid var(--colorBorder);
 
-		outline: 1px solid var(--colorTextQuaternary);
+		outline: 1px solid var(--colorBorder);
 		outline-offset: 4px;
 		box-shadow: var(--boxShadow);
 	}
@@ -138,7 +138,7 @@
 		width: fit-content;
 
 		line-height: normal;
-		color: #fff;
+		color: var(--colorWhite);
 		font-weight: 300;
 
 		background-color: rgba(0, 0, 0, 0.8);

@@ -18,7 +18,7 @@
 		{placeholder}
 		class="input small-text"
 		{type}
-		name={label}
+		name={label.toLowerCase}
 		id={label}
 		required
 		on:input
@@ -51,7 +51,7 @@
 	}
 
 	.input {
-		border: 1px solid var(--colorTextQuaternary);
+		border: 1px solid var(--colorBorder);
 
 		background-color: transparent;
 

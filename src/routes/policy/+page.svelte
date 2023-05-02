@@ -18,6 +18,6 @@
 		height: 500px;
 		align-items: center;
 		justify-content: center;
-		border: 1px dotted var(--colorText);
+		border: 1px dotted var(--colorBorder);
 	}
 </style>

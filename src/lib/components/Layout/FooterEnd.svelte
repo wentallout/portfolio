@@ -27,8 +27,4 @@
 		margin-top: var(--space-s);
 		color: var(--colorTextSecondary);
 	}
-
-	.end__text:hover {
-		color: var(--colorPrimary);
-	}
 </style>

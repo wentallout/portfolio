@@ -297,7 +297,7 @@
 	.song-list {
 		display: flex;
 		flex-direction: column;
-		background-color: var(--surface-1);
+		background-color: transparent;
 		width: 100%;
 	}
 

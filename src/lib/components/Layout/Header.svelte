@@ -45,7 +45,7 @@
 				{/each}
 
 				<li class="hamburger" on:click={openNav} on:keydown={openNav}>
-					<List color="var(--colorText)" width="32" height="32" />
+					<List color="var(--colorWhite)" width="32" height="32" />
 				</li>
 			</ul>
 		</nav>
@@ -54,7 +54,7 @@
 
 <div bind:this={navOverlayEle} class="overlay">
 	<div class="closebtn" on:click={closeNav} on:keydown={closeNav}>
-		<X color="var(--colorTextSecondary)" width="32" height="32" />
+		<X color="var(--colorBlack)" width="32" height="32" />
 	</div>
 	<div class="overlay-content">
 		{#each navItems as navItem}
@@ -73,7 +73,7 @@
 
 <style>
 	.active-page {
-		color: var(--colorPrimary) !important;
+		color: var(--colorPrimaryActive) !important;
 	}
 
 	.active-page:hover {
@@ -90,7 +90,7 @@
 		/* FONT */
 		font-size: var(--font-size-base);
 		font-weight: 500;
-		color: var(--colorText);
+		color: var(--colorWhite);
 		/* --- */
 		width: 100%;
 		display: flex;
@@ -101,7 +101,7 @@
 	.nav-scrolldown {
 		background-color: rgba(0, 0, 0, 0.7) !important;
 		backdrop-filter: blur(5px);
-		color: #fff;
+		color: var(--colorWhite);
 	}
 
 	.nav-list {
@@ -119,6 +119,7 @@
 	.nav-list__item:hover {
 		font-weight: 600;
 		scale: 1.1;
+		color: var(--colorPrimaryHover);
 	}
 
 	.hamburger {
@@ -192,7 +193,7 @@
 	.overlay-item {
 		padding: var(--space-l) 0;
 
-		color: var(--colorText);
+		color: var(--colorWhite);
 
 		/* FLEX */
 		display: flex;
@@ -213,8 +214,7 @@
 
 	.overlay-item:hover,
 	.overlay-item:focus {
-		font-weight: 600;
-		background: var(--colorBgElevated);
+		outline: var(--primary-500);
 	}
 
 	.closebtn {

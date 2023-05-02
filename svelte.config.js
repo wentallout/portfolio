@@ -7,9 +7,7 @@ import rehypeAutolinkHeadings from 'rehype-autolink-headings';
 
 import remarkUnwrapImages from 'remark-unwrap-images';
 import sequence from 'svelte-sequential-preprocessor';
-
 import remarkGfm from 'remark-gfm';
-
 import rehypeWidont from 'rehype-widont';
 
 // torch_eYAF6gD0idBcJcmEPVyxVRVmuAHTrcP9mV8s7vTl

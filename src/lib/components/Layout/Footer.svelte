@@ -107,7 +107,7 @@
 
 		background: linear-gradient(0deg, var(--colorBgContainer) 0%, var(--colorBgElevated) 100%);
 
-		border-top: 1px solid var(--colorTextQuaternary);
+		border-top: 1px solid var(--colorBorderSecondary);
 	}
 	.list-container {
 		overflow: hidden;
@@ -127,7 +127,7 @@
 	}
 
 	.list__title {
-		font-family: 'Fancy';
+		font-family: var(--fancy-font);
 		color: var(--colorText);
 		font-size: var(--font-size-base);
 
@@ -157,7 +157,7 @@
 		gap: var(--space-3xs);
 	}
 
-	.nav-list__item:hover {
+	.nav-list__item a:hover {
 		color: var(--colorPrimary);
 	}
 </style>

@@ -31,7 +31,7 @@
 
 		padding: var(--space-xs);
 
-		background-color: var(--colorTextQuaternary);
+		background-color: var(--colorBgElevated);
 
 		border-radius: 100%;
 	}

@@ -1,4 +1,4 @@
-<a class="skip-link" href="#main-content"> Skip to main content </a>
+<a class="skip-link" tabindex="0" href="#main-content"> Skip to main content </a>
 
 <style>
 	.skip-link {
@@ -9,7 +9,7 @@
 
 		background-color: var(--colorPrimary);
 
-		color: #000;
+		color: var(--colorBlack);
 		font-weight: 600;
 		padding: var(--space-s);
 		translate: 0 -100%;
@@ -23,7 +23,7 @@
 	}
 
 	.skip-link:hover {
-		background-color: var(--colorPrimary-400);
+		background-color: var(--colorPrimaryHover);
 	}
 
 	.skip-link:focus {

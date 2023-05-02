@@ -50,7 +50,7 @@
 		height: 300px;
 		overflow: hidden;
 
-		border: 1px solid var(--colorTextQuaternary);
+		border: 1px solid var(--colorBorder);
 	}
 
 	.other:before {
@@ -79,6 +79,6 @@
 	.other__title {
 		z-index: 3;
 		font-weight: 600;
-		color: #fff;
+		color: var(--colorWhite);
 	}
 </style>

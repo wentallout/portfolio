@@ -24,7 +24,8 @@
 		height: 200px;
 		transition: var(--transition);
 
-		outline: 1px solid var(--colorTextQuaternary);
+		outline: 1px solid var(--colorBorder);
+		box-shadow: var(--boxShadow);
 	}
 	.tool__name {
 		font-weight: 500;
@@ -43,10 +44,8 @@
 	}
 
 	.tool:hover {
-		border: 1px solid var(--colorPrimary);
-	}
-
-	.tool:hover .tool__name {
-		color: var(--colorPrimary);
+		transform: scale(1.1);
+		z-index: 2;
+		background-color: var(--colorBgElevated);
 	}
 </style>

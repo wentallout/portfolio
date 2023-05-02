@@ -50,8 +50,8 @@
 		gap: 0.25rem;
 
 		/* SPACING */
-		margin-top: var(--space-s);
-		margin-bottom: var(--space-l);
+		padding-top: var(--space-s);
+		padding-bottom: var(--space-l);
 	}
 
 	.breadcrumb__unclickable {

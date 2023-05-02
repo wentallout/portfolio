@@ -8,6 +8,8 @@
 
 	import PaperPlaneRight from '~icons/ph/paper-plane-right';
 	import SectionTitle from '$lib/components/Common/SectionTitle.svelte';
+
+	export const prerender = true;
 </script>
 
 <section>
@@ -16,12 +18,7 @@
 	</SectionTitle>
 
 	<div class="form-container">
-		<form
-			class="contact"
-			name="contact"
-			method="POST"
-			data-netlify="true"
-			data-netlify-recaptcha="true">
+		<form class="contact" name="contact" method="post" netlify>
 			<input type="hidden" name="form-name" value="contact" />
 
 			<TextInput type="text" label="Name" placeholder="Enter your name here" />
@@ -32,18 +29,19 @@
 
 			<div class="contact__btn">
 				<Button
+					type="submit"
 					label="Send message"
 					backgroundColor="var(--colorPrimary)"
 					glowColor="var(--colorPrimary)">
-					<PaperPlaneRight color="#000" width="16" height="16" />
+					<PaperPlaneRight color="var(--colorBlack)" width="16" height="16" />
 				</Button>
 
 				<Button
+					type="reset"
 					label="Reset"
 					borderColor="var(--colorError)"
 					backgroundColor="transparent"
 					labelColor="var(--colorError)"
-					type="reset"
 					><ArrowCounterClockwise color="var(--colorError)" width="16" height="16" />
 				</Button>
 			</div>

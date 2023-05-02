@@ -14,12 +14,11 @@
 </details>
 
 <style>
-	summary:hover {
-		background-color: var(--colorTextQuaternary);
-	}
-
 	summary {
 		max-width: var(--text-width);
+	}
+	summary:hover {
+		background-color: var(--colorBgElevated);
 	}
 
 	details > summary {
@@ -53,6 +52,6 @@
 	}
 
 	details[open] .answer {
-		outline: 0.1px solid var(--surface-1);
+		outline: 0.1px solid var(--colorBgElevated);
 	}
 </style>

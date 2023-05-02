@@ -1,6 +1,6 @@
 <script>
 	export let label = 'exampleLabel';
-	export let labelColor = '#000';
+	export let labelColor = 'var(--colorBlack)';
 	export let backgroundColor = 'transparent';
 	export let width = '';
 	export let glowColor = 'var(--colorBgElevated)';
@@ -31,6 +31,8 @@
 		outline-offset: 4px;
 		transition: filter 250ms;
 		width: 100%;
+
+		box-shadow: var(--boxShadow);
 	}
 
 	@media (min-width: 992px) {

@@ -33,7 +33,7 @@
 					<Button
 						label="Contact"
 						labelColor="var(--colorText)"
-						backgroundColor="var(--colorTextQuaternary)"
+						backgroundColor="transparent"
 						borderColor="var(--colorText)" />
 				</a>
 			</div>

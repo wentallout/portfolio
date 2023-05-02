@@ -26,6 +26,13 @@
 
 <body data-sveltekit-preload-data="hover">
 	<div>%sveltekit.body%</div>
+
+	<!-- "/static/netlify-form-helper.html" -->
+	<form name="contact" netlify netlify-honeypot="bot-field" hidden>
+		<input name="name" type="text" />
+		<input name="email" type="email" />
+		<textarea name="message"></textarea>
+	</form>
 </body>
 
 </html>

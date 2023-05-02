@@ -52,7 +52,7 @@
 		overflow: hidden;
 		/* --- */
 
-		outline: 1px solid var(--colorTextQuaternary);
+		outline: 1px solid var(--colorBorder);
 
 		box-shadow: var(--boxShadow);
 	}

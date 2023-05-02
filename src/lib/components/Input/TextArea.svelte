@@ -19,7 +19,7 @@
 		color: var(--colorText) !important;
 		margin-bottom: var(--space-s);
 		background-color: transparent;
-		border: 1px solid var(--colorTextQuaternary);
+		border: 1px solid var(--colorBorder);
 
 		transition: outline 0.3s;
 		resize: vertical;
