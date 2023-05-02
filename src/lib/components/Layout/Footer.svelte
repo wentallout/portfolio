@@ -157,7 +157,7 @@
 		gap: var(--space-3xs);
 	}
 
-	.nav-list__item:hover {
+	.nav-list__item a:hover {
 		color: var(--colorPrimary);
 	}
 </style>

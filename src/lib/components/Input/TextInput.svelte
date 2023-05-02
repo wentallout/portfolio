@@ -18,7 +18,7 @@
 		{placeholder}
 		class="input small-text"
 		{type}
-		name={label}
+		name={label.toLowerCase}
 		id={label}
 		required
 		on:input

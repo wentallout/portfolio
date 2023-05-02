@@ -53,6 +53,6 @@
 	}
 
 	details[open] .answer {
-		outline: 0.1px solid var(--surface-1);
+		outline: 0.1px solid var(--colorBgElevated);
 	}
 </style>
