@@ -11,10 +11,7 @@
 	import Header from '$lib/components/Layout/Header.svelte';
 	import Breadcrumb from '$lib/components/Layout/Breadcrumb.svelte';
 
-	import '$lib/styles/sanitize.css';
 	import '$lib/styles/global.css';
-	import '$lib/styles/weird.css';
-	import 'atropos/css/min';
 
 	import { page } from '$app/stores';
 	import ThemeToggle from '$lib/components/Theme/ThemeToggle.svelte';
@@ -47,16 +44,11 @@
 </div>
 
 <style>
-	
-
 	.main-content {
 		position: relative;
 		display: flex;
 		flex-direction: column;
-
 		min-height: 100vh;
-
-		/* Responsive Padding */
 		padding: 0 var(--page-padding);
 		z-index: 1;
 	}
@@ -73,12 +65,4 @@
 		background-position: bottom var(--space-xl) left 0, bottom var(--space-xl) right 0;
 		background-repeat: no-repeat;
 	} */
-
-	/* TARGET MOBILE SCREENS TO HIDE DECORATIONS */
-	@media (max-width: 991px) {
-		.main-content:after,
-		.main-content:before {
-			display: none;
-		}
-	}
 </style>

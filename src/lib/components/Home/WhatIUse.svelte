@@ -106,7 +106,7 @@
 		padding: var(--space-l);
 		z-index: 1;
 		min-height: 230px;
-		border: 1px solid var(--colorTextQuaternary);
+		border: 1px solid var(--colorBorder);
 		overflow: hidden;
 		transition: var(--transition);
 		background-color: var(--colorBgLayout);

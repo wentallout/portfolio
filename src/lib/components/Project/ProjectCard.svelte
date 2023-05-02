@@ -48,9 +48,9 @@
 
 		transition: var(--transition);
 		overflow: hidden;
-		border: 1px solid var(--colorTextQuaternary);
+		border: 1px solid var(--colorBorder);
 
-		outline: 1px solid var(--colorTextQuaternary);
+		outline: 1px solid var(--colorBorder);
 		outline-offset: 4px;
 		box-shadow: var(--boxShadow);
 	}

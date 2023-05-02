@@ -63,6 +63,8 @@
 		/*  */
 
 		border-radius: 100%;
+
+		box-shadow: var(--boxShadow);
 	}
 	@media (min-width: 768px) {
 		.bck2top {

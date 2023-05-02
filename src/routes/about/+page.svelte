@@ -86,7 +86,7 @@
 		display: flex;
 		gap: var(--space-s);
 		flex-direction: column;
-		border-bottom: 1px solid var(--colorTextTertiary);
+		border-bottom: 4px solid var(--colorBorderSecondary);
 
 		padding-top: var(--space-s);
 		padding-bottom: var(--space-3xl);

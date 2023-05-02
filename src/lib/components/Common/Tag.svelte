@@ -14,11 +14,13 @@
 		border-radius: var(--border-radius-light);
 		padding: 8px 12px;
 		line-height: normal;
-		background: var(--accent);
+		background: var(--colorBgElevated);
 
-		color: var(--colorPrimary);
-		border: 1px solid var(--colorTextQuaternary);
+		color: var(--colorInfo);
+		border: 1px solid var(--colorBorder);
 		transition: var(--transition);
+
+		box-shadow: var(--boxShadow);
 	}
 
 	.tag:before {

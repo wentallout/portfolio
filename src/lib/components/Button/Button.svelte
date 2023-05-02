@@ -31,6 +31,8 @@
 		outline-offset: 4px;
 		transition: filter 250ms;
 		width: 100%;
+
+		box-shadow: var(--boxShadow);
 	}
 
 	@media (min-width: 992px) {

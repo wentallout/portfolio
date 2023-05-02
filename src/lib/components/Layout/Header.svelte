@@ -192,7 +192,7 @@
 	.overlay-item {
 		padding: var(--space-l) 0;
 
-		color: var(--colorText);
+		color: #fff;
 
 		/* FLEX */
 		display: flex;
@@ -213,8 +213,7 @@
 
 	.overlay-item:hover,
 	.overlay-item:focus {
-		font-weight: 600;
-		background: var(--colorBgElevated);
+		outline: var(--primary-500);
 	}
 
 	.closebtn {

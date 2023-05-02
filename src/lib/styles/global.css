@@ -1,9 +1,8 @@
+@import url('reset.css');
+@import url('spacing.css');
 @import url('typography.css');
 @import url('color.css');
-
-* {
-	margin: 0;
-}
+@import url('other.css');
 
 html {
 	scroll-padding: var(--scroll-padding, 60px);
@@ -11,8 +10,6 @@ html {
 	overflow-x: hidden;
 	min-height: 101vh;
 	text-rendering: optimizeLegibility;
-
-	-moz-osx-font-smoothing: grayscale;
 	color: var(--colorText);
 	scrollbar-gutter: stable;
 }
@@ -22,18 +19,6 @@ html {
 
 	--max-width: 80rem;
 	--text-width: 70ch;
-	--page-padding: 1.5rem;
-
-	/* SPACING */
-	--space-3xs: clamp(0.25rem, calc(0.23rem + 0.08vw), 0.31rem);
-	--space-2xs: clamp(0.56rem, calc(0.55rem + 0.08vw), 0.63rem);
-	--space-xs: clamp(0.81rem, calc(0.78rem + 0.17vw), 0.94rem);
-	--space-s: clamp(1.06rem, calc(1.01rem + 0.25vw), 1.25rem);
-	--space-m: clamp(1.63rem, calc(1.56rem + 0.34vw), 1.88rem);
-	--space-l: clamp(2.13rem, calc(2.02rem + 0.51vw), 2.5rem);
-	--space-xl: clamp(3.19rem, calc(3.03rem + 0.76vw), 3.75rem);
-	--space-2xl: clamp(4.25rem, calc(4.05rem + 1.02vw), 5rem);
-	--space-3xl: clamp(6.38rem, calc(6.07rem + 1.53vw), 7.5rem);
 
 	/* BORDER RADIUS */
 	--border-radius: 16px;
@@ -47,41 +32,7 @@ html {
 	caret-color: var(--colorPrimary);
 	--z-index-max: 99;
 
-	/* 6	0.043
-7	0.032
-8	0.024
-9	0.016
-10	0.01
-11	0.005
-12	0
-13	-0.0025
-14	-0.006
-15	-0.009
-16	-0.011
-17	-0.013
-18	-0.014
-20	-0.017
-24	-0.019
-30	-0.021
-40	-0.022
-80	-0.022 */
-}
-
-@media (min-width: 768px) {
-	:root {
-		--page-padding: 18vw;
-	}
-}
-
-@media (min-width: 992px) {
-	:root {
-		--page-padding: 20vw;
-	}
-}
-
-::selection {
-	color: var(--colorBgElevated);
-	background: var(--colorPrimary);
+	
 }
 
 .underline {
@@ -135,14 +86,6 @@ svg {
 	flex: none;
 }
 
-hr {
-	height: 14px;
-	background-color: var(--colorText);
-	width: 100%;
-	border: none;
-	clip-path: polygon(0px 7px, 100% 7px, 100% 8px, 0px 8px);
-}
-
 .icon {
 	color: var(--colorText);
 	transition: color 0.3s ease;
@@ -160,36 +103,12 @@ hr {
 	color: var(--colorPrimary);
 }
 
-.rainbow {
-	background: -webkit-linear-gradient(92deg, #95d7e3, #eb76ff);
-	background-size: 600vw 600vw;
-	background-clip: text;
-	-webkit-background-clip: text;
-	-webkit-text-fill-color: transparent;
-	animation: rainbowTextAni 2s linear infinite alternate;
-}
-
-@keyframes rainbowTextAni {
-	from {
-		filter: hue-rotate(0deg);
-		background-position-x: 0%;
-	}
-	to {
-		filter: hue-rotate(360deg);
-		background-position-x: 600vw;
-	}
-}
-
 [contenteditable] {
 	outline: 0px solid transparent;
 }
 
 .embed {
 	margin-bottom: var(--space-s);
-}
-
-::placeholder {
-	color: var(--colorTextSecondary);
 }
 
 label:has(+ input:focus),

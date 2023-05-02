@@ -6,56 +6,6 @@
 
 [Open in Visual Studio Code](https://open.vscode.dev/wentallout/portfolio)
 
-## ❓ What is this?
-
-This is a portfolio/blog built using SvelteKit. Hosted on Netlify.
-
-My portfolio URL: [wentallout.tech](https://wentallout.tech)
-
-## 🤩 What makes this special?
-
-- A website made with SvelteKit is just incredibly even compared to other framework-based websites and has great SEO out-of-the-box. You won't need a backend or CMS though, the blog posts are just markdown files you can store on your computer (see `routes/blog`).
-- All imported images are automatically converted to `webp` and lazy loaded to optimize loading speed.
-- Visitors can also comment on your blogs using GitHub discussion (you might want to customize `Comments.svelte` component so that it works on your repo)
-
-## 🏆 Progress
-
-### Pages
-
-- ✅ Home
-- ❌ Project: can add more projects
-- ✅ Blog
-- ✅ Resource
-- ✅ Contact
-
-### Features
-
-- ✅ Fonts
-  - Self-hosted + Subset using [glyphhanger](https://www.npmjs.com/package/glyphhanger)
-  - font-family: [Inter](https://rsms.me/inter/)
-- ✅ Images
-  - Compressed and Converted into `webp`
-  - Native Lazy Loading using `loading = 'lazy'`
-- ✅ Routing
-- ✅ Page Transition:
-  - Fly Effect from `svelte/transiton`
-  - Loading Bar from [nprogress](https://www.npmjs.com/package/nprogress)
-- ✅ Contact Page
-  - Netlify Form
-- ✅ SEO 100/100
-- ✅ Responsive
-- ✅ Dark/Light Mode Toggle (I need to work on lightmode hex colors tho)
-
----
-
-- ✅ Blog: Automatic Table of Contents
-- ✅ Blog: Code Highlight
-  - Choose themes here: [prism-themes](https://github.com/PrismJS/prism-themes) then paste into `styles/prism.css`
-- ✅ Blog: Search
-- ✅ Blog: Tags/Categories
-- ✅ Blog: Pagination
-- ✅ Blog: Comment (https://github.com/giscus/giscus-component | https://giscus.app)
-
 ## 💻 Developing
 
 1. Install dependencies with `npm install` (or `pnpm install` or `yarn`)
@@ -64,6 +14,95 @@ My portfolio URL: [wentallout.tech](https://wentallout.tech)
 ```bash
 npm run dev
 ```
+
+## ❓ What is this?
+
+This is a portfolio/blog built using SvelteKit. Hosted on Netlify.
+
+My portfolio URL: [wentallout.tech](https://wentallout.tech)
+
+## 🤩 What makes this special?
+
+A website made with SvelteKit is just incredibly fast even compared to other framework-based websites like React/Next/Vue and has great SEO out-of-the-box. You won't need a backend or CMS though, the blog posts are just markdown files you can store on your computer (see `routes/blog`).
+
+All imported images are automatically converted to `webp` and lazy loaded to optimize loading speed.
+
+Visitors can also comment on your blogs using GitHub discussion (you might want to customize `Comments.svelte` component so that it works on your repo)
+
+## 💅 Styling files
+
+`src/lib/styles`
+
+- `reset.css` handles reset [joshwcomeau](https://www.joshwcomeau.com/css/custom-css-reset/)
+- `global.css` handles all global styles and importing all other css files
+- `spacing.css` handles spacing for `margin`, `padding` and the whole page layout in general [utopia.fyi](https://utopia.fyi/)
+- `typography.css` handles all typography-related stuff
+- `color.css` handles all CSS variables for text colors, border colors, `font-size`, `line-height`
+
+## 🏆 Progress
+
+### Pages
+
+✅ Home
+
+❌ Project: can add more projects
+
+✅ Blog
+
+✅ Resource
+
+✅ Contact
+
+### Features
+
+✅ Fonts
+
+- Self-hosted + Subset using [glyphhanger](https://www.npmjs.com/package/glyphhanger)
+- font-family: [Inter](https://rsms.me/inter/)
+
+✅ Images
+
+- Compressed and Converted into `webp` using`vite-imagetools`
+- `loading = 'lazy'`
+
+✅ Routing
+
+✅ Page Transition
+
+- Fly Effect from `svelte/transiton`
+- [nprogress](https://www.npmjs.com/package/nprogress)
+
+✅ Blogs
+
+- Use markdown to write blogs [mdsvex](https://github.com/pngwn/MDsveX)
+- use `categories` (#hashtag) to filter blogs
+- multiple markdown-related plugins installed: `rehype` and `remark`
+
+✅ Contact Form
+
+- Netlify Form
+
+✅ SEO 100/100
+
+✅ Responsive
+
+✅ Dark/Light Mode Toggle (I need to work on lightmode hex colors tho)
+
+---
+
+✅ Blog: Automatic Table of Contents
+
+✅ Blog: Code Highlight
+
+- Choose a theme: [prism-themes](https://github.com/PrismJS/prism-themes) then paste into `styles/prism.css`
+
+✅ Blog: Search
+
+✅ Blog: Tags/Categories
+
+✅ Blog: Pagination
+
+✅ Blog: Comment [Giscus](https://giscus.app)
 
 ## 🎓 Svelte checklist
 

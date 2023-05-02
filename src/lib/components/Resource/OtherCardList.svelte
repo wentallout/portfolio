@@ -50,7 +50,7 @@
 		height: 300px;
 		overflow: hidden;
 
-		border: 1px solid var(--colorTextQuaternary);
+		border: 1px solid var(--colorBorder);
 	}
 
 	.other:before {

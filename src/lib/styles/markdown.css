@@ -176,17 +176,18 @@ pre {
 	border-radius: var(--border-radius);
 	overflow: auto;
 	max-width: var(--text-width);
-	border: 1px solid var(--colorText);
+	border: 1px solid var(--colorBorder);
 }
 
 table {
 	border-collapse: collapse;
-	background-color: var(--colorTextQuaternary);
+	background-color: var(--colorBgContainer);
 	padding: var(--space-s);
 
 	max-width: fit-content;
 	overflow: auto;
 	border-radius: var(--border-radius-light);
+	box-shadow: var(--boxShadow);
 }
 
 table tbody {
@@ -233,7 +234,7 @@ aside.toc > nav > ul > li:before {
 	border-radius: var(--border-radius-light);
 
 	background-color: var(--colorTextQuaternary);
-	border: 1px solid var(--colorTextQuaternary);
+	border: 1px solid var(--colorBorder);
 }
 
 .markdown img:hover {

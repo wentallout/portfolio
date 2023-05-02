@@ -51,7 +51,7 @@
 	}
 
 	.input {
-		border: 1px solid var(--colorTextQuaternary);
+		border: 1px solid var(--colorBorder);
 
 		background-color: transparent;
 

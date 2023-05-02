@@ -1,12 +1,39 @@
-:root {
-	/* SYSTEM */
-	--colorSuccess: #49aa19;
-	--colorWarning: #d89614;
-	--colorError: #dc4446;
-	--colorInfo: #1668dc;
+[color-scheme='dark'] {
+	color-scheme: dark;
 
-	--boxShadow: 0 6px 16px 0 rgba(0, 0, 0, 0.08), 0 3px 6px -4px rgba(0, 0, 0, 0.12),
-		0 9px 28px 8px rgba(0, 0, 0, 0.05);
+	/* PRIMARY */
+	--colorPrimary: #dca203;
+	--colorPrimaryHover: #e8bb27;
+	--colorPrimaryActive: #ad8107;
+
+	/* INFO  */
+	--colorInfo: #1668dc;
+	--colorInfoHover: #15417e;
+	--colorInfoActive: #1554ad;
+
+	/* TEXT */
+	--colorText: rgba(255, 255, 255, 0.85);
+	--colorTextSecondary: rgba(255, 255, 255, 0.65);
+	--colorTextTertiary: rgba(255, 255, 255, 0.45);
+	--colorTextQuaternary: rgba(255, 255, 255, 0.25);
+
+	/* BORDER */
+	--colorBorder: #424242;
+	--colorBorderSecondary: #303030;
+
+	/* BACKGROUND */
+	--colorBgElevated: #1f1f1f;
+	--colorBgContainer: #141414;
+	--colorBgLayout: #121212;
+
+	/* OTHER */
+	--smooth-border: linear-gradient(
+		0deg,
+		var(--colorBgLayout) 0%,
+		rgba(0, 0, 0, 0.1) 12%,
+		rgba(0, 0, 0, 0.1) 30%,
+		rgba(0, 0, 0, 0) 40%
+	);
 }
 
 [color-scheme='light'] {
@@ -17,11 +44,20 @@
 	--colorPrimaryHover: #ffcd29;
 	--colorPrimaryActive: #d99800;
 
+	/* INFO  */
+	--colorInfo: #1677ff;
+	--colorInfoHover: #69b1ff;
+	--colorInfoActive: #0958d9;
+
 	/* TEXT */
 	--colorText: rgba(0, 0, 0, 0.88);
 	--colorTextSecondary: rgba(0, 0, 0, 0.65);
 	--colorTextTertiary: rgba(0, 0, 0, 0.45);
 	--colorTextQuaternary: rgba(0, 0, 0, 0.25);
+
+	/* BORDER */
+	--colorBorder: #d9d9d9;
+	--colorBorderSecondary: #f0f0f0;
 
 	/* BACKGROUND */
 	--colorBgElevated: #fff;
@@ -38,33 +74,23 @@
 	);
 }
 
-[color-scheme='dark'] {
-	color-scheme: dark;
+:root {
+	/* SYSTEM */
+	--colorSuccess: #49aa19;
+	--colorWarning: #d89614;
+	--colorError: #dc4446;
 
-	/* PRIMARY */
-	--colorPrimary: #dca203;
-	--colorPrimaryHover: #e8bb27;
-	--colorPrimaryActive: #ad8107;
+	--boxShadow: 0 6px 16px 0 rgba(0, 0, 0, 0.08), 0 3px 6px -4px rgba(0, 0, 0, 0.12),
+		0 9px 28px 8px rgba(0, 0, 0, 0.05);
+}
 
-	/* TEXT */
-	--colorText: rgba(255, 255, 255, 0.85);
-	--colorTextSecondary: rgba(255, 255, 255, 0.65);
-	--colorTextTertiary: rgba(255, 255, 255, 0.45);
-	--colorTextQuaternary: rgba(255, 255, 255, 0.25);
+::placeholder {
+	color: var(--colorTextSecondary);
+}
 
-	/* BACKGROUND */
-	--colorBgElevated: #1f1f1f;
-	--colorBgContainer: #141414;
-	--colorBgLayout: #121212;
-
-	/* OTHER */
-	--smooth-border: linear-gradient(
-		0deg,
-		var(--colorBgLayout) 0%,
-		rgba(0, 0, 0, 0.1) 12%,
-		rgba(0, 0, 0, 0.1) 30%,
-		rgba(0, 0, 0, 0) 40%
-	);
+::selection {
+	color: var(--colorBgElevated);
+	background: var(--colorPrimary);
 }
 
 body {

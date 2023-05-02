@@ -14,12 +14,11 @@
 </details>
 
 <style>
-	summary:hover {
-		background-color: var(--colorTextQuaternary);
-	}
-
 	summary {
 		max-width: var(--text-width);
+	}
+	summary:hover {
+		background-color: var(--colorBgElevated);
 	}
 
 	details > summary {
