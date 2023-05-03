@@ -4,6 +4,8 @@
 	export let placeholder = '';
 	export let value = '';
 
+	export let name = '';
+
 	export let autoSuggestList = [];
 
 	$: autoSuggestList;
@@ -18,7 +20,7 @@
 		{placeholder}
 		class="input small-text"
 		{type}
-		name={label.toLowerCase}
+		{name}
 		id={label}
 		required
 		on:input
