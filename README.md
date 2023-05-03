@@ -15,6 +15,8 @@
 npm run dev
 ```
 
+---
+
 ## ❓ What is this?
 
 This is a portfolio/blog built using SvelteKit. Hosted on Netlify.
@@ -29,15 +31,19 @@ All imported images are automatically converted to `webp` and lazy loaded to opt
 
 Visitors can also comment on your blogs using GitHub discussion (you might want to customize `Comments.svelte` component so that it works on your repo)
 
-## 💅 Styling files
+---
+
+## 💅 Styling
 
 `src/lib/styles`
 
-- `reset.css` handles reset [joshwcomeau](https://www.joshwcomeau.com/css/custom-css-reset/)
-- `global.css` handles all global styles and importing all other css files
-- `spacing.css` handles spacing for `margin`, `padding` and the whole page layout in general [utopia.fyi](https://utopia.fyi/)
-- `typography.css` handles all typography-related stuff
-- `color.css` handles all CSS variables for text colors, border colors, `font-size`, `line-height`
+- `reset.css` custom CSS Reset by [joshwcomeau](https://www.joshwcomeau.com/css/custom-css-reset/)
+- `global.css` global styles and importing all other css files
+- `spacing.css` spacing for `margin`, `padding` and the whole page layout in general [utopia.fyi](https://utopia.fyi/)
+- `typography.css` typography-related stuff like `font-size`, `line-height`, `letter-spacing`, `font-weight`
+- `color.css` CSS variables for text colors, border colors, background colors
+
+---
 
 ## 🏆 Progress
 
@@ -54,6 +60,12 @@ Visitors can also comment on your blogs using GitHub discussion (you might want 
 ✅ Contact
 
 ### Features
+
+✅ SEO 100/100
+
+✅ Responsive
+
+✅ Dark/Light Mode Toggle
 
 ✅ Fonts
 
@@ -82,12 +94,6 @@ Visitors can also comment on your blogs using GitHub discussion (you might want 
 
 - Netlify Form
 
-✅ SEO 100/100
-
-✅ Responsive
-
-✅ Dark/Light Mode Toggle (I need to work on lightmode hex colors tho)
-
 ---
 
 ✅ Blog: Automatic Table of Contents
@@ -103,6 +109,8 @@ Visitors can also comment on your blogs using GitHub discussion (you might want 
 ✅ Blog: Pagination
 
 ✅ Blog: Comment [Giscus](https://giscus.app)
+
+---
 
 ## 🎓 Svelte checklist
 
