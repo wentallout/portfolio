@@ -18,7 +18,12 @@
 	</SectionTitle>
 
 	<div class="form-container">
-		<form class="contact" name="contact" method="post" netlify>
+		<form
+			class="contact"
+			name="contact"
+			method="POST"
+			netlify-honeypot="bot-field"
+			data-netlify="true">
 			<input type="hidden" name="form-name" value="contact" />
 
 			<TextInput name="name" type="text" label="Name" placeholder="Enter your name here" />

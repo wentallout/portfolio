@@ -90,6 +90,8 @@ Visitors can also comment on your blogs using GitHub discussion (you might want 
 - use `categories` (#hashtag) to filter blogs
 - multiple markdown-related plugins installed: `rehype` and `remark`
 
+✅ RSS
+
 ✅ Contact Form
 
 - Netlify Form

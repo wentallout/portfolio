@@ -25,11 +25,14 @@
 		required
 		on:input
 		{value} />
-	<datalist id="search">
-		{#each autoSuggestList as item}
-			<option>{item}</option>
-		{/each}
-	</datalist>
+
+	{#if autoSuggestList != []}
+		<datalist id="search">
+			{#each autoSuggestList as item}
+				<option>{item}</option>
+			{/each}
+		</datalist>
+	{/if}
 </div>
 
 <style>
