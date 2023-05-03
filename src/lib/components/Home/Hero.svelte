@@ -76,7 +76,7 @@
 		color: var(--colorPrimary);
 	}
 	.focus-low {
-		color: var(--colorTextQuaternary);
+		color: var(--colorTextTertiary);
 	}
 
 	.hero__text {
@@ -95,7 +95,7 @@
 	}
 
 	.text-focus-in {
-		animation: text-focus-in 2s cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
+		animation: text-focus-in 1s cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
 	}
 
 	@keyframes text-focus-in {

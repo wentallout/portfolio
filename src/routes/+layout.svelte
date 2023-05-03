@@ -1,4 +1,5 @@
 <script>
+	import ThemeToggle from '$lib/components/Theme/ThemeToggle.svelte';
 	import ScrollBar from '$lib/components/Layout/ScrollBar.svelte';
 	import ProgressBar from '$lib/components/Transition/ProgressBar.svelte';
 	import PageTransition from '$lib/components/Transition/PageTransition.svelte';
@@ -10,14 +11,15 @@
 	import Footer from '$lib/components/Layout/Footer.svelte';
 	import Header from '$lib/components/Layout/Header.svelte';
 	import Breadcrumb from '$lib/components/Layout/Breadcrumb.svelte';
+	import { page } from '$app/stores';
 
 	import '$lib/styles/global.css';
-
-	import { page } from '$app/stores';
-	import ThemeToggle from '$lib/components/Theme/ThemeToggle.svelte';
-
 	export let data;
+
+	
 </script>
+
+
 
 <!-- MISC -->
 <ScrollProgressBar color="var(--colorPrimary)" />
@@ -42,6 +44,7 @@
 
 	<Footer />
 </div>
+
 
 <style>
 	.main-content {

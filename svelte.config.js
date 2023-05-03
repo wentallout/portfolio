@@ -40,6 +40,7 @@ const config = {
 			handleHttpError: 'warn',
 			entries: ['*']
 		},
+
 		alias: {
 			$blogImages: 'src/lib/assets/images/blog'
 		}
