@@ -98,7 +98,6 @@
 
 body {
 	transition: background 1.1s;
-
 	background: var(--colorBgLayout);
 	background-repeat: no-repeat;
 	background-attachment: fixed;
