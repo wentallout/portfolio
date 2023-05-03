@@ -21,13 +21,13 @@
 		<form class="contact" name="contact" method="post" netlify>
 			<input type="hidden" name="form-name" value="contact" />
 
-			<TextInput type="text" label="Name" name="name" placeholder="Enter your name here" />
+			<TextInput name="name" type="text" label="Name" placeholder="Enter your name here" />
 
-			<TextInput type="email" label="Email" name="email" placeholder="username@email.com" />
+			<TextInput name="email" type="email" label="Email" placeholder="username@email.com" />
 
 			<TextArea
+				name="message"
 				label="Message"
-				name="mesage"
 				placeholder="Something you want to tell me. Ex: jobs, ideas" />
 
 			<div class="contact__btn">
