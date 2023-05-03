@@ -23,6 +23,4 @@ export function setTheme(newTheme) {
 
 // const preference = window.matchMedia('(prefer-color-scheme: dark)')
 
-
-
 // preference.addEventListener('change',()=> {})

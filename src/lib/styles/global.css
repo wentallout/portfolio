@@ -9,7 +9,7 @@ html {
 	scroll-behavior: auto;
 	overflow-x: hidden;
 	min-height: 101vh;
-	
+
 	color: var(--colorText);
 	scrollbar-gutter: stable;
 }

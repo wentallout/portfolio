@@ -41,7 +41,7 @@ Visitors can also comment on your blogs using GitHub discussion (you might want 
 - `global.css` global styles and importing all other css files
 - `spacing.css` spacing for `margin`, `padding` and the whole page layout in general [utopia.fyi](https://utopia.fyi/)
 - `typography.css` typography-related stuff like `font-size`, `line-height`, `letter-spacing`, `font-weight`
-- `color.css` CSS variables for text colors, border colors, background colors
+- `color.css` text colors, border colors, background colors
 
 ---
 

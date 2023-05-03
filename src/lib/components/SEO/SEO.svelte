@@ -6,25 +6,7 @@
 	import defaultTwitterImage from '$lib/assets/images/seo/800x418.png';
 	//
 
-	// SEO stuff
 	import website from '$lib/config.js';
-	import OpenGraph from '$lib/components/SEO/OpenGraph.svelte';
-	import SchemaOrg from '$lib/components/SEO/SchemaOrg.svelte';
-	import Twitter from '$lib/components/SEO/Twitter.svelte';
-
-	export let entityMeta = null;
-	export let lastUpdated = new Date();
-	export let datePublished = new Date();
-	export let metadescription;
-	export let slug;
-	export let timeToRead = 0;
-	export let title = '';
-	const pageTitle = `${title} - ${siteTitle}`;
-	const url = `${siteUrl}/${slug}`;
-
-	export let article = false;
-	const defaultAlt = 'cool cover image';
-
 	const {
 		author,
 		entity,
@@ -41,6 +23,24 @@
 		tiktokUsername,
 		twitterUsername
 	} = website;
+
+	import OpenGraph from '$lib/components/SEO/OpenGraph.svelte';
+	import SchemaOrg from '$lib/components/SEO/SchemaOrg.svelte';
+	import Twitter from '$lib/components/SEO/Twitter.svelte';
+
+	export let entityMeta = null;
+	export let lastUpdated = new Date();
+	export let datePublished = new Date();
+	export let metadescription;
+	export let slug;
+	export let timeToRead = 0;
+	export let title = '';
+
+	const pageTitle = `${title} - ${siteTitle}`;
+	const url = `${siteUrl}/${slug}`;
+
+	export let article = false;
+	const defaultAlt = 'cool cover image';
 
 	export let breadcrumbs = [
 		{
