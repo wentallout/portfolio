@@ -1,10 +1,12 @@
 <script>
 	export let label = 'message';
 	export let placeholder = 'Something you want to tell me. Ex: jobs, ideas';
+
+	export let name = '';
 </script>
 
 <label for={label} class="label small-text">{label}</label>
-<textarea class="textarea small-text" name={label} id={label} {placeholder} required />
+<textarea class="textarea small-text" {name} id={label} {placeholder} required />
 
 <style>
 	.label {
