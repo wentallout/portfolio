@@ -33,7 +33,7 @@ const website = {
 	contactEmail: 'wentallout@gmail.com',
 
 	// PWA
-	siteTitle: 'Khoa, the Designer',
+	siteTitle: 'Nguyen Dang Khoa',
 	siteShortTitle: 'Portfolio built using SvelteKit',
 	siteUrl: 'https://wentallout.tech',
 	icon: 'static/icon-512.png',

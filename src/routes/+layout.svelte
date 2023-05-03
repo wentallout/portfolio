@@ -15,11 +15,7 @@
 
 	import '$lib/styles/global.css';
 	export let data;
-
-	
 </script>
-
-
 
 <!-- MISC -->
 <ScrollProgressBar color="var(--colorPrimary)" />
@@ -44,7 +40,6 @@
 
 	<Footer />
 </div>
-
 
 <style>
 	.main-content {

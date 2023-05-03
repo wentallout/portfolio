@@ -3,9 +3,7 @@
 	import TextArea from '$lib/components/Input/TextArea.svelte';
 	import TextInput from '$lib/components/Input/TextInput.svelte';
 	import EnvelopeSimple from '~icons/ph/envelope-simple';
-
 	import ArrowCounterClockwise from '~icons/ph/arrow-counter-clockwise';
-
 	import PaperPlaneRight from '~icons/ph/paper-plane-right';
 	import SectionTitle from '$lib/components/Common/SectionTitle.svelte';
 
