@@ -21,6 +21,7 @@
 	size-adjust: 107%;
 	ascent-override: 90%;
 	src: local('Arial');
+	font-display: swap;
 }
 
 pre code {

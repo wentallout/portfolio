@@ -8,7 +8,7 @@
 	<section>
 		<div class="about">
 			<SectionTitle sectionTitle="About me" let:sectionIcon>
-				<Smiley {sectionIcon} />
+				<Smiley {...sectionIcon} />
 			</SectionTitle>
 			<div class="about__block">
 				<div class="desc">
