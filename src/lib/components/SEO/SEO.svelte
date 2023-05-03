@@ -6,6 +6,7 @@
 	import defaultTwitterImage from '$lib/assets/images/seo/800x418.png';
 	//
 
+	// SEO stuff
 	import website from '$lib/config.js';
 	import OpenGraph from '$lib/components/SEO/OpenGraph.svelte';
 	import SchemaOrg from '$lib/components/SEO/SchemaOrg.svelte';
@@ -18,7 +19,10 @@
 	export let slug;
 	export let timeToRead = 0;
 	export let title = '';
+	const pageTitle = `${title} - ${siteTitle}`;
+	const url = `${siteUrl}/${slug}`;
 
+	export let article = false;
 	const defaultAlt = 'cool cover image';
 
 	const {
@@ -38,10 +42,6 @@
 		twitterUsername
 	} = website;
 
-	const pageTitle = `${title} - ${siteTitle}`;
-	const url = `${siteUrl}/${slug}`;
-
-	export let article = false;
 	export let breadcrumbs = [
 		{
 			name: 'Home',
