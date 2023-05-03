@@ -25,7 +25,7 @@
 </script>
 
 {#if path !== '/' && id !== null}
-	<nav aria-label="breadcrumb" id="breadcrumb" class="breadcrumb small-text">
+	<nav aria-label="breadcrumb" id="breadcrumb" class="breadcrumb small-text full-width">
 		{#each crumbs as c, i}
 			{#if i == crumbs.length - 1}
 				<div class="breadcrumb__unclickable">
@@ -52,6 +52,10 @@
 		/* SPACING */
 		padding-top: var(--space-s);
 		padding-bottom: var(--space-l);
+		padding-left: var(--page-padding);
+		padding-right: var(--page-padding);
+
+		background-color: transparent;
 	}
 
 	.breadcrumb__unclickable {
@@ -68,7 +72,7 @@
 	}
 
 	.breadcrumb__clickable:hover {
-		color: var(--colorPrimary-300);
+		color: var(--colorPrimaryHover);
 		text-underline-offset: 2px;
 	}
 </style>

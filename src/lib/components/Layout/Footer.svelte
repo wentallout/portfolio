@@ -108,6 +108,8 @@
 		background: linear-gradient(0deg, var(--colorBgContainer) 0%, var(--colorBgElevated) 100%);
 
 		border-top: 1px solid var(--colorBorderSecondary);
+
+		box-shadow: var(--boxShadow);
 	}
 	.list-container {
 		overflow: hidden;

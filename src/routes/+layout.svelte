@@ -20,9 +20,9 @@
 </script>
 
 <!-- MISC -->
+<ScrollProgressBar color="var(--colorPrimary)" />
 <ProgressBar />
 <ScrollBar />
-<ScrollProgressBar />
 <ThemeToggle />
 <!--  -->
 

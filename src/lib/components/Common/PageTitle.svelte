@@ -12,17 +12,6 @@
 </div>
 
 <style>
-	/* .clone__text {
-		position: absolute;
-		font-family: var(--fancy-font);
-
-		transform: translateY(-10px);
-
-		color: transparent;
-		-webkit-text-stroke: 1px var(--colorTextSecondary);
-		opacity: 0.2;
-	} */
-
 	.title__deco {
 		z-index: 1;
 

@@ -1,4 +1,5 @@
 import { sveltekit } from '@sveltejs/kit/vite';
+import { SvelteKitPWA } from '@vite-pwa/sveltekit'
 import Icons from 'unplugin-icons/vite';
 import { imagetools } from 'vite-imagetools';
 import svg from '@poppanator/sveltekit-svg';
@@ -7,6 +8,7 @@ import svg from '@poppanator/sveltekit-svg';
 const config = {
 	plugins: [
 		sveltekit(),
+		SvelteKitPWA(),
 		svg({
 			includePaths: ['./src/lib/assets/images/'],
 			svgoOptions: {

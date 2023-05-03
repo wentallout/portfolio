@@ -1,12 +1,15 @@
 <script>
-	import HomeSectionTitle from '$lib/components/Home/HomeSectionTitle.svelte';
+	import SectionTitle from '$lib/components/Common/SectionTitle.svelte';
 	import SaosContainer from '$lib/components/Common/SaosContainer.svelte';
+	import Smiley from '~icons/ph/smiley';
 </script>
 
 <SaosContainer>
 	<section>
 		<div class="about">
-			<HomeSectionTitle title="About me" />
+			<SectionTitle sectionTitle="About me" let:sectionIcon>
+				<Smiley {sectionIcon} />
+			</SectionTitle>
 			<div class="about__block">
 				<div class="desc">
 					<div class="block">

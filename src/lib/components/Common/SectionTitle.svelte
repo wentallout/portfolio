@@ -28,12 +28,10 @@
 		display: flex;
 		justify-content: center;
 		align-items: center;
-
 		padding: var(--space-xs);
-
 		background-color: var(--colorBgElevated);
-
 		border-radius: 100%;
+		box-shadow: var(--boxShadow);
 	}
 
 	.title__text {

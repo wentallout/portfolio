@@ -1,11 +1,15 @@
 <script>
 	import ProjectCardList from '$lib/components/Project/ProjectCardList.svelte';
-	import HomeSectionTitle from '$lib/components/Home/HomeSectionTitle.svelte';
+	import SectionTitle from '$lib/components/Common/SectionTitle.svelte';
+
+	import Star from '~icons/ph/star';
 </script>
 
 <section>
 	<div class="featured">
-		<HomeSectionTitle title="Featured Projects" />
+		<SectionTitle sectionTitle="Featured Projects" let:sectionIcon>
+			<Star {...sectionIcon} />
+		</SectionTitle>
 		<ProjectCardList hasMoreButton={true} />
 	</div>
 </section>

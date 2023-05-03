@@ -14,9 +14,8 @@
 		border-radius: var(--border-radius-light);
 		padding: 8px 12px;
 		line-height: normal;
-		background: var(--colorBgElevated);
 
-		color: var(--colorInfo);
+		color: var(--colorPrimary);
 		border: 1px solid var(--colorBorder);
 		transition: var(--transition);
 
@@ -29,5 +28,6 @@
 
 	.tag:hover {
 		background: var(--colorBgElevated);
+		color: var(--colorPrimaryHover);
 	}
 </style>

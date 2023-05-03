@@ -1,18 +1,21 @@
 <script>
 	import SaosContainer from '$lib/components/Common/SaosContainer.svelte';
 
-	import HomeSectionTitle from '$lib/components/Home/HomeSectionTitle.svelte';
-
 	import Frontend from '$lib/assets/images/home/frontend.svg?component';
 	import Navigation from '$lib/assets/images/home/navigation.svg?component';
 	import GraphicDesign from '$lib/assets/images/home/graphicDesign.svg?component';
 	import Process from '$lib/assets/images/home/process.svg?component';
+	import SectionTitle from '$lib/components/Common/SectionTitle.svelte';
+
+	import Toolbox from '~icons/ph/toolbox';
 </script>
 
 <SaosContainer>
 	<section>
 		<div class="tool">
-			<HomeSectionTitle title="What I Use" />
+			<SectionTitle sectionTitle="What I Use" let:sectionIcon>
+				<Toolbox {...sectionIcon} />
+			</SectionTitle>
 
 			<div class="tool__block">
 				<div class="block__section">

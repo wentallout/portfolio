@@ -23,9 +23,10 @@
 <style>
 	.toggle {
 		padding: var(--space-xs);
-		background: none;
+		background: var(--colorBlack);
 
 		border: 0;
+		border-radius: 100%;
 
 		overflow: visible;
 		position: fixed;
@@ -37,6 +38,7 @@
 		flex-direction: column;
 		justify-content: center;
 		align-items: center;
+		mix-blend-mode: difference;
 	}
 
 	.toggle__icon {

@@ -1,9 +1,6 @@
 <script>
-	import Phone from '~icons/ph/phone';
 	import YinYang from '~icons/ph/yin-yang-fill';
-	import Envelope from '~icons/ph/envelope';
 
-	import ExLink from '$lib/components/Common/ExLink.svelte';
 	import { fly } from 'svelte/transition';
 	import { theme } from '$lib/stores/themeStore.js';
 </script>
@@ -26,20 +23,6 @@
 	</a>
 
 	<div class="logo__alter">{'[' + 'wentallout' + ']'}</div>
-
-	<div class="cover__btn">
-		<ExLink ariaLabel="phone number" href="tel:+84929066331">
-			<div class="contact">
-				<Phone />
-			</div>
-		</ExLink>
-
-		<ExLink ariaLabel="email" href="mailto:wentallout@gmail.com">
-			<div class="contact">
-				<Envelope />
-			</div>
-		</ExLink>
-	</div>
 </div>
 
 <style>
@@ -111,21 +94,6 @@
 		}
 	}
 
-	.cover__btn {
-		width: 100%;
-		position: absolute;
-		display: flex;
-		justify-content: center;
-		bottom: var(--space-s);
-		padding-right: 1rem;
-		left: 0;
-		z-index: 5;
-		transition: var(--transition);
-		gap: var(--space-m);
-		flex-direction: row;
-		flex-wrap: wrap;
-	}
-
 	.cover::after {
 		pointer-events: none;
 		content: '';
@@ -165,17 +133,6 @@
 		100% {
 			object-position: top;
 		}
-	}
-
-	.contact {
-		user-select: none;
-		transition: var(--transition);
-		font-weight: 400;
-		display: flex;
-		flex-direction: row;
-
-		align-items: center;
-		gap: 4px;
 	}
 
 	.cover::before {

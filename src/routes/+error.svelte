@@ -44,7 +44,7 @@
 		<a class="back" rel="external" href="/">
 			<Button
 				label="Take Me Home"
-				labelColor="var(--colorTextSecondary)"
+				labelColor="var(--colorBlack)"
 				backgroundColor="var(--colorPrimary)" />
 		</a>
 	</div>
