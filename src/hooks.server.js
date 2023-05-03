@@ -60,8 +60,7 @@ const directives = {
 
 		// 'https://polyfill.io',
 	],
-	'worker-src': ["'self'"],
-	'report-to': ["'csp-endpoint'"]
+	'worker-src': ["'self'"]
 };
 
 const csp = Object.entries(directives)
@@ -82,8 +81,6 @@ export async function handle({ event, resolve }) {
 
 	response.headers.set('Content-Security-Policy', csp);
 	response.headers.set('Strict-Transport-Security', 'max-age=31536000; includeSubDomains; preload');
-
-	
 
 	return response;
 }
