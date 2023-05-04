@@ -28,6 +28,7 @@
 
 	<div class="embed">
 		<Spotify
+		
 			spotifyLink="playlist/37i9dQZF1DWWY64wDtewQt?si=67ed3300e96e43ec"
 			width="100%"
 			height="500px" />
