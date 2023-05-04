@@ -1,7 +1,3 @@
-<script context="module">
-	export const prerender = true;
-</script>
-
 <script>
 	import Button from '$lib/components/Button/Button.svelte';
 	import TextArea from '$lib/components/Input/TextArea.svelte';
@@ -19,10 +15,10 @@
 
 	<div class="form-container">
 		<form name="contact" class="contact" method="post" data-netlify="true">
+			<input type="hidden" name="form-name" value="contact" />
+
 			<TextInput name="name" type="text" label="Name" placeholder="Enter your name here" />
-
 			<TextInput name="email" type="email" label="Email" placeholder="username@email.com" />
-
 			<TextArea
 				name="message"
 				label="Message"
