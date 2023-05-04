@@ -14,10 +14,7 @@ html,
 body {
 	height: 100%;
 }
-body {
-	line-height: 1.5;
-	-webkit-font-smoothing: antialiased;
-}
+
 img,
 picture,
 video,
@@ -41,7 +38,12 @@ h5,
 h6 {
 	overflow-wrap: break-word;
 }
-#root,
+/* #root,
 #__next {
 	isolation: isolate;
+} */
+
+iframe {
+	overflow: hidden;
+	border-style: none;
 }

@@ -43,11 +43,11 @@ const config = {
 
 		alias: {
 			$blogImages: 'src/lib/assets/images/blog'
+		},
+		csp: {
+			mode: 'auto',
+			directives: { 'script-src': ['self'] }
 		}
-		// csp: {
-		// 	mode: 'auto',
-		// 	directives: { 'script-src': ['self'] }
-		// }
 	},
 
 	vitePlugin: {

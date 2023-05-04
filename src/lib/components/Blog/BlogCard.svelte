@@ -57,12 +57,6 @@
 		box-shadow: var(--boxShadow);
 	}
 
-	/* @media (min-width: 992px) {
-		.blog {
-			width: 50%;
-		}
-	} */
-
 	.blog:hover {
 		background-color: var(--colorBgElevated);
 		transform: scale(1.1);

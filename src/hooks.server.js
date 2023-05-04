@@ -46,20 +46,7 @@ const directives = {
 		// 'https://*.facebook.net',
 		// 'https://*.stripe.com',
 	],
-	'script-src': [
-		"'self'",
-		"'unsafe-inline'",
-		'https://unpkg.com',
-		'https://utteranc.es/',
-		'https://my.spline.design'
-		// 'https://*.stripe.com',
-		// 'https://*.facebook.com',
-		// 'https://*.facebook.net',
-		// 'https://hcaptcha.com',
-		// 'https://*.hcaptcha.com',
-
-		// 'https://polyfill.io',
-	],
+	'script-src': ["'self'", "'unsafe-inline'", 'https://unpkg.com', 'https://utteranc.es/'],
 	'worker-src': ["'self'"]
 };
 

@@ -110,6 +110,8 @@ svg {
 
 .embed {
 	margin-bottom: var(--space-s);
+	overflow: hidden;
+	background-color: transparent;
 }
 
 label:has(+ input:focus),

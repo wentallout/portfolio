@@ -24,7 +24,6 @@
 	details > summary {
 		cursor: pointer;
 		padding: var(--space-xs);
-
 		transition: var(--transition);
 	}
 
@@ -47,11 +46,10 @@
 	}
 
 	details[open] {
-		/* outline: 1px solid var(--colorText); */
 		margin-bottom: var(--space-s);
 	}
 
 	details[open] .answer {
-		outline: 0.1px solid var(--colorBgElevated);
+		outline: 1px solid var(--colorBorder);
 	}
 </style>
