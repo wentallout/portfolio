@@ -1,3 +1,7 @@
+<script context="module">
+	export const prerender = true;
+</script>
+
 <script>
 	import Button from '$lib/components/Button/Button.svelte';
 	import TextArea from '$lib/components/Input/TextArea.svelte';
@@ -6,8 +10,6 @@
 	import ArrowCounterClockwise from '~icons/ph/arrow-counter-clockwise';
 	import PaperPlaneRight from '~icons/ph/paper-plane-right';
 	import SectionTitle from '$lib/components/Common/SectionTitle.svelte';
-
-	export const prerender = true;
 </script>
 
 <section>
@@ -16,14 +18,7 @@
 	</SectionTitle>
 
 	<div class="form-container">
-		<form
-			class="contact"
-			name="contact"
-			method="POST"
-			netlify-honeypot="bot-field"
-			data-netlify="true">
-			<input type="hidden" name="form-name" value="contact" />
-
+		<form name="contact" class="contact" method="post" data-netlify="true">
 			<TextInput name="name" type="text" label="Name" placeholder="Enter your name here" />
 
 			<TextInput name="email" type="email" label="Email" placeholder="username@email.com" />

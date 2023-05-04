@@ -34,7 +34,7 @@ const config = {
 	]),
 	extensions: ['.svelte', '.svx'],
 	kit: {
-		adapter: adapter({ edge: false }),
+		adapter: adapter({ edge: true }),
 		prerender: {
 			crawl: true,
 			handleHttpError: 'warn',

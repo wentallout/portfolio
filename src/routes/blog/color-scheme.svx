@@ -1,9 +1,28 @@
 ---
 title: How to come up with a color scheme
-date: 2022-12-22
+date: 2023-05-03
 categories:
     - color
 ---
+
+## New trick: Realtime Colors
+
+https://www.youtube.com/watch?v=HAlIWRcldoc
+
+Go here: https://realtimecolors.com/
+
+## How to distribute colors?
+
+60% neutral
+30% secondary color 
+10% accent color
+
+## Does the color match your industry?
+
+Just use color psychology:
+
+Yellow makes us feel optimistic and energetic, blue feels trustworthy, purple feels sophisticated, orange feels innovative, black feels elegant, green feels hopeful, red feels exciting.
+
 
 ## RGB vs CMYK
 
@@ -88,21 +107,7 @@ Color: awsmcolor instagram
 
 colours.cafe instagram
 
-### Gradient tools
 
-https://webgradients.com
-
-https://www.grabient.com
-
-https://gradients.cssgears.com
-
-colinkeany.com/blend
-
-uigradients.com
-
-www.gradients.io
-
-colorspark.app/gradient
 
 
 
