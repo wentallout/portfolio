@@ -21,8 +21,6 @@ export const navItems = [
 	}
 ];
 
-// METADATA
-
 const facebookPageName = 'wentallout';
 const facebookAuthorPageName = 'wentallout.uiux';
 
@@ -32,7 +30,6 @@ const website = {
 	siteLanguage: 'en-US',
 	contactEmail: 'wentallout@gmail.com',
 
-	// PWA
 	siteTitle: 'Nguyen Dang Khoa',
 	siteShortTitle: 'Portfolio built using SvelteKit',
 	siteUrl: 'https://wentallout.tech',
@@ -40,9 +37,7 @@ const website = {
 	backgroundColor: '#121212',
 	themeColor: '#ffbb00',
 	description: 'Nguyen Dang Khoa - Professional UI/UX Designer and Frontend Developer since 2022',
-	//
 
-	//SOCIAL
 	facebookAuthorPage: `https://www.facebook.com/${facebookAuthorPageName}`,
 	facebookAuthorPageName,
 	facebookPage: `https://www.facebook.com/${facebookPageName}`,

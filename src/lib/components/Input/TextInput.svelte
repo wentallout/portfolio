@@ -8,6 +8,8 @@
 
 	export let autoSuggestList = [];
 
+	export let list = '';
+
 	$: autoSuggestList;
 </script>
 
@@ -16,7 +18,7 @@
 		<label for={label} class="label small-text">{label}</label>
 	{/if}
 	<input
-		list="search"
+		list={list || null}
 		{placeholder}
 		class="input small-text"
 		{type}
@@ -26,8 +28,8 @@
 		on:input
 		{value} />
 
-	{#if autoSuggestList != []}
-		<datalist id="search">
+	{#if list}
+		<datalist id={list}>
 			{#each autoSuggestList as item}
 				<option>{item}</option>
 			{/each}
