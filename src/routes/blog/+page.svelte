@@ -70,6 +70,7 @@
 <section class="blog-list">
 	<TextInput
 		autoSuggestList={autoSuggest}
+		list="search"
 		bind:value={searchTerm}
 		placeholder="Search blogs..."
 		on:input={handleSearchInput} />
