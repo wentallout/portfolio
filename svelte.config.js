@@ -45,7 +45,7 @@ const config = {
 			$blogImages: 'src/lib/assets/images/blog'
 		},
 		csp: {
-			mode: 'auto',
+			mode: 'hash',
 			directives: { 'script-src': ['self'] }
 		}
 	},

@@ -3,7 +3,7 @@
 	"version": "0.0.1",
 	"scripts": {
 		"dev": "vite dev --host",
-		"build": "vite build && node ./generate-headers",
+		"build": "vite build",
 		"postbuild": "npx svelte-sitemap --domain https://wentallout.tech",
 		"preview": "vite preview",
 		"check": "svelte-check --tsconfig ./jsconfig.json",
