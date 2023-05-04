@@ -20,6 +20,8 @@
 		metadescription: 'Welcome to Portfolio of Khoa',
 		slug: ''
 	};
+
+	export const prerender = true;
 </script>
 
 <SEO {...seoProps} />

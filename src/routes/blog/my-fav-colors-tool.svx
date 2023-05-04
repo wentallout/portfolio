@@ -6,9 +6,7 @@ categories:
     - 'freebies'
 ---
 
-<script>
-    import Image from '$lib/components/Common/Image.svelte';
-</script>
+
 
 ## Gradient
 
@@ -20,6 +18,38 @@ categories:
 -> Primary + Accent + Neutral.
 
 [Colormind.io](http://colormind.io)
+
+## Colors
+
+- [Adobe Color](https://color.adobe.com)
+- [Coolors](https://coolors.co)
+- [Color Hunt](https://colorhunt.co)
+- [Khroma](https://khroma.co)
+- [Muzli Colors](https://colors.muz.li)
+- [Dopely Colors](https://colors.dopely.top)
+- [Flat UI Colors](https://flatuicolors.com)
+- [My color space](https://mycolor.space) - Just enter a color and generate gradients.
+- [Colorhub](https://colorhub.vercel.app) - Find perfect color palette for your next project
+
+## From Instagram
+
+- [Interface Colour](https://instagram.com/interface.colour)
+
+## Gradient tools
+
+https://webgradients.com
+
+https://www.grabient.com
+
+https://gradients.cssgears.com
+
+https://colinkeany.com/blend
+
+https://uigradients.com
+
+https://www.gradients.io
+
+https://colorspark.app/gradient
 
 
 
