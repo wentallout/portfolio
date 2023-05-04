@@ -1,6 +1,6 @@
 ---
-title: Best typography values for your UI
-date: 2022-10-01
+title: How to achieve accessible typography? 
+date: 2023-05-04
 categories:
     - typography
 ---
@@ -9,6 +9,10 @@ categories:
     import Image from '$lib/components/Common/Image.svelte';
     import headingFontSizes from '$blogImages/headingFontSizes.png';
 </script>
+
+## Make typography accessible
+
+https://betterwebtype.com/articles/2019/06/16/5-keys-to-accessible-web-typography/
 
 ## Light or Dark Background?
 

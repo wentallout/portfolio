@@ -25,7 +25,7 @@
 </script>
 
 {#if path !== '/' && id !== null}
-	<nav aria-label="breadcrumb" id="breadcrumb" class="breadcrumb small-text full-width">
+	<nav aria-label="breadcrumb" id="breadcrumb" class="breadcrumb small-text">
 		{#each crumbs as c, i}
 			{#if i == crumbs.length - 1}
 				<div class="breadcrumb__unclickable">
@@ -52,8 +52,6 @@
 		/* SPACING */
 		padding-top: var(--space-s);
 		padding-bottom: var(--space-l);
-		padding-left: var(--page-padding);
-		padding-right: var(--page-padding);
 
 		background-color: transparent;
 	}

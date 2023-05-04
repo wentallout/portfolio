@@ -5,14 +5,14 @@
 	import Download from '~icons/ph/download';
 	import SkipBack from '~icons/ph/skip-back';
 	import SkipForward from '~icons/ph/skip-forward';
-	import Pause from '~icons/ph/pause';
+	import Pause from '~icons/ph/pause-fill';
 	import SpeakerHigh from '~icons/ph/speaker-high';
 	import SpeakerX from '~icons/ph/speaker-x';
 
 	let currentSongIndex = 0;
 	let playing = false;
 	let duration;
-	let currentTime;
+	let currentTime = 0;
 	let volume = 0.4;
 	let audioEle;
 	let volumeEle;
@@ -77,89 +77,89 @@
 	});
 </script>
 
+<audio
+	bind:muted
+	bind:currentTime
+	bind:duration
+	bind:volume
+	autoplay="false"
+	onended={next}
+	src={'/ringtones/' + $musicList[currentSongIndex].audio}
+	bind:this={audioEle} />
 <div class="player">
-	<audio
-		bind:muted
-		bind:currentTime
-		bind:duration
-		bind:volume
-		autoplay="false"
-		onended={next}
-		src={'/ringtones/' + $musicList[currentSongIndex].audio}
-		bind:this={audioEle} />
-	<div class="player">
-		<div class="current">
-			<div class="info">
-				<div class="info__name xxl-text">{$musicList[currentSongIndex].name}</div>
+	<div class="current">
+		<div class="info">
+			<div class="info__name xxl-text">{$musicList[currentSongIndex].name}</div>
 
-				<div class="song-time">
-					<div class="current-time xl-text">{format(currentTime)}</div>
-					<div class="duration xl-text">{format(duration)}</div>
-				</div>
+			<div class="song-time">
+				<div class="current-time xl-text">{format(currentTime)}</div>
+				<div class="duration xl-text">{format(duration)}</div>
 			</div>
 		</div>
-		<div class="position">
-			<input
-				bind:this={positionEle}
-				class="position__input"
-				type="range"
-				value={(currentTime / duration) * 100 || 0} />
-		</div>
+	</div>
+	<div class="position">
+		<input
+			bind:this={positionEle}
+			class="position__control"
+			type="range"
+			step="any"
+			list="marker"
+			value={(currentTime / duration) * 100 || 0} />
+	</div>
 
-		<div class="volume-and-control">
-			<div class="volume">
-				<button class="mute__btn" on:click={mute} on:keydown={mute}>
-					{#if muted}
-						<SpeakerX width="24" height="24" color="var(--colorTextSecondary)" />
-					{:else}
-						<SpeakerHigh width="24" height="24" color="var(--colorText)" />
-					{/if}
-				</button>
-				<input
-					bind:this={volumeEle}
-					type="range"
-					id="volume-control"
-					min="0"
-					max="100"
-					value={volume * 100} />
-			</div>
-			<div class="controls">
-				<button class="mp-btn mp-btn-small" on:click={prev}>
-					<SkipBack width="24" height="24" color="var(--colorText)" />
-				</button>
-
-				{#if playing}
-					<button class="mp-btn" on:click={pauseMusic}>
-						<Pause width="24" height="24" color="var(--colorText)" />
-					</button>
+	<div class="volume-and-control">
+		<div class="volume">
+			<button class="mute__btn" on:click={mute} on:keydown={mute}>
+				{#if muted}
+					<SpeakerX width="24" height="24" color="var(--colorTextSecondary)" />
 				{:else}
-					<button class="mp-btn play-btn" on:click={playMusic}>
-						<PlayFill width="24" height="24" color="var(--colorTextSecondary)" />
-					</button>
+					<SpeakerHigh width="24" height="24" color="var(--colorText)" />
 				{/if}
+			</button>
+			<input
+				bind:this={volumeEle}
+				type="range"
+				id="volume-control"
+				min="0"
+				max="100"
+				value={volume * 100} />
+		</div>
+		<div class="controls">
+			<button class="mp-btn mp-btn-small" on:click={prev}>
+				<SkipBack width="24" height="24" color="var(--colorTextSecondary)" />
+			</button>
 
-				<button class="mp-btn mp-btn-small" on:click={next}>
-					<SkipForward width="24" height="24" color="var(--colorText)" />
+			{#if playing}
+				<button class="mp-btn play-btn" on:click={pauseMusic}>
+					<Pause width="24" height="24" color="var(--colorBlack)" />
 				</button>
-			</div>
-		</div>
+			{:else}
+				<button class="mp-btn play-btn" on:click={playMusic}>
+					<PlayFill width="24" height="24" color="var(--colorBlack)" />
+				</button>
+			{/if}
 
-		<div class="song-list">
-			{#each $musicList as music, i}
-				<div
-					class={i == currentSongIndex ? 'song-active' : 'song'}
-					on:click={() => setSong(i)}
-					on:keydown={() => setSong(i)}>
-					<div class="song-name small-text">{music.name}</div>
-					<a
-						class="download"
-						href={'/ringtones/' + $musicList[i].audio}
-						download={$musicList[i].audio}>
-						<Download width="16" height="16" color="var(--colorText)" />
-					</a>
-				</div>
-			{/each}
+			<button class="mp-btn mp-btn-small" on:click={next}>
+				<SkipForward width="24" height="24" color="var(--colorTextSecondary)" />
+			</button>
 		</div>
+	</div>
+
+	<div class="song-list">
+		{#each $musicList as music, i}
+			<div
+				class={i == currentSongIndex ? 'song-active' : 'song'}
+				on:click={() => setSong(i)}
+				on:keydown={() => setSong(i)}>
+				<div class="song-name small-text">{music.name}</div>
+				<a
+					class="download"
+					href={'/ringtones/' + $musicList[i].audio}
+					download={$musicList[i].audio}>
+					<Download width="16" height="16" color="var(--colorText)" />
+				</a>
+			</div>
+		{/each}
 	</div>
 </div>
 
@@ -186,9 +186,10 @@
 		padding: var(--space-s);
 	}
 
-	.position__input {
+	.position__control {
 		width: 100%;
 		transition: 0.3s;
+		height: 3rem;
 	}
 
 	.volume {
@@ -214,6 +215,9 @@
 	}
 
 	.controls {
+		display: flex;
+		justify-content: center;
+		align-items: center;
 		padding: var(--space-m);
 	}
 
@@ -222,7 +226,7 @@
 		top: 50%;
 		right: 0%;
 		transform: translate(-50%, -50%);
-		background-color: var(--colorTextSecondary);
+		background-color: var(--colorBlack);
 		width: 40px;
 		height: 40px;
 		display: flex;
@@ -266,12 +270,15 @@
 	}
 
 	.mp-btn {
-		width: 80px;
-		height: 80px;
-		clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
-		background-color: var(--colorText);
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		padding: var(--space-xs);
+		flex-direction: row;
+		background-color: var(--colorBgContainer);
 		border: 0;
 		transition: var(--transition);
+		border-radius: 100%;
 	}
 
 	.mp-btn:hover {
@@ -289,7 +296,7 @@
 		justify-content: center;
 		align-items: center;
 		width: 100%;
-		background-color: var(--colorTextQuaternary);
+		background-color: var(--colorBgContainer);
 		border-radius: var(--border-radius);
 		overflow: hidden;
 	}
@@ -306,6 +313,7 @@
 
 		position: relative;
 		background: var(--colorPrimary);
+		color: var(--colorBlack);
 	}
 
 	.song-name {

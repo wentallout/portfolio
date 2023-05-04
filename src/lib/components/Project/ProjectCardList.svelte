@@ -21,7 +21,7 @@
 	{#if hasMoreButton}
 		<div class="more">
 			<a href="/project">
-				<Button backgroundColor="var(--colorPrimary)" label="See all projects" />
+				<Button backgroundColor="var(--colorPrimary)" glowColor="var(--colorPrimary)" label="See all projects" />
 			</a>
 		</div>
 	{/if}
