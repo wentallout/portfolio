@@ -24,7 +24,6 @@
 	.container {
 		width: 100%;
 		max-width: 100vw;
-
 		font-weight: 400;
 		font-size: var(--font-size-small);
 		line-height: normal;

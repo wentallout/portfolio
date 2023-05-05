@@ -9,7 +9,7 @@
 		"check": "svelte-check --tsconfig ./jsconfig.json",
 		"check:watch": "svelte-check --tsconfig ./jsconfig.json --watch",
 		"test": "playwright test",
-		"lint": "prettier --check . && eslint .",
+		"lint": "prettier --check . && eslint --ext .js,.svelte src",
 		"lint:css": "stylelint \"src/**/*.{css,svelte}\"",
 		"format": "prettier --write .",
 		"ngrok": "ngrok http 4173"
@@ -26,8 +26,7 @@
 		"autoprefixer": "^10.4.14",
 		"cssnano": "^6.0.1",
 		"eslint": "^8.39.0",
-		"eslint-config-prettier": "^8.8.0",
-		"eslint-plugin-svelte3": "^4.0.0",
+		"eslint-plugin-svelte": "^2.27.3",
 		"imagetools-core": "^3.3.1",
 		"mdsvex": "^0.10.6",
 		"minisearch": "^6.0.1",

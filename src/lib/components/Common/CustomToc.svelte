@@ -13,7 +13,7 @@
 	--toc-li-hover-bg="transparent"
 	--toc-li-hover-color="var(--colorPrimary)"
 	--toc-desktop-bg="transparent"
-	--toc-mobile-bg="var(--colorTextQuaternary)"
+	--toc-mobile-bg="var(--colorBgElevated)"
 	--toc-mobile-btn-bg="var(--colorPrimary)"
 	--toc-li-padding="var(--space-2xs) 0"
 	--toc-li-color="var(--colorTextSecondary)"
@@ -25,13 +25,13 @@
 	--toc-desktop-sticky-top="var(--scroll-padding)"
 	--toc-mobile-bottom="100px"
 	--toc-mobile-btn-border-radius="100%"
-	--toc-mobile-btn-padding="var(-space-m)">
+	--toc-mobile-btn-padding="var(-space-xs)">
 	<span class="toc-title base-text" slot="title">
 		<ListBullets color="var(--colorText)" width="24" height="24" />
 		Contents</span>
 
 	<span slot="open-toc-icon">
-		<ListBullets color="var(--colorTextSecondary)" width="24" height="24" />
+		<ListBullets color="var(--colorBlack)" width="24" height="24" />
 	</span>
 </Toc>
 

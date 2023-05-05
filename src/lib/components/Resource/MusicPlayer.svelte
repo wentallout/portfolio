@@ -107,22 +107,22 @@
 			list="marker"
 			value={(currentTime / duration) * 100 || 0} />
 
-			<div class="volume">
-				<button class="mute__btn" on:click={mute} on:keydown={mute}>
-					{#if muted}
-						<SpeakerX width="24" height="24" color="var(--colorTextSecondary)" />
-					{:else}
-						<SpeakerHigh width="24" height="24" color="var(--colorText)" />
-					{/if}
-				</button>
-				<input
-					bind:this={volumeEle}
-					type="range"
-					id="volume-control"
-					min="0"
-					max="100"
-					value={volume * 100} />
-			</div>
+		<div class="volume">
+			<button class="mute__btn" on:click={mute} on:keydown={mute}>
+				{#if muted}
+					<SpeakerX width="24" height="24" color="var(--colorTextSecondary)" />
+				{:else}
+					<SpeakerHigh width="24" height="24" color="var(--colorText)" />
+				{/if}
+			</button>
+			<input
+				bind:this={volumeEle}
+				type="range"
+				id="volume-control"
+				min="0"
+				max="100"
+				value={volume * 100} />
+		</div>
 	</div>
 	<div class="controls">
 		<button class="mp-btn other-btn" on:click={prev}>
@@ -143,8 +143,6 @@
 			<SkipForward width="24" height="24" color="var(--colorTextSecondary)" />
 		</button>
 	</div>
-	
-	
 
 	<div class="song-list">
 		{#each $musicList as music, i}
@@ -173,7 +171,7 @@
 	.position {
 		display: flex;
 		flex-direction: row;
-		flex-wrap:wrap;
+		flex-wrap: wrap;
 		width: 100%;
 		padding: var(--space-s) var(--space-l);
 		gap: var(--space-s);
@@ -188,11 +186,9 @@
 	}
 
 	.volume {
-		
 		display: flex;
 		align-items: center;
 		gap: var(--space-s);
-		
 	}
 
 	.info__current {
@@ -206,14 +202,10 @@
 
 	.info__duration {
 		font-weight: 300;
-		color: var(--colorTextSecondary);
+		color: var(--colorWhite);
 	}
 
-	
-
 	.download {
-		
-		
 		background-color: var(--colorBlack);
 		width: 40px;
 		height: 40px;
@@ -234,16 +226,18 @@
 		display: flex;
 		flex-direction: column;
 		gap: var(--space-s);
-		width: 100%;
+		width: fit-content;
 		align-items: center;
 		justify-content: center;
 		padding: var(--space-l);
+		color: var(--colorWhite);
 	}
 
 	.info__time {
 		display: flex;
 		flex-direction: row;
 		gap: var(--space-s);
+		color: var(--colorWhite);
 	}
 
 	.current {
@@ -252,19 +246,21 @@
 		flex-direction: column;
 		align-items: center;
 		width: 100%;
-		background: black;
-		
+
+		background: url(/images/retro.gif);
+
+		background-repeat: repeat;
 	}
 
 	/* MUSIC PLAYER BUTTONS */
 
 	.controls {
 		display: flex;
-		justify-content: center;		
+		justify-content: center;
 		align-items: center;
 		padding: var(--space-m);
 		gap: var(--space-s);
-		
+
 		width: 100%;
 	}
 
@@ -272,7 +268,7 @@
 		display: flex;
 		justify-content: center;
 		align-items: center;
-		
+
 		padding: var(--space-xs);
 		flex-direction: row;
 		background-color: var(--colorBgContainer);
@@ -293,7 +289,6 @@
 	.other-btn {
 		scale: 0.8;
 		background-color: var(--colorBgElevated);
-
 	}
 
 	.player {
@@ -332,14 +327,12 @@
 		color: var(--colorBlack);
 	}
 
-	.cs
-	{
-		display:flex;
-		flex-wrap:wrap;
-		flex-direction:row;
-		align-items:center;
+	.cs {
+		display: flex;
+		flex-wrap: wrap;
+		flex-direction: row;
+		align-items: center;
 	}
-
 
 	.song {
 		padding: var(--space-xs) var(--space-l);
