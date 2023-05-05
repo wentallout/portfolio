@@ -41,6 +41,9 @@
 			<div class="list__title">Other</div>
 			<ul class="nav-list">
 				<li class="nav-list__item">
+					<a href="/doc/uxForBeginners.pdf">UX For Beginners</a>
+				</li>
+				<li class="nav-list__item">
 					<a href="/resource/music">Music</a>
 				</li>
 				<li class="nav-list__item">
@@ -96,6 +99,7 @@
 <style>
 	.footer {
 		display: flex;
+
 		flex-direction: column;
 		width: 100%;
 

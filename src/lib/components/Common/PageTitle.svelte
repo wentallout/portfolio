@@ -8,7 +8,7 @@
 		<img class="title__deco" src={decoImageUrl} alt="page title" />
 	{/if}
 
-	<h1 class="xxxl-text title__text">{pageTitle}</h1>
+	<h1 class="xxxl-text title__text tracking-in-expand">{pageTitle}</h1>
 </div>
 
 <style>
@@ -43,5 +43,24 @@
 		font-family: var(--fancy-font);
 		color: var(--colorText);
 		z-index: 2;
+
+		text-shadow: 0 0 4px var(--colorBlack);
+	}
+
+	.tracking-in-expand {
+		animation: tracking-in-expand 0.7s cubic-bezier(0.215, 0.61, 0.355, 1) both;
+	}
+
+	@keyframes tracking-in-expand {
+		0% {
+			letter-spacing: -0.5em;
+			opacity: 0;
+		}
+		40% {
+			opacity: 0.6;
+		}
+		100% {
+			opacity: 1;
+		}
 	}
 </style>

@@ -8,7 +8,7 @@
 	import { theme, toggleTheme } from '$lib/stores/themeStore.js';
 </script>
 
-<button class="toggle" on:click={toggleTheme} aria-label="Toggle theme">
+<button type="button" class="toggle" on:click={toggleTheme} aria-label="Toggle theme">
 	{#if $theme === 'dark'}
 		<div in:fly={{ y: 10 }} class="toggle__icon">
 			<Sun class="icon" color="var(--colorWhite)" width="24" height="24" />
@@ -31,8 +31,8 @@
 		overflow: visible;
 		position: fixed;
 		top: 0;
-		right: 0;
-		z-index: 98;
+		left: 0;
+		z-index: var(--z-index-max);
 
 		display: flex;
 		flex-direction: column;

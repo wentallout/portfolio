@@ -12,7 +12,7 @@
 	let currentSongIndex = 0;
 	let playing = false;
 	let duration;
-	let currentTime = 0;
+	let currentTime;
 	let volume = 0.4;
 	let audioEle;
 	let volumeEle;
@@ -91,12 +91,13 @@
 		<div class="info">
 			<div class="info__name xxl-text">{$musicList[currentSongIndex].name}</div>
 
-			<div class="song-time">
-				<div class="current-time xl-text">{format(currentTime)}</div>
-				<div class="duration xl-text">{format(duration)}</div>
+			<div class="info__time">
+				<div class="info__current xl-text">{format(currentTime)}</div>
+				<div class="info__duration xl-text">{format(duration)}</div>
 			</div>
 		</div>
 	</div>
+
 	<div class="position">
 		<input
 			bind:this={positionEle}
@@ -105,9 +106,7 @@
 			step="any"
 			list="marker"
 			value={(currentTime / duration) * 100 || 0} />
-	</div>
 
-	<div class="volume-and-control">
 		<div class="volume">
 			<button class="mute__btn" on:click={mute} on:keydown={mute}>
 				{#if muted}
@@ -124,31 +123,31 @@
 				max="100"
 				value={volume * 100} />
 		</div>
-		<div class="controls">
-			<button class="mp-btn mp-btn-small" on:click={prev}>
-				<SkipBack width="24" height="24" color="var(--colorTextSecondary)" />
-			</button>
+	</div>
+	<div class="controls">
+		<button class="mp-btn other-btn" on:click={prev}>
+			<SkipBack width="24" height="24" color="var(--colorTextSecondary)" />
+		</button>
 
-			{#if playing}
-				<button class="mp-btn play-btn" on:click={pauseMusic}>
-					<Pause width="24" height="24" color="var(--colorBlack)" />
-				</button>
-			{:else}
-				<button class="mp-btn play-btn" on:click={playMusic}>
-					<PlayFill width="24" height="24" color="var(--colorBlack)" />
-				</button>
-			{/if}
-
-			<button class="mp-btn mp-btn-small" on:click={next}>
-				<SkipForward width="24" height="24" color="var(--colorTextSecondary)" />
+		{#if playing}
+			<button class="mp-btn play-btn" on:click={pauseMusic}>
+				<Pause width="24" height="24" color="var(--colorBlack)" />
 			</button>
-		</div>
+		{:else}
+			<button class="mp-btn play-btn" on:click={playMusic}>
+				<PlayFill width="24" height="24" color="var(--colorBlack)" />
+			</button>
+		{/if}
+
+		<button class="mp-btn other-btn" on:click={next}>
+			<SkipForward width="24" height="24" color="var(--colorTextSecondary)" />
+		</button>
 	</div>
 
 	<div class="song-list">
 		{#each $musicList as music, i}
 			<div
-				class={i == currentSongIndex ? 'song-active' : 'song'}
+				class={i == currentSongIndex ? 'cs song-active' : 'cs song'}
 				on:click={() => setSong(i)}
 				on:keydown={() => setSong(i)}>
 				<div class="song-name small-text">{music.name}</div>
@@ -156,7 +155,7 @@
 					class="download"
 					href={'/ringtones/' + $musicList[i].audio}
 					download={$musicList[i].audio}>
-					<Download width="16" height="16" color="var(--colorText)" />
+					<Download width="16" height="16" color="var(--colorWhite)" />
 				</a>
 			</div>
 		{/each}
@@ -164,16 +163,6 @@
 </div>
 
 <style>
-	.volume-and-control {
-		position: relative;
-		display: flex;
-		flex-direction: row;
-		width: 100%;
-		justify-content: center;
-		align-items: center;
-		flex-wrap: wrap;
-	}
-
 	.mute__btn {
 		all: unset;
 		cursor: pointer;
@@ -182,25 +171,27 @@
 	.position {
 		display: flex;
 		flex-direction: row;
+		flex-wrap: wrap;
 		width: 100%;
-		padding: var(--space-s);
+		padding: var(--space-s) var(--space-l);
+		gap: var(--space-s);
 	}
 
 	.position__control {
-		width: 100%;
+		display: flex;
+		flex-grow: 1;
 		transition: 0.3s;
 		height: 3rem;
+		background: transparent;
 	}
 
 	.volume {
-		position: absolute;
-		left: var(--space-l);
 		display: flex;
 		align-items: center;
 		gap: var(--space-s);
 	}
 
-	.current-time {
+	.info__current {
 		font-weight: 300;
 		color: var(--colorPrimary);
 	}
@@ -209,23 +200,12 @@
 		font-weight: 600;
 	}
 
-	.duration {
+	.info__duration {
 		font-weight: 300;
-		color: var(--color-text-low);
-	}
-
-	.controls {
-		display: flex;
-		justify-content: center;
-		align-items: center;
-		padding: var(--space-m);
+		color: var(--colorWhite);
 	}
 
 	.download {
-		position: absolute;
-		top: 50%;
-		right: 0%;
-		transform: translate(-50%, -50%);
 		background-color: var(--colorBlack);
 		width: 40px;
 		height: 40px;
@@ -234,6 +214,8 @@
 		align-items: center;
 		border-radius: 100%;
 		z-index: 2;
+
+		margin-left: auto;
 	}
 
 	.download:hover {
@@ -244,16 +226,18 @@
 		display: flex;
 		flex-direction: column;
 		gap: var(--space-s);
-		width: 100%;
+		width: fit-content;
 		align-items: center;
 		justify-content: center;
 		padding: var(--space-l);
+		color: var(--colorWhite);
 	}
 
-	.song-time {
+	.info__time {
 		display: flex;
 		flex-direction: row;
 		gap: var(--space-s);
+		color: var(--colorWhite);
 	}
 
 	.current {
@@ -262,17 +246,29 @@
 		flex-direction: column;
 		align-items: center;
 		width: 100%;
-		margin-bottom: var(--space-xl);
+
+		background: url(/images/retro.gif);
+
+		background-repeat: repeat;
 	}
 
-	.mp-btn-small {
-		scale: 0.8;
+	/* MUSIC PLAYER BUTTONS */
+
+	.controls {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		padding: var(--space-m);
+		gap: var(--space-s);
+
+		width: 100%;
 	}
 
 	.mp-btn {
 		display: flex;
 		justify-content: center;
 		align-items: center;
+
 		padding: var(--space-xs);
 		flex-direction: row;
 		background-color: var(--colorBgContainer);
@@ -288,6 +284,11 @@
 
 	.play-btn {
 		background-color: var(--colorPrimary);
+	}
+
+	.other-btn {
+		scale: 0.8;
+		background-color: var(--colorBgElevated);
 	}
 
 	.player {
@@ -323,18 +324,24 @@
 
 	.song-active .song-name {
 		font-weight: 600;
-		color: var(--colorTextSecondary);
+		color: var(--colorBlack);
+	}
+
+	.cs {
+		display: flex;
+		flex-wrap: wrap;
+		flex-direction: row;
+		align-items: center;
 	}
 
 	.song {
-		padding: var(--space-s) var(--space-l);
-
+		padding: var(--space-xs) var(--space-l);
 		transition: var(--transition);
 		position: relative;
 	}
 
 	.song:hover {
-		background-color: var(--colorTextQuaternary);
+		background-color: var(--colorBgElevated);
 		cursor: pointer;
 	}
 </style>

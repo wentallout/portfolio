@@ -15,7 +15,7 @@
 		translate: 0 -100%;
 		transition: translate 150ms ease-in-out;
 		transition: background-color 0.5s;
-		z-index: 11;
+		z-index: var(--z-index-max);
 
 		display: flex;
 		justify-content: center;

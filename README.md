@@ -6,6 +6,8 @@
 
 [Open in Visual Studio Code](https://open.vscode.dev/wentallout/portfolio)
 
+---
+
 ## 💻 Developing
 
 1. Install dependencies with `npm install` (or `pnpm install` or `yarn`)
@@ -84,19 +86,17 @@ Visitors can also comment on your blogs using GitHub discussion (you might want 
 - Fly Effect from `svelte/transiton`
 - [nprogress](https://www.npmjs.com/package/nprogress)
 
-✅ Blogs
-
-- Use markdown to write blogs [mdsvex](https://github.com/pngwn/MDsveX)
-- use `categories` (#hashtag) to filter blogs
-- multiple markdown-related plugins installed: `rehype` and `remark`
-
 ✅ RSS
 
 ✅ Contact Form
 
 - Netlify Form
 
----
+### Blogs
+
+- Use markdown to write blogs [mdsvex](https://github.com/pngwn/MDsveX)
+- use `categories` (#hashtag) to filter blogs
+- multiple markdown-related plugins installed: `rehype` and `remark`
 
 ✅ Blog: Automatic Table of Contents
 
@@ -113,62 +113,3 @@ Visitors can also comment on your blogs using GitHub discussion (you might want 
 ✅ Blog: Comment [Giscus](https://giscus.app)
 
 ---
-
-## 🎓 Svelte checklist
-
-Learn Svelte here: https://learn.svelte.dev/tutorial
-
-### Part 1: Basic Svelte
-
-- ✅ Introduction
-- ✅ Reactivity
-  - `Updating arrays and objects`
-- ✅ Props
-  - remember `spread props`
-- ✅ Logic
-  - `keyed each` and `await`
-- Events
-  - `inline handlers` is bad, don't use
-  - `Component events` -> can't understand
-- Bindings
-- Lifecycle
-- Stores
-
-### Part 2: Advanced Svelte
-
-- Motion
-- Transitions
-- Animations
-- Actions
-- Advanced bindings
-- Classes and styles
-- Component composition
-- Context API
-- Special elements
-- Module context
-- Miscellaneous
-- ✅ Next steps
-
-### Part 3: Basic SvelteKit
-
-- ✅ Introduction
-- Routing
-- Loading data
-- Headers and cookies
-- Shared modules
-- Forms
-- API routes
-- Stores
-- ✅ Errors and redirects
-
-### Part 4: Advanced SvelteKit
-
-- Hooks
-- ✅ Page options
-- ✅ Link options
-  - `data-sveltekit-preload-data`
-  - `data-sveltekit-reload`
-- Advanced routing
-- Advanced loading
-- Environment variables
-- ✅ Conclusion

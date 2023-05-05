@@ -1,16 +1,14 @@
 <script>
+	// CREDIT: kudadam/svelte-scrollprogress
+
 	import { createEventDispatcher } from 'svelte';
 
-	/**@type {string}*/
 	let width = '0%';
-	/**@type {number}*/
-	export let zIndex = 999;
-	/**@type {string}*/
-	export let color = 'tomato';
 
-	/**@type {string}*/
-	export let height = '5px';
+	export let color = 'var(--colorPrimary)';
+	export let background = 'transparent';
 
+	export let height = '4px';
 	export let position = 'bottom';
 
 	const dispatch = createEventDispatcher();
@@ -22,10 +20,8 @@
 	 * @returns
 	 */
 	export const debounce = (func) => {
-		/** @type {Number} */
 		let timeout;
 
-		/** @return @this {any} */
 		return function () {
 			let context = this;
 			let args = arguments;
@@ -56,24 +52,26 @@
 	};
 </script>
 
-<div class="svelte-scrollprogress-container {position}">
+<div class="svelte-scrollprogress-container {position}" style:--ssp-background={background}>
 	<div
 		class="svelte-scrollprogress {position}"
 		style:--ssp-color={color}
 		style:--ssp-height={height}
-		style:--ssp-width={width}
-		style:--ssp-z-index={zIndex} />
+		style:--ssp-width={width} />
 </div>
 <svelte:window on:scroll={debounce(watchScrolling)} on:load={debounce(watchScrolling)} />
 
 <style>
 	.svelte-scrollprogress-container {
 		position: fixed;
-		background: transparent;
-		width: 100%;
+		background: var(--ssp-background);
+		width: 100vw;
 		margin: 0;
 		padding: 0;
 		left: 0;
+		z-index: var(--z-index-max);
+
+		background: black;
 	}
 
 	.top {
@@ -102,7 +100,7 @@
 	}
 
 	.svelte-scrollprogress {
-		z-index: 9999;
+		background: var(--ssp-color);
 		height: var(--ssp-height);
 		width: var(--ssp-width);
 		transition: width 100ms ease-out;

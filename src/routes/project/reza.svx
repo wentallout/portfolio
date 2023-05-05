@@ -9,7 +9,7 @@ date: '2022-09-14'
 
     //images
 	import thumbnail from '$lib/assets/images/project/reza/thumbnail.png';
-    import discord from '$lib/assets/images/project/reza/discord.png';
+   
     import feature from '$lib/assets/images/project/reza/feature.png';
     import role from '$lib/assets/images/project/reza/role.png';
     import plan from '$lib/assets/images/project/reza/plan.png';
@@ -100,15 +100,13 @@ I set up a meeting time for my team at 7:00 PM every Monday, Wednesday, and Frid
 
 We use Discord for our daily meetings and share our progress and feedback through screen share.
 
-<Image src={discord} alt="discord screen" />
-
 ## Process
 
 The **Design Thinking** method is a practical way to solve complex problems by finding information about the human needs.
 
 There are 5 phases to go through: **Empathize, Define, Ideate, Prototype, Test**.
 
-### Phase 1 - empathize
+### Phase 1 - Empathize
 
 In the first phase, I need to understand what my potential users want to identify issues. The goal is that I can answer the challenges they face.
 

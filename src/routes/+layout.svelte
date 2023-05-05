@@ -11,20 +11,19 @@
 	import Footer from '$lib/components/Layout/Footer.svelte';
 	import Header from '$lib/components/Layout/Header.svelte';
 	import Breadcrumb from '$lib/components/Layout/Breadcrumb.svelte';
-	import { page } from '$app/stores';
 
 	import '$lib/styles/global.css';
 	export let data;
 </script>
 
 <!-- MISC -->
+<SkipLink />
 <ScrollProgressBar color="var(--colorPrimary)" />
 <ProgressBar />
 <ScrollBar />
 <ThemeToggle />
 <!--  -->
 
-<SkipLink />
 <PWA />
 <Cover />
 <div class="page-container">
@@ -33,7 +32,7 @@
 
 	<PageTransition {data}>
 		<main class="main-content" id="main-content">
-			<Breadcrumb path={$page.url.pathname} id={$page.route.id} />
+			<Breadcrumb />
 			<slot />
 		</main>
 	</PageTransition>

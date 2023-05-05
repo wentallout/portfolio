@@ -1,6 +1,7 @@
 <script>
-	export let path;
-	export let id;
+	import { page } from '$app/stores';
+	let path = $page.url.pathname;
+	let id = $page.route.id;
 	let crumbs;
 
 	import CaretRight from '~icons/ph/caret-right';

@@ -170,12 +170,10 @@ blockquote p {
 }
 
 pre {
-	color: var(--colorText);
-	padding: var(--space-s) var(--space-s);
-	border-radius: var(--border-radius);
+	padding: var(--space-s);
+	border-radius: var(--border-radius-light);
 	overflow: auto;
 	max-width: var(--text-width);
-	border: 1px solid var(--colorBorder);
 }
 
 table {
