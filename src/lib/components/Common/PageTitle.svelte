@@ -43,5 +43,7 @@
 		font-family: var(--fancy-font);
 		color: var(--colorText);
 		z-index: 2;
+
+		text-shadow: 0 0 4px var(--colorBlack);
 	}
 </style>

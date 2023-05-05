@@ -33,6 +33,5 @@
 		flex-wrap: wrap;
 		gap: var(--space-s);
 		flex-direction: row;
-		/* z-index: 1; */
 	}
 </style>

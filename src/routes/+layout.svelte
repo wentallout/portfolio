@@ -17,13 +17,13 @@
 </script>
 
 <!-- MISC -->
+<SkipLink />
 <ScrollProgressBar color="var(--colorPrimary)" />
 <ProgressBar />
 <ScrollBar />
 <ThemeToggle />
 <!--  -->
 
-<SkipLink />
 <PWA />
 <Cover />
 <div class="page-container">

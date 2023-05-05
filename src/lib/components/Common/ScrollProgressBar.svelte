@@ -3,10 +3,7 @@
 
 	import { createEventDispatcher } from 'svelte';
 
-	/**@type {string}*/
 	let width = '0%';
-	/**@type {number}*/
-	export let zIndex = 99999;
 
 	export let color = 'var(--colorPrimary)';
 	export let background = 'transparent';
@@ -60,8 +57,7 @@
 		class="svelte-scrollprogress {position}"
 		style:--ssp-color={color}
 		style:--ssp-height={height}
-		style:--ssp-width={width}
-		style:--ssp-z-index={zIndex} />
+		style:--ssp-width={width} />
 </div>
 <svelte:window on:scroll={debounce(watchScrolling)} on:load={debounce(watchScrolling)} />
 
@@ -69,11 +65,13 @@
 	.svelte-scrollprogress-container {
 		position: fixed;
 		background: var(--ssp-background);
-		width: 100%;
+		width: 100vw;
 		margin: 0;
 		padding: 0;
 		left: 0;
-		z-index: var(--ssp-z-index);
+		z-index: var(--z-index-max);
+
+		background: black;
 	}
 
 	.top {
@@ -102,7 +100,6 @@
 	}
 
 	.svelte-scrollprogress {
-		z-index: var(--ssp-z-index);
 		background: var(--ssp-color);
 		height: var(--ssp-height);
 		width: var(--ssp-width);

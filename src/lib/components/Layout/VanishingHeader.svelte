@@ -47,7 +47,7 @@
 		/* POSITION */
 		position: fixed;
 		top: 0;
-		z-index: 10;
+		z-index: 98;
 		width: 100%;
 
 		transition: transform 100ms linear;

@@ -43,7 +43,6 @@
 		line-height: normal;
 		font-size: var(--font-size-mid);
 		color: var(--colorWhite);
-		z-index: 3;
 		user-select: none;
 	}
 
@@ -111,7 +110,7 @@
 		width: 100%;
 		object-fit: cover;
 		object-position: top;
-		filter: brightness(70%);
+		filter: brightness(50%);
 		transition: var(--transition);
 	}
 
@@ -133,20 +132,5 @@
 		100% {
 			object-position: top;
 		}
-	}
-
-	.cover::before {
-		position: absolute;
-		display: block;
-		content: '';
-		background-repeat: repeat;
-		background-image: url(/images/ptn1.svg);
-
-		background-size: 2px;
-		width: 100%;
-		height: 100%;
-		opacity: 0.1;
-
-		z-index: 3;
 	}
 </style>

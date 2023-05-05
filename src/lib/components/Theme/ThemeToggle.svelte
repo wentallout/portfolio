@@ -32,7 +32,7 @@
 		position: fixed;
 		top: 0;
 		left: 0;
-		z-index: 98;
+		z-index: var(--z-index-max);
 
 		display: flex;
 		flex-direction: column;
