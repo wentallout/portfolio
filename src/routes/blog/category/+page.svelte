@@ -1,8 +1,8 @@
 <script>
 	export let data;
-	import SectionTitle from '$lib/components/Common/SectionTitle.svelte';
+	import SectionTitle from '$components/Common/SectionTitle.svelte';
 	import Folder from '~icons/ph/folder';
-	import BlogTagsList from '$lib/components/Blog/BlogTagsList.svelte';
+	import BlogTagsList from '$components/Blog/BlogTagsList.svelte';
 </script>
 
 <SectionTitle sectionTitle="Category" let:sectionIcon>

@@ -1,12 +1,12 @@
 <script>
-	import ExLink from '$lib/components/Common/ExLink.svelte';
+	import ExLink from '$components/Common/ExLink.svelte';
 	import FigmaLogo from '~icons/ph/figma-logo';
 	import RedditLogo from '~icons/ph/reddit-logo';
 	import Handshake from '~icons/ph/handshake';
 	import LinkedinLogo from '~icons/ph/linkedin-logo';
 	import InstagramLogo from '~icons/ph/instagram-logo';
 	import GitHubLogo from '~icons/ph/github-logo';
-	import SectionTitle from '$lib/components/Common/SectionTitle.svelte';
+	import SectionTitle from '$components/Common/SectionTitle.svelte';
 
 	let icon = {
 		color: 'var(--colorText)',

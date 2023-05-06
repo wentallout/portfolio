@@ -7,7 +7,7 @@
 	export let loading = 'lazy';
 	export let decoding = 'async';
 
-	import ExLink from '$lib/components/Common/ExLink.svelte';
+	import ExLink from '$components/Common/ExLink.svelte';
 </script>
 
 <ExLink href={src} aria-label={alt}>

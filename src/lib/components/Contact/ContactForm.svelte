@@ -1,11 +1,11 @@
 <script>
-	import Button from '$lib/components/Button/Button.svelte';
-	import TextArea from '$lib/components/Input/TextArea.svelte';
-	import TextInput from '$lib/components/Input/TextInput.svelte';
+	import Button from '$components/Button/Button.svelte';
+	import TextArea from '$components/Input/TextArea.svelte';
+	import TextInput from '$components/Input/TextInput.svelte';
 	import EnvelopeSimple from '~icons/ph/envelope-simple';
 	import ArrowCounterClockwise from '~icons/ph/arrow-counter-clockwise';
 	import PaperPlaneRight from '~icons/ph/paper-plane-right';
-	import SectionTitle from '$lib/components/Common/SectionTitle.svelte';
+	import SectionTitle from '$components/Common/SectionTitle.svelte';
 </script>
 
 <section>

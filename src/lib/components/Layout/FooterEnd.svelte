@@ -1,6 +1,6 @@
 <script>
 	import { COPYRIGHT_ENTITY } from '$lib/constants/entities.js';
-	import ExLink from '$lib/components/Common/ExLink.svelte';
+	import ExLink from '$components/Common/ExLink.svelte';
 </script>
 
 <div class="end xs-text">

@@ -14,6 +14,7 @@
 		"paths": {
 			"$lib": ["src/lib"],
 			"$lib/*": ["src/lib/*"],
+			"$components": ["src/lib/components"],
 			"$blogImages": ["src/lib/assets/images/blog"]
 		}
 	}

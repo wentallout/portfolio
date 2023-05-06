@@ -1,10 +1,10 @@
 <script>
-	import Hero from '$lib/components/Home/Hero.svelte';
-	import GetInTouch from '$lib/components/Home/GetInTouch.svelte';
-	import FeaturedProject from '$lib/components/Home/Featured.svelte';
-	import Clients from '$lib/components/Home/MyClients.svelte';
-	import WhatIUse from '$lib/components/Home/WhatIUse.svelte';
-	import AboutMe from '$lib/components/Home/AboutMe.svelte';
+	import Hero from '$components/Home/Hero.svelte';
+	import GetInTouch from '$components/Home/GetInTouch.svelte';
+	import FeaturedProject from '$components/Home/Featured.svelte';
+	import Clients from '$components/Home/MyClients.svelte';
+	import WhatIUse from '$components/Home/WhatIUse.svelte';
+	import AboutMe from '$components/Home/AboutMe.svelte';
 
 	const breadcrumbs = [
 		{
@@ -12,7 +12,7 @@
 			slug: ''
 		}
 	];
-	import SEO from '$lib/components/SEO/SEO.svelte';
+	import SEO from '$components/SEO/SEO.svelte';
 
 	const seoProps = {
 		breadcrumbs,

@@ -1,9 +1,9 @@
 <script>
-	import Comments from '$lib/components/Blog/Comments.svelte';
-	import SEO from '$lib/components/SEO/SEO.svelte';
-	import Line from '$lib/components/Common/Line.svelte';
-	import PostContainer from '$lib/components/Common/PostContainer.svelte';
-	import Tag from '$lib/components/Common/Tag.svelte';
+	import Comments from '$components/Blog/Comments.svelte';
+	import SEO from '$components/SEO/SEO.svelte';
+	import Line from '$components/Common/Line.svelte';
+	import PostContainer from '$components/Common/PostContainer.svelte';
+	import Tag from '$components/Common/Tag.svelte';
 	export let data;
 	import Time from 'svelte-time';
 

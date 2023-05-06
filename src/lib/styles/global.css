@@ -30,7 +30,7 @@ html {
 	/* MISC */
 	accent-color: var(--colorPrimary);
 	caret-color: var(--colorPrimary);
-	--z-index-max: 99;
+	--zIndexMax: 99;
 }
 
 .underline {

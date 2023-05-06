@@ -1,5 +1,5 @@
 <script>
-	import ResourceCard from '$lib/components/Resource/ResourceCard.svelte';
+	import ResourceCard from '$components/Resource/ResourceCard.svelte';
 </script>
 
 <div class="tools">

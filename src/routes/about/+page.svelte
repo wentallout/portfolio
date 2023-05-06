@@ -1,5 +1,5 @@
 <script>
-	import PageTitle from '$lib/components/Common/PageTitle.svelte';
+	import PageTitle from '$components/Common/PageTitle.svelte';
 
 	//get this year in javascript
 

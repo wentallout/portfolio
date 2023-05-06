@@ -1,5 +1,5 @@
 <script>
-	import SocialButtons from '$lib/components/Contact/SocialButtons.svelte';
+	import SocialButtons from '$components/Contact/SocialButtons.svelte';
 
 	import { navItems } from '$lib/config.js';
 	import { onMount } from 'svelte';
@@ -8,7 +8,7 @@
 	import List from '~icons/ph/list';
 	import X from '~icons/ph/x';
 
-	import VanishingHeader from '$lib/components/Layout/VanishingHeader.svelte';
+	import VanishingHeader from '$components/Layout/VanishingHeader.svelte';
 
 	let scrollY;
 
@@ -168,7 +168,7 @@
 		height: 0%;
 		width: 100%;
 		position: fixed;
-		z-index: var(--z-index-max);
+		z-index: var(--zIndexMax);
 		top: 0;
 		left: 0;
 		background-color: rgba(0, 0, 0, 0.8);

@@ -7,7 +7,7 @@ categories:
 
 <script>
 import projectOrganization from '$blogImages/projectOrganization.png';
-import Image from '$lib/components/Common/Image.svelte';
+import Image from '$components/Common/Image.svelte';
 </script>
 
 

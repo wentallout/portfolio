@@ -1,16 +1,16 @@
 <script>
-	import PageTitle from '$lib/components/Common/PageTitle.svelte';
-	import SectionDesc from '$lib/components/Common/SectionDesc.svelte';
-	import OtherCardList from '$lib/components/Resource/OtherCardList.svelte';
-	import BookGallery from '$lib/components/Resource/BookGallery.svelte';
-	import ToolCardList from '$lib/components/Resource/ResourceCardList.svelte';
+	import PageTitle from '$components/Common/PageTitle.svelte';
+	import SectionDesc from '$components/Common/SectionDesc.svelte';
+	import OtherCardList from '$components/Resource/OtherCardList.svelte';
+	import BookGallery from '$components/Resource/BookGallery.svelte';
+	import ToolCardList from '$components/Resource/ResourceCardList.svelte';
 	import Books from '~icons/ph/books';
 	import HardDrives from '~icons/ph/hard-drives';
 	import Flask from '~icons/ph/flask';
 
-	import SectionTitle from '$lib/components/Common/SectionTitle.svelte';
+	import SectionTitle from '$components/Common/SectionTitle.svelte';
 
-	import SEO from '$lib/components/SEO/SEO.svelte';
+	import SEO from '$components/SEO/SEO.svelte';
 	const breadcrumbs = [
 		{
 			name: 'Home',

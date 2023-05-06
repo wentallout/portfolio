@@ -1,6 +1,6 @@
 <script>
-	import SectionTitle from '$lib/components/Common/SectionTitle.svelte';
-	import SaosContainer from '$lib/components/Common/SaosContainer.svelte';
+	import SectionTitle from '$components/Common/SectionTitle.svelte';
+	import SaosContainer from '$components/Common/SaosContainer.svelte';
 	import Smiley from '~icons/ph/smiley';
 </script>
 

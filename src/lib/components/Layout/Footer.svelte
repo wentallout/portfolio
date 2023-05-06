@@ -1,8 +1,8 @@
 <script>
-	import NotAI from '$lib/components/Layout/NotAI.svelte';
-	import FooterEnd from '$lib/components/Layout/FooterEnd.svelte';
-	import ExLink from '$lib/components/Common/ExLink.svelte';
-	import Marquee from '$lib/components/Common/Marquee.svelte';
+	import NotAI from '$components/Layout/NotAI.svelte';
+	import FooterEnd from '$components/Layout/FooterEnd.svelte';
+	import ExLink from '$components/Common/ExLink.svelte';
+	import Marquee from '$components/Common/Marquee.svelte';
 	import { navItems } from '$lib/config.js';
 
 	// ICONS

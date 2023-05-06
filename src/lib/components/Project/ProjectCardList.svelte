@@ -1,6 +1,6 @@
 <script>
-	import Button from '$lib/components/Button/Button.svelte';
-	import ProjectCard from '$lib/components/Project/ProjectCard.svelte';
+	import Button from '$components/Button/Button.svelte';
+	import ProjectCard from '$components/Project/ProjectCard.svelte';
 	import rezaSquare from '$lib/assets/images/project/rezaSquare.png';
 
 	// linkToFigma="https://www.figma.com/file/owUrwidb8hZbdmruKhMtyS/REZA%3A-Restaurant-Reservation-App?node-id=2%3A9&t=a8W16CMSWgxzoLKB-1"
@@ -21,7 +21,10 @@
 	{#if hasMoreButton}
 		<div class="more">
 			<a href="/project">
-				<Button backgroundColor="var(--colorPrimary)" glowColor="var(--colorPrimary)" label="See all projects" />
+				<Button
+					backgroundColor="var(--colorPrimary)"
+					glowColor="var(--colorPrimary)"
+					label="See all projects" />
 			</a>
 		</div>
 	{/if}

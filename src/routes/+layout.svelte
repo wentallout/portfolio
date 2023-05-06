@@ -1,16 +1,16 @@
 <script>
-	import ThemeToggle from '$lib/components/Theme/ThemeToggle.svelte';
-	import ScrollBar from '$lib/components/Layout/ScrollBar.svelte';
-	import ProgressBar from '$lib/components/Transition/ProgressBar.svelte';
-	import PageTransition from '$lib/components/Transition/PageTransition.svelte';
-	import ScrollProgressBar from '$lib/components/Common/ScrollProgressBar.svelte';
-	import Cover from '$lib/components/Layout/Cover.svelte';
-	import SkipLink from '$lib/components/Layout/SkipLink.svelte';
-	import PWA from '$lib/components/PWA/PWA.svelte';
-	import BackToTop from '$lib/components/Layout/BackToTop.svelte';
-	import Footer from '$lib/components/Layout/Footer.svelte';
-	import Header from '$lib/components/Layout/Header.svelte';
-	import Breadcrumb from '$lib/components/Layout/Breadcrumb.svelte';
+	import ThemeToggle from '$components/Theme/ThemeToggle.svelte';
+	import ScrollBar from '$components/Layout/ScrollBar.svelte';
+	import ProgressBar from '$components/Transition/ProgressBar.svelte';
+	import PageTransition from '$components/Transition/PageTransition.svelte';
+	import ScrollProgressBar from '$components/Common/ScrollProgressBar.svelte';
+	import Cover from '$components/Layout/Cover.svelte';
+	import SkipLink from '$components/Layout/SkipLink.svelte';
+	import PWA from '$components/PWA/PWA.svelte';
+	import BackToTop from '$components/Layout/BackToTop.svelte';
+	import Footer from '$components/Layout/Footer.svelte';
+	import Header from '$components/Layout/Header.svelte';
+	import Breadcrumb from '$components/Layout/Breadcrumb.svelte';
 
 	import '$lib/styles/global.css';
 	export let data;

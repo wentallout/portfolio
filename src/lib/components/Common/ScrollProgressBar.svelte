@@ -68,7 +68,7 @@
 		margin: 0;
 		padding: 0;
 		left: 0;
-		z-index: var(--z-index-max);
+		z-index: var(--zIndexMax);
 		background: var(--colorBgContainer);
 	}
 
