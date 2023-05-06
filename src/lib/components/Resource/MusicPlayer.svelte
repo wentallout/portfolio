@@ -16,9 +16,8 @@
 	let volume = 0.4;
 	let audioEle;
 	let volumeEle;
-	let positionEle;
+	let seekBarEle;
 	let muted;
-	let muteIcon;
 
 	function mute() {
 		muted = !muted;
@@ -38,11 +37,8 @@
 		if (isNaN(seconds)) return '...';
 
 		const minutes = Math.floor(seconds / 60);
-
 		seconds = Math.floor(seconds % 60);
-
 		if (seconds < 10) seconds = '0' + seconds;
-
 		return `${minutes}:${seconds}`;
 	}
 
@@ -66,15 +62,18 @@
 
 	onMount(() => {
 		audioEle.pause();
-
-		volumeEle.addEventListener('input', () => {
-			volume = volumeEle.value / 100;
-		});
-
-		positionEle.addEventListener('input', () => {
-			currentTime = duration * (positionEle.value / 100);
-		});
 	});
+
+	function handleSeekBar() {
+		currentTime = duration * (seekBarEle.value / 100);
+	}
+
+	function handleVolume() {
+		volume = volumeEle.value / 100;
+	}
+
+	let seekBarValue;
+	$: seekBarValue = (currentTime / duration) * 100 || 0;
 </script>
 
 <audio
@@ -98,17 +97,20 @@
 		</div>
 	</div>
 
-	<div class="position">
+	<div class="seekBar">
 		<input
-			bind:this={positionEle}
-			class="position__control"
+			bind:this={seekBarEle}
+			on:input={handleSeekBar}
+			class="seekBar__control"
 			type="range"
+			min="0"
+			max="100"
 			step="any"
 			list="marker"
-			value={(currentTime / duration) * 100 || 0} />
+			value={seekBarValue} />
 
 		<div class="volume">
-			<button class="mute__btn" on:click={mute} on:keydown={mute}>
+			<button type="button" class="mute__btn" on:click={mute} on:keydown={mute}>
 				{#if muted}
 					<SpeakerX width="24" height="24" color="var(--colorTextSecondary)" />
 				{:else}
@@ -117,29 +119,31 @@
 			</button>
 			<input
 				bind:this={volumeEle}
+				on:input={handleVolume}
 				type="range"
 				id="volume-control"
 				min="0"
 				max="100"
+				step="any"
 				value={volume * 100} />
 		</div>
 	</div>
 	<div class="controls">
-		<button class="mp-btn other-btn" on:click={prev}>
+		<button type="button" class="mp-btn other-btn" on:click={prev}>
 			<SkipBack width="24" height="24" color="var(--colorTextSecondary)" />
 		</button>
 
 		{#if playing}
-			<button class="mp-btn play-btn" on:click={pauseMusic}>
+			<button type="button" class="mp-btn play-btn" on:click={pauseMusic}>
 				<Pause width="24" height="24" color="var(--colorBlack)" />
 			</button>
 		{:else}
-			<button class="mp-btn play-btn" on:click={playMusic}>
+			<button type="button" class="mp-btn play-btn" on:click={playMusic}>
 				<PlayFill width="24" height="24" color="var(--colorBlack)" />
 			</button>
 		{/if}
 
-		<button class="mp-btn other-btn" on:click={next}>
+		<button type="button" class="mp-btn other-btn" on:click={next}>
 			<SkipForward width="24" height="24" color="var(--colorTextSecondary)" />
 		</button>
 	</div>
@@ -168,7 +172,7 @@
 		cursor: pointer;
 	}
 
-	.position {
+	.seekBar {
 		display: flex;
 		flex-direction: row;
 		flex-wrap: wrap;
@@ -177,7 +181,7 @@
 		gap: var(--space-s);
 	}
 
-	.position__control {
+	.seekBar__control {
 		display: flex;
 		flex-grow: 1;
 		transition: 0.3s;
@@ -337,7 +341,6 @@
 	.song {
 		padding: var(--space-xs) var(--space-l);
 		transition: var(--transition);
-		position: relative;
 	}
 
 	.song:hover {

@@ -64,14 +64,12 @@
 <style>
 	.svelte-scrollprogress-container {
 		position: fixed;
-		background: var(--ssp-background);
 		width: 100vw;
 		margin: 0;
 		padding: 0;
 		left: 0;
 		z-index: var(--z-index-max);
-
-		background: black;
+		background: var(--colorBgContainer);
 	}
 
 	.top {

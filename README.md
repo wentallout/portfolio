@@ -1,12 +1,22 @@
-# Khoa's Portfolio
+![GitHub](https://img.shields.io/github/license/wentallout/portfolio?style=for-the-badge)
+![GitHub top language](https://img.shields.io/github/languages/top/wentallout/portfolio?style=for-the-badge)
+![Libraries.io dependency status for GitHub repo](https://img.shields.io/librariesio/github/wentallout/portfolio?style=for-the-badge)
+![GitHub pull requests](https://img.shields.io/github/issues-pr/wentallout/portfolio?style=for-the-badge)
+![GitHub last commit](https://img.shields.io/github/last-commit/wentallout/portfolio?style=for-the-badge)
+![GitHub commit activity](https://img.shields.io/github/commit-activity/m/wentallout/portfolio?style=for-the-badge)
+![GitHub repo size](https://img.shields.io/github/repo-size/wentallout/portfolio?style=for-the-badge)
 
-[![Netlify Status](https://api.netlify.com/api/v1/badges/7bf37fa7-ec78-4efd-aa9a-1a18a4fc62e4/deploy-status)](https://app.netlify.com/sites/khoa-design/deploys)
+# Khoa's Portfolio
 
 [![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/wentallout/portfolio)
 
 [Open in Visual Studio Code](https://open.vscode.dev/wentallout/portfolio)
 
 ---
+
+## 📦 Deploy
+
+[![Netlify Status](https://api.netlify.com/api/v1/badges/7bf37fa7-ec78-4efd-aa9a-1a18a4fc62e4/deploy-status)](https://app.netlify.com/sites/khoa-design/deploys)
 
 ## 💻 Developing
 
@@ -16,8 +26,6 @@
 ```bash
 npm run dev
 ```
-
----
 
 ## ❓ What is this?
 
@@ -33,8 +41,6 @@ All imported images are automatically converted to `webp` and lazy loaded to opt
 
 Visitors can also comment on your blogs using GitHub discussion (you might want to customize `Comments.svelte` component so that it works on your repo)
 
----
-
 ## 💅 Styling
 
 `src/lib/styles`
@@ -44,8 +50,6 @@ Visitors can also comment on your blogs using GitHub discussion (you might want 
 - `spacing.css` spacing for `margin`, `padding` and the whole page layout in general [utopia.fyi](https://utopia.fyi/)
 - `typography.css` typography-related stuff like `font-size`, `line-height`, `letter-spacing`, `font-weight`
 - `color.css` text colors, border colors, background colors
-
----
 
 ## 🏆 Progress
 
@@ -111,5 +115,3 @@ Visitors can also comment on your blogs using GitHub discussion (you might want 
 ✅ Blog: Pagination
 
 ✅ Blog: Comment [Giscus](https://giscus.app)
-
----

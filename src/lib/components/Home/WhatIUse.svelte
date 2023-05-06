@@ -109,7 +109,7 @@
 		padding: var(--space-l);
 		z-index: 1;
 		min-height: 230px;
-		border: 1px solid var(--colorBorder);
+		outline: 1px solid var(--colorBorderSecondary);
 		overflow: hidden;
 		transition: var(--transition);
 		background-color: var(--colorBgLayout);
@@ -121,7 +121,7 @@
 		transform: scale(1.1);
 		overflow: visible;
 		border: 0;
-		z-index: 2;
+		z-index: var(--z-index-max);
 	}
 
 	@media (min-width: 992px) {
