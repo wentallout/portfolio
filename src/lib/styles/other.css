@@ -81,7 +81,7 @@ input[type='range'] {
 input[type='range']::-webkit-slider-runnable-track {
 	width: 300px;
 	height: 16px;
-	background: var(--colorBlack);
+	outline: 1px solid var(--colorBorderSecondary);
 	border: none;
 }
 
