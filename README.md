@@ -1,18 +1,22 @@
 ![GitHub](https://img.shields.io/github/license/wentallout/portfolio?style=for-the-badge)
 ![GitHub top language](https://img.shields.io/github/languages/top/wentallout/portfolio?style=for-the-badge)
 ![Libraries.io dependency status for GitHub repo](https://img.shields.io/librariesio/github/wentallout/portfolio?style=for-the-badge)
+![GitHub pull requests](https://img.shields.io/github/issues-pr/wentallout/portfolio?style=for-the-badge)
+![GitHub last commit](https://img.shields.io/github/last-commit/wentallout/portfolio?style=for-the-badge)
 ![GitHub commit activity](https://img.shields.io/github/commit-activity/m/wentallout/portfolio?style=for-the-badge)
 ![GitHub repo size](https://img.shields.io/github/repo-size/wentallout/portfolio?style=for-the-badge)
 
 # Khoa's Portfolio
-
-[![Netlify Status](https://api.netlify.com/api/v1/badges/7bf37fa7-ec78-4efd-aa9a-1a18a4fc62e4/deploy-status)](https://app.netlify.com/sites/khoa-design/deploys)
 
 [![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/wentallout/portfolio)
 
 [Open in Visual Studio Code](https://open.vscode.dev/wentallout/portfolio)
 
 ---
+
+## 📦 Deploy
+
+[![Netlify Status](https://api.netlify.com/api/v1/badges/7bf37fa7-ec78-4efd-aa9a-1a18a4fc62e4/deploy-status)](https://app.netlify.com/sites/khoa-design/deploys)
 
 ## 💻 Developing
 
