@@ -18,7 +18,6 @@
 	let volumeEle;
 	let seekBarEle;
 	let muted;
-	let muteIcon;
 
 	function mute() {
 		muted = !muted;
@@ -66,7 +65,7 @@
 	});
 
 	function handleSeekBar() {
-		currentTime = seekBarEle.value;
+		currentTime = duration * (seekBarEle.value / 100);
 	}
 
 	function handleVolume() {
