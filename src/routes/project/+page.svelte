@@ -1,12 +1,12 @@
 <script>
-	import ProjectCardList from '$lib/components/Project/ProjectCardList.svelte';
-	import PageTitle from '$lib/components/Common/PageTitle.svelte';
+	import ProjectCardList from '$components/Project/ProjectCardList.svelte';
+	import PageTitle from '$components/Common/PageTitle.svelte';
 	import Brain from '~icons/ph/brain';
 
 	// import FigmaLogo from '~icons/ph/figma-logo';
-	import SectionTitle from '$lib/components/Common/SectionTitle.svelte';
+	import SectionTitle from '$components/Common/SectionTitle.svelte';
 
-	import SEO from '$lib/components/SEO/SEO.svelte';
+	import SEO from '$components/SEO/SEO.svelte';
 	const breadcrumbs = [
 		{
 			name: 'Home',

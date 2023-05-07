@@ -1,5 +1,5 @@
 <script>
-	import Button from '$lib/components/Button/Button.svelte';
+	import Button from '$components/Button/Button.svelte';
 
 	import Crack from '$lib/assets/images/other/crack.svg';
 

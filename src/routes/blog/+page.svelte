@@ -1,13 +1,15 @@
 <script>
-	import SEO from '$lib/components/SEO/SEO.svelte';
-	import TextInput from '$lib/components/Input/TextInput.svelte';
-	import BlogListContainer from '$lib/components/Blog/BlogListContainer.svelte';
-	import BlogCard from '$lib/components/Blog/BlogCard.svelte';
-	import PageTitle from '$lib/components/Common/PageTitle.svelte';
-	import BlogTagsList from '$lib/components/Blog/BlogTagsList.svelte';
+	import SEO from '$components/SEO/SEO.svelte';
+	import TextInput from '$components/Input/TextInput.svelte';
+	import BlogListContainer from '$components/Blog/BlogListContainer.svelte';
+	import BlogCard from '$components/Blog/BlogCard.svelte';
+	import PageTitle from '$components/Common/PageTitle.svelte';
+	import BlogTagsList from '$components/Blog/BlogTagsList.svelte';
 
 	import MiniSearch from 'minisearch';
 	import { paginate, DarkPaginationNav } from 'svelte-paginate';
+
+	import { fade, slide } from 'svelte/transition';
 
 	export let data;
 
@@ -88,14 +90,16 @@
 
 	<BlogListContainer>
 		{#if filteredBlogs.length === 0}
-			<div class="not-found small-text">No blogs found.</div>
+			<div transition:slide|local class="not-found small-text">No blogs found.</div>
 		{:else}
 			{#each paginatedItems as item}
-				<BlogCard
-					blogTitle={item.meta.title}
-					blogLink={item.path}
-					blogDate={item.meta.date}
-					blogTags={item.meta.categories} />
+				{#key item}
+					<BlogCard
+						blogTitle={item.meta.title}
+						blogLink={item.path}
+						blogDate={item.meta.date}
+						blogTags={item.meta.categories} />
+				{/key}
 			{/each}
 		{/if}
 	</BlogListContainer>

@@ -1,6 +1,6 @@
 <script>
-	import End from '$lib/components/Common/ThankYou.svelte';
-	import CustomToc from '$lib/components/Common/CustomToc.svelte';
+	import End from '$components/Common/ThankYou.svelte';
+	import CustomToc from '$components/Common/CustomToc.svelte';
 </script>
 
 <div class="post-container">

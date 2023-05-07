@@ -1,11 +1,11 @@
 <script>
-	import SaosContainer from '$lib/components/Common/SaosContainer.svelte';
+	import SaosContainer from '$components/Common/SaosContainer.svelte';
 
 	import Frontend from '$lib/assets/images/home/frontend.svg?component';
 	import Navigation from '$lib/assets/images/home/navigation.svg?component';
 	import GraphicDesign from '$lib/assets/images/home/graphicDesign.svg?component';
 	import Process from '$lib/assets/images/home/process.svg?component';
-	import SectionTitle from '$lib/components/Common/SectionTitle.svelte';
+	import SectionTitle from '$components/Common/SectionTitle.svelte';
 
 	import Toolbox from '~icons/ph/toolbox';
 </script>
@@ -121,7 +121,7 @@
 		transform: scale(1.1);
 		overflow: visible;
 		border: 0;
-		z-index: var(--z-index-max);
+		z-index: var(--zIndexMax);
 	}
 
 	@media (min-width: 992px) {

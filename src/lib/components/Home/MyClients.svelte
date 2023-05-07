@@ -1,9 +1,9 @@
 <script>
-	import SaosContainer from '$lib/components/Common/SaosContainer.svelte';
-	import ExLink from '$lib/components/Common/ExLink.svelte';
+	import SaosContainer from '$components/Common/SaosContainer.svelte';
+	import ExLink from '$components/Common/ExLink.svelte';
 	import fpt from '$lib/assets/images/home/fpt.png?w=300&h=300';
 	import nashtech from '$lib/assets/images/home/nashtech.png?w=300&h=300';
-	import SectionTitle from '$lib/components/Common/SectionTitle.svelte';
+	import SectionTitle from '$components/Common/SectionTitle.svelte';
 
 	import Buildings from '~icons/ph/buildings';
 </script>

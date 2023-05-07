@@ -4,7 +4,7 @@
 	import NoBSGuideUX from '$lib/assets/images/book/NoBSGuideUX.png?w=200&h=300';
 	import Sprint from '$lib/assets/images/book/Sprint.png?w=200&h=300';
 	import JustEnoughResearch from '$lib/assets/images/book/JustEnoughResearch.png?w=200&h=300';
-	import CoolBook from '$lib/components/Resource/CoolBook.svelte';
+	import CoolBook from '$components/Resource/CoolBook.svelte';
 
 	let books = [
 		{

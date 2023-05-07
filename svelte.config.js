@@ -42,7 +42,8 @@ const config = {
 		},
 
 		alias: {
-			$blogImages: 'src/lib/assets/images/blog'
+			$blogImages: 'src/lib/assets/images/blog',
+			$components: 'src/lib/components'
 		},
 		csp: {
 			mode: 'hash',

@@ -1,6 +1,6 @@
 <script>
 	import { onMount } from 'svelte';
-	import { musicList } from '$lib/components/Resource/musiclist.js';
+	import { musicList } from '$components/Resource/musiclist.js';
 	import PlayFill from '~icons/ph/play-fill';
 	import Download from '~icons/ph/download';
 	import SkipBack from '~icons/ph/skip-back';
@@ -107,7 +107,7 @@
 			max="100"
 			step="any"
 			list="marker"
-			value={seekBarValue} />
+			bind:value={seekBarValue} />
 
 		<div class="volume">
 			<button type="button" class="mute__btn" on:click={mute} on:keydown={mute}>

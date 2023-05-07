@@ -23,7 +23,6 @@
 <style>
 	.toggle {
 		padding: var(--space-xs);
-		background: var(--colorBlack);
 
 		border: 0;
 		border-radius: 100%;
@@ -32,13 +31,13 @@
 		position: fixed;
 		top: 0;
 		left: 0;
-		z-index: var(--z-index-max);
+		z-index: var(--zIndexMax);
 
 		display: flex;
 		flex-direction: column;
 		justify-content: center;
 		align-items: center;
-		mix-blend-mode: difference;
+		background-color: transparent;
 	}
 
 	.toggle__icon {

@@ -1,5 +1,5 @@
 <script>
-	import ExLink from '$lib/components/Common/ExLink.svelte';
+	import ExLink from '$components/Common/ExLink.svelte';
 
 	export let href = '';
 	export let name = '';
