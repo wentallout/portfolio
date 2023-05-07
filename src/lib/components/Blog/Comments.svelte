@@ -2,9 +2,11 @@
 	import Giscus from '@giscus/svelte';
 
 	export let category = 'Blogs';
-	let categoryId = 'DIC_kwDOH5VoSc4CV-u6';
+	let categoryId = '';
 
-	if ((category = 'Projects')) {
+	if (category === 'Blogs') {
+		categoryId = 'DIC_kwDOH5VoSc4CV-u6';
+	} else {
 		categoryId = 'DIC_kwDOH5VoSc4CV-xr';
 	}
 </script>
@@ -14,7 +16,7 @@
 		id="comments"
 		repo="wentallout/portfolio"
 		repoId="R_kgDOH5VoSQ"
-		{category}
+	{category}
 		{categoryId}
 		mapping="title"
 		strict="0"

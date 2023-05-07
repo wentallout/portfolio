@@ -9,6 +9,8 @@
 	import MiniSearch from 'minisearch';
 	import { paginate, DarkPaginationNav } from 'svelte-paginate';
 
+	import { fade, slide } from 'svelte/transition';
+
 	export let data;
 
 	let allBlogs = data.blogs;
@@ -88,14 +90,16 @@
 
 	<BlogListContainer>
 		{#if filteredBlogs.length === 0}
-			<div class="not-found small-text">No blogs found.</div>
+			<div transition:slide|local class="not-found small-text">No blogs found.</div>
 		{:else}
 			{#each paginatedItems as item}
-				<BlogCard
-					blogTitle={item.meta.title}
-					blogLink={item.path}
-					blogDate={item.meta.date}
-					blogTags={item.meta.categories} />
+				{#key item}
+					<BlogCard
+						blogTitle={item.meta.title}
+						blogLink={item.path}
+						blogDate={item.meta.date}
+						blogTags={item.meta.categories} />
+				{/key}
 			{/each}
 		{/if}
 	</BlogListContainer>

@@ -107,7 +107,7 @@
 			max="100"
 			step="any"
 			list="marker"
-			value={seekBarValue} />
+			bind:value={seekBarValue} />
 
 		<div class="volume">
 			<button type="button" class="mute__btn" on:click={mute} on:keydown={mute}>

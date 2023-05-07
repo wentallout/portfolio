@@ -3,6 +3,7 @@
 	export let blogTitle = 'blogTitle';
 	export let blogDate = '';
 	import Time from 'svelte-time';
+	import { fade } from 'svelte/transition';
 
 	import CaretRight from '~icons/ph/caret-right';
 
@@ -11,7 +12,7 @@
 	export let hasTags = true;
 </script>
 
-<a href={blogLink} class="blog">
+<a transition:fade href={blogLink} class="blog">
 	<article class="blog__info">
 		{#if hasTags}
 			<div class="tags">

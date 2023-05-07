@@ -1,9 +1,24 @@
 ---
-title: Figma plugins
-date: 2022-01-30
+title: Free Figma resources
+date: 2023-05-07
 categories:
     - freebies
 ---
+
+## UI Kits
+
+https://figmaelements.com
+
+https://uistore.design
+
+https://setproduct.com/freebies
+
+https://uxcrush.com
+
+https://ui8.net/ui-kits
+
+https://uplabs.com
+
 
 
 ## Shadow
