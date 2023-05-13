@@ -2,7 +2,7 @@
 title: Best Frontend Tools
 date: 2023-04-11
 categories:
-    - freebies
+    - frontend
 ---
 
 ## Gradient Generator

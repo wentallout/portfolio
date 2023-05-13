@@ -1,17 +1,13 @@
 <script>
 	import SocialButtons from '$components/Contact/SocialButtons.svelte';
-
+	import VanishingHeader from '$components/Layout/VanishingHeader.svelte';
 	import { navItems } from '$lib/config.js';
 	import { onMount } from 'svelte';
 	import { page } from '$app/stores';
-
 	import List from '~icons/ph/list';
 	import X from '~icons/ph/x';
 
-	import VanishingHeader from '$components/Layout/VanishingHeader.svelte';
-
 	let scrollY;
-
 	let navOverlayEle;
 
 	function openNav() {
@@ -73,12 +69,7 @@
 
 <style>
 	.active-page {
-		color: var(--colorPrimaryActive) !important;
-	}
-
-	.active-page:hover {
-		user-select: none;
-		cursor: not-allowed;
+		color: var(--colorPrimary) !important;
 	}
 
 	.overlay-item.active-page:after {

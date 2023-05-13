@@ -8,7 +8,7 @@
 	export let color = 'var(--colorPrimary)';
 	export let background = 'transparent';
 
-	export let height = '4px';
+	export let height = '2px';
 	export let position = 'bottom';
 
 	const dispatch = createEventDispatcher();

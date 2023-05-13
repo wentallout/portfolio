@@ -30,7 +30,7 @@
 		overflow: visible;
 		position: fixed;
 		top: 0;
-		left: 0;
+		right:0;
 		z-index: var(--zIndexMax);
 
 		display: flex;

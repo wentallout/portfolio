@@ -1,0 +1,25 @@
+---
+title: Common Designers Problems
+date: 2023-05-10
+categories:
+    - fundamental
+---
+
+## Design Brief
+
+A design brief is a short document that outlines the goals, requirements, restraints, and opportunities of a project. It ensures that both clients and designers are on the same page.
+
+## Sample of a Design Brief
+
+
+- Name: HipDee Company UX Project 
+- About our company: HipDee is a digital music, podcast and video service that enables users to stream their favorite sounds as well as create and share their own. 500000 people have used it. 
+- What do we need:  We need a new mobile app and desktop design 
+- Why do we need it?: The present app design isnt operating as well as we'd like it to, which is preventing us from expanding our business quickly. Our new app layout will promote brand awareness and help us advance to the forefront of the digital audio industry.
+- Our vision for the project: We'd like to switch the majority of how our product operates now—which is online—to an app. We want our brand to stand out from the competition since we're not afraid to push the envelope in our highly saturated target industry. Our present brand assets have a more business vibe, but we'd like to modernize them and make something trendier to match our target market. Since our business is called HipDee, we'd like to incorporate amusing components that feature. Hip or other audio gear.                                                               
+- Some examples: behance links 
+- Where will the UX be use: design assets will be transfered to desktop platform before the app design is immediately launched on a mobile version 
+- File types: .fig, AI files, .pdf 
+- Target audience: 17-25 years old users with expendable income and an interest in social media
+- Deadline: Oct 6th
+- Budget: $6500

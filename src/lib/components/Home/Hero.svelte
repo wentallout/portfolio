@@ -1,16 +1,19 @@
 <script>
 	import Button from '$components/Button/Button.svelte';
+	import HeroScene from '$components/Scenes/HeroScene.svelte';
 
-	let heroEle;
+	import { Canvas } from '@threlte/core';
+
+	import HeroSVG from '$lib/assets/images/home/hero.svg?component';
 </script>
 
-<section bind:this={heroEle} class="full-width">
+<section class="full-width">
 	<div class="hero">
 		<div class="hero__block">
 			<div class="hero__name xxl-text">
 				Khoa is a
 				<span class="focus">UI/UX Designer</span>
-				<span class="focus focus-low text-focus-in">+ Frontend Developer</span>
+				<span class="focus focus-low text-focus-in large-text">+ Developer</span>
 			</div>
 			<div class="hero__text small-text">
 				I create practical and user-friendly products that bring real value and enhance people's
@@ -38,10 +41,45 @@
 				</a>
 			</div>
 		</div>
+
+		<div class="hero__visual">
+			<!-- <Canvas>
+				<HeroScene />
+			</Canvas> -->
+
+			<HeroSVG width="100%" height="100%" />
+		</div>
 	</div>
 </section>
 
 <style>
+	section {
+		overflow: visible;
+	}
+
+	.hero__visual {
+		display: none;
+
+		overflow: visible;
+		z-index: -1;
+
+		position: absolute;
+		top: 0;
+		right: var(--page-padding);
+	}
+
+	@media (min-width: 992px) {
+		.hero__visual {
+			display: block;
+			width: 500px;
+			height: 100%;
+			aspect-ratio: 1.4;
+			top: 50%;
+			right: 0;
+			transform: translate(-50%, -50%);
+		}
+	}
+
 	.hero__link {
 		display: block;
 		color: var(--colorPrimary);
@@ -53,7 +91,8 @@
 
 	.hero {
 		display: flex;
-		flex-direction: column;
+		flex-direction: row;
+		flex-wrap: wrap;
 
 		position: relative;
 		overflow: visible;
