@@ -122,3 +122,22 @@ label:has(+ textarea:focus) {
 	margin-inline-start: 50%;
 	transform: translateX(-50%);
 }
+
+@keyframes fadeForLazyload {
+	0% {
+		opacity: 0.3;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+
+img {
+	animation: fadeForLazyload 0.5s linear;
+}
+
+.cool-border {
+	border: 1px solid var(--colorBorder);
+	outline: 1px solid var(--colorBorder);
+	outline-offset: 4px;
+}

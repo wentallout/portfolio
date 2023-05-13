@@ -25,7 +25,7 @@
 	}
 
 	.other-container > * {
-		flex: 1 1 10ch;
+		flex: 1 1 20ch;
 	}
 
 	.other__image {

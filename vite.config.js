@@ -17,8 +17,8 @@ const config = {
 					{
 						name: 'preset-default',
 						params: { overrides: { removeViewBox: false } }
-					},
-					{ name: 'removeAttrs', params: { attrs: '(fill|stroke)' } }
+					}
+					// { name: 'removeAttrs', params: { attrs: '(fill|stroke)' } }
 				]
 			}
 		}),
@@ -31,6 +31,9 @@ const config = {
 			}
 		})
 	],
+	ssr: {
+		noExternal: ['three', 'troika-three-text']
+	},
 	server: {
 		port: '3000'
 	},

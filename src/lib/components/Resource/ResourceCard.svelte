@@ -28,9 +28,9 @@
 		box-shadow: var(--boxShadow);
 	}
 	.tool__name {
+		color: var(--colorText);
 		font-weight: 500;
 		margin-bottom: var(--space-xs);
-		color: var(--colorText);
 	}
 
 	.tool__description {
@@ -44,8 +44,9 @@
 	}
 
 	.tool:hover {
-		transform: scale(1.1);
-		z-index: 2;
 		background-color: var(--colorBgElevated);
+
+		box-shadow: -5px 5px var(--colorPrimaryHover);
+		transform: translate(5px, -5px);
 	}
 </style>

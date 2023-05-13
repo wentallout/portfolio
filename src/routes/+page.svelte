@@ -22,6 +22,10 @@
 	};
 </script>
 
+<svelte:head>
+	<title>Nguyen Dang Khoa - UI/UX Designer</title>
+</svelte:head>
+
 <SEO {...seoProps} />
 <Hero />
 <FeaturedProject />

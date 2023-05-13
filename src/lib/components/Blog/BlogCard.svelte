@@ -7,7 +7,7 @@
 
 	import CaretRight from '~icons/ph/caret-right';
 
-	export let blogTags = ['cat1', 'cat2'];
+	export let blogTags = ['category1', 'category2'];
 
 	export let hasTags = true;
 </script>
@@ -60,8 +60,9 @@
 
 	.blog:hover {
 		background-color: var(--colorBgElevated);
-		transform: scale(1.1);
-		z-index: 2;
+
+		box-shadow: -5px 5px var(--colorPrimaryHover);
+		transform: translate(5px, -5px);
 	}
 
 	.tags {

@@ -48,15 +48,14 @@
 
 		transition: var(--transition);
 		overflow: hidden;
-		border: 1px solid var(--colorBorder);
 
-		outline: 1px solid var(--colorBorder);
-		outline-offset: 4px;
 		box-shadow: var(--boxShadow);
+		outline: 1px solid var(--colorBorder);
 	}
 	.project:hover {
 		background-color: var(--colorBgElevated);
-		transform: scale(1.1);
+		box-shadow: -5px 5px var(--colorPrimaryHover);
+		transform: translate(5px, -5px);
 	}
 
 	.project:hover .indicator {
