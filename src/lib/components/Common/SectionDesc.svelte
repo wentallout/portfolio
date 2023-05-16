@@ -10,7 +10,7 @@
 	.section-description {
 		max-width: var(--text-width);
 		text-align: left;
-		margin-bottom: var(--space-l);
+		margin-bottom: var(--spaceL);
 		color: var(--colorTextSecondary);
 	}
 </style>

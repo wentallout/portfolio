@@ -19,7 +19,7 @@
 		top: 0;
 		left: 50%;
 		transform: translateY(-50%) translateX(-50%);
-		height: var(--font-size-xl);
+		height: var(--fontSizeXL);
 		width: auto;
 		opacity: 0.5;
 		user-select: none;
@@ -32,15 +32,15 @@
 		justify-content: center;
 		align-items: center;
 		flex-direction: column;
-		gap: var(--space-s);
+		gap: var(--spaceSmall);
 		/*  */
 
-		margin-bottom: var(--space-2xl);
+		margin-bottom: var(--space2XL);
 		overflow: visible;
 	}
 
 	.title__text {
-		font-family: var(--fancy-font);
+		font-family: var(--fontFancy);
 		color: var(--colorText);
 		z-index: 2;
 

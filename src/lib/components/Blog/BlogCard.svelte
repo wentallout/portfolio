@@ -44,7 +44,7 @@
 		/* SIZE */
 		width: 100%;
 		height: 120px;
-		padding: var(--space-s) var(--space-xs);
+		padding: var(--spaceSmall) var(--spaceXS);
 		/* --- */
 
 		/* OTHER */
@@ -69,7 +69,7 @@
 		display: flex;
 		flex-direction: row;
 		flex-wrap: wrap;
-		gap: var(--space-xs);
+		gap: var(--spaceXS);
 	}
 
 	.tag {
@@ -86,7 +86,7 @@
 	}
 
 	.blog__title {
-		font-weight: 500;
+		font-weight: var(--fontWeightMid);
 		overflow: hidden;
 		color: var(--colorText);
 
@@ -107,7 +107,7 @@
 		/* --- */
 
 		/* FONT */
-		font-weight: 400;
+		font-weight: var(--fontWeightSmall);
 		color: var(--colorTextSecondary);
 		/* --- */
 	}

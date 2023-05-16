@@ -51,8 +51,8 @@
 		gap: 0.25rem;
 
 		/* SPACING */
-		padding-top: var(--space-s);
-		padding-bottom: var(--space-l);
+		padding-top: var(--space3XL);
+		padding-bottom: var(--spaceL);
 
 		background-color: transparent;
 	}
@@ -60,12 +60,12 @@
 	.breadcrumb__unclickable {
 		pointer-events: none;
 		display: inline-block;
-		font-weight: 300;
+		font-weight: var(--fontWeightXS);
 		color: var(--colorTextSecondary);
 	}
 
 	.breadcrumb__clickable {
-		font-weight: 300;
+		font-weight: var(--fontWeightXS);
 		display: inline-flex;
 		color: var(--colorPrimary);
 	}

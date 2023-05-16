@@ -22,7 +22,7 @@
 		display: flex;
 		flex-direction: row;
 		flex-wrap: wrap;
-		gap: var(--space-s);
-		margin-bottom: var(--space-m);
+		gap: var(--spaceSmall);
+		margin-bottom: var(--spaceM);
 	}
 </style>

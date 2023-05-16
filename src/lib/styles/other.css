@@ -1,17 +1,3 @@
-.rotate {
-	animation: rotation 2s infinite linear;
-	z-index: 2;
-}
-
-@keyframes rotation {
-	from {
-		transform: rotate(0deg);
-	}
-	to {
-		transform: rotate(359deg);
-	}
-}
-
 /* -------------------------------- Nprogress START ------------------------------- */
 #nprogress .bar {
 	background: var(--colorPrimary) !important;
@@ -48,28 +34,10 @@
 }
 
 .svelte-lightbox-footer h2 {
-	font-size: var(--font-size-small);
+	font-size: var(--fontSizeSmall);
 }
 
-.rainbow {
-	background: -webkit-linear-gradient(92deg, #95d7e3, #eb76ff);
-	background-size: 600vw 600vw;
-	background-clip: text;
-	-webkit-background-clip: text;
-	-webkit-text-fill-color: transparent;
-	animation: rainbowTextAni 2s linear infinite alternate;
-}
 
-@keyframes rainbowTextAni {
-	from {
-		filter: hue-rotate(0deg);
-		background-position-x: 0%;
-	}
-	to {
-		filter: hue-rotate(360deg);
-		background-position-x: 600vw;
-	}
-}
 
 /* INPUT RANGE */
 

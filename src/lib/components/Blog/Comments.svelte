@@ -16,14 +16,14 @@
 		id="comments"
 		repo="wentallout/portfolio"
 		repoId="R_kgDOH5VoSQ"
-	{category}
+		{category}
 		{categoryId}
 		mapping="title"
 		strict="0"
 		reactionsEnabled="1"
 		emitMetadata="1"
 		inputPosition="top"
-		theme="dark"
+		theme="transparent_dark"
 		lang="en"
 		loading="lazy" />
 </section>

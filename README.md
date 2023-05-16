@@ -6,17 +6,10 @@
 ![GitHub commit activity](https://img.shields.io/github/commit-activity/m/wentallout/portfolio?style=for-the-badge)
 ![GitHub repo size](https://img.shields.io/github/repo-size/wentallout/portfolio?style=for-the-badge)
 
-# Khoa's Portfolio
+# Khoa's Portfolio [![Netlify Status](https://api.netlify.com/api/v1/badges/7bf37fa7-ec78-4efd-aa9a-1a18a4fc62e4/deploy-status)](https://app.netlify.com/sites/khoa-design/deploys)
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/wentallout/portfolio)
-
-[Open in Visual Studio Code](https://open.vscode.dev/wentallout/portfolio)
-
----
-
-## 📦 Deploy
-
-[![Netlify Status](https://api.netlify.com/api/v1/badges/7bf37fa7-ec78-4efd-aa9a-1a18a4fc62e4/deploy-status)](https://app.netlify.com/sites/khoa-design/deploys)
+[![Open in StackBlitz](https://img.shields.io/badge/Open%20in-StackBlitz-blue?style=for-the-badge&logo=stackblitz)](https://stackblitz.com/github/wentallout/portfolio)
+[![Open in VSCode](https://img.shields.io/badge/Open%20in-VSCode-blue?style=for-the-badge&logo=visualstudiocode)](https://open.vscode.dev/wentallout/portfolio)
 
 ## 💻 Developing
 
@@ -37,7 +30,7 @@ My portfolio URL: [wentallout.tech](https://wentallout.tech)
 
 A website made with SvelteKit is just incredibly fast even compared to other framework-based websites like React/Next/Vue and has great SEO out-of-the-box. You won't need a backend or CMS though, the blog posts are just markdown files you can store on your computer (see `routes/blog`).
 
-All imported images are automatically converted to `webp` and lazy loaded to optimize loading speed.
+All imported images are automatically converted to `webp` and lazy loaded to optimize performance.
 
 Visitors can also comment on your blogs using GitHub discussion (you might want to customize `Comments.svelte` component so that it works on your repo)
 
@@ -49,29 +42,25 @@ Visitors can also comment on your blogs using GitHub discussion (you might want 
 - `global.css` global styles and importing all other css files
 - `spacing.css` spacing for `margin`, `padding` and the whole page layout in general [utopia.fyi](https://utopia.fyi/)
 - `typography.css` typography-related stuff like `font-size`, `line-height`, `letter-spacing`, `font-weight`
-- `color.css` text colors, border colors, background colors
+- `color.css` text colors, border colors, background colors (2 color schemes: `light` and `dark`)
 
-## 🏆 Progress
+## 🗺 Sitemap
 
-### Pages
+| page     | path      |
+| -------- | --------- |
+| Home     | /         |
+| Project  | /project  |
+| Blog     | /blog     |
+| Resource | /resource |
+| Contact  | /contact  |
 
-✅ Home
-
-❌ Project: can add more projects
-
-✅ Blog
-
-✅ Resource
-
-✅ Contact
-
-### Features
+## Features
 
 ✅ SEO 100/100
 
 ✅ Responsive
 
-✅ Dark/Light Mode Toggle
+✅ Dark/Light Mode Toggle Button
 
 ✅ Fonts
 
@@ -94,9 +83,9 @@ Visitors can also comment on your blogs using GitHub discussion (you might want 
 
 ✅ Contact Form
 
-- Netlify Form
+---
 
-### Blogs
+### 👉 Blogs
 
 - Use markdown to write blogs [mdsvex](https://github.com/pngwn/MDsveX)
 - use `categories` (#hashtag) to filter blogs

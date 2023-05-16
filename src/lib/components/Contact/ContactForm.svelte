@@ -51,7 +51,7 @@
 		display: flex;
 		flex-wrap: wrap;
 		justify-content: flex-start;
-		margin-bottom: var(--space-m);
+		margin-bottom: var(--spaceM);
 	}
 
 	.contact {
@@ -61,11 +61,11 @@
 	}
 
 	.contact__btn {
-		margin-top: var(--space-m);
+		margin-top: var(--spaceM);
 		width: 100%;
 
 		display: flex;
 		flex-wrap: wrap;
-		gap: var(--space-s);
+		gap: var(--spaceSmall);
 	}
 </style>

@@ -85,9 +85,9 @@
 		text-transform: capitalize;
 
 		/* FONT */
-		font-weight: 600;
+		font-weight: var(--fontWeightLarge);
 		line-height: normal;
-		font-size: var(--font-size-small);
+		font-size: var(--fontSizeSmall);
 		/* --- */
 	}
 	.pushable:hover {

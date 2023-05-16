@@ -45,7 +45,7 @@
 		align-items: center;
 
 		position: relative;
-		padding: var(--space-m);
+		padding: var(--spaceM);
 
 		height: 300px;
 		overflow: hidden;
@@ -78,7 +78,7 @@
 
 	.other__title {
 		z-index: 3;
-		font-weight: 600;
+		font-weight: var(--fontWeightLarge);
 		color: var(--colorWhite);
 	}
 </style>

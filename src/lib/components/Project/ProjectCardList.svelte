@@ -45,6 +45,6 @@
 	.projects {
 		display: flex;
 		flex-direction: column;
-		gap: var(--space-xl);
+		gap: var(--spaceXL);
 	}
 </style>

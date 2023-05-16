@@ -79,17 +79,17 @@
 		display: flex;
 		flex-direction: column;
 
-		padding: var(--space-l) 0;
+		padding: var(--spaceL) 0;
 	}
 
 	.about__info {
 		display: flex;
-		gap: var(--space-s);
+		gap: var(--spaceSmall);
 		flex-direction: column;
 		border-bottom: 4px solid var(--colorBorderSecondary);
 
-		padding-top: var(--space-s);
-		padding-bottom: var(--space-3xl);
+		padding-top: var(--spaceSmall);
+		padding-bottom: var(--space3XL);
 	}
 
 	@media (min-width: 992px) {
@@ -99,7 +99,7 @@
 	}
 
 	.info__title {
-		font-weight: 600;
+		font-weight: var(--fontWeightLarge);
 		color: var(--colorText);
 		width: 400px;
 	}

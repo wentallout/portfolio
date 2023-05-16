@@ -2,7 +2,7 @@
 	font-family: 'Normal';
 	src: url('/fonts/Inter.woff2') format('woff2');
 
-	font-weight: 300 600;
+	font-weight: var(--fontWeightXS) 600;
 	font-stretch: normal;
 	font-style: normal;
 	font-display: swap;
@@ -29,28 +29,28 @@ pre code {
 }
 
 :root {
-	--normal-font: 'Normal';
-	--fancy-font: 'Fancy';
+	--fontNormal: 'Normal';
+	--fontFancy: 'Fancy';
 
 	/* FONT SIZE */
-	--font-size-xs: clamp(0.9rem, calc(0.9rem + -0.05vw), 0.92rem);
-	--font-size-small: clamp(1rem, calc(1rem + 0.07vw), 1rem);
-	--font-size-base: clamp(1.06rem, calc(1.01rem + 0.25vw), 1.25rem);
-	--font-size-mid: clamp(1.28rem, calc(1.17rem + 0.53vw), 1.67rem);
-	--font-size-large: clamp(1.53rem, calc(1.34rem + 0.94vw), 2.22rem);
-	--font-size-xl: clamp(1.84rem, calc(1.53rem + 1.52vw), 2.96rem);
-	--font-size-2xl: clamp(2.2rem, calc(1.73rem + 2.36vw), 3.95rem);
-	--font-size-3xl: clamp(2.64rem, calc(1.93rem + 3.55vw), 5.26rem);
+	--fontSizeXS: clamp(0.9rem, calc(0.9rem + -0.05vw), 0.92rem);
+	--fontSizeSmall: clamp(1rem, calc(1rem + 0.07vw), 1rem);
+	--fontSizeBase: clamp(1.06rem, calc(1.01rem + 0.25vw), 1.25rem);
+	--fontSizeMid: clamp(1.28rem, calc(1.17rem + 0.53vw), 1.67rem);
+	--fontSizeLarge: clamp(1.53rem, calc(1.34rem + 0.94vw), 2.22rem);
+	--fontSizeXL: clamp(1.84rem, calc(1.53rem + 1.52vw), 2.96rem);
+	--fontSize2XL: clamp(2.2rem, calc(1.73rem + 2.36vw), 3.95rem);
+	--fontSize3XL: clamp(2.64rem, calc(1.93rem + 3.55vw), 5.26rem);
 
 	/* LINE HEIGHT */
-	--line-height-xs: 160%;
-	--line-height-small: 160%;
-	--line-height-base: 160%;
-	--line-height-mid: 120%;
-	--line-height-large: 120%;
-	--line-height-xl: 120%;
-	--line-height-2xl: 120%;
-	--line-height-3xl: 120%;
+	--lineHeightXS: 160%;
+	--lineHeightSmall: 160%;
+	--lineHeightBase: 160%;
+	--lineHeightMid: 120%;
+	--lineHeightLarge: 120%;
+	--lineHeightXL: 120%;
+	--lineHeight2XL: 120%;
+	--lineHeight3XL: 120%;
 }
 
 /* @supports (font-variation-settings: normal) {
@@ -63,56 +63,56 @@ pre code {
 html {
 	text-rendering: optimizeLegibility;
 	-webkit-font-smoothing: antialiased;
-	font-family: var(--normal-font), 'fallback', sans-serif, -apple-system, BlinkMacSystemFont,
+	font-family: var(--fontNormal), 'fallback', sans-serif, -apple-system, BlinkMacSystemFont,
 		'Segoe UI', Roboto, Helvetica, Arial, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
-	font-weight: 400;
+	font-weight: var(--fontWeightSmall);
 }
 
 .xs-text {
-	line-height: var(--line-height-xs);
-	font-size: var(--font-size-xs);
+	font-size: var(--fontSizeXS);
+	line-height: var(--lineHeightXS);
 	letter-spacing: -0.006em;
 }
 
 .small-text {
-	font-size: var(--font-size-small);
-	line-height: var(--line-height-small);
+	font-size: var(--fontSizeSmall);
+	line-height: var(--lineHeightSmall);
 	letter-spacing: -0.011em;
 }
 
 .base-text {
-	font-size: var(--font-size-base);
-	line-height: var(--line-height-base);
+	font-size: var(--fontSizeBase);
+	line-height: var(--lineHeightBase);
 	letter-spacing: -0.017em;
 }
 
 .mid-text {
-	font-size: var(--font-size-mid);
-	line-height: var(--line-height-mid);
+	font-size: var(--fontSizeMid);
+	line-height: var(--lineHeightMid);
 	letter-spacing: -0.02em;
 }
 
 .large-text {
-	font-size: var(--font-size-large);
-	line-height: var(--line-height-large);
+	font-size: var(--fontSizeLarge);
+	line-height: var(--lineHeightLarge);
 	letter-spacing: -0.021em;
 }
 
 .xl-text {
-	font-size: var(--font-size-xl);
-	line-height: var(--line-height-xl);
+	font-size: var(--fontSizeXL);
+	line-height: var(--lineHeightXL);
 	letter-spacing: -0.022em;
 }
 
 .xxl-text {
-	font-size: var(--font-size-2xl);
-	line-height: var(--line-height-2xl);
+	font-size: var(--fontSize2XL);
+	line-height: var(--lineHeight2XL);
 	letter-spacing: -0.022em;
 }
 
 .xxxl-text {
-	font-size: var(--font-size-3xl);
-	line-height: var(--line-height-3xl);
+	font-size: var(--fontSize3XL);
+	line-height: var(--lineHeight3XL);
 	letter-spacing: -0.022em;
 }
 
@@ -135,3 +135,16 @@ html {
 	30	-0.021
 	40	-0.022
 	80	-0.022 */
+[color-scheme='dark'] {
+	--fontWeightXS: 300;
+	--fontWeightSmall: 400;
+	--fontWeightMid: 500;
+	--fontWeightLarge: 600;
+}
+
+[color-scheme='light'] {
+	--fontWeightXS: 400;
+	--fontWeightSmall: 500;
+	--fontWeightMid: 500;
+	--fontWeightLarge: 600;
+}

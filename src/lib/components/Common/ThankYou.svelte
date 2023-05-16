@@ -1,23 +1,21 @@
 <script>
-	import Line from '$components/Common/Line.svelte';
 </script>
 
 <div class="end">
-	<Line />
 	<div class="end__text xl-text rainbow">Thanks for reading.</div>
 </div>
 
 <style>
 	.end {
-		margin-top: var(--space-3xl);
-		margin-bottom: var(--space-3xl);
+		margin-top: var(--space3XL);
+		margin-bottom: var(--space3XL);
 	}
 
 	.end__text {
 		display: flex;
-		font-family: var(--fancy-font);
+		font-family: var(--fontFancy);
 		color: var(--colorText);
-		padding: var(--space-s) 0;
+		padding: var(--spaceSmall) 0;
 		justify-content: center;
 		align-items: center;
 		flex-direction: column;

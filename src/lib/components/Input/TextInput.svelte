@@ -45,8 +45,8 @@
 	}
 
 	.label {
-		font-weight: 500;
-		margin-bottom: var(--space-3xs);
+		font-weight: var(--fontWeightMid);
+		margin-bottom: var(--space3XS);
 	}
 
 	datalist option {
@@ -68,8 +68,8 @@
 		/* --- */
 
 		/* SPACING */
-		padding: var(--space-xs);
-		margin-bottom: var(--space-s);
+		padding: var(--spaceXS);
+		margin-bottom: var(--spaceSmall);
 		/* --- */
 
 		width: 100%;

@@ -177,8 +177,8 @@
 		flex-direction: row;
 		flex-wrap: wrap;
 		width: 100%;
-		padding: var(--space-s) var(--space-l);
-		gap: var(--space-s);
+		padding: var(--spaceSmall) var(--spaceL);
+		gap: var(--spaceSmall);
 	}
 
 	.seekBar__control {
@@ -192,20 +192,20 @@
 	.volume {
 		display: flex;
 		align-items: center;
-		gap: var(--space-s);
+		gap: var(--spaceSmall);
 	}
 
 	.info__current {
-		font-weight: 300;
+		font-weight: var(--fontWeightXS);
 		color: var(--colorPrimary);
 	}
 
 	.info__name {
-		font-weight: 600;
+		font-weight: var(--fontWeightLarge);
 	}
 
 	.info__duration {
-		font-weight: 300;
+		font-weight: var(--fontWeightXS);
 		color: var(--colorWhite);
 	}
 
@@ -229,18 +229,18 @@
 	.info {
 		display: flex;
 		flex-direction: column;
-		gap: var(--space-s);
+		gap: var(--spaceSmall);
 		width: fit-content;
 		align-items: center;
 		justify-content: center;
-		padding: var(--space-l);
+		padding: var(--spaceL);
 		color: var(--colorWhite);
 	}
 
 	.info__time {
 		display: flex;
 		flex-direction: row;
-		gap: var(--space-s);
+		gap: var(--spaceSmall);
 		color: var(--colorWhite);
 	}
 
@@ -262,8 +262,8 @@
 		display: flex;
 		justify-content: center;
 		align-items: center;
-		padding: var(--space-m);
-		gap: var(--space-s);
+		padding: var(--spaceM);
+		gap: var(--spaceSmall);
 
 		width: 100%;
 	}
@@ -273,7 +273,7 @@
 		justify-content: center;
 		align-items: center;
 
-		padding: var(--space-xs);
+		padding: var(--spaceXS);
 		flex-direction: row;
 		background-color: var(--colorBgContainer);
 		border: 0;
@@ -314,7 +314,7 @@
 	}
 
 	.song-active {
-		padding: var(--space-s) var(--space-l);
+		padding: var(--spaceSmall) var(--spaceL);
 
 		position: relative;
 		background: var(--colorPrimary);
@@ -322,12 +322,12 @@
 	}
 
 	.song-name {
-		font-weight: 300;
+		font-weight: var(--fontWeightXS);
 		color: var(--colorText);
 	}
 
 	.song-active .song-name {
-		font-weight: 600;
+		font-weight: var(--fontWeightLarge);
 		color: var(--colorBlack);
 	}
 
@@ -339,7 +339,7 @@
 	}
 
 	.song {
-		padding: var(--space-xs) var(--space-l);
+		padding: var(--spaceXS) var(--spaceL);
 		transition: var(--transition);
 	}
 

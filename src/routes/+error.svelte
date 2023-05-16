@@ -73,8 +73,8 @@
 	}
 
 	.status {
-		font-size: calc(var(--font-size-2xl) * 2);
-		margin-bottom: var(--space-xl);
+		font-size: calc(var(--fontSize2XL) * 2);
+		margin-bottom: var(--spaceXL);
 	}
 	.error {
 		display: flex;
@@ -82,24 +82,24 @@
 		flex-wrap: wrap;
 		justify-content: center;
 		align-items: center;
-		gap: var(--space-m);
-		padding: var(--space-l);
+		gap: var(--spaceM);
+		padding: var(--spaceL);
 		position: relative;
 	}
 	.status {
 		color: var(--colorError);
-		font-family: var(--fancy-font);
+		font-family: var(--fontFancy);
 	}
 	.detail {
 		display: flex;
 		flex-direction: row;
 		justify-content: center;
 		align-items: center;
-		gap: var(--space-s);
-		margin-bottom: var(--space-m);
+		gap: var(--spaceSmall);
+		margin-bottom: var(--spaceM);
 		display: inline-block;
 		color: var(--colorTextSecondary);
-		font-weight: 400;
+		font-weight: var(--fontWeightSmall);
 		max-width: var(--text-width);
 	}
 </style>

@@ -18,9 +18,9 @@
 		flex-direction: row;
 
 		align-items: flex-start;
-		margin-top: var(--space-3xl);
+		margin-top: var(--space3XL);
 		justify-content: space-between;
-		gap: var(--space-m);
+		gap: var(--spaceM);
 	}
 	.post-content {
 		display: flex;

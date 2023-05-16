@@ -24,14 +24,14 @@
 	.container {
 		width: 100%;
 		max-width: 100vw;
-		font-weight: 400;
-		font-size: var(--font-size-small);
+		font-weight: var(--fontWeightSmall);
+		font-size: var(--fontSizeSmall);
 		line-height: normal;
 		position: relative;
 	}
 
 	.marquee {
-		--gap: var(--space-3xl);
+		--gap: var(--space3XL);
 		position: relative;
 		display: flex;
 		overflow: hidden;
@@ -39,7 +39,7 @@
 		gap: var(--gap);
 		background-color: var(--colorBlack);
 		color: var(--colorPrimary);
-		padding: var(--space-xs) 0;
+		padding: var(--spaceXS) 0;
 	}
 
 	.marquee__content {

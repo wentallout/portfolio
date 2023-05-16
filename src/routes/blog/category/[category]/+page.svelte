@@ -22,9 +22,9 @@
 <style>
 	.result {
 		margin-top: 0;
-		margin-bottom: var(--space-m);
+		margin-bottom: var(--spaceM);
 		color: var(--neutral-900);
-		font-family: var(--fancy-font);
+		font-family: var(--fontFancy);
 	}
 
 	.result__title {

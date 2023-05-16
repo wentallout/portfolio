@@ -13,7 +13,8 @@
 			<div class="hero__name xxl-text">
 				Khoa is a
 				<span class="focus">UI/UX Designer</span>
-				<span class="focus focus-low text-focus-in large-text">+ Developer</span>
+				<span class="focus focus-low text-focus-in mid-text">+ Web Developer</span>
+				<span class="focus focus-low text-focus-in mid-text">+ AI Art Enthusiast</span>
 			</div>
 			<div class="hero__text small-text">
 				I create practical and user-friendly products that bring real value and enhance people's
@@ -100,14 +101,14 @@
 
 	.hero__block {
 		display: flex;
-		padding: var(--space-3xl) var(--page-padding);
+		padding: var(--space3XL) var(--page-padding);
 		flex-direction: column;
 		position: relative;
 	}
 
 	.hero__name {
-		font-family: var(--fancy-font);
-		margin-bottom: var(--space-l);
+		font-family: var(--fontFancy);
+		margin-bottom: var(--spaceL);
 	}
 
 	.focus {
@@ -121,15 +122,15 @@
 	.hero__text {
 		color: var(--colorTextSecondary);
 		max-width: var(--text-width);
-		margin-bottom: var(--space-s);
+		margin-bottom: var(--spaceSmall);
 		text-wrap: balance;
 	}
 	.hero__btn {
-		margin-top: var(--space-l);
+		margin-top: var(--spaceL);
 		width: 100%;
 
 		display: flex;
-		gap: var(--space-s);
+		gap: var(--spaceSmall);
 		flex-wrap: wrap;
 	}
 

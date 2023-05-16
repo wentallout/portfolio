@@ -41,7 +41,7 @@
 		align-items: center;
 		flex-direction: row;
 		flex-wrap: wrap;
-		gap: var(--space-m);
+		gap: var(--spaceM);
 	}
 
 	.logo {

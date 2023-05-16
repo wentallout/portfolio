@@ -55,19 +55,19 @@
 	}
 
 	.block__title {
-		font-weight: 600;
+		font-weight: var(--fontWeightLarge);
 		color: var(--colorText);
 	}
 
 	.desc {
 		display: flex;
 		flex-direction: column;
-		gap: var(--space-l);
+		gap: var(--spaceL);
 		max-width: var(--text-width);
 	}
 
 	.block__text {
-		font-weight: 400;
+		font-weight: var(--fontWeightSmall);
 
 		color: var(--colorTextSecondary);
 	}
@@ -75,6 +75,6 @@
 	.block {
 		display: flex;
 		flex-direction: column;
-		gap: var(--space-xs);
+		gap: var(--spaceXS);
 	}
 </style>

@@ -23,7 +23,7 @@
 
 	details > summary {
 		cursor: pointer;
-		padding: var(--space-xs);
+		padding: var(--spaceXS);
 		transition: var(--transition);
 	}
 
@@ -38,7 +38,7 @@
 	.answer {
 		color: var(--colorTextSecondary);
 		max-width: var(--text-width);
-		padding: var(--space-s);
+		padding: var(--spaceSmall);
 	}
 
 	details:focus {
@@ -46,7 +46,7 @@
 	}
 
 	details[open] {
-		margin-bottom: var(--space-s);
+		margin-bottom: var(--spaceSmall);
 	}
 
 	details[open] .answer {

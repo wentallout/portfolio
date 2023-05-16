@@ -131,12 +131,12 @@
 	}
 
 	.blog-list {
-		margin-top: var(--space-m);
+		margin-top: var(--spaceM);
 		min-height: 100vh;
 	}
 
 	.not-found {
-		padding: var(--space-s) 0;
+		padding: var(--spaceSmall) 0;
 		color: var(--colorTextSecondary);
 	}
 </style>
