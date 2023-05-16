@@ -10,16 +10,16 @@
 
 <style>
 	.label {
-		font-weight: 500;
-		margin-bottom: var(--space-3xs);
+		font-weight: var(--fontWeightMid);
+		margin-bottom: var(--space3XS);
 	}
 
 	.textarea {
 		height: 7rem;
 		font-family: inherit;
-		padding: var(--space-xs);
+		padding: var(--spaceXS);
 		color: var(--colorText) !important;
-		margin-bottom: var(--space-s);
+		margin-bottom: var(--spaceSmall);
 		background-color: transparent;
 		border: 1px solid var(--colorBorder);
 

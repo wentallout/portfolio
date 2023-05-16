@@ -14,7 +14,7 @@
 	.container {
 		display: flex;
 		flex-direction: column;
-		gap: var(--space-m);
+		gap: var(--spaceM);
 		height: 500px;
 		align-items: center;
 		justify-content: center;

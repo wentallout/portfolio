@@ -59,9 +59,9 @@
 		/* FLEX */
 		display: flex;
 		flex-direction: row;
-		/* padding: 0 var(--space-m); */
+		/* padding: 0 var(--spaceM); */
 		width: 100%;
-		margin-bottom: var(--space-m);
+		margin-bottom: var(--spaceM);
 		border-bottom: 0;
 		overflow: hidden;
 	}
@@ -76,11 +76,11 @@
 		display: flex;
 		flex-wrap: wrap;
 		flex-direction: row;
-		gap: var(--space-m);
+		gap: var(--spaceM);
 	}
 
 	.social__address {
-		padding: var(--space-s);
+		padding: var(--spaceSmall);
 		transition: var(--transition);
 		background-color: var(--colorBgContainer);
 		display: flex;

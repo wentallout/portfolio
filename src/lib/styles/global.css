@@ -2,6 +2,7 @@
 @import url('spacing.css');
 @import url('typography.css');
 @import url('color.css');
+@import url('animation.css');
 @import url('other.css');
 
 html {
@@ -25,7 +26,9 @@ html {
 	--border-radius-light: calc(var(--border-radius) / 2);
 
 	/* TRANSITION */
-	--transition: 0.3s ease-in-out;
+	/* --transition: 0.3s ease-in-out; */
+
+	--transition: 0.3s cubic-bezier(0.25, 0.1, 0.25, 1);
 
 	/* MISC */
 	accent-color: var(--colorPrimary);
@@ -77,7 +80,7 @@ address {
 section {
 	/* Spacing */
 	max-width: var(--max-width);
-	margin-bottom: calc(var(--space-3xl) * 2);
+	margin-bottom: calc(var(--space3XL) * 2);
 }
 
 svg {
@@ -106,7 +109,7 @@ svg {
 }
 
 .embed {
-	margin-bottom: var(--space-s);
+	margin-bottom: var(--spaceSmall);
 	overflow: hidden;
 	background-color: transparent;
 }

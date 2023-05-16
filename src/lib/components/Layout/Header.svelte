@@ -70,6 +70,7 @@
 <style>
 	.active-page {
 		color: var(--colorPrimary) !important;
+		border-bottom: 1px solid inherit;
 	}
 
 	.overlay-item.active-page:after {
@@ -79,9 +80,9 @@
 
 	.nav {
 		/* FONT */
-		font-size: var(--font-size-base);
-		font-weight: 500;
-		color: var(--colorWhite);
+		font-size: var(--fontSizeBase);
+		font-weight: var(--fontWeightMid);
+		color: var(--colorText);
 		/* --- */
 		width: 100%;
 		display: flex;
@@ -108,7 +109,7 @@
 	}
 
 	.nav-list__item:hover {
-		font-weight: 600;
+		font-weight: var(--fontWeightLarge);
 		scale: 1.1;
 		color: var(--colorPrimaryHover);
 	}
@@ -121,7 +122,7 @@
 
 		width: 100vw;
 		max-width: 100vw;
-		padding: var(--space-xs);
+		padding: var(--spaceXS);
 		cursor: pointer;
 	}
 
@@ -144,7 +145,7 @@
 	}
 
 	.item {
-		padding: var(--space-s);
+		padding: var(--spaceSmall);
 		display: flex;
 		justify-content: center;
 		align-items: center;
@@ -167,7 +168,7 @@
 		backdrop-filter: blur(5px);
 		overflow-y: hidden;
 		transition: var(--transition);
-		font-weight: 300;
+		font-weight: var(--fontWeightXS);
 	}
 
 	.overlay-content {
@@ -182,7 +183,7 @@
 	}
 
 	.overlay-item {
-		padding: var(--space-l) 0;
+		padding: var(--spaceL) 0;
 
 		color: var(--colorWhite);
 
@@ -200,7 +201,7 @@
 		padding-right: var(--page-padding);
 
 		outline: 1px solid transparent;
-		font-weight: 500;
+		font-weight: var(--fontWeightMid);
 	}
 
 	.overlay-item:hover,
@@ -221,7 +222,7 @@
 		top: 0;
 		cursor: pointer;
 
-		/* padding: var(--space-xs); */
+		/* padding: var(--spaceXS); */
 		cursor: pointer;
 	}
 
@@ -233,7 +234,7 @@
 
 	.social {
 		border-top: 1px solid var(--colorTextTertiary);
-		padding-top: var(--space-2xl);
+		padding-top: var(--space2XL);
 	}
 
 	.header {

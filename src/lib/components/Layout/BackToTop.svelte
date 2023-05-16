@@ -28,7 +28,7 @@
 <svelte:window on:scroll={handleOnScroll} />
 
 <div class="bck2top" on:click={goTop} on:keyup={goTop} class:hidden>
-	<CaretUp width="24" height="24" color="var(--colorBgElevated)" />
+	<CaretUp width="24" height="24" color="var(--colorBlack)" />
 </div>
 
 <style>
@@ -37,11 +37,14 @@
 		display: flex;
 		justify-content: center;
 		align-items: center;
+		flex-direction: column;
 		/* --- */
 
 		/* SIZE */
-		width: 40px;
-		height: 40px;
+
+		aspect-ratio: 1/1;
+		padding: var(--spaceXS);
+		border-radius: 50%;
 		/* --- */
 
 		/* COLOR */
@@ -50,8 +53,8 @@
 
 		/* POSITION FIXED ON SCREEN */
 		position: fixed;
-		right: var(--space-s);
-		bottom: var(--space-s);
+		right: var(--spaceSmall);
+		bottom: var(--spaceSmall);
 		z-index: var(--zIndexMax);
 		/*  */
 
@@ -62,15 +65,7 @@
 		line-height: normal;
 		/*  */
 
-		border-radius: 100%;
-
 		box-shadow: var(--boxShadow);
-	}
-	@media (min-width: 768px) {
-		.bck2top {
-			width: 56px;
-			height: 56px;
-		}
 	}
 
 	@media (hover: hover) {

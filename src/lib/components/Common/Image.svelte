@@ -27,13 +27,13 @@
 
 	.image-with-caption {
 		position: relative;
-		margin-bottom: var(--space-s);
+		margin-bottom: var(--spaceSmall);
 	}
 
 	.caption {
 		opacity: 0;
 		padding: 4px 8px;
-		font-size: var(--font-size-xs);
+		font-size: var(--fontSizeXS);
 
 		/* POSITION */
 		position: absolute;

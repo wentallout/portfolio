@@ -1,5 +1,4 @@
 <script>
-	import NotAI from '$components/Layout/NotAI.svelte';
 	import FooterEnd from '$components/Layout/FooterEnd.svelte';
 	import ExLink from '$components/Common/ExLink.svelte';
 	import Marquee from '$components/Common/Marquee.svelte';
@@ -40,9 +39,6 @@
 		<div class="list">
 			<div class="list__title">Other</div>
 			<ul class="nav-list">
-				<li class="nav-list__item">
-					<a href="/doc/uxForBeginners.pdf">UX For Beginners</a>
-				</li>
 				<li class="nav-list__item">
 					<a href="/resource/music">Music</a>
 				</li>
@@ -91,51 +87,73 @@
 		</div>
 	</div>
 
-	<NotAI />
 	<FooterEnd />
 </footer>
 <Marquee />
 
 <style>
+	.footer:before {
+		content: '';
+		position: absolute;
+		top: 0;
+		left: 0;
+		background-image: url(/images/chain.svg);
+		background-repeat: repeat-x;
+		width: 100%;
+		height: 35px;
+	}
+
+	:global([color-scheme='light'] .footer:before) {
+		filter: invert();
+	}
+
 	.footer {
 		display: flex;
 
 		flex-direction: column;
 		width: 100%;
 
-		padding: var(--space-xl) var(--page-padding);
+		padding: var(--spaceXL) var(--page-padding);
 		/* Position */
 		position: relative;
 		/* Width */
 		max-width: 100vw;
 
-		background: linear-gradient(0deg, var(--colorBgContainer) 0%, var(--colorBgElevated) 100%);
+		background-color: linear-gradient(
+			0deg,
+			var(--colorBgContainer) 0%,
+			var(--colorBgElevated) 100%
+		);
 
-		border-top: 1px solid var(--colorBorderSecondary);
+		background: url(/images/stardust.png);
 
 		box-shadow: var(--boxShadow);
 	}
 	.list-container {
 		overflow: hidden;
 		--min: 20ch;
-		--gap: var(--space-l);
+		--gap: var(--spaceL);
 
 		display: grid;
 		grid-gap: var(--gap);
 
 		grid-template-columns: repeat(auto-fit, minmax(min(100%, var(--min)), 1fr));
+
+		border-bottom: 1px solid var(--colorTextQuaternary);
+
+		margin-bottom: var(--spaceSmall);
 	}
 
 	.list {
 		display: flex;
 		flex-direction: column;
-		gap: var(--space-m);
+		gap: var(--spaceM);
 	}
 
 	.list__title {
-		font-family: var(--fancy-font);
+		font-family: var(--fontFancy);
 		color: var(--colorText);
-		font-size: var(--font-size-base);
+		font-size: var(--fontSizeBase);
 
 		border-bottom: 4px solid transparent;
 		border-image: linear-gradient(to right, var(--colorTextTertiary), transparent) 1 0%;
@@ -147,20 +165,21 @@
 		justify-content: left;
 		align-items: flex-start;
 		margin: 0;
-		margin-bottom: var(--space-l);
+		margin-bottom: var(--spaceL);
 		flex-wrap: wrap;
-		gap: var(--space-2xs);
+		gap: var(--space2XS);
 	}
 
 	.nav-list__item {
 		display: flex;
+
 		padding-left: 0;
-		padding-right: var(--space-xs);
+		padding-right: var(--spaceXS);
 		max-width: 30ch;
-		font-weight: 400;
+		font-weight: var(--fontWeightSmall);
 		transition: 0.3s;
 		color: var(--colorTextSecondary);
-		gap: var(--space-3xs);
+		gap: var(--space3XS);
 	}
 
 	.nav-list__item a:hover {

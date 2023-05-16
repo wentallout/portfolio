@@ -12,7 +12,7 @@
 
 <a href={linkToDetail}>
 	<article class="project">
-		<div class="year xs-text">{year}</div>
+		<div class="project__year xs-text">{year}</div>
 		<img class="project__thumbnail" src={thumbnail} alt="" />
 
 		<div class="project__info">
@@ -72,7 +72,7 @@
 	.info {
 		display: flex;
 		flex-direction: column;
-		gap: var(--space-xs);
+		gap: var(--spaceXS);
 		height: auto;
 	}
 
@@ -82,14 +82,14 @@
 
 		flex-direction: column;
 		position: relative;
-		padding: var(--space-m) var(--space-xl);
-		gap: var(--space-m);
+		padding: var(--spaceM) var(--spaceXL);
+		gap: var(--spaceM);
 		color: var(--colorTextSecondary);
 	}
 
 	.name {
 		color: var(--colorText);
-		font-weight: 600;
+		font-weight: var(--fontWeightLarge);
 	}
 
 	.project__thumbnail {
@@ -107,7 +107,7 @@
 	.info__section {
 		display: flex;
 		flex-direction: column;
-		gap: var(--space-xs);
+		gap: var(--spaceXS);
 	}
 
 	@media (min-width: 992px) {
@@ -117,12 +117,12 @@
 
 		.info__section {
 			flex-direction: row;
-			gap: var(--space-m);
+			gap: var(--spaceM);
 		}
 	}
 
 	.section__label {
-		font-weight: 500;
+		font-weight: var(--fontWeightMid);
 		min-width: 10%;
 	}
 
@@ -130,7 +130,7 @@
 		max-width: var(--text-width);
 	}
 
-	.year {
+	.project__year {
 		position: absolute;
 		top: 0;
 		left: 0;
@@ -138,7 +138,7 @@
 
 		line-height: normal;
 		color: var(--colorWhite);
-		font-weight: 300;
+		font-weight: var(--fontWeightXS);
 
 		background-color: rgba(0, 0, 0, 0.8);
 		backdrop-filter: blur(5px);
@@ -151,11 +151,11 @@
 
 	.indicator {
 		margin-top: auto;
-		font-weight: 400;
+		font-weight: var(--fontWeightSmall);
 		display: flex;
 		flex-direction: row;
 		align-items: center;
-		gap: var(--space-xs);
+		gap: var(--spaceXS);
 		color: var(--colorText);
 		transition: var(--transition);
 	}

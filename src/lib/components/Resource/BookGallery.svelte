@@ -47,7 +47,7 @@
 
 	@media (min-width: 768px) {
 		.books {
-			gap: var(--space-m);
+			gap: var(--spaceM);
 		}
 	}
 </style>

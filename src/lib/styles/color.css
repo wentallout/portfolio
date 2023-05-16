@@ -67,10 +67,10 @@
 	/* OTHER */
 	--smooth-border: linear-gradient(
 		0deg,
-		var(--colorBgLayout) 0%,
-		rgba(255, 255, 255, 0.1) 12%,
-		rgba(255, 255, 255, 0.1) 30%,
-		rgba(255, 255, 255, 0) 40%
+		#fff 0%,
+		rgba(0, 0, 0, 0.1) 12%,
+		rgba(0, 0, 0, 0.1) 10%,
+		rgba(0, 0, 0, 0) 40%
 	);
 }
 

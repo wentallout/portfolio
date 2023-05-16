@@ -1,4 +1,4 @@
-<div class="notai">
+<div class="badge">
 	<a href="https://notbyai.fyi">
 		<img
 			width="132"
@@ -11,7 +11,8 @@
 </div>
 
 <style>
-	.notai {
+	.badge {
+		
 		display: flex;
 		width: 100%;
 	}

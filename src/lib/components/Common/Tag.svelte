@@ -7,15 +7,15 @@
 
 <style>
 	.tag {
+		color: var(--colorPrimary);
 		display: inline-block;
-		font-weight: 400;
+		font-weight: var(--fontWeightSmall);
 		width: fit-content;
 
 		border-radius: var(--border-radius-light);
 		padding: 8px 12px;
 		line-height: normal;
 
-		color: var(--colorPrimary);
 		border: 1px solid var(--colorBorder);
 		transition: var(--transition);
 

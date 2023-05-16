@@ -1,8 +1,11 @@
 <script>
 	import { COPYRIGHT_ENTITY } from '$lib/constants/entities.js';
 	import ExLink from '$components/Common/ExLink.svelte';
+
+	import Badges from '$components/Layout/Badges.svelte';
 </script>
 
+<Badges />
 <div class="end xs-text">
 	<div class="end__text">
 		Copyright {`${COPYRIGHT_ENTITY}`} 2023 全力を尽くす, All Rights Reserved. Built with SvelteKit by
@@ -24,7 +27,7 @@
 	}
 	.end__text {
 		user-select: none;
-		margin-top: var(--space-s);
+		margin-top: var(--spaceSmall);
 		color: var(--colorTextSecondary);
 	}
 </style>

@@ -5,8 +5,8 @@
 <style>
 	.blogs {
 		/* SPACING */
-		margin-top: var(--space-l);
-		margin-bottom: var(--space-l);
+		margin-top: var(--spaceL);
+		margin-bottom: var(--spaceL);
 		/* --- */
 
 		--min: 40ch;

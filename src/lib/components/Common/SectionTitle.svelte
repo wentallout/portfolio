@@ -20,22 +20,22 @@
 		display: flex;
 		justify-content: left;
 		align-items: center;
-		margin-bottom: var(--space-xl);
-		gap: var(--space-s);
+		margin-bottom: var(--spaceXL);
+		gap: var(--spaceSmall);
 	}
 
 	.title__icon {
 		display: flex;
 		justify-content: center;
 		align-items: center;
-		padding: var(--space-xs);
+		padding: var(--spaceXS);
 		background-color: var(--colorBgElevated);
 		border-radius: 100%;
 		box-shadow: var(--boxShadow);
 	}
 
 	.title__text {
-		font-family: var(--fancy-font);
+		font-family: var(--fontFancy);
 		color: var(--colorText);
 	}
 </style>

@@ -20,7 +20,7 @@
 		display: flex;
 		flex-direction: column;
 		width: 100%;
-		padding: var(--space-m);
+		padding: var(--spaceM);
 		height: 200px;
 		transition: var(--transition);
 
@@ -29,8 +29,8 @@
 	}
 	.tool__name {
 		color: var(--colorText);
-		font-weight: 500;
-		margin-bottom: var(--space-xs);
+		font-weight: var(--fontWeightMid);
+		margin-bottom: var(--spaceXS);
 	}
 
 	.tool__description {
@@ -39,7 +39,7 @@
 		display: -webkit-box;
 		-webkit-line-clamp: 3;
 		-webkit-box-orient: vertical;
-		font-weight: 400;
+		font-weight: var(--fontWeightSmall);
 		margin: 0;
 	}
 

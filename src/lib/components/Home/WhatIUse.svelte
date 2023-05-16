@@ -106,7 +106,7 @@
 		align-items: center;
 		position: relative;
 
-		padding: var(--space-l);
+		padding: var(--spaceL);
 		z-index: 1;
 		min-height: 230px;
 		outline: 1px solid var(--colorBorderSecondary);
@@ -132,14 +132,14 @@
 
 	.block__title {
 		color: var(--colorText);
-		font-weight: 600;
-		margin-top: var(--space-m);
-		margin-bottom: var(--space-2xs);
+		font-weight: var(--fontWeightLarge);
+		margin-top: var(--spaceM);
+		margin-bottom: var(--space2XS);
 	}
 
 	.block__text {
 		color: var(--colorTextSecondary);
-		font-weight: 400;
+		font-weight: var(--fontWeightSmall);
 		margin: 0;
 	}
 </style>
