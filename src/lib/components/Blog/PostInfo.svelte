@@ -3,6 +3,7 @@
 
 	import ExLink from '$components/Common/ExLink.svelte';
 	import Tag from '$components/Common/Tag.svelte';
+
 	export let data;
 
 	export let hasCategory = false;
@@ -18,7 +19,7 @@
 		<div class="info__section">
 			<div class="section__title">Written by:</div>
 			<ExLink href="https://www.linkedin.com/in/wentallout/">
-				<div class="underline">Nguyen Dang Khoa (@wentallout)</div>
+				<div class="underline">Khoa (@wentallout)</div>
 			</ExLink>
 		</div>
 	</div>
@@ -58,7 +59,7 @@
 		opacity: 0.8;
 		background-image: linear-gradient(var(--colorBgElevated) 1px, transparent 1px),
 			linear-gradient(to right, var(--colorBgElevated) 1px, var(--colorBgLayout) 1px);
-		background-size: 20px 20px;
+		background-size: 40px 40px;
 	}
 
 	.post-info {

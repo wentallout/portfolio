@@ -4,11 +4,8 @@
 	export let blogDate = '';
 	import Time from 'svelte-time';
 	import { fade } from 'svelte/transition';
-
 	import CaretRight from '~icons/ph/caret-right';
-
 	export let blogTags = ['category1', 'category2'];
-
 	export let hasTags = true;
 </script>
 

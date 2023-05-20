@@ -8,10 +8,10 @@
 
 # Khoa's Portfolio [![Netlify Status](https://api.netlify.com/api/v1/badges/7bf37fa7-ec78-4efd-aa9a-1a18a4fc62e4/deploy-status)](https://app.netlify.com/sites/khoa-design/deploys)
 
+## 💻 Developing
+
 [![Open in StackBlitz](https://img.shields.io/badge/Open%20in-StackBlitz-blue?style=for-the-badge&logo=stackblitz)](https://stackblitz.com/github/wentallout/portfolio)
 [![Open in VSCode](https://img.shields.io/badge/Open%20in-VSCode-blue?style=for-the-badge&logo=visualstudiocode)](https://open.vscode.dev/wentallout/portfolio)
-
-## 💻 Developing
 
 1. Install dependencies with `npm install` (or `pnpm install` or `yarn`)
 2. Start a development server:
@@ -34,13 +34,19 @@ All imported images are automatically converted to `webp` and lazy loaded to opt
 
 Visitors can also comment on your blogs using GitHub discussion (you might want to customize `Comments.svelte` component so that it works on your repo)
 
+## ⌨ Coding style
+
+- HTML: Semantic and SEO-focused
+- CSS: Vanilla B.E.M (No Tailwind or Bootstrap BS)
+- JS: VanillaJS/Svelte
+
 ## 💅 Styling
 
 `src/lib/styles`
 
 - `reset.css` custom CSS Reset by [joshwcomeau](https://www.joshwcomeau.com/css/custom-css-reset/)
 - `global.css` global styles and importing all other css files
-- `spacing.css` spacing for `margin`, `padding` and the whole page layout in general [utopia.fyi](https://utopia.fyi/)
+- `spacing.css` spacing for `margin`, `padding` and the whole page layout in general. Check out [utopia.fyi](https://utopia.fyi/) for more information about this spacing system.
 - `typography.css` typography-related stuff like `font-size`, `line-height`, `letter-spacing`, `font-weight`
 - `color.css` text colors, border colors, background colors (2 color schemes: `light` and `dark`)
 
@@ -62,6 +68,8 @@ Visitors can also comment on your blogs using GitHub discussion (you might want 
 
 ✅ Dark/Light Mode Toggle Button
 
+✅ Dynamic Breadcrumb (`Breadcumb.svelte`)
+
 ✅ Fonts
 
 - Self-hosted + Subset using [glyphhanger](https://www.npmjs.com/package/glyphhanger)
@@ -74,9 +82,9 @@ Visitors can also comment on your blogs using GitHub discussion (you might want 
 
 ✅ Routing
 
-✅ Page Transition
+✅ Page Transition Animation
 
-- Fly Effect from `svelte/transiton`
+- `svelte/transiton`
 - [nprogress](https://www.npmjs.com/package/nprogress)
 
 ✅ RSS
@@ -85,7 +93,7 @@ Visitors can also comment on your blogs using GitHub discussion (you might want 
 
 ---
 
-### 👉 Blogs
+## Blogs
 
 - Use markdown to write blogs [mdsvex](https://github.com/pngwn/MDsveX)
 - use `categories` (#hashtag) to filter blogs
@@ -99,8 +107,10 @@ Visitors can also comment on your blogs using GitHub discussion (you might want 
 
 ✅ Blog: Search
 
-✅ Blog: Tags/Categories
+✅ Blog: Categories
 
 ✅ Blog: Pagination
 
-✅ Blog: Comment [Giscus](https://giscus.app)
+✅ Blog: Prev/Next Blog Button
+
+✅ Blog: Comment using [Giscus](https://giscus.app)

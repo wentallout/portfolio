@@ -58,7 +58,7 @@
 		display: block;
 		content: '';
 		background-repeat: repeat;
-		background-image: url(/images/ptn1.svg);
+		background-image: url(/images/pattern.svg);
 		background-color: rgba(0, 0, 0, 0.2);
 		background-size: 4px;
 		width: 100%;

@@ -1,6 +1,6 @@
 <script>
 	import { page } from '$app/stores';
-	let path = $page.url.pathname;
+	let currentPath = $page.url.pathname;
 	let id = $page.route.id;
 	let crumbs;
 
@@ -8,7 +8,7 @@
 
 	$: {
 		// Remove zero-length tokens.
-		const tokens = path.split('/').filter((t) => t !== '');
+		const tokens = currentPath.split('/').filter((t) => t !== '');
 
 		// Create { label, href } pairs for each token.
 		let tokenPath = '';
@@ -25,7 +25,7 @@
 	}
 </script>
 
-{#if path !== '/' && id !== null}
+{#if currentPath !== '/' && id !== null}
 	<nav aria-label="breadcrumb" id="breadcrumb" class="breadcrumb small-text">
 		{#each crumbs as c, i}
 			{#if i == crumbs.length - 1}

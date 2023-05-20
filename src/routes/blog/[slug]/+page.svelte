@@ -4,6 +4,7 @@
 	import PostContainer from '$components/Common/PostContainer.svelte';
 	import PostInfo from '$components/Blog/PostInfo.svelte';
 	export let data;
+	import PrevNextBlog from '$components/Blog/PrevNextBlog.svelte';
 </script>
 
 <SEO title={data.title} />
@@ -14,6 +15,6 @@
 	<PostContainer>
 		<svelte:component this={data.content} />
 	</PostContainer>
-
+	<PrevNextBlog />
 	<Comments category="Blogs" />
 </article>

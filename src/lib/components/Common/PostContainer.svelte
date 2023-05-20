@@ -1,5 +1,4 @@
 <script>
-	import End from '$components/Common/ThankYou.svelte';
 	import CustomToc from '$components/Common/CustomToc.svelte';
 </script>
 
@@ -10,7 +9,6 @@
 
 	<CustomToc />
 </div>
-<End />
 
 <style>
 	.post-container {

@@ -86,7 +86,7 @@
 		display: flex;
 		gap: var(--spaceSmall);
 		flex-direction: column;
-		border-bottom: 4px solid var(--colorBorderSecondary);
+		border-bottom: 4px solid var(--colorBorder);
 
 		padding-top: var(--spaceSmall);
 		padding-bottom: var(--space3XL);

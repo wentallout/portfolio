@@ -9,11 +9,16 @@
 	import MiniSearch from 'minisearch';
 	import { paginate, DarkPaginationNav } from 'svelte-paginate';
 
-	import { fade, slide } from 'svelte/transition';
+	import { slide } from 'svelte/transition';
+
+	// STORE BLOG
+	import { allBlogStore } from '$lib/stores/blogStore.js';
+
+	// STORE BLOG END
 
 	export let data;
-
 	let allBlogs = data.blogs;
+	allBlogStore.set(data.blogs);
 
 	import { onMount } from 'svelte';
 
@@ -45,20 +50,15 @@
 	});
 
 	function handleSearchInput(event) {
-		// SEARCH
 		searchTerm = event.target.value.toLowerCase();
 		filteredBlogs = miniSearch.search(searchTerm);
-
 		if (searchTerm === '') {
 			filteredBlogs = [...allBlogs];
 		}
 		currentPage = 1;
-		// ---
 
-		// AUTO SUGGEST
 		let suggestData = miniSearch.autoSuggest(searchTerm, { fuzzy: 0.2 });
 		autoSuggest = suggestData.map((item) => item.suggestion);
-		// ---
 	}
 
 	$: items = filteredBlogs;
@@ -67,7 +67,7 @@
 
 <SEO title="Blog" />
 
-<PageTitle pageTitle="Blog" decoImageUrl="/images/blog.svg" />
+<PageTitle pageTitle="Blog" />
 
 <section class="blog-list">
 	<TextInput
