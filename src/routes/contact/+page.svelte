@@ -26,7 +26,7 @@
 
 <SEO {...seoProps} />
 
-<PageTitle pageTitle="Contact" decoImageUrl="/images/contact.svg" />
+<PageTitle pageTitle="Contact" />
 
 <ContactForm />
 

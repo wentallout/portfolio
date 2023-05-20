@@ -21,16 +21,11 @@ html {
 	--max-width: 80rem;
 	--text-width: 70ch;
 
-	/* BORDER RADIUS */
 	--border-radius: 16px;
 	--border-radius-light: calc(var(--border-radius) / 2);
 
-	/* TRANSITION */
-	/* --transition: 0.3s ease-in-out; */
-
 	--transition: 0.3s cubic-bezier(0.25, 0.1, 0.25, 1);
 
-	/* MISC */
 	accent-color: var(--colorPrimary);
 	caret-color: var(--colorPrimary);
 	--zIndexMax: 99;
@@ -85,6 +80,7 @@ section {
 
 svg {
 	flex: none;
+	flex-shrink: 0;
 }
 
 .icon {

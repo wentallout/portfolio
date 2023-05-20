@@ -31,7 +31,7 @@
 
 <SEO {...seoProps} />
 
-<PageTitle pageTitle="Resource" decoImageUrl="/images/resource.svg" />
+<PageTitle pageTitle="Resource" />
 
 <section>
 	<SectionTitle sectionTitle="Book" let:sectionIcon>

@@ -1,5 +1,6 @@
 export const fetchMarkdownBlogs = async () => {
 	const allBlogFiles = import.meta.glob('/src/routes/blog/*.svx');
+
 	const iterableBlogFiles = Object.entries(allBlogFiles);
 
 	const allBlogs = await Promise.all(

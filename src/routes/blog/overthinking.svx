@@ -1,5 +1,5 @@
 ---
-title: 'Overthinking'
+title: 'How to overcome overthinking'
 date: '2023-05-15'
 categories:
     - 'tips'

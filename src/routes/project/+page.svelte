@@ -26,7 +26,7 @@
 </script>
 
 <SEO {...seoProps} />
-<PageTitle pageTitle="Project" decoImageUrl="/images/project.svg" />
+<PageTitle pageTitle="Project" />
 
 <section>
 	<SectionTitle sectionTitle="Case Study" let:sectionIcon>
