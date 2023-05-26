@@ -233,7 +233,7 @@
 	}
 
 	.social {
-		border-top: 1px solid var(--colorTextTertiary);
+		border-top: 1px solid var(--colorBorder);
 		padding-top: var(--space2XL);
 	}
 

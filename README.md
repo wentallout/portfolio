@@ -75,6 +75,8 @@ Visitors can also comment on your blogs using GitHub discussion (you might want 
 - Self-hosted + Subset using [glyphhanger](https://www.npmjs.com/package/glyphhanger)
 - font-family: [Inter](https://rsms.me/inter/)
 
+✅ Icons ([phosphoricons](https://phosphoricons.com/))
+
 ✅ Images
 
 - Compressed and Converted into `webp` using`vite-imagetools`

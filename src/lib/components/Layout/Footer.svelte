@@ -101,6 +101,7 @@
 		background-repeat: repeat-x;
 		width: 100%;
 		height: 35px;
+		opacity: 0.1;
 	}
 
 	:global([color-scheme='light'] .footer:before) {
@@ -139,7 +140,7 @@
 
 		grid-template-columns: repeat(auto-fit, minmax(min(100%, var(--min)), 1fr));
 
-		border-bottom: 1px solid var(--colorTextQuaternary);
+		border-bottom: 1px solid var(--colorBorder);
 
 		margin-bottom: var(--spaceSmall);
 	}
