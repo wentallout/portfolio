@@ -62,6 +62,7 @@ Step 4: Add colors for Error (red), Success, Status Color (use a tint)
 ## Color scale
 
 [0to255.com](https://0to255.com)
+[colorbox.io](https://colorbox.io)
 
 A more modern tool
 [hihayk.github.io/scale](https://hihayk.github.io/scale)
@@ -71,41 +72,22 @@ For 50%/60% lightness
 use 50% for darkness
 
 
-[colorbox.io](https://colorbox.io)
+
 
 Meant for data visualization
 [tristen.ca](https://tristen.ca/hcl-picker)
 
-## Always wireframe your design in greyscale first 
-
+Always wireframe your design in greyscale first 
 Then pickup some color later
 
-## Chrome extension
-
-https://Palette.site
-
-SNATCHR extension
-
-CSS Peeper
-
-Style Guide Generator
-
-## Web Tool for color scheme
-
-https://color.adobe.com/explore
-
-Get colors from an image
-https://www.canva.com/colors/color-palette-generator/
-
-http://colormind.io/image/
 
 ### Inspiration
 
 http://www.thedayscolor.com
 
-Color: awsmcolor instagram
+https://www.instagram.com/awsmcolor/
 
-colours.cafe instagram
+https://www.instagram.com/colours.cafe/    
 
 
 
