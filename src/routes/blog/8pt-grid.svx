@@ -1,0 +1,49 @@
+---
+title: How to use the 8pt Grid in UI/UX Design
+date: 2023-05-30
+categories:
+    - fundamental
+---
+
+## Video
+
+https://www.youtube.com/watch?v=ohF93_k3IMk
+
+## What is it?
+
+It's just you following the same style of value for your spacing or sizes. 
+
+The goal -> consistent and eliminates randomness
+
+It's also great for communication: Just remember the numbers 4 and 8.
+
+Ex: 4,8,12,16,24,32,40,48,etc
+
+## When 4 or 8?
+
+When creating dashboard or something small, you might have to use 4pt spacing. It depends on what level of precision you need.
+
+## Do we use it everywhere?
+
+Yes. ALMOST. 
+
+Paddings, Margins,
+
+Buttons, Inputs (EX: use height 40px, padding: 16px)
+
+Icons
+
+## Places where we don't use it?
+
+- Container width
+- Width based on columns (not 8pt grid)
+- Most container height
+
+
+## When do we break the rule?
+
+Example: when you put icon next to text
+
+Should aim to not do it, but sometimes you might need to.
+
+But remember: the system is there to help you stay consistent. More simplicity = happy design life.
