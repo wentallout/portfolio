@@ -48,9 +48,9 @@
 					</div>
 					<div class="section__text">
 						<h3 class="block__title base-text">Design</h3>
+						<p class="block__text small-text">Figma</p>
 						<p class="block__text small-text">Canva</p>
 						<p class="block__text small-text">Illustrator</p>
-						<p class="block__text small-text">Photoshop</p>
 					</div>
 				</div>
 
@@ -61,7 +61,7 @@
 					<div class="section__text">
 						<h3 class="block__title base-text">Frontend</h3>
 						<p class="block__text small-text">HTML, CSS, JS</p>
-						<p class="block__text small-text">Bootstrap, Material</p>
+						<p class="block__text small-text">TailwindCSS, Bootstrap</p>
 						<p class="block__text small-text">React, SvelteKit</p>
 					</div>
 				</div>
