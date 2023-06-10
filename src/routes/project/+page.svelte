@@ -4,7 +4,7 @@
 	import Brain from '~icons/ph/brain';
 
 	// import FigmaLogo from '~icons/ph/figma-logo';
-	import SectionTitle from '$components/Common/SectionTitle.svelte';
+	import SectionTitle from '$lib/components/Common/Section/SectionTitle.svelte';
 
 	import SEO from '$components/SEO/SEO.svelte';
 	const breadcrumbs = [

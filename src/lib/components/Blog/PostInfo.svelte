@@ -68,7 +68,7 @@
 		flex-direction: row;
 		flex-wrap: wrap;
 		gap: var(--spaceM);
-		margin-bottom: var(--spaceSmall);
+		margin-bottom: var(--spaceS);
 		color: var(--colorTextSecondary);
 	}
 

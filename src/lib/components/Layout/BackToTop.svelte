@@ -53,8 +53,8 @@
 
 		/* POSITION FIXED ON SCREEN */
 		position: fixed;
-		right: var(--spaceSmall);
-		bottom: var(--spaceSmall);
+		right: var(--spaceS);
+		bottom: var(--spaceS);
 		z-index: var(--zIndexMax);
 		/*  */
 

@@ -1,5 +1,5 @@
 <script>
-	import FooterEnd from '$components/Layout/FooterEnd.svelte';
+	import FooterEnd from '$components/Layout/Footer/FooterEnd.svelte';
 	import ExLink from '$components/Common/ExLink.svelte';
 	import Marquee from '$components/Common/Marquee.svelte';
 	import { navItems } from '$lib/config.js';
@@ -11,6 +11,7 @@
 	import GitHubLogo from '~icons/ph/github-logo';
 	import Phone from '~icons/ph/phone';
 	import MapPin from '~icons/ph/map-pin';
+	import FooterDeco from '$lib/components/Layout/Footer/FooterDeco.svelte';
 </script>
 
 <footer class="footer small-text">
@@ -88,6 +89,10 @@
 	</div>
 
 	<FooterEnd />
+	<img class="footer__deco" alt="footer decoration" src="/images/footer-skyline.webp" />
+
+	<FooterDeco/>
+
 </footer>
 <Marquee />
 
@@ -102,6 +107,15 @@
 		width: 100%;
 		height: 35px;
 		opacity: 0.1;
+	}
+
+	.footer__deco {
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		background-repeat: repeat-x;
+		height: 52px;
+		width: 100%;
 	}
 
 	:global([color-scheme='light'] .footer:before) {
@@ -125,10 +139,6 @@
 			var(--colorBgContainer) 0%,
 			var(--colorBgElevated) 100%
 		);
-
-		background: url(/images/stardust.png);
-
-		box-shadow: var(--boxShadow);
 	}
 	.list-container {
 		overflow: hidden;
@@ -142,7 +152,7 @@
 
 		border-bottom: 1px solid var(--colorBorder);
 
-		margin-bottom: var(--spaceSmall);
+		margin-bottom: var(--spaceS);
 	}
 
 	.list {
@@ -156,7 +166,7 @@
 		color: var(--colorText);
 		font-size: var(--fontSizeBase);
 
-		border-bottom: 4px solid transparent;
+		border-bottom: 2px solid transparent;
 		border-image: linear-gradient(to right, var(--colorTextTertiary), transparent) 1 0%;
 	}
 

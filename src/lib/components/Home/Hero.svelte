@@ -120,7 +120,7 @@
 	.hero__text {
 		color: var(--colorTextSecondary);
 		max-width: var(--text-width);
-		margin-bottom: var(--spaceSmall);
+		margin-bottom: var(--spaceS);
 		text-wrap: balance;
 		max-width: 40ch;
 	}
@@ -129,7 +129,7 @@
 		width: 100%;
 
 		display: flex;
-		gap: var(--spaceSmall);
+		gap: var(--spaceS);
 		flex-wrap: wrap;
 	}
 

@@ -1,5 +1,5 @@
 ---
-title: How to achieve accessible typography? 
+title: How to calculate typography values? 
 date: 2023-05-04
 categories:
     - typography
@@ -20,7 +20,7 @@ A large majority of websites favored dark on light color schemes. People use a l
 
 Black text on a white background is a common pattern for body copy. The contrast is easy on the eyes and is, at least among these websites, the status quo.
 
-## Font size for headlines
+## font-size for heading
 
 <Image src="{headingFontSizes}" alt="heading font sizes" />
 
@@ -30,50 +30,56 @@ The most popular font size for headlines is **between 29 and 32 px**.
 headline font size = body copy font size * 2.4
 ```
 
-## Font Size For Body Copy
+## font-size for body
 
 The most popular font size for body copy is **between 14 and 16 px**.
 
-## Best line-height
+## line-height
 
-```
-line height =  body copy font size * 1.5 (or 1.6)
-```
+For Heading: 110% -> 130%
+For Body: 130% - 150%
 
-## Best letter spacing
+## letter-spacing
+
+Headings with crispness use negative letter-spacing. (usually -0.5%, -1%, -2%)
 
 There's no **correct** way to achieve perfect spacing atm.
 
 [The Designer's Guide To Letter Spacing](https://www.webdesignerdepot.com/2020/07/the-designers-guide-to-letter-spacing/)
 
+## Left align ALWAYS
 
-## Best line-length
+If it's >3 lines of text, it's left-align
+
+Body text is always left-aligned. Hyphenation is not used at line endings. And links are underlined and/or highlighted with bold or color, sometimes only on hover.
+
+DON'T MIX ALIGNMENT (if it's centered, then center all)
+ 
+## line-length / text-width
 
 https://baymard.com/blog/line-length-readability
 
-The optimal line length for body text is 50-75 characters
+The optimal line length for body text is **50-75 characters**
 
-In unstyled HTML, text runs the full width of the screen.
+On Desktop: 600px is a very good number for text-width
 
-For desktop users, that makes it difficult to track from the end of one line to the beginning of another.
-
-So let’s make the lines shorter.
+In unstyled HTML, text runs the full width of the screen. For desktop users, that makes it difficult to track from the end of one line to the beginning of another. So let's make the lines shorter.
 
 The ideal line length is 50-75 characters (or 2-3 alphabets 😉).
 
-Much longer, and it’s hard to move your eye from the end of one line to the beginning of the next
-Much shorter, and the text feels like an unimportant sidebar
+Much longer, and it's hard to move your eye from the end of one line to the beginning of the next. Much shorter, and the text feels like an unimportant sidebar.
 
+
+## 2 is magic
+
+2 diffrent font-size, use font-weight and subtle color changes to create hierachy.
 
 ## Characters per line
 
 The optimal number of characters per line is between 55 and 75, but 75 to 90 is more popular.
 
-## Left align is usually correct
 
-Body text is always left-aligned. Hyphenation is not used at line endings. And links are underlined and/or highlighted with bold or color, sometimes only on hover.
-
-## Some numbers on the implementation of responsive design
+## Raw data
 
 At a display width of 500 pixels:
 - Average line height: 28 pixels
@@ -94,8 +100,6 @@ At a display width of 1600 pixels:
 - Average font size of headlines: 40.7 pixels
 - Average font size of body: 16.2 pixels
 - Average number of characters per line: 86.8
-
-## Raw data
 
 [Spreadsheet](https://docs.google.com/spreadsheets/d/1Vcehdh4SZT5RJhzZ0i-rjCRFX_HC2Lo94hbSqiqYblQ/edit#gid=1)
 

@@ -43,11 +43,6 @@
 		display: flex;
 		flex-direction: row;
 		flex-wrap: wrap;
-	}
-
-	@media (min-width: 768px) {
-		.books {
-			gap: var(--spaceM);
-		}
+		gap: var(--spaceM);
 	}
 </style>

@@ -24,7 +24,7 @@
 	/* BACKGROUND */
 	--colorBgElevated: #1f1f1f;
 	--colorBgContainer: #141414;
-	--colorBgLayout: #121212;
+	--colorBgLayout: hsl(0, 0%, 6%);
 
 	/* OTHER */
 	--smooth-border: linear-gradient(

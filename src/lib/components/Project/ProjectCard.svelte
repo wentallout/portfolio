@@ -122,7 +122,6 @@
 	}
 
 	.section__label {
-		font-weight: var(--fontWeightMid);
 		min-width: 10%;
 	}
 

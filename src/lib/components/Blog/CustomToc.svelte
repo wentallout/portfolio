@@ -9,7 +9,7 @@
 	--toc-mobile-bg="var(--colorBgElevated)"
 	--toc-mobile-btn-bg="var(--colorPrimary)"
 	--toc-mobile-bottom="100px"
-	--toc-mobile-right="var(--spaceSmall)"
+	--toc-mobile-right="var(--spaceS)"
 	--toc-mobile-btn-border-radius="100%"
 	--toc-mobile-btn-padding=""
 	--toc-max-height="80vh"

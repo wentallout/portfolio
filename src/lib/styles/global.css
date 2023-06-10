@@ -105,7 +105,7 @@ svg {
 }
 
 .embed {
-	margin-bottom: var(--spaceSmall);
+	margin-bottom: var(--spaceS);
 	overflow: hidden;
 	background-color: transparent;
 }

@@ -27,7 +27,7 @@
 
 	.image-with-caption {
 		position: relative;
-		margin-bottom: var(--spaceSmall);
+		margin-bottom: var(--spaceS);
 	}
 
 	.caption {

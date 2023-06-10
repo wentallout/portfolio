@@ -5,7 +5,7 @@
 	import EnvelopeSimple from '~icons/ph/envelope-simple';
 	import ArrowCounterClockwise from '~icons/ph/arrow-counter-clockwise';
 	import PaperPlaneRight from '~icons/ph/paper-plane-right';
-	import SectionTitle from '$components/Common/SectionTitle.svelte';
+	import SectionTitle from '$lib/components/Common/Section/SectionTitle.svelte';
 </script>
 
 <section>
@@ -66,6 +66,6 @@
 
 		display: flex;
 		flex-wrap: wrap;
-		gap: var(--spaceSmall);
+		gap: var(--spaceS);
 	}
 </style>

@@ -17,6 +17,7 @@
 		perspective: 600px;
 		width: 300px;
 		height: auto;
+		outline: 1px solid var(--colorBorder);
 	}
 
 	@keyframes initAnimation {

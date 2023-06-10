@@ -21,7 +21,7 @@
 		flex-wrap: wrap;
 
 		overflow: hidden;
-		gap: 1rem;
+		gap: var(--spaceM);
 	}
 
 	.other-container > * {

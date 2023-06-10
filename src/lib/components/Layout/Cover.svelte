@@ -3,18 +3,17 @@
 	import { theme } from '$lib/stores/themeStore.js';
 
 	import { page } from '$app/stores';
-	let path = $page.url.pathname;
 
-	let isBlogOrProject;
+	let showCover;
 
-	$: if ($page.url.pathname.includes('/blog') || $page.url.pathname.includes('/project')) {
-		isBlogOrProject = true;
+	$: if ($page.url.pathname === '/') {
+		showCover = true;
 	} else {
-		isBlogOrProject = false;
+		showCover = false;
 	}
 </script>
 
-{#if !isBlogOrProject}
+{#if showCover}
 	<div class="cover">
 		{#if $theme === 'dark'}
 			<video in:fly={{ y: 10, duration: 500 }} class="video" autoplay muted loop>

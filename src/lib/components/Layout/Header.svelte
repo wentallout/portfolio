@@ -56,7 +56,7 @@
 		{#each navItems as navItem}
 			<a
 				class="overlay-item xl-text"
-				class:active-page={$page.url.pathname === `${navItem.path}`}
+				class:active-page-mobile={$page.url.pathname === `${navItem.path}`}
 				on:click={closeNav}
 				href={navItem.path}>
 				{navItem.title}</a>
@@ -73,9 +73,9 @@
 		border-bottom: 1px solid inherit;
 	}
 
-	.overlay-item.active-page:after {
-		content: '⏴';
-		margin-left: auto;
+	.active-page-mobile {
+		color: var(--colorPrimary) !important;
+		border-left: 4px solid inherit;
 	}
 
 	.nav {
@@ -145,7 +145,7 @@
 	}
 
 	.item {
-		padding: var(--spaceSmall);
+		padding: var(--spaceS);
 		display: flex;
 		justify-content: center;
 		align-items: center;

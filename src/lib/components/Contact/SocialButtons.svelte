@@ -31,7 +31,7 @@
 	.social-links {
 		display: flex;
 		flex-wrap: wrap;
-		gap: var(--spaceSmall);
+		gap: var(--spaceS);
 		flex-direction: row;
 	}
 </style>

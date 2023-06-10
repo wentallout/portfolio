@@ -69,7 +69,7 @@
 
 		/* SPACING */
 		padding: var(--spaceXS);
-		margin-bottom: var(--spaceSmall);
+		margin-bottom: var(--spaceS);
 		/* --- */
 
 		width: 100%;

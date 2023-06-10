@@ -11,7 +11,7 @@
 
 		color: var(--colorBlack);
 		font-weight: var(--fontWeightLarge);
-		padding: var(--spaceSmall);
+		padding: var(--spaceS);
 		translate: 0 -100%;
 		transition: translate 150ms ease-in-out;
 		transition: background-color 0.5s;

@@ -27,7 +27,7 @@
 	}
 	.end__text {
 		user-select: none;
-		margin-top: var(--spaceSmall);
+		margin-top: var(--spaceS);
 		color: var(--colorTextSecondary);
 	}
 </style>

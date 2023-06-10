@@ -40,7 +40,7 @@
 		--min: 40ch;
 
 		display: grid;
-		grid-gap: 1rem;
+		grid-gap: var(--spaceM);
 
 		grid-template-columns: repeat(auto-fit, minmax(min(100%, var(--min)), 1fr));
 	}

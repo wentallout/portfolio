@@ -38,7 +38,7 @@
 	.answer {
 		color: var(--colorTextSecondary);
 		max-width: var(--text-width);
-		padding: var(--spaceSmall);
+		padding: var(--spaceS);
 	}
 
 	details:focus {
@@ -46,7 +46,7 @@
 	}
 
 	details[open] {
-		margin-bottom: var(--spaceSmall);
+		margin-bottom: var(--spaceS);
 	}
 
 	details[open] .answer {
