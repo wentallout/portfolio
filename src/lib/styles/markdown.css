@@ -39,7 +39,7 @@
 
 .markdown h2 {
 	/* SPACING */
-	margin-bottom: var(--spaceSmall);
+	margin-bottom: var(--spaceS);
 	/* --- */
 
 	/* FONT */
@@ -57,7 +57,7 @@
 .markdown h3 {
 	/* SPACING */
 	margin-top: var(--spaceL);
-	margin-bottom: var(--spaceSmall);
+	margin-bottom: var(--spaceS);
 	/* --- */
 
 	/* FONT */
@@ -73,7 +73,7 @@
 .markdown h4 {
 	/* SPACING */
 	margin-top: var(--spaceM);
-	margin-bottom: var(--spaceSmall);
+	margin-bottom: var(--spaceS);
 	/* --- */
 
 	/* FONT */
@@ -89,7 +89,7 @@
 	font-size: var(--fontSizeSmall);
 	line-height: var(--lineHeightSmall);
 	margin: 0;
-	margin-bottom: var(--spaceSmall);
+	margin-bottom: var(--spaceS);
 	max-width: var(--text-width);
 }
 
@@ -154,7 +154,7 @@
 }
 
 .markdown ul {
-	margin-bottom: var(--spaceSmall);
+	margin-bottom: var(--spaceS);
 }
 
 .markdown ol li::before {
@@ -167,8 +167,8 @@ blockquote {
 	padding: var(--spaceXS);
 	font-weight: var(--fontWeightXS);
 	border-left: 4px solid var(--colorPrimary);
-	margin-top: var(--spaceSmall);
-	margin-bottom: var(--spaceSmall);
+	margin-top: var(--spaceS);
+	margin-bottom: var(--spaceS);
 	max-width: var(--text-width);
 }
 
@@ -178,7 +178,7 @@ blockquote p {
 }
 
 pre {
-	padding: var(--spaceSmall);
+	padding: var(--spaceS);
 	border-radius: var(--border-radius-light);
 	overflow: auto;
 	max-width: var(--text-width);
@@ -187,7 +187,7 @@ pre {
 table {
 	border-collapse: collapse;
 	background-color: var(--colorBgContainer);
-	padding: var(--spaceSmall);
+	padding: var(--spaceS);
 
 	max-width: fit-content;
 	overflow: auto;
@@ -231,7 +231,7 @@ aside.toc > nav > ul > li:before {
 	width: 100%;
 	aspect-ratio: 16/9;
 
-	margin-bottom: var(--spaceSmall);
+	margin-bottom: var(--spaceS);
 	border-radius: var(--border-radius-light);
 
 	background-color: var(--colorTextQuaternary);

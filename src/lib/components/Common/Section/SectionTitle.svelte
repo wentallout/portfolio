@@ -1,5 +1,7 @@
 <script>
+	import SectionDesc from '$components/Common/Section/SectionDesc.svelte';
 	export let sectionTitle = '';
+	export let sectionDesc = '';
 
 	let sectionIcon = {
 		color: 'var(--colorText)',
@@ -8,20 +10,28 @@
 	};
 </script>
 
-<div class="section-title">
-	<div class="title__icon">
-		<slot {sectionIcon} />
+<div class="container">
+	<div class="section-title">
+		<div class="title__icon">
+			<slot {sectionIcon} />
+		</div>
+		<h2 class="title__text xl-text">{sectionTitle}</h2>
 	</div>
-	<h2 class="title__text xl-text">{sectionTitle}</h2>
+	<SectionDesc text={sectionDesc} />
 </div>
 
 <style>
+	.container {
+		margin-bottom: var(--spaceL);
+	}
+
 	.section-title {
 		display: flex;
 		justify-content: left;
+
 		align-items: center;
-		margin-bottom: var(--spaceXL);
-		gap: var(--spaceSmall);
+		gap: var(--spaceS);
+		margin-bottom: var(--spaceS);
 	}
 
 	.title__icon {

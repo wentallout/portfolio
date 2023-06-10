@@ -41,7 +41,7 @@
 		/* SIZE */
 		width: 100%;
 		height: 120px;
-		padding: var(--spaceSmall) var(--spaceXS);
+		padding: var(--spaceS) var(--spaceXS);
 		/* --- */
 
 		/* OTHER */

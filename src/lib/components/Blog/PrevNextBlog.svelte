@@ -97,7 +97,7 @@
 	.prevnext__btn {
 		text-decoration: none !important;
 		border: 1px solid var(--colorBorder);
-		padding: var(--spaceSmall);
+		padding: var(--spaceS);
 		transition: var(--transition);
 
 		display: flex;

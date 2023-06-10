@@ -136,7 +136,7 @@
 	}
 
 	.not-found {
-		padding: var(--spaceSmall) 0;
+		padding: var(--spaceS) 0;
 		color: var(--colorTextSecondary);
 	}
 </style>

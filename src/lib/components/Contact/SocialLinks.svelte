@@ -6,7 +6,7 @@
 	import LinkedinLogo from '~icons/ph/linkedin-logo';
 	import InstagramLogo from '~icons/ph/instagram-logo';
 	import GitHubLogo from '~icons/ph/github-logo';
-	import SectionTitle from '$components/Common/SectionTitle.svelte';
+	import SectionTitle from '$lib/components/Common/Section/SectionTitle.svelte';
 
 	let icon = {
 		color: 'var(--colorText)',
@@ -80,13 +80,13 @@
 	}
 
 	.social__address {
-		padding: var(--spaceSmall);
+		padding: var(--spaceS);
 		transition: var(--transition);
 		background-color: var(--colorBgContainer);
 		display: flex;
 		justify-content: center;
 		align-items: center;
-		border-radius: 100%;
+		border: 1px solid var(--colorBorder);
 	}
 
 	.social__address:hover {

@@ -2,8 +2,11 @@
 	"extends": "./.svelte-kit/tsconfig.json",
 	"include": ["src/**/*.d.ts", "src/**/*.js", "src/**/*.svelte"],
 	"compilerOptions": {
+		"module": "commonjs",
+		"target": "es2016",
+		"jsx": "preserve",
 		"allowJs": true,
-		"checkJs": false,
+		"checkJs": true,
 		"esModuleInterop": true,
 		"forceConsistentCasingInFileNames": false,
 		"resolveJsonModule": true,
@@ -15,7 +18,9 @@
 			"$lib": ["src/lib"],
 			"$lib/*": ["src/lib/*"],
 			"$components": ["src/lib/components"],
-			"$blogImages": ["src/lib/assets/images/blog"]
+			"$components/*": ["src/lib/components/*"],
+			"$blogImages": ["src/lib/assets/images/blog"],
+			"$blogImages/*": ["src/lib/assets/images/blog/*"]
 		}
 	}
 }

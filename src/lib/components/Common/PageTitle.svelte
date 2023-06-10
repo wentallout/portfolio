@@ -32,7 +32,7 @@
 		justify-content: center;
 		align-items: center;
 		flex-direction: column;
-		gap: var(--spaceSmall);
+		gap: var(--spaceS);
 		/*  */
 
 		margin-bottom: var(--space2XL);
@@ -43,8 +43,6 @@
 		font-family: var(--fontFancy);
 		color: var(--colorText);
 		z-index: 2;
-		/* text-shadow: 0 0 4px var(--colorBlack); */
-		text-shadow: var(--colorBgElevated) -2px 2px 0px, var(--colorBgElevated) -4px 3px 0px;
 	}
 
 	.tracking-in-expand {

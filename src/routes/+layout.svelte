@@ -8,7 +8,7 @@
 	import SkipLink from '$components/Layout/SkipLink.svelte';
 	import PWA from '$components/PWA/PWA.svelte';
 	import BackToTop from '$components/Layout/BackToTop.svelte';
-	import Footer from '$components/Layout/Footer.svelte';
+	import Footer from '$components/Layout/Footer/Footer.svelte';
 	import Header from '$components/Layout/Header.svelte';
 	import Breadcrumb from '$components/Layout/Breadcrumb.svelte';
 
@@ -26,19 +26,19 @@
 
 <PWA />
 <Cover />
-<div class="page-container">
-	<BackToTop />
-	<Header />
+<!-- class="page-container" -->
 
-	<PageTransition {data}>
-		<main class="main-content" id="main-content">
-			<Breadcrumb />
-			<slot />
-		</main>
-	</PageTransition>
+<BackToTop />
+<Header />
 
-	<Footer />
-</div>
+<PageTransition {data}>
+	<main class="main-content" id="main-content">
+		<Breadcrumb />
+		<slot />
+	</main>
+</PageTransition>
+
+<Footer />
 
 <style>
 	.main-content {

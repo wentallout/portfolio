@@ -5,7 +5,7 @@
 	import Navigation from '$lib/assets/images/home/navigation.svg?component';
 	import GraphicDesign from '$lib/assets/images/home/graphicDesign.svg?component';
 	import Process from '$lib/assets/images/home/process.svg?component';
-	import SectionTitle from '$components/Common/SectionTitle.svelte';
+	import SectionTitle from '$lib/components/Common/Section/SectionTitle.svelte';
 
 	import Toolbox from '~icons/ph/toolbox';
 </script>
@@ -75,7 +75,8 @@
 		position: absolute;
 		top: 0;
 		right: 0;
-		opacity: 0.1;
+		opacity: 0.05;
+		scale: 1.5;
 	}
 
 	.section__text {
@@ -94,7 +95,7 @@
 		width: 100%;
 		--min: 20ch;
 		display: grid;
-		grid-gap: 1rem;
+		grid-gap: var(--spaceM);
 		grid-template-columns: repeat(auto-fit, minmax(min(100%, var(--min)), 1fr));
 		justify-content: center;
 		align-content: center;

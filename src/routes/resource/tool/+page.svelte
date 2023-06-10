@@ -1,5 +1,5 @@
 <script>
-	import SectionTitle from '$components/Common/SectionTitle.svelte';
+	import SectionTitle from '$lib/components/Common/Section/SectionTitle.svelte';
 
 	// import { resourceData, getResource } from '$lib/stores/resourceStore.js';
 	import Wrench from '~icons/ph/wrench';

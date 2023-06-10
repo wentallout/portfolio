@@ -19,7 +19,7 @@
 		font-family: inherit;
 		padding: var(--spaceXS);
 		color: var(--colorText) !important;
-		margin-bottom: var(--spaceSmall);
+		margin-bottom: var(--spaceS);
 		background-color: transparent;
 		border: 1px solid var(--colorBorder);
 

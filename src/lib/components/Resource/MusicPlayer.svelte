@@ -177,8 +177,8 @@
 		flex-direction: row;
 		flex-wrap: wrap;
 		width: 100%;
-		padding: var(--spaceSmall) var(--spaceL);
-		gap: var(--spaceSmall);
+		padding: var(--spaceS) var(--spaceL);
+		gap: var(--spaceS);
 	}
 
 	.seekBar__control {
@@ -192,7 +192,7 @@
 	.volume {
 		display: flex;
 		align-items: center;
-		gap: var(--spaceSmall);
+		gap: var(--spaceS);
 	}
 
 	.info__current {
@@ -229,7 +229,7 @@
 	.info {
 		display: flex;
 		flex-direction: column;
-		gap: var(--spaceSmall);
+		gap: var(--spaceS);
 		width: fit-content;
 		align-items: center;
 		justify-content: center;
@@ -240,7 +240,7 @@
 	.info__time {
 		display: flex;
 		flex-direction: row;
-		gap: var(--spaceSmall);
+		gap: var(--spaceS);
 		color: var(--colorWhite);
 	}
 
@@ -263,7 +263,7 @@
 		justify-content: center;
 		align-items: center;
 		padding: var(--spaceM);
-		gap: var(--spaceSmall);
+		gap: var(--spaceS);
 
 		width: 100%;
 	}
@@ -314,7 +314,7 @@
 	}
 
 	.song-active {
-		padding: var(--spaceSmall) var(--spaceL);
+		padding: var(--spaceS) var(--spaceL);
 
 		position: relative;
 		background: var(--colorPrimary);

@@ -1,9 +1,6 @@
 <script>
-	import SectionDesc from '$components/Common/SectionDesc.svelte';
-	import SectionTitle from '$components/Common/SectionTitle.svelte';
-
+	import SectionTitle from '$lib/components/Common/Section/SectionTitle.svelte';
 	import MusicNotes from '~icons/ph/music-notes';
-
 	import FileAudio from '~icons/ph/file-audio';
 
 	import { Spotify } from 'sveltekit-embed';
@@ -13,11 +10,12 @@
 
 <PageTitle pageTitle="Music" />
 <section>
-	<SectionTitle sectionTitle="Ringtone" let:sectionIcon>
+	<SectionTitle
+		sectionTitle="Ringtone"
+		let:sectionIcon
+		sectionDesc="Custom ringtones made by Khoa for your phone. Intros are removed. Free download enabled.">
 		<FileAudio {...sectionIcon} />
 	</SectionTitle>
-	<SectionDesc
-		text="Custom ringtones made by Khoa for your phone. Intros are removed. Free download enabled." />
 
 	<MusicPlayer />
 </section>

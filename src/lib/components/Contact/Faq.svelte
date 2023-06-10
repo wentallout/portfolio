@@ -1,6 +1,6 @@
 <script>
 	import Details from '$components/Common/Details.svelte';
-	import SectionTitle from '$components/Common/SectionTitle.svelte';
+	import SectionTitle from '$lib/components/Common/Section/SectionTitle.svelte';
 
 	import Question from '~icons/ph/question';
 </script>
