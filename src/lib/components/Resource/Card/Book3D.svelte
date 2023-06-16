@@ -3,7 +3,7 @@
 	export let imgUrl = '';
 </script>
 
-<div class="book-container" target="_blank" rel="noreferrer noopener">
+<div class="book-container">
 	<div class="book">
 		<img loading="lazy" decoding="async" {alt} src={imgUrl} />
 	</div>
@@ -15,8 +15,8 @@
 		align-items: center;
 		justify-content: center;
 		perspective: 600px;
-		width: 300px;
-		height: auto;
+		width: 200px;
+		aspect-ratio: 1/1;
 		outline: 1px solid var(--colorBorder);
 	}
 

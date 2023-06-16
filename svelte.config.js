@@ -48,17 +48,20 @@ const config = {
 		},
 		csp: {
 			mode: 'hash',
-			directives: { 'script-src': ['self'] }
+			directives: {
+				'script-src': ['self', 'unsafe-inline', 'https://www.googletagmanager.com'],
+				'img-src': ['self', 'www.googletagmanager.com']
+			}
 		}
 	},
 
 	vitePlugin: {
-		experimental: {
+		inspector: {
 			inspector: true,
 			toggleKeyCombo: 'meta-shift',
 			holdMode: true,
 			showToggleButton: 'always',
-			toggleButtonPos: 'top-right'
+			toggleButtonPos: 'bottom-right'
 		}
 	}
 };

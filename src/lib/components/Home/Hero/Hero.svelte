@@ -1,10 +1,8 @@
 <script>
+	import HeroVisual from './HeroVisual.svelte';
 	import Button from '$components/Button/Button.svelte';
-	import HeroScene from '$components/Scenes/HeroScene.svelte';
-
+	// import HeroScene from '$components/Scenes/HeroScene.svelte';
 	// import { Canvas } from '@threlte/core';
-
-	import HeroSVG from '$lib/assets/images/home/hero.svg?component';
 </script>
 
 <section class="full-width">
@@ -25,7 +23,7 @@
 			<div class="hero__btn">
 				<a href="/project">
 					<Button
-						label="See Full Portfolio"
+						label="See All Projects"
 						labelColor="#000"
 						backgroundColor="var(--colorPrimary)"
 						glowColor="var(--colorPrimary)" />
@@ -41,42 +39,13 @@
 			</div>
 		</div>
 
-		<div class="hero__visual">
-			<!-- <Canvas>
-				<HeroScene />
-			</Canvas> -->
-
-			<HeroSVG width="100%" height="100%" />
-		</div>
+		<HeroVisual />
 	</div>
 </section>
 
 <style>
 	section {
 		overflow: visible;
-	}
-
-	.hero__visual {
-		display: none;
-
-		overflow: visible;
-		z-index: -1;
-
-		position: absolute;
-		top: 0;
-		right: var(--page-padding);
-	}
-
-	@media (min-width: 1200px) {
-		.hero__visual {
-			display: block;
-			width: 500px;
-			height: 100%;
-			aspect-ratio: 1.4;
-			top: 50%;
-			right: 0;
-			transform: translate(-50%, -50%);
-		}
 	}
 
 	.hero__link {
@@ -92,9 +61,10 @@
 		display: flex;
 		flex-direction: row;
 		flex-wrap: wrap;
-
 		position: relative;
 		overflow: visible;
+		/* justify-content: center; */
+		align-items: center;
 	}
 
 	.hero__block {
@@ -113,16 +83,12 @@
 		display: block;
 		color: var(--colorPrimary);
 	}
-	.focus-low {
-		color: var(--colorTextTertiary);
-	}
 
 	.hero__text {
 		color: var(--colorTextSecondary);
-		max-width: var(--text-width);
+		max-width: 40ch;
 		margin-bottom: var(--spaceS);
 		text-wrap: balance;
-		max-width: 40ch;
 	}
 	.hero__btn {
 		margin-top: var(--spaceL);
@@ -131,20 +97,5 @@
 		display: flex;
 		gap: var(--spaceS);
 		flex-wrap: wrap;
-	}
-
-	.text-focus-in {
-		animation: text-focus-in 1s cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
-	}
-
-	@keyframes text-focus-in {
-		0% {
-			filter: blur(12px);
-			opacity: 0;
-		}
-		100% {
-			filter: blur(0px);
-			opacity: 1;
-		}
 	}
 </style>

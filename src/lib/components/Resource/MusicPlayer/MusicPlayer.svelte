@@ -1,6 +1,6 @@
 <script>
 	import { onMount } from 'svelte';
-	import { musicList } from '$components/Resource/musiclist.js';
+	import { musicList } from '$components/Resource/MusicPlayer/musiclist.js';
 	import PlayFill from '~icons/ph/play-fill';
 	import Download from '~icons/ph/download';
 	import SkipBack from '~icons/ph/skip-back';

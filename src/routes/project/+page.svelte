@@ -29,7 +29,7 @@
 <PageTitle pageTitle="Project" />
 
 <section>
-	<SectionTitle sectionTitle="Case Study" let:sectionIcon>
+	<SectionTitle sectionTitle="Case Studies" let:sectionIcon>
 		<Brain {...sectionIcon} />
 	</SectionTitle>
 

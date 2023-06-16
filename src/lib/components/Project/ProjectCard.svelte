@@ -22,7 +22,7 @@
 
 			<div class="info small-text">
 				<div class="info__section">
-					<div class="section__label">Intro</div>
+					<div class="section__label">About</div>
 					<div class="section__desc">{what}</div>
 				</div>
 
@@ -56,11 +56,6 @@
 		background-color: var(--colorBgElevated);
 		box-shadow: -5px 5px var(--colorPrimaryHover);
 		transform: translate(5px, -5px);
-	}
-
-	.project:hover .indicator {
-		padding-left: 0.5rem;
-		color: var(--colorPrimary);
 	}
 
 	.title {
@@ -122,6 +117,7 @@
 	}
 
 	.section__label {
+		color: var(--colorText);
 		min-width: 10%;
 	}
 
@@ -157,5 +153,12 @@
 		gap: var(--spaceXS);
 		color: var(--colorText);
 		transition: var(--transition);
+		opacity: 0;
+	}
+
+	.project:hover .indicator {
+		padding-left: 0.5rem;
+		color: var(--colorPrimary);
+		opacity: 1;
 	}
 </style>

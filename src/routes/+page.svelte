@@ -1,5 +1,5 @@
 <script>
-	import Hero from '$components/Home/Hero.svelte';
+	import Hero from '$lib/components/Home/Hero/Hero.svelte';
 	import GetInTouch from '$components/Home/GetInTouch.svelte';
 	import FeaturedProject from '$components/Home/Featured.svelte';
 	import Clients from '$components/Home/MyClients.svelte';

@@ -1,11 +1,12 @@
 <script>
 	import SocialButtons from '$components/Contact/SocialButtons.svelte';
-	import VanishingHeader from '$components/Layout/VanishingHeader.svelte';
+	import VanishingHeader from '$lib/components/Layout/Header/VanishingHeader.svelte';
 	import { navItems } from '$lib/config.js';
 	import { onMount } from 'svelte';
 	import { page } from '$app/stores';
 	import List from '~icons/ph/list';
 	import X from '~icons/ph/x';
+	import { fade } from 'svelte/transition';
 
 	let scrollY;
 	let navOverlayEle;
@@ -33,7 +34,10 @@
 		<nav aria-label="primary menu" class="nav" class:nav-scrolldown={scrollY > 0}>
 			<ul class="nav-list">
 				{#each navItems as navItem}
-					<li class="nav-list__item" class:active-page={$page.url.pathname === `${navItem.path}`}>
+					<li
+						transition:fade
+						class="nav-list__item"
+						class:active-page={$page.url.pathname === `${navItem.path}`}>
 						<a class="item" href={navItem.path}>
 							{navItem.title}
 						</a>
@@ -70,7 +74,7 @@
 <style>
 	.active-page {
 		color: var(--colorPrimary) !important;
-		border-bottom: 1px solid inherit;
+		border-top: 1px solid inherit;
 	}
 
 	.active-page-mobile {
@@ -102,10 +106,12 @@
 		width: 100%;
 
 		margin: 0;
+		overflow: visible;
 	}
 
 	.nav-list__item {
 		display: none;
+		overflow: visible;
 	}
 
 	.nav-list__item:hover {
@@ -239,5 +245,21 @@
 
 	.header {
 		position: relative;
+	}
+
+	.nav-list__item::before {
+		content: '';
+		position: absolute;
+		margin: auto;
+		background: transparent;
+		transition: var(--transition);
+		pointer-events: none;
+		width: 0;
+	}
+
+	.nav-list__item:hover::before {
+		width: 100%;
+		inset: 0 -10px 30px;
+		background: radial-gradient(ellipse at top, currentcolor, transparent 50%);
 	}
 </style>
