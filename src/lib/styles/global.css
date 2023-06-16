@@ -26,8 +26,7 @@ html {
 
 	--transition: 0.3s cubic-bezier(0.25, 0.1, 0.25, 1);
 
-	accent-color: var(--colorPrimary);
-	caret-color: var(--colorPrimary);
+	
 	--zIndexMax: 99;
 }
 

@@ -1,7 +1,7 @@
 <script>
 	import FooterEnd from '$components/Layout/Footer/FooterEnd.svelte';
 	import ExLink from '$components/Common/ExLink.svelte';
-	import Marquee from '$components/Common/Marquee.svelte';
+	import Marquee from '$lib/components/Layout/Footer/Marquee.svelte';
 	import { navItems } from '$lib/config.js';
 
 	// ICONS

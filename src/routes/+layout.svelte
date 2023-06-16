@@ -1,16 +1,16 @@
 <script>
 	import ThemeToggle from '$components/Theme/ThemeToggle.svelte';
-	import ScrollBar from '$components/Layout/ScrollBar.svelte';
+	import ScrollBar from '$lib/components/Layout/Other/ScrollBar.svelte';
 	import ProgressBar from '$components/Transition/ProgressBar.svelte';
 	import PageTransition from '$components/Transition/PageTransition.svelte';
-	import ScrollProgressBar from '$components/Common/ScrollProgressBar.svelte';
-	import Cover from '$components/Layout/Cover.svelte';
-	import SkipLink from '$components/Layout/SkipLink.svelte';
+	import ScrollProgressBar from '$lib/components/Layout/Other/ScrollProgressBar.svelte';
+	import Cover from '$lib/components/Layout/Header/Cover.svelte';
+	import SkipLink from '$lib/components/Layout/Other/SkipLink.svelte';
 	import PWA from '$components/PWA/PWA.svelte';
-	import BackToTop from '$components/Layout/BackToTop.svelte';
+	import BackToTop from '$lib/components/Layout/Other/BackToTop.svelte';
 	import Footer from '$components/Layout/Footer/Footer.svelte';
-	import Header from '$components/Layout/Header.svelte';
-	import Breadcrumb from '$components/Layout/Breadcrumb.svelte';
+	import Header from '$lib/components/Layout/Header/Header.svelte';
+	import Breadcrumb from '$lib/components/Layout/Other/Breadcrumb.svelte';
 
 	import '$lib/styles/global.css';
 	export let data;

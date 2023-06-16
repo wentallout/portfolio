@@ -4,7 +4,7 @@
 	import NoBSGuideUX from '$lib/assets/images/book/NoBSGuideUX.png?w=200&h=300';
 	import Sprint from '$lib/assets/images/book/Sprint.png?w=200&h=300';
 	import JustEnoughResearch from '$lib/assets/images/book/JustEnoughResearch.png?w=200&h=300';
-	import CoolBook from '$components/Resource/CoolBook.svelte';
+	import Book3D from '$lib/components/Resource/Card/Book3D.svelte';
 
 	let books = [
 		{
@@ -33,16 +33,25 @@
 
 <div class="books">
 	{#each books as book}
-		<CoolBook imgUrl={book.imgUrl} alt={book.name} />
+		<Book3D imgUrl={book.imgUrl} alt={book.name} />
 	{/each}
 </div>
 
 <style>
 	.books {
 		width: 100%;
-		display: flex;
+		/* display: flex;
 		flex-direction: row;
 		flex-wrap: wrap;
-		gap: var(--spaceM);
+		gap: var(--spaceM); */
+
+		--min: 15ch;
+		--gap: var(--spaceM);
+
+		display: grid;
+		grid-gap: var(--gap);
+		/* min() with 100% prevents overflow
+  in extra narrow spaces */
+		grid-template-columns: repeat(auto-fit, minmax(min(100%, var(--min)), 1fr));
 	}
 </style>

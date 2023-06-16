@@ -4,7 +4,7 @@
 	import FileAudio from '~icons/ph/file-audio';
 
 	import { Spotify } from 'sveltekit-embed';
-	import MusicPlayer from '$components/Resource/MusicPlayer.svelte';
+	import MusicPlayer from '$lib/components/Resource/MusicPlayer/MusicPlayer.svelte';
 	import PageTitle from '$components/Common/PageTitle.svelte';
 </script>
 

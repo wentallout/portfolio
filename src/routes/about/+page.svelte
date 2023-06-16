@@ -14,8 +14,8 @@
 
 <section class="about">
 	<div class="about__info">
-		<div class="info__title base-text">Who am I?</div>
-		<div class="info__description small-text">
+		<div class="about__title large-text">Who am I?</div>
+		<div class="about_desc small-text">
 			<ul>
 				<li>Khoa. {age} y/o.</li>
 				<li>Live and work in Ho Chi Minh City, Vietnam.</li>
@@ -26,24 +26,24 @@
 	</div>
 
 	<div class="about__info">
-		<div class="info__title base-text">My mission</div>
-		<div class="info__description small-text">
+		<div class="about__title large-text">My mission</div>
+		<div class="about_desc small-text">
 			My mission is to create intuitive and user-centric designs that simplify complex concepts and
 			make technology accessible to all.
 		</div>
 	</div>
 
 	<div class="about__info">
-		<div class="info__title base-text">My story</div>
-		<div class="info__description small-text">
+		<div class="about__title large-text">My story</div>
+		<div class="about_desc small-text">
 			With a background in frontend development and design, I've honed my skills through hands-on
 			experience and learning from challenges, failures, and successes.
 		</div>
 	</div>
 
 	<div class="about__info">
-		<div class="info__title base-text">My value</div>
-		<div class="info__description small-text">
+		<div class="about__title large-text">My value</div>
+		<div class="about_desc small-text">
 			As a UI/UX designer with a frontend background, I bring a unique blend of creative design
 			skills and technical expertise. I am passionate about crafting intuitive and delightful user
 			experiences, rooted in research-driven insights and iterative design processes. With a keen
@@ -55,10 +55,11 @@
 	</div>
 
 	<div class="about__info">
-		<div class="info__title base-text">My hobbies</div>
-		<div class="info__description small-text">
+		<div class="about__title large-text">My hobbies</div>
+		<div class="about_desc small-text">
 			<ul>
 				<li>Web Design</li>
+				<li>Crypto</li>
 				<li>A.I</li>
 				<li>Music</li>
 				<li>Fashion</li>
@@ -67,8 +68,8 @@
 	</div>
 
 	<div class="about__info">
-		<div class="info__title base-text">Why I made this website?</div>
-		<div class="info__description small-text">
+		<div class="about__title large-text">Why I made this website?</div>
+		<div class="about_desc small-text">
 			Mainly to showcase my projects and occasionally share my knowledge.
 		</div>
 	</div>
@@ -86,25 +87,18 @@
 		display: flex;
 		gap: var(--spaceS);
 		flex-direction: column;
-		border-bottom: 4px solid var(--colorBorder);
 
 		padding-top: var(--spaceS);
-		padding-bottom: var(--space3XL);
+		padding-bottom: var(--spaceXL);
 	}
 
-	@media (min-width: 992px) {
-		.about__info {
-			flex-direction: row;
-		}
-	}
-
-	.info__title {
+	.about__title {
 		font-weight: var(--fontWeightLarge);
 		color: var(--colorText);
-		width: 400px;
+		width: 100%;
 	}
 
-	.info__description {
+	.about_desc {
 		color: var(--colorTextSecondary);
 		width: 100%;
 		max-width: var(--text-width);

@@ -1,16 +1,19 @@
 <script>
 	import PageTitle from '$components/Common/PageTitle.svelte';
 
-	import OtherCardList from '$components/Resource/OtherCardList.svelte';
-	import BookGallery from '$components/Resource/BookGallery.svelte';
-	import ToolCardList from '$components/Resource/ResourceCardList.svelte';
+	import OtherCardList from '$lib/components/Resource/List/OtherCardList.svelte';
+	import BookList from '$lib/components/Resource/List/BookList.svelte';
+	import ToolCardList from '$lib/components/Resource/List/ResourceCardList.svelte';
 	import Books from '~icons/ph/books';
 	import HardDrives from '~icons/ph/hard-drives';
 	import Flask from '~icons/ph/flask';
 
 	import SectionTitle from '$lib/components/Common/Section/SectionTitle.svelte';
 
+	import BoundingBox from '~icons/ph/bounding-box';
+
 	import SEO from '$components/SEO/SEO.svelte';
+	import EssentialList from '$lib/components/Resource/List/EssentialList.svelte';
 	const breadcrumbs = [
 		{
 			name: 'Home',
@@ -35,13 +38,24 @@
 
 <section>
 	<SectionTitle
+		sectionTitle="Essential"
+		let:sectionIcon
+		sectionDesc="Essential libraries for my work">
+		<BoundingBox {...sectionIcon} />
+	</SectionTitle>
+
+	<EssentialList />
+</section>
+
+<section>
+	<SectionTitle
 		sectionTitle="Book"
 		let:sectionIcon
 		sectionDesc="Here are some of my favorite books">
 		<Books {...sectionIcon} />
 	</SectionTitle>
 
-	<BookGallery />
+	<BookList />
 </section>
 
 <section>
