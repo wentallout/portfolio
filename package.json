@@ -12,7 +12,8 @@
 		"lint": "prettier --check . && eslint --ext .js,.svelte src",
 		"lint:css": "stylelint \"src/**/*.{css,svelte}\"",
 		"format": "prettier --write .",
-		"ngrok": "ngrok http 4173"
+		"ngrok": "ngrok http 4173",
+		"translate": "npx inlang machine translate"
 	},
 	"devDependencies": {
 		"@giscus/svelte": "^2.2.8",

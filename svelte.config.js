@@ -49,7 +49,7 @@ const config = {
 		csp: {
 			mode: 'hash',
 			directives: {
-				'script-src': ['self', 'unsafe-inline', 'https://www.googletagmanager.com'],
+				'script-src': ['self', 'unsafe-inline', 'https://www.googletagmanager.com','https://cdn.jsdelivr.net'],
 				'img-src': ['self', 'www.googletagmanager.com']
 			}
 		}

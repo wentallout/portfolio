@@ -3,6 +3,8 @@
 	import Button from '$components/Button/Button.svelte';
 	// import HeroScene from '$components/Scenes/HeroScene.svelte';
 	// import { Canvas } from '@threlte/core';
+
+	// import { i } from '@inlang/sdk-js';
 </script>
 
 <section class="full-width">

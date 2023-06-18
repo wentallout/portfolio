@@ -118,11 +118,12 @@
 	}
 
 	.block__section:hover {
-		background-color: var(--colorBgElevated);
+		/* background-color: var(--colorBgElevated); */
 		transform: scale(1.1);
 		overflow: visible;
 		border: 0;
 		z-index: var(--zIndexMax);
+		outline: 0;
 	}
 
 	@media (min-width: 992px) {

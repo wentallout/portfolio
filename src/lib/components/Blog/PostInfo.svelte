@@ -45,7 +45,6 @@
 		padding-bottom: var(--spaceXL);
 		background-color: var(--colorBgLayout);
 		position: relative;
-		background: url(/images/stardust.png);
 	}
 
 	.container:before {
