@@ -1,5 +1,5 @@
 <script>
-	import LangSwitcher from '$lib/components/Button/LangSwitcher.svelte';
+	// import LangSwitcher from '$lib/components/Button/LangSwitcher.svelte';
 	import ThemeSwitcher from '$lib/components/Button/ThemeSwitcher.svelte';
 	import ScrollBar from '$lib/components/Layout/Other/ScrollBar.svelte';
 	import ProgressBar from '$components/Transition/ProgressBar.svelte';
@@ -17,21 +17,18 @@
 	export let data;
 </script>
 
-<!-- MISC -->
+<!-- MISC START -->
 <SkipLink />
 <ScrollProgressBar color="var(--colorPrimary)" />
 <ProgressBar />
 <ScrollBar />
-
-<LangSwitcher />
-<ThemeSwitcher />
-<!--  -->
-
 <PWA />
-<Cover />
-<!-- class="page-container" -->
-
 <BackToTop />
+<!-- <LangSwitcher /> -->
+<ThemeSwitcher />
+<!-- MISC END  -->
+
+<Cover />
 <Header />
 
 <PageTransition {data}>
