@@ -55,6 +55,10 @@
 		box-shadow: var(--boxShadow);
 	}
 
+	.blog:hover .icon {
+		opacity: 1;
+	}
+
 	.blog:hover {
 		background-color: var(--colorBgElevated);
 
@@ -79,6 +83,7 @@
 	}
 
 	.icon {
+		opacity: 0;
 		transition: var(--transition);
 	}
 

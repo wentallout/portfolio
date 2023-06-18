@@ -52,7 +52,7 @@
 	</header>
 </VanishingHeader>
 
-<div bind:this={navOverlayEle} class="overlay">
+<div class="overlay" bind:this={navOverlayEle}>
 	<div class="closebtn" on:click={closeNav} on:keydown={closeNav}>
 		<X color="var(--colorBlack)" width="32" height="32" />
 	</div>
@@ -63,7 +63,8 @@
 				class:active-page-mobile={$page.url.pathname === `${navItem.path}`}
 				on:click={closeNav}
 				href={navItem.path}>
-				{navItem.title}</a>
+				{navItem.title}
+			</a>
 		{/each}
 		<div class="overlay-item social">
 			<SocialButtons />

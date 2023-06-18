@@ -4,11 +4,13 @@ import Icons from 'unplugin-icons/vite';
 import { imagetools } from 'vite-imagetools';
 import svg from '@poppanator/sveltekit-svg';
 
+import inlangPlugin from '@inlang/sdk-js/adapter-sveltekit';
+
 /** @type {import('vite').UserConfig} */
 const config = {
 	plugins: [
+		inlangPlugin(),
 		sveltekit(),
-
 		svg({
 			includePaths: ['./src/lib/assets/images/'],
 			svgoOptions: {

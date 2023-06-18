@@ -11,9 +11,9 @@
 	import GitHubLogo from '~icons/ph/github-logo';
 	import Phone from '~icons/ph/phone';
 	import MapPin from '~icons/ph/map-pin';
-	import FooterDeco from '$lib/components/Layout/Footer/FooterDeco.svelte';
 </script>
 
+<div class="chain" />
 <footer class="footer small-text">
 	<div class="list-container">
 		<div class="list">
@@ -90,18 +90,13 @@
 
 	<FooterEnd />
 	<img class="footer__deco" alt="footer decoration" src="/images/footer-skyline.webp" />
-
-	<FooterDeco/>
-
 </footer>
 <Marquee />
 
 <style>
-	.footer:before {
-		content: '';
-		position: absolute;
-		top: 0;
-		left: 0;
+	.chain {
+		/* content: ''; */
+
 		background-image: url(/images/chain.svg);
 		background-repeat: repeat-x;
 		width: 100%;
@@ -116,6 +111,7 @@
 		background-repeat: repeat-x;
 		height: 52px;
 		width: 100%;
+		z-index: 2;
 	}
 
 	:global([color-scheme='light'] .footer:before) {
@@ -139,6 +135,10 @@
 			var(--colorBgContainer) 0%,
 			var(--colorBgElevated) 100%
 		);
+
+		background-color: transparent;
+		background-image: radial-gradient(var(--colorBgElevated) 1px, transparent 1px);
+		background-size: 5px 5px;
 	}
 	.list-container {
 		overflow: hidden;

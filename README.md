@@ -62,36 +62,40 @@ Visitors can also comment on your blogs using GitHub discussion (you might want 
 
 ## Features
 
-✅ SEO 100/100
+⭐ i18n: EN - VN
 
-✅ Responsive
+⭐ SEO 100/100
 
-✅ Dark/Light Mode Toggle Button
+⭐ Responsive
 
-✅ Dynamic Breadcrumb (`Breadcumb.svelte`)
+⭐ PWA: Works OFFLINE
 
-✅ Fonts
+⭐ Dark/Light Mode Toggle Button
+
+⭐ Dynamic Breadcrumb (`Breadcumb.svelte`)
+
+⭐ Fonts
 
 - Self-hosted + Subset using [glyphhanger](https://www.npmjs.com/package/glyphhanger)
 - font-family: [Inter](https://rsms.me/inter/)
 
-✅ Icons ([phosphoricons](https://phosphoricons.com/))
+⭐ Icons ([phosphoricons](https://phosphoricons.com/))
 
-✅ Images
+⭐ Images
 
 - Compressed and Converted into `webp` using`vite-imagetools`
 - `loading = 'lazy'`
 
-✅ Routing
+⭐ Routing
 
-✅ Page Transition Animation
+⭐ Page Transition Animation
 
 - `svelte/transiton`
 - [nprogress](https://www.npmjs.com/package/nprogress)
 
-✅ RSS
+⭐ RSS
 
-✅ Contact Form
+⭐ Contact Form
 
 ---
 
@@ -101,18 +105,16 @@ Visitors can also comment on your blogs using GitHub discussion (you might want 
 - use `categories` (#hashtag) to filter blogs
 - multiple markdown-related plugins installed: `rehype` and `remark`
 
-✅ Blog: Automatic Table of Contents
+⭐ Blog: Automatic Table of Contents
 
-✅ Blog: Code Highlight
+⭐ Blog: Code Highlight
 
 - Choose a theme: [prism-themes](https://github.com/PrismJS/prism-themes) then paste into `styles/prism.css`
 
-✅ Blog: Search
+⭐ Blog: Search, Pagination
 
-✅ Blog: Categories
+⭐ Blog: Categories/Tags
 
-✅ Blog: Pagination
+⭐ Blog: Prev/Next Button
 
-✅ Blog: Prev/Next Blog Button
-
-✅ Blog: Comment using [Giscus](https://giscus.app)
+⭐ Blog: Comment using [Giscus](https://giscus.app)

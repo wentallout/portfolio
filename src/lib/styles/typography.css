@@ -1,8 +1,8 @@
 @font-face {
 	font-family: 'Normal';
-	src: url('/fonts/Inter.woff2') format('woff2');
+	src: url('/fonts/Inter-subset.woff2') format('woff2');
 
-	font-weight: var(--fontWeightXS) 600;
+	font-weight: 300 600;
 	font-stretch: normal;
 	font-style: normal;
 	font-display: swap;

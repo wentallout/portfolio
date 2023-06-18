@@ -12,11 +12,13 @@
 		"lint": "prettier --check . && eslint --ext .js,.svelte src",
 		"lint:css": "stylelint \"src/**/*.{css,svelte}\"",
 		"format": "prettier --write .",
-		"ngrok": "ngrok http 4173"
+		"ngrok": "ngrok http 4173",
+		"translate": "npx inlang machine translate"
 	},
 	"devDependencies": {
 		"@giscus/svelte": "^2.2.8",
 		"@iconify-json/ph": "^1.1.5",
+		"@inlang/sdk-js": "^0.6.5",
 		"@poppanator/sveltekit-svg": "^3.0.1",
 		"@ronilaukkarinen/stylelint-a11y": "^1.2.7",
 		"@supabase/supabase-js": "^2.21.0",
@@ -73,5 +75,8 @@
 	"repository": {
 		"type": "git",
 		"url": "https://github.com/wentallout/portfolio"
+	},
+	"dependencies": {
+		"@inlang/cli": "^0.11.1"
 	}
 }
