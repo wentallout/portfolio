@@ -1,43 +1,35 @@
 <script>
 	import FlagGb from '$lib/assets/images/flags/FlagGb.svelte';
 	import FlagVn from '$lib/assets/images/flags/FlagVn.svelte';
-	import { switchLanguage } from '@inlang/sdk-js';
+	// import { switchLanguage } from '@inlang/sdk-js';
 
 	let isEn;
 	let isVi;
 
-	function handleSwitchLanguage(lang) {
-		switchLanguage(lang);
-		if (lang === 'en') {
-			isEn = true;
-			isVi = false;
-		} else {
-			isVi = true;
-			isEn = false;
-		}
-	}
+	// function handleSwitchLanguage(lang) {
+	// 	switchLanguage(lang);
+	// 	if (lang === 'en') {
+	// 		isEn = true;
+	// 		isVi = false;
+	// 	} else {
+	// 		isVi = true;
+	// 		isEn = false;
+	// 	}
+	// }
 </script>
 
 <div class="lang">
-	<button
-		class="lang__btn xs-text"
-		class:active={isEn}
-		type="button"
-		on:click={() => handleSwitchLanguage('en')}>
+	<button class="lang__btn xs-text" class:active={isEn} type="button">
 		<FlagGb />
 	</button>
-	<button
-		class="lang__btn xs-text"
-		class:active={isVi}
-		type="button"
-		on:click={() => handleSwitchLanguage('vi')}>
+	<button class="lang__btn xs-text" class:active={isVi} type="button">
 		<FlagVn />
 	</button>
 </div>
 
 <style>
 	.lang {
-		display: flex;
+		display: none;
 		flex-direction: row;
 
 		position: fixed;

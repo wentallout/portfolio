@@ -62,7 +62,7 @@ Visitors can also comment on your blogs using GitHub discussion (you might want 
 
 ## Features
 
-⭐ i18n: EN - VN
+⭐ i18n: EN - VN (work in progress)
 
 ⭐ SEO 100/100
 
