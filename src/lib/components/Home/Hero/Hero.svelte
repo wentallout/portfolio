@@ -1,8 +1,6 @@
 <script>
 	import HeroVisual from './HeroVisual.svelte';
 	import Button from '$components/Button/Button.svelte';
-
-	import { i } from '@inlang/sdk-js';
 </script>
 
 <section class="full-width">
@@ -13,9 +11,8 @@
 				<span class="focus">UI/UX Designer</span>
 			</div>
 			<div class="hero__text small-text">
-				<!-- I create practical and user-friendly products that bring real value and enhance people's
-				lives. -->
-				{i('hero.text')}
+				I create practical and user-friendly products that bring real value and enhance people's
+				lives.
 
 				<a class="hero__link underline" href="/about">
 					<span>More about Khoa</span>
