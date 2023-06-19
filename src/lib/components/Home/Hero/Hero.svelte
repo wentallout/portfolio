@@ -1,10 +1,8 @@
 <script>
 	import HeroVisual from './HeroVisual.svelte';
 	import Button from '$components/Button/Button.svelte';
-	// import HeroScene from '$components/Scenes/HeroScene.svelte';
-	// import { Canvas } from '@threlte/core';
 
-	// import { i } from '@inlang/sdk-js';
+	import { i } from '@inlang/sdk-js';
 </script>
 
 <section class="full-width">
@@ -15,8 +13,10 @@
 				<span class="focus">UI/UX Designer</span>
 			</div>
 			<div class="hero__text small-text">
-				I create practical and user-friendly products that bring real value and enhance people's
-				lives.
+				<!-- I create practical and user-friendly products that bring real value and enhance people's
+				lives. -->
+				{i('hero.text')}
+
 				<a class="hero__link underline" href="/about">
 					<span>More about Khoa</span>
 				</a>
