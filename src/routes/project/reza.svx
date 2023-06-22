@@ -106,7 +106,7 @@ The **Design Thinking** method is a practical way to solve complex problems by f
 
 There are 5 phases to go through: **Empathize, Define, Ideate, Prototype, Test**.
 
-### Phase 1 - Empathize
+### Empathize
 
 In the first phase, I need to understand what my potential users want to identify issues. The goal is that I can answer the challenges they face.
 
@@ -126,7 +126,7 @@ Using online surveys I can gather real data from students to employees. I want t
 
 => **Conclusion 3**: People don't actually understand what it's like to reserve a restaurant table because they have never done it before.
 
-### Phase 2 - Define
+### Define
 
 In the second phase, I need to determine our target users based on the data I've researched and identify the pattern of problems I found from the previous phase.
 
@@ -147,7 +147,7 @@ I made a simplified one later:
 - Help users track their reservation.
 - Help users find important info: recommended dishes and price (menu), parking lot, address, reviews
 
-### Phase 3 - Ideate
+### Ideate
 
 From what we have brainstormed, we prioritized certain features based on impact/effort.
 
@@ -189,7 +189,7 @@ I wanted my team to create a simple design system before moving to phase 4. This
 <Image src={ds3} alt="design system" />    
 
 
-### Phase 4 - Prototype
+### Prototype
 
 Phase 4 is all about creating an interactive design that will be tested by potential users in phase 5.
 
@@ -225,7 +225,7 @@ Alarm users when it's time to go to the restaurant. Also it gives them good deal
 
 <Image src={notiScreen}  alt="notification screen UI" />
 
-### Phase 5 - Test
+### Test
 
 It's widely known that early, repeated testing and redesign will save time and money. We can't just work on something for months then release it without knowing how people wil react to it.
 

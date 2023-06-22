@@ -37,14 +37,8 @@
 		display: flex;
 		position: relative;
 		width: 100%;
-		height: 240px;
+		height: 300px;
 		background-color: var(--colorBgLayout);
-	}
-
-	@media (min-width: 768px) {
-		.cover {
-			height: 300px;
-		}
 	}
 
 	.cover::after {

@@ -1,4 +1,5 @@
 <script>
+	import ChainDivider from '$components/Layout/Other/ChainDivider.svelte';
 	import FooterEnd from '$components/Layout/Footer/FooterEnd.svelte';
 	import ExLink from '$components/Common/ExLink.svelte';
 	import Marquee from '$lib/components/Layout/Footer/Marquee.svelte';
@@ -11,9 +12,11 @@
 	import GitHubLogo from '~icons/ph/github-logo';
 	import Phone from '~icons/ph/phone';
 	import MapPin from '~icons/ph/map-pin';
+
+	import Wall from '$lib/assets/images/common/wall.jpg';
 </script>
 
-<div class="chain" />
+<ChainDivider />
 <footer class="footer small-text">
 	<div class="list-container">
 		<div class="list">
@@ -94,16 +97,6 @@
 <Marquee />
 
 <style>
-	.chain {
-		/* content: ''; */
-
-		background-image: url(/images/chain.svg);
-		background-repeat: repeat-x;
-		width: 100%;
-		height: 35px;
-		opacity: 0.1;
-	}
-
 	.footer__deco {
 		position: absolute;
 		bottom: 0;
@@ -112,10 +105,6 @@
 		height: 52px;
 		width: 100%;
 		z-index: 2;
-	}
-
-	:global([color-scheme='light'] .footer:before) {
-		filter: invert();
 	}
 
 	.footer {
@@ -136,10 +125,10 @@
 			var(--colorBgElevated) 100%
 		);
 
-		background-color: transparent;
 		background-image: radial-gradient(var(--colorBgElevated) 1px, transparent 1px);
 		background-size: 5px 5px;
 	}
+
 	.list-container {
 		overflow: hidden;
 		--min: 20ch;

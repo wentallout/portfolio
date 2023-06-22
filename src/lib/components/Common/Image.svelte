@@ -1,4 +1,6 @@
 <script>
+	import SaosContainer from '$components/Common/SaosContainer.svelte';
+
 	export let src = '';
 	export let alt = '';
 	export let width;
@@ -10,45 +12,38 @@
 	import ExLink from '$components/Common/ExLink.svelte';
 </script>
 
-<ExLink href={src} aria-label={alt}>
-	<div class="image-with-caption">
-		<img {src} {width} {height} {loading} {decoding} alt="Image of {alt}" />
-
-		<div class="caption">{alt}</div>
-	</div>
-</ExLink>
+<SaosContainer
+	animation="scale-in-ver-top 0.3s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;">
+	<ExLink href={src} aria-label={alt}>
+		<figure>
+			<img {src} {width} {height} {loading} {decoding} alt="Image of {alt}" />
+			<figcaption class="caption xs-text">
+				{alt}
+			</figcaption>
+		</figure>
+	</ExLink>
+</SaosContainer>
 
 <style>
-	img {
-		margin-bottom: 0;
-		transition: all 0.3s ease;
-		user-select: none;
-	}
+	figure {
+		max-width: 100%;
 
-	.image-with-caption {
-		position: relative;
 		margin-bottom: var(--spaceS);
 	}
 
-	.caption {
-		opacity: 0;
-		padding: 4px 8px;
-		font-size: var(--fontSizeXS);
-
-		/* POSITION */
-		position: absolute;
-		left: 0;
-		bottom: 0;
-		/* --- */
-
-		background-color: rgba(0, 0, 0, 0.8);
-		width: fit-content;
-
-		/* OTHER */
-		transition: var(--transition);
-		/* --- */
+	figure > img {
+		max-width: inherit;
 	}
-	.image-with-caption:hover .caption {
-		opacity: 1;
+
+	figure {
+		border: 1px solid var(--colorBorder);
+	}
+
+	.caption {
+		border-top: 1px solid var(--colorBorder);
+		font-size: var(--fontSizeXS);
+		color: var(--colorTextSecondary);
+		width: 100%;
+		padding: 4px 8px;
 	}
 </style>

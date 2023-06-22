@@ -85,6 +85,7 @@
 		gap: var(--spaceM);
 		padding: var(--spaceL);
 		position: relative;
+		margin-top: var(--spaceL);
 	}
 	.status {
 		color: var(--colorError);

@@ -1,5 +1,5 @@
 <script>
-	import ProjectCardList from '$components/Project/ProjectCardList.svelte';
+	import ProjectCardList from '$lib/components/Project/List/ProjectCardList.svelte';
 	import SectionTitle from '$lib/components/Common/Section/SectionTitle.svelte';
 
 	import Star from '~icons/ph/star';

@@ -1,6 +1,6 @@
 <script>
 	import Button from '$components/Button/Button.svelte';
-	import ProjectCard from '$components/Project/ProjectCard.svelte';
+	import ProjectCard from '$lib/components/Project/Card/ProjectCard.svelte';
 	import rezaSquare from '$lib/assets/images/project/rezaSquare.png';
 
 	// linkToFigma="https://www.figma.com/file/owUrwidb8hZbdmruKhMtyS/REZA%3A-Restaurant-Reservation-App?node-id=2%3A9&t=a8W16CMSWgxzoLKB-1"

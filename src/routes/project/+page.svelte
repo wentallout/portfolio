@@ -1,12 +1,16 @@
 <script>
-	import ProjectCardList from '$components/Project/ProjectCardList.svelte';
+	import ProjectCardList from '$lib/components/Project/List/ProjectCardList.svelte';
 	import PageTitle from '$components/Common/PageTitle.svelte';
-	import Brain from '~icons/ph/brain';
+	import ProjectorScreen from '~icons/ph/projector-screen';
+
+	import CodePen from '~icons/ph/codepen-logo';
 
 	// import FigmaLogo from '~icons/ph/figma-logo';
 	import SectionTitle from '$lib/components/Common/Section/SectionTitle.svelte';
 
 	import SEO from '$components/SEO/SEO.svelte';
+	import SnippetList from '$lib/components/Project/List/SnippetList.svelte';
+
 	const breadcrumbs = [
 		{
 			name: 'Home',
@@ -29,11 +33,25 @@
 <PageTitle pageTitle="Project" />
 
 <section>
-	<SectionTitle sectionTitle="Case Studies" let:sectionIcon>
-		<Brain {...sectionIcon} />
+	<SectionTitle
+		sectionDesc="UI/UX case studies built with clear business goal and empathy."
+		sectionTitle="Case Studies"
+		let:sectionIcon>
+		<ProjectorScreen {...sectionIcon} />
 	</SectionTitle>
 
 	<ProjectCardList />
+</section>
+
+<section>
+	<SectionTitle
+		sectionDesc="CSS solutions to niche problems."
+		sectionTitle="CSS Snippets"
+		let:sectionIcon>
+		<CodePen {...sectionIcon} />
+	</SectionTitle>
+
+	<SnippetList />
 </section>
 
 <!-- <section>

@@ -1,5 +1,5 @@
 <script>
-	import { fade, blur, scale } from 'svelte/transition';
+	import { fade, blur } from 'svelte/transition';
 
 	export let data;
 </script>

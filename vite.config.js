@@ -25,7 +25,8 @@ const config = {
 		imagetools({
 			defaultDirectives: () => {
 				return new URLSearchParams({
-					format: 'avif'
+					// format: 'avif',
+					format: 'webp'
 				});
 			}
 		})

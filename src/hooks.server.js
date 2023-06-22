@@ -5,13 +5,14 @@ const directives = {
 	'child-src': ["'self'"],
 	'connect-src': ["'self'", 'ws://localhost:*'],
 	// 'connect-src': ["'self'", 'ws://localhost:*', 'https://hcaptcha.com', 'https://*.hcaptcha.com'],
-	'img-src': [
-		"'self'",
-		'data:',
-		'https://*.cloudfront.net',
-		'https://*.amazonaws.com',
-		'https://twemoji.maxcdn.com'
-	],
+	// 'img-src': [
+	// 	"'self'",
+	// 	'data:',
+	// 	'https://*.cloudfront.net',
+	// 	'https://*.amazonaws.com',
+	// 	'https://twemoji.maxcdn.com',
+	// 	''
+	// ],
 	'font-src': ["'self'", 'data:', 'https://*.cloudfront.net'],
 	'form-action': ["'self'"],
 	'frame-ancestors': ["'self'"],
@@ -35,7 +36,8 @@ const directives = {
 	'default-src': [
 		"'self'",
 		PUBLIC_DOMAIN,
-		`ws://${PUBLIC_DOMAIN}`
+		`ws://${PUBLIC_DOMAIN}`,
+		'https://shots.codepen.io'
 		// 'https://*.google.com',
 		// 'https://*.googleapis.com',
 		// 'https://*.firebase.com',
