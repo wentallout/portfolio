@@ -227,15 +227,6 @@ aside.toc > nav > ul > li:before {
 	margin-left: auto;
 	margin-right: auto;
 	object-fit: contain;
-
-	width: 100%;
-	aspect-ratio: 16/9;
-
-	margin-bottom: var(--spaceS);
-	border-radius: var(--border-radius-light);
-
-	background-color: var(--colorTextQuaternary);
-	border: 1px solid var(--colorBorder);
 }
 
 .markdown img:hover {

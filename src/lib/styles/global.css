@@ -18,7 +18,7 @@ html {
 	text-underline-offset: 4px;
 
 	--max-width: 80rem;
-	--text-width: 70ch;
+	--text-width: 65ch;
 
 	--border-radius: 16px;
 	--border-radius-light: calc(var(--border-radius) / 2);

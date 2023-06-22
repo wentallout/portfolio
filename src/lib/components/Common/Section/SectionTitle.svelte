@@ -5,46 +5,57 @@
 
 	let sectionIcon = {
 		color: 'var(--colorText)',
-		height: 24,
-		width: 24
+		height: 240,
+		width: 240
 	};
 </script>
 
-<div class="container">
-	<div class="section-title">
-		<div class="title__icon">
+<div class="section">
+	<div class="section__title">
+		<div class="section__icon">
 			<slot {sectionIcon} />
 		</div>
-		<h2 class="title__text xl-text">{sectionTitle}</h2>
+		<h2 class="section__text xl-text">{sectionTitle}</h2>
 	</div>
-	<SectionDesc text={sectionDesc} />
+
+	{#if sectionDesc !== ''}
+		<SectionDesc text={sectionDesc} />
+	{/if}
 </div>
 
 <style>
-	.container {
-		margin-bottom: var(--spaceL);
+	.section {
+		margin-bottom: var(--spaceXL);
 	}
 
-	.section-title {
+	.section__title {
 		display: flex;
 		justify-content: left;
 
 		align-items: center;
-		gap: var(--spaceS);
+		gap: var(--space2XS);
 		margin-bottom: var(--spaceS);
+
+		position: relative;
 	}
 
-	.title__icon {
+	.section__icon {
 		display: flex;
 		justify-content: center;
 		align-items: center;
-		padding: var(--spaceXS);
-		background-color: var(--colorBgElevated);
-		border-radius: 100%;
-		box-shadow: var(--boxShadow);
+
+		position: absolute;
+		top: 50%;
+		bottom: 50%;
+		left: -120px;
+		opacity: 0.03;
 	}
 
-	.title__text {
+	:global([color-scheme='light'] .section__icon) {
+		opacity: 0.1;
+	}
+
+	.section__text {
 		font-family: var(--fontFancy);
 		color: var(--colorText);
 	}

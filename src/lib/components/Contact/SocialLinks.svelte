@@ -17,7 +17,7 @@
 
 <section>
 	<SectionTitle sectionTitle="Social" let:sectionIcon>
-		<Handshake {...sectionIcon} />
+		<Handshake  {...sectionIcon} />
 	</SectionTitle>
 
 	<div class="social small-text">

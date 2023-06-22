@@ -6,9 +6,10 @@
 	import UXDeli from '$lib/assets/images/resource/UXDeli.png';
 
 	import FluentDesign from '$lib/assets/images/resource/FluentDesign.png';
+	import CardListContainer from '$lib/components/Layout/Container/CardListContainer.svelte';
 </script>
 
-<div class="essential">
+<CardListContainer>
 	<FigmaCard
 		href="https://www.figma.com/community/file/1248375255495415511"
 		title="Apple Design Resources - iOS 17 and iPadOS 17"
@@ -24,18 +25,4 @@
 		desc="Microsoft"
 		thumbnailUrl={FluentDesign}
 		href="https://www.figma.com/community/file/836828295772957889/Microsoft-Fluent-2-Web" />
-	<!-- <FigmaCard title="aya4" desc="aya" />  -->
-</div>
-
-<style>
-	.essential {
-		--min: 30ch;
-		--gap: var(--spaceM);
-
-		display: grid;
-		grid-gap: var(--gap);
-		/* min() with 100% prevents overflow
-  in extra narrow spaces */
-		grid-template-columns: repeat(auto-fit, minmax(min(100%, var(--min)), 1fr));
-	}
-</style>
+</CardListContainer>

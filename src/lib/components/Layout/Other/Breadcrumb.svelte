@@ -25,7 +25,7 @@
 	}
 </script>
 
-{#if currentPath !== '/' && id !== null}
+{#if crumbs.length > 2}
 	<nav aria-label="breadcrumb" id="breadcrumb" class="breadcrumb small-text">
 		{#each crumbs as c, i}
 			{#if i == crumbs.length - 1}

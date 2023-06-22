@@ -8,7 +8,6 @@ import rehypeAutolinkHeadings from 'rehype-autolink-headings';
 import remarkUnwrapImages from 'remark-unwrap-images';
 import sequence from 'svelte-sequential-preprocessor';
 import remarkGfm from 'remark-gfm';
-import rehypeWidont from 'rehype-widont';
 import remarkSectionize from 'remark-sectionize';
 
 // torch_eYAF6gD0idBcJcmEPVyxVRVmuAHTrcP9mV8s7vTl
@@ -28,8 +27,7 @@ const config = {
 					rehypeExternalLinks,
 					{ rel: ['nofollow', 'noopener', 'noreferrer', 'external'], target: '_blank' }
 				],
-				[rehypeAutolinkHeadings, { behavior: 'wrap' }],
-				rehypeWidont
+				[rehypeAutolinkHeadings, { behavior: 'wrap' }]
 			]
 		})
 	]),
@@ -49,8 +47,18 @@ const config = {
 		csp: {
 			mode: 'hash',
 			directives: {
-				'script-src': ['self', 'unsafe-inline', 'https://www.googletagmanager.com','https://cdn.jsdelivr.net'],
-				'img-src': ['self', 'www.googletagmanager.com']
+				'script-src': [
+					'self',
+					'unsafe-inline',
+					'https://www.googletagmanager.com',
+					'https://cdn.jsdelivr.net'
+				],
+				'img-src': [
+					'self',
+					'www.googletagmanager.com',
+					'https://shots.codepen.io',
+					'https://*.cloudfront.net'
+				]
 			}
 		}
 	},

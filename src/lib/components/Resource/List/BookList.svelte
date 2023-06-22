@@ -29,29 +29,38 @@
 		},
 		{ name: 'Sprint', imgUrl: Sprint, bookUrl: 'https://matix.li/92648755b3ce' }
 	];
+
+	import { Splide, SplideSlide, SplideTrack } from '@splidejs/svelte-splide';
+	import '@splidejs/svelte-splide/css';
+
+	import { AutoScroll } from '@splidejs/splide-extension-auto-scroll';
+
+	const options = {
+		rewind: true,
+
+		autoplay: false,
+		arrows: false,
+		height: 'fit-content',
+		perPage: 2,
+		perMove: 2,
+		pagination: true,
+		autoScroll: {
+			speed: 2,
+			rewind: true
+		}
+	};
+
+	const extensions = {
+		AutoScroll
+	};
 </script>
 
-<div class="books">
-	{#each books as book}
-		<Book3D imgUrl={book.imgUrl} alt={book.name} />
-	{/each}
-</div>
-
-<style>
-	.books {
-		width: 100%;
-		/* display: flex;
-		flex-direction: row;
-		flex-wrap: wrap;
-		gap: var(--spaceM); */
-
-		--min: 15ch;
-		--gap: var(--spaceM);
-
-		display: grid;
-		grid-gap: var(--gap);
-		/* min() with 100% prevents overflow
-  in extra narrow spaces */
-		grid-template-columns: repeat(auto-fit, minmax(min(100%, var(--min)), 1fr));
-	}
-</style>
+<Splide hasTrack={false} class="splide" {options} {extensions} aria-label="My Favorite Images">
+	<SplideTrack>
+		{#each books as book}
+			<SplideSlide>
+				<Book3D imgUrl={book.imgUrl} alt={book.name} />
+			</SplideSlide>
+		{/each}
+	</SplideTrack>
+</Splide>

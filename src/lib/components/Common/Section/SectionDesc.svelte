@@ -12,7 +12,6 @@
 	.section-description {
 		max-width: var(--text-width);
 		text-align: left;
-
 		color: var(--colorTextSecondary);
 	}
 </style>

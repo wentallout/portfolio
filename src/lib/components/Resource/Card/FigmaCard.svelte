@@ -24,6 +24,7 @@
 	.fcard {
 		border: 1px solid var(--colorBorder);
 		transition: var(--transition);
+		box-shadow: var(--boxShadow);
 	}
 
 	.fcard:hover {

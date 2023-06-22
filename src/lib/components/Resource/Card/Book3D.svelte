@@ -3,21 +3,26 @@
 	export let imgUrl = '';
 </script>
 
-<div class="book-container">
-	<div class="book">
-		<img loading="lazy" decoding="async" {alt} src={imgUrl} />
+<div class="container">
+	<div class="book-container">
+		<div class="book">
+			<img loading="lazy" decoding="async" {alt} src={imgUrl} />
+		</div>
 	</div>
 </div>
 
 <style>
-	.book-container {
+	.container {
+		width: 100%;
 		display: flex;
-		align-items: center;
 		justify-content: center;
+		align-items: center;
+	}
+
+	.book-container {
 		perspective: 600px;
-		width: 200px;
-		aspect-ratio: 1/1;
-		outline: 1px solid var(--colorBorder);
+		width: fit-content;
+		height: fit-content;
 	}
 
 	@keyframes initAnimation {
@@ -30,6 +35,7 @@
 	}
 
 	.book {
+		perspective: 600px;
 		width: 200px;
 		height: 300px;
 		position: relative;

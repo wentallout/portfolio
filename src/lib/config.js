@@ -30,8 +30,8 @@ const website = {
 	siteLanguage: 'en-US',
 	contactEmail: 'wentallout@gmail.com',
 
-	siteTitle: 'Nguyen Dang Khoa',
-	siteShortTitle: 'Portfolio built using SvelteKit',
+	siteTitle: 'Khoa UI/UX - Design, Develop, Devote',
+	siteShortTitle: 'Khoa UI/UX',
 	siteUrl: 'https://wentallout.tech',
 	icon: 'static/icon-512.png',
 	backgroundColor: '#121212',
