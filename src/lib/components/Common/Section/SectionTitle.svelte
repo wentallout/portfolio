@@ -5,8 +5,8 @@
 
 	let sectionIcon = {
 		color: 'var(--colorText)',
-		height: 240,
-		width: 240
+		height: 32,
+		width: 32
 	};
 </script>
 
@@ -33,7 +33,7 @@
 		justify-content: left;
 
 		align-items: center;
-		gap: var(--space2XS);
+		gap: var(--spaceS);
 		margin-bottom: var(--spaceS);
 
 		position: relative;
@@ -43,12 +43,6 @@
 		display: flex;
 		justify-content: center;
 		align-items: center;
-
-		position: absolute;
-		top: 50%;
-		bottom: 50%;
-		left: -120px;
-		opacity: 0.03;
 	}
 
 	:global([color-scheme='light'] .section__icon) {
