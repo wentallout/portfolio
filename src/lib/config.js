@@ -30,7 +30,7 @@ const website = {
 	siteLanguage: 'en-US',
 	contactEmail: 'wentallout@gmail.com',
 
-	siteTitle: 'Khoa UI/UX - Design, Develop, Devote',
+	siteTitle: 'Khoa UI/UX - Design and Develop',
 	siteShortTitle: 'Khoa UI/UX',
 	siteUrl: 'https://wentallout.tech',
 	icon: 'static/icon-512.png',
