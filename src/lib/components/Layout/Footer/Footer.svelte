@@ -13,15 +13,16 @@
 	import Phone from '~icons/ph/phone';
 	import MapPin from '~icons/ph/map-pin';
 
-	import Wall from '$lib/assets/images/common/wall.jpg';
+	// import FooterBg from '$lib/assets/images/common/footer-bg.png';
 </script>
 
 <ChainDivider />
 <footer class="footer small-text">
-	<div class="list-container">
+	<!-- <img class="footer__bg" src={FooterBg} alt="" /> -->
+	<div class="footer__list">
 		<div class="list">
 			<div class="list__title">About me</div>
-			<ul class="nav-list">
+			<ul class="list__nav">
 				<li class="nav-list__item">
 					Designer in Ho Chi Minh City, Vietnam that designs superb affordable websites and apps for
 					small businesses and non-profits alike.
@@ -31,7 +32,7 @@
 
 		<div class="list">
 			<div class="list__title">Navigate</div>
-			<ul class="nav-list">
+			<ul class="list__nav">
 				{#each navItems as navItem}
 					<li class="nav-list__item">
 						<a href={navItem.path}>{navItem.title}</a>
@@ -42,7 +43,7 @@
 
 		<div class="list">
 			<div class="list__title">Other</div>
-			<ul class="nav-list">
+			<ul class="list__nav">
 				<li class="nav-list__item">
 					<a href="/resource/music">Music</a>
 				</li>
@@ -54,7 +55,7 @@
 
 		<div class="list">
 			<div class="list__title">Contact</div>
-			<ul class="nav-list">
+			<ul class="list__nav">
 				<li class="nav-list__item">
 					<ExLink href="https://goo.gl/maps/GLt6uhYWwU91fXz49">
 						<MapPin width="24" height="24" />
@@ -97,6 +98,17 @@
 <Marquee />
 
 <style>
+	/* .footer__bg {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+
+		z-index: -1;
+		filter: grayscale() brightness(0.4);
+	} */
+
 	.footer__deco {
 		position: absolute;
 		bottom: 0;
@@ -109,7 +121,7 @@
 
 	.footer {
 		display: flex;
-
+		overflow: hidden;
 		flex-direction: column;
 		width: 100%;
 
@@ -129,7 +141,7 @@
 		background-size: 5px 5px;
 	}
 
-	.list-container {
+	.footer__list {
 		overflow: hidden;
 		--min: 20ch;
 		--gap: var(--spaceL);
@@ -159,7 +171,7 @@
 		border-image: linear-gradient(to right, var(--colorTextTertiary), transparent) 1 0%;
 	}
 
-	.nav-list {
+	.list__nav {
 		display: flex;
 		flex-direction: column;
 		justify-content: left;
