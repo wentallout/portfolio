@@ -1,0 +1,197 @@
+---
+title: ES6 Javascript 
+date: 2023-06-24
+categories:
+    - frontend
+---
+
+## Copy an Array with the Spread Operator
+
+```js
+let arr = [1,2,3];
+
+let copy [...arr];
+
+
+```
+
+Note: you can `push` the `arr` but the copy won't be affected.
+
+## Nested Destructuring for Objects
+
+```js
+let obj = {data: {user: 'Laurie'}}
+
+const {data} = obj;
+// data = {user: 'Laurie'}
+
+const {data:{user}} = obj
+// user = 'Laurie'
+```
+
+## Copy an Object with the Spread Operator
+
+```js
+let obj = {a:1,b:2,c:3}
+
+
+
+let copy = {...obj}
+// copy = {a:1,b:2,c:3}
+
+// add one thing in copy
+copy['d'] = 4
+// copy = {a:1,b:2,c:3,d:4}
+```
+
+Note: the copy wont be affected when the original change.
+
+## Merge Arrays using the Spread Operator
+
+```js
+let arr1= [1,2,3]
+
+let arr2 = [4,5,6]
+
+let arrMerged = [...arr1,...arr2]
+
+//arrMerged = [1, 2, 3, 4, 5, 6]
+```
+
+## Flatten a Nested Array in JavaScript with Array.prototype.flat
+
+```js
+let arr = [1,2, [3,4,[5,6]]]
+let resultFlat1 = arr.flat(1);
+let resultFlat2= arr.flat(2);
+
+
+console.log(arr);
+console.log(resultFlat1);
+console.log(resultFlat2);
+
+// [1, 2, [3, 4, [5, 6]]]
+// [1, 2, 3, 4, [5, 6]]
+// [1, 2, 3, 4, 5, 6]
+```
+
+## Merge Objects with JavaScript's Spread Operator
+
+
+```js
+let obj1 = {a:1,b:2}
+
+let obj2 = {c:3,d:4}
+
+let merged = {...obj1,...obj2}
+
+//merged = {a:1,b:2,c:3,d:4}
+```
+
+
+## For...in Loop vs. For...of Loop
+
+```js
+let arr = [1, 2, 3];
+for (let item of arr) {
+  console.log(item);
+}
+// 1
+// 2
+// 3
+for (let item in arr) {
+  console.log(item);
+}
+// 0
+// 1
+// 2
+
+let obj = { a: 1, b: 2, c: 3 };
+console.log(Object.entries(obj));
+// [ [ 'a', 1 ], [ 'b', 2 ], [ 'c', 3 ] ]
+for (let [key, value] of Object.entries(obj)) {
+  console.log(`key: ${key}, value: ${value}`);
+}
+// key: a, value: 1
+// key: b, value: 2
+// key: c, value: 3
+
+for (let key in obj) {
+  console.log(key);
+}
+// a
+// b
+// c
+```
+
+## Array.prototype.flatMap from ES2019
+
+Use the flatMap function to both map and flatten at the same time.
+
+```js
+let arr = [1, 2, 3];
+
+console.log("map: ", arr.map(el => [el, el * 2]));
+// this is [[1,2],[2,4],[3,6]]
+
+console.log("flatMap: ", arr.flatMap(el => [el, el * 2]));
+// this is [1,2,2,4,3,6]
+
+console.log("map().flat(): ", arr.map(el => [el, el * 2]).flat());
+// this is [1,2,2,4,3,6]
+
+```
+
+## Convert an Object to an Array and back again with Object.entries and Object.fromEntries
+
+Use these functions in order to flip back and forth between an Object and an Array.
+
+```js
+const obj = { a: 1, b: 2, c: 3 };
+
+const arr = Object.entries(obj);
+console.log("To array: ", arr);
+
+const result = Object.fromEntries(arr);
+console.log("Back to Object: ", result);
+
+```
+
+## Safely Access a Property on a JavaScript Object with Optional Chaining
+
+
+You can use optional chaining to access properties of an object. If the parent property exists, it acts as a typical dot accessor. If not, optional chaining prevents an error from being thrown and instead returns undefined.
+```js
+    let obj = { node: 1 }
+
+    console.log(obj.node)
+    //1
+
+    console.log(obj?.node)
+    //1
+
+    let other = null
+   
+    console.log(other.node)
+    //error
+
+    console.log(other?.node)
+    //undefined
+```
+
+## Safely Access a Property on a JavaScript Array with Optional Chaining
+
+You can use optional chaining to access elements in an array. If the array is null or undefined, attempting to access an element with optional chaining prevents an error from being thrown, returning undefined instead.
+
+
+```js
+    let arr = [1,2,3]
+    arr[0]
+    //1
+
+    let other = null;
+    other[0]
+    //ERROR. DON'T DO THIS
+    other?.[0]
+    // safely recieve undefined
+```

@@ -1,4 +1,4 @@
-/* -------------------------------- Nprogress START ------------------------------- */
+/* -------------------------------- Nprogress START */
 #nprogress .bar {
 	background: var(--colorPrimary) !important;
 	height: 5px !important;
@@ -20,7 +20,7 @@
 	right: 20px !important;
 }
 
-/* -------------------------------- Nprogress END ------------------------------- */
+/* -------------------------------- Nprogress END  */
 
 .btn svg {
 	margin-right: 4px;
@@ -70,3 +70,15 @@ input[type='range']:focus::-webkit-slider-runnable-track {
 .splide {
 	border: 1px solid var(--colorBorder);
 }
+
+@media (prefers-reduced-data: reduce) {
+  body {
+    font-family: system-ui;
+  }
+}
+
+/* @media (prefers-reduced-motion) {
+  .animation {
+    animation: none;
+  }
+} */
