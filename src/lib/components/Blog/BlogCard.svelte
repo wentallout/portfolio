@@ -9,7 +9,7 @@
 	export let hasTags = true;
 </script>
 
-<a transition:fade href={blogLink} class="blog">
+<a transition:fade|global href={blogLink} class="blog">
 	<article class="blog__info">
 		{#if hasTags}
 			<div class="tags">

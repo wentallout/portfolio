@@ -22,22 +22,9 @@ html {
 
 	--border-radius: 16px;
 	--border-radius-light: calc(var(--border-radius) / 2);
-
 	--transition: 0.3s cubic-bezier(0.25, 0.1, 0.25, 1);
 
 	--zIndexMax: 99;
-}
-
-.underline {
-	text-decoration: underline;
-	text-decoration-skip-ink: none;
-	transition: var(--transition);
-}
-
-.underline:hover {
-	text-decoration: underline;
-	text-decoration-skip-ink: none;
-	text-underline-offset: 2px;
 }
 
 ul {
@@ -78,6 +65,7 @@ section {
 svg {
 	flex: none;
 	flex-shrink: 0;
+	flex-grow: 0;
 }
 
 .icon {
@@ -121,6 +109,14 @@ label:has(+ textarea:focus) {
 	transform: translateX(-50%);
 }
 
-img {
-	animation: fadeForLazyload 0.5s linear;
+.link {
+	color: var(--colorPrimary);
+	text-decoration: underline;
+	text-decoration-skip-ink: none;
+	transition: var(--transition);
+	text-underline-offset: 4px;
+}
+
+.link:hover {
+	color: var(--colorPrimaryHover);
 }

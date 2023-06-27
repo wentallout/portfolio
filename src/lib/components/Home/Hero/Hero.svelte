@@ -1,5 +1,5 @@
 <script>
-	import HeroVisual from './HeroVisual.svelte';
+	import HeroVisual from '$lib/components/Home/Hero/HeroVisual.svelte';
 	import Button from '$components/Button/Button.svelte';
 </script>
 

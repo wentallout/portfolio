@@ -1,5 +1,8 @@
 <script>
-	import HeroSVG from '$lib/assets/images/home/hero.svg?component';
+	// import HeroSVG from '$lib/assets/images/home/hero.svg?component';
+
+	import { draw } from 'svelte/transition';
+	import { quintOut } from 'svelte/easing';
 </script>
 
 <div class="hero__visual">

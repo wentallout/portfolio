@@ -12,8 +12,7 @@
 	import ExLink from '$components/Common/ExLink.svelte';
 </script>
 
-<SaosContainer
-	animation="scale-in-ver-top 0.3s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;">
+<SaosContainer animation="imgAni 0.3s">
 	<ExLink href={src} aria-label={alt}>
 		<figure>
 			<img {src} {width} {height} {loading} {decoding} alt="Image of {alt}" />
