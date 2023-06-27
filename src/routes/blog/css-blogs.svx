@@ -9,7 +9,7 @@ categories:
 
 - A List Apart
 - Codrops
-- CSS { In Real Life }
+- CSS In Real Life
 - CSS Tricks
 - CSS Weekly
 - Dev.to
@@ -22,9 +22,6 @@ categories:
 - SitePoint 
 - Smashing Magazine
  
-
-
-
 ## Podcasts
 
 - #A11y Rules
@@ -48,7 +45,6 @@ categories:
 - The Web Platform Podcast
 - Web Standards
 - Working Draft Podcast
-
 
 ## People 
 
@@ -79,7 +75,7 @@ categories:
 - Codecademy
 - CSSWG (W3C CSS Working Group)
 - Design+Code
-- Egghead.io
+- Egghead.io https://egghead.io/
 - freeCodeCamp
 - Frontend Masters
 - Level Up Tutorials

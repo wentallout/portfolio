@@ -50,8 +50,10 @@ const config = {
 				'script-src': [
 					'self',
 					'unsafe-inline',
+					'https://unpkg.com',
 					'https://www.googletagmanager.com',
-					'https://cdn.jsdelivr.net'
+					'https://cdn.jsdelivr.net',
+					'https://utteranc.es/'
 				],
 				'img-src': [
 					'self',

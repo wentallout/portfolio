@@ -35,7 +35,7 @@
 			<ul class="nav-list">
 				{#each navItems as navItem}
 					<li
-						transition:fade
+						transition:fade|global
 						class="nav-list__item"
 						class:active-page={$page.url.pathname === `${navItem.path}`}>
 						<a class="item" href={navItem.path}>
@@ -44,16 +44,16 @@
 					</li>
 				{/each}
 
-				<li class="hamburger" on:click={openNav} on:keydown={openNav}>
-					<List color="var(--colorWhite)" width="32" height="32" />
-				</li>
+				<button type="button" class="hamburger" on:click={openNav} on:keydown={openNav}>
+					<List color="var(--colorText)" width="32" height="32" />
+				</button>
 			</ul>
 		</nav>
 	</header>
 </VanishingHeader>
 
 <div class="overlay" bind:this={navOverlayEle}>
-	<div class="closebtn" on:click={closeNav} on:keydown={closeNav}>
+	<div role="button" tabindex="" class="closebtn" on:click={closeNav} on:keydown={closeNav}>
 		<X color="var(--colorBlack)" width="32" height="32" />
 	</div>
 	<div class="overlay-content">

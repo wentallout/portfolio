@@ -5,8 +5,6 @@ export async function GET({ fetch }) {
 	const response = await fetch('api/blog');
 	const blogs = await response.json();
 
-	console.log(blogs);
-
 	const headers = { 'Content-Type': 'application/xml' };
 
 	const xml = `

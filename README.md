@@ -37,7 +37,7 @@ Visitors can also comment on your blogs using GitHub discussion (you might want 
 ## ⌨ Coding style
 
 - HTML: Semantic and SEO-focused
-- CSS: Vanilla B.E.M (No Tailwind or Bootstrap BS)
+- CSS: Vanilla CSS with BEM naming style (No Tailwind or Bootstrap)
 - JS: VanillaJS/Svelte
 
 ## 💅 Styling
@@ -60,11 +60,20 @@ Visitors can also comment on your blogs using GitHub discussion (you might want 
 | Resource | /resource |
 | Contact  | /contact  |
 
+Slug
+
+- /project/`[slug]`
+- /blog/`[slug]`
+
 ## Features
 
-⭐ i18n: EN - VN (work in progress)
+⭐ i18n: EN - VN (work in progress, still buggy)
 
-⭐ SEO 100/100
+⭐ SEO
+
+- SSR: https://kit.svelte.dev/docs/seo#out-of-the-box-ssr
+
+- `sitemap.xml`: helps search engines understand and index the content on the site, using dynamic sitemap technique https://www.casperfeng.com/blog/generating-dynamic-sitemaps-in-sveltekit
 
 ⭐ Responsive
 

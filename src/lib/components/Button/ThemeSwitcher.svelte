@@ -10,11 +10,11 @@
 
 <button type="button" class="toggle" on:click={toggleTheme} aria-label="Toggle theme">
 	{#if $theme === 'dark'}
-		<div in:fly={{ y: 10 }} class="toggle__icon">
+		<div in:fly|global={{ y: 10 }} class="toggle__icon">
 			<Sun class="icon" color="var(--colorText)" width="24" height="24" />
 		</div>
 	{:else}
-		<div class="toggle__icon" in:fly={{ y: -10 }}>
+		<div class="toggle__icon" in:fly|global={{ y: -10 }}>
 			<Moon class="icon" color="var(--colorText)" width="24" height="24" />
 		</div>
 	{/if}
@@ -30,7 +30,7 @@
 		overflow: visible;
 		position: fixed;
 		top: 0;
-		right: 0;
+		left: 0;
 		z-index: var(--zIndexMax);
 
 		display: flex;

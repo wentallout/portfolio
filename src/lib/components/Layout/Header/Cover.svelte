@@ -17,13 +17,13 @@
 {#if showCover}
 	<div class="cover">
 		{#if $theme === 'dark'}
-			<video in:fly={{ y: 10, duration: 500 }} class="video" autoplay muted loop>
+			<video in:fly|global={{ y: 10 }} class="video" autoplay muted loop>
 				<source src="/videos/city.webm" type="video/webm" />
 			</video>
 		{/if}
 
 		{#if $theme === 'light'}
-			<video in:fly={{ y: -10, duration: 500 }} class="video" autoplay muted loop>
+			<video in:fly|global={{ y: -10 }} class="video" autoplay muted loop>
 				<source src="/videos/mountains.webm" type="video/webm" />
 			</video>
 		{/if}

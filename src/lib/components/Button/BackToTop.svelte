@@ -27,7 +27,7 @@
 
 <svelte:window on:scroll={handleOnScroll} />
 
-<div class="bck2top" on:click={goTop} on:keyup={goTop} class:hidden>
+<div role="button" tabindex="" class="bck2top" on:click={goTop} on:keyup={goTop} class:hidden>
 	<CaretUp width="24" height="24" color="var(--colorBlack)" />
 </div>
 

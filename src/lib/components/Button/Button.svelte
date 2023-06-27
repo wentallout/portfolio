@@ -2,7 +2,7 @@
 	export let label = 'exampleLabel';
 	export let labelColor = 'var(--colorBlack)';
 	export let backgroundColor = 'transparent';
-	export let width = '';
+	export let width = undefined;
 	export let glowColor = 'var(--colorBgElevated)';
 	export let type = 'submit';
 
@@ -10,12 +10,14 @@
 	export let border = `1px solid ${borderColor}`;
 </script>
 
-<button {type} class="pushable" style="--glow-color:{glowColor}; width:{width}">
+<button {type} class="pushable" style:--glow-color={glowColor} style:width>
 	<span class="shadow" />
 	<span class="edge" />
 	<span
 		class="front"
-		style="background-color: {backgroundColor}; border: {border}; color: {labelColor};">
+		style:background-color={backgroundColor}
+		style:border
+		style:color={labelColor}>
 		<slot />
 		{label}
 	</span>

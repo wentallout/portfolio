@@ -9,10 +9,12 @@
 <div class="end xs-text">
 	<div class="end__text">
 		Copyright {`${COPYRIGHT_ENTITY}`} 2023 全力を尽くす, All Rights Reserved. Built with SvelteKit by
-		Khoa.
+		<ExLink href="https://www.linkedin.com/in/wentallout/">
+			<span class="link"> @wentallout </span>
+		</ExLink>
 	</div>
 
-	<ExLink href="/doc/privacy-policy.pdf">
+	<ExLink href="/policy">
 		<div class="end__text">Privacy Policy</div>
 	</ExLink>
 </div>

@@ -90,7 +90,7 @@
 
 	<BlogListContainer>
 		{#if filteredBlogs.length === 0}
-			<div transition:slide|local class="not-found small-text">No blogs found.</div>
+			<div transition:slide class="not-found small-text">No blogs found.</div>
 		{:else}
 			{#each paginatedItems as item}
 				{#key item}

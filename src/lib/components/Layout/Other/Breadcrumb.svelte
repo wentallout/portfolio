@@ -1,7 +1,7 @@
 <script>
 	import { page } from '$app/stores';
 	let currentPath = $page.url.pathname;
-	let id = $page.route.id;
+	// let id = $page.route.id;
 	let crumbs;
 
 	import CaretRight from '~icons/ph/caret-right';
@@ -33,7 +33,7 @@
 					{c.label}
 				</div>
 			{:else}
-				<a class="breadcrumb__clickable underline" href={c.href}>{c.label}</a>
+				<a class="breadcrumb__clickable link" href={c.href}>{c.label}</a>
 				<CaretRight width="16" height="16" />
 
 				<!-- /&nbsp; -->

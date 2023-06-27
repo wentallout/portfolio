@@ -16,8 +16,8 @@
 	// import FooterBg from '$lib/assets/images/common/footer-bg.png';
 </script>
 
-<ChainDivider />
 <footer class="footer small-text">
+	<ChainDivider />
 	<!-- <img class="footer__bg" src={FooterBg} alt="" /> -->
 	<div class="footer__list">
 		<div class="list">
@@ -121,7 +121,7 @@
 
 	.footer {
 		display: flex;
-		overflow: hidden;
+		overflow: visible;
 		flex-direction: column;
 		width: 100%;
 
@@ -166,7 +166,7 @@
 		font-family: var(--fontFancy);
 		color: var(--colorText);
 		font-size: var(--fontSizeBase);
-
+		padding-bottom: var(--space2XS);
 		border-bottom: 2px solid transparent;
 		border-image: linear-gradient(to right, var(--colorTextTertiary), transparent) 1 0%;
 	}

@@ -11,7 +11,7 @@
 </div>
 
 <style>
-	.container {
+.container {
 		display: flex;
 		flex-direction: column;
 		gap: var(--spaceM);
