@@ -1,7 +1,7 @@
 <script>
 </script>
 
-<div class="xs-text tag">
+<div class="text-xs tag">
 	<slot />
 </div>
 

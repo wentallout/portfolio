@@ -3,9 +3,13 @@
 	import FigmaCard from '$lib/components/Resource/Card/FigmaCard.svelte';
 </script>
 
-<!--  -->
-
 <CardListContainer>
+	<FigmaCard
+		title="Responsive Hamburger Navbar without JS"
+		href="https://codepen.io/wentallout/pen/ExOmjXv"
+		thumbnailUrl="https://shots.codepen.io/username/pen/ExOmjXv-800.jpg?version=1688066327"
+		desc="use a checkbox hack to make hamburger navbar and skip writing JS." />
+
 	<FigmaCard
 		title="Panoramic Animation"
 		href="https://codepen.io/wentallout/pen/xxQEOzq"
@@ -21,5 +25,11 @@
 		title="Glitchy Text Animation"
 		href="https://codepen.io/wentallout/pen/rNzBQOQ"
 		thumbnailUrl="https://shots.codepen.io/username/pen/rNzBQOQ-800.jpg?version=1687436295"
-		desc="make futuristic glitchy text 100% CSS" />
+		desc="futuristic glitchy text" />
+
+	<FigmaCard
+		title="Clock"
+		href="https://codepen.io/wentallout/pen/rNQjbPW"
+		thumbnailUrl="https://shots.codepen.io/username/pen/rNQjbPW-800.jpg?version=1687876016"
+		desc="a clock in VanillaJS" />
 </CardListContainer>

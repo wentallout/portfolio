@@ -14,15 +14,15 @@
 		{#if hasTags}
 			<div class="tags">
 				{#each blogTags as tag}
-					<span class="tag xs-text">
+					<span class="tag text-xs">
 						#{tag}
 					</span>
 				{/each}
 			</div>
 		{/if}
 
-		<div class="blog__title base-text">{blogTitle}</div>
-		<div class="blog__date xs-text">
+		<div class="blog__title text-base">{blogTitle}</div>
+		<div class="blog__date text-xs">
 			<Time timestamp={blogDate} relative />
 		</div>
 	</article>

@@ -15,12 +15,12 @@
 
 <div class="input-container">
 	{#if label != ''}
-		<label for={label} class="label small-text">{label}</label>
+		<label for={label} class="label text-small">{label}</label>
 	{/if}
 	<input
 		list={list || null}
 		{placeholder}
-		class="input small-text"
+		class="input text-small"
 		{type}
 		{name}
 		id={label}

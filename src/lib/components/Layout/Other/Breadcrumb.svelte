@@ -26,7 +26,7 @@
 </script>
 
 {#if crumbs.length > 2}
-	<nav aria-label="breadcrumb" id="breadcrumb" class="breadcrumb small-text">
+	<nav aria-label="breadcrumb" id="breadcrumb" class="breadcrumb text-small">
 		{#each crumbs as c, i}
 			{#if i == crumbs.length - 1}
 				<div class="breadcrumb__unclickable">

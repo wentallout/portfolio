@@ -9,9 +9,9 @@
 	export let hasCategory = false;
 </script>
 
-<div class="container full-width">
+<header class="container full-width">
 	<h1>{data.title}</h1>
-	<div class="post-info small-text">
+	<div class="post-info text-small">
 		<div class="info__section">
 			<div class="section__title">Last updated:</div>
 			<Time relative timestamp={data.date} />
@@ -36,7 +36,7 @@
 			</div>
 		{/if}
 	{/if}
-</div>
+</header>
 
 <style>
 	.container {

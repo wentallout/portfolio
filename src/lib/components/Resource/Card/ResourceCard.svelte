@@ -8,8 +8,8 @@
 
 <ExLink {href} ariaLabel={name}>
 	<div class="tool">
-		<h2 class="tool__name base-text">{name}</h2>
-		<div class="tool__description small-text">
+		<h2 class="tool__name text-base">{name}</h2>
+		<div class="tool__description text-small">
 			{desc}
 		</div>
 	</div>

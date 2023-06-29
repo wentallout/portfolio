@@ -16,7 +16,7 @@
 	<ExLink href={src} aria-label={alt}>
 		<figure>
 			<img {src} {width} {height} {loading} {decoding} alt="Image of {alt}" />
-			<figcaption class="caption xs-text">
+			<figcaption class="caption text-xs">
 				{alt}
 			</figcaption>
 		</figure>

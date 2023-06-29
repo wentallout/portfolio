@@ -9,7 +9,7 @@
 
 <div class="title full-width">
 	<img alt="title deco" class="title__deco" src={decoImageUrl} />
-	<h1 class="title__text xxxl-text tracking-in-expand">{pageTitle}</h1>
+	<h1 class="title__text text-3xl tracking-in-expand">{pageTitle}</h1>
 </div>
 
 <style>

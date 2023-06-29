@@ -15,7 +15,7 @@
 		<div class="section__icon">
 			<slot {sectionIcon} />
 		</div>
-		<h2 class="section__text xl-text">{sectionTitle}</h2>
+		<h2 class="section__text text-xl">{sectionTitle}</h2>
 	</div>
 
 	{#if sectionDesc !== ''}

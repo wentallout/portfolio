@@ -19,10 +19,10 @@
 </script>
 
 <div class="lang">
-	<button class="lang__btn xs-text" class:active={isEn} type="button">
+	<button class="lang__btn text-xs" class:active={isEn} type="button">
 		<FlagGb />
 	</button>
-	<button class="lang__btn xs-text" class:active={isVi} type="button">
+	<button class="lang__btn text-xs" class:active={isVi} type="button">
 		<FlagVn />
 	</button>
 </div>

@@ -14,8 +14,8 @@
 		<img class="fcard__thumbnail" src={thumbnailUrl} alt="" />
 
 		<div class="fcard__info">
-			<div class="fcard__title small-text">{title}</div>
-			<div class="fcard__desc xs-text">{desc}</div>
+			<div class="fcard__title text-small">{title}</div>
+			<div class="fcard__desc text-xs">{desc}</div>
 		</div>
 	</div>
 </ExLink>

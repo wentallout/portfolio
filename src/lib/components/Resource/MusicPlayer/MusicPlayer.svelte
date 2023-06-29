@@ -88,11 +88,11 @@
 <div class="player">
 	<div class="current">
 		<div class="info">
-			<div class="info__name xxl-text">{$musicList[currentSongIndex].name}</div>
+			<div class="info__name text-2xl">{$musicList[currentSongIndex].name}</div>
 
 			<div class="info__time">
-				<div class="info__current xl-text">{format(currentTime)}</div>
-				<div class="info__duration xl-text">{format(duration)}</div>
+				<div class="info__current text-xl">{format(currentTime)}</div>
+				<div class="info__duration text-xl">{format(duration)}</div>
 			</div>
 		</div>
 	</div>
@@ -154,7 +154,7 @@
 				class={i == currentSongIndex ? 'cs song-active' : 'cs song'}
 				on:click={() => setSong(i)}
 				on:keydown={() => setSong(i)}>
-				<div class="song-name small-text">{music.name}</div>
+				<div class="song-name text-small">{music.name}</div>
 				<a
 					class="download"
 					href={'/ringtones/' + $musicList[i].audio}

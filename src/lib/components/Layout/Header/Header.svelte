@@ -59,7 +59,7 @@
 	<div class="overlay-content">
 		{#each navItems as navItem}
 			<a
-				class="overlay-item xl-text"
+				class="overlay-item text-xl"
 				class:active-page-mobile={$page.url.pathname === `${navItem.path}`}
 				on:click={closeNav}
 				href={navItem.path}>

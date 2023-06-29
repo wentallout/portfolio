@@ -5,8 +5,8 @@
 	export let name = '';
 </script>
 
-<label for={label} class="label small-text">{label}</label>
-<textarea class="textarea small-text" {name} id={label} {placeholder} required />
+<label for={label} class="label text-small">{label}</label>
+<textarea class="textarea text-small" {name} id={label} {placeholder} required />
 
 <style>
 	.label {

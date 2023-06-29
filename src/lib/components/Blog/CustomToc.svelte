@@ -27,7 +27,7 @@
 	--toc-active-border-radius="0"
 	--activeHeadingScrollOffset="var(--scroll-padding)"
 	--toc-desktop-sticky-top="var(--scroll-padding)">
-	<span class="toc-title base-text" slot="title">
+	<span class="toc-title text-base" slot="title">
 		<ListBullets color="var(--colorText)" width="24" height="24" />
 		Contents</span>
 

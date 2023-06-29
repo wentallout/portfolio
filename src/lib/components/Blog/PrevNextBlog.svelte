@@ -54,7 +54,7 @@
 				</div>
 
 				<div class="prev__text">
-					<div class="prevnext__title base-text">{prevBlog.meta.title}</div>
+					<div class="prevnext__title text-base">{prevBlog.meta.title}</div>
 				</div>
 			</a>
 		{/if}
@@ -62,7 +62,7 @@
 		{#if nextBlog}
 			<a class="prevnext__btn" href={nextBlog.path}>
 				<div class="next__text">
-					<div class="prevnext__title base-text">{nextBlog.meta.title}</div>
+					<div class="prevnext__title text-base">{nextBlog.meta.title}</div>
 				</div>
 				<div class="next__icon">
 					<CaretRight class="icon" width="24" height="24" />
