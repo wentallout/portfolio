@@ -8,6 +8,8 @@
 
 # Khoa's Portfolio [![Netlify Status](https://api.netlify.com/api/v1/badges/7bf37fa7-ec78-4efd-aa9a-1a18a4fc62e4/deploy-status)](https://app.netlify.com/sites/khoa-design/deploys)
 
+![github-banner](https://github.com/wentallout/portfolio/assets/76118931/a3b8fe5d-534a-4b5f-863a-1f86734e22d3)
+
 ## 💻 Developing
 
 [![Open in StackBlitz](https://img.shields.io/badge/Open%20in-StackBlitz-blue?style=for-the-badge&logo=stackblitz)](https://stackblitz.com/github/wentallout/portfolio)
