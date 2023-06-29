@@ -45,8 +45,8 @@
 
 <section>
 	<SectionTitle
-		sectionDesc="CSS solutions to niche problems."
-		sectionTitle="CSS Snippets"
+		sectionDesc="Some solutions to niche Frontend problems."
+		sectionTitle="Snippets"
 		let:sectionIcon>
 		<CodePen {...sectionIcon} />
 	</SectionTitle>

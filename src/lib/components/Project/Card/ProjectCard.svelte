@@ -12,15 +12,15 @@
 
 <a href={linkToDetail}>
 	<article class="project">
-		<div class="project__year xs-text">{year}</div>
+		<div class="project__year text-xs">{year}</div>
 		<img class="project__thumbnail" src={thumbnail} alt="" />
 
 		<div class="project__info">
 			<div class="title">
-				<div class="name mid-text">{projectName}</div>
+				<div class="name text-mid">{projectName}</div>
 			</div>
 
-			<div class="info small-text">
+			<div class="info text-small">
 				<div class="info__section">
 					<div class="section__label">About</div>
 					<div class="section__desc">{what}</div>
@@ -32,7 +32,7 @@
 				</div>
 			</div>
 
-			<div class="indicator small-text">
+			<div class="indicator text-small">
 				<ArrowRight color="inherit" width="24" height="24" />Read Case Study
 			</div>
 		</div>

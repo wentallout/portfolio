@@ -18,7 +18,6 @@ const directives = {
 	'media-src': ["'self'", 'data:', 'https://*.cloudfront.net'],
 	'object-src': ["'none'"],
 	'style-src': ["'self'", "'unsafe-inline'", 'https://*.cloudfront.net'],
-	'default-src': ["'self'", PUBLIC_DOMAIN, `ws://${PUBLIC_DOMAIN}`, 'https://shots.codepen.io'],
 	'worker-src': ["'self'"]
 };
 

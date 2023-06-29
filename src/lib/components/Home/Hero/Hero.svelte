@@ -6,11 +6,11 @@
 <section class="full-width">
 	<div class="hero">
 		<div class="hero__block">
-			<div class="hero__name xxl-text">
+			<div class="hero__name text-2xl">
 				Khoa is a
 				<span class="focus">UI/UX Designer</span>
 			</div>
-			<div class="hero__text small-text">
+			<div class="hero__text text-small">
 				I create practical and user-friendly products that bring real value and enhance people's
 				lives.
 

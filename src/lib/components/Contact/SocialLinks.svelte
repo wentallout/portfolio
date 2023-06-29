@@ -17,10 +17,10 @@
 
 <section>
 	<SectionTitle sectionTitle="Social" let:sectionIcon>
-		<Handshake  {...sectionIcon} />
+		<Handshake {...sectionIcon} />
 	</SectionTitle>
 
-	<div class="social small-text">
+	<div class="social text-small">
 		<address class="social__list">
 			<ExLink href="https://www.linkedin.com/in/wentallout">
 				<div class="social__address">

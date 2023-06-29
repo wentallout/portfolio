@@ -5,7 +5,7 @@
 	export let data;
 </script>
 
-<div class="result large-text">
+<div class="result text-large">
 	<span class="result__title">Posts about </span>
 	<span class="result__category">#{data.category}</span>
 </div>

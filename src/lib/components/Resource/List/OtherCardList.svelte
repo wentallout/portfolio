@@ -1,16 +1,16 @@
 <div class="other-container">
 	<a class="other" href="/resource/music">
 		<img class="other__image" src="images/music.webp" alt="music" />
-		<div class="other__title large-text">Music</div>
+		<div class="other__title text-large">Music</div>
 	</a>
 	<a class="other" href="/resource/tool">
 		<img class="other__image" src="images/tool.webp" alt="tool" />
-		<div class="other__title large-text">Tool</div>
+		<div class="other__title text-large">Tool</div>
 	</a>
 
 	<a class="other" href="/resource/exp">
 		<img class="other__image" src="images/exp.webp" alt="experiment" />
-		<div class="other__title large-text">Experiment</div>
+		<div class="other__title text-large">Experiment</div>
 	</a>
 </div>
 

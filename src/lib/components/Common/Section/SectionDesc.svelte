@@ -3,7 +3,7 @@
 </script>
 
 {#if text !== ''}
-	<p class="section-description small-text">
+	<p class="section-description text-small">
 		{text}
 	</p>
 {/if}

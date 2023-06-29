@@ -6,7 +6,7 @@
 </script>
 
 <Badges />
-<div class="end xs-text">
+<div class="end text-xs">
 	<div class="end__text">
 		Copyright {`${COPYRIGHT_ENTITY}`} 2023 全力を尽くす, All Rights Reserved. Built with SvelteKit by
 		<ExLink href="https://www.linkedin.com/in/wentallout/">

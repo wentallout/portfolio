@@ -38,7 +38,7 @@
 			<div class="">{$page.error.message}</div>
 		</h1>
 
-		<div class="detail small-text">
+		<div class="detail text-small">
 			{customMessage}
 		</div>
 		<a class="back" rel="external" href="/">

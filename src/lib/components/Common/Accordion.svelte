@@ -19,7 +19,7 @@
 		type="button"
 		on:click={handleOpenaccordion}
 		on:keydown={handleOpenaccordion}>
-		<div class="small-text">{accordionSection}</div>
+		<div class="text-small">{accordionSection}</div>
 		<div class="caret" class:caret-active={isOpened}>
 			<CaretDown width="16" height="16" />
 		</div>
@@ -28,7 +28,7 @@
 		<div
 			in:slide={{ duration: 300 }}
 			out:slide={{ duration: 100 }}
-			class="accordion__text small-text">
+			class="accordion__text text-small">
 			{accordionText}
 		</div>
 	{/if}

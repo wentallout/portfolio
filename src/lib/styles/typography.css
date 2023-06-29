@@ -1,6 +1,6 @@
 @font-face {
 	font-family: 'Normal';
-	src: url('/fonts/Inter-subset.woff2') format('woff2');
+	src: url('/fonts/Inter.woff2') format('woff2');
 
 	font-weight: 300 600;
 	font-stretch: normal;
@@ -68,49 +68,49 @@ html {
 	font-weight: var(--fontWeightSmall);
 }
 
-.xs-text {
+.text-xs {
 	font-size: var(--fontSizeXS);
 	line-height: var(--lineHeightXS);
 	letter-spacing: -0.006em;
 }
 
-.small-text {
+.text-small {
 	font-size: var(--fontSizeSmall);
 	line-height: var(--lineHeightSmall);
 	letter-spacing: -0.011em;
 }
 
-.base-text {
+.text-base {
 	font-size: var(--fontSizeBase);
 	line-height: var(--lineHeightBase);
 	letter-spacing: -0.017em;
 }
 
-.mid-text {
+.text-mid {
 	font-size: var(--fontSizeMid);
 	line-height: var(--lineHeightMid);
 	letter-spacing: -0.02em;
 }
 
-.large-text {
+.text-large {
 	font-size: var(--fontSizeLarge);
 	line-height: var(--lineHeightLarge);
 	letter-spacing: -0.021em;
 }
 
-.xl-text {
+.text-xl {
 	font-size: var(--fontSizeXL);
 	line-height: var(--lineHeightXL);
 	letter-spacing: -0.022em;
 }
 
-.xxl-text {
+.text-2xl {
 	font-size: var(--fontSize2XL);
 	line-height: var(--lineHeight2XL);
 	letter-spacing: -0.022em;
 }
 
-.xxxl-text {
+.text-3xl {
 	font-size: var(--fontSize3XL);
 	line-height: var(--lineHeight3XL);
 	letter-spacing: -0.022em;

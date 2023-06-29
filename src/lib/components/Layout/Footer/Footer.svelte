@@ -16,7 +16,7 @@
 	// import FooterBg from '$lib/assets/images/common/footer-bg.png';
 </script>
 
-<footer class="footer small-text">
+<footer class="footer text-small">
 	<ChainDivider />
 	<!-- <img class="footer__bg" src={FooterBg} alt="" /> -->
 	<div class="footer__list">

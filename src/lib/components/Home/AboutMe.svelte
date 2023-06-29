@@ -13,8 +13,8 @@
 			<div class="about__block">
 				<div class="desc">
 					<div class="block">
-						<div class="block__title base-text">Background</div>
-						<div class="block__text small-text">
+						<div class="block__title text-base">Background</div>
+						<div class="block__text text-small">
 							I spent about a year working as a full-stack developer, but eventually I found my true
 							passion in UI/UX design. I'm currently focusing on UX design, which involves finding
 							ways to make the user experience better through research, flow development, and
@@ -23,8 +23,8 @@
 						</div>
 					</div>
 					<div class="block">
-						<div class="block__title base-text">Thought Process</div>
-						<div class="block__text small-text">
+						<div class="block__title text-base">Thought Process</div>
+						<div class="block__text text-small">
 							I use industry guidelines and proven UX frameworks to tackle unique project
 							challenges. The process includes discovery, prototyping, and user testing while
 							collaborating with stakeholders to achieve successful outcomes. Removing unnecessary

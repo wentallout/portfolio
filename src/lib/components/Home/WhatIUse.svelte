@@ -23,10 +23,10 @@
 						<Process width="120" height="120" fill="var(--colorText)" alt="process" />
 					</div>
 					<div class="section__text">
-						<h3 class="block__title base-text">UX Frameworks</h3>
-						<p class="block__text small-text">Design Thinking</p>
-						<p class="block__text small-text">Double Diamond</p>
-						<p class="block__text small-text">UX Honeycomb</p>
+						<h3 class="block__title text-base">UX Frameworks</h3>
+						<p class="block__text text-small">Design Thinking</p>
+						<p class="block__text text-small">Double Diamond</p>
+						<p class="block__text text-small">UX Honeycomb</p>
 					</div>
 				</div>
 
@@ -35,10 +35,10 @@
 						<Navigation width="120" height="120" fill="var(--colorText)" alt="navigation" />
 					</div>
 					<div class="section__text">
-						<h3 class="block__title base-text">Prototyping</h3>
-						<p class="block__text small-text">Figma</p>
-						<p class="block__text small-text">Adobe XD</p>
-						<p class="block__text small-text" />
+						<h3 class="block__title text-base">Prototyping</h3>
+						<p class="block__text text-small">Figma</p>
+						<p class="block__text text-small">Adobe XD</p>
+						<p class="block__text text-small" />
 					</div>
 				</div>
 
@@ -47,10 +47,10 @@
 						<GraphicDesign width="120" height="120" fill="var(--colorText)" alt="graphic design" />
 					</div>
 					<div class="section__text">
-						<h3 class="block__title base-text">Design</h3>
-						<p class="block__text small-text">Figma</p>
-						<p class="block__text small-text">Canva</p>
-						<p class="block__text small-text">Illustrator</p>
+						<h3 class="block__title text-base">Design</h3>
+						<p class="block__text text-small">Figma</p>
+						<p class="block__text text-small">Canva</p>
+						<p class="block__text text-small">Illustrator</p>
 					</div>
 				</div>
 
@@ -59,10 +59,10 @@
 						<Frontend width="120" height="120" fill="var(--colorText)" alt="frontend" />
 					</div>
 					<div class="section__text">
-						<h3 class="block__title base-text">Frontend</h3>
-						<p class="block__text small-text">HTML, CSS, JS</p>
-						<p class="block__text small-text">TailwindCSS, Bootstrap</p>
-						<p class="block__text small-text">React, SvelteKit</p>
+						<h3 class="block__title text-base">Frontend</h3>
+						<p class="block__text text-small">HTML, CSS, JS</p>
+						<p class="block__text text-small">TailwindCSS, Bootstrap</p>
+						<p class="block__text text-small">React, SvelteKit</p>
 					</div>
 				</div>
 			</div>
