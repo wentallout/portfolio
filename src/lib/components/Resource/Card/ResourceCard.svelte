@@ -23,7 +23,7 @@
 		padding: var(--spaceM);
 		height: 200px;
 		transition: var(--transition);
-
+		border-radius: var(--borderRadius);
 		outline: 1px solid var(--colorBorder);
 		box-shadow: var(--boxShadow);
 

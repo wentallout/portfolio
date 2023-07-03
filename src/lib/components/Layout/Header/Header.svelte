@@ -83,10 +83,10 @@
 		display: flex;
 
 		transition: ease-in-out 0.3s;
-		/* border-radius: var(--border-radius); */
+		/* border-radius: var(--borderRadius); */
 
-		border-bottom-left-radius: var(--border-radius);
-		border-bottom-right-radius: var(--border-radius);
+		border-bottom-left-radius: var(--borderRadius);
+		border-bottom-right-radius: var(--borderRadius);
 	}
 
 	.active-page {

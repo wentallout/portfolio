@@ -16,6 +16,5 @@
 
 	::-webkit-scrollbar-track {
 		background: transparent;
-		border: 1px solid var(--colorBgElevated);
 	}
 </style>

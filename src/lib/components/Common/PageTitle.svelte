@@ -59,7 +59,7 @@
 	}
 
 	:global([color-scheme='light'] .title__deco) {
-		filter: invert();
+		filter: grayscale() invert();
 	}
 
 	@keyframes pageTitleAni {

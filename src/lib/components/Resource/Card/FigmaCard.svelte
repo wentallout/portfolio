@@ -27,6 +27,8 @@
 		border: 1px solid var(--colorBorder);
 		transition: var(--transition);
 		box-shadow: var(--boxShadow);
+		border-radius: var(--borderRadius);
+		overflow:hidden;
 
 		&:hover {
 			background-color: var(--colorBgElevated);
