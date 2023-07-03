@@ -20,7 +20,9 @@
 			<video transition:fade={{ duration: 300 }} class="video" autoplay muted loop>
 				<source src="/videos/city.webm" type="video/webm" />
 			</video>
-		{:else}
+		{/if}
+
+		{#if $theme === 'light'}
 			<video transition:fade={{ duration: 300 }} class="video" autoplay muted loop>
 				<source src="/videos/mountains.webm" type="video/webm" />
 			</video>
