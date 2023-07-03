@@ -1,11 +1,13 @@
 const autoprefixer = require('autoprefixer');
-const cssnano = require('cssnano');
+const csso = require('postcss-csso');
 const postcssPresetEnv = require('postcss-preset-env');
+const postcssGlobalData = require('@csstools/postcss-global-data');
 
 const config = {
 	plugins: [
-		autoprefixer,
-		cssnano,
+		postcssGlobalData({
+			files: ['src/lib/styles/global-postcss.css']
+		}),
 		postcssPresetEnv({
 			stage: 5,
 			features: {
@@ -13,7 +15,9 @@ const config = {
 				'custom-media-queries': true,
 				'media-query-ranges': true
 			}
-		})
+		}),
+		autoprefixer,
+		csso()
 	]
 };
 

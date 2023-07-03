@@ -23,7 +23,7 @@
 						<Process width="120" height="120" fill="var(--colorText)" alt="process" />
 					</div>
 					<div class="section__text">
-						<h3 class="block__title text-base">UX Frameworks</h3>
+						<h3 class="block__title text-base">Frameworks</h3>
 						<p class="block__text text-small">Design Thinking</p>
 						<p class="block__text text-small">Double Diamond</p>
 						<p class="block__text text-small">UX Honeycomb</p>
@@ -38,7 +38,6 @@
 						<h3 class="block__title text-base">Prototyping</h3>
 						<p class="block__text text-small">Figma</p>
 						<p class="block__text text-small">Adobe XD</p>
-						<p class="block__text text-small" />
 					</div>
 				</div>
 
@@ -82,6 +81,7 @@
 	.section__text {
 		width: 100%;
 		text-align: left;
+		flex-grow: 1;
 	}
 
 	.tool {
@@ -109,7 +109,7 @@
 
 		padding: var(--spaceL);
 		z-index: 1;
-		min-height: 230px;
+		/* min-height: 230px; */
 		outline: 1px solid var(--colorBorder);
 		overflow: hidden;
 		transition: var(--transition);

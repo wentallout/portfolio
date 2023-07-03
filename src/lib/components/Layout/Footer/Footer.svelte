@@ -1,4 +1,5 @@
 <script>
+	import SaosContainer from './../../Common/SaosContainer.svelte';
 	import ChainDivider from '$components/Layout/Other/ChainDivider.svelte';
 	import FooterEnd from '$components/Layout/Footer/FooterEnd.svelte';
 	import ExLink from '$components/Common/ExLink.svelte';
@@ -16,99 +17,93 @@
 	// import FooterBg from '$lib/assets/images/common/footer-bg.png';
 </script>
 
-<footer class="footer text-small">
-	<ChainDivider />
-	<!-- <img class="footer__bg" src={FooterBg} alt="" /> -->
-	<div class="footer__list">
-		<div class="list">
-			<div class="list__title">About me</div>
-			<ul class="list__nav">
-				<li class="nav-list__item">
-					Designer in Ho Chi Minh City, Vietnam that designs superb affordable websites and apps for
-					small businesses and non-profits alike.
-				</li>
-			</ul>
+<SaosContainer animation="bounce-in-bottom 1.1s ease-in both;">
+	<footer class="footer text-small">
+		<div class="global-container">
+			<ChainDivider />
+			<!-- <img class="footer__bg" src={FooterBg} alt="" /> -->
+			<div class="footer__list">
+				<div class="list">
+					<div class="list__title">About me</div>
+					<ul class="list__nav">
+						<li class="nav-list__item">
+							Designer in Ho Chi Minh City, Vietnam that designs superb affordable websites and apps
+							for small businesses and non-profits alike.
+						</li>
+					</ul>
+				</div>
+
+				<div class="list">
+					<div class="list__title">Navigate</div>
+					<ul class="list__nav">
+						{#each navItems as navItem}
+							<li class="nav-list__item">
+								<a href={navItem.path}>{navItem.title}</a>
+							</li>
+						{/each}
+					</ul>
+				</div>
+
+				<div class="list">
+					<div class="list__title">Other</div>
+					<ul class="list__nav">
+						<li class="nav-list__item">
+							<a href="/resource/music">Music</a>
+						</li>
+						<li class="nav-list__item">
+							<a href="/rss.xml">RSS</a>
+						</li>
+					</ul>
+				</div>
+
+				<div class="list">
+					<div class="list__title">Contact</div>
+					<ul class="list__nav">
+						<li class="nav-list__item">
+							<ExLink href="https://goo.gl/maps/GLt6uhYWwU91fXz49">
+								<MapPin width="24" height="24" />
+								Ho Chi Minh City</ExLink>
+						</li>
+
+						<li class="nav-list__item">
+							<ExLink href="mailto:wentallout@gmail.com">
+								<Envelope width="24" height="24" />
+								wentallout@gmail.com</ExLink>
+						</li>
+						<li class="nav-list__item">
+							<ExLink href="tel:+84929066331">
+								<Phone width="24" height="24" />
+								<span>+84 929066331</span>
+							</ExLink>
+						</li>
+						<li class="nav-list__item">
+							<ExLink href="https://www.linkedin.com/in/wentallout">
+								<LinkedinLogo width="24" height="24" />Linkedin</ExLink>
+						</li>
+						<li class="nav-list__item">
+							<ExLink href="https://www.instagram.com/wentallout/saved">
+								<InstagramLogo width="24" height="24" />
+								Instagram
+							</ExLink>
+						</li>
+						<li class="nav-list__item">
+							<ExLink href="https://github.com/wentallout">
+								<GitHubLogo width="24" height="24" />
+								GitHub
+							</ExLink>
+						</li>
+					</ul>
+				</div>
+			</div>
+
+			<FooterEnd />
+			<img class="footer__deco" alt="footer decoration" src="/images/footer-skyline.webp" />
 		</div>
-
-		<div class="list">
-			<div class="list__title">Navigate</div>
-			<ul class="list__nav">
-				{#each navItems as navItem}
-					<li class="nav-list__item">
-						<a href={navItem.path}>{navItem.title}</a>
-					</li>
-				{/each}
-			</ul>
-		</div>
-
-		<div class="list">
-			<div class="list__title">Other</div>
-			<ul class="list__nav">
-				<li class="nav-list__item">
-					<a href="/resource/music">Music</a>
-				</li>
-				<li class="nav-list__item">
-					<a href="/rss.xml">RSS</a>
-				</li>
-			</ul>
-		</div>
-
-		<div class="list">
-			<div class="list__title">Contact</div>
-			<ul class="list__nav">
-				<li class="nav-list__item">
-					<ExLink href="https://goo.gl/maps/GLt6uhYWwU91fXz49">
-						<MapPin width="24" height="24" />
-						Ho Chi Minh City</ExLink>
-				</li>
-
-				<li class="nav-list__item">
-					<ExLink href="mailto:wentallout@gmail.com">
-						<Envelope width="24" height="24" />
-						wentallout@gmail.com</ExLink>
-				</li>
-				<li class="nav-list__item">
-					<ExLink href="tel:+84929066331">
-						<Phone width="24" height="24" />
-						+84 929066331</ExLink>
-				</li>
-				<li class="nav-list__item">
-					<ExLink href="https://www.linkedin.com/in/wentallout">
-						<LinkedinLogo width="24" height="24" />Linkedin</ExLink>
-				</li>
-				<li class="nav-list__item">
-					<ExLink href="https://www.instagram.com/wentallout/saved">
-						<InstagramLogo width="24" height="24" />
-						Instagram
-					</ExLink>
-				</li>
-				<li class="nav-list__item">
-					<ExLink href="https://github.com/wentallout">
-						<GitHubLogo width="24" height="24" />
-						GitHub
-					</ExLink>
-				</li>
-			</ul>
-		</div>
-	</div>
-
-	<FooterEnd />
-	<img class="footer__deco" alt="footer decoration" src="/images/footer-skyline.webp" />
-</footer>
+	</footer>
+</SaosContainer>
 <Marquee />
 
 <style>
-	/* .footer__bg {
-		position: absolute;
-		top: 0;
-		left: 0;
-		width: 100%;
-		height: 100%;
-
-		z-index: -1;
-		filter: grayscale() brightness(0.4);
-	} */
-
 	.footer__deco {
 		position: absolute;
 		bottom: 0;
@@ -121,11 +116,11 @@
 
 	.footer {
 		display: flex;
-		overflow: visible;
+
 		flex-direction: column;
 		width: 100%;
 
-		padding: var(--spaceXL) var(--page-padding);
+		padding: var(--spaceXL) 0;
 		/* Position */
 		position: relative;
 		/* Width */
@@ -152,7 +147,6 @@
 		grid-template-columns: repeat(auto-fit, minmax(min(100%, var(--min)), 1fr));
 
 		border-bottom: 1px solid var(--colorBorder);
-
 		margin-bottom: var(--spaceS);
 	}
 
@@ -184,10 +178,8 @@
 
 	.nav-list__item {
 		display: flex;
-
-		padding-left: 0;
-		padding-right: var(--spaceXS);
-		max-width: 30ch;
+		flex-direction: row;
+		/* max-width: 30ch; */
 		font-weight: var(--fontWeightSmall);
 		transition: 0.3s;
 		color: var(--colorTextSecondary);

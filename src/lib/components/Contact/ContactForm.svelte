@@ -9,7 +9,10 @@
 </script>
 
 <section>
-	<SectionTitle sectionTitle="Get in touch" let:sectionIcon>
+	<SectionTitle
+		sectionTitle="Get in touch"
+		sectionDesc="Tell me about your next big project. I'll be happy to contribute."
+		let:sectionIcon>
 		<EnvelopeSimple {...sectionIcon} />
 	</SectionTitle>
 

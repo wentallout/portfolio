@@ -11,7 +11,7 @@
 	</div>
 </div>
 
-<style>
+<style lang="postcss">
 	.container {
 		width: 100%;
 		display: flex;
@@ -43,10 +43,10 @@
 		transform: rotateY(-30deg);
 		transition: 1s ease;
 		animation: 1s ease 0s 1 initAnimation;
-	}
 
-	.book:hover {
-		transform: rotateY(0deg);
+		&:hover {
+			transform: rotateY(0deg);
+		}
 	}
 
 	.book > :first-child {

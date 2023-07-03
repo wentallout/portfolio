@@ -28,6 +28,7 @@
 		font-size: var(--fontSizeSmall);
 		line-height: normal;
 		position: relative;
+		overflow: hidden;
 	}
 
 	.marquee {

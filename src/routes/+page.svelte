@@ -13,6 +13,7 @@
 		}
 	];
 	import SEO from '$components/SEO/SEO.svelte';
+	import Principles from '$lib/components/Home/Principles.svelte';
 
 	const seoProps = {
 		breadcrumbs,
@@ -31,5 +32,6 @@
 <FeaturedProject />
 <WhatIUse />
 <AboutMe />
+<Principles />
 <Clients />
 <GetInTouch />

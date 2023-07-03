@@ -20,7 +20,7 @@
 	{/if}
 </button>
 
-<style>
+<style lang="postcss">
 	.toggle {
 		padding: var(--spaceXS);
 
@@ -38,13 +38,13 @@
 		justify-content: center;
 		align-items: center;
 		background-color: transparent;
+
+		&:hover {
+			cursor: pointer;
+		}
 	}
 
 	.toggle__icon {
 		color: var(--colorPrimaryHover);
-	}
-
-	.toggle:hover {
-		cursor: pointer;
 	}
 </style>

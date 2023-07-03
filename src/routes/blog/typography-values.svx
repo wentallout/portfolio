@@ -1,5 +1,5 @@
 ---
-title: How to calculate typography values? 
+title: How to calculate typography values like line height and letter spacing 
 date: 2023-05-04
 categories:
     - typography
@@ -36,6 +36,8 @@ The most popular font size for body copy is **between 14 and 16 px**.
 
 ## line-height
 
+https://www.thegoodlineheight.com/
+
 For Heading: 110% -> 130%
 For Body: 130% - 150%
 
@@ -47,14 +49,6 @@ There's no **correct** way to achieve perfect spacing atm.
 
 [The Designer's Guide To Letter Spacing](https://www.webdesignerdepot.com/2020/07/the-designers-guide-to-letter-spacing/)
 
-## Left align ALWAYS
-
-If it's >3 lines of text, it's left-align
-
-Body text is always left-aligned. Hyphenation is not used at line endings. And links are underlined and/or highlighted with bold or color, sometimes only on hover.
-
-DON'T MIX ALIGNMENT (if it's centered, then center all)
- 
 ## line-length / text-width
 
 https://baymard.com/blog/line-length-readability
@@ -69,6 +63,13 @@ The ideal line length is 50-75 characters (or 2-3 alphabets 😉).
 
 Much longer, and it's hard to move your eye from the end of one line to the beginning of the next. Much shorter, and the text feels like an unimportant sidebar.
 
+## Left align ALWAYS
+
+If it's >3 lines of text, it's left-align
+
+Body text is always left-aligned. Hyphenation is not used at line endings. And links are underlined and/or highlighted with bold or color, sometimes only on hover.
+
+DON'T MIX ALIGNMENT (if it's centered, then center all)
 
 ## 2 is magic
 
@@ -80,26 +81,6 @@ The optimal number of characters per line is between 55 and 75, but 75 to 90 is 
 
 
 ## Raw data
-
-At a display width of 500 pixels:
-- Average line height: 28 pixels
-- Average font size of body: 15 pixels
-- Average number of characters per line: 77
-
-At a display width of 700 pixels:
-- Average font size of headlines: 36 pixels
-- Average font size of body: 15.6 pixels
-- Average number of characters per line: 82.7
-
-At a display width of 950 pixels:
-- Average font size of headlines: 37.9 pixels
-- Average font size of body: 16.1 pixels
-- Average number of characters per line: 84.8
-
-At a display width of 1600 pixels:
-- Average font size of headlines: 40.7 pixels
-- Average font size of body: 16.2 pixels
-- Average number of characters per line: 86.8
 
 [Spreadsheet](https://docs.google.com/spreadsheets/d/1Vcehdh4SZT5RJhzZ0i-rjCRFX_HC2Lo94hbSqiqYblQ/edit#gid=1)
 

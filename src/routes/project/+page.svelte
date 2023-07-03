@@ -5,7 +5,6 @@
 
 	import CodePen from '~icons/ph/codepen-logo';
 
-	// import FigmaLogo from '~icons/ph/figma-logo';
 	import SectionTitle from '$lib/components/Common/Section/SectionTitle.svelte';
 
 	import SEO from '$components/SEO/SEO.svelte';
@@ -34,7 +33,7 @@
 
 <section>
 	<SectionTitle
-		sectionDesc="UI/UX case studies built with clear business goal and empathy."
+		sectionDesc="UI/UX case studies built with business goal and empathy."
 		sectionTitle="Case Studies"
 		let:sectionIcon>
 		<ProjectorScreen {...sectionIcon} />

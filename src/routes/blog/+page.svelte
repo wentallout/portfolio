@@ -9,8 +9,6 @@
 	import MiniSearch from 'minisearch';
 	import { paginate, DarkPaginationNav } from 'svelte-paginate';
 
-	import { slide } from 'svelte/transition';
-
 	// STORE BLOG
 	import { allBlogStore } from '$lib/stores/blogStore.js';
 
@@ -21,6 +19,7 @@
 	allBlogStore.set(data.blogs);
 
 	import { onMount } from 'svelte';
+	import { fade } from 'svelte/transition';
 
 	let searchTerm = '';
 	let filteredBlogs = [];
@@ -90,7 +89,7 @@
 
 	<BlogListContainer>
 		{#if filteredBlogs.length === 0}
-			<div transition:slide class="not-found text-small">No blogs found.</div>
+			<div class="not-found text-small">No blogs found.</div>
 		{:else}
 			{#each paginatedItems as item}
 				{#key item}

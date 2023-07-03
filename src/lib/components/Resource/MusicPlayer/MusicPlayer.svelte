@@ -150,10 +150,10 @@
 
 	<div class="song-list">
 		{#each $musicList as music, i}
-			<div
+			<button
+				type="button"
 				class={i == currentSongIndex ? 'cs song-active' : 'cs song'}
-				on:click={() => setSong(i)}
-				on:keydown={() => setSong(i)}>
+				on:click={() => setSong(i)}>
 				<div class="song-name text-small">{music.name}</div>
 				<a
 					class="download"
@@ -161,12 +161,12 @@
 					download={$musicList[i].audio}>
 					<Download width="16" height="16" color="var(--colorWhite)" />
 				</a>
-			</div>
+			</button>
 		{/each}
 	</div>
 </div>
 
-<style>
+<style lang="postcss">
 	.mute__btn {
 		all: unset;
 		cursor: pointer;
@@ -218,12 +218,11 @@
 		align-items: center;
 		border-radius: 100%;
 		z-index: 2;
-
 		margin-left: auto;
-	}
 
-	.download:hover {
-		filter: brightness(1.3);
+		&:hover {
+			filter: brightness(1.3);
+		}
 	}
 
 	.info {
@@ -341,10 +340,10 @@
 	.song {
 		padding: var(--spaceXS) var(--spaceL);
 		transition: var(--transition);
-	}
 
-	.song:hover {
-		background-color: var(--colorBgElevated);
-		cursor: pointer;
+		&:hover {
+			background-color: var(--colorBgElevated);
+			cursor: pointer;
+		}
 	}
 </style>

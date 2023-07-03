@@ -10,37 +10,38 @@
 </script>
 
 <header class="container full-width">
-	<h1>{data.title}</h1>
-	<div class="post-info text-small">
-		<div class="info__section">
-			<div class="section__title">Last updated:</div>
-			<Time relative timestamp={data.date} />
-		</div>
-		<div class="info__section">
-			<div class="section__title">Written by:</div>
-			<ExLink href="https://www.linkedin.com/in/wentallout/">
-				<div class="underline">Khoa (@wentallout)</div>
-			</ExLink>
-		</div>
-	</div>
-	{#if hasCategory}
-		{#if data.categories.length}
-			<div class="category">
-				{#each data.categories as category}
-					<a class="content-tag" href="/blog/category/{category}">
-						<Tag>
-							{category}
-						</Tag>
-					</a>
-				{/each}
+	<div class="global-container">
+		<h1>{data.title}</h1>
+		<div class="post-info text-small">
+			<div class="info__section">
+				<div class="section__title">Last updated:</div>
+				<Time relative timestamp={data.date} />
 			</div>
+			<div class="info__section">
+				<div class="section__title">Written by:</div>
+				<ExLink href="https://www.linkedin.com/in/wentallout/">
+					<div class="link">Khoa (@wentallout)</div>
+				</ExLink>
+			</div>
+		</div>
+		{#if hasCategory}
+			{#if data.categories.length}
+				<div class="category">
+					{#each data.categories as category}
+						<a class="content-tag" href="/blog/category/{category}">
+							<Tag>
+								{category}
+							</Tag>
+						</a>
+					{/each}
+				</div>
+			{/if}
 		{/if}
-	{/if}
+	</div>
 </header>
 
 <style>
 	.container {
-		padding-inline: var(--page-padding);
 		padding-top: var(--spaceXL);
 		padding-bottom: var(--spaceXL);
 		background-color: var(--colorBgLayout);
@@ -79,9 +80,5 @@
 
 	.section__title {
 		font-weight: var(--fontWeightLarge);
-	}
-
-	.underline:hover {
-		color: var(--colorPrimaryHover);
 	}
 </style>

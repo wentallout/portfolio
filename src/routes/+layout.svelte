@@ -32,7 +32,7 @@
 <Header />
 
 <PageTransition {data}>
-	<main class="main-content" id="main-content">
+	<main class="main-content global-container" id="main-content">
 		<Breadcrumb />
 		<slot />
 	</main>
@@ -40,13 +40,12 @@
 
 <Footer />
 
-<style>
+<style lang="postcss">
 	.main-content {
 		position: relative;
 		display: flex;
 		flex-direction: column;
 		min-height: 100vh;
-		padding: 0 var(--page-padding);
 		z-index: 1;
 	}
 

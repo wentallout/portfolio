@@ -27,7 +27,7 @@
 	</section>
 </SaosContainer>
 
-<style>
+<style lang="postcss">
 	.clients {
 		width: 100%;
 		display: flex;
@@ -51,9 +51,9 @@
 
 		filter: grayscale();
 		transition: var(--transition);
-	}
 
-	.logo:hover {
-		filter: none;
+		&:hover {
+			filter: none;
+		}
 	}
 </style>

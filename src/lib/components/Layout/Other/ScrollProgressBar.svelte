@@ -1,6 +1,4 @@
 <script>
-	// CREDIT: kudadam/svelte-scrollprogress
-
 	import { createEventDispatcher } from 'svelte';
 
 	let width = '0%';
@@ -70,6 +68,8 @@
 		left: 0;
 		z-index: var(--zIndexMax);
 		background: var(--colorBgContainer);
+		overflow: hidden;
+		display: none;
 	}
 
 	.top {

@@ -8,17 +8,13 @@
 	export let accordionText = '';
 	export let isOpened = false;
 
-	function handleOpenaccordion() {
+	function handleOpen() {
 		isOpened = !isOpened;
 	}
 </script>
 
 <div class="accordion">
-	<button
-		class="accordion__section"
-		type="button"
-		on:click={handleOpenaccordion}
-		on:keydown={handleOpenaccordion}>
+	<button class="accordion__btn" type="button" on:click={handleOpen} on:keydown={handleOpen}>
 		<div class="text-small">{accordionSection}</div>
 		<div class="caret" class:caret-active={isOpened}>
 			<CaretDown width="16" height="16" />
@@ -34,12 +30,7 @@
 	{/if}
 </div>
 
-<style>
-	.accordion__section {
-		text-align: left;
-		max-width: var(--text-width);
-	}
-
+<style lang="postcss">
 	.caret {
 		transition: var(--transition);
 	}
@@ -50,9 +41,9 @@
 		transform: rotate(180deg);
 	}
 
-	.accordion__section {
+	.accordion__btn {
 		width: 100%;
-		max-width: var(--text-width);
+
 		cursor: pointer;
 		padding: var(--spaceXS);
 		transition: var(--transition);
@@ -61,9 +52,10 @@
 		align-items: center;
 		flex-direction: row;
 		border: 1px solid var(--colorBorder);
-	}
-	.accordion__section:hover {
-		background-color: var(--colorBgElevated);
+
+		&:hover {
+			background-color: var(--colorBgElevated);
+		}
 	}
 
 	.accordion__text {
