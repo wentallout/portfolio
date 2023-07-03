@@ -8,7 +8,6 @@
 	],
 	"rules": {
 		"block-opening-brace-newline-before": "always",
-		"a11y/media-prefers-reduced-motion": true,
 		"a11y/no-outline-none": true,
 		"a11y/selector-pseudo-class-focus": true,
 		"order/order": ["custom-properties", "declarations"],
@@ -37,7 +36,7 @@
 		],
 		"selector-pseudo-class-no-unknown": [true, { "ignorePseudoClasses": ["global"] }]
 	},
-	"ignoreFiles": ["node_modules/*", "src/assets/**", "build/**", "src/lib/styles/normalise.css"],
+	"ignoreFiles": ["node_modules/*", "src/assets/**", "build/**", "src/lib/styles/reset.css"],
 	"defaultSeverity": "error",
 	"customSyntax": "postcss-html"
 }

@@ -1,6 +1,4 @@
 <script>
-	
-
 	import Giscus from '$components/Blog/Comments/Giscus.svelte';
 
 	export let category = 'Blogs';
