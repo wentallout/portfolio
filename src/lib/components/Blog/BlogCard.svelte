@@ -3,13 +3,13 @@
 	export let blogTitle = 'blogTitle';
 	export let blogDate = '';
 	import Time from 'svelte-time';
-	import { fade } from 'svelte/transition';
+
 	import CaretRight from '~icons/ph/caret-right';
 	export let blogTags = ['category1', 'category2'];
 	export let hasTags = true;
 </script>
 
-<a transition:fade|global href={blogLink} class="blog">
+<a href={blogLink} class="blog">
 	<article class="blog__info">
 		{#if hasTags}
 			<div class="tags">
@@ -29,7 +29,7 @@
 	<div class="icon"><CaretRight color="var(--colorText)" /></div>
 </a>
 
-<style>
+<style lang="postcss">
 	.blog {
 		/* FLEX */
 		display: flex;
@@ -53,17 +53,16 @@
 		outline: 1px solid var(--colorBorder);
 
 		box-shadow: var(--boxShadow);
+
+		&:hover {
+			background-color: var(--colorBgElevated);
+			box-shadow: -5px 5px var(--colorPrimaryHover);
+			transform: translate(5px, -5px);
+		}
 	}
 
 	.blog:hover .icon {
 		opacity: 1;
-	}
-
-	.blog:hover {
-		background-color: var(--colorBgElevated);
-
-		box-shadow: -5px 5px var(--colorPrimaryHover);
-		transform: translate(5px, -5px);
 	}
 
 	.tags {

@@ -1,16 +1,24 @@
 <script>
 	export let href;
 	export let ariaLabel = '';
+	export let style = '';
 </script>
 
-<a aria-label={ariaLabel} {href} rel="external nofollow noopener noreferrer" target="_blank">
+<a
+	{style}
+	aria-label={ariaLabel}
+	{href}
+	rel="external nofollow noopener noreferrer"
+	target="_blank">
 	<slot />
 </a>
 
 <style>
 	a {
 		font-size: inherit;
-		display: contents;
+		display: flex;
+		gap: var(--space2XS);
+		flex-direction: row;
 		position: relative;
 	}
 </style>

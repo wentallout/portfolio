@@ -87,9 +87,9 @@
 		justify-content: center;
 		align-items: center;
 		border: 1px solid var(--colorBorder);
-	}
 
-	.social__address:hover {
-		background-color: var(--colorBgElevated);
+		&:hover {
+			background-color: var(--colorBgElevated);
+		}
 	}
 </style>

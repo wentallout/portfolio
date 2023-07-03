@@ -1,13 +1,8 @@
 <script>
 	// import HeroSVG from '$lib/assets/images/home/hero.svg?component';
-
-	import { draw } from 'svelte/transition';
-	import { quintOut } from 'svelte/easing';
 </script>
 
 <div class="hero__visual">
-	<!-- <HeroSVG width="100%" height="100%" /> -->
-
 	<svg
 		width="822"
 		height="602"
@@ -159,20 +154,22 @@
 		height: 0;
 	}
 
-	@media (min-width: 1200px) {
+	@media (min-width: 768px) {
 		.hero__visual {
 			overflow: visible;
 			position: absolute;
 			top: 0;
-			right: var(--page-padding);
+			right: 0;
 			z-index: -1;
 			display: block;
-			width: 500px;
-			height: 100%;
-			aspect-ratio: 1.4;
+
+			width: 400px;
+			height: 400px;
+			aspect-ratio: 1/1;
+
 			top: 50%;
 			right: 0;
-			transform: translate(-50%, -50%);
+			transform: translate(0, -50%);
 		}
 	}
 

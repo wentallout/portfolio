@@ -43,3 +43,86 @@
 		clip-path: inset(0%);
 	}
 }
+
+/**
+ * ----------------------------------------
+ * animation bounce-in-bottom
+ * ----------------------------------------
+ */
+@keyframes bounce-in-bottom {
+	0% {
+		transform: translateY(500px);
+		animation-timing-function: ease-in;
+		opacity: 0;
+	}
+	38% {
+		transform: translateY(0);
+		animation-timing-function: ease-out;
+		opacity: 1;
+	}
+	55% {
+		transform: translateY(65px);
+		animation-timing-function: ease-in;
+	}
+	72% {
+		transform: translateY(0);
+		animation-timing-function: ease-out;
+	}
+	81% {
+		transform: translateY(28px);
+		animation-timing-function: ease-in;
+	}
+	90% {
+		transform: translateY(0);
+		animation-timing-function: ease-out;
+	}
+	95% {
+		transform: translateY(8px);
+		animation-timing-function: ease-in;
+	}
+	100% {
+		transform: translateY(0);
+		animation-timing-function: ease-out;
+	}
+}
+
+/* animation: glitch 1.5s ease infinite; */
+@keyframes glitch {
+	0%,
+	20%,
+	33%,
+	60%,
+	64%,
+	66%,
+	69%,
+	73%,
+	75%,
+	90%,
+	93%,
+	100% {
+		transform: skew(0deg);
+	}
+	21%,
+	81% {
+		transform: skew(30deg, 0deg);
+	}
+	22%,
+	82% {
+		transform: skew(-30deg, 0deg);
+	}
+	61% {
+		transform: skew(35deg);
+	}
+	62% {
+		transform: skew(-15deg, -8deg);
+	}
+	65% {
+		transform: skew(15deg, -8deg);
+	}
+	70% {
+		transform: skew(-65deg);
+	}
+	74% {
+		transform: skew(15deg, -15deg);
+	}
+}

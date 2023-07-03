@@ -39,23 +39,22 @@
 	</article>
 </a>
 
-<style>
+<style lang="postcss">
 	.project {
 		position: relative;
 		width: 100%;
 		display: flex;
 		flex-direction: column;
-
 		transition: var(--transition);
 		overflow: hidden;
-
 		box-shadow: var(--boxShadow);
 		outline: 1px solid var(--colorBorder);
-	}
-	.project:hover {
-		background-color: var(--colorBgElevated);
-		box-shadow: -5px 5px var(--colorPrimaryHover);
-		transform: translate(5px, -5px);
+
+		&:hover {
+			background-color: var(--colorBgElevated);
+			box-shadow: -5px 5px var(--colorPrimaryHover);
+			transform: translate(5px, -5px);
+		}
 	}
 
 	.title {

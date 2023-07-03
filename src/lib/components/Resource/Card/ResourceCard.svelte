@@ -15,7 +15,7 @@
 	</div>
 </ExLink>
 
-<style>
+<style lang="postcss">
 	.tool {
 		display: flex;
 		flex-direction: column;
@@ -26,6 +26,12 @@
 
 		outline: 1px solid var(--colorBorder);
 		box-shadow: var(--boxShadow);
+
+		&:hover {
+			background-color: var(--colorBgElevated);
+			box-shadow: -5px 5px var(--colorPrimaryHover);
+			transform: translate(5px, -5px);
+		}
 	}
 	.tool__name {
 		color: var(--colorText);
@@ -41,12 +47,5 @@
 		-webkit-box-orient: vertical;
 		font-weight: var(--fontWeightSmall);
 		margin: 0;
-	}
-
-	.tool:hover {
-		background-color: var(--colorBgElevated);
-
-		box-shadow: -5px 5px var(--colorPrimaryHover);
-		transform: translate(5px, -5px);
 	}
 </style>

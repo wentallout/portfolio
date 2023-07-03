@@ -1,5 +1,5 @@
 <script>
-	export let duration = '300ms';
+	export let duration = '100ms';
 	export let offset = 0;
 	export let tolerance = 0;
 
@@ -44,13 +44,10 @@
 
 <style>
 	div {
-		/* POSITION */
 		position: fixed;
 		top: 0;
 		z-index: 98;
 		width: 100%;
-
-		transition: transform 100ms linear;
 	}
 	.show {
 		transform: translateY(0%);

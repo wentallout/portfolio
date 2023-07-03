@@ -26,6 +26,7 @@
 <style>
 	.section {
 		margin-bottom: var(--spaceXL);
+		width: 100%;
 	}
 
 	.section__title {

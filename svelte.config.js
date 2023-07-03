@@ -15,9 +15,7 @@ import remarkSectionize from 'remark-sectionize';
 /** @type {import('@sveltejs/kit').Config} */
 const config = {
 	preprocess: sequence([
-		sveltePreprocess({
-			postcss: true
-		}),
+		sveltePreprocess(),
 		mdsvex({
 			extensions: ['.svelte.md', '.md', '.svx'],
 			remarkPlugins: [remarkUnwrapImages, remarkGfm, remarkSectionize],
@@ -67,9 +65,7 @@ const config = {
 
 	vitePlugin: {
 		inspector: {
-			inspector: true,
 			toggleKeyCombo: 'meta-shift',
-			holdMode: true,
 			showToggleButton: 'always',
 			toggleButtonPos: 'bottom-right'
 		}

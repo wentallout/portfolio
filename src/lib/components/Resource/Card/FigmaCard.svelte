@@ -1,12 +1,14 @@
 <script>
 	import ExLink from '$lib/components/Common/ExLink.svelte';
 
-	export let thumbnailUrl = '';
 	export let title = 'insert title';
 	export let desc = 'author';
 	export let href = '';
+	export let thumbnailUrl = '';
 
-	ExLink;
+	$: if (href.includes('codepen.io')) {
+		thumbnailUrl = href.replace('codepen.io', 'shots.codepen.io') + '-800.jpg';
+	}
 </script>
 
 <ExLink {href}>
@@ -20,25 +22,27 @@
 	</div>
 </ExLink>
 
-<style>
+<style lang="postcss">
 	.fcard {
 		border: 1px solid var(--colorBorder);
 		transition: var(--transition);
 		box-shadow: var(--boxShadow);
+
+		&:hover {
+			background-color: var(--colorBgElevated);
+			box-shadow: -5px 5px var(--colorPrimaryHover);
+			transform: translate(5px, -5px);
+		}
+	}
+	.fcard:hover {
 	}
 
-	.fcard:hover {
-		background-color: var(--colorBgElevated);
-		box-shadow: -5px 5px var(--colorPrimaryHover);
-		transform: translate(5px, -5px);
+	.fcard__thumbnail {
+		width: 100%;
+		aspect-ratio: 2/1;
 	}
 
 	.fcard__info {
-		/* padding-top: 8px;
-		padding-bottom: 8px;
-		padding-left: 16px;
-		padding-right: 16px; */
-
 		padding: var(--space2XS) var(--spaceXS);
 	}
 
@@ -49,22 +53,10 @@
 		display: -webkit-box;
 		-webkit-line-clamp: 2;
 		-webkit-box-orient: vertical;
-		height: 52px;
+		font-weight: 500;
 	}
 
 	.fcard__desc {
 		color: var(--colorTextSecondary);
-	}
-
-	.fcard__thumbnail {
-		/* flex: 1 0 auto; */
-		width: 100%;
-		aspect-ratio: 2/1;
-		background-size: contain;
-		background-position: center;
-		background-repeat: no-repeat;
-		display: flex;
-		justify-content: center;
-		align-items: center;
 	}
 </style>

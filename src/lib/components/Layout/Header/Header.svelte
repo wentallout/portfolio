@@ -31,7 +31,7 @@
 
 <VanishingHeader duration="300ms" offset={50} tolerance={5}>
 	<header class="header" bind:this={headerEle}>
-		<nav aria-label="primary menu" class="nav" class:nav-scrolldown={scrollY > 0}>
+		<nav class="nav global-container" class:nav-scrolldown={scrollY > 0} aria-label="primary menu">
 			<ul class="nav-list">
 				{#each navItems as navItem}
 					<li
@@ -56,7 +56,7 @@
 	<div role="button" tabindex="" class="closebtn" on:click={closeNav} on:keydown={closeNav}>
 		<X color="var(--colorBlack)" width="32" height="32" />
 	</div>
-	<div class="overlay-content">
+	<div class="overlay-content global-container">
 		{#each navItems as navItem}
 			<a
 				class="overlay-item text-xl"
@@ -72,17 +72,7 @@
 	</div>
 </div>
 
-<style>
-	.active-page {
-		color: var(--colorPrimary) !important;
-		border-top: 1px solid inherit;
-	}
-
-	.active-page-mobile {
-		color: var(--colorPrimary) !important;
-		border-left: 4px solid inherit;
-	}
-
+<style lang="postcss">
 	.nav {
 		/* FONT */
 		font-size: var(--fontSizeBase);
@@ -92,7 +82,21 @@
 		width: 100%;
 		display: flex;
 
-		transition: ease-in-out 0.1s;
+		transition: ease-in-out 0.3s;
+		/* border-radius: var(--border-radius); */
+
+		border-bottom-left-radius: var(--border-radius);
+		border-bottom-right-radius: var(--border-radius);
+	}
+
+	.active-page {
+		color: var(--colorPrimary) !important;
+		border-top: 1px solid inherit;
+	}
+
+	.active-page-mobile {
+		color: var(--colorPrimary) !important;
+		border-left: 4px solid inherit;
 	}
 
 	.nav-scrolldown {
@@ -113,12 +117,12 @@
 	.nav-list__item {
 		display: none;
 		overflow: visible;
-	}
 
-	.nav-list__item:hover {
-		font-weight: var(--fontWeightLarge);
-		scale: 1.1;
-		color: var(--colorPrimaryHover);
+		&:hover {
+			font-weight: var(--fontWeightLarge);
+			scale: 1.1;
+			color: var(--colorPrimaryHover);
+		}
 	}
 
 	.hamburger {
@@ -127,16 +131,12 @@
 		justify-content: center;
 		/* --- */
 
-		width: 100vw;
-		max-width: 100vw;
+		width: 100%;
 		padding: var(--spaceXS);
 		cursor: pointer;
 	}
 
 	@media (min-width: 768px) {
-		.nav {
-			padding: 0 var(--page-padding);
-		}
 		.nav-list__item {
 			display: flex;
 			justify-content: center;
@@ -166,6 +166,7 @@
 	.overlay {
 		height: 0%;
 		width: 100%;
+
 		position: fixed;
 		z-index: var(--zIndexMax);
 		top: 0;
@@ -173,7 +174,7 @@
 		background-color: rgba(0, 0, 0, 0.8);
 
 		backdrop-filter: blur(5px);
-		overflow-y: hidden;
+		overflow: hidden;
 		transition: var(--transition);
 		font-weight: var(--fontWeightXS);
 	}
@@ -203,9 +204,6 @@
 		width: 100%;
 		height: var(--scroll-padding);
 		/* --- */
-
-		padding-left: var(--page-padding);
-		padding-right: var(--page-padding);
 
 		outline: 1px solid transparent;
 		font-weight: var(--fontWeightMid);
@@ -246,6 +244,7 @@
 
 	.header {
 		position: relative;
+		overflow: hidden;
 	}
 
 	.nav-list__item::before {

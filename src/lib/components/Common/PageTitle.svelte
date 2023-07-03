@@ -7,7 +7,7 @@
 	export let decoImageUrl = Wall;
 </script>
 
-<div class="title full-width">
+<div class="full-width title">
 	<img alt="title deco" class="title__deco" src={decoImageUrl} />
 	<h1 class="title__text text-3xl tracking-in-expand">{pageTitle}</h1>
 </div>

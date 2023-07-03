@@ -1,6 +1,6 @@
 <script>
 	import Logo from '$lib/components/Layout/Header/Logo.svelte';
-	import { fly } from 'svelte/transition';
+	import { fade } from 'svelte/transition';
 	import { theme } from '$lib/stores/themeStore.js';
 
 	import { page } from '$app/stores';
@@ -17,13 +17,11 @@
 {#if showCover}
 	<div class="cover">
 		{#if $theme === 'dark'}
-			<video in:fly|global={{ y: 10 }} class="video" autoplay muted loop>
+			<video transition:fade={{ duration: 300 }} class="video" autoplay muted loop>
 				<source src="/videos/city.webm" type="video/webm" />
 			</video>
-		{/if}
-
-		{#if $theme === 'light'}
-			<video in:fly|global={{ y: -10 }} class="video" autoplay muted loop>
+		{:else}
+			<video transition:fade={{ duration: 300 }} class="video" autoplay muted loop>
 				<source src="/videos/mountains.webm" type="video/webm" />
 			</video>
 		{/if}
@@ -37,6 +35,10 @@
 		display: flex;
 		position: relative;
 		width: 100%;
+
+		padding-top: var(--scroll-padding);
+		padding-bottom: var(--scroll-padding);
+
 		height: 300px;
 		background-color: var(--colorBgLayout);
 	}
@@ -59,7 +61,7 @@
 		object-fit: cover;
 		object-position: top;
 
-		transition: var(--transition);
+		/* transition: var(--transition); */
 	}
 
 	:global([color-scheme='dark'] .video) {

@@ -3,22 +3,22 @@
 
 	<img
 		class="official-logo rotate"
-		width="300px"
-		height="300px"
+		width="200px"
+		height="200px"
 		src="/images/coolLogo.svg"
 		alt="2nd logo" />
 </a>
 
-<style>
+<style lang="postcss">
 	.official-logo {
 		filter: drop-shadow(0px 0px 10px var(--colorText));
-
 		transition: var(--transition);
-	}
 
-	.official-logo:hover {
-		color: var(--colorPrimary);
-		filter: drop-shadow(0px 0px 10px var(--colorPrimary));
+		&:hover {
+			color: var(--colorPrimary);
+			filter: drop-shadow(0px 0px 10px var(--colorPrimary));
+			animation: glitch 1.5s ease infinite;
+		}
 	}
 
 	.cover__logo {
@@ -28,12 +28,10 @@
 		transform: translate(-50%, -50%);
 		z-index: 3;
 		transition: var(--transition);
-
 		aspect-ratio: 1/1;
-		width: 200px;
-	}
 
-	.cover__logo:hover {
-		filter: brightness(1.2);
+		&:hover {
+			filter: brightness(1.2);
+		}
 	}
 </style>
