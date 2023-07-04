@@ -15,6 +15,6 @@
 	}
 
 	::-webkit-scrollbar-track {
-		background: transparent;
+		background: transparent; 
 	}
 </style>

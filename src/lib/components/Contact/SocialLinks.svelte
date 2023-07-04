@@ -87,7 +87,7 @@
 		justify-content: center;
 		align-items: center;
 		border: 1px solid var(--colorBorder);
-
+		border-radius: var(--borderRadius);
 		&:hover {
 			background-color: var(--colorBgElevated);
 		}
