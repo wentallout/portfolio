@@ -5,11 +5,11 @@
 		"dev": "vite dev --host",
 		"build": "vite build",
 		"preview": "vite preview",
-		"check": "svelte-check --tsconfig ./jsconfig.json",
-		"check:watch": "svelte-check --tsconfig ./jsconfig.json --watch",
+		"check": "svelte-check",
+		"check:watch": "svelte-check --watch",
 		"test": "playwright test",
 		"lint": "prettier --check . && eslint --ext .js,.svelte src",
-		"lint:css": "stylelint \"src/**/*.{css,svelte}\"",
+		"lint:stylelint": "stylelint \"src/**/*.{css,svelte}\"",
 		"format": "prettier --write .",
 		"ngrok": "ngrok http 4173"
 	},
@@ -72,5 +72,8 @@
 	"repository": {
 		"type": "git",
 		"url": "https://github.com/wentallout/portfolio"
+	},
+	"bugs": {
+		"url": "https://github.com/wentallout/portfolio/issues"
 	}
 }

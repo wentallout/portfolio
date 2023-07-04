@@ -77,6 +77,8 @@
 
 		/* OTHER */
 		transition: var(--transition);
+
+		border-radius: var(--borderRadius);
 	}
 
 	.input:focus-visible {

@@ -31,9 +31,25 @@
 </div>
 
 <style lang="postcss">
+
+	.accordion 
+	{
+		border: 1px solid var(--colorBorder);
+		border-radius: var(--borderRadius);
+		box-shadow: var(--boxShadow);
+	}
+
+	.accordion__btn:has(> .caret-active)
+	{
+		
+		font-weight: 600;
+		border-bottom: 1px solid var(--colorBorder);
+	}
+
 	.caret {
 		transition: var(--transition);
 	}
+
 
 	.caret-active {
 		width: fit-content;
@@ -51,8 +67,8 @@
 		justify-content: space-between;
 		align-items: center;
 		flex-direction: row;
-		border: 1px solid var(--colorBorder);
-
+		/* border: 1px solid var(--colorBorder); */
+		border-radius: var(--borderRadius);
 		&:hover {
 			background-color: var(--colorBgElevated);
 		}

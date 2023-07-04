@@ -115,6 +115,8 @@
 		transition: var(--transition);
 		background-color: var(--colorBgLayout);
 		box-shadow: var(--boxShadow);
+
+		border-radius: var(--borderRadius);
 	}
 
 	.block__section:hover {

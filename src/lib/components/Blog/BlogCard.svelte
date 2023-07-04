@@ -39,7 +39,7 @@
 		/* --- */
 
 		/* SIZE */
-		width: 100%;
+	width: 100%;
 		height: 120px;
 		padding: var(--spaceS) var(--spaceXS);
 		/* --- */
@@ -48,6 +48,7 @@
 		transition: var(--transition);
 		position: relative;
 		overflow: hidden;
+		border-radius: var(--borderRadius);
 		/* --- */
 
 		outline: 1px solid var(--colorBorder);

@@ -117,7 +117,7 @@
 <style>
 	:global(.pagination-nav) {
 		background-color: transparent !important;
-		border-radius: var(--border-radius-light) !important;
+		border-radius: var(--borderRadius-light) !important;
 		box-shadow: none !important;
 	}
 

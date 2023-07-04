@@ -301,7 +301,7 @@
 		align-items: center;
 		width: 100%;
 		background-color: var(--colorBgContainer);
-		border-radius: var(--border-radius);
+		border-radius: var(--borderRadius);
 		overflow: hidden;
 	}
 

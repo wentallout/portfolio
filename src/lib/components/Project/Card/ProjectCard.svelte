@@ -49,6 +49,7 @@
 		overflow: hidden;
 		box-shadow: var(--boxShadow);
 		outline: 1px solid var(--colorBorder);
+		border-radius: var(--borderRadius);
 
 		&:hover {
 			background-color: var(--colorBgElevated);
@@ -95,7 +96,7 @@
 		position: relative;
 		padding: 8px;
 
-		border-radius: var(--border-radius);
+		border-radius: var(--borderRadius);
 	}
 
 	.info__section {

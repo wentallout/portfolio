@@ -72,6 +72,8 @@
 		gap: var(--space2XS);
 		max-height: 210px;
 		position: relative;
+		border-radius: var(--borderRadius);
+		box-shadow: var(--boxShadow);
 	}
 
 	.principle__title {

@@ -50,6 +50,7 @@ Visitors can also comment on your blogs using GitHub discussion (you might want 
 - `spacing.css` spacing for `margin`, `padding` and the whole page layout in general. Check out [utopia.fyi](https://utopia.fyi/) for more information about this spacing system.
 - `typography.css` typography-related stuff like `font-size`, `line-height`, `letter-spacing`, `font-weight`
 - `color.css` text colors, border colors, background colors (2 color schemes: `light` and `dark`)
+- `animation.css` for anything animate.
 
 ## 🗺 Sitemap
 

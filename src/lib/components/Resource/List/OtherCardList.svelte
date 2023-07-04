@@ -51,6 +51,7 @@
 		overflow: hidden;
 
 		border: 1px solid var(--colorBorder);
+		border-radius: var(--borderRadius);
 	}
 
 	.other:before {
