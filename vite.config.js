@@ -21,7 +21,7 @@ const config = {
 				]
 			}
 		}),
-		Icons({ compiler: 'svelte' }),
+		Icons({ compiler: 'svelte',defaultClass: 'icon' }),
 		imagetools({
 			defaultDirectives: () => {
 				return new URLSearchParams({

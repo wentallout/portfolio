@@ -16,7 +16,7 @@
 <style>
 	a {
 		font-size: inherit;
-		display: flex;
+
 		gap: var(--space2XS);
 		flex-direction: row;
 		position: relative;

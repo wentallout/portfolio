@@ -1,5 +1,5 @@
 <script>
-	import SaosContainer from './../../Common/SaosContainer.svelte';
+	import SaosContainer from '$lib/components/Common/SaosContainer.svelte';
 	import ChainDivider from '$components/Layout/Other/ChainDivider.svelte';
 	import FooterEnd from '$components/Layout/Footer/FooterEnd.svelte';
 	import ExLink from '$components/Common/ExLink.svelte';
@@ -17,7 +17,7 @@
 	// import FooterBg from '$lib/assets/images/common/footer-bg.png';
 </script>
 
-<SaosContainer animation="bounce-in-bottom 1.1s ease-in both;">
+<SaosContainer>
 	<footer class="footer text-small">
 		<div class="global-container">
 			<ChainDivider />
@@ -53,6 +53,9 @@
 						<li class="nav-list__item">
 							<a href="/rss.xml">RSS</a>
 						</li>
+						<li class="nav-list__item">
+							<a href="/sitemap.xml">Sitemap</a>
+						</li>
 					</ul>
 				</div>
 
@@ -61,35 +64,50 @@
 					<ul class="list__nav">
 						<li class="nav-list__item">
 							<ExLink href="https://goo.gl/maps/GLt6uhYWwU91fXz49">
-								<MapPin width="24" height="24" />
-								Ho Chi Minh City</ExLink>
+								<div class="nav-list__link">
+									<MapPin width="24" height="24" />
+									Ho Chi Minh City
+								</div>
+							</ExLink>
 						</li>
 
 						<li class="nav-list__item">
 							<ExLink href="mailto:wentallout@gmail.com">
-								<Envelope width="24" height="24" />
-								wentallout@gmail.com</ExLink>
+								<div class="nav-list__link">
+									<Envelope width="24" height="24" />
+									wentallout@gmail.com
+								</div>
+							</ExLink>
 						</li>
 						<li class="nav-list__item">
 							<ExLink href="tel:+84929066331">
-								<Phone width="24" height="24" />
-								<span>+84 929066331</span>
+								<div class="nav-list__link">
+									<Phone width="24" height="24" />
+									+84 929066331
+								</div>
 							</ExLink>
 						</li>
 						<li class="nav-list__item">
 							<ExLink href="https://www.linkedin.com/in/wentallout">
-								<LinkedinLogo width="24" height="24" />Linkedin</ExLink>
+								<div class="nav-list__link">
+									<LinkedinLogo width="24" height="24" />Linkedin
+								</div>
+							</ExLink>
 						</li>
 						<li class="nav-list__item">
 							<ExLink href="https://www.instagram.com/wentallout/saved">
-								<InstagramLogo width="24" height="24" />
-								Instagram
+								<div class="nav-list__link">
+									<InstagramLogo width="24" height="24" />
+									Instagram
+								</div>
 							</ExLink>
 						</li>
 						<li class="nav-list__item">
 							<ExLink href="https://github.com/wentallout">
-								<GitHubLogo width="24" height="24" />
-								GitHub
+								<div class="nav-list__link">
+									<GitHubLogo width="24" height="24" />
+									GitHub
+								</div>
 							</ExLink>
 						</li>
 					</ul>
@@ -104,6 +122,12 @@
 <Marquee />
 
 <style>
+	.nav-list__link {
+		display: flex;
+		flex-direction: row;
+		gap: var(--spaceXS);
+	}
+
 	.footer__deco {
 		position: absolute;
 		bottom: 0;

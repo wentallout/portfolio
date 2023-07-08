@@ -26,11 +26,12 @@
 <style>
 	figure {
 		max-width: 100%;
-
+		margin-left: auto;
+		margin-right: auto;
 		margin-bottom: var(--spaceS);
 	}
 
-	figure > img {
+	img {
 		max-width: inherit;
 	}
 

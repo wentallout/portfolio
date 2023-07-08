@@ -26,7 +26,7 @@
 			<Time timestamp={blogDate} relative />
 		</div>
 	</article>
-	<div class="icon"><CaretRight color="var(--colorText)" /></div>
+	<div class="blog__icon"><CaretRight color="var(--colorText)" /></div>
 </a>
 
 <style lang="postcss">
@@ -62,7 +62,7 @@
 		}
 	}
 
-	.blog:hover .icon {
+	.blog:hover .blog__icon {
 		opacity: 1;
 	}
 
@@ -82,7 +82,7 @@
 		flex-direction: column;
 	}
 
-	.icon {
+	.blog__icon {
 		opacity: 0;
 		transition: var(--transition);
 	}

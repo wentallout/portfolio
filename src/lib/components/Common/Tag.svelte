@@ -1,7 +1,9 @@
 <script>
+	import Hash from '~icons/ph/hash';
 </script>
 
 <div class="text-xs tag">
+	<Hash width="16" height="16" />
 	<slot />
 </div>
 
@@ -18,13 +20,15 @@
 
 		border: 1px solid var(--colorBorder);
 		transition: var(--transition);
-
+		display: flex;
+		flex-direction: row;
+		gap: var(--space2XS);
 		box-shadow: var(--boxShadow);
 	}
 
-	.tag:before {
+	/* .tag:before {
 		content: '#';
-	}
+	} */
 
 	.tag:hover {
 		background: var(--colorBgElevated);
