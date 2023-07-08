@@ -12,7 +12,7 @@
 		font-weight: var(--fontWeightSmall);
 		width: fit-content;
 
-		border-radius: var(--borderRadius-light);
+		border-radius: var(--borderRadiusLight);
 		padding: 8px 12px;
 		line-height: normal;
 

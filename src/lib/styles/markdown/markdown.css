@@ -179,7 +179,7 @@ blockquote p {
 
 pre {
 	padding: var(--spaceS);
-	border-radius: var(--borderRadius-light);
+	border-radius: var(--borderRadiusLight);
 	overflow: auto;
 	max-width: var(--text-width);
 }
@@ -191,7 +191,7 @@ table {
 
 	max-width: fit-content;
 	overflow: auto;
-	border-radius: var(--borderRadius-light);
+	border-radius: var(--borderRadiusLight);
 	box-shadow: var(--boxShadow);
 }
 

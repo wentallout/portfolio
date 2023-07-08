@@ -15,33 +15,33 @@
 
 <div class="accordion">
 	<button class="accordion__btn" type="button" on:click={handleOpen} on:keydown={handleOpen}>
-		<div class="text-small">{accordionSection}</div>
+		<div class="text-small accordion__section">{accordionSection}</div>
 		<div class="caret" class:caret-active={isOpened}>
 			<CaretDown width="16" height="16" />
 		</div>
 	</button>
 	{#if isOpened}
 		<div
+			class="accordion__text text-small"
 			in:slide={{ duration: 300 }}
-			out:slide={{ duration: 100 }}
-			class="accordion__text text-small">
+			out:slide={{ duration: 100 }}>
 			{accordionText}
 		</div>
 	{/if}
 </div>
 
 <style lang="postcss">
+	.accordion__section {
+		text-align: left;
+	}
 
-	.accordion 
-	{
+	.accordion {
 		border: 1px solid var(--colorBorder);
 		border-radius: var(--borderRadius);
 		box-shadow: var(--boxShadow);
 	}
 
-	.accordion__btn:has(> .caret-active)
-	{
-		
+	.accordion__btn:has(> .caret-active) {
 		font-weight: 600;
 		border-bottom: 1px solid var(--colorBorder);
 	}
@@ -49,7 +49,6 @@
 	.caret {
 		transition: var(--transition);
 	}
-
 
 	.caret-active {
 		width: fit-content;

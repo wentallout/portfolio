@@ -49,7 +49,7 @@
 		left: 0;
 		width: 100%;
 		height: 100%;
-		border-radius: var(--borderRadius-light);
+		border-radius: var(--borderRadiusLight);
 		background: var(--glow-color);
 		filter: brightness(0.8);
 
@@ -63,7 +63,7 @@
 		left: 0;
 		width: 100%;
 		height: 100%;
-		border-radius: var(--borderRadius-light);
+		border-radius: var(--borderRadiusLight);
 
 		background: var(--glow-color);
 		filter: brightness(0.8);
@@ -77,7 +77,7 @@
 		gap: 4px;
 		position: relative;
 		padding: 12px 42px;
-		border-radius: var(--borderRadius-light);
+		border-radius: var(--borderRadiusLight);
 
 		color: white;
 
