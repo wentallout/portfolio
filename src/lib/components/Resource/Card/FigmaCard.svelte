@@ -28,15 +28,13 @@
 		transition: var(--transition);
 		box-shadow: var(--boxShadow);
 		border-radius: var(--borderRadius);
-		overflow:hidden;
+		overflow: hidden;
 
 		&:hover {
 			background-color: var(--colorBgElevated);
 			box-shadow: -5px 5px var(--colorPrimaryHover);
 			transform: translate(5px, -5px);
 		}
-	}
-	.fcard:hover {
 	}
 
 	.fcard__thumbnail {

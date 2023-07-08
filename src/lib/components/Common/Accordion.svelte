@@ -16,7 +16,7 @@
 <div class="accordion">
 	<button class="accordion__btn" type="button" on:click={handleOpen} on:keydown={handleOpen}>
 		<div class="text-small accordion__section">{accordionSection}</div>
-		<div class="caret" class:caret-active={isOpened}>
+		<div class="icon caret" class:caret-active={isOpened}>
 			<CaretDown width="16" height="16" />
 		</div>
 	</button>
