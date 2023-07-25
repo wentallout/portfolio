@@ -1,11 +1,12 @@
 <script>
 	export let label = 'exampleLabel';
 	export let labelColor = 'var(--colorBlack)';
-	export let backgroundColor = 'transparent';
+
 	export let width = undefined;
 	export let glowColor = 'var(--colorBgElevated)';
 	export let type = 'submit';
 
+	export let backgroundColor = 'transparent';
 	export let borderColor = backgroundColor;
 	export let border = `1px solid ${borderColor}`;
 </script>
@@ -50,7 +51,6 @@
 		width: 100%;
 		height: 100%;
 		border-radius: var(--borderRadiusLight);
-		background: var(--glow-color);
 		filter: brightness(0.8);
 
 		will-change: transform;
@@ -65,7 +65,6 @@
 		height: 100%;
 		border-radius: var(--borderRadiusLight);
 
-		background: var(--glow-color);
 		filter: brightness(0.8);
 	}
 	.front {

@@ -41,8 +41,9 @@
 					label="Reset"
 					borderColor="var(--colorError)"
 					backgroundColor="transparent"
-					labelColor="var(--colorError)"
-					><ArrowCounterClockwise color="var(--colorError)" width="16" height="16" />
+					glowColor="var(--colorError)"
+					labelColor="var(--colorError)">
+					<ArrowCounterClockwise color="var(--colorError)" width="16" height="16" />
 				</Button>
 			</div>
 		</form>

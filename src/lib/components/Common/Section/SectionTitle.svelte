@@ -46,10 +46,6 @@
 		align-items: center;
 	}
 
-	:global([color-scheme='light'] .section__icon) {
-		opacity: 0.1;
-	}
-
 	.section__text {
 		font-family: var(--fontFancy);
 		color: var(--colorText);
