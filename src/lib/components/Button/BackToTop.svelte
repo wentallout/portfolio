@@ -41,14 +41,14 @@
 		/* --- */
 
 		/* SIZE */
-
 		aspect-ratio: 1/1;
 		padding: var(--spaceXS);
 		border-radius: 50%;
 		/* --- */
 
 		/* COLOR */
-		background-color: var(--colorPrimary);
+		background-color: var(--colorBgElevated);
+		border: 1px solid var(--colorText);
 		/* --- */
 
 		/* POSITION FIXED ON SCREEN */

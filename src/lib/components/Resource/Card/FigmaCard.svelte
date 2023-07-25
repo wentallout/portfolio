@@ -11,7 +11,7 @@
 	}
 </script>
 
-<ExLink {href}>
+<ExLink {href} style="display:flex">
 	<div class="fcard">
 		<img class="fcard__thumbnail" src={thumbnailUrl} alt="" />
 
@@ -29,6 +29,7 @@
 		box-shadow: var(--boxShadow);
 		border-radius: var(--borderRadius);
 		overflow: hidden;
+		flex-grow: 1;
 
 		&:hover {
 			background-color: var(--colorBgElevated);
@@ -43,6 +44,7 @@
 	}
 
 	.fcard__info {
+		width: 100%;
 		padding: var(--space2XS) var(--spaceXS);
 	}
 

@@ -1,3 +1,6 @@
 {
-	"recommendations": ["rocketseat.theme-omni"]
+  "recommendations": [
+    "rocketseat.theme-omni",
+    "inlang.vs-code-extension"
+  ]
 }

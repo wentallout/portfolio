@@ -20,7 +20,7 @@
 			<div class="info__section">
 				<div class="section__title">Written by:</div>
 				<ExLink href="https://www.linkedin.com/in/wentallout/">
-					<div class="link">Khoa (@wentallout)</div>
+					<div class="link">Dang Khoa (@wentallout)</div>
 				</ExLink>
 			</div>
 		</div>
@@ -44,7 +44,7 @@
 	.container {
 		padding-top: var(--spaceXL);
 		padding-bottom: var(--spaceXL);
-		background-color: var(--colorBgLayout);
+
 		position: relative;
 	}
 
@@ -56,10 +56,19 @@
 		top: 0;
 		z-index: -1;
 		left: 0;
-		opacity: 0.8;
-		background-image: linear-gradient(var(--colorBgElevated) 1px, transparent 1px),
-			linear-gradient(to right, var(--colorBgElevated) 1px, var(--colorBgLayout) 1px);
-		background-size: 40px 40px;
+
+		--s: 80px; /* the size */
+		--c: var(--colorBgLayout);
+		opacity: 0.4;
+		--_s: calc(2 * var(--s)) calc(2 * var(--s));
+		--_g: 35.36% 35.36% at;
+		--_c: #0000 66%, var(--colorBgElevated) 68% 70%, #0000 72%;
+		background: radial-gradient(var(--_g) 100% 25%, var(--_c)) var(--s) var(--s) / var(--_s),
+			radial-gradient(var(--_g) 0 75%, var(--_c)) var(--s) var(--s) / var(--_s),
+			radial-gradient(var(--_g) 100% 25%, var(--_c)) 0 0 / var(--_s),
+			radial-gradient(var(--_g) 0 75%, var(--_c)) 0 0 / var(--_s),
+			repeating-conic-gradient(var(--c) 0 25%, #0000 0 50%) 0 0 / var(--_s),
+			radial-gradient(var(--_c)) 0 calc(var(--s) / 2) / var(--s) var(--s) var(--c);
 	}
 
 	.post-info {

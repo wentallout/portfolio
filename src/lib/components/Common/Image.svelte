@@ -29,14 +29,13 @@
 		margin-left: auto;
 		margin-right: auto;
 		margin-bottom: var(--spaceS);
+		border: 1px solid var(--colorBorder);
+		border-radius: var(--borderRadius);
+		overflow: hidden;
 	}
 
 	img {
 		max-width: inherit;
-	}
-
-	figure {
-		border: 1px solid var(--colorBorder);
 	}
 
 	.caption {
@@ -44,6 +43,6 @@
 		font-size: var(--fontSizeXS);
 		color: var(--colorTextSecondary);
 		width: 100%;
-		padding: 4px 8px;
+		padding: 4px var(--spaceS);
 	}
 </style>
