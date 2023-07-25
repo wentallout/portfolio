@@ -57,13 +57,14 @@
 	}
 
 	.accordion__btn {
+		display: flex;
+		justify-content: space-between;
 		width: 100%;
 
 		cursor: pointer;
-		padding: var(--spaceXS);
+		padding: var(--spaceXS) var(--spaceS);
 		transition: var(--transition);
-		display: flex;
-		justify-content: space-between;
+
 		align-items: center;
 		flex-direction: row;
 		/* border: 1px solid var(--colorBorder); */
@@ -76,6 +77,6 @@
 	.accordion__text {
 		color: var(--colorTextSecondary);
 		max-width: var(--text-width);
-		padding: var(--spaceXS) var(--spaceXS);
+		padding: var(--spaceXS) var(--spaceS);
 	}
 </style>

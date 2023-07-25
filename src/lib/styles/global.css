@@ -61,16 +61,14 @@ section {
 
 svg {
 	flex: none;
-	flex-shrink: 0;
-	flex-grow: 0;
 }
 
 .icon {
 	transition: var(--transition);
 	filter: drop-shadow(0px 0px 10px currentColor);
-	flex-grow: 0;
-	flex-shrink: 0;
+
 	color: currentColor;
+	flex: none;
 }
 
 *:hover > .icon {

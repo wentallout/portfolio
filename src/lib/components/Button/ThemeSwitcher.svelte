@@ -44,7 +44,7 @@
 		}
 	}
 
-	.toggle__icon {
+	.toggle:hover .toggle__icon {
 		color: var(--colorPrimaryHover);
 	}
 </style>

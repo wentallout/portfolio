@@ -142,7 +142,6 @@
 
 .markdown a:hover {
 	color: var(--colorPrimaryHover);
-	background-color: var(--colorBgElevated);
 }
 
 .markdown li:not(.toc li) {

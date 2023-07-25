@@ -1,0 +1,62 @@
+---
+title: 7 typography rules to achieve great UI
+date: 2023-07-11
+categories:
+    - typography
+---
+
+## 2 font families max
+
+Character widths and weights of each font should be complementary to the other.
+
+Example: Avenir and Georgia have similar character widths; that creates visual harmony.
+
+![](https://i.imgur.com/JrJSlqo.png)
+
+At the same time, font pairings need to have some visual difference; otherwise there's no reason to use the second font.
+
+## Limit line width
+
+When line lengths are too wide, the eyes has to work a lot harder to track the text - following and finding the beginning of the next line.
+
+That makes reading and comprehension more difficult - and much slower.
+
+The common standard is 60 characters per line.
+
+For mobile, it's 30-40 characters per line.
+
+## Choose readability
+
+Make sure your typefaces are readable at all sizes. (devices and resolutions)
+
+## Choose legibility
+
+Make sure all letterforms are clearly distinguishable in your typeface.
+
+Beware of "L" that looks like "I"
+
+Some fonts have poorly specified kerning. Try putting "r" and "n" next to each other. "f" next to "l" might look like an "h"
+
+## Use space between paragraphs.
+
+Visual breaks between paragraphs give the eye a place to rest; the rest actually speeds understanding and comprehension.
+
+Generously spaced content is easier to focus on - and easier to process.
+
+More line-height please => your line-height should be at least equal to half the character height.
+
+## Align text elements in layout using baselines
+
+When you have multiple text elements on a single screen, they should all share points of common alignment.
+
+Even if those chunks are unrelated, alignment helps keep the layout ordered and makes it easy and quick to scan.
+
+![](https://i.imgur.com/cmooNFk.png)
+
+## Use styles to visually differentiate content
+
+When choosing a typeface, you want one that has at least 3 styles: regular, italic, bold.
+
+This sometimes removes the need for more than one font entirely.
+
+![](https://i.imgur.com/iIHGBd2.png)

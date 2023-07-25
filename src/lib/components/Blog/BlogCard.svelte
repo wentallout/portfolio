@@ -26,7 +26,9 @@
 			<Time timestamp={blogDate} relative />
 		</div>
 	</article>
-	<div class="blog__icon"><CaretRight color="var(--colorText)" /></div>
+	<span class="blog__icon">
+		<CaretRight color="var(--colorText)" width="16" height="16" />
+	</span>
 </a>
 
 <style lang="postcss">
@@ -39,7 +41,7 @@
 		/* --- */
 
 		/* SIZE */
-	width: 100%;
+		width: 100%;
 		height: 120px;
 		padding: var(--spaceS) var(--spaceXS);
 		/* --- */
@@ -85,6 +87,7 @@
 	.blog__icon {
 		opacity: 0;
 		transition: var(--transition);
+		flex: none;
 	}
 
 	.blog__title {

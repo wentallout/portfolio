@@ -15,10 +15,8 @@
 
 <style>
 	a {
+		display: flex;
 		font-size: inherit;
-
-		gap: var(--space2XS);
-		flex-direction: row;
 		position: relative;
 	}
 </style>
