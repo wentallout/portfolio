@@ -1,21 +1,19 @@
-<a aria-label="home" href="/" class="cover__logo">
-	<!-- <official-logo class="official-logo" width="100%" height="100%" color="var(--colorText)" /> -->
+<script>
+	export let width = '200px';
+	export let height = width;
+</script>
 
-	<img
-		class="official-logo rotate"
-		width="200px"
-		height="200px"
-		src="/images/coolLogo.svg"
-		alt="2nd logo" />
+<a aria-label="home" href="/" class="cover__logo">
+	<img class="official-logo rotate" {width} {height} src="/images/coolLogo.svg" alt="2nd logo" />
 </a>
 
 <style lang="postcss">
 	.official-logo {
-		filter: drop-shadow(0px 0px 10px var(--colorText));
+		filter: drop-shadow(0px 0px 10px var(--colorPrimary));
 		transition: var(--transition);
 
 		&:hover {
-			color: var(--colorPrimary);
+			color: var(--colorPrimaryHover);
 			filter: drop-shadow(0px 0px 10px var(--colorPrimary));
 			animation: glitch 1.5s ease infinite;
 		}

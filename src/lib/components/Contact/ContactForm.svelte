@@ -40,7 +40,7 @@
 					type="reset"
 					label="Reset"
 					borderColor="var(--colorError)"
-					backgroundColor="transparent"
+					backgroundColor="var(--colorBgLayout)"
 					glowColor="var(--colorError)"
 					labelColor="var(--colorError)">
 					<ArrowCounterClockwise color="var(--colorError)" width="16" height="16" />

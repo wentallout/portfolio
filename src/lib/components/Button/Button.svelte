@@ -9,11 +9,13 @@
 	export let backgroundColor = 'transparent';
 	export let borderColor = backgroundColor;
 	export let border = `1px solid ${borderColor}`;
+
+	export let shadowColor = backgroundColor;
 </script>
 
 <button {type} class="pushable" style:--glow-color={glowColor} style:width>
-	<span class="shadow" />
-	<span class="edge" />
+	<span class="shadow" style:background-color={shadowColor} />
+
 	<span
 		class="front"
 		style:background-color={backgroundColor}
@@ -34,6 +36,7 @@
 		outline-offset: 4px;
 		transition: filter 250ms;
 		width: 100%;
+		border-radius: var(--borderRadiusLight);
 
 		box-shadow: var(--boxShadow);
 	}
@@ -52,21 +55,11 @@
 		height: 100%;
 		border-radius: var(--borderRadiusLight);
 		filter: brightness(0.8);
-
 		will-change: transform;
 		transform: translateY(2px);
 		transition: transform 600ms cubic-bezier(0.3, 0.7, 0.4, 1);
 	}
-	.edge {
-		position: absolute;
-		top: 0;
-		left: 0;
-		width: 100%;
-		height: 100%;
-		border-radius: var(--borderRadiusLight);
 
-		filter: brightness(0.8);
-	}
 	.front {
 		display: flex;
 		flex-direction: row;
@@ -93,7 +86,6 @@
 	}
 	.pushable:hover {
 		filter: brightness(110%);
-
 		filter: drop-shadow(0 0 5px var(--glow-color));
 	}
 	.pushable:hover .front {

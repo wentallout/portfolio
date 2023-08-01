@@ -41,10 +41,10 @@
 		box-shadow: var(--boxShadow);
 	}
 
-	.accordion__btn:has(> .caret-active) {
+	/* .accordion__btn:has(> .caret-active) {
 		font-weight: 600;
 		border-bottom: 1px solid var(--colorBorder);
-	}
+	} */
 
 	.caret {
 		transition: var(--transition);
