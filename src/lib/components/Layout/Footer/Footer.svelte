@@ -19,6 +19,7 @@
 
 <SaosContainer>
 	<footer class="footer text-small">
+		<div class="bg" />
 		<div class="global-container">
 			<ChainDivider />
 			<!-- <img class="footer__bg" src={FooterBg} alt="" /> -->
@@ -122,6 +123,23 @@
 <Marquee />
 
 <style>
+	.bg {
+		height: 100% !important;
+		position: -webkit-sticky;
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		background: url('https://cityhunter-movie.com/assets/2nd/img/bg_news.jpg') bottom center
+			no-repeat;
+		background-size: cover;
+		z-index: -1;
+	}
+
+	:global([color-scheme='light'] .bg) {
+		filter: invert();
+	}
+
 	.nav-list__link {
 		display: flex;
 		flex-direction: row;
@@ -206,7 +224,7 @@
 		/* max-width: 30ch; */
 		font-weight: var(--fontWeightSmall);
 		transition: 0.3s;
-		color: var(--colorTextSecondary);
+		color: var(--colorText);
 		gap: var(--space3XS);
 	}
 

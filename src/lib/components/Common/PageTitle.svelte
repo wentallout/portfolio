@@ -9,7 +9,7 @@
 
 <div class="full-width title">
 	<img alt="title deco" class="title__deco" src={decoImageUrl} />
-	<h1 class="title__text text-3xl tracking-in-expand">{pageTitle}</h1>
+	<h1 class="text-3xl title__text tracking-in-expand">{pageTitle}</h1>
 </div>
 
 <style>
@@ -60,6 +60,7 @@
 
 	:global([color-scheme='light'] .title__deco) {
 		filter: grayscale() invert();
+		opacity: 0.2;
 	}
 
 	@keyframes pageTitleAni {
