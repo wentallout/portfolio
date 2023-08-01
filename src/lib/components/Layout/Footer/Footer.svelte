@@ -13,6 +13,7 @@
 	import GitHubLogo from '~icons/ph/github-logo';
 	import Phone from '~icons/ph/phone';
 	import MapPin from '~icons/ph/map-pin';
+	import Logo from '$components/Layout/Header/Logo.svelte';
 
 	// import FooterBg from '$lib/assets/images/common/footer-bg.png';
 </script>
@@ -27,6 +28,10 @@
 				<div class="list">
 					<div class="list__title">About me</div>
 					<ul class="list__nav">
+						<li class="nav-list__item footer__logo">
+							<img alt="footer logo" width="24" height="24" src="/images/coolLogo.svg" />
+							<span style="color:var(--colorPrimary);font-weight:600">entallout</span>
+						</li>
 						<li class="nav-list__item">
 							Designer in Ho Chi Minh City, Vietnam that designs superb affordable websites and apps
 							for small businesses and non-profits alike.
@@ -134,6 +139,7 @@
 			no-repeat;
 		background-size: cover;
 		z-index: -1;
+		/* filter: brightness(0.4); */
 	}
 
 	:global([color-scheme='light'] .bg) {
@@ -230,5 +236,12 @@
 
 	.nav-list__item a:hover {
 		color: var(--colorPrimary);
+	}
+
+	.footer__logo {
+		display: flex;
+		justify-content: start;
+		align-items: center;
+		width: 100%;
 	}
 </style>
