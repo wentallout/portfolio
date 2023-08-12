@@ -129,3 +129,7 @@ Slug
 ⭐ Blog: Prev/Next Button
 
 ⭐ Blog: Comment using [Giscus](https://giscus.app)
+
+## Stat
+
+![Alt](https://repobeats.axiom.co/api/embed/c17a64a1c0a63ba6cef6618f14b3e39fdf67eb3f.svg "Repobeats analytics image")

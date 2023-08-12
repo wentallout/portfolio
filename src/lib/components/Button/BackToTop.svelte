@@ -1,5 +1,5 @@
 <script>
-	import CaretUp from '~icons/ph/caret-up';
+	import UpIcon from '$lib/assets/images/common/UpIcon.svelte';
 
 	export let showOnPx = 150;
 	let hidden = true;
@@ -28,7 +28,7 @@
 <svelte:window on:scroll={handleOnScroll} />
 
 <button type="button" class="bck2top" on:click={goTop} on:keyup={goTop} class:hidden>
-	<CaretUp width="24" height="24" color="var(--colorBlack)" />
+	<UpIcon size="24" />
 </button>
 
 <style>
@@ -47,8 +47,8 @@
 		/* --- */
 
 		/* COLOR */
-		background-color: var(--colorBgElevated);
-		border: 1px solid var(--colorText);
+
+		border: 1px solid var(--colorBorder);
 		/* --- */
 
 		/* POSITION FIXED ON SCREEN */

@@ -8,8 +8,9 @@
 </script>
 
 <div class="full-width title">
-	<img alt="title deco" class="title__deco" src={decoImageUrl} />
+	<img alt="title deco" class="title__bg" src={decoImageUrl} />
 	<h1 class="text-3xl title__text tracking-in-expand">{pageTitle}</h1>
+	<div class="title__deco" />
 </div>
 
 <style>
@@ -40,7 +41,7 @@
 		z-index: 4;
 	}
 
-	.title__deco {
+	.title__bg {
 		content: '';
 		position: absolute;
 		top: 0;
@@ -58,7 +59,7 @@
 		object-position: top;
 	}
 
-	:global([color-scheme='light'] .title__deco) {
+	:global([color-scheme='light'] .title__bg) {
 		filter: grayscale() invert();
 		opacity: 0.2;
 	}
@@ -79,8 +80,24 @@
 		font-family: var(--fontFancy);
 		color: var(--colorText);
 		z-index: 2;
-
+		position: relative;
 		filter: drop-shadow(0px 0px 2px currentcolor);
+	}
+
+	.title__deco {
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		display: block;
+		content: '';
+		height: 40px;
+		width: 100%;
+		background-image: url(/images/spark.svg);
+		background-repeat: repeat-x;
+	}
+
+	:global([color-scheme='light'] .title__deco) {
+		filter: invert();
 	}
 
 	.tracking-in-expand {

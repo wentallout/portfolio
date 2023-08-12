@@ -8,7 +8,7 @@ module.exports = {
 	settings: {
 		svelte: {}
 	},
-	// overrides: [{ files: ['*.svelte'], processor: 'svelte3/svelte3' }],
+
 	parserOptions: {
 		sourceType: 'module',
 		ecmaVersion: 2022
