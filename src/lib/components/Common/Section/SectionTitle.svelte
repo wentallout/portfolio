@@ -4,7 +4,7 @@
 	export let sectionDesc = '';
 
 	let sectionIcon = {
-		color: 'var(--colorText)',
+		color: 'var(--colorTextTertiary)',
 		height: 32,
 		width: 32
 	};

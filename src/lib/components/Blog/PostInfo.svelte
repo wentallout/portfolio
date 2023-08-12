@@ -28,7 +28,7 @@
 			{#if data.categories.length}
 				<div class="category">
 					{#each data.categories as category}
-						<a class="content-tag" href="/blog/category/{category}">
+						<a class="tag__content" href="/blog/category/{category}">
 							<Tag>
 								{category}
 							</Tag>
@@ -41,6 +41,10 @@
 </header>
 
 <style>
+	.tag__content {
+		text-decoration: none !important;
+	}
+
 	.container {
 		padding-top: var(--spaceXL);
 		padding-bottom: var(--spaceXL);

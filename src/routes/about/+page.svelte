@@ -1,5 +1,6 @@
 <script>
 	import PageTitle from '$components/Common/PageTitle.svelte';
+	import WorldMap from '$lib/assets/images/other/WorldMap.svelte';
 
 	//get this year in javascript
 
@@ -11,6 +12,10 @@
 </script>
 
 <PageTitle pageTitle="About Me" />
+
+<div class="about__map">
+	<WorldMap />
+</div>
 
 <section class="about">
 	<div class="about__info">
@@ -76,6 +81,11 @@
 </section>
 
 <style>
+	.about__map {
+		width: 100%;
+		max-height: 560px;
+	}
+
 	.about {
 		display: flex;
 		flex-direction: column;

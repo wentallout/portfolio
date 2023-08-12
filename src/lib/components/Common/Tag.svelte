@@ -1,9 +1,10 @@
 <script>
-	import Hash from '~icons/ph/hash';
+	import Tag from '~icons/ph/tag';
 </script>
 
 <div class="text-xs tag">
-	<Hash width="16" height="16" />
+	<Tag width="16" height="16" />
+
 	<slot />
 </div>
 

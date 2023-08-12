@@ -1,5 +1,5 @@
 <script>
-	export let width = '200px';
+	export let width = '160px';
 	export let height = width;
 </script>
 

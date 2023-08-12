@@ -6,6 +6,10 @@
 
 	import CaretRight from '~icons/ph/caret-right';
 
+	function removeHyphens(text) {
+		return text.replace(/-/g, ' '); // This line removes all hyphens and replaces them with spaces
+	}
+
 	$: {
 		// Remove zero-length tokens.
 		const tokens = currentPath.split('/').filter((t) => t !== '');
@@ -15,12 +19,11 @@
 		crumbs = tokens.map((t) => {
 			tokenPath += '/' + t;
 			return {
-				label: t.replace('-', ' '),
+				label: removeHyphens(t),
 				href: tokenPath
 			};
 		});
 
-		// Add a way to get home too.
 		crumbs.unshift({ label: 'home', href: '/' });
 	}
 </script>
@@ -35,8 +38,6 @@
 			{:else}
 				<a class="breadcrumb__clickable link" href={c.href}>{c.label}</a>
 				<CaretRight width="16" height="16" />
-
-				<!-- /&nbsp; -->
 			{/if}
 		{/each}
 	</nav>
