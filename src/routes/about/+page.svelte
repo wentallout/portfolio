@@ -64,10 +64,10 @@
 		<div class="about_desc text-small">
 			<ul>
 				<li>Web Design</li>
-				<li>Crypto</li>
+				<li>Mechanical Keyboard</li>
+				<li>Blockchain</li>
 				<li>A.I</li>
 				<li>Music</li>
-				<li>Fashion</li>
 			</ul>
 		</div>
 	</div>

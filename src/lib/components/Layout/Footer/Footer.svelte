@@ -13,9 +13,6 @@
 	import GitHubLogo from '~icons/ph/github-logo';
 	import Phone from '~icons/ph/phone';
 	import MapPin from '~icons/ph/map-pin';
-	import Logo from '$components/Layout/Header/Logo.svelte';
-
-	// import FooterBg from '$lib/assets/images/common/footer-bg.png';
 </script>
 
 <SaosContainer>
@@ -130,7 +127,6 @@
 <style>
 	.bg {
 		height: 100% !important;
-		position: -webkit-sticky;
 		position: absolute;
 		top: 0;
 		left: 0;
@@ -139,7 +135,6 @@
 			no-repeat;
 		background-size: cover;
 		z-index: -1;
-		/* filter: brightness(0.4); */
 	}
 
 	:global([color-scheme='light'] .bg) {
