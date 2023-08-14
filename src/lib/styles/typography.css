@@ -144,7 +144,7 @@ html {
 
 [color-scheme='light'] {
 	--fontWeightXS: 400;
-	--fontWeightSmall: 500;
+	--fontWeightSmall: 400;
 	--fontWeightMid: 500;
 	--fontWeightLarge: 600;
 }

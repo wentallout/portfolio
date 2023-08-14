@@ -3,11 +3,11 @@
 	export let projectName = '';
 	export let what = '';
 	export let result = '';
-
 	export let year = '';
 	export let thumbnail;
 
 	import ArrowRight from '~icons/ph/arrow-right';
+
 </script>
 
 <a href={linkToDetail}>
