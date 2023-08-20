@@ -131,8 +131,7 @@
 		top: 0;
 		left: 0;
 		width: 100%;
-		background: url('https://cityhunter-movie.com/assets/2nd/img/bg_news.jpg') bottom center
-			no-repeat;
+		background: url('/images/bg_news.jpg') bottom center no-repeat;
 		background-size: cover;
 		z-index: -1;
 	}
@@ -235,7 +234,7 @@
 
 	.footer__logo {
 		display: flex;
-		justify-content: start;
+		justify-content: flex-start;
 		align-items: center;
 		width: 100%;
 	}

@@ -9,7 +9,7 @@
 			<div class="hero__block">
 				<div class="hero__name text-2xl">
 					Khoa is a
-					<span class="focus">UI/UX Designer</span>
+					<div class="focus">UI/UX Designer</div>
 				</div>
 				<div class="hero__text text-small">
 					I create practical and user-friendly products that bring real value and enhance people's

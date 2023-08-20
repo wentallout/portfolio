@@ -76,6 +76,8 @@
 		right: 0;
 		opacity: 0.05;
 		scale: 1.5;
+		transform: rotate(45deg);
+		transition: var(--transition);
 	}
 
 	.section__text {
@@ -93,7 +95,7 @@
 	}
 	.tool__block {
 		width: 100%;
-		--min: 20ch;
+		--min: 240px;
 		display: grid;
 		grid-gap: var(--spaceM);
 		grid-template-columns: repeat(auto-fit, minmax(min(100%, var(--min)), 1fr));
@@ -126,6 +128,11 @@
 		border: 0;
 		z-index: var(--zIndexMax);
 		outline: 0;
+		--colorText: var(--colorPrimary);
+	}
+
+	.block__section:hover .section__svg {
+		transform: rotate(0deg);
 	}
 
 	@media (min-width: 992px) {

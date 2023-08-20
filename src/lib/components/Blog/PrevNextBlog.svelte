@@ -72,7 +72,7 @@
 	</div>
 {/if}
 
-<style>
+<style lang="postcss">
 	.prevnext {
 		--min: 20ch;
 		--gap: var(--spaceS);
@@ -106,6 +106,11 @@
 		align-items: center;
 
 		min-height: 132px;
+		border-radius: var(--borderRadius);
+
+		&:hover {
+			background-color: var(--colorBgElevated);
+		}
 	}
 
 	.prevnext__title {
