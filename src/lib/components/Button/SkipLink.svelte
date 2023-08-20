@@ -14,7 +14,7 @@
 		padding: var(--spaceS);
 		translate: 0 -100%;
 		transition: translate 150ms ease-in-out;
-		transition: background-color 0.5s;
+
 		z-index: var(--zIndexMax);
 
 		display: flex;

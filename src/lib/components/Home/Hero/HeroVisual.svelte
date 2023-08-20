@@ -150,11 +150,9 @@
 <style>
 	.hero__visual {
 		display: none;
-		width: 0;
-		height: 0;
 	}
 
-	@media (min-width: 768px) {
+	@media (min-width: 992px) {
 		.hero__visual {
 			overflow: visible;
 			position: absolute;
@@ -163,12 +161,12 @@
 			z-index: -1;
 			display: block;
 
-			width: 400px;
-			height: 400px;
+			width: 500px;
+			height: auto;
 			aspect-ratio: 1/1;
 
 			top: 50%;
-			right: 0;
+			right: -10%;
 			transform: translate(0, -50%);
 		}
 	}

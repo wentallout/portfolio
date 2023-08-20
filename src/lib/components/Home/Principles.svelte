@@ -54,7 +54,7 @@
 	}
 
 	.principle {
-		--min: 40ch;
+		--min: 35ch;
 		--gap: var(--spaceM);
 
 		display: grid;

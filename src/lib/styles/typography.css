@@ -1,36 +1,39 @@
 @font-face {
-	font-family: 'Normal';
+	font-display: swap;
+	font-family: 'Inter';
 	src: url('/fonts/Inter.woff2') format('woff2');
-
 	font-weight: 300 600;
 	font-stretch: normal;
 	font-style: normal;
-	font-display: swap;
 	font-named-instance: 'Regular';
 }
 
 @font-face {
-	font-family: 'Fancy';
-	src: url('/fonts/MK.woff2') format('woff2');
-	font-style: normal;
 	font-display: swap;
+	font-family: 'Gilroy';
+	src: url('/fonts/Gilroy.woff2') format('woff2');
+	font-style: normal;
 }
 
-@font-face {
+/* @font-face {
 	font-family: 'fallback';
 	size-adjust: 107%;
 	ascent-override: 90%;
 	src: local('Arial');
 	font-display: swap;
-}
+} */
 
 pre code {
 	font-feature-settings: normal;
 }
 
+.balance {
+	text-wrap: balance;
+}
+
 :root {
-	--fontNormal: 'Normal';
-	--fontFancy: 'Fancy';
+	--fontNormal: 'Inter', 'Inter override';
+	--fontFancy: 'Gilroy', 'Gilroy override';
 
 	/* FONT SIZE */
 	--fontSizeXS: clamp(0.9rem, calc(0.9rem + -0.05vw), 0.92rem);
@@ -63,8 +66,7 @@ pre code {
 html {
 	text-rendering: optimizeLegibility;
 	-webkit-font-smoothing: antialiased;
-	font-family: var(--fontNormal), 'fallback', sans-serif, -apple-system, BlinkMacSystemFont,
-		'Segoe UI', Roboto, Helvetica, Arial, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
+	font-family: var(--fontNormal);
 	font-weight: var(--fontWeightSmall);
 }
 

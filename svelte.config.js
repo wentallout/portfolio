@@ -65,9 +65,10 @@ const config = {
 
 	vitePlugin: {
 		inspector: {
-			toggleKeyCombo: 'meta-shift',
+			toggleKeyCombo: 'control-shift',
+			holdMode: true,
 			showToggleButton: 'always',
-			toggleButtonPos: 'bottom-right'
+			toggleButtonPos: 'bottom-left'
 		}
 	}
 };

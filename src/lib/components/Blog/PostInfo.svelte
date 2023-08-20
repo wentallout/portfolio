@@ -50,29 +50,12 @@
 		padding-bottom: var(--spaceXL);
 
 		position: relative;
-	}
 
-	.container:before {
-		position: absolute;
-		content: '';
-		width: 100%;
-		height: 100%;
-		top: 0;
-		z-index: -1;
-		left: 0;
-
-		--s: 80px; /* the size */
-		--c: var(--colorBgLayout);
-		opacity: 0.4;
-		--_s: calc(2 * var(--s)) calc(2 * var(--s));
-		--_g: 35.36% 35.36% at;
-		--_c: #0000 66%, var(--colorBgElevated) 68% 70%, #0000 72%;
-		background: radial-gradient(var(--_g) 100% 25%, var(--_c)) var(--s) var(--s) / var(--_s),
-			radial-gradient(var(--_g) 0 75%, var(--_c)) var(--s) var(--s) / var(--_s),
-			radial-gradient(var(--_g) 100% 25%, var(--_c)) 0 0 / var(--_s),
-			radial-gradient(var(--_g) 0 75%, var(--_c)) 0 0 / var(--_s),
-			repeating-conic-gradient(var(--c) 0 25%, #0000 0 50%) 0 0 / var(--_s),
-			radial-gradient(var(--_c)) 0 calc(var(--s) / 2) / var(--s) var(--s) var(--c);
+		background-color: transparent;
+		background-image: url('/images/space.svg');
+		background-size: 100% 100%;
+		background-position: center;
+		background-repeat: no-repeat;
 	}
 
 	.post-info {
