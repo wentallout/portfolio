@@ -41,6 +41,7 @@
 					label="Reset"
 					borderColor="var(--colorError)"
 					backgroundColor="var(--colorBgLayout)"
+					shadowColor="var(--colorError)"
 					glowColor="var(--colorError)"
 					labelColor="var(--colorError)">
 					<ArrowCounterClockwise color="var(--colorError)" width="16" height="16" />

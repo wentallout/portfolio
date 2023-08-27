@@ -9,7 +9,7 @@
 		<LogoNotAi />
 	</ExLink>
 	<ExLink style="display:block" href="https://kit.svelte.dev/">
-		<LogoSvelte height="42" width="auto" />
+		<LogoSvelte height="42" width="100%" />
 	</ExLink>
 </div>
 

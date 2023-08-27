@@ -41,7 +41,7 @@
 		box-shadow: var(--boxShadow);
 	}
 
-	@media (min-width: 992px) {
+	@media (min-width: 768px) {
 		.pushable {
 			width: fit-content;
 		}
@@ -54,7 +54,7 @@
 		width: 100%;
 		height: 100%;
 		border-radius: var(--borderRadiusLight);
-		filter: brightness(0.8);
+		filter: brightness(0.7);
 		will-change: transform;
 		transform: translateY(2px);
 		transition: transform 600ms cubic-bezier(0.3, 0.7, 0.4, 1);

@@ -3,12 +3,7 @@
 </script>
 
 <div class="hero__visual">
-	<svg
-		width="822"
-		height="602"
-		viewBox="0 0 822 602"
-		fill="none"
-		xmlns="http://www.w3.org/2000/svg">
+	<svg viewBox="0 0 822 602" fill="none" xmlns="http://www.w3.org/2000/svg">
 		<g clip-path="url(#clip0_130_35)">
 			<path
 				d="M800.344 584.002L792.2 586.607L778.279 556.436L790.298 552.591L800.344 584.002Z"
@@ -152,22 +147,25 @@
 		display: none;
 	}
 
+	.hero__visual svg {
+		width: 100%;
+		height: 100%;
+	}
+
 	@media (min-width: 992px) {
 		.hero__visual {
 			overflow: visible;
-			position: absolute;
+		position: absolute;
 			top: 0;
 			right: 0;
 			z-index: -1;
 			display: block;
 
-			width: 500px;
-			height: auto;
+			height: 100%;
+
 			aspect-ratio: 1/1;
 
-			top: 50%;
-			right: -10%;
-			transform: translate(0, -50%);
+			/* transform: translate(0, -50%); */
 		}
 	}
 

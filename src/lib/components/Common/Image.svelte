@@ -6,6 +6,7 @@
 	export let width;
 	export let height;
 
+	// try not to touch this
 	export let loading = 'lazy';
 	export let decoding = 'async';
 
