@@ -10,10 +10,11 @@
 				<div class="hero__name text-2xl">
 					Khoa is a
 					<div class="focus">UI/UX Designer</div>
+					<div class="focus">+ Developer</div>
 				</div>
 				<div class="hero__text text-small">
 					I create practical and user-friendly products that bring real value and enhance people's
-					lives.
+					lives. My projects promote healthy and eco friendly lifestyles.
 
 					<a class="hero__link link" href="/about">
 						<span>More about me</span>
@@ -24,7 +25,7 @@
 					<a href="/project">
 						<Button
 							label="See All Projects"
-							labelColor="#000"
+							labelColor="var(--colorBgLayout)"
 							backgroundColor="var(--colorPrimary)"
 							glowColor="var(--colorPrimary)" />
 					</a>
@@ -33,18 +34,22 @@
 						<Button
 							label="Contact"
 							labelColor="var(--colorText)"
-							backgroundColor="transparent"
+							backgroundColor="var(--colorBgLayout)"
+							shadowColor="var(--colorTextSecondary)"
 							borderColor="var(--colorText)" />
 					</a>
 				</div>
 			</div>
-
-			<HeroVisual />
 		</div>
+		<HeroVisual />
 	</div>
 </section>
 
 <style>
+	.full-width {
+		position: relative;
+	}
+
 	.hero__link {
 		display: block;
 		color: var(--colorPrimary);
@@ -93,8 +98,8 @@
 	.hero__btn {
 		margin-top: var(--spaceL);
 		width: 100%;
-
 		display: flex;
+		flex-direction: row;
 		gap: var(--spaceS);
 		flex-wrap: wrap;
 	}

@@ -5,10 +5,65 @@ categories:
     - fundamental
 ---
 
+## 3 main types
+
+Background, Behavioral and Skills
+
+### Background
+
+- Name some of your favorite apps and experiences you like
+- Tell me about the trajectory of your career - what are the next steps?
+
+### Behavioral
+For behavioral questions, you need to understand the STAR method. The STAR Method: Situation, Task, Action, Result.
+
+- Situation: set the scene.
+- Task: the problems you were given.
+- Actions: specific steps you took.
+- Results: the outcome.
+
+### Cross functional role
+
+Persuading others that design you come up is the right one
+
+Questions to expect:
+- How do you deal with people on your team who have opposing viewpoints on your design?
+
+- Situation: This happened to me recently, I created a concept for a sign up screen and the engineer felt the design didn't solve the problem
+- Task: I gather data that highlight the drop off point on the page
+- Action: I set up time with him and walk him through the data and show him how the new design solve the drop off point
+- Results: He changed his mind and became a strong advocate for the design.
+
+Other way to answer like: I think it's important to have everyone onboard with the design, so I would gather some data to highlight the problem, and walk the team through my design solution so they understand how I came to that conclusion. I'd also suggest that we iterate on the design and test it after launch to make sure we are tracking the right things.
+
+Another strange question to expect: "Do you feel comfortable wireframing in Sketch".
+-> Answer: I understand the features of Sketch, but my previous companies have used different tools. I feel confident I can adapt what I know from those tools to learn it pretty quickly, especially if that's what the team uses.
+
+## Interview Experience
+
+Talking to the hiring manager
+
+What do they think:
+
+- Are you a fit for the role? 
+- Are you a fit for the team?
+- Can you handle the work?
+- What strengths would you bring to the team?
+
+They will ask you like: "Walk me through one of the projects in your portfolio, and some of the trade-offs you had to make in the design."
+
+
+How to talk about your work? Let's focus on one project first:
+- Describe the goal
+- Talk about how you achieve that goal?
+- Describe in detail any design decisions or projects related issues
+
+Question to ask them:
+- What's the design process like here?
+- What challenges is the team facing right now?
+
+
 ## General Questions
-
-
-
 
 ### 1. Could you tell me about yourself and describe your background in brief?
 
@@ -130,3 +185,4 @@ Here we built an app for 9yo to do something...
 - Don't rush, dont be picture perfect, casually talk through your project
 
 4/ How you measure your success
+

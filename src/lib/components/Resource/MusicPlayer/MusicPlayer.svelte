@@ -159,7 +159,7 @@
 					class="download"
 					href={'/ringtones/' + $musicList[i].audio}
 					download={$musicList[i].audio}>
-					<Download width="16" height="16" color="var(--colorWhite)" />
+					<Download width="16" height="16" color="currentColor" />
 				</a>
 			</button>
 		{/each}
@@ -210,7 +210,6 @@
 	}
 
 	.download {
-		background-color: var(--colorBlack);
 		width: 40px;
 		height: 40px;
 		display: flex;
@@ -219,9 +218,11 @@
 		border-radius: 100%;
 		z-index: 2;
 		margin-left: auto;
+		transition: var(--transition);
 
 		&:hover {
-			filter: brightness(1.3);
+			outline: 1px solid var(--colorText);
+			scale: 1.2;
 		}
 	}
 

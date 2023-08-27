@@ -14,10 +14,12 @@
 	import Breadcrumb from '$lib/components/Layout/Other/Breadcrumb.svelte';
 
 	import '$lib/styles/global.css';
+	import Analytics from '$lib/components/Analytics/Analytics.svelte';
 	export let data;
 </script>
 
 <!-- MISC START -->
+<Analytics />
 <SkipLink />
 <ScrollProgressBar color="var(--colorPrimary)" />
 <ProgressBar />

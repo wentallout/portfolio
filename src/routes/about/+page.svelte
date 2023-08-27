@@ -2,8 +2,6 @@
 	import PageTitle from '$components/Common/PageTitle.svelte';
 	import WorldMap from '$lib/assets/images/other/WorldMap.svelte';
 
-	//get this year in javascript
-
 	let date = new Date();
 
 	let year = date.getFullYear();
