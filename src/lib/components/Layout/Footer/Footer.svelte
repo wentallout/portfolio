@@ -30,8 +30,8 @@
 							<span style="color:var(--colorPrimary);font-weight:600">entallout</span>
 						</li>
 						<li class="nav-list__item">
-							Designer in Ho Chi Minh City, Vietnam that designs superb affordable websites and apps
-							for small businesses and non-profits alike.
+							Dang Khoa is a Designer+Developer in Ho Chi Minh City, Vietnam that creates superb
+							affordable websites and apps for small businesses.
 						</li>
 					</ul>
 				</div>

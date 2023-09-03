@@ -1,27 +1,40 @@
 @font-face {
 	font-display: swap;
+	font-style: normal;
 	font-family: 'Inter';
 	src: url('/fonts/Inter.woff2') format('woff2');
 	font-weight: 300 600;
-	font-stretch: normal;
-	font-style: normal;
-	font-named-instance: 'Regular';
 }
 
 @font-face {
-	font-display: swap;
-	font-family: 'Gilroy';
-	src: url('/fonts/Gilroy.woff2') format('woff2');
+	font-family: 'Inter Fallback';
 	font-style: normal;
+	font-weight: 400;
+	src: local('Arial');
+	ascent-override: 90%;
+	descent-override: 22.43%;
+	line-gap-override: 0%;
+	size-adjust: 107.64%;
 }
 
-/* @font-face {
-	font-family: 'fallback';
-	size-adjust: 107%;
-	ascent-override: 90%;
-	src: local('Arial');
+@font-face {
+	font-family: 'Gilroy';
+	font-style: normal;
+	font-weight: 400;
 	font-display: swap;
-} */
+	src: url('/fonts/Gilroy.woff2') format('woff2');
+}
+
+@font-face {
+	font-family: 'Gilroy Fallback';
+	font-style: normal;
+	font-weight: 400;
+	src: local('Arial');
+	ascent-override: 72.87%;
+	descent-override: 21.4%;
+	line-gap-override: 22.44%;
+	size-adjust: 106.07%;
+}
 
 pre code {
 	font-feature-settings: normal;
@@ -32,8 +45,8 @@ pre code {
 }
 
 :root {
-	--fontNormal: 'Inter', 'Inter override';
-	--fontFancy: 'Gilroy', 'Gilroy override';
+	--fontNormal: 'Inter', 'Inter Fallback';
+	--fontFancy: 'Gilroy', 'Gilroy Fallback';
 
 	/* FONT SIZE */
 	--fontSizeXS: clamp(0.9rem, calc(0.9rem + -0.05vw), 0.92rem);
