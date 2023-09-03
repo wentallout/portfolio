@@ -5,7 +5,7 @@
 </script>
 
 {#key data.pathname}
-	<div in:fade|global={{ duration: 150, delay: 150 }} out:blur|global={{ duration: 200 }}>
+	<div in:fade|global={{ duration: 150, delay: 150 }} out:blur|global={{ duration: 100 }}>
 		<slot />
 	</div>
 {/key}

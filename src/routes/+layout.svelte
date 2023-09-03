@@ -15,7 +15,16 @@
 
 	import '$lib/styles/global.css';
 	import Analytics from '$lib/components/Analytics/Analytics.svelte';
+	import { onNavigate } from '$app/navigation';
 	export let data;
+
+	onNavigate(() => {
+		if (!document.startViewTransition) return;
+
+		return new Promise((fulfil) => {
+			document.startViewTransition(() => new Promise(fulfil));
+		});
+	});
 </script>
 
 <!-- MISC START -->

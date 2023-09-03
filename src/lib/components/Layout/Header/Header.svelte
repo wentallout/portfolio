@@ -73,6 +73,18 @@
 </div>
 
 <style lang="postcss">
+	:root {
+		view-transition-name: none;
+	}
+
+	::view-transition-group(indicator) {
+		animation-duration: 0.3s;
+	}
+
+	.active-page::after {
+		view-transition-name: indicator;
+	}
+
 	.nav {
 		/* FONT */
 		font-size: var(--fontSizeBase);
@@ -90,8 +102,24 @@
 	}
 
 	.active-page {
+		position: relative;
 		color: var(--colorPrimary) !important;
 		border-top: 1px solid inherit;
+
+		/*  */
+	}
+
+	.active-page::after {
+		content: '';
+		position: absolute;
+		top: 0;
+		left: 0;
+
+		/* border-bottom: 1px solid white; */
+
+		width: 100%;
+		inset: 0 -10px 30px;
+		background: radial-gradient(ellipse at top, currentcolor, transparent 50%);
 	}
 
 	.active-page-mobile {
@@ -257,9 +285,9 @@
 		width: 0;
 	}
 
-	.nav-list__item:hover::before {
+	/* .nav-list__item:hover::before {
 		width: 100%;
 		inset: 0 -10px 30px;
 		background: radial-gradient(ellipse at top, currentcolor, transparent 50%);
-	}
+	} */
 </style>

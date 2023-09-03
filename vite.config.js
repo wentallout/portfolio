@@ -1,7 +1,7 @@
 import { sveltekit } from '@sveltejs/kit/vite';
 
 import Icons from 'unplugin-icons/vite';
-import { FontaineTransform } from 'fontaine';
+
 import { imagetools } from 'vite-imagetools';
 import svg from '@poppanator/sveltekit-svg';
 
@@ -9,7 +9,6 @@ import svg from '@poppanator/sveltekit-svg';
 const config = {
 	plugins: [
 		sveltekit(),
-		FontaineTransform.vite({ fallbacks: ['Arial', 'Roboto'] }),
 		svg({
 			includePaths: ['./src/lib/assets/images/'],
 			svgoOptions: {

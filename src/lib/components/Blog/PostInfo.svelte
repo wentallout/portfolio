@@ -11,7 +11,7 @@
 
 <header class="container full-width">
 	<div class="global-container">
-		<h1>{data.title}</h1>
+		<h1 class="post-title">{data.title}</h1>
 		<div class="post-info text-small">
 			<div class="info__section">
 				<div class="section__title">Last updated:</div>

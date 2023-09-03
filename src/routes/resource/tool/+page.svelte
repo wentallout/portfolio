@@ -4,6 +4,8 @@
 	// import { resourceData, getResource } from '$lib/stores/resourceStore.js';
 	import Wrench from '~icons/ph/wrench';
 
+	import Copy from '~icons/ph/copy';
+
 	let baseFontSize = 16;
 	let pxValue;
 	let remValue;
@@ -32,13 +34,25 @@
 
 	<div class="converter">
 		<div class="input-group">
+			<button
+				disabled={!pxValue}
+				class="converter__copy"
+				type="button"
+				on:click={copyToClipboard(pxValue)}>
+				<Copy width="24" height="24" />
+			</button>
 			<input bind:value={pxValue} type="number" name="px" id="px" />
 			<label class="converter__label" for="px">PX</label>
-			<button class="converter__copy" type="button" on:click={copyToClipboard(pxValue)}
-				>Copy</button>
 		</div>
 
 		<div class="input-group">
+			<button
+				disabled={!remValue}
+				class="converter__copy"
+				type="button"
+				on:click={copyToClipboard(remValue)}>
+				<Copy width="24" height="24" />
+			</button>
 			<input
 				style="color:var(--colorPrimary);"
 				bind:value={remValue}
@@ -49,8 +63,6 @@
 				name="rem"
 				id="rem" />
 			<label class="converter__label" for="rem">REM</label>
-			<button class="converter__copy" type="button" on:click={copyToClipboard(remValue)}
-				>Copy</button>
 		</div>
 	</div>
 </section>
@@ -79,10 +91,15 @@
 		background-color: var(--colorPrimary);
 		align-self: stretch;
 		color: var(--colorBlack);
+		min-width: 40px;
 
 		&:hover {
 			cursor: pointer;
 			background-color: var(--colorPrimaryHover);
+		}
+
+		&:disabled {
+			opacity: 0;
 		}
 	}
 
