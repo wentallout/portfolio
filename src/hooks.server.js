@@ -1,4 +1,4 @@
-const PUBLIC_DOMAIN = 'wentallout.tech';
+const PUBLIC_DOMAIN = 'wentallout.io.vn';
 
 const directives = {
 	'base-uri': ["'self'"],

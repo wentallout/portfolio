@@ -1,6 +1,6 @@
 ---
 title: Future CSS Features
-date: 2023-26-06
+date: 2023-06-26
 categories:
     - frontend
 ---

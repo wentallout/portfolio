@@ -25,7 +25,7 @@ npm run dev
 
 This is a portfolio/blog built using SvelteKit. Hosted on Netlify.
 
-My portfolio URL: [wentallout.tech](https://wentallout.tech)
+URL: [wentallout.io.vn](https://wentallout.io.vn)
 
 ## 🤩 What makes this special?
 
@@ -132,4 +132,4 @@ Slug
 
 ## Stat
 
-![Alt](https://repobeats.axiom.co/api/embed/c17a64a1c0a63ba6cef6618f14b3e39fdf67eb3f.svg "Repobeats analytics image")
+![Alt](https://repobeats.axiom.co/api/embed/c17a64a1c0a63ba6cef6618f14b3e39fdf67eb3f.svg 'Repobeats analytics image')

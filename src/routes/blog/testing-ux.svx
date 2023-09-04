@@ -1,0 +1,105 @@
+---
+title: How to test user experience
+date: 2023-09-04
+categories:
+    - ux
+---
+
+## What to after designing?
+
+Ok you finished designed your project, what now? you have to test it. Guess what? you need to plan your test early.
+
+### Why plan testing early?
+
+- Additional clarity on scope: What browser? What devices?
+- Less explaining: setting expectations now for what you'll test reduces misunderstanding.
+- Less stress before, during and after launch: If you've thoroughly tested everything, you can be confident everything performs as expected.
+
+Simple: Anything that isn't on the test plan? not happening.
+
+###  You can't test everything
+
+Be realistic about what matters most - because you can't do it all. Three good reasons:
+- Budgets are finite. You're working for a client... with a budget, always.
+- Schedules are finite. If testing isn't on the schedule, it'll be rushed or left out.
+- Not every scenario matters. Your website may not need to work on hundreds of devices.
+
+## Identify who you're testing for
+
+Focus on scenarios most relevant to your audience:
+- What are the most popular devices they'll use? iPad, iPhone
+- What OS/Browser are most popular among your audience? Win 10, OS X
+- What connection speeds do they have? 3G, 4G, broadband
+- How tech savvy is your demographic? Woman between 18-35, fairly tech-savvy, smartphone owner, social media user.
+
+If you don't have the luxury of surveying actual users, there is a wealth of useful statistical information available online. Here are some sites:
+
+- W3 Schools: w3schools.com/browsers
+- Net Market Share: http://www.netmarketshare.com
+- StatCounter: http://gs.statcounter.com
+
+## Prioritize browser and device support
+
+Fully Supported Browsers and devices (all content must be readable, all functionality must work properly, minimal deviation from approved UI Design)
+
+Partially supported browsers and devices: all content must be readable, navigation must work, login functionality must degrade gracefully
+
+Unsupported browsers and devices: no testing will be performed 
+
+## Decide what to test
+
+There are 6 core types of testing you should perform:
+
+- **Functionality** testing
+- **Usability** testing
+- **Errors and Exception** testing
+- **Compatibility** testing
+- **Performance** testing
+- **Security** testing
+
+### Functionality testing
+
+a. Test all links:
+
+- test all internal and outgoing links, links that jump within single pages, links used to send email, check for orphan pages (pages that can't be accessed cuz nothing links to it)
+
+b. Test forms on all pages:
+
+- Check validations on each field
+- Check default values of fields, if they exist
+- Test incorrect input into form fields
+- Test options to create, delete, view or modify forms.
+
+c. Test cookies:
+
+- Test functionality and security by enabling/disabling cookies in your browser.
+- Test to ensure cookies are encrypted before writing to the user's device.
+- For session-based cookies, check login sessions and user stats.
+
+d. Test HTML/CSS validation:
+
+- Validate the site for HTML syntax errors: http://validator.w3.org 
+- Check that the site is crawlable to search engines: https://www.google.com/webmasters/tools
+
+e. Test database connections and consistency
+- Check data integrity and errors while you edit, delete, modify the forms or do any DB related functionality.
+- Ensure all database queries are executing correctly.
+- Ensure data is retrieved correctly.
+- Ensure data is updated correctly.
+
+### Usability testing
+
+This covers navigation, content, presentation and task success.
+
+- User surveys such as Survey Monkey
+- Videotaped, moderated user sessions
+- Online services such as: 
+    - UserTesting
+    - Loop 11
+    - Optimizely
+
+
+
+
+
+

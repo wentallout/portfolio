@@ -131,13 +131,14 @@
 		top: 0;
 		left: 0;
 		width: 100%;
-		background: url('/images/bg_news.jpg') bottom center no-repeat;
+		background: url('/images/footer_bg.png') center no-repeat;
 		background-size: cover;
 		z-index: -1;
+		filter: brightness(0.4);
 	}
 
 	:global([color-scheme='light'] .bg) {
-		filter: invert();
+		display: none;
 	}
 
 	.nav-list__link {
@@ -167,15 +168,6 @@
 		position: relative;
 		/* Width */
 		max-width: 100vw;
-
-		background-color: linear-gradient(
-			0deg,
-			var(--colorBgContainer) 0%,
-			var(--colorBgElevated) 100%
-		);
-
-		background-image: radial-gradient(var(--colorBgElevated) 1px, transparent 1px);
-		background-size: 5px 5px;
 	}
 
 	.footer__list {
