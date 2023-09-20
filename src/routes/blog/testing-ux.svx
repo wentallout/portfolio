@@ -1,5 +1,5 @@
 ---
-title: How to test user experience
+title: UI/UX Testing simplified
 date: 2023-09-04
 categories:
     - ux
@@ -89,14 +89,87 @@ e. Test database connections and consistency
 
 ### Usability testing
 
-This covers navigation, content, presentation and task success.
+This covers navigation, content, presentation and task success. Testing can be done via several methods:
 
-- User surveys such as Survey Monkey
+- SurveyMonkey (surveymonkey.com)
 - Videotaped, moderated user sessions
 - Online services such as: 
     - UserTesting
     - Loop 11
     - Optimizely
+
+a. Test ease and effectiveness of navigation:
+
+- Do users find what they need easily?
+- How long does it take them to find what they're looking for?
+- Does the structure and organization of the navigation match the user's expectation?
+- Are links labeled with terms that make sense to users?
+
+b. Test usefulness of content:
+
+- Does content match what your users want or need?
+- Can users find & read the content they need?
+- Do they understand the content?
+- Can they act on the content?
+
+c. Test the effectiveness of UI:
+
+- Do UI elements **clearly separate** navigation from content?
+- Do UI elements distract or create a barrier between the user and the content? (ads or popup)
+- Do UI elements clearly signal what can be acted upon or interacted with - and how to do so? (do buttons look like buttons?)
+- Do UI elements work together to guide the user through a particular process or task flow?
+
+d. Test task success:
+
+- Were users able to accomplish the key task they came to the site to perform?
+- If so, did they feel satisfied - or angry and frustrated?
+- If not, what prevented them from succeeding?
+- What's the consequence of each task failure - lost customers, increased support costs, inaccurate data captured?
+
+### Errors and Exceptions testing
+
+This covers what happens when things go wrong - a user enters bas information, stops a process, the system crashes, etc.
+
+- Test that interactions **between servers** are executed properly.
+- Test that errors are handled properly.
+- If the database or web server returns an error, make sure error messages are displayed appropriately to users.
+- Make sure error messages are understandable and instructive.
+- Test for transaction interruption or lost connection to a web server
+
+### Compatibility testing
+
+There are 2 main categories: browser and OS.
+
+a. Browser compatibility
+
+- Does the website display consistently in different browsers?
+- Does the website display consistently in the same browser across diffrent OS platforms?
+- Does all functionality (links, forms, etc) work properly across diffrent browsers?
+- Comprehensive list of online tools that simplify testing:
+
+
+b. OS and device compatibility
+
+- Does all functionality (links, forms, etc) work properly across different OS platforms and devices?
+- Do web service calls or API functions work properly across all OS platforms and devices?
+
+### Performance Testing
+
+This measures how well the website can accommodate heavy user activity. It should include:
+
+- Web Load Testing: what happens when a high volume of users are accessing or requesting the same page? the site should be able to handle simultaneous user requests, large input data from users, simultaneous database connections, etc.
+- Web Stress Testing: what happens when the site is stretched beyond its specification limits? How does the site and the server reacts to stress and recovers from crashes? Stress is generally tested on input fields, login processes and sign up areas.
+
+### Security Testing
+
+Security testing measures how well the website - and any user, product or transactional data it captures and transmits - is protected against hackers. Here are some ways to test security:
+
+- Paste an internal url (https) directly into the browser's address bar - without logging in. Internal pages should not open.
+- Try changing url options directly while logged in with a specific user ID. Example: if you're checking site statistics with publisher site ID=123. Try changing that ID parameter to a different site ID. Access should be denied.
+- Try some invalid entried in input fields like login username, password, or input text boxes. Check the system reaction.
+- Web directories or files should not be directly accessible - unless a specific download option exists in the UI.
+- Test whether SSL is used for security measures. If used, you should see a warning when switching from non-secure (http) pages to secure (https) pages and vice versa.
+- Check for logs of all transactions, error messages and security breach attempts on your web server (usually via CP)
 
 
 

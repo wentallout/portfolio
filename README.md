@@ -5,7 +5,7 @@
 ![GitHub commit activity](https://img.shields.io/github/commit-activity/m/wentallout/portfolio?style=for-the-badge)
 ![GitHub repo size](https://img.shields.io/github/repo-size/wentallout/portfolio?style=for-the-badge)
 
-# Khoa's Portfolio [![Netlify Status](https://api.netlify.com/api/v1/badges/7bf37fa7-ec78-4efd-aa9a-1a18a4fc62e4/deploy-status)](https://app.netlify.com/sites/khoa-design/deploys)
+# Portfolio [![Netlify Status](https://api.netlify.com/api/v1/badges/7bf37fa7-ec78-4efd-aa9a-1a18a4fc62e4/deploy-status)](https://app.netlify.com/sites/khoa-design/deploys)
 
 ![Banner](https://raw.githubusercontent.com/wentallout/wentallout/773d77e9c040bd20e5002d41738139946d9bd85d/images/portfolio-banner.svg)
 
@@ -133,3 +133,7 @@ Slug
 ## Stat
 
 ![Alt](https://repobeats.axiom.co/api/embed/c17a64a1c0a63ba6cef6618f14b3e39fdf67eb3f.svg 'Repobeats analytics image')
+
+[![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2Fwentallout%2Fportfolio.svg?type=large&issueType=license)](https://app.fossa.com/projects/git%2Bgithub.com%2Fwentallout%2Fportfolio?ref=badge_large&issueType=license)
+
+[⬆ Back to Top](#)

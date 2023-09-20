@@ -58,6 +58,7 @@
 		"stylelint-order": "^6.0.3",
 		"svelte": "^3.59.2",
 		"svelte-check": "^3.5.0",
+		"svelte-meta-tags": "^3.0.4",
 		"svelte-paginate": "^0.1.0",
 		"svelte-preprocess": "^5.0.4",
 		"svelte-sequential-preprocessor": "^1.0.0",

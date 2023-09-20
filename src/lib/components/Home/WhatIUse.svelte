@@ -128,7 +128,6 @@
 		border: 0;
 		z-index: var(--zIndexMax);
 		outline: 0;
-		--colorText: var(--colorPrimary);
 	}
 
 	.block__section:hover .section__svg {
