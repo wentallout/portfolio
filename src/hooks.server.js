@@ -3,7 +3,8 @@ const PUBLIC_DOMAIN = 'wentallout.io.vn';
 const directives = {
 	'base-uri': ["'self'"],
 	'child-src': ["'self'"],
-	'connect-src': ["'self'", 'ws://localhost:*'],
+	
+	// 'connect-src': ["'self'", 'ws://localhost:*'],
 	'font-src': ["'self'", 'data:', 'https://*.cloudfront.net'],
 	'form-action': ["'self'"],
 	'frame-ancestors': ["'self'"],
