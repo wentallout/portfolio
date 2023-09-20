@@ -172,8 +172,8 @@
 			'@type': 'ImageObject',
 			'@id': `${siteUrl}/#personlogo`,
 			inLanguage: siteLanguage,
-			url: `${siteUrl}/assets/rodneylab-logo.png`,
-			contentUrl: `${siteUrl}/assets/rodneylab-logo.png`,
+			url: `${siteUrl}/images/coolLogo.svg`,
+			contentUrl: `${siteUrl}/images/coolLogo.svg`,
 			width: 512,
 			height: 512,
 			caption: entity

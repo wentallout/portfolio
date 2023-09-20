@@ -4,7 +4,13 @@
 </script>
 
 <a aria-label="home" href="/" class="cover__logo">
-	<img class="official-logo rotate" {width} {height} src="/images/coolLogo.svg" alt="2nd logo" />
+	<img
+		id="personlogo"
+		class="official-logo rotate"
+		{width}
+		{height}
+		src="/images/coolLogo.svg"
+		alt="2nd logo" />
 </a>
 
 <style lang="postcss">
