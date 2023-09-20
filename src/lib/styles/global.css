@@ -21,6 +21,7 @@ html {
 
 	--borderRadius: 16px;
 	--borderRadiusLight: calc(var(--borderRadius) / 2);
+	--borderRadiusSM: calc(var(--borderRadiusLight) / 2);
 	--transition: 0.3s cubic-bezier(0.25, 0.1, 0.25, 1);
 
 	--zIndexMax: 99;

@@ -38,7 +38,7 @@
 		overflow: hidden;
 		user-select: none;
 		gap: var(--gap);
-		background-color: var(--colorBlack);
+		background-color: #000;
 		color: var(--colorPrimary);
 		padding: var(--spaceXS) 0;
 	}

@@ -26,7 +26,7 @@
 		transition: outline 0.3s;
 		resize: vertical;
 
-		border-radius: var(--borderRadius);
+		border-radius: var(--borderRadiusSM);
 	}
 
 	.textarea:focus-visible {

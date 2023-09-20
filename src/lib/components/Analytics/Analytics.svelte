@@ -1,5 +1,14 @@
 <script>
 	import { page } from '$app/stores';
+
+	$: {
+		if (typeof gtag !== 'undefined') {
+			gtag('config', 'G-7CY06JLZ38', {
+				page_title: document.title,
+				page_path: $page.url.pathname
+			});
+		}
+	}
 </script>
 
 <svelte:head>
@@ -13,6 +22,6 @@
 		}
 
 		gtag('js', new Date());
-		gtag('config', 'G-7CY06JLZ38');
+		gtag('config', 'MEASUREMENT_ID');
 	</script>
 </svelte:head>

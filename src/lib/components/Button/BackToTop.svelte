@@ -66,6 +66,8 @@
 		/*  */
 
 		box-shadow: var(--boxShadow);
+
+		color: var(--colorText);
 	}
 
 	@media (hover: hover) {

@@ -21,13 +21,21 @@
 	onNavigate(() => {
 		if (!document.startViewTransition) return;
 
-		return new Promise((fulfil) => {
-			document.startViewTransition(() => new Promise(fulfil));
+		// return new Promise((fulfil) => {
+		// 	document.startViewTransition(() => new Promise(fulfil));
+		// });
+
+		return new Promise((resolve) => {
+			document.startViewTransition(async () => {
+				resolve();
+				await navigation.complete;
+			});
 		});
 	});
 </script>
 
 <!-- MISC START -->
+
 <Analytics />
 <SkipLink />
 <ScrollProgressBar color="var(--colorPrimary)" />

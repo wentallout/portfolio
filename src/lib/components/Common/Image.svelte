@@ -31,7 +31,7 @@
 		margin-right: auto;
 		margin-bottom: var(--spaceS);
 		border: 1px solid var(--colorBorder);
-		border-radius: var(--borderRadius);
+		border-radius: var(--borderRadiusSM);
 		overflow: hidden;
 	}
 

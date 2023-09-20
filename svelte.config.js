@@ -41,26 +41,26 @@ const config = {
 		alias: {
 			$blogImages: 'src/lib/assets/images/blog',
 			$components: 'src/lib/components'
-		},
-		csp: {
-			mode: 'hash',
-			directives: {
-				'script-src': [
-					'self',
-					'unsafe-inline',
-					'https://unpkg.com',
-					'https://www.googletagmanager.com',
-					'https://cdn.jsdelivr.net',
-					'https://utteranc.es/'
-				],
-				'img-src': [
-					'self',
-					'www.googletagmanager.com',
-					'https://shots.codepen.io',
-					'https://*.cloudfront.net'
-				]
-			}
 		}
+		// csp: {
+		// 	mode: 'auto',
+		// 	directives: {
+		// 		'script-src': [
+		// 			'self',
+		// 			'unsafe-inline',
+		// 			'https://unpkg.com',
+		// 			'https://www.googletagmanager.com',
+		// 			'https://cdn.jsdelivr.net',
+		// 			'https://utteranc.es/'
+		// 		],
+		// 		'img-src': [
+		// 			'self',
+		// 			'www.googletagmanager.com',
+		// 			'https://shots.codepen.io',
+		// 			'https://*.cloudfront.net'
+		// 		]
+		// 	}
+		// }
 	},
 
 	vitePlugin: {

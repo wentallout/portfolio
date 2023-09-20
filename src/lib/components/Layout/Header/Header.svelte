@@ -6,7 +6,6 @@
 	import { page } from '$app/stores';
 	import List from '~icons/ph/list';
 	import X from '~icons/ph/x';
-	import { fade } from 'svelte/transition';
 
 	let scrollY;
 	let navOverlayEle;
@@ -31,20 +30,22 @@
 
 <VanishingHeader duration="300ms" offset={50} tolerance={5}>
 	<header class="header" bind:this={headerEle}>
-		<nav class="nav global-container" class:nav-scrolldown={scrollY > 0} aria-label="primary menu">
+		<nav class="nav global-container" class:nav--scrolldown={scrollY > 0} aria-label="primary menu">
 			<ul class="nav-list">
 				{#each navItems as navItem}
-					<li
-						transition:fade|global
-						class="nav-list__item"
-						class:active-page={$page.url.pathname === `${navItem.path}`}>
+					<li class="nav-list__item" class:active-page={$page.url.pathname === `${navItem.path}`}>
 						<a class="item" href={navItem.path}>
 							{navItem.title}
 						</a>
 					</li>
 				{/each}
 
-				<button type="button" class="hamburger" on:click={openNav} on:keydown={openNav}>
+				<button
+					aria-label="navigation button"
+					type="button"
+					class="hamburger"
+					on:click={openNav}
+					on:keydown={openNav}>
 					<List color="var(--colorText)" width="32" height="32" />
 				</button>
 			</ul>
@@ -60,7 +61,7 @@
 		{#each navItems as navItem}
 			<a
 				class="overlay-item text-xl"
-				class:active-page-mobile={$page.url.pathname === `${navItem.path}`}
+				class:active-page--mobile={$page.url.pathname === `${navItem.path}`}
 				on:click={closeNav}
 				href={navItem.path}>
 				{navItem.title}
@@ -94,11 +95,15 @@
 		width: 100%;
 		display: flex;
 
-		transition: ease-in-out 0.3s;
-		/* border-radius: var(--borderRadius); */
-
 		border-bottom-left-radius: var(--borderRadius);
 		border-bottom-right-radius: var(--borderRadius);
+		transition: background var(--transition);
+	}
+
+	.nav--scrolldown {
+		background: color-mix(in srgb, var(--colorBgLayout) 50%, transparent);
+		backdrop-filter: blur(5px);
+		color: var(--colorText);
 	}
 
 	.active-page {
@@ -115,22 +120,14 @@
 		top: 0;
 		left: 0;
 
-		/* border-bottom: 1px solid white; */
-
 		width: 100%;
 		inset: 0 -10px 30px;
-		background: radial-gradient(ellipse at top, currentcolor, transparent 50%);
+		background: radial-gradient(ellipse at top, currentColor, transparent 50%);
 	}
 
-	.active-page-mobile {
+	.active-page--mobile {
 		color: var(--colorPrimary) !important;
 		border-left: 4px solid inherit;
-	}
-
-	.nav-scrolldown {
-		background-color: rgba(0, 0, 0, 0.7) !important;
-		backdrop-filter: blur(5px);
-		color: var(--colorWhite);
 	}
 
 	.nav-list {
@@ -145,6 +142,8 @@
 	.nav-list__item {
 		display: none;
 		overflow: visible;
+
+		transition: scale linear 0.3s;
 
 		&:hover {
 			font-weight: var(--fontWeightLarge);
@@ -186,7 +185,6 @@
 		align-items: center;
 		width: 100%;
 		height: 100%;
-		transition: var(--transition);
 	}
 
 	/* ---OVERLAY--- */
@@ -199,8 +197,8 @@
 		z-index: var(--zIndexMax);
 		top: 0;
 		left: 0;
-		background-color: rgba(0, 0, 0, 0.8);
 
+		background: color-mix(in srgb, var(--colorBgLayout) 50%, transparent);
 		backdrop-filter: blur(5px);
 		overflow: hidden;
 		transition: var(--transition);
@@ -235,6 +233,8 @@
 
 		outline: 1px solid transparent;
 		font-weight: var(--fontWeightMid);
+
+		color: var(--colorText);
 	}
 
 	.overlay-item:hover,
@@ -267,7 +267,7 @@
 
 	.social {
 		border-top: 1px solid var(--colorBorder);
-		padding-top: var(--space2XL);
+		justify-self: flex-end;
 	}
 
 	.header {

@@ -5,10 +5,10 @@
 </script>
 
 <div class="badge">
-	<ExLink style="display:block" href="https://notbyai.fyi">
+	<ExLink ariaLabel="not by ai" style="display:block" href="https://notbyai.fyi">
 		<LogoNotAi />
 	</ExLink>
-	<ExLink style="display:block" href="https://kit.svelte.dev/">
+	<ExLink ariaLabel="SvelteKit" style="display:block" href="https://kit.svelte.dev/">
 		<LogoSvelte height="42" width="100%" />
 	</ExLink>
 </div>

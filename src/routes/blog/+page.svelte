@@ -1,34 +1,25 @@
 <script>
-	import SEO from '$components/SEO/SEO.svelte';
+	
 	import TextInput from '$components/Input/TextInput.svelte';
 	import BlogListContainer from '$components/Blog/BlogListContainer.svelte';
 	import BlogCard from '$components/Blog/BlogCard.svelte';
 	import PageTitle from '$components/Common/PageTitle.svelte';
 	import BlogTagsList from '$components/Blog/BlogTagsList.svelte';
-
 	import MiniSearch from 'minisearch';
 	import { paginate, DarkPaginationNav } from 'svelte-paginate';
-
-	// STORE BLOG
+	import { onMount } from 'svelte';
 	import { allBlogStore } from '$lib/stores/blogStore.js';
 
-	// STORE BLOG END
-
 	export let data;
+
 	let allBlogs = data.blogs;
 	allBlogStore.set(data.blogs);
 
-	import { onMount } from 'svelte';
-	import { fade } from 'svelte/transition';
-
 	let searchTerm = '';
 	let filteredBlogs = [];
-	let items = [];
 	let currentPage = 1;
 	let pageSize = 16;
-
 	let autoSuggest;
-
 	let miniSearch = new MiniSearch({
 		fields: ['meta.title'],
 		storeFields: ['meta', 'path'],
@@ -43,8 +34,6 @@
 
 	onMount(() => {
 		filteredBlogs = [...allBlogs];
-
-		items = [...allBlogs];
 		miniSearch.addAll(filteredBlogs);
 	});
 
@@ -60,11 +49,8 @@
 		autoSuggest = suggestData.map((item) => item.suggestion);
 	}
 
-	$: items = filteredBlogs;
-	$: paginatedItems = paginate({ items, pageSize, currentPage });
+	$: paginatedItems = paginate({ items: filteredBlogs, pageSize, currentPage });
 </script>
-
-<SEO title="Blog" />
 
 <PageTitle pageTitle="Blog" />
 
@@ -79,7 +65,7 @@
 
 	{#if filteredBlogs.length != 0}
 		<DarkPaginationNav
-			totalItems={items.length}
+			totalItems={filteredBlogs.length}
 			{pageSize}
 			{currentPage}
 			limit={1}
@@ -91,13 +77,13 @@
 		{#if filteredBlogs.length === 0}
 			<div class="not-found text-small">No blogs found.</div>
 		{:else}
-			{#each paginatedItems as item}
-				{#key item}
+			{#each paginatedItems as paginatedItem}
+				{#key paginatedItem}
 					<BlogCard
-						blogTitle={item.meta.title}
-						blogLink={item.path}
-						blogDate={item.meta.date}
-						blogTags={item.meta.categories} />
+						blogTitle={paginatedItem.meta.title}
+						blogLink={paginatedItem.path}
+						blogDate={paginatedItem.meta.date}
+						blogTags={paginatedItem.meta.categories} />
 				{/key}
 			{/each}
 		{/if}
@@ -105,7 +91,7 @@
 
 	{#if filteredBlogs.length != 0}
 		<DarkPaginationNav
-			totalItems={items.length}
+			totalItems={filteredBlogs.length}
 			{pageSize}
 			{currentPage}
 			limit={1}
@@ -115,6 +101,10 @@
 </section>
 
 <style>
+	:global(.dark-pagination-nav .option:hover) {
+		background: var(--colorBgElevated) !important;
+	}
+
 	:global(.pagination-nav) {
 		background-color: transparent !important;
 		border-radius: var(--borderRadiusLight) !important;

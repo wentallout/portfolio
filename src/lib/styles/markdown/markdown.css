@@ -8,8 +8,8 @@
 }
 
 .markdown section {
-	margin-top: var(--space2XL);
-	margin-bottom: var(--space3XL);
+	margin-top: var(--spaceL);
+	margin-bottom: var(--spaceXL);
 }
 
 .markdown h1 {
@@ -137,7 +137,7 @@
 	) {
 	color: var(--colorPrimary);
 	text-decoration: underline;
-	text-decoration-skip-ink: none;
+	/* text-decoration-skip-ink: none; */
 }
 
 .markdown a:hover {

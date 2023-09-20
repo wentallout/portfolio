@@ -25,7 +25,7 @@
 					<a href="/project">
 						<Button
 							label="See All Projects"
-							labelColor="var(--colorBgLayout)"
+							labelColor="var(--colorBlack)"
 							backgroundColor="var(--colorPrimary)"
 							glowColor="var(--colorPrimary)" />
 					</a>

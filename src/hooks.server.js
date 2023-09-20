@@ -1,4 +1,4 @@
-const PUBLIC_DOMAIN = 'wentallout.tech';
+const PUBLIC_DOMAIN = 'wentallout.io.vn';
 
 const directives = {
 	'base-uri': ["'self'"],
@@ -35,7 +35,7 @@ export async function handle({ event, resolve }) {
 	);
 	response.headers.set('X-Content-Type-Options', 'nosniff');
 
-	// response.headers.set('Content-Security-Policy-Report-Only', csp);
+	response.headers.set('Content-Security-Policy-Report-Only', csp);
 
 	response.headers.set('Content-Security-Policy', csp);
 	response.headers.set('Strict-Transport-Security', 'max-age=31536000; includeSubDomains; preload');

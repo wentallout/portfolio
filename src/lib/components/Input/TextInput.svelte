@@ -59,7 +59,6 @@
 
 	.input {
 		border: 1px solid var(--colorBorder);
-
 		background-color: transparent;
 
 		/* FONT */
@@ -78,7 +77,7 @@
 		/* OTHER */
 		transition: var(--transition);
 
-		border-radius: var(--borderRadius);
+		border-radius: var(--borderRadiusSM);
 	}
 
 	.input:focus-visible {

@@ -1,0 +1,39 @@
+---
+title: Most important things to remember in UI/UX
+date: 2023-09-04
+categories:
+    - ux
+---
+
+## 3 things
+
+You need to know 3 things in every project: 
+
+- What are we creating? 
+- What's worth doing? 
+- What value does it provide?
+
+
+- Every ideas must have competition.
+- Most important principle of good UI/UX is progressive disclosure. Information presented to someone who isn't interested in it - or isn't ready to process it is just noise.
+
+## Requirements
+
+There are 3 kinds of requirements:
+
+- things people say they need
+- things people actually need
+- things people don't know they need
+
+When you need to get requirements quickly, **use scenarios** are your best friend
+
+## Documentation
+
+- Documentation eliminates excuses and surprises which makes life good.
+- When it comes to interacting with clients, partners: silence equals agreement.
+- If you're doing something without a list, you're guessing which is bad.
+
+## Testing
+
+Be realistic about what matters most: you can't test everything
+

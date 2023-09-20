@@ -32,7 +32,7 @@ const website = {
 
 	siteTitle: 'Khoa UI/UX - Design and Develop',
 	siteShortTitle: 'Khoa UI/UX',
-	siteUrl: 'https://wentallout.tech',
+	siteUrl: 'https://wentallout.io.vn',
 	icon: 'static/icon-512.png',
 	backgroundColor: '#121212',
 	themeColor: '#ffbb00',

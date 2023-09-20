@@ -1,7 +1,7 @@
 /* -------------------------------- Nprogress START */
 #nprogress .bar {
 	background: var(--colorPrimary) !important;
-	height: 5px !important;
+	height: 3px !important;
 }
 
 #nprogress .peg {
