@@ -7,6 +7,10 @@
 	export let data;
 
 	export let hasCategory = false;
+
+	import Pen from '~icons/ph/pen';
+
+	import CalendarBlank from '~icons/ph/calendar-blank';
 </script>
 
 <header class="container full-width">
@@ -14,14 +18,14 @@
 		<h1 class="post-title">{data.title}</h1>
 		<div class="post-info text-small">
 			<div class="info__section">
-				<div class="section__title">Last updated:</div>
+				<CalendarBlank width="20" height="20" />
+				Last updated:
 				<Time relative timestamp={data.date} />
 			</div>
 			<div class="info__section">
-				<div class="section__title">Written by:</div>
-				<ExLink href="https://www.linkedin.com/in/wentallout/">
-					<div class="link">Dang Khoa (@wentallout)</div>
-				</ExLink>
+				<Pen width="20" height="20" />
+				Written by:
+				<ExLink href="https://www.linkedin.com/in/wentallout/">Dang Khoa (@wentallout)</ExLink>
 			</div>
 		</div>
 		{#if hasCategory}
@@ -72,9 +76,6 @@
 		display: flex;
 		flex-direction: row;
 		gap: 4px;
-	}
-
-	.section__title {
-		font-weight: var(--fontWeightLarge);
+		align-items: center;
 	}
 </style>
