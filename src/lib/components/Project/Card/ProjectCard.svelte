@@ -7,7 +7,6 @@
 	export let thumbnail;
 
 	import ArrowRight from '~icons/ph/arrow-right';
-
 </script>
 
 <a href={linkToDetail}>
@@ -55,6 +54,9 @@
 			background-color: var(--colorBgElevated);
 			box-shadow: -5px 5px var(--colorPrimaryHover);
 			transform: translate(5px, -5px);
+		}
+		&:active {
+			scale: 0.9;
 		}
 	}
 

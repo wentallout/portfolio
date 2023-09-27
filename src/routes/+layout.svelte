@@ -4,8 +4,8 @@
 	import ScrollBar from '$lib/components/Layout/Other/ScrollBar.svelte';
 	import ProgressBar from '$components/Transition/ProgressBar.svelte';
 	import PageTransition from '$components/Transition/PageTransition.svelte';
-	import ScrollProgressBar from '$lib/components/Layout/Other/ScrollProgressBar.svelte';
-	import Cover from '$lib/components/Layout/Header/Cover.svelte';
+
+	import HeaderCover from '$lib/components/Layout/Header/HeaderCover.svelte';
 	import SkipLink from '$lib/components/Button/SkipLink.svelte';
 	import PWA from '$components/PWA/PWA.svelte';
 	import BackToTop from '$lib/components/Button/BackToTop.svelte';
@@ -38,7 +38,7 @@
 
 <Analytics />
 <SkipLink />
-<ScrollProgressBar color="var(--colorPrimary)" />
+
 <ProgressBar />
 <ScrollBar />
 <PWA />
@@ -47,7 +47,7 @@
 <ThemeSwitcher />
 <!-- MISC END  -->
 
-<Cover />
+<HeaderCover />
 <Header />
 
 <PageTransition {data}>

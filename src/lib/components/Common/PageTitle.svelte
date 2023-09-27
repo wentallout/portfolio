@@ -11,10 +11,30 @@
 	<img alt="title deco" class="title__bg" src={decoImageUrl} />
 	<h1 class="text-3xl title__text tracking-in-expand">{pageTitle}</h1>
 	<div class="title__deco" />
+
+	<div class="title__extra">{pageTitle}</div>
 </div>
 
 <style>
+	.title__extra {
+		-webkit-text-stroke: 1px var(--colorText);
+		-webkit-text-fill-color: transparent;
+		font-size: 30vh;
+		position: absolute;
+		paint-order: stroke fill;
+
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+
+		font-family: var(--fontFancy);
+		opacity: 0.2;
+		z-index: -2;
+	}
+
 	.title {
+		z-index: 1;
 		position: relative;
 		/* FLEX */
 		display: flex;
@@ -47,7 +67,7 @@
 		top: 0;
 		left: 0;
 
-		z-index: -1;
+		z-index: -3;
 
 		width: 100%;
 		height: 100%;

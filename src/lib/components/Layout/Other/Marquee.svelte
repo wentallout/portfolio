@@ -1,21 +1,26 @@
+<script>
+	export let items = [
+		'Design Thinking',
+		'Usability',
+		'Accessibility',
+		'Information Architecture',
+		'Wireframe',
+		'Responsive Design'
+	];
+</script>
+
 <div class="container">
 	<div class="marquee">
 		<ul class="marquee__content">
-			<li>Design Thinking</li>
-			<li>Usability</li>
-			<li>Accessibility</li>
-			<li>Information Architecture</li>
-			<li>Wireframe</li>
-			<li>Responsive Design</li>
+			{#each items as item}
+				<li>{item}</li>
+			{/each}
 		</ul>
 
 		<ul class="marquee__content" aria-hidden="true">
-			<li>Design Thinking</li>
-			<li>Usability</li>
-			<li>Accessibility</li>
-			<li>Information Architecture</li>
-			<li>Wireframe</li>
-			<li>Responsive Design</li>
+			{#each items as item}
+				<li>{item}</li>
+			{/each}
 		</ul>
 	</div>
 </div>
@@ -24,23 +29,27 @@
 	.container {
 		width: 100%;
 		max-width: 100vw;
-		font-weight: var(--fontWeightSmall);
-		font-size: var(--fontSizeSmall);
+		font-size: var(--fontSizeXS);
+		font-weight: var(--fontWeightLarge);
 		line-height: normal;
 		position: relative;
 		overflow: hidden;
 	}
 
 	.marquee {
+		background-color: var(--colorBgLayout);
+
 		--gap: var(--space3XL);
 		position: relative;
 		display: flex;
 		overflow: hidden;
 		user-select: none;
 		gap: var(--gap);
-		background-color: #000;
-		color: var(--colorPrimary);
+
+		color: var(--colorText);
 		padding: var(--spaceXS) 0;
+		border-top: 1px solid var(--colorBorder);
+		border-bottom: 1px solid var(--colorBorder);
 	}
 
 	.marquee__content {

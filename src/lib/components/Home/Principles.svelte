@@ -62,6 +62,9 @@
 
 		grid-template-columns: repeat(auto-fit, minmax(min(100%, var(--min)), 1fr));
 		align-items: stretch;
+
+		position: relative;
+		z-index: 1;
 	}
 
 	.principle__section {
@@ -70,8 +73,8 @@
 		display: flex;
 		flex-direction: column;
 		gap: var(--space2XS);
-		position: relative;
-		border-radius: var(--borderRadius);
+
+		border-radius: var(--borderRadiusLight);
 		box-shadow: var(--boxShadow);
 	}
 

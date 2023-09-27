@@ -7,9 +7,11 @@
 	import CaretRight from '~icons/ph/caret-right';
 	export let blogTags = ['category1', 'category2'];
 	export let hasTags = true;
+
+	import { fade } from 'svelte/transition';
 </script>
 
-<a href={blogLink} class="blog">
+<a transition:fade={{ duration: 300 }} href={blogLink} class="blog">
 	<article class="blog__info">
 		{#if hasTags}
 			<div class="tags">

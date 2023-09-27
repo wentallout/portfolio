@@ -3,7 +3,7 @@
 	import ChainDivider from '$components/Layout/Other/ChainDivider.svelte';
 	import FooterEnd from '$components/Layout/Footer/FooterEnd.svelte';
 	import ExLink from '$components/Common/ExLink.svelte';
-	import Marquee from '$lib/components/Layout/Footer/Marquee.svelte';
+	import Marquee from '$lib/components/Layout/Other/Marquee.svelte';
 	import { navItems } from '$lib/config.js';
 
 	// ICONS
@@ -131,10 +131,10 @@
 		top: 0;
 		left: 0;
 		width: 100%;
-		background: url('/images/footer_bg.png') center no-repeat;
+		background: url('/images/footer_bg.webp') center no-repeat;
 		background-size: cover;
 		z-index: -1;
-		filter: brightness(0.4);
+		filter: brightness(0.5);
 	}
 
 	:global([color-scheme='light'] .bg) {

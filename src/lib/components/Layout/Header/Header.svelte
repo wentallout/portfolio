@@ -54,9 +54,14 @@
 </VanishingHeader>
 
 <div class="overlay" bind:this={navOverlayEle}>
-	<div role="button" tabindex="" class="closebtn" on:click={closeNav} on:keydown={closeNav}>
+	<button
+		aria-label="close nav menu"
+		type="button"
+		class="closebtn"
+		on:click={closeNav}
+		on:keydown={closeNav}>
 		<X color="var(--colorBlack)" width="32" height="32" />
-	</div>
+	</button>
 	<div class="overlay-content global-container">
 		{#each navItems as navItem}
 			<a

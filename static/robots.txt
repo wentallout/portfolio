@@ -1,5 +1,6 @@
 User-agent: *
 Disallow:
+Sitemap: https://wentallout.io.vn/sitemap.xml
 
 User-agent: Twitterbot
 Disallow:
