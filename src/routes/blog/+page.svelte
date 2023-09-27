@@ -126,9 +126,4 @@
 		margin-top: var(--spaceM);
 		min-height: 100vh;
 	}
-
-	.not-found {
-		padding: var(--spaceS) 0;
-		color: var(--colorTextSecondary);
-	}
 </style>
