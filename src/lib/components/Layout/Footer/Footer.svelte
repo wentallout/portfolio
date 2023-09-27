@@ -56,9 +56,9 @@
 						<li class="nav-list__item">
 							<a href="/rss.xml">RSS</a>
 						</li>
-						<li class="nav-list__item">
+						<!-- <li class="nav-list__item">
 							<a href="/sitemap.xml">Sitemap</a>
-						</li>
+						</li> -->
 					</ul>
 				</div>
 
