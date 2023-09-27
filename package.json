@@ -11,7 +11,8 @@
 		"lint": "prettier --check . && eslint --ext .js,.svelte src",
 		"lint:stylelint": "stylelint \"src/**/*.{css,svelte}\"",
 		"format": "prettier --write .",
-		"ngrok": "ngrok http 4173"
+		"ngrok": "ngrok http 4173",
+		"postbuild": "npx svelte-sitemap --domain https://wentallout.io.vn"
 	},
 	"devDependencies": {
 		"@csstools/postcss-global-data": "^2.1.0",
@@ -56,13 +57,13 @@
 		"stylelint-declaration-strict-value": "^1.9.2",
 		"stylelint-high-performance-animation": "^1.9.0",
 		"stylelint-order": "^6.0.3",
-		"super-sitemap": "^0.13.7",
 		"svelte": "^4.2.1",
 		"svelte-check": "^3.5.2",
 		"svelte-meta-tags": "^3.0.4",
 		"svelte-paginate": "^0.1.0",
 		"svelte-preprocess": "^5.0.4",
 		"svelte-sequential-preprocessor": "^2.0.1",
+		"svelte-sitemap": "^2.6.0",
 		"svelte-time": "^0.8.0",
 		"svelte-toc": "^0.5.6",
 		"sveltekit-embed": "^0.0.12",
