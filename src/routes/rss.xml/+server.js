@@ -63,7 +63,7 @@ export async function GET({ fetch }) {
 							<title>${blog.meta.title}</title>
 							<link>${config.siteUrl}${blog.path}</link>
 							<guid isPermaLink="true">${config.siteUrl}${blog.path}</guid>
-							<pubDate>${buildRFC822Date(new Date(blog.meta.date).toString)}</pubDate>
+							<pubDate>${buildRFC822Date(new Date(blog.meta.date).toString())}</pubDate>
 						</item>
 					`
 					)
