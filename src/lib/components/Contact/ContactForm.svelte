@@ -6,6 +6,7 @@
 	import ArrowCounterClockwise from '~icons/ph/arrow-counter-clockwise';
 	import PaperPlaneRight from '~icons/ph/paper-plane-right';
 	import SectionTitle from '$lib/components/Common/Section/SectionTitle.svelte';
+	import ContactArt from '$lib/assets/images/other/ContactArt.svelte';
 </script>
 
 <section>
@@ -20,8 +21,8 @@
 		<form name="contact" class="contact" method="post" data-netlify="true">
 			<input type="hidden" name="form-name" value="contact" />
 
-			<TextInput name="name" type="text" label="Name" placeholder="Enter your name here" />
-			<TextInput name="email" type="email" label="Email" placeholder="username@email.com" />
+			<TextInput name="name" type="text" label="Name" placeholder="John Doe" />
+			<TextInput name="email" type="email" label="Email" placeholder="username@gmail.com" />
 			<TextArea
 				name="message"
 				label="Message"
@@ -48,15 +49,28 @@
 				</Button>
 			</div>
 		</form>
+		<div class="contact__art">
+			<ContactArt />
+		</div>
 	</div>
 </section>
 
 <style>
 	.form-container {
-		display: flex;
+		/* display: flex;
 		flex-wrap: wrap;
 		justify-content: flex-start;
-		margin-bottom: var(--spaceM);
+		margin-bottom: var(--spaceM); */
+		display: grid;
+		gap: var(--spaceXL);
+		align-items: center;
+		grid-template-columns: 1fr;
+	}
+
+	@media (min-width: 768px) {
+		.form-container {
+			grid-template-columns: 1fr auto;
+		}
 	}
 
 	.contact {
@@ -72,5 +86,9 @@
 		display: flex;
 		flex-wrap: wrap;
 		gap: var(--spaceS);
+	}
+
+	.contact__art {
+		max-width: 300px;
 	}
 </style>

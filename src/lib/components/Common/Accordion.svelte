@@ -24,7 +24,7 @@
 		<div
 			class="accordion__text text-small"
 			in:slide={{ duration: 300 }}
-			out:slide={{ duration: 100 }}>
+			out:slide={{ duration: 300 }}>
 			{accordionText}
 		</div>
 	{/if}
@@ -75,7 +75,7 @@
 	}
 
 	.accordion__text {
-		color: var(--colorTextSecondary);
+		color: var(--colorText);
 		max-width: var(--text-width);
 		padding: var(--spaceXS) var(--spaceS);
 	}

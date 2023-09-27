@@ -1,5 +1,5 @@
 <script>
-	
+	import LoadingBarSpinner from '$lib/assets/images/other/LoadingBarSpinner.svelte';
 	import TextInput from '$components/Input/TextInput.svelte';
 	import BlogListContainer from '$components/Blog/BlogListContainer.svelte';
 	import BlogCard from '$components/Blog/BlogCard.svelte';
@@ -18,7 +18,7 @@
 	let searchTerm = '';
 	let filteredBlogs = [];
 	let currentPage = 1;
-	let pageSize = 16;
+	let pageSize = 24;
 	let autoSuggest;
 	let miniSearch = new MiniSearch({
 		fields: ['meta.title'],
@@ -39,13 +39,14 @@
 
 	function handleSearchInput(event) {
 		searchTerm = event.target.value.toLowerCase();
-		filteredBlogs = miniSearch.search(searchTerm);
+		filteredBlogs = miniSearch.search(searchTerm, { prefix: true });
 		if (searchTerm === '') {
 			filteredBlogs = [...allBlogs];
 		}
 		currentPage = 1;
 
 		let suggestData = miniSearch.autoSuggest(searchTerm, { fuzzy: 0.2 });
+
 		autoSuggest = suggestData.map((item) => item.suggestion);
 	}
 
@@ -55,12 +56,14 @@
 <PageTitle pageTitle="Blog" />
 
 <section class="blog-list">
-	<TextInput
-		autoSuggestList={autoSuggest}
-		list="search"
-		bind:value={searchTerm}
-		placeholder="Search blogs..."
-		on:input={handleSearchInput} />
+	<search>
+		<TextInput
+			autoSuggestList={autoSuggest}
+			list="search"
+			bind:value={searchTerm}
+			placeholder="Search blogs..."
+			on:input={handleSearchInput} />
+	</search>
 	<BlogTagsList {data} />
 
 	{#if filteredBlogs.length != 0}
@@ -75,7 +78,7 @@
 
 	<BlogListContainer>
 		{#if filteredBlogs.length === 0}
-			<div class="not-found text-small">No blogs found.</div>
+			<LoadingBarSpinner />
 		{:else}
 			{#each paginatedItems as paginatedItem}
 				{#key paginatedItem}

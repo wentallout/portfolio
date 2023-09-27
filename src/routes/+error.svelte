@@ -1,8 +1,6 @@
 <script>
 	import Button from '$components/Button/Button.svelte';
 
-	import Crack from '$lib/assets/images/other/crack.svg';
-
 	import { page } from '$app/stores';
 
 	let customMessage = '';
@@ -27,10 +25,12 @@
 		default:
 			customMessage = 'An unexpected error occurred. Please try again later.';
 	}
+
+	import House from '~icons/ph/house';
 </script>
 
 <div class="error">
-	<img class="error__deco" src={Crack} alt="" />
+	<img class="error__deco" src="/images/crack.svg" alt="" />
 
 	<div class="error__info">
 		<h1 class="status">
@@ -45,7 +45,9 @@
 			<Button
 				label="Take Me Home"
 				labelColor="var(--colorBlack)"
-				backgroundColor="var(--colorPrimary)" />
+				backgroundColor="var(--colorPrimary)">
+				<House width="16" height="16" />
+			</Button>
 		</a>
 	</div>
 </div>
@@ -65,15 +67,15 @@
 	.error__deco {
 		position: absolute;
 		top: 0;
-		right: 0;
+		left: 0;
 		width: 600px;
 		height: auto;
 		z-index: -1;
-		opacity: 0.5;
+		opacity: 0;
 	}
 
 	.status {
-		font-size: calc(var(--fontSize2XL) * 2);
+		font-size: calc(var(--fontSizeXL) * 2);
 		margin-bottom: var(--spaceXL);
 	}
 	.error {

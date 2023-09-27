@@ -1,23 +1,12 @@
 <script>
+	import PageTitle from '$components/Common/PageTitle.svelte';
 	import Button from '$components/Button/Button.svelte';
 </script>
 
-<div class="container">
-	<h1 class="text-large">PRIVACY POLICY</h1>
+<PageTitle pageTitle="Policy" />
 
+<section>
 	<a href="/doc/privacy-policy.pdf">
 		<Button label="Read Privacy Policy" backgroundColor="var(--colorPrimary)" />
 	</a>
-</div>
-
-<style>
-	.container {
-		display: flex;
-		flex-direction: column;
-		gap: var(--spaceM);
-		height: 500px;
-		align-items: center;
-		justify-content: center;
-		border: 1px dotted var(--colorBorder);
-	}
-</style>
+</section>

@@ -1,9 +1,28 @@
 <script>
+	let latestBlog = 'Loading...';
+
+	onMount(async () => {
+		try {
+			const response = await fetch(`/api/blog`);
+			const allBlogs = await response.json();
+			if (allBlogs && allBlogs.length > 0) {
+				latestBlog = allBlogs[0].meta.title;
+			} else {
+				latestBlog = 'No blogs found';
+			}
+		} catch (error) {
+			console.error('Error fetching blog:', error);
+			latestBlog = 'Error fetching blog';
+		}
+	});
+
 	import Logo from '$lib/components/Layout/Header/Logo.svelte';
 	import { fade } from 'svelte/transition';
 	import { theme } from '$lib/stores/themeStore.js';
 
 	import { page } from '$app/stores';
+	import Marquee from '$components/Layout/Other/Marquee.svelte';
+	import { onMount } from 'svelte';
 
 	let showCover;
 
@@ -12,6 +31,15 @@
 	} else {
 		showCover = false;
 	}
+
+	let marqueeItems;
+
+	$: marqueeItems = [
+		'Mirr Design',
+		'Current FE Project: Zen Garden',
+		'Current UI/UX Project: Slick Store',
+		`Latest Blog: ${latestBlog}`
+	];
 </script>
 
 {#if showCover}
@@ -20,9 +48,7 @@
 			<video transition:fade={{ duration: 300 }} class="video" autoplay muted loop>
 				<source src="/videos/city.webm" type="video/webm" />
 			</video>
-		{/if}
-
-		{#if $theme === 'light'}
+		{:else if $theme === 'light'}
 			<video transition:fade={{ duration: 300 }} class="video" autoplay muted loop>
 				<source src="/videos/mountains.webm" type="video/webm" />
 			</video>
@@ -30,6 +56,10 @@
 
 		<Logo />
 	</div>
+
+	{#if marqueeItems}
+		<Marquee items={marqueeItems} />
+	{/if}
 {/if}
 
 <style>
@@ -44,6 +74,14 @@
 		height: 300px;
 		background-color: var(--colorBgLayout);
 	}
+
+	/* .cover__deco {
+		background: url('/images/sonic.svg');
+		background-repeat: repeat-x;
+
+		width: 100%;
+		height: 14px;
+	} */
 
 	.cover::after {
 		pointer-events: none;
