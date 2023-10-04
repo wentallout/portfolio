@@ -40,14 +40,13 @@
 
 <style lang="postcss">
 	.project {
+		display: flex;
 		position: relative;
 		width: 100%;
-		display: flex;
 		flex-direction: column;
 		transition: var(--transition);
 		overflow: hidden;
 		box-shadow: var(--boxShadow);
-		outline: 1px solid var(--colorBorder);
 		border-radius: var(--borderRadius);
 
 		&:hover {

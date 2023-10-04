@@ -1,5 +1,5 @@
 ---
-title: Everything I know about UX (kinda)
+title: Everything I know about UX
 date: '2022-01-24'
 categories:
     - ux
@@ -12,6 +12,14 @@ We're going to look at what user experience is and why it is so important for yo
 ## What is UX
 
 User experience design involves lots of different activities. But ultimately, it's an approach to the design of a digital or physical product or real life service where the user is at the centre of it. User experience is called UX for short, but it is often referred to as UCD, which is User-Centered Design. It is about keeping your user at the heart of everything that you are designing. To be able to do this, you need to have a good understanding of **who the user is, what they think, how they behave, and what they need**.
+
+
+## What is the role of UI/UX Designer
+
+- Design Principles: Color, contrast, whitespace, typography, etc
+- Wireframing and Prototyping: Plan the layout of app screens
+- User Research: Identify and validate user needs
+- User Testing: Test and validate designs
 
 ## Confusion
 

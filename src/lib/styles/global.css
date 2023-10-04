@@ -117,3 +117,8 @@ label:has(+ textarea:focus) {
 	text-decoration: underline;
 	text-underline-offset: 2px;
 }
+
+/* Experimental CSS */
+textarea {
+	form-sizing: normal;
+}
