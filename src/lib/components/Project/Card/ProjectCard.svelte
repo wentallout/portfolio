@@ -2,7 +2,8 @@
 	export let linkToDetail = '';
 	export let projectName = '';
 	export let what = '';
-	export let result = '';
+	export let output = '';
+	export let role = '';
 	export let year = '';
 	export let thumbnail;
 
@@ -21,18 +22,23 @@
 
 			<div class="info text-small">
 				<div class="info__section">
-					<div class="section__label">About</div>
+					<div class="section__label">Goal</div>
 					<div class="section__desc">{what}</div>
+				</div>
+				<div class="info__section">
+					<div class="section__label">Role</div>
+					<div class="section__desc">{role}</div>
 				</div>
 
 				<div class="info__section">
 					<div class="section__label">Output</div>
-					<div class="section__desc">{result}</div>
+					<div class="section__desc">{output}</div>
 				</div>
 			</div>
 
 			<div class="indicator text-small">
-				<ArrowRight color="inherit" width="24" height="24" />Read Case Study
+				<ArrowRight color="inherit" width="24" height="24" />
+				Read Case Study
 			</div>
 		</div>
 	</article>
@@ -40,14 +46,13 @@
 
 <style lang="postcss">
 	.project {
+		display: flex;
 		position: relative;
 		width: 100%;
-		display: flex;
 		flex-direction: column;
 		transition: var(--transition);
 		overflow: hidden;
 		box-shadow: var(--boxShadow);
-		outline: 1px solid var(--colorBorder);
 		border-radius: var(--borderRadius);
 
 		&:hover {
@@ -56,7 +61,8 @@
 			transform: translate(5px, -5px);
 		}
 		&:active {
-			scale: 0.9;
+			box-shadow: -1px 1px var(--colorPrimaryActive);
+			transform: translate(1px, -1px);
 		}
 	}
 

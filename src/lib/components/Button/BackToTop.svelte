@@ -44,6 +44,9 @@
 		aspect-ratio: 1/1;
 		padding: var(--spaceXS);
 		border-radius: 50%;
+
+		width: 48px;
+		height: 48px;
 		/* --- */
 
 		/* COLOR */
@@ -60,14 +63,22 @@
 
 		/* OTHER */
 		opacity: 1;
-		transition: opacity 0.3s, visibility 0.3s;
+		transition:
+			opacity 0.3s,
+			visibility 0.3s;
 		user-select: none;
 		line-height: normal;
 		/*  */
 
 		box-shadow: var(--boxShadow);
-
 		color: var(--colorText);
+	}
+
+	@media (min-width: 768px) {
+		.bck2top {
+			width: 64px;
+			height: 64px;
+		}
 	}
 
 	@media (hover: hover) {

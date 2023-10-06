@@ -69,7 +69,6 @@
 
 	.principle__section {
 		padding: var(--spaceL);
-		border: 1px solid var(--colorBorder);
 		display: flex;
 		flex-direction: column;
 		gap: var(--space2XS);

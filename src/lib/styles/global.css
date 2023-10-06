@@ -8,7 +8,7 @@
 
 html {
 	scroll-padding: var(--scroll-padding, 60px);
-	scroll-behavior: auto;
+	scroll-behavior: smooth;
 	overflow-x: hidden;
 	max-width: 100vw;
 	min-height: 101vh;
@@ -116,4 +116,9 @@ label:has(+ textarea:focus) {
 	color: var(--colorPrimaryHover);
 	text-decoration: underline;
 	text-underline-offset: 2px;
+}
+
+/* Experimental CSS */
+textarea {
+	form-sizing: normal;
 }
