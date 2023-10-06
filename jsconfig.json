@@ -22,7 +22,9 @@
 			"$components": ["src/lib/components"],
 			"$components/*": ["src/lib/components/*"],
 			"$blogImages": ["src/lib/assets/images/blog"],
-			"$blogImages/*": ["src/lib/assets/images/blog/*"]
+			"$blogImages/*": ["src/lib/assets/images/blog/*"],
+			"$projectImages": ["src/lib/assets/images/project"],
+			"$projectImages/*": ["src/lib/assets/images/project/*"]
 		}
 	}
 }

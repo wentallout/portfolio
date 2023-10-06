@@ -17,9 +17,11 @@
 	<ExLink href={src} aria-label={alt}>
 		<figure>
 			<img {src} {width} {height} {loading} {decoding} alt="Image of {alt}" />
-			<figcaption class="caption text-xs">
-				{alt}
-			</figcaption>
+			{#if alt !== ''}
+				<figcaption class="caption text-xs">
+					{alt}
+				</figcaption>
+			{/if}
 		</figure>
 	</ExLink>
 </SaosContainer>
@@ -29,8 +31,8 @@
 		max-width: 100%;
 		margin-left: auto;
 		margin-right: auto;
-		margin-bottom: var(--spaceS);
-		border: 1px solid var(--colorBorder);
+		margin-bottom: var(--space3XL);
+
 		border-radius: var(--borderRadiusSM);
 		overflow: hidden;
 	}
@@ -40,10 +42,11 @@
 	}
 
 	.caption {
-		border-top: 1px solid var(--colorBorder);
 		font-size: var(--fontSizeXS);
 		color: var(--colorTextSecondary);
 		width: 100%;
 		padding: 4px var(--spaceS);
+		border: 1px solid var(--colorBorder);
+		background-color: var(--colorBgElevated);
 	}
 </style>

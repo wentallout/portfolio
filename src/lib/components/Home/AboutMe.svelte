@@ -3,7 +3,7 @@
 	import SaosContainer from '$components/Common/SaosContainer.svelte';
 	import Smiley from '~icons/ph/smiley';
 
-	import AboutMeImg from '$lib/assets/images/home/about-me-img.png';
+	import AboutMeImg from '$lib/assets/images/home/aboutMe.webp';
 </script>
 
 <SaosContainer>
@@ -52,9 +52,17 @@
 	}
 
 	.about__img {
+		height: 100%;
+		aspect-ratio: 1/1;
 		max-width: 300px;
 		flex-grow: 1;
-		border-radius: 100%;
+		border-radius: var(--borderRadiusLight);
+		filter: grayscale(1) brightness(0.7);
+		transition: var(--transition);
+	}
+
+	section:hover .about__img {
+		filter: grayscale(0);
 	}
 
 	.block__title {

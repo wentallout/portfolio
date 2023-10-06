@@ -17,20 +17,17 @@
 
 <SaosContainer>
 	<footer class="footer text-small">
-		<div class="bg" />
+		<ChainDivider />
+		<img class="footer__logo" alt="footer logo" width="24" height="24" src="/images/coolLogo.svg" />
+
 		<div class="global-container">
-			<ChainDivider />
 			<!-- <img class="footer__bg" src={FooterBg} alt="" /> -->
 			<div class="footer__list">
 				<div class="list">
 					<div class="list__title">About me</div>
 					<ul class="list__nav">
-						<li class="nav-list__item footer__logo">
-							<img alt="footer logo" width="24" height="24" src="/images/coolLogo.svg" />
-							<span style="color:var(--colorPrimary);font-weight:600">entallout</span>
-						</li>
 						<li class="nav-list__item">
-							Dang Khoa is a Designer+Developer in Ho Chi Minh City, Vietnam that creates superb
+							Nguyen Dang Khoa is a UI Designer in Ho Chi Minh City, Vietnam that creates superb
 							affordable websites and apps for small businesses.
 						</li>
 					</ul>
@@ -125,18 +122,6 @@
 <Marquee />
 
 <style>
-	.bg {
-		height: 100% !important;
-		position: absolute;
-		top: 0;
-		left: 0;
-		width: 100%;
-		background: url('/images/footer_bg.webp') center no-repeat;
-		background-size: cover;
-		z-index: -1;
-		filter: brightness(0.5);
-	}
-
 	:global([color-scheme='light'] .bg) {
 		display: none;
 	}
@@ -148,13 +133,13 @@
 	}
 
 	.footer__deco {
-		position: absolute;
-		bottom: 0;
-		left: 0;
 		background-repeat: repeat-x;
 		height: 52px;
 		width: 100%;
 		z-index: 2;
+		position: absolute;
+		bottom: 0;
+		left: 0;
 	}
 
 	.footer {
@@ -168,6 +153,8 @@
 		position: relative;
 		/* Width */
 		max-width: 100vw;
+		position: relative;
+		overflow: hidden;
 	}
 
 	.footer__list {
@@ -192,7 +179,7 @@
 
 	.list__title {
 		font-family: var(--fontFancy);
-		color: var(--colorText);
+		color: var(--colorTextSecondary);
 		font-size: var(--fontSizeBase);
 		padding-bottom: var(--space2XS);
 		border-bottom: 2px solid transparent;
@@ -225,9 +212,12 @@
 	}
 
 	.footer__logo {
-		display: flex;
-		justify-content: flex-start;
-		align-items: center;
-		width: 100%;
+		position: absolute;
+		left: -5%;
+		top: 40%;
+		width: auto;
+		height: 100%;
+		aspect-ratio: 1 / 1;
+		opacity: 0.1;
 	}
 </style>

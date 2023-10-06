@@ -17,7 +17,7 @@
 
 <style>
 	.title__extra {
-		-webkit-text-stroke: 1px var(--colorText);
+		-webkit-text-stroke: 2px var(--colorText);
 		-webkit-text-fill-color: transparent;
 		font-size: 30vh;
 		position: absolute;
@@ -29,7 +29,7 @@
 		transform: translate(-50%, -50%);
 
 		font-family: var(--fontFancy);
-		opacity: 0.2;
+		opacity: 15%;
 		z-index: -2;
 	}
 

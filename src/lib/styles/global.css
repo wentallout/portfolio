@@ -8,7 +8,7 @@
 
 html {
 	scroll-padding: var(--scroll-padding, 60px);
-	scroll-behavior: auto;
+	scroll-behavior: smooth;
 	overflow-x: hidden;
 	max-width: 100vw;
 	min-height: 101vh;
