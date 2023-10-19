@@ -4,7 +4,7 @@
 	export let what = '';
 	export let output = '';
 	export let role = '';
-	export let year = '';
+
 	export let thumbnail;
 
 	import ArrowRight from '~icons/ph/arrow-right';
@@ -12,7 +12,6 @@
 
 <a href={linkToDetail}>
 	<article class="project">
-		<div class="project__year text-xs">{year}</div>
 		<img class="project__thumbnail" src={thumbnail} alt="" />
 
 		<div class="project__info">
@@ -55,6 +54,8 @@
 		box-shadow: var(--boxShadow);
 		border-radius: var(--borderRadius);
 
+		background-color: var(--colorBgContainer);
+
 		&:hover {
 			background-color: var(--colorBgElevated);
 			box-shadow: -5px 5px var(--colorPrimaryHover);
@@ -82,12 +83,17 @@
 	.project__info {
 		display: flex;
 		flex-grow: 2;
-
 		flex-direction: column;
 		position: relative;
-		padding: var(--spaceM) var(--spaceXL);
+		padding: var(--spaceM) var(--spaceL);
 		gap: var(--spaceM);
 		color: var(--colorTextSecondary);
+	}
+
+	@media (min-width: 768px) {
+		.project__info {
+			padding: var(--spaceM) var(--spaceXL);
+		}
 	}
 
 	.name {
@@ -131,25 +137,6 @@
 
 	.section__desc {
 		max-width: var(--text-width);
-	}
-
-	.project__year {
-		position: absolute;
-		top: 0;
-		left: 0;
-		width: fit-content;
-
-		line-height: normal;
-		color: var(--colorWhite);
-		font-weight: var(--fontWeightXS);
-
-		background-color: rgba(0, 0, 0, 0.8);
-		backdrop-filter: blur(5px);
-
-		padding: 8px;
-		z-index: 3;
-
-		flex-direction: column;
 	}
 
 	.indicator {

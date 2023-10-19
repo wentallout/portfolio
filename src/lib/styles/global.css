@@ -122,3 +122,10 @@ label:has(+ textarea:focus) {
 textarea {
 	form-sizing: normal;
 }
+
+body {
+	/* background-image: url('/images/grain.png');
+	background-position: 0 0;
+	background-size: 300px 300px;
+	background-repeat: auto; */
+}

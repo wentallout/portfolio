@@ -1,6 +1,6 @@
 ---
 title: How to calculate typography values like line height and letter spacing 
-date: 2023-05-04
+date: 2023-10-23
 categories:
     - typography
 ---
@@ -10,15 +10,25 @@ categories:
     import headingFontSizes from '$blogImages/headingFontSizes.png';
 </script>
 
+## line-length / text-width
+
+https://piccalil.li/quick-tip/line-length/
+https://baymard.com/blog/line-length-readability
+
+The optimal line length for body text is **50-75 characters**
+
+On Desktop: 600px is a very good number for text-width
+
+In unstyled HTML, text runs the full width of the screen. For desktop users, that makes it difficult to track from the end of one line to the beginning of another. So let's make the lines shorter.
+
+The ideal line length is 50-75 characters (or 2-3 alphabets 😉).
+
+Much longer, and it's hard to move your eye from the end of one line to the beginning of the next. Much shorter, and the text feels like an unimportant sidebar.
+
 ## Make typography accessible
 
 https://betterwebtype.com/articles/2019/06/16/5-keys-to-accessible-web-typography/
 
-## Light or Dark Background?
-
-A large majority of websites favored dark on light color schemes. People use a less aggressive contrast of an off-white or even beige background with dark-gray text. The off-white is often chosen to lower contrast. If you're making a news/blog website, you might want a comfortable lengthy reading experience.
-
-Black text on a white background is a common pattern for body copy. The contrast is easy on the eyes and is, at least among these websites, the status quo.
 
 ## font-size for heading
 
@@ -49,19 +59,7 @@ There's no **correct** way to achieve perfect spacing atm.
 
 [The Designer's Guide To Letter Spacing](https://www.webdesignerdepot.com/2020/07/the-designers-guide-to-letter-spacing/)
 
-## line-length / text-width
 
-https://baymard.com/blog/line-length-readability
-
-The optimal line length for body text is **50-75 characters**
-
-On Desktop: 600px is a very good number for text-width
-
-In unstyled HTML, text runs the full width of the screen. For desktop users, that makes it difficult to track from the end of one line to the beginning of another. So let's make the lines shorter.
-
-The ideal line length is 50-75 characters (or 2-3 alphabets 😉).
-
-Much longer, and it's hard to move your eye from the end of one line to the beginning of the next. Much shorter, and the text feels like an unimportant sidebar.
 
 ## Left align ALWAYS
 

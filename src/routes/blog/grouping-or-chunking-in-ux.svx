@@ -1,0 +1,25 @@
+---
+title: Grouping or chunking in UX
+date: 2023-10-19
+categories:
+    - ux
+---
+
+## Grouping or chunking
+
+Have you ever wondered why every book is divided into chapters and then into sections and paragraphs
+
+We humans can't consume or handle large amount of information but we love bite sized chunks of information
+
+## Examples
+
+If I show you a washing machine and it has 100 buttons to do different functions and another one which has like 10 buttons which one will you prefer to buy.
+
+SOLUTION: Group relevant controls together so they make sense to user
+
+
+![](https://i.imgur.com/MnMO1O6.png)
+
+![](https://i.imgur.com/vvIqOSA.png)
+
+![](https://i.imgur.com/frveFVe.png)

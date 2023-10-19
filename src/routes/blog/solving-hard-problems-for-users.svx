@@ -1,0 +1,39 @@
+---
+title: Solving hard problems for your users
+date: 2023-10-19
+categories:
+    - ux
+---
+
+## Lazy
+
+Humans are lazy by nature. If you make it too difficult for them to achieve some goal, they will quit. So while designing and developing apps or products, keep in mind this human behavior.
+
+Don't burden your users with difficult calculations or let them memorize long passwords. Solve these problems yourselves using the dev side or design side.
+
+
+## Ways to make it easier for users
+
+People don't even remember their passwords or even email addresses
+- Showing passwords while typing so the users know what they are typing.
+- Automatically locating user's location via GPS or automatically logging them to app after first use will make it effort-less
+
+## Other good examples
+
+- Some apps can calculate calories, duration, steps and speed for people that run/walk
+- Log in with Facebook/Google button rather than using the typical username/password
+- If you make a map app, have an easy button to get Home or Work location
+- International telephone input (add a flag dropdown to user phone number to automatically get the correct phone format)
+- Affordability calculator, mortgage calculator from Zillow
+
+
+Pillowise USA have a measure tool that helps user find their perfect pillow for their body
+
+![](https://i.imgur.com/nGyv3xS.png)
+
+tylko has a tool to customize bookshelves
+
+![](https://i.imgur.com/7ZeIjgW.png)
+
+
+![](https://i.imgur.com/DOq2cTH.png)

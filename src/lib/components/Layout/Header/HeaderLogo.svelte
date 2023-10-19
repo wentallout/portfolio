@@ -3,7 +3,7 @@
 	export let height = width;
 </script>
 
-<a aria-label="home" href="/" class="cover__logo">
+<div aria-label="home" class="cover__logo">
 	<img
 		id="personlogo"
 		class="official-logo rotate"
@@ -11,7 +11,8 @@
 		{height}
 		src="/images/coolLogo.svg"
 		alt="2nd logo" />
-</a>
+	<div class="logo__deco">WENT ALL OUT</div>
+</div>
 
 <style lang="postcss">
 	.official-logo {
@@ -37,5 +38,25 @@
 		&:hover {
 			filter: brightness(1.2);
 		}
+
+		&:hover .logo__deco {
+			opacity: 1;
+		}
+	}
+
+	.logo__deco {
+		opacity: 0;
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		background-color: var(--colorText);
+		color: var(--colorBgLayout);
+		width: 100%;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		transition: var(--transition);
+		font-weight: 600;
 	}
 </style>

@@ -1,5 +1,4 @@
 <script>
-	import Faq from '$components/Contact/Faq.svelte';
 	import PageTitle from '$components/Common/PageTitle.svelte';
 	import SocialLinks from '$components/Contact/SocialLinks.svelte';
 	import ContactForm from '$components/Contact/ContactForm.svelte';
@@ -31,5 +30,3 @@
 <ContactForm />
 
 <SocialLinks />
-
-<Faq />

@@ -3,11 +3,14 @@
 <style global>
 	::-webkit-scrollbar {
 		width: 16px;
+		outline: 1px solid var(--colorTextQuaternary);
 	}
 
 	::-webkit-scrollbar-thumb {
 		background: var(--colorText);
-		box-shadow: inset 2px 2px 2px hsla(0, 0%, 100%, 0.25), inset -2px -2px 2px rgba(0, 0, 0, 0.25);
+		box-shadow:
+			inset 2px 2px 2px hsla(0, 0%, 100%, 0.25),
+			inset -2px -2px 2px rgba(0, 0, 0, 0.25);
 	}
 
 	::-webkit-scrollbar-thumb:hover {
@@ -15,6 +18,6 @@
 	}
 
 	::-webkit-scrollbar-track {
-		background: transparent; 
+		background: transparent;
 	}
 </style>

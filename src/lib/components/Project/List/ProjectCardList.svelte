@@ -12,7 +12,6 @@
 
 <div class="projects">
 	<ProjectCard
-		year="2022"
 		projectName="Reza - Restaurant Reservation App"
 		linkToDetail="project/reza"
 		role="UI, Research, Persona, User Flow, Wireframe, Design System, Prototype, Test"
@@ -21,7 +20,6 @@
 		thumbnail={rezaSquare} />
 
 	<ProjectCard
-		year="2023"
 		projectName="Developer Portfolio"
 		linkToDetail="project/dev-portfolio"
 		what="A clean, minimal, highly customizable portfolio website for developers."
