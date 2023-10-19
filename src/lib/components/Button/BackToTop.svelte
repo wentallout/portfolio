@@ -72,6 +72,8 @@
 
 		box-shadow: var(--boxShadow);
 		color: var(--colorText);
+
+		background-color: var(--colorBgElevated);
 	}
 
 	@media (min-width: 768px) {

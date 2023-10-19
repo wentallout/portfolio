@@ -1,0 +1,18 @@
+---
+title: Using Design Patterns to improve UX
+date: 2023-10-19
+categories:
+    - ux
+---
+
+## Design patterns
+
+Our human brains recognize things easily if they have encountered a similar pattern in the past. So if you deviate a lot from the pattern user's brain follows, then you are making it difficult for the user to use your product.
+
+EX: Don't invent a car which have airplane like controls to move around
+
+## Reference
+
+pttrns.com
+
+http://welie.com/patterns/

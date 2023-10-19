@@ -15,7 +15,9 @@
 
 <div class="accordion">
 	<button class="accordion__btn" type="button" on:click={handleOpen} on:keydown={handleOpen}>
-		<div class="text-small accordion__section">{accordionSection}</div>
+		<div class="text-small accordion__section" class:accordion--active={isOpened}>
+			{accordionSection}
+		</div>
 		<div class="icon caret" class:caret-active={isOpened}>
 			<CaretDown width="16" height="16" />
 		</div>
@@ -35,16 +37,16 @@
 		text-align: left;
 	}
 
+	.accordion--active {
+		color: var(--colorPrimaryActive);
+		font-weight: 600;
+	}
+
 	.accordion {
 		border: 1px solid var(--colorBorder);
 		border-radius: var(--borderRadius);
 		box-shadow: var(--boxShadow);
 	}
-
-	/* .accordion__btn:has(> .caret-active) {
-		font-weight: 600;
-		border-bottom: 1px solid var(--colorBorder);
-	} */
 
 	.caret {
 		transition: var(--transition);

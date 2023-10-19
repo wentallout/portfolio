@@ -10,6 +10,10 @@ categories:
     import uxBooks from '$blogImages/uxBooks.jpeg';
 </script>
 
+## Mega list 
+
+https://www.airtable.com/universe/expqM3OWZoJkjl7wy/the-monster-list-of-ux-books?explore=true
+
 ## roadmap
 
 <Image src={uxBooks} alt="UX Books to read" imagePreset="scroll"  />

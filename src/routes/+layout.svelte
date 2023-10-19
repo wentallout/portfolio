@@ -66,6 +66,7 @@
 		flex-direction: column;
 		min-height: 100vh;
 		z-index: 1;
+		/* background-color: var(--colorBgLayout); */
 	}
 
 	/* .main-content:after {

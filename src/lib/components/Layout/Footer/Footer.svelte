@@ -1,4 +1,5 @@
 <script>
+	import PhysicsCanvas from '$lib/components/Layout/Footer/PhysicsCanvas.svelte';
 	import SaosContainer from '$lib/components/Common/SaosContainer.svelte';
 	import ChainDivider from '$components/Layout/Other/ChainDivider.svelte';
 	import FooterEnd from '$components/Layout/Footer/FooterEnd.svelte';
@@ -17,6 +18,7 @@
 
 <SaosContainer>
 	<footer class="footer text-small">
+		<PhysicsCanvas />
 		<ChainDivider />
 		<img class="footer__logo" alt="footer logo" width="24" height="24" src="/images/coolLogo.svg" />
 
@@ -51,11 +53,11 @@
 							<a href="/resource/music">Music</a>
 						</li>
 						<li class="nav-list__item">
+							<a href="/resource/tool">REM Converter</a>
+						</li>
+						<li class="nav-list__item">
 							<a href="/rss.xml">RSS</a>
 						</li>
-						<!-- <li class="nav-list__item">
-							<a href="/sitemap.xml">Sitemap</a>
-						</li> -->
 					</ul>
 				</div>
 
@@ -155,6 +157,11 @@
 		max-width: 100vw;
 		position: relative;
 		overflow: hidden;
+
+		background-image: url('/images/grain.png');
+		background-position: 0 0;
+		background-size: 300px 300px;
+		background-repeat: auto;
 	}
 
 	.footer__list {
@@ -213,11 +220,12 @@
 
 	.footer__logo {
 		position: absolute;
-		left: -5%;
-		top: 40%;
+		left: 0;
+		top: 0;
 		width: auto;
 		height: 100%;
 		aspect-ratio: 1 / 1;
 		opacity: 0.1;
+		user-select: none;
 	}
 </style>

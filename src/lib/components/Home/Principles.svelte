@@ -75,6 +75,7 @@
 
 		border-radius: var(--borderRadiusLight);
 		box-shadow: var(--boxShadow);
+		background-color: var(--colorBgContainer);
 	}
 
 	.principle__title {

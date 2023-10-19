@@ -1,6 +1,6 @@
 <script>
 	import { onMount } from 'svelte';
-	import { musicList } from '$components/Resource/MusicPlayer/musiclist.js';
+	import { musicList } from '$lib/components/Resource/MusicPlayer/music.js';
 	import PlayFill from '~icons/ph/play-fill';
 	import Download from '~icons/ph/download';
 	import SkipBack from '~icons/ph/skip-back';
@@ -8,7 +8,9 @@
 	import Pause from '~icons/ph/pause-fill';
 	import SpeakerHigh from '~icons/ph/speaker-high';
 	import SpeakerX from '~icons/ph/speaker-x';
+	import AudioMotionAnalyzer from 'audiomotion-analyzer';
 
+	let visualizerEl;
 	let currentSongIndex = 0;
 	let playing = false;
 	let duration;
@@ -59,9 +61,36 @@
 		currentSongIndex = i;
 		playMusic();
 	}
+	let visualizerLogoEl;
+
+	let energy;
+	let energyHeight;
+
+	$: energyHeight = 120 + energy * 150;
 
 	onMount(() => {
 		audioEle.pause();
+
+		function drawCallback(analyzer) {
+			energy = analyzer.getEnergy();
+		}
+
+		let analyzer = new AudioMotionAnalyzer(visualizerEl, {
+			source: audioEle,
+			height: 300,
+			mode: 10,
+			barSpace: 0,
+			ledBars: true,
+			colorMode: 'gradient',
+			showBgColor: false,
+			overlay: true,
+			roundBars: true,
+			mirror: 1,
+			gradient: 'rainbow',
+			showPeaks: false,
+			showScaleX: false,
+			onCanvasDraw: drawCallback
+		});
 	});
 
 	function handleSeekBar() {
@@ -75,6 +104,15 @@
 	let seekBarValue;
 	$: seekBarValue = (currentTime / duration) * 100 || 0;
 </script>
+
+<div bind:this={visualizerEl} class="visualizer">
+	<img
+		style="--energyHeight:{energyHeight}px;"
+		bind:this={visualizerLogoEl}
+		class="visualizer__logo"
+		src="/images/coolLogo.svg"
+		alt="" />
+</div>
 
 <audio
 	bind:muted
@@ -167,6 +205,28 @@
 </div>
 
 <style lang="postcss">
+	.visualizer__logo {
+		position: absolute;
+		left: 0;
+		right: 0;
+		top: 0;
+		bottom: 0;
+		margin: auto;
+		height: var(--energyHeight);
+		--shadow: calc(var(--energyHeight) - 100px);
+		filter: drop-shadow(0 0 var(--shadow) var(--colorPrimaryHover));
+		z-index: -1;
+	}
+
+	.visualizer {
+		position: relative;
+		height: 300px;
+		background: url(/images/dancing.webp);
+		background-size: contain;
+		background-position-x: center;
+		background-repeat: no-repeat;
+	}
+
 	.mute__btn {
 		all: unset;
 		cursor: pointer;
@@ -201,12 +261,13 @@
 	}
 
 	.info__name {
+		color: var(--colorText);
 		font-weight: var(--fontWeightLarge);
 	}
 
 	.info__duration {
 		font-weight: var(--fontWeightXS);
-		color: var(--colorWhite);
+		color: var(--colorTextQuaternary);
 	}
 
 	.download {
@@ -250,10 +311,6 @@
 		flex-direction: column;
 		align-items: center;
 		width: 100%;
-
-		background: url(/images/retro.gif);
-
-		background-repeat: repeat;
 	}
 
 	/* MUSIC PLAYER BUTTONS */
@@ -302,7 +359,7 @@
 		align-items: center;
 		width: 100%;
 		background-color: var(--colorBgContainer);
-		border-radius: var(--borderRadius);
+
 		overflow: hidden;
 	}
 

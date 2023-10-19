@@ -16,7 +16,7 @@
 		}
 	});
 
-	import Logo from '$lib/components/Layout/Header/Logo.svelte';
+	import HeaderLogo from '$lib/components/Layout/Header/HeaderLogo.svelte';
 	import { fade } from 'svelte/transition';
 	import { theme } from '$lib/stores/themeStore.js';
 
@@ -54,7 +54,7 @@
 			</video>
 		{/if}
 
-		<Logo />
+		<HeaderLogo />
 	</div>
 
 	{#if marqueeItems}

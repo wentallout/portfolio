@@ -8,5 +8,9 @@ export const musicList = writable([
 	{
 		audio: 'Belt.mp3',
 		name: 'Belt'
+	},
+	{
+		audio: 'IllDoIt.mp3',
+		name: 'Ill Do It'
 	}
 ]);
