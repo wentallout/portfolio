@@ -88,12 +88,6 @@ svg {
 	outline: 0px solid transparent;
 }
 
-.embed {
-	margin-bottom: var(--spaceS);
-	overflow: hidden;
-	background-color: transparent;
-}
-
 label:has(+ input:focus),
 label:has(+ textarea:focus) {
 	color: var(--colorPrimary);

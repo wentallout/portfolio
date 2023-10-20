@@ -5,36 +5,33 @@
 
 	// import { Spotify } from 'sveltekit-embed';
 	import MusicPlayer from '$lib/components/Resource/MusicPlayer/MusicPlayer.svelte';
-	// import PageTitle from '$components/Common/PageTitle.svelte';
+	// import PageTitle from '$components/Common/PageTitle.svelte'
+
+	import { SoundCloud } from 'sveltekit-embed';
 </script>
 
 <section>
 	<SectionTitle
 		sectionTitle="Music"
 		let:sectionIcon
-		sectionDesc="Khoa's favorite ringtones that you can download. Live Radio included">
+		sectionDesc="Khoa's favorite songs that you can download. Live Radio included">
 		<FileAudio {...sectionIcon} />
 	</SectionTitle>
 
 	<MusicPlayer />
 </section>
 
-<!-- <section>
-	<SectionTitle sectionTitle="Spotify Playlist" let:sectionIcon>
+<section>
+	<SectionTitle sectionTitle="SoundCloud" let:sectionIcon>
 		<MusicNotes {...sectionIcon} />
 	</SectionTitle>
 
-	<div class="embed">
-		<Spotify
-			spotifyLink="playlist/37i9dQZF1DWWY64wDtewQt?si=67ed3300e96e43ec"
-			width="100%"
-			height="500px" />
-	</div>
+	<SoundCloud
+		soundcloudLink="https://soundcloud.com/falxce/falxce-berylxx-serenity?si=e37c4665ee3e4a87a5e76a302267f96f&utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing" />
 
-	<div class="embed">
-		<Spotify spotifyLink="playlist/4rVu705DBrGDeNSec40ooy" width="100%" height="500px" />
-	</div>
-</section> -->
+	<SoundCloud
+		soundcloudLink="https://soundcloud.com/falxce/osaka?si=476a413a993d433da0c6e7d8f388507e&utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing" />
+</section>
 
 <style>
 </style>

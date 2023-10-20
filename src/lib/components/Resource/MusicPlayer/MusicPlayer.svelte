@@ -1,6 +1,7 @@
 <script>
+	import { formatMusicTime } from './musicUtils.js';
 	import { onMount } from 'svelte';
-	import { musicList } from '$lib/components/Resource/MusicPlayer/music.js';
+	import { musicList, isPlaying } from '$lib/components/Resource/MusicPlayer/musicStores.js';
 	import PlayFill from '~icons/ph/play-fill';
 	import Download from '~icons/ph/download';
 	import SkipBack from '~icons/ph/skip-back';
@@ -10,9 +11,11 @@
 	import SpeakerX from '~icons/ph/speaker-x';
 	import AudioMotionAnalyzer from 'audiomotion-analyzer';
 
+	import MusicVisualizer from './MusicVisualizer.svelte';
+
 	let visualizerEl;
 	let currentSongIndex = 0;
-	let playing = false;
+
 	let duration;
 	let currentTime;
 	let volume = 0.4;
@@ -26,22 +29,13 @@
 	}
 
 	function playMusic() {
-		playing = true;
+		$isPlaying = true;
 		audioEle.play();
 	}
 
 	function pauseMusic() {
-		playing = false;
+		$isPlaying = false;
 		audioEle.pause();
-	}
-
-	function format(seconds) {
-		if (isNaN(seconds)) return '...';
-
-		const minutes = Math.floor(seconds / 60);
-		seconds = Math.floor(seconds % 60);
-		if (seconds < 10) seconds = '0' + seconds;
-		return `${minutes}:${seconds}`;
 	}
 
 	function prev() {
@@ -61,12 +55,9 @@
 		currentSongIndex = i;
 		playMusic();
 	}
-	let visualizerLogoEl;
 
 	let energy;
 	let energyHeight;
-
-	$: energyHeight = 120 + energy * 150;
 
 	onMount(() => {
 		audioEle.pause();
@@ -78,7 +69,7 @@
 		let analyzer = new AudioMotionAnalyzer(visualizerEl, {
 			source: audioEle,
 			height: 300,
-			mode: 10,
+			mode: 4,
 			barSpace: 0,
 			ledBars: true,
 			colorMode: 'gradient',
@@ -103,40 +94,62 @@
 
 	let seekBarValue;
 	$: seekBarValue = (currentTime / duration) * 100 || 0;
+	$: energyHeight = 120 + energy * 150;
+	$: audioEle;
 </script>
 
-<div bind:this={visualizerEl} class="visualizer">
+<!-- <MusicVisualizer audioEleProp={audioEle} /> -->
+
+<div class="visualizer" bind:this={visualizerEl}>
 	<img
 		style="--energyHeight:{energyHeight}px;"
-		bind:this={visualizerLogoEl}
 		class="visualizer__logo"
 		src="/images/coolLogo.svg"
-		alt="" />
+		alt="music visualizer logo" />
 </div>
 
 <audio
+	bind:this={audioEle}
 	crossorigin="anonymous"
 	bind:muted
 	bind:currentTime
 	bind:duration
 	bind:volume
 	autoplay="false"
-	onended={next}
-	src={$musicList[currentSongIndex].audio}
-	bind:this={audioEle} />
+	on:ended={next}
+	src={$musicList[currentSongIndex].audio} />
 <div class="player">
 	<div class="current">
 		<div class="info">
 			<div class="info__name text-2xl">{$musicList[currentSongIndex].name}</div>
 
 			<div class="info__time">
-				<div class="info__current text-xl">{format(currentTime)}</div>
-				<div class="info__duration text-xl">{format(duration)}</div>
+				<div class="info__current text-xl">{formatMusicTime(currentTime)}</div>
+				<div class="info__duration text-xl">{formatMusicTime(duration)}</div>
 			</div>
 		</div>
 	</div>
 
 	<div class="seekBar">
+		<div class="controls">
+			<button type="button" class="mp-btn other-btn" on:click={prev}>
+				<SkipBack width="24" height="24" color="var(--colorTextSecondary)" />
+			</button>
+
+			{#if $isPlaying}
+				<button type="button" class="mp-btn play-btn" on:click={pauseMusic}>
+					<Pause width="24" height="24" color="var(--colorBlack)" />
+				</button>
+			{:else}
+				<button type="button" class="mp-btn play-btn" on:click={playMusic}>
+					<PlayFill width="24" height="24" color="var(--colorBlack)" />
+				</button>
+			{/if}
+
+			<button type="button" class="mp-btn other-btn" on:click={next}>
+				<SkipForward width="24" height="24" color="var(--colorTextSecondary)" />
+			</button>
+		</div>
 		<input
 			bind:this={seekBarEle}
 			on:input={handleSeekBar}
@@ -166,25 +179,6 @@
 				step="any"
 				value={volume * 100} />
 		</div>
-	</div>
-	<div class="controls">
-		<button type="button" class="mp-btn other-btn" on:click={prev}>
-			<SkipBack width="24" height="24" color="var(--colorTextSecondary)" />
-		</button>
-
-		{#if playing}
-			<button type="button" class="mp-btn play-btn" on:click={pauseMusic}>
-				<Pause width="24" height="24" color="var(--colorBlack)" />
-			</button>
-		{:else}
-			<button type="button" class="mp-btn play-btn" on:click={playMusic}>
-				<PlayFill width="24" height="24" color="var(--colorBlack)" />
-			</button>
-		{/if}
-
-		<button type="button" class="mp-btn other-btn" on:click={next}>
-			<SkipForward width="24" height="24" color="var(--colorTextSecondary)" />
-		</button>
 	</div>
 
 	<div class="song-list">
@@ -236,6 +230,7 @@
 	.seekBar {
 		display: flex;
 		flex-direction: row;
+		align-items: center;
 		flex-wrap: wrap;
 		width: 100%;
 		padding: var(--spaceS) var(--spaceL);
@@ -281,9 +276,9 @@
 		z-index: 2;
 		margin-left: auto;
 		transition: var(--transition);
+		outline: 1px solid var(--colorTextQuaternary);
 
 		&:hover {
-			outline: 1px solid var(--colorText);
 			scale: 1.2;
 		}
 	}
@@ -295,7 +290,7 @@
 		width: fit-content;
 		align-items: center;
 		justify-content: center;
-		padding: var(--spaceL);
+		padding: var(--spaceM);
 		color: var(--colorWhite);
 	}
 
@@ -320,10 +315,8 @@
 		display: flex;
 		justify-content: center;
 		align-items: center;
-		padding: var(--spaceM);
-		gap: var(--spaceS);
-
-		width: 100%;
+		padding: var(--spaceS) 0;
+		gap: var(--spaceXS);
 	}
 
 	.mp-btn {
@@ -372,11 +365,20 @@
 	}
 
 	.song-active {
-		padding: var(--spaceS) var(--spaceL);
+		padding: var(--space2XS) var(--spaceL);
 
 		position: relative;
 		background: var(--colorPrimary);
 		color: var(--colorBlack);
+	}
+
+	.song-active::before {
+		content: '🎵';
+		color: var(--colorTextSecondary);
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
 	}
 
 	.song-name {
