@@ -2,39 +2,40 @@
 	import { onMount } from 'svelte';
 	import AudioMotionAnalyzer from 'audiomotion-analyzer';
 	let visualizerEl;
-
+	import { audioPlayerEl, isPlaying } from '$lib/components/Resource/MusicPlayer/musicStores.js';
 	let energy;
 	let energyHeight;
 
-	$: energyHeight = 120 + energy * 150;
+	let analyzerSettings = {
+		source: $audioPlayerEl,
+		height: 300,
+		mode: 4,
+		barSpace: 0,
+		ledBars: true,
+		colorMode: 'gradient',
+		showBgColor: false,
+		overlay: true,
+		roundBars: true,
+		mirror: 1,
+		gradient: 'rainbow',
+		showPeaks: false,
+		showScaleX: false,
+		onCanvasDraw: drawCallback
+	};
 
-	export let audioEleProp;
+	let analyzer;
 
 	onMount(() => {
-		function drawCallback(i) {
-			energy = i.getEnergy();
-		}
-
-		let analyzer = new AudioMotionAnalyzer(visualizerEl, {
-			source: audioEleProp,
-			height: 300,
-			mode: 4,
-			barSpace: 0,
-			ledBars: true,
-			colorMode: 'gradient',
-			showBgColor: false,
-			overlay: true,
-			roundBars: true,
-			mirror: 1,
-			gradient: 'rainbow',
-			showPeaks: false,
-			showScaleX: false,
-			onCanvasDraw: drawCallback
-		});
+		analyzer = new AudioMotionAnalyzer(visualizerEl, analyzerSettings);
 	});
-</script>
 
-<audio bind:this={audioEleProp}></audio>
+	$: energyHeight = 120 + energy * 150;
+	function drawCallback(i) {
+		energy = i.getEnergy();
+	}
+
+	$: console.log(analyzer);
+</script>
 
 <div class="visualizer" bind:this={visualizerEl}>
 	<img
@@ -42,6 +43,12 @@
 		class="visualizer__logo"
 		src="/images/coolLogo.svg"
 		alt="music visualizer logo" />
+
+	<img
+		class:dancer-active={$isPlaying}
+		class="visualizer__dancer"
+		alt="gojo"
+		src="/images/dancing.webp" />
 </div>
 
 <style>
@@ -61,9 +68,22 @@
 	.visualizer {
 		position: relative;
 		height: 300px;
-		background: url(/images/dancing.webp);
-		background-size: contain;
-		background-position-x: center;
-		background-repeat: no-repeat;
+	}
+
+	.visualizer__dancer {
+		position: absolute;
+		left: 50%;
+		top: 50%;
+		transform: translate(-50%, -50%);
+		height: 100%;
+		width: auto;
+		object-fit: contain;
+		margin: auto;
+		opacity: 0;
+		transition: var(--transition);
+	}
+
+	.dancer-active {
+		opacity: 1;
 	}
 </style>

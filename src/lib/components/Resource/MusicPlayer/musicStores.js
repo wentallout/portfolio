@@ -46,5 +46,13 @@ export const musicList = writable([
 	{
 		audio: 'http://113.164.229.226:7005/stream',
 		name: '[Radio] VOV3 Music'
+	},
+	{
+		audio: 'https://uk2.internet-radio.com/proxy/esvive?mp=/stream',
+		name: '[Radio] Esvive Radio'
+	},
+	{
+		audio: 'http://163.172.77.142:8724/stream/1/',
+		name: '[Radio] HanaPOP KPOP'
 	}
 ]);

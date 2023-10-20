@@ -1,7 +1,11 @@
 <script>
 	import { formatMusicTime } from './musicUtils.js';
 	import { onMount } from 'svelte';
-	import { musicList, isPlaying } from '$lib/components/Resource/MusicPlayer/musicStores.js';
+	import {
+		musicList,
+		isPlaying,
+		audioPlayerEl
+	} from '$lib/components/Resource/MusicPlayer/musicStores.js';
 	import PlayFill from '~icons/ph/play-fill';
 	import Download from '~icons/ph/download';
 	import SkipBack from '~icons/ph/skip-back';
@@ -9,17 +13,15 @@
 	import Pause from '~icons/ph/pause-fill';
 	import SpeakerHigh from '~icons/ph/speaker-high';
 	import SpeakerX from '~icons/ph/speaker-x';
-	import AudioMotionAnalyzer from 'audiomotion-analyzer';
 
 	import MusicVisualizer from './MusicVisualizer.svelte';
 
-	let visualizerEl;
 	let currentSongIndex = 0;
 
 	let duration;
 	let currentTime;
 	let volume = 0.4;
-	let audioEle;
+
 	let volumeEle;
 	let seekBarEle;
 	let muted;
@@ -30,12 +32,12 @@
 
 	function playMusic() {
 		$isPlaying = true;
-		audioEle.play();
+		$audioPlayerEl.play();
 	}
 
 	function pauseMusic() {
 		$isPlaying = false;
-		audioEle.pause();
+		$audioPlayerEl.pause();
 	}
 
 	function prev() {
@@ -56,32 +58,8 @@
 		playMusic();
 	}
 
-	let energy;
-	let energyHeight;
-
 	onMount(() => {
-		audioEle.pause();
-
-		function drawCallback(analyzer) {
-			energy = analyzer.getEnergy();
-		}
-
-		let analyzer = new AudioMotionAnalyzer(visualizerEl, {
-			source: audioEle,
-			height: 300,
-			mode: 4,
-			barSpace: 0,
-			ledBars: true,
-			colorMode: 'gradient',
-			showBgColor: false,
-			overlay: true,
-			roundBars: true,
-			mirror: 1,
-			gradient: 'rainbow',
-			showPeaks: false,
-			showScaleX: false,
-			onCanvasDraw: drawCallback
-		});
+		$audioPlayerEl.pause();
 	});
 
 	function handleSeekBar() {
@@ -94,22 +72,12 @@
 
 	let seekBarValue;
 	$: seekBarValue = (currentTime / duration) * 100 || 0;
-	$: energyHeight = 120 + energy * 150;
-	$: audioEle;
 </script>
 
-<!-- <MusicVisualizer audioEleProp={audioEle} /> -->
-
-<div class="visualizer" bind:this={visualizerEl}>
-	<img
-		style="--energyHeight:{energyHeight}px;"
-		class="visualizer__logo"
-		src="/images/coolLogo.svg"
-		alt="music visualizer logo" />
-</div>
+<MusicVisualizer />
 
 <audio
-	bind:this={audioEle}
+	bind:this={$audioPlayerEl}
 	crossorigin="anonymous"
 	bind:muted
 	bind:currentTime
@@ -200,28 +168,6 @@
 </div>
 
 <style lang="postcss">
-	.visualizer__logo {
-		position: absolute;
-		left: 0;
-		right: 0;
-		top: 0;
-		bottom: 0;
-		margin: auto;
-		height: var(--energyHeight);
-		--shadow: calc(var(--energyHeight) - 100px);
-		filter: drop-shadow(0 0 var(--shadow) var(--colorPrimaryHover));
-		z-index: -1;
-	}
-
-	.visualizer {
-		position: relative;
-		height: 300px;
-		background: url(/images/dancing.webp);
-		background-size: contain;
-		background-position-x: center;
-		background-repeat: no-repeat;
-	}
-
 	.mute__btn {
 		all: unset;
 		cursor: pointer;
@@ -362,6 +308,8 @@
 		flex-direction: column;
 		background-color: transparent;
 		width: 100%;
+		max-height: 70vh;
+		overflow-y: scroll;
 	}
 
 	.song-active {
@@ -373,15 +321,23 @@
 	}
 
 	.song-active::before {
-		content: '🎵';
-		color: var(--colorTextSecondary);
+		content: 'PLAYING';
+
+		z-index: 0;
+		font-weight: 600;
+		font-size: 60px;
 		position: absolute;
 		top: 50%;
-		left: 50%;
+		right: 0;
+		opacity: 0.4;
 		transform: translate(-50%, -50%);
+
+		-webkit-text-stroke: 2px var(--colorText);
+		-webkit-text-fill-color: transparent;
 	}
 
 	.song-name {
+		z-index: 1;
 		font-weight: var(--fontWeightXS);
 		color: var(--colorText);
 	}
