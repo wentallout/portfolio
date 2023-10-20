@@ -14,7 +14,7 @@ const directives = {
 		'https://giscus.app'
 	],
 	'manifest-src': ["'self'"],
-	'media-src': ["'self'", 'data:', 'https://*.cloudfront.net'],
+	'media-src': ['*'],
 	'object-src': ["'none'"],
 	'style-src': ["'self'", "'unsafe-inline'", 'https://*.cloudfront.net'],
 	'worker-src': ["'self'"]

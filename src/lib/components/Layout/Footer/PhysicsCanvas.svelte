@@ -89,7 +89,7 @@
 			}
 		});
 
-		let intialShapes = Composites.stack(50, 50, 10, 2, 40, 40, function (x, y) {
+		let intialShapes = Composites.stack(50, 50, 1, 1, 40, 40, function (x, y) {
 			return createShape(x, y);
 		});
 
@@ -118,18 +118,19 @@
 
 <svelte:window bind:devicePixelRatio />
 
-<div
-	class="obj"
-	on:mousemove={handleMouseMove}
+<!-- on:mousemove={handleMouseMove}
 	on:keypress={handleClick}
-	on:click={handleClick}
+	on:click={handleClick} -->
+
+<div
+	class="phys-canvas"
 	bind:clientWidth={eleClientWidth}
 	bind:clientHeight={eleClientHeight}
 	bind:this={physEle}>
 </div>
 
 <style>
-	.obj {
+	.phys-canvas {
 		position: absolute;
 		top: 0;
 		left: 0;

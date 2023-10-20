@@ -3,23 +3,23 @@
 	import MusicNotes from '~icons/ph/music-notes';
 	import FileAudio from '~icons/ph/file-audio';
 
-	import { Spotify } from 'sveltekit-embed';
+	// import { Spotify } from 'sveltekit-embed';
 	import MusicPlayer from '$lib/components/Resource/MusicPlayer/MusicPlayer.svelte';
-	import PageTitle from '$components/Common/PageTitle.svelte';
+	// import PageTitle from '$components/Common/PageTitle.svelte';
 </script>
 
-<PageTitle pageTitle="Music" />
 <section>
 	<SectionTitle
-		sectionTitle="Ringtone"
+		sectionTitle="Music"
 		let:sectionIcon
-		sectionDesc="Custom ringtones made by Khoa for your phone. Intros are removed. Free download enabled.">
+		sectionDesc="Khoa's favorite ringtones that you can download. Live Radio included">
 		<FileAudio {...sectionIcon} />
 	</SectionTitle>
 
 	<MusicPlayer />
 </section>
-<section>
+
+<!-- <section>
 	<SectionTitle sectionTitle="Spotify Playlist" let:sectionIcon>
 		<MusicNotes {...sectionIcon} />
 	</SectionTitle>
@@ -34,7 +34,7 @@
 	<div class="embed">
 		<Spotify spotifyLink="playlist/4rVu705DBrGDeNSec40ooy" width="100%" height="500px" />
 	</div>
-</section>
+</section> -->
 
 <style>
 </style>
