@@ -115,13 +115,14 @@
 </div>
 
 <audio
+	crossorigin="anonymous"
 	bind:muted
 	bind:currentTime
 	bind:duration
 	bind:volume
 	autoplay="false"
 	onended={next}
-	src={'/ringtones/' + $musicList[currentSongIndex].audio}
+	src={$musicList[currentSongIndex].audio}
 	bind:this={audioEle} />
 <div class="player">
 	<div class="current">
