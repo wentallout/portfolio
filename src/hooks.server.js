@@ -8,6 +8,7 @@ const directives = {
 	'frame-ancestors': ["'self'"],
 	'frame-src': [
 		"'self'",
+		'https://w.soundcloud.com',
 		'https://www.youtube-nocookie.com',
 		'https://open.spotify.com',
 		'https://my.spline.design',

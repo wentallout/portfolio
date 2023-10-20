@@ -1,6 +1,11 @@
 <script>
+	import { formatMusicTime } from './musicUtils.js';
 	import { onMount } from 'svelte';
-	import { musicList } from '$lib/components/Resource/MusicPlayer/music.js';
+	import {
+		musicList,
+		isPlaying,
+		audioPlayerEl
+	} from '$lib/components/Resource/MusicPlayer/musicStores.js';
 	import PlayFill from '~icons/ph/play-fill';
 	import Download from '~icons/ph/download';
 	import SkipBack from '~icons/ph/skip-back';
@@ -8,15 +13,15 @@
 	import Pause from '~icons/ph/pause-fill';
 	import SpeakerHigh from '~icons/ph/speaker-high';
 	import SpeakerX from '~icons/ph/speaker-x';
-	import AudioMotionAnalyzer from 'audiomotion-analyzer';
 
-	let visualizerEl;
+	import MusicVisualizer from './MusicVisualizer.svelte';
+
 	let currentSongIndex = 0;
-	let playing = false;
+
 	let duration;
 	let currentTime;
 	let volume = 0.4;
-	let audioEle;
+
 	let volumeEle;
 	let seekBarEle;
 	let muted;
@@ -26,22 +31,13 @@
 	}
 
 	function playMusic() {
-		playing = true;
-		audioEle.play();
+		$isPlaying = true;
+		$audioPlayerEl.play();
 	}
 
 	function pauseMusic() {
-		playing = false;
-		audioEle.pause();
-	}
-
-	function format(seconds) {
-		if (isNaN(seconds)) return '...';
-
-		const minutes = Math.floor(seconds / 60);
-		seconds = Math.floor(seconds % 60);
-		if (seconds < 10) seconds = '0' + seconds;
-		return `${minutes}:${seconds}`;
+		$isPlaying = false;
+		$audioPlayerEl.pause();
 	}
 
 	function prev() {
@@ -61,36 +57,9 @@
 		currentSongIndex = i;
 		playMusic();
 	}
-	let visualizerLogoEl;
-
-	let energy;
-	let energyHeight;
-
-	$: energyHeight = 120 + energy * 150;
 
 	onMount(() => {
-		audioEle.pause();
-
-		function drawCallback(analyzer) {
-			energy = analyzer.getEnergy();
-		}
-
-		let analyzer = new AudioMotionAnalyzer(visualizerEl, {
-			source: audioEle,
-			height: 300,
-			mode: 10,
-			barSpace: 0,
-			ledBars: true,
-			colorMode: 'gradient',
-			showBgColor: false,
-			overlay: true,
-			roundBars: true,
-			mirror: 1,
-			gradient: 'rainbow',
-			showPeaks: false,
-			showScaleX: false,
-			onCanvasDraw: drawCallback
-		});
+		$audioPlayerEl.pause();
 	});
 
 	function handleSeekBar() {
@@ -105,38 +74,50 @@
 	$: seekBarValue = (currentTime / duration) * 100 || 0;
 </script>
 
-<div bind:this={visualizerEl} class="visualizer">
-	<img
-		style="--energyHeight:{energyHeight}px;"
-		bind:this={visualizerLogoEl}
-		class="visualizer__logo"
-		src="/images/coolLogo.svg"
-		alt="" />
-</div>
+<MusicVisualizer />
 
 <audio
+	bind:this={$audioPlayerEl}
 	crossorigin="anonymous"
 	bind:muted
 	bind:currentTime
 	bind:duration
 	bind:volume
 	autoplay="false"
-	onended={next}
-	src={$musicList[currentSongIndex].audio}
-	bind:this={audioEle} />
+	on:ended={next}
+	src={$musicList[currentSongIndex].audio} />
 <div class="player">
 	<div class="current">
 		<div class="info">
 			<div class="info__name text-2xl">{$musicList[currentSongIndex].name}</div>
 
 			<div class="info__time">
-				<div class="info__current text-xl">{format(currentTime)}</div>
-				<div class="info__duration text-xl">{format(duration)}</div>
+				<div class="info__current text-xl">{formatMusicTime(currentTime)}</div>
+				<div class="info__duration text-xl">{formatMusicTime(duration)}</div>
 			</div>
 		</div>
 	</div>
 
 	<div class="seekBar">
+		<div class="controls">
+			<button type="button" class="mp-btn other-btn" on:click={prev}>
+				<SkipBack width="24" height="24" color="var(--colorTextSecondary)" />
+			</button>
+
+			{#if $isPlaying}
+				<button type="button" class="mp-btn play-btn" on:click={pauseMusic}>
+					<Pause width="24" height="24" color="var(--colorBlack)" />
+				</button>
+			{:else}
+				<button type="button" class="mp-btn play-btn" on:click={playMusic}>
+					<PlayFill width="24" height="24" color="var(--colorBlack)" />
+				</button>
+			{/if}
+
+			<button type="button" class="mp-btn other-btn" on:click={next}>
+				<SkipForward width="24" height="24" color="var(--colorTextSecondary)" />
+			</button>
+		</div>
 		<input
 			bind:this={seekBarEle}
 			on:input={handleSeekBar}
@@ -167,25 +148,6 @@
 				value={volume * 100} />
 		</div>
 	</div>
-	<div class="controls">
-		<button type="button" class="mp-btn other-btn" on:click={prev}>
-			<SkipBack width="24" height="24" color="var(--colorTextSecondary)" />
-		</button>
-
-		{#if playing}
-			<button type="button" class="mp-btn play-btn" on:click={pauseMusic}>
-				<Pause width="24" height="24" color="var(--colorBlack)" />
-			</button>
-		{:else}
-			<button type="button" class="mp-btn play-btn" on:click={playMusic}>
-				<PlayFill width="24" height="24" color="var(--colorBlack)" />
-			</button>
-		{/if}
-
-		<button type="button" class="mp-btn other-btn" on:click={next}>
-			<SkipForward width="24" height="24" color="var(--colorTextSecondary)" />
-		</button>
-	</div>
 
 	<div class="song-list">
 		{#each $musicList as music, i}
@@ -206,28 +168,6 @@
 </div>
 
 <style lang="postcss">
-	.visualizer__logo {
-		position: absolute;
-		left: 0;
-		right: 0;
-		top: 0;
-		bottom: 0;
-		margin: auto;
-		height: var(--energyHeight);
-		--shadow: calc(var(--energyHeight) - 100px);
-		filter: drop-shadow(0 0 var(--shadow) var(--colorPrimaryHover));
-		z-index: -1;
-	}
-
-	.visualizer {
-		position: relative;
-		height: 300px;
-		background: url(/images/dancing.webp);
-		background-size: contain;
-		background-position-x: center;
-		background-repeat: no-repeat;
-	}
-
 	.mute__btn {
 		all: unset;
 		cursor: pointer;
@@ -236,6 +176,7 @@
 	.seekBar {
 		display: flex;
 		flex-direction: row;
+		align-items: center;
 		flex-wrap: wrap;
 		width: 100%;
 		padding: var(--spaceS) var(--spaceL);
@@ -281,9 +222,9 @@
 		z-index: 2;
 		margin-left: auto;
 		transition: var(--transition);
+		outline: 1px solid var(--colorTextQuaternary);
 
 		&:hover {
-			outline: 1px solid var(--colorText);
 			scale: 1.2;
 		}
 	}
@@ -295,7 +236,7 @@
 		width: fit-content;
 		align-items: center;
 		justify-content: center;
-		padding: var(--spaceL);
+		padding: var(--spaceM);
 		color: var(--colorWhite);
 	}
 
@@ -320,10 +261,8 @@
 		display: flex;
 		justify-content: center;
 		align-items: center;
-		padding: var(--spaceM);
-		gap: var(--spaceS);
-
-		width: 100%;
+		padding: var(--spaceS) 0;
+		gap: var(--spaceXS);
 	}
 
 	.mp-btn {
@@ -369,17 +308,36 @@
 		flex-direction: column;
 		background-color: transparent;
 		width: 100%;
+		max-height: 70vh;
+		overflow-y: scroll;
 	}
 
 	.song-active {
-		padding: var(--spaceS) var(--spaceL);
+		padding: var(--space2XS) var(--spaceL);
 
 		position: relative;
 		background: var(--colorPrimary);
 		color: var(--colorBlack);
 	}
 
+	.song-active::before {
+		content: 'PLAYING';
+
+		z-index: 0;
+		font-weight: 600;
+		font-size: 60px;
+		position: absolute;
+		top: 50%;
+		right: 0;
+		opacity: 0.4;
+		transform: translate(-50%, -50%);
+
+		-webkit-text-stroke: 2px var(--colorText);
+		-webkit-text-fill-color: transparent;
+	}
+
 	.song-name {
+		z-index: 1;
 		font-weight: var(--fontWeightXS);
 		color: var(--colorText);
 	}

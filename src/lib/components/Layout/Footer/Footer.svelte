@@ -29,8 +29,7 @@
 					<div class="list__title">About me</div>
 					<ul class="list__nav">
 						<li class="nav-list__item">
-							Nguyen Dang Khoa is a UI Designer in Ho Chi Minh City, Vietnam that creates superb
-							affordable websites and apps for small businesses.
+							I creates superb affordable websites and apps for small businesses.
 						</li>
 					</ul>
 				</div>

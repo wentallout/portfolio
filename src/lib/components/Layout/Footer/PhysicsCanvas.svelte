@@ -22,6 +22,7 @@
 	function changeGravity() {
 		time = time + 0.01;
 		engine.gravity.x = Math.sin(time);
+
 		engine.gravity.y = Math.cos(time);
 		requestAnimationFrame(changeGravity);
 	}
@@ -41,19 +42,41 @@
 			}
 		});
 
-		let createShape = function (x, y) {
-			return Bodies.circle(x, y, 25, {
-				frictionAir: 0.05,
-				render: {
-					sprite: {
-						texture: '/images/coolLogo.svg',
-						yScale: 0.5,
-						xScale: 0.5
-					}
-				},
-				restitution: 0.8
-			});
-		};
+		let shape1 = Bodies.circle(0, 0, 25, {
+			frictionAir: 0.05,
+			render: {
+				sprite: {
+					texture: '/images/WENT.svg',
+					yScale: 3,
+					xScale: 3
+				}
+			},
+			restitution: 0.8
+		});
+
+		let shape2 = Bodies.circle(300, 0, 25, {
+			frictionAir: 0.05,
+			render: {
+				sprite: {
+					texture: '/images/ALL.svg',
+					yScale: 3,
+					xScale: 3
+				}
+			},
+			restitution: 0.8
+		});
+
+		let shape3 = Bodies.circle(600, 0, 25, {
+			frictionAir: 0.05,
+			render: {
+				sprite: {
+					texture: '/images/OUT.svg',
+					yScale: 3,
+					xScale: 3
+				}
+			},
+			restitution: 0.8
+		});
 
 		// Create a wall for the shapes to bounce off
 		let wallOptions = {
@@ -89,11 +112,21 @@
 			}
 		});
 
-		let intialShapes = Composites.stack(50, 50, 1, 1, 40, 40, function (x, y) {
-			return createShape(x, y);
-		});
+		// let intialShapes = Composites.stack(50, 50, 1, 1, 40, 40, function (x, y) {
+		// 	return createShape(x, y);
+		// });
 
-		Composite.add(engine.world, [ground, ceiling, leftWall, rightWall, mouseControl, intialShapes]);
+		Composite.add(engine.world, [
+			ground,
+			ceiling,
+			leftWall,
+			rightWall,
+			mouseControl,
+			// intialShapes,
+			shape1,
+			shape2,
+			shape3
+		]);
 
 		Render.run(renderer);
 		Runner.run(engine);
