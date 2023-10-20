@@ -6,35 +6,29 @@
 	let energy;
 	let energyHeight;
 
-	let analyzerSettings = {
-		source: $audioPlayerEl,
-		height: 300,
-		mode: 4,
-		barSpace: 0,
-		ledBars: true,
-		colorMode: 'gradient',
-		showBgColor: false,
-		overlay: true,
-		roundBars: true,
-		mirror: 1,
-		gradient: 'rainbow',
-		showPeaks: false,
-		showScaleX: false,
-		onCanvasDraw: drawCallback
-	};
-
-	let analyzer;
-
 	onMount(() => {
-		analyzer = new AudioMotionAnalyzer(visualizerEl, analyzerSettings);
+		new AudioMotionAnalyzer(visualizerEl, {
+			source: $audioPlayerEl,
+			height: 300,
+			mode: 4,
+			barSpace: 0,
+			ledBars: true,
+			colorMode: 'gradient',
+			showBgColor: false,
+			overlay: true,
+			roundBars: true,
+			mirror: 1,
+			gradient: 'rainbow',
+			showPeaks: false,
+			showScaleX: false,
+			onCanvasDraw: drawCallback
+		});
 	});
 
 	$: energyHeight = 120 + energy * 150;
 	function drawCallback(i) {
 		energy = i.getEnergy();
 	}
-
-	$: console.log(analyzer);
 </script>
 
 <div class="visualizer" bind:this={visualizerEl}>
@@ -44,11 +38,7 @@
 		src="/images/coolLogo.svg"
 		alt="music visualizer logo" />
 
-	<img
-		class:dancer-active={$isPlaying}
-		class="visualizer__dancer"
-		alt="gojo"
-		src="/images/dancing.webp" />
+	<img class="visualizer__dancer" alt="gojo" src="/images/dancing.webp" />
 </div>
 
 <style>
@@ -79,11 +69,8 @@
 		width: auto;
 		object-fit: contain;
 		margin: auto;
-		opacity: 0;
-		transition: var(--transition);
-	}
 
-	.dancer-active {
-		opacity: 1;
+		z-index: -1;
+		transition: var(--transition);
 	}
 </style>
