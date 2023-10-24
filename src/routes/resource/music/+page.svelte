@@ -8,6 +8,8 @@
 	// import PageTitle from '$components/Common/PageTitle.svelte'
 
 	import { SoundCloud } from 'sveltekit-embed';
+
+	
 </script>
 
 <section>
