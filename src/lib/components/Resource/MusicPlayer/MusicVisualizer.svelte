@@ -38,7 +38,11 @@
 		src="/images/coolLogo.svg"
 		alt="music visualizer logo" />
 
-	<img class="visualizer__dancer" alt="gojo" src="/images/dancing.webp" />
+	<img
+		class:dancer-active={$isPlaying}
+		class="visualizer__dancer"
+		alt="gojo"
+		src="/images/dancing.webp" />
 </div>
 
 <style>
@@ -69,8 +73,13 @@
 		width: auto;
 		object-fit: contain;
 		margin: auto;
-
+		opacity: 0;
 		z-index: -1;
 		transition: var(--transition);
+	}
+
+	.dancer-active {
+		opacity: 1;
+		z-index: -1;
 	}
 </style>

@@ -331,8 +331,8 @@
 		right: 0;
 		opacity: 0.4;
 		transform: translate(-50%, -50%);
-
-		-webkit-text-stroke: 2px var(--colorText);
+		font-family: var(--fontFancy);
+		-webkit-text-stroke: 1px var(--colorText);
 		-webkit-text-fill-color: transparent;
 	}
 

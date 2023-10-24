@@ -1,5 +1,6 @@
 <script>
 	import Hero from '$lib/components/Home/Hero/Hero.svelte';
+	import Services from '$lib/components/Home/Services.svelte';
 	import GetInTouch from '$components/Home/GetInTouch.svelte';
 	import FeaturedProject from '$components/Home/Featured.svelte';
 	import Clients from '$components/Home/MyClients.svelte';
@@ -29,6 +30,7 @@
 
 <SEO {...seoProps} />
 <Hero />
+<Services />
 <FeaturedProject />
 <WhatIUse />
 <AboutMe />

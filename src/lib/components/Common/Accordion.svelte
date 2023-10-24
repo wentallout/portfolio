@@ -11,6 +11,8 @@
 	function handleOpen() {
 		isOpened = !isOpened;
 	}
+
+	
 </script>
 
 <div class="accordion">
@@ -22,6 +24,7 @@
 			<CaretDown width="16" height="16" />
 		</div>
 	</button>
+
 	{#if isOpened}
 		<div
 			class="accordion__text text-small"
@@ -78,7 +81,7 @@
 
 	.accordion__text {
 		color: var(--colorText);
-		max-width: var(--text-width);
+
 		padding: var(--spaceXS) var(--spaceS);
 	}
 </style>

@@ -86,13 +86,13 @@ html {
 .text-xs {
 	font-size: var(--fontSizeXS);
 	line-height: var(--lineHeightXS);
-	letter-spacing: -0.006em;
+	/* letter-spacing: -0.006em; */
 }
 
 .text-small {
 	font-size: var(--fontSizeSmall);
 	line-height: var(--lineHeightSmall);
-	letter-spacing: -0.011em;
+	/* letter-spacing: -0.011em; */
 }
 
 .text-base {

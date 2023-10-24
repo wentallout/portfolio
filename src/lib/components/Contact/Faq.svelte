@@ -63,5 +63,6 @@
 		display: flex;
 		flex-direction: column;
 		gap: var(--spaceM);
+		max-width: var(--text-width);
 	}
 </style>

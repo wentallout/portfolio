@@ -15,16 +15,12 @@
 				<div class="hero__text text-small">
 					I create practical and user-friendly products that bring real value and enhance people's
 					lives. My projects promote healthy and eco friendly lifestyles.
-
-					<a class="hero__link link" href="/about">
-						<span>More about me</span>
-					</a>
 				</div>
 
 				<div class="hero__btn">
 					<a href="/project">
 						<Button
-							label="See All Projects"
+							label="View Portfolio"
 							labelColor="var(--colorBlack)"
 							backgroundColor="var(--colorPrimary)"
 							glowColor="var(--colorPrimary)" />

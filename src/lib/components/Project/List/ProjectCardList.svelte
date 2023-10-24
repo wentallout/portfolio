@@ -33,7 +33,7 @@
 				<Button
 					backgroundColor="var(--colorPrimary)"
 					glowColor="var(--colorPrimary)"
-					label="See all projects" />
+					label="See more projects" />
 			</a>
 		</div>
 	{/if}

@@ -3,7 +3,7 @@ import { writable } from 'svelte/store';
 export const isPlaying = writable(false);
 
 /**
- * @type {HTMLElement}
+ * @type {HTMLAudioElement}
  */
 export const audioPlayerEl = writable();
 
@@ -16,15 +16,6 @@ export const musicList = writable([
 		audio: '/ringtones/ChaChaCha.flac',
 		name: 'Cha Cha Cha'
 	},
-
-	{
-		audio: '/ringtones/PerfectGirl.mp3',
-		name: 'Perfect Girl'
-	},
-	{
-		audio: '/ringtones/Belt.mp3',
-		name: 'Belt'
-	},
 	{
 		audio: '/ringtones/IllDoIt.mp3',
 		name: 'Ill Do It'
@@ -32,6 +23,11 @@ export const musicList = writable([
 	{
 		audio: '/ringtones/9Mm.flac',
 		name: '9Mm'
+	},
+
+	{
+		audio: 'https://stream.nightride.fm/nightride.ogg',
+		name: '[Radio] Nightride FM'
 	},
 
 	{

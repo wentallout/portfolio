@@ -23,7 +23,6 @@
 		<img class="footer__logo" alt="footer logo" width="24" height="24" src="/images/coolLogo.svg" />
 
 		<div class="global-container">
-			<!-- <img class="footer__bg" src={FooterBg} alt="" /> -->
 			<div class="footer__list">
 				<div class="list">
 					<div class="list__title">About me</div>
@@ -32,6 +31,7 @@
 							I creates superb affordable websites and apps for small businesses.
 						</li>
 					</ul>
+					<a class="link" href="/about"> More about me </a>
 				</div>
 
 				<div class="list">
@@ -143,6 +143,10 @@
 		left: 0;
 	}
 
+	.link {
+		display: inline;
+	}
+
 	.footer {
 		display: flex;
 
@@ -226,5 +230,6 @@
 		aspect-ratio: 1 / 1;
 		opacity: 0.1;
 		user-select: none;
+		z-index: -1;
 	}
 </style>
