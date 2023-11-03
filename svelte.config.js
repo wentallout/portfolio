@@ -43,24 +43,7 @@ const config = {
 			$components: 'src/lib/components'
 		},
 		csp: {
-			mode: 'auto',
-			directives: {
-				'script-src': [
-					'self',
-					'unsafe-inline',
-					'https://www.google-analytics.com',
-					'https://unpkg.com',
-					'https://www.googletagmanager.com',
-					'https://cdn.jsdelivr.net',
-					'https://utteranc.es/'
-				],
-				'img-src': [
-					'self',
-					'www.googletagmanager.com',
-					'https://shots.codepen.io',
-					'https://*.cloudfront.net'
-				]
-			}
+			mode: 'auto'
 		}
 	},
 

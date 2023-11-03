@@ -1,7 +1,7 @@
 <script>
 	import { page } from '$app/stores';
 	let currentPath = $page.url.pathname;
-	// let id = $page.route.id;
+
 	let crumbs;
 
 	import CaretRight from '~icons/ph/caret-right';
@@ -12,7 +12,7 @@
 
 	$: {
 		// Remove zero-length tokens.
-		const tokens = currentPath.split('/').filter((t) => t !== '');
+		let tokens = currentPath.split('/').filter((t) => t !== '');
 
 		// Create { label, href } pairs for each token.
 		let tokenPath = '';
@@ -28,20 +28,18 @@
 	}
 </script>
 
-{#if crumbs.length > 2}
-	<nav aria-label="breadcrumb" id="breadcrumb" class="breadcrumb text-small">
-		{#each crumbs as c, i}
-			{#if i == crumbs.length - 1}
-				<div class="breadcrumb__unclickable">
-					{c.label}
-				</div>
-			{:else}
-				<a class="breadcrumb__clickable link" href={c.href}>{c.label}</a>
-				<CaretRight width="16" height="16" />
-			{/if}
-		{/each}
-	</nav>
-{/if}
+<nav aria-label="breadcrumb" id="breadcrumb" class="breadcrumb text-small">
+	{#each crumbs as c, i}
+		{#if i == crumbs.length - 1}
+			<div class="breadcrumb__unclickable">
+				{c.label}
+			</div>
+		{:else}
+			<a class="breadcrumb__clickable link" href={c.href}>{c.label}</a>
+			<CaretRight width="16" height="16" />
+		{/if}
+	{/each}
+</nav>
 
 <style>
 	.breadcrumb {
@@ -51,8 +49,7 @@
 		align-items: center;
 		gap: 0.25rem;
 
-		/* SPACING */
-		padding-top: var(--space3XL);
+		padding-top: 100px;
 		padding-bottom: var(--spaceL);
 
 		background-color: transparent;

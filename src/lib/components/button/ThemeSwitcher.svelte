@@ -10,12 +10,14 @@
 
 <button type="button" class="toggle" on:click={toggleTheme} aria-label="Toggle theme">
 	{#if $theme === 'dark'}
-		<div in:fly|global={{ y: 10 }} class="toggle__icon">
-			<Sun class="icon" color="var(--colorText)" width="24" height="24" />
-		</div>
-	{:else}
 		<div class="toggle__icon" in:fly|global={{ y: -10 }}>
 			<Moon class="icon" color="var(--colorText)" width="24" height="24" />
+			<div class="text-xs">Night</div>
+		</div>
+	{:else}
+		<div class="toggle__icon" in:fly|global={{ y: 10 }}>
+			<Sun class="icon" color="var(--colorText)" width="24" height="24" />
+			<div class="text-xs">Day</div>
 		</div>
 	{/if}
 </button>
@@ -44,7 +46,10 @@
 		}
 	}
 
-	.toggle:hover .toggle__icon {
-		color: var(--colorPrimaryHover);
+	.toggle__icon {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
 	}
 </style>
