@@ -1,5 +1,4 @@
 <script>
-	import ScrollBar from '$components/layout/other/ScrollBar.svelte';
 	import PageTransition from '$components/transition/PageTransition.svelte';
 	import HeaderCover from '$components/layout/header/HeaderCover.svelte';
 	import SkipLink from '$components/button/SkipLink.svelte';
@@ -32,7 +31,7 @@
 <SkipLink />
 
 <ProgressBar />
-<ScrollBar />
+
 <PWA />
 <BackToTop />
 
