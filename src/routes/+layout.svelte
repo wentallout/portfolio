@@ -1,5 +1,4 @@
 <script>
-	import ThemeSwitcher from '$components/button/ThemeSwitcher.svelte';
 	import ScrollBar from '$components/layout/Other/ScrollBar.svelte';
 	import ProgressBar from '$components/transition/ProgressBar.svelte';
 	import PageTransition from '$components/transition/PageTransition.svelte';
@@ -15,6 +14,7 @@
 	import '$lib/styles/global.css';
 	import Analytics from '$components/analytics/Analytics.svelte';
 	import { onNavigate } from '$app/navigation';
+	import ThemeSwitcher from '$components/button/ThemeSwitcher.svelte';
 	export let data;
 
 	onNavigate(() => {
