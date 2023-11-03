@@ -4,7 +4,7 @@
 	import BookList from '$lib/sections/resource/BookList.svelte';
 	import SEO from '$components/seo/SEO.svelte';
 	import EssentialList from '$lib/sections/resource/EssentialList.svelte';
-	import SectionTitle from '$components/common/Section/SectionTitle.svelte';
+	import SectionTitle from '$components/sections/SectionTitle.svelte';
 
 	// ICONS
 	import Books from '~icons/ph/books';

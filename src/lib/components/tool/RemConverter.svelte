@@ -1,6 +1,6 @@
 <script>
 	import Copy from '~icons/ph/copy';
-	import SectionTitle from '$components/common/Section/SectionTitle.svelte';
+	import SectionTitle from '$components/sections/SectionTitle.svelte';
 	import Wrench from '~icons/ph/wrench';
 	let baseFontSize = 16;
 	let pxInput;

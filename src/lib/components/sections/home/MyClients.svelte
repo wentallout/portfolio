@@ -3,7 +3,7 @@
 	import ExLink from '$components/common/ExLink.svelte';
 	import fpt from '$lib/assets/images/home/fpt.png?w=300&h=300';
 	import nashtech from '$lib/assets/images/home/nashtech.png?w=300&h=300';
-	import SectionTitle from '$components/common/Section/SectionTitle.svelte';
+	import SectionTitle from '$components/sections/SectionTitle.svelte';
 
 	import Buildings from '~icons/ph/buildings';
 </script>

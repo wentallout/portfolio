@@ -1,6 +1,6 @@
 <script>
 	export let data;
-	import SectionTitle from '$components/common/Section/SectionTitle.svelte';
+	import SectionTitle from '$components/sections/SectionTitle.svelte';
 	import Folder from '~icons/ph/folder';
 	import BlogTagsList from '$lib/sections/blog/BlogTagsList.svelte';
 </script>

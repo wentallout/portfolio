@@ -1,6 +1,6 @@
 <script>
 	import Wrench from '~icons/ph/wrench';
-	import SectionTitle from '$components/common/Section/SectionTitle.svelte';
+	import SectionTitle from '$components/sections/SectionTitle.svelte';
 
 	import Palette from '~icons/ph/palette';
 
@@ -8,10 +8,7 @@
 	let saturation;
 	let brightness;
 
-	function genRandomHSB()
-	{
-		
-	}
+	function genRandomHSB() {}
 </script>
 
 <section>

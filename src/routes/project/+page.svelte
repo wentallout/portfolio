@@ -5,7 +5,7 @@
 
 	import CodePen from '~icons/ph/codepen-logo';
 
-	import SectionTitle from '$components/common/Section/SectionTitle.svelte';
+	import SectionTitle from '$components/sections/SectionTitle.svelte';
 
 	import SEO from '$components/seo/SEO.svelte';
 	import SnippetList from '$lib/sections/project/SnippetList.svelte';
