@@ -6,6 +6,21 @@
 @import url('reduce-motion.css');
 @import url('other.css');
 
+:root {
+	text-underline-offset: 4px;
+
+	--borderRadius: 16px;
+	--borderRadiusLight: calc(var(--borderRadius) / 2);
+	--borderRadiusSM: calc(var(--borderRadiusLight) / 2);
+	--transition: 0.3s cubic-bezier(0.25, 0.1, 0.25, 1);
+
+	--zIndexMax: 99;
+
+	--cursorDefault: url('/cursor/default.svg'), auto;
+	--cursorPointer: url('/cursor/pointer.svg'), auto;
+	--cursorText: url('/cursor/text.svg'), auto;
+}
+
 html {
 	scroll-padding: var(--scroll-padding, 60px);
 	scroll-behavior: smooth;
@@ -26,15 +41,31 @@ html {
 	}
 }
 
-:root {
-	text-underline-offset: 4px;
+@media (hover: hover) and (pointer: fine) {
+	body {
+		cursor: var(--cursorDefault);
+	}
 
-	--borderRadius: 16px;
-	--borderRadiusLight: calc(var(--borderRadius) / 2);
-	--borderRadiusSM: calc(var(--borderRadiusLight) / 2);
-	--transition: 0.3s cubic-bezier(0.25, 0.1, 0.25, 1);
+	p,
+	h1,
+	h2,
+	h3,
+	h4,
+	h5,
+	h6,
+	input[type='text'],
+	input[type='tel'],
+	input[type='email'],
+	input[type='search'] {
+		cursor: var(--cursorText);
+	}
 
-	--zIndexMax: 99;
+	a,
+	a *,
+	button,
+	button * {
+		cursor: var(--cursorPointer);
+	}
 }
 
 ul {

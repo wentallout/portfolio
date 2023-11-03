@@ -28,8 +28,6 @@
 	});
 </script>
 
-<!-- MISC START -->
-
 <Analytics />
 <SkipLink />
 
@@ -39,7 +37,6 @@
 <BackToTop />
 
 <ThemeSwitcher />
-<!-- MISC END  -->
 
 <HeaderCover />
 <Header />
@@ -60,19 +57,5 @@
 		flex-direction: column;
 		min-height: 100vh;
 		z-index: 1;
-		/* background-color: var(--colorBgLayout); */
 	}
-
-	/* .main-content:after {
-		z-index: -1;
-		content: '';
-		position: absolute;
-		bottom: 0;
-		right: 0;
-		width: 100%;
-		height: 100%;
-		background: url('/images/bg_decor_line_l.png'), url('/images/bg_decor_line_r.png');
-		background-position: bottom var(--spaceXL) left 0, bottom var(--spaceXL) right 0;
-		background-repeat: no-repeat;
-	} */
 </style>
