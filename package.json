@@ -79,5 +79,8 @@
 	},
 	"bugs": {
 		"url": "https://github.com/wentallout/portfolio/issues"
+	},
+	"dependencies": {
+		"@sentry/sveltekit": "^7.75.0"
 	}
 }

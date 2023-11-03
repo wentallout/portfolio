@@ -1,8 +1,8 @@
 <script>
-	import PostContainer from '$components/Common/PostContainer.svelte';
-	import SEO from '$components/SEO/SEO.svelte';
-	import Comments from '$lib/components/Comments/Comments.svelte';
-	import PostInfo from '$lib/components/Blog/PostInfo.svelte';
+	import PostContainer from '$components/common/PostContainer.svelte';
+	import SEO from '$components/seo/SEO.svelte';
+	import Comments from '$components/comments/Comments.svelte';
+	import PostInfo from '$components/blog/PostInfo.svelte';
 	export let data;
 </script>
 

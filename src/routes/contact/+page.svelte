@@ -1,7 +1,7 @@
 <script>
-	import PageTitle from '$components/Common/PageTitle.svelte';
-	import SocialLinks from '$components/Contact/SocialLinks.svelte';
-	import ContactForm from '$components/Contact/ContactForm.svelte';
+	import PageTitle from '$components/common/PageTitle.svelte';
+
+	import ContactForm from '$components/contact/ContactForm.svelte';
 
 	const breadcrumbs = [
 		{
@@ -13,7 +13,7 @@
 			slug: 'contact'
 		}
 	];
-	import SEO from '$components/SEO/SEO.svelte';
+	import SEO from '$components/seo/SEO.svelte';
 
 	const seoProps = {
 		breadcrumbs,
@@ -28,5 +28,3 @@
 <PageTitle pageTitle="Contact" />
 
 <ContactForm />
-
-<SocialLinks />

@@ -1,6 +1,6 @@
 <script>
 	import Phone from '~icons/ph/phone';
-	import ExLink from '$components/Common/ExLink.svelte';
+	import ExLink from '$components/common/ExLink.svelte';
 	import Envelope from '~icons/ph/envelope';
 
 	import LinkedinLogo from '~icons/ph/linkedin-logo';

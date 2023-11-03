@@ -1,6 +1,6 @@
 <script>
-	import SectionDesc from '$components/Common/Section/SectionDesc.svelte';
-	import SaosContainer from '$lib/components/Common/SaosContainer.svelte';
+	import SectionDesc from '$components/common/Section/SectionDesc.svelte';
+	import SaosContainer from '$components/common/SaosContainer.svelte';
 	export let sectionTitle = '';
 	export let sectionDesc = '';
 

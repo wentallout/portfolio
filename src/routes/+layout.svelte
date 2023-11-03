@@ -1,20 +1,20 @@
 <script>
-	import LangSwitcher from '$lib/components/Button/LangSwitcher.svelte';
-	import ThemeSwitcher from '$lib/components/Button/ThemeSwitcher.svelte';
-	import ScrollBar from '$lib/components/Layout/Other/ScrollBar.svelte';
-	import ProgressBar from '$components/Transition/ProgressBar.svelte';
-	import PageTransition from '$components/Transition/PageTransition.svelte';
+	import LangSwitcher from '$components/button/LangSwitcher.svelte';
+	import ThemeSwitcher from '$components/button/ThemeSwitcher.svelte';
+	import ScrollBar from '$components/layout/Other/ScrollBar.svelte';
+	import ProgressBar from '$components/transition/ProgressBar.svelte';
+	import PageTransition from '$components/transition/PageTransition.svelte';
 
-	import HeaderCover from '$lib/components/Layout/Header/HeaderCover.svelte';
-	import SkipLink from '$lib/components/Button/SkipLink.svelte';
-	import PWA from '$components/PWA/PWA.svelte';
-	import BackToTop from '$lib/components/Button/BackToTop.svelte';
-	import Footer from '$components/Layout/Footer/Footer.svelte';
-	import Header from '$lib/components/Layout/Header/Header.svelte';
-	import Breadcrumb from '$lib/components/Layout/Other/Breadcrumb.svelte';
+	import HeaderCover from '$components/layout/Header/HeaderCover.svelte';
+	import SkipLink from '$components/button/SkipLink.svelte';
+	import PWA from '$components/pwa/PWA.svelte';
+	import BackToTop from '$components/button/BackToTop.svelte';
+	import Footer from '$components/layout/Footer/Footer.svelte';
+	import Header from '$components/layout/Header/Header.svelte';
+	import Breadcrumb from '$components/layout/Other/Breadcrumb.svelte';
 
 	import '$lib/styles/global.css';
-	import Analytics from '$lib/components/Analytics/Analytics.svelte';
+	import Analytics from '$components/analytics/Analytics.svelte';
 	import { onNavigate } from '$app/navigation';
 	export let data;
 

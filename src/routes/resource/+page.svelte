@@ -1,19 +1,17 @@
 <script>
-	import PageTitle from '$components/Common/PageTitle.svelte';
+	import PageTitle from '$components/common/PageTitle.svelte';
+	import OtherCardList from '$lib/sections/resource/OtherCardList.svelte';
+	import BookList from '$lib/sections/resource/BookList.svelte';
+	import SEO from '$components/seo/SEO.svelte';
+	import EssentialList from '$lib/sections/resource/EssentialList.svelte';
+	import SectionTitle from '$components/common/Section/SectionTitle.svelte';
 
-	import OtherCardList from '$lib/components/Resource/List/OtherCardList.svelte';
-	import BookList from '$lib/components/Resource/List/BookList.svelte';
-	import ToolCardList from '$lib/components/Resource/List/ResourceCardList.svelte';
+	// ICONS
 	import Books from '~icons/ph/books';
 	import HardDrives from '~icons/ph/hard-drives';
-	import Flask from '~icons/ph/flask';
-
-	import SectionTitle from '$lib/components/Common/Section/SectionTitle.svelte';
-
 	import BoundingBox from '~icons/ph/bounding-box';
+	//
 
-	import SEO from '$components/SEO/SEO.svelte';
-	import EssentialList from '$lib/components/Resource/List/EssentialList.svelte';
 	const breadcrumbs = [
 		{
 			name: 'Home',
@@ -56,17 +54,6 @@
 	</SectionTitle>
 
 	<BookList />
-</section>
-
-<section>
-	<SectionTitle
-		sectionDesc="User research helps you understand user behaviors, needs, and motivations through various qualitative and quantitative methods (interviews, observation, forms, etc)."
-		sectionTitle="User Research Tool"
-		let:sectionIcon>
-		<Flask {...sectionIcon} />
-	</SectionTitle>
-
-	<ToolCardList />
 </section>
 
 <section>

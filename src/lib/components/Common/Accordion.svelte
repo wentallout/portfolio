@@ -11,13 +11,11 @@
 	function handleOpen() {
 		isOpened = !isOpened;
 	}
-
-	
 </script>
 
 <div class="accordion">
 	<button class="accordion__btn" type="button" on:click={handleOpen} on:keydown={handleOpen}>
-		<div class="text-small accordion__section" class:accordion--active={isOpened}>
+		<div class="accordion__section text-small" class:accordion--active={isOpened}>
 			{accordionSection}
 		</div>
 		<div class="icon caret" class:caret-active={isOpened}>

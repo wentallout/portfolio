@@ -1,8 +1,8 @@
 <script>
 	import { COPYRIGHT_ENTITY } from '$lib/constants/entities.js';
-	import ExLink from '$components/Common/ExLink.svelte';
+	import ExLink from '$components/common/ExLink.svelte';
 
-	import Badges from '$lib/components/Layout/Footer/Badges.svelte';
+	import Badges from '$components/layout/Footer/Badges.svelte';
 </script>
 
 <Badges />
@@ -14,7 +14,7 @@
 		</ExLink>
 	</div>
 
-	<ExLink href="/policy">
+	<ExLink href="/doc/privacy-policy.pdf">
 		<div class="end__text">Privacy Policy</div>
 	</ExLink>
 </div>

@@ -1,7 +1,7 @@
 <script>
 	import LogoNotAi from '$lib/assets/images/badge/LogoNotAI.svelte';
 	import LogoSvelte from '$lib/assets/images/badge/LogoSvelte.svelte';
-	import ExLink from '$lib/components/Common/ExLink.svelte';
+	import ExLink from '$components/common/ExLink.svelte';
 </script>
 
 <div class="badge">

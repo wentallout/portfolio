@@ -1,5 +1,5 @@
 <script>
-	import PageTitle from '$components/Common/PageTitle.svelte';
+	import PageTitle from '$components/common/PageTitle.svelte';
 	import WorldMap from '$lib/assets/images/other/WorldMap.svelte';
 
 	let date = new Date();

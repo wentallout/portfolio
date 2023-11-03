@@ -14,6 +14,16 @@ html {
 	min-height: 101vh;
 	color: var(--colorText);
 	scrollbar-gutter: stable;
+	/* cursor: url('/cursor/cursor.svg'), auto; */
+}
+
+@media (hover: hover) and (pointer: fine) {
+	a,
+	a *,
+	button,
+	button * {
+		cursor: url('/cursor/pointer.svg'), auto;
+	}
 }
 
 :root {

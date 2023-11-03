@@ -1,6 +1,6 @@
 <script>
-	import SocialButtons from '$components/Contact/SocialButtons.svelte';
-	import VanishingHeader from '$lib/components/Layout/Header/VanishingHeader.svelte';
+	import SocialButtons from '$components/contact/SocialButtons.svelte';
+	import VanishingHeader from '$components/layout/Header/VanishingHeader.svelte';
 	import { navItems } from '$lib/config.js';
 	import { onMount } from 'svelte';
 	import { page } from '$app/stores';
@@ -103,20 +103,24 @@
 		border-bottom-left-radius: var(--borderRadius);
 		border-bottom-right-radius: var(--borderRadius);
 		transition: background var(--transition);
+
+		background: transparent;
 	}
 
 	.nav--scrolldown {
 		background: color-mix(in srgb, var(--colorBgLayout) 50%, transparent);
 		backdrop-filter: blur(5px);
 		color: var(--colorText);
+		box-shadow:
+			rgba(0, 0, 0, 0.4) 0px 2px 4px,
+			rgba(0, 0, 0, 0.3) 0px 7px 13px -3px,
+			rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
 	}
 
 	.active-page {
 		position: relative;
-		color: var(--colorPrimary) !important;
-		border-top: 1px solid inherit;
 
-		/*  */
+		border-bottom: 2px solid var(--colorPrimaryActive);
 	}
 
 	.active-page::after {
@@ -127,12 +131,12 @@
 
 		width: 100%;
 		inset: 0 -10px 30px;
-		background: radial-gradient(ellipse at top, currentColor, transparent 50%);
+		background: radial-gradient(ellipse at top, var(--colorPrimaryActive), transparent 50%);
 	}
 
 	.active-page--mobile {
-		color: var(--colorPrimary) !important;
-		border-left: 4px solid inherit;
+		color: var(--colorPrimaryActive) !important;
+		border-right: 4px solid var(--colorPrimaryActive);
 	}
 
 	.nav-list {
@@ -190,8 +194,6 @@
 		align-items: center;
 		width: 100%;
 		height: 100%;
-
-		text-shadow: 0 0 5px var(--colorBgLayout);
 	}
 
 	/* ---OVERLAY--- */
@@ -242,11 +244,6 @@
 		font-weight: var(--fontWeightMid);
 
 		color: var(--colorText);
-	}
-
-	.overlay-item:hover,
-	.overlay-item:focus {
-		outline: var(--primary-500);
 	}
 
 	.closebtn {

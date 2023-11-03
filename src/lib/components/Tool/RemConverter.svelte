@@ -1,6 +1,6 @@
 <script>
 	import Copy from '~icons/ph/copy';
-	import SectionTitle from '$components/Common/Section/SectionTitle.svelte';
+	import SectionTitle from '$components/common/Section/SectionTitle.svelte';
 	import Wrench from '~icons/ph/wrench';
 	let baseFontSize = 16;
 	let pxInput;
@@ -91,6 +91,7 @@
 		width: 100%;
 		height: 100%;
 		font-size: var(--fontSize3XL);
+		appearance: none;
 
 		&:focus-visible {
 			outline: 0;

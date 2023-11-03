@@ -1,5 +1,5 @@
 <script>
-	import CustomToc from '$components/Blog/CustomToc.svelte';
+	import CustomToc from '$components/blog/CustomToc.svelte';
 </script>
 
 <div class="post-container">

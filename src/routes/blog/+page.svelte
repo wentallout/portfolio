@@ -1,10 +1,10 @@
 <script>
 	import LoadingBarSpinner from '$lib/assets/images/other/LoadingBarSpinner.svelte';
-	import TextInput from '$components/Input/TextInput.svelte';
-	import BlogListContainer from '$components/Blog/BlogListContainer.svelte';
-	import BlogCard from '$components/Blog/BlogCard.svelte';
-	import PageTitle from '$components/Common/PageTitle.svelte';
-	import BlogTagsList from '$components/Blog/BlogTagsList.svelte';
+	import TextInput from '$components/input/TextInput.svelte';
+	import BlogListContainer from '$lib/sections/blog/BlogListContainer.svelte';
+	import BlogCard from '$components/blog/BlogCard.svelte';
+	import PageTitle from '$components/common/PageTitle.svelte';
+	import BlogTagsList from '$lib/sections/blog/BlogTagsList.svelte';
 	import MiniSearch from 'minisearch';
 	import { paginate, DarkPaginationNav } from 'svelte-paginate';
 	import { onMount } from 'svelte';
