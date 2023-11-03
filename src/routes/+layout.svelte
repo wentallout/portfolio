@@ -1,5 +1,6 @@
 <script>
 	import PageTransition from '$components/transition/PageTransition.svelte';
+
 	import HeaderCover from '$components/layout/header/HeaderCover.svelte';
 	import SkipLink from '$components/button/SkipLink.svelte';
 	import PWA from '$components/pwa/PWA.svelte';
