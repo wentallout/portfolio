@@ -1,8 +1,8 @@
 <script>
 	import Time from 'svelte-time';
 
-	import ExLink from '$components/Common/ExLink.svelte';
-	import Tag from '$components/Common/Tag.svelte';
+	import ExLink from '$components/common/ExLink.svelte';
+	import Tag from '$components/common/Tag.svelte';
 
 	export let data;
 

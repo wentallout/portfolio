@@ -5,7 +5,7 @@ categories:
     - ux
 ---
 
-## Preference
+## Reference
 
 https://stephaniewalter.design/blog/the-expert-guide-to-user-interviews/
 

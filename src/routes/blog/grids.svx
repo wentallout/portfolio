@@ -37,7 +37,7 @@ Unlike the previous grid systems, the axial grid is free from columns, modules a
 
 
 
-## preference
+## Reference
 
 [How to build responsive grids in Figma](https://www.wednesday.is/writing-articles/figma-how-to-build-responsive-and-scalable-grids-for-web-design)
 

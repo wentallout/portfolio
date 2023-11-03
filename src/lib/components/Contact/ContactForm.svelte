@@ -1,16 +1,17 @@
 <script>
-	import ExLink from '$lib/components/Common/ExLink.svelte';
-	import Button from '$components/Button/Button.svelte';
-	import TextArea from '$components/Input/TextArea.svelte';
-	import TextInput from '$components/Input/TextInput.svelte';
+	import ExLink from '$components/common/ExLink.svelte';
+	import Button from '$components/button/Button.svelte';
+	import TextArea from '$components/input/TextArea.svelte';
+	import TextInput from '$components/input/TextInput.svelte';
 	import EnvelopeSimple from '~icons/ph/envelope-simple';
 	import ArrowCounterClockwise from '~icons/ph/arrow-counter-clockwise';
 	import PaperPlaneRight from '~icons/ph/paper-plane-right';
-	import SectionTitle from '$lib/components/Common/Section/SectionTitle.svelte';
+	import SectionTitle from '$components/common/Section/SectionTitle.svelte';
 
 	import Envelope from '~icons/ph/envelope';
 	import Clock from '~icons/ph/clock';
 	import Phone from '~icons/ph/phone';
+	import CopyToClipboard from '$components/common/CopyToClipboard.svelte';
 </script>
 
 <section>
@@ -27,10 +28,7 @@
 
 			<TextInput name="name" type="text" label="Name" placeholder="John Doe" />
 			<TextInput name="email" type="email" label="Email" placeholder="username@gmail.com" />
-			<TextArea
-				name="message"
-				label="Message"
-				placeholder="Something you want to tell me. Ex: jobs, ideas" />
+			<TextArea name="message" label="Message" placeholder="Tell me about jobs, ideas" />
 
 			<div class="contact__btn">
 				<Button
@@ -54,29 +52,36 @@
 			</div>
 		</form>
 		<div class="contact__other">
-			<ExLink href="mailto:wentallout@gmail.com">
-				<div class="contact__address">
-					<div class="address__title text-mid">
-						<Envelope />
-						<div class="">wentallout@gmail.com</div>
-					</div>
-					<div class="address__desc">Send me an email</div>
-				</div>
-			</ExLink>
-
-			<ExLink href="tel:+84929066331">
-				<div class="contact__address">
-					<div class="address__title text-mid">
-						<Phone />
-						<div class="">+84 929066331</div>
-					</div>
-					<div class="address__desc">Call me directly</div>
-				</div>
-			</ExLink>
 			<div class="contact__address">
-				<div class="address__title text-mid">
+				<ExLink href="mailto:wentallout@gmail.com">
+					<div class="address__title text-base">
+						<Envelope />
+						<div class="">Email me</div>
+					</div>
+				</ExLink>
+
+				<CopyToClipboard textToCopy={'wentallout@gmail.com'}>
+					<div class="address__desc text-small">wentallout@gmail.com</div>
+				</CopyToClipboard>
+			</div>
+
+			<div class="contact__address">
+				<ExLink href="tel:+84929066331">
+					<div class="address__title text-base">
+						<Phone />
+						<div>Call me</div>
+					</div>
+				</ExLink>
+
+				<CopyToClipboard textToCopy={'(+84)929066331'}>
+					<div class="address__desc text-small">(+84)929066331</div>
+				</CopyToClipboard>
+			</div>
+
+			<div class="contact__address">
+				<div class="address__title text-base">
 					<Clock />
-					<div class="">Working hours</div>
+					<div>Working hours</div>
 				</div>
 				<div class="address__desc">Monday - Friday 9:00 AM to 7:00 PM</div>
 			</div>
@@ -126,22 +131,23 @@
 		flex-grow: 1;
 		flex-direction: column;
 		gap: var(--spaceXS);
-		background-color: var(--colorBgElevated);
+		background-color: var(--colorBgContainer);
 		padding: var(--spaceS) var(--spaceM);
 		border-radius: var(--borderRadius);
 		transition: var(--transition);
-	}
-
-	.contact__address:hover {
-		color: var(--colorPrimaryHover);
-		outline: 1px solid var(--colorPrimaryHover);
+		box-shadow: var(--boxShadow);
 	}
 
 	.address__title {
 		display: flex;
 		flex-direction: row;
 		align-items: center;
-		gap: var(--spaceXS);
+		gap: var(--space2XS);
+		font-weight: 500;
+
+		&:hover {
+			color: var(--colorPrimaryHover);
+		}
 	}
 
 	.address__desc {

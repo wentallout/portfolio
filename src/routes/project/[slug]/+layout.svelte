@@ -1,5 +1,5 @@
 <script>
-	import MarkdownContainer from '$components/Markdown/MarkdownContainer.svelte';
+	import MarkdownContainer from '$components/markdown/MarkdownContainer.svelte';
 </script>
 
 <MarkdownContainer>

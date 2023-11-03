@@ -1,4 +1,10 @@
 <script>
+	import HeaderLogo from '$components/layout/Header/HeaderLogo.svelte';
+	import { fade } from 'svelte/transition';
+	import { theme } from '$lib/stores/themeStore.js';
+	import { page } from '$app/stores';
+	import Marquee from '$components/layout/Other/Marquee.svelte';
+	import { onMount } from 'svelte';
 	let latestBlog = 'Loading...';
 
 	onMount(async () => {
@@ -16,15 +22,14 @@
 		}
 	});
 
-	import HeaderLogo from '$lib/components/Layout/Header/HeaderLogo.svelte';
-	import { fade } from 'svelte/transition';
-	import { theme } from '$lib/stores/themeStore.js';
+	let showCover = true;
+	let videoUrl;
 
-	import { page } from '$app/stores';
-	import Marquee from '$components/Layout/Other/Marquee.svelte';
-	import { onMount } from 'svelte';
-
-	let showCover;
+	$: if ($theme === 'dark') {
+		videoUrl = '/videos/dark.webm';
+	} else {
+		videoUrl = '/videos/light.webm';
+	}
 
 	$: if ($page.url.pathname === '/') {
 		showCover = true;
@@ -44,15 +49,11 @@
 
 {#if showCover}
 	<div class="cover">
-		{#if $theme === 'dark'}
+		{#key videoUrl}
 			<video transition:fade={{ duration: 300 }} class="video" autoplay muted loop>
-				<source src="/videos/city.webm" type="video/webm" />
+				<source src={videoUrl} type="video/webm" />
 			</video>
-		{:else if $theme === 'light'}
-			<video transition:fade={{ duration: 300 }} class="video" autoplay muted loop>
-				<source src="/videos/mountains.webm" type="video/webm" />
-			</video>
-		{/if}
+		{/key}
 
 		<HeaderLogo />
 	</div>
@@ -75,14 +76,6 @@
 		background-color: var(--colorBgLayout);
 	}
 
-	/* .cover__deco {
-		background: url('/images/sonic.svg');
-		background-repeat: repeat-x;
-
-		width: 100%;
-		height: 14px;
-	} */
-
 	.cover::after {
 		pointer-events: none;
 		content: '';
@@ -100,13 +93,15 @@
 		width: 100%;
 		object-fit: cover;
 		object-position: top;
-
-		/* transition: var(--transition); */
 	}
 
 	:global([color-scheme='dark'] .video) {
-		filter: brightness(50%);
+		/* filter: brightness(50%); */
 	}
+
+	/* :global([color-scheme='light'] .video) {
+		filter: invert();
+	} */
 
 	@media (min-width: 768px) {
 		.video {

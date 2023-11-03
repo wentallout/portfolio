@@ -24,9 +24,9 @@
 		twitterUsername
 	} = website;
 
-	import OpenGraph from '$components/SEO/OpenGraph.svelte';
-	import SchemaOrg from '$components/SEO/SchemaOrg.svelte';
-	import Twitter from '$components/SEO/Twitter.svelte';
+	import OpenGraph from '$components/seo/OpenGraph.svelte';
+	import SchemaOrg from '$components/seo/SchemaOrg.svelte';
+	import Twitter from '$components/seo/Twitter.svelte';
 
 	export let entityMeta = null;
 	export let lastUpdated = new Date();

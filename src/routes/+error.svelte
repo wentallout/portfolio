@@ -1,5 +1,5 @@
 <script>
-	import Button from '$components/Button/Button.svelte';
+	import Button from '$components/button/Button.svelte';
 
 	import { page } from '$app/stores';
 

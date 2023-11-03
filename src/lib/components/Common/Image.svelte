@@ -1,5 +1,5 @@
 <script>
-	import SaosContainer from '$components/Common/SaosContainer.svelte';
+	import SaosContainer from '$components/common/SaosContainer.svelte';
 
 	export let src = '';
 	export let alt = '';
@@ -10,7 +10,7 @@
 	export let loading = 'lazy';
 	export let decoding = 'async';
 
-	import ExLink from '$components/Common/ExLink.svelte';
+	import ExLink from '$components/common/ExLink.svelte';
 </script>
 
 <SaosContainer animation="imgAni 0.3s">

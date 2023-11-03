@@ -1,14 +1,14 @@
 <script>
-	import ProjectCardList from '$lib/components/Project/List/ProjectCardList.svelte';
-	import PageTitle from '$components/Common/PageTitle.svelte';
+	import ProjectCardList from '$lib/sections/project/ProjectCardList.svelte';
+	import PageTitle from '$components/common/PageTitle.svelte';
 	import ProjectorScreen from '~icons/ph/projector-screen';
 
 	import CodePen from '~icons/ph/codepen-logo';
 
-	import SectionTitle from '$lib/components/Common/Section/SectionTitle.svelte';
+	import SectionTitle from '$components/common/Section/SectionTitle.svelte';
 
-	import SEO from '$components/SEO/SEO.svelte';
-	import SnippetList from '$lib/components/Project/List/SnippetList.svelte';
+	import SEO from '$components/seo/SEO.svelte';
+	import SnippetList from '$lib/sections/project/SnippetList.svelte';
 
 	const breadcrumbs = [
 		{

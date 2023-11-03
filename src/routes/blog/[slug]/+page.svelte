@@ -1,10 +1,10 @@
 <script>
-	import Comments from '$lib/components/Comments/Comments.svelte';
-	import SEO from '$components/SEO/SEO.svelte';
-	import PostContainer from '$components/Common/PostContainer.svelte';
-	import PostInfo from '$components/Blog/PostInfo.svelte';
+	import Comments from '$components/comments/Comments.svelte';
+	import SEO from '$components/seo/SEO.svelte';
+	import PostContainer from '$components/common/PostContainer.svelte';
+	import PostInfo from '$components/blog/PostInfo.svelte';
 	export let data;
-	import PrevNextBlog from '$components/Blog/PrevNextBlog.svelte';
+	import PrevNextBlog from '$components/blog/PrevNextBlog.svelte';
 </script>
 
 <SEO title={data.title} />

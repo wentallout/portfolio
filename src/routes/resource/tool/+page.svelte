@@ -1,12 +1,8 @@
 <script>
-	
-	import RemConverter from '$lib/components/Tool/RemConverter.svelte';
+	import RemConverter from '$components/tool/RemConverter.svelte';
 
 	// import { resourceData, getResource } from '$lib/stores/resourceStore.js';
-
 </script>
-
-
 
 <RemConverter />
 
