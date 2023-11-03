@@ -1,5 +1,4 @@
 <script>
-	import LangSwitcher from '$components/button/LangSwitcher.svelte';
 	import ThemeSwitcher from '$components/button/ThemeSwitcher.svelte';
 	import ScrollBar from '$components/layout/Other/ScrollBar.svelte';
 	import ProgressBar from '$components/transition/ProgressBar.svelte';
@@ -21,10 +20,6 @@
 	onNavigate(() => {
 		if (!document.startViewTransition) return;
 
-		// return new Promise((fulfil) => {
-		// 	document.startViewTransition(() => new Promise(fulfil));
-		// });
-
 		return new Promise((resolve) => {
 			document.startViewTransition(async () => {
 				resolve();
@@ -43,7 +38,7 @@
 <ScrollBar />
 <PWA />
 <BackToTop />
-<LangSwitcher />
+
 <ThemeSwitcher />
 <!-- MISC END  -->
 
