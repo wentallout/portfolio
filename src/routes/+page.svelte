@@ -15,6 +15,7 @@
 	];
 	import SEO from '$components/seo/SEO.svelte';
 	import Principles from '$lib/sections/home/Principles.svelte';
+	import SaosContainer from '$lib/components/common/SaosContainer.svelte';
 
 	const seoProps = {
 		breadcrumbs,
@@ -30,10 +31,28 @@
 
 <SEO {...seoProps} />
 <Hero />
-<Services />
-<FeaturedProject />
-<WhatIUse />
-<AboutMe />
-<Principles />
-<Clients />
+
+<SaosContainer animation="fade-in-top 0.6s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;">
+	<Services />
+</SaosContainer>
+
+<SaosContainer animation="fade-in-top 0.6s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;">
+	<FeaturedProject />
+</SaosContainer>
+
+<SaosContainer animation="fade-in-top 0.6s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;">
+	<WhatIUse />
+</SaosContainer>
+
+<SaosContainer animation="fade-in-top 0.6s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;">
+	<AboutMe />
+</SaosContainer>
+
+<SaosContainer animation="fade-in-top 0.6s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;">
+	<Principles />
+</SaosContainer>
+
+<SaosContainer animation="fade-in-top 0.6s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;">
+	<Clients />
+</SaosContainer>
 <GetInTouch />
