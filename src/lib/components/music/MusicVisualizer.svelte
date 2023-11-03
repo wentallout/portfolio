@@ -2,7 +2,7 @@
 	import { onMount } from 'svelte';
 	import AudioMotionAnalyzer from 'audiomotion-analyzer';
 	let visualizerEl;
-	import { audioPlayerEl, isPlaying } from '$components/music/MusicPlayer/musicStores.js';
+	import { audioPlayerEl, isPlaying } from '$lib/stores/musicStore.js';
 	let energy;
 	let energyHeight;
 
