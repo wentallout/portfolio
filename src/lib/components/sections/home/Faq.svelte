@@ -1,6 +1,6 @@
 <script>
 	import Accordion from '$components/common/Accordion.svelte';
-	import SectionTitle from '$components/common/section/SectionTitle.svelte';
+	import SectionTitle from '$components/sections/SectionTitle.svelte';
 
 	import QuestionArt from '$lib/assets/images/other/QuestionArt.svelte';
 

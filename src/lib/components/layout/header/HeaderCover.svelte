@@ -1,9 +1,9 @@
 <script>
-	import HeaderLogo from '$components/layout/Header/HeaderLogo.svelte';
+	import HeaderLogo from '$components/layout/header/HeaderLogo.svelte';
 	import { fade } from 'svelte/transition';
 	import { theme } from '$lib/stores/themeStore.js';
 	import { page } from '$app/stores';
-	import Marquee from '$components/layout/Other/Marquee.svelte';
+	import Marquee from '$components/layout/other/Marquee.svelte';
 	import { onMount } from 'svelte';
 	let latestBlog = 'Loading...';
 

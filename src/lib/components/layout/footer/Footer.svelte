@@ -1,10 +1,10 @@
 <script>
-	import PhysicsCanvas from '$components/layout/Footer/PhysicsCanvas.svelte';
+	import PhysicsCanvas from '$components/layout/footer/PhysicsCanvas.svelte';
 	import SaosContainer from '$components/common/SaosContainer.svelte';
-	import ChainDivider from '$components/layout/Other/ChainDivider.svelte';
-	import FooterEnd from '$components/layout/Footer/FooterEnd.svelte';
+	import ChainDivider from '$components/layout/other/ChainDivider.svelte';
+	import FooterEnd from '$components/layout/footer/FooterEnd.svelte';
 	import ExLink from '$components/common/ExLink.svelte';
-	import Marquee from '$components/layout/Other/Marquee.svelte';
+	import Marquee from '$components/layout/other/Marquee.svelte';
 	import { navItems } from '$lib/config.js';
 
 	// ICONS

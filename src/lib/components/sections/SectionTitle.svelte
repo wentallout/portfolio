@@ -1,6 +1,6 @@
 <script>
-	import SectionDesc from '$components/common/Section/SectionDesc.svelte';
-	import SaosContainer from '$components/common/SaosContainer.svelte';
+	import SectionDesc from '$components/sections/SectionDesc.svelte';
+
 	export let sectionTitle = '';
 	export let sectionDesc = '';
 
@@ -11,20 +11,18 @@
 	};
 </script>
 
-<SaosContainer animation="fade-in-top 0.6s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;">
-	<div class="section">
-		<div class="section__title">
-			<div class="section__icon">
-				<slot {sectionIcon} />
-			</div>
-			<h2 class="section__text text-xl">{sectionTitle}</h2>
+<div class="section">
+	<div class="section__title">
+		<div class="section__icon">
+			<slot {sectionIcon} />
 		</div>
-
-		{#if sectionDesc !== ''}
-			<SectionDesc text={sectionDesc} />
-		{/if}
+		<h2 class="section__text text-xl">{sectionTitle}</h2>
 	</div>
-</SaosContainer>
+
+	{#if sectionDesc !== ''}
+		<SectionDesc text={sectionDesc} />
+	{/if}
+</div>
 
 <style>
 	.section {

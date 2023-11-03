@@ -9,7 +9,7 @@ categories:
     import utopia from '$blogImages/utopia.png';
     import utopiaOutput from '$blogImages/utopiaOutput.png';
 
-    import Image from '$components/Common/Image.svelte';
+    import Image from '$components/common/Image.svelte';
 
 </script>
 

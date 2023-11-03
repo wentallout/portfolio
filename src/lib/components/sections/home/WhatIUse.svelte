@@ -5,7 +5,7 @@
 	import Navigation from '$lib/assets/images/home/navigation.svg?component';
 	import GraphicDesign from '$lib/assets/images/home/graphicDesign.svg?component';
 	import Process from '$lib/assets/images/home/process.svg?component';
-	import SectionTitle from '$components/common/Section/SectionTitle.svelte';
+	import SectionTitle from '$components/sections/SectionTitle.svelte';
 
 	import Toolbox from '~icons/ph/toolbox';
 </script>

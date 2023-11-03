@@ -152,10 +152,7 @@
 				class={i == currentSongIndex ? 'cs song-active' : 'cs song'}
 				on:click={() => setSong(i)}>
 				<div class="song-name text-small">{music.name}</div>
-				<a
-					class="download"
-					href={'/ringtones/' + $musicList[i].audio}
-					download={$musicList[i].audio}>
+				<a class="download" href={$musicList[i].audio} download={$musicList[i].audio}>
 					<Download width="16" height="16" color="currentColor" />
 				</a>
 			</button>

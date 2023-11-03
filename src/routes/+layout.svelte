@@ -1,6 +1,5 @@
 <script>
-	import ScrollBar from '$components/layout/other/ScrollBar.svelte';
-	import PageTransition from '$components/transition/PageTransition.svelte';
+	import ProgressBar from '$components/loading/ProgressBar.svelte';
 	import HeaderCover from '$components/layout/header/HeaderCover.svelte';
 	import SkipLink from '$components/button/SkipLink.svelte';
 	import PWA from '$components/pwa/PWA.svelte';
@@ -13,8 +12,6 @@
 	import Analytics from '$components/analytics/Analytics.svelte';
 	import { onNavigate } from '$app/navigation';
 	import ThemeSwitcher from '$components/button/ThemeSwitcher.svelte';
-	import ProgressBar from '$components/transition/ProgressBar.svelte';
-	export let data;
 
 	onNavigate(() => {
 		if (!document.startViewTransition) return;
@@ -28,28 +25,27 @@
 	});
 </script>
 
-<!-- MISC START -->
+<svelte:head>
+	<meta name="view-transition" content="same-origin" />
+</svelte:head>
 
 <Analytics />
 <SkipLink />
 
 <ProgressBar />
-<ScrollBar />
+
 <PWA />
 <BackToTop />
 
 <ThemeSwitcher />
-<!-- MISC END  -->
 
 <HeaderCover />
 <Header />
 
-<PageTransition {data}>
-	<main class="main-content global-container" id="main-content">
-		<Breadcrumb />
-		<slot />
-	</main>
-</PageTransition>
+<main class="main-content global-container" id="main-content">
+	<Breadcrumb />
+	<slot />
+</main>
 
 <Footer />
 
@@ -60,19 +56,5 @@
 		flex-direction: column;
 		min-height: 100vh;
 		z-index: 1;
-		/* background-color: var(--colorBgLayout); */
 	}
-
-	/* .main-content:after {
-		z-index: -1;
-		content: '';
-		position: absolute;
-		bottom: 0;
-		right: 0;
-		width: 100%;
-		height: 100%;
-		background: url('/images/bg_decor_line_l.png'), url('/images/bg_decor_line_r.png');
-		background-position: bottom var(--spaceXL) left 0, bottom var(--spaceXL) right 0;
-		background-repeat: no-repeat;
-	} */
 </style>

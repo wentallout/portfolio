@@ -1,5 +1,5 @@
 <script>
-	import SectionTitle from '$components/common/section/SectionTitle.svelte';
+	import SectionTitle from '$components/sections/SectionTitle.svelte';
 	import HeatmapArt from '$lib/assets/images/home/HeatmapArt.svelte';
 	import ResponsiveArt from '$lib/assets/images/home/ResponsiveArt.svelte';
 
