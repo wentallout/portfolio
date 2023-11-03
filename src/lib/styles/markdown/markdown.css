@@ -253,10 +253,10 @@ aside.toc > nav {
 	font-family: inherit;
 }
 
-.markdown h2 a::before {
+/* .markdown h2 a::before {
 	counter-increment: h2-counter;
 	content: counter(h2-counter) '. ';
-}
+} */
 
 .markdown h2:hover {
 	border-image: linear-gradient(to right, var(--colorPrimaryHover), transparent) 1 0%;

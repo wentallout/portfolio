@@ -7,7 +7,7 @@ categories:
 
 <script>
 
-import Image from '$components/Common/Image.svelte';
+import Image from '$components/common/Image.svelte';
 </script>
 
 Ideas and their execution matters more. You should start learning Adobe Illustrator.

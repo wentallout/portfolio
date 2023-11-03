@@ -18,7 +18,7 @@ import typography from '$lib/assets/images/project/dev-portfolio/typography.png'
 import other from '$lib/assets/images/project/dev-portfolio/other.png';
 
 
- import Image from '$components/Common/Image.svelte';
+ import Image from '$components/common/Image.svelte';
 </script>
 
 ## Design System

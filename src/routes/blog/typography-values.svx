@@ -6,7 +6,7 @@ categories:
 ---
 
 <script>
-    import Image from '$components/Common/Image.svelte';
+    import Image from '$components/common/Image.svelte';
     import headingFontSizes from '$blogImages/headingFontSizes.png';
 </script>
 
