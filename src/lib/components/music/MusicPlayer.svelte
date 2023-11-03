@@ -1,7 +1,6 @@
 <script>
-	import { formatMusicTime } from './musicUtils.js';
 	import { onMount } from 'svelte';
-	import { musicList, isPlaying, audioPlayerEl } from '$lib/stores/musicStores.js';
+	import { musicList, isPlaying, audioPlayerEl, formatMusicTime } from '$lib/stores/musicStore.js';
 
 	import PlayFill from '~icons/ph/play-fill';
 	import Download from '~icons/ph/download';

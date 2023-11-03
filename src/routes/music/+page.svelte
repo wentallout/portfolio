@@ -4,9 +4,9 @@
 	import FileAudio from '~icons/ph/file-audio';
 
 	// import { Spotify } from 'sveltekit-embed';
-	import MusicPlayer from '$components/music/MusicPlayer.svelte';
 
 	import { SoundCloud } from 'sveltekit-embed';
+	import MusicPlayer from '$lib/components/music/MusicPlayer.svelte';
 </script>
 
 <section>
