@@ -1,5 +1,5 @@
 <script>
-	import ProjectCardList from '$lib/sections/project/ProjectCardList.svelte';
+	import ProjectCardList from '$components/sections/project/ProjectCardList.svelte';
 	import PageTitle from '$components/common/PageTitle.svelte';
 	import ProjectorScreen from '~icons/ph/projector-screen';
 
@@ -8,7 +8,7 @@
 	import SectionTitle from '$components/sections/SectionTitle.svelte';
 
 	import SEO from '$components/seo/SEO.svelte';
-	import SnippetList from '$lib/sections/project/SnippetList.svelte';
+	import SnippetList from '$components/sections/project/SnippetList.svelte';
 
 	const breadcrumbs = [
 		{

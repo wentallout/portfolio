@@ -1,11 +1,11 @@
 <script>
-	import Hero from '$lib/sections/home/Hero.svelte';
-	import Services from '$lib/sections/home/Services.svelte';
-	import GetInTouch from '$lib/sections/home/GetInTouch.svelte';
-	import FeaturedProject from '$lib/sections/home/Featured.svelte';
-	import Clients from '$lib/sections/home/MyClients.svelte';
-	import WhatIUse from '$lib/sections/home/WhatIUse.svelte';
-	import AboutMe from '$lib/sections/home/AboutMe.svelte';
+	import Hero from '$components/sections/home/Hero.svelte';
+	import Services from '$components/sections/home/Services.svelte';
+	import GetInTouch from '$components/sections/home/GetInTouch.svelte';
+	import FeaturedProject from '$components/sections/home/Featured.svelte';
+	import Clients from '$components/sections/home/MyClients.svelte';
+	import WhatIUse from '$components/sections/home/WhatIUse.svelte';
+	import AboutMe from '$components/sections/home/AboutMe.svelte';
 
 	const breadcrumbs = [
 		{
@@ -14,7 +14,7 @@
 		}
 	];
 	import SEO from '$components/seo/SEO.svelte';
-	import Principles from '$lib/sections/home/Principles.svelte';
+	import Principles from '$components/sections/home/Principles.svelte';
 	import SaosContainer from '$lib/components/common/SaosContainer.svelte';
 
 	const seoProps = {
