@@ -1,20 +1,19 @@
 <script>
-	import ScrollBar from '$components/Layout/Other/ScrollBar.svelte';
-	import ProgressBar from '$components/transition/ProgressBar.svelte';
+	import ScrollBar from '$components/layout/other/ScrollBar.svelte';
 	import PageTransition from '$components/transition/PageTransition.svelte';
-
-	import HeaderCover from '$components/layout/Header/HeaderCover.svelte';
+	import HeaderCover from '$components/layout/header/HeaderCover.svelte';
 	import SkipLink from '$components/button/SkipLink.svelte';
 	import PWA from '$components/pwa/PWA.svelte';
 	import BackToTop from '$components/button/BackToTop.svelte';
-	import Footer from '$components/layout/Footer/Footer.svelte';
-	import Header from '$components/layout/Header/Header.svelte';
-	import Breadcrumb from '$components/layout/Other/Breadcrumb.svelte';
+	import Footer from '$components/layout/footer/Footer.svelte';
+	import Header from '$components/layout/header/Header.svelte';
+	import Breadcrumb from '$components/layout/other/Breadcrumb.svelte';
 
 	import '$lib/styles/global.css';
 	import Analytics from '$components/analytics/Analytics.svelte';
 	import { onNavigate } from '$app/navigation';
 	import ThemeSwitcher from '$components/button/ThemeSwitcher.svelte';
+	import ProgressBar from '$components/transition/ProgressBar.svelte';
 	export let data;
 
 	onNavigate(() => {

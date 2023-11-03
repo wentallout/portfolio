@@ -1,5 +1,5 @@
 <script>
-	import SectionTitle from '$lib/components/common/section/SectionTitle.svelte';
+	import SectionTitle from '$components/common/section/SectionTitle.svelte';
 
 	import Scales from '~icons/ph/scales';
 </script>
