@@ -1,5 +1,5 @@
 <script>
-	import CardListContainer from '$components/layout/Container/CardListContainer.svelte';
+	import CardListContainer from '$components/layout/container/CardListContainer.svelte';
 	import FigmaCard from '$components/resource/FigmaCard.svelte';
 
 	let snippetList = [

@@ -3,17 +3,18 @@
 	import MusicNotes from '~icons/ph/music-notes';
 	import FileAudio from '~icons/ph/file-audio';
 
-	// import { Spotify } from 'sveltekit-embed';
-
 	import { SoundCloud } from 'sveltekit-embed';
-	import MusicPlayer from '$lib/components/music/MusicPlayer.svelte';
+	import MusicPlayer from '$components/music/MusicPlayer.svelte';
+	import PageTitle from '$components/common/PageTitle.svelte';
 </script>
+
+<PageTitle pageTitle="Music" />
 
 <section>
 	<SectionTitle
-		sectionTitle="Music"
+		sectionTitle="Music Player"
 		let:sectionIcon
-		sectionDesc="Khoa's favorite songs that you can download. Live Radio included">
+		sectionDesc="Now you can listen and download Khoa's favorite songs. Live Radio included. Enjoy!">
 		<FileAudio {...sectionIcon} />
 	</SectionTitle>
 

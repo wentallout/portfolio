@@ -175,8 +175,9 @@
 		align-items: center;
 		flex-wrap: wrap;
 		width: 100%;
-		padding: var(--spaceS) var(--spaceL);
+		padding: 0 var(--spaceL);
 		gap: var(--spaceS);
+		box-shadow: var(--boxShadow);
 	}
 
 	.seekBar__control {

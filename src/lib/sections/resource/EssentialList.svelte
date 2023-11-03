@@ -6,7 +6,7 @@
 	import UXDeli from '$lib/assets/images/resource/UXDeli.png';
 
 	import FluentDesign from '$lib/assets/images/resource/FluentDesign.png';
-	import CardListContainer from '$components/layout/Container/CardListContainer.svelte';
+	import CardListContainer from '$components/layout/container/CardListContainer.svelte';
 </script>
 
 <CardListContainer>
