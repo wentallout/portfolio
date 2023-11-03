@@ -1,5 +1,5 @@
 <script>
-	import ScrollBar from '$components/layout/Other/ScrollBar.svelte';
+	import ScrollBar from '$components/Layout/Other/ScrollBar.svelte';
 	import ProgressBar from '$components/transition/ProgressBar.svelte';
 	import PageTransition from '$components/transition/PageTransition.svelte';
 
