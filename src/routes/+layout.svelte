@@ -1,5 +1,5 @@
 <script>
-	import PageTrans from '$components/transition/PageTrans.svelte';
+	import PTransition from '$components/transition/PTransition.svelte';
 
 	import HeaderCover from '$components/layout/header/HeaderCover.svelte';
 	import SkipLink from '$components/button/SkipLink.svelte';
@@ -41,12 +41,12 @@
 <HeaderCover />
 <Header />
 
-<PageTrans {data}>
+<PTransition {data}>
 	<main class="main-content global-container" id="main-content">
 		<Breadcrumb />
 		<slot />
 	</main>
-</PageTrans>
+</PTransition>
 
 <Footer />
 
