@@ -1,6 +1,6 @@
 <script>
 	import SocialButtons from '$components/contact/SocialButtons.svelte';
-	import VanishingHeader from '$components/layout/Header/VanishingHeader.svelte';
+	import VanishingHeader from '$components/layout/header/VanishingHeader.svelte';
 	import { navItems } from '$lib/config.js';
 	import { onMount } from 'svelte';
 	import { page } from '$app/stores';

@@ -2,7 +2,7 @@
 	import { COPYRIGHT_ENTITY } from '$lib/constants/entities.js';
 	import ExLink from '$components/common/ExLink.svelte';
 
-	import Badges from '$components/layout/Footer/Badges.svelte';
+	import Badges from '$components/layout/footer/Badges.svelte';
 </script>
 
 <Badges />

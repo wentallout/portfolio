@@ -1,5 +1,8 @@
 <script>
-	import PTransition from '$components/transition/PTransition.svelte';
+	// loading stuff
+	import PageTransition from '$lib/components/loading/PageTransition.svelte';
+	import ProgressBar from '$components/loading/ProgressBar.svelte';
+	//
 
 	import HeaderCover from '$components/layout/header/HeaderCover.svelte';
 	import SkipLink from '$components/button/SkipLink.svelte';
@@ -13,7 +16,7 @@
 	import Analytics from '$components/analytics/Analytics.svelte';
 	import { onNavigate } from '$app/navigation';
 	import ThemeSwitcher from '$components/button/ThemeSwitcher.svelte';
-	import ProgressBar from '$components/transition/ProgressBar.svelte';
+
 	export let data;
 
 	onNavigate(() => {
@@ -41,12 +44,12 @@
 <HeaderCover />
 <Header />
 
-<PTransition {data}>
+<PageTransition {data}>
 	<main class="main-content global-container" id="main-content">
 		<Breadcrumb />
 		<slot />
 	</main>
-</PTransition>
+</PageTransition>
 
 <Footer />
 
