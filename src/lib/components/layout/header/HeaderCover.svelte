@@ -23,7 +23,7 @@
 	});
 
 	let showCover = true;
-	let videoUrl;
+	let videoUrl = '';
 
 	$: if ($theme === 'dark') {
 		videoUrl = '/videos/dark.webm';

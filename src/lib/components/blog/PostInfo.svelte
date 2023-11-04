@@ -11,8 +11,10 @@
 	import Pen from '~icons/ph/pen';
 
 	import CalendarBlank from '~icons/ph/calendar-blank';
+	import Breadcrumb from '$components/layout/other/Breadcrumb.svelte';
 </script>
 
+<Breadcrumb />
 <header class="container full-width">
 	<div class="global-container">
 		<h1 class="post-title">{data.title}</h1>

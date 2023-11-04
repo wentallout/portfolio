@@ -12,6 +12,7 @@
 	import Analytics from '$components/analytics/Analytics.svelte';
 	import { onNavigate } from '$app/navigation';
 	import ThemeSwitcher from '$components/button/ThemeSwitcher.svelte';
+	import { onMount } from 'svelte';
 
 	onNavigate(() => {
 		if (!document.startViewTransition) return;
@@ -23,6 +24,14 @@
 			});
 		});
 	});
+
+	// onMount(() => {
+	// 	let theme = localStorage.getItem('color-scheme');
+
+	// 	theme
+	// 		? document.documentElement.setAttribute('color-scheme', theme)
+	// 		: localStorage.setItem('color-scheme', 'dark');
+	// });
 </script>
 
 <svelte:head>
@@ -43,7 +52,6 @@
 <Header />
 
 <main class="main-content global-container" id="main-content">
-	<Breadcrumb />
 	<slot />
 </main>
 

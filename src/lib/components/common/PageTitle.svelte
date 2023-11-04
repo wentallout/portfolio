@@ -1,8 +1,8 @@
 <script>
 	export let pageTitle = 'pageTitle';
-	// export let decoImageUrl = '';
 
 	import Wall from '$lib/assets/images/common/wall.jpg';
+	import Breadcrumb from '$components/layout/other/Breadcrumb.svelte';
 
 	export let decoImageUrl = Wall;
 </script>
@@ -14,6 +14,7 @@
 
 	<div class="title__extra">{pageTitle}</div>
 </div>
+<Breadcrumb />
 
 <style>
 	.title__extra {
@@ -43,8 +44,6 @@
 		flex-direction: column;
 		gap: var(--spaceS);
 		/*  */
-
-		margin-bottom: var(--space2XL);
 
 		padding-top: var(--spaceM);
 		padding-bottom: var(--spaceM);
