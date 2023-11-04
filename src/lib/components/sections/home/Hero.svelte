@@ -81,7 +81,6 @@
 	}
 
 	.hero__text {
-		color: var(--colorTextSecondary);
 		margin-bottom: var(--spaceS);
 		text-wrap: balance;
 		max-width: 40ch;

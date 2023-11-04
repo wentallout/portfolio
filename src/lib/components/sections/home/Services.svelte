@@ -127,7 +127,6 @@
 		display: flex;
 		flex-direction: column;
 		gap: var(--spaceXS);
-		color: var(--colorTextSecondary);
 	}
 
 	.optional {

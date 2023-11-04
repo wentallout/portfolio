@@ -15,7 +15,7 @@
 
 	<script type="module">
 		let theme = localStorage.getItem('color-scheme');
-		console.log('test theme', theme);
+
 		theme
 			? document.documentElement.setAttribute('color-scheme', theme)
 			: localStorage.setItem('color-scheme', 'dark');

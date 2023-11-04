@@ -29,7 +29,7 @@
 
 <button type="button" class="bck2top" on:click={goTop} on:keyup={goTop} class:hidden>
 	<UpIcon size="24" />
-	<div class="bck2top__text text-xs">TOP</div>
+	<div class="bck2top__text text-xs">Top</div>
 </button>
 
 <style>
