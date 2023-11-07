@@ -6,13 +6,14 @@
 	import BackToTop from '$components/button/BackToTop.svelte';
 	import Footer from '$components/layout/footer/Footer.svelte';
 	import Header from '$components/layout/header/Header.svelte';
-	import Breadcrumb from '$components/layout/other/Breadcrumb.svelte';
 
 	import '$lib/styles/global.css';
 	import Analytics from '$components/analytics/Analytics.svelte';
 	import { onNavigate } from '$app/navigation';
 	import ThemeSwitcher from '$components/button/ThemeSwitcher.svelte';
-	import { onMount } from 'svelte';
+	import { onDestroy, onMount } from 'svelte';
+
+	import { snowflakeCursor } from '$lib/utils/cursorTrail.js';
 
 	onNavigate(() => {
 		if (!document.startViewTransition) return;
@@ -25,12 +26,15 @@
 		});
 	});
 
-	// onMount(() => {
-	// 	let theme = localStorage.getItem('color-scheme');
+	let cursorEffect;
+	onMount(() => {
+		//https://github.com/tholman/cursor-effects
 
-	// 	theme
-	// 		? document.documentElement.setAttribute('color-scheme', theme)
-	// 		: localStorage.setItem('color-scheme', 'dark');
+		cursorEffect = new snowflakeCursor();
+	});
+
+	// onDestroy(() => {
+	// 	cursorEffect.destroy();
 	// });
 </script>
 

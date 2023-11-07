@@ -8,11 +8,9 @@
 <Badges />
 <div class="end text-xs">
 	<div class="end__text">
-		Copyright {`${COPYRIGHT_ENTITY}`} 2023 全力を尽くす, All Rights Reserved. Built with SvelteKit by
-		<ExLink style="display:contents" href="https://www.linkedin.com/in/wentallout/">
-			<span class="link"> @wentallout </span>
-		</ExLink>
+		Copyright {`${COPYRIGHT_ENTITY}`} 2023 Nguyen Dang Khoa (wentallout), All Rights Reserved.
 	</div>
+	<div class="end__text">Made with SvelteKit</div>
 
 	<ExLink href="/doc/privacy-policy.pdf">
 		<div class="end__text">Privacy Policy</div>

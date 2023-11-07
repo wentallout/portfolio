@@ -16,7 +16,7 @@
 	</SectionTitle>
 
 	<div class="service">
-		<div class="service__section">
+		<div class="service__section skewable">
 			<div class="service__thumbnail">
 				<div class="service__art">
 					<ResponsiveArt />
@@ -51,7 +51,7 @@
 			</a>
 		</div>
 
-		<div class="service__section">
+		<div class="service__section skewable">
 			<div class="service__thumbnail">
 				<div class="service__art">
 					<HeatmapArt />

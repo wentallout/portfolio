@@ -9,4 +9,11 @@ declare namespace App {
 	// interface Platform {}
 	// interface Session {}
 	// interface Stuff {}
+
+	interface Locals {
+		user: {
+			name: string;
+			role: string;
+		};
+	}
 }

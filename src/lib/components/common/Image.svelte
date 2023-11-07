@@ -32,9 +32,9 @@
 		margin-left: auto;
 		margin-right: auto;
 		margin-bottom: var(--space3XL);
-
 		border-radius: var(--borderRadiusSM);
 		overflow: hidden;
+		box-shadow: var(--boxShadow);
 	}
 
 	img {

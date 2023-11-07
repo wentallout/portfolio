@@ -22,13 +22,14 @@
 <style lang="postcss">
 	.toggle {
 		padding: var(--spaceXS);
-
+		aspect-ratio: 1/1;
+		width: 48px;
 		border: 0;
 
 		overflow: visible;
 		position: fixed;
 		top: 0;
-		left: 0;
+		right: 0;
 		z-index: var(--zIndexMax);
 
 		display: flex;
@@ -36,12 +37,18 @@
 		justify-content: center;
 		align-items: center;
 		background-color: var(--colorBgElevated);
-		border-radius: 0 0 16px;
+		border-radius: 0 0 0 16px;
 
 		box-shadow: var(--boxShadow);
 
 		&:hover {
 			cursor: pointer;
+		}
+	}
+
+	@media (min-width: 768px) {
+		.toggle {
+			width: 64px;
 		}
 	}
 

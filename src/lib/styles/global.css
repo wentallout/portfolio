@@ -41,9 +41,9 @@ html {
 }
 
 @media (hover: hover) and (pointer: fine) {
-	body {
+	/* body {
 		cursor: var(--cursorDefault);
-	}
+	} */
 
 	p,
 	h1,
