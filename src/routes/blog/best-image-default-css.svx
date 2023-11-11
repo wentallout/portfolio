@@ -1,0 +1,25 @@
+---
+title: A better image reset for your CSS
+date: 2023-11-10
+categories:
+    - frontend
+---
+
+## Reference
+
+https://www.youtube.com/watch?v=345V2MU3E_w
+
+## The code
+
+```css
+img 
+{
+max-width: 100%;
+height: auto;
+vertical-align: middle;
+font-style: italic;
+background-repeat: no-repeat;
+background-size: cover;
+shape-margin: 0.75rem;
+}
+```
