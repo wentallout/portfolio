@@ -1,7 +1,7 @@
 <script>
 	import Button from '$components/button/Button.svelte';
 	import ProjectCard from '$components/project/ProjectCard.svelte';
-	import rezaSquare from '$lib/assets/images/project/rezaSquare.png';
+	import rezaSquare from '$lib/assets/images/project/reza/rezaSquare.png';
 
 	import devPortfolioSquare from '$lib/assets/images/project/dev-portfolio/thumbnail.png';
 

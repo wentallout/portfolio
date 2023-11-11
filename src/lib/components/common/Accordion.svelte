@@ -47,6 +47,7 @@
 		border: 1px solid var(--colorBorder);
 		border-radius: var(--borderRadius);
 		box-shadow: var(--boxShadow);
+		max-width: var(--text-width);
 	}
 
 	.caret {
@@ -79,7 +80,6 @@
 
 	.accordion__text {
 		color: var(--colorText);
-
 		padding: var(--spaceXS) var(--spaceS);
 	}
 </style>
