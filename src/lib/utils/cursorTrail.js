@@ -2,7 +2,9 @@ export function snowflakeCursor(options) {
 	let hasWrapperEl = options && options.element;
 	let element = hasWrapperEl || document.body;
 
-	let possibleEmoji = ['w', 'e', 'n', 't', 'a', 'l', 'l', 'o', 'u', 't'];
+	// let possibleEmoji = ['w', 'e', 'n', 't', 'a', 'l', 'l', 'o', 'u', 't'];
+
+	let possibleEmoji = ['W', 'W', 'W', 'W', 'W'];
 	let width = window.innerWidth;
 	let height = window.innerHeight;
 	let cursor = { x: width / 2, y: width / 2 };
@@ -32,8 +34,8 @@ export function snowflakeCursor(options) {
 		canvas = document.createElement('canvas');
 		context = canvas.getContext('2d');
 
-		canvas.style.top = '0px';
-		canvas.style.left = '0px';
+		canvas.style.bottom = '0px';
+		canvas.style.right = '0px';
 		canvas.style.pointerEvents = 'none';
 
 		if (hasWrapperEl) {
@@ -48,7 +50,7 @@ export function snowflakeCursor(options) {
 			canvas.height = height;
 		}
 
-		context.font = 'bold 14px Gilroy';
+		context.font = 'bold 16px Gilroy';
 
 		context.textBaseline = 'middle';
 		context.textAlign = 'center';
@@ -62,7 +64,7 @@ export function snowflakeCursor(options) {
 			bgCanvas.height = measurements.actualBoundingBoxAscent * 2;
 
 			bgContext.textAlign = 'center';
-			bgContext.font = '14px sans-serif';
+			bgContext.font = '16px sans-serif';
 			bgContext.textBaseline = 'middle';
 
 			let randomColor = '#' + Math.floor(Math.random() * 16777215).toString(16);
@@ -117,8 +119,8 @@ export function snowflakeCursor(options) {
 	function onMouseMove(e) {
 		if (hasWrapperEl) {
 			const boundingRect = element.getBoundingClientRect();
-			cursor.x = e.clientX - boundingRect.left;
-			cursor.y = e.clientY - boundingRect.top;
+			cursor.x = e.clientX - boundingRect.bottom;
+			cursor.y = e.clientY - boundingRect.right;
 		} else {
 			cursor.x = e.clientX;
 			cursor.y = e.clientY;
@@ -170,7 +172,7 @@ export function snowflakeCursor(options) {
 	 */
 
 	function Particle(x, y, canvasItem) {
-		const lifeSpan = Math.floor(Math.random() * 60 + 240);
+		const lifeSpan = Math.floor(Math.random() * 60 + 120);
 		this.initialLifeSpan = lifeSpan; //
 		this.lifeSpan = lifeSpan; //ms
 		this.velocity = {
