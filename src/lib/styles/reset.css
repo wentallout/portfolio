@@ -93,10 +93,6 @@ pre {
 	font-size: 1em; /* 2 */
 }
 
-a {
-	background-color: transparent;
-}
-
 abbr[title] {
 	border-bottom: none; /* 1 */
 	text-decoration: underline; /* 2 */
@@ -390,10 +386,6 @@ pre {
    * Remove the gray background on active links in IE 10.
    */
 
-a {
-	background-color: transparent;
-}
-
 /**
    * 1. Remove the bottom border in Chrome 57-
    * 2. Add the correct text decoration in Chrome, Edge, IE, Opera, and Safari.
@@ -665,4 +657,14 @@ template {
 
 [hidden] {
 	display: none;
+}
+
+img {
+	max-width: 100%;
+	height: auto;
+	vertical-align: middle;
+	font-style: italic;
+	background-repeat: no-repeat;
+	background-size: cover;
+	shape-margin: 0.75rem;
 }

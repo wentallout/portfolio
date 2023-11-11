@@ -99,7 +99,7 @@
 	}
 
 	:global([color-scheme='light'] .video) {
-		filter: opacity(70%) brightness(100%);
+		/* filter: opacity(70%) brightness(100%); */
 	}
 
 	@media (min-width: 768px) {

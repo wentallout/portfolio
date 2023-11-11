@@ -45,8 +45,8 @@
 		top: 50%;
 		left: 50%;
 		transform: translate(-50%, -50%);
-		background-color: var(--colorBgLayout);
-		color: var(--colorText);
+		background-color: var(--colorPrimary);
+		color: var(--colorBlack);
 		width: 100%;
 		display: flex;
 		justify-content: center;
