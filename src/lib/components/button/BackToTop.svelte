@@ -29,11 +29,14 @@
 
 <button type="button" class="bck2top" on:click={goTop} on:keyup={goTop} class:hidden>
 	<UpIcon size="24" />
-	<div class="bck2top__text text-xs">TOP</div>
+	<div class="bck2top__text text-xs">Top</div>
 </button>
 
 <style>
 	.bck2top {
+		aspect-ratio: 1/1;
+		width: 48px;
+
 		/* FLEX */
 		display: flex;
 		justify-content: center;
@@ -41,18 +44,7 @@
 		flex-direction: column;
 		/* --- */
 
-		/* SIZE */
-
 		padding: var(--spaceXS);
-
-		width: 48px;
-		height: fit-content;
-		/* --- */
-
-		/* COLOR */
-
-		border: 1px solid var(--colorBorder);
-		/* --- */
 
 		/* POSITION FIXED ON SCREEN */
 		position: fixed;
@@ -68,7 +60,7 @@
 			visibility 0.3s;
 		user-select: none;
 		line-height: normal;
-		border-radius: 8px 8px 0 0;
+		border-radius: 16px 0 0;
 		/*  */
 
 		box-shadow: var(--boxShadow);
@@ -89,11 +81,6 @@
 			transition: var(--transition);
 			filter: brightness(1.2);
 		}
-	}
-
-	.bck2top:active {
-		transform: scale(0.9);
-		padding-bottom: 24px;
 	}
 
 	.bck2top.hidden {

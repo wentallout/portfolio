@@ -22,7 +22,7 @@
 	--colorBorderSecondary: #303030;
 
 	/* BACKGROUND */
-	--colorBgElevated: #1f1f1f;
+	--colorBgElevated: hsl(0, 0%, 16%);
 	--colorBgContainer: #141414;
 	--colorBgLayout: #121212;
 

@@ -69,7 +69,7 @@
 				<ExLink href="tel:+84929066331">
 					<div class="address__title text-base">
 						<Phone />
-						<div>Call me</div>
+						<div>Phone / Zalo / Telegram</div>
 					</div>
 				</ExLink>
 

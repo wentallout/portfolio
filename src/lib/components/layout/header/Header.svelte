@@ -1,5 +1,5 @@
 <script>
-	import SocialButtons from '$components/contact/SocialButtons.svelte';
+	import SocialButtons from '$lib/components/layout/header/SocialButtons.svelte';
 	import VanishingHeader from '$components/layout/header/VanishingHeader.svelte';
 	import { navItems } from '$lib/config.js';
 	import { onMount } from 'svelte';
@@ -155,6 +155,12 @@
 			scale: 1.1;
 			color: var(--colorPrimaryHover);
 		}
+
+		text-shadow:
+			-1px -1px 0 var(--colorBgLayout),
+			1px -1px 0 var(--colorBgLayout),
+			-1px 1px 0 var(--colorBgLayout),
+			1px 1px 0 var(--colorBgLayout);
 	}
 
 	.hamburger {

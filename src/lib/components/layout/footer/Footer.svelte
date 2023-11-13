@@ -1,6 +1,6 @@
 <script>
 	import PhysicsCanvas from '$components/layout/footer/PhysicsCanvas.svelte';
-	import SaosContainer from '$components/common/SaosContainer.svelte';
+
 	import ChainDivider from '$components/layout/other/ChainDivider.svelte';
 	import FooterEnd from '$components/layout/footer/FooterEnd.svelte';
 	import ExLink from '$components/common/ExLink.svelte';
@@ -16,109 +16,109 @@
 	import MapPin from '~icons/ph/map-pin';
 </script>
 
-<SaosContainer>
-	<footer class="footer text-small">
-		<PhysicsCanvas />
-		<ChainDivider />
+<ChainDivider />
+<footer class="footer text-small">
+	<PhysicsCanvas />
 
-		<div class="global-container">
-			<div class="footer__list">
-				<div class="list">
-					<div class="list__title">About me</div>
-					<ul class="list__nav">
-						<li class="nav-list__item">
-							I creates superb affordable websites and apps for small businesses.
-						</li>
-					</ul>
-					<a class="link" href="/about"> More about me </a>
-				</div>
-
-				<div class="list">
-					<div class="list__title">Navigate</div>
-					<ul class="list__nav">
-						{#each navItems as navItem}
-							<li class="nav-list__item">
-								<a href={navItem.path}>{navItem.title}</a>
-							</li>
-						{/each}
-					</ul>
-				</div>
-
-				<div class="list">
-					<div class="list__title">Other</div>
-					<ul class="list__nav">
-						<li class="nav-list__item">
-							<a href="/music">Music</a>
-						</li>
-						<li class="nav-list__item">
-							<a href="/resource/tool">REM Converter</a>
-						</li>
-						<li class="nav-list__item">
-							<a href="/rss.xml">RSS</a>
-						</li>
-					</ul>
-				</div>
-
-				<div class="list">
-					<div class="list__title">Contact</div>
-					<ul class="list__nav">
-						<li class="nav-list__item">
-							<ExLink href="https://goo.gl/maps/GLt6uhYWwU91fXz49">
-								<div class="nav-list__link">
-									<MapPin width="24" height="24" />
-									Ho Chi Minh City
-								</div>
-							</ExLink>
-						</li>
-
-						<li class="nav-list__item">
-							<ExLink href="mailto:wentallout@gmail.com">
-								<div class="nav-list__link">
-									<Envelope width="24" height="24" />
-									wentallout@gmail.com
-								</div>
-							</ExLink>
-						</li>
-						<li class="nav-list__item">
-							<ExLink href="tel:+84929066331">
-								<div class="nav-list__link">
-									<Phone width="24" height="24" />
-									+84 929066331
-								</div>
-							</ExLink>
-						</li>
-						<li class="nav-list__item">
-							<ExLink href="https://www.linkedin.com/in/wentallout">
-								<div class="nav-list__link">
-									<LinkedinLogo width="24" height="24" />Linkedin
-								</div>
-							</ExLink>
-						</li>
-						<li class="nav-list__item">
-							<ExLink href="https://www.instagram.com/wentallout/saved">
-								<div class="nav-list__link">
-									<InstagramLogo width="24" height="24" />
-									Instagram
-								</div>
-							</ExLink>
-						</li>
-						<li class="nav-list__item">
-							<ExLink href="https://github.com/wentallout">
-								<div class="nav-list__link">
-									<GitHubLogo width="24" height="24" />
-									GitHub
-								</div>
-							</ExLink>
-						</li>
-					</ul>
-				</div>
+	<div class="global-container">
+		<div class="footer__list">
+			<div class="list">
+				<div class="list__title">About me</div>
+				<ul class="list__nav">
+					<li class="nav-list__item">
+						I creates superb affordable websites and apps for small businesses.
+					</li>
+				</ul>
+				<a class="link" href="/about"> More about me </a>
 			</div>
 
-			<FooterEnd />
-			<img class="footer__deco" alt="footer decoration" src="/images/footer-skyline.webp" />
+			<div class="list">
+				<div class="list__title">Navigate</div>
+				<ul class="list__nav">
+					{#each navItems as navItem}
+						<li class="nav-list__item">
+							<a href={navItem.path}>{navItem.title}</a>
+						</li>
+					{/each}
+				</ul>
+			</div>
+			
+
+			<div class="list">
+				<div class="list__title">Other</div>
+				<ul class="list__nav">
+					<li class="nav-list__item">
+						<a href="/music">Music</a>
+					</li>
+					<li class="nav-list__item">
+						<a href="/resource/tool">REM Converter</a>
+					</li>
+					<li class="nav-list__item">
+						<a href="/rss.xml">RSS</a>
+					</li>
+				</ul>
+			</div>
+
+			<div class="list">
+				<div class="list__title">Contact</div>
+				<ul class="list__nav">
+					<li class="nav-list__item">
+						<ExLink href="https://goo.gl/maps/GLt6uhYWwU91fXz49">
+							<div class="nav-list__link">
+								<MapPin width="24" height="24" />
+								Ho Chi Minh City
+							</div>
+						</ExLink>
+					</li>
+
+					<li class="nav-list__item">
+						<ExLink href="mailto:wentallout@gmail.com">
+							<div class="nav-list__link">
+								<Envelope width="24" height="24" />
+								wentallout@gmail.com
+							</div>
+						</ExLink>
+					</li>
+					<li class="nav-list__item">
+						<ExLink href="tel:+84929066331">
+							<div class="nav-list__link">
+								<Phone width="24" height="24" />
+								+84 929066331
+							</div>
+						</ExLink>
+					</li>
+					<li class="nav-list__item">
+						<ExLink href="https://www.linkedin.com/in/wentallout">
+							<div class="nav-list__link">
+								<LinkedinLogo width="24" height="24" />Linkedin
+							</div>
+						</ExLink>
+					</li>
+					<li class="nav-list__item">
+						<ExLink href="https://www.instagram.com/wentallout/saved">
+							<div class="nav-list__link">
+								<InstagramLogo width="24" height="24" />
+								Instagram
+							</div>
+						</ExLink>
+					</li>
+					<li class="nav-list__item">
+						<ExLink href="https://github.com/wentallout">
+							<div class="nav-list__link">
+								<GitHubLogo width="24" height="24" />
+								GitHub
+							</div>
+						</ExLink>
+					</li>
+				</ul>
+			</div>
 		</div>
-	</footer>
-</SaosContainer>
+
+		<FooterEnd />
+		<img class="footer__deco" alt="footer decoration" src="/images/footer-skyline.webp" />
+	</div>
+</footer>
+
 <Marquee />
 
 <style>

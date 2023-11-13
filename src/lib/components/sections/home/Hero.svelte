@@ -12,7 +12,7 @@
 					<div class="focus">UI/UX Designer</div>
 					<div class="focus">+ Developer</div>
 				</div>
-				<div class="hero__text text-small">
+				<div class="hero__text text-base">
 					I create practical and user-friendly products that bring real value and enhance people's
 					lives. My projects promote healthy and eco friendly lifestyles.
 				</div>
@@ -81,7 +81,6 @@
 	}
 
 	.hero__text {
-		color: var(--colorTextSecondary);
 		margin-bottom: var(--spaceS);
 		text-wrap: balance;
 		max-width: 40ch;

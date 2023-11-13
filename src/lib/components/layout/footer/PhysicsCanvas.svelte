@@ -42,6 +42,8 @@
 			}
 		});
 
+		
+
 		let shape1 = Bodies.circle(0, 0, 25, {
 			frictionAir: 0.05,
 			render: {
@@ -93,6 +95,7 @@
 			100,
 			wallOptions
 		);
+
 		let ceiling = Bodies.rectangle(eleClientWidth / 2, -50, eleClientWidth, 100, wallOptions);
 		let leftWall = Bodies.rectangle(-50, eleClientHeight / 2, 100, eleClientHeight, wallOptions);
 		let rightWall = Bodies.rectangle(
@@ -150,10 +153,6 @@
 </script>
 
 <svelte:window bind:devicePixelRatio />
-
-<!-- on:mousemove={handleMouseMove}
-	on:keypress={handleClick}
-	on:click={handleClick} -->
 
 <div
 	class="phys-canvas"

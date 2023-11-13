@@ -23,13 +23,6 @@
 	});
 
 	let showCover = true;
-	let videoUrl = '';
-
-	$: if ($theme === 'dark') {
-		videoUrl = '/videos/dark.webm';
-	} else {
-		videoUrl = '/videos/light.webm';
-	}
 
 	$: if ($page.url.pathname === '/') {
 		showCover = true;
@@ -49,11 +42,17 @@
 
 {#if showCover}
 	<div class="cover">
-		{#key videoUrl}
+		{#if $theme === 'dark'}
 			<video transition:fade={{ duration: 300 }} class="video" autoplay muted loop>
-				<source src={videoUrl} type="video/webm" />
+				<source src="/videos/dark.webm" type="video/webm" />
 			</video>
-		{/key}
+		{/if}
+
+		{#if $theme === 'light'}
+			<video transition:fade={{ duration: 300 }} class="video" autoplay muted loop>
+				<source src="/videos/light.webm" type="video/webm" />
+			</video>
+		{/if}
 
 		<HeaderLogo />
 	</div>
@@ -99,9 +98,9 @@
 		/* filter: brightness(50%); */
 	}
 
-	/* :global([color-scheme='light'] .video) {
-		filter: invert();
-	} */
+	:global([color-scheme='light'] .video) {
+		/* filter: opacity(70%) brightness(100%); */
+	}
 
 	@media (min-width: 768px) {
 		.video {

@@ -1,5 +1,5 @@
 ---
-title: 'Find the perfect type scale for your next UI design'
+title: 'Dont know what font size to use? Find the perfect type scale'
 date: '2022-09-20'
 categories:
     - 'typography'
@@ -49,6 +49,19 @@ This can get complicated so I suggest you experiment a little bit. I normally ca
 - Low Contrast (websites with a lot of text like E-commerce, news): work well for layouts that contain a lot of identifiers
 
 -> Major Second (1.125), Minor Second (1.067)
+
+## Fluid type generator
+
+https://uilearn.com/type-scale/
+
+## iOS common font sizes
+
+For example, as of iOS 17 the type sizes would be as follows:
+
+- Titles & Actions = 17px
+- Subtitles & Body Copy = 15px
+- Secondary Actions = 13px
+- Metadata = 11px
 
 
 ## Reference
