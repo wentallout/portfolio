@@ -109,7 +109,6 @@
 		background-color: transparent;
 		position: relative;
 		padding: 8px;
-
 		border-radius: var(--borderRadius);
 	}
 

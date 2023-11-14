@@ -315,11 +315,10 @@
 	}
 
 	.song-active::before {
-		content: 'PLAYING';
-
+		content: 'Playing';
 		z-index: 0;
 		font-weight: 600;
-		font-size: 60px;
+		font-size: 3em;
 		position: absolute;
 		top: 50%;
 		right: 0;

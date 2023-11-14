@@ -46,26 +46,21 @@
 </script>
 
 {#if allBlogs}
-	<div class="prevnext">
+	<div class="prevnext text-small">
 		{#if prevBlog}
 			<a class="prevnext__btn" href={prevBlog.path}>
-				<div class="prev__icon">
-					<CaretLeft class="icon" width="24" height="24" />
-				</div>
-
-				<div class="prev__text">
-					<div class="prevnext__title text-base">{prevBlog.meta.title}</div>
+				<div class="prev__deco">Previous</div>
+				<div class="prev__text prevnext__title">
+					{prevBlog.meta.title}
 				</div>
 			</a>
 		{/if}
 
 		{#if nextBlog}
 			<a class="prevnext__btn" href={nextBlog.path}>
-				<div class="next__text">
-					<div class="prevnext__title text-base">{nextBlog.meta.title}</div>
-				</div>
-				<div class="next__icon">
-					<CaretRight class="icon" width="24" height="24" />
+				<div class="next__deco">Next</div>
+				<div class="next__text prevnext__title">
+					{nextBlog.meta.title}
 				</div>
 			</a>
 		{/if}
@@ -75,28 +70,19 @@
 <style lang="postcss">
 	.prevnext {
 		--min: 20ch;
-		--gap: var(--spaceS);
-
+		--gap: 0;
+		border: 1px solid var(--colorBorder);
 		display: grid;
 		grid-gap: var(--gap);
-		/* min() with 100% prevents overflow
-  in extra narrow spaces */
+		border-radius: var(--borderRadius);
 		grid-template-columns: repeat(auto-fit, minmax(min(100%, var(--min)), 1fr));
+		overflow: hidden;
+		border-right: 0;
 	}
-
-	.next__icon {
-		flex-shrink: 0;
-		color: var(--colorText);
-	}
-
-	.prev__icon {
-		flex-shrink: 0;
-		color: var(--colorText);
-	}
-
 	.prevnext__btn {
+		position: relative;
 		text-decoration: none !important;
-		border: 1px solid var(--colorBorder);
+
 		padding: var(--spaceS);
 		transition: var(--transition);
 
@@ -104,21 +90,55 @@
 		flex-direction: row;
 		justify-content: flex-start;
 		align-items: center;
-
 		min-height: 132px;
-		border-radius: var(--borderRadius);
+		border-right: 1px solid var(--colorBorder);
 
 		&:hover {
 			background-color: var(--colorBgElevated);
+			color: var(--colorPrimaryHover);
 		}
 	}
 
 	.prevnext__title {
 		color: var(--colorText);
-		font-weight: 600;
+		font-weight: 500;
 	}
 
 	.next__text {
-		margin-left: auto;
+		position: relative;
+		text-align: right;
+		width: 100%;
+	}
+
+	.prev__text {
+		position: relative;
+		text-align: left;
+		width: 100%;
+	}
+
+	.prev__deco {
+		position: absolute;
+		top: 0;
+		left: 0;
+
+		font-weight: 600;
+		font-size: 3em;
+		opacity: 0.4;
+		font-family: var(--fontFancy);
+		-webkit-text-stroke: 1px var(--colorText);
+		-webkit-text-fill-color: transparent;
+	}
+
+	.next__deco {
+		position: absolute;
+		top: 0;
+		right: 0;
+
+		font-weight: 600;
+		font-size: 3em;
+		opacity: 0.4;
+		font-family: var(--fontFancy);
+		-webkit-text-stroke: 1px var(--colorText);
+		-webkit-text-fill-color: transparent;
 	}
 </style>

@@ -12,6 +12,10 @@
 	import Clock from '~icons/ph/clock';
 	import Phone from '~icons/ph/phone';
 	import CopyToClipboard from '$components/common/CopyToClipboard.svelte';
+
+	import At from '~icons/ph/at';
+
+	import User from '~icons/ph/user';
 </script>
 
 <section>
@@ -26,8 +30,16 @@
 		<form name="contact" class="contact" method="post" data-netlify="true">
 			<input type="hidden" name="form-name" value="contact" />
 
-			<TextInput name="name" type="text" label="Name" placeholder="John Doe" />
-			<TextInput name="email" type="email" label="Email" placeholder="username@gmail.com" />
+			<TextInput name="name" type="text" label="Name" placeholder="John Doe">
+				<span slot="icon">
+					<User />
+				</span>
+			</TextInput>
+			<TextInput name="email" type="email" label="Email" placeholder="username@gmail.com">
+				<span slot="icon">
+					<At />
+				</span>
+			</TextInput>
 			<TextArea name="message" label="Message" placeholder="Tell me about jobs, ideas" />
 
 			<div class="contact__btn">
@@ -56,10 +68,9 @@
 				<ExLink href="mailto:wentallout@gmail.com">
 					<div class="address__title text-base">
 						<Envelope />
-						<div class="">Email me</div>
+						<div>Email me</div>
 					</div>
 				</ExLink>
-
 				<CopyToClipboard textToCopy={'wentallout@gmail.com'}>
 					<div class="address__desc text-small">wentallout@gmail.com</div>
 				</CopyToClipboard>
@@ -72,7 +83,6 @@
 						<div>Phone / Zalo / Telegram</div>
 					</div>
 				</ExLink>
-
 				<CopyToClipboard textToCopy={'(+84)929066331'}>
 					<div class="address__desc text-small">(+84)929066331</div>
 				</CopyToClipboard>

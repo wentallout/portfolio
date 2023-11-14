@@ -1,5 +1,5 @@
 <script>
-	export let label = '';
+	export let label;
 	export let type = 'text';
 	export let placeholder = '';
 	export let value = '';
@@ -13,14 +13,20 @@
 	$: autoSuggestList;
 </script>
 
-<div class="input-container">
-	{#if label != ''}
-		<label for={label} class="label text-small">{label}</label>
+{#if label}
+	<label for={label} class="label text-small">{label}</label>
+{/if}
+<div class="input-container text-small">
+	{#if $$slots.icon}
+		<div class="input__icon">
+			<slot name="icon" />
+		</div>
 	{/if}
+
 	<input
 		list={list || null}
 		{placeholder}
-		class="input text-small"
+		class="input"
 		{type}
 		{name}
 		id={label}
@@ -41,7 +47,11 @@
 	.input-container {
 		display: flex;
 		width: 100%;
-		flex-direction: column;
+		flex-direction: row;
+		align-items: center;
+		border: 1px solid var(--colorBorder);
+		margin-bottom: var(--spaceS);
+		border-radius: var(--borderRadiusSM);
 	}
 
 	.label {
@@ -58,30 +68,28 @@
 	}
 
 	.input {
-		border: 1px solid var(--colorBorder);
 		background-color: transparent;
-
 		/* FONT */
 		font-family: inherit;
 		color: var(--colorText) !important;
 		/* --- */
-
 		/* SPACING */
 		padding: var(--spaceXS);
-		margin-bottom: var(--spaceS);
 		/* --- */
-
 		width: 100%;
 		height: 3.5rem;
-
 		/* OTHER */
 		transition: var(--transition);
-
-		border-radius: var(--borderRadiusSM);
+		outline: 0;
 	}
 
-	.input:focus-visible {
-		outline: 1px solid var(--colorPrimary);
-		box-shadow: 0px 0px 4px var(--colorPrimary);
+	.input-container:has(.input:focus-visible) {
+		outline: 1px solid var(--colorPrimaryActive);
+		box-shadow: 0px 0px 4px var(--colorPrimaryActive);
+		color: var(--colorPrimaryActive);
+	}
+
+	.input__icon {
+		padding-left: var(--spaceXS);
 	}
 </style>

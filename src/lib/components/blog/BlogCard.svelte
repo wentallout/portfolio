@@ -23,7 +23,7 @@
 			</div>
 		{/if}
 
-		<div class="blog__title text-base">{blogTitle}</div>
+		<div class="blog__title text-small">{blogTitle}</div>
 		<div class="blog__date text-xs">
 			<Time timestamp={blogDate} relative />
 		</div>
@@ -56,6 +56,8 @@
 		/* --- */
 
 		box-shadow: var(--boxShadow);
+
+		background-color: var(--colorBgContainer);
 
 		&:hover {
 			background-color: var(--colorBgElevated);

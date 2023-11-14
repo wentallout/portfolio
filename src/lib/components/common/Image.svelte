@@ -45,8 +45,8 @@
 		font-size: var(--fontSizeXS);
 		color: var(--colorTextSecondary);
 		width: 100%;
-		padding: 4px 8px;
-		border: 1px solid var(--colorBorder);
+		padding: var(--space3XS) var(--space2XS);
+
 		background-color: var(--colorBgElevated);
 	}
 </style>

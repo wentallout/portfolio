@@ -1,5 +1,6 @@
 <script>
 	import { page } from '$app/stores';
+	import { onMount } from 'svelte';
 	let currentPath = $page.url.pathname;
 
 	let crumbs;
@@ -26,9 +27,19 @@
 
 		crumbs.unshift({ label: 'home', href: '/' });
 	}
+
+	let breadcrumbEl;
+
+	onMount(() => {
+		const observer = new IntersectionObserver(
+			([e]) => e.target.classList.toggle('is-pinned', e.intersectionRatio < 1),
+			{ threshold: [1] }
+		);
+		observer.observe(breadcrumbEl);
+	});
 </script>
 
-<nav aria-label="breadcrumb" id="breadcrumb" class="breadcrumb text-small">
+<nav bind:this={breadcrumbEl} aria-label="breadcrumb" id="breadcrumb" class="breadcrumb text-small">
 	{#each crumbs as c, i}
 		{#if i == crumbs.length - 1}
 			<div class="breadcrumb__unclickable">
@@ -49,10 +60,13 @@
 		align-items: center;
 		gap: 0.25rem;
 
-		padding-top: 100px;
-		padding-bottom: var(--spaceL);
+		margin-top: 100px;
+		margin-bottom: var(--spaceL);
 
 		background-color: transparent;
+		position: sticky;
+		top: -1px;
+		transition: var(--transition);
 	}
 
 	.breadcrumb__unclickable {
@@ -71,5 +85,13 @@
 	.breadcrumb__clickable:hover {
 		color: var(--colorPrimaryHover);
 		text-underline-offset: 2px;
+	}
+
+	:global(.breadcrumb.is-pinned) {
+		background-color: var(--colorBgElevated);
+		padding: var(--space3XS);
+		box-shadow: var(--boxShadow);
+		z-index: 99999;
+		border-radius: 0 0 var(--borderRadiusLight) var(--borderRadiusLight);
 	}
 </style>

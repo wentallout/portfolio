@@ -7,14 +7,14 @@
 
 <button class="toggle" type="button" on:click={toggleTheme} aria-label="Toggle theme">
 	{#if $theme === 'dark'}
-		<div class="toggle__icon" in:fly|global={{ y: -10 }}>
-			<Moon class="icon" color="var(--colorText)" width="24" height="24" />
-			<div class="text-xs">Dark</div>
+		<div class="toggle__icon text-xs" in:fly|global={{ y: -10 }}>
+			<Moon width="24" height="24" class="icon" color="var(--colorText)" />
+			<div>Dark</div>
 		</div>
 	{:else}
-		<div class="toggle__icon" in:fly|global={{ y: 10 }}>
-			<Sun class="icon" color="var(--colorText)" width="24" height="24" />
-			<div class="text-xs">Light</div>
+		<div class="toggle__icon text-xs" in:fly|global={{ y: 10 }}>
+			<Sun width="24" height="24" class="icon" color="var(--colorText)" />
+			<div>Light</div>
 		</div>
 	{/if}
 </button>

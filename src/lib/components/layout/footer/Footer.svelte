@@ -42,7 +42,6 @@
 					{/each}
 				</ul>
 			</div>
-			
 
 			<div class="list">
 				<div class="list__title">Other</div>
@@ -65,7 +64,7 @@
 					<li class="nav-list__item">
 						<ExLink href="https://goo.gl/maps/GLt6uhYWwU91fXz49">
 							<div class="nav-list__link">
-								<MapPin width="24" height="24" />
+								<MapPin />
 								Ho Chi Minh City
 							</div>
 						</ExLink>
@@ -74,7 +73,7 @@
 					<li class="nav-list__item">
 						<ExLink href="mailto:wentallout@gmail.com">
 							<div class="nav-list__link">
-								<Envelope width="24" height="24" />
+								<Envelope />
 								wentallout@gmail.com
 							</div>
 						</ExLink>
@@ -82,7 +81,7 @@
 					<li class="nav-list__item">
 						<ExLink href="tel:+84929066331">
 							<div class="nav-list__link">
-								<Phone width="24" height="24" />
+								<Phone />
 								+84 929066331
 							</div>
 						</ExLink>
@@ -90,14 +89,14 @@
 					<li class="nav-list__item">
 						<ExLink href="https://www.linkedin.com/in/wentallout">
 							<div class="nav-list__link">
-								<LinkedinLogo width="24" height="24" />Linkedin
+								<LinkedinLogo />Linkedin
 							</div>
 						</ExLink>
 					</li>
 					<li class="nav-list__item">
 						<ExLink href="https://www.instagram.com/wentallout/saved">
 							<div class="nav-list__link">
-								<InstagramLogo width="24" height="24" />
+								<InstagramLogo />
 								Instagram
 							</div>
 						</ExLink>
@@ -105,7 +104,7 @@
 					<li class="nav-list__item">
 						<ExLink href="https://github.com/wentallout">
 							<div class="nav-list__link">
-								<GitHubLogo width="24" height="24" />
+								<GitHubLogo />
 								GitHub
 							</div>
 						</ExLink>
