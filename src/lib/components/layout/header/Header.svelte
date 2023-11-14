@@ -287,7 +287,7 @@
 		margin: auto;
 		background: transparent;
 		transition: var(--transition);
-		pointer-events: none;
+
 		width: 0;
 	}
 
