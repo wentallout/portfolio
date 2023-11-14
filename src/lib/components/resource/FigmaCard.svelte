@@ -29,6 +29,7 @@
 		border-radius: var(--borderRadius);
 		overflow: hidden;
 		flex-grow: 1;
+		background-color: var(--colorBgContainer);
 
 		&:hover {
 			background-color: var(--colorBgElevated);

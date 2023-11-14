@@ -28,6 +28,14 @@ The attention to detail in replicating real-world textures, like leather or wood
 - Satoshi (What I don’t like about it is that you always need to have uneven spacing on top and bottom as it has a higher line height, which easily makes your elements visually not centered.)
 - Work Sans (Work Sans is an ideal type choice for modern user interfaces because of its simplicity and readability, making it well-suited for both body text and headlines in digital environments. )
 - IBM Plex Sans
+- Pretendard
+- Uncut Sans
+- Haskoy
+- Aspekta
+- Bertioga Sans
+
+
+
 
 
 

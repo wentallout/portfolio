@@ -3,9 +3,12 @@
 	import SectionTitle from '$components/sections/SectionTitle.svelte';
 	import Folder from '~icons/ph/folder';
 	import BlogTagsList from '$components/sections/blog/BlogTagsList.svelte';
+	import Breadcrumb from '$components/layout/other/Breadcrumb.svelte';
 </script>
 
-<SectionTitle sectionTitle="Category" let:sectionIcon>
+<Breadcrumb />
+
+<SectionTitle sectionTitle="Blog categories" let:sectionIcon>
 	<Folder {...sectionIcon} />
 </SectionTitle>
 

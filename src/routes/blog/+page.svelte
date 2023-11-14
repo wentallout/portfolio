@@ -10,6 +10,8 @@
 	import { onMount } from 'svelte';
 	import { allBlogStore } from '$lib/stores/blogStore.js';
 
+	import MagnifyingGlass from '~icons/ph/magnifying-glass';
+
 	export let data;
 
 	let allBlogs = data.blogs;
@@ -62,7 +64,11 @@
 			list="search"
 			bind:value={searchTerm}
 			placeholder="Search blogs..."
-			on:input={handleSearchInput} />
+			on:input={handleSearchInput}>
+			<span slot="icon">
+				<MagnifyingGlass />
+			</span>
+		</TextInput>
 	</search>
 	<BlogTagsList {data} />
 

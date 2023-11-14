@@ -28,11 +28,11 @@
 	--activeHeadingScrollOffset="var(--scroll-padding)"
 	--toc-desktop-sticky-top="var(--scroll-padding)">
 	<span class="toc-title text-base" slot="title">
-		<ListBullets color="var(--colorText)" width="24" height="24" />
+		<ListBullets color="var(--colorText)" />
 		Contents</span>
 
 	<span class="open-toc-icon" slot="open-toc-icon">
-		<ListBullets color="var(--colorBlack)" width="24" height="24" />
+		<ListBullets color="var(--colorBlack)" />
 	</span>
 </Toc>
 

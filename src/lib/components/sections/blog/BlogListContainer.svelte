@@ -10,7 +10,7 @@
 		/* --- */
 
 		--min: 40ch;
-		--gap: var(--spaceM);
+		--gap: var(--spaceS);
 
 		display: grid;
 		grid-gap: var(--gap);

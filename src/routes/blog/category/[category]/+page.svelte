@@ -1,9 +1,12 @@
 <script>
 	import BlogCard from '$components/blog/BlogCard.svelte';
 	import BlogListContainer from '$components/sections/blog/BlogListContainer.svelte';
+	import Breadcrumb from '$lib/components/layout/other/Breadcrumb.svelte';
 
 	export let data;
 </script>
+
+<Breadcrumb />
 
 <div class="result text-large">
 	<span class="result__title">Posts about </span>
