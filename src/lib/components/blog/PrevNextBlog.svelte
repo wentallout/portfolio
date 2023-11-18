@@ -119,7 +119,7 @@
 	.prev__deco {
 		position: absolute;
 		top: 0;
-		left: 0;
+		left: var(--spaceS);
 
 		font-weight: 600;
 		font-size: 3em;
@@ -132,7 +132,7 @@
 	.next__deco {
 		position: absolute;
 		top: 0;
-		right: 0;
+		right: var(--spaceS);
 
 		font-weight: 600;
 		font-size: 3em;

@@ -5,7 +5,7 @@
 
 <section>
 	<div class="full-width">
-		<div class="hero global-container">
+		<div class="hero pad">
 			<div class="hero__block">
 				<div class="hero__name text-2xl">
 					Khoa is a
