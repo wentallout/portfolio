@@ -1,5 +1,4 @@
 <script>
-	import hash from 'object-hash';
 	export let article = false;
 	export let author;
 
@@ -16,6 +15,9 @@
 	export let siteLanguage;
 	export let siteTitle;
 	export let siteTitleAlt;
+	/**
+	 * @type {string}
+	 */
 	export let siteUrl;
 	export let title;
 	export let url;
@@ -26,12 +28,28 @@
 	export let tiktokUsername;
 	export let twitterUsername;
 
+	function generateEntityHash(entity) {
+		let hash = 0;
+
+		if (entity.length === 0) {
+			return hash;
+		}
+
+		for (let i = 0; i < entity.length; i++) {
+			const char = entity.charCodeAt(i);
+			hash = (hash << 5) - hash + char;
+			hash |= 0;
+		}
+
+		return hash.toString();
+	}
+
 	/**
 	 * @type {{ url: string; faviconWidth: number; faviconHeight: number } | null}
 	 */
 	export let entityMeta = null;
 
-	const entityHash = hash({ author }, { algorithm: 'md5' });
+	const entityHash = generateEntityHash(author);
 
 	const schemaOrgEntity =
 		entityMeta !== null
@@ -186,7 +204,7 @@
 			`https://github.com/${githubPage}`,
 			`https://www.tiktok.com/${tiktokUsername}`,
 			`https://t.me/${telegramUsername}`,
-			`https://uk.linkedin.com/in/${linkedinProfile}`,
+			`https://linkedin.com/in/${linkedinProfile}`,
 			facebookPage
 		]
 	};
