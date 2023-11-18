@@ -10,11 +10,10 @@
 	<div class="end__text">
 		Copyright {`${COPYRIGHT_ENTITY}`} 2023 Nguyen Dang Khoa (wentallout), All Rights Reserved.
 	</div>
-	<div class="end__text">Made with SvelteKit</div>
 
-	<ExLink href="/doc/privacy-policy.pdf">
-		<div class="end__text">Privacy Policy</div>
-	</ExLink>
+	<div class="end__text">
+		Made with <span style="color:#FF3E00;font-weight:600">SvelteKit</span>
+	</div>
 </div>
 
 <style>

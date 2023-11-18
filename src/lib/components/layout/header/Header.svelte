@@ -6,6 +6,7 @@
 	import { page } from '$app/stores';
 	import List from '~icons/ph/list';
 	import X from '~icons/ph/x';
+	import ThemeSwitcher from '$lib/components/button/ThemeSwitcher.svelte';
 
 	let scrollY;
 	let navOverlayEle;
@@ -30,7 +31,8 @@
 
 <VanishingHeader duration="300ms" offset={50} tolerance={5}>
 	<header class="header" bind:this={headerEle}>
-		<nav class="nav global-container" class:nav--scrolldown={scrollY > 0} aria-label="primary menu">
+		<ThemeSwitcher />
+		<nav class="nav pad" class:nav--scrolldown={scrollY > 0} aria-label="primary menu">
 			<ul class="nav-list">
 				{#each navItems as navItem}
 					<li class="nav-list__item" class:active-page={$page.url.pathname === `${navItem.path}`}>
@@ -62,7 +64,7 @@
 		on:keydown={closeNav}>
 		<X color="var(--colorBlack)" width="32" height="32" />
 	</button>
-	<div class="overlay-content global-container">
+	<div class="overlay-content">
 		{#each navItems as navItem}
 			<a
 				class="overlay-item text-xl"
@@ -79,10 +81,6 @@
 </div>
 
 <style lang="postcss">
-	/* :root {
-		view-transition-name: none;
-	} */
-
 	::view-transition-group(indicator) {
 		animation-duration: 0.3s;
 	}
@@ -228,7 +226,7 @@
 	}
 
 	.overlay-item {
-		padding: var(--spaceL) 0;
+		padding: var(--spaceL) var(--spaceM);
 
 		color: var(--colorWhite);
 
@@ -290,10 +288,4 @@
 
 		width: 0;
 	}
-
-	/* .nav-list__item:hover::before {
-		width: 100%;
-		inset: 0 -10px 30px;
-		background: radial-gradient(ellipse at top, currentcolor, transparent 50%);
-	} */
 </style>
