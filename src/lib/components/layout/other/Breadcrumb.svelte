@@ -61,7 +61,7 @@
 		gap: 0.25rem;
 
 		margin-top: 100px;
-		margin-bottom: var(--spaceL);
+		margin-bottom: var(--spaceXL);
 
 		background-color: transparent;
 		position: sticky;
@@ -88,8 +88,8 @@
 	}
 
 	:global(.breadcrumb.is-pinned) {
-		background-color: var(--colorBgElevated);
-		padding: var(--space3XS);
+		background-color: var(--colorBgLayout);
+		padding: var(--space2XS) var(--spaceXS);
 		box-shadow: var(--boxShadow);
 		z-index: 99999;
 		border-radius: 0 0 var(--borderRadiusLight) var(--borderRadiusLight);

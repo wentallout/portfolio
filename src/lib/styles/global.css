@@ -116,10 +116,6 @@ svg {
 	color: inherit;
 }
 
-/* .icon:hover {
-	color: var(--colorPrimary);
-} */
-
 .social__address:hover svg {
 	color: var(--colorPrimary);
 }
@@ -130,7 +126,7 @@ svg {
 
 label:has(+ input:focus),
 label:has(+ textarea:focus) {
-	color: var(--colorPrimary);
+	color: var(--colorPrimaryActive);
 }
 
 .full-width {

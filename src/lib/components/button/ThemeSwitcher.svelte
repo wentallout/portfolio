@@ -5,57 +5,67 @@
 	import { theme, toggleTheme } from '$lib/stores/themeStore.js';
 </script>
 
-<button class="toggle" type="button" on:click={toggleTheme} aria-label="Toggle theme">
-	{#if $theme === 'dark'}
-		<div class="toggle__icon text-xs" in:fly|global={{ y: -10 }}>
-			<Moon width="24" height="24" class="icon" color="var(--colorText)" />
-			<div>Dark</div>
-		</div>
-	{:else}
-		<div class="toggle__icon text-xs" in:fly|global={{ y: 10 }}>
-			<Sun width="24" height="24" class="icon" color="var(--colorText)" />
-			<div>Light</div>
-		</div>
-	{/if}
+<button class="pill" type="button" on:click={toggleTheme} aria-label="Toggle theme">
+	<div
+		class="circle"
+		class:circle--left={$theme === 'dark'}
+		class:circle--right={$theme === 'light'}>
+		{#if $theme === 'dark'}
+			<div aria-label="dark mode">
+				<Moon width="16" height="16" class="icon" color="var(--colorText)" />
+			</div>
+		{:else if $theme === 'light'}
+			<div aria-label="light mode">
+				<Sun width="16" height="16" class="icon" color="var(--colorText)" />
+			</div>
+		{/if}
+	</div>
 </button>
 
 <style lang="postcss">
-	.toggle {
-		padding: var(--spaceXS);
-		aspect-ratio: 1/1;
-		width: 48px;
-		border: 0;
+	.pill {
+		--pillWidth: 48px;
+		width: var(--pillWidth);
 
-		overflow: visible;
-		position: fixed;
-		top: 0;
-		right: 0;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		border-radius: var(--borderRadius);
+		border: 1px solid var(--colorText);
+		overflow: hidden;
+		background-color: var(--colorBgContainer);
+		height: fit-content;
 		z-index: var(--zIndexMax);
+		position: absolute;
+		top: 50%;
+		right: 0;
+		transform: translate(-50%, -50%);
+		transition: var(--transition);
+		padding: 2px;
+	}
 
-		display: flex;
-		flex-direction: column;
-		justify-content: center;
-		align-items: center;
+	.pill:hover {
+		filter: brightness(120%);
+	}
+
+	.circle {
+		height: calc(var(--pillWidth) / 2);
+		aspect-ratio: 1/1;
+		border-radius: 50%;
 		background-color: var(--colorBgElevated);
-		border-radius: 0 0 0 16px;
-
 		box-shadow: var(--boxShadow);
-
-		&:hover {
-			cursor: pointer;
-		}
-	}
-
-	@media (min-width: 768px) {
-		.toggle {
-			width: 64px;
-		}
-	}
-
-	.toggle__icon {
 		display: flex;
-		flex-direction: column;
 		justify-content: center;
 		align-items: center;
+
+		transition: var(--transition);
+	}
+
+	.circle--left {
+		transform: translateX(0);
+	}
+
+	.circle--right {
+		transform: translateX(calc(var(--pillWidth) / 2 - 6px));
 	}
 </style>

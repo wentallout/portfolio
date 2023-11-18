@@ -13,7 +13,7 @@
 	import ThemeSwitcher from '$components/button/ThemeSwitcher.svelte';
 	import { onDestroy, onMount } from 'svelte';
 
-	import { snowflakeCursor } from '$lib/utils/cursorTrail.js';
+	// import { snowflakeCursor } from '$lib/utils/cursorTrail.js';
 
 	onNavigate(() => {
 		if (!document.startViewTransition) return;
@@ -25,17 +25,6 @@
 			});
 		});
 	});
-
-	let cursorEffect;
-	onMount(() => {
-		//https://github.com/tholman/cursor-effects
-
-		cursorEffect = new snowflakeCursor();
-	});
-
-	// onDestroy(() => {
-	// 	cursorEffect.destroy();
-	// });
 </script>
 
 <svelte:head>
@@ -50,12 +39,10 @@
 <PWA />
 <BackToTop />
 
-<ThemeSwitcher />
-
 <HeaderCover />
 <Header />
 
-<main class="main-content global-container" id="main-content">
+<main class="main-content pad" id="main-content">
 	<slot />
 </main>
 

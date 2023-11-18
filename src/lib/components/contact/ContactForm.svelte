@@ -71,7 +71,7 @@
 						<div>Email me</div>
 					</div>
 				</ExLink>
-				<CopyToClipboard textToCopy={'wentallout@gmail.com'}>
+				<CopyToClipboard textToCopy="wentallout@gmail.com">
 					<div class="address__desc text-small">wentallout@gmail.com</div>
 				</CopyToClipboard>
 			</div>
@@ -83,7 +83,7 @@
 						<div>Phone / Zalo / Telegram</div>
 					</div>
 				</ExLink>
-				<CopyToClipboard textToCopy={'(+84)929066331'}>
+				<CopyToClipboard textToCopy="(+84)929066331">
 					<div class="address__desc text-small">(+84)929066331</div>
 				</CopyToClipboard>
 			</div>

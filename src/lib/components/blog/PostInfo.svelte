@@ -16,7 +16,7 @@
 
 <Breadcrumb />
 <header class="container full-width">
-	<div class="global-container">
+	<div class="pad">
 		<h1 class="post-title">{data.title}</h1>
 		<div class="post-info text-small">
 			<div class="info__section">

@@ -5,18 +5,16 @@
 	export let sectionDesc = '';
 
 	let sectionIcon = {
-		color: 'var(--colorTextTertiary)',
-		height: 32,
-		width: 32
+		color: 'var(--colorTextTertiary)'
 	};
 </script>
 
 <div class="section">
 	<div class="section__title">
-		<div class="section__icon">
+		<div class="section__icon text-large">
 			<slot {sectionIcon} />
 		</div>
-		<h2 class="section__text text-xl">{sectionTitle}</h2>
+		<h2 class="section__text text-large">{sectionTitle}</h2>
 	</div>
 
 	{#if sectionDesc !== ''}
@@ -31,13 +29,14 @@
 	}
 
 	.section__title {
+		/* FLEX */
 		display: flex;
 		justify-content: left;
-
 		align-items: center;
 		gap: var(--spaceS);
-		margin-bottom: var(--spaceS);
+		/*  */
 
+		margin-bottom: var(--spaceM);
 		position: relative;
 	}
 

@@ -20,23 +20,25 @@
 <footer class="footer text-small">
 	<PhysicsCanvas />
 
-	<div class="global-container">
+	<div class="pad">
 		<div class="footer__list">
 			<div class="list">
-				<div class="list__title">About me</div>
+				<h5 class="list__title">About me</h5>
 				<ul class="list__nav">
-					<li class="nav-list__item">
+					<li class="nav-list__link">
 						I creates superb affordable websites and apps for small businesses.
 					</li>
+					<li class="nav-list__link">
+						<a class="link" href="/about">More about me </a>
+					</li>
 				</ul>
-				<a class="link" href="/about"> More about me </a>
 			</div>
 
 			<div class="list">
-				<div class="list__title">Navigate</div>
+				<h5 class="list__title">Navigate</h5>
 				<ul class="list__nav">
 					{#each navItems as navItem}
-						<li class="nav-list__item">
+						<li class="nav-list__link">
 							<a href={navItem.path}>{navItem.title}</a>
 						</li>
 					{/each}
@@ -44,24 +46,30 @@
 			</div>
 
 			<div class="list">
-				<div class="list__title">Other</div>
+				<h5 class="list__title">Other</h5>
 				<ul class="list__nav">
-					<li class="nav-list__item">
+					<li class="nav-list__link">
 						<a href="/music">Music</a>
 					</li>
-					<li class="nav-list__item">
+					<li class="nav-list__link">
 						<a href="/resource/tool">REM Converter</a>
 					</li>
-					<li class="nav-list__item">
+					<li class="nav-list__link">
 						<a href="/rss.xml">RSS</a>
+					</li>
+					<li class="nav-list__link">
+						<a href="https://dnsrecords.io/wentallout.io.vn">DNS</a>
+					</li>
+					<li class="nav-list__link">
+						<a href="/doc/privacy-policy.pdf">Privacy Policy</a>
 					</li>
 				</ul>
 			</div>
 
 			<div class="list">
-				<div class="list__title">Contact</div>
+				<h5 class="list__title">Contact</h5>
 				<ul class="list__nav">
-					<li class="nav-list__item">
+					<li>
 						<ExLink href="https://goo.gl/maps/GLt6uhYWwU91fXz49">
 							<div class="nav-list__link">
 								<MapPin />
@@ -70,7 +78,7 @@
 						</ExLink>
 					</li>
 
-					<li class="nav-list__item">
+					<li>
 						<ExLink href="mailto:wentallout@gmail.com">
 							<div class="nav-list__link">
 								<Envelope />
@@ -78,7 +86,7 @@
 							</div>
 						</ExLink>
 					</li>
-					<li class="nav-list__item">
+					<li>
 						<ExLink href="tel:+84929066331">
 							<div class="nav-list__link">
 								<Phone />
@@ -86,14 +94,14 @@
 							</div>
 						</ExLink>
 					</li>
-					<li class="nav-list__item">
+					<li>
 						<ExLink href="https://www.linkedin.com/in/wentallout">
 							<div class="nav-list__link">
 								<LinkedinLogo />Linkedin
 							</div>
 						</ExLink>
 					</li>
-					<li class="nav-list__item">
+					<li>
 						<ExLink href="https://www.instagram.com/wentallout/saved">
 							<div class="nav-list__link">
 								<InstagramLogo />
@@ -101,7 +109,7 @@
 							</div>
 						</ExLink>
 					</li>
-					<li class="nav-list__item">
+					<li>
 						<ExLink href="https://github.com/wentallout">
 							<div class="nav-list__link">
 								<GitHubLogo />
@@ -129,6 +137,11 @@
 		display: flex;
 		flex-direction: row;
 		gap: var(--spaceXS);
+		align-items: center;
+
+		&:hover {
+			color: var(--colorPrimaryHover);
+		}
 	}
 
 	.footer__deco {
@@ -203,19 +216,5 @@
 		margin-bottom: var(--spaceL);
 		flex-wrap: wrap;
 		gap: var(--space2XS);
-	}
-
-	.nav-list__item {
-		display: flex;
-		flex-direction: row;
-		/* max-width: 30ch; */
-		font-weight: var(--fontWeightSmall);
-		transition: 0.3s;
-		color: var(--colorText);
-		gap: var(--space3XS);
-	}
-
-	.nav-list__item a:hover {
-		color: var(--colorPrimary);
 	}
 </style>

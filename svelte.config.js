@@ -40,7 +40,8 @@ const config = {
 
 		alias: {
 			$blogImages: 'src/lib/assets/images/blog',
-			$components: 'src/lib/components'
+			$components: 'src/lib/components',
+			$projectImages: 'src/lib/assets/images/project'
 		},
 		csp: {
 			mode: 'auto'

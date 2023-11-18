@@ -3,24 +3,6 @@
 	import { fade } from 'svelte/transition';
 	import { theme } from '$lib/stores/themeStore.js';
 	import { page } from '$app/stores';
-	import Marquee from '$components/layout/other/Marquee.svelte';
-	import { onMount } from 'svelte';
-	let latestBlog = 'Loading...';
-
-	onMount(async () => {
-		try {
-			const response = await fetch(`/api/blog`);
-			const allBlogs = await response.json();
-			if (allBlogs && allBlogs.length > 0) {
-				latestBlog = allBlogs[0].meta.title;
-			} else {
-				latestBlog = 'No blogs found';
-			}
-		} catch (error) {
-			console.error('Error fetching blog:', error);
-			latestBlog = 'Error fetching blog';
-		}
-	});
 
 	let showCover = true;
 
@@ -29,15 +11,6 @@
 	} else {
 		showCover = false;
 	}
-
-	let marqueeItems;
-
-	$: marqueeItems = [
-		'Mirr Design',
-		'Current FE Project: Zen Garden',
-		'Current UI/UX Project: Slick Store',
-		`Latest Blog: ${latestBlog}`
-	];
 </script>
 
 {#if showCover}
@@ -56,10 +29,6 @@
 
 		<HeaderLogo />
 	</div>
-
-	{#if marqueeItems}
-		<Marquee items={marqueeItems} />
-	{/if}
 {/if}
 
 <style>

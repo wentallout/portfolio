@@ -8,8 +8,12 @@
 	<ExLink ariaLabel="not by ai" style="display:block" href="https://notbyai.fyi">
 		<LogoNotAi />
 	</ExLink>
-	<ExLink ariaLabel="SvelteKit" style="display:block" href="https://kit.svelte.dev/">
+	<ExLink ariaLabel="SvelteKit" style="display:block" href="https://kit.svelte.dev">
 		<LogoSvelte height="42" width="100%" />
+	</ExLink>
+
+	<ExLink ariaLabel="Svelte Vietnam" style="display:block" href="https://www.sveltevietnam.dev">
+		<img class="badge__img" alt="svelte vietnam" src="/images/sveltevn.png" />
 	</ExLink>
 </div>
 
@@ -20,5 +24,10 @@
 		flex-wrap: wrap;
 		width: 100%;
 		gap: var(--spaceM);
+	}
+
+	.badge__img {
+		height: 42px;
+		width: auto;
 	}
 </style>

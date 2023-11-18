@@ -18,5 +18,6 @@
 		display: flex;
 		font-size: inherit;
 		position: relative;
+		color: inherit;
 	}
 </style>
