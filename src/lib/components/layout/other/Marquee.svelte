@@ -38,18 +38,14 @@
 
 	.marquee {
 		background-color: var(--colorBgLayout);
-
 		--gap: var(--space3XL);
 		position: relative;
 		display: flex;
 		overflow: hidden;
 		user-select: none;
 		gap: var(--gap);
-
 		color: var(--colorText);
 		padding: var(--spaceXS) 0;
-		border-top: 1px solid var(--colorBorder);
-		border-bottom: 1px solid var(--colorBorder);
 	}
 
 	.marquee__content {

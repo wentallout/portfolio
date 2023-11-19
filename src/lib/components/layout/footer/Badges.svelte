@@ -8,6 +8,9 @@
 	<ExLink ariaLabel="not by ai" style="display:block" href="https://notbyai.fyi">
 		<LogoNotAi />
 	</ExLink>
+	<ExLink ariaLabel="Vite" style="display:block" href="https://vitejs.dev/">
+		<img class="badge__img" alt="vite" src="/images/vite.svg" />
+	</ExLink>
 	<ExLink ariaLabel="SvelteKit" style="display:block" href="https://kit.svelte.dev">
 		<LogoSvelte height="42" width="100%" />
 	</ExLink>

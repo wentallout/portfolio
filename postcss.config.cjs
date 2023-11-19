@@ -1,5 +1,4 @@
 const autoprefixer = require('autoprefixer');
-const csso = require('postcss-csso');
 const postcssPresetEnv = require('postcss-preset-env');
 const postcssGlobalData = require('@csstools/postcss-global-data');
 
@@ -16,8 +15,7 @@ const config = {
 				'media-query-ranges': true
 			}
 		}),
-		autoprefixer,
-		csso()
+		autoprefixer
 	]
 };
 

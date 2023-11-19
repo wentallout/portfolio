@@ -6,6 +6,8 @@
 
 <RemConverter />
 
+<div class="nah">there's nothing here lmao</div>
+
 <!-- <div>
 	{#await getResource()}
 		{#each $resourceData as resource (resource.id)}
@@ -22,4 +24,7 @@
 </div> -->
 
 <style>
+	.nah {
+		color: red;
+	}
 </style>

@@ -1,9 +1,10 @@
 import { sveltekit } from '@sveltejs/kit/vite';
 
 import Icons from 'unplugin-icons/vite';
-
+import browserslist from 'browserslist';
 import { imagetools } from 'vite-imagetools';
 import svg from '@poppanator/sveltekit-svg';
+import { browserslistToTargets } from 'lightningcss';
 
 /** @type {import('vite').UserConfig} */
 const config = {
@@ -41,6 +42,16 @@ const config = {
 
 	preview: {
 		port: '4000'
+	},
+	css: {
+		transformer: 'lightningcss',
+		lightningcss: {
+			targets: browserslistToTargets(browserslist('>= 0.25%'))
+		},
+		devSourcemap: true
+	},
+	build: {
+		cssMinify: 'lightningcss'
 	}
 };
 

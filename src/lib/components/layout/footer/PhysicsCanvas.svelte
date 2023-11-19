@@ -38,11 +38,10 @@
 				height: eleClientHeight,
 				background: 'transparent',
 				wireframes: false,
-				pixelRatio: devicePixelRatio
+				pixelRatio: devicePixelRatio,
+				hasBounds: true
 			}
 		});
-
-		
 
 		let shape1 = Bodies.circle(0, 0, 25, {
 			frictionAir: 0.05,
@@ -90,18 +89,18 @@
 
 		let ground = Bodies.rectangle(
 			eleClientWidth / 2,
-			eleClientHeight + 50,
+			eleClientHeight,
 			eleClientWidth,
 			100,
 			wallOptions
 		);
+		let ceiling = Bodies.rectangle(eleClientWidth / 2, 0, eleClientWidth, 10000, wallOptions);
 
-		let ceiling = Bodies.rectangle(eleClientWidth / 2, -50, eleClientWidth, 100, wallOptions);
-		let leftWall = Bodies.rectangle(-50, eleClientHeight / 2, 100, eleClientHeight, wallOptions);
+		let leftWall = Bodies.rectangle(0, eleClientHeight / 2, 1, eleClientHeight, wallOptions);
 		let rightWall = Bodies.rectangle(
-			eleClientWidth + 50,
+			eleClientWidth,
 			eleClientHeight / 2,
-			100,
+			50,
 			eleClientHeight,
 			wallOptions
 		);
@@ -110,7 +109,7 @@
 			element: physEle,
 			constraint: {
 				render: {
-					visible: false
+					visible: true
 				}
 			}
 		});
@@ -134,6 +133,8 @@
 		Render.run(renderer);
 		Runner.run(engine);
 		changeGravity();
+
+		window.addEventListener('resize', handleResize);
 	});
 
 	function handleClick(event) {
