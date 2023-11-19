@@ -105,14 +105,14 @@
 			wallOptions
 		);
 
-		let mouseControl = MouseConstraint.create(engine, {
-			element: physEle,
-			constraint: {
-				render: {
-					visible: true
-				}
-			}
-		});
+		// let mouseControl = MouseConstraint.create(engine, {
+		// 	element: physEle,
+		// 	constraint: {
+		// 		render: {
+		// 			visible: true
+		// 		}
+		// 	}
+		// });
 
 		// let intialShapes = Composites.stack(50, 50, 1, 1, 40, 40, function (x, y) {
 		// 	return createShape(x, y);
@@ -133,24 +133,22 @@
 		Render.run(renderer);
 		Runner.run(engine);
 		changeGravity();
-
-		window.addEventListener('resize', handleResize);
 	});
 
-	function handleClick(event) {
-		const shape = createShape(event.pageX, event.pageY);
-		intialShapes.bodies.push(shape);
-		World.add(engine.world, shape);
-	}
+	// function handleClick(event) {
+	// 	const shape = createShape(event.pageX, event.pageY);
+	// 	intialShapes.bodies.push(shape);
+	// 	World.add(engine.world, shape);
+	// }
 
-	function handleMouseMove(event) {
-		const vector = { x: event.pageX, y: event.pageY };
-		const hoveredShapes = Query.point(intialShapes.bodies, vector);
-		hoveredShapes.forEach((shape) => {
-			shape.render.sprite = null;
-			shape.render.fillStyle = 'red';
-		});
-	}
+	// function handleMouseMove(event) {
+	// 	const vector = { x: event.pageX, y: event.pageY };
+	// 	const hoveredShapes = Query.point(intialShapes.bodies, vector);
+	// 	hoveredShapes.forEach((shape) => {
+	// 		shape.render.sprite = null;
+	// 		shape.render.fillStyle = 'red';
+	// 	});
+	// }
 </script>
 
 <svelte:window bind:devicePixelRatio />
