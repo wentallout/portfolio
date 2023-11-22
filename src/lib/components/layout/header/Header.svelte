@@ -113,8 +113,8 @@
 
 	.active-page {
 		position: relative;
-
 		border-bottom: 2px solid var(--colorPrimaryActive);
+		color: var(--colorPrimaryActive);
 	}
 
 	.active-page::after {

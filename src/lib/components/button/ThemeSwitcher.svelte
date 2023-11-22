@@ -42,10 +42,10 @@
 		transform: translate(-50%, -50%);
 		transition: var(--transition);
 		padding: 2px;
-	}
 
-	.pill:hover {
-		filter: brightness(120%);
+		&:hover {
+			filter: brightness(110%);
+		}
 	}
 
 	.circle {
@@ -57,8 +57,12 @@
 		display: flex;
 		justify-content: center;
 		align-items: center;
-
+		border: 1px solid var(--colorTextQuaternary);
 		transition: var(--transition);
+
+		&:hover {
+			border: 1px solid var(--colorPrimaryHover);
+		}
 	}
 
 	.circle--left {

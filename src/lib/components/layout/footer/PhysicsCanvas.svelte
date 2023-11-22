@@ -123,7 +123,7 @@
 			ceiling,
 			leftWall,
 			rightWall,
-			mouseControl,
+			// mouseControl,
 			// intialShapes,
 			shape1,
 			shape2,
