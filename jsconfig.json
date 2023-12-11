@@ -14,7 +14,7 @@
 		"noErrorTruncation": true,
 		"resolveJsonModule": true,
 		"skipLibCheck": true,
-		"sourceMap": false,
+		"sourceMap": true,
 		"strict": true,
 		"baseUrl": ".",
 		"paths": {

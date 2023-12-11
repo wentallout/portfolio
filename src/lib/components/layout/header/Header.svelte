@@ -85,10 +85,6 @@
 		animation-duration: 0.3s;
 	}
 
-	.active-page::after {
-		view-transition-name: indicator;
-	}
-
 	.nav {
 		/* FONT */
 		font-size: var(--fontSizeBase);
@@ -113,11 +109,12 @@
 
 	.active-page {
 		position: relative;
-
 		border-bottom: 2px solid var(--colorPrimaryActive);
+		color: var(--colorPrimaryActive);
 	}
 
 	.active-page::after {
+		view-transition-name: indicator;
 		content: '';
 		position: absolute;
 		top: 0;
@@ -285,7 +282,6 @@
 		margin: auto;
 		background: transparent;
 		transition: var(--transition);
-
 		width: 0;
 	}
 </style>

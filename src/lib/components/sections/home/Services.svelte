@@ -42,9 +42,9 @@
 				</li>
 			</ul>
 
-			<a class="service__btn" href="/contact">
+			<a class="service__btn" href="https://cal.com/wentallout/web">
 				<Button
-					label="Make a website"
+					label="Book a meeting"
 					labelColor="var(--colorBlack)"
 					backgroundColor="var(--colorPrimary)"
 					glowColor="var(--colorPrimary)" />
@@ -73,9 +73,9 @@
 				</li>
 			</ul>
 
-			<a class="service__btn" href="/contact">
+			<a class="service__btn" href="https://cal.com/wentallout/web">
 				<Button
-					label="Design a website"
+					label="Book a meeting"
 					labelColor="var(--colorBlack)"
 					backgroundColor="var(--colorPrimary)"
 					glowColor="var(--colorPrimary)" />

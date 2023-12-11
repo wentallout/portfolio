@@ -14,7 +14,7 @@
 		<div class="section__icon text-large">
 			<slot {sectionIcon} />
 		</div>
-		<h2 class="section__text text-large">{sectionTitle}</h2>
+		<h2 data-title={sectionTitle} class="section__text text-large">{sectionTitle}</h2>
 	</div>
 
 	{#if sectionDesc !== ''}
@@ -49,5 +49,21 @@
 	.section__text {
 		font-family: var(--fontFancy);
 		color: var(--colorText);
+		position: relative;
+	}
+
+	.section__text::before {
+		content: attr(data-title);
+		height: 100%;
+		left: -2px;
+		top: 2px;
+		-webkit-text-fill-color: var(--colorBgLayout);
+		-webkit-text-stroke: 1px var(--colorTextQuaternary);
+		color: var(--colorText);
+		display: block;
+		position: absolute;
+		width: 100%;
+		z-index: -1;
+		opacity: 1;
 	}
 </style>

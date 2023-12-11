@@ -16,7 +16,7 @@
 
 <Breadcrumb />
 <header class="container full-width">
-	<div class="pad">
+	<div class="pad skew">
 		<h1 class="post-title">{data.title}</h1>
 		<div class="post-info text-small">
 			<div class="info__section">
@@ -54,11 +54,8 @@
 	.container {
 		padding-top: var(--spaceXL);
 		padding-bottom: var(--spaceXL);
-
 		position: relative;
-
 		background-color: transparent;
-		background-image: url('/images/space.svg');
 		background-size: 100% 100%;
 		background-position: center;
 		background-repeat: no-repeat;

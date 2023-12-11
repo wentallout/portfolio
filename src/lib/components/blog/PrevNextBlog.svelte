@@ -49,7 +49,7 @@
 	<div class="prevnext text-small">
 		{#if prevBlog}
 			<a class="prevnext__btn" href={prevBlog.path}>
-				<div class="prev__deco">Previous</div>
+				<div class="prevnext__sign">← Previous</div>
 				<div class="prev__text prevnext__title">
 					{prevBlog.meta.title}
 				</div>
@@ -57,8 +57,8 @@
 		{/if}
 
 		{#if nextBlog}
-			<a class="prevnext__btn" href={nextBlog.path}>
-				<div class="next__deco">Next</div>
+			<a class="prevnext__btn next" href={nextBlog.path}>
+				<div class="prevnext__sign">Next →</div>
 				<div class="next__text prevnext__title">
 					{nextBlog.meta.title}
 				</div>
@@ -69,7 +69,7 @@
 
 <style lang="postcss">
 	.prevnext {
-		--min: 20ch;
+		--min: 16ch;
 		--gap: 0;
 		border: 1px solid var(--colorBorder);
 		display: grid;
@@ -82,14 +82,13 @@
 	.prevnext__btn {
 		position: relative;
 		text-decoration: none !important;
-
-		padding: var(--spaceS);
+		padding: var(--spaceXS);
 		transition: var(--transition);
-
 		display: flex;
-		flex-direction: row;
+		gap: var(--spaceS);
+		flex-direction: column;
 		justify-content: flex-start;
-		align-items: center;
+		align-items: flex-start;
 		min-height: 132px;
 		border-right: 1px solid var(--colorBorder);
 
@@ -99,46 +98,15 @@
 		}
 	}
 
-	.prevnext__title {
+	.prevnext__sign {
 		color: var(--colorText);
+	}
+
+	.prevnext__title {
 		font-weight: 500;
 	}
 
-	.next__text {
-		position: relative;
-		text-align: right;
-		width: 100%;
-	}
-
-	.prev__text {
-		position: relative;
-		text-align: left;
-		width: 100%;
-	}
-
-	.prev__deco {
-		position: absolute;
-		top: 0;
-		left: var(--spaceS);
-
-		font-weight: 600;
-		font-size: 3em;
-		opacity: 0.4;
-		font-family: var(--fontFancy);
-		-webkit-text-stroke: 1px var(--colorText);
-		-webkit-text-fill-color: transparent;
-	}
-
-	.next__deco {
-		position: absolute;
-		top: 0;
-		right: var(--spaceS);
-
-		font-weight: 600;
-		font-size: 3em;
-		opacity: 0.4;
-		font-family: var(--fontFancy);
-		-webkit-text-stroke: 1px var(--colorText);
-		-webkit-text-fill-color: transparent;
+	.next {
+		align-items: flex-end;
 	}
 </style>

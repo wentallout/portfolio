@@ -27,15 +27,15 @@
 
 <svelte:window on:scroll={handleOnScroll} />
 
-<button type="button" class="bck2top" on:click={goTop} on:keyup={goTop} class:hidden>
-	<UpIcon size="24" />
-	<div class="bck2top__text text-xs">Top</div>
+<button class="bck2top text-xs" type="button" on:click={goTop} on:keyup={goTop} class:hidden>
+	<UpIcon />
+	<div class="bck2top__text">Top</div>
 </button>
 
 <style>
 	.bck2top {
-		aspect-ratio: 1/1;
 		width: 48px;
+		aspect-ratio: 1/1;
 
 		/* FLEX */
 		display: flex;
@@ -43,8 +43,6 @@
 		align-items: center;
 		flex-direction: column;
 		/* --- */
-
-		padding: var(--spaceXS);
 
 		/* POSITION FIXED ON SCREEN */
 		position: fixed;
@@ -68,23 +66,23 @@
 		background-color: var(--colorBgElevated);
 	}
 
-	@media (min-width: 768px) {
-		.bck2top {
-			width: 64px;
-		}
+	.bck2top:active {
+		color: var(--colorPrimaryActive);
 	}
 
-	@media (hover: hover) {
-		.bck2top:hover {
-			cursor: pointer;
-			transform: scale(1.1);
-			transition: var(--transition);
-			filter: brightness(1.2);
+	@media (min-width: 768px) {
+		.bck2top {
+			width: 56px;
+			aspect-ratio: 1/1;
 		}
 	}
 
 	.bck2top.hidden {
 		opacity: 0;
 		visibility: hidden;
+	}
+
+	.bck2top__text {
+		font-weight: 600;
 	}
 </style>

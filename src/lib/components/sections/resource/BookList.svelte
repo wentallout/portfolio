@@ -37,11 +37,10 @@
 
 	const options = {
 		rewind: true,
-
 		autoplay: false,
 		arrows: false,
 		height: 'fit-content',
-		perPage: 2,
+		perPage: 3,
 		perMove: 2,
 		pagination: true,
 		autoScroll: {

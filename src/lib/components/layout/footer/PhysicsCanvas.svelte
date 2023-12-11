@@ -38,11 +38,10 @@
 				height: eleClientHeight,
 				background: 'transparent',
 				wireframes: false,
-				pixelRatio: devicePixelRatio
+				pixelRatio: devicePixelRatio,
+				hasBounds: true
 			}
 		});
-
-		
 
 		let shape1 = Bodies.circle(0, 0, 25, {
 			frictionAir: 0.05,
@@ -90,30 +89,30 @@
 
 		let ground = Bodies.rectangle(
 			eleClientWidth / 2,
-			eleClientHeight + 50,
+			eleClientHeight,
 			eleClientWidth,
 			100,
 			wallOptions
 		);
+		let ceiling = Bodies.rectangle(eleClientWidth / 2, 0, eleClientWidth, 10000, wallOptions);
 
-		let ceiling = Bodies.rectangle(eleClientWidth / 2, -50, eleClientWidth, 100, wallOptions);
-		let leftWall = Bodies.rectangle(-50, eleClientHeight / 2, 100, eleClientHeight, wallOptions);
+		let leftWall = Bodies.rectangle(0, eleClientHeight / 2, 1, eleClientHeight, wallOptions);
 		let rightWall = Bodies.rectangle(
-			eleClientWidth + 50,
+			eleClientWidth,
 			eleClientHeight / 2,
-			100,
+			50,
 			eleClientHeight,
 			wallOptions
 		);
 
-		let mouseControl = MouseConstraint.create(engine, {
-			element: physEle,
-			constraint: {
-				render: {
-					visible: false
-				}
-			}
-		});
+		// let mouseControl = MouseConstraint.create(engine, {
+		// 	element: physEle,
+		// 	constraint: {
+		// 		render: {
+		// 			visible: true
+		// 		}
+		// 	}
+		// });
 
 		// let intialShapes = Composites.stack(50, 50, 1, 1, 40, 40, function (x, y) {
 		// 	return createShape(x, y);
@@ -124,7 +123,7 @@
 			ceiling,
 			leftWall,
 			rightWall,
-			mouseControl,
+			// mouseControl,
 			// intialShapes,
 			shape1,
 			shape2,
@@ -136,20 +135,20 @@
 		changeGravity();
 	});
 
-	function handleClick(event) {
-		const shape = createShape(event.pageX, event.pageY);
-		intialShapes.bodies.push(shape);
-		World.add(engine.world, shape);
-	}
+	// function handleClick(event) {
+	// 	const shape = createShape(event.pageX, event.pageY);
+	// 	intialShapes.bodies.push(shape);
+	// 	World.add(engine.world, shape);
+	// }
 
-	function handleMouseMove(event) {
-		const vector = { x: event.pageX, y: event.pageY };
-		const hoveredShapes = Query.point(intialShapes.bodies, vector);
-		hoveredShapes.forEach((shape) => {
-			shape.render.sprite = null;
-			shape.render.fillStyle = 'red';
-		});
-	}
+	// function handleMouseMove(event) {
+	// 	const vector = { x: event.pageX, y: event.pageY };
+	// 	const hoveredShapes = Query.point(intialShapes.bodies, vector);
+	// 	hoveredShapes.forEach((shape) => {
+	// 		shape.render.sprite = null;
+	// 		shape.render.fillStyle = 'red';
+	// 	});
+	// }
 </script>
 
 <svelte:window bind:devicePixelRatio />

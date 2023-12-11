@@ -10,7 +10,6 @@
 <div class="full-width title">
 	<img alt="title deco" class="title__bg" src={decoImageUrl} />
 	<h1 class="text-3xl title__text tracking-in-expand">{pageTitle}</h1>
-	<div class="title__deco" />
 
 	<div class="title__extra">{pageTitle}</div>
 </div>
@@ -101,18 +100,6 @@
 		z-index: 2;
 		position: relative;
 		filter: drop-shadow(0px 0px 2px currentcolor);
-	}
-
-	.title__deco {
-		position: absolute;
-		bottom: 0;
-		left: 0;
-		display: block;
-		content: '';
-		height: 40px;
-		width: 100%;
-		background-image: url(/images/spark.svg);
-		background-repeat: repeat-x;
 	}
 
 	:global([color-scheme='light'] .title__deco) {

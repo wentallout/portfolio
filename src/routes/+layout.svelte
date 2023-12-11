@@ -10,8 +10,10 @@
 	import '$lib/styles/global.css';
 	import Analytics from '$components/analytics/Analytics.svelte';
 	import { onNavigate } from '$app/navigation';
-	import ThemeSwitcher from '$components/button/ThemeSwitcher.svelte';
+
 	import { onDestroy, onMount } from 'svelte';
+	import SparkleMouseTrail from '$lib/components/common/SparkleMouseTrail.svelte';
+	import ScrollProgressBar from '$lib/components/common/ScrollProgressBar.svelte';
 
 	// import { snowflakeCursor } from '$lib/utils/cursorTrail.js';
 
@@ -34,6 +36,7 @@
 <Analytics />
 <SkipLink />
 
+<ScrollProgressBar />
 <ProgressBar />
 
 <PWA />
@@ -43,6 +46,7 @@
 <Header />
 
 <main class="main-content pad" id="main-content">
+	<SparkleMouseTrail />
 	<slot />
 </main>
 
