@@ -15,7 +15,7 @@
 		starAnimationDuration: 1500,
 		minimumTimeBetweenStars: 250,
 		minimumDistanceBetweenStars: 75,
-		glowDuration: 30,
+		glowDuration: 50,
 		maximumGlowPointSpacing: 10,
 		colors: ['249 146 253', '252 254 255'],
 		sizes: ['1.4rem', '1rem', '0.6rem'],
@@ -76,7 +76,6 @@
 		const glow = document.createElement('div');
 
 		glow.className = 'glow-point';
-
 		glow.style.left = px(position.x);
 		glow.style.top = px(position.y);
 		const hueRotateDegree = getRandomHueRotateDegree();
@@ -105,8 +104,8 @@
 		imgElement.src = '/images/star.svg';
 
 		imgElement.className = 'star';
-		imgElement.style.width = '16px';
-		imgElement.style.height = '16px';
+		imgElement.style.width = '24px';
+		imgElement.style.height = '24px';
 		imgElement.style.left = px(position.x);
 		imgElement.style.top = px(position.y);
 		imgElement.style.fontSize = selectRandom(config.sizes);

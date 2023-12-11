@@ -6,12 +6,12 @@
 <Toc
 	breakpoint="992"
 	flashClickedHeadingsFor="0"
-	--toc-mobile-bg="var(--colorBgElevated)"
+	--toc-mobile-bg="var(--colorBgContainer)"
 	--toc-mobile-btn-bg="var(--colorPrimary)"
 	--toc-mobile-bottom="100px"
-	--toc-mobile-right="var(--spaceS)"
+	--toc-mobile-right="0"
 	--toc-mobile-btn-border-radius="100%"
-	--toc-mobile-btn-padding=""
+	--toc-mobile-btn-padding="0px"
 	--toc-max-height="80vh"
 	--toc-font-size="calc(var(--fontSizeSmall)*90/100)"
 	--toc-padding="var(--spaceM)"
@@ -32,7 +32,7 @@
 		Contents</span>
 
 	<span class="open-toc-icon" slot="open-toc-icon">
-		<ListBullets color="var(--colorBlack)" />
+		<ListBullets width="16" height="16" color="#000" />
 	</span>
 </Toc>
 

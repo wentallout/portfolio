@@ -38,7 +38,7 @@ Visitors can also comment on your blogs using GitHub discussion (you might want 
 ## ⌨ Coding style
 
 - HTML: Semantic and SEO-focused
-- CSS: Vanilla CSS with BEM naming style (No Tailwind or Bootstrap)
+- CSS: Vanilla CSS with BEM naming scheme
 - JS: VanillaJS/Svelte
 
 ## 💅 Styling

@@ -31,7 +31,7 @@
 		justify-content: space-between;
 		align-items: center;
 		border-radius: var(--borderRadius);
-		border: 1px solid var(--colorText);
+		border: 1px solid var(--colorTextQuaternary);
 		overflow: hidden;
 		background-color: var(--colorBgContainer);
 		height: fit-content;

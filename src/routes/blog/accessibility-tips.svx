@@ -1,0 +1,118 @@
+---
+title: Accessibility tips (with svelte solution)
+date: 2023-11-26
+categories:
+    - fundamental
+---
+
+## List of problems
+
+[](https://i.imgur.com/xoNg1eH.png)
+
+
+## The number of websites with basic WCAG violations is too high!
+
+96.3% of home pages had detected WCAG 2 failures.
+
+## Common WCAG failures
+
+- Low contrast text
+- Missing alternative text
+- Empyty links
+- Missing form labels
+- Empty buttons
+- Missing document language
+
+## Highlighted by Svelte
+
+![](https://i.imgur.com/ydkXpdh.png)
+
+## The ideal solution
+
+- More policy and compliance laws
+- More executive
+
+## Some compliance laws examples
+
+- Equal Opportunity Act, Germany
+- Stanca Act
+
+## How much of this is the developer's responsibility?
+
+- 
+-
+- If you are a solo or freelance developer
+
+## Disclaimer
+
+- Our tools alone cannot solve the world's digital accessibility problems
+
+
+## What is WCAG?
+
+Web Contents Accessibility
+
+### Perceivable
+
+Information and interfaces must be
+
+### Operable
+
+Interactions must be set up in a way that the user can perform with their interfacts
+
+### Understandable
+
+All content presented can be interpreted
+
+### Robust
+
+Content can be interpreted reliably through a wide array 
+
+## What role does Svelte play in accessibility?
+
+Accessibility is everyone's responsibility
+
+- Some framework or libraries have documentation
+- Some of them rec
+
+Svelte is a compiler
+
+It cannot detect:
+- Low colour contrast
+- Relevant focus management (except autofocus)
+
+What can Svelte detect?
+
+- It uses static analysis 
+
+## Keyboard interactivity
+
+Ask yourself:
+- Can a user focus on interactive elements using TAB
+- Can they activate links using ENTER (keydown)
+
+`<button>` is very useful, use it if you can instead of making a complex div
+
+## Forms
+
+Improved example
+
+![good form](https://i.imgur.com/IwriRnO.png)
+
+## Navigation and screen reader
+
+An easier time for our users
+- Indicate the current page with `aria-current="page"`
+
+![](https://i.imgur.com/xsjrdeQ.png)
+
+![](https://i.imgur.com/R7luOgP.png)
+
+![](https://i.imgur.com/tWXZL8h.png)
+
+
+
+
+
+
+

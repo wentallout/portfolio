@@ -135,8 +135,9 @@
 
 .glow-point {
 	position: absolute;
-	box-shadow: 0rem 0rem 0.2rem 0.2rem #ffbb00;
+	box-shadow: 0rem 0rem 8px 8px #ffbb0041;
 	pointer-events: none;
+	transition: var(--transition);
 }
 
 .star {

@@ -13,6 +13,7 @@
 
 	import { onDestroy, onMount } from 'svelte';
 	import SparkleMouseTrail from '$lib/components/common/SparkleMouseTrail.svelte';
+	import ScrollProgressBar from '$lib/components/common/ScrollProgressBar.svelte';
 
 	// import { snowflakeCursor } from '$lib/utils/cursorTrail.js';
 
@@ -35,6 +36,7 @@
 <Analytics />
 <SkipLink />
 
+<ScrollProgressBar />
 <ProgressBar />
 
 <PWA />
