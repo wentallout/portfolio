@@ -30,17 +30,17 @@
 		<form name="contact" class="contact" method="post" data-netlify="true">
 			<input type="hidden" name="form-name" value="contact" />
 
-			<TextInput name="name" type="text" label="Name" placeholder="John Doe">
+			<TextInput name="name" type="text" label="Name">
 				<span slot="icon">
 					<User />
 				</span>
 			</TextInput>
-			<TextInput name="email" type="email" label="Email" placeholder="username@gmail.com">
+			<TextInput name="email" type="email" label="Email">
 				<span slot="icon">
 					<At />
 				</span>
 			</TextInput>
-			<TextArea name="message" label="Message" placeholder="Tell me about jobs, ideas" />
+			<TextArea name="message" label="Message" />
 
 			<div class="contact__btn">
 				<Button
