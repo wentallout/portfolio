@@ -71,7 +71,7 @@ Slug
 
 ⭐ SEO
 
-- SSR: https://kit.svelte.dev/docs/seo#out-of-the-box-ssr
+- [SSR](https://kit.svelte.dev/docs/seo#out-of-the-box-ssr)
 
 - `sitemap.xml`: helps search engines understand and index the content on the site, using dynamic sitemap technique https://www.casperfeng.com/blog/generating-dynamic-sitemaps-in-sveltekit
 

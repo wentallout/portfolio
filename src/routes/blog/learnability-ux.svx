@@ -1,0 +1,35 @@
+---
+title: Learnability in UX
+date: 2023-12-27
+categories:
+    - ux
+---
+
+## What is learnability
+
+Learnability refers to how easy it is for the user to learn to use the product and its features 
+
+Learnability is part of usability (usefullness) of your product.
+
+Can users quickly learn and start using my App with ease? 
+
+
+## How to improve learnability 
+
+- Discoverable Controls (big buttons, highlighted buttons)
+- Notifications 
+- User Onboarding help (Videos or slides to highlight main features)
+- Social Logins
+
+## Examples
+
+![adobe tutorials](https://i.imgur.com/F5PU3uG.png)
+
+- Documentation
+- Adobe website has its own Photoshop tutorial
+
+- Help both Beginner and Experienced users too
+![help users on any skill levels](https://i.imgur.com/bhUQKZO.png)
+
+- "How it works" button
+![how it works](https://i.imgur.com/yrW41y5.png)

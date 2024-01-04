@@ -1,0 +1,95 @@
+---
+title: Understand human behavior in UX
+date: 2023-12-27
+categories:
+    - ux
+---
+
+## Humans are lazy
+
+Humans are lazy by nature. If you give them too many obstacles to get a thing, they might give up.
+
+Avoid too lengthy forms to convert better. Same thing happens with eCommerce industry.
+
+Cart Abandonment Rate is 69% the second major reason for this is Account creation.
+
+## Decision Paralysis
+
+Don't overwhelm users with too many choices. When presented with more choices or too much infomrmation to decide, human mind gives up or unable to make a decision.
+
+Example:
+- Give users few options to choose from
+- Have you even seen a website with more than 4 Pricing packages?
+
+![pricing ui](https://i.imgur.com/jJQT1ei.png)
+
+## People don't read, they scan
+
+People don't read on websites, they scan. Humans are only interested in information they need. There are two scanning patterns:
+
+- Z-pattern
+- F-pattern
+
+## User makes mistakes 
+
+Even if your app scores 100% on usability scale, users still make mistakes. There are two ways you can limit this
+
+- Don't let it happen in the first place
+- Guide the user to fix the mistake easily (when users delete an email Gmail, there is an Undo button)
+
+## Distraction
+
+From a UX perspective, we can design software, websites and all digital interfaces to minimize distraction and focus the user's attention onto one task at a time and don't put burden on our user's brain.
+
+Example: Google search term prediction when you type something.
+
+
+## How humans make decisions?
+
+Most of the decisions made by users are by Unconscious Mind (OLD brain). Most mental processing occurs unconsciously. 
+
+Example: It takes 0.05 seconds for users to form an opinion about a site - all a customer needs to decide whether they'll leave or stay.
+
+## Trust and First Impressions
+
+According to web credibility research from Stanford, 75% of users admit to making judgements about a company's credibility based on their website's design
+
+People are more likely to purchase products if they perceive a high degree trust. This is influenced by the level of overall user experience and perceived quality of product.
+
+## Rational and calculated decisions 
+
+Rational or new brain kicks in when you need to compare things or when calculations are neccesary. Also when OLD brain can't make a decision, it will get help from concious brain.
+
+Like when users compare two products while shopping online side by side and see the difference in features. That's your NEW brain
+
+## Humans hate change 
+
+Humans resist change. When a website gets a totally different redesign, most users don't like it at all. They will start complaining about it.
+
+Solution: Progressive change and consistency in design. If Facebook moves its button on each post to the top. What do you think will happen?
+
+[site redesign disaster](https://www.sitepoint.com/3-painful-site-redesign-disasters/)
+
+## Do we really need a new solution
+
+Before making any change see if users really need a new solution or you just need to adjust the old one for better UX
+
+Ex: Yahoo and Digg failed when they introduced new redesigned websites. Digg's traffic dropped by more than 25% in USA & UK.
+
+## Actions are goal-oriented
+
+Our actions are based on our goals. Whatever we do, there is an aim behind it 
+
+EX: I'm using Google to search for a Painkiller medicine. So goals are what makes different uses of the same product possible
+
+That is why Goals an Motivations recorded in User Interviews
+
+## Change Blindness 
+
+You are blind to almost anything other than your goal. That is why we are blind to changes which we are not interested in.
+
+EX: I'm searching for a video so I will skip all the articles and webpages on that topic. My eyes will be constantly looking for videos. (SCANNING is normal human behaviour)
+
+## Final words
+
+Don't try to follow trends, try to be loyal to your customers first.

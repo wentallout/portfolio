@@ -1,6 +1,6 @@
 <script>
 	import BlogCard from '$components/blog/BlogCard.svelte';
-	import BlogListContainer from '$components/sections/blog/BlogListContainer.svelte';
+	import BlogListContainer from '$sections/blog/BlogListContainer.svelte';
 	import Breadcrumb from '$lib/components/layout/other/Breadcrumb.svelte';
 
 	export let data;

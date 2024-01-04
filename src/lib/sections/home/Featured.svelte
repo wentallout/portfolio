@@ -1,6 +1,6 @@
 <script>
-	import ProjectCardList from '$components/sections/project/ProjectCardList.svelte';
-	import SectionTitle from '$components/sections/SectionTitle.svelte';
+	import ProjectCardList from '$sections/project/ProjectCardList.svelte';
+	import SectionTitle from '$sections/SectionTitle.svelte';
 
 	import Star from '~icons/ph/star';
 </script>

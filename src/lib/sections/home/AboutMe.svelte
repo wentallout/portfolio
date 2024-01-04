@@ -1,5 +1,5 @@
 <script>
-	import SectionTitle from '$components/sections/SectionTitle.svelte';
+	import SectionTitle from '$sections/SectionTitle.svelte';
 	import SaosContainer from '$components/common/SaosContainer.svelte';
 	import Smiley from '~icons/ph/smiley';
 
