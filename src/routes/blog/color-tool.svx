@@ -8,6 +8,8 @@ categories:
 
 ## Color scheme generator
 
+⭐NEW - [css-color-palette-generator](https://www.hover.dev/css-color-palette-generator)
+
 [goodpalette](https://goodpalette.io/) beautiful color palettes for UI (Primary + Accent + Neutral).
 
 [Colormind.io](http://colormind.io)  

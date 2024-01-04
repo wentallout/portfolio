@@ -1,0 +1,38 @@
+---
+title: Our vision is limited - Peripheral Vision
+date: 2023-12-27
+categories:
+    - ux
+---
+
+## Peripheral vision
+
+What you see directly in front of your eyes is called your central vision. What you see off to the sides is your peripheral vision. Everything is just blurry in peripheral vision.
+
+You can't see things clearly in your Peripheral Vision area
+
+## Central vs Peripheral Vision Diagram
+
+![vision diagram](https://i.imgur.com/ujTX30p.png)
+
+## Limits of peripheral vision
+
+This means your vision is clearest in the center and weaker at the edges. Central vision is used for seeing detail, while peripheral vision is more effective at seeing motion. 
+
+A normal visual field is approximately 170 degrees around, with 100 degrees comprising the peripheral vision.
+
+## Peripheral vision in design
+
+When designing, use messages and notifications within the peripheral vision. Or use motions to show errors if it is outside peripheral vision.
+
+Designers use peripheral "pop" to focus the attention of a product's users, as well as to allow users to find information faster.
+
+You can also use sound, animation to catch people's attention
+
+## Example of peripheral vision
+
+Everything on the screen that is not within 1-2 centimeters of the click location (assuming normal computer viewing distance) is in peripheral vision, where resolution is low.
+
+If, after the click, an error message appears in the periphery, it should not be surprising that the person might not notice it.
+
+

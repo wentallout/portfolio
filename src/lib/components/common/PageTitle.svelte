@@ -48,6 +48,8 @@
 		padding-bottom: var(--spaceM);
 		overflow: hidden;
 		height: 300px;
+
+		user-select: none;
 	}
 
 	.title::after {

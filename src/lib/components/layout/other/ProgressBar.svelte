@@ -20,5 +20,3 @@
 		}
 	}
 </script>
-
-<div class="" />

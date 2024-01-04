@@ -1,11 +1,10 @@
 <script>
+	import CaretRight from '~icons/ph/caret-right';
 	import { page } from '$app/stores';
 	import { onMount } from 'svelte';
 	let currentPath = $page.url.pathname;
 
 	let crumbs;
-
-	import CaretRight from '~icons/ph/caret-right';
 
 	function removeHyphens(text) {
 		return text.replace(/-/g, ' '); // This line removes all hyphens and replaces them with spaces
@@ -30,12 +29,16 @@
 
 	let breadcrumbEl;
 
-	onMount(() => {
+	function makeBreadcrumbSticky() {
 		const observer = new IntersectionObserver(
-			([e]) => e.target.classList.toggle('is-pinned', e.intersectionRatio < 1),
+			([e]) => e.target.classList.toggle('sticky', e.intersectionRatio < 1),
 			{ threshold: [1] }
 		);
 		observer.observe(breadcrumbEl);
+	}
+
+	onMount(() => {
+		makeBreadcrumbSticky();
 	});
 </script>
 
@@ -87,7 +90,7 @@
 		text-underline-offset: 2px;
 	}
 
-	:global(.breadcrumb.is-pinned) {
+	:global(.breadcrumb.sticky) {
 		background-color: var(--colorBgLayout);
 		padding: var(--space2XS) var(--spaceXS);
 		box-shadow: var(--boxShadow);

@@ -1,5 +1,5 @@
 <script>
-	import SectionTitle from '$components/sections/SectionTitle.svelte';
+	import SectionTitle from '$sections/SectionTitle.svelte';
 	import HeatmapArt from '$lib/assets/images/home/HeatmapArt.svelte';
 	import ResponsiveArt from '$lib/assets/images/home/ResponsiveArt.svelte';
 
@@ -37,8 +37,15 @@
 					<strong>Lightweight: </strong> no more heavy libraries that slow down loading speed
 				</li>
 				<li class="service__point optional">
-					★ Optional: Enhanced with the most cutting edge framework which is <strong
-						>SvelteKit</strong> for optimal SEO, lightning fast loading speed and reusable components
+					★ Optional: Enhanced with the most cutting edge web framework -
+					<strong>SvelteKit</strong> for optimal SEO, lightning fast loading speed and reusable
+					components.
+					<br />
+					<a
+						rel="external nofollow noopener noreferrer"
+						target="_blank"
+						class="link"
+						href="https://kit.svelte.dev/docs/performance">SvelteKit out-of-the-box performance</a>
 				</li>
 			</ul>
 

@@ -6,7 +6,7 @@
 	import EnvelopeSimple from '~icons/ph/envelope-simple';
 	import ArrowCounterClockwise from '~icons/ph/arrow-counter-clockwise';
 	import PaperPlaneRight from '~icons/ph/paper-plane-right';
-	import SectionTitle from '$components/sections/SectionTitle.svelte';
+	import SectionTitle from '$sections/SectionTitle.svelte';
 
 	import Envelope from '~icons/ph/envelope';
 	import Clock from '~icons/ph/clock';
@@ -14,7 +14,6 @@
 	import CopyToClipboard from '$components/common/CopyToClipboard.svelte';
 
 	import At from '~icons/ph/at';
-
 	import User from '~icons/ph/user';
 </script>
 

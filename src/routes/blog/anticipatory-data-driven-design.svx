@@ -1,0 +1,31 @@
+---
+title: Data Driven Design - UX
+date: 2023-12-27
+categories:
+    - ux
+---
+
+## Anticipatory Design
+
+You might have seen a lot of websites where they show you suggested movies or books depending on your likes or your search data.
+
+Anticipatory design is based on user behavioral data (browsing, purchase, search, etc) and use that to suggest or make decisions for users
+
+## Examples of Anticipatory Design
+
+Netflix suggests content based on your viewing habits and ratings. Amazon suggests items based on your past purchase history. 
+
+Nest thermostat learns your heating/cooling habits and then automatically adjusts the temparature of your home according to your preferences.
+
+![gmail anticipatory design](https://i.imgur.com/RqKjAmJ.png)
+
+![recommend books](https://i.imgur.com/nBeizwW.png)
+
+![nest](https://i.imgur.com/KodxCq9.png)
+
+
+Whenever you see stuff like: "Recommended for you"
+
+
+
+

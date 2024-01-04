@@ -85,6 +85,10 @@
 		animation-duration: 0.3s;
 	}
 
+	::view-transition-group(indicator2) {
+		animation: 0.3s linear both border;
+	}
+
 	.nav {
 		/* FONT */
 		font-size: var(--fontSizeBase);
@@ -110,7 +114,7 @@
 	.active-page {
 		position: relative;
 		border-bottom: 2px solid var(--colorPrimaryActive);
-		color: var(--colorPrimaryActive);
+		color: var(--colorPrimary);
 	}
 
 	.active-page::after {
@@ -127,7 +131,8 @@
 
 	.active-page--mobile {
 		color: var(--colorPrimaryActive) !important;
-		border-right: 4px solid var(--colorPrimaryActive);
+		border-left: 4px solid var(--colorPrimaryActive);
+		view-transition-name: indicator2;
 	}
 
 	.nav-list {
@@ -142,20 +147,25 @@
 	.nav-list__item {
 		display: none;
 		overflow: visible;
-
 		transition: scale linear 0.3s;
+		text-shadow:
+			-1px -1px 0 var(--colorBgLayout),
+			1px -1px 0 var(--colorBgLayout),
+			-1px 1px 0 var(--colorBgLayout),
+			1px 1px 0 var(--colorBgLayout);
 
 		&:hover {
 			font-weight: var(--fontWeightLarge);
 			scale: 1.1;
 			color: var(--colorPrimaryHover);
 		}
+	}
 
-		text-shadow:
-			-1px -1px 0 var(--colorBgLayout),
-			1px -1px 0 var(--colorBgLayout),
-			-1px 1px 0 var(--colorBgLayout),
-			1px 1px 0 var(--colorBgLayout);
+	.nav:has(a:hover) a:not(:hover) {
+		opacity: 0.6;
+		scale: 0.85;
+		text-shadow: none;
+		transition: var(--transition);
 	}
 
 	.hamburger {
@@ -274,6 +284,7 @@
 	.header {
 		position: relative;
 		overflow: hidden;
+		user-select: none;
 	}
 
 	.nav-list__item::before {

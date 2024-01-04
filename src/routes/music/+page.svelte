@@ -1,5 +1,5 @@
 <script>
-	import SectionTitle from '$components/sections/SectionTitle.svelte';
+	import SectionTitle from '$sections/SectionTitle.svelte';
 	import MusicNotes from '~icons/ph/music-notes';
 	import FileAudio from '~icons/ph/file-audio';
 

@@ -1,10 +1,10 @@
 <script>
 	import PageTitle from '$components/common/PageTitle.svelte';
-	import OtherCardList from '$components/sections/resource/OtherCardList.svelte';
-	import BookList from '$components/sections/resource/BookList.svelte';
+	import OtherCardList from '$sections/resource/OtherCardList.svelte';
+	import BookList from '$sections/resource/BookList.svelte';
 	import SEO from '$components/seo/SEO.svelte';
-	import EssentialList from '$components/sections/resource/EssentialList.svelte';
-	import SectionTitle from '$components/sections/SectionTitle.svelte';
+	import EssentialList from '$sections/resource/EssentialList.svelte';
+	import SectionTitle from '$sections/SectionTitle.svelte';
 
 	// ICONS
 	import Books from '~icons/ph/books';

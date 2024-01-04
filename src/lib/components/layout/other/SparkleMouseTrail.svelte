@@ -1,16 +1,4 @@
 <script>
-	import { onMount } from 'svelte';
-
-	let start = new Date().getTime();
-
-	const originPosition = { x: 0, y: 0 };
-
-	const last = {
-		starTimestamp: start,
-		starPosition: originPosition,
-		mousePosition: originPosition
-	};
-
 	const config = {
 		starAnimationDuration: 1500,
 		minimumTimeBetweenStars: 250,
@@ -20,6 +8,16 @@
 		colors: ['249 146 253', '252 254 255'],
 		sizes: ['1.4rem', '1rem', '0.6rem'],
 		animations: ['fall-1', 'fall-2', 'fall-3']
+	};
+
+	let start = new Date().getTime();
+
+	const originPosition = { x: 0, y: 0 };
+
+	const last = {
+		starTimestamp: start,
+		starPosition: originPosition,
+		mousePosition: originPosition
 	};
 
 	let count = 0;
@@ -43,20 +41,20 @@
 	const determinePointQuantity = (distance) =>
 		Math.max(Math.floor(distance / config.maximumGlowPointSpacing), 1);
 
-	function createGlow(last, current) {
-		const distance = calcDistance(last, current),
-			quantity = determinePointQuantity(distance);
+	// function createGlow(last, current) {
+	// 	const distance = calcDistance(last, current),
+	// 		quantity = determinePointQuantity(distance);
 
-		const dx = (current.x - last.x) / quantity,
-			dy = (current.y - last.y) / quantity;
+	// 	const dx = (current.x - last.x) / quantity,
+	// 		dy = (current.y - last.y) / quantity;
 
-		Array.from(Array(quantity)).forEach((_, index) => {
-			const x = last.x + dx * index,
-				y = last.y + dy * index;
+	// 	Array.from(Array(quantity)).forEach((_, index) => {
+	// 		const x = last.x + dx * index,
+	// 			y = last.y + dy * index;
 
-			createGlowPoint({ x, y });
-		});
-	}
+	// 		createGlowPoint({ x, y });
+	// 	});
+	// }
 
 	function updateLastStar(position) {
 		last.starTimestamp = new Date().getTime();
@@ -85,8 +83,6 @@
 
 		removeElement(glow, config.glowDuration);
 	};
-
-	onMount(() => {});
 
 	function handlePointerLeave() {
 		document.body.onpointerleave = () => updateLastMousePosition(originPosition);
@@ -136,7 +132,7 @@
 			updateLastStar(mousePosition);
 		}
 
-		createGlow(last.mousePosition, mousePosition);
+		// createGlow(last.mousePosition, mousePosition);
 		updateLastMousePosition(mousePosition);
 	}
 </script>

@@ -1,6 +1,6 @@
 <script>
 	import Wrench from '~icons/ph/wrench';
-	import SectionTitle from '$components/sections/SectionTitle.svelte';
+	import SectionTitle from '$sections/SectionTitle.svelte';
 
 	import Palette from '~icons/ph/palette';
 

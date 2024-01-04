@@ -1,8 +1,8 @@
 <script>
 	export let data;
-	import SectionTitle from '$components/sections/SectionTitle.svelte';
+	import SectionTitle from '$sections/SectionTitle.svelte';
 	import Folder from '~icons/ph/folder';
-	import BlogTagsList from '$components/sections/blog/BlogTagsList.svelte';
+	import BlogTagsList from '$sections/blog/BlogTagsList.svelte';
 	import Breadcrumb from '$components/layout/other/Breadcrumb.svelte';
 </script>
 

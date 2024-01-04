@@ -1,0 +1,35 @@
+---
+title: Smart Defaults in UX
+date: 2023-12-27
+categories:
+    - ux
+---
+
+## People rarely change defaults
+
+Default are settings or values set when you start using an App or Product (out of the box setting).
+
+Most of the time users won't change these settings so these default settings play vital role and make decisions for their user.
+
+Less than 5% of users change default settings (Jarod Spool)
+
+## Default settings of smartphones
+
+Have you ever thought that what if your smart phone's ring tone is at 90% volume out of the box. What if they set it to no ring tone by default?
+
+user smart defaults in your apps default settings for 
+
+## Smart defaults examples
+
+Pre-populating form fields with users location, country or phone code is another example of Smart Defaults in web Forms.
+
+Ex: having AutoSave turned on by default in Google Docs, Sheets etc. So users don't have to manually save their work.
+
+Ex: Good privacy settings are on by default (Facebook)
+
+
+This page saved your past searches
+
+![](https://i.imgur.com/apxb2cr.png)
+
+![](https://i.imgur.com/GFXhHUo.png)

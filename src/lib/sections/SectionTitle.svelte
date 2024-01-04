@@ -1,5 +1,5 @@
 <script>
-	import SectionDesc from '$components/sections/SectionDesc.svelte';
+	import SectionDesc from '$sections/SectionDesc.svelte';
 
 	export let sectionTitle = '';
 	export let sectionDesc = '';
