@@ -69,8 +69,6 @@ Slug
 
 ## Features
 
-⭐ i18n: EN - VN (work in progress, still buggy)
-
 ⭐ SEO
 
 - SSR: https://kit.svelte.dev/docs/seo#out-of-the-box-ssr
@@ -107,6 +105,8 @@ Slug
 ⭐ RSS
 
 ⭐ Contact Form
+
+⚠️ i18n: EN - VN (work in progress)
 
 ---
 
