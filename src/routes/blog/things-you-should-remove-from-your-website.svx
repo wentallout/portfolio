@@ -1,0 +1,62 @@
+---
+title: Things you should remove from your website
+date: 2024-01-21
+categories:
+    - ux
+---
+
+## Vague Homepage Headlines
+
+Be SPECIFIC and DESCRIPTIVE
+
+The users can't tell what you do if you're not descriptive. What does you company do? Explain please.
+
+Tips: use a 5-second test
+
+Bad headline: `Technology that rehumanizes healthcare`
+
+Good headline: `Leadership coaching and training for mid-level managers`
+
+## Generic navigations labels
+
+Make your nav labels more specific
+
+Good labels: `Wholesale Medical Supplies`, `Compasses`, `Charts and Maps`
+
+Generic labels: `Product`, `Services`, `About`, `Blog`, `Contact`
+
+## Don't add
+
+## Homepage Slideshows
+
+REMOVE THIS. seriously.
+
+## Stock Photos of People
+
+Just take an authentic photo, don't use stock images.
+
+## Social Media Icons in Headers
+
+You don't want your users to leave. Social media is distracting, put them in the footer, only show colors when hover.
+
+## Dates on Blog Posts
+
+The dates can make your content looks older and "useless". People don't want to read a 10 y/o blogs.
+
+## Long Paragraphs
+
+Never write a paragraph longer than 3 lines. Break up your content, use bullets lists/numbered lists, bold, italic, subhead, images, links.
+
+## Press Releases
+
+## PDF Files
+
+Not a fan.
+
+## Testimonials Page
+
+
+
+## Reference
+
+[13 Things To Remove From Your Website Immediately](https://www.youtube.com/watch?v=zdWTUE9-mDk)

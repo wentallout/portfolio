@@ -5,14 +5,15 @@
 
 <Toc
 	breakpoint="992"
-	flashClickedHeadingsFor="0"
+	flashClickedHeadingsFor="1500"
+	scrollBehavior="smooth"
+	keepActiveTocItemInView={false}
 	--toc-mobile-bg="var(--colorBgContainer)"
 	--toc-mobile-btn-bg="var(--colorPrimary)"
 	--toc-mobile-bottom="100px"
 	--toc-mobile-right="0"
 	--toc-mobile-btn-border-radius="100%"
 	--toc-mobile-btn-padding="0px"
-	--toc-max-height="80vh"
 	--toc-font-size="calc(var(--fontSizeSmall)*90/100)"
 	--toc-padding="var(--spaceM)"
 	--toc-li-border-radius="0"
@@ -39,6 +40,11 @@
 <style>
 	:global(.toc ::-webkit-scrollbar) {
 		width: 12px;
+	}
+
+	:global(aside.toc > nav) {
+		overflow-y: auto !important;
+		scrollbar-gutter: stable;
 	}
 
 	.open-toc-icon {

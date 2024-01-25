@@ -44,7 +44,7 @@
 
 	/* FONT */
 	font-family: var(--fontFancy);
-	font-size: var(--fontSizeLarge);
+	font-size: var(--fontSizeXL);
 	line-height: var(--lineHeightLarge);
 	color: var(--colorText);
 	/* --- */

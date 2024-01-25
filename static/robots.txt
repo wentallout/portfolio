@@ -4,3 +4,6 @@ Sitemap: https://wentallout.io.vn/sitemap.xml
 
 User-agent: Twitterbot
 Disallow:
+
+User-agent: GPTBot
+Disallow: /

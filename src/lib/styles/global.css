@@ -12,7 +12,7 @@
 
 html {
 	scroll-padding: var(--scroll-padding, 60px);
-	scroll-behavior: smooth;
+	/* scroll-behavior: smooth; */
 	overflow-x: hidden;
 	max-width: 100vw;
 	min-height: 101vh;
@@ -140,11 +140,4 @@ label:has(+ textarea:focus) {
 /* Experimental CSS */
 textarea {
 	form-sizing: normal;
-}
-
-body {
-	/* background-image: url('/images/grain.png');
-	background-position: 0 0;
-	background-size: 300px 300px;
-	background-repeat: auto; */
 }
