@@ -15,9 +15,9 @@
 
 <div class="accordion">
 	<button class="accordion__btn" type="button" on:click={handleOpen} on:keydown={handleOpen}>
-		<div class="accordion__section text-small" class:accordion--active={isOpened}>
+		<p class="accordion__section text-small" class:accordion--active={isOpened}>
 			{accordionSection}
-		</div>
+		</p>
 		<div class="icon caret" class:caret-active={isOpened}>
 			<CaretDown width="16" height="16" />
 		</div>
@@ -36,6 +36,7 @@
 <style lang="postcss">
 	.accordion__section {
 		text-align: left;
+		text-wrap: balance;
 	}
 
 	.accordion--active {

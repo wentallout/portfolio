@@ -130,6 +130,10 @@ Slug
 
 ⭐ Blog: Comment using [Giscus](https://giscus.app)
 
+## Todo
+
+💡 [Splash screen](https://www.sveltevietnam.dev/en/blog/20231220-behind-the-screen-progressive-splashscreen)
+
 ## Stat
 
 ![Alt](https://repobeats.axiom.co/api/embed/c17a64a1c0a63ba6cef6618f14b3e39fdf67eb3f.svg 'Repobeats analytics image')
