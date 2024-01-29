@@ -22,9 +22,10 @@
 		"@ronilaukkarinen/stylelint-a11y": "^1.2.9",
 		"@splidejs/splide-extension-auto-scroll": "^0.5.3",
 		"@splidejs/svelte-splide": "^0.2.9",
-		"@sveltejs/adapter-netlify": "^4.0.0",
+		"@sveltejs/adapter-netlify": "^4.1.0",
 		"@sveltejs/enhanced-img": "^0.1.8",
-		"@sveltejs/kit": "^2.4.0",
+		"@sveltejs/kit": "^2.5.0",
+		"@sveltejs/vite-plugin-svelte": "^3.0.1",
 		"audiomotion-analyzer": "^4.3.0",
 		"autoprefixer": "^10.4.17",
 		"eslint": "^8.56.0",
@@ -69,11 +70,12 @@
 		"svelte-sequential-preprocessor": "^2.0.1",
 		"svelte-sitemap": "^2.6.0",
 		"svelte-time": "^0.8.2",
-		"svelte-toc": "^0.5.6",
+		"svelte-toc": "^0.5.7",
 		"sveltekit-embed": "^0.0.12",
 		"unplugin-icons": "^0.18.2",
-		"vite": "^5.0.11",
-		"vite-imagetools": "^6.2.9"
+		"vite": "^5.0.12",
+		"vite-imagetools": "^6.2.9",
+		"vite-plugin-pagefind": "^0.0.14"
 	},
 	"type": "module",
 	"repository": {

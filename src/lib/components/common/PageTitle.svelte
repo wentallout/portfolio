@@ -5,13 +5,24 @@
 	import Breadcrumb from '$components/layout/other/Breadcrumb.svelte';
 
 	export let decoImageUrl = Wall;
+
+	import StarFour from '~icons/ph/star-four';
 </script>
 
 <div class="full-width title">
-	<img alt="title deco" class="title__bg" src={decoImageUrl} />
-	<h1 class="text-3xl title__text tracking-in-expand">{pageTitle}</h1>
+	<div class="title__extra">
+		{pageTitle}
+	</div>
 
-	<div class="title__extra">{pageTitle}</div>
+	<img alt="title deco" class="title__bg" src={decoImageUrl} />
+
+	<div class="title__content">
+		<StarFour width="40" height="40" />
+		<h1 class="text-3xl title__text tracking-in-expand">
+			{pageTitle}
+		</h1>
+		<StarFour width="40" height="40" />
+	</div>
 </div>
 <Breadcrumb />
 
@@ -31,6 +42,14 @@
 		font-family: var(--fontFancy);
 		opacity: 15%;
 		z-index: -2;
+	}
+
+	.title__content {
+		display: flex;
+		flex-direction: row;
+		justify-content: center;
+		align-items: center;
+		gap: 24px;
 	}
 
 	.title {
@@ -66,16 +85,12 @@
 		position: absolute;
 		top: 0;
 		left: 0;
-
 		z-index: -3;
-
 		width: 100%;
 		height: 100%;
-
 		object-fit: cover;
 		animation: pageTitleAni 50s linear;
 		filter: grayscale() brightness(0.3);
-
 		object-position: top;
 	}
 

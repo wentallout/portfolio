@@ -14,6 +14,7 @@
 	import SparkleMouseTrail from '$components/layout/other/SparkleMouseTrail.svelte';
 	import ScrollProgressBar from '$components/layout/other/ScrollProgressBar.svelte';
 	import VideoCover from '$lib/components/layout/header/VideoCover.svelte';
+	import PageFind from '$lib/components/pagefind/PageFind.svelte';
 
 	// import { snowflakeCursor } from '$lib/utils/cursorTrail.js';
 
@@ -45,8 +46,10 @@
 <VideoCover />
 <NavBar />
 
+<PageFind />
 <main class="main-content pad" id="main-content">
 	<SparkleMouseTrail />
+
 	<slot />
 </main>
 

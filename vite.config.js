@@ -6,6 +6,13 @@ import { imagetools } from 'vite-imagetools';
 import svg from '@poppanator/sveltekit-svg';
 import { browserslistToTargets } from 'lightningcss';
 
+import { pagefind } from 'vite-plugin-pagefind';
+
+const pagefindConfig = {
+	publicDir: 'static',
+	buildDir: 'build'
+};
+
 /** @type {import('vite').UserConfig} */
 const config = {
 	plugins: [
@@ -29,7 +36,8 @@ const config = {
 					format: 'webp'
 				});
 			}
-		})
+		}),
+		pagefind(pagefindConfig)
 	],
 
 	ssr: {
