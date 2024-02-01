@@ -5,18 +5,20 @@ import browserslist from 'browserslist';
 import { imagetools } from 'vite-imagetools';
 import svg from '@poppanator/sveltekit-svg';
 import { browserslistToTargets } from 'lightningcss';
+import { paraglide } from '@inlang/paraglide-js-adapter-sveltekit/vite';
 
 import { pagefind } from 'vite-plugin-pagefind';
-
-const pagefindConfig = {
-	publicDir: 'static',
-	buildDir: 'build'
-};
 
 /** @type {import('vite').UserConfig} */
 const config = {
 	plugins: [
+		paraglide({
+			project: './project.inlang',
+			outdir: './src/paraglide'
+		}),
 		sveltekit(),
+		,
+		pagefind({ publicDir: 'static', buildDir: 'build' }),
 		svg({
 			includePaths: ['./src/lib/assets/images/'],
 			svgoOptions: {
@@ -36,8 +38,8 @@ const config = {
 					format: 'webp'
 				});
 			}
-		}),
-		pagefind(pagefindConfig)
+		})
+		// pagefind(pagefindConfig)
 	],
 
 	ssr: {

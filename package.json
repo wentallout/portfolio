@@ -3,7 +3,7 @@
 	"version": "1.0.0",
 	"scripts": {
 		"dev": "vite dev --host --open",
-		"build": "vite build",
+		"build": "paraglide-js compile --project ./project.inlang && vite build",
 		"preview": "vite preview",
 		"check": "svelte-check",
 		"check:watch": "svelte-check --watch",
@@ -13,11 +13,14 @@
 		"format": "prettier --ignore-path .gitignore --write --plugin-search-dir=. .",
 		"ngrok": "ngrok http 4173",
 		"postbuild": "npx svelte-sitemap --domain https://wentallout.io.vn",
-		"prepare": "husky install"
+		"prepare": "husky install",
+		"postinstall": "paraglide-js compile --project ./project.inlang"
 	},
 	"devDependencies": {
 		"@csstools/postcss-global-data": "^2.1.1",
 		"@iconify-json/ph": "^1.1.10",
+		"@inlang/paraglide-js": "1.2.2",
+		"@inlang/paraglide-js-adapter-sveltekit": "^0.3.0",
 		"@poppanator/sveltekit-svg": "^4.2.1",
 		"@ronilaukkarinen/stylelint-a11y": "^1.2.9",
 		"@splidejs/splide-extension-auto-scroll": "^0.5.3",
@@ -25,8 +28,8 @@
 		"@sveltejs/adapter-netlify": "^4.1.0",
 		"@sveltejs/enhanced-img": "^0.1.8",
 		"@sveltejs/kit": "^2.5.0",
-		"@sveltejs/vite-plugin-svelte": "^3.0.1",
-		"audiomotion-analyzer": "^4.3.0",
+		"@sveltejs/vite-plugin-svelte": "^3.0.2",
+		"audiomotion-analyzer": "^4.4.0",
 		"autoprefixer": "^10.4.17",
 		"eslint": "^8.56.0",
 		"eslint-plugin-svelte": "^2.35.1",
@@ -72,10 +75,10 @@
 		"svelte-time": "^0.8.2",
 		"svelte-toc": "^0.5.7",
 		"sveltekit-embed": "^0.0.12",
-		"unplugin-icons": "^0.18.2",
+		"unplugin-icons": "^0.18.3",
 		"vite": "^5.0.12",
 		"vite-imagetools": "^6.2.9",
-		"vite-plugin-pagefind": "^0.0.14"
+		"vite-plugin-pagefind": "^0.0.17"
 	},
 	"type": "module",
 	"repository": {

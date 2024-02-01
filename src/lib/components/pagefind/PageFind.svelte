@@ -1,22 +1,28 @@
 <!-- <script>
 	import { onMount } from 'svelte';
 
-	onMount(() => {
-		new PagefindUI({ element: '#search', showSubResults: true });
+	let input;
 
-		window.addEventListener('keydown', (event) => {
-			if (event.key === '/' || event.key === '.') {
-				console.log('you pressed the slash');
-				event.preventDefault();
-				document.querySelector('div#search input').focus();
-			}
-		});
+	let searchResult;
+
+	$: searchResult;
+
+	onMount(async () => {
+		const pagefind = await import('/pagefind/pagefind.js');
+		console.log(await pagefind.search('sveltekit'));
 	});
+
+	async function handleInput(e) {
+		searchResult = await pagefind.search(input);
+		console.log(searchResult);
+	}
 </script>
 
-<svelte:head>
-	<link href="/pagefind/pagefind/pagefind-ui.css" rel="stylesheet" />
-	<script defer src="/pagefind/pagefind/pagefind-ui.js"></script>
-</svelte:head>
+<input bind:this={input} type="text" on:input={handleInput} />
+<div>{searchResult}</div>
 
-<div id="search"></div> -->
+<style>
+	input {
+		background-color: red;
+	}
+</style> -->

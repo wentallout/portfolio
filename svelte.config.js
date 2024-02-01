@@ -42,7 +42,8 @@ const config = {
 			$blogImages: 'src/lib/assets/images/blog',
 			$components: 'src/lib/components',
 			$sections: 'src/lib/sections',
-			$projectImages: 'src/lib/assets/images/project'
+			$projectImages: 'src/lib/assets/images/project',
+			$paraglide: './src/paraglide'
 		},
 		csp: {
 			mode: 'auto'

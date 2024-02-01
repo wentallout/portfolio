@@ -14,6 +14,7 @@
 	import GitHubLogo from '~icons/ph/github-logo';
 	import Phone from '~icons/ph/phone';
 	import MapPin from '~icons/ph/map-pin';
+	import LanguageSwitcher from '$components/i18n/LanguageSwitcher.svelte';
 </script>
 
 <ChainDivider />
@@ -124,6 +125,8 @@
 		<FooterEnd />
 		<img class="footer__deco" alt="footer decoration" src="/images/footer-skyline.webp" />
 	</div>
+
+	<LanguageSwitcher />
 </footer>
 
 <Marquee />

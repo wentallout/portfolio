@@ -1,13 +1,11 @@
 <script>
+	import '$lib/styles/global.css';
 	import ProgressBar from '$components/loading/ProgressBar.svelte';
-
 	import SkipLink from '$components/button/SkipLink.svelte';
 	import PWA from '$components/pwa/PWA.svelte';
 	import BackToTop from '$components/button/BackToTop.svelte';
 	import Footer from '$components/layout/footer/Footer.svelte';
 	import NavBar from '$lib/components/layout/header/NavBar.svelte';
-
-	import '$lib/styles/global.css';
 	import Analytics from '$components/analytics/Analytics.svelte';
 	import { onNavigate } from '$app/navigation';
 
@@ -16,7 +14,8 @@
 	import VideoCover from '$lib/components/layout/header/VideoCover.svelte';
 	import PageFind from '$lib/components/pagefind/PageFind.svelte';
 
-	// import { snowflakeCursor } from '$lib/utils/cursorTrail.js';
+	import { ParaglideJS } from '@inlang/paraglide-js-adapter-sveltekit';
+	import { i18n } from '$lib/i18n.js';
 
 	onNavigate(() => {
 		if (!document.startViewTransition) return;
@@ -36,7 +35,6 @@
 
 <Analytics />
 <SkipLink />
-
 <ScrollProgressBar />
 <ProgressBar />
 
@@ -49,8 +47,9 @@
 <PageFind />
 <main class="main-content pad" id="main-content">
 	<SparkleMouseTrail />
-
-	<slot />
+	<ParaglideJS {i18n}>
+		<slot />
+	</ParaglideJS>
 </main>
 
 <Footer />

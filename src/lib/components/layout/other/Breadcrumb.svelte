@@ -64,7 +64,7 @@
 		align-items: center;
 		gap: 0.25rem;
 
-		margin-top: 100px;
+		margin-top: var(--spaceM);
 		margin-bottom: var(--spaceXL);
 
 		background-color: transparent;
