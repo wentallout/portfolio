@@ -21,7 +21,7 @@
 	let headerEle;
 
 	onMount(() => {
-		const navigationHeight = headerEle.offsetHeight;
+		const navigationHeight = headerEle.offsetHeight + 16;
 
 		document.documentElement.style.setProperty('--scroll-padding', navigationHeight + 'px');
 	});

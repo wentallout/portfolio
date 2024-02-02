@@ -1,6 +1,4 @@
 <script>
-	import PhysicsCanvas from '$components/layout/footer/PhysicsCanvas.svelte';
-
 	import ChainDivider from '$components/layout/other/ChainDivider.svelte';
 	import FooterEnd from '$components/layout/footer/FooterEnd.svelte';
 	import ExLink from '$components/common/ExLink.svelte';
@@ -19,8 +17,6 @@
 
 <ChainDivider />
 <footer class="footer text-small">
-	<PhysicsCanvas />
-
 	<div class="pad">
 		<div class="footer__list">
 			<div class="list">
@@ -32,6 +28,7 @@
 					<li class="nav-list__link">
 						<a class="link" href="/about">More about me </a>
 					</li>
+					<LanguageSwitcher />
 				</ul>
 			</div>
 
@@ -125,8 +122,6 @@
 		<FooterEnd />
 		<img class="footer__deco" alt="footer decoration" src="/images/footer-skyline.webp" />
 	</div>
-
-	<LanguageSwitcher />
 </footer>
 
 <Marquee />

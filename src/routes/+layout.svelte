@@ -1,5 +1,5 @@
 <script>
-	import '$lib/styles/global.css';
+	import '$styles/global.css';
 	import ProgressBar from '$components/loading/ProgressBar.svelte';
 	import SkipLink from '$components/button/SkipLink.svelte';
 	import PWA from '$components/pwa/PWA.svelte';
@@ -12,7 +12,6 @@
 	import SparkleMouseTrail from '$components/layout/other/SparkleMouseTrail.svelte';
 	import ScrollProgressBar from '$components/layout/other/ScrollProgressBar.svelte';
 	import VideoCover from '$lib/components/layout/header/VideoCover.svelte';
-	import PageFind from '$lib/components/pagefind/PageFind.svelte';
 
 	import { ParaglideJS } from '@inlang/paraglide-js-adapter-sveltekit';
 	import { i18n } from '$lib/i18n.js';
@@ -32,27 +31,26 @@
 <svelte:head>
 	<meta name="view-transition" content="same-origin" />
 </svelte:head>
+<ParaglideJS {i18n}>
+	<Analytics />
+	<SkipLink />
+	<ScrollProgressBar />
+	<ProgressBar />
 
-<Analytics />
-<SkipLink />
-<ScrollProgressBar />
-<ProgressBar />
+	<PWA />
+	<BackToTop />
 
-<PWA />
-<BackToTop />
+	<VideoCover />
+	<NavBar />
 
-<VideoCover />
-<NavBar />
+	<main class="main-content pad" id="main-content">
+		<SparkleMouseTrail />
 
-<PageFind />
-<main class="main-content pad" id="main-content">
-	<SparkleMouseTrail />
-	<ParaglideJS {i18n}>
 		<slot />
-	</ParaglideJS>
-</main>
+	</main>
 
-<Footer />
+	<Footer />
+</ParaglideJS>
 
 <style lang="postcss">
 	.main-content {

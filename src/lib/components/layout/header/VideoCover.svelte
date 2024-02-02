@@ -6,7 +6,11 @@
 
 	let showCover = true;
 
-	$: if ($page.url.pathname === '/') {
+	$: if (
+		$page.url.pathname === '/' ||
+		$page.url.pathname === '/de' ||
+		$page.url.pathname === '/vi'
+	) {
 		showCover = true;
 	} else {
 		showCover = false;

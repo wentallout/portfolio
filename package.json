@@ -20,7 +20,7 @@
 		"@csstools/postcss-global-data": "^2.1.1",
 		"@iconify-json/ph": "^1.1.10",
 		"@inlang/paraglide-js": "1.2.2",
-		"@inlang/paraglide-js-adapter-sveltekit": "^0.3.0",
+		"@inlang/paraglide-js-adapter-sveltekit": "^0.3.2",
 		"@poppanator/sveltekit-svg": "^4.2.1",
 		"@ronilaukkarinen/stylelint-a11y": "^1.2.9",
 		"@splidejs/splide-extension-auto-scroll": "^0.5.3",
@@ -33,6 +33,7 @@
 		"autoprefixer": "^10.4.17",
 		"eslint": "^8.56.0",
 		"eslint-plugin-svelte": "^2.35.1",
+		"fontaine": "^0.4.1",
 		"giscus": "^1.4.0",
 		"gsap": "^3.12.5",
 		"husky": "^8.0.3",
@@ -46,6 +47,7 @@
 		"object-hash": "^3.0.0",
 		"postcss": "^8.4.33",
 		"postcss-html": "^1.6.0",
+		"postcss-import": "^16.0.0",
 		"postcss-load-config": "^5.0.2",
 		"postcss-preset-env": "^9.3.0",
 		"prettier": "^3.2.4",
@@ -77,8 +79,7 @@
 		"sveltekit-embed": "^0.0.12",
 		"unplugin-icons": "^0.18.3",
 		"vite": "^5.0.12",
-		"vite-imagetools": "^6.2.9",
-		"vite-plugin-pagefind": "^0.0.17"
+		"vite-imagetools": "^6.2.9"
 	},
 	"type": "module",
 	"repository": {

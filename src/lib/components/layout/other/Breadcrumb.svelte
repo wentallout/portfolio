@@ -64,7 +64,7 @@
 		align-items: center;
 		gap: 0.25rem;
 
-		margin-top: var(--spaceM);
+		margin-top: var(--scroll-padding);
 		margin-bottom: var(--spaceXL);
 
 		background-color: transparent;

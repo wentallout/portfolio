@@ -25,7 +25,7 @@ npm run dev
 
 This is a portfolio/blog built using SvelteKit. Hosted on Netlify.
 
-URL: [wentallout.io.vn](https://wentallout.io.vn)
+Visit: [wentallout.io.vn](https://wentallout.io.vn)
 
 ## 🤩 What makes this special?
 
@@ -43,7 +43,7 @@ Visitors can also comment on your blogs using GitHub discussion (you might want 
 
 ## 💅 Styling
 
-`src/lib/styles`
+`src/styles`
 
 - `reset.css` custom CSS Reset by [joshwcomeau](https://www.joshwcomeau.com/css/custom-css-reset/)
 - `global.css` global styles and importing all other css files
@@ -69,13 +69,15 @@ Slug
 
 ## Features
 
-⭐ i18n: EN - VN (work in progress, still buggy)
+⭐ i18n (inlang): 3 languages (configurable)
+
+- [Tutorial to add i18n to Svelte by Nils Jacobsen](https://inlang.com/g/2fg8ng94/guide-nilsjacobsen-buildAGlobalSvelteApp)
+- Machine translation command: `npx @inlang/cli machine translate --project project.inlang`
 
 ⭐ SEO
 
 - [SSR](https://kit.svelte.dev/docs/seo#out-of-the-box-ssr)
-
-- `sitemap.xml`: helps search engines understand and index the content on the site, using dynamic sitemap technique https://www.casperfeng.com/blog/generating-dynamic-sitemaps-in-sveltekit
+- `sitemap.xml`: using `https://github.com/bartholomej/svelte-sitemap`
 
 ⭐ Responsive
 
@@ -83,21 +85,24 @@ Slug
 
 ⭐ Dark/Light Mode Toggle Button
 
-⭐ Dynamic Breadcrumb (`Breadcumb.svelte`)
+⭐ Dynamic Breadcrumb (`Breadcrumb.svelte`)
 
 ⭐ Fonts
 
-- Self-hosted + Subset using [glyphhanger](https://www.npmjs.com/package/glyphhanger)
 - font-family: [Inter](https://rsms.me/inter/)
+- Self-hosted + Subset using [glyphhanger](https://www.npmjs.com/package/glyphhanger)
 
-⭐ Icons ([phosphoricons](https://phosphoricons.com/))
+⭐ Icons
+
+- Icon family: [phosphoricons](https://phosphoricons.com/)
+- `unplugin-icons` (vite plugin)
 
 ⭐ Images
 
 - Compressed and Converted into `webp` using`vite-imagetools`
 - `loading = 'lazy'`
 
-⭐ Routing
+⭐ Routing: built-in [filesystem-based router](https://kit.svelte.dev/docs/routing)
 
 ⭐ Page Transition Animation
 

@@ -39,6 +39,7 @@ const config = {
 		},
 
 		alias: {
+			$styles: './src/styles',
 			$blogImages: 'src/lib/assets/images/blog',
 			$components: 'src/lib/components',
 			$sections: 'src/lib/sections',
