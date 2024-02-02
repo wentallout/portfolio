@@ -1,0 +1,40 @@
+---
+title: The Correct BEM naming style in CSS (2024)
+date: 2024-01-28
+categories:
+    - frontend
+---
+
+## Reference
+
+https://bem-cheat-sheet.9elements.com/
+
+## Breadcrumb
+
+```html
+<nav class="breadcrumb" aria-label="Breadcrumb">
+  <ol class="breadcrumb__list">
+    <li class="breadcrumb__item"><a class="breadcrumb__link" href="#">Home</a></li>
+    <li class="breadcrumb__item"><a class="breadcrumb__link" href="#">About</a></li>
+    <li class="breadcrumb__item"><a class="breadcrumb__link" href="#" aria-current="location">Vision</a></li>
+  </ol>
+</nav>
+```
+
+## Navigation
+
+```html
+<nav class="main-nav" aria-label="Main">
+  <ul class="main-nav__list">
+    <li class="main-nav__item">
+      <a href="#" class="main-nav__link">Home</a>
+    </li>
+    <li class="main-nav__item">
+      <a href="#" class="main-nav__link">Work</a>
+    </li>
+    <li class="main-nav__item">
+      <a href="#" class="main-nav__link">About us</a>
+    </li>
+  </ul>
+</nav>
+```

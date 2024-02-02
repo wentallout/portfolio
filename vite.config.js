@@ -1,15 +1,26 @@
 import { sveltekit } from '@sveltejs/kit/vite';
-
+import { FontaineTransform } from 'fontaine';
 import Icons from 'unplugin-icons/vite';
 import browserslist from 'browserslist';
 import { imagetools } from 'vite-imagetools';
 import svg from '@poppanator/sveltekit-svg';
 import { browserslistToTargets } from 'lightningcss';
+import { paraglide } from '@inlang/paraglide-js-adapter-sveltekit/vite';
+
+const fontaineOptions = {
+	fallbacks: ['BlinkMacSystemFont', 'Segoe UI', 'Helvetica Neue', 'Arial', 'Roboto', 'Noto Sans']
+};
 
 /** @type {import('vite').UserConfig} */
 const config = {
 	plugins: [
+		FontaineTransform.vite(fontaineOptions),
+		paraglide({
+			project: './project.inlang',
+			outdir: './src/paraglide'
+		}),
 		sveltekit(),
+
 		svg({
 			includePaths: ['./src/lib/assets/images/'],
 			svgoOptions: {
@@ -33,7 +44,7 @@ const config = {
 	],
 
 	ssr: {
-		noExternal: ['three', 'troika-three-text']
+		// noExternal: ['three', 'troika-three-text']
 	},
 
 	server: {

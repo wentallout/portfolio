@@ -5,6 +5,10 @@ categories:
     - frontend
 ---
 
+## Reference
+
+https://moderncss.dev/12-modern-css-one-line-upgrades/
+
 ## aspect-ratio
 
 ```css

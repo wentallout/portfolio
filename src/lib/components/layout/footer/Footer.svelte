@@ -1,6 +1,4 @@
 <script>
-	import PhysicsCanvas from '$components/layout/footer/PhysicsCanvas.svelte';
-
 	import ChainDivider from '$components/layout/other/ChainDivider.svelte';
 	import FooterEnd from '$components/layout/footer/FooterEnd.svelte';
 	import ExLink from '$components/common/ExLink.svelte';
@@ -14,12 +12,11 @@
 	import GitHubLogo from '~icons/ph/github-logo';
 	import Phone from '~icons/ph/phone';
 	import MapPin from '~icons/ph/map-pin';
+	import LanguageSwitcher from '$components/i18n/LanguageSwitcher.svelte';
 </script>
 
 <ChainDivider />
 <footer class="footer text-small">
-	<PhysicsCanvas />
-
 	<div class="pad">
 		<div class="footer__list">
 			<div class="list">
@@ -31,6 +28,7 @@
 					<li class="nav-list__link">
 						<a class="link" href="/about">More about me </a>
 					</li>
+					<LanguageSwitcher />
 				</ul>
 			</div>
 

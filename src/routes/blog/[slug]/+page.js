@@ -14,6 +14,6 @@ export async function load({ params }) {
 			categories
 		};
 	} catch (err) {
-		throw error(404);
+		error(404);
 	}
 }

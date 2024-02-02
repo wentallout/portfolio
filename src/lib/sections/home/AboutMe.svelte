@@ -4,6 +4,7 @@
 	import Smiley from '~icons/ph/smiley';
 
 	import AboutMeImg from '$lib/assets/images/home/aboutMe.webp';
+	import * as m from '$paraglide/messages';
 </script>
 
 <SaosContainer>
@@ -26,9 +27,7 @@
 				<div class="block">
 					<h3 class="block__title text-base">Thought Process</h3>
 					<p class="block__text text-small">
-						I use industry guidelines and proven UX frameworks to tackle unique project challenges.
-						The process includes discovery, prototyping, and user testing while collaborating with
-						stakeholders to achieve successful outcomes.
+						{m.thoughtProcess()}
 					</p>
 				</div>
 			</div>

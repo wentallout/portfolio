@@ -7,7 +7,8 @@
 	let crumbs;
 
 	function removeHyphens(text) {
-		return text.replace(/-/g, ' '); // This line removes all hyphens and replaces them with spaces
+		// This line removes all hyphens and replaces them with spaces
+		return text.replace(/-/g, ' ');
 	}
 
 	$: {
@@ -42,7 +43,7 @@
 	});
 </script>
 
-<nav bind:this={breadcrumbEl} aria-label="breadcrumb" id="breadcrumb" class="breadcrumb text-small">
+<nav class="breadcrumb text-small" bind:this={breadcrumbEl} aria-label="breadcrumb" id="breadcrumb">
 	{#each crumbs as c, i}
 		{#if i == crumbs.length - 1}
 			<div class="breadcrumb__unclickable">
@@ -63,7 +64,7 @@
 		align-items: center;
 		gap: 0.25rem;
 
-		margin-top: 100px;
+		margin-top: var(--scroll-padding);
 		margin-bottom: var(--spaceXL);
 
 		background-color: transparent;

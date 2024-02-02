@@ -1,5 +1,5 @@
 <script>
-	import '$lib/styles/markdown/markdown.css';
+	import '$styles/markdown/markdown.css';
 </script>
 
 <div class="markdown">

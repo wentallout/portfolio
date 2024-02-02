@@ -28,8 +28,7 @@
 		width: var(--pillWidth);
 
 		display: flex;
-		justify-content: space-between;
-		align-items: center;
+
 		border-radius: var(--borderRadius);
 		border: 1px solid var(--colorTextQuaternary);
 		overflow: hidden;
@@ -57,8 +56,8 @@
 		display: flex;
 		justify-content: center;
 		align-items: center;
-		border: 1px solid var(--colorTextQuaternary);
-		transition: var(--transition);
+
+		transition: transform 0.3s cubic-bezier(0.68, -0.55, 0.27, 1.55);
 
 		&:hover {
 			border: 1px solid var(--colorPrimaryHover);

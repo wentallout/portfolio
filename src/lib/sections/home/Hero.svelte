@@ -1,6 +1,7 @@
 <script>
 	import HeroVisual from '$lib/assets/images/home/HeroVisual.svelte';
 	import Button from '$components/button/Button.svelte';
+	import * as m from '$paraglide/messages';
 </script>
 
 <section>
@@ -13,8 +14,7 @@
 					<div class="focus">+ Developer</div>
 				</div>
 				<div class="hero__text text-base">
-					I create practical and user-friendly products that bring real value and enhance people's
-					lives. My projects promote healthy and eco friendly lifestyles.
+					{m.heroText()}
 				</div>
 
 				<div class="hero__btn">

@@ -62,7 +62,7 @@
 		currentTime = duration * (seekBarEle.value / 100);
 	}
 
-	function handleVolume() {
+function handleVolume() {
 		volume = volumeEle.value / 100;
 	}
 
