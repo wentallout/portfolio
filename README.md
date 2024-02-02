@@ -67,12 +67,13 @@ Slug
 - /project/`[slug]`
 - /blog/`[slug]`
 
-## Features
+## Main Features
 
 ⭐ i18n (inlang): 3 languages (configurable)
 
 - [Tutorial to add i18n to Svelte by Nils Jacobsen](https://inlang.com/g/2fg8ng94/guide-nilsjacobsen-buildAGlobalSvelteApp)
 - Machine translation command: `npx @inlang/cli machine translate --project project.inlang`
+- [paraglide-js-adapter-sveltekit](https://www.npmjs.com/package/@inlang/paraglide-js-adapter-sveltekit)
 
 ⭐ SEO
 
@@ -90,12 +91,14 @@ Slug
 ⭐ Fonts
 
 - font-family: [Inter](https://rsms.me/inter/)
-- Self-hosted + Subset using [glyphhanger](https://www.npmjs.com/package/glyphhanger)
+- Fonts are self-hosted + subset using [glyphhanger](https://www.npmjs.com/package/glyphhanger)
+- [Fontaine](https://github.com/unjs/fontaine): reduce CLS
 
 ⭐ Icons
 
+- `unplugin-icons`
 - Icon family: [phosphoricons](https://phosphoricons.com/)
-- `unplugin-icons` (vite plugin)
+- [Browse phosphor icons](https://icon-sets.iconify.design/ph)
 
 ⭐ Images
 
@@ -111,11 +114,11 @@ Slug
 
 ⭐ RSS
 
-⭐ Contact Form
+⭐ Working Contact Form (need Netlify setup)
 
 ---
 
-## Blogs
+## Blogging Features
 
 - Use markdown to write blogs [mdsvex](https://github.com/pngwn/MDsveX)
 - use `categories` (#hashtag) to filter blogs

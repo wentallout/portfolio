@@ -44,7 +44,7 @@ const config = {
 	],
 
 	ssr: {
-		noExternal: ['three', 'troika-three-text']
+		// noExternal: ['three', 'troika-three-text']
 	},
 
 	server: {

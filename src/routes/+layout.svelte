@@ -1,20 +1,13 @@
 <script>
 	import '$styles/global.css';
-	import ProgressBar from '$components/loading/ProgressBar.svelte';
-	import SkipLink from '$components/button/SkipLink.svelte';
-	import PWA from '$components/pwa/PWA.svelte';
-	import BackToTop from '$components/button/BackToTop.svelte';
 	import Footer from '$components/layout/footer/Footer.svelte';
 	import NavBar from '$lib/components/layout/header/NavBar.svelte';
-	import Analytics from '$components/analytics/Analytics.svelte';
 	import { onNavigate } from '$app/navigation';
-
 	import SparkleMouseTrail from '$components/layout/other/SparkleMouseTrail.svelte';
-	import ScrollProgressBar from '$components/layout/other/ScrollProgressBar.svelte';
 	import VideoCover from '$lib/components/layout/header/VideoCover.svelte';
-
 	import { ParaglideJS } from '@inlang/paraglide-js-adapter-sveltekit';
 	import { i18n } from '$lib/i18n.js';
+	import Misc from '$sections/Misc.svelte';
 
 	onNavigate(() => {
 		if (!document.startViewTransition) return;
@@ -31,21 +24,14 @@
 <svelte:head>
 	<meta name="view-transition" content="same-origin" />
 </svelte:head>
+
 <ParaglideJS {i18n}>
-	<Analytics />
-	<SkipLink />
-	<ScrollProgressBar />
-	<ProgressBar />
-
-	<PWA />
-	<BackToTop />
-
+	<Misc />
 	<VideoCover />
 	<NavBar />
 
 	<main class="main-content pad" id="main-content">
 		<SparkleMouseTrail />
-
 		<slot />
 	</main>
 
