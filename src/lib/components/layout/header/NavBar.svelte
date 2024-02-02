@@ -21,7 +21,7 @@
 	let headerEle;
 
 	onMount(() => {
-		const navigationHeight = headerEle.offsetHeight + 16;
+		const navigationHeight = headerEle.offsetHeight;
 
 		document.documentElement.style.setProperty('--scroll-padding', navigationHeight + 'px');
 	});
@@ -214,7 +214,7 @@
 		top: 0;
 		left: 0;
 
-		background: color-mix(in srgb, var(--colorBgLayout) 50%, transparent);
+		background: color-mix(in srgb, var(--colorBgLayout) 70%, transparent);
 		backdrop-filter: blur(5px);
 		overflow: hidden;
 		transition: var(--transition);
