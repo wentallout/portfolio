@@ -116,6 +116,8 @@ Slug
 
 ⭐ Working Contact Form (need Netlify setup)
 
+⚠️ i18n: EN - VN (work in progress)
+
 ---
 
 ## Blogging Features
