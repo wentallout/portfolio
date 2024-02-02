@@ -91,6 +91,7 @@ Slug
 ⭐ Fonts
 
 - font-family: [Inter](https://rsms.me/inter/)
+- [Google Web Font Helper](https://gwfh.mranftl.com/fonts)
 - Fonts are self-hosted + subset using [glyphhanger](https://www.npmjs.com/package/glyphhanger)
 - [Fontaine](https://github.com/unjs/fontaine): reduce CLS
 
