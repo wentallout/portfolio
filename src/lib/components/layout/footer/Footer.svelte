@@ -20,7 +20,7 @@
 	<div class="pad">
 		<div class="footer__list">
 			<div class="list">
-				<h5 class="list__title">About me</h5>
+				<div class="list__title">About me</div>
 				<ul class="list__nav">
 					<li class="nav-list__link">
 						I creates superb affordable websites and apps for small businesses.
@@ -33,7 +33,7 @@
 			</div>
 
 			<div class="list">
-				<h5 class="list__title">Navigate</h5>
+				<div class="list__title">Navigate</div>
 				<ul class="list__nav">
 					{#each navItems as navItem}
 						<li class="nav-list__link">
@@ -44,7 +44,7 @@
 			</div>
 
 			<div class="list">
-				<h5 class="list__title">Other</h5>
+				<div class="list__title">Other</div>
 				<ul class="list__nav">
 					<li class="nav-list__link">
 						<a href="/music">Music</a>
@@ -65,7 +65,7 @@
 			</div>
 
 			<div class="list">
-				<h5 class="list__title">Contact</h5>
+				<div class="list__title">Contact</div>
 				<ul class="list__nav">
 					<li>
 						<ExLink href="https://goo.gl/maps/GLt6uhYWwU91fXz49">
@@ -169,11 +169,6 @@
 		max-width: 100vw;
 		position: relative;
 		overflow: hidden;
-
-		background-image: url('/images/grain.png');
-		background-position: 0 0;
-		background-size: 300px 300px;
-		background-repeat: auto;
 	}
 
 	.footer__list {

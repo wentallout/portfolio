@@ -5,10 +5,12 @@
 </script>
 
 {#each availableLanguageTags as lang}
-	<a
-		href={i18n.route($page.url.pathname)}
-		hreflang={lang}
-		aria-current={lang === languageTag() ? 'page' : undefined}>
-		{lang}
-	</a>
+	<li>
+		<a
+			href={i18n.route($page.url.pathname)}
+			hreflang={lang}
+			aria-current={lang === languageTag() ? 'page' : undefined}>
+			{lang}
+		</a>
+	</li>
 {/each}
