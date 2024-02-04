@@ -93,9 +93,9 @@ Slug
 
 ⭐ Fonts
 
-- Self-hosted: [Google Web Font Helper](https://gwfh.mranftl.com/fonts)
-- Font: [Inter](https://rsms.me/inter/)
-- Subset: [glyphhanger](https://www.npmjs.com/package/glyphhanger)
+- Self-host: [Google Web Font Helper](https://gwfh.mranftl.com/fonts)
+- font-family: [Inter](https://rsms.me/inter/)
+- Subset: [Subset Variable Font Guide](https://barrd.dev/article/create-a-variable-font-subset-for-smaller-file-size/)
 - Reduce Font CLS (Cumulative Layout Shift): [Fontaine](https://github.com/unjs/fontaine)
 
 ⭐ Icons

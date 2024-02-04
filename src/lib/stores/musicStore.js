@@ -13,6 +13,10 @@ export const musicList = writable([
 		name: 'Memory Reboot'
 	},
 	{
+		audio: '/ringtones/Fluxxwave.flac',
+		name: 'Fluxxwave'
+	},
+	{
 		audio: '/ringtones/ChaChaCha.flac',
 		name: 'Cha Cha Cha'
 	},
