@@ -144,9 +144,9 @@
 
 	.footer__deco {
 		background-repeat: repeat-x;
-		height: 52px;
+		height: auto;
 		width: 100%;
-		z-index: 2;
+		z-index: -1;
 		position: absolute;
 		bottom: 0;
 		left: 0;
