@@ -43,10 +43,6 @@ const config = {
 		})
 	],
 
-	ssr: {
-		// noExternal: ['three', 'troika-three-text']
-	},
-
 	server: {
 		port: '3000'
 	},

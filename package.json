@@ -39,7 +39,6 @@
 		"husky": "^8.0.3",
 		"lightningcss": "^1.23.0",
 		"lint-staged": "^15.2.1",
-		"matter-js": "^0.19.0",
 		"mdsvex": "^0.11.0",
 		"minisearch": "^6.3.0",
 		"node-html-parser": "^6.1.12",

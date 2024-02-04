@@ -16,7 +16,7 @@
 	</ExLink>
 
 	<ExLink ariaLabel="Svelte Vietnam" style="display:block" href="https://www.sveltevietnam.dev">
-		<img class="badge__img" alt="svelte vietnam" src="/images/sveltevn.png" />
+		<img class="badge__img" alt="svelte vietnam" src="/images/sveltevn.webp" />
 	</ExLink>
 
 	<ExLink ariaLabel="Netlify" style="display:block" href="https://netlify.com">

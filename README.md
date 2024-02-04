@@ -1,11 +1,13 @@
+<h1 id="portfolio">Portfolio</h1>
+
+[![Netlify Status](https://api.netlify.com/api/v1/badges/7bf37fa7-ec78-4efd-aa9a-1a18a4fc62e4/deploy-status)](https://app.netlify.com/sites/khoa-design/deploys)
+
 ![GitHub](https://img.shields.io/github/license/wentallout/portfolio?style=for-the-badge)
 ![GitHub top language](https://img.shields.io/github/languages/top/wentallout/portfolio?style=for-the-badge)
 ![GitHub pull requests](https://img.shields.io/github/issues-pr/wentallout/portfolio?style=for-the-badge)
 ![GitHub last commit](https://img.shields.io/github/last-commit/wentallout/portfolio?style=for-the-badge)
 ![GitHub commit activity](https://img.shields.io/github/commit-activity/m/wentallout/portfolio?style=for-the-badge)
 ![GitHub repo size](https://img.shields.io/github/repo-size/wentallout/portfolio?style=for-the-badge)
-
-# Portfolio [![Netlify Status](https://api.netlify.com/api/v1/badges/7bf37fa7-ec78-4efd-aa9a-1a18a4fc62e4/deploy-status)](https://app.netlify.com/sites/khoa-design/deploys)
 
 ![Banner](https://raw.githubusercontent.com/wentallout/wentallout/773d77e9c040bd20e5002d41738139946d9bd85d/images/portfolio-banner.svg)
 
@@ -40,6 +42,7 @@ Visitors can also comment on your blogs using GitHub discussion (you might want 
 - HTML: Semantic and SEO-focused
 - CSS: Vanilla CSS with BEM naming scheme
 - JS: VanillaJS/Svelte
+- [eslint-plugin-svelte](https://sveltejs.github.io/eslint-plugin-svelte/user-guide)
 
 ## 💅 Styling
 
@@ -69,7 +72,7 @@ Slug
 
 ## Main Features
 
-⭐ i18n (inlang): 3 languages (configurable)
+⭐ i18n (`inlang` + `paraglide.js`)
 
 - [Tutorial to add i18n to Svelte by Nils Jacobsen](https://inlang.com/g/2fg8ng94/guide-nilsjacobsen-buildAGlobalSvelteApp)
 - Machine translation command: `npx @inlang/cli machine translate --project project.inlang`
@@ -90,10 +93,10 @@ Slug
 
 ⭐ Fonts
 
-- font-family: [Inter](https://rsms.me/inter/)
-- [Google Web Font Helper](https://gwfh.mranftl.com/fonts)
-- Fonts are self-hosted + subset using [glyphhanger](https://www.npmjs.com/package/glyphhanger)
-- [Fontaine](https://github.com/unjs/fontaine): reduce CLS
+- Self-hosted: [Google Web Font Helper](https://gwfh.mranftl.com/fonts)
+- Font: [Inter](https://rsms.me/inter/)
+- Subset: [glyphhanger](https://www.npmjs.com/package/glyphhanger)
+- Reduce Font CLS (Cumulative Layout Shift): [Fontaine](https://github.com/unjs/fontaine)
 
 ⭐ Icons
 
@@ -116,8 +119,6 @@ Slug
 ⭐ RSS
 
 ⭐ Working Contact Form (need Netlify setup)
-
-⚠️ i18n: EN - VN (work in progress)
 
 ---
 
@@ -151,4 +152,8 @@ Slug
 
 [![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2Fwentallout%2Fportfolio.svg?type=large&issueType=license)](https://app.fossa.com/projects/git%2Bgithub.com%2Fwentallout%2Fportfolio?ref=badge_large&issueType=license)
 
-[⬆ Back to Top](#)
+## License
+
+[Published under MIT License](https://github.com/wentallout/portfolio/blob/master/LICENSE.md)
+
+[⬆ Back to Top](#portfolio)
