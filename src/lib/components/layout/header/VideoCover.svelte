@@ -20,13 +20,13 @@
 {#if showCover}
 	<div class="cover">
 		{#if $theme === 'dark'}
-			<video transition:fade={{ duration: 300 }} class="video" autoplay muted loop>
+			<video playsinline transition:fade={{ duration: 300 }} class="video" autoplay muted loop>
 				<source src="/videos/dark.webm" type="video/webm" />
 			</video>
 		{/if}
 
 		{#if $theme === 'light'}
-			<video transition:fade={{ duration: 300 }} class="video" autoplay muted loop>
+			<video playsinline transition:fade={{ duration: 300 }} class="video" autoplay muted loop>
 				<source src="/videos/light.webm" type="video/webm" />
 			</video>
 		{/if}
@@ -65,14 +65,6 @@
 		width: 100%;
 		object-fit: cover;
 		object-position: top;
-	}
-
-	:global([color-scheme='dark'] .video) {
-		/* filter: brightness(50%); */
-	}
-
-	:global([color-scheme='light'] .video) {
-		/* filter: opacity(70%) brightness(100%); */
 	}
 
 	@media (min-width: 768px) {

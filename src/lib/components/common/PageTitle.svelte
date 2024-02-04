@@ -14,7 +14,7 @@
 		{pageTitle}
 	</div>
 
-	<img alt="title deco" class="title__bg" src={decoImageUrl} />
+	<img loading="lazy" alt="title deco" class="title__bg" src={decoImageUrl} />
 
 	<div class="title__content">
 		<StarFour width="40" height="40" />

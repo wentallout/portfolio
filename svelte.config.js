@@ -37,17 +37,22 @@ const config = {
 			handleHttpError: 'warn',
 			entries: ['*']
 		},
-
-		alias: {
-			$styles: './src/styles',
-			$blogImages: 'src/lib/assets/images/blog',
-			$components: 'src/lib/components',
-			$sections: 'src/lib/sections',
-			$projectImages: 'src/lib/assets/images/project',
-			$paraglide: './src/paraglide'
-		},
 		csp: {
-			mode: 'auto'
+			mode: 'hash',
+			directives: {
+				'script-src': ['self']
+			}
+		},
+		csrf: {
+			checkOrigin: true
+		},
+		alias: {
+			$components: './src/lib/components',
+			$sections: './src/lib/sections',
+			$blogImages: './src/lib/assets/images/blog',
+			$projectImages: './src/lib/assets/images/project',
+			$paraglide: './src/paraglide',
+			$styles: './src/styles'
 		}
 	},
 

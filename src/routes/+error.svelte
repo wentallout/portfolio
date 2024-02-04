@@ -30,7 +30,7 @@
 </script>
 
 <div class="error">
-	<img class="error__deco" src="/images/crack.svg" alt="" />
+	<img loading="lazy" class="error__deco" src="/images/crack.svg" alt="" />
 
 	<div class="error__info">
 		<h1 class="status">
