@@ -9,6 +9,8 @@
 	import { i18n } from '$lib/i18n.js';
 	import Misc from '$sections/Misc.svelte';
 
+	import { onMount } from 'svelte';
+
 	onNavigate(() => {
 		if (!document.startViewTransition) return;
 
@@ -30,7 +32,7 @@
 	<VideoCover />
 	<NavBar />
 
-	<main class="main-content pad" id="main-content">
+	<main id="main-content" class="main-content pad">
 		<SparkleMouseTrail />
 		<slot />
 	</main>

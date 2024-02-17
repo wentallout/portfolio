@@ -5,21 +5,21 @@
 </script>
 
 <div class="badge">
-	<ExLink ariaLabel="not by ai" style="display:block" href="https://notbyai.fyi">
+	<ExLink style="display:block" ariaLabel="not by ai" href="https://notbyai.fyi">
 		<LogoNotAi />
 	</ExLink>
-	<ExLink ariaLabel="Vite" style="display:block" href="https://vitejs.dev/">
+	<ExLink style="display:block" ariaLabel="Vite" href="https://vitejs.dev/">
 		<img class="badge__img" alt="vite" src="/images/vite.svg" />
 	</ExLink>
-	<ExLink ariaLabel="SvelteKit" style="display:block" href="https://kit.svelte.dev">
+	<ExLink style="display:block" ariaLabel="SvelteKit" href="https://kit.svelte.dev">
 		<LogoSvelte height="42" width="100%" />
 	</ExLink>
 
-	<ExLink ariaLabel="Svelte Vietnam" style="display:block" href="https://www.sveltevietnam.dev">
+	<ExLink style="display:block" ariaLabel="Svelte Vietnam" href="https://www.sveltevietnam.dev">
 		<img class="badge__img" alt="svelte vietnam" src="/images/sveltevn.webp" />
 	</ExLink>
 
-	<ExLink ariaLabel="Netlify" style="display:block" href="https://netlify.com">
+	<ExLink style="display:block" ariaLabel="Netlify" href="https://netlify.com">
 		<img class="badge__img" alt="built with netlify" src="/images/netlify.svg" />
 	</ExLink>
 </div>

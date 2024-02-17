@@ -75,6 +75,10 @@ img {
 
 	max-width: 100%;
 	height: auto;
+
+	&:hover {
+		filter: brightness(1) contrast(1);
+	}
 }
 
 [color-scheme='dark'] img {

@@ -20,13 +20,13 @@
 {#if showCover}
 	<div class="cover">
 		{#if $theme === 'dark'}
-			<video playsinline transition:fade={{ duration: 300 }} class="video" autoplay muted loop>
+			<video class="video" autoplay loop muted playsinline transition:fade={{ duration: 300 }}>
 				<source src="/videos/dark.webm" type="video/webm" />
 			</video>
 		{/if}
 
 		{#if $theme === 'light'}
-			<video playsinline transition:fade={{ duration: 300 }} class="video" autoplay muted loop>
+			<video class="video" autoplay loop muted playsinline transition:fade={{ duration: 300 }}>
 				<source src="/videos/light.webm" type="video/webm" />
 			</video>
 		{/if}

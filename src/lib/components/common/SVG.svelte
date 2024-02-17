@@ -8,4 +8,4 @@
 	export let alt = '';
 </script>
 
-<img {src} {width} {height} loading="lazy" decoding="async" alt="SVG of {alt}" />
+<img alt="SVG of {alt}" decoding="async" {height} loading="lazy" {src} {width} />

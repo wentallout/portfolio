@@ -13,14 +13,14 @@
 	export let shadowColor = backgroundColor;
 </script>
 
-<button {type} class="pushable" style:--glow-color={glowColor} style:width>
-	<span class="shadow" style:background-color={shadowColor} />
+<button style:--glow-color={glowColor} style:width class="pushable" {type}>
+	<span style:background-color={shadowColor} class="shadow" />
 
 	<span
-		class="front"
 		style:background-color={backgroundColor}
 		style:border
-		style:color={labelColor}>
+		style:color={labelColor}
+		class="front">
 		<slot />
 		{label}
 	</span>

@@ -3,8 +3,8 @@
 
 	export let src = '';
 	export let alt = '';
-	export let width;
-	export let height;
+	export let width = 'auto';
+	export let height = 'auto';
 
 	// try not to touch this
 	export let loading = 'lazy';
@@ -14,9 +14,9 @@
 </script>
 
 <SaosContainer animation="imgAni 0.3s">
-	<ExLink href={src} aria-label={alt}>
+	<ExLink ariaLabel={alt} href={src}>
 		<figure>
-			<img {src} {width} {height} {loading} {decoding} alt="Image of {alt}" />
+			<img alt="Image of {alt}" {decoding} {height} {loading} {src} {width} />
 			{#if alt !== ''}
 				<figcaption class="caption text-xs">
 					{alt}

@@ -6,7 +6,7 @@
 	export let desc = '';
 </script>
 
-<ExLink {href} ariaLabel={name}>
+<ExLink ariaLabel={name} {href}>
 	<div class="tool">
 		<h2 class="tool__name text-base">{name}</h2>
 		<div class="tool__description text-small">

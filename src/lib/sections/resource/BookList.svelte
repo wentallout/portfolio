@@ -54,11 +54,11 @@
 	};
 </script>
 
-<Splide hasTrack={false} class="splide" {options} {extensions} aria-label="My Favorite Images">
+<Splide class="splide" aria-label="My Favorite Images" {extensions} hasTrack={false} {options}>
 	<SplideTrack>
 		{#each books as book}
 			<SplideSlide>
-				<Book3D imgUrl={book.imgUrl} alt={book.name} />
+				<Book3D alt={book.name} imgUrl={book.imgUrl} />
 			</SplideSlide>
 		{/each}
 	</SplideTrack>

@@ -14,14 +14,14 @@
 		{pageTitle}
 	</div>
 
-	<img loading="lazy" alt="title deco" class="title__bg" src={decoImageUrl} />
+	<img class="title__bg" alt="title deco" loading="lazy" src={decoImageUrl} />
 
 	<div class="title__content">
-		<StarFour width="40" height="40" />
+		<StarFour height="40" width="40" />
 		<h1 class="text-3xl title__text tracking-in-expand">
 			{pageTitle}
 		</h1>
-		<StarFour width="40" height="40" />
+		<StarFour height="40" width="40" />
 	</div>
 </div>
 <Breadcrumb />

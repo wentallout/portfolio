@@ -15,9 +15,9 @@
 	<div class="faq">
 		<div class="faqlist">
 			<Accordion
-				isOpened="true"
 				accordionSection="What is UI/UX design?"
-				accordionText="UI/UX design stands for user interface/user experience design. It involves creating visually appealing and easy-to-use interfaces for digital products and ensuring that the user experience is intuitive, efficient, and enjoyable." />
+				accordionText="UI/UX design stands for user interface/user experience design. It involves creating visually appealing and easy-to-use interfaces for digital products and ensuring that the user experience is intuitive, efficient, and enjoyable."
+				isOpened="true" />
 			<Accordion
 				accordionSection="Why is UI/UX design important?"
 				accordionText="Good UI/UX design is crucial for the success of digital products because it can greatly impact user engagement, retention, and conversion rates. A well-designed interface can also improve brand perception and customer loyalty." />

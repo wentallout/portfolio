@@ -11,7 +11,7 @@
 	import { fade } from 'svelte/transition';
 </script>
 
-<a transition:fade={{ duration: 300 }} href={blogLink} class="blog">
+<a class="blog" href={blogLink} transition:fade={{ duration: 300 }}>
 	<article class="blog__info">
 		{#if hasTags}
 			<div class="tags">
@@ -25,11 +25,11 @@
 
 		<div class="blog__title text-small">{blogTitle}</div>
 		<div class="blog__date text-xs">
-			<Time timestamp={blogDate} relative />
+			<Time relative timestamp={blogDate} />
 		</div>
 	</article>
 	<span class="blog__icon">
-		<CaretRight color="var(--colorText)" width="16" height="16" />
+		<CaretRight color="var(--colorText)" height="16" width="16" />
 	</span>
 </a>
 

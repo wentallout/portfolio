@@ -6,7 +6,7 @@
 <div class="container">
 	<div class="book-container">
 		<div class="book">
-			<img loading="lazy" decoding="async" {alt} src={imgUrl} />
+			<img {alt} decoding="async" loading="lazy" src={imgUrl} />
 		</div>
 	</div>
 </div>

@@ -2,8 +2,8 @@
 	export let linkToDetail = '';
 	export let projectName = '';
 	export let what = '';
-	export let output = '';
 	export let role = '';
+	export let output = '';
 
 	export let thumbnail;
 
@@ -12,7 +12,7 @@
 
 <a href={linkToDetail}>
 	<article class="project">
-		<img class="project__thumbnail" src={thumbnail} alt="" />
+		<img class="project__thumbnail" alt="" src={thumbnail} />
 
 		<div class="project__info">
 			<div class="title">
@@ -21,7 +21,7 @@
 
 			<div class="info text-small">
 				<div class="info__section">
-					<div class="section__label">Goal</div>
+					<div class="section__label">About</div>
 					<div class="section__desc">{what}</div>
 				</div>
 				<div class="info__section">
@@ -36,8 +36,8 @@
 			</div>
 
 			<div class="indicator text-small">
-				<ArrowRight color="inherit" width="24" height="24" />
-				Read Case Study
+				<ArrowRight color="inherit" height="24" width="24" />
+				Read
 			</div>
 		</div>
 	</article>

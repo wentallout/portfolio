@@ -5,27 +5,35 @@
 
 	import devPortfolioSquare from '$lib/assets/images/project/dev-portfolio/thumbnail.png';
 
-	// linkToFigma="https://www.figma.com/file/owUrwidb8hZbdmruKhMtyS/REZA%3A-Restaurant-Reservation-App?node-id=2%3A9&t=a8W16CMSWgxzoLKB-1"
+	import superTabManagerThumbnail from '$lib/assets/images/project/super-tab-manager/thumbnail.png';
 
 	export let hasMoreButton = false;
 </script>
 
 <div class="projects">
 	<ProjectCard
-		projectName="Reza - Restaurant Reservation App"
-		linkToDetail="project/reza"
-		role="UI, Research, Persona, User Flow, Wireframe, Design System, Prototype, Test"
-		what="Reza is an app that lets people book restaurant tables easily."
-		output="Home, Search, Detail, Reservation"
-		thumbnail={rezaSquare} />
+		linkToDetail="https://chrome.google.com/webstore/detail/supertabmanager/bkjlmdjfdppebnijgnhgfdnojfneppaa?hl=en"
+		output="Features: Group similar tabs, close duplicated or harmful tabs, search tabs. UI that adapts to user's dark/light preference."
+		projectName="Super Tab Manager"
+		role="Designer, Developer"
+		thumbnail={superTabManagerThumbnail}
+		what="A sleek, minimal, user-friendly Chrome extension that makes managing multiple browser tabs easier" />
 
 	<ProjectCard
-		projectName="Developer Portfolio"
+		linkToDetail="project/reza"
+		output="UI, Research, Persona, User Flow, Wireframe, Design System, Prototype, Test"
+		projectName="Reza - Restaurant Reservation App"
+		role="UI/UX Designer"
+		thumbnail={rezaSquare}
+		what="Mobile app that lets people book restaurant tables easily." />
+
+	<ProjectCard
 		linkToDetail="project/dev-portfolio"
-		what="A clean, minimal, highly customizable portfolio website for developers."
-		role="UI, Design System"
 		output="3 screens: Home, Projects, Contact"
-		thumbnail={devPortfolioSquare} />
+		projectName="Developer Portfolio"
+		role="UI/UX Designer"
+		thumbnail={devPortfolioSquare}
+		what="A clean, minimal, highly customizable portfolio website for developers." />
 
 	{#if hasMoreButton}
 		<div class="more">

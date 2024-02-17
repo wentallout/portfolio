@@ -43,7 +43,7 @@
 	});
 </script>
 
-<nav class="breadcrumb text-small" bind:this={breadcrumbEl} aria-label="breadcrumb" id="breadcrumb">
+<nav bind:this={breadcrumbEl} id="breadcrumb" class="breadcrumb text-small" aria-label="breadcrumb">
 	{#each crumbs as c, i}
 		{#if i == crumbs.length - 1}
 			<div class="breadcrumb__unclickable">
@@ -51,7 +51,7 @@
 			</div>
 		{:else}
 			<a class="breadcrumb__clickable link" href={c.href}>{c.label}</a>
-			<CaretRight width="16" height="16" />
+			<CaretRight height="16" width="16" />
 		{/if}
 	{/each}
 </nav>

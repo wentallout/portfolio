@@ -1,15 +1,15 @@
 <div class="other-container">
 	<a class="other" href="/music">
-		<img class="other__image" src="images/music.webp" alt="music" />
+		<img class="other__image" alt="music" src="images/music.webp" />
 		<div class="other__title text-large">Music</div>
 	</a>
 	<a class="other" href="/resource/tool">
-		<img class="other__image" src="images/tool.webp" alt="tool" />
+		<img class="other__image" alt="tool" src="images/tool.webp" />
 		<div class="other__title text-large">Tool</div>
 	</a>
 
 	<a class="other" href="/resource/exp">
-		<img class="other__image" src="images/exp.webp" alt="experiment" />
+		<img class="other__image" alt="experiment" src="images/exp.webp" />
 		<div class="other__title text-large">Experiment</div>
 	</a>
 </div>

@@ -3,7 +3,7 @@
 </script>
 
 <div class="text-xs tag">
-	<Tag width="16" height="16" />
+	<Tag height="16" width="16" />
 
 	<slot />
 </div>

@@ -28,18 +28,18 @@
 {#if mounted}
 	<giscus-widget
 		{id}
-		{host}
-		{repo}
-		repoid={repoId}
 		{category}
 		categoryid={categoryId}
-		{mapping}
-		{term}
-		{strict}
-		reactionsenabled={reactionsEnabled}
 		emitmetadata={emitMetadata}
+		{host}
 		inputposition={inputPosition}
-		{theme}
 		{lang}
-		{loading} />
+		{loading}
+		{mapping}
+		reactionsenabled={reactionsEnabled}
+		{repo}
+		repoid={repoId}
+		{strict}
+		{term}
+		{theme} />
 {/if}

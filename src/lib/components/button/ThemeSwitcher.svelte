@@ -5,18 +5,18 @@
 	import { theme, toggleTheme } from '$lib/stores/themeStore.js';
 </script>
 
-<button class="pill" type="button" on:click={toggleTheme} aria-label="Toggle theme">
+<button class="pill" aria-label="Toggle theme" type="button" on:click={toggleTheme}>
 	<div
 		class="circle"
 		class:circle--left={$theme === 'dark'}
 		class:circle--right={$theme === 'light'}>
 		{#if $theme === 'dark'}
 			<div aria-label="dark mode">
-				<Moon width="16" height="16" class="icon" color="var(--colorText)" />
+				<Moon class="icon" color="var(--colorText)" height="16" width="16" />
 			</div>
 		{:else if $theme === 'light'}
 			<div aria-label="light mode">
-				<Sun width="16" height="16" class="icon" color="var(--colorText)" />
+				<Sun class="icon" color="var(--colorText)" height="16" width="16" />
 			</div>
 		{/if}
 	</div>

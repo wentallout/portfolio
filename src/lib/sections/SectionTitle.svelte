@@ -14,7 +14,7 @@
 		<div class="section__icon text-large">
 			<slot {sectionIcon} />
 		</div>
-		<h2 data-title={sectionTitle} class="section__text text-large">{sectionTitle}</h2>
+		<h2 class="section__text text-large" data-title={sectionTitle}>{sectionTitle}</h2>
 	</div>
 
 	{#if sectionDesc !== ''}
