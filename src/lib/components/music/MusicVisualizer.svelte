@@ -31,16 +31,16 @@
 	}
 </script>
 
-<div class="visualizer" bind:this={visualizerEl}>
+<div bind:this={visualizerEl} class="visualizer">
 	<img
 		style="--energyHeight:{energyHeight}px;"
 		class="visualizer__logo"
-		src="/images/coolLogo.svg"
-		alt="music visualizer logo" />
+		alt="music visualizer logo"
+		src="/images/coolLogo.svg" />
 
 	<img
-		class:dancer-active={$isPlaying}
 		class="visualizer__dancer"
+		class:dancer-active={$isPlaying}
 		alt="gojo"
 		src="/images/dancing.webp" />
 </div>

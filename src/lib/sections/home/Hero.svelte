@@ -20,19 +20,19 @@
 				<div class="hero__btn">
 					<a href="/project">
 						<Button
-							label="View Portfolio"
-							labelColor="var(--colorBlack)"
 							backgroundColor="var(--colorPrimary)"
-							glowColor="var(--colorPrimary)" />
+							glowColor="var(--colorPrimary)"
+							label="View Portfolio"
+							labelColor="var(--colorBlack)" />
 					</a>
 
 					<a href="/contact">
 						<Button
+							backgroundColor="var(--colorBgLayout)"
+							borderColor="var(--colorText)"
 							label="Contact"
 							labelColor="var(--colorText)"
-							backgroundColor="var(--colorBgLayout)"
-							shadowColor="var(--colorTextSecondary)"
-							borderColor="var(--colorText)" />
+							shadowColor="var(--colorTextSecondary)" />
 					</a>
 				</div>
 			</div>

@@ -4,7 +4,7 @@
 	export let animation = 'fade-in 1.2s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;';
 </script>
 
-<Saos {once} {animation}>
+<Saos {animation} {once}>
 	<slot />
 </Saos>
 

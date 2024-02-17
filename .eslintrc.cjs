@@ -3,7 +3,8 @@ module.exports = {
 	extends: ['plugin:svelte/recommended', 'plugin:svelte/prettier'],
 	rules: {
 		'svelte/no-dupe-else-if-blocks': 'error',
-		'svelte/button-has-type': 'error'
+		'svelte/button-has-type': 'error',
+		'svelte/sort-attributes': 1
 	},
 	settings: {
 		svelte: {}

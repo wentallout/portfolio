@@ -19,22 +19,22 @@
 
 <section>
 	<SectionTitle
-		sectionTitle="Get in touch"
 		sectionDesc="Tell me about your next big project. I'll be happy to contribute."
+		sectionTitle="Get in touch"
 		let:sectionIcon>
 		<EnvelopeSimple {...sectionIcon} />
 	</SectionTitle>
 
 	<div class="form-container">
-		<form name="contact" class="contact" method="post" data-netlify="true">
-			<input type="hidden" name="form-name" value="contact" />
+		<form name="contact" class="contact" data-netlify="true" method="post">
+			<input name="form-name" type="hidden" value="contact" />
 
-			<TextInput name="name" type="text" label="Name">
+			<TextInput name="name" label="Name" type="text">
 				<span slot="icon">
 					<User />
 				</span>
 			</TextInput>
-			<TextInput name="email" type="email" label="Email">
+			<TextInput name="email" label="Email" type="email">
 				<span slot="icon">
 					<At />
 				</span>
@@ -43,22 +43,22 @@
 
 			<div class="contact__btn">
 				<Button
-					type="submit"
-					label="Send message"
 					backgroundColor="var(--colorPrimary)"
-					glowColor="var(--colorPrimary)">
-					<PaperPlaneRight color="var(--colorBlack)" width="16" height="16" />
+					glowColor="var(--colorPrimary)"
+					label="Send message"
+					type="submit">
+					<PaperPlaneRight color="var(--colorBlack)" height="16" width="16" />
 				</Button>
 
 				<Button
-					type="reset"
-					label="Reset"
-					borderColor="var(--colorError)"
 					backgroundColor="var(--colorBgLayout)"
-					shadowColor="var(--colorError)"
+					borderColor="var(--colorError)"
 					glowColor="var(--colorError)"
-					labelColor="var(--colorError)">
-					<ArrowCounterClockwise color="var(--colorError)" width="16" height="16" />
+					label="Reset"
+					labelColor="var(--colorError)"
+					shadowColor="var(--colorError)"
+					type="reset">
+					<ArrowCounterClockwise color="var(--colorError)" height="16" width="16" />
 				</Button>
 			</div>
 		</form>

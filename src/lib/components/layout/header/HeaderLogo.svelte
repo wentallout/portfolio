@@ -3,14 +3,14 @@
 	export let height = width;
 </script>
 
-<div aria-label="home" class="cover__logo">
+<div class="cover__logo" aria-label="home">
 	<img
 		id="personlogo"
 		class="official-logo rotate"
-		{width}
+		alt="2nd logo"
 		{height}
 		src="/images/coolLogo.svg"
-		alt="2nd logo" />
+		{width} />
 	<div class="logo__deco">went all out</div>
 </div>
 

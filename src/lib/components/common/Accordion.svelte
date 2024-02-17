@@ -19,7 +19,7 @@
 			{accordionSection}
 		</p>
 		<div class="icon caret" class:caret-active={isOpened}>
-			<CaretDown width="16" height="16" />
+			<CaretDown height="16" width="16" />
 		</div>
 	</button>
 

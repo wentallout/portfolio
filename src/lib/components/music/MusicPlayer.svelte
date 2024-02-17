@@ -62,7 +62,7 @@
 		currentTime = duration * (seekBarEle.value / 100);
 	}
 
-function handleVolume() {
+	function handleVolume() {
 		volume = volumeEle.value / 100;
 	}
 
@@ -74,14 +74,14 @@ function handleVolume() {
 
 <audio
 	bind:this={$audioPlayerEl}
+	autoplay="false"
 	crossorigin="anonymous"
+	src={$musicList[currentSongIndex].audio}
 	bind:muted
 	bind:currentTime
 	bind:duration
 	bind:volume
-	autoplay="false"
-	on:ended={next}
-	src={$musicList[currentSongIndex].audio} />
+	on:ended={next} />
 <div class="player">
 	<div class="current">
 		<div class="info">
@@ -96,64 +96,64 @@ function handleVolume() {
 
 	<div class="seekBar">
 		<div class="controls">
-			<button type="button" class="mp-btn other-btn" on:click={prev}>
-				<SkipBack width="24" height="24" color="var(--colorTextSecondary)" />
+			<button class="mp-btn other-btn" type="button" on:click={prev}>
+				<SkipBack color="var(--colorTextSecondary)" height="24" width="24" />
 			</button>
 
 			{#if $isPlaying}
-				<button type="button" class="mp-btn play-btn" on:click={pauseMusic}>
-					<Pause width="24" height="24" color="var(--colorBlack)" />
+				<button class="mp-btn play-btn" type="button" on:click={pauseMusic}>
+					<Pause color="var(--colorBlack)" height="24" width="24" />
 				</button>
 			{:else}
-				<button type="button" class="mp-btn play-btn" on:click={playMusic}>
-					<PlayFill width="24" height="24" color="var(--colorBlack)" />
+				<button class="mp-btn play-btn" type="button" on:click={playMusic}>
+					<PlayFill color="var(--colorBlack)" height="24" width="24" />
 				</button>
 			{/if}
 
-			<button type="button" class="mp-btn other-btn" on:click={next}>
-				<SkipForward width="24" height="24" color="var(--colorTextSecondary)" />
+			<button class="mp-btn other-btn" type="button" on:click={next}>
+				<SkipForward color="var(--colorTextSecondary)" height="24" width="24" />
 			</button>
 		</div>
 		<input
 			bind:this={seekBarEle}
-			on:input={handleSeekBar}
 			class="seekBar__control"
-			type="range"
-			min="0"
-			max="100"
-			step="any"
 			list="marker"
+			max="100"
+			min="0"
+			step="any"
+			type="range"
+			on:input={handleSeekBar}
 			bind:value={seekBarValue} />
 
 		<div class="volume">
-			<button type="button" class="mute__btn" on:click={mute} on:keydown={mute}>
+			<button class="mute__btn" type="button" on:click={mute} on:keydown={mute}>
 				{#if muted}
-					<SpeakerX width="24" height="24" color="var(--colorTextSecondary)" />
+					<SpeakerX color="var(--colorTextSecondary)" height="24" width="24" />
 				{:else}
-					<SpeakerHigh width="24" height="24" color="var(--colorText)" />
+					<SpeakerHigh color="var(--colorText)" height="24" width="24" />
 				{/if}
 			</button>
 			<input
 				bind:this={volumeEle}
-				on:input={handleVolume}
-				type="range"
 				id="volume-control"
-				min="0"
 				max="100"
+				min="0"
 				step="any"
-				value={volume * 100} />
+				type="range"
+				value={volume * 100}
+				on:input={handleVolume} />
 		</div>
 	</div>
 
 	<div class="song-list">
 		{#each $musicList as music, i}
 			<button
-				type="button"
 				class={i == currentSongIndex ? 'cs song-active' : 'cs song'}
+				type="button"
 				on:click={() => setSong(i)}>
 				<div class="song-name text-small">{music.name}</div>
-				<a class="download" href={$musicList[i].audio} download={$musicList[i].audio}>
-					<Download width="16" height="16" color="currentColor" />
+				<a class="download" download={$musicList[i].audio} href={$musicList[i].audio}>
+					<Download color="currentColor" height="16" width="16" />
 				</a>
 			</button>
 		{/each}

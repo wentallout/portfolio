@@ -11,18 +11,18 @@
 
 <CardListContainer>
 	<FigmaCard
-		href="https://www.figma.com/community/file/1248375255495415511"
-		title="Apple Design Resources - iOS 17 and iPadOS 17"
 		desc="Apple"
-		thumbnailUrl={iOSThumbnail} />
+		href="https://www.figma.com/community/file/1248375255495415511"
+		thumbnailUrl={iOSThumbnail}
+		title="Apple Design Resources - iOS 17 and iPadOS 17" />
 	<FigmaCard
-		title="UX Templates"
 		desc="BB Agency"
+		href="https://www.figma.com/community/file/1249989452135952332/UX-Templates"
 		thumbnailUrl={UXDeli}
-		href="https://www.figma.com/community/file/1249989452135952332/UX-Templates" />
+		title="UX Templates" />
 	<FigmaCard
-		title="Microsoft Fluent 2 Web"
 		desc="Microsoft"
+		href="https://www.figma.com/community/file/836828295772957889/Microsoft-Fluent-2-Web"
 		thumbnailUrl={FluentDesign}
-		href="https://www.figma.com/community/file/836828295772957889/Microsoft-Fluent-2-Web" />
+		title="Microsoft Fluent 2 Web" />
 </CardListContainer>

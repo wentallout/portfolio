@@ -20,12 +20,12 @@
 		<h1 class="post-title">{data.title}</h1>
 		<div class="post-info text-small">
 			<div class="info__section">
-				<CalendarBlank width="20" height="20" />
+				<CalendarBlank height="20" width="20" />
 				Last updated:
 				<Time relative timestamp={data.date} />
 			</div>
 			<div class="info__section">
-				<Pen width="20" height="20" />
+				<Pen height="20" width="20" />
 				Written by:
 				<ExLink href="https://www.linkedin.com/in/wentallout/">Dang Khoa (@wentallout)</ExLink>
 			</div>

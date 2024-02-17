@@ -30,7 +30,7 @@
 <svelte:window bind:scrollY />
 
 <VanishingHeader duration="300ms" offset={50} tolerance={5}>
-	<header class="header" bind:this={headerEle}>
+	<header bind:this={headerEle} class="header">
 		<ThemeSwitcher />
 		<nav class="nav pad" class:nav--scrolldown={scrollY > 0} aria-label="primary menu">
 			<ul class="nav-list">
@@ -43,34 +43,34 @@
 				{/each}
 
 				<button
+					class="hamburger"
 					aria-label="navigation button"
 					type="button"
-					class="hamburger"
 					on:click={openNav}
 					on:keydown={openNav}>
-					<List color="var(--colorText)" width="32" height="32" />
+					<List color="var(--colorText)" height="32" width="32" />
 				</button>
 			</ul>
 		</nav>
 	</header>
 </VanishingHeader>
 
-<div class="overlay" bind:this={navOverlayEle}>
+<div bind:this={navOverlayEle} class="overlay">
 	<button
+		class="closebtn"
 		aria-label="close nav menu"
 		type="button"
-		class="closebtn"
 		on:click={closeNav}
 		on:keydown={closeNav}>
-		<X color="var(--colorBlack)" width="32" height="32" />
+		<X color="var(--colorBlack)" height="32" width="32" />
 	</button>
 	<div class="overlay-content">
 		{#each navItems as navItem}
 			<a
 				class="overlay-item text-xl"
 				class:active-page--mobile={$page.url.pathname === `${navItem.path}`}
-				on:click={closeNav}
-				href={navItem.path}>
+				href={navItem.path}
+				on:click={closeNav}>
 				{navItem.title}
 			</a>
 		{/each}
@@ -185,7 +185,7 @@
 			justify-content: center;
 			align-items: center;
 
-			width: 100%;
+			flex-grow: 1;
 			line-height: 1;
 		}
 
@@ -199,8 +199,7 @@
 		display: flex;
 		justify-content: center;
 		align-items: center;
-		width: 100%;
-		height: 100%;
+		flex-grow: 1;
 	}
 
 	/* ---OVERLAY--- */

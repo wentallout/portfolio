@@ -1,5 +1,5 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="2rem" height="2rem" viewBox="0 0 24 24" {...$$props}
-	><rect width="2.8" height="12" x="1" y="6" fill="currentColor"
+<svg height="2rem" viewBox="0 0 24 24" width="2rem" xmlns="http://www.w3.org/2000/svg" {...$$props}
+	><rect fill="currentColor" height="12" width="2.8" x="1" y="6"
 		><animate
 			id="svgSpinnersBarsScale0"
 			attributeName="y"
@@ -14,7 +14,7 @@
 			dur="0.6s"
 			keySplines=".36,.61,.3,.98;.36,.61,.3,.98"
 			values="12;22;12" /></rect
-	><rect width="2.8" height="12" x="5.8" y="6" fill="currentColor"
+	><rect fill="currentColor" height="12" width="2.8" x="5.8" y="6"
 		><animate
 			attributeName="y"
 			begin="svgSpinnersBarsScale0.begin+0.1s"
@@ -28,7 +28,7 @@
 			dur="0.6s"
 			keySplines=".36,.61,.3,.98;.36,.61,.3,.98"
 			values="12;22;12" /></rect
-	><rect width="2.8" height="12" x="10.6" y="6" fill="currentColor"
+	><rect fill="currentColor" height="12" width="2.8" x="10.6" y="6"
 		><animate
 			attributeName="y"
 			begin="svgSpinnersBarsScale0.begin+0.2s"
@@ -42,7 +42,7 @@
 			dur="0.6s"
 			keySplines=".36,.61,.3,.98;.36,.61,.3,.98"
 			values="12;22;12" /></rect
-	><rect width="2.8" height="12" x="15.4" y="6" fill="currentColor"
+	><rect fill="currentColor" height="12" width="2.8" x="15.4" y="6"
 		><animate
 			attributeName="y"
 			begin="svgSpinnersBarsScale0.begin+0.3s"
@@ -56,7 +56,7 @@
 			dur="0.6s"
 			keySplines=".36,.61,.3,.98;.36,.61,.3,.98"
 			values="12;22;12" /></rect
-	><rect width="2.8" height="12" x="20.2" y="6" fill="currentColor"
+	><rect fill="currentColor" height="12" width="2.8" x="20.2" y="6"
 		><animate
 			id="svgSpinnersBarsScale1"
 			attributeName="y"

@@ -11,9 +11,9 @@
 	}
 </script>
 
-<ExLink {href} style="display:flex">
+<ExLink style="display:flex" {href}>
 	<div class="fcard">
-		<img class="fcard__thumbnail" src={thumbnailUrl} alt="" />
+		<img class="fcard__thumbnail" alt="" src={thumbnailUrl} />
 
 		<div class="fcard__info">
 			<div class="fcard__title text-small">{title}</div>

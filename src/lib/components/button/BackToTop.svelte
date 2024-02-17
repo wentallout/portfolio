@@ -27,7 +27,7 @@
 
 <svelte:window on:scroll={handleOnScroll} />
 
-<button class="bck2top text-xs" type="button" on:click={goTop} on:keyup={goTop} class:hidden>
+<button class="bck2top text-xs" class:hidden type="button" on:click={goTop} on:keyup={goTop}>
 	<UpIcon />
 	<div class="bck2top__text">Top</div>
 </button>

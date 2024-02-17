@@ -28,34 +28,34 @@
 	<div class="converter">
 		<div class="input-group">
 			<button
-				disabled={!pxInput}
 				class="converter__copy"
+				disabled={!pxInput}
 				type="button"
 				on:click={copyToClipboard(pxInput)}>
-				<Copy width="24" height="24" />
+				<Copy height="24" width="24" />
 			</button>
-			<input class="converter__input" bind:value={pxInput} type="number" name="px" id="px" />
+			<input id="px" name="px" class="converter__input" type="number" bind:value={pxInput} />
 			<label class="converter__label" for="px">PX</label>
 		</div>
 
 		<div class="input-group">
 			<button
-				disabled={!remInput}
 				class="converter__copy"
+				disabled={!remInput}
 				type="button"
 				on:click={copyToClipboard(remInput)}>
-				<Copy width="24" height="24" />
+				<Copy height="24" width="24" />
 			</button>
 			<input
-				class="converter__input"
+				id="rem"
+				name="rem"
 				style="color:var(--colorPrimary);"
+				class="converter__input"
+				type="number"
 				bind:value={remInput}
 				on:input={() => {
 					pxInput = remInput * baseFontSize;
-				}}
-				type="number"
-				name="rem"
-				id="rem" />
+				}} />
 			<label class="converter__label" for="rem">REM</label>
 		</div>
 	</div>

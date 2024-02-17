@@ -10,7 +10,9 @@ categories:
 
 ⭐NEW - [css-color-palette-generator](https://www.hover.dev/css-color-palette-generator)
 
-[goodpalette](https://goodpalette.io/) beautiful color palettes for UI (Primary + Accent + Neutral).
+[colorffy](https://colorffy.com)
+
+[goodpalette](https://goodpalette.io) beautiful color palettes for UI (Primary + Accent + Neutral).
 
 [Colormind.io](http://colormind.io)  
 
@@ -55,6 +57,10 @@ https://uigradients.com
 https://www.gradients.io
 
 https://colorspark.app/gradient
+
+## Palette Previewer
+
+⭐NEW [palettify.co](https://palettify.co)
 
 
 

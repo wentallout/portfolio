@@ -9,8 +9,8 @@
 
 <section>
 	<SectionTitle
-		sectionTitle="Services"
 		sectionDesc="I offer cost-effective web services that deliver outstanding value"
+		sectionTitle="Services"
 		let:sectionIcon>
 		<HandHeart {...sectionIcon} />
 	</SectionTitle>
@@ -42,19 +42,19 @@
 					components.
 					<br />
 					<a
-						rel="external nofollow noopener noreferrer"
-						target="_blank"
 						class="link"
-						href="https://kit.svelte.dev/docs/performance">SvelteKit out-of-the-box performance</a>
+						href="https://kit.svelte.dev/docs/performance"
+						rel="external nofollow noopener noreferrer"
+						target="_blank">SvelteKit out-of-the-box performance</a>
 				</li>
 			</ul>
 
 			<a class="service__btn" href="https://cal.com/wentallout/web">
 				<Button
-					label="Book a meeting"
-					labelColor="var(--colorBlack)"
 					backgroundColor="var(--colorPrimary)"
-					glowColor="var(--colorPrimary)" />
+					glowColor="var(--colorPrimary)"
+					label="Book a meeting"
+					labelColor="var(--colorBlack)" />
 			</a>
 		</div>
 
@@ -82,10 +82,10 @@
 
 			<a class="service__btn" href="https://cal.com/wentallout/web">
 				<Button
-					label="Book a meeting"
-					labelColor="var(--colorBlack)"
 					backgroundColor="var(--colorPrimary)"
-					glowColor="var(--colorPrimary)" />
+					glowColor="var(--colorPrimary)"
+					label="Book a meeting"
+					labelColor="var(--colorBlack)" />
 			</a>
 		</div>
 	</div>

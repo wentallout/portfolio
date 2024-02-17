@@ -4,36 +4,36 @@
 </script>
 
 <Toc
-	breakpoint="992"
-	flashClickedHeadingsFor="1500"
-	scrollBehavior="smooth"
-	keepActiveTocItemInView={false}
-	--toc-mobile-bg="var(--colorBgContainer)"
-	--toc-mobile-btn-bg="var(--colorPrimary)"
-	--toc-mobile-bottom="100px"
-	--toc-mobile-right="0"
-	--toc-mobile-btn-border-radius="100%"
-	--toc-mobile-btn-padding="0px"
+	--activeHeadingScrollOffset="var(--scroll-padding)"
+	--toc-active-bg="transparent"
+	--toc-active-border-radius="0"
+	--toc-active-color="var(--colorPrimary)"
+	--toc-active-font-weight="400"
+	--toc-desktop-bg="transparent"
+	--toc-desktop-sticky-top="var(--scroll-padding)"
 	--toc-font-size="calc(var(--fontSizeSmall)*90/100)"
-	--toc-padding="var(--spaceM)"
 	--toc-li-border-radius="0"
+	--toc-li-color="var(--colorTextSecondary)"
 	--toc-li-hover-bg="transparent"
 	--toc-li-hover-color="var(--colorPrimaryHover)"
-	--toc-desktop-bg="transparent"
 	--toc-li-padding="var(--space2XS) 0"
-	--toc-li-color="var(--colorTextSecondary)"
-	--toc-active-color="var(--colorPrimary)"
-	--toc-active-bg="transparent"
-	--toc-active-font-weight="400"
-	--toc-active-border-radius="0"
-	--activeHeadingScrollOffset="var(--scroll-padding)"
-	--toc-desktop-sticky-top="var(--scroll-padding)">
-	<span class="toc-title text-base" slot="title">
+	--toc-mobile-bg="var(--colorBgContainer)"
+	--toc-mobile-bottom="100px"
+	--toc-mobile-btn-bg="var(--colorPrimary)"
+	--toc-mobile-btn-border-radius="100%"
+	--toc-mobile-btn-padding="0px"
+	--toc-mobile-right="0"
+	--toc-padding="var(--spaceM)"
+	breakpoint="992"
+	flashClickedHeadingsFor="1500"
+	keepActiveTocItemInView={false}
+	scrollBehavior="smooth">
+	<span slot="title" class="toc-title text-base">
 		<ListBullets color="var(--colorText)" />
 		Contents</span>
 
-	<span class="open-toc-icon" slot="open-toc-icon">
-		<ListBullets width="16" height="16" color="#000" />
+	<span slot="open-toc-icon" class="open-toc-icon">
+		<ListBullets color="#000" height="16" width="16" />
 	</span>
 </Toc>
 

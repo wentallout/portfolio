@@ -14,16 +14,16 @@
 <section>
 	<Giscus
 		id="comments"
-		repo="wentallout/portfolio"
-		repoId="R_kgDOH5VoSQ"
 		{category}
 		{categoryId}
-		mapping="title"
-		strict="0"
-		reactionsEnabled="1"
 		emitMetadata="1"
 		inputPosition="top"
-		theme="transparent_dark"
 		lang="en"
-		loading="lazy" />
+		loading="lazy"
+		mapping="title"
+		reactionsEnabled="1"
+		repo="wentallout/portfolio"
+		repoId="R_kgDOH5VoSQ"
+		strict="0"
+		theme="transparent_dark" />
 </section>

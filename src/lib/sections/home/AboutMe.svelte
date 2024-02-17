@@ -31,7 +31,7 @@
 					</p>
 				</div>
 			</div>
-			<img class="about__img" src={AboutMeImg} alt="about Khoa" />
+			<img class="about__img" alt="about Khoa" src={AboutMeImg} />
 		</div>
 	</section>
 </SaosContainer>

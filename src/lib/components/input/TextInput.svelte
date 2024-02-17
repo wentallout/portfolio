@@ -14,7 +14,7 @@
 </script>
 
 {#if label}
-	<label for={label} class="label text-small">{label}</label>
+	<label class="label text-small" for={label}>{label}</label>
 {/if}
 <div class="input-container text-small">
 	{#if $$slots.icon}
@@ -24,15 +24,15 @@
 	{/if}
 
 	<input
+		id={label}
+		{name}
+		class="input"
 		list={list || null}
 		{placeholder}
-		class="input"
-		{type}
-		{name}
-		id={label}
 		required
-		on:input
-		{value} />
+		{type}
+		{value}
+		on:input />
 
 	{#if list}
 		<datalist id={list}>

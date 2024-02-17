@@ -1,12 +1,10 @@
 <script>
 	import SaosContainer from '$components/common/SaosContainer.svelte';
-
 	import Frontend from '$lib/assets/images/home/frontend.svg?component';
 	import Navigation from '$lib/assets/images/home/navigation.svg?component';
 	import GraphicDesign from '$lib/assets/images/home/graphicDesign.svg?component';
 	import Process from '$lib/assets/images/home/process.svg?component';
 	import SectionTitle from '$sections/SectionTitle.svelte';
-
 	import Toolbox from '~icons/ph/toolbox';
 </script>
 
@@ -20,7 +18,7 @@
 			<div class="tool__block">
 				<div class="block__section">
 					<div class="section__svg">
-						<Process width="120" height="120" fill="var(--colorText)" alt="process" />
+						<Process alt="process" fill="var(--colorText)" height="120" width="120" />
 					</div>
 					<div class="section__text">
 						<h3 class="block__title text-base">Frameworks</h3>
@@ -32,7 +30,7 @@
 
 				<div class="block__section">
 					<div class="section__svg">
-						<Navigation width="120" height="120" fill="var(--colorText)" alt="navigation" />
+						<Navigation alt="navigation" fill="var(--colorText)" height="120" width="120" />
 					</div>
 					<div class="section__text">
 						<h3 class="block__title text-base">Prototyping</h3>
@@ -43,7 +41,7 @@
 
 				<div class="block__section">
 					<div class="section__svg">
-						<GraphicDesign width="120" height="120" fill="var(--colorText)" alt="graphic design" />
+						<GraphicDesign alt="graphic design" fill="var(--colorText)" height="120" width="120" />
 					</div>
 					<div class="section__text">
 						<h3 class="block__title text-base">Design</h3>
@@ -55,7 +53,7 @@
 
 				<div class="block__section">
 					<div class="section__svg">
-						<Frontend width="120" height="120" fill="var(--colorText)" alt="frontend" />
+						<Frontend alt="frontend" fill="var(--colorText)" height="120" width="120" />
 					</div>
 					<div class="section__text">
 						<h3 class="block__title text-base">Frontend</h3>

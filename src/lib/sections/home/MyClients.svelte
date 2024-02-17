@@ -16,11 +16,11 @@
 			</SectionTitle>
 			<div class="clients__logo">
 				<ExLink href="https://www.fpt-software.com">
-					<img class="logo" loading="lazy" decoding="async" src={fpt} alt="FPT Software" />
+					<img class="logo" alt="FPT Software" decoding="async" loading="lazy" src={fpt} />
 				</ExLink>
 
 				<ExLink href="https://nashtechglobal.com">
-					<img class="logo" loading="lazy" decoding="async" src={nashtech} alt="NashTech" />
+					<img class="logo" alt="NashTech" decoding="async" loading="lazy" src={nashtech} />
 				</ExLink>
 			</div>
 		</div>

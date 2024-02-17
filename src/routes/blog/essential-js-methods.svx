@@ -1,0 +1,299 @@
+---
+title: Essential JS methods
+date: 2024-02-07
+categories:
+    - frontend
+---
+
+## Function throttling
+
+```js
+/** Function throttling timer version */
+function throttle(callback: Function, delay: number) {
+   let timer: number | null
+   return function () {
+     if (timer) return
+     const args = arguments //Use closure to save parameter array
+     timer = setTimeout(() => {
+       callback.apply(null, args)
+       timer = null
+     }, delay)
+   }
+}
+
+```
+
+## URL decoding & encoding
+
+```js
+/** Encode URL */
+function encodeURL(url: string, isComponent = true): string {
+   return isComponent ? encodeURIComponent(url) : encodeURI(url)
+}
+
+/** Decode URL */
+function decodeURL(url: string, isComponent = true): string {
+   return isComponent ? decodeURIComponent(url) : decodeURI(url)
+}
+
+```
+
+## Get global CSS variables using 📡 JavaScript
+
+```js
+/**
+ * @description Use JS to get global css variables
+ * @param cssVariableName variable name
+ * @returns {string} variable value
+*/
+function getCssVariableValue(cssVariableName: string): string {
+   return getComputedStyle(document.documentElement).getPropertyValue(cssVariableName)
+}
+```
+
+## Set global CSS variables 💪 with JS
+
+```js
+/**
+  * @description Set global CSS variables with JS
+  * @param {string} cssVariableName variable name
+  * @param {string} cssVariableValue variable value
+  */
+function setCssVariableValue(cssVariableName: string, cssVariableValue: string): void {
+   document.documentElement.style.setProperty(cssVariableName, cssVariableValue)
+}
+```
+
+## Clear all cookies
+
+```js
+/**
+ * @description clear all cookies
+ */
+function clearCookie(): void {
+   const keyList = document.cookie.match(/[^ =;]+(?=\=)/g) as string[] | null
+   keyList && keyList.forEach(key => (document.cookie = `${key}=0;path=/;expires=${new Date(0).toUTCString()}`))
+}
+```
+
+## Clear all project caches
+
+```js
+/**
+ * @description Clear all project caches
+ */
+function clearCache(): void {
+  window.localStorage.clear()
+  window.sessionStorage.clear()
+  const keyList = document.cookie.match(/[^ =;]+(?=\=)/g) as string[] | null
+  keyList && keyList.forEach(key => (document.cookie = `${key}=0;path=/;expires=${new Date(0).toUTCString()}`))
+}
+```
+
+## Get URL query parameters by name 
+
+```js
+/**
+  * @description Get URL query parameters by name
+  * @param {string} key The key of the query parameter that needs to be obtained
+  * @param {string} url The link that needs to be parsed, the default is window.location.href
+  * @returns {string | null} obtained value corresponding to key
+  */
+function getQueryByName(key, url = window.location.href) {
+   const queryNameRegExp = new RegExp(`[?&]${key}=([^&]*)(?:&|$)`)
+   const queryNameMatch = url.match(queryNameRegExp)
+   return queryNameMatch ? decodeURIComponent(queryNameMatch[1]) : null
+}
+```
+
+## Login page time prefix
+
+```js
+/**
+  * @description time prefix of login page
+  * @returns {string} time prefix
+  */
+function timeFix(): string {
+   const time = new Date()
+   const hour = time.getHours()
+   return hour < 9 ? 'Good morning' : hour <= 11 ? 'Good morning' : hour <= 13 ? 'Good afternoon' : hour < 20 ? 'Good afternoon' : 'Good evening'
+}
+```
+
+## Welcome message on login page
+
+```js
+/**
+  * @description Welcome message on the login page
+  * @returns {string} random welcome message
+  */
+function welcome(): string {
+   const list = ['Long time no see, I miss you so much! ', 'Wait until the stars go to sleep before I miss you', 'We are open today']
+   return list[Math.floor(Math.random() * list.length)]
+}
+```
+
+## Recursive deep copy
+
+```js
+/**
+  * @description Make a deep copy of the incoming data and return it
+  * @param {any} source data source
+  * @returns {any} copied data
+  */
+function deepClone(source: any): any {
+   if (!source || typeof source !== 'object') return source
+   if (source instanceof Date) return new Date(source)
+   if (source instanceof RegExp) return new RegExp(source)
+   const target = Array.isArray(source) ? ([] as Record<any, any>) : ({} as Record<any, any>)
+   for (const key in source) target[key] = typeof source[key] === 'object' ? deepClone(source[key]) : source[key]
+   return target
+}
+
+```
+
+## Randomly generate a UUID
+
+```js
+/**
+  * @description Randomly generate a UUID
+  * @returns {string} generated uuid
+  */
+function getRandomUUID(): string {
+   const tempURL = URL.createObjectURL(new Blob())
+   const uuidStr = tempURL.toString()
+   const separator = uuidStr.includes('/') ? '/' : ':'
+   URL.revokeObjectURL(tempURL)
+   return uuidStr.substring(uuidStr.lastIndexOf(separator) + 1)
+}
+
+function getRandomUUID(): string {
+   const fn = (): string => (((1 + Math.random()) * 0x10000) | 0).toString(16).substring(1)
+   return fn() + fn() + '-' + fn() + '-' + fn() + '-' + fn() + '-' + fn() + fn() + fn()
+}
+```
+
+## Random boolean
+
+```js
+/**
+  * @description random boolean value
+  * @returns {boolean} true | false
+  */
+function getRandomBoolean(): boolean {
+   return Math.random() > 0.5
+}
+```
+
+## Reverse a string
+
+```js
+/**
+  * @description reverse string
+  * @param {string} str string
+  * @returns {string} reversed string
+  */
+function reverseString(str: string): string {
+   return str.split('').reverse().join('')
+}
+```
+
+## Randomly generate hex colors
+
+```js
+/**
+  * @description Randomly generates a color string in Hex format
+  * @returns {string} Color string in Hex format
+  */
+function getRandomHexColor(): string {
+   return `#${Math.floor(Math.random() * 0xffffff).toString(16)}`
+}
+
+```
+
+## Get the true type of a variable
+
+```js
+/**
+  * @description Get the real type of the variable
+  * @param {any} variable variable of any type
+  * @returns {string} variable type
+  */
+function getRawType(variable: any): string {
+   return Object.prototype.toString.call(variable).split(' ')[1].replace(']', '').toLowerCase()
+}
+```
+
+## Copy text to clipboard
+
+```js
+/**
+  * @description Copy text to clipboard
+  * @param {string} text The copied text
+  */
+function copyText(text: string): void {
+   // Whether to support navigator.clipboard attribute
+   const isClipboardApiSupported = window.navigator && window.navigator.clipboard
+   if (isClipboardApiSupported) {
+     window.navigator.clipboard.writeText(text)
+   } else {
+     const textarea = document.createElement('textarea')
+     textarea.readOnly = true
+     textarea.value = text
+     textarea.style.position = 'absolute'
+     textarea.style.top = '-9999px'
+     textarea.style.left = '-9999px'
+     document.body.appendChild(textarea)
+     textarea.select()
+     document.execCommand('copy')
+     textarea.remove()
+   }
+}
+```
+
+## Scroll to top or bottom
+
+```js
+/**
+  * @description scroll to top
+  */
+function scrollToTop(element: HTMLElement): void {
+   element.scrollIntoView({ behavior: 'smooth', block: 'start' })
+}
+
+/**
+ * @description scroll to bottom
+ */
+function scrollToBottom(element: HTMLElement): void {
+  element.scrollIntoView({ behavior: 'smooth', block: 'end' })
+}
+```
+
+## Object common methods
+
+```js
+const obj = { a: 1, b: 2, c: 3, d: 4 }
+//Object.keys()
+// Will return an array consisting of the given object's own enumerable properties
+Object.keys(obj) // ['a', 'b', 'c', 'd']
+//Object.values()
+// Returns an array of all enumerable property values of the given object itself
+Object.values(obj) // [1, 2, 3, 4]
+//Object.entries()
+// Returns an array of key-value pairs for the given object's own enumerable properties
+Object.entries(obj) // [['a', 1], ['b', 2], ['c', 3], ['d', 4]]
+//Object.fromEntries()
+//Convert the list of key-value pairs into an object, which is the reverse operation of Object.entries()
+Object.fromEntries( [['a', 1], ['b', 2]]) // { a: 1, b: 2 }
+// hasOwnProperty()
+// Returns a Boolean value indicating whether the object has the specified attribute in its own properties (that is, whether it has the specified key)
+obj.hasOwnProperty('a') // true
+obj.hasOwnProperty('fff') // false
+//Object.assign()
+// Used to copy the values of all enumerable properties from one or more source objects to the target object. It will return the target object.
+const target = { a: 1, b: 2 }
+const source = { b: 4, c: 5 }
+const result = Object.assign(target, source) // { ...target, ...source } has the same effect
+console.log(result) // {a: 1, b: 4, c: 5}
+```
+

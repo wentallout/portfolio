@@ -38,7 +38,7 @@
 
 <svelte:window bind:scrollY={y} />
 
-<div use:setTransitionDuration class={headerClass}>
+<div class={headerClass} use:setTransitionDuration>
 	<slot />
 </div>
 

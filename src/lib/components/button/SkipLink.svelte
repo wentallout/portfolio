@@ -1,4 +1,4 @@
-<a class="skip-link" tabindex="0" href="#main-content"> Skip to main content </a>
+<a class="skip-link" href="#main-content" tabindex="0"> Skip to main content </a>
 
 <style>
 	.skip-link {

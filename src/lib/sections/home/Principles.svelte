@@ -6,8 +6,8 @@
 
 <section>
 	<SectionTitle
-		sectionTitle="My Design Principles"
 		sectionDesc="These are my own personal guidelines for a good design. I hope to improve upon these in the future. You can call it S.T.I.R."
+		sectionTitle="My Design Principles"
 		let:sectionIcon>
 		<Scales {...sectionIcon} />
 	</SectionTitle>
