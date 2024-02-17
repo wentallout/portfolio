@@ -34,11 +34,6 @@
 					<div class="section__desc">{output}</div>
 				</div>
 			</div>
-
-			<div class="indicator text-small">
-				<ArrowRight color="inherit" height="24" width="24" />
-				Read
-			</div>
 		</div>
 	</article>
 </a>
@@ -48,6 +43,7 @@
 		display: flex;
 		position: relative;
 		width: 100%;
+		height: 300px;
 		flex-direction: column;
 		transition: var(--transition);
 		overflow: hidden;
@@ -57,7 +53,6 @@
 		background-color: var(--colorBgContainer);
 
 		&:hover {
-			background-color: var(--colorBgElevated);
 			box-shadow: -5px 5px var(--colorPrimaryHover);
 			transform: translate(5px, -5px);
 		}
@@ -92,7 +87,7 @@
 
 	@media (min-width: 768px) {
 		.project__info {
-			padding: var(--spaceM) var(--spaceXL);
+			padding: var(--spaceS) var(--spaceXL);
 		}
 	}
 
@@ -102,13 +97,20 @@
 	}
 
 	.project__thumbnail {
-		height: 300px;
+		/* height: 300px;
+		width: auto;
+		object-fit: cover;
+		aspect-ratio: 1/1; */
+
+		height: 100%; /* Fill the card vertically */
+		width: auto; /* Maintain aspect ratio */
+		object-fit: cover; /* Fill the box, covering any empty space */
 		aspect-ratio: 1/1;
+
 		margin-bottom: auto;
 		object-fit: cover;
 		background-color: transparent;
 		position: relative;
-		padding: 8px;
 		border-radius: var(--borderRadius);
 	}
 
@@ -136,23 +138,5 @@
 
 	.section__desc {
 		max-width: var(--text-width);
-	}
-
-	.indicator {
-		margin-top: auto;
-		font-weight: var(--fontWeightSmall);
-		display: flex;
-		flex-direction: row;
-		align-items: center;
-		gap: var(--spaceXS);
-		color: var(--colorText);
-		transition: var(--transition);
-		opacity: 0;
-	}
-
-	.project:hover .indicator {
-		padding-left: 0.5rem;
-		color: var(--colorPrimary);
-		opacity: 1;
 	}
 </style>
