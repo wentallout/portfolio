@@ -34,6 +34,7 @@
 		line-height: normal;
 		position: relative;
 		overflow: hidden;
+		height: 40px;
 	}
 
 	.marquee {
