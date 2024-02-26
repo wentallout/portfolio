@@ -10,7 +10,7 @@
 			<div class="hero__block">
 				<div class="hero__name text-2xl">
 					Khoa is a
-					<div class="focus">UI/UX Designer</div>
+					<div class="focus">Designer</div>
 					<div class="focus">+ Developer</div>
 				</div>
 				<div class="hero__text text-base">

@@ -25,13 +25,13 @@ const facebookPageName = 'wentallout';
 const facebookAuthorPageName = 'wentallout.uiux';
 
 const website = {
-	author: 'Nguyen Dang Khoa',
+	author: 'Khoa Nguyen',
 	ogLanguage: 'en_US',
 	siteLanguage: 'en-US',
 	contactEmail: 'wentallout@gmail.com',
 
-	siteTitle: 'Khoa UI/UX - Design and Develop',
-	siteShortTitle: 'Khoa UI/UX',
+	siteTitle: 'Khoa Nguyen - Design and Develop',
+	siteShortTitle: 'Khoa Nguyen - Design and Develop',
 	siteUrl: 'https://wentallout.io.vn',
 	icon: 'static/icon-512.png',
 	backgroundColor: '#121212',
