@@ -8,7 +8,6 @@
 	import { ParaglideJS } from '@inlang/paraglide-js-adapter-sveltekit';
 	import { i18n } from '$lib/i18n.js';
 	import Misc from '$sections/Misc.svelte';
-	import { onMount } from 'svelte';
 
 	onNavigate(() => {
 		if (!document.startViewTransition) return;
