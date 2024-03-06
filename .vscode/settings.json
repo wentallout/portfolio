@@ -8,5 +8,10 @@
 		}
 	],
 	"svg.preview.background": "transparent",
-	"dotenv.enableAutocloaking": false
+	"dotenv.enableAutocloaking": false,
+	"workbench.colorCustomizations": {
+		"activityBar.background": "#133507",
+		"titleBar.activeBackground": "#1B4A0A",
+		"titleBar.activeForeground": "#F4FDF1"
+	}
 }
