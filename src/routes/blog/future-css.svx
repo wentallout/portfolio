@@ -66,3 +66,15 @@ p {
   overflow: hidden;
 }
 ```
+
+## CSS Warpped 2023
+
+https://developer.chrome.com/blog/css-wrapped-2023
+
+## Gradient
+
+https://gradient.style
+
+## Learn CSS 
+
+https://web.dev/learn/css

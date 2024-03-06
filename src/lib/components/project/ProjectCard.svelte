@@ -43,7 +43,7 @@
 		display: flex;
 		position: relative;
 		width: 100%;
-		height: 300px;
+
 		flex-direction: column;
 		transition: var(--transition);
 		overflow: hidden;
@@ -97,12 +97,7 @@
 	}
 
 	.project__thumbnail {
-		/* height: 300px;
-		width: auto;
-		object-fit: cover;
-		aspect-ratio: 1/1; */
-
-		height: 100%; /* Fill the card vertically */
+		height: 300px; /* Fill the card vertically */
 		width: auto; /* Maintain aspect ratio */
 		object-fit: cover; /* Fill the box, covering any empty space */
 		aspect-ratio: 1/1;
@@ -112,6 +107,13 @@
 		background-color: transparent;
 		position: relative;
 		border-radius: var(--borderRadius);
+	}
+
+	@media (min-width: 992px) {
+		.project__thumbnail {
+			height: 100%;
+			max-width: 300px;
+		}
 	}
 
 	.info__section {
