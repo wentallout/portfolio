@@ -7,11 +7,10 @@
 }
 
 @font-face {
-	font-family: 'Gilroy';
+	font-family: 'Canela';
 	font-display: swap;
 	font-style: normal;
-	font-weight: 400;
-	src: url('/fonts/Gilroy.woff2') format('woff2');
+	src: url('/fonts/CanelaDeck-Medium.woff2') format('woff2');
 }
 
 pre code {
@@ -24,7 +23,7 @@ pre code {
 
 :root {
 	--fontNormal: 'Inter', 'Inter override';
-	--fontFancy: 'Gilroy', 'Gilroy override';
+	--fontFancy: 'Canela', 'Canela override';
 
 	/* FONT SIZE */
 	--fontSizeXS: clamp(0.9rem, calc(0.9rem + -0.05vw), 0.92rem);

@@ -1,5 +1,6 @@
 <script>
 	import SectionDesc from '$sections/SectionDesc.svelte';
+	import { onMount } from 'svelte';
 
 	export let sectionTitle = '';
 	export let sectionDesc = '';
@@ -7,6 +8,23 @@
 	let sectionIcon = {
 		color: 'var(--colorTextTertiary)'
 	};
+
+	let titleEle;
+
+	onMount(() => {
+		document.addEventListener('mousemove', function (event) {
+			const titleRect = titleEle.getBoundingClientRect();
+			const mouseX = event.clientX - titleRect.left;
+			const mouseXFromCenter = mouseX - titleRect.width / 2;
+			const limitedMouse = Math.max(-40, Math.min(40, mouseXFromCenter));
+
+			const slowDownFactor = 0.5; // Adjust the slow down factor as needed
+			const adjustedMouse = limitedMouse * slowDownFactor;
+
+			titleEle.style.setProperty('--before-top', `${-adjustedMouse}px`);
+			titleEle.style.setProperty('--before-left', `${-adjustedMouse}px`);
+		});
+	});
 </script>
 
 <div class="section">
@@ -14,7 +32,9 @@
 		<div class="section__icon text-large">
 			<slot {sectionIcon} />
 		</div>
-		<h2 class="section__text text-large" data-title={sectionTitle}>{sectionTitle}</h2>
+		<h2 bind:this={titleEle} class="section__text text-large" data-title={sectionTitle}>
+			{sectionTitle}
+		</h2>
 	</div>
 
 	{#if sectionDesc !== ''}
@@ -50,20 +70,40 @@
 		font-family: var(--fontFancy);
 		color: var(--colorText);
 		position: relative;
+		--before-left: 4px;
 	}
 
 	.section__text::before {
 		content: attr(data-title);
 		height: 100%;
-		left: -2px;
-		top: 2px;
-		-webkit-text-fill-color: var(--colorBgLayout);
-		-webkit-text-stroke: 1px var(--colorTextQuaternary);
+		width: 100vw;
+		left: 0px;
+		top: 80%;
+		-webkit-text-fill-color: transparent;
+		-webkit-text-stroke: 1px var(--colorText);
 		color: var(--colorText);
 		display: block;
 		position: absolute;
 		width: 100%;
 		z-index: -1;
-		opacity: 1;
+		opacity: 0.1;
+		font-weight: 100;
+		/* transform: rotateX(180deg); */
+
+		animation: textAni 5s linear infinite;
+	}
+
+	@keyframes textAni {
+		0% {
+			top: 80%;
+		}
+
+		50% {
+			top: -80%;
+		}
+
+		100% {
+			top: 80%;
+		}
 	}
 </style>
