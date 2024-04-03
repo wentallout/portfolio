@@ -15,10 +15,11 @@
 </script>
 
 <Breadcrumb />
-<header class="container full-width">
+<header class="blog full-width">
+	<div class="blog__bg"></div>
 	<div class="pad skew">
-		<h1 class="post-title">{data.title}</h1>
-		<div class="post-info text-small">
+		<h1 class="blog__title">{data.title}</h1>
+		<div class="blog__info text-small">
 			<div class="info__section">
 				<CalendarBlank height="20" width="20" />
 				Last updated:
@@ -34,7 +35,7 @@
 			{#if data.categories.length}
 				<div class="category">
 					{#each data.categories as category}
-						<a class="tag__content" href="/blog/category/{category}">
+						<a class="category__tag" href="/blog/category/{category}">
 							<Tag>
 								{category}
 							</Tag>
@@ -47,11 +48,24 @@
 </header>
 
 <style>
-	.tag__content {
+	.blog__bg {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background-image: url('/images/patterns/wao-pattern.svg');
+		background-repeat: repeat;
+		opacity: 0.2;
+		z-index: -9999;
+		filter: grayscale(1);
+	}
+
+	.category__tag {
 		text-decoration: none !important;
 	}
 
-	.container {
+	.blog {
 		padding-top: var(--spaceXL);
 		padding-bottom: var(--spaceXL);
 		position: relative;
@@ -61,7 +75,7 @@
 		background-repeat: no-repeat;
 	}
 
-	.post-info {
+	.blog__info {
 		width: 100%;
 		display: flex;
 		flex-direction: row;
@@ -69,12 +83,19 @@
 		gap: var(--spaceM);
 		margin-bottom: var(--spaceS);
 		color: var(--colorTextSecondary);
+
+		& .info__section {
+			display: flex;
+			flex-direction: row;
+			gap: 4px;
+			align-items: center;
+		}
 	}
 
-	.info__section {
-		display: flex;
-		flex-direction: row;
-		gap: 4px;
-		align-items: center;
+	.blog__title {
+		text-shadow:
+			0 2px 2px #dfdfdf,
+			-2px 5px 1px #b8b8b8,
+			-4px 8px 0px #979797;
 	}
 </style>

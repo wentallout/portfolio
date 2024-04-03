@@ -12,7 +12,7 @@
 
 <a href={linkToDetail}>
 	<article class="project">
-		<img class="project__thumbnail" alt="" src={thumbnail} />
+		<img class="project__thumbnail" alt="" loading="lazy" src={thumbnail} />
 
 		<div class="project__info">
 			<div class="title">

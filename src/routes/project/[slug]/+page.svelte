@@ -2,7 +2,7 @@
 	import PostContainer from '$components/common/PostContainer.svelte';
 	import SEO from '$components/seo/SEO.svelte';
 	import Comments from '$components/comments/Comments.svelte';
-	import PostInfo from '$components/blog/PostInfo.svelte';
+	import PostInfo from '$components/blog/BlogInfo.svelte';
 	export let data;
 </script>
 

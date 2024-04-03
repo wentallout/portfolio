@@ -45,7 +45,7 @@
 
 <nav bind:this={breadcrumbEl} id="breadcrumb" class="breadcrumb text-small" aria-label="breadcrumb">
 	{#each crumbs as c, i}
-		{#if i == crumbs.length - 1}
+		{#if i === crumbs.length - 1}
 			<div class="breadcrumb__unclickable">
 				{c.label}
 			</div>
