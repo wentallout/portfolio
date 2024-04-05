@@ -29,11 +29,11 @@ html {
 	}
 }
 
-@media (hover: hover) and (pointer: fine) {
-	/* body {
-		cursor: var(--cursorDefault);
-	} */
+body {
+	cursor: var(--cursorDefault);
+}
 
+@media (hover: hover) and (pointer: fine) {
 	p,
 	h1,
 	h2,
