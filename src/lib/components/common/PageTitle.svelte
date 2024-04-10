@@ -49,7 +49,7 @@
 		flex-direction: row;
 		justify-content: center;
 		align-items: center;
-		gap: 24px;
+		gap: var(--spaceM);
 	}
 
 	.title {
@@ -89,7 +89,7 @@
 		width: 100%;
 		height: 100%;
 		object-fit: cover;
-		animation: pageTitleAni 50s linear;
+		animation: pageTitleAni 50s infinite ease-in-out;
 		filter: grayscale() brightness(0.3);
 		object-position: top;
 	}

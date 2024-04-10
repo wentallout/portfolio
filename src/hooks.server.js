@@ -1,7 +1,23 @@
 import { sequence } from '@sveltejs/kit/hooks';
 
 import { i18n } from '$lib/i18n.js';
-export const handle = i18n.handle();
+export const handle = i18n.handle(async (event, resolve) => {
+	const { url, request, locals } = event;
+
+	// check for Referer header to know where the user is navigating from
+	const referer = request.headers.get('Referer');
+	if (referer) {
+		const urlReferer = new URL(referer);
+		if (urlReferer.origin === url.origin) {
+			locals.internalReferer = urlReferer;
+		}
+	}
+
+	await resolve(event, {
+		transformPageChunk: ({ html }) =>
+			html.replace('%splash-skip%', String(!!locals.internalReferer))
+	});
+});
 
 const PUBLIC_DOMAIN = 'wentallout.io.vn';
 

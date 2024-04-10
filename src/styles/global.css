@@ -145,3 +145,9 @@ label:has(+ textarea:focus) {
 textarea {
 	form-sizing: normal;
 }
+
+.obf {
+	display: none;
+	overflow: hidden;
+	width: 0;
+}

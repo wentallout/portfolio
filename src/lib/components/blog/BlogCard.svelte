@@ -25,7 +25,7 @@
 
 		<div class="blog__title text-small">{blogTitle}</div>
 		<div class="blog__date text-xs">
-			<Time relative timestamp={blogDate} />
+			<Time format="YYYY" timestamp={blogDate} />
 		</div>
 	</article>
 	<span class="blog__icon">
@@ -45,7 +45,7 @@
 		/* SIZE */
 		width: 100%;
 		height: 140px;
-		padding: var(--spaceS) var(--spaceM);
+		padding: var(--space2XS) var(--spaceS);
 		/* --- */
 
 		/* OTHER */
@@ -53,11 +53,9 @@
 		position: relative;
 		overflow: hidden;
 		border-radius: var(--borderRadius);
-		/* --- */
-
 		box-shadow: var(--boxShadow);
-
 		background-color: var(--colorBgContainer);
+		/* --- */
 
 		&:hover {
 			background-color: var(--colorBgElevated);
@@ -78,7 +76,9 @@
 	}
 
 	.tag {
-		color: var(--colorPrimary);
+		font-weight: 400;
+		font-size: var(--fontSizeXS);
+		color: var(--colorTextSecondary);
 	}
 
 	.blog__info {
@@ -93,9 +93,12 @@
 	}
 
 	.blog__title {
-		font-weight: var(--fontWeightMid);
 		overflow: hidden;
+
+		/* FONT */
+		font-weight: var(--fontWeightLarge);
 		color: var(--colorText);
+		/* --- */
 
 		/* LINE CLAMP */
 		display: -webkit-box;
@@ -103,6 +106,8 @@
 		-webkit-box-orient: vertical;
 		text-overflow: ellipsis;
 		/* --- */
+
+		text-wrap: balance;
 	}
 
 	.blog__date {
@@ -114,8 +119,21 @@
 		/* --- */
 
 		/* FONT */
-		font-weight: var(--fontWeightSmall);
-		color: var(--colorTextSecondary);
+		font-weight: var(--fontWeightLarge);
+		-webkit-text-stroke: 1px var(--colorText);
+		-webkit-text-fill-color: transparent;
+		font-size: var(--fontSizeXL);
 		/* --- */
+
+		opacity: 0;
+		position: absolute;
+		top: 50%;
+		bottom: 50%;
+		right: 1%;
+		transform: rotate(90deg);
+	}
+
+	.blog:hover .blog__date {
+		opacity: 0.2;
 	}
 </style>

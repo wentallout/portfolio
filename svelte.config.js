@@ -5,7 +5,6 @@ import rehypeSlug from 'rehype-slug';
 import rehypeExternalLinks from 'rehype-external-links';
 import rehypeAutolinkHeadings from 'rehype-autolink-headings';
 
-
 import remarkUnwrapImages from 'remark-unwrap-images';
 import sequence from 'svelte-sequential-preprocessor';
 import remarkGfm from 'remark-gfm';
@@ -39,9 +38,9 @@ const config = {
 			entries: ['*']
 		},
 		csp: {
-			mode: 'hash',
+			mode: 'nonce',
 			directives: {
-				'script-src': ['self']
+				'script-src': ['self', 'unsafe-inline']
 			}
 		},
 		csrf: {
