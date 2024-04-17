@@ -120,8 +120,7 @@
 
 		/* FONT */
 		font-weight: var(--fontWeightLarge);
-		-webkit-text-stroke: 1px var(--colorText);
-		-webkit-text-fill-color: transparent;
+		color: var(--colorTextTertiary);
 		font-size: var(--fontSizeXL);
 		/* --- */
 
@@ -134,6 +133,6 @@
 	}
 
 	.blog:hover .blog__date {
-		opacity: 0.2;
+		opacity: 0.1;
 	}
 </style>

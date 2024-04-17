@@ -13,15 +13,14 @@
 	align-items: center;
 	justify-content: center;
 
-	background-color: var(--colorBgLayout);
-	backdrop-filter: blur(5px);
-
 	animation-name: splash-out;
 	animation-duration: calc(var(--animation-out-duration) * 0.6);
 	animation-play-state: running;
 	animation-timing-function: ease;
 	animation-fill-mode: forwards;
 	animation-delay: calc(var(--animation-in-duration) + var(--animation-out-duration) * 0.4);
+
+	background-color: var(--colorBgLayout);
 
 	&[data-splash-skip='true'] {
 		display: none;
@@ -34,13 +33,11 @@
 }
 
 @keyframes splash-out {
-	from {
+	0% {
 		transform: translateY(0);
-		opacity: 1;
 	}
 
-	to {
+	100% {
 		transform: translateY(-100%);
-		opacity: 0;
 	}
 }
