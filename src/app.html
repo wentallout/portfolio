@@ -18,6 +18,22 @@
 		theme
 			? document.documentElement.setAttribute('color-scheme', theme)
 			: localStorage.setItem('color-scheme', 'dark');
+
+
+		function stamp() {
+			document.documentElement.setAttribute('data-splashed-at', new Date().toISOString());
+			// if (splashEl) splashEl.remove();
+		}
+
+		const splashEl = document.getElementById('splash');
+		if (!splashEl || splashEl.getAttribute('data-splash-skip') === 'true') {
+			stamp();
+		} else {
+			splashEl.addEventListener('animationend', (e) => {
+				if (!splashEl.isSameNode(e.target)) return;
+				stamp();
+			});
+		}	
 	</script>
 </head>
 
@@ -31,24 +47,6 @@
 				d="M31.9093 134.669L0 25.3308H31.0019L55.7278 109.565L75.5388 25.3308H104.197L125.898 110.321L149.263 25.3308H160L129.754 134.669H101.248L80.2268 53.535L60.4159 134.669H31.9093ZM38.5633 126.427H51.569L24.3478 33.5728H11.4934L38.5633 126.427ZM107.75 126.427H120.756L97.0889 33.5728H84.2344L107.75 126.427Z"
 				fill="#FFBB00" />
 		</svg>
-
-
-		<script nonce="%sveltekit.nonce%">
-			function stamp() {
-				document.documentElement.setAttribute('data-splashed-at', new Date().toISOString());
-				// if (splashEl) splashEl.remove();
-			}
-
-			const splashEl = document.getElementById('splash');
-			if (!splashEl || splashEl.getAttribute('data-splash-skip') === 'true') {
-				stamp();
-			} else {
-				splashEl.addEventListener('animationend', (e) => {
-					if (!splashEl.isSameNode(e.target)) return;
-					stamp();
-				});
-			}
-		</script>
 	</div>
 	<!-- end SplashScreen -->
 	<div>%sveltekit.body%</div>
