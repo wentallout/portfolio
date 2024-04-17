@@ -38,7 +38,7 @@ const config = {
 			entries: ['*']
 		},
 		csp: {
-			mode: 'nonce',
+			mode: 'auto',
 			directives: {
 				'script-src': ['self', 'unsafe-inline']
 			}
