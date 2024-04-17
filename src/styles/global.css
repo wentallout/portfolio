@@ -29,11 +29,11 @@ html {
 	}
 }
 
-@media (hover: hover) and (pointer: fine) {
-	/* body {
-		cursor: var(--cursorDefault);
-	} */
+body {
+	cursor: var(--cursorDefault);
+}
 
+@media (hover: hover) and (pointer: fine) {
 	p,
 	h1,
 	h2,
@@ -144,4 +144,10 @@ label:has(+ textarea:focus) {
 /* Experimental CSS */
 textarea {
 	form-sizing: normal;
+}
+
+.obf {
+	display: none;
+	overflow: hidden;
+	width: 0;
 }

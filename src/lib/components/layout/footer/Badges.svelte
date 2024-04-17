@@ -23,14 +23,21 @@
 		<img class="badge__img" alt="built with netlify" src="/images/netlify.svg" />
 	</ExLink>
 </div>
+<img
+	alt="This website runs on green hosting - verified by thegreenwebfoundation.org"
+	height="95px"
+	src="https://app.greenweb.org/api/v3/greencheckimage/wentallout.io.vn?nocache=true"
+	width="200px" />
 
 <style>
 	.badge {
 		display: flex;
 		flex-direction: row;
+
 		flex-wrap: wrap;
 		width: 100%;
 		gap: var(--spaceM);
+		margin-bottom: var(--spaceS);
 	}
 
 	.badge__img {

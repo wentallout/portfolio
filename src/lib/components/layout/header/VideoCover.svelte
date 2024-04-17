@@ -69,7 +69,7 @@
 
 	@media (min-width: 768px) {
 		.video {
-			animation: updown 30s ease-in-out;
+			animation: updown 50s infinite ease-in-out;
 		}
 	}
 

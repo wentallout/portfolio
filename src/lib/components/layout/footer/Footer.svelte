@@ -80,7 +80,11 @@
 						<ExLink href="mailto:wentallout@gmail.com">
 							<div class="nav-list__link">
 								<Envelope />
-								wentallout@gmail.com
+								<div class="">
+									<span>wentallout@</span>
+									<b class="obf">j</b>
+									<span>gmail.com</span>
+								</div>
 							</div>
 						</ExLink>
 					</li>

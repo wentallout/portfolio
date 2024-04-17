@@ -8,23 +8,6 @@
 	let sectionIcon = {
 		color: 'var(--colorTextTertiary)'
 	};
-
-	let titleEle;
-
-	onMount(() => {
-		document.addEventListener('mousemove', function (event) {
-			const titleRect = titleEle.getBoundingClientRect();
-			const mouseX = event.clientX - titleRect.left;
-			const mouseXFromCenter = mouseX - titleRect.width / 2;
-			const limitedMouse = Math.max(-40, Math.min(40, mouseXFromCenter));
-
-			const slowDownFactor = 0.5; // Adjust the slow down factor as needed
-			const adjustedMouse = limitedMouse * slowDownFactor;
-
-			titleEle.style.setProperty('--before-top', `${-adjustedMouse}px`);
-			titleEle.style.setProperty('--before-left', `${-adjustedMouse}px`);
-		});
-	});
 </script>
 
 <div class="section">
@@ -32,7 +15,7 @@
 		<div class="section__icon text-large">
 			<slot {sectionIcon} />
 		</div>
-		<h2 bind:this={titleEle} class="section__text text-large" data-title={sectionTitle}>
+		<h2 class="section__text text-large" data-title={sectionTitle}>
 			{sectionTitle}
 		</h2>
 	</div>
