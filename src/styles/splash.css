@@ -32,6 +32,11 @@
 	}
 }
 
+.c-splash__deco {
+	font-family: var(--fontFancy);
+	font-size: var(--fontSizeLarge);
+}
+
 @keyframes splash-out {
 	0% {
 		transform: translateY(0);
