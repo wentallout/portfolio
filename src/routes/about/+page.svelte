@@ -1,6 +1,6 @@
 <script>
 	import PageTitle from '$components/common/PageTitle.svelte';
-	import WorldMap from '$lib/assets/images/other/WorldMap.svelte';
+	import WorldMap from '$lib/assets/icons/WorldMap.svelte';
 
 	const date = new Date();
 	const year = date.getFullYear();

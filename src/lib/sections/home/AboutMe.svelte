@@ -3,8 +3,8 @@
 	import SaosContainer from '$components/common/SaosContainer.svelte';
 	import Smiley from '~icons/ph/smiley';
 
-	import AboutMeImg from '$lib/assets/images/home/aboutMe.webp';
 	import * as m from '$paraglide/messages';
+	import AboutMeArt from '$lib/assets/arts/AboutMeArt.svelte';
 </script>
 
 <SaosContainer>
@@ -31,7 +31,10 @@
 					</p>
 				</div>
 			</div>
-			<img class="about__img" alt="about Khoa" src={AboutMeImg} />
+
+			<div class="about__img">
+				<AboutMeArt />
+			</div>
 		</div>
 	</section>
 </SaosContainer>
@@ -55,13 +58,6 @@
 		aspect-ratio: 1/1;
 		max-width: 300px;
 		flex-grow: 1;
-		border-radius: var(--borderRadiusLight);
-		filter: grayscale(1) brightness(0.7);
-		transition: var(--transition);
-	}
-
-	section:hover .about__img {
-		filter: grayscale(0);
 	}
 
 	.block__title {

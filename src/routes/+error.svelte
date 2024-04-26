@@ -30,8 +30,6 @@
 </script>
 
 <div class="error">
-	<img loading="lazy" class="error__deco" src="/images/crack.svg" alt="" />
-
 	<div class="error__info">
 		<h1 class="status">
 			{$page.status}
@@ -62,16 +60,6 @@
 		flex-direction: column;
 		justify-content: flex-start;
 		color: var(--colorTextSecondary);
-	}
-
-	.error__deco {
-		position: absolute;
-		top: 0;
-		left: 0;
-		width: 600px;
-		height: auto;
-		z-index: -1;
-		opacity: 0;
 	}
 
 	.status {

@@ -1,5 +1,5 @@
 <script>
-	import HeroVisual from '$lib/assets/images/home/HeroVisual.svelte';
+	import HeroVisual from '$lib/assets/arts/HeroVisual.svelte';
 	import Button from '$components/button/Button.svelte';
 	import * as m from '$paraglide/messages';
 </script>

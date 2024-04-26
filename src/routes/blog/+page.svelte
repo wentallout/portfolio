@@ -1,5 +1,5 @@
 <script>
-	import LoadingBarSpinner from '$lib/assets/images/other/LoadingBarSpinner.svelte';
+	import LoadingBarSpinner from '$lib/assets/icons/LoadingBarSpinner.svelte';
 	import TextInput from '$components/input/TextInput.svelte';
 	import BlogListContainer from '$sections/blog/BlogListContainer.svelte';
 	import BlogCard from '$components/blog/BlogCard.svelte';

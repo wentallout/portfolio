@@ -1,6 +1,6 @@
 <script>
-	import LogoNotAi from '$lib/assets/images/badge/LogoNotAI.svelte';
-	import LogoSvelte from '$lib/assets/images/badge/LogoSvelte.svelte';
+	import LogoNotAi from '$lib/assets/icons/LogoNotAI.svelte';
+	import LogoSvelte from '$lib/assets/icons/LogoSvelte.svelte';
 	import ExLink from '$components/common/ExLink.svelte';
 </script>
 

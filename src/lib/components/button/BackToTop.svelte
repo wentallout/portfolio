@@ -1,5 +1,5 @@
 <script>
-	import UpIcon from '$lib/assets/images/common/UpIcon.svelte';
+	import UpIcon from '$lib/assets/icons/UpIcon.svelte';
 
 	export let showOnPx = 150;
 	let hidden = true;

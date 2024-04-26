@@ -1,16 +1,40 @@
 @font-face {
-	font-family: 'Inter';
-	font-display: swap;
-	font-style: normal;
-	src: url('/fonts/Inter.woff2') format('woff2');
-	font-weight: 300 600;
-}
-
-@font-face {
 	font-family: 'Canela';
 	font-display: swap;
 	font-style: normal;
 	src: url('/fonts/CanelaDeck-Medium.woff2') format('woff2');
+}
+
+@font-face {
+	font-family: 'Inter';
+	font-display: swap;
+	font-style: normal;
+	src: url('/fonts/inter-300.woff2') format('woff2');
+	font-weight: 300;
+}
+
+@font-face {
+	font-family: 'Inter';
+	font-display: swap;
+	font-style: normal;
+	src: url('/fonts/inter-400.woff2') format('woff2');
+	font-weight: 400;
+}
+
+@font-face {
+	font-family: 'Inter';
+	font-display: swap;
+	font-style: normal;
+	src: url('/fonts/inter-500.woff2') format('woff2');
+	font-weight: 500;
+}
+
+@font-face {
+	font-family: 'Inter';
+	font-display: swap;
+	font-style: normal;
+	src: url('/fonts/inter-600.woff2') format('woff2');
+	font-weight: 600;
 }
 
 pre code {
@@ -53,7 +77,7 @@ pre code {
 	}
 } */
 
-html {
+body {
 	text-rendering: optimizeLegibility;
 	-webkit-font-smoothing: antialiased;
 	font-family: var(--fontNormal);

@@ -1,10 +1,11 @@
 <script>
 	import SectionTitle from '$sections/SectionTitle.svelte';
-	import HeatmapArt from '$lib/assets/images/home/HeatmapArt.svelte';
-	import ResponsiveArt from '$lib/assets/images/home/ResponsiveArt.svelte';
+
+	import ResponsiveWebArt from '$lib/assets/arts/ResponsiveWebArt.svelte';
 
 	import HandHeart from '~icons/ph/hand-heart';
 	import Button from '$components/button/Button.svelte';
+	import AbTestingArt from '$lib/assets/arts/ABTestingArt.svelte';
 </script>
 
 <section>
@@ -19,7 +20,7 @@
 		<div class="service__section skewable">
 			<div class="service__thumbnail">
 				<div class="service__art">
-					<ResponsiveArt />
+					<ResponsiveWebArt />
 				</div>
 				<h3 class="service__title text-mid">Static Website</h3>
 			</div>
@@ -51,26 +52,26 @@
 
 			<a class="service__btn" href="https://cal.com/wentallout/web">
 				<Button
-					backgroundColor="var(--colorPrimary)"
-					glowColor="var(--colorPrimary)"
+					backgroundColor="var(--colorBgLayout)"
+					borderColor="var(--colorText)"
+					glowColor="var(--colorText)"
 					label="Book a meeting"
-					labelColor="var(--colorBlack)" />
+					labelColor="var(--colorText)"
+					shadowColor="var(--colorTextSecondary)" />
 			</a>
 		</div>
 
 		<div class="service__section skewable">
 			<div class="service__thumbnail">
 				<div class="service__art">
-					<HeatmapArt />
+					<AbTestingArt />
 				</div>
 				<h3 class="service__title text-mid">Design/Redesign Website</h3>
 			</div>
 
 			<ul class="service__desc text-small">
 				<li class="service__point">
-					<div class="">
-						Consistent design system to improve <strong>brand recognition and marketing</strong>
-					</div>
+					Consistent design system to improve <strong>brand recognition and marketing</strong>
 				</li>
 				<li class="service__point">Fantastic <strong>user experience and accessibility</strong></li>
 				<li class="service__point">Easier <strong>maintenance and scalability</strong></li>
@@ -82,10 +83,12 @@
 
 			<a class="service__btn" href="https://cal.com/wentallout/web">
 				<Button
-					backgroundColor="var(--colorPrimary)"
-					glowColor="var(--colorPrimary)"
+					backgroundColor="var(--colorBgLayout)"
+					borderColor="var(--colorText)"
+					glowColor="var(--colorText)"
 					label="Book a meeting"
-					labelColor="var(--colorBlack)" />
+					labelColor="var(--colorText)"
+					shadowColor="var(--colorTextSecondary)" />
 			</a>
 		</div>
 	</div>
@@ -104,7 +107,8 @@
 	}
 
 	.service__art {
-		max-width: 200px;
+		width: auto;
+		height: 200px;
 	}
 
 	.service__thumbnail {
@@ -112,6 +116,7 @@
 		flex-direction: column;
 		gap: var(--spaceS);
 		align-items: center;
+		flex-grow: 0;
 	}
 
 	.service__section {
@@ -119,7 +124,7 @@
 		padding: var(--spaceL) var(--spaceM);
 		border-radius: var(--borderRadiusLight);
 		box-shadow: var(--boxShadow);
-		gap: var(--spaceL);
+		gap: var(--spaceM);
 
 		display: flex;
 		flex-direction: column;
