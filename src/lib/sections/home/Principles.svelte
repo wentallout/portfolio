@@ -1,4 +1,5 @@
 <script>
+	import PrincipleArt from '$lib/assets/arts/PrincipleArt.svelte';
 	import SectionTitle from '$sections/SectionTitle.svelte';
 
 	import Scales from '~icons/ph/scales';
@@ -12,41 +13,58 @@
 		<Scales {...sectionIcon} />
 	</SectionTitle>
 
-	<div class="principle">
-		<div class="principle__section">
-			<h3 class="principle__title text-base">Straightforward</h3>
-			<p class="principle__desc text-small">
-				Simplify the design by removing unnecessary steps or elements for a seamless user experience
-				and reduced cognitive load.
-			</p>
-		</div>
+	<div class="principle-container">
+		<div class="principle">
+			<div class="principle__section">
+				<h3 class="principle__title text-base">Straightforward</h3>
+				<p class="principle__desc text-small">
+					Simplify the design by removing unnecessary steps or elements for a seamless user
+					experience and reduced cognitive load.
+				</p>
+			</div>
 
-		<div class="principle__section">
-			<h3 class="principle__title text-base">Test</h3>
-			<p class="principle__desc text-small">
-				Continuously test and iterate the design to ensure it meets users' needs and expectations.
-			</p>
-		</div>
+			<div class="principle__section">
+				<h3 class="principle__title text-base">Test</h3>
+				<p class="principle__desc text-small">
+					Continuously test and iterate the design to ensure it meets users' needs and expectations.
+				</p>
+			</div>
 
-		<div class="principle__section">
-			<h3 class="principle__title text-base">Instructional</h3>
-			<p class="principle__desc text-small">
-				Provide clear instructions and guidance to users, if necessary, to ensure ease of product or
-				interface usage.
-			</p>
-		</div>
+			<div class="principle__section">
+				<h3 class="principle__title text-base">Instructional</h3>
+				<p class="principle__desc text-small">
+					Provide clear instructions and guidance to users, if necessary, to ensure ease of product
+					or interface usage.
+				</p>
+			</div>
 
-		<div class="principle__section">
-			<h3 class="principle__title text-base">Readable</h3>
-			<p class="principle__desc text-small">
-				Optimize readability by choosing appropriate fonts, colors, and spacing for comfortable
-				reading and reduced eye strain.
-			</p>
+			<div class="principle__section">
+				<h3 class="principle__title text-base">Readable</h3>
+				<p class="principle__desc text-small">
+					Optimize readability by choosing appropriate fonts, colors, and spacing for comfortable
+					reading and reduced eye strain.
+				</p>
+			</div>
+		</div>
+		<div class="principle__art">
+			<PrincipleArt />
 		</div>
 	</div>
 </section>
 
 <style>
+	.principle-container {
+		display: grid;
+		grid-template-columns: 1fr; /* Two columns with equal width */
+		gap: var(--spaceM); /* Gap between grid items */
+	}
+
+	@media (min-width: 768px) {
+		.principle-container {
+			grid-template-columns: 1fr 1fr;
+		}
+	}
+
 	.principle__title:first-letter {
 		font-size: 200%;
 		color: var(--colorPrimary);
@@ -54,14 +72,9 @@
 	}
 
 	.principle {
-		--min: 35ch;
-		--gap: var(--spaceM);
-
-		display: grid;
-		grid-gap: var(--gap);
-
-		grid-template-columns: repeat(auto-fit, minmax(min(100%, var(--min)), 1fr));
-		align-items: stretch;
+		display: flex;
+		gap: var(--spaceM);
+		flex-direction: column;
 
 		position: relative;
 		z-index: 1;
@@ -84,5 +97,9 @@
 
 	.principle__desc {
 		color: var(--colorTextSecondary);
+	}
+
+	.principle__art {
+		align-self: center;
 	}
 </style>
