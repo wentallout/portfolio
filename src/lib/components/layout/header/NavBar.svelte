@@ -162,7 +162,7 @@
 	}
 
 	.nav:has(a:hover) a:not(:hover) {
-		opacity: 0.6;
+		opacity: 0.7;
 		text-shadow: none;
 		transition: var(--transition);
 	}

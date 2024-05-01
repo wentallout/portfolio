@@ -18,13 +18,13 @@
 				</div>
 
 				<div class="hero__btn">
-					<a href="/project">
+					<!-- <a href="/project">
 						<Button
 							backgroundColor="var(--colorPrimary)"
 							glowColor="var(--colorPrimary)"
 							label="View Portfolio"
 							labelColor="var(--colorBlack)" />
-					</a>
+					</a> -->
 
 					<a href="/contact">
 						<Button

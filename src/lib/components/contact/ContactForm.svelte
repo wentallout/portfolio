@@ -108,7 +108,7 @@
 
 	@media (min-width: 768px) {
 		.form-container {
-			grid-template-columns: 1fr auto;
+			grid-template-columns: 1fr 1fr;
 		}
 	}
 

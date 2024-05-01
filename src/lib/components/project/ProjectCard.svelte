@@ -11,7 +11,7 @@
 </script>
 
 <a href={linkToDetail}>
-	<article class="project">
+	<article class="project kagura-border">
 		<img class="project__thumbnail" alt="" loading="lazy" src={thumbnail} />
 
 		<div class="project__info">

@@ -52,9 +52,3 @@
 
 	<SnippetList />
 </section>
-
-<!-- <section>
-	<SectionTitle sectionTitle="UI" let:sectionIcon>
-		<FigmaLogo {...sectionIcon} />
-	</SectionTitle>
-</section> -->

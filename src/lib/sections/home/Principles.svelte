@@ -1,4 +1,5 @@
 <script>
+	import SaosContainer from '$components/common/SaosContainer.svelte';
 	import PrincipleArt from '$lib/assets/arts/PrincipleArt.svelte';
 	import SectionTitle from '$sections/SectionTitle.svelte';
 
@@ -15,36 +16,45 @@
 
 	<div class="principle-container">
 		<div class="principle">
-			<div class="principle__section">
-				<h3 class="principle__title text-base">Straightforward</h3>
-				<p class="principle__desc text-small">
-					Simplify the design by removing unnecessary steps or elements for a seamless user
-					experience and reduced cognitive load.
-				</p>
-			</div>
+			<SaosContainer animation="slide-in-left 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both">
+				<div class="principle__section kagura-border">
+					<h3 class="principle__title text-base">Straightforward</h3>
+					<p class="principle__desc text-small">
+						Simplify the design by removing unnecessary steps or elements for a seamless user
+						experience and reduced cognitive load.
+					</p>
+				</div>
+			</SaosContainer>
 
-			<div class="principle__section">
-				<h3 class="principle__title text-base">Test</h3>
-				<p class="principle__desc text-small">
-					Continuously test and iterate the design to ensure it meets users' needs and expectations.
-				</p>
-			</div>
+			<SaosContainer animation="slide-in-left 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both">
+				<div class="principle__section kagura-border">
+					<h3 class="principle__title text-base">Test</h3>
+					<p class="principle__desc text-small">
+						Continuously test and iterate the design to ensure it meets users' needs and
+						expectations.
+					</p>
+				</div>
+			</SaosContainer>
 
-			<div class="principle__section">
-				<h3 class="principle__title text-base">Instructional</h3>
-				<p class="principle__desc text-small">
-					Provide clear instructions and guidance to users, if necessary, to ensure ease of product
-					or interface usage.
-				</p>
-			</div>
+			<SaosContainer animation="slide-in-left 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both">
+				<div class="principle__section kagura-border">
+					<h3 class="principle__title text-base">Instructional</h3>
+					<p class="principle__desc text-small">
+						Provide clear instructions and guidance to users, if necessary, to ensure ease of
+						product or interface usage.
+					</p>
+				</div>
+			</SaosContainer>
 
-			<div class="principle__section">
-				<h3 class="principle__title text-base">Readable</h3>
-				<p class="principle__desc text-small">
-					Optimize readability by choosing appropriate fonts, colors, and spacing for comfortable
-					reading and reduced eye strain.
-				</p>
-			</div>
+			<SaosContainer animation="slide-in-left 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both">
+				<div class="principle__section kagura-border">
+					<h3 class="principle__title text-base">Readable</h3>
+					<p class="principle__desc text-small">
+						Optimize readability by choosing appropriate fonts, colors, and spacing for comfortable
+						reading and reduced eye strain.
+					</p>
+				</div>
+			</SaosContainer>
 		</div>
 		<div class="principle__art">
 			<PrincipleArt />

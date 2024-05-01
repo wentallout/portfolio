@@ -130,3 +130,25 @@ input[type='range']:focus::-webkit-slider-runnable-track {
 	-webkit-transform: rotate(var(--angle)) skew(var(--angle));
 	transform: rotate(var(--angle)) skew(var(--angle));
 }
+
+.kagura-border {
+	position: relative;
+	overflow: hidden;
+}
+
+.kagura-border:before {
+	content: '';
+	position: absolute;
+	border-image: url('/images/dark-border.webp');
+	border-image-width: 25px;
+	border-image-repeat: repeat;
+	border-image-slice: 100 100 100 100 fill;
+	padding: 20px 30px 20px 30px !important;
+	top: -3px;
+	right: -3px;
+	bottom: -3px;
+	left: -3px;
+	border-style: solid;
+	pointer-events: none;
+	opacity: 0.5;
+}
