@@ -1,9 +1,10 @@
 <script>
 	import SaosContainer from '$components/common/SaosContainer.svelte';
-	import Frontend from '$lib/assets/images/home/frontend.svg?component';
-	import Navigation from '$lib/assets/images/home/navigation.svg?component';
-	import GraphicDesign from '$lib/assets/images/home/graphicDesign.svg?component';
-	import Process from '$lib/assets/images/home/process.svg?component';
+	import FrontendArt from '$lib/assets/arts/FrontendArt.svelte';
+	import GraphicDesignArt from '$lib/assets/arts/GraphicDesignArt.svelte';
+	import NavigationArt from '$lib/assets/arts/NavigationArt.svelte';
+	import ProcessArt from '$lib/assets/arts/ProcessArt.svelte';
+
 	import SectionTitle from '$sections/SectionTitle.svelte';
 	import Toolbox from '~icons/ph/toolbox';
 </script>
@@ -16,9 +17,9 @@
 			</SectionTitle>
 
 			<div class="tool__block">
-				<div class="block__section">
+				<div class="block__section kagura-border">
 					<div class="section__svg">
-						<Process alt="process" fill="var(--colorText)" height="120" width="120" />
+						<ProcessArt height="120" width="120" />
 					</div>
 					<div class="section__text">
 						<h3 class="block__title text-base">Frameworks</h3>
@@ -28,9 +29,9 @@
 					</div>
 				</div>
 
-				<div class="block__section">
+				<div class="block__section kagura-border">
 					<div class="section__svg">
-						<Navigation alt="navigation" fill="var(--colorText)" height="120" width="120" />
+						<NavigationArt height="120" width="120" />
 					</div>
 					<div class="section__text">
 						<h3 class="block__title text-base">Prototyping</h3>
@@ -39,9 +40,9 @@
 					</div>
 				</div>
 
-				<div class="block__section">
+				<div class="block__section kagura-border">
 					<div class="section__svg">
-						<GraphicDesign alt="graphic design" fill="var(--colorText)" height="120" width="120" />
+						<GraphicDesignArt height="120" width="120" />
 					</div>
 					<div class="section__text">
 						<h3 class="block__title text-base">Design</h3>
@@ -51,9 +52,9 @@
 					</div>
 				</div>
 
-				<div class="block__section">
+				<div class="block__section kagura-border">
 					<div class="section__svg">
-						<Frontend alt="frontend" fill="var(--colorText)" height="120" width="120" />
+						<FrontendArt fill="var(--colorText)" height="120" width="120" />
 					</div>
 					<div class="section__text">
 						<h3 class="block__title text-base">Frontend</h3>

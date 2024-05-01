@@ -51,7 +51,7 @@
 
 	@media (min-width: 768px) {
 		.faq {
-			grid-template-columns: 1fr auto;
+			grid-template-columns: 1fr 1fr;
 		}
 	}
 

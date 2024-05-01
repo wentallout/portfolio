@@ -17,7 +17,7 @@
 	</SectionTitle>
 
 	<div class="service">
-		<div class="service__section skewable">
+		<div class="service__section kagura-border">
 			<div class="service__thumbnail">
 				<div class="service__art">
 					<ResponsiveWebArt />
@@ -61,7 +61,7 @@
 			</a>
 		</div>
 
-		<div class="service__section skewable">
+		<div class="service__section kagura-border">
 			<div class="service__thumbnail">
 				<div class="service__art">
 					<AbTestingArt />

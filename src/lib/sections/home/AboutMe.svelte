@@ -15,15 +15,14 @@
 		<div class="about__grid">
 			<div class="about__desc">
 				<div class="block">
-					<h3 class="block__title text-base">Background</h3>
+					<h3 class="block__title text-base">My goal</h3>
 					<p class="block__text text-small">
-						I spent about a year working as a full-stack developer, but eventually I found my true
-						passion in UI/UX design. I'm currently focusing on UX design, which involves finding
-						ways to make the user experience better through research, flow development, and
-						wireframing. It's really rewarding to be able to use my skills to solve problems and
-						improve people's experiences.
+						My only goal is to be an independent product maker. I'm tired of writing meaningless
+						codes for big tech companies that don't serve anyone so I start learning UI/UX to plan,
+						design and develop useful products for everyone.
 					</p>
 				</div>
+
 				<div class="block">
 					<h3 class="block__title text-base">Thought Process</h3>
 					<p class="block__text text-small">
@@ -49,7 +48,7 @@
 
 	@media (min-width: 768px) {
 		.about__grid {
-			grid-template-columns: 1fr auto;
+			grid-template-columns: 1fr 1fr;
 		}
 	}
 
@@ -74,8 +73,8 @@
 
 	.block__text {
 		font-weight: var(--fontWeightSmall);
-
 		color: var(--colorTextSecondary);
+		text-wrap: balance;
 	}
 
 	.block {
