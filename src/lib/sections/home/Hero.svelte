@@ -2,6 +2,40 @@
 	import HeroVisual from '$lib/assets/arts/HeroVisual.svelte';
 	import Button from '$components/button/Button.svelte';
 	import * as m from '$paraglide/messages';
+	import { onMount } from 'svelte';
+
+	import { gsap } from 'gsap';
+	let focusText = ['website', 'app', 'game'];
+	let focusIndex = 0;
+
+	onMount(() => {
+		function cycleWords() {
+			let focusElement = document.querySelector('.hero__focus');
+			gsap.to(focusElement, {
+				opacity: 0,
+				duration: 0.25,
+				onComplete: () => {
+					focusElement.textContent = focusText[focusIndex];
+					// Use gsap.fromTo() to animate the glow
+					gsap.fromTo(
+						focusElement,
+						{
+							textShadow: '0 0 50px currentColor', // Start state of the glow
+							opacity: 0
+						},
+						{
+							textShadow: '0 0 10px currentColor', // End state of the glow
+							opacity: 1,
+							ease: 'power2.out',
+							duration: 0.25
+						}
+					);
+				}
+			});
+			focusIndex = (focusIndex + 1) % focusText.length;
+		}
+		setInterval(cycleWords, 1000);
+	});
 </script>
 
 <section>
@@ -9,11 +43,18 @@
 		<div class="hero pad">
 			<div class="hero__block">
 				<div class="hero__name text-2xl">
-					Khoa is a
-					<div class="focus">Designer</div>
-					<div class="focus">+ Developer</div>
+					<div>
+						Crafting your dream
+
+						<span id="hero__focus" class="hero__focus focus">
+							<span class="word">website</span>
+							<span class="word">app</span>
+							<span class="word">game</span>
+						</span>
+					</div>
+					<div>one pixel at a time</div>
 				</div>
-				<div class="hero__text text-base">
+				<div class="hero__text text-small">
 					{m.heroText()}
 				</div>
 
@@ -70,20 +111,27 @@
 		width: 100%;
 	}
 
+	@media (min-width: 768px) {
+		.hero__block {
+			max-width: 60%;
+		}
+	}
+
 	.hero__name {
 		font-family: var(--fontFancy);
 		margin-bottom: var(--spaceL);
 	}
 
 	.focus {
-		display: block;
 		color: var(--colorPrimary);
+		display: block;
 	}
 
 	.hero__text {
 		margin-bottom: var(--spaceS);
 		text-wrap: balance;
 		max-width: 40ch;
+		color: var(--colorTextSecondary);
 	}
 	.hero__btn {
 		margin-top: var(--spaceL);
