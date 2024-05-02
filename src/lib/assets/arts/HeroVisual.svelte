@@ -330,6 +330,12 @@
 		height: 100%;
 	}
 
+	@media (min-width: 768px) {
+		.hero__visual {
+			max-width: 500px;
+		}
+	}
+
 	@media (min-width: 992px) {
 		.hero__visual {
 			overflow: visible;
@@ -338,9 +344,8 @@
 			right: 0;
 			z-index: -1;
 			display: block;
-
+			max-width: 560px;
 			height: 100%;
-
 			aspect-ratio: 1/1;
 
 			/* transform: translate(0, -50%); */

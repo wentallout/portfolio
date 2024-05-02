@@ -27,14 +27,18 @@
 							textShadow: '0 0 10px currentColor', // End state of the glow
 							opacity: 1,
 							ease: 'power2.out',
-							duration: 0.25
+							duration: 0.25,
+							onComplete: () => {
+								// Cycle the words after the animation is complete
+								focusIndex = (focusIndex + 1) % focusText.length;
+								setTimeout(cycleWords, 1000);
+							}
 						}
 					);
 				}
 			});
-			focusIndex = (focusIndex + 1) % focusText.length;
 		}
-		setInterval(cycleWords, 1000);
+		cycleWords();
 	});
 </script>
 

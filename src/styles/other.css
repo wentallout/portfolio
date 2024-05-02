@@ -150,5 +150,5 @@ input[type='range']:focus::-webkit-slider-runnable-track {
 	left: -3px;
 	border-style: solid;
 	pointer-events: none;
-	opacity: 0.5;
+	opacity: 0.3;
 }

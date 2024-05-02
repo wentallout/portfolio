@@ -53,10 +53,8 @@
 	}
 
 	.about__img {
-		height: 100%;
-		aspect-ratio: 1/1;
-		max-width: 300px;
-		flex-grow: 1;
+		width: 100%;
+		height: auto;
 	}
 
 	.block__title {
