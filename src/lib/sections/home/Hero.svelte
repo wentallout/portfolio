@@ -9,8 +9,8 @@
 	let focusIndex = 0;
 
 	onMount(() => {
+		let focusElement = document.querySelector('.hero__focus');
 		function cycleWords() {
-			let focusElement = document.querySelector('.hero__focus');
 			gsap.to(focusElement, {
 				opacity: 0,
 				duration: 0.25,

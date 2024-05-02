@@ -97,5 +97,7 @@
 			0 2px 2px #dfdfdf,
 			-2px 5px 1px #b8b8b8,
 			-4px 8px 0px #979797;
+
+		text-wrap: balance;
 	}
 </style>

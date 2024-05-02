@@ -27,6 +27,7 @@
 	line-height: 120%;
 	position: relative;
 	color: var(--colorText);
+	text-wrap: balance;
 }
 
 .markdown h2:first-child {
