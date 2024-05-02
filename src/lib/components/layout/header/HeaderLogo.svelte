@@ -11,7 +11,7 @@
 		{height}
 		src="/images/coolLogo.svg"
 		{width} />
-	<div class="logo__deco">went all out</div>
+	<div class="logo__deco">WENT ALL OUT</div>
 </div>
 
 <style lang="postcss">
@@ -42,16 +42,19 @@
 
 	.logo__deco {
 		position: absolute;
-		top: 50%;
+		top: 100%;
 		left: 50%;
 		transform: translate(-50%, -50%);
-		background-color: var(--colorPrimary);
-		color: var(--colorBlack);
+		color: var(--colorPrimary);
 		width: 100%;
+
+		transition: var(--transition);
+		font-family: var(--fontFancy);
+
+		/* FLEX */
 		display: flex;
 		justify-content: center;
 		align-items: center;
-		transition: var(--transition);
-		font-weight: 600;
+		/* --- */
 	}
 </style>

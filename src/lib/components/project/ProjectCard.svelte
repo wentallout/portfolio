@@ -6,8 +6,6 @@
 	export let output = '';
 
 	export let thumbnail;
-
-	import ArrowRight from '~icons/ph/arrow-right';
 </script>
 
 <a href={linkToDetail}>
@@ -49,7 +47,6 @@
 		overflow: hidden;
 		box-shadow: var(--boxShadow);
 		border-radius: var(--borderRadius);
-
 		background-color: var(--colorBgContainer);
 
 		&:hover {
@@ -87,7 +84,7 @@
 
 	@media (min-width: 768px) {
 		.project__info {
-			padding: var(--spaceS) var(--spaceXL);
+			padding: var(--spaceM) var(--spaceXL);
 		}
 	}
 
@@ -112,7 +109,7 @@
 	@media (min-width: 992px) {
 		.project__thumbnail {
 			height: 100%;
-			max-width: 300px;
+			max-width: 400px;
 		}
 	}
 
