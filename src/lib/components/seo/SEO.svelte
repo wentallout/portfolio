@@ -36,7 +36,7 @@
 	export let timeToRead = 0;
 	export let title = '';
 
-	const pageTitle = `${title} - ${siteTitle}`;
+	const pageTitle = `${title} | ${siteTitle}`;
 	const url = `${siteUrl}/${slug}`;
 
 	export let article = false;

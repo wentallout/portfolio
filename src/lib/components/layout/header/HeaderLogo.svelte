@@ -1,21 +1,65 @@
 <script>
 	export let width = '160px';
 	export let height = width;
+
+	import { onMount } from 'svelte';
+	import { gsap } from 'gsap';
+
+	import { TextPlugin } from 'gsap/dist/TextPlugin.js';
+
+	let logoDeco;
+	const phrases = ['WENT ALL OUT', 'Khoa Nguyen'];
+	let i = 0;
+
+	const typePhrase = () => {
+		gsap.to(logoDeco, {
+			duration: 1,
+			text: {
+				value: phrases[i % phrases.length],
+				padSpace: true
+			},
+			ease: 'power2.inOut',
+			onComplete: () => {
+				removePhrase();
+			}
+		});
+	};
+
+	const removePhrase = () => {
+		gsap.to(logoDeco, {
+			duration: 1,
+			text: {
+				value: '',
+				padSpace: true,
+				rtl: true
+			},
+			ease: 'power2.inOut',
+			onComplete: () => {
+				i++;
+				typePhrase();
+			}
+		});
+	};
+
+	onMount(() => {
+		gsap.registerPlugin(TextPlugin);
+		typePhrase();
+	});
 </script>
 
 <div class="cover__logo" aria-label="home">
 	<img
 		id="personlogo"
-		class="official-logo rotate"
+		class="logo__main rotate"
 		alt="2nd logo"
 		{height}
 		src="/images/coolLogo.svg"
 		{width} />
-	<div class="logo__deco">WENT ALL OUT</div>
+	<div bind:this={logoDeco} class="logo__deco">WENT ALL OUT</div>
 </div>
 
 <style lang="postcss">
-	.official-logo {
+	.logo__main {
 		filter: drop-shadow(0px 0px 10px var(--colorPrimary));
 		transition: var(--transition);
 
