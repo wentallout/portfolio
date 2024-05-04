@@ -1,5 +1,5 @@
 <script>
-	import HeroVisual from '$lib/assets/arts/HeroVisual.svelte';
+	import HeroVisual from '$lib/assets/arts/HeroArt.svelte';
 	import Button from '$components/button/Button.svelte';
 	import * as m from '$paraglide/messages';
 	import { onMount } from 'svelte';
@@ -49,27 +49,25 @@
 				<div class="hero__name text-2xl">
 					<div>
 						Crafting your dream
-
 						<span id="hero__focus" class="hero__focus focus">
 							<span class="word">website</span>
 							<span class="word">app</span>
 							<span class="word">game</span>
 						</span>
 					</div>
-					<div>one pixel at a time</div>
 				</div>
 				<div class="hero__text text-small">
 					{m.heroText()}
 				</div>
 
 				<div class="hero__btn">
-					<!-- <a href="/project">
+					<a href="#services">
 						<Button
 							backgroundColor="var(--colorPrimary)"
 							glowColor="var(--colorPrimary)"
-							label="View Portfolio"
+							label="Book a Meeting"
 							labelColor="var(--colorBlack)" />
-					</a> -->
+					</a>
 
 					<a href="/contact">
 						<Button

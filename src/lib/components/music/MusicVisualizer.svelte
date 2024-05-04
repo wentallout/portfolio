@@ -36,7 +36,7 @@
 		style="--energyHeight:{energyHeight}px;"
 		class="visualizer__logo"
 		alt="music visualizer logo"
-		src="/images/coolLogo.svg" />
+		src="/images/brand-logo.svg" />
 
 	<img
 		class="visualizer__dancer"

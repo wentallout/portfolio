@@ -53,7 +53,7 @@
 		class="logo__main rotate"
 		alt="2nd logo"
 		{height}
-		src="/images/coolLogo.svg"
+		src="/images/brand-logo.svg"
 		{width} />
 	<div bind:this={logoDeco} class="logo__deco">WENT ALL OUT</div>
 </div>

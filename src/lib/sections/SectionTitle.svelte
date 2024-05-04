@@ -15,7 +15,7 @@
 		<div class="section__icon text-large">
 			<slot {sectionIcon} />
 		</div>
-		<h2 class="section__text text-large" data-title={sectionTitle}>
+		<h2 id={sectionTitle.toLowerCase()} class="section__text text-large" data-title={sectionTitle}>
 			{sectionTitle}
 		</h2>
 	</div>

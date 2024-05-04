@@ -190,8 +190,8 @@
 			'@type': 'ImageObject',
 			'@id': `${siteUrl}/#personlogo`,
 			inLanguage: siteLanguage,
-			url: `${siteUrl}/images/coolLogo.svg`,
-			contentUrl: `${siteUrl}/images/coolLogo.svg`,
+			url: `${siteUrl}/images/brand-logo.svg`,
+			contentUrl: `${siteUrl}/images/brand-logo.svg`,
 			width: 512,
 			height: 512,
 			caption: entity

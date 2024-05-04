@@ -124,12 +124,12 @@ input[type='range']:focus::-webkit-slider-runnable-track {
 	background: transparent;
 }
 
-.skew {
+/* .skew {
 	--angle: -3deg;
 	--unskew: rotate(calc(var(--angle) * -1)) skew(calc(var(--angle) * -1));
 	-webkit-transform: rotate(var(--angle)) skew(var(--angle));
 	transform: rotate(var(--angle)) skew(var(--angle));
-}
+} */
 
 .kagura-border {
 	position: relative;

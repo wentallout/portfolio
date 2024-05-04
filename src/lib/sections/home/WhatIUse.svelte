@@ -100,6 +100,7 @@
 		grid-template-columns: repeat(auto-fit, minmax(min(100%, var(--min)), 1fr));
 		justify-content: center;
 		align-content: center;
+		align-items: stretch;
 	}
 
 	.block__section {

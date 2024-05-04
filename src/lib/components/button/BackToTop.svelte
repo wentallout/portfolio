@@ -34,14 +34,15 @@
 
 <style>
 	.bck2top {
-		width: 48px;
 		aspect-ratio: 1/1;
+		padding: var(--spaceXS);
 
 		/* FLEX */
 		display: flex;
 		justify-content: center;
 		align-items: center;
 		flex-direction: column;
+		gap: var(--space2XS);
 		/* --- */
 
 		/* POSITION FIXED ON SCREEN */
@@ -72,7 +73,7 @@
 
 	@media (min-width: 768px) {
 		.bck2top {
-			width: 56px;
+			padding: var(--spaceS);
 			aspect-ratio: 1/1;
 		}
 	}
@@ -83,6 +84,7 @@
 	}
 
 	.bck2top__text {
+		font-family: var(--fontFancy);
 		font-weight: 600;
 	}
 </style>

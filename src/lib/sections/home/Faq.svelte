@@ -2,7 +2,7 @@
 	import Accordion from '$components/common/Accordion.svelte';
 	import SectionTitle from '$sections/SectionTitle.svelte';
 
-	import QuestionArt from '$lib/assets/icons/FaqArt.svelte';
+	import QuestionArt from '$lib/assets/arts/FaqArt.svelte';
 
 	import Question from '~icons/ph/question';
 </script>
