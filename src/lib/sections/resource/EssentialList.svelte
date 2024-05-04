@@ -1,11 +1,11 @@
 <script>
 	import FigmaCard from '$components/resource/FigmaCard.svelte';
 
-	import iOSThumbnail from '$lib/assets/images/resource/iOSDesign.png';
+	import iOSThumbnail from '$lib/assets/images/resource/ios-design.png';
 
-	import UXDeli from '$lib/assets/images/resource/UXDeli.png';
+	import UXDeli from '$lib/assets/images/resource/ux-deli.png';
 
-	import FluentDesign from '$lib/assets/images/resource/FluentDesign.png';
+	import FluentDesign from '$lib/assets/images/resource/fluent-design.png';
 	import CardListContainer from '$components/layout/container/CardListContainer.svelte';
 </script>
 
