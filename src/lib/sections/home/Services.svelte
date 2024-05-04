@@ -22,23 +22,19 @@
 				<div class="service__art">
 					<ResponsiveWebArt />
 				</div>
-				<h3 class="service__title text-mid">Static Website</h3>
+				<h3 class="service__title text-mid">Website Development</h3>
 			</div>
 
 			<ul class="service__desc text-small">
 				<li class="service__point">
+					Including: Landing Page, Portfolio/Resume, Marketing, Event, Non-profit
+				</li>
+				<li class="service__point">
 					Written using
 					<strong>HTML, CSS, JS </strong>
 				</li>
-				<li class="service__point">
-					<strong>Responsive:</strong> Looks great on all screen sizes
-				</li>
-
-				<li class="service__point">
-					<strong>Lightweight: </strong> no more heavy libraries that slow down loading speed
-				</li>
 				<li class="service__point optional">
-					★ Optional: Enhanced with the most cutting edge web framework -
+					★ Optional: Enhanced with
 					<strong>SvelteKit</strong> for optimal SEO, lightning fast loading speed and reusable
 					components.
 					<br />
@@ -47,6 +43,13 @@
 						href="https://kit.svelte.dev/docs/performance"
 						rel="external nofollow noopener noreferrer"
 						target="_blank">SvelteKit out-of-the-box performance</a>
+				</li>
+				<li class="service__point">
+					<strong>Responsive:</strong> Looks great on all screen sizes
+				</li>
+
+				<li class="service__point">
+					<strong>Lightweight: </strong> no more heavy libraries that slow down loading speed
 				</li>
 			</ul>
 

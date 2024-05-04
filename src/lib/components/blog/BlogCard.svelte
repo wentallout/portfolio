@@ -11,7 +11,7 @@
 	import { fade } from 'svelte/transition';
 </script>
 
-<a class="blog" href={blogLink} transition:fade={{ duration: 300 }}>
+<a class="blog kagura-border" href={blogLink} transition:fade={{ duration: 300 }}>
 	<article class="blog__info">
 		{#if hasTags}
 			<div class="tags">

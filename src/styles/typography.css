@@ -82,6 +82,7 @@ body {
 	-webkit-font-smoothing: antialiased;
 	font-family: var(--fontNormal);
 	font-weight: var(--fontWeightSmall);
+
 }
 
 .text-xs {

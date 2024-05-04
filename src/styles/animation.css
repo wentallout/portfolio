@@ -1,7 +1,3 @@
-:root {
-	--elastic-out: linear(0, 0.2178 2.1%, 1.1144 8.49%, ... 1.0056 72.24%, 0.9981 86.66%, 1);
-}
-
 @keyframes stopRotate {
 	0% {
 		transform: rotateY(0deg);

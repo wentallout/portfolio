@@ -14,10 +14,10 @@
 	import Breadcrumb from '$components/layout/other/Breadcrumb.svelte';
 </script>
 
-<Breadcrumb />
 <header class="blog full-width">
 	<div class="blog__bg"></div>
-	<div class="pad skew">
+	<div class="pad">
+		<Breadcrumb />
 		<h1 class="blog__title">{data.title}</h1>
 		<div class="blog__info text-small">
 			<div class="info__section">
@@ -56,7 +56,8 @@
 		height: 100%;
 		background-image: url('/images/patterns/wao-pattern.svg');
 		background-repeat: repeat;
-		opacity: 0.2;
+		background-size: 200px;
+		opacity: 0.1;
 		z-index: -9999;
 		filter: grayscale(1);
 	}
@@ -94,9 +95,9 @@
 
 	.blog__title {
 		text-shadow:
-			0 2px 2px #dfdfdf,
+			0 2px 2px var(--colorBgElevated),
 			-2px 5px 1px #b8b8b8,
-			-4px 8px 0px #979797;
+			-4px 8px 0px var(--colorBgElevated);
 
 		text-wrap: balance;
 	}

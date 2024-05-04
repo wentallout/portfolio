@@ -12,12 +12,13 @@
 
 html {
 	scroll-padding: var(--scroll-padding, 60px);
-	/* scroll-behavior: smooth; */
+	scroll-behavior: smooth;
 	overflow-x: hidden;
 	max-width: 100vw;
 	min-height: 101vh;
 	color: var(--colorText);
 	scrollbar-gutter: stable;
+	cursor: var(--cursorDefault);
 }
 
 @media (hover: hover) and (pointer: fine) {
@@ -27,10 +28,6 @@ html {
 	button * {
 		cursor: url('/cursor/pointer.svg'), auto;
 	}
-}
-
-body {
-	cursor: var(--cursorDefault);
 }
 
 @media (hover: hover) and (pointer: fine) {

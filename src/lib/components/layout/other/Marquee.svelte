@@ -29,12 +29,12 @@
 	.container {
 		width: 100%;
 		max-width: 100vw;
-		font-size: var(--fontSizeXS);
+		font-size: var(--fontSizeSmall);
 		font-weight: var(--fontWeightLarge);
 		line-height: normal;
 		position: relative;
 		overflow: hidden;
-		height: 40px;
+		padding-block: 4px;
 	}
 
 	.marquee {
@@ -57,6 +57,7 @@
 		min-width: 100%;
 		animation: scroll 20s linear infinite;
 		animation-direction: reverse;
+		font-family: var(--fontFancy);
 	}
 
 	.marquee:hover .marquee__content {

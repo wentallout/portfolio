@@ -1,5 +1,4 @@
 <script>
-	import ChainDivider from '$components/layout/other/ChainDivider.svelte';
 	import FooterEnd from '$components/layout/footer/FooterEnd.svelte';
 	import ExLink from '$components/common/ExLink.svelte';
 	import Marquee from '$components/layout/other/Marquee.svelte';
@@ -15,8 +14,7 @@
 	import LanguageSwitcher from '$components/i18n/LanguageSwitcher.svelte';
 </script>
 
-<ChainDivider />
-<footer class="footer text-small">
+<footer class="footer text-small gradient-bg">
 	<div class="pad">
 		<div class="footer__list">
 			<div class="list">
@@ -124,7 +122,7 @@
 		</div>
 
 		<FooterEnd />
-		<img class="footer__deco" alt="footer decoration" src="/images/footer-skyline.webp" />
+		<div class="footer__deco" alt="footer decoration" />
 	</div>
 </footer>
 
@@ -147,8 +145,9 @@
 	}
 
 	.footer__deco {
+		background: url('/images/footer-skyline.webp');
 		background-repeat: repeat-x;
-		height: auto;
+		height: 53px;
 		width: 100%;
 		z-index: -1;
 		position: absolute;
@@ -199,7 +198,7 @@
 		font-family: var(--fontFancy);
 		color: var(--colorTextSecondary);
 		font-size: var(--fontSizeBase);
-		padding-bottom: var(--space2XS);
+		padding-bottom: var(--space3XS);
 		border-bottom: 2px solid transparent;
 		border-image: linear-gradient(to right, var(--colorTextTertiary), transparent) 1 0%;
 	}
