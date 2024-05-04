@@ -122,7 +122,7 @@
 		</div>
 
 		<FooterEnd />
-		<img class="footer__deco" alt="footer decoration" src="/images/footer-skyline.webp" />
+		<div class="footer__deco" alt="footer decoration" />
 	</div>
 </footer>
 
@@ -145,8 +145,9 @@
 	}
 
 	.footer__deco {
+		background: url('/images/footer-skyline.webp');
 		background-repeat: repeat-x;
-		height: auto;
+		height: 53px;
 		width: 100%;
 		z-index: -1;
 		position: absolute;

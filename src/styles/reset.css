@@ -56,10 +56,6 @@ html {
 	-webkit-text-size-adjust: 100%; /* 2 */
 }
 
-body {
-	margin: 0;
-}
-
 main {
 	display: block;
 }
@@ -298,10 +294,6 @@ summary {
 	display: list-item;
 }
 
-template {
-	display: none;
-}
-
 [hidden] {
 	display: none;
 }
@@ -367,16 +359,6 @@ hr {
 	box-sizing: content-box; /* 1 */
 	height: 0; /* 1 */
 	overflow: visible; /* 2 */
-}
-
-/**
-   * 1. Correct the inheritance and scaling of font size in all browsers.
-   * 2. Correct the odd `em` font sizing in all browsers.
-   */
-
-pre {
-	font-family: monospace, monospace; /* 1 */
-	font-size: 1em; /* 2 */
 }
 
 /* Text-level semantics
@@ -500,17 +482,6 @@ select {
 }
 
 /**
-   * Correct the inability to style clickable types in iOS and Safari.
-   */
-
-button,
-[type='button'],
-[type='reset'],
-[type='submit'] {
-	-webkit-appearance: button;
-}
-
-/**
    * Remove the inner border and padding in Firefox.
    */
 
@@ -611,16 +582,6 @@ textarea {
 	-webkit-appearance: none;
 }
 
-/**
-   * 1. Correct the inability to style clickable types in iOS and Safari.
-   * 2. Change font properties to `inherit` in Safari.
-   */
-
-::-webkit-file-upload-button {
-	-webkit-appearance: button; /* 1 */
-	font: inherit; /* 2 */
-}
-
 /* Interactive
 	 ========================================================================== */
 
@@ -654,10 +615,6 @@ template {
 /**
    * Add the correct display in IE 10.
    */
-
-[hidden] {
-	display: none;
-}
 
 img {
 	max-width: 100%;
