@@ -87,18 +87,6 @@ input[type='range']:focus::-webkit-slider-runnable-track {
 	border-radius: var(--borderRadius);
 }
 
-/* @media (prefers-reduced-data: reduce) {
-	body {
-		font-family: system-ui;
-	}
-} */
-
-/* @media (prefers-reduced-motion) {
-  .animation {
-    animation: none;
-  }
-} */
-
 ::-webkit-scrollbar {
 	width: 16px;
 	outline: 1px solid var(--colorTextQuaternary);
