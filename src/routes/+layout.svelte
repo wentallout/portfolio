@@ -4,13 +4,13 @@
 
 	import Footer from '$components/layout/footer/Footer.svelte';
 	import NavBar from '$lib/components/layout/header/NavBar.svelte';
-	import { onNavigate } from '$app/navigation';
-	import { browser } from '$app/environment';
 
 	import VideoCover from '$lib/components/layout/header/VideoCover.svelte';
 	import { ParaglideJS } from '@inlang/paraglide-js-adapter-sveltekit';
 	import { i18n } from '$lib/i18n.js';
 	import Misc from '$sections/Misc.svelte';
+
+	import { onNavigate } from '$app/navigation';
 
 	onNavigate(() => {
 		if (!document.startViewTransition) return;
