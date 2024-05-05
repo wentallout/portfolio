@@ -1,5 +1,5 @@
 <script>
-	import UpIcon from '$lib/assets/icons/UpIcon.svelte';
+	import ArrowLineUp from '~icons/ph/arrow-line-up';
 
 	export let showOnPx = 150;
 	let hidden = true;
@@ -28,7 +28,7 @@
 <svelte:window on:scroll={handleOnScroll} />
 
 <button class="bck2top text-xs" class:hidden type="button" on:click={goTop} on:keyup={goTop}>
-	<UpIcon />
+	<ArrowLineUp width="24" height="24" />
 	<div class="bck2top__text">Top</div>
 </button>
 

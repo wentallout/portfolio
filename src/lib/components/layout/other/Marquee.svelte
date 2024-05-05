@@ -30,8 +30,7 @@
 		width: 100%;
 		max-width: 100vw;
 		font-size: var(--fontSizeSmall);
-		font-weight: var(--fontWeightLarge);
-		line-height: normal;
+		line-height: 1;
 		position: relative;
 		overflow: hidden;
 		padding-block: 4px;

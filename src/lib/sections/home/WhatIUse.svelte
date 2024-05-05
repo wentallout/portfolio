@@ -54,7 +54,7 @@
 
 				<div class="block__section kagura-border">
 					<div class="section__svg">
-						<FrontendArt fill="var(--colorText)" height="120" width="120" />
+						<FrontendArt height="120" width="120" />
 					</div>
 					<div class="section__text">
 						<h3 class="block__title text-base">Frontend</h3>

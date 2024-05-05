@@ -283,6 +283,7 @@
 		position: relative;
 		overflow: hidden;
 		user-select: none;
+		view-transition-name: header;
 	}
 
 	.nav-list__item::before {
