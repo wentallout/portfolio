@@ -19,7 +19,6 @@
     "format": "prettier --ignore-path .gitignore --write --plugin-search-dir=. .",
     "ngrok": "ngrok http 4173",
     "postbuild": "npx svelte-sitemap --domain https://wentallout.io.vn",
-    "prepare": "husky install",
     "postinstall": "paraglide-js compile --project ./project.inlang",
     "test:chrome": "npx playwright test --headed --browser=chromium",
     "test:firefox": "npx playwright test --headed --browser=firefox",
@@ -100,5 +99,8 @@
   },
   "lint-staged": {
     "*": "eslint --fix"
+  },
+  "dependencies": {
+    "posthog-js": "^1.130.2"
   }
 }
