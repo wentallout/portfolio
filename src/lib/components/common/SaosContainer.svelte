@@ -3,7 +3,7 @@
 	export let once = true;
 	export let animation = 'fade-in 1.2s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;';
 
-	export let className;
+	
 
 	//slide-in-left 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
 </script>
