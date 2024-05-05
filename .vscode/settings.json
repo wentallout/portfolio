@@ -1,18 +1,18 @@
 {
-	"svg.preview.background": "transparent",
-	"dotenv.enableAutocloaking": false,
-	"workbench.colorCustomizations": {
-		"activityBar.background": "#133507",
-		"titleBar.activeBackground": "#1B4A0A",
-		"titleBar.activeForeground": "#F4FDF1"
-	},
-	"npm.packageManager": "bun",
+  "svg.preview.background": "transparent",
+  "dotenv.enableAutocloaking": false,
+  "workbench.colorCustomizations": {
+    "activityBar.background": "#133507",
+    "titleBar.activeBackground": "#1B4A0A",
+    "titleBar.activeForeground": "#F4FDF1"
+  },
+  "npm.packageManager": "bun",
   // Enable the ESlint flat config support
   "eslint.experimental.useFlatConfig": true,
 
   // Disable the default formatter, use eslint instead
   "prettier.enable": false,
-  "editor.formatOnSave": false,
+  "editor.formatOnSave": true,
 
   // Auto fix
   "editor.codeActionsOnSave": {
@@ -47,7 +47,7 @@
     "jsonc",
     "yaml",
     "toml",
-    "astro",
-    
+    "astro"
+
   ]
 }

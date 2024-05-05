@@ -1,13 +1,20 @@
 {
   "name": "portfolio",
+  "type": "module",
   "version": "1.0.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/wentallout/portfolio"
+  },
+  "bugs": {
+    "url": "https://github.com/wentallout/portfolio/issues"
+  },
   "scripts": {
     "dev": "vite dev --host --open",
     "build": "paraglide-js compile --project ./project.inlang && vite build",
     "preview": "vite preview",
     "check": "svelte-check",
     "check:watch": "svelte-check --watch",
-    "lint": "prettier --ignore-path .gitignore --check . && eslint --ignore-path .gitignore --fix .",
     "lint:stylelint": "stylelint \"src/**/*.{css,svelte}\"",
     "format": "prettier --ignore-path .gitignore --write --plugin-search-dir=. .",
     "ngrok": "ngrok http 4173",
@@ -16,7 +23,9 @@
     "postinstall": "paraglide-js compile --project ./project.inlang",
     "test:chrome": "npx playwright test --headed --browser=chromium",
     "test:firefox": "npx playwright test --headed --browser=firefox",
-    "test:safari": "npx playwright test --headed --browser=webkit"
+    "test:safari": "npx playwright test --headed --browser=webkit",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix"
   },
   "devDependencies": {
     "@antfu/eslint-config": "^2.16.1",
@@ -39,7 +48,6 @@
     "fontaine": "^0.5.0",
     "giscus": "^1.5.0",
     "gsap": "^3.12.5",
-    "husky": "^8.0.3",
     "lightningcss": "^1.24.1",
     "lint-staged": "^15.2.2",
     "mdsvex": "^0.11.0",
@@ -84,19 +92,11 @@
     "vite": "^5.2.11",
     "vite-imagetools": "^7.0.2"
   },
-  "type": "module",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/wentallout/portfolio"
-  },
-  "bugs": {
-    "url": "https://github.com/wentallout/portfolio/issues"
-  },
   "trustedDependencies": [
     "svelte-preprocess"
   ],
   "simple-git-hooks": {
-    "pre-commit": "pnpm lint-staged"
+    "pre-commit": "npm lint-staged"
   },
   "lint-staged": {
     "*": "eslint --fix"
