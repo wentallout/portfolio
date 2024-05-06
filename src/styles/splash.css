@@ -33,8 +33,15 @@
 }
 
 .c-splash__deco {
+	font-size: var(--fontSizeBase);
+	color: var(--colorTextSecondary)
+}
+
+.c-splash__name 
+{
 	font-family: var(--fontFancy);
-	font-size: var(--fontSizeLarge);
+	font-size: var(--fontSizeXL);
+	margin-bottom: var(--spaceS);
 }
 
 @keyframes splash-out {

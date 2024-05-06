@@ -6,39 +6,44 @@
 	import { gsap } from 'gsap';
 
 	import { TextPlugin } from 'gsap/dist/TextPlugin.js';
+
 	let logoDeco;
 	onMount(() => {
 		const phrases = ['WENT ALL OUT', 'Khoa Nguyen'];
 		let i = 0;
 
 		const typePhrase = () => {
-			gsap.to(logoDeco, {
-				duration: 1,
-				text: {
-					value: phrases[i % phrases.length],
-					padSpace: true
-				},
-				ease: 'power2.inOut',
-				onComplete: () => {
-					removePhrase();
-				}
-			});
+			if (logoDeco) {
+				gsap.to(logoDeco, {
+					duration: 1,
+					text: {
+						value: phrases[i % phrases.length],
+						padSpace: true
+					},
+					ease: 'power2.inOut',
+					onComplete: () => {
+						removePhrase();
+					}
+				});
+			}
 		};
 
 		const removePhrase = () => {
-			gsap.to(logoDeco, {
-				duration: 1,
-				text: {
-					value: '',
-					padSpace: true,
-					rtl: true
-				},
-				ease: 'power2.inOut',
-				onComplete: () => {
-					i++;
-					typePhrase();
-				}
-			});
+			if (logoDeco) {
+				gsap.to(logoDeco, {
+					duration: 1,
+					text: {
+						value: '',
+						padSpace: true,
+						rtl: true
+					},
+					ease: 'power2.inOut',
+					onComplete: () => {
+						i++;
+						typePhrase();
+					}
+				});
+			}
 		};
 
 		gsap.registerPlugin(TextPlugin);
