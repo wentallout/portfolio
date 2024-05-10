@@ -1,5 +1,5 @@
 ---
-title: [JavaScript Advanced Concept] Optional chaining
+title: JavaScript Advanced Concept Optional chaining
 date: 2024-05-10
 categories:
     - javascript 

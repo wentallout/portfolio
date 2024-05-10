@@ -1,8 +1,8 @@
 ---
-title: 'Free Music for your project'
-date: '2023-03-03'
+title: Free Music for your project
+date: 2023-03-03
 categories:
-    - 'freebies'
+    - freebies
 ---
 
 ## Free Sound and Music

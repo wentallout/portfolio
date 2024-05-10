@@ -1,5 +1,5 @@
 ---
-title: [JavaScript Advanced Concept] Higher Order Functions
+title: JavaScript Advanced Concept Higher Order Functions
 date: 2024-05-10
 categories:
 - javascript 

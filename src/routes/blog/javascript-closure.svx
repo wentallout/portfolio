@@ -1,8 +1,8 @@
 ---
-title: [JavaScript Advanced Concept] Closure
+title: JavaScript Advanced Concept Closure
 date: 2024-05-10
 categories:
-- javascript 
+  - javascript 
 ---
 
 ## Quick warning

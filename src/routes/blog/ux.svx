@@ -1,6 +1,6 @@
 ---
 title: Everything I know about UX
-date: '2022-01-24'
+date: 2022-01-24
 categories:
     - ux
 ---
