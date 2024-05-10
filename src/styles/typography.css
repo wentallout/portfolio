@@ -68,6 +68,13 @@ pre code {
 	--lineHeightXL: 120%;
 	--lineHeight2XL: 120%;
 	--lineHeight3XL: 120%;
+
+	--tracking-tighter: -0.05em;
+	--tracking-tight: -0.025em;
+	--tracking-normal: 0em;
+	--tracking-wide: 0.025em;
+	--tracking-wider: 0.05em;
+	--tracking-widest: 0.1em;
 }
 
 /* @supports (font-variation-settings: normal) {

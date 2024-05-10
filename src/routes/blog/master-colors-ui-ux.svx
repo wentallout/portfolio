@@ -1,0 +1,79 @@
+---
+title: Master your colors in design
+date: 2024-05-08
+categories:
+    - color
+---
+
+## Trust me and just use HSB?
+
+HSB is the way-to-go. There are subtle differences between software color pickers.
+
+Get the most comfortable with HSB and HEX. Any of these can be converted into any other format. So don't fret about the final color format:
+
+- RGB (RGBa)
+- HEX
+- HSL
+- HSB (HSV)
+
+## How we see color
+
+We are able to see color because of photoreceptors in our eyes. There are two types of receptors involved in sight: rods and cones.
+
+Rods work at very low levels of light. We use these for night vision because even a few bits of light can activate them. Rods don't help with color vision, which is why we see everything in shades of gray at night.
+
+Cones need a lot more light, and they can see color. We have three types of cones: blue, green, and red. The brain integrates the signals sent from these 3 types of cones to allow us to see millions of colors. For example, we see yellow when green and red cones are stimulated, but the blue cones aren't. When all the cones are stimulated equally, the brain perceives the color as white.
+
+Animals that see well in the dark have many more rods than humans.
+
+## What is the best way to select and manage colors?
+
+HSB stands for Hue, Saturation and Brightness. It’s human-friendly and easy to use because it uses the ideas we already naturally think of when describing colors.
+
+Let's break it down.
+
+### Hue
+
+**Hue** is a number between 0 and 360 on the color wheel. It’s measured in degrees, like degrees of a circle.
+
+If you want to develop a good understanding of HSB, you should have a couple of anchor points in mind. Let’s use red, green, and blue since they are equidistant around the circle.
+
+- Red is 0º
+- Green is 120º 
+- Blue is 240º 
+- Red is also 360º, which is the same as 0º
+
+### Saturation
+
+Saturation defines a range from pure color (100%) to gray (0%). Saturation refers to color intensity; a fully saturated color is pure, while a fully desaturated color appears as grey.
+
+### Brightness
+
+Brightness is the relative lightness or darkness of a particular color, from black (no brightness) to white (full brightness). think of it as a white light source (such as a professional studio light) that brings light into the room. The more intense the light is, the more bright the colors on the wall will be.
+
+![brightness](https://ci3.googleusercontent.com/meips/ADKq_NYpGjdukVDqQEBq1RoO0qGZbyfCQCR973Bx7lFYZps_qCo_DnJkIEEViEPkCULV0UGR-N8NNhtEzbnou_2nT8Y_abR49aeJcYWVrPEggdy6KRUws4x8oYgJPvsCLuVOutrddpjPkG6iCrumfJKSrl34CQy5VxdC-YQ=s0-d-e1-ft#https://mcusercontent.com/91c6911ed666ab5babcc9deaf/images/4f37e9ad-4675-cb4a-b9e4-6fc8859972bf.png)
+
+
+## White and black are not the opposite to each other.
+
+This method slightly differs from how we think of colors. When using black, you can set the brightness to 0% and then set hue and saturation to almost anything.
+
+When creating white, you can set the brightness to 100% and the saturation to 0% while setting the hue to anything you like.
+
+To add white, you must move your color towards the white on your color picker or the top left corner, decreasing the saturation and increasing the brightness
+
+Dark shades, on the other hand, don’t need to be dull. Instead of adding black to remove the white, you can increase saturation and decrease brightness. This will give you a much richer shade of color.
+
+Accessibility of any digital product should make it suitable for elderly users, visually impaired, color blind, or others (accessibility doesn't stop at the colors level, but we will cover only that in this chapter).
+
+The minimum level of accessibility is 4:5:1 contrast ration (or AA) for all of your most crucial elements.
+
+A - Low contrast
+AA - Average contrast
+AAA - High contrast
+You can test this contrast by using a range of dedicated plugins and websites of your choice.
+
+They work by entering them on the WCAG scale.
+
+
+

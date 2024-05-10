@@ -15,7 +15,7 @@
 		<div class="section__icon text-large">
 			<slot {sectionIcon} />
 		</div>
-		<h2 id={sectionTitle.toLowerCase()} class="section__text text-large" data-title={sectionTitle}>
+		<h2 id={sectionTitle.toLowerCase()} class="text-xl section__text" data-title={sectionTitle}>
 			{sectionTitle}
 		</h2>
 	</div>
@@ -39,7 +39,7 @@
 		gap: var(--spaceS);
 		/*  */
 
-		margin-bottom: var(--spaceM);
+		margin-bottom: var(--spaceS);
 		position: relative;
 	}
 
@@ -54,6 +54,8 @@
 		color: var(--colorText);
 		position: relative;
 		--before-left: 4px;
+
+		letter-spacing: var(--tracking-tight);
 	}
 
 	.section__text::before {

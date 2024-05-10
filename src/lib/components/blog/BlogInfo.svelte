@@ -56,7 +56,7 @@
 		height: 100%;
 		background-image: url('/images/patterns/wao-pattern.svg');
 		background-repeat: repeat;
-		background-size: 200px;
+		background-size: 400px;
 		opacity: 0.1;
 		z-index: -9999;
 		filter: grayscale(1);
@@ -94,11 +94,6 @@
 	}
 
 	.blog__title {
-		text-shadow:
-			0 2px 2px var(--colorBgElevated),
-			-2px 5px 1px #b8b8b8,
-			-4px 8px 0px var(--colorBgElevated);
-
 		text-wrap: balance;
 	}
 </style>

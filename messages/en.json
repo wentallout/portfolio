@@ -1,5 +1,5 @@
 {
-	"$schema": "https://inlang.com/schema/inlang-message-format",
-	"heroText": "Every line of code, every design element, meticulously crafted to showcase your uniqueness",
-	"thoughtProcess": "I use industry guidelines and proven UX frameworks to tackle unique project challenges.\n\t\t\t\t\t\tThe process includes discovery, prototyping, and user testing while collaborating with\n\t\t\t\t\t\tstakeholders to achieve successful outcomes."
+  "$schema": "https://inlang.com/schema/inlang-message-format",
+  "heroText": "Every line of code, every design element, meticulously crafted to solve real problem and showcase your brand. No more generic Wordpress templates!",
+  "thoughtProcess": "I use industry guidelines and proven UX frameworks to tackle unique project challenges.\n\t\t\t\t\t\tThe process includes discovery, prototyping, and user testing while collaborating with\n\t\t\t\t\t\tstakeholders to achieve successful outcomes."
 }

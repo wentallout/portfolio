@@ -1,0 +1,27 @@
+---
+title: What is CI/CD (Continuous Integration/Continuous Delivery)
+date: 2024-05-09
+categories:
+    - frontend
+---
+
+CI/CD stands for Continuous Integration and Continuous Delivery or Continuous Deployment, which are key concepts in modern software development, particularly relevant to your work as a front-end engineer.
+
+Continuous Integration (CI): This is the practice of automating the integration of code changes from multiple contributors into a single software project. It's primarily aimed at reducing integration issues which can help you and your team to develop software more rapidly. In practice, CI means that whenever a developer commits changes to a part of the code, it is automatically tested against the current codebase to ensure that these changes don't break anything. This encourages developers to integrate more frequently, perhaps even daily, leading to better collaboration and software quality.
+Continuous Delivery (CD): This extends CI by automatically releasing the changes made to the codebase to a staging or production environment after the build stage. This ensures that you can release new changes to your customers quickly in a sustainable way. It's about automating further stages of the pipeline and ensuring that your code is always in a release-ready state.
+Continuous Deployment (another CD): This is a more advanced practice where every change that passes all stages of your production pipeline is released to your customers. There's no human intervention, and only a failed test will prevent a new change to be deployed to production.
+CI/CD pipelines are typically realized through DevOps tools like Jenkins, GitLab CI/CD, CircleCI, Travis CI, and others. These tools automate the steps in your software delivery process, such as initiating automatic builds, running tests, and deploying to a production environment.
+
+## Benefits of CI/CD
+
+Implementing CI/CD can significantly improve the speed, efficiency, and quality of software development, especially in teams where multiple developers work on the same codebase. As a front-end engineer, you might interact with these processes mostly in the context of integrating and deploying your front-end code, ensuring that your contributions work seamlessly with the rest of the application and reach users rapidly and reliably.
+
+## Learn more
+
+Enterprise UI Development: Testing & Code Quality (Building a CI Pipeline with Github Actions Section) from Frontend Masters: https://frontendmasters.com/courses/enterprise-ui-dev/?utm_source=guides&utm_medium=website&utm_campaign=feh2024
+
+
+## Tools
+
+- https://github.com/features/actions
+- https://buddy.works

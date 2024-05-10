@@ -29,7 +29,7 @@
 </script>
 
 <SEO {...seoProps} />
-<PageTitle pageTitle="Project" />
+<PageTitle pageTitle="Projects" />
 
 <section>
 	<SectionTitle

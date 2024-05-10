@@ -10,17 +10,14 @@ categories:
 
 ⭐NEW - [css-color-palette-generator](https://www.hover.dev/css-color-palette-generator)
 
-[colorffy](https://colorffy.com)
+- [colorffy](https://colorffy.com)
+- [goodpalette](https://goodpalette.io) beautiful color palettes for UI (Primary + Accent + Neutral).
+- [Colormind.io](http://colormind.io)  
+- [Adobe Color](https://color.adobe.com/explore)
 
-[goodpalette](https://goodpalette.io) beautiful color palettes for UI (Primary + Accent + Neutral).
+## Get colors from an image
 
-[Colormind.io](http://colormind.io)  
-
-https://color.adobe.com/explore
-
-Get colors from an image
 https://www.canva.com/colors/color-palette-generator/
-
 http://colormind.io/image/
 
 ## Colors
@@ -43,20 +40,13 @@ http://colormind.io/image/
 
 - [Gradientify](https://gradientify.com/) carefully crafted gradients for your next projects.
 - [Josh's Gradient Generator](https://www.joshwcomeau.com/gradient-generator/) John Comeau gradient generator
-
-https://webgradients.com
-
-https://www.grabient.com
-
-https://gradients.cssgears.com
-
-http://colinkeany.com/blend 2 colors simple gradient
-
-https://uigradients.com
-
-https://www.gradients.io
-
-https://colorspark.app/gradient
+- https://webgradients.com
+- https://www.grabient.com
+- https://gradients.cssgears.com
+- http://colinkeany.com/blend
+- https://uigradients.com
+- https://www.gradients.io
+- https://colorspark.app/gradient
 
 ## Palette Previewer
 

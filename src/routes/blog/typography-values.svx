@@ -51,14 +51,6 @@ https://www.thegoodlineheight.com/
 For Heading: 110% -> 130%
 For Body: 130% - 150%
 
-## letter-spacing
-
-Headings with crispness use negative letter-spacing. (usually -0.5%, -1%, -2%)
-
-There's no **correct** way to achieve perfect spacing atm.
-
-[The Designer's Guide To Letter Spacing](https://www.webdesignerdepot.com/2020/07/the-designers-guide-to-letter-spacing/)
-
 
 ## Left align ALWAYS
 

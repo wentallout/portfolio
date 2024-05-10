@@ -117,6 +117,7 @@
 		z-index: 2;
 		position: relative;
 		filter: drop-shadow(0px 0px 2px currentcolor);
+		letter-spacing: var(--tracking-tight);
 	}
 
 	:global([color-scheme='light'] .title__deco) {

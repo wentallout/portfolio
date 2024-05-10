@@ -1,0 +1,28 @@
+---
+title: A/B Testing
+date: 2024-05-09
+categories:
+    - ux
+    - frontend
+---
+
+## What is A/B Testing
+
+A/B testing, also known as split testing, is a method used to compare two versions of a web page, app feature, or other product elements to determine which one performs better. It's a process particularly relevant for optimizing user experience and engagement on websites or applications.
+
+
+## Process
+
+The process involves the following steps:
+
+- Hypothesis Formulation: Starting with a hypothesis about how a change could improve a specific metric.
+- Creating Variations: Two versions are created - the original (A) and a variant (B).
+- Randomized Experimentation: The audience is randomly divided into two groups for each version.
+- Data Collection: Data on user behavior is collected for both versions.
+- Analysis: Results of both versions are compared to determine the better performer.
+- Conclusion: Deciding on the winning version based on the analysis.
+- Implementation: The winning version is implemented for all users.
+
+## Benefit
+
+A/B testing allows for data-driven decision-making and is effective in refining user interfaces and experiences, leading to higher user satisfaction and better performance of web projects.

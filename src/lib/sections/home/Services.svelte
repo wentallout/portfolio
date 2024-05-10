@@ -58,7 +58,7 @@
 					backgroundColor="var(--colorBgLayout)"
 					borderColor="var(--colorText)"
 					glowColor="var(--colorText)"
-					label="Book a meeting"
+					label="Schedule meeting"
 					labelColor="var(--colorText)"
 					shadowColor="var(--colorTextSecondary)" />
 			</a>
@@ -89,7 +89,7 @@
 					backgroundColor="var(--colorBgLayout)"
 					borderColor="var(--colorText)"
 					glowColor="var(--colorText)"
-					label="Book a meeting"
+					label="Schedule meeting"
 					labelColor="var(--colorText)"
 					shadowColor="var(--colorTextSecondary)" />
 			</a>

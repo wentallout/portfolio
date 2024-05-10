@@ -1,0 +1,29 @@
+---
+title: Everything about CLS
+date: 2024-05-08
+categories:
+    - frontend
+    - fundamental
+---
+
+## What is CLS?
+
+Cumulative Layout Shift (CLS) is where the layout of a web page unexpectedly shifts after the initial content loads and new content pops in. At its best, it’s a little inconvenient. At its worst, it’s an accidental click of a “BUY NOW” button that suddenly appeared under your mouse cursor after an ad loaded, resulting in an unwanted purchase.
+
+CLS is one of the Core Web Vitals that your pages are scored (and ranked) on by Google. It’s often caused by client-side data-fetching after a page has first loaded, and loading large images, ads or embedded media players, all of which are made worse by slow internet connections. The purpose of using CLS as an indicator of performance is to ensure that we’re building great user experiences, and not causing users to accidentally perform actions they did not intend. Not all CLS is bad, however. Google states that “In fact, many dynamic web applications frequently change the start position of elements on the page. A layout shift is only bad if the user isn’t expecting it.”
+
+
+## How is CLS measured?
+
+CLS is measured on a decimal scale. A good cumulative layout shift score is 0.1 or less. A poor CLS score is greater than 0.25. Similar to how Interaction to Next Paint (INP) is measured, Google assesses your page for CLS based on the largest burst of unexpected layout shifts that occur during a user’s time on the page. Smaller one-off instances of layout shift may be inconsequential, but a bunch of layout shifts happening one after the other, i.e. cumulatively, is what we need to avoid.
+
+## How to avoid unexpected cumulative layout shift
+
+There are tried-and-tested ways to avoid causing CLS on your web pages, including but not limited to:
+
+- Include `width` and `height` attributes on image elements and iframes.
+
+Provide placeholder elements (sometimes known as skeleton loaders) that are the same dimensions as dynamic elements that may be loaded via JavaScript later in the page life-cycle.
+
+Use the CSS at-rule @font-face: size-adjust to minimize any shifts caused by font files loading after the initial page render. Lazar Nikolov takes a deep dive into this topic in his article: Web Fonts and the Dreaded Cumulative Layout Shift.
+

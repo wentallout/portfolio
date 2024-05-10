@@ -8,7 +8,7 @@
 	import PageTitle from '$components/common/PageTitle.svelte';
 </script>
 
-<PageTitle pageTitle="Music" />
+<PageTitle pageTitle="Musics" />
 
 <section>
 	<SectionTitle

@@ -1,0 +1,22 @@
+---
+title: IP Address
+date: 2024-05-09
+categories:
+    - internet 
+    - fundamental
+---
+
+## What is IP Address
+
+IP Addresses serve as unique identifiers for devices on the internet, similar to how a postal address identifies a location in the physical world. They are critical for the accurate routing and delivery of data across the internet. Each device connected to the internet, from computers to smartphones, is assigned an IP address.
+
+
+## The 2 standards
+
+There are two main types of IP address standards:
+
+IPv4 (Internet Protocol version 4): This is the older and most widely used standard. IPv4 addresses are 32 bits in length, allowing for a theoretical maximum of about 4.3 billion unique addresses. They are typically represented in decimal format, divided into four octets (e.g., 192.0.2.1).
+
+IPv6 (Internet Protocol version 6): With the rapid growth of the internet and the exhaustion of IPv4 addresses, IPv6 was introduced. IPv6 addresses are 128 bits long, greatly expanding the number of available addresses. They are expressed in hexadecimal format, separated by colons (e.g., 2001:0db8:85a3:0000:0000:8a2e:0370:7334). This standard not only addresses the limitation of available addresses but also improves upon various aspects of IP addressing, including simplified processing by routers and enhanced security features.
+
+Both IP address standards are essential in the current landscape of the internet. While IPv4 is still predominant, the transition to IPv6 is gradually taking place as the need for more internet addresses continues to grow, driven by the proliferation of internet-connected devices.
