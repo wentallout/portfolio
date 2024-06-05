@@ -1,10 +1,8 @@
 import { sveltekit } from '@sveltejs/kit/vite';
 import { FontaineTransform } from 'fontaine';
 import Icons from 'unplugin-icons/vite';
-import browserslist from 'browserslist';
 import { imagetools } from 'vite-imagetools';
 
-import { browserslistToTargets } from 'lightningcss';
 import { paraglide } from '@inlang/paraglide-js-adapter-sveltekit/vite';
 
 const fontaineOptions = {
@@ -21,18 +19,6 @@ const config = {
 		}),
 		sveltekit(),
 
-		// svg({
-		// 	includePaths: ['./src/lib/assets/images/'],
-		// 	svgoOptions: {
-		// 		multipass: true,
-		// 		plugins: [
-		// 			{
-		// 				name: 'preset-default',
-		// 				params: { overrides: { removeViewBox: false } }
-		// 			}
-		// 		]
-		// 	}
-		// }),
 		Icons({ compiler: 'svelte', defaultClass: 'icon' }),
 		imagetools({
 			defaultDirectives: () => {
@@ -52,9 +38,6 @@ const config = {
 	},
 	css: {
 		transformer: 'lightningcss',
-		lightningcss: {
-			targets: browserslistToTargets(browserslist('>= 0.25%'))
-		},
 		devSourcemap: true
 	},
 	build: {

@@ -37,12 +37,12 @@ const config = {
 			handleHttpError: 'warn',
 			entries: ['*']
 		},
-		csp: {
-			mode: 'hash',
-			directives: {
-				'script-src': ['self', 'unsafe-inline', '*.posthog.com']
-			}
-		},
+		// csp: {
+		// 	mode: 'hash',
+		// 	directives: {
+		// 		'script-src': ['self', 'unsafe-inline', '*.posthog.com']
+		// 	}
+		// },
 		csrf: {
 			checkOrigin: true
 		},
