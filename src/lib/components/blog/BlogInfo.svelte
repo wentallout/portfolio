@@ -62,6 +62,12 @@
 		filter: grayscale(1);
 	}
 
+	.category {
+		display: flex;
+		flex-direction: row;
+		gap: var(--spaceXS);
+	}
+
 	.category__tag {
 		text-decoration: none !important;
 	}

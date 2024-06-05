@@ -58,7 +58,6 @@
 		/* --- */
 
 		&:hover {
-			background-color: var(--colorBgElevated);
 			box-shadow: -5px 5px var(--colorPrimaryHover);
 			transform: translate(5px, -5px);
 		}

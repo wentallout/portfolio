@@ -1,6 +1,6 @@
 .c-splash {
 	--animation-in-duration: 500ms;
-	--animation-out-duration: 300ms;
+	--animation-out-duration: 500ms;
 
 	position: fixed;
 	z-index: 9999;

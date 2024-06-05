@@ -4,6 +4,11 @@
 
 	let snippetList = [
 		{
+			title: 'Truncating Long Text with CSS Ellipsis',
+			href: 'https://codepen.io/wentallout/pen/MWdpQWW',
+			desc: 'truncate long text with css ellipsis'
+		},
+		{
 			title: 'Pancake Stack Layout',
 			href: 'https://codepen.io/wentallout/pen/KKrqXMj',
 			desc: 'a commonly used layout in both desktop and mobile'

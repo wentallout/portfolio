@@ -248,4 +248,10 @@ aside.toc > nav {
 	font-family: inherit;
 }
 
+p > code 
+{
+	background-color: #1e1e1e;
+	padding: 4px 8px;
+	margin: 4px;
+}
 

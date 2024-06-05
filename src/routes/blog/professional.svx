@@ -1,0 +1,64 @@
+---
+title: What Makes You a Professional Web Developer
+date: 2024-05-23
+categories:
+    - fundamental
+---
+
+## The Professional Web Developer
+
+The definitions all relate to how we do our work, both in terms of its quality as well as our conduct. Let's see what this can mean for professional web development. Note that I intentionally make everything that follows sound normative—but that it's all open for feedback and discussion. Only together can we come up with expectations for the work in our field.
+
+### You Commit to High Standards for Work and Conduct
+
+A professional web developer doesn't set a low bar for themselves and for their peers, but challenges themselves and others with a high bar. High standards are necessary because there's nothing, let alone professionalism, in no or a low bar. Being able to save a file that contains some HTML "tags" is not enough to call someone a professional web developer. Even valid code, see the next point, is not enough.
+
+Accordingly, where those high standards lie exactly is a challenge, as well as how to weigh them. We're applying standards in our organizations, though. Think of hiring standards, think of codes of conduct, think of coding guidelines. Perhaps what we're lacking is codifying and documenting expectations for professional developers, just on a larger scale, broadly accessible, reviewed and discussed and agreed-on.
+
+### You Validate
+
+Committing to high standards includes that a professional web developer writes and ships valid code. This means that the code in question is syntactically correct and in conformance with the respective standards. (Excuses, even if sophisticated, and shortcuts should not be allowed.)
+
+There are many tools for validation—note the many web-based ones, or the Node packages (HTML, CSS) alone. The most important one, however, is education. A professional web developer should know what code is valid. Validation, as a tooling-aided process, supports this knowing—by validating, developers learn to write higher-quality code.
+
+Writing and shipping valid code is a base criterion for working in our field.
+
+### You Exercise Control over Yourself
+
+On the conduct side, high standards also mean to have yourself under control. Like the other points, this one is broad. What it entails, however, are things like being respectful, and not lashing out at others; being timely, and not standing people up; or being reliable, and not being flaky when it comes to whether or when something is being done.
+
+### You Act Ethically
+
+A professional web developer acts ethically. What does this mean? That's an excellent question, and one that may not have been answered satisfactorily yet in writings about ethical conduct in our field. Why hasn't it? Because there are several schools of Ethics, and our tech-based views usually miss calling out which one they're ascribing to—let alone explain why their view is to be preferred, or what other schools there are.
+
+But the matter is not that complicated, either. This is for another underrepresented issue: Only a minority of web developer positions deal with high-impact ethical decisions. Few of us have to decide about working for someone or on something that has a negative lasting impact on many, several, or even one living being. *
+
+The point may be kept broad: As a professional, you have an eye on the impact of your work and your conduct carrying it out, so as to act responsibly and not only not hurt anyone, but to actively make lives better.
+
+### You Keep Practicing
+
+A professional web developer keeps practicing—that is, actively developing, maintaining, and optimizing code. Practice is known to be a great teacher, but here it's decisive—how can you be a developer if you don't develop? Without practicing, it won't take long until you can't call yourself a professional any longer. (This can be fine, for example, if you're moving into a different role, and change from being a professional developer to being a professional else.)
+
+Apart from your paid work, two of the most wonderful ways to keep practicing include contributing to open source projects, and running your own website. Both greatly serve growth and identification as a professional.
+
+### You Keep Learning
+
+A professional web developer keeps learning. The field doesn't stop; therefore, to keep producing good work (cf. high standards), the people in the field cannot stop.
+
+Learning means to regularly read, watch, and listen to professional sources of news and opinion. This doesn't need to be extreme, like every day, but it should be done routinely. The best "trick" here is to stay as close as possible to the source, that is, the standards.
+
+### You Take Care of Yourself
+
+A professional web developer takes care of themselves. This may sound new, so think of professionals in other areas—perhaps of athletes. An athlete would not get drunk the day before an event (a work day); instead, they would make sure they have a good workout, a good meal, and get good sleep.
+
+A professional web developer can be a bit like an athlete. In high-performance environments, you have to, no, you choose to. Because if nowhere else, then this is where you can't just "say" you're a professional—you have to be one.
+
+### You Take Care of Others
+
+A professional web developer takes care of others. They realize that at the end of the day, giving their work everything; giving their field everything; giving others everything is the best way to also give to themselves.
+
+Taking care of others is not the only reason for why we may be in the field; but it is the most beautiful one, and the one that makes everything here, all professionalism easy and worthwhile. Even if you're only in it for the pay check, your work is about others. The more you see this, the more you live this, the easier it is to identify and act as a professional. You're not an island.
+
+## Reference
+
+https://meiert.com/en/blog/professional-web-developer

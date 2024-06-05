@@ -9,7 +9,6 @@
 	onMount(() => {
 		new AudioMotionAnalyzer(visualizerEl, {
 			source: $audioPlayerEl,
-			height: 300,
 			mode: 4,
 			barSpace: 0,
 			ledBars: true,
@@ -25,16 +24,16 @@
 		});
 	});
 
-	$: energyHeight = 120 + energy * 150;
+	$: energyHeight = 90 + energy * 150;
 	function drawCallback(i) {
 		energy = i.getEnergy();
 	}
 </script>
 
-<div bind:this={visualizerEl} class="visualizer">
+<div class="visualizer" bind:this={visualizerEl} class:visualizer--playing={$isPlaying}>
 	<img
-		style="--energyHeight:{energyHeight}px;"
 		class="visualizer__logo"
+		style="--energyHeight:{energyHeight}px;"
 		alt="music visualizer logo"
 		src="/images/brand-logo.svg" />
 
@@ -46,6 +45,22 @@
 </div>
 
 <style>
+	.visualizer {
+		display: none;
+		position: relative;
+		height: 100px;
+	}
+
+	.visualizer--playing {
+		display: block;
+	}
+
+	@media (min-width: 768px) {
+		.visualizer {
+			position: relative;
+			height: 300px;
+		}
+	}
 	.visualizer__logo {
 		position: absolute;
 		left: 0;
@@ -57,11 +72,6 @@
 		--shadow: calc(var(--energyHeight) - 100px);
 		filter: drop-shadow(0 0 var(--shadow) var(--colorPrimaryHover));
 		z-index: -1;
-	}
-
-	.visualizer {
-		position: relative;
-		height: 300px;
 	}
 
 	.visualizer__dancer {

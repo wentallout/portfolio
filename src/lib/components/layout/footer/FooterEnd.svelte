@@ -12,7 +12,10 @@
 	</div>
 
 	<div class="end__text">
-		Made with <span style="color:#FF3E00;font-weight:600">SvelteKit</span>
+		Made by Khoa with
+		<a target="_blank" href="https://svelte.dev">
+			<span class="end__svelte">SvelteKit</span>
+		</a>
 	</div>
 </div>
 
@@ -28,5 +31,10 @@
 		user-select: none;
 		margin-top: var(--spaceS);
 		color: var(--colorTextSecondary);
+	}
+
+	.end__svelte {
+		color: var(--colorSvelte);
+		font-weight: 600;
 	}
 </style>

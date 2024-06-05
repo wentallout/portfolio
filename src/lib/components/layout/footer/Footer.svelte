@@ -4,19 +4,23 @@
 	import Marquee from '$components/layout/other/Marquee.svelte';
 	import { navItems } from '$lib/config.js';
 
-	// ICONS
-	import Envelope from '~icons/ph/envelope';
-	import LinkedinLogo from '~icons/ph/linkedin-logo';
-	import InstagramLogo from '~icons/ph/instagram-logo';
-	import GitHubLogo from '~icons/ph/github-logo';
-	import Phone from '~icons/ph/phone';
-	import MapPin from '~icons/ph/map-pin';
+	import {
+		Envelope,
+		LinkedinLogo,
+		InstagramLogo,
+		GitHubLogo,
+		Phone,
+		MapPin
+	} from '$lib/assets/icons/icons';
+
 	import LanguageSwitcher from '$components/i18n/LanguageSwitcher.svelte';
 </script>
 
-<footer class="footer text-small gradient-bg">
+<footer class="footer text-small">
+	<div class="gradient-bg"></div>
+
 	<div class="pad">
-		<div class="footer__list">
+		<div class="footer__list pad">
 			<div class="list">
 				<div class="list__title">About me</div>
 				<ul class="list__nav">
@@ -129,6 +133,20 @@
 <Marquee />
 
 <style>
+	.gradient-bg {
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		width: 100%;
+		height: 40%;
+		pointer-events: none;
+	}
+
+	.pad {
+		z-index: 3;
+		background: transparent;
+	}
+
 	:global([color-scheme='light'] .bg) {
 		display: none;
 	}
@@ -160,16 +178,17 @@
 	}
 
 	.footer {
+		/* FLEX */
 		display: flex;
-
 		flex-direction: column;
-		width: 100%;
+		/* --- */
 
-		padding: var(--spaceXL) 0;
-		/* Position */
-		position: relative;
-		/* Width */
+		/* SIZE */
 		max-width: 100vw;
+		width: 100%;
+		padding: var(--spaceXL) 0;
+		/* --- */
+
 		position: relative;
 		overflow: hidden;
 	}

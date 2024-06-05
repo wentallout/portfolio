@@ -57,7 +57,7 @@
 						for your business
 					</div>
 				</div>
-				<div class="hero__text text-small">
+				<div class="hero__text text-base">
 					{m.heroText()}
 				</div>
 

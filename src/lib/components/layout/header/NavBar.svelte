@@ -30,7 +30,7 @@
 <svelte:window bind:scrollY />
 
 <VanishingHeader duration="300ms" offset={50} tolerance={5}>
-	<header bind:this={headerEle} class="header">
+	<header class="header" bind:this={headerEle}>
 		<ThemeSwitcher />
 		<nav class="nav pad" class:nav--scrolldown={scrollY > 0} aria-label="primary menu">
 			<ul class="nav-list">
@@ -106,9 +106,11 @@
 	}
 
 	.nav--scrolldown {
-		background: color-mix(in srgb, var(--colorBgLayout) 50%, transparent);
+		background: color-mix(in srgb, var(--colorBgLayout) 100%, transparent);
 		backdrop-filter: blur(5px);
 		color: var(--colorText);
+		border: 1px solid var(--colorBorder);
+		box-shadow: 0 2px 2px -2px rgba(0, 0, 0, 0.2);
 	}
 
 	.active-page {
