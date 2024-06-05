@@ -38,7 +38,7 @@ const config = {
 			entries: ['*']
 		},
 		csp: {
-			mode: 'auto',
+			mode: 'hash',
 			directives: {
 				'script-src': ['self', 'unsafe-inline', '*.posthog.com']
 			}
