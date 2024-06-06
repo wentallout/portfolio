@@ -29,7 +29,7 @@
 </script>
 
 <SEO {...seoProps} />
-<PageTitle pageTitle="Project" />
+<PageTitle pageTitle="Projects" />
 
 <section>
 	<SectionTitle
@@ -44,8 +44,8 @@
 
 <section>
 	<SectionTitle
-		sectionDesc="Some solutions to niche Frontend problems."
-		sectionTitle="Snippets"
+		sectionDesc="Code snippets for common frontend problems"
+		sectionTitle="Code Snippets"
 		let:sectionIcon>
 		<CodePen {...sectionIcon} />
 	</SectionTitle>

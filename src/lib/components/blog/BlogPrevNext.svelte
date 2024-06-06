@@ -82,7 +82,7 @@
 	.prevnext__btn {
 		position: relative;
 		text-decoration: none !important;
-		padding: var(--spaceXS);
+		padding: var(--spaceXS) var(--spaceS);
 		transition: var(--transition);
 		display: flex;
 		gap: var(--spaceS);
@@ -99,7 +99,7 @@
 	}
 
 	.prevnext__sign {
-		color: var(--colorText);
+		color: var(--colorTextSecondary);
 	}
 
 	.prevnext__title {

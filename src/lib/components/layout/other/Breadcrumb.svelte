@@ -62,13 +62,14 @@
 		display: flex;
 		flex-direction: row;
 		align-items: center;
-		gap: 0.25rem;
-
+		flex-wrap: wrap;
+		gap: var(--space3XS);
+		position: relative;
 		margin-top: var(--scroll-padding);
 		margin-bottom: var(--spaceXL);
 
 		background-color: transparent;
-		position: sticky;
+
 		top: -1px;
 		transition: var(--transition);
 	}
@@ -92,10 +93,11 @@
 	}
 
 	:global(.breadcrumb.sticky) {
+		position: sticky;
 		background-color: var(--colorBgLayout);
 		padding: var(--space2XS) var(--spaceXS);
 		box-shadow: var(--boxShadow);
-		z-index: 99999;
+		z-index: 9999;
 		border-radius: 0 0 var(--borderRadiusLight) var(--borderRadiusLight);
 	}
 </style>

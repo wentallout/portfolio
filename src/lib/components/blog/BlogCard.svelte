@@ -45,7 +45,7 @@
 		/* SIZE */
 		width: 100%;
 		height: 140px;
-		padding: var(--space2XS) var(--spaceS);
+		padding: var(--space2XS) var(--spaceM);
 		/* --- */
 
 		/* OTHER */
@@ -58,9 +58,12 @@
 		/* --- */
 
 		&:hover {
-			background-color: var(--colorBgElevated);
 			box-shadow: -5px 5px var(--colorPrimaryHover);
 			transform: translate(5px, -5px);
+		}
+
+		&:hover .tags {
+			opacity: 1;
 		}
 	}
 
@@ -69,10 +72,11 @@
 	}
 
 	.tags {
-		display: flex;
+		opacity: 0;
 		flex-direction: row;
 		flex-wrap: wrap;
 		gap: var(--spaceXS);
+		transition: var(--transition);
 	}
 
 	.tag {
@@ -96,7 +100,7 @@
 		overflow: hidden;
 
 		/* FONT */
-		font-weight: var(--fontWeightLarge);
+		font-weight: var(--fontWeightMid);
 		color: var(--colorText);
 		/* --- */
 

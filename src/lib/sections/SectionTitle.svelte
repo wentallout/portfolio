@@ -1,6 +1,5 @@
 <script>
 	import SectionDesc from '$sections/SectionDesc.svelte';
-	import { onMount } from 'svelte';
 
 	export let sectionTitle = '';
 	export let sectionDesc = '';
@@ -15,7 +14,7 @@
 		<div class="section__icon text-large">
 			<slot {sectionIcon} />
 		</div>
-		<h2 id={sectionTitle.toLowerCase()} class="section__text text-large" data-title={sectionTitle}>
+		<h2 id={sectionTitle.toLowerCase()} class="text-xl section__text" data-title={sectionTitle}>
 			{sectionTitle}
 		</h2>
 	</div>
@@ -39,7 +38,7 @@
 		gap: var(--spaceS);
 		/*  */
 
-		margin-bottom: var(--spaceM);
+		margin-bottom: var(--spaceS);
 		position: relative;
 	}
 
@@ -54,14 +53,16 @@
 		color: var(--colorText);
 		position: relative;
 		--before-left: 4px;
+
+		letter-spacing: var(--tracking-tight);
 	}
 
 	.section__text::before {
 		content: attr(data-title);
 		height: 100%;
 		width: 100vw;
-		left: 0px;
-		top: 80%;
+		left: 8px;
+		top: 4px;
 		-webkit-text-fill-color: transparent;
 		-webkit-text-stroke: 1px var(--colorText);
 		color: var(--colorText);
@@ -71,22 +72,5 @@
 		z-index: -1;
 		opacity: 0.1;
 		font-weight: 100;
-		/* transform: rotateX(180deg); */
-
-		animation: textAni 5s linear infinite;
-	}
-
-	@keyframes textAni {
-		0% {
-			top: 80%;
-		}
-
-		50% {
-			top: -80%;
-		}
-
-		100% {
-			top: 80%;
-		}
 	}
 </style>

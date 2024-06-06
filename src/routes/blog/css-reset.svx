@@ -1,0 +1,34 @@
+---
+title: CSS Reset - What is it?
+date: 2024-05-09
+categories:
+    - frontend
+---
+
+
+## Problem
+
+When you're building web pages, you'll notice that different browsers have their own default styles for various HTML elements. These default styles can cause inconsistencies in how your web pages look across different browsers. This is where CSS resets come in handy.
+
+## What does CSS Reset do?
+
+CSS resets ensure consistency across different browsers by removing default styles that browsers apply to HTML elements. This leads to more control over styling and simplifies cross-browser compatibility.
+
+## Purpose of CSS Resets:
+
+Consistency Across Browsers: Resets help achieve a uniform look across various browsers.
+Control Over Styling: Resets provide a clean slate for custom styles, ensuring they behave as expected.
+Simplifying Cross-Browser Compatibility: Resets reduce the quirks that arise from browser default style clashes.
+Considerations:
+
+Resets can sometimes be overkill for smaller projects.
+Understand what each reset rule does to avoid removing needed styles.
+Modern frameworks may include their own reset or normalization styles.
+CSS resets are useful for ensuring consistency and control over styling across different browsers. However, they can be overkill for smaller projects and may not be necessary if you're using a modern CSS framework.
+
+## Tools
+
+- ress: https://www.ress.page/
+- Destyle.css: https://nicolas-cusan.github.io/destyle.css/
+- The New CSS Reset: https://github.com/elad2412/the-new-css-reset
+- A modern CSS reset: https://www.joshwcomeau.com/css/custom-css-reset/

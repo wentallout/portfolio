@@ -19,6 +19,7 @@
 	text-transform: capitalize;
 	margin-bottom: var(--spaceM);
 	color: var(--colorText);
+	letter-spacing: var(--tracking-tight);
 }
 
 .markdown h2,
@@ -27,7 +28,7 @@
 	line-height: 120%;
 	position: relative;
 	color: var(--colorText);
-	text-wrap: balance;
+	
 }
 
 .markdown h2:first-child {
@@ -232,10 +233,13 @@ aside.toc > nav {
 	max-width: 240px;
 }
 
-.markdown h2:hover::after,
-.markdown h3:hover::after,
-.markdown h4:hover::after {
+.markdown h2:hover::before,
+.markdown h3:hover::before,
+.markdown h4:hover::before {
 	content: ' 🔗';
+	position: absolute;
+	left: -7%;
+
 }
 
 .icon-link:before {
@@ -244,6 +248,10 @@ aside.toc > nav {
 	font-family: inherit;
 }
 
-.markdown h2:hover {
-	border-image: linear-gradient(to right, var(--colorPrimaryHover), transparent) 1 0%;
+p > code 
+{
+	background-color: #1e1e1e;
+	padding: 4px 8px;
+	margin: 4px;
 }
+

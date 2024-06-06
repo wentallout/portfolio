@@ -46,17 +46,18 @@
 	<div class="full-width">
 		<div class="hero pad">
 			<div class="hero__block">
-				<div class="hero__name text-2xl">
+				<div class="text-3xl hero__heading">
 					<div>
-						Crafting your dream
+						Tailor-made
 						<span id="hero__focus" class="hero__focus focus">
 							<span class="word">website</span>
 							<span class="word">app</span>
 							<span class="word">game</span>
 						</span>
+						for your business
 					</div>
 				</div>
-				<div class="hero__text text-small">
+				<div class="hero__text text-base">
 					{m.heroText()}
 				</div>
 
@@ -119,9 +120,10 @@
 		}
 	}
 
-	.hero__name {
+	.hero__heading {
 		font-family: var(--fontFancy);
 		margin-bottom: var(--spaceL);
+		letter-spacing: var(--tracking-tighter);
 	}
 
 	.focus {

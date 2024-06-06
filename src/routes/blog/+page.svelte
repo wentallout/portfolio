@@ -55,7 +55,7 @@
 	$: paginatedItems = paginate({ items: filteredBlogs, pageSize, currentPage });
 </script>
 
-<PageTitle pageTitle="Blog" />
+<PageTitle pageTitle="Blogs" />
 
 <section class="blog-list">
 	<search>

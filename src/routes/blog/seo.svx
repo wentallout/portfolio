@@ -1,0 +1,20 @@
+---
+title: Basic things you need to know about SEO
+date: 2024-05-09
+categories:
+    - seo 
+    - fundamental
+---
+
+
+## Search Engine Optimization (SEO)
+
+Search Engine Optimization (SEO) is a process used to increase a website's visibility in search engine results. It involves various strategies and techniques aimed at improving a website's ranking on search engine result pages (SERPs). The higher a website ranks, the more likely it is to be visited by users.
+
+SEO focuses on both technical and creative elements. Key aspects include optimizing content with relevant keywords, ensuring the site is structured in a way that search engines can easily crawl, improving site speed, and ensuring the site is mobile-friendly. It also involves building backlinks from other reputable websites, which enhances a site's credibility and authority. Additionally, SEO includes optimizing on-page elements like titles, meta descriptions, and header tags to make them more search-engine friendly. Regular content updates and using tools like Google Analytics for performance analysis are also crucial for maintaining and improving SEO rankings. Effective SEO strategies lead to higher organic traffic, which is valuable for any website seeking to increase its online presence and reach.
+
+## Learn more
+
+https://learningseo.io/
+
+https://frontendmasters.com/courses/modern-seo/?utm_source=guides&utm_medium=website&utm_campaign=feh2024

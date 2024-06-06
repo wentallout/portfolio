@@ -1,0 +1,21 @@
+---
+title: What is JSON?
+date: 2024-05-08
+categories:
+    - frontend
+    - fundamental
+---
+
+## JavaScript Object Notation (JSON)
+
+JSON (JavaScript Object Notation) is a lightweight data-interchange format that is easy for humans to read and write and easy for machines to parse and generate. It's a text-based format, consisting of name-value pairs and ordered lists of values, which is used extensively in web development and various other programming contexts. Here's a breakdown of its key characteristics:
+
+Lightweight Data Format: JSON is text-based, making it lightweight and suitable for data interchange.
+Human and Machine Readable: Its structure is simple and clear, making it readable by humans and easily parsed by machines.
+Language Independent: Despite its name, JSON is independent of JavaScript and can be used with many programming languages.
+JSON's simplicity, efficiency, and wide support across programming languages have made it a fundamental tool in modern software development, particularly for web APIs, configuration management, and data interchange in distributed systems.
+
+## Learn more
+
+- https://www.json.org/json-en.html
+- https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Objects/JSON

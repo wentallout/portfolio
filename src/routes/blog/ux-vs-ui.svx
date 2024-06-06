@@ -1,8 +1,8 @@
 ---
 title: Understanding UX and UI
-date: '2022-09-30'
+date: 2022-09-30
 categories:
-    - 'fundamental'
+    - fundamental
 ---
 
 <script>

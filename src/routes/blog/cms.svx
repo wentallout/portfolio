@@ -1,0 +1,27 @@
+---
+title: Content Management System (CMS) - What is it?
+date: 2024-05-09
+categories:
+    - web
+    - frontend
+---
+
+
+## What is a CMS
+
+Content Management Systems (CMS) are software tools designed to help users create, manage, and modify content on a website without the need for specialized technical knowledge. Essentially, they provide a user-friendly interface for handling the various elements of a website. 
+
+## Key aspects
+
+Here's a breakdown of key aspects of CMS:
+
+- User-Friendly Interface: CMS platforms typically offer a user-friendly interface, making it easy for people with little to no coding experience to create and manage website content.
+- Content Creation and Management: Users can create, edit, and publish digital content such as text, images, and videos. This includes formatting content, inserting media, and managing how and when content is displayed.
+- Templates and Design: Most CMSs offer a variety of pre-designed templates, allowing users to choose and customize the layout and design of their website without coding.
+- Extensions and Plugins: Many CMSs support extensions or plugins, which add additional functionalities to the website, like SEO tools, social media integration, analytics, and more.
+- User Roles and Permissions: A CMS allows the assignment of different roles and permissions to different users, enabling control over who can edit or publish content.
+- SEO-Friendly Features: CMSs often include features that help optimize the website for search engines, such as customizable URLs, meta tags, and integration with analytics tools.
+- Responsive Design: Modern CMSs ensure that the content is mobile-friendly and looks good on all devices.
+- Security: CMSs provide security features to protect the website from unauthorized access and cyber threats.
+- Scalability: A CMS can support a website's growth, allowing the addition of more pages or content without a significant overhaul of the site structure.
+

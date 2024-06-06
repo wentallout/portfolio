@@ -1,41 +1,14 @@
 ---
-title: 'Grids'
-date: '2022-10-31'
+title: Grids
+date: 2022-10-31
 categories:
-    - 'fundamental'
+    - fundamental
 ---
 
 <script>
 
 import Image from '$components/common/Image.svelte';
 </script>
-
-## types of Grids
-
-### Column Grid
-
-### Modular Grid
-
-### Hierarchical Grid
-
-Even tho it's possible to use both a column and modular grids to establish a clear visual hierarchy, the Hierarchical Grid is used for the sole purpose of establishing a very clear visual hierarchy.
-
-### Baseline Grid
-
-Great if you want to achieve consistency with type + poster with a lot of types
-
-
-They create a vertical rhythym
-
-### Alternative: Axial Grid
-
-Unlike the previous grid systems, the axial grid is free from columns, modules and encourages more free and simple layout.
-
-### Alternative: Diagonal Grid
-
-### Alternative: Radial Grid
-
-
 
 ## Reference
 

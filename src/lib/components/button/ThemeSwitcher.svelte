@@ -11,11 +11,11 @@
 		class:circle--left={$theme === 'dark'}
 		class:circle--right={$theme === 'light'}>
 		{#if $theme === 'dark'}
-			<div aria-label="dark mode">
+			<div>
 				<Moon class="icon" color="var(--colorText)" height="16" width="16" />
 			</div>
 		{:else if $theme === 'light'}
-			<div aria-label="light mode">
+			<div>
 				<Sun class="icon" color="var(--colorText)" height="16" width="16" />
 			</div>
 		{/if}

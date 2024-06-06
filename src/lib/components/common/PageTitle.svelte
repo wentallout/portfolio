@@ -40,8 +40,10 @@
 		transform: translate(-50%, -50%);
 
 		font-family: var(--fontFancy);
-		opacity: 15%;
+		opacity: 10%;
 		z-index: -2;
+		font-weight: 100;
+		letter-spacing: var(--tracking-tighter);
 	}
 
 	.title__content {
@@ -117,6 +119,7 @@
 		z-index: 2;
 		position: relative;
 		filter: drop-shadow(0px 0px 2px currentcolor);
+		letter-spacing: var(--tracking-tight);
 	}
 
 	:global([color-scheme='light'] .title__deco) {

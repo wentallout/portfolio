@@ -1,5 +1,5 @@
 <script>
-	import Giscus from '$components/comments/Giscus.svelte';
+	import Giscus from '$components/blog/BlogGiscus.svelte';
 
 	export let category = 'Blogs';
 	let categoryId = '';

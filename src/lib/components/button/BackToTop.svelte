@@ -35,7 +35,7 @@
 <style>
 	.bck2top {
 		aspect-ratio: 1/1;
-		padding: var(--spaceXS);
+		padding: var(--space2XS);
 
 		/* FLEX */
 		display: flex;
@@ -47,8 +47,8 @@
 
 		/* POSITION FIXED ON SCREEN */
 		position: fixed;
-		right: 0;
-		bottom: 0;
+		right: 8px;
+		bottom: 8px;
 		z-index: var(--zIndexMax);
 		/*  */
 
@@ -59,7 +59,7 @@
 			visibility 0.3s;
 		user-select: none;
 		line-height: normal;
-		border-radius: 16px 0 0;
+		border-radius: 16px;
 		/*  */
 
 		box-shadow: var(--boxShadow);
@@ -67,15 +67,15 @@
 		background-color: var(--colorBgElevated);
 	}
 
-	.bck2top:active {
-		color: var(--colorPrimaryActive);
-	}
-
 	@media (min-width: 768px) {
 		.bck2top {
-			padding: var(--spaceS);
+			padding: var(--spaceXS);
 			aspect-ratio: 1/1;
 		}
+	}
+
+	.bck2top:active {
+		color: var(--colorPrimaryActive);
 	}
 
 	.bck2top.hidden {

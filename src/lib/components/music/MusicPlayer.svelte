@@ -11,6 +11,7 @@
 	import SpeakerX from '~icons/ph/speaker-x';
 
 	import MusicVisualizer from '$components/music/MusicVisualizer.svelte';
+	import { slide } from 'svelte/transition';
 
 	let currentSongIndex = 0;
 
@@ -24,6 +25,12 @@
 
 	function mute() {
 		muted = !muted;
+
+		if (muted === true) {
+			volume = 0;
+		} else {
+			volume = 0.4;
+		}
 	}
 
 	function playMusic() {
@@ -82,70 +89,73 @@
 	bind:duration
 	bind:volume
 	on:ended={next} />
+
 <div class="player">
-	<div class="current">
+	<div class="player__current">
 		<div class="info">
-			<div class="info__name text-2xl">{$musicList[currentSongIndex].name}</div>
+			{#if $isPlaying}
+				<div transition:slide class="info__name text-xl">{$musicList[currentSongIndex].name}</div>
+			{/if}
 
 			<div class="info__time">
-				<div class="info__current text-xl">{formatMusicTime(currentTime)}</div>
-				<div class="info__duration text-xl">{formatMusicTime(duration)}</div>
+				<div class="info__current text-base">{formatMusicTime(currentTime)}</div>
+				<input
+					bind:this={seekBarEle}
+					class="seekBar__control"
+					list="marker"
+					max="100"
+					min="0"
+					step="any"
+					type="range"
+					on:input={handleSeekBar}
+					bind:value={seekBarValue} />
+				<div class="info__duration text-base">{formatMusicTime(duration)}</div>
+			</div>
+		</div>
+
+		<div class="player__btns">
+			<div class="controls">
+				<button class="mp-btn other-btn" type="button" on:click={prev}>
+					<SkipBack color="var(--colorTextSecondary)" height="24" width="24" />
+				</button>
+
+				{#if $isPlaying}
+					<button class="mp-btn play-btn" type="button" on:click={pauseMusic}>
+						<Pause color="var(--colorBlack)" height="24" width="24" />
+					</button>
+				{:else}
+					<button class="mp-btn play-btn" type="button" on:click={playMusic}>
+						<PlayFill color="var(--colorBlack)" height="24" width="24" />
+					</button>
+				{/if}
+
+				<button class="mp-btn other-btn" type="button" on:click={next}>
+					<SkipForward color="var(--colorTextSecondary)" height="24" width="24" />
+				</button>
+			</div>
+
+			<div class="volume">
+				<button class="mute__btn" type="button" on:click={mute} on:keydown={mute}>
+					{#if muted}
+						<SpeakerX color="var(--colorTextQuaternary)" height="24" width="24" />
+					{:else}
+						<SpeakerHigh color="var(--colorText)" height="24" width="24" />
+					{/if}
+				</button>
+				<input
+					bind:this={volumeEle}
+					id="volume-control"
+					max="100"
+					min="0"
+					step="any"
+					type="range"
+					value={volume * 100}
+					on:input={handleVolume} />
 			</div>
 		</div>
 	</div>
 
-	<div class="seekBar">
-		<div class="controls">
-			<button class="mp-btn other-btn" type="button" on:click={prev}>
-				<SkipBack color="var(--colorTextSecondary)" height="24" width="24" />
-			</button>
-
-			{#if $isPlaying}
-				<button class="mp-btn play-btn" type="button" on:click={pauseMusic}>
-					<Pause color="var(--colorBlack)" height="24" width="24" />
-				</button>
-			{:else}
-				<button class="mp-btn play-btn" type="button" on:click={playMusic}>
-					<PlayFill color="var(--colorBlack)" height="24" width="24" />
-				</button>
-			{/if}
-
-			<button class="mp-btn other-btn" type="button" on:click={next}>
-				<SkipForward color="var(--colorTextSecondary)" height="24" width="24" />
-			</button>
-		</div>
-		<input
-			bind:this={seekBarEle}
-			class="seekBar__control"
-			list="marker"
-			max="100"
-			min="0"
-			step="any"
-			type="range"
-			on:input={handleSeekBar}
-			bind:value={seekBarValue} />
-
-		<div class="volume">
-			<button class="mute__btn" type="button" on:click={mute} on:keydown={mute}>
-				{#if muted}
-					<SpeakerX color="var(--colorTextSecondary)" height="24" width="24" />
-				{:else}
-					<SpeakerHigh color="var(--colorText)" height="24" width="24" />
-				{/if}
-			</button>
-			<input
-				bind:this={volumeEle}
-				id="volume-control"
-				max="100"
-				min="0"
-				step="any"
-				type="range"
-				value={volume * 100}
-				on:input={handleVolume} />
-		</div>
-	</div>
-
-	<div class="song-list">
+	<div class="player__list">
 		{#each $musicList as music, i}
 			<button
 				class={i == currentSongIndex ? 'cs song-active' : 'cs song'}
@@ -166,15 +176,14 @@
 		cursor: pointer;
 	}
 
-	.seekBar {
+	.player__btns {
 		display: flex;
 		flex-direction: row;
 		align-items: center;
 		flex-wrap: wrap;
 		width: 100%;
-		padding: 0 var(--spaceL);
 		gap: var(--spaceS);
-		box-shadow: var(--boxShadow);
+		margin-bottom: var(--spaceM);
 	}
 
 	.seekBar__control {
@@ -199,6 +208,11 @@
 	.info__name {
 		color: var(--colorText);
 		font-weight: var(--fontWeightLarge);
+		text-align: center;
+	}
+
+	.info {
+		width: 100%;
 	}
 
 	.info__duration {
@@ -206,47 +220,34 @@
 		color: var(--colorTextQuaternary);
 	}
 
-	.download {
-		width: 40px;
-		height: 40px;
-		display: flex;
-		justify-content: center;
-		align-items: center;
-		border-radius: 100%;
-		z-index: 2;
-		margin-left: auto;
-		transition: var(--transition);
-		outline: 1px solid var(--colorTextQuaternary);
-
-		&:hover {
-			scale: 1.2;
-		}
-	}
-
-	.info {
+	.player__info {
 		display: flex;
 		flex-direction: column;
 		gap: var(--spaceS);
-		width: fit-content;
+		width: 100%;
 		align-items: center;
 		justify-content: center;
-		padding: var(--spaceM);
 		color: var(--colorWhite);
 	}
 
 	.info__time {
 		display: flex;
 		flex-direction: row;
+		align-items: center;
+		justify-content: space-between;
 		gap: var(--spaceS);
 		color: var(--colorWhite);
+		width: 100%;
+		margin-bottom: var(--spaceM);
 	}
 
-	.current {
+	.player__current {
 		display: flex;
 		justify-content: center;
 		flex-direction: column;
 		align-items: center;
 		width: 100%;
+		padding: var(--spaceM) var(--spaceS);
 	}
 
 	/* MUSIC PLAYER BUTTONS */
@@ -255,7 +256,6 @@
 		display: flex;
 		justify-content: center;
 		align-items: center;
-		padding: var(--spaceS) 0;
 		gap: var(--spaceXS);
 	}
 
@@ -297,7 +297,7 @@
 		overflow: hidden;
 	}
 
-	.song-list {
+	.player__list {
 		display: flex;
 		flex-direction: column;
 		background-color: transparent;
@@ -317,16 +317,17 @@
 	.song-active::before {
 		content: 'Playing';
 		z-index: 0;
-		font-weight: 600;
+
 		font-size: 3em;
 		position: absolute;
-		top: 50%;
+
 		right: 0;
 		opacity: 0.4;
-		transform: translate(-50%, -50%);
+
 		font-family: var(--fontFancy);
 		-webkit-text-stroke: 1px var(--colorText);
 		-webkit-text-fill-color: transparent;
+		font-weight: 100;
 	}
 
 	.song-name {
@@ -354,6 +355,23 @@
 		&:hover {
 			background-color: var(--colorBgElevated);
 			cursor: pointer;
+		}
+	}
+
+	.download {
+		width: 40px;
+		height: 40px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		border-radius: 100%;
+		z-index: 2;
+		margin-left: auto;
+		transition: var(--transition);
+		outline: 1px solid var(--colorTextQuaternary);
+
+		&:hover {
+			scale: 1.2;
 		}
 	}
 </style>

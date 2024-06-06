@@ -2,7 +2,7 @@
 title: 'What is WCAG?'
 date: '2022-11-26'
 categories:
-    - 'fundamental'
+    - fundamental
 ---
 
 ## Checklist 

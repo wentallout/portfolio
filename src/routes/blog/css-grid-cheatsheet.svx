@@ -1,0 +1,22 @@
+---
+title: 'CSS Grid: Ultimate Cheatsheet'
+date: 2024-05-30
+categories:
+    - fundamental
+---
+
+## Aligning content and items
+
+![Aligning content and items](https://i.imgur.com/HZC33fH.jpeg)
+
+## Justify, align, place self
+
+![Justify, align, place self](https://i.imgur.com/rdYrwrh.jpeg)
+
+## Grid templates Areas
+
+![Grid templates Areas](https://i.imgur.com/maL5srE.jpeg)
+
+## Autofill vs Autofit
+
+![Autofill vs Autofit](https://i.imgur.com/jW6vWzJ.jpeg)

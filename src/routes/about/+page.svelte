@@ -16,9 +16,10 @@
 <section class="about">
 	<div class="about__info">
 		<div class="about__title text-large">Who am I?</div>
-		<div class="about_desc text-small">
+		<div class="about__desc text-small">
 			<ul>
 				<li>Khoa. {age} y/o.</li>
+
 				<li>Live and work in Ho Chi Minh City, Vietnam.</li>
 				<li>1 year Web Developer</li>
 				<li>6 months UX Designer</li>
@@ -28,7 +29,7 @@
 
 	<div class="about__info">
 		<div class="about__title text-large">My mission</div>
-		<div class="about_desc text-small">
+		<div class="about__desc text-small">
 			My mission is to create intuitive and user-centric designs that simplify complex concepts and
 			make technology accessible to all.
 		</div>
@@ -36,7 +37,7 @@
 
 	<div class="about__info">
 		<div class="about__title text-large">My story</div>
-		<div class="about_desc text-small">
+		<div class="about__desc text-small">
 			With a background in frontend development and design, I've honed my skills through hands-on
 			experience and learning from challenges, failures, and successes.
 		</div>
@@ -44,7 +45,7 @@
 
 	<div class="about__info">
 		<div class="about__title text-large">My value</div>
-		<div class="about_desc text-small">
+		<div class="about__desc text-small">
 			As a UI/UX designer with a frontend background, I bring a unique blend of creative design
 			skills and technical expertise. I am passionate about crafting intuitive and delightful user
 			experiences, rooted in research-driven insights and iterative design processes. With a keen
@@ -57,7 +58,7 @@
 
 	<div class="about__info">
 		<div class="about__title text-large">Unique Value Proposition</div>
-		<div class="about_desc text-small">
+		<div class="about__desc text-small">
 			I am a flexible and chill developer/designer known for seamlessly integrating the latest web
 			design trends into my work. My adaptability and laid-back approach foster a collaborative
 			environment where I enjoy engaging with fellow designers, offering constructive feedback, and
@@ -69,7 +70,7 @@
 
 	<div class="about__info">
 		<div class="about__title text-large">My hobbies</div>
-		<div class="about_desc text-small">
+		<div class="about__desc text-small">
 			<ul>
 				<li>Web Design</li>
 				<li>Mechanical Keyboard</li>
@@ -109,7 +110,7 @@
 		width: 100%;
 	}
 
-	.about_desc {
+	.about__desc {
 		color: var(--colorTextSecondary);
 		width: 100%;
 		max-width: var(--text-width);

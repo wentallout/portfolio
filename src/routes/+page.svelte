@@ -5,7 +5,6 @@
 	import FeaturedProject from '$sections/home/Featured.svelte';
 	import Clients from '$sections/home/MyClients.svelte';
 	import WhatIUse from '$sections/home/WhatIUse.svelte';
-	import AboutMe from '$sections/home/AboutMe.svelte';
 
 	const breadcrumbs = [
 		{
@@ -38,10 +37,6 @@
 
 <SaosContainer animation="fade-in-top 0.6s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;">
 	<WhatIUse />
-</SaosContainer>
-
-<SaosContainer animation="fade-in-top 0.6s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;">
-	<AboutMe />
 </SaosContainer>
 
 <SaosContainer animation="fade-in-top 0.6s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;">

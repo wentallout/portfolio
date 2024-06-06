@@ -88,6 +88,11 @@
 
 	accent-color: var(--colorPrimary);
 	caret-color: var(--colorPrimary);
+
+	/* OTHER */
+	--colorSvelte: #FF3E00;
+
+	/* --- */
 }
 
 ::placeholder {
@@ -111,7 +116,7 @@ body {
 [color-scheme='dark'] .gradient-bg,
 [color-scheme='light'] .gradient-bg {
 	background-image: linear-gradient(180deg, var(--colorBgLayout) 45%, var(--colorInfo) 90%);
-	animation: neonGlow 5s infinite;
+	animation: neonGlow 3s infinite;
 }
 
 @keyframes neonGlow {
