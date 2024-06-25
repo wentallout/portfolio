@@ -1,9 +1,3 @@
----
-runme:
-  id: 01HXBNCQB9K8SYAMGBXMSW5XYD
-  version: v3
----
-
 <h1 id="portfolio">Portfolio</h1>
 
 [![Netlify Status](https://api.netlify.com/api/v1/badges/7bf37fa7-ec78-4efd-aa9a-1a18a4fc62e4/deploy-status)](https://app.netlify.com/sites/khoa-design/deploys)
@@ -148,13 +142,17 @@ Slug
 
 ⭐ Blog: Comment using [Giscus](https://giscus.app)
 
+## Background inspired by
+
+[bg.ibelick.com](https://bg.ibelick.com)
+
 ## Todo
 
 💡 [Splash screen](https://www.sveltevietnam.dev/en/blog/20231220-behind-the-screen-progressive-splashscreen)
 
 ## Stat
 
-![Alt](https://repobeats.axiom.co/api/embed/c17a64a1c0a63ba6cef6618f14b3e39fdf67eb3f.svg "Repobeats analytics image")
+![Alt](https://repobeats.axiom.co/api/embed/c17a64a1c0a63ba6cef6618f14b3e39fdf67eb3f.svg 'Repobeats analytics image')
 
 [![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2Fwentallout%2Fportfolio.svg?type=large&issueType=license)](https://app.fossa.com/projects/git%2Bgithub.com%2Fwentallout%2Fportfolio?ref=badge_large&issueType=license)
 

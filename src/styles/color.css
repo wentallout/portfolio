@@ -109,9 +109,10 @@ body {
 	background: var(--colorBgLayout);
 	background-repeat: no-repeat;
 	background-attachment: fixed;
-
 	min-height: 100vh;
+	position: relative;
 }
+
 
 [color-scheme='dark'] .gradient-bg,
 [color-scheme='light'] .gradient-bg {

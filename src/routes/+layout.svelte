@@ -11,6 +11,7 @@
 	import Misc from '$sections/Misc.svelte';
 
 	import { onNavigate } from '$app/navigation';
+	import BgDeco from '$components/common/BgDeco.svelte';
 
 	onNavigate(() => {
 		if (!document.startViewTransition) return;
@@ -29,6 +30,7 @@
 </svelte:head>
 
 <ParaglideJS {i18n}>
+	<BgDeco />
 	<Misc />
 	<VideoCover />
 	<NavBar />
