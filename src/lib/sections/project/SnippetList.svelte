@@ -4,6 +4,11 @@
 
 	let snippetList = [
 		{
+			title: '3D Card Tilt On Hover',
+			href: 'https://codepen.io/wentallout/pen/MWdvEzN',
+			desc: '3D card that tilts on hover'
+		},
+		{
 			title: 'Truncating Long Text with CSS Ellipsis',
 			href: 'https://codepen.io/wentallout/pen/MWdpQWW',
 			desc: 'truncate long text with css ellipsis'

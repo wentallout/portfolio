@@ -1,0 +1,102 @@
+---
+title: '10 Key Steps to Make Your Website Better and Boost Your Business'
+date: 2024-06-22
+categories:
+    - frontend
+    - seo
+    - ux
+    - web design
+---
+
+
+## Fast loading times
+
+Use tools like Google PageSpeed Insights to identify issues.
+
+For example, compress and optimize images using tools like TinyPNG.
+
+## Mobile Responsiveness
+
+Test your site on various devices and browsers to ensure it looks and functions well everywhere. Use Google's Mobile-Friendly Test tool as a starting point.
+
+## Simplify Navigation
+
+Ensure that your site structure is intuitive. For example, revise your menu to include no more than 7 items, making sure each is clearly labeled
+
+## Consistent Branding
+
+Keep your visual elements consistent. Use the same color scheme and font styles across all pages.
+
+## Engaging Content
+
+Content should be easy to read and visually appealing. Incorporate bullet points, headers, and images to break up text.
+
+## Value Proposition
+
+Clearly communicate your value proposition on your homepage and landing pages. For instance, highlight unique benefits of your
+product/service with a compelling headline.
+
+## Customer Testimonials & Reviews
+
+Add a section on your homepage or product pages showcasing real customer testimonials and reviews to build trust.
+
+## CTA Placement & Design
+
+Ensure your CTAs are prominently placed and impossible to miss. 
+
+For example, use contrasting colors for your CTA button that stand out against the page background.
+
+## Privacy Policy & Contact Information
+
+Make your privacy policy easily accessible and provide clear contact information to increase credibility
+
+## Heatmaps & User Recordings
+
+Tools like Hotjar or Crazy Egg can show where users click, scroll, and spend time on your site, helping you identify areas for improvement.
+
+## Bonus tools
+
+### Page speed
+
+https://pagespeed.web.dev/
+
+### Image Compression 
+
+https://tinypng.com
+
+### Mobile testing
+
+https://developers.google.com/search/blog/2016/05/a-new-mobile-friendly-testing-tool
+
+### Example of simplified navigation: 
+
+- https://www.wellandgood.com/
+- https://500designs.com/
+
+### Engaging content
+
+- https://www.semrush.com/topic-research/
+
+### Value proposition
+
+https://www.strategyzer.com/library/the-value-proposition-canvas
+
+### Customer testimonials: 
+
+https://app.senja.io/signin
+
+### CTA placement & design
+
+- https://accessibe.com/accessscan
+- Contrast checker: https://coolors.co/contrast-checker
+
+### Privacy and Policy
+
+https://termly.io/resources/articles/privacy-policy-issues-to-avoid
+
+### Heatmaps & User recording
+
+https://www.hotjar.com/
+
+https://clarity.microsoft.com/
+
