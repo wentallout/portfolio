@@ -13,7 +13,7 @@
 		<img class="project__thumbnail" alt="" loading="lazy" src={thumbnail} />
 
 		<div class="project__info">
-			<div class="title">
+			<div class="project__title">
 				<div class="name text-mid">{projectName}</div>
 			</div>
 
@@ -59,7 +59,7 @@
 		}
 	}
 
-	.title {
+	.project__title {
 		display: flex;
 		justify-content: flex-start;
 		flex-direction: column;
@@ -91,6 +91,7 @@
 	.name {
 		color: var(--colorText);
 		font-weight: var(--fontWeightLarge);
+		font-family: var(--fontFancy);
 	}
 
 	.project__thumbnail {
