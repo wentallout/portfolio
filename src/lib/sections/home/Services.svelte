@@ -136,6 +136,7 @@
 
 	.service__title {
 		margin-bottom: var(--spaceM);
+		font-family: var(--fontFancy);
 	}
 
 	.service__desc {
