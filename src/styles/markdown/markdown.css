@@ -52,7 +52,7 @@
 	/* --- */
 
 	padding-bottom: var(--space3XS);
-	border-bottom: 4px solid transparent;
+	border-bottom: 1px solid transparent;
 	border-image: linear-gradient(to right, var(--colorText), transparent) 1 0%;
 }
 
@@ -96,7 +96,7 @@
 }
 
 .markdown ul {
-	border-left: 4px solid transparent;
+	border-left: 2px solid transparent;
 	border-image: linear-gradient(to bottom, var(--colorText), transparent) 1 1;
 }
 
