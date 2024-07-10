@@ -10,6 +10,8 @@ categories:
 
 Acceptance testing is a software testing method that aims to determine if a system satisfies the user requirements and if it is ready for deployment. It involves executing test cases that simulate real-life scenarios to validate the functionality, usability, and performance of the software.
 
+## When do you do Acceptance Testing?
+
 **Acceptance testing** is the final phase of software testing where the software is tested for its compliance with the business requirements and user expectations.
 
 ## Purpose
