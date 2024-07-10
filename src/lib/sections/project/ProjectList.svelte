@@ -12,7 +12,7 @@
 
 <div class="projects">
 	<ProjectCard
-		linkToDetail="https://chrome.google.com/webstore/detail/supertabmanager/bkjlmdjfdppebnijgnhgfdnojfneppaa?hl=en"
+		linkToDetail="project/super-tab-manager"
 		output="Features: Group similar tabs, close duplicated or harmful tabs, search tabs. UI that adapts to user's dark/light preference."
 		projectName="Super Tab Manager"
 		role="Designer, Developer"

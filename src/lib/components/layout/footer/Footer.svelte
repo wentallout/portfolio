@@ -198,11 +198,7 @@
 
 		display: grid;
 		grid-gap: var(--gap);
-
 		grid-template-columns: repeat(auto-fit, minmax(min(100%, var(--min)), 1fr));
-
-		border-bottom: 1px solid var(--colorBorder);
-		margin-bottom: var(--spaceS);
 	}
 
 	.list {
@@ -216,7 +212,7 @@
 		color: var(--colorTextSecondary);
 		font-size: var(--fontSizeBase);
 		padding-bottom: var(--space3XS);
-		border-bottom: 2px solid transparent;
+		border-bottom: 1px solid transparent;
 		border-image: linear-gradient(to right, var(--colorTextTertiary), transparent) 1 0%;
 	}
 

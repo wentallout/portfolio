@@ -57,7 +57,7 @@
 		background-image: url('/images/patterns/wao-pattern.svg');
 		background-repeat: repeat;
 		background-size: 400px;
-		opacity: 0.1;
+		opacity: 0.04;
 		z-index: -9999;
 		filter: grayscale(1);
 	}

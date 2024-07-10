@@ -1,5 +1,5 @@
 <script>
-	import ProjectCardList from '$sections/project/ProjectCardList.svelte';
+	import ProjectList from '$sections/project/ProjectList.svelte';
 	import SectionTitle from '$sections/SectionTitle.svelte';
 
 	import Star from '~icons/ph/star';
@@ -10,7 +10,7 @@
 		<SectionTitle sectionTitle="Featured" let:sectionIcon>
 			<Star {...sectionIcon} />
 		</SectionTitle>
-		<ProjectCardList hasMoreButton={true} />
+		<ProjectList hasMoreButton={true} />
 	</div>
 </section>
 

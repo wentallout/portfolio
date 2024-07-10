@@ -59,7 +59,7 @@
 		gap: var(--space2XS);
 		font-family: var(--fontFancy);
 		border-style: solid;
-		border-width: 0 0 4px 0;
+		border-width: 0 0 1px 0;
 		border-image: linear-gradient(to right, var(--colorTextTertiary), transparent) 1 0%;
 	}
 </style>

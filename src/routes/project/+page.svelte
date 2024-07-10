@@ -1,5 +1,5 @@
 <script>
-	import ProjectCardList from '$sections/project/ProjectCardList.svelte';
+	import ProjectList from '$sections/project/ProjectList.svelte';
 	import PageTitle from '$components/common/PageTitle.svelte';
 	import ProjectorScreen from '~icons/ph/projector-screen';
 
@@ -39,7 +39,7 @@
 		<ProjectorScreen {...sectionIcon} />
 	</SectionTitle>
 
-	<ProjectCardList />
+	<ProjectList />
 </section>
 
 <section>

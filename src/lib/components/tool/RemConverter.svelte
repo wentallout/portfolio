@@ -2,6 +2,7 @@
 	import Copy from '~icons/ph/copy';
 	import SectionTitle from '$sections/SectionTitle.svelte';
 	import Wrench from '~icons/ph/wrench';
+	import Breadcrumb from '$components/layout/other/Breadcrumb.svelte';
 	let baseFontSize = 16;
 	let pxInput;
 	let remInput;
@@ -21,8 +22,10 @@
 	};
 </script>
 
+<Breadcrumb />
+
 <section>
-	<SectionTitle sectionTitle="PX - REM Converter" let:sectionIcon>
+	<SectionTitle sectionTitle="PX to REM Converter" let:sectionIcon>
 		<Wrench {...sectionIcon} />
 	</SectionTitle>
 	<div class="converter">

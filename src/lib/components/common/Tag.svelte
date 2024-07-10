@@ -17,7 +17,7 @@
 		font-weight: var(--fontWeightSmall);
 		width: fit-content;
 		border-radius: var(--borderRadiusLight);
-		padding: 8px 12px;
+		padding: 6px 8px;
 		line-height: normal;
 		border: 1px solid var(--colorBorder);
 		transition: var(--transition);
