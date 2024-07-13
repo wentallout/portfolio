@@ -44,7 +44,7 @@
 		padding-top: var(--scroll-padding);
 		padding-bottom: var(--scroll-padding);
 
-		height: 300px;
+		height: 30dvh;
 		background-color: var(--colorBgLayout);
 	}
 

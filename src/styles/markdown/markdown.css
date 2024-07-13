@@ -27,7 +27,7 @@
 .markdown h4 {
 	line-height: 120%;
 	position: relative;
-	color: var(--colorText);
+	color: var(--colorPrimary);
 	
 }
 
@@ -48,12 +48,7 @@
 	font-family: var(--fontFancy);
 	font-size: var(--fontSizeXL);
 	line-height: var(--lineHeightLarge);
-	color: var(--colorText);
 	/* --- */
-
-	padding-bottom: var(--space3XS);
-	border-bottom: 1px solid transparent;
-	border-image: linear-gradient(to right, var(--colorText), transparent) 1 0%;
 }
 
 .markdown h3 {
@@ -66,10 +61,8 @@
 	font-weight: var(--fontWeightLarge);
 	font-size: var(--fontSizeMid);
 	line-height: var(--lineHeightMid);
-
 	/* --- */
 
-	border-bottom: 1px solid inherit;
 }
 
 .markdown h4 {
@@ -118,7 +111,7 @@
 }
 
 .markdown
-	a:not(
+	p>a:not(
 		.toc a,
 		.markdown h2 a,
 		.markdown h3 a,
@@ -126,15 +119,21 @@
 		.markdown h5 a,
 		.markdown a:has(img)
 	) {
-	color: var(--colorPrimary);
+	color: var(--colorInfo);
 	text-decoration: underline;
 	transition: var(--transition);
 	/* text-decoration-skip-ink: none; */
+
+	&:hover {
+		color:var(--colorInfoHover);
+	}
+
+	&:active {
+		color:var(--colorInfoActive);
+	}
 }
 
-/* .markdown a:hover {
-	color: var(--colorPrimaryHover);
-} */
+
 
 .markdown li:not(.toc li) {
 	margin-bottom: var(--space3XS);

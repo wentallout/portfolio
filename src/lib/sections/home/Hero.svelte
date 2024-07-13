@@ -5,6 +5,7 @@
 	import { onMount } from 'svelte';
 
 	import { gsap } from 'gsap';
+	import { CalendarCheck } from '$lib/assets/icons/icons';
 	let focusText = ['website', 'app', 'game'];
 	let focusIndex = 0;
 
@@ -66,8 +67,10 @@
 						<Button
 							backgroundColor="var(--colorPrimary)"
 							glowColor="var(--colorPrimary)"
-							label="Book a Meeting"
-							labelColor="var(--colorBlack)" />
+							label="Book a Call"
+							labelColor="var(--colorBlack)">
+							<CalendarCheck />
+						</Button>
 					</a>
 
 					<a href="/contact">
@@ -106,8 +109,8 @@
 	.hero__block {
 		display: flex;
 
-		padding-top: var(--space3XL);
-		padding-bottom: var(--space3XL);
+		padding-top: var(--spaceL);
+		padding-bottom: var(--spaceL);
 
 		flex-direction: column;
 		position: relative;
@@ -116,6 +119,8 @@
 
 	@media (min-width: 768px) {
 		.hero__block {
+			padding-top: var(--space3XL);
+			padding-bottom: var(--space3XL);
 			max-width: 60%;
 		}
 	}

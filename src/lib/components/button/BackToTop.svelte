@@ -29,7 +29,6 @@
 
 <button class="bck2top text-xs" class:hidden type="button" on:click={goTop} on:keyup={goTop}>
 	<ArrowLineUp width="24" height="24" />
-	<div class="bck2top__text">Top</div>
 </button>
 
 <style>
@@ -59,18 +58,28 @@
 			visibility 0.3s;
 		user-select: none;
 		line-height: normal;
-		border-radius: 16px;
+
 		/*  */
 
 		box-shadow: var(--boxShadow);
 		color: var(--colorText);
-		background-color: var(--colorBgElevated);
+		background: color-mix(in srgb, var(--colorBgElevated) 50%, transparent);
+		backdrop-filter: blur(5px);
+
+		& .bck2top__text {
+			font-family: var(--fontFancy);
+			font-size: var(--fontSizeXS);
+			font-weight: 100;
+		}
+
+		&:hover {
+			background: color-mix(in srgb, var(--colorBgElevated) 100%, transparent);
+		}
 	}
 
 	@media (min-width: 768px) {
 		.bck2top {
 			padding: var(--spaceXS);
-			aspect-ratio: 1/1;
 		}
 	}
 
@@ -81,10 +90,5 @@
 	.bck2top.hidden {
 		opacity: 0;
 		visibility: hidden;
-	}
-
-	.bck2top__text {
-		font-family: var(--fontFancy);
-		font-weight: 600;
 	}
 </style>

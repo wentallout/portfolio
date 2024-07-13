@@ -1,7 +1,4 @@
 <script>
-	export let width = '160px';
-	export let height = width;
-
 	import { onMount } from 'svelte';
 	import { gsap } from 'gsap';
 
@@ -52,18 +49,14 @@
 </script>
 
 <div class="cover__logo" aria-label="home">
-	<img
-		id="personlogo"
-		class="logo__main rotate"
-		alt="2nd logo"
-		{height}
-		src="/images/brand-logo.svg"
-		{width} />
-	<div bind:this={logoDeco} class="logo__deco">WENT ALL OUT</div>
+	<img id="personlogo" class="logo__main rotate" alt="2nd logo" src="/images/brand-logo.svg" />
+	<div bind:this={logoDeco} class="logo__deco">went all out</div>
 </div>
 
 <style lang="postcss">
 	.logo__main {
+		width: 100px;
+		height: 100px;
 		filter: drop-shadow(0px 0px 10px var(--colorPrimary));
 		transition: var(--transition);
 
@@ -82,6 +75,7 @@
 		z-index: 3;
 		transition: var(--transition);
 		aspect-ratio: 1/1;
+		overflow: visible;
 
 		&:hover {
 			filter: brightness(1.2);
@@ -104,5 +98,7 @@
 		justify-content: center;
 		align-items: center;
 		/* --- */
+
+		white-space: nowrap;
 	}
 </style>

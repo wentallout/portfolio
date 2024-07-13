@@ -17,7 +17,7 @@
 	</SectionTitle>
 
 	<div class="service">
-		<div class="service__section kagura-border">
+		<div class="service__section custom-border">
 			<div class="service__thumbnail">
 				<div class="service__art">
 					<ResponsiveWebArt />
@@ -58,13 +58,13 @@
 					backgroundColor="var(--colorBgLayout)"
 					borderColor="var(--colorText)"
 					glowColor="var(--colorText)"
-					label="Schedule meeting"
+					label="Book a Call"
 					labelColor="var(--colorText)"
 					shadowColor="var(--colorTextSecondary)" />
 			</a>
 		</div>
 
-		<div class="service__section kagura-border">
+		<div class="service__section custom-border">
 			<div class="service__thumbnail">
 				<div class="service__art">
 					<AbTestingArt />
@@ -89,7 +89,7 @@
 					backgroundColor="var(--colorBgLayout)"
 					borderColor="var(--colorText)"
 					glowColor="var(--colorText)"
-					label="Schedule meeting"
+					label="Book a Call"
 					labelColor="var(--colorText)"
 					shadowColor="var(--colorTextSecondary)" />
 			</a>

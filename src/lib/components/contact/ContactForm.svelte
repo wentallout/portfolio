@@ -63,7 +63,7 @@
 			</div>
 		</form>
 		<div class="contact__other">
-			<div class="contact__address kagura-border">
+			<div class="contact__address custom-border">
 				<ExLink href="mailto:wentallout@gmail.com">
 					<div class="address__title text-base">
 						<Envelope />
@@ -75,7 +75,7 @@
 				</CopyToClipboard>
 			</div>
 
-			<div class="contact__address kagura-border">
+			<div class="contact__address custom-border">
 				<ExLink href="tel:+84929066331">
 					<div class="address__title text-base">
 						<Phone />
@@ -87,7 +87,7 @@
 				</CopyToClipboard>
 			</div>
 
-			<div class="contact__address kagura-border">
+			<div class="contact__address custom-border">
 				<div class="address__title text-base">
 					<Clock />
 					<div>Working hours</div>

@@ -12,7 +12,7 @@
 </script>
 
 <ExLink style="display:flex" {href}>
-	<div class="fcard kagura-border">
+	<div class="fcard custom-border">
 		<img class="fcard__thumbnail" alt="" src={thumbnailUrl} />
 
 		<div class="fcard__info">

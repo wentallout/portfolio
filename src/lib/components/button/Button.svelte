@@ -17,10 +17,10 @@
 	<span style:background-color={shadowColor} class="shadow" />
 
 	<span
+		class="front"
 		style:background-color={backgroundColor}
 		style:border
-		style:color={labelColor}
-		class="front">
+		style:color={labelColor}>
 		<slot />
 		{label}
 	</span>
@@ -48,9 +48,12 @@
 	}
 
 	.shadow {
+		/* POSITION */
 		position: absolute;
 		top: 0;
 		left: 0;
+		/* --- */
+
 		width: 100%;
 		height: 100%;
 		border-radius: var(--borderRadiusLight);
@@ -76,7 +79,6 @@
 		will-change: transform;
 		transform: translateY(-2px);
 		transition: transform 600ms cubic-bezier(0.3, 0.7, 0.4, 1);
-		text-transform: capitalize;
 
 		/* FONT */
 		font-weight: var(--fontWeightLarge);
