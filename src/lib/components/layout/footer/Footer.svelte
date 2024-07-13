@@ -14,9 +14,11 @@
 	} from '$lib/assets/icons/icons';
 
 	import LanguageSwitcher from '$components/i18n/LanguageSwitcher.svelte';
+	import StarBg from '$components/common/StarBg.svelte';
 </script>
 
 <footer class="footer text-small">
+	<StarBg />
 	<div class="gradient-bg"></div>
 
 	<div class="pad">

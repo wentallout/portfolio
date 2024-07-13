@@ -115,7 +115,7 @@
 
 	.active-page {
 		position: relative;
-		border-bottom: 2px solid var(--colorPrimaryActive);
+		border-bottom: 1px solid transparent;
 		color: var(--colorPrimary);
 	}
 
@@ -148,18 +148,18 @@
 
 	.nav-list__item {
 		display: none;
-		overflow: visible;
-		transition: scale linear 0.3s;
+
+		transition: linear 0.3s;
 		text-shadow:
 			-1px -1px 0 var(--colorBgLayout),
 			1px -1px 0 var(--colorBgLayout),
 			-1px 1px 0 var(--colorBgLayout),
 			1px 1px 0 var(--colorBgLayout);
-
+ 
 		&:hover {
 			font-weight: var(--fontWeightLarge);
-			scale: 1.1;
 			color: var(--colorPrimaryHover);
+			border-bottom: 1px solid var(--colorPrimaryHover);
 		}
 	}
 

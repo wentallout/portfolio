@@ -103,6 +103,7 @@
 		object-fit: cover;
 		background-color: transparent;
 		position: relative;
+		border: 1px solid var(--colorBorder);
 	}
 
 	@media (min-width: 992px) {

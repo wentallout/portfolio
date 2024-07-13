@@ -119,8 +119,8 @@
 
 	@media (min-width: 768px) {
 		.hero__block {
-			padding-top: var(--space3XL);
-			padding-bottom: var(--space3XL);
+			padding-top: var(--spaceXL);
+			padding-bottom: var(--spaceXL);
 			max-width: 60%;
 		}
 	}

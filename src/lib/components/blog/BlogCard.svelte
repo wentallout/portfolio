@@ -52,7 +52,7 @@
 		transition: var(--transition);
 		position: relative;
 		overflow: hidden;
-		border-radius: var(--borderRadius);
+
 		box-shadow: var(--boxShadow);
 		background-color: var(--colorBgContainer);
 		/* --- */
