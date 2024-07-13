@@ -48,6 +48,19 @@
 </header>
 
 <style>
+	.blog {
+		padding-top: var(--spaceXL);
+		padding-bottom: var(--spaceXL);
+		position: relative;
+		background-color: transparent;
+		background-size: 100% 100%;
+		background-position: center;
+		background-repeat: no-repeat;
+	}
+
+	
+
+
 	.blog__bg {
 		position: absolute;
 		top: 0;
@@ -70,16 +83,6 @@
 
 	.category__tag {
 		text-decoration: none !important;
-	}
-
-	.blog {
-		padding-top: var(--spaceXL);
-		padding-bottom: var(--spaceXL);
-		position: relative;
-		background-color: transparent;
-		background-size: 100% 100%;
-		background-position: center;
-		background-repeat: no-repeat;
 	}
 
 	.blog__info {

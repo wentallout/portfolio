@@ -9,7 +9,7 @@
 </script>
 
 <a href={linkToDetail}>
-	<article class="project kagura-border">
+	<article class="project custom-border">
 		<img class="project__thumbnail" alt="" loading="lazy" src={thumbnail} />
 
 		<div class="project__info">
@@ -46,7 +46,7 @@
 		transition: var(--transition);
 		overflow: hidden;
 		box-shadow: var(--boxShadow);
-		border-radius: var(--borderRadius);
+
 		background-color: var(--colorBgContainer);
 
 		&:hover {
@@ -66,10 +66,9 @@
 	}
 
 	.info {
-		display: flex;
-		flex-direction: column;
+		display: grid;
 		gap: var(--spaceXS);
-		height: auto;
+		grid-template-rows: 1fr 1fr 1fr;
 	}
 
 	.project__info {
@@ -104,7 +103,6 @@
 		object-fit: cover;
 		background-color: transparent;
 		position: relative;
-		border-radius: var(--borderRadius);
 	}
 
 	@media (min-width: 992px) {

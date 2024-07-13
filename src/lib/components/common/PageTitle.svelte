@@ -27,6 +27,24 @@
 <Breadcrumb />
 
 <style>
+	.title {
+		z-index: 1;
+		position: relative;
+		/* FLEX */
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-direction: column;
+		gap: var(--spaceS);
+		/*  */
+
+		padding-top: var(--spaceM);
+		padding-bottom: var(--spaceM);
+		overflow: hidden;
+		height: 30dvh;
+
+		user-select: none;
+	}
 	.title__extra {
 		-webkit-text-stroke: 2px var(--colorText);
 		-webkit-text-fill-color: transparent;
@@ -52,25 +70,6 @@
 		justify-content: center;
 		align-items: center;
 		gap: var(--spaceM);
-	}
-
-	.title {
-		z-index: 1;
-		position: relative;
-		/* FLEX */
-		display: flex;
-		justify-content: center;
-		align-items: center;
-		flex-direction: column;
-		gap: var(--spaceS);
-		/*  */
-
-		padding-top: var(--spaceM);
-		padding-bottom: var(--spaceM);
-		overflow: hidden;
-		height: 300px;
-
-		user-select: none;
 	}
 
 	.title::after {

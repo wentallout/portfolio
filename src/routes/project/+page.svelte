@@ -32,10 +32,7 @@
 <PageTitle pageTitle="Projects" />
 
 <section>
-	<SectionTitle
-		sectionDesc="UI/UX case studies built with business goal and empathy."
-		sectionTitle="Case Studies"
-		let:sectionIcon>
+	<SectionTitle sectionTitle="Projects" let:sectionIcon>
 		<ProjectorScreen {...sectionIcon} />
 	</SectionTitle>
 

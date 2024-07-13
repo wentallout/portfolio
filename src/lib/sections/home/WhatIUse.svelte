@@ -17,7 +17,7 @@
 			</SectionTitle>
 
 			<div class="tool__block">
-				<div class="block__section kagura-border">
+				<div class="block__section custom-border">
 					<div class="section__svg">
 						<ProcessArt height="120" width="120" />
 					</div>
@@ -29,7 +29,7 @@
 					</div>
 				</div>
 
-				<div class="block__section kagura-border">
+				<div class="block__section custom-border">
 					<div class="section__svg">
 						<NavigationArt height="120" width="120" />
 					</div>
@@ -40,7 +40,7 @@
 					</div>
 				</div>
 
-				<div class="block__section kagura-border">
+				<div class="block__section custom-border">
 					<div class="section__svg">
 						<GraphicDesignArt height="120" width="120" />
 					</div>
@@ -52,7 +52,7 @@
 					</div>
 				</div>
 
-				<div class="block__section kagura-border">
+				<div class="block__section custom-border">
 					<div class="section__svg">
 						<FrontendArt height="120" width="120" />
 					</div>

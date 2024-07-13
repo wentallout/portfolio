@@ -5,7 +5,7 @@ date: 2024-05-28
 
 ## Chrome Extension I made to solve this
 
-https://chrome.google.com/webstore/detail/supertabmanager/bkjlmdjfdppebnijgnhgfdnojfneppaa?hl=en
+[Link to Extension](https://chrome.google.com/webstore/detail/supertabmanager/bkjlmdjfdppebnijgnhgfdnojfneppaa?hl=en)
 
 
 
