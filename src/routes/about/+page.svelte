@@ -44,12 +44,12 @@
 	<div class="about__info">
 		<div class="about__title text-large">Unique Value Proposition</div>
 		<div class="about__desc text-small">
-			I am a flexible and chill person known for seamlessly integrating the latest web
-			design trends into my work. My adaptability and laid-back approach foster a collaborative
-			environment where I enjoy engaging with fellow designers, offering constructive feedback, and
-			staying on the cutting edge of industry developments. Through my unique journey, I bring not
-			only technical expertise but also a fresh perspective that results in visually appealing
-			designs and user-centric solutions.
+			I am a flexible and chill person known for seamlessly integrating the latest web design trends
+			into my work. My adaptability and laid-back approach foster a collaborative environment where
+			I enjoy engaging with fellow designers, offering constructive feedback, and staying on the
+			cutting edge of industry developments. Through my unique journey, I bring not only technical
+			expertise but also a fresh perspective that results in visually appealing designs and
+			user-centric solutions.
 		</div>
 	</div>
 
@@ -57,7 +57,7 @@
 		<div class="about__title text-large">My hobbies</div>
 		<div class="about__desc text-small">
 			<ul>
-				<li>Web Design</li>
+				<li>Video Games</li>
 				<li>Mechanical Keyboard</li>
 				<li>Blockchain</li>
 				<li>A.I</li>
@@ -93,6 +93,7 @@
 		font-weight: var(--fontWeightLarge);
 		color: var(--colorText);
 		width: 100%;
+		font-family: var(--fontFancy);
 	}
 
 	.about__desc {

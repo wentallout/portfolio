@@ -95,18 +95,20 @@
 		font-weight: var(--fontWeightMid);
 		color: var(--colorText);
 		/* --- */
+
 		width: 100%;
 		display: flex;
-
 		border-bottom-left-radius: var(--borderRadius);
 		border-bottom-right-radius: var(--borderRadius);
 		transition: background var(--transition);
-
 		background: transparent;
 	}
 
 	.nav--scrolldown {
-		background: color-mix(in srgb, var(--colorBgLayout) 100%, transparent);
+		/* background: color-mix(in srgb, var(--colorBgLayout) 80%, transparent); */
+		/* relative color */
+		background-color: hsl(from var(--colorBgLayout) h s l / 80%);
+
 		backdrop-filter: blur(5px);
 		color: var(--colorText);
 		border: 1px solid var(--colorBorder);
@@ -155,7 +157,7 @@
 			1px -1px 0 var(--colorBgLayout),
 			-1px 1px 0 var(--colorBgLayout),
 			1px 1px 0 var(--colorBgLayout);
- 
+
 		&:hover {
 			font-weight: var(--fontWeightLarge);
 			color: var(--colorPrimaryHover);

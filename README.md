@@ -156,6 +156,8 @@ Slug
 
 [![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2Fwentallout%2Fportfolio.svg?type=large&issueType=license)](https://app.fossa.com/projects/git%2Bgithub.com%2Fwentallout%2Fportfolio?ref=badge_large&issueType=license)
 
+Featured on: https://www.portfolioshub.com
+
 ## License
 
 [Published under MIT License](https://github.com/wentallout/portfolio/blob/master/LICENSE.md)

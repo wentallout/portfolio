@@ -22,7 +22,7 @@
 	<div class="gradient-bg"></div>
 
 	<div class="pad">
-		<div class="footer__list pad">
+		<div class="footer__list">
 			<div class="list">
 				<div class="list__title">About me</div>
 				<ul class="list__nav">

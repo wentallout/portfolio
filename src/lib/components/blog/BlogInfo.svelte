@@ -12,10 +12,47 @@
 
 	import CalendarBlank from '~icons/ph/calendar-blank';
 	import Breadcrumb from '$components/layout/other/Breadcrumb.svelte';
+
+	import { onMount } from 'svelte';
+
+	function getRandomColor() {
+		// const r = Math.floor(Math.random() * 256);
+		// const g = Math.floor(Math.random() * 256);
+		// const b = Math.floor(Math.random() * 256);
+		// return `rgb(${r}, ${g}, ${b})`;
+
+		let color, luminance;
+
+		do {
+			const r = Math.floor(Math.random() * 256);
+			const g = Math.floor(Math.random() * 256);
+			const b = Math.floor(Math.random() * 256);
+			color = `rgb(${r}, ${g}, ${b})`;
+
+			// Calculate luminance
+			const rNorm = r / 255;
+			const gNorm = g / 255;
+			const bNorm = b / 255;
+			luminance = 0.2126 * rNorm + 0.7152 * gNorm + 0.0722 * bNorm;
+		} while (luminance < 0.3 || luminance > 0.7);
+
+		return color;
+	}
+
+	function applyRandomGradient() {
+		const color1 = getRandomColor();
+		const color2 = getRandomColor();
+		const gradient = `linear-gradient(${color1}, ${color2})`;
+		document.documentElement.style.setProperty('--random-background', gradient);
+	}
+
+	onMount(() => {
+		applyRandomGradient();
+	});
 </script>
 
 <header class="blog full-width">
-	<div class="blog__bg"></div>
+	<div class="blog__gradient"></div>
 	<div class="pad">
 		<Breadcrumb />
 		<h1 class="blog__title">{data.title}</h1>
@@ -48,37 +85,67 @@
 </header>
 
 <style>
+	:root {
+		--random-background: linear-gradient(rgb(4, 93, 211), rgb(19, 35, 128));
+	}
+
+	.blog__gradient {
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		width: 100%;
+		height: 100px;
+		background: var(--smooth-border);
+	}
+
 	.blog {
+		position: relative;
 		padding-top: var(--spaceXL);
 		padding-bottom: var(--spaceXL);
-		position: relative;
-		background-color: transparent;
 		background-size: 100% 100%;
 		background-position: center;
 		background-repeat: no-repeat;
+		z-index: 9999;
 	}
 
-	
-
-
-	.blog__bg {
+	.blog:before {
+		content: '';
 		position: absolute;
+		pointer-events: none;
 		top: 0;
 		left: 0;
 		width: 100%;
 		height: 100%;
 		background-image: url('/images/patterns/wao-pattern.svg');
 		background-repeat: repeat;
-		background-size: 400px;
-		opacity: 0.04;
-		z-index: -9999;
+		background-size: 200px;
+
+		opacity: 0.1;
 		filter: grayscale(1);
+		z-index: -9998;
+	}
+
+	.blog:after {
+		content: '';
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		pointer-events: none;
+		background-image: var(--random-background);
+		z-index: -9999;
+	}
+
+	:global([color-scheme='dark'] .blog:after) {
+		filter: brightness(0.5);
 	}
 
 	.category {
 		display: flex;
 		flex-direction: row;
 		gap: var(--spaceXS);
+		z-index: 9999;
 	}
 
 	.category__tag {
@@ -104,5 +171,10 @@
 
 	.blog__title {
 		text-wrap: balance;
+		text-shadow:
+			-1px -1px 0 var(--colorBgLayout),
+			1px -1px 0 var(--colorBgLayout),
+			-1px 1px 0 var(--colorBgLayout),
+			1px 1px 0 var(--colorBgLayout);
 	}
 </style>

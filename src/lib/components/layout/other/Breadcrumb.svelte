@@ -84,7 +84,7 @@
 	.breadcrumb__clickable {
 		font-weight: var(--fontWeightXS);
 		display: inline-flex;
-		color: var(--colorPrimary);
+		color: var(--colorInfo);
 	}
 
 	.breadcrumb__clickable:hover {
