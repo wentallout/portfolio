@@ -121,9 +121,12 @@ input[type='range']:focus::-webkit-slider-runnable-track {
 
 .custom-border {
 	position: relative;
-	overflow: hidden;
+	overflow: visible !important;
 	border-radius: 0 !important;
+	
 }
+
+
 
 .custom-border:before {
 	content: '';
@@ -135,7 +138,7 @@ input[type='range']:focus::-webkit-slider-runnable-track {
 	/* --- */
 
 	/* BORDER */
-	border: 12px solid transparent;
+	border: 16px solid transparent;
 	border-image: url('/images/tech-border.svg') 30 stretch;
 	/* --- */
 
@@ -148,9 +151,16 @@ input[type='range']:focus::-webkit-slider-runnable-track {
 	
 	z-index: var(--zIndexMax);
 	pointer-events: none;
+	transition: var(--transition);	
 }
 
 [color-scheme='dark'] .custom-border:before
 {
 	filter:invert(1);
+}
+
+.custom-border:hover::before {
+	opacity: 0.7;
+
+    filter: invert(76%) sepia(99%) saturate(3862%) hue-rotate(360deg) brightness(103%) contrast(104%);
 }

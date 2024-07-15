@@ -47,7 +47,7 @@
 		position: relative;
 		padding: var(--spaceM);
 
-		height: 300px;
+		height: 10dvh;
 		overflow: hidden;
 
 		border: 1px solid var(--colorBorder);

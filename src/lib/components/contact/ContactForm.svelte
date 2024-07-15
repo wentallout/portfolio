@@ -15,6 +15,14 @@
 
 	import At from '~icons/ph/at';
 	import User from '~icons/ph/user';
+	import { getUserLocalTime, getVietnamTime } from '$lib/utils/time';
+
+	let localTime, vietnamTime;
+
+	setInterval(() => {
+		localTime = getUserLocalTime();
+		vietnamTime = getVietnamTime();
+	}, 1000);
 </script>
 
 <section>
@@ -93,6 +101,8 @@
 					<div>Working hours</div>
 				</div>
 				<div class="address__desc">Monday - Friday 9:00 AM to 7:00 PM</div>
+				<div class="address__desc">Your time: {localTime}</div>
+				<div class="address__desc">My time: {vietnamTime}</div>
 			</div>
 		</div>
 	</div>
@@ -142,7 +152,7 @@
 		gap: var(--spaceXS);
 		background-color: var(--colorBgContainer);
 		padding: var(--spaceS) var(--spaceM);
-		border-radius: var(--borderRadius);
+
 		transition: var(--transition);
 		box-shadow: var(--boxShadow);
 	}

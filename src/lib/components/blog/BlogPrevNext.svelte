@@ -74,7 +74,6 @@
 		border: 1px solid var(--colorBorder);
 		display: grid;
 		grid-gap: var(--gap);
-		border-radius: var(--borderRadius);
 		grid-template-columns: repeat(auto-fit, minmax(min(100%, var(--min)), 1fr));
 		overflow: hidden;
 		border-right: 0;
