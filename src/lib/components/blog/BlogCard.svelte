@@ -61,10 +61,6 @@
 			box-shadow: -5px 5px var(--colorPrimaryHover);
 			transform: translate(5px, -5px);
 		}
-
-		&:hover .tags {
-			opacity: 1;
-		}
 	}
 
 	.blog:hover .blog__icon {
@@ -72,7 +68,6 @@
 	}
 
 	.tags {
-		opacity: 0;
 		flex-direction: row;
 		flex-wrap: wrap;
 		gap: var(--spaceXS);
@@ -82,7 +77,7 @@
 	.tag {
 		font-weight: 400;
 		font-size: var(--fontSizeXS);
-		color: var(--colorTextSecondary);
+		color: var(--colorTextQuaternary);
 	}
 
 	.blog__info {

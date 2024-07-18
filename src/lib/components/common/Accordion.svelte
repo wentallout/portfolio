@@ -13,7 +13,7 @@
 	}
 </script>
 
-<div class="accordion">
+<div class="accordion custom-border">
 	<button class="accordion__btn" type="button" on:click={handleOpen} on:keydown={handleOpen}>
 		<p class="accordion__section text-small" class:accordion--active={isOpened}>
 			{accordionSection}
@@ -34,6 +34,11 @@
 </div>
 
 <style lang="postcss">
+	.accordion {
+		border: 1px solid var(--colorBorder);
+		box-shadow: var(--boxShadow);
+		max-width: var(--text-width);
+	}
 	.accordion__section {
 		text-align: left;
 		text-wrap: balance;
@@ -42,13 +47,6 @@
 	.accordion--active {
 		color: var(--colorPrimaryActive);
 		font-weight: 600;
-	}
-
-	.accordion {
-		border: 1px solid var(--colorBorder);
-		border-radius: var(--borderRadius);
-		box-shadow: var(--boxShadow);
-		max-width: var(--text-width);
 	}
 
 	.caret {

@@ -8,10 +8,11 @@
 	export let thumbnail;
 </script>
 
-<a href={linkToDetail}>
+<a class="project-link" href={linkToDetail}>
 	<article class="project custom-border">
-		<img class="project__thumbnail" alt="" loading="lazy" src={thumbnail} />
-
+		<div class="project__thumbnail">
+			<img class="" alt="" loading="lazy" src={thumbnail} />
+		</div>
 		<div class="project__info">
 			<div class="project__title">
 				<div class="name text-mid">{projectName}</div>
@@ -41,17 +42,15 @@
 		display: flex;
 		position: relative;
 		width: 100%;
-
 		flex-direction: column;
 		transition: var(--transition);
-		overflow: hidden;
 		box-shadow: var(--boxShadow);
-
 		background-color: var(--colorBgContainer);
+		overflow: hidden;
 
 		&:hover {
-			box-shadow: -5px 5px var(--colorPrimaryHover);
-			transform: translate(5px, -5px);
+			box-shadow: -6px 6px var(--colorPrimaryHover);
+			transform: translate(6px, -6px);
 		}
 		&:active {
 			box-shadow: -1px 1px var(--colorPrimaryActive);
@@ -94,7 +93,7 @@
 	}
 
 	.project__thumbnail {
-		height: 300px; /* Fill the card vertically */
+		height: 30%; /* Fill the card vertically */
 		width: auto; /* Maintain aspect ratio */
 		object-fit: cover; /* Fill the box, covering any empty space */
 		aspect-ratio: 1/1;
@@ -104,6 +103,7 @@
 		background-color: transparent;
 		position: relative;
 		border: 1px solid var(--colorBorder);
+		overflow: hidden;
 	}
 
 	@media (min-width: 992px) {

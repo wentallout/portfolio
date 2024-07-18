@@ -5,8 +5,6 @@
 	import Breadcrumb from '$components/layout/other/Breadcrumb.svelte';
 
 	export let decoImageUrl = Wall;
-
-	import StarFour from '~icons/ph/star-four';
 </script>
 
 <div class="full-width title">
@@ -17,11 +15,9 @@
 	<img class="title__bg" alt="title deco" loading="lazy" src={decoImageUrl} />
 
 	<div class="title__content">
-		<StarFour height="40" width="40" />
 		<h1 class="text-3xl title__text tracking-in-expand">
 			{pageTitle}
 		</h1>
-		<StarFour height="40" width="40" />
 	</div>
 </div>
 <Breadcrumb />
@@ -46,7 +42,7 @@
 		user-select: none;
 	}
 	.title__extra {
-		-webkit-text-stroke: 2px var(--colorText);
+		-webkit-text-stroke: 1.5px var(--colorText);
 		-webkit-text-fill-color: transparent;
 		font-size: 30vh;
 		position: absolute;
