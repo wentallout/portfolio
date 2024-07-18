@@ -46,6 +46,19 @@
 		display: flex;
 		justify-content: center;
 		align-items: center;
+		position: relative;
+	}
+	.section__icon::before {
+		content: '';
+		background: url('/images/crosshair.svg') no-repeat center / contain;
+		width: 200%;
+		height: 200%;
+		opacity: 0.3;
+
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
 	}
 
 	.section__text {

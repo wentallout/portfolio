@@ -28,6 +28,17 @@
 	line-height: 120%;
 	position: relative;
 	color: var(--colorPrimary);
+	transition: var(--transition);
+
+	&:hover 
+	{
+		color: var(--colorPrimaryHover);
+	}
+
+	&:active
+	{
+		color: var(--colorPrimaryActive);
+	}
 	
 }
 
@@ -43,13 +54,15 @@
 	/* SPACING */
 	margin-bottom: var(--spaceS);
 	/* --- */
-
+	position: relative;
 	/* FONT */
 	font-family: var(--fontFancy);
 	font-size: var(--fontSizeXL);
 	line-height: var(--lineHeightLarge);
 	/* --- */
 }
+
+
 
 .markdown h3 {
 	/* SPACING */
@@ -232,20 +245,14 @@ aside.toc > nav {
 	max-width: 240px;
 }
 
-.markdown h2:hover::before,
-.markdown h3:hover::before,
-.markdown h4:hover::before {
+.markdown h2:hover::after,
+.markdown h3:hover::after,
+.markdown h4:hover::after {
 	content: ' 🔗';
-	position: absolute;
-	left: -7%;
+	
 
 }
 
-.icon-link:before {
-	content: '# ';
-	font-size: inherit;
-	font-family: inherit;
-}
 
 p > code 
 {
