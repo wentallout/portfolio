@@ -13,7 +13,7 @@
 		background-size: var(--spaceS) var(--spaceL);
 		mask-image: radial-gradient(ellipse 70% 40% at 50% 0%, #000 35%, transparent 100%);
 		background-repeat: repeat;
-		height: 100vh;
+		height: 100dvh;
 		width: 100%;
 	}
 </style>

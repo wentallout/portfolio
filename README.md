@@ -81,7 +81,7 @@ Slug
 ⭐ SEO
 
 - [SSR](https://kit.svelte.dev/docs/seo#out-of-the-box-ssr)
-- `sitemap.xml`: using `https://github.com/bartholomej/svelte-sitemap`
+- [sitemap](https://github.com/jasongitmail/super-sitemap)
 
 ⭐ Responsive
 
@@ -156,7 +156,7 @@ Slug
 
 [![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2Fwentallout%2Fportfolio.svg?type=large&issueType=license)](https://app.fossa.com/projects/git%2Bgithub.com%2Fwentallout%2Fportfolio?ref=badge_large&issueType=license)
 
-Featured on: https://www.portfolioshub.com
+Featured on: [portfolioshub.com](https://www.portfolioshub.com)
 
 ## License
 
