@@ -20,7 +20,7 @@
 		bottom: 0;
 		width: 100%;
 		height: 1px;
-		background: var(--colorPrimary);
+		background: linear-gradient(238deg, #fd8800, #fd008f, #9700fd, #003dfd, #05c7e6, #4bd58d);
 		z-index: var(--zIndexMax);
 		transform-origin: 0 50%;
 		animation: grow-progress auto linear;

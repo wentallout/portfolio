@@ -71,6 +71,10 @@
 		color: var(--colorBlack);
 		min-width: 40px;
 
+		display: flex;
+		justify-content: center;
+		align-items: center;
+
 		&:hover {
 			cursor: pointer;
 			background-color: var(--colorPrimaryHover);

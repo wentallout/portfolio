@@ -51,6 +51,18 @@
 </div>
 
 <style>
+	.error {
+		display: flex;
+		flex-direction: column;
+		flex-wrap: wrap;
+		justify-content: center;
+		align-items: center;
+		gap: var(--spaceM);
+		padding: var(--spaceL);
+		position: relative;
+		margin-top: var(--spaceL);
+		height: 100dvh;
+	}
 	.back {
 		text-align: center;
 	}
@@ -66,17 +78,7 @@
 		font-size: calc(var(--fontSizeXL) * 2);
 		margin-bottom: var(--spaceXL);
 	}
-	.error {
-		display: flex;
-		flex-direction: column;
-		flex-wrap: wrap;
-		justify-content: center;
-		align-items: center;
-		gap: var(--spaceM);
-		padding: var(--spaceL);
-		position: relative;
-		margin-top: var(--spaceL);
-	}
+
 	.status {
 		color: var(--colorError);
 		font-family: var(--fontFancy);

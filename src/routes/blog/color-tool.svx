@@ -1,6 +1,6 @@
 ---
-title: 'Essential Tools for Crafting Striking Color Schemes and Gradients for Web and Design'
-date: '2023-05-28'
+title: 'Tools for Crafting Color Schemes and Gradients for Web and Design'
+date: '2024-07-28'
 categories:
     - 'color'
     - 'freebies'
@@ -38,6 +38,8 @@ http://colormind.io/image/
 
 ## Gradient
 
+NEW: https://www.designgradients.com
+
 - [Gradientify](https://gradientify.com/) carefully crafted gradients for your next projects.
 - [Josh's Gradient Generator](https://www.joshwcomeau.com/gradient-generator/) John Comeau gradient generator
 - https://webgradients.com
@@ -51,6 +53,10 @@ http://colormind.io/image/
 ## Palette Previewer
 
 ⭐NEW [palettify.co](https://palettify.co)
+
+## Reference
+
+https://www.youtube.com/watch?v=7hgIzaifLN4
 
 
 

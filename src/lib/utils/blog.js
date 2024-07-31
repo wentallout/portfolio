@@ -8,7 +8,7 @@ export const fetchMarkdownBlogs = async () => {
 
 	const iterableBlogFiles = Object.entries(allBlogFiles);
 
-	const allBlogs = await Promise.all(
+	return await Promise.all(
 		iterableBlogFiles.map(async ([path, resolver]) => {
 			const { metadata } = await resolver();
 			const blogPath = path.slice(11, -4);
@@ -19,6 +19,10 @@ export const fetchMarkdownBlogs = async () => {
 			};
 		})
 	);
+};
 
-	return allBlogs;
+export const getBlogSlugs = async () => {
+	const allBlogs = await fetchMarkdownBlogs();
+
+	return allBlogs.map((blog) => blog.path.replace(/^\/blog\//, ''));
 };
