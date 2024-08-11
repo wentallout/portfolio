@@ -37,12 +37,12 @@
 		<form name="contact" class="contact" data-netlify="true" method="post">
 			<input name="form-name" type="hidden" value="contact" />
 
-			<TextInput name="name" label="Name" type="text">
+			<TextInput name="name" label="Name" type="text" placeholder="John Doe">
 				<span slot="icon">
 					<User />
 				</span>
 			</TextInput>
-			<TextInput name="email" label="Email" type="email">
+			<TextInput name="email" label="Email" type="email" placeholder="username@gmail.com">
 				<span slot="icon">
 					<At />
 				</span>
@@ -146,15 +146,17 @@
 	}
 
 	.contact__address {
+		/* FLEX */
 		display: flex;
 		flex-grow: 1;
 		flex-direction: column;
 		gap: var(--spaceXS);
-		background-color: var(--colorBgContainer);
-		padding: var(--spaceS) var(--spaceM);
+		/* --- */
 
+		padding: var(--spaceS) var(--spaceM);
 		transition: var(--transition);
 		box-shadow: var(--boxShadow);
+		background: var(--colorGradientBg);
 	}
 
 	.address__title {
@@ -167,9 +169,5 @@
 		&:hover {
 			color: var(--colorPrimaryHover);
 		}
-	}
-
-	.address__desc {
-		color: var(--colorTextSecondary);
 	}
 </style>

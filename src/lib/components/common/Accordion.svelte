@@ -38,6 +38,8 @@
 		border: 1px solid var(--colorBorder);
 		box-shadow: var(--boxShadow);
 		max-width: var(--text-width);
+
+		background: var(--colorGradientBg);
 	}
 	.accordion__section {
 		text-align: left;

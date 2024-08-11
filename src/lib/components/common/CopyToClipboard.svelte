@@ -1,4 +1,6 @@
 <script>
+	import { fade } from 'svelte/transition';
+
 	export let textToCopy;
 	let show = false;
 
@@ -9,7 +11,7 @@
 		show = true;
 		setTimeout(() => {
 			show = false;
-		}, 1000);
+		}, 3000);
 	}
 </script>
 
@@ -17,8 +19,9 @@
 	<slot />
 	<CopySimple style="color:inherit" />
 </button>
-{#if textToCopy}
-	<div class="indicator text-xs" class:indicator--show={show}>Copied</div>
+
+{#if show === true}
+	<div transition:fade class="indicator text-xs">Copied</div>
 {/if}
 
 <style>
@@ -28,25 +31,16 @@
 		text-align: initial;
 		align-items: center;
 		color: var(--colorTextSecondary);
-		width: fit-content;
 		gap: var(--space3XS);
 
 		&:hover {
 			cursor: pointer;
-			color: var(--colorPrimaryHover);
-			scale: 1.1;
-			transition: var(--transition);
+			color: var(--colorPrimaryHover) !important;
 		}
 	}
 
 	.indicator {
-		display: none;
-		opacity: 0;
 		transition: 0.3s;
 		color: var(--colorPrimary);
-	}
-	.indicator--show {
-		display: block;
-		opacity: 1;
 	}
 </style>

@@ -123,7 +123,6 @@
 	}
 
 	.service__section {
-		background-color: var(--colorBgContainer);
 		padding: var(--spaceL) var(--spaceM);
 		border-radius: var(--borderRadiusLight);
 		box-shadow: var(--boxShadow);
@@ -132,6 +131,8 @@
 		display: flex;
 		flex-direction: column;
 		align-items: center;
+
+		background: var(--colorGradientBg);
 	}
 
 	.service__title {
