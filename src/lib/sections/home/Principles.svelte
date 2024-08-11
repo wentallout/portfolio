@@ -99,6 +99,8 @@
 		border-radius: var(--borderRadiusLight);
 		box-shadow: var(--boxShadow);
 		background-color: var(--colorBgContainer);
+
+		background: var(--colorGradientBg);
 	}
 
 	.principle__title {

@@ -119,6 +119,8 @@
 		box-shadow: var(--boxShadow);
 
 		border-radius: var(--borderRadiusLight);
+
+		background: var(--colorGradientBg);
 	}
 
 	.block__section:hover {

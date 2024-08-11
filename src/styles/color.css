@@ -34,10 +34,14 @@
 		rgba(0, 0, 0, 0.1) 30%,
 		rgba(0, 0, 0, 0) 40%
 	);
+
+	--colorGradientBg: linear-gradient(360deg, #0e0e0e, #121212, #1a1a1a);
 }
 
 [color-scheme='light'] {
 	color-scheme: light;
+
+	--colorGradientBg: linear-gradient(360deg, #ececec, #f5f5f5, #ffffff);
 
 	/* PRIMARY */
 	--colorPrimary: #ffbb00;

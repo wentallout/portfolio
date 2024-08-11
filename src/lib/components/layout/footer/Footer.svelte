@@ -154,7 +154,7 @@
 	.nav-list__link {
 		display: flex;
 		flex-direction: row;
-		gap: var(--spaceXS);
+		gap: var(--space2XS);
 		align-items: center;
 
 		&:hover {
@@ -211,7 +211,7 @@
 
 	.list__title {
 		font-family: var(--fontFancy);
-		color: var(--colorTextSecondary);
+		color: var(--colorText);
 		font-size: var(--fontSizeBase);
 		padding-bottom: var(--space3XS);
 		border-bottom: 1px solid transparent;

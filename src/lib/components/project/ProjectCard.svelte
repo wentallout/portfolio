@@ -45,7 +45,7 @@
 		flex-direction: column;
 		transition: var(--transition);
 		box-shadow: var(--boxShadow);
-		background-color: var(--colorBgContainer);
+
 		overflow: hidden;
 
 		&:hover {
@@ -78,6 +78,7 @@
 		padding: var(--spaceM) var(--spaceL);
 		gap: var(--spaceM);
 		color: var(--colorTextSecondary);
+		background: var(--colorGradientBg);
 	}
 
 	@media (min-width: 768px) {
@@ -93,7 +94,7 @@
 	}
 
 	.project__thumbnail {
-		height: 30%; /* Fill the card vertically */
+		height: 30dvh; /* Fill the card vertically */
 		width: auto; /* Maintain aspect ratio */
 		object-fit: cover; /* Fill the box, covering any empty space */
 		aspect-ratio: 1/1;
@@ -102,7 +103,7 @@
 		object-fit: cover;
 		background-color: transparent;
 		position: relative;
-		border: 1px solid var(--colorBorder);
+		border: 1px dotted var(--colorBorderSecondary);
 		overflow: hidden;
 	}
 

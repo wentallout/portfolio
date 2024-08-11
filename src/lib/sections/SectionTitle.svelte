@@ -77,13 +77,13 @@
 		left: 8px;
 		top: 4px;
 		-webkit-text-fill-color: transparent;
-		-webkit-text-stroke: 1px var(--colorText);
-		color: var(--colorText);
+		-webkit-text-stroke: 2px var(--colorPrimary);
+		color: var(--colorPrimary);
 		display: block;
 		position: absolute;
 		width: 100%;
 		z-index: -1;
-		opacity: 0.1;
+		opacity: 0.5;
 		font-weight: 100;
 	}
 </style>
