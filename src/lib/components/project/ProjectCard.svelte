@@ -78,7 +78,7 @@
 		padding: var(--spaceM) var(--spaceL);
 		gap: var(--spaceM);
 		color: var(--colorTextSecondary);
-		background: var(--colorGradientBg);
+		background: var(--colorBgGradientSubtle);
 	}
 
 	@media (min-width: 768px) {

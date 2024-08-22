@@ -156,7 +156,7 @@
 		padding: var(--spaceS) var(--spaceM);
 		transition: var(--transition);
 		box-shadow: var(--boxShadow);
-		background: var(--colorGradientBg);
+		background: var(--colorBgGradientSubtle);
 	}
 
 	.address__title {

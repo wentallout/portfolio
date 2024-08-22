@@ -100,7 +100,7 @@
 		box-shadow: var(--boxShadow);
 		background-color: var(--colorBgContainer);
 
-		background: var(--colorGradientBg);
+		background: var(--colorBgGradientSubtle);
 	}
 
 	.principle__title {

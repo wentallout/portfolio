@@ -29,18 +29,6 @@
 	}
 
 	let breadcrumbEl;
-
-	function makeBreadcrumbSticky() {
-		const observer = new IntersectionObserver(
-			([e]) => e.target.classList.toggle('sticky', e.intersectionRatio < 1),
-			{ threshold: [1] }
-		);
-		observer.observe(breadcrumbEl);
-	}
-
-	onMount(() => {
-		makeBreadcrumbSticky();
-	});
 </script>
 
 <nav bind:this={breadcrumbEl} id="breadcrumb" class="breadcrumb text-small" aria-label="breadcrumb">
@@ -82,7 +70,7 @@
 	}
 
 	.breadcrumb__clickable {
-		font-weight: var(--fontWeightXS);
+		font-weight: var(--fontWeightLarge);
 		display: inline-flex;
 		color: var(--colorInfo);
 	}
@@ -90,14 +78,5 @@
 	.breadcrumb__clickable:hover {
 		color: var(--colorPrimaryHover);
 		text-underline-offset: 2px;
-	}
-
-	:global(.breadcrumb.sticky) {
-		position: sticky;
-		background-color: var(--colorBgLayout);
-		padding: var(--space2XS) var(--spaceXS);
-		box-shadow: var(--boxShadow);
-		z-index: 9999;
-		border-radius: 0 0 var(--borderRadiusLight) var(--borderRadiusLight);
 	}
 </style>

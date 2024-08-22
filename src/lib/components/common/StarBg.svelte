@@ -2,14 +2,12 @@
 
 <style>
 	.stars {
-		height: 31px;
+		height: 19px;
 		width: 100%;
-		background-image: url(/images/patterns/stars.svg);
-		background-size: auto 15px;
+		background-image: url(/images/audio-bounce.png);
 		background-repeat: repeat-x;
 		background-position: 100%;
 		margin-bottom: var(--spaceM);
-		opacity: 0.5;
 	}
 
 	:global([color-scheme='dark'] .stars) {

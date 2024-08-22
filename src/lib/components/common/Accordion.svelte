@@ -39,7 +39,7 @@
 		box-shadow: var(--boxShadow);
 		max-width: var(--text-width);
 
-		background: var(--colorGradientBg);
+		background: var(--colorBgGradientSubtle);
 	}
 	.accordion__section {
 		text-align: left;
