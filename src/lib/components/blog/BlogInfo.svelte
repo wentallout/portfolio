@@ -16,11 +16,6 @@
 	import { onMount } from 'svelte';
 
 	function getRandomColor() {
-		// const r = Math.floor(Math.random() * 256);
-		// const g = Math.floor(Math.random() * 256);
-		// const b = Math.floor(Math.random() * 256);
-		// return `rgb(${r}, ${g}, ${b})`;
-
 		let color, luminance;
 
 		do {
@@ -82,9 +77,23 @@
 			{/if}
 		{/if}
 	</div>
+	<div class="blog__deco"></div>
 </header>
 
 <style>
+	.blog__deco {
+		width: 100%;
+		height: 150px;
+		background-image: url('/images/beat-mix.png');
+		background-repeat: repeat-x;
+		rotate: 360deg;
+		position: absolute;
+		left: 0;
+		bottom: 0;
+		z-index: -1;
+		opacity: 0.2;
+	}
+
 	:root {
 		--random-background: linear-gradient(rgb(4, 93, 211), rgb(19, 35, 128));
 	}
@@ -118,9 +127,9 @@
 		height: 100%;
 		background-image: url('/images/patterns/wao-pattern.svg');
 		background-repeat: repeat;
-		background-size: 200px;
+		background-size: 500px;
 
-		opacity: 0.1;
+		opacity: 0.05;
 		filter: grayscale(1);
 		z-index: -9998;
 	}
@@ -138,7 +147,7 @@
 	}
 
 	:global([color-scheme='dark'] .blog:after) {
-		filter: brightness(0.5);
+		filter: brightness(0.6);
 	}
 
 	.category {
@@ -172,9 +181,9 @@
 	.blog__title {
 		text-wrap: balance;
 		text-shadow:
-			-1px -1px 0 var(--colorBgLayout),
-			1px -1px 0 var(--colorBgLayout),
-			-1px 1px 0 var(--colorBgLayout),
-			1px 1px 0 var(--colorBgLayout);
+			-2px -2px 0 var(--colorBgLayout),
+			2px -2px 0 var(--colorBgLayout),
+			-2px 2px 0 var(--colorBgLayout),
+			2px 2px 0 var(--colorBgLayout);
 	}
 </style>

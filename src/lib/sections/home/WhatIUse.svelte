@@ -120,7 +120,7 @@
 
 		border-radius: var(--borderRadiusLight);
 
-		background: var(--colorGradientBg);
+		background: var(--colorBgGradientSubtle);
 	}
 
 	.block__section:hover {

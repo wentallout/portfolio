@@ -245,13 +245,7 @@ aside.toc > nav {
 	max-width: 240px;
 }
 
-.markdown h2:hover::after,
-.markdown h3:hover::after,
-.markdown h4:hover::after {
-	content: ' 🔗';
-	
 
-}
 
 
 p > code 

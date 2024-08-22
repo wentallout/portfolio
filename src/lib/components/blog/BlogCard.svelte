@@ -54,7 +54,7 @@
 		overflow: hidden;
 
 		box-shadow: var(--boxShadow);
-		background-color: var(--colorBgContainer);
+		background: var(--colorBgGradientSubtle);
 		/* --- */
 
 		&:hover {

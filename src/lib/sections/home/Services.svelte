@@ -132,7 +132,7 @@
 		flex-direction: column;
 		align-items: center;
 
-		background: var(--colorGradientBg);
+		background: var(--colorBgGradientSubtle);
 	}
 
 	.service__title {
