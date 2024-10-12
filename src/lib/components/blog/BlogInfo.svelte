@@ -14,36 +14,6 @@
 	import Breadcrumb from '$components/layout/other/Breadcrumb.svelte';
 
 	import { onMount } from 'svelte';
-
-	function getRandomColor() {
-		let color, luminance;
-
-		do {
-			const r = Math.floor(Math.random() * 256);
-			const g = Math.floor(Math.random() * 256);
-			const b = Math.floor(Math.random() * 256);
-			color = `rgb(${r}, ${g}, ${b})`;
-
-			// Calculate luminance
-			const rNorm = r / 255;
-			const gNorm = g / 255;
-			const bNorm = b / 255;
-			luminance = 0.2126 * rNorm + 0.7152 * gNorm + 0.0722 * bNorm;
-		} while (luminance < 0.3 || luminance > 0.7);
-
-		return color;
-	}
-
-	function applyRandomGradient() {
-		const color1 = getRandomColor();
-		const color2 = getRandomColor();
-		const gradient = `linear-gradient(${color1}, ${color2})`;
-		document.documentElement.style.setProperty('--random-background', gradient);
-	}
-
-	onMount(() => {
-		applyRandomGradient();
-	});
 </script>
 
 <header class="blog full-width">
@@ -94,10 +64,6 @@
 		opacity: 0.2;
 	}
 
-	:root {
-		--random-background: linear-gradient(rgb(4, 93, 211), rgb(19, 35, 128));
-	}
-
 	.blog__gradient {
 		position: absolute;
 		bottom: 0;
@@ -111,10 +77,6 @@
 		position: relative;
 		padding-top: var(--spaceXL);
 		padding-bottom: var(--spaceXL);
-		background-size: 100% 100%;
-		background-position: center;
-		background-repeat: no-repeat;
-		z-index: 9999;
 	}
 
 	.blog:before {
@@ -141,13 +103,20 @@
 		left: 0;
 		width: 100%;
 		height: 100%;
-		pointer-events: none;
-		background-image: var(--random-background);
 		z-index: -9999;
+		background: url('/images/bg-sky.png');
+		background-size: cover;
+		background-position: center;
+		background-repeat: no-repeat;
 	}
 
 	:global([color-scheme='dark'] .blog:after) {
-		filter: brightness(0.6);
+		filter: brightness(0.5);
+	}
+
+	:global([color-scheme='light'] .blog:after) {
+		filter: greyscale(1);
+		opacity: 0.2;
 	}
 
 	.category {
