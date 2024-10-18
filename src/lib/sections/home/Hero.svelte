@@ -51,15 +51,15 @@
 					<div>
 						Tailor-made
 						<span id="hero__focus" class="hero__focus focus">
-							<span class="word">website</span>
-							<span class="word">app</span>
-							<span class="word">game</span>
+							<span class="word">websites</span>
+							<span class="word">mobile apps</span>
+							<span class="word">games</span>
 						</span>
-						for your business
+						for everyone.
 					</div>
 				</div>
 				<div class="hero__text text-base">
-					{m.heroText()}
+					Hi, I'm <strong>Khoa Nguyen</strong>. I help people create amazing digital products.
 				</div>
 
 				<div class="hero__btn">
@@ -141,7 +141,12 @@
 		text-wrap: balance;
 		max-width: 40ch;
 		color: var(--colorTextSecondary);
+
+		& strong {
+			color: var(--colorPrimary);
+		}
 	}
+
 	.hero__btn {
 		margin-top: var(--spaceL);
 		width: 100%;

@@ -112,6 +112,7 @@
 	}
 
 	.principle__art {
+		max-width: 500px;
 		align-self: center;
 	}
 </style>

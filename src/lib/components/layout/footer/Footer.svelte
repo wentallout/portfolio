@@ -61,7 +61,7 @@
 						<a href="https://dnsrecords.io/wentallout.io.vn">DNS</a>
 					</li>
 					<li class="nav-list__link">
-						<a href="/doc/privacy-policy.pdf">Privacy Policy</a>
+						<a href="/privacy">Privacy Policy</a>
 					</li>
 				</ul>
 			</div>
