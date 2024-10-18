@@ -12,5 +12,7 @@
 
 	:global([color-scheme='dark'] .stars) {
 		filter: invert(1);
+
 	}
+	
 </style>

@@ -74,8 +74,8 @@
 		content: attr(data-title);
 		height: 100%;
 		width: 100vw;
-		left: 8px;
-		top: 4px;
+		left: 3px;
+		top: 3px;
 		-webkit-text-fill-color: transparent;
 		-webkit-text-stroke: 2px var(--colorPrimary);
 		color: var(--colorPrimary);
