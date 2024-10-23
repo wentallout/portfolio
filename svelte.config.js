@@ -9,14 +9,13 @@ import remarkUnwrapImages from 'remark-unwrap-images';
 import sequence from 'svelte-sequential-preprocessor';
 import remarkGfm from 'remark-gfm';
 import remarkSectionize from 'remark-sectionize';
-import { vitePreprocess } from '@sveltejs/kit/vite';
 
 // torch_eYAF6gD0idBcJcmEPVyxVRVmuAHTrcP9mV8s7vTl
 
 /** @type {import('@sveltejs/kit').Config} */
 const config = {
 	preprocess: sequence([
-		vitePreprocess(),
+		sveltePreprocess(),
 		mdsvex({
 			extensions: ['.svelte.md', '.md', '.svx'],
 			remarkPlugins: [remarkUnwrapImages, remarkGfm, remarkSectionize],
