@@ -52,15 +52,19 @@
 
 <style>
 	.error {
+		/* FLEX */
 		display: flex;
 		flex-direction: column;
 		flex-wrap: wrap;
 		justify-content: center;
 		align-items: center;
 		gap: var(--spaceM);
+		/* --- */
+
 		padding: var(--spaceL);
 		position: relative;
 		margin-top: var(--spaceL);
+
 		height: 100dvh;
 	}
 	.back {
