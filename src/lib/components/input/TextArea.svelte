@@ -1,12 +1,11 @@
 <script>
-	export let label = 'message';
-	export let placeholder = 'Something you want to tell me. Ex: jobs, ideas';
 
-	export let name = '';
+	/** @type {{label?: string, placeholder?: string, name?: string}} */
+	let { label = 'message', placeholder = 'Something you want to tell me. Ex: jobs, ideas', name = '' } = $props();
 </script>
 
 <label class="label text-small" for={label}>{label}</label>
-<textarea id={label} {name} class="textarea text-small" {placeholder} required />
+<textarea id={label} {name} class="textarea text-small" {placeholder} required></textarea>
 
 <style>
 	.label {

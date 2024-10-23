@@ -1,7 +1,11 @@
 <script>
-	export let href;
-	export let ariaLabel = '';
-	export let style = '';
+	/** @type {{href: any, ariaLabel?: string, style?: string, children?: import('svelte').Snippet}} */
+	let {
+		href,
+		ariaLabel = '',
+		style = '',
+		children
+	} = $props();
 </script>
 
 <a
@@ -10,7 +14,7 @@
 	{href}
 	rel="external nofollow noopener noreferrer"
 	target="_blank">
-	<slot />
+	{@render children?.()}
 </a>
 
 <style>

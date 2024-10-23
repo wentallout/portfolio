@@ -1,10 +1,9 @@
 <script>
-	export let duration = '100ms';
-	export let offset = 0;
-	export let tolerance = 0;
+	/** @type {{duration?: string, offset?: number, tolerance?: number, children?: import('svelte').Snippet}} */
+	let { duration = '100ms', offset = 0, tolerance = 0, children } = $props();
 
-	let headerClass = 'show';
-	let y = 0;
+	let headerClass = $state('show');
+	let y = $state(0);
 	let lastY = 0;
 
 	function deriveClass(y, dy) {
@@ -33,13 +32,15 @@
 		node.style.transitionDuration = duration;
 	}
 
-	$: headerClass = updateClass(y);
+	$effect(() => {
+		headerClass = updateClass(y);
+	});
 </script>
 
 <svelte:window bind:scrollY={y} />
 
 <div class={headerClass} use:setTransitionDuration>
-	<slot />
+	{@render children?.()}
 </div>
 
 <style>

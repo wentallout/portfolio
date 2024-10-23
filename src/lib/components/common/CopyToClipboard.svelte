@@ -1,10 +1,11 @@
 <script>
 	import { fade } from 'svelte/transition';
 
-	export let textToCopy;
-	let show = false;
+	let show = $state(false);
 
 	import CopySimple from '~icons/ph/copy-simple';
+	/** @type {{textToCopy: any, children?: import('svelte').Snippet}} */
+	let { textToCopy, children } = $props();
 
 	async function copyToClipboard() {
 		await navigator.clipboard.writeText(textToCopy);
@@ -15,8 +16,8 @@
 	}
 </script>
 
-<button class="copy" type="button" on:click={copyToClipboard}>
-	<slot />
+<button class="copy" type="button" onclick={copyToClipboard}>
+	{@render children?.()}
 	<CopySimple style="color:inherit" />
 </button>
 

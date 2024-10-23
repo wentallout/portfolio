@@ -4,9 +4,7 @@
 	import ExLink from '$components/common/ExLink.svelte';
 	import Tag from '$components/common/Tag.svelte';
 
-	export let data;
 
-	export let hasCategory = false;
 
 	import Pen from '~icons/ph/pen';
 
@@ -14,6 +12,8 @@
 	import Breadcrumb from '$components/layout/other/Breadcrumb.svelte';
 
 	import { onMount } from 'svelte';
+	/** @type {{data: any, hasCategory?: boolean}} */
+	let { data, hasCategory = false } = $props();
 </script>
 
 <header class="blog full-width">

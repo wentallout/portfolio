@@ -1,5 +1,5 @@
 import adapter from '@sveltejs/adapter-netlify';
-import sveltePreprocess from 'svelte-preprocess';
+import { sveltePreprocess } from 'svelte-preprocess';
 import { mdsvex } from 'mdsvex';
 import rehypeSlug from 'rehype-slug';
 import rehypeExternalLinks from 'rehype-external-links';
@@ -9,13 +9,14 @@ import remarkUnwrapImages from 'remark-unwrap-images';
 import sequence from 'svelte-sequential-preprocessor';
 import remarkGfm from 'remark-gfm';
 import remarkSectionize from 'remark-sectionize';
+import { vitePreprocess } from '@sveltejs/kit/vite';
 
 // torch_eYAF6gD0idBcJcmEPVyxVRVmuAHTrcP9mV8s7vTl
 
 /** @type {import('@sveltejs/kit').Config} */
 const config = {
 	preprocess: sequence([
-		sveltePreprocess(),
+		vitePreprocess(),
 		mdsvex({
 			extensions: ['.svelte.md', '.md', '.svx'],
 			remarkPlugins: [remarkUnwrapImages, remarkGfm, remarkSectionize],

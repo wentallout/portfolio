@@ -1,16 +1,19 @@
 <script>
 	import SaosContainer from '$components/common/SaosContainer.svelte';
 
-	export let src = '';
-	export let alt = '';
-	export let width = 'auto';
-	export let height = 'auto';
 
 	// try not to touch this
-	export let loading = 'lazy';
-	export let decoding = 'async';
 
 	import ExLink from '$components/common/ExLink.svelte';
+	/** @type {{src?: string, alt?: string, width?: string, height?: string, loading?: string, decoding?: string}} */
+	let {
+		src = '',
+		alt = '',
+		width = 'auto',
+		height = 'auto',
+		loading = 'lazy',
+		decoding = 'async'
+	} = $props();
 </script>
 
 <SaosContainer animation="imgAni 0.3s">

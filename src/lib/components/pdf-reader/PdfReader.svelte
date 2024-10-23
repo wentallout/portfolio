@@ -9,13 +9,14 @@
 		MagnifyingGlassMinus
 	} from '$lib/assets/icons/icons';
 
-	export let pdfUrl;
+	/** @type {{pdfUrl: any}} */
+	let { pdfUrl } = $props();
 
 	let pdfDoc = null;
-	let pageNum = 1;
-	let pageCount = 0;
+	let pageNum = $state(1);
+	let pageCount = $state(0);
 	let pageRendering = false;
-	let canvas;
+	let canvas = $state();
 	let ctx;
 	let scale = 1.5;
 
@@ -79,10 +80,10 @@
 <div class="pdf-reader">
 	<div class="controls">
 		<span>Page {pageNum} of {pageCount}</span>
-		<button on:click={zoomIn} aria-label="Zoom In">
+		<button onclick={zoomIn} aria-label="Zoom In">
 			<MagnifyingGlassPlus size={24} />
 		</button>
-		<button on:click={zoomOut} aria-label="Zoom Out">
+		<button onclick={zoomOut} aria-label="Zoom Out">
 			<MagnifyingGlassMinus size={24} />
 		</button>
 	</div>
@@ -90,14 +91,14 @@
 		<canvas bind:this={canvas}></canvas>
 		<button
 			class="nav-button prev"
-			on:click={() => changePage(-1)}
+			onclick={() => changePage(-1)}
 			disabled={pageNum <= 1}
 			aria-label="Previous page">
 			<ArrowLeft size={32} />
 		</button>
 		<button
 			class="nav-button next"
-			on:click={() => changePage(1)}
+			onclick={() => changePage(1)}
 			disabled={pageNum >= pageCount}
 			aria-label="Next page">
 			<ArrowRight size={32} />

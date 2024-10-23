@@ -1,32 +1,8 @@
 <script>
-	export let article = false;
-	export let author;
 
-	/**
-	 * @type {{ name: string; slug: string }[]}
-	 */
-	export let breadcrumbs;
+	
 
-	export let datePublished;
-	export let entity;
-	export let lastUpdated;
-	export let featuredImage;
-	export let metadescription;
-	export let siteLanguage;
-	export let siteTitle;
-	export let siteTitleAlt;
-	/**
-	 * @type {string}
-	 */
-	export let siteUrl;
-	export let title;
-	export let url;
-	export let facebookPage;
-	export let githubPage;
-	export let linkedinProfile;
-	export let telegramUsername;
-	export let tiktokUsername;
-	export let twitterUsername;
+	
 
 	function generateEntityHash(entity) {
 		let hash = 0;
@@ -44,10 +20,31 @@
 		return hash.toString();
 	}
 
-	/**
-	 * @type {{ url: string; faviconWidth: number; faviconHeight: number } | null}
-	 */
-	export let entityMeta = null;
+	
+	/** @type {{article?: boolean, author: any, breadcrumbs: { name: string; slug: string }[], datePublished: any, entity: any, lastUpdated: any, featuredImage: any, metadescription: any, siteLanguage: any, siteTitle: any, siteTitleAlt: any, siteUrl: string, title: any, url: any, facebookPage: any, githubPage: any, linkedinProfile: any, telegramUsername: any, tiktokUsername: any, twitterUsername: any, entityMeta?: { url: string; faviconWidth: number; faviconHeight: number } | null}} */
+	let {
+		article = false,
+		author,
+		breadcrumbs,
+		datePublished,
+		entity,
+		lastUpdated,
+		featuredImage,
+		metadescription,
+		siteLanguage,
+		siteTitle,
+		siteTitleAlt,
+		siteUrl,
+		title,
+		url,
+		facebookPage,
+		githubPage,
+		linkedinProfile,
+		telegramUsername,
+		tiktokUsername,
+		twitterUsername,
+		entityMeta = null
+	} = $props();
 
 	const entityHash = generateEntityHash(author);
 

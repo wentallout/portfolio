@@ -3,7 +3,7 @@
 
 	import { page } from '$app/stores';
 
-	let customMessage = '';
+	let customMessage = $state('');
 
 	switch ($page.status) {
 		case 404:

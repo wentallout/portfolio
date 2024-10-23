@@ -1,9 +1,7 @@
 <script>
 	import ProjectList from '$sections/project/ProjectList.svelte';
 	import PageTitle from '$components/common/PageTitle.svelte';
-	import ProjectorScreen from '~icons/ph/projector-screen';
-
-	import CodePen from '~icons/ph/codepen-logo';
+	import { ProjectorScreen, CodePen } from '$lib/assets/icons/icons';
 
 	import SectionTitle from '$sections/SectionTitle.svelte';
 
@@ -32,8 +30,10 @@
 <PageTitle pageTitle="Projects" />
 
 <section>
-	<SectionTitle sectionTitle="Projects" let:sectionIcon>
-		<ProjectorScreen {...sectionIcon} />
+	<SectionTitle sectionTitle="Projects">
+		{#snippet children({ sectionIcon })}
+			<ProjectorScreen {...sectionIcon} />
+		{/snippet}
 	</SectionTitle>
 
 	<ProjectList />
@@ -42,9 +42,10 @@
 <section>
 	<SectionTitle
 		sectionDesc="Code snippets for common frontend problems"
-		sectionTitle="Code Snippets"
-		let:sectionIcon>
-		<CodePen {...sectionIcon} />
+		sectionTitle="Code Snippets">
+		{#snippet children({ sectionIcon })}
+			<CodePen {...sectionIcon} />
+		{/snippet}
 	</SectionTitle>
 
 	<SnippetList />

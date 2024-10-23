@@ -1,8 +1,9 @@
 <script>
 	import Giscus from '$components/blog/BlogGiscus.svelte';
 
-	export let category = 'Blogs';
-	let categoryId = '';
+	/** @type {{category?: string}} */
+	let { category = 'Blogs' } = $props();
+	let categoryId = $state('');
 
 	if (category === 'Blogs') {
 		categoryId = 'DIC_kwDOH5VoSc4CV-u6';

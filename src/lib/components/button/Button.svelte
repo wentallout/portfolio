@@ -1,27 +1,31 @@
 <script>
-	export let label = 'exampleLabel';
-	export let labelColor = 'var(--colorBlack)';
 
-	export let width = undefined;
-	export let glowColor = 'var(--colorBgElevated)';
-	export let type = 'submit';
 
-	export let backgroundColor = 'transparent';
-	export let borderColor = backgroundColor;
-	export let border = `1px solid ${borderColor}`;
 
-	export let shadowColor = backgroundColor;
+	/** @type {{label?: string, labelColor?: string, width?: any, glowColor?: string, type?: string, backgroundColor?: string, borderColor?: any, border?: any, shadowColor?: any, children?: import('svelte').Snippet}} */
+	let {
+		label = 'exampleLabel',
+		labelColor = 'var(--colorBlack)',
+		width = undefined,
+		glowColor = 'var(--colorBgElevated)',
+		type = 'submit',
+		backgroundColor = 'transparent',
+		borderColor = backgroundColor,
+		border = `1px solid ${borderColor}`,
+		shadowColor = backgroundColor,
+		children
+	} = $props();
 </script>
 
 <button style:--glow-color={glowColor} style:width class="pushable" {type}>
-	<span style:background-color={shadowColor} class="shadow" />
+	<span style:background-color={shadowColor} class="shadow"></span>
 
 	<span
 		class="front"
 		style:background-color={backgroundColor}
 		style:border
 		style:color={labelColor}>
-		<slot />
+		{@render children?.()}
 		{label}
 	</span>
 </button>

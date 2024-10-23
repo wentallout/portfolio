@@ -4,7 +4,7 @@
 
 	import { TextPlugin } from 'gsap/dist/TextPlugin.js';
 
-	let logoDeco;
+	let logoDeco = $state();
 	onMount(() => {
 		const phrases = ['WENT ALL OUT', 'Khoa Nguyen'];
 		let i = 0;

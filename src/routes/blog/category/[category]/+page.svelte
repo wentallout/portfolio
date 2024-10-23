@@ -3,7 +3,8 @@
 	import BlogListContainer from '$sections/blog/BlogListContainer.svelte';
 	import Breadcrumb from '$lib/components/layout/other/Breadcrumb.svelte';
 
-	export let data;
+	/** @type {{data: any}} */
+	let { data } = $props();
 </script>
 
 <Breadcrumb />

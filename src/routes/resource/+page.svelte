@@ -37,10 +37,12 @@
 <section>
 	<SectionTitle
 		sectionTitle="Essential"
-		let:sectionIcon
+		
 		sectionDesc="Essential libraries for my work">
-		<BoundingBox {...sectionIcon} />
-	</SectionTitle>
+		{#snippet children({ sectionIcon })}
+				<BoundingBox {...sectionIcon} />
+		{/snippet}
+		</SectionTitle>
 
 	<EssentialList />
 </section>
@@ -48,18 +50,22 @@
 <section>
 	<SectionTitle
 		sectionTitle="Book"
-		let:sectionIcon
+		
 		sectionDesc="Here are some of my favorite books">
-		<Books {...sectionIcon} />
-	</SectionTitle>
+		{#snippet children({ sectionIcon })}
+				<Books {...sectionIcon} />
+					{/snippet}
+		</SectionTitle>
 
 	<BookList />
 </section>
 
 <section>
-	<SectionTitle sectionTitle="Other" let:sectionIcon>
-		<HardDrives {...sectionIcon} />
-	</SectionTitle>
+	<SectionTitle sectionTitle="Other" >
+		{#snippet children({ sectionIcon })}
+				<HardDrives {...sectionIcon} />
+					{/snippet}
+		</SectionTitle>
 
 	<OtherCardList />
 </section>

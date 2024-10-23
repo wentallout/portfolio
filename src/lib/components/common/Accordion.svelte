@@ -4,9 +4,8 @@
 	import { slide } from 'svelte/transition';
 
 	// PROPS
-	export let accordionSection = '';
-	export let accordionText = '';
-	export let isOpened = false;
+	/** @type {{accordionSection?: string, accordionText?: string, isOpened?: boolean}} */
+	let { accordionSection = '', accordionText = '', isOpened = $bindable(false) } = $props();
 
 	function handleOpen() {
 		isOpened = !isOpened;
@@ -14,7 +13,7 @@
 </script>
 
 <div class="accordion custom-border">
-	<button class="accordion__btn" type="button" on:click={handleOpen} on:keydown={handleOpen}>
+	<button class="accordion__btn" type="button" onclick={handleOpen} onkeydown={handleOpen}>
 		<p class="accordion__section text-small" class:accordion--active={isOpened}>
 			{accordionSection}
 		</p>

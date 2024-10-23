@@ -17,7 +17,7 @@
 	import User from '~icons/ph/user';
 	import { getUserLocalTime, getVietnamTime } from '$lib/utils/time';
 
-	let localTime, vietnamTime;
+	let localTime = $state(), vietnamTime = $state();
 
 	setInterval(() => {
 		localTime = getUserLocalTime();
@@ -29,23 +29,29 @@
 	<SectionTitle
 		sectionDesc="Tell me about your next big project. I'll be happy to contribute."
 		sectionTitle="Get in touch"
-		let:sectionIcon>
-		<EnvelopeSimple {...sectionIcon} />
-	</SectionTitle>
+		>
+		{#snippet children({ sectionIcon })}
+				<EnvelopeSimple {...sectionIcon} />
+					{/snippet}
+		</SectionTitle>
 
 	<div class="form-container">
 		<form name="contact" class="contact" data-netlify="true" method="post">
 			<input name="form-name" type="hidden" value="contact" />
 
 			<TextInput name="name" label="Name" type="text" placeholder="John Doe">
-				<span slot="icon">
-					<User />
-				</span>
+				{#snippet icon()}
+								<span >
+						<User />
+					</span>
+							{/snippet}
 			</TextInput>
 			<TextInput name="email" label="Email" type="email" placeholder="username@gmail.com">
-				<span slot="icon">
-					<At />
-				</span>
+				{#snippet icon()}
+								<span >
+						<At />
+					</span>
+							{/snippet}
 			</TextInput>
 			<TextArea name="message" label="Message" />
 

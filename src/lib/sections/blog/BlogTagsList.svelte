@@ -1,6 +1,7 @@
 <script>
-	export let data;
 	import Tag from '$components/common/Tag.svelte';
+	/** @type {{data: any}} */
+	let { data } = $props();
 
 	const categories = new Set(data.blogs.flatMap((blog) => blog.meta.categories));
 

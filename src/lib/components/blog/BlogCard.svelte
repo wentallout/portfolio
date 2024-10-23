@@ -1,14 +1,17 @@
 <script>
-	export let blogLink = '';
-	export let blogTitle = 'blogTitle';
-	export let blogDate = '';
 	import Time from 'svelte-time';
 
 	import CaretRight from '~icons/ph/caret-right';
-	export let blogTags = ['category1', 'category2'];
-	export let hasTags = true;
 
 	import { fade } from 'svelte/transition';
+	/** @type {{blogLink?: string, blogTitle?: string, blogDate?: string, blogTags?: any, hasTags?: boolean}} */
+	let {
+		blogLink = '',
+		blogTitle = 'blogTitle',
+		blogDate = '',
+		blogTags = ['category1', 'category2'],
+		hasTags = true
+	} = $props();
 </script>
 
 <a class="blog custom-border" href={blogLink} transition:fade={{ duration: 300 }}>

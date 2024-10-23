@@ -4,10 +4,12 @@
 	import Wrench from '~icons/ph/wrench';
 	import Breadcrumb from '$components/layout/other/Breadcrumb.svelte';
 	let baseFontSize = 16;
-	let pxInput;
-	let remInput;
+	let pxInput = $state();
+	let remInput = $state();
 
-	$: remInput = pxInput / baseFontSize;
+	$effect(() => {
+		remInput = pxInput / baseFontSize;
+	});
 
 	//add a copy to clipboard function for remInput
 	const copyToClipboard = (value) => {
@@ -25,8 +27,10 @@
 <Breadcrumb />
 
 <section>
-	<SectionTitle sectionTitle="PX to REM Converter" let:sectionIcon>
-		<Wrench {...sectionIcon} />
+	<SectionTitle sectionTitle="PX to REM Converter">
+		{#snippet children({ sectionIcon })}
+			<Wrench {...sectionIcon} />
+		{/snippet}
 	</SectionTitle>
 	<div class="converter">
 		<div class="input-group">
@@ -34,7 +38,7 @@
 				class="converter__copy"
 				disabled={!pxInput}
 				type="button"
-				on:click={copyToClipboard(pxInput)}>
+				onclick={copyToClipboard(pxInput)}>
 				<Copy height="24" width="24" />
 			</button>
 			<input id="px" name="px" class="converter__input" type="number" bind:value={pxInput} />
@@ -46,7 +50,7 @@
 				class="converter__copy"
 				disabled={!remInput}
 				type="button"
-				on:click={copyToClipboard(remInput)}>
+				onclick={copyToClipboard(remInput)}>
 				<Copy height="24" width="24" />
 			</button>
 			<input
@@ -56,7 +60,7 @@
 				class="converter__input"
 				type="number"
 				bind:value={remInput}
-				on:input={() => {
+				oninput={() => {
 					pxInput = remInput * baseFontSize;
 				}} />
 			<label class="converter__label" for="rem">REM</label>

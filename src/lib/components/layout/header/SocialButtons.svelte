@@ -6,7 +6,8 @@
 	import LinkedinLogo from '~icons/ph/linkedin-logo';
 	import InstagramLogo from '~icons/ph/instagram-logo';
 	import GitHubLogo from '~icons/ph/github-logo';
-	export let style = '';
+	/** @type {{style?: string}} */
+	let { style = '' } = $props();
 </script>
 
 <div {style} class="social-links">

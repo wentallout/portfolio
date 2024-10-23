@@ -1,8 +1,8 @@
 <script>
 	import SectionDesc from '$sections/SectionDesc.svelte';
 
-	export let sectionTitle = '';
-	export let sectionDesc = '';
+	/** @type {{sectionTitle?: string, sectionDesc?: string, children?: import('svelte').Snippet<[any]>}} */
+	let { sectionTitle = '', sectionDesc = '', children } = $props();
 
 	let sectionIcon = {
 		color: 'var(--colorTextTertiary)'
@@ -12,7 +12,7 @@
 <div class="section">
 	<div class="section__title">
 		<div class="section__icon text-large">
-			<slot {sectionIcon} />
+			{@render children?.({ sectionIcon, })}
 		</div>
 		<h2 id={sectionTitle.toLowerCase()} class="text-xl section__text" data-title={sectionTitle}>
 			{sectionTitle}

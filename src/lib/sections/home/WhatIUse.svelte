@@ -12,9 +12,11 @@
 <SaosContainer>
 	<section>
 		<div class="tool">
-			<SectionTitle sectionTitle="What I Use" let:sectionIcon>
-				<Toolbox {...sectionIcon} />
-			</SectionTitle>
+			<SectionTitle sectionTitle="What I Use" >
+				{#snippet children({ sectionIcon })}
+								<Toolbox {...sectionIcon} />
+											{/snippet}
+						</SectionTitle>
 
 			<div class="tool__block">
 				<div class="block__section custom-border">

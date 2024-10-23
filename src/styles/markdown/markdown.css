@@ -27,8 +27,11 @@
 .markdown h4 {
 	line-height: 120%;
 	position: relative;
-	color: var(--colorPrimary);
+	color: var(--colorText);
 	transition: var(--transition);
+
+	text-wrap: balance;
+    
 
 	&:hover 
 	{

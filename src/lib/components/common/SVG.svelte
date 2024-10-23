@@ -1,11 +1,14 @@
 <script>
-	export let src = '';
 
-	export let width;
-	export let height;
 	// export let fill = 'var(--colorText)';
 
-	export let alt = '';
+	/** @type {{src?: string, width: any, height: any, alt?: string}} */
+	let {
+		src = '',
+		width,
+		height,
+		alt = ''
+	} = $props();
 </script>
 
 <img alt="SVG of {alt}" decoding="async" {height} loading="lazy" {src} {width} />
