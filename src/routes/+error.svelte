@@ -3,7 +3,7 @@
 
 	import { page } from '$app/stores';
 
-	let customMessage = '';
+	let customMessage = $state('');
 
 	switch ($page.status) {
 		case 404:
@@ -52,15 +52,19 @@
 
 <style>
 	.error {
+		/* FLEX */
 		display: flex;
 		flex-direction: column;
-		flex-wrap: wrap;
 		justify-content: center;
 		align-items: center;
+		flex-wrap: wrap;
 		gap: var(--spaceM);
+		/* --- */
+
 		padding: var(--spaceL);
 		position: relative;
 		margin-top: var(--spaceL);
+
 		height: 100dvh;
 	}
 	.back {

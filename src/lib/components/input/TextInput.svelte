@@ -1,25 +1,31 @@
 <script>
-	export let label;
-	export let type = 'text';
-	export let placeholder = '';
-	export let value = '';
+	
+	/** @type {{label: any, type?: string, placeholder?: string, value?: string, name?: string, autoSuggestList?: any, list?: string, icon?: import('svelte').Snippet}} */
+	let {
+		label,
+		type = 'text',
+		placeholder = '',
+		inputValue = '',
+		name = '',
+		autoSuggestList = [],
+		list = '',
+		icon,
+		handleOnInput
+	} = $props();
+	
 
-	export let name = '';
-
-	export let autoSuggestList = [];
-
-	export let list = '';
-
-	$: autoSuggestList;
+	// $effect(() => {
+	// 	autoSuggestList;
+	// });
 </script>
 
 {#if label}
 	<label class="label text-small" for={label}>{label}</label>
 {/if}
 <div class="input-container text-small">
-	{#if $$slots.icon}
+	{#if icon}
 		<div class="input__icon">
-			<slot name="icon" />
+			{@render icon?.()}
 		</div>
 	{/if}
 
@@ -31,8 +37,8 @@
 		{placeholder}
 		required
 		{type}
-		{value}
-		on:input />
+		value={inputValue}
+		oninput={handleOnInput} />
 
 	{#if list}
 		<datalist id={list}>

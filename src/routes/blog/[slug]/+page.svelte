@@ -3,8 +3,9 @@
 	import SEO from '$components/seo/SEO.svelte';
 	import PostContainer from '$components/blog/BlogContainer.svelte';
 	import PostInfo from '$components/blog/BlogInfo.svelte';
-	export let data;
-	import PrevNextBlog from '$components/blog/BlogPrevNext.svelte';
+	import BlogPrevNext from '$components/blog/BlogPrevNext.svelte';
+	/** @type {{data: any}} */
+	let { data } = $props();
 </script>
 
 <SEO title={data.title} />
@@ -13,8 +14,8 @@
 	<PostInfo hasCategory="true" {data} />
 
 	<PostContainer>
-		<svelte:component this={data.content} />
+		<data.content />
 	</PostContainer>
-	<PrevNextBlog />
+	<BlogPrevNext />
 	<Comments category="Blogs" />
 </article>

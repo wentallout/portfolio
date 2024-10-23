@@ -24,7 +24,7 @@
 	<div class="pad">
 		<div class="footer__list">
 			<div class="list">
-				<div class="list__title">About me</div>
+				<div class="list__title">About</div>
 				<ul class="list__nav">
 					<li class="nav-list__link">Affordable websites and apps for small businesses</li>
 					<li class="nav-list__link">
@@ -126,7 +126,7 @@
 		</div>
 
 		<FooterEnd />
-		<div class="footer__deco" alt="footer decoration" />
+		<div class="footer__deco" alt="footer decoration"></div>
 	</div>
 </footer>
 

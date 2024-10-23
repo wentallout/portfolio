@@ -1,27 +1,30 @@
 <script>
 	import { onMount } from 'svelte';
 
-	export let id = undefined;
-	export let host = 'https://giscus.app';
-	export let repo;
-	export let repoId;
-	export let category = undefined;
-	export let categoryId = undefined;
-	export let mapping = 'pathname';
-	export let term = undefined;
-	export let strict = '0';
-	export let reactionsEnabled = '1';
-	export let emitMetadata = '0';
-	export let inputPosition = 'bottom';
-	export let theme = 'light';
-	export let lang = 'en';
-	export let loading = 'eager';
+	/** @type {{id?: any, host?: string, repo: any, repoId: any, category?: any, categoryId?: any, mapping?: string, term?: any, strict?: string, reactionsEnabled?: string, emitMetadata?: string, inputPosition?: string, theme?: string, lang?: string, loading?: string}} */
+	let {
+		id = undefined,
+		host = 'https://giscus.app',
+		repo,
+		repoId,
+		category = undefined,
+		categoryId = undefined,
+		mapping = 'pathname',
+		term = undefined,
+		strict = '0',
+		reactionsEnabled = '1',
+		emitMetadata = '0',
+		inputPosition = 'bottom',
+		theme = 'light',
+		lang = 'en',
+		loading = 'eager'
+	} = $props();
 
-	let mounted = false;
+	let mounted = $state(false);
 
-	onMount(() => {
+	onMount(async () => {
 		mounted = true;
-		import('giscus');
+		await import('giscus');
 	});
 </script>
 
@@ -41,5 +44,5 @@
 		repoid={repoId}
 		{strict}
 		{term}
-		{theme} />
+		{theme}></giscus-widget>
 {/if}

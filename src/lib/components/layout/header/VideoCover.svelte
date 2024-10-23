@@ -4,17 +4,19 @@
 	import { theme } from '$lib/stores/themeStore.js';
 	import { page } from '$app/stores';
 
-	let showCover = true;
+	let showCover = $state(true);
 
-	$: if (
-		$page.url.pathname === '/' ||
-		$page.url.pathname === '/de' ||
-		$page.url.pathname === '/vi'
-	) {
-		showCover = true;
-	} else {
-		showCover = false;
-	}
+	$effect(() => {
+		if (
+			$page.url.pathname === '/' ||
+			$page.url.pathname === '/de' ||
+			$page.url.pathname === '/vi'
+		) {
+			showCover = true;
+		} else {
+			showCover = false;
+		}
+	});
 </script>
 
 {#if showCover}

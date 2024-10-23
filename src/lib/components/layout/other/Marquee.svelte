@@ -1,12 +1,13 @@
 <script>
-	export let items = [
+	/** @type {{items?: any}} */
+	let { items = [
 		'Design Thinking',
 		'Usability',
 		'Accessibility',
 		'Information Architecture',
 		'Wireframe',
 		'Responsive Design'
-	];
+	] } = $props();
 </script>
 
 <div class="container">

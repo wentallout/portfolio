@@ -1,10 +1,10 @@
 <script>
-	export let pageTitle = 'pageTitle';
 
 	import Wall from '$lib/assets/images/common/wall.webp';
 	import Breadcrumb from '$components/layout/other/Breadcrumb.svelte';
 
-	export let decoImageUrl = Wall;
+	/** @type {{pageTitle?: string, decoImageUrl?: any}} */
+	let { pageTitle = 'pageTitle', decoImageUrl = Wall } = $props();
 </script>
 
 <div class="full-width title">

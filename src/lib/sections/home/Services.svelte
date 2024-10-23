@@ -12,9 +12,11 @@
 	<SectionTitle
 		sectionDesc="I offer cost-effective web services that deliver outstanding value"
 		sectionTitle="Services"
-		let:sectionIcon>
-		<HandHeart {...sectionIcon} />
-	</SectionTitle>
+		>
+		{#snippet children({ sectionIcon })}
+				<HandHeart {...sectionIcon} />
+					{/snippet}
+		</SectionTitle>
 
 	<div class="service">
 		<div class="service__section custom-border">

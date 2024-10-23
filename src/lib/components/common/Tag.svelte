@@ -1,12 +1,14 @@
 <script>
 	import Tag from '~icons/ph/tag';
+	/** @type {{children?: import('svelte').Snippet}} */
+	let { children } = $props();
 </script>
 
 <div class="text-xs tag">
 	<!-- <Tag height="16" width="16" /> -->
 
 	<span class="tag__text">
-		<slot />
+		{@render children?.()}
 	</span>
 </div>
 

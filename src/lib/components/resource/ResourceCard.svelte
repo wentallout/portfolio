@@ -1,9 +1,8 @@
 <script>
 	import ExLink from '$components/common/ExLink.svelte';
 
-	export let href = '';
-	export let name = '';
-	export let desc = '';
+	/** @type {{href?: string, name?: string, desc?: string}} */
+	let { href = '', name = '', desc = '' } = $props();
 </script>
 
 <ExLink ariaLabel={name} {href}>

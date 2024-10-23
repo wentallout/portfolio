@@ -2,14 +2,21 @@
 	import { onMount } from 'svelte';
 	import * as pdfjs from 'pdfjs-dist';
 	import PageTitle from '$components/common/PageTitle.svelte';
+	import {
+		ArrowLeft,
+		ArrowRight,
+		MagnifyingGlassPlus,
+		MagnifyingGlassMinus
+	} from '$lib/assets/icons/icons';
 
-	export let pdfUrl;
+	/** @type {{pdfUrl: any}} */
+	let { pdfUrl } = $props();
 
 	let pdfDoc = null;
-	let pageNum = 1;
-	let pageCount = 0;
+	let pageNum = $state(1);
+	let pageCount = $state(0);
 	let pageRendering = false;
-	let canvas;
+	let canvas = $state();
 	let ctx;
 	let scale = 1.5;
 
@@ -72,13 +79,31 @@
 
 <div class="pdf-reader">
 	<div class="controls">
-		<button on:click={() => changePage(-1)} disabled={pageNum <= 1}>Previous</button>
 		<span>Page {pageNum} of {pageCount}</span>
-		<button on:click={() => changePage(1)} disabled={pageNum >= pageCount}>Next</button>
-		<button on:click={zoomIn}>Zoom In</button>
-		<button on:click={zoomOut}>Zoom Out</button>
+		<button onclick={zoomIn} aria-label="Zoom In">
+			<MagnifyingGlassPlus size={24} />
+		</button>
+		<button onclick={zoomOut} aria-label="Zoom Out">
+			<MagnifyingGlassMinus size={24} />
+		</button>
 	</div>
-	<canvas bind:this={canvas}></canvas>
+	<div class="canvas-container">
+		<canvas bind:this={canvas}></canvas>
+		<button
+			class="nav-button prev"
+			onclick={() => changePage(-1)}
+			disabled={pageNum <= 1}
+			aria-label="Previous page">
+			<ArrowLeft size={32} />
+		</button>
+		<button
+			class="nav-button next"
+			onclick={() => changePage(1)}
+			disabled={pageNum >= pageCount}
+			aria-label="Next page">
+			<ArrowRight size={32} />
+		</button>
+	</div>
 </div>
 
 <style>
@@ -90,13 +115,60 @@
 
 	.controls {
 		margin-bottom: 1rem;
+		display: flex;
+		align-items: center;
+		gap: 0.5rem;
 	}
 
-	button {
-		margin: 0 0.5rem;
+	.canvas-container {
+		position: relative;
+		display: inline-block;
 	}
 
 	canvas {
 		border: 1px solid #ccc;
+	}
+
+	.nav-button {
+		position: absolute;
+		top: 50%;
+		transform: translateY(-50%);
+		background: rgba(0, 0, 0, 0.5);
+		color: white;
+		border: none;
+		padding: 0.5rem;
+		cursor: pointer;
+		transition: background 0.3s ease;
+	}
+
+	.nav-button:hover:not(:disabled) {
+		background: rgba(0, 0, 0, 0.7);
+	}
+
+	.nav-button:disabled {
+		display: none;
+	}
+
+	.prev {
+		left: 10px;
+	}
+
+	.next {
+		right: 10px;
+	}
+
+	button {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		background: none;
+		border: none;
+		cursor: pointer;
+		padding: 0.25rem;
+	}
+
+	button:disabled {
+		opacity: 0.5;
+		cursor: not-allowed;
 	}
 </style>

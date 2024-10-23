@@ -1,14 +1,19 @@
 <script>
 	import ExLink from '$components/common/ExLink.svelte';
 
-	export let title = 'insert title';
-	export let desc = 'author';
-	export let href = '';
-	export let thumbnailUrl = '';
+	/** @type {{title?: string, desc?: string, href?: string, thumbnailUrl?: string}} */
+	let {
+		title = 'insert title',
+		desc = 'author',
+		href = '',
+		thumbnailUrl = $bindable('')
+	} = $props();
 
-	$: if (href.includes('codepen.io')) {
-		thumbnailUrl = href.replace('codepen.io', 'shots.codepen.io') + '-800.jpg';
-	}
+	$effect(() => {
+		if (href.includes('codepen.io')) {
+			thumbnailUrl = href.replace('codepen.io', 'shots.codepen.io') + '-800.jpg';
+		}
+	});
 </script>
 
 <ExLink style="display:flex" {href}>

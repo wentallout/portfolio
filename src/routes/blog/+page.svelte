@@ -8,20 +8,21 @@
 	import MiniSearch from 'minisearch';
 	import { paginate, DarkPaginationNav } from 'svelte-paginate';
 	import { onMount } from 'svelte';
-	import { allBlogStore } from '$lib/stores/blogStore.js';
 
 	import MagnifyingGlass from '~icons/ph/magnifying-glass';
+	import { allBlogStore } from '$lib/stores/blogStore';
 
-	export let data;
+	/** @type {{data: any}} */
+	let { data } = $props();
 
 	let allBlogs = data.blogs;
-	allBlogStore.set(data.blogs);
+	allBlogStore.set(allBlogs);
 
-	let searchTerm = '';
-	let filteredBlogs = [];
-	let currentPage = 1;
+	let searchTerm = $state('');
+	let filteredBlogs = $state([]);
+	let currentPage = $state(1);
 	let pageSize = 24;
-	let autoSuggest;
+	let autoSuggest = $state();
 	let miniSearch = new MiniSearch({
 		fields: ['meta.title'],
 		storeFields: ['meta', 'path'],
@@ -52,7 +53,7 @@
 		autoSuggest = suggestData.map((item) => item.suggestion);
 	}
 
-	$: paginatedItems = paginate({ items: filteredBlogs, pageSize, currentPage });
+	let paginatedItems = $derived(paginate({ items: filteredBlogs, pageSize, currentPage }));
 </script>
 
 <PageTitle pageTitle="Blogs" />
@@ -62,12 +63,14 @@
 		<TextInput
 			autoSuggestList={autoSuggest}
 			list="search"
-			bind:value={searchTerm}
+			inputValue={searchTerm}
 			placeholder="Search blogs..."
-			on:input={handleSearchInput}>
-			<span slot="icon">
-				<MagnifyingGlass />
-			</span>
+			handleOnInput={handleSearchInput}>
+			{#snippet icon()}
+				<span>
+					<MagnifyingGlass />
+				</span>
+			{/snippet}
 		</TextInput>
 	</search>
 	<BlogTagsList {data} />

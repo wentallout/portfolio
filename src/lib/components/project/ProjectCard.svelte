@@ -1,11 +1,14 @@
 <script>
-	export let linkToDetail = '';
-	export let projectName = '';
-	export let what = '';
-	export let role = '';
-	export let output = '';
 
-	export let thumbnail;
+	/** @type {{linkToDetail?: string, projectName?: string, what?: string, role?: string, output?: string, thumbnail: any}} */
+	let {
+		linkToDetail = '',
+		projectName = '',
+		what = '',
+		role = '',
+		output = '',
+		thumbnail
+	} = $props();
 </script>
 
 <a class="project-link" href={linkToDetail}>

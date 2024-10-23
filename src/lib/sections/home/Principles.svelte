@@ -9,9 +9,10 @@
 <section>
 	<SectionTitle
 		sectionDesc="These are my own personal guidelines for a good design."
-		sectionTitle="Design Principles"
-		let:sectionIcon>
-		<Scales {...sectionIcon} />
+		sectionTitle="Design Principles">
+		{#snippet children({ sectionIcon })}
+			<Scales {...sectionIcon} />
+		{/snippet}
 	</SectionTitle>
 
 	<div class="principle-container">
@@ -99,7 +100,6 @@
 		border-radius: var(--borderRadiusLight);
 		box-shadow: var(--boxShadow);
 		background-color: var(--colorBgContainer);
-
 		background: var(--colorBgGradientSubtle);
 	}
 

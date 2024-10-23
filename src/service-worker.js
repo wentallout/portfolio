@@ -10,10 +10,10 @@ const ASSETS = [
 
 self.addEventListener('install', (event) => {
 	// Create a new cache and add all files to it
-	async function addFilesToCache() {
+	const addFilesToCache = async () => {
 		const cache = await caches.open(CACHE);
 		await cache.addAll(ASSETS);
-	}
+	};
 
 	event.waitUntil(addFilesToCache());
 });
@@ -22,7 +22,9 @@ self.addEventListener('activate', (event) => {
 	// Remove previous cached data from disk
 	async function deleteOldCaches() {
 		for (const key of await caches.keys()) {
-			if (key !== CACHE) await caches.delete(key);
+			if (key !== CACHE) {
+				await caches.delete(key);
+			}
 		}
 	}
 
@@ -35,6 +37,12 @@ self.addEventListener('fetch', (event) => {
 
 	async function respond() {
 		const url = new URL(event.request.url);
+
+		// Ignore non-HTTP(S) requests
+		if (!['http:', 'https:'].includes(url.protocol)) {
+			return fetch(event.request);
+		}
+
 		const cache = await caches.open(CACHE);
 
 		// `build`/`files` can always be served from the cache
@@ -48,7 +56,11 @@ self.addEventListener('fetch', (event) => {
 			const response = await fetch(event.request);
 
 			if (response.status === 200) {
-				cache.put(event.request, response.clone());
+				try {
+					await cache.put(event.request, response.clone());
+				} catch (error) {
+					console.warn('Failed to cache response:', error);
+				}
 			}
 
 			return response;

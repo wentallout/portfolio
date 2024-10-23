@@ -1,7 +1,7 @@
 <script>
 	import Saos from 'saos';
-	export let once = true;
-	export let animation = 'fade-in 1.2s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;';
+	/** @type {{once?: boolean, animation?: string, children?: import('svelte').Snippet}} */
+	let { once = true, animation = 'fade-in 1.2s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;', children } = $props();
 
 	
 
@@ -10,7 +10,7 @@
 
 <div class="">
 	<Saos {animation} {once}>
-		<slot />
+		{@render children?.()}
 	</Saos>
 </div>
 

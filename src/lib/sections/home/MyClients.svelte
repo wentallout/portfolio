@@ -11,9 +11,11 @@
 <SaosContainer>
 	<section>
 		<div class="clients">
-			<SectionTitle sectionTitle="Worked at" let:sectionIcon>
-				<Buildings {...sectionIcon} />
-			</SectionTitle>
+			<SectionTitle sectionTitle="Worked at" >
+				{#snippet children({ sectionIcon })}
+								<Buildings {...sectionIcon} />
+											{/snippet}
+						</SectionTitle>
 			<div class="clients__logo">
 				<ExLink href="https://www.fpt-software.com">
 					<img class="logo" alt="FPT Software" decoding="async" loading="lazy" src={fpt} />

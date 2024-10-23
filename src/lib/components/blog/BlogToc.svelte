@@ -28,10 +28,14 @@
 	flashClickedHeadingsFor="1500"
 	keepActiveTocItemInView={false}
 	scrollBehavior="smooth">
-	<span slot="title" class="toc-title text-base">
-		<ListBullets color="var(--colorText)" />
-		Contents</span>
+	{#snippet title()}
+		<span  class="toc-title text-base">
+			<ListBullets color="var(--colorText)" />
+			Contents
+		</span>
+	{/snippet}
 
+	<!-- @migration-task: migrate this slot by hand, `open-toc-icon` is an invalid identifier -->
 	<span slot="open-toc-icon" class="open-toc-icon">
 		<ListBullets color="#000" height="16" width="16" />
 	</span>
