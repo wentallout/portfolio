@@ -55,9 +55,9 @@
 		/* FLEX */
 		display: flex;
 		flex-direction: column;
-		flex-wrap: wrap;
 		justify-content: center;
 		align-items: center;
+		flex-wrap: wrap;
 		gap: var(--spaceM);
 		/* --- */
 
