@@ -3,6 +3,7 @@
 	import ExLink from '$components/common/ExLink.svelte';
 
 	import Badges from '$components/layout/footer/Badges.svelte';
+	import { VERSION } from '@sveltejs/kit';
 </script>
 
 <Badges />
@@ -14,7 +15,7 @@
 	<div class="end__text">
 		Made by Khoa with
 		<a target="_blank" href="https://svelte.dev">
-			<span class="end__svelte">SvelteKit</span>
+			<span class="end__svelte">SvelteKit {VERSION}</span>
 		</a>
 	</div>
 </div>

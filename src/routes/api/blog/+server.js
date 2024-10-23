@@ -8,7 +8,13 @@ export const GET = async () => {
 		return new Date(b.meta.date) - new Date(a.meta.date);
 	});
 
-	return json(sortedBlogs);
+	// Add index to each blog post
+	const indexedBlogs = sortedBlogs.map((blog, index) => ({
+		...blog,
+		index
+	}));
+
+	return json(indexedBlogs);
 };
 
 

@@ -1,44 +1,31 @@
 <script>
 	import CaretRight from '~icons/ph/caret-right';
 	import { page } from '$app/stores';
-	import { onMount } from 'svelte';
-	let currentPath = $page.url.pathname;
 
-	let crumbs;
+	let crumbs = $state([]);
 
-	function removeHyphens(text) {
-		// This line removes all hyphens and replaces them with spaces
-		return text.replace(/-/g, ' ');
-	}
+	$effect(() => {
+		const path = $page.url.pathname;
+		const segments = path.split('/').filter(Boolean);
 
-	$: {
-		// Remove zero-length tokens.
-		let tokens = currentPath.split('/').filter((t) => t !== '');
-
-		// Create { label, href } pairs for each token.
-		let tokenPath = '';
-		crumbs = tokens.map((t) => {
-			tokenPath += '/' + t;
-			return {
-				label: removeHyphens(t),
-				href: tokenPath
-			};
-		});
-
-		crumbs.unshift({ label: 'home', href: '/' });
-	}
-
-	let breadcrumbEl;
+		crumbs = [
+			{ label: 'home', href: '/' },
+			...segments.map((segment, index) => ({
+				label: segment.replace(/-/g, ' '),
+				href: '/' + segments.slice(0, index + 1).join('/')
+			}))
+		];
+	});
 </script>
 
-<nav bind:this={breadcrumbEl} id="breadcrumb" class="breadcrumb text-small" aria-label="breadcrumb">
-	{#each crumbs as c, i}
+<nav id="breadcrumb" class="breadcrumb text-small" aria-label="breadcrumb">
+	{#each crumbs as crumb, i}
 		{#if i === crumbs.length - 1}
 			<div class="breadcrumb__unclickable">
-				{c.label}
+				{crumb.label}
 			</div>
 		{:else}
-			<a class="breadcrumb__clickable link" href={c.href}>{c.label}</a>
+			<a class="breadcrumb__clickable link" href={crumb.href}>{crumb.label}</a>
 			<CaretRight height="16" width="16" />
 		{/if}
 	{/each}
@@ -52,6 +39,7 @@
 		align-items: center;
 		flex-wrap: wrap;
 		gap: var(--space3XS);
+
 		position: relative;
 		margin-top: var(--scroll-padding);
 		margin-bottom: var(--spaceXL);

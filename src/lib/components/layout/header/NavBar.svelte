@@ -4,12 +4,11 @@
 	import { navItems } from '$lib/config.js';
 	import { onMount } from 'svelte';
 	import { page } from '$app/stores';
-	import List from '~icons/ph/list';
-	import X from '~icons/ph/x';
-	import ThemeSwitcher from '$lib/components/button/ThemeSwitcher.svelte';
 
-	let scrollY;
-	let navOverlayEle;
+	import ThemeSwitcher from '$lib/components/button/ThemeSwitcher.svelte';
+	import { List, X } from '$lib/assets/icons/icons';
+	let scrollY = $state();
+	let navOverlayEle = $state();
 
 	function openNav() {
 		navOverlayEle.style.height = '100%';
@@ -18,11 +17,10 @@
 		navOverlayEle.style.height = '0%';
 	}
 
-	let headerEle;
+	let headerEle = $state();
 
 	onMount(() => {
 		const navigationHeight = headerEle.offsetHeight;
-
 		document.documentElement.style.setProperty('--scroll-padding', navigationHeight + 'px');
 	});
 </script>
@@ -46,8 +44,8 @@
 					class="hamburger"
 					aria-label="navigation button"
 					type="button"
-					on:click={openNav}
-					on:keydown={openNav}>
+					onclick={openNav}
+					onkeydown={openNav}>
 					<List color="var(--colorText)" height="32" width="32" />
 				</button>
 			</ul>
@@ -60,8 +58,8 @@
 		class="closebtn"
 		aria-label="close nav menu"
 		type="button"
-		on:click={closeNav}
-		on:keydown={closeNav}>
+		onclick={closeNav}
+		onkeydown={closeNav}>
 		<X color="var(--colorBlack)" height="32" width="32" />
 	</button>
 	<div class="overlay-content">
@@ -70,7 +68,7 @@
 				class="overlay-item text-xl"
 				class:active-page--mobile={$page.url.pathname === `${navItem.path}`}
 				href={navItem.path}
-				on:click={closeNav}>
+				onclick={closeNav}>
 				{navItem.title}
 			</a>
 		{/each}

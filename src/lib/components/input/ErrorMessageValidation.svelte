@@ -1,5 +1,6 @@
 <script>
-	export let errors;
+	/** @type {{errors: any}} */
+	let { errors } = $props();
 </script>
 
 <div class="invalid text-xs">{errors}</div>

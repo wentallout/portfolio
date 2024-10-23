@@ -8,9 +8,11 @@
 </script>
 
 <section>
-	<SectionTitle sectionTitle="Frequently Asked Questions" let:sectionIcon>
-		<Question {...sectionIcon} />
-	</SectionTitle>
+	<SectionTitle sectionTitle="Frequently Asked Questions" >
+		{#snippet children({ sectionIcon })}
+				<Question {...sectionIcon} />
+					{/snippet}
+		</SectionTitle>
 
 	<div class="faq">
 		<div class="faqlist">

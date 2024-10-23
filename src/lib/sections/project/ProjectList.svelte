@@ -7,7 +7,8 @@
 
 	import superTabManagerThumbnail from '$lib/assets/images/project/super-tab-manager/thumbnail.png';
 
-	export let hasMoreButton = false;
+	/** @type {{hasMoreButton?: boolean}} */
+	let { hasMoreButton = false } = $props();
 </script>
 
 <div class="projects">

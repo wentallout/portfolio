@@ -13,18 +13,22 @@
 <section>
 	<SectionTitle
 		sectionTitle="Music Player"
-		let:sectionIcon
+		
 		sectionDesc="Now you can listen and download Khoa's favorite songs. Live Radio included. Enjoy!">
-		<FileAudio {...sectionIcon} />
-	</SectionTitle>
+		{#snippet children({ sectionIcon })}
+				<FileAudio {...sectionIcon} />
+					{/snippet}
+		</SectionTitle>
 
 	<MusicPlayer />
 </section>
 
 <section>
-	<SectionTitle sectionTitle="SoundCloud" let:sectionIcon>
-		<MusicNotes {...sectionIcon} />
-	</SectionTitle>
+	<SectionTitle sectionTitle="SoundCloud" >
+		{#snippet children({ sectionIcon })}
+				<MusicNotes {...sectionIcon} />
+					{/snippet}
+		</SectionTitle>
 
 	<SoundCloud
 		soundcloudLink="https://soundcloud.com/falxce/falxce-berylxx-serenity?si=e37c4665ee3e4a87a5e76a302267f96f&utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing" />

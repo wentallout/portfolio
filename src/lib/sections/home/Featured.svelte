@@ -7,9 +7,11 @@
 
 <section>
 	<div class="featured">
-		<SectionTitle sectionTitle="Featured" let:sectionIcon>
-			<Star {...sectionIcon} />
-		</SectionTitle>
+		<SectionTitle sectionTitle="Featured" >
+			{#snippet children({ sectionIcon })}
+						<Star {...sectionIcon} />
+								{/snippet}
+				</SectionTitle>
 		<ProjectList hasMoreButton={true} />
 	</div>
 </section>

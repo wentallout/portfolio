@@ -3,31 +3,48 @@
 	import AudioMotionAnalyzer from 'audiomotion-analyzer';
 	let visualizerEl;
 	import { audioPlayerEl, isPlaying } from '$lib/stores/musicStore.js';
-	let energy;
-	let energyHeight;
+	let energy = $state();
+	let energyHeight = $derived(90 + energy * 150);
+	let audioMotion;
 
-	onMount(() => {
-		new AudioMotionAnalyzer(visualizerEl, {
-			source: $audioPlayerEl,
-			mode: 4,
-			barSpace: 0,
-			ledBars: true,
-			colorMode: 'gradient',
-			showBgColor: false,
-			overlay: true,
-			roundBars: true,
-			mirror: 1,
-			gradient: 'rainbow',
-			showPeaks: false,
-			showScaleX: false,
-			onCanvasDraw: drawCallback
-		});
-	});
-
-	$: energyHeight = 90 + energy * 150;
 	function drawCallback(i) {
 		energy = i.getEnergy();
 	}
+
+	function initializeVisualizer() {
+		if (audioPlayerEl && !audioMotion) {
+			audioMotion = new AudioMotionAnalyzer(visualizerEl, {
+				source: $audioPlayerEl,
+				mode: 4,
+				barSpace: 0,
+				ledBars: true,
+				colorMode: 'gradient',
+				showBgColor: false,
+				overlay: true,
+				roundBars: true,
+				mirror: 1,
+				gradient: 'rainbow',
+				showPeaks: false,
+				showScaleX: false,
+				onCanvasDraw: drawCallback
+			});
+		}
+	}
+
+	onMount(() => {
+		// We'll initialize the visualizer when the play button is clicked
+		return () => {
+			if (audioMotion) {
+				audioMotion.destroy();
+			}
+		};
+	});
+
+	$effect(() => {
+		if ($isPlaying) {
+			initializeVisualizer();
+		}
+	});
 </script>
 
 <div class="visualizer" bind:this={visualizerEl} class:visualizer--playing={$isPlaying}>

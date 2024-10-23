@@ -12,6 +12,8 @@
 
 	import { onNavigate } from '$app/navigation';
 	import BgDeco from '$components/common/BgDeco.svelte';
+	/** @type {{children?: import('svelte').Snippet}} */
+	let { children } = $props();
 
 	onNavigate(() => {
 		if (!document.startViewTransition) return;
@@ -36,7 +38,7 @@
 	<NavBar />
 
 	<main id="main-content" class="main-content pad">
-		<slot />
+		{@render children?.()}
 	</main>
 
 	<Footer />

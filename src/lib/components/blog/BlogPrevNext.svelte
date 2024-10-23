@@ -1,71 +1,60 @@
-<script>
-	import CaretLeft from '~icons/ph/caret-left';
-	import CaretRight from '~icons/ph/caret-right';
-	import { allBlogStore } from '$lib/stores/blogStore';
-	import { page } from '$app/stores';
+<script lang="ts">
 	import { onMount } from 'svelte';
+	import { page } from '$app/stores';
 
-	let allBlogs;
-	let nextBlog;
-	let prevBlog;
-	let currentBlogIndex;
-	let currentPath = $page.url.pathname;
-
-	function findCurrentBlog() {
-		if (allBlogs) {
-			for (let i = 0; i < allBlogs.length; i++) {
-				if (currentPath === allBlogs[i].path) {
-					currentBlogIndex = i;
-				}
-			}
-		}
-	}
-
-	function findPrevBlog() {
-		prevBlog = allBlogs[currentBlogIndex - 1];
-	}
-	function findNextBlog() {
-		nextBlog = allBlogs[currentBlogIndex + 1];
-	}
+	let prevBlog: { path: string; meta: { title: string } } | null = null;
+	let nextBlog: { path: string; meta: { title: string } } | null = null;
 
 	onMount(() => {
-		findCurrentBlog();
-		findNextBlog();
-		findPrevBlog();
+		let unsubscribe: () => void;
+
+		fetch('/api/blog')
+			.then((response) => response.json())
+			.then((blogs) => {
+				unsubscribe = page.subscribe((value) => {
+					const currentIndex = blogs.findIndex((blog) => blog.path === value.url.pathname);
+
+					if (currentIndex > 0) {
+						prevBlog = {
+							path: blogs[currentIndex - 1].path,
+							meta: { title: blogs[currentIndex - 1].meta.title }
+						};
+					}
+
+					if (currentIndex < blogs.length - 1) {
+						nextBlog = {
+							path: blogs[currentIndex + 1].path,
+							meta: { title: blogs[currentIndex + 1].meta.title }
+						};
+					}
+				});
+			});
+
+		return () => {
+			if (unsubscribe) unsubscribe();
+		};
 	});
-
-	$: allBlogs = $allBlogStore;
-
-	$: if (prevBlog === undefined) {
-		prevBlog = allBlogs[allBlogs.length - 1];
-	}
-
-	$: if (nextBlog === undefined) {
-		nextBlog = allBlogs[0];
-	}
 </script>
 
-{#if allBlogs}
-	<div class="prevnext text-small">
-		{#if prevBlog}
-			<a class="prevnext__btn" href={prevBlog.path}>
-				<div class="prevnext__sign">← Previous</div>
-				<div class="prev__text prevnext__title">
-					{prevBlog.meta.title}
-				</div>
-			</a>
-		{/if}
+<div class="prevnext text-small">
+	{#if prevBlog}
+		<a class="prevnext__btn" href={prevBlog.path}>
+			<div class="prevnext__sign">← Previous</div>
+			<div class="prev__text prevnext__title">
+				{prevBlog.meta.title}
+			</div>
+		</a>
+	{/if}
 
-		{#if nextBlog}
-			<a class="prevnext__btn next" href={nextBlog.path}>
-				<div class="prevnext__sign">Next →</div>
-				<div class="next__text prevnext__title">
-					{nextBlog.meta.title}
-				</div>
-			</a>
-		{/if}
-	</div>
-{/if}
+	{#if nextBlog}
+		<a class="prevnext__btn next" href={nextBlog.path}>
+			<div class="prevnext__sign">Next →</div>
+			<div class="next__text prevnext__title">
+				{nextBlog.meta.title}
+			</div>
+		</a>
+	{/if}
+</div>
 
 <style lang="postcss">
 	.prevnext {
@@ -99,6 +88,8 @@
 
 	.prevnext__sign {
 		color: var(--colorTextSecondary);
+		font-weight: 300;
+		font-size: var(--fontSizeXS);
 	}
 
 	.prevnext__title {

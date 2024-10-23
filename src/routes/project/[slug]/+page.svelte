@@ -3,7 +3,8 @@
 	import SEO from '$components/seo/SEO.svelte';
 	import Comments from '$components/blog/BlogComments.svelte';
 	import PostInfo from '$components/blog/BlogInfo.svelte';
-	export let data;
+	/** @type {{data: any}} */
+	let { data } = $props();
 </script>
 
 <SEO title={data.title} />
@@ -12,7 +13,7 @@
 	<PostInfo {data} />
 
 	<PostContainer>
-		<svelte:component this={data.content} />
+		<data.content />
 	</PostContainer>
 
 	<Comments category="Projects" />

@@ -1,10 +1,12 @@
 <script>
 	import CustomToc from '$components/blog/BlogToc.svelte';
+	/** @type {{children?: import('svelte').Snippet}} */
+	let { children } = $props();
 </script>
 
 <div class="post-container">
 	<div class="post-content">
-		<slot />
+		{@render children?.()}
 	</div>
 
 	<CustomToc />

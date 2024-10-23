@@ -1,5 +1,6 @@
 <script>
-	export let text = '';
+	/** @type {{text?: string}} */
+	let { text = '' } = $props();
 </script>
 
 {#if text !== ''}

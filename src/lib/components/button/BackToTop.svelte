@@ -1,8 +1,9 @@
 <script>
 	import ArrowLineUp from '~icons/ph/arrow-line-up';
 
-	export let showOnPx = 150;
-	let hidden = true;
+	/** @type {{showOnPx?: number}} */
+	let { showOnPx = 150 } = $props();
+	let hidden = $state(true);
 
 	function goTop() {
 		document.body.scrollIntoView();
@@ -25,9 +26,9 @@
 	}
 </script>
 
-<svelte:window on:scroll={handleOnScroll} />
+<svelte:window onscroll={handleOnScroll} />
 
-<button class="bck2top text-xs" class:hidden type="button" on:click={goTop} on:keyup={goTop}>
+<button class="bck2top text-xs" class:hidden type="button" onclick={goTop} onkeyup={goTop}>
 	<ArrowLineUp width="24" height="24" />
 </button>
 

@@ -1,16 +1,19 @@
 <script>
-	export let article = false;
-	export let datePublished;
-	export let lastUpdated;
-	export let facebookAuthorPage = '';
-	export let facebookPage = '';
-	export let image;
-	export let squareImage;
-	export let metadescription;
-	export let ogLanguage;
-	export let pageTitle;
-	export let siteTitle;
-	export let url;
+	/** @type {{article?: boolean, datePublished: any, lastUpdated: any, facebookAuthorPage?: string, facebookPage?: string, image: any, squareImage: any, metadescription: any, ogLanguage: any, pageTitle: any, siteTitle: any, url: any}} */
+	let {
+		article = false,
+		datePublished,
+		lastUpdated,
+		facebookAuthorPage = '',
+		facebookPage = '',
+		image,
+		squareImage,
+		metadescription,
+		ogLanguage,
+		pageTitle,
+		siteTitle,
+		url
+	} = $props();
 </script>
 
 <svelte:head>

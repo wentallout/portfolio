@@ -5,7 +5,7 @@
 	import { theme, toggleTheme } from '$lib/stores/themeStore.js';
 </script>
 
-<button class="pill" aria-label="Toggle theme" type="button" on:click={toggleTheme}>
+<button class="pill" aria-label="Toggle theme" type="button" onclick={toggleTheme}>
 	<div
 		class="circle"
 		class:circle--left={$theme === 'dark'}

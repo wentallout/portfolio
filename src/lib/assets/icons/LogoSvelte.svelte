@@ -1,6 +1,6 @@
 <script>
-	export let width = '5.57em';
-	export let height = '1em';
+	/** @type {{width?: string, height?: string}} */
+	let { width = '5.57em', height = '1em' } = $props();
 </script>
 
 <svg {height} viewBox="0 0 512 92" {width} xmlns="http://www.w3.org/2000/svg"

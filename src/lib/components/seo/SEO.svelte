@@ -4,6 +4,7 @@
 	import defaultOgImage from '$lib/assets/images/seo/1200x627.png?format=png';
 	import defaultOgSquareImage from '$lib/assets/images/seo/400x400.png?format=png';
 	import defaultTwitterImage from '$lib/assets/images/seo/800x418.png?format=png';
+	const defaultAlt = 'cool cover image';
 	//
 
 	import website from '$lib/config.js';
@@ -28,21 +29,21 @@
 	import SchemaOrg from '$components/seo/SchemaOrg.svelte';
 	import Twitter from '$components/seo/Twitter.svelte';
 
-	export let entityMeta = null;
-	export let lastUpdated = new Date();
-	export let datePublished = new Date();
-	export let metadescription;
-	export let slug;
-	export let timeToRead = 0;
-	export let title = '';
 
-	const pageTitle = `${title} | ${siteTitle}`;
-	const url = `${siteUrl}/${slug}`;
+	
 
-	export let article = false;
-	const defaultAlt = 'cool cover image';
 
-	export let breadcrumbs = [
+	/** @type {{entityMeta?: any, lastUpdated?: any, datePublished?: any, metadescription: any, slug: any, timeToRead?: number, title?: string, article?: boolean, breadcrumbs?: any, featuredImage?: any, ogImage?: any, ogSquareImage?: any, twitterImage?: any}} */
+	let {
+		entityMeta = null,
+		lastUpdated = new Date(),
+		datePublished = new Date(),
+		metadescription,
+		slug,
+		timeToRead = 0,
+		title = '',
+		article = false,
+		breadcrumbs = [
 		{
 			name: 'Home',
 			slug: ''
@@ -63,27 +64,39 @@
 			name: 'Contact',
 			slug: 'contact'
 		}
-	];
-
-	export let featuredImage = {
+	],
+		featuredImage = {
 		url: defaultFeaturedImage,
 		alt: defaultAlt,
 		width: 672,
 		height: 448,
 		caption: 'Home page'
-	};
-	export let ogImage = {
+	},
+		ogImage = {
 		url: defaultOgImage,
 		alt: defaultAlt
-	};
-	export let ogSquareImage = {
+	},
+		ogSquareImage = {
 		url: defaultOgSquareImage,
 		alt: defaultAlt
-	};
-	export let twitterImage = {
+	},
+		twitterImage = {
 		url: defaultTwitterImage,
 		alt: defaultAlt
+	}
+	} = $props();
+
+	
+	const twitterProps = {
+		article,
+		author,
+		twitterUsername,
+		image: twitterImage,
+		timeToRead
 	};
+
+	const pageTitle = `${title} | ${siteTitle}`;
+	const url = `${siteUrl}/${slug}`;
 
 	const openGraphProps = {
 		article,
@@ -98,6 +111,7 @@
 		url,
 		...(article ? { datePublished, lastUpdated, facebookPage, facebookAuthorPage } : {})
 	};
+
 	const schemaOrgProps = {
 		article,
 		author,
@@ -120,13 +134,6 @@
 		telegramUsername,
 		tiktokUsername,
 		twitterUsername
-	};
-	const twitterProps = {
-		article,
-		author,
-		twitterUsername,
-		image: twitterImage,
-		timeToRead
 	};
 </script>
 

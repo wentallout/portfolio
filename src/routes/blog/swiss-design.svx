@@ -11,9 +11,9 @@ categories:
 
 Rule 0: use sans-serif fonts
 
-- 1. Simple layout
-- 2. No BS Navigation (user dont need to dig for information) Less is more, form follows function.
-- 3. Efficient Swiss culture
+- Simple layout
+- No BS Navigation (user dont need to dig for information) Less is more, form follows function.
+- Efficient Swiss culture
 
 ## Website examples
 
