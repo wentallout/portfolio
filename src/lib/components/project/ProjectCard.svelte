@@ -1,4 +1,5 @@
 <script>
+	import MouseGlow from '$components/common/MouseGlow.svelte';
 
 	/** @type {{linkToDetail?: string, projectName?: string, what?: string, role?: string, output?: string, thumbnail: any}} */
 	let {
@@ -12,6 +13,7 @@
 </script>
 
 <a class="project-link" href={linkToDetail}>
+	<MouseGlow />
 	<article class="project custom-border">
 		<div class="project__thumbnail">
 			<img class="" alt="" loading="lazy" src={thumbnail} />
@@ -41,6 +43,10 @@
 </a>
 
 <style lang="postcss">
+	.project-link {
+		position: relative;
+	}
+
 	.project {
 		display: flex;
 		position: relative;

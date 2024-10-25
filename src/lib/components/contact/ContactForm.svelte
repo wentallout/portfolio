@@ -17,7 +17,8 @@
 	import User from '~icons/ph/user';
 	import { getUserLocalTime, getVietnamTime } from '$lib/utils/time';
 
-	let localTime = $state(), vietnamTime = $state();
+	let localTime = $state(),
+		vietnamTime = $state();
 
 	setInterval(() => {
 		localTime = getUserLocalTime();
@@ -28,12 +29,11 @@
 <section>
 	<SectionTitle
 		sectionDesc="Tell me about your next big project. I'll be happy to contribute."
-		sectionTitle="Get in touch"
-		>
+		sectionTitle="Get in touch">
 		{#snippet children({ sectionIcon })}
-				<EnvelopeSimple {...sectionIcon} />
-					{/snippet}
-		</SectionTitle>
+			<EnvelopeSimple {...sectionIcon} />
+		{/snippet}
+	</SectionTitle>
 
 	<div class="form-container">
 		<form name="contact" class="contact" data-netlify="true" method="post">
@@ -41,17 +41,17 @@
 
 			<TextInput name="name" label="Name" type="text" placeholder="John Doe">
 				{#snippet icon()}
-								<span >
+					<span>
 						<User />
 					</span>
-							{/snippet}
+				{/snippet}
 			</TextInput>
 			<TextInput name="email" label="Email" type="email" placeholder="username@gmail.com">
 				{#snippet icon()}
-								<span >
+					<span>
 						<At />
 					</span>
-							{/snippet}
+				{/snippet}
 			</TextInput>
 			<TextArea name="message" label="Message" />
 
@@ -93,7 +93,7 @@
 				<ExLink href="tel:+84929066331">
 					<div class="address__title text-base">
 						<Phone />
-						<div>Phone / Zalo / Telegram</div>
+						<div>Phone / WhatsApp / Zalo / Telegram</div>
 					</div>
 				</ExLink>
 				<CopyToClipboard textToCopy="(+84)929066331">
@@ -171,9 +171,9 @@
 		align-items: center;
 		gap: var(--space2XS);
 		font-weight: 500;
+	}
 
-		&:hover {
-			color: var(--colorPrimaryHover);
-		}
+	.address__desc {
+		color: var(--colorTextSecondary);
 	}
 </style>

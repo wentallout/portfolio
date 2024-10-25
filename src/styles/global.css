@@ -126,10 +126,7 @@ label:has(+ textarea:focus) {
 
 .link {
 	color: var(--colorPrimary);
-	text-decoration: underline;
-	text-decoration-skip-ink: none;
 	transition: var(--transition);
-	text-underline-offset: 4px;
 }
 
 .link:hover {

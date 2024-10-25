@@ -6,6 +6,7 @@
 
 	$effect(() => {
 		const path = $page.url.pathname;
+
 		const segments = path.split('/').filter(Boolean);
 
 		crumbs = [
@@ -58,13 +59,13 @@
 	}
 
 	.breadcrumb__clickable {
-		font-weight: var(--fontWeightLarge);
+		font-weight: var(--fontWeightXS);
 		display: inline-flex;
 		color: var(--colorInfo);
 	}
 
 	.breadcrumb__clickable:hover {
 		color: var(--colorPrimaryHover);
-		text-underline-offset: 2px;
+		text-underline-offset: 1px;
 	}
 </style>

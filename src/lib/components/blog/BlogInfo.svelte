@@ -4,8 +4,6 @@
 	import ExLink from '$components/common/ExLink.svelte';
 	import Tag from '$components/common/Tag.svelte';
 
-
-
 	import Pen from '~icons/ph/pen';
 
 	import CalendarBlank from '~icons/ph/calendar-blank';
@@ -62,6 +60,7 @@
 		bottom: 0;
 		z-index: -1;
 		opacity: 0.2;
+		filter: grayscale(1);
 	}
 
 	.blog__gradient {
@@ -71,6 +70,7 @@
 		width: 100%;
 		height: 100px;
 		background: var(--smooth-border);
+		pointer-events: none;
 	}
 
 	.blog {
@@ -89,8 +89,7 @@
 		height: 100%;
 		background-image: url('/images/patterns/wao-pattern.svg');
 		background-repeat: repeat;
-		background-size: 500px;
-
+		background-size: 200px;
 		opacity: 0.05;
 		filter: grayscale(1);
 		z-index: -9998;
@@ -104,10 +103,11 @@
 		width: 100%;
 		height: 100%;
 		z-index: -9999;
-		background: url('/images/bg-sky.png');
+		background: url('/images/dither_it_bg-sky.png');
 		background-size: cover;
 		background-position: center;
 		background-repeat: no-repeat;
+		opacity: 0.2;
 	}
 
 	:global([color-scheme='dark'] .blog:after) {
@@ -154,5 +154,7 @@
 			2px -2px 0 var(--colorBgLayout),
 			-2px 2px 0 var(--colorBgLayout),
 			2px 2px 0 var(--colorBgLayout);
+
+		color: var(--colorPrimary);
 	}
 </style>
