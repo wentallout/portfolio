@@ -4,6 +4,7 @@
 	import CaretRight from '~icons/ph/caret-right';
 
 	import { fade } from 'svelte/transition';
+	import MouseGlow from '$components/common/MouseGlow.svelte';
 	/** @type {{blogLink?: string, blogTitle?: string, blogDate?: string, blogTags?: any, hasTags?: boolean}} */
 	let {
 		blogLink = '',
@@ -15,6 +16,7 @@
 </script>
 
 <a class="blog custom-border" href={blogLink} transition:fade={{ duration: 300 }}>
+	<MouseGlow />
 	<article class="blog__info">
 		{#if hasTags}
 			<div class="tags">
@@ -71,14 +73,15 @@
 	}
 
 	.tags {
+		display: flex;
 		flex-direction: row;
 		flex-wrap: wrap;
-		gap: var(--spaceXS);
+		gap: var(--space2XS);
 		transition: var(--transition);
 	}
 
 	.tag {
-		font-weight: 400;
+		font-weight: 300;
 		font-size: var(--fontSizeXS);
 		color: var(--colorTextQuaternary);
 	}

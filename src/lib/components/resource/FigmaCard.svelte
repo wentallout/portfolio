@@ -1,5 +1,6 @@
 <script>
 	import ExLink from '$components/common/ExLink.svelte';
+	import MouseGlow from '$components/common/MouseGlow.svelte';
 
 	/** @type {{title?: string, desc?: string, href?: string, thumbnailUrl?: string}} */
 	let {
@@ -16,7 +17,8 @@
 	});
 </script>
 
-<ExLink style="display:flex" {href}>
+<ExLink style="display:flex;position:relative;" {href}>
+	<MouseGlow />
 	<div class="fcard custom-border">
 		<img class="fcard__thumbnail" alt="" src={thumbnailUrl} />
 
@@ -37,7 +39,6 @@
 		background-color: var(--colorBgContainer);
 
 		&:hover {
-			background-color: var(--colorBgElevated);
 			box-shadow: -5px 5px var(--colorPrimaryHover);
 			transform: translate(5px, -5px);
 		}

@@ -72,7 +72,7 @@
 		align-items: center;
 		flex-direction: row;
 		/* border: 1px solid var(--colorBorder); */
-		border-radius: var(--borderRadius);
+
 		&:hover {
 			background-color: var(--colorBgElevated);
 		}

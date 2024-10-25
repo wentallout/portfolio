@@ -16,7 +16,7 @@
 	.tag {
 		color: var(--colorTextSecondary);
 		display: inline-block;
-		font-weight: var(--fontWeightSmall);
+		font-weight: var(--fontWeightXS);
 		width: fit-content;
 		border-radius: var(--borderRadiusLight);
 		padding: 6px 8px;
