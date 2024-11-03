@@ -17,8 +17,8 @@
 	import User from '~icons/ph/user';
 	import { getUserLocalTime, getVietnamTime } from '$lib/utils/time';
 
-	let localTime = $state(),
-		vietnamTime = $state();
+	let localTime = $state();
+	let vietnamTime = $state();
 
 	setInterval(() => {
 		localTime = getUserLocalTime();

@@ -147,7 +147,7 @@ input[type='range']:focus::-webkit-slider-runnable-track {
 	height: 100%;
 	/* --- */
 
-	opacity: 0.1;
+	opacity: 0.03;
 	
 	z-index: var(--zIndexMax);
 	pointer-events: none;

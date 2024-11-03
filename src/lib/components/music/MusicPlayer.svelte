@@ -225,16 +225,6 @@
 		color: var(--colorTextQuaternary);
 	}
 
-	.player__info {
-		display: flex;
-		flex-direction: column;
-		gap: var(--spaceS);
-		width: 100%;
-		align-items: center;
-		justify-content: center;
-		color: var(--colorWhite);
-	}
-
 	.info__time {
 		display: flex;
 		flex-direction: row;

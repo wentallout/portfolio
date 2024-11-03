@@ -5,6 +5,9 @@
 	import FeaturedProject from '$sections/home/Featured.svelte';
 	import Clients from '$sections/home/MyClients.svelte';
 	import WhatIUse from '$sections/home/WhatIUse.svelte';
+	import SEO from '$components/seo/SEO.svelte';
+	import Principles from '$sections/home/Principles.svelte';
+	import SaosContainer from '$lib/components/common/SaosContainer.svelte';
 
 	const breadcrumbs = [
 		{
@@ -12,9 +15,6 @@
 			slug: ''
 		}
 	];
-	import SEO from '$components/seo/SEO.svelte';
-	import Principles from '$sections/home/Principles.svelte';
-	import SaosContainer from '$lib/components/common/SaosContainer.svelte';
 
 	const seoProps = {
 		breadcrumbs,

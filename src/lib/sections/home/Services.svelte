@@ -11,12 +11,11 @@
 <section>
 	<SectionTitle
 		sectionDesc="I offer cost-effective web services that deliver outstanding value"
-		sectionTitle="Services"
-		>
+		sectionTitle="Services">
 		{#snippet children({ sectionIcon })}
-				<HandHeart {...sectionIcon} />
-					{/snippet}
-		</SectionTitle>
+			<HandHeart {...sectionIcon} />
+		{/snippet}
+	</SectionTitle>
 
 	<div class="service">
 		<div class="service__section custom-border">
@@ -35,17 +34,7 @@
 					Written using
 					<strong>HTML, CSS, JS </strong>
 				</li>
-				<li class="service__point optional">
-					★ Optional: Enhanced with
-					<strong>SvelteKit</strong> for optimal SEO, lightning fast loading speed and reusable
-					components.
-					<br />
-					<a
-						class="link"
-						href="https://kit.svelte.dev/docs/performance"
-						rel="external nofollow noopener noreferrer"
-						target="_blank">SvelteKit out-of-the-box performance</a>
-				</li>
+
 				<li class="service__point">
 					<strong>Responsive:</strong> Looks great on all screen sizes
 				</li>
@@ -80,10 +69,6 @@
 				</li>
 				<li class="service__point">Fantastic <strong>user experience and accessibility</strong></li>
 				<li class="service__point">Easier <strong>maintenance and scalability</strong></li>
-				<li class="service__point optional">
-					★ Optional: I also provide free website critiques, send your URL and get back a list of
-					improvements you can apply ranging from UX, UI, SEO, and more.
-				</li>
 			</ul>
 
 			<a class="service__btn" href="https://cal.com/wentallout/web">
@@ -146,10 +131,6 @@
 		display: flex;
 		flex-direction: column;
 		gap: var(--spaceXS);
-	}
-
-	.optional {
-		color: var(--colorTextTertiary);
 	}
 
 	.service__btn {

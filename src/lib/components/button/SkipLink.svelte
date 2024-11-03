@@ -1,7 +1,7 @@
-<a class="skip-link" href="#main-content" tabindex="0"> Skip to main content </a>
+<a class="skipper" href="#main-content" tabindex="0"> Skip to main content </a>
 
 <style>
-	.skip-link {
+	.skipper {
 		position: fixed;
 		top: 0;
 		left: 0;
@@ -22,11 +22,11 @@
 		align-items: center;
 	}
 
-	.skip-link:hover {
+	.skipper:hover {
 		background-color: var(--colorPrimaryHover);
 	}
 
-	.skip-link:focus {
+	.skipper:focus {
 		translate: 0;
 		outline: none;
 	}
