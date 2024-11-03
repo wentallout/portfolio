@@ -7,7 +7,9 @@
 	let { data } = $props();
 </script>
 
-<Breadcrumb />
+<div class="extra-margin">
+	<Breadcrumb />
+</div>
 
 <div class="result text-large">
 	<span class="result__title">Posts about </span>
@@ -24,6 +26,10 @@
 </BlogListContainer>
 
 <style>
+	.extra-margin {
+		margin-top: var(--spaceM);
+	}
+
 	.result {
 		margin-top: 0;
 		margin-bottom: var(--spaceM);

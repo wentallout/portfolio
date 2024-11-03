@@ -67,9 +67,8 @@
 						<Button
 							backgroundColor="var(--colorPrimary)"
 							glowColor="var(--colorPrimary)"
-							label="Book a Call"
+							label="Make it happen!"
 							labelColor="var(--colorBlack)">
-							<CalendarCheck />
 						</Button>
 					</a>
 

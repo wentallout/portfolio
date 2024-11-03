@@ -7,9 +7,7 @@
 </script>
 
 <section>
-	<SectionTitle
-		sectionDesc="These are my own personal guidelines for a good design."
-		sectionTitle="Design Principles">
+	<SectionTitle sectionDesc="My guidelines for a good design." sectionTitle="Design Principles">
 		{#snippet children({ sectionIcon })}
 			<Scales {...sectionIcon} />
 		{/snippet}

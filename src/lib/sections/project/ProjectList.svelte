@@ -7,11 +7,21 @@
 
 	import superTabManagerThumbnail from '$lib/assets/images/project/super-tab-manager/thumbnail.png';
 
+	import stockGrabberThumbnail from '$lib/assets/images/project/stock-grabber/thumbnail.png';
+
 	/** @type {{hasMoreButton?: boolean}} */
 	let { hasMoreButton = false } = $props();
 </script>
 
 <div class="projects">
+	<ProjectCard
+		linkToDetail="project/stock-grabber"
+		output="Features: Search, select/unselect all images, download multiple images in one zip file."
+		projectName="Stock Grabber"
+		role="Designer, Developer"
+		thumbnail={stockGrabberThumbnail}
+		what="A simple app to help you download multiple stock images at the same time." />
+
 	<ProjectCard
 		linkToDetail="project/super-tab-manager"
 		output="Features: Group similar tabs, close duplicated or harmful tabs, search tabs. UI that adapts to user's dark/light preference."

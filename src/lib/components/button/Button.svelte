@@ -1,7 +1,4 @@
 <script>
-
-
-
 	/** @type {{label?: string, labelColor?: string, width?: any, glowColor?: string, type?: string, backgroundColor?: string, borderColor?: any, border?: any, shadowColor?: any, children?: import('svelte').Snippet}} */
 	let {
 		label = 'exampleLabel',

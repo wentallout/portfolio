@@ -67,11 +67,7 @@
 		background: color-mix(in srgb, var(--colorBgElevated) 50%, transparent);
 		backdrop-filter: blur(5px);
 
-		& .bck2top__text {
-			font-family: var(--fontFancy);
-			font-size: var(--fontSizeXS);
-			font-weight: 100;
-		}
+		border-radius: var(--borderRadius);
 
 		&:hover {
 			background: color-mix(in srgb, var(--colorBgElevated) 100%, transparent);

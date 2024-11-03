@@ -31,9 +31,9 @@
 	<header class="header" bind:this={headerEle}>
 		<ThemeSwitcher />
 		<nav class="nav pad" class:nav--scrolldown={scrollY > 0} aria-label="primary menu">
-			<ul class="nav-list">
+			<ul class="navlist">
 				{#each navItems as navItem}
-					<li class="nav-list__item" class:active-page={$page.url.pathname === `${navItem.path}`}>
+					<li class="navlist__item" class:active-page={$page.url.pathname === `${navItem.path}`}>
 						<a class="item" href={navItem.path}>
 							{navItem.title}
 						</a>
@@ -83,10 +83,6 @@
 		animation-duration: 0.3s;
 	}
 
-	::view-transition-group(indicator2) {
-		animation: 0.3s linear both border;
-	}
-
 	.nav {
 		/* FONT */
 		font-size: var(--fontSizeBase);
@@ -134,10 +130,9 @@
 	.active-page--mobile {
 		color: var(--colorPrimaryActive) !important;
 		border-left: 4px solid var(--colorPrimaryActive);
-		view-transition-name: indicator2;
 	}
 
-	.nav-list {
+	.navlist {
 		display: flex;
 		flex-direction: row;
 		width: 100%;
@@ -146,9 +141,8 @@
 		overflow: visible;
 	}
 
-	.nav-list__item {
+	.navlist__item {
 		display: none;
-
 		transition: linear 0.3s;
 		text-shadow:
 			-1px -1px 0 var(--colorBgLayout),
@@ -163,11 +157,11 @@
 		}
 	}
 
-	.nav:has(a:hover) a:not(:hover) {
+	/* .nav:has(a:hover) a:not(:hover) {
 		opacity: 0.7;
 		text-shadow: none;
 		transition: var(--transition);
-	}
+	} */
 
 	.hamburger {
 		/* FLEX */
@@ -181,7 +175,7 @@
 	}
 
 	@media (min-width: 768px) {
-		.nav-list__item {
+		.navlist__item {
 			display: flex;
 			justify-content: center;
 			align-items: center;
@@ -228,7 +222,8 @@
 		display: flex;
 		flex-direction: column;
 		width: 100%;
-		justify-content: center;
+		height: calc(100% - var(--scroll-padding)); /* Subtract the top padding */
+		justify-content: flex-start; /* Changed from center to flex-start */
 		align-items: center;
 	}
 
@@ -278,7 +273,7 @@
 
 	.social {
 		border-top: 1px solid var(--colorBorder);
-		justify-self: flex-end;
+		margin-top: auto; /* This pushes the social buttons to the bottom */
 	}
 
 	.header {
@@ -288,7 +283,7 @@
 		view-transition-name: header;
 	}
 
-	.nav-list__item::before {
+	.navlist__item::before {
 		content: '';
 		position: absolute;
 		margin: auto;

@@ -4,6 +4,11 @@
 
 	let snippetList = [
 		{
+			title: 'Auto Fit Text',
+			href: 'https://codepen.io/wentallout/pen/KKOBVxq',
+			desc: 'Text that fit to its container width.'
+		},
+		{
 			title: '3D Card Tilt On Hover',
 			href: 'https://codepen.io/wentallout/pen/MWdvEzN',
 			desc: '3D card that tilts on hover'
