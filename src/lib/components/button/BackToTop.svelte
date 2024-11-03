@@ -67,6 +67,8 @@
 		background: color-mix(in srgb, var(--colorBgElevated) 50%, transparent);
 		backdrop-filter: blur(5px);
 
+		border-radius: var(--borderRadius);
+
 		&:hover {
 			background: color-mix(in srgb, var(--colorBgElevated) 100%, transparent);
 		}

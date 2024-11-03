@@ -1,8 +1,8 @@
 ---
 title: Great game feedback examples
-date: '2024-11-02'
+date: 2024-11-02
 categories:
-    - 'game testing'
+    - game testing
 ---
 
 ## What issues did you experience during the test?

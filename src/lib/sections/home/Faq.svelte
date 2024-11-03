@@ -8,11 +8,11 @@
 </script>
 
 <section>
-	<SectionTitle sectionTitle="Frequently Asked Questions" >
+	<SectionTitle sectionTitle="Frequently Asked Questions">
 		{#snippet children({ sectionIcon })}
-				<Question {...sectionIcon} />
-					{/snippet}
-		</SectionTitle>
+			<Question {...sectionIcon} />
+		{/snippet}
+	</SectionTitle>
 
 	<div class="faq">
 		<div class="faqlist">
@@ -25,12 +25,12 @@
 				accordionText="Good UI/UX design is crucial for the success of digital products because it can greatly impact user engagement, retention, and conversion rates. A well-designed interface can also improve brand perception and customer loyalty." />
 
 			<Accordion
-				accordionSection="How do you approach a new design project?"
+				accordionSection="How do you approach a new project?"
 				accordionText="I typically start by gathering as much information as possible about the project and the target audience. This may involve conducting user research, creating personas, and analyzing competitors. From there, I create wireframes and prototypes to test different design ideas and iterate based on user feedback." />
 
 			<Accordion
 				accordionSection="How do you measure the success of a design project?"
-				accordionText="Success metrics can vary depending on the project goals, but I typically look at metrics like user engagement, conversion rates, and user satisfaction to gauge the success of a design project. I also gather feedback from stakeholders and users to assess the impact of the design on their experience." />
+				accordionText="Success metrics can vary depending on the project goals, but I typically look at metrics like user engagement, conversion rates, and user satisfaction to gauge the success of a project. I also gather feedback from stakeholders and users to assess the impact of the design on their experience." />
 
 			<Accordion
 				accordionSection="How do you handle design feedback and criticism?"
