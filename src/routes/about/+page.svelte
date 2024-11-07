@@ -19,8 +19,7 @@
 			<ul>
 				<li>Khoa Nguyen. {age} y/o.</li>
 				<li>Live and work in Ho Chi Minh City, Vietnam.</li>
-				<li>2 year Web Developer</li>
-				<li>6 months UX Designer</li>
+				<li>~2 years as Web Developer. Trained by the best UX Designers at Mirr Design</li>
 			</ul>
 		</div>
 	</div>
@@ -45,11 +44,7 @@
 		<div class="about__title text-large">Unique Value Proposition</div>
 		<div class="about__desc text-small">
 			I am a flexible and chill person known for seamlessly integrating the latest web design trends
-			into my work. My adaptability and laid-back approach foster a collaborative environment where
-			I enjoy engaging with fellow designers, offering constructive feedback, and staying on the
-			cutting edge of industry developments. Through my unique journey, I bring not only technical
-			expertise but also a fresh perspective that results in visually appealing designs and
-			user-centric solutions.
+			into my work.
 		</div>
 	</div>
 
@@ -59,7 +54,6 @@
 			<ul>
 				<li>Video Games</li>
 				<li>Mechanical Keyboard</li>
-				<li>Blockchain</li>
 				<li>A.I</li>
 				<li>Music</li>
 			</ul>

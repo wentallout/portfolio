@@ -112,7 +112,7 @@
 		object-fit: cover;
 		background-color: transparent;
 		position: relative;
-		border: 1px dotted var(--colorBorderSecondary);
+
 		overflow: hidden;
 	}
 
