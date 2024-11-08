@@ -1,0 +1,43 @@
+---
+title: Journey of automation in testing
+date: 2024-11-07
+categories:
+    - testing
+---
+
+## Origins of Automation
+
+- Leonardo da Vinci: Way ahead of his time! Created an automatic gold-beating machine for textile production in Florence.
+- Automation's Goal: Always to boost productivity – starting with manufacturing, and now essential in digital workflows, like CI/CD pipelines for development and testing.
+
+## Rise of Automation in QA
+
+Early 2010s: Automation in QA exploded, with CI/CD promising the ability to automate almost anything.
+Pessimism & Role Changes: Testers worried about job security as automation became essential in Agile's fast-paced environment.
+Popular Tools: Selenium and Cypress ruled – coding skills were needed for automation.
+
+## AI Steps In
+
+AI-Driven Tools: Today, AI-powered automation can record tests, no coding needed – cutting down time and effort.
+Limits of Automation:
+Great for functional tests but struggles with subjective areas like usability and accessibility.
+Human Testing: Still essential for complex, intuitive tasks that machines miss.
+
+## Balance in Testing: Human + Automation
+
+- Humans vs. Tech: Humans detect nuances and adapt; machines excel at repetition.
+- Avoid Automating Everything: Choose what needs automating. Don't add automation just for stats.
+- Test Pyramid: Automate at the lowest level (unit tests), reduce end-to-end tests.
+
+## Wise Automation
+
+- Strategic Focus: Focus on high-risk areas, like order flows for e-commerce.
+- Team Strategy: Plan automation in team sessions to maximize value.
+
+## The Future of Automation in QA
+Autonomous Testing: Bots could handle all testing, but they lack empathy and creativity – real QA needs humans.
+Balanced Approach: Automate repetitive tasks; keep humans for exploratory, creative testing.
+
+## In Summary
+
+Automation boosts efficiency but doesn't replace the human touch. Automate smartly, and remember that balanced testing means better quality.

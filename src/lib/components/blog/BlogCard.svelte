@@ -1,10 +1,9 @@
 <script>
 	import Time from 'svelte-time';
 
-	import CaretRight from '~icons/ph/caret-right';
-
 	import { fade } from 'svelte/transition';
 	import MouseGlow from '$components/common/MouseGlow.svelte';
+	import { CaretRight } from '$lib/assets/icons/icons';
 	/** @type {{blogLink?: string, blogTitle?: string, blogDate?: string, blogTags?: any, hasTags?: boolean}} */
 	let {
 		blogLink = '',

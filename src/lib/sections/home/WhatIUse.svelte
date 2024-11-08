@@ -4,19 +4,19 @@
 	import GraphicDesignArt from '$lib/assets/arts/GraphicDesignArt.svelte';
 	import NavigationArt from '$lib/assets/arts/NavigationArt.svelte';
 	import ProcessArt from '$lib/assets/arts/ProcessArt.svelte';
+	import { Toolbox } from '$lib/assets/icons/icons';
 
 	import SectionTitle from '$sections/SectionTitle.svelte';
-	import Toolbox from '~icons/ph/toolbox';
 </script>
 
 <SaosContainer>
 	<section>
 		<div class="tool">
-			<SectionTitle sectionTitle="What I Use" >
+			<SectionTitle sectionTitle="What I Use">
 				{#snippet children({ sectionIcon })}
-								<Toolbox {...sectionIcon} />
-											{/snippet}
-						</SectionTitle>
+					<Toolbox {...sectionIcon} />
+				{/snippet}
+			</SectionTitle>
 
 			<div class="tool__block">
 				<div class="block__section custom-border">

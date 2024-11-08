@@ -3,11 +3,10 @@
 
 	import ResponsiveWebArt from '$lib/assets/arts/ResponsiveWebArt.svelte';
 
-	import HandHeart from '~icons/ph/hand-heart';
 	import Button from '$components/button/Button.svelte';
 	import AbTestingArt from '$lib/assets/arts/ABTestingArt.svelte';
 
-	import { CalendarCheck } from '$lib/assets/icons/icons';
+	import { CalendarCheck, HandHeart } from '$lib/assets/icons/icons';
 	import MouseGlow from '$components/common/MouseGlow.svelte';
 </script>
 

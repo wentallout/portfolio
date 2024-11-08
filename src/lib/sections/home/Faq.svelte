@@ -3,8 +3,7 @@
 	import SectionTitle from '$sections/SectionTitle.svelte';
 
 	import QuestionArt from '$lib/assets/arts/FaqArt.svelte';
-
-	import Question from '~icons/ph/question';
+	import { Question } from '$lib/assets/icons/icons';
 </script>
 
 <section>

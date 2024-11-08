@@ -1,17 +1,16 @@
 <script>
+	import { Star } from '$lib/assets/icons/icons';
 	import ProjectList from '$sections/project/ProjectList.svelte';
 	import SectionTitle from '$sections/SectionTitle.svelte';
-
-	import Star from '~icons/ph/star';
 </script>
 
 <section>
 	<div class="featured">
-		<SectionTitle sectionTitle="Featured" >
+		<SectionTitle sectionTitle="Featured">
 			{#snippet children({ sectionIcon })}
-						<Star {...sectionIcon} />
-								{/snippet}
-				</SectionTitle>
+				<Star {...sectionIcon} />
+			{/snippet}
+		</SectionTitle>
 		<ProjectList hasMoreButton={true} />
 	</div>
 </section>

@@ -1,11 +1,13 @@
 <script>
-	import Phone from '~icons/ph/phone';
 	import ExLink from '$components/common/ExLink.svelte';
-	import Envelope from '~icons/ph/envelope';
 
-	import LinkedinLogo from '~icons/ph/linkedin-logo';
-	import InstagramLogo from '~icons/ph/instagram-logo';
-	import GitHubLogo from '~icons/ph/github-logo';
+	import {
+		LinkedinLogo,
+		Phone,
+		InstagramLogo,
+		GitHubLogo,
+		Envelope
+	} from '$lib/assets/icons/icons';
 	/** @type {{style?: string}} */
 	let { style = '' } = $props();
 </script>

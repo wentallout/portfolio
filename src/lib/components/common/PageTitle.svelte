@@ -1,5 +1,4 @@
 <script>
-
 	import Wall from '$lib/assets/images/common/wall.webp';
 	import Breadcrumb from '$components/layout/other/Breadcrumb.svelte';
 
@@ -12,7 +11,14 @@
 		{pageTitle}
 	</div>
 
-	<img class="title__bg" alt="title deco" loading="lazy" src={decoImageUrl} />
+	<img
+		width="1920"
+		height="642"
+		class="title__bg"
+		alt="title deco"
+		title="title deco"
+		loading="eager"
+		src={decoImageUrl} />
 
 	<div class="title__content">
 		<h1 class="text-3xl title__text tracking-in-expand">

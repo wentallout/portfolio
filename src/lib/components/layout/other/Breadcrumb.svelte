@@ -1,6 +1,6 @@
 <script>
-	import CaretRight from '~icons/ph/caret-right';
 	import { page } from '$app/stores';
+	import { CaretRight } from '$lib/assets/icons/icons';
 
 	let crumbs = $state([]);
 

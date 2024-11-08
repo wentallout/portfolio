@@ -1,6 +1,7 @@
 <script>
+	import { CaretDown } from '$lib/assets/icons/icons';
 	// IMPORTS
-	import CaretDown from '~icons/ph/caret-down';
+
 	import { slide } from 'svelte/transition';
 
 	// PROPS

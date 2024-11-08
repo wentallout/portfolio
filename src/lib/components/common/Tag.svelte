@@ -1,5 +1,6 @@
 <script>
-	import Tag from '~icons/ph/tag';
+	import { Tag } from '$lib/assets/icons/icons';
+
 	/** @type {{children?: import('svelte').Snippet}} */
 	let { children } = $props();
 </script>

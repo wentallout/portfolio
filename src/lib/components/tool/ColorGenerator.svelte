@@ -1,8 +1,7 @@
 <script>
-	import Wrench from '~icons/ph/wrench';
-	import SectionTitle from '$sections/SectionTitle.svelte';
+	import { Wrench, Palette } from '$lib/assets/icons/icons';
 
-	import Palette from '~icons/ph/palette';
+	import SectionTitle from '$sections/SectionTitle.svelte';
 
 	let hue;
 	let saturation;
@@ -12,11 +11,11 @@
 </script>
 
 <section>
-	<SectionTitle sectionTitle="Color Generator" >
+	<SectionTitle sectionTitle="Color Generator">
 		{#snippet children({ sectionIcon })}
-				<Palette {...sectionIcon} />
-					{/snippet}
-		</SectionTitle>
+			<Palette {...sectionIcon} />
+		{/snippet}
+	</SectionTitle>
 </section>
 
 <style>

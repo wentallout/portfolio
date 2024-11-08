@@ -1,7 +1,5 @@
 <script>
 	import SectionTitle from '$sections/SectionTitle.svelte';
-	import MusicNotes from '~icons/ph/music-notes';
-	import FileAudio from '~icons/ph/file-audio';
 
 	import { SoundCloud } from 'sveltekit-embed';
 	import MusicPlayer from '$components/music/MusicPlayer.svelte';
@@ -13,22 +11,21 @@
 <section>
 	<SectionTitle
 		sectionTitle="Music Player"
-		
 		sectionDesc="Now you can listen and download Khoa's favorite songs. Live Radio included. Enjoy!">
 		{#snippet children({ sectionIcon })}
-				<FileAudio {...sectionIcon} />
-					{/snippet}
-		</SectionTitle>
+			<FileAudio {...sectionIcon} />
+		{/snippet}
+	</SectionTitle>
 
 	<MusicPlayer />
 </section>
 
 <section>
-	<SectionTitle sectionTitle="SoundCloud" >
+	<SectionTitle sectionTitle="SoundCloud">
 		{#snippet children({ sectionIcon })}
-				<MusicNotes {...sectionIcon} />
-					{/snippet}
-		</SectionTitle>
+			<MusicNotes {...sectionIcon} />
+		{/snippet}
+	</SectionTitle>
 
 	<SoundCloud
 		soundcloudLink="https://soundcloud.com/falxce/falxce-berylxx-serenity?si=e37c4665ee3e4a87a5e76a302267f96f&utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing" />

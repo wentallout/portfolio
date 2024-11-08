@@ -5,12 +5,7 @@
 	import SEO from '$components/seo/SEO.svelte';
 	import EssentialList from '$sections/resource/EssentialList.svelte';
 	import SectionTitle from '$sections/SectionTitle.svelte';
-
-	// ICONS
-	import Books from '~icons/ph/books';
-	import HardDrives from '~icons/ph/hard-drives';
-	import BoundingBox from '~icons/ph/bounding-box';
-	//
+	import { Books, HardDrives, BoundingBox } from '$lib/assets/icons/icons';
 
 	const breadcrumbs = [
 		{
@@ -35,37 +30,31 @@
 <PageTitle pageTitle="Resource" />
 
 <section>
-	<SectionTitle
-		sectionTitle="Essential"
-		
-		sectionDesc="Essential libraries for my work">
+	<SectionTitle sectionTitle="Essential" sectionDesc="Essential libraries for my work">
 		{#snippet children({ sectionIcon })}
-				<BoundingBox {...sectionIcon} />
+			<BoundingBox {...sectionIcon} />
 		{/snippet}
-		</SectionTitle>
+	</SectionTitle>
 
 	<EssentialList />
 </section>
 
 <section>
-	<SectionTitle
-		sectionTitle="Book"
-		
-		sectionDesc="Here are some of my favorite books">
+	<SectionTitle sectionTitle="Book" sectionDesc="Here are some of my favorite books">
 		{#snippet children({ sectionIcon })}
-				<Books {...sectionIcon} />
-					{/snippet}
-		</SectionTitle>
+			<Books {...sectionIcon} />
+		{/snippet}
+	</SectionTitle>
 
 	<BookList />
 </section>
 
 <section>
-	<SectionTitle sectionTitle="Other" >
+	<SectionTitle sectionTitle="Other">
 		{#snippet children({ sectionIcon })}
-				<HardDrives {...sectionIcon} />
-					{/snippet}
-		</SectionTitle>
+			<HardDrives {...sectionIcon} />
+		{/snippet}
+	</SectionTitle>
 
 	<OtherCardList />
 </section>
