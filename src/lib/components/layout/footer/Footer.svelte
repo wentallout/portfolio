@@ -1,11 +1,11 @@
 <script>
-	import FooterEnd from '$components/layout/footer/FooterEnd.svelte';
+	import FooterCopyright from '$components/layout/footer/FooterCopyright.svelte';
 	import ExLink from '$components/common/ExLink.svelte';
 	import Marquee from '$components/layout/other/Marquee.svelte';
 	import { navItems } from '$lib/config.js';
 
 	import {
-		Envelope,
+		EnvelopeSimple,
 		LinkedinLogo,
 		InstagramLogo,
 		GitHubLogo,
@@ -13,7 +13,6 @@
 		MapPin
 	} from '$lib/assets/icons/icons';
 
-	import LanguageSwitcher from '$components/i18n/LanguageSwitcher.svelte';
 	import StarBg from '$components/common/StarBg.svelte';
 </script>
 
@@ -30,7 +29,6 @@
 					<li class="nav-list__link">
 						<a class="link" href="/about">More about me </a>
 					</li>
-					<LanguageSwitcher />
 				</ul>
 			</div>
 
@@ -81,7 +79,7 @@
 					<li>
 						<ExLink href="mailto:wentallout@gmail.com">
 							<div class="nav-list__link">
-								<Envelope />
+								<EnvelopeSimple />
 								<div class="">
 									<span>wentallout@</span>
 									<b class="obf">j</b>
@@ -125,7 +123,7 @@
 			</div>
 		</div>
 
-		<FooterEnd />
+		<FooterCopyright />
 		<div class="footer__deco" alt="footer decoration"></div>
 	</div>
 </footer>

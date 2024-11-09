@@ -44,13 +44,19 @@
 			src="/images/netlify.svg" />
 	</ExLink>
 </div>
-<img
-	loading="lazy"
-	title="green hosting"
-	alt="This website runs on green hosting - verified by thegreenwebfoundation.org"
-	height="95px"
-	src="https://app.greenweb.org/api/v3/greencheckimage/wentallout.io.vn?nocache=true"
-	width="200px" />
+
+<ExLink
+	style="display:block"
+	ariaLabel="green web foundation"
+	href="https://www.thegreenwebfoundation.org/green-web-check/?url=https%3A%2F%2Fwentallout.io.vn">
+	<img
+		loading="lazy"
+		title="green hosting"
+		alt="This website runs on green hosting - verified by thegreenwebfoundation.org"
+		height="95px"
+		src="https://app.greenweb.org/api/v3/greencheckimage/wentallout.io.vn?nocache=true"
+		width="200px" />
+</ExLink>
 
 <style>
 	.badge {

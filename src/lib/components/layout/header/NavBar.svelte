@@ -39,17 +39,16 @@
 						</a>
 					</li>
 				{/each}
-
-				<button
-					class="hamburger"
-					aria-label="navigation button"
-					type="button"
-					onclick={openNav}
-					onkeydown={openNav}>
-					<List color="var(--colorText)" height="32" width="32" />
-				</button>
 			</ul>
 		</nav>
+		<button
+			class="hamburger"
+			aria-label="navigation button"
+			type="button"
+			onclick={openNav}
+			onkeydown={openNav}>
+			<List color="var(--colorText)" height="32" width="32" />
+		</button>
 	</header>
 </VanishingHeader>
 

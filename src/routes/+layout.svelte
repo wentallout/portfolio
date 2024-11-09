@@ -6,8 +6,7 @@
 	import NavBar from '$lib/components/layout/header/NavBar.svelte';
 
 	import VideoCover from '$lib/components/layout/header/VideoCover.svelte';
-	import { ParaglideJS } from '@inlang/paraglide-js-adapter-sveltekit';
-	import { i18n } from '$lib/i18n.js';
+
 	import Misc from '$sections/Misc.svelte';
 
 	import { onNavigate } from '$app/navigation';
@@ -31,18 +30,16 @@
 	<meta name="view-transition" content="same-origin" />
 </svelte:head>
 
-<ParaglideJS {i18n}>
-	<BgDeco />
-	<Misc />
-	<VideoCover />
-	<NavBar />
+<BgDeco />
+<Misc />
+<VideoCover />
+<NavBar />
 
-	<main id="main-content" class="main-content pad">
-		{@render children?.()}
-	</main>
+<main id="main-content" class="main-content pad">
+	{@render children?.()}
+</main>
 
-	<Footer />
-</ParaglideJS>
+<Footer />
 
 <style lang="postcss">
 	.main-content {

@@ -51,17 +51,8 @@ const config = {
 			$sections: './src/lib/sections',
 			$blogImages: './src/lib/assets/images/blog',
 			$projectImages: './src/lib/assets/images/project',
-			$paraglide: './src/paraglide',
+	
 			$styles: './src/styles'
-		}
-	},
-
-	vitePlugin: {
-		inspector: {
-			toggleKeyCombo: 'control-shift',
-			holdMode: true,
-			showToggleButton: 'always',
-			toggleButtonPos: 'bottom-left'
 		}
 	}
 };

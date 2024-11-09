@@ -1,7 +1,7 @@
 <script>
 	import HeroVisual from '$lib/assets/arts/HeroArt.svelte';
 	import Button from '$components/button/Button.svelte';
-	import * as m from '$paraglide/messages';
+
 	import { onMount } from 'svelte';
 
 	import { gsap } from 'gsap';

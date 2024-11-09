@@ -6,7 +6,7 @@
 		Phone,
 		InstagramLogo,
 		GitHubLogo,
-		Envelope
+		EnvelopeSimple
 	} from '$lib/assets/icons/icons';
 	/** @type {{style?: string}} */
 	let { style = '' } = $props();
@@ -17,7 +17,7 @@
 		<Phone class="icon" color="var(--colorText)" height="32" width="32" />
 	</ExLink>
 	<ExLink ariaLabel="email" href="mailto:wentallout@gmail.com">
-		<Envelope class="icon" color="var(--colorText)" height="32" width="32" />
+		<EnvelopeSimple class="icon" color="var(--colorText)" height="32" width="32" />
 	</ExLink>
 	<ExLink ariaLabel="linkedin" href="https://www.linkedin.com/in/wentallout">
 		<LinkedinLogo class="icon" color="var(--colorText)" height="32" width="32" />
