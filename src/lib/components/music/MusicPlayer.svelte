@@ -121,7 +121,7 @@
 		<div class="player__btns">
 			<div class="controls">
 				<button class="mp-btn other-btn" type="button" onclick={prev}>
-					<SkipBack color="var(--colorTextSecondary)" height="24" width="24" />
+					<SkipBack color="var(--colorTextQuaternary)" height="24" width="24" />
 				</button>
 
 				{#if $isPlaying}
@@ -135,11 +135,11 @@
 				{/if}
 
 				<button class="mp-btn other-btn" type="button" onclick={next}>
-					<SkipForward color="var(--colorTextSecondary)" height="24" width="24" />
+					<SkipForward color="var(--colorTextQuaternary)" height="24" width="24" />
 				</button>
 			</div>
 
-			<div class="volume">
+			<div class="player__volume">
 				<button class="mute__btn" type="button" onclick={mute} onkeydown={mute}>
 					{#if muted}
 						<SpeakerX color="var(--colorTextQuaternary)" height="24" width="24" />
@@ -182,13 +182,11 @@
 	}
 
 	.player__btns {
-		display: flex;
-		flex-direction: row;
-		align-items: center;
-		flex-wrap: wrap;
-		width: 100%;
+		display: grid;
+		grid-template-columns: 1fr auto;
 		gap: var(--spaceS);
 		margin-bottom: var(--spaceM);
+		width: 100%;
 	}
 
 	.seekBar__control {
@@ -199,7 +197,7 @@
 		background: transparent;
 	}
 
-	.volume {
+	.player__volume {
 		display: flex;
 		align-items: center;
 		gap: var(--spaceS);
@@ -248,10 +246,8 @@
 	/* MUSIC PLAYER BUTTONS */
 
 	.controls {
-		display: flex;
-		justify-content: center;
-		align-items: center;
-		gap: var(--spaceXS);
+		display: grid;
+		grid-template-columns: 1fr 1fr 1fr;
 	}
 
 	.mp-btn {
@@ -264,7 +260,6 @@
 		background-color: var(--colorBgContainer);
 		border: 0;
 		transition: var(--transition);
-		border-radius: 100%;
 	}
 
 	.mp-btn:hover {
@@ -277,8 +272,7 @@
 	}
 
 	.other-btn {
-		scale: 0.8;
-		background-color: var(--colorBgElevated);
+		border: 1px solid var(--colorBorder);
 	}
 
 	.player {
@@ -302,8 +296,6 @@
 	}
 
 	.song-active {
-		padding: var(--space2XS) var(--spaceL);
-
 		position: relative;
 		background: var(--colorPrimary);
 		color: var(--colorBlack);
@@ -341,10 +333,10 @@
 		flex-wrap: wrap;
 		flex-direction: row;
 		align-items: center;
+		padding: var(--spaceXS) var(--spaceS);
 	}
 
 	.song {
-		padding: var(--spaceXS) var(--spaceL);
 		transition: var(--transition);
 
 		&:hover {

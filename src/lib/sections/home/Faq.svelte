@@ -3,8 +3,7 @@
 	import SectionTitle from '$sections/SectionTitle.svelte';
 
 	import QuestionArt from '$lib/assets/arts/FaqArt.svelte';
-
-	import Question from '~icons/ph/question';
+	import { Question } from '$lib/assets/icons/icons';
 </script>
 
 <section>
@@ -20,6 +19,7 @@
 				accordionSection="What is UI/UX design?"
 				accordionText="UI/UX design stands for user interface/user experience design. It involves creating visually appealing and easy-to-use interfaces for digital products and ensuring that the user experience is intuitive, efficient, and enjoyable."
 				isOpened="true" />
+				
 			<Accordion
 				accordionSection="Why is UI/UX design important?"
 				accordionText="Good UI/UX design is crucial for the success of digital products because it can greatly impact user engagement, retention, and conversion rates. A well-designed interface can also improve brand perception and customer loyalty." />
@@ -34,7 +34,7 @@
 
 			<Accordion
 				accordionSection="How do you handle design feedback and criticism?"
-				accordionText="I welcome feedback and criticism as opportunities to improve my designs and better meet project goals. I take the time to understand the feedback and consider it carefully before making any changes. I also ask follow-up questions to clarify any confusion and ensure that I'm addressing the feedback effectively." />
+				accordionText="I take the time to understand the feedback and consider it carefully before making any changes. I also ask follow-up questions to clarify any confusion and ensure that I'm addressing the feedback effectively." />
 		</div>
 
 		<div class="faq__art">

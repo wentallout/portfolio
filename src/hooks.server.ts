@@ -1,7 +1,6 @@
-import { sequence } from '@sveltejs/kit/hooks';
+import type { Handle } from '@sveltejs/kit';
 
-import { i18n } from '$lib/i18n.js';
-export const handle = i18n.handle(async (event, resolve) => {
+export const handle: Handle = async ({ event, resolve }) => {
 	const { url, request, locals } = event;
 
 	// check for Referer header to know where the user is navigating from
@@ -13,11 +12,11 @@ export const handle = i18n.handle(async (event, resolve) => {
 		}
 	}
 
-	await resolve(event, {
+	return resolve(event, {
 		transformPageChunk: ({ html }) =>
 			html.replace('%splash-skip%', String(!!locals.internalReferer))
 	});
-});
+};
 
 const PUBLIC_DOMAIN = 'wentallout.io.vn';
 

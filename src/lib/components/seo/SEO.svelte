@@ -4,7 +4,7 @@
 	import defaultOgImage from '$lib/assets/images/seo/1200x627.png?format=png';
 	import defaultOgSquareImage from '$lib/assets/images/seo/400x400.png?format=png';
 	import defaultTwitterImage from '$lib/assets/images/seo/800x418.png?format=png';
-	const defaultAlt = 'cool cover image';
+	const defaultAlt = 'cover image';
 	//
 
 	import website from '$lib/config.js';
@@ -29,11 +29,7 @@
 	import SchemaOrg from '$components/seo/SchemaOrg.svelte';
 	import Twitter from '$components/seo/Twitter.svelte';
 
-
-	
-
-
-	/** @type {{entityMeta?: any, lastUpdated?: any, datePublished?: any, metadescription: any, slug: any, timeToRead?: number, title?: string, article?: boolean, breadcrumbs?: any, featuredImage?: any, ogImage?: any, ogSquareImage?: any, twitterImage?: any}} */
+	/** @type {{entityMeta?: any, lastUpdated?: any, datePublished?: any, metadescription: string, slug: any, timeToRead?: number, title?: string, article?: boolean, breadcrumbs?: any, featuredImage?: any, ogImage?: any, ogSquareImage?: any, twitterImage?: any}} */
 	let {
 		entityMeta = null,
 		lastUpdated = new Date(),
@@ -44,49 +40,48 @@
 		title = '',
 		article = false,
 		breadcrumbs = [
-		{
-			name: 'Home',
-			slug: ''
-		},
-		{
-			name: 'Project',
-			slug: 'project'
-		},
-		{
-			name: 'Blog',
-			slug: 'blog'
-		},
-		{
-			name: 'Resource',
-			slug: 'resource'
-		},
-		{
-			name: 'Contact',
-			slug: 'contact'
-		}
-	],
+			{
+				name: 'Home',
+				slug: ''
+			},
+			{
+				name: 'Project',
+				slug: 'project'
+			},
+			{
+				name: 'Blog',
+				slug: 'blog'
+			},
+			{
+				name: 'Resource',
+				slug: 'resource'
+			},
+			{
+				name: 'Contact',
+				slug: 'contact'
+			}
+		],
 		featuredImage = {
-		url: defaultFeaturedImage,
-		alt: defaultAlt,
-		width: 672,
-		height: 448,
-		caption: 'Home page'
-	},
+			url: defaultFeaturedImage,
+			alt: defaultAlt,
+			width: 672,
+			height: 448,
+			caption: 'Home page'
+		},
 		ogImage = {
-		url: defaultOgImage,
-		alt: defaultAlt
-	},
+			url: defaultOgImage,
+			alt: defaultAlt
+		},
 		ogSquareImage = {
-		url: defaultOgSquareImage,
-		alt: defaultAlt
-	},
+			url: defaultOgSquareImage,
+			alt: defaultAlt
+		},
 		twitterImage = {
-		url: defaultTwitterImage,
-		alt: defaultAlt
-	}
+			url: defaultTwitterImage,
+			alt: defaultAlt
+		}
 	} = $props();
 
-	
 	const twitterProps = {
 		article,
 		author,

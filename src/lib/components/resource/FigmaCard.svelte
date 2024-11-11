@@ -20,7 +20,14 @@
 <ExLink style="display:flex;position:relative;" {href}>
 	<MouseGlow />
 	<div class="fcard custom-border">
-		<img class="fcard__thumbnail" alt="" src={thumbnailUrl} />
+		<img
+			width="800"
+			height="45"
+			class="fcard__thumbnail"
+			alt={title}
+			{title}
+			src={thumbnailUrl}
+			loading="lazy" />
 
 		<div class="fcard__info">
 			<div class="fcard__title text-small">{title}</div>

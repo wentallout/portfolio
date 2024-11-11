@@ -1,8 +1,8 @@
 <script>
 	import { fly } from 'svelte/transition';
-	import Sun from '~icons/ph/sun';
-	import Moon from '~icons/ph/moon';
+
 	import { theme, toggleTheme } from '$lib/stores/themeStore.js';
+	import { Sun, Moon } from '$lib/assets/icons/icons';
 </script>
 
 <button class="pill" aria-label="Toggle theme" type="button" onclick={toggleTheme}>

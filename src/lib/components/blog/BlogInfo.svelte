@@ -4,12 +4,11 @@
 	import ExLink from '$components/common/ExLink.svelte';
 	import Tag from '$components/common/Tag.svelte';
 
-	import Pen from '~icons/ph/pen';
-
-	import CalendarBlank from '~icons/ph/calendar-blank';
 	import Breadcrumb from '$components/layout/other/Breadcrumb.svelte';
 
 	import { onMount } from 'svelte';
+	import { CalendarBlank, Pen } from '$lib/assets/icons/icons';
+
 	/** @type {{data: any, hasCategory?: boolean}} */
 	let { data, hasCategory = false } = $props();
 </script>

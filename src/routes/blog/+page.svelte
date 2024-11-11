@@ -9,8 +9,8 @@
 	import { paginate, DarkPaginationNav } from 'svelte-paginate';
 	import { onMount } from 'svelte';
 
-	import MagnifyingGlass from '~icons/ph/magnifying-glass';
 	import { allBlogStore } from '$lib/stores/blogStore';
+	import { MagnifyingGlass } from '$lib/assets/icons/icons';
 
 	/** @type {{data: any}} */
 	let { data } = $props();

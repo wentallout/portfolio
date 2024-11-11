@@ -2,6 +2,7 @@
 	import Button from '$components/button/Button.svelte';
 
 	import { page } from '$app/stores';
+	import { House } from '$lib/assets/icons/icons';
 
 	let customMessage = $state('');
 
@@ -25,8 +26,6 @@
 		default:
 			customMessage = 'An unexpected error occurred. Please try again later.';
 	}
-
-	import House from '~icons/ph/house';
 </script>
 
 <div class="error">

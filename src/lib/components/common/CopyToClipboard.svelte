@@ -1,9 +1,9 @@
 <script>
-	import { fade } from 'svelte/transition';
+	import { CopySimple } from '$lib/assets/icons/icons';
+	import { slide, scale } from 'svelte/transition';
 
 	let show = $state(false);
 
-	import CopySimple from '~icons/ph/copy-simple';
 	/** @type {{textToCopy: any, children?: import('svelte').Snippet}} */
 	let { textToCopy, children } = $props();
 
@@ -20,9 +20,10 @@
 	{@render children?.()}
 	<CopySimple style="color:inherit" />
 </button>
-
 {#if show === true}
-	<div transition:fade class="indicator text-xs">Copied</div>
+	<div in:scale={{ duration: 300 }} out:scale={{ duration: 300 }} class="indicator text-xs">
+		Copied {textToCopy}
+	</div>
 {/if}
 
 <style>
@@ -41,7 +42,6 @@
 	}
 
 	.indicator {
-		transition: 0.3s;
 		color: var(--colorPrimary);
 	}
 </style>

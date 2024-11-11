@@ -3,19 +3,21 @@
 	import Button from '$components/button/Button.svelte';
 	import TextArea from '$components/input/TextArea.svelte';
 	import TextInput from '$components/input/TextInput.svelte';
-	import EnvelopeSimple from '~icons/ph/envelope-simple';
-	import ArrowCounterClockwise from '~icons/ph/arrow-counter-clockwise';
-	import PaperPlaneRight from '~icons/ph/paper-plane-right';
-	import SectionTitle from '$sections/SectionTitle.svelte';
 
-	import Envelope from '~icons/ph/envelope';
-	import Clock from '~icons/ph/clock';
-	import Phone from '~icons/ph/phone';
+	import SectionTitle from '$sections/SectionTitle.svelte';
 	import CopyToClipboard from '$components/common/CopyToClipboard.svelte';
 
-	import At from '~icons/ph/at';
-	import User from '~icons/ph/user';
 	import { getUserLocalTime, getVietnamTime } from '$lib/utils/time';
+	import { slide } from 'svelte/transition';
+	import {
+		At,
+		Clock,
+		Phone,
+		User,
+		ArrowCounterClockwise,
+		PaperPlaneRight,
+		EnvelopeSimple
+	} from '$lib/assets/icons/icons';
 
 	let localTime = $state();
 	let vietnamTime = $state();
@@ -80,8 +82,8 @@
 			<div class="contact__address custom-border">
 				<ExLink href="mailto:wentallout@gmail.com">
 					<div class="address__title text-base">
-						<Envelope />
-						<div>Email me</div>
+						<EnvelopeSimple />
+						<div>Email</div>
 					</div>
 				</ExLink>
 				<CopyToClipboard textToCopy="wentallout@gmail.com">

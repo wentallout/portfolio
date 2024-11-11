@@ -49,7 +49,15 @@
 </script>
 
 <div class="cover__logo" aria-label="home">
-	<img id="personlogo" class="logo__main rotate" alt="2nd logo" src="/images/brand-logo.svg" />
+	<img
+		width="160"
+		height="160"
+		id="personlogo"
+		class="logo__main rotate"
+		alt="2nd logo"
+		title="wentallout logo"
+		src="/images/brand-logo.svg"
+		loading="eager" />
 	<div bind:this={logoDeco} class="logo__deco">went all out</div>
 </div>
 

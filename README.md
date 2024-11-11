@@ -72,12 +72,6 @@ Slug
 
 ## Main Features
 
-⭐ i18n (`inlang` + `paraglide.js`)
-
-- [Tutorial to add i18n to Svelte by Nils Jacobsen](https://inlang.com/g/2fg8ng94/guide-nilsjacobsen-buildAGlobalSvelteApp)
-- Machine translation command: `npx @inlang/cli machine translate --project project.inlang`
-- [paraglide-js-adapter-sveltekit](https://www.npmjs.com/package/@inlang/paraglide-js-adapter-sveltekit)
-
 ⭐ SEO
 
 - [SSR](https://kit.svelte.dev/docs/seo#out-of-the-box-ssr)
@@ -91,12 +85,12 @@ Slug
 
 ⭐ Dynamic Breadcrumb (`Breadcrumb.svelte`)
 
-⭐ Fonts
+⭐ Font Optimization
 
 - Self-host: [Google Web Font Helper](https://gwfh.mranftl.com/fonts)
 - font-family: [Inter](https://rsms.me/inter/)
 - Subset: [Subset Variable Font Guide](https://barrd.dev/article/create-a-variable-font-subset-for-smaller-file-size/)
-- Reduce Font CLS (Cumulative Layout Shift): [Fontaine](https://github.com/unjs/fontaine)
+- Reduce Font CLS (Cumulative Layout Shift): [Automatic font matching](https://deploy-preview-15--upbeat-shirley-608546.netlify.app/perfect-ish-font-fallback)
 
 ⭐ Icons
 

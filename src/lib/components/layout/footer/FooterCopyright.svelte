@@ -4,12 +4,15 @@
 
 	import Badges from '$components/layout/footer/Badges.svelte';
 	import { VERSION } from '@sveltejs/kit';
+
+	let currentYear = new Date().getFullYear();
 </script>
 
 <Badges />
 <div class="end text-xs">
 	<div class="end__text">
-		Copyright {`${COPYRIGHT_ENTITY}`} 2023 Nguyen Dang Khoa (wentallout), All Rights Reserved.
+		Copyright {`${COPYRIGHT_ENTITY}`}
+		{currentYear} Nguyen Dang Khoa (wentallout), All Rights Reserved.
 	</div>
 
 	<div class="end__text">

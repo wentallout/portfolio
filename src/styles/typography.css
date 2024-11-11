@@ -41,13 +41,25 @@ pre code {
 	font-feature-settings: normal;
 }
 
-.balance {
-	text-wrap: balance;
+@font-face {
+    font-family: "Inter-fallback";
+    size-adjust: 107.00%;
+    ascent-override: 90%;
+    src: local("Arial");
 }
 
+@font-face {
+    font-family: "Chakra Petch-fallback";
+    size-adjust: 102.69%;
+    ascent-override: 101%;
+    src: local("Arial");
+}
+
+
+
 :root {
-	--fontNormal: 'Inter', 'Inter override';
-	--fontFancy: 'Chakra', 'Chakra override';
+	--fontNormal: 'Inter', 'Inter-fallback';
+	--fontFancy: 'Chakra', 'Chakra Petch-fallback';
 
 	/* FONT SIZE */
 	--fontSizeXS: clamp(0.9rem, calc(0.9rem + -0.05vw), 0.92rem);
@@ -83,6 +95,10 @@ pre code {
 			'cpsp', 'zero';
 	}
 } */
+
+.balance {
+	text-wrap: balance;
+}
 
 body {
 	text-rendering: optimizeLegibility;

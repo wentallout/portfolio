@@ -1,13 +1,13 @@
 <script>
 	import Button from '$components/button/Button.svelte';
 	import ProjectCard from '$components/project/ProjectCard.svelte';
-	import rezaSquare from '$lib/assets/images/project/reza/rezaSquare.png';
+	import rezaSquare from '$lib/assets/images/project/reza/rezaSquare.jpg';
 
 	import devPortfolioSquare from '$lib/assets/images/project/dev-portfolio/thumbnail.png';
 
-	import superTabManagerThumbnail from '$lib/assets/images/project/super-tab-manager/thumbnail.png';
+	import superTabManagerThumbnail from '$lib/assets/images/project/super-tab-manager/thumbnail.jpg';
 
-	import stockGrabberThumbnail from '$lib/assets/images/project/stock-grabber/thumbnail.png';
+	import stockGrabberThumbnail from '$lib/assets/images/project/stock-grabber/thumbnail.jpg';
 
 	/** @type {{hasMoreButton?: boolean}} */
 	let { hasMoreButton = false } = $props();

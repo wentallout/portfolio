@@ -1,8 +1,7 @@
 <script>
-	import Copy from '~icons/ph/copy';
 	import SectionTitle from '$sections/SectionTitle.svelte';
-	import Wrench from '~icons/ph/wrench';
 	import Breadcrumb from '$components/layout/other/Breadcrumb.svelte';
+	import { Copy, Wrench } from '$lib/assets/icons/icons';
 	let baseFontSize = 16;
 	let pxInput = $state();
 	let remInput = $state();

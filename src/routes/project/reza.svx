@@ -8,7 +8,7 @@ date: '2022-09-14'
     import Image from '$components/common/Image.svelte';
 
     //images
-	import thumbnail from '$lib/assets/images/project/reza/thumbnail.png';
+	import thumbnail from '$lib/assets/images/project/reza/thumbnail.jpg';
    
     import feature from '$lib/assets/images/project/reza/feature.png';
     import role from '$lib/assets/images/project/reza/role.png';

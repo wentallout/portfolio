@@ -16,7 +16,14 @@
 	<MouseGlow />
 	<article class="project custom-border">
 		<div class="project__thumbnail">
-			<img class="" alt="" loading="lazy" src={thumbnail} />
+			<img
+				width="400"
+				height="400"
+				class=""
+				alt={projectName}
+				title={projectName}
+				loading="lazy"
+				src={thumbnail} />
 		</div>
 		<div class="project__info">
 			<div class="project__title">

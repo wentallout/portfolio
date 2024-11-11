@@ -1,5 +1,5 @@
 <script>
-	import ArrowLineUp from '~icons/ph/arrow-line-up';
+	import { ArrowLineUp } from '$lib/assets/icons/icons';
 
 	/** @type {{showOnPx?: number}} */
 	let { showOnPx = 150 } = $props();

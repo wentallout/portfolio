@@ -1,11 +1,13 @@
 <script>
-	import Phone from '~icons/ph/phone';
 	import ExLink from '$components/common/ExLink.svelte';
-	import Envelope from '~icons/ph/envelope';
 
-	import LinkedinLogo from '~icons/ph/linkedin-logo';
-	import InstagramLogo from '~icons/ph/instagram-logo';
-	import GitHubLogo from '~icons/ph/github-logo';
+	import {
+		LinkedinLogo,
+		Phone,
+		InstagramLogo,
+		GitHubLogo,
+		EnvelopeSimple
+	} from '$lib/assets/icons/icons';
 	/** @type {{style?: string}} */
 	let { style = '' } = $props();
 </script>
@@ -15,7 +17,7 @@
 		<Phone class="icon" color="var(--colorText)" height="32" width="32" />
 	</ExLink>
 	<ExLink ariaLabel="email" href="mailto:wentallout@gmail.com">
-		<Envelope class="icon" color="var(--colorText)" height="32" width="32" />
+		<EnvelopeSimple class="icon" color="var(--colorText)" height="32" width="32" />
 	</ExLink>
 	<ExLink ariaLabel="linkedin" href="https://www.linkedin.com/in/wentallout">
 		<LinkedinLogo class="icon" color="var(--colorText)" height="32" width="32" />

@@ -1,6 +1,6 @@
 <script>
+	import { ListBullets } from '$lib/assets/icons/icons';
 	import Toc from 'svelte-toc';
-	import ListBullets from '~icons/ph/list-bullets';
 </script>
 
 <Toc
@@ -29,7 +29,7 @@
 	keepActiveTocItemInView={false}
 	scrollBehavior="smooth">
 	{#snippet title()}
-		<span  class="toc-title text-base">
+		<span class="toc-title text-base">
 			<ListBullets color="var(--colorText)" />
 			Contents
 		</span>
