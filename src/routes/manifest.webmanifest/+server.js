@@ -1,5 +1,5 @@
 import website from '$lib/config.js';
-export const prerender = true;
+
 export const GET = function get({ setHeaders }) {
 	const { backgroundColor, description, siteShortTitle, siteTitle, themeColor } = website;
 	const manifest = {

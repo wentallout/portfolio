@@ -51,8 +51,11 @@ const config = {
 			$sections: './src/lib/sections',
 			$blogImages: './src/lib/assets/images/blog',
 			$projectImages: './src/lib/assets/images/project',
-	
+
 			$styles: './src/styles'
+		},
+		env: {
+			dir: '.'
 		}
 	}
 };

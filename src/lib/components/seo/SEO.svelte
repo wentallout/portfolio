@@ -1,9 +1,9 @@
 <script>
 	// ADD IMAGE
-	import defaultFeaturedImage from '$lib/assets/images/seo/1344x896.png?format=png';
-	import defaultOgImage from '$lib/assets/images/seo/1200x627.png?format=png';
-	import defaultOgSquareImage from '$lib/assets/images/seo/400x400.png?format=png';
-	import defaultTwitterImage from '$lib/assets/images/seo/800x418.png?format=png';
+	import defaultFeaturedImage from '$lib/assets/images/seo/1344x896.png';
+	import defaultOgImage from '$lib/assets/images/seo/1200x627.png';
+	import defaultOgSquareImage from '$lib/assets/images/seo/400x400.png';
+	import defaultTwitterImage from '$lib/assets/images/seo/800x418.png';
 	const defaultAlt = 'cover image';
 	//
 

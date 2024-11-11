@@ -1,5 +1,4 @@
 import config from '$lib/config';
-export const prerender = true;
 
 function addLeadingZero(num) {
 	num = num.toString();
