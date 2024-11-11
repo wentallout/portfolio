@@ -4,7 +4,7 @@
 	import { SoundCloud } from 'sveltekit-embed';
 	import MusicPlayer from '$components/music/MusicPlayer.svelte';
 	import PageTitle from '$components/common/PageTitle.svelte';
-	import { FileAudio } from '$lib/assets/icons/icons';
+	import { FileAudio, MusicNotes } from '$lib/assets/icons/icons';
 </script>
 
 <PageTitle pageTitle="Musics" />
