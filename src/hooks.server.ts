@@ -31,13 +31,7 @@ import { aj } from './lib/server/arcjet';
 // 	});
 // };
 
-export async function handle({
-	event,
-	resolve
-}: {
-	event: RequestEvent;
-	resolve: (event: RequestEvent) => Response | Promise<Response>;
-}) {
+export const handle: Handle = async ({ event, resolve }) => {
 	// Ignore routes that extend the Arcjet rules - they will call `.protect` themselves
 	const filteredRoutes = ['/api/rate-limited', '/rate-limited'];
 	if (filteredRoutes.includes(event.url.pathname)) {
@@ -51,9 +45,15 @@ export async function handle({
 		return error(403, 'Forbidden');
 	}
 
+	const response = await resolve(event, {
+		preload: ({ type }) => {
+			return type === 'font' || type === 'js' || type === 'css';
+		}
+	});
+
 	// Continue with the route
-	return resolve(event);
-}
+	return response;
+};
 
 const PUBLIC_DOMAIN = 'wentallout.io.vn';
 

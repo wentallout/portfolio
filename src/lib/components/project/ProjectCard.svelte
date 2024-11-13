@@ -12,14 +12,13 @@
 	} = $props();
 </script>
 
-<a class="project-link" href={linkToDetail}>
+<a href={linkToDetail}>
 	<MouseGlow />
 	<article class="project custom-border">
 		<div class="project__thumbnail">
 			<img
 				width="400"
 				height="400"
-				class=""
 				alt={projectName}
 				title={projectName}
 				loading="lazy"
@@ -50,10 +49,6 @@
 </a>
 
 <style lang="postcss">
-	.project-link {
-		position: relative;
-	}
-
 	.project {
 		display: flex;
 		position: relative;
@@ -61,7 +56,6 @@
 		flex-direction: column;
 		transition: var(--transition);
 		box-shadow: var(--boxShadow);
-
 		overflow: hidden;
 
 		&:hover {
@@ -71,6 +65,12 @@
 		&:active {
 			box-shadow: -1px 1px var(--colorPrimaryActive);
 			transform: translate(1px, -1px);
+		}
+	}
+
+	@media (min-width: 992px) {
+		.project {
+			flex-direction: row;
 		}
 	}
 

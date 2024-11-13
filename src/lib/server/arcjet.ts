@@ -2,7 +2,7 @@ import arcjet, { shield, detectBot } from '@arcjet/sveltekit';
 import { env } from '$env/dynamic/private';
 
 export const aj = arcjet({
-	key: process.env.ARCJET_KEY!,
+	key: env.ARCJET_KEY!,
 	rules: [
 		shield({ mode: 'LIVE' }),
 		detectBot({

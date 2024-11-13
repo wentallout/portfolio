@@ -25,7 +25,7 @@
 			<div class="list">
 				<div class="list__title">About</div>
 				<ul class="list__nav">
-					<li class="nav-list__link">Affordable websites and apps for small businesses</li>
+					<li class="nav-list__link">Affordable websites for your business.</li>
 					<li class="nav-list__link">
 						<a class="link" href="/about">More about me </a>
 					</li>

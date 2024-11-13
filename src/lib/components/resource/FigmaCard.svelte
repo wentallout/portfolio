@@ -3,12 +3,7 @@
 	import MouseGlow from '$components/common/MouseGlow.svelte';
 
 	/** @type {{title?: string, desc?: string, href?: string, thumbnailUrl?: string}} */
-	let {
-		title = 'insert title',
-		desc = 'author',
-		href = '',
-		thumbnailUrl = $bindable('')
-	} = $props();
+	let { title = 'insert title', desc = 'author', href = '', thumbnailUrl = '' } = $props();
 
 	$effect(() => {
 		if (href.includes('codepen.io')) {
@@ -21,9 +16,9 @@
 	<MouseGlow />
 	<div class="fcard custom-border">
 		<img
+			class="fcard__thumbnail"
 			width="800"
 			height="45"
-			class="fcard__thumbnail"
 			alt={title}
 			{title}
 			src={thumbnailUrl}

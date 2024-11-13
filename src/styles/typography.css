@@ -2,10 +2,10 @@
 	font-family: 'Chakra';
 	font-display: swap;
 	font-style: normal;
-	src: url('/fonts/chakra.woff2') format('woff2');
+	src: url($lib/fonts/chakra.woff2) format('woff2');
 }
 
-@font-face {
+/* @font-face {
 	font-family: 'Inter';
 	font-display: swap;
 	font-style: normal;
@@ -35,7 +35,19 @@
 	font-style: normal;
 	src: url('/fonts/inter-600.woff2') format('woff2');
 	font-weight: 600;
+} */
+
+@font-face 
+{
+	font-family: 'Inter Variable';
+  font-style: normal;
+  font-display: swap;
+  font-weight: 300 600;
+  src: url($lib/fonts/inter.woff2) format('woff2-variations');
+  unicode-range: U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+2074,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;
+
 }
+
 
 pre code {
 	font-feature-settings: normal;
@@ -58,7 +70,7 @@ pre code {
 
 
 :root {
-	--fontNormal: 'Inter', 'Inter-fallback';
+	--fontNormal: 'Inter Variable', 'Inter-fallback';
 	--fontFancy: 'Chakra', 'Chakra Petch-fallback';
 
 	/* FONT SIZE */
@@ -72,14 +84,14 @@ pre code {
 	--fontSize3XL: clamp(2.64rem, calc(1.93rem + 3.55vw), 5.26rem);
 
 	/* LINE HEIGHT */
-	--lineHeightXS: 160%;
-	--lineHeightSmall: 160%;
-	--lineHeightBase: 160%;
-	--lineHeightMid: 120%;
-	--lineHeightLarge: 120%;
-	--lineHeightXL: 120%;
-	--lineHeight2XL: 120%;
-	--lineHeight3XL: 120%;
+	--lineHeightXS: 1.8;
+	--lineHeightSmall: 1.8;
+	--lineHeightBase: 1.6;
+	--lineHeightMid: 1.6;
+	--lineHeightLarge: 1.2;
+	--lineHeightXL: 1.2;
+	--lineHeight2XL: 1.2;
+	--lineHeight3XL: 1.2;
 
 	--tracking-tighter: -0.05em;
 	--tracking-tight: -0.025em;
@@ -105,6 +117,8 @@ body {
 	-webkit-font-smoothing: antialiased;
 	font-family: var(--fontNormal);
 	font-weight: var(--fontWeightSmall);
+	font-size: var(--fontSizeSmall);
+	line-height: var(--lineHeightSmall);
 
 }
 

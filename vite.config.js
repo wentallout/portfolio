@@ -1,4 +1,5 @@
 import { sveltekit } from '@sveltejs/kit/vite';
+import { visualizer } from 'rollup-plugin-visualizer';
 
 import Icons from 'unplugin-icons/vite';
 import { imagetools } from 'vite-imagetools';
@@ -15,6 +16,10 @@ const config = {
 					format: 'webp'
 				});
 			}
+		}),
+		visualizer({
+			emitFile: true,
+			filename: 'stats.html'
 		})
 	],
 

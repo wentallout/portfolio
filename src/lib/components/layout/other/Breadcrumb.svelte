@@ -1,6 +1,6 @@
 <script>
 	import { page } from '$app/stores';
-	import { CaretRight } from '$lib/assets/icons/icons';
+	import { CaretRight, House } from '$lib/assets/icons/icons';
 
 	let crumbs = $state([]);
 
@@ -10,7 +10,6 @@
 		const segments = path.split('/').filter(Boolean);
 
 		crumbs = [
-			{ label: 'home', href: '/' },
 			...segments.map((segment, index) => ({
 				label: segment.replace(/-/g, ' '),
 				href: '/' + segments.slice(0, index + 1).join('/')
@@ -21,13 +20,19 @@
 
 <nav id="breadcrumb" class="breadcrumb text-small" aria-label="breadcrumb">
 	{#each crumbs as crumb, i}
+		{#if i === 0}
+			<a class="breadcrumb__clickable link" href="/">
+				<House />
+			</a>
+			<CaretRight />
+		{/if}
 		{#if i === crumbs.length - 1}
 			<div class="breadcrumb__unclickable">
 				{crumb.label}
 			</div>
 		{:else}
 			<a class="breadcrumb__clickable link" href={crumb.href}>{crumb.label}</a>
-			<CaretRight height="16" width="16" />
+			<CaretRight />
 		{/if}
 	{/each}
 </nav>
@@ -61,7 +66,7 @@
 	.breadcrumb__clickable {
 		font-weight: var(--fontWeightXS);
 		display: inline-flex;
-		color: var(--colorInfo);
+		color: var(--colorPrimary);
 	}
 
 	.breadcrumb__clickable:hover {
