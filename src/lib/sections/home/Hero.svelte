@@ -52,8 +52,7 @@
 						Tailor-made
 						<span id="hero__focus" class="hero__focus focus">
 							<span class="word">websites</span>
-							<span class="word">mobile apps</span>
-							<span class="word">games</span>
+							<span class="word">apps</span>
 						</span>
 						with precision.
 					</div>
