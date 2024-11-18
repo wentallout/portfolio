@@ -1,9 +1,10 @@
 <script>
 	import ExLink from '$components/common/ExLink.svelte';
 	import MouseGlow from '$components/common/MouseGlow.svelte';
+	import { fade } from 'svelte/transition';
 
 	/** @type {{title?: string, desc?: string, href?: string, thumbnailUrl?: string}} */
-	let { title = 'insert title', desc = 'author', href = '', thumbnailUrl = '' } = $props();
+	let { title = 'insert title', desc = 'author', href, thumbnailUrl } = $props();
 
 	$effect(() => {
 		if (href.includes('codepen.io')) {
@@ -12,17 +13,21 @@
 	});
 </script>
 
-<ExLink style="display:flex;position:relative;" {href}>
+<ExLink {href}>
 	<MouseGlow />
+
 	<div class="fcard custom-border">
-		<img
-			class="fcard__thumbnail"
-			width="800"
-			height="45"
-			alt={title}
-			{title}
-			src={thumbnailUrl}
-			loading="lazy" />
+		{#if thumbnailUrl && thumbnailUrl.length > 0}
+			<img
+				transition:fade
+				class="fcard__thumbnail"
+				width="800"
+				height="45"
+				alt={title}
+				{title}
+				src={thumbnailUrl}
+				loading="lazy" />
+		{/if}
 
 		<div class="fcard__info">
 			<div class="fcard__title text-small">{title}</div>

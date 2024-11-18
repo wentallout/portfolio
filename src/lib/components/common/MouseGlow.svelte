@@ -5,7 +5,8 @@
 	let parentHeight;
 	let size = 100; // Size of the glow in pixels
 	let glowElement;
-	let parentElement;
+	let parentEl;
+	
 	const updateGlowPosition = (e) => {
 		if (!parentElement) return;
 
@@ -24,13 +25,13 @@
 	};
 
 	onMount(() => {
-		parentElement = glowElement.parentElement;
-		parentElement.addEventListener('mousemove', updateGlowPosition);
-		parentElement.addEventListener('mouseleave', resetGlow);
+		parentEl = glowElement.parentElement;
+		parentEl.addEventListener('mousemove', updateGlowPosition);
+		parentEl.addEventListener('mouseleave', resetGlow);
 
 		return () => {
-			parentElement.removeEventListener('mousemove', updateGlowPosition);
-			parentElement.removeEventListener('mouseleave', resetGlow);
+			parentEl.removeEventListener('mousemove', updateGlowPosition);
+			parentEl.removeEventListener('mouseleave', resetGlow);
 		};
 	});
 </script>

@@ -12,9 +12,9 @@
 <div class="section">
 	<div class="section__title">
 		<div class="section__icon text-large">
-			{@render children?.({ sectionIcon, })}
+			{@render children?.({ sectionIcon })}
 		</div>
-		<h2 id={sectionTitle.toLowerCase()} class="text-xl section__text" data-title={sectionTitle}>
+		<h2 class="text-xl section__text" id={sectionTitle.toLowerCase()} data-title={sectionTitle}>
 			{sectionTitle}
 		</h2>
 	</div>
@@ -63,7 +63,7 @@
 
 	.section__text {
 		font-family: var(--fontFancy);
-		color: var(--colorText);
+		color: var(--colorPrimary);
 		position: relative;
 		--before-left: 4px;
 
@@ -74,11 +74,11 @@
 		content: attr(data-title);
 		height: 100%;
 		width: 100vw;
-		left: 3px;
+		left: 4px;
 		top: 3px;
 		-webkit-text-fill-color: transparent;
-		-webkit-text-stroke: 2px var(--colorPrimary);
-		color: var(--colorPrimary);
+		-webkit-text-stroke: 1px var(--colorPrimaryActive);
+		color: var(--colorPrimaryHover);
 		display: block;
 		position: absolute;
 		width: 100%;

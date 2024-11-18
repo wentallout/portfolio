@@ -14,6 +14,7 @@
 
 <style>
 	a {
-		display: contents;
+		display: block;
+		position: relative;
 	}
 </style>

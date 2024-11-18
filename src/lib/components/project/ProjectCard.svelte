@@ -12,7 +12,7 @@
 	} = $props();
 </script>
 
-<a href={linkToDetail}>
+<a class="project-container" href={linkToDetail}>
 	<MouseGlow />
 	<article class="project custom-border">
 		<div class="project__thumbnail">
@@ -49,6 +49,10 @@
 </a>
 
 <style lang="postcss">
+	.project-container {
+		position: relative;
+	}
+
 	.project {
 		display: flex;
 		position: relative;

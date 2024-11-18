@@ -1,4 +1,5 @@
 <div class="bg-deco"></div>
+<div class="bg-noise"></div>
 
 <style>
 	.bg-deco {
@@ -15,5 +16,22 @@
 		background-repeat: repeat;
 		height: 100dvh;
 		width: 100%;
+		pointer-events: none;
+	}
+
+	.bg-noise {
+		width: 100%;
+		height: 100%;
+		background-size: 109px;
+		background-repeat: repeat;
+		background-image: url(/images/noise.png);
+		opacity: 0.06;
+
+		position: fixed;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		top: 0;
+		pointer-events: none;
 	}
 </style>
