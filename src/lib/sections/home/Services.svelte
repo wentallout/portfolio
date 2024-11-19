@@ -93,7 +93,7 @@
 
 	.service {
 		--min: 30ch;
-		--gap: var(--spaceXL);
+		--gap: var(--space2XL);
 
 		display: grid;
 		grid-gap: var(--gap);

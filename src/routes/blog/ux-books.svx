@@ -7,7 +7,7 @@ categories:
 
 <script>
     import Image from '$components/common/Image.svelte';
-    import uxBooks from '$blogImages/uxBooks.jpeg';
+    import uxBooks from '$blogImages/uxBooks.webp';
 </script>
 
 ## Mega list 

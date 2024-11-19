@@ -81,6 +81,6 @@
 
 	.accordion__text {
 		color: var(--colorText);
-		padding: var(--spaceXS);
+		padding: var(--spaceXS) var(--spaceS);
 	}
 </style>

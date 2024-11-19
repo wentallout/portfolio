@@ -54,6 +54,7 @@ import Clock from '~icons/ph/clock';
 import ArrowCounterClockwise from '~icons/ph/arrow-counter-clockwise';
 import PaperPlaneRight from '~icons/ph/paper-plane-right';
 import EnvelopeSimple from '~icons/ph/envelope-simple';
+import ThumbsUp from '~icons/ph/thumbs-up';
 
 export {
 	GitHubLogo,
@@ -109,5 +110,6 @@ export {
 	Clock,
 	ArrowCounterClockwise,
 	PaperPlaneRight,
-	EnvelopeSimple
+	EnvelopeSimple,
+	ThumbsUp
 };

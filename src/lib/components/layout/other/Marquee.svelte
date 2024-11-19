@@ -1,13 +1,15 @@
 <script>
 	/** @type {{items?: any}} */
-	let { items = [
-		'Design Thinking',
-		'Usability',
-		'Accessibility',
-		'Information Architecture',
-		'Wireframe',
-		'Responsive Design'
-	] } = $props();
+	let {
+		items = [
+			'E-commerce',
+			'Landing page',
+			'Usability',
+			'Accessibility',
+			'Information Architecture',
+			'Responsive Design'
+		]
+	} = $props();
 </script>
 
 <div class="container">

@@ -9,7 +9,6 @@
 		MagnifyingGlassMinus
 	} from '$lib/assets/icons/icons';
 
-	/** @type {{pdfUrl: any}} */
 	let { pdfUrl } = $props();
 
 	let pdfDoc = null;

@@ -1,20 +1,20 @@
 {
-  "extends": "./.svelte-kit/tsconfig.json",
-  // "include": ["src/**/*.d.ts", "src/**/*.js", "src/**/*.svelte"],
-  "include": ["src/**/*"],
-  "compilerOptions": {
-    "target": "es2022",
-    "module": "es2022",
-    "lib": ["es2020", "DOM"],
-    "moduleResolution": "bundler",
-    "allowJs": true,
-    "checkJs": false,
-    "esModuleInterop": true,
-    "forceConsistentCasingInFileNames": false,
-    "noErrorTruncation": true,
-    "resolveJsonModule": true,
-    "skipLibCheck": true,
-    "sourceMap": true,
-    "strict": true
-  }
+	"extends": "./.svelte-kit/tsconfig.json",
+	// "include": ["src/**/*.d.ts", "src/**/*.js", "src/**/*.svelte"],
+	"include": ["src/**/*"],
+	"compilerOptions": {
+		"target": "es2022",
+		"module": "es2022",
+		"lib": ["es2020", "DOM"],
+		"moduleResolution": "bundler",
+		"allowJs": true,
+		"checkJs": false,
+		"esModuleInterop": true,
+		"forceConsistentCasingInFileNames": false,
+		"noErrorTruncation": true,
+		"resolveJsonModule": true,
+		"skipLibCheck": true,
+		"sourceMap": true,
+		"strict": true
+	}
 }

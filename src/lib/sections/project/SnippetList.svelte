@@ -4,6 +4,11 @@
 
 	let snippetList = [
 		{
+			title: 'Canva Magic Mouse effect',
+			href: 'https://codepen.io/Hyperplexed/pen/OJdpEME',
+			desc: 'cool sparkle that follows your mouse'
+		},
+		{
 			title: 'Auto Fit Text',
 			href: 'https://codepen.io/wentallout/pen/KKOBVxq',
 			desc: 'Text that fit to its container width.'

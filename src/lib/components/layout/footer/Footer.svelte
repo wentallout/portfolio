@@ -25,7 +25,7 @@
 			<div class="list">
 				<div class="list__title">About</div>
 				<ul class="list__nav">
-					<li class="nav-list__link">Affordable websites and apps for small businesses</li>
+					<li class="nav-list__link">Affordable websites for your business.</li>
 					<li class="nav-list__link">
 						<a class="link" href="/about">More about me </a>
 					</li>
@@ -131,6 +131,22 @@
 <Marquee />
 
 <style>
+	.footer {
+		/* FLEX */
+		display: flex;
+		flex-direction: column;
+		/* --- */
+
+		/* SIZE */
+		max-width: 100vw;
+		width: 100%;
+		padding: var(--spaceXL) 0;
+		/* --- */
+
+		position: relative;
+		overflow: hidden;
+		background-color: var(--colorBgLayout);
+	}
 	.gradient-bg {
 		position: absolute;
 		bottom: 0;
@@ -173,22 +189,6 @@
 
 	.link {
 		display: inline;
-	}
-
-	.footer {
-		/* FLEX */
-		display: flex;
-		flex-direction: column;
-		/* --- */
-
-		/* SIZE */
-		max-width: 100vw;
-		width: 100%;
-		padding: var(--spaceXL) 0;
-		/* --- */
-
-		position: relative;
-		overflow: hidden;
 	}
 
 	.footer__list {

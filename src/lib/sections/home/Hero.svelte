@@ -5,7 +5,7 @@
 	import { onMount } from 'svelte';
 
 	import { gsap } from 'gsap';
-	import { CalendarCheck } from '$lib/assets/icons/icons';
+	import { CalendarCheck, ThumbsUp } from '$lib/assets/icons/icons';
 	let focusText = ['website', 'app', 'game'];
 	let focusIndex = 0;
 
@@ -52,10 +52,9 @@
 						Tailor-made
 						<span id="hero__focus" class="hero__focus focus">
 							<span class="word">websites</span>
-							<span class="word">mobile apps</span>
-							<span class="word">games</span>
+							<span class="word">apps</span>
 						</span>
-						for everyone.
+						with precision.
 					</div>
 				</div>
 				<div class="hero__text text-base">
@@ -69,6 +68,7 @@
 							glowColor="var(--colorPrimary)"
 							label="Make it happen!"
 							labelColor="var(--colorBlack)">
+							<ThumbsUp />
 						</Button>
 					</a>
 

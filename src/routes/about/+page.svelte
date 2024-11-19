@@ -1,16 +1,11 @@
 <script>
 	import PageTitle from '$components/common/PageTitle.svelte';
-	import WorldMap from '$lib/assets/icons/WorldMap.svelte';
 
 	const currentYear = new Date().getFullYear();
 	const age = currentYear - 1999;
 </script>
 
 <PageTitle pageTitle="About Me" />
-
-<div class="about__map">
-	<WorldMap />
-</div>
 
 <section class="about">
 	<div class="about__info">
