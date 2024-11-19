@@ -1,6 +1,6 @@
 ---
 title: 'Make your websites sell better'
-date: 2024-06-22
+date: 2024-11-19
 categories:
     - frontend
     - seo
