@@ -99,6 +99,15 @@ pre code {
 	--tracking-wide: 0.025em;
 	--tracking-wider: 0.05em;
 	--tracking-widest: 0.1em;
+
+
+
+	//https://sinja.io/blog/get-maximum-out-of-your-font#contextual-alternates;
+	font-variant-ligatures: normal;
+
+
+	//https://sinja.io/blog/get-maximum-out-of-your-font#numerals;
+	font-variant-numeric: tabular-nums
 }
 
 /* @supports (font-variation-settings: normal) {

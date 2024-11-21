@@ -9,7 +9,7 @@ export const aj = arcjet({
 			mode: 'LIVE', // will block requests. Use "DRY_RUN" to log only
 			// Block all bots except search engine crawlers. See the full list of bots
 			// for other options: https://arcjet.com/bot-list
-			allow: ['CATEGORY:SEARCH_ENGINE']
+			allow: ['CATEGORY:SEARCH_ENGINE', 'GOOGLE_LIGHTHOUSE', 'AHREFS_CRAWLER']
 		})
 	]
 });

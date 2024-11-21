@@ -19,7 +19,7 @@
 1. Install dependencies with `npm install` (or `pnpm install` or `yarn`)
 2. Start a development server:
 
-```bash {"id":"01HXBNCQB894KEH9E91AMQVG50"}
+```bash
 npm run dev
 ```
 
@@ -113,6 +113,8 @@ Slug
 ⭐ RSS
 
 ⭐ Working Contact Form (need Netlify setup)
+
+⭐ Increased Defense against attacks: bot projectection, SQL injection, Cross-site scripting and more; works better than Web Application Firewall (WAF) [Read more](https://docs.arcjet.com/shield/concepts)
 
 ---
 
