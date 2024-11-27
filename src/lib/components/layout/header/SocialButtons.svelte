@@ -8,7 +8,7 @@
 		GitHubLogo,
 		EnvelopeSimple
 	} from '$lib/assets/icons/icons';
-	/** @type {{style?: string}} */
+
 	let { style = '' } = $props();
 </script>
 

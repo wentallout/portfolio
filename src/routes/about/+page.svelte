@@ -57,11 +57,6 @@
 </section>
 
 <style>
-	.about__map {
-		width: 100%;
-		max-height: 560px;
-	}
-
 	.about {
 		display: flex;
 		flex-direction: column;

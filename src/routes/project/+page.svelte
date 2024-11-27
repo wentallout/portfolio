@@ -1,12 +1,10 @@
 <script>
-	import ProjectList from '$sections/project/ProjectList.svelte';
 	import PageTitle from '$components/common/PageTitle.svelte';
-	import { ProjectorScreen, CodePen } from '$lib/assets/icons/icons';
-
-	import SectionTitle from '$sections/SectionTitle.svelte';
-
 	import SEO from '$components/seo/SEO.svelte';
+	import { CodePen, ProjectorScreen } from '$lib/assets/icons/icons';
+	import ProjectList from '$sections/project/ProjectList.svelte';
 	import SnippetList from '$sections/project/SnippetList.svelte';
+	import SectionTitle from '$sections/SectionTitle.svelte';
 
 	const breadcrumbs = [
 		{
@@ -20,9 +18,9 @@
 	];
 	const seoProps = {
 		breadcrumbs,
-		title: 'Project',
 		metadescription: 'Look at projects made by Khoa',
-		slug: 'project'
+		slug: 'project',
+		title: 'Project'
 	};
 </script>
 

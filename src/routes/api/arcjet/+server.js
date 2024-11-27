@@ -2,24 +2,24 @@ import arcjet, { detectBot, shield, tokenBucket } from '@arcjet/sveltekit';
 import { error, json } from '@sveltejs/kit';
 
 const aj = arcjet({
-	key: process.env.ARCJET_KEY, // Get your site key from https://app.arcjet.com
 	characteristics: ['ip.src'], // Track requests by IP
+	key: process.env.ARCJET_KEY, // Get your site key from https://app.arcjet.com
 	rules: [
 		// Shield protects your app from common attacks e.g. SQL injection
 		shield({ mode: 'LIVE' }),
 		// Create a bot detection rule
 		detectBot({
-			mode: 'LIVE', // Blocks requests. Use "DRY_RUN" to log only
 			// Block all bots except search engine crawlers. See
 			// https://arcjet.com/bot-list
-			allow: ['CATEGORY:SEARCH_ENGINE']
+			allow: ['CATEGORY:SEARCH_ENGINE'],
+			mode: 'LIVE' // Blocks requests. Use "DRY_RUN" to log only
 		}),
 		// Create a token bucket rate limit. Other algorithms are supported.
 		tokenBucket({
-			mode: 'LIVE',
-			refillRate: 5, // Refill 5 tokens per interval
+			capacity: 10, // Bucket capacity of 10 tokens
 			interval: 10, // Refill every 10 seconds
-			capacity: 10 // Bucket capacity of 10 tokens
+			mode: 'LIVE',
+			refillRate: 5 // Refill 5 tokens per interval
 		})
 	]
 });

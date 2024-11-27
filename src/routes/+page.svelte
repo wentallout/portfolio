@@ -1,13 +1,13 @@
 <script>
-	import Hero from '$sections/home/Hero.svelte';
-	import Services from '$sections/home/Services.svelte';
-	import GetInTouch from '$sections/home/GetInTouch.svelte';
-	import FeaturedProject from '$sections/home/Featured.svelte';
-	import Clients from '$sections/home/MyClients.svelte';
-	import WhatIUse from '$sections/home/WhatIUse.svelte';
 	import SEO from '$components/seo/SEO.svelte';
-	import Principles from '$sections/home/Principles.svelte';
 	import SaosContainer from '$lib/components/common/SaosContainer.svelte';
+	import FeaturedProject from '$sections/home/Featured.svelte';
+	import GetInTouch from '$sections/home/GetInTouch.svelte';
+	import Hero from '$sections/home/Hero.svelte';
+	import Clients from '$sections/home/MyClients.svelte';
+	import Principles from '$sections/home/Principles.svelte';
+	import Services from '$sections/home/Services.svelte';
+	import WhatIUse from '$sections/home/WhatIUse.svelte';
 
 	const breadcrumbs = [
 		{
@@ -18,9 +18,9 @@
 
 	const seoProps = {
 		breadcrumbs,
-		title: 'Home',
 		metadescription: 'Welcome to Portfolio of Khoa',
-		slug: ''
+		slug: '',
+		title: 'Home'
 	};
 </script>
 

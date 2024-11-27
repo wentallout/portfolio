@@ -258,3 +258,7 @@ p > code
 	margin: 4px;
 }
 
+pre[class*='language-'],
+code[class*='language-'] {
+	max-width: 100%;
+}

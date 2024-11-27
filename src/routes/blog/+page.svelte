@@ -1,16 +1,15 @@
 <script>
-	import LoadingBarSpinner from '$lib/assets/icons/LoadingBarSpinner.svelte';
-	import TextInput from '$components/input/TextInput.svelte';
-	import BlogListContainer from '$sections/blog/BlogListContainer.svelte';
 	import BlogCard from '$components/blog/BlogCard.svelte';
 	import PageTitle from '$components/common/PageTitle.svelte';
+	import TextInput from '$components/input/TextInput.svelte';
+	import { MagnifyingGlass } from '$lib/assets/icons/icons';
+	import LoadingBarSpinner from '$lib/assets/icons/LoadingBarSpinner.svelte';
+	import { allBlogStore } from '$lib/stores/blogStore';
+	import BlogListContainer from '$sections/blog/BlogListContainer.svelte';
 	import BlogTagsList from '$sections/blog/BlogTagsList.svelte';
 	import MiniSearch from 'minisearch';
-	import { paginate, DarkPaginationNav } from 'svelte-paginate';
 	import { onMount } from 'svelte';
-
-	import { allBlogStore } from '$lib/stores/blogStore';
-	import { MagnifyingGlass } from '$lib/assets/icons/icons';
+	import { DarkPaginationNav, paginate } from 'svelte-paginate';
 
 	/** @type {{data: any}} */
 	let { data } = $props();
@@ -24,15 +23,15 @@
 	let pageSize = 24;
 	let autoSuggest = $state();
 	let miniSearch = new MiniSearch({
-		fields: ['meta.title'],
-		storeFields: ['meta', 'path'],
-		idField: 'meta.title',
 		extractField: (document, fieldName) => {
 			return fieldName.split('.').reduce((doc, key) => doc && doc[key], document);
 		},
+		fields: ['meta.title'],
+		idField: 'meta.title',
 		searchOptions: {
 			fuzzy: 3
-		}
+		},
+		storeFields: ['meta', 'path']
 	});
 
 	onMount(() => {
@@ -53,7 +52,7 @@
 		autoSuggest = suggestData.map((item) => item.suggestion);
 	}
 
-	let paginatedItems = $derived(paginate({ items: filteredBlogs, pageSize, currentPage }));
+	let paginatedItems = $derived(paginate({ currentPage, items: filteredBlogs, pageSize }));
 </script>
 
 <PageTitle pageTitle="Blogs" />
@@ -62,10 +61,10 @@
 	<search>
 		<TextInput
 			autoSuggestList={autoSuggest}
-			list="search"
+			handleOnInput={handleSearchInput}
 			inputValue={searchTerm}
-			placeholder="Search blogs..."
-			handleOnInput={handleSearchInput}>
+			list="search"
+			placeholder="Search blogs...">
 			{#snippet icon()}
 				<span>
 					<MagnifyingGlass />
@@ -77,11 +76,11 @@
 
 	{#if filteredBlogs.length != 0}
 		<DarkPaginationNav
-			totalItems={filteredBlogs.length}
-			{pageSize}
 			{currentPage}
 			limit={1}
+			{pageSize}
 			showStepOptions={true}
+			totalItems={filteredBlogs.length}
 			on:setPage={(e) => (currentPage = e.detail.page)} />
 	{/if}
 
@@ -92,10 +91,10 @@
 			{#each paginatedItems as paginatedItem}
 				{#key paginatedItem}
 					<BlogCard
-						blogTitle={paginatedItem.meta.title}
-						blogLink={paginatedItem.path}
 						blogDate={paginatedItem.meta.date}
-						blogTags={paginatedItem.meta.categories} />
+						blogLink={paginatedItem.path}
+						blogTags={paginatedItem.meta.categories}
+						blogTitle={paginatedItem.meta.title} />
 				{/key}
 			{/each}
 		{/if}
@@ -103,11 +102,11 @@
 
 	{#if filteredBlogs.length != 0}
 		<DarkPaginationNav
-			totalItems={filteredBlogs.length}
-			{pageSize}
 			{currentPage}
 			limit={1}
+			{pageSize}
 			showStepOptions={true}
+			totalItems={filteredBlogs.length}
 			on:setPage={(e) => (currentPage = e.detail.page)} />
 	{/if}
 </section>

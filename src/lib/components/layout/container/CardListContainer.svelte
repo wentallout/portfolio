@@ -17,5 +17,7 @@
 		/* min() with 100% prevents overflow
   in extra narrow spaces */
 		grid-template-columns: repeat(auto-fit, minmax(min(100%, var(--min)), 1fr));
+
+		grid-auto-rows: 1fr;
 	}
 </style>

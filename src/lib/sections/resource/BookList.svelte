@@ -1,52 +1,51 @@
 <script>
-	import UIDesignPrinciples from '$lib/assets/images/book/UIDesignPrinciples.png?w=200&h=300';
+	import Book3D from '$components/resource/Book3D.svelte';
 	import DesignManual from '$lib/assets/images/book/DesignManual.png?w=200&h=300';
+	import JustEnoughResearch from '$lib/assets/images/book/JustEnoughResearch.png?w=200&h=300';
 	import NoBSGuideUX from '$lib/assets/images/book/NoBSGuideUX.png?w=200&h=300';
 	import Sprint from '$lib/assets/images/book/Sprint.png?w=200&h=300';
-	import JustEnoughResearch from '$lib/assets/images/book/JustEnoughResearch.png?w=200&h=300';
-	import Book3D from '$components/resource/Book3D.svelte';
+	import UIDesignPrinciples from '$lib/assets/images/book/UIDesignPrinciples.png?w=200&h=300';
 
 	let books = [
 		{
-			name: 'Just Enough Research',
+			bookUrl: 'https://terabox.com/s/1BXO6sku01d2yUm-IGH1l-A',
 			imgUrl: JustEnoughResearch,
-			bookUrl: 'https://terabox.com/s/1BXO6sku01d2yUm-IGH1l-A'
+			name: 'Just Enough Research'
 		},
 		{
-			name: 'UI Design Principles',
+			bookUrl: 'https://matix.li/56ca135e203d',
 			imgUrl: UIDesignPrinciples,
-			bookUrl: 'https://matix.li/56ca135e203d'
+			name: 'UI Design Principles'
 		},
 		{
-			name: 'Design Manual',
+			bookUrl: 'https://matix.li/92ee7d7f4bad',
 			imgUrl: DesignManual,
-			bookUrl: 'https://matix.li/92ee7d7f4bad'
+			name: 'Design Manual'
 		},
 		{
-			name: 'NoBSGuideUX',
+			bookUrl: 'https://matix.li/0794035223cd',
 			imgUrl: NoBSGuideUX,
-			bookUrl: 'https://matix.li/0794035223cd'
+			name: 'NoBSGuideUX'
 		},
-		{ name: 'Sprint', imgUrl: Sprint, bookUrl: 'https://matix.li/92648755b3ce' }
+		{ bookUrl: 'https://matix.li/92648755b3ce', imgUrl: Sprint, name: 'Sprint' }
 	];
 
-	import { Splide, SplideSlide, SplideTrack } from '@splidejs/svelte-splide';
-	import '@splidejs/svelte-splide/css';
-
 	import { AutoScroll } from '@splidejs/splide-extension-auto-scroll';
+	import '@splidejs/svelte-splide/css';
+	import { Splide, SplideSlide, SplideTrack } from '@splidejs/svelte-splide';
 
 	const options = {
-		rewind: true,
-		autoplay: false,
 		arrows: false,
-		height: 'fit-content',
-		perPage: 3,
-		perMove: 2,
-		pagination: true,
+		autoplay: false,
 		autoScroll: {
-			speed: 2,
-			rewind: true
-		}
+			rewind: true,
+			speed: 2
+		},
+		height: 'fit-content',
+		pagination: true,
+		perMove: 2,
+		perPage: 3,
+		rewind: true
 	};
 
 	const extensions = {

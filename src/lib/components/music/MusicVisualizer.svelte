@@ -1,6 +1,6 @@
 <script>
-	import { onMount } from 'svelte';
 	import AudioMotionAnalyzer from 'audiomotion-analyzer';
+	import { onMount } from 'svelte';
 	let visualizerEl;
 	import { audioPlayerEl, isPlaying } from '$lib/stores/musicStore.js';
 	let energy = $state();
@@ -14,19 +14,19 @@
 	function initializeVisualizer() {
 		if (audioPlayerEl && !audioMotion) {
 			audioMotion = new AudioMotionAnalyzer(visualizerEl, {
-				source: $audioPlayerEl,
-				mode: 4,
 				barSpace: 0,
-				ledBars: true,
 				colorMode: 'gradient',
-				showBgColor: false,
+				gradient: 'rainbow',
+				ledBars: true,
+				mirror: 1,
+				mode: 4,
+				onCanvasDraw: drawCallback,
 				overlay: true,
 				roundBars: true,
-				mirror: 1,
-				gradient: 'rainbow',
+				showBgColor: false,
 				showPeaks: false,
 				showScaleX: false,
-				onCanvasDraw: drawCallback
+				source: $audioPlayerEl
 			});
 		}
 	}
@@ -47,10 +47,10 @@
 	});
 </script>
 
-<div class="visualizer" bind:this={visualizerEl} class:visualizer--playing={$isPlaying}>
+<div bind:this={visualizerEl} class="visualizer" class:visualizer--playing={$isPlaying}>
 	<img
-		class="visualizer__logo"
 		style="--energyHeight:{energyHeight}px;"
+		class="visualizer__logo"
 		alt="music visualizer logo"
 		src="/images/brand-logo.svg" />
 

@@ -107,7 +107,7 @@ pre code {
 
 
 	//https://sinja.io/blog/get-maximum-out-of-your-font#numerals;
-	font-variant-numeric: tabular-nums
+	font-variant-numeric: tabular-nums;
 }
 
 /* @supports (font-variation-settings: normal) {

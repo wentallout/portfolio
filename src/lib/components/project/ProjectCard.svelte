@@ -1,14 +1,13 @@
 <script>
 	import MouseGlow from '$components/common/MouseGlow.svelte';
 
-	/** @type {{linkToDetail?: string, projectName?: string, what?: string, role?: string, output?: string, thumbnail: any}} */
 	let {
 		linkToDetail = '',
-		projectName = '',
-		what = '',
-		role = '',
 		output = '',
-		thumbnail
+		projectName = '',
+		role = '',
+		thumbnail,
+		what = ''
 	} = $props();
 </script>
 
@@ -17,12 +16,12 @@
 	<article class="project custom-border">
 		<div class="project__thumbnail">
 			<img
-				width="400"
-				height="400"
 				alt={projectName}
-				title={projectName}
+				height="400"
 				loading="lazy"
-				src={thumbnail} />
+				src={thumbnail}
+				title={projectName}
+				width="400" />
 		</div>
 		<div class="project__info">
 			<div class="project__title">

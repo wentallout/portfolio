@@ -4,7 +4,7 @@
 	import { fade } from 'svelte/transition';
 
 	/** @type {{title?: string, desc?: string, href?: string, thumbnailUrl?: string}} */
-	let { title = 'insert title', desc = 'author', href, thumbnailUrl } = $props();
+	let { desc = 'author', href, thumbnailUrl, title = 'insert title' } = $props();
 
 	$effect(() => {
 		if (href.includes('codepen.io')) {
@@ -13,20 +13,20 @@
 	});
 </script>
 
-<ExLink {href}>
+<ExLink style="display:flex;position:relative" {href}>
 	<MouseGlow />
 
 	<div class="fcard custom-border">
 		{#if thumbnailUrl && thumbnailUrl.length > 0}
 			<img
-				transition:fade
 				class="fcard__thumbnail"
-				width="800"
-				height="45"
 				alt={title}
-				{title}
+				height="45"
+				loading="lazy"
 				src={thumbnailUrl}
-				loading="lazy" />
+				{title}
+				width="800"
+				transition:fade />
 		{/if}
 
 		<div class="fcard__info">
@@ -43,7 +43,8 @@
 		border-radius: var(--borderRadius);
 		overflow: hidden;
 		flex-grow: 1;
-		background-color: var(--colorBgContainer);
+
+		background: var(--colorBgGradientSubtle);
 
 		&:hover {
 			box-shadow: -5px 5px var(--colorPrimaryHover);
