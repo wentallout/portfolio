@@ -18,7 +18,6 @@
 
 <footer class="footer text-small">
 	<StarBg />
-	<div class="gradient-bg"></div>
 
 	<div class="pad">
 		<div class="footer__list">
@@ -147,14 +146,7 @@
 		overflow: hidden;
 		background-color: var(--colorBgLayout);
 	}
-	.gradient-bg {
-		position: absolute;
-		bottom: 0;
-		left: 0;
-		width: 100%;
-		height: 40%;
-		pointer-events: none;
-	}
+	
 
 	.pad {
 		z-index: 3;

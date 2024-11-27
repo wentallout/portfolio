@@ -1,26 +1,22 @@
 <script>
-	import { onMount } from 'svelte';
-	import { musicList, isPlaying, audioPlayerEl, formatMusicTime } from '$lib/stores/musicStore.js';
-
+	import MusicVisualizer from '$components/music/MusicVisualizer.svelte';
 	import {
-		PlayFill,
 		Download,
+		Pause,
+		PlayFill,
 		SkipBack,
 		SkipForward,
-		Pause,
 		SpeakerHigh,
 		SpeakerX
 	} from '$lib/assets/icons/icons';
-
-	import MusicVisualizer from '$components/music/MusicVisualizer.svelte';
+	import { audioPlayerEl, formatMusicTime, isPlaying, musicList } from '$lib/stores/musicStore.js';
+	import { onMount } from 'svelte';
 	import { slide } from 'svelte/transition';
 
 	let currentSongIndex = $state(0);
-
 	let duration = $state();
 	let currentTime = $state();
 	let volume = $state(0.4);
-
 	let volumeEle = $state();
 	let seekBarEle = $state();
 	let muted = $state();
@@ -88,18 +84,18 @@
 	bind:this={$audioPlayerEl}
 	autoplay="false"
 	crossorigin="anonymous"
+	onended={next}
 	src={$musicList[currentSongIndex].audio}
 	bind:muted
 	bind:currentTime
 	bind:duration
-	bind:volume
-	onended={next}></audio>
+	bind:volume></audio>
 
 <div class="player">
 	<div class="player__current">
 		<div class="info">
 			{#if $isPlaying}
-				<div transition:slide class="info__name text-xl">{$musicList[currentSongIndex].name}</div>
+				<div class="info__name text-xl" transition:slide>{$musicList[currentSongIndex].name}</div>
 			{/if}
 
 			<div class="info__time">
@@ -110,9 +106,9 @@
 					list="marker"
 					max="100"
 					min="0"
+					oninput={handleSeekBar}
 					step="any"
 					type="range"
-					oninput={handleSeekBar}
 					value={seekBarValue} />
 				<div class="info__duration text-base">{formatMusicTime(duration)}</div>
 			</div>
@@ -120,27 +116,27 @@
 
 		<div class="player__btns">
 			<div class="controls">
-				<button class="mp-btn other-btn" type="button" onclick={prev}>
+				<button class="mp-btn other-btn" onclick={prev} type="button">
 					<SkipBack color="var(--colorTextQuaternary)" height="24" width="24" />
 				</button>
 
 				{#if $isPlaying}
-					<button class="mp-btn play-btn" type="button" onclick={pauseMusic}>
+					<button class="mp-btn play-btn" onclick={pauseMusic} type="button">
 						<Pause color="var(--colorBlack)" height="24" width="24" />
 					</button>
 				{:else}
-					<button class="mp-btn play-btn" type="button" onclick={playMusic}>
+					<button class="mp-btn play-btn" onclick={playMusic} type="button">
 						<PlayFill color="var(--colorBlack)" height="24" width="24" />
 					</button>
 				{/if}
 
-				<button class="mp-btn other-btn" type="button" onclick={next}>
+				<button class="mp-btn other-btn" onclick={next} type="button">
 					<SkipForward color="var(--colorTextQuaternary)" height="24" width="24" />
 				</button>
 			</div>
 
 			<div class="player__volume">
-				<button class="mute__btn" type="button" onclick={mute} onkeydown={mute}>
+				<button class="mute__btn" onclick={mute} onkeydown={mute} type="button">
 					{#if muted}
 						<SpeakerX color="var(--colorTextQuaternary)" height="24" width="24" />
 					{:else}
@@ -152,10 +148,10 @@
 					id="volume-control"
 					max="100"
 					min="0"
+					oninput={handleVolume}
 					step="any"
 					type="range"
-					value={volume * 100}
-					oninput={handleVolume} />
+					value={volume * 100} />
 			</div>
 		</div>
 	</div>
@@ -164,8 +160,8 @@
 		{#each $musicList as music, i}
 			<button
 				class={i == currentSongIndex ? 'cs song-active' : 'cs song'}
-				type="button"
-				onclick={() => setSong(i)}>
+				onclick={() => setSong(i)}
+				type="button">
 				<div class="song-name text-small">{music.name}</div>
 				<a class="download" download={$musicList[i].audio} href={$musicList[i].audio}>
 					<Download color="currentColor" height="16" width="16" />

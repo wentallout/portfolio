@@ -42,6 +42,7 @@ Visitors can also comment on your blogs using GitHub discussion (you might want 
 - HTML: Semantic and SEO-focused
 - CSS: Vanilla CSS with BEM naming scheme
 - JS: VanillaJS/Svelte
+- Linting optimized for aesthetics: alphabetical style [perfectionist.dev](https://perfectionist.dev/)
 - [eslint-plugin-svelte](https://sveltejs.github.io/eslint-plugin-svelte/user-guide)
 
 ## 💅 Styling
@@ -88,7 +89,7 @@ Slug
 ⭐ Font Optimization
 
 - Self-host: [Google Web Font Helper](https://gwfh.mranftl.com/fonts)
-- font-family: [Inter](https://rsms.me/inter/)
+- font-family: [Inter](https://rsms.me/inter/). [Read more about Inter](https://beautifulwebtype.com/inter)
 - Subset: [Subset Variable Font Guide](https://barrd.dev/article/create-a-variable-font-subset-for-smaller-file-size/)
 - Reduce Font CLS (Cumulative Layout Shift): [Automatic font matching](https://deploy-preview-15--upbeat-shirley-608546.netlify.app/perfect-ish-font-fallback)
 

@@ -1,18 +1,17 @@
 <script>
-	import SectionTitle from '$sections/SectionTitle.svelte';
-
-	import { SoundCloud } from 'sveltekit-embed';
-	import MusicPlayer from '$components/music/MusicPlayer.svelte';
 	import PageTitle from '$components/common/PageTitle.svelte';
+	import MusicPlayer from '$components/music/MusicPlayer.svelte';
 	import { FileAudio, MusicNotes } from '$lib/assets/icons/icons';
+	import SectionTitle from '$sections/SectionTitle.svelte';
+	import { SoundCloud } from 'sveltekit-embed';
 </script>
 
 <PageTitle pageTitle="Musics" />
 
 <section>
 	<SectionTitle
-		sectionTitle="Music Player"
-		sectionDesc="Now you can listen and download Khoa's favorite songs. Live Radio included. Enjoy!">
+		sectionDesc="Now you can listen and download Khoa's favorite songs. Live Radio included. Enjoy!"
+		sectionTitle="Music Player">
 		{#snippet children({ sectionIcon })}
 			<FileAudio {...sectionIcon} />
 		{/snippet}

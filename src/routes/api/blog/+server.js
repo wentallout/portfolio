@@ -1,5 +1,5 @@
-import { fetchMarkdownBlogs } from '$lib/utils/blog.js';
 import { json } from '@sveltejs/kit';
+import { fetchMarkdownBlogs } from '$lib/utils/blog.js';
 
 export const GET = async () => {
 	const allBlogs = await fetchMarkdownBlogs();
@@ -16,5 +16,3 @@ export const GET = async () => {
 
 	return json(indexedBlogs);
 };
-
-

@@ -8,12 +8,12 @@ export const GET = async ({ params }) => {
 	let projectSlugs = await getProjectSlugs();
 
 	return await sitemap.response({
+		excludeRoutePatterns: ['/blog/category/*'],
 		origin: 'https://wentallout.io.vn',
 		page: params.page,
 		paramValues: {
 			'/blog/[slug]': blogSlugs,
 			'/project/[slug]': projectSlugs
-		},
-		excludeRoutePatterns: ['/blog/category/*']
+		}
 	});
 };

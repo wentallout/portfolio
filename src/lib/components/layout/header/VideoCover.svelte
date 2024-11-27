@@ -1,8 +1,8 @@
 <script>
-	import HeaderLogo from '$components/layout/header/HeaderLogo.svelte';
-	import { fade } from 'svelte/transition';
-	import { theme } from '$lib/stores/themeStore.js';
 	import { page } from '$app/stores';
+	import HeaderLogo from '$components/layout/header/HeaderLogo.svelte';
+	import { theme } from '$lib/stores/themeStore.js';
+	import { fade } from 'svelte/transition';
 
 	let showCover = $state(true);
 

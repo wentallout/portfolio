@@ -30,10 +30,9 @@ const config = {
 	preview: {
 		port: '4000'
 	},
-	css: {
-		transformer: 'lightningcss',
-		devSourcemap: true
-	},
+	// css: {
+	// 	transformer: 'lightningcss'
+	// },
 	build: {
 		cssMinify: 'lightningcss'
 	}

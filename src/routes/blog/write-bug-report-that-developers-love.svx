@@ -1,0 +1,83 @@
+---
+title: Write Bug Reports That Developers Love!
+date: 2024-11-26
+categories:
+    - testing
+---
+
+## 🛠️ 1. Title
+
+Short and specific: a clear summary of the bug.
+
+It should also be searchable, so developers can find it in a pinch.
+
+### Tips on writing great titles:
+
+- 1. Keep it simple, but descriptive.
+- 2. Don't abbreviate.
+- 3. Make it searchable.
+- 4. Focus on the technical problem.
+- 5. Highlight the specific feature/component you have issues with.
+
+## 🛠️ 2. Steps to reproduce
+
+Describe how you found the bug, so the developer can try to reproduce it.
+
+### Tips on writing reproducible steps:
+
+- 1. Use a numbered list so it's easy to follow.
+- 2. This is your chance to be comprehensive and (reasonably) verbose. Don't leave out any details!
+
+## 🛠️ 3. Expected vs actual result
+
+Take some time to explain what should happen vs. what actually happened. If you just describe the bug, some people might think you're describing the expected behavior.
+
+### Tips for writing expected vs. actual results:
+
+- 1. Use a direct comparison format. For example, “The button should turn green” vs. “The button is turning blue”.
+- 2. Be precise. Simply stating “it went wrong” instead of “the page loads indefinitely” means you are leaving out very valuable information!
+
+## 🛠️ 4. Screenshot or Proof
+
+Screenshots and annotations help developers visualize the bug, and pinpoint its location on the page.
+
+### Tips on taking great screenshots
+
+- 1. Annotations go a long way towards driving your point across.
+- 2. Highlight the problematic element. Don't be ambiguous.
+- 3. Use big fonts, different colors, etc.—the bug needs to be even more obvious here than in your summary.
+- 4. For complicated issues, record a short video! This adds a ton of helpful context when trying to reproduce bugs.
+
+## 🛠️ 5. Priority
+
+The urgency and potential impact of the bug. Determines how quickly it needs to be fixed.
+
+### How to determine priority/severity:
+
+- 1. Critical: blocking bugs that directly prevent business. Example: a checkout page not loading.
+- 2. High: affects major features, but non-breaking. E.g.: the search bar on an e-commerce website.
+- 3. Medium: noticeable bugs that disrupt normal use. E.g.: broken link, long loading times.
+- 4. Low: small issues and enhancements: typos, missing images…
+
+## 🛠️ 6. Environment
+
+For developers to reproduce and fix your bug, they'll need to know your browser version, screen size, operating system… Some bugs only occur within specific environments.
+
+### How to find your environment info:
+
+- 1. Browser and version: look for a “Help” or “About” option in your browser's menu.
+- 2. Operating system: on PC, press the Windows key + Pause/break. On a Mac, click the Apple logo and choose “About this Mac”.
+- 3. Screen size: look in your computer's display settings, or search online for “screen resolution” along with your device model.
+
+## 🛠️ 7. Console logs
+
+This is where your web browser **shows errors or warnings**. Console logs can help developers figure out what went wrong.
+
+### How to access your console logs
+
+- 1. Right-click the page, select “Inspect” or “Inspect Element”, then click on the “Console” tab.
+- 2. Try to make the bug happen again and see if any messages pop up there.
+
+## Reference
+
+https://www.perfectbugreport.io

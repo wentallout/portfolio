@@ -1,41 +1,27 @@
 import adapter from '@sveltejs/adapter-netlify';
-import { sveltePreprocess } from 'svelte-preprocess';
 import { mdsvex } from 'mdsvex';
-import rehypeSlug from 'rehype-slug';
-import rehypeExternalLinks from 'rehype-external-links';
 import rehypeAutolinkHeadings from 'rehype-autolink-headings';
-
-import remarkUnwrapImages from 'remark-unwrap-images';
-import sequence from 'svelte-sequential-preprocessor';
+import rehypeExternalLinks from 'rehype-external-links';
+import rehypeSlug from 'rehype-slug';
 import remarkGfm from 'remark-gfm';
 import remarkSectionize from 'remark-sectionize';
+import remarkUnwrapImages from 'remark-unwrap-images';
+import { sveltePreprocess } from 'svelte-preprocess';
+import sequence from 'svelte-sequential-preprocessor';
 
 // torch_eYAF6gD0idBcJcmEPVyxVRVmuAHTrcP9mV8s7vTl
 
 /** @type {import('@sveltejs/kit').Config} */
 const config = {
-	preprocess: sequence([
-		sveltePreprocess(),
-		mdsvex({
-			extensions: ['.svelte.md', '.md', '.svx'],
-			remarkPlugins: [remarkUnwrapImages, remarkGfm, remarkSectionize],
-			rehypePlugins: [
-				rehypeSlug,
-				[
-					rehypeExternalLinks,
-					{ rel: ['nofollow', 'noopener', 'noreferrer', 'external'], target: '_blank' }
-				],
-				[rehypeAutolinkHeadings, { behavior: 'wrap' }]
-			]
-		})
-	]),
 	extensions: ['.svelte', '.svx'],
 	kit: {
 		adapter: adapter({ edge: false }),
-		prerender: {
-			crawl: true,
-			handleHttpError: 'warn',
-			entries: ['*']
+		alias: {
+			$blogImages: './src/lib/assets/images/blog',
+			$components: './src/lib/components',
+			$projectImages: './src/lib/assets/images/project',
+			$sections: './src/lib/sections',
+			$styles: './src/styles'
 		},
 		// csp: {
 		// 	mode: 'hash',
@@ -46,18 +32,30 @@ const config = {
 		csrf: {
 			checkOrigin: true
 		},
-		alias: {
-			$components: './src/lib/components',
-			$sections: './src/lib/sections',
-			$blogImages: './src/lib/assets/images/blog',
-			$projectImages: './src/lib/assets/images/project',
-
-			$styles: './src/styles'
-		},
 		env: {
 			dir: '.'
+		},
+		prerender: {
+			crawl: true,
+			entries: ['*'],
+			handleHttpError: 'warn'
 		}
-	}
+	},
+	preprocess: sequence([
+		sveltePreprocess(),
+		mdsvex({
+			extensions: ['.svelte.md', '.md', '.svx'],
+			rehypePlugins: [
+				rehypeSlug,
+				[
+					rehypeExternalLinks,
+					{ rel: ['nofollow', 'noopener', 'noreferrer', 'external'], target: '_blank' }
+				],
+				[rehypeAutolinkHeadings, { behavior: 'wrap' }]
+			],
+			remarkPlugins: [remarkUnwrapImages, remarkGfm, remarkSectionize]
+		})
+	])
 };
 
 export default config;

@@ -1,19 +1,18 @@
 <script>
-	import Button from '$components/button/Button.svelte';
-
 	import { page } from '$app/stores';
+	import Button from '$components/button/Button.svelte';
 	import { House } from '$lib/assets/icons/icons';
 
 	let customMessage = $state('');
 
 	switch ($page.status) {
-		case 404:
-			customMessage =
-				"Oops! The page you're looking for cannot be found. Please check the URL or try searching for what you need.";
-			break;
 		case 403:
 			customMessage =
 				"Sorry, you don't have permission to access this page. Please contact the website administrator for assistance.";
+			break;
+		case 404:
+			customMessage =
+				"Oops! The page you're looking for cannot be found. Please check the URL or try searching for what you need.";
 			break;
 		case 500:
 			customMessage =
@@ -38,12 +37,12 @@
 		<div class="detail text-small">
 			{customMessage}
 		</div>
-		<a class="back" rel="external" href="/">
+		<a class="back" href="/" rel="external">
 			<Button
+				backgroundColor="var(--colorPrimary)"
 				label="Take Me Home"
-				labelColor="var(--colorBlack)"
-				backgroundColor="var(--colorPrimary)">
-				<House width="16" height="16" />
+				labelColor="var(--colorBlack)">
+				<House height="16" width="16" />
 			</Button>
 		</a>
 	</div>
