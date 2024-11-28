@@ -1,22 +1,22 @@
-const autoprefixer = require('autoprefixer');
-const postcssPresetEnv = require('postcss-preset-env');
 const postcssGlobalData = require('@csstools/postcss-global-data');
+const autoprefixer = require('autoprefixer');
 const atImport = require('postcss-import');
+const postcssPresetEnv = require('postcss-preset-env');
 
 const config = {
 	plugins: [
-		postcssGlobalData({
-			files: ['src/styles/global-postcss.css']
-		}),
+		// postcssGlobalData({
+		// 	files: ['src/styles/global-postcss.css']
+		// }),
 		atImport(),
 		postcssPresetEnv({
-			stage: 3,
 			features: {
-				'nesting-rules': true,
+				'cascade-layers': false,
 				'custom-media-queries': true,
 				'media-query-ranges': true,
-				'cascade-layers': false
-			}
+				'nesting-rules': true
+			},
+			stage: 3
 		}),
 		autoprefixer
 	]
