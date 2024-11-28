@@ -22,13 +22,27 @@
 {#if showCover}
 	<div class="cover">
 		{#if $theme === 'dark'}
-			<video class="video" autoplay loop muted playsinline transition:fade={{ duration: 300 }}>
+			<video
+				class="video"
+				autoplay
+				fetchpriority="high"
+				loop
+				muted
+				playsinline
+				transition:fade={{ duration: 300 }}>
 				<source src="/videos/dark.webm" type="video/webm" />
 			</video>
 		{/if}
 
 		{#if $theme === 'light'}
-			<video class="video" autoplay loop muted playsinline transition:fade={{ duration: 300 }}>
+			<video
+				class="video"
+				autoplay
+				fetchpriority="high"
+				loop
+				muted
+				playsinline
+				transition:fade={{ duration: 300 }}>
 				<source src="/videos/light.webm" type="video/webm" />
 			</video>
 		{/if}
