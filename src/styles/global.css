@@ -1,10 +1,9 @@
 @import url('reset.css');
-@import url('spacing.css');
 @import url('typography.css');
+@import url('spacing.css');
 @import url('color.css');
 @import url('animation.css');
 @import url('other.css');
-@import url('reduce-motion.css');
 
 :root {
 	text-underline-offset: 4px;
