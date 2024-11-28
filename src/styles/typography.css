@@ -37,37 +37,34 @@
 	font-weight: 600;
 } */
 
-@font-face 
-{
+@font-face {
 	font-family: 'Inter Variable';
-  font-style: normal;
-  font-display: swap;
-  font-weight: 300 600;
-  src: url($lib/fonts/inter.woff2) format('woff2-variations');
-  unicode-range: U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+2074,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;
-
+	font-style: normal;
+	font-display: swap;
+	font-weight: 300 600;
+	src: url($lib/fonts/inter.woff2) format('woff2-variations');
+	unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304,
+		U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF,
+		U+FFFD;
 }
-
 
 pre code {
 	font-feature-settings: normal;
 }
 
 @font-face {
-    font-family: "Inter-fallback";
-    size-adjust: 107.00%;
-    ascent-override: 90%;
-    src: local("Arial");
+	font-family: 'Inter-fallback';
+	size-adjust: 107%;
+	ascent-override: 90%;
+	src: local('Arial');
 }
 
 @font-face {
-    font-family: "Chakra Petch-fallback";
-    size-adjust: 102.69%;
-    ascent-override: 101%;
-    src: local("Arial");
+	font-family: 'Chakra Petch-fallback';
+	size-adjust: 102.69%;
+	ascent-override: 101%;
+	src: local('Arial');
 }
-
-
 
 :root {
 	--fontNormal: 'Inter Variable', 'Inter-fallback';
@@ -100,13 +97,8 @@ pre code {
 	--tracking-wider: 0.05em;
 	--tracking-widest: 0.1em;
 
-
-
-	//https://sinja.io/blog/get-maximum-out-of-your-font#contextual-alternates;
 	font-variant-ligatures: normal;
 
-
-	//https://sinja.io/blog/get-maximum-out-of-your-font#numerals;
 	font-variant-numeric: tabular-nums;
 }
 
@@ -128,7 +120,6 @@ body {
 	font-weight: var(--fontWeightSmall);
 	font-size: var(--fontSizeSmall);
 	line-height: var(--lineHeightSmall);
-
 }
 
 .text-xs {
