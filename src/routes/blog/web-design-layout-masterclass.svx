@@ -1,0 +1,63 @@
+---
+title: Master Web Design layout in 5 minutes
+date: 2024-11-28
+categories:
+    - ux
+    - frontend
+---
+
+## Data to Information
+
+Avoid copying raw data into designs. Transform dense content into organized, digestible visuals like infographics.
+
+## Hierarchy Importance
+
+Maintain a balance between visual weight by using up to five clear hierarchies in your design.
+
+## Visual Direction
+
+Use colors and layouts to guide the user's eye logically through the design.
+
+## Visual Balance
+
+Achieve both symmetrical and asymmetrical balance within compositions for interest and engagement.
+
+## Clarity of Intention
+
+Be bold or subtle but avoid ambiguity in design choices to communicate effectively.
+
+## Natural Design Elements
+
+Draw inspiration from nature to create visually pleasing designs that resonate with users.
+
+## Engagement through Interaction
+
+Incorporate animations and interactions to keep users engaged with your design.
+
+## Use the Whole Canvas
+
+Make full use of the available space in web design for a complete feel.
+
+## Attention to Details
+
+Small details matter significantly in creating polished and refined layouts.
+
+Be pixel-perfect.
+
+## Grid Structure
+
+Use grids for organization, structure, and consistent alignment in design. Grids give your design a "rhythm"
+
+## VERY IMPORANT: Practice and Experiment
+
+Spend time actively creating layouts rather than just learning through tutorials.
+
+## STEAL MORE: Inspirational Borrowing
+
+Learning from other designs can enhance your style, as long as you don't replicate them exactly.
+
+## Reference
+
+https://www.youtube.com/watch?v=mK3aS4BiE2s
+
+

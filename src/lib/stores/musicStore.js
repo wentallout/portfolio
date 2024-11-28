@@ -6,27 +6,6 @@ export const audioPlayerEl = writable();
 
 export const musicList = writable([
 	{
-		audio: '/ringtones/MemoryReboot.flac',
-		name: 'Memory Reboot'
-	},
-	{
-		audio: '/ringtones/Fluxxwave.flac',
-		name: 'Fluxxwave'
-	},
-	{
-		audio: '/ringtones/ChaChaCha.flac',
-		name: 'Cha Cha Cha'
-	},
-	{
-		audio: '/ringtones/IllDoIt.mp3',
-		name: 'Ill Do It'
-	},
-	{
-		audio: '/ringtones/9Mm.flac',
-		name: '9Mm'
-	},
-
-	{
 		audio: 'https://stream.nightride.fm/nightride.ogg',
 		name: '[Radio] Nightride FM'
 	},

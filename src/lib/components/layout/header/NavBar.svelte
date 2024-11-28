@@ -1,12 +1,11 @@
 <script>
-	import SocialButtons from '$lib/components/layout/header/SocialButtons.svelte';
+	import { page } from '$app/stores';
+	import ThemeSwitcher from '$components/button/ThemeSwitcher.svelte';
+	import SocialButtons from '$components/layout/header/SocialButtons.svelte';
 	import VanishingHeader from '$components/layout/header/VanishingHeader.svelte';
+	import { List, X } from '$lib/assets/icons/icons';
 	import { navItems } from '$lib/config.js';
 	import { onMount } from 'svelte';
-	import { page } from '$app/stores';
-
-	import ThemeSwitcher from '$lib/components/button/ThemeSwitcher.svelte';
-	import { List, X } from '$lib/assets/icons/icons';
 	let scrollY = $state();
 	let navOverlayEle = $state();
 
@@ -28,7 +27,7 @@
 <svelte:window bind:scrollY />
 
 <VanishingHeader duration="300ms" offset={50} tolerance={5}>
-	<header class="header" bind:this={headerEle}>
+	<header bind:this={headerEle} class="header">
 		<ThemeSwitcher />
 		<nav class="nav pad" class:nav--scrolldown={scrollY > 0} aria-label="primary menu">
 			<ul class="navlist">
@@ -44,9 +43,9 @@
 		<button
 			class="hamburger"
 			aria-label="navigation button"
-			type="button"
 			onclick={openNav}
-			onkeydown={openNav}>
+			onkeydown={openNav}
+			type="button">
 			<List color="var(--colorText)" height="32" width="32" />
 		</button>
 	</header>
@@ -56,9 +55,9 @@
 	<button
 		class="closebtn"
 		aria-label="close nav menu"
-		type="button"
 		onclick={closeNav}
-		onkeydown={closeNav}>
+		onkeydown={closeNav}
+		type="button">
 		<X color="var(--colorBlack)" height="32" width="32" />
 	</button>
 	<div class="overlay-content">
@@ -95,6 +94,7 @@
 		border-bottom-right-radius: var(--borderRadius);
 		transition: background var(--transition);
 		background: transparent;
+		will-change: padding;
 	}
 
 	.nav--scrolldown {

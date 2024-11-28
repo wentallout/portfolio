@@ -1,16 +1,56 @@
 <script>
-	import Time from 'svelte-time';
-
 	import ExLink from '$components/common/ExLink.svelte';
 	import Tag from '$components/common/Tag.svelte';
-
 	import Breadcrumb from '$components/layout/other/Breadcrumb.svelte';
-
-	import { onMount } from 'svelte';
 	import { CalendarBlank, Pen } from '$lib/assets/icons/icons';
+	import { onMount } from 'svelte';
 
 	/** @type {{data: any, hasCategory?: boolean}} */
 	let { data, hasCategory = false } = $props();
+
+	function formatRelativeTime(dateString) {
+		const date = new Date(dateString);
+		const now = new Date();
+		now.setHours(0, 0, 0, 0); // reset time to midnight
+		date.setHours(0, 0, 0, 0); // reset time to midnight
+
+		const diff = now - date;
+
+		const units = [
+			{ factor: 31536000000, name: 'year' }, // 1000 * 60 * 60 * 24 * 365
+			{ factor: 2628000000, name: 'month' }, // 1000 * 60 * 60 * 24 * 30
+			{ factor: 86400000, name: 'day' } // 1000 * 60 * 60 * 24
+		];
+
+		for (const unit of units) {
+			const value = Math.floor(diff / unit.factor);
+			if (value >= 1) {
+				if (diff > 0) {
+					return `${value} ${unit.name} ago`;
+				} else {
+					return `in ${-value} ${unit.name}`;
+				}
+			}
+		}
+
+		if (diff === 0) {
+			return 'today';
+		} else if (diff > 0) {
+			return 'yesterday';
+		} else {
+			return 'tomorrow';
+		}
+	}
+
+	function getDate(dateString) {
+		let input = new Date(dateString);
+
+		const formattedDate = new Intl.DateTimeFormat('en-GB', {
+			dateStyle: 'medium'
+		}).format(input);
+
+		return formattedDate;
+	}
 </script>
 
 <header class="blog full-width">
@@ -22,7 +62,11 @@
 			<div class="info__section">
 				<CalendarBlank height="20" width="20" />
 				Last updated:
-				<Time relative timestamp={data.date} />
+				{#if data.date}
+					{getDate(data.date)}
+					({formatRelativeTime(data.date)}
+				{/if})
+				<!-- <Time relative timestamp={data.date} /> -->
 			</div>
 			<div class="info__section">
 				<Pen height="20" width="20" />

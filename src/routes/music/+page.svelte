@@ -6,7 +6,7 @@
 	import { SoundCloud } from 'sveltekit-embed';
 </script>
 
-<PageTitle pageTitle="Musics" />
+<PageTitle pageTitle="Music" />
 
 <section>
 	<SectionTitle

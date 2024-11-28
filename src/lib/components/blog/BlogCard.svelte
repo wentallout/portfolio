@@ -1,15 +1,13 @@
 <script>
-	import Time from 'svelte-time';
-
-	import { fade } from 'svelte/transition';
 	import MouseGlow from '$components/common/MouseGlow.svelte';
 	import { CaretRight } from '$lib/assets/icons/icons';
+	import { fade } from 'svelte/transition';
 	/** @type {{blogLink?: string, blogTitle?: string, blogDate?: string, blogTags?: any, hasTags?: boolean}} */
 	let {
-		blogLink = '',
-		blogTitle = 'blogTitle',
 		blogDate = '',
+		blogLink = '',
 		blogTags = ['category1', 'category2'],
+		blogTitle = 'blogTitle',
 		hasTags = true
 	} = $props();
 </script>
@@ -28,9 +26,6 @@
 		{/if}
 
 		<div class="blog__title text-small">{blogTitle}</div>
-		<div class="blog__date text-xs">
-			<Time format="YYYY" timestamp={blogDate} />
-		</div>
 	</article>
 	<span class="blog__icon">
 		<CaretRight color="var(--colorText)" height="16" width="16" />
