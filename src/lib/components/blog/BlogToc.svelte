@@ -18,7 +18,7 @@
 	--toc-li-hover-color="var(--colorPrimaryHover)"
 	--toc-li-padding="var(--space2XS) 0"
 	--toc-mobile-bg="var(--colorBgContainer)"
-	--toc-mobile-bottom="100px"
+	--toc-mobile-bottom="56px"
 	--toc-mobile-btn-bg="var(--colorPrimary)"
 	--toc-mobile-btn-border-radius="16px"
 	--toc-mobile-btn-padding="0px"
@@ -35,7 +35,6 @@
 		</span>
 	{/snippet}
 
-	<!-- @migration-task: migrate this slot by hand, `open-toc-icon` is an invalid identifier -->
 	<span slot="open-toc-icon" class="open-toc-icon">
 		<ListBullets color="var(--colorText)" />
 	</span>
