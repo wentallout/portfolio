@@ -37,7 +37,7 @@
 
 	<!-- @migration-task: migrate this slot by hand, `open-toc-icon` is an invalid identifier -->
 	<span slot="open-toc-icon" class="open-toc-icon">
-		<ListBullets color="#000" height="16" width="16" />
+		<ListBullets color="var(--colorText)" />
 	</span>
 </Toc>
 
@@ -46,9 +46,18 @@
 		width: 12px;
 	}
 
+	:global(button[aria-label='Open table of contents']) {
+		background: color-mix(in srgb, var(--colorBgElevated) 100%, transparent);
+		z-index: var(--zIndexMax);
+	}
+
 	:global(aside.toc > nav) {
 		overflow-y: auto !important;
 		scrollbar-gutter: stable;
+	}
+
+	:global(aside.toc li) {
+		line-height: 1.5;
 	}
 
 	.open-toc-icon {

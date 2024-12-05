@@ -1,28 +1,31 @@
 <script>
+	import SaosContainer from '$components/common/SaosContainer.svelte';
 	import SectionDesc from '$sections/SectionDesc.svelte';
 
 	/** @type {{sectionTitle?: string, sectionDesc?: string, children?: import('svelte').Snippet<[any]>}} */
-	let { sectionTitle = '', sectionDesc = '', children } = $props();
+	let { children, sectionDesc = '', sectionTitle = '' } = $props();
 
 	let sectionIcon = {
 		color: 'var(--colorTextTertiary)'
 	};
 </script>
 
-<div class="section">
-	<div class="section__title">
-		<div class="section__icon text-large">
-			{@render children?.({ sectionIcon })}
+<SaosContainer animation="fade-in-left 0.6s cubic-bezier(0.39, 0.575, 0.565, 1) both">
+	<div class="section">
+		<div class="section__title">
+			<div class="section__icon text-large">
+				{@render children?.({ sectionIcon })}
+			</div>
+			<h2 id={sectionTitle.toLowerCase()} class="text-xl section__text" data-title={sectionTitle}>
+				{sectionTitle}
+			</h2>
 		</div>
-		<h2 class="text-xl section__text" id={sectionTitle.toLowerCase()} data-title={sectionTitle}>
-			{sectionTitle}
-		</h2>
-	</div>
 
-	{#if sectionDesc !== ''}
-		<SectionDesc text={sectionDesc} />
-	{/if}
-</div>
+		{#if sectionDesc !== ''}
+			<SectionDesc text={sectionDesc} />
+		{/if}
+	</div>
+</SaosContainer>
 
 <style>
 	.section {

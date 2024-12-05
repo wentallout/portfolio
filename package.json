@@ -55,7 +55,6 @@
 		"postcss-import": "^16.1.0",
 		"postcss-load-config": "^5.1.0",
 		"postcss-preset-env": "^9.6.0",
-		"posthog-js": "^1.190.2",
 		"prettier": "^3.4.1",
 		"prettier-plugin-svelte": "^3.3.2",
 		"rehype-autolink-headings": "^7.1.0",
