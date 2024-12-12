@@ -1,5 +1,5 @@
-import eslintPluginSvelte from 'eslint-plugin-svelte';
 import perfectionist from 'eslint-plugin-perfectionist';
+import eslintPluginSvelte from 'eslint-plugin-svelte';
 import globals from 'globals';
 
 export default [
@@ -9,18 +9,18 @@ export default [
 	{
 		languageOptions: {
 			ecmaVersion: 2022,
-			sourceType: 'module',
 			globals: {
 				...globals.browser,
 				...globals.node,
 				myCustomGlobal: 'readonly'
-			}
+			},
+			sourceType: 'module'
 		}
 	},
 	{
 		rules: {
-			'svelte/no-dupe-else-if-blocks': 'error',
 			'svelte/button-has-type': 'error',
+			'svelte/no-dupe-else-if-blocks': 'error',
 			'svelte/sort-attributes': 1
 		}
 	},

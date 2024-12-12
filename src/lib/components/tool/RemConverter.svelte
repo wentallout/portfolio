@@ -1,7 +1,7 @@
 <script>
-	import SectionTitle from '$sections/SectionTitle.svelte';
 	import Breadcrumb from '$components/layout/other/Breadcrumb.svelte';
 	import { Copy, Wrench } from '$lib/assets/icons/icons';
+	import SectionTitle from '$sections/SectionTitle.svelte';
 	let baseFontSize = 16;
 	let pxInput = $state();
 	let remInput = $state();
@@ -36,8 +36,8 @@
 			<button
 				class="converter__copy"
 				disabled={!pxInput}
-				type="button"
-				onclick={copyToClipboard(pxInput)}>
+				onclick={copyToClipboard(pxInput)}
+				type="button">
 				<Copy height="24" width="24" />
 			</button>
 			<input id="px" name="px" class="converter__input" type="number" bind:value={pxInput} />
@@ -48,8 +48,8 @@
 			<button
 				class="converter__copy"
 				disabled={!remInput}
-				type="button"
-				onclick={copyToClipboard(remInput)}>
+				onclick={copyToClipboard(remInput)}
+				type="button">
 				<Copy height="24" width="24" />
 			</button>
 			<input
@@ -57,11 +57,11 @@
 				name="rem"
 				style="color:var(--colorPrimary);"
 				class="converter__input"
-				type="number"
-				bind:value={remInput}
 				oninput={() => {
 					pxInput = remInput * baseFontSize;
-				}} />
+				}}
+				type="number"
+				bind:value={remInput} />
 			<label class="converter__label" for="rem">REM</label>
 		</div>
 	</div>

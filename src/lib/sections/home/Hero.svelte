@@ -45,7 +45,7 @@
 
 <section>
 	<div class="full-width">
-		<div class="hero pad">
+		<div class="hero g-container">
 			<div class="hero__block">
 				<div class="text-3xl hero__heading">
 					<div>
