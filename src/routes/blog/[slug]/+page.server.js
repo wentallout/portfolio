@@ -14,6 +14,6 @@ export async function load({ params }) {
 			title
 		};
 	} catch (err) {
-		error(404);
+		throw error(404, 'Not Found');
 	}
 }
