@@ -39,7 +39,7 @@
 <VideoCover />
 <NavBar />
 
-<main id="main-content" class="main-content pad">
+<main id="main-content" class="main-content g-container">
 	{@render children?.()}
 </main>
 

@@ -3,34 +3,6 @@ import type { Handle } from '@sveltejs/kit';
 import { error, type RequestEvent } from '@sveltejs/kit';
 import { aj } from './lib/server/arcjet';
 
-// export const handle: Handle = async ({ event: RequestEvent, resolve: }) => {
-// 	const { url, request, locals } = event;
-
-// 	const referer = request.headers.get('Referer');
-// 	if (referer) {
-// 		const urlReferer = new URL(referer);
-// 		if (urlReferer.origin === url.origin) {
-// 			locals.internalReferer = urlReferer;
-// 		}
-// 	}
-
-// 	const filteredRoutes = ['/api/rate-limited', '/rate-limited'];
-// 	if (filteredRoutes.includes(event.url.pathname)) {
-
-// 		return resolve(event);
-// 	}
-
-// 	const decision = await aj.protect(event);
-// 	if (decision.isDenied()) {
-// 		return error(403, 'Forbidden');
-// 	}
-
-// 	return resolve(event, {
-// 		transformPageChunk: ({ html }) =>
-// 			html.replace('%splash-skip%', String(!!locals.internalReferer))
-// 	});
-// };
-
 export const handle: Handle = async ({ event, resolve }) => {
 	// Ignore routes that extend the Arcjet rules - they will call `.protect` themselves
 	const filteredRoutes = ['/api/rate-limited', '/rate-limited'];
@@ -77,7 +49,3 @@ const directives = {
 	'style-src': ["'self'", "'unsafe-inline'", 'https://*.cloudfront.net'],
 	'worker-src': ["'self'"]
 };
-
-// const csp = Object.entries(directives)
-// 	.map(([key, arr]) => key + ' ' + arr.join(' '))
-// 	.join('; ');

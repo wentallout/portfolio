@@ -16,8 +16,6 @@
 
 	animation-name: slide-out-bck-center;
 
-	
-
 	animation-duration: calc(var(--animation-out-duration) * 0.6);
 	animation-play-state: running;
 	animation-timing-function: ease;
@@ -28,9 +26,6 @@
 
 	background: radial-gradient(125% 125% at 50% 10%, #000 40%, var(--colorPrimary) 100%);
 
-
-	
-
 	&[data-splash-skip='true'] {
 		display: none;
 	}
@@ -39,17 +34,14 @@
 		position: relative;
 		animation-play-state: inherit;
 	}
-
-	
 }
 
 .c-splash__deco {
 	font-size: var(--fontSizeBase);
-	color: var(--colorTextSecondary)
+	color: var(--colorTextSecondary);
 }
 
-.c-splash__name 
-{
+.c-splash__name {
 	font-family: var(--fontFancy);
 	font-size: var(--fontSizeXL);
 	margin-bottom: var(--spaceS);
@@ -62,21 +54,27 @@
 
 	100% {
 		transform: translateY(-100%);
-	
 	}
-
 }
-
-
 
 @keyframes slide-out-bck-center {
-  0% {
-    transform: translateZ(0);
-    opacity: 1;
-  }
-  100% {
-    transform: translateZ(-1100px);
-    opacity: 0;
-  }
+	0% {
+		transform: translateZ(0);
+		opacity: 1;
+	}
+	100% {
+		transform: translateZ(-1100px);
+		opacity: 0;
+	}
 }
 
+.dot-pattern {
+	position: absolute;
+	inset: 0;
+	z-index: -10;
+	height: 100%;
+	width: 100%;
+	background-color: white;
+	background-image: radial-gradient(#e5e7eb 1px, transparent 1px);
+	background-size: 16px 16px;
+}

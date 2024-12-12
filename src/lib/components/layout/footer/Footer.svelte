@@ -19,7 +19,7 @@
 <footer class="footer text-small">
 	<StarBg />
 
-	<div class="pad">
+	<div class="g-container">
 		<div class="footer__list">
 			<div class="list">
 				<div class="list__title">About</div>
@@ -146,9 +146,8 @@
 		overflow: hidden;
 		background-color: var(--colorBgLayout);
 	}
-	
 
-	.pad {
+	.g-container {
 		z-index: 3;
 		background: transparent;
 	}

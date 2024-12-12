@@ -29,7 +29,7 @@
 <VanishingHeader duration="300ms" offset={50} tolerance={5}>
 	<header bind:this={headerEle} class="header">
 		<ThemeSwitcher />
-		<nav class="nav pad" class:nav--scrolldown={scrollY > 0} aria-label="primary menu">
+		<nav class="nav g-container" class:nav--scrolldown={scrollY > 0} aria-label="primary menu">
 			<ul class="navlist">
 				{#each navItems as navItem}
 					<li class="navlist__item" class:active-page={$page.url.pathname === `${navItem.path}`}>

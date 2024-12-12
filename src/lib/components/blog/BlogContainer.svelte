@@ -14,13 +14,12 @@
 
 <style>
 	.post-container {
-		display: flex;
-		flex-direction: row;
-
-		align-items: flex-start;
 		margin-top: var(--space3XL);
-		justify-content: space-between;
+
 		gap: var(--spaceM);
+
+		display: grid;
+		grid-template-columns: 1fr auto;
 	}
 	.post-content {
 		display: flex;

@@ -43,6 +43,7 @@
 		border-radius: var(--borderRadius);
 		overflow: hidden;
 		flex-grow: 1;
+		position: relative;
 
 		background: var(--colorBgGradientSubtle);
 

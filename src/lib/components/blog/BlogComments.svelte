@@ -22,7 +22,7 @@
 		lang="en"
 		loading="lazy"
 		mapping="title"
-		reactionsEnabled="1"
+		reactionsEnabled="0"
 		repo="wentallout/portfolio"
 		repoId="R_kgDOH5VoSQ"
 		strict="0"

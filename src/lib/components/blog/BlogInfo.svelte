@@ -55,7 +55,7 @@
 
 <header class="blog full-width">
 	<div class="blog__gradient"></div>
-	<div class="pad">
+	<div class="g-container">
 		<Breadcrumb />
 		<h1 class="blog__title">{data.title}</h1>
 		<div class="blog__info text-small">

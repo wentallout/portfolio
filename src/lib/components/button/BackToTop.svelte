@@ -28,14 +28,16 @@
 
 <svelte:window onscroll={handleOnScroll} />
 
-<button class="bck2top text-xs" class:hidden type="button" onclick={goTop} onkeyup={goTop}>
-	<ArrowLineUp width="24" height="24" />
+<button class="bck2top text-xs" class:hidden onclick={goTop} onkeyup={goTop} type="button">
+	<ArrowLineUp />
 </button>
 
 <style>
 	.bck2top {
 		aspect-ratio: 1/1;
 		padding: var(--space2XS);
+		width: 40px;
+		height: 40px;
 
 		/* FLEX */
 		display: flex;

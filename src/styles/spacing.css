@@ -9,19 +9,23 @@
 	--space2XL: clamp(4.25rem, calc(4.05rem + 1.02vw), 5rem);
 	--space3XL: clamp(6.38rem, calc(6.07rem + 1.53vw), 7.5rem);
 
-	--max-width: 72rem;
+	--site-width: 72rem;
+	--site-margin: 1.5rem;
+	--container-main: calc(min(100%, var(--site-width)) - var(--site-margin) * 2);
+	--container-full: calc(100% - var(--site-margin) * 2);
+}
+
+.g-container {
+	width: 100%;
+	margin-inline: auto;
+	max-width: var(--container-main);
+}
+
+:root {
 	--text-width: 100%;
 }
 
-.pad {
-	padding-inline: 24px;
-	width: 100%;
-	margin-inline:auto;
-	max-width: var(--max-width);
-}
-
 @media (min-width: 768px) {
-	
 	:root {
 		--text-width: 65ch;
 	}
