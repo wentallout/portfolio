@@ -5,40 +5,8 @@
 	src: url($lib/fonts/chakra.woff2) format('woff2');
 }
 
-/* @font-face {
-	font-family: 'Inter';
-	font-display: swap;
-	font-style: normal;
-	src: url('/fonts/inter-300.woff2') format('woff2');
-	font-weight: 300;
-}
-
 @font-face {
 	font-family: 'Inter';
-	font-display: swap;
-	font-style: normal;
-	src: url('/fonts/inter-400.woff2') format('woff2');
-	font-weight: 400;
-}
-
-@font-face {
-	font-family: 'Inter';
-	font-display: swap;
-	font-style: normal;
-	src: url('/fonts/inter-500.woff2') format('woff2');
-	font-weight: 500;
-}
-
-@font-face {
-	font-family: 'Inter';
-	font-display: swap;
-	font-style: normal;
-	src: url('/fonts/inter-600.woff2') format('woff2');
-	font-weight: 600;
-} */
-
-@font-face {
-	font-family: 'Inter Variable';
 	font-style: normal;
 	font-display: swap;
 	font-weight: 300 600;
@@ -67,7 +35,7 @@ pre code {
 }
 
 :root {
-	--fontNormal: 'Inter Variable', 'Inter-fallback';
+	--fontNormal: 'Inter', 'Inter-fallback';
 	--fontFancy: 'Chakra', 'Chakra Petch-fallback';
 
 	/* FONT SIZE */
