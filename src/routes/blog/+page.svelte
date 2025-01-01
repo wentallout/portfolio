@@ -24,7 +24,7 @@
 	let searchTerm = $state('');
 	let filteredBlogs = $state([]);
 	let currentPage = $state(1);
-	let pageSize = 24;
+	let pageSize = 42;
 	let autoSuggest = $state();
 	let miniSearch = new MiniSearch({
 		extractField: (document, fieldName) => {

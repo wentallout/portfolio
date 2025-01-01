@@ -35,16 +35,14 @@
 <style>
 	.bck2top {
 		aspect-ratio: 1/1;
-		padding: var(--space2XS);
+
 		width: 40px;
-		height: 40px;
 
 		/* FLEX */
 		display: flex;
 		justify-content: center;
 		align-items: center;
 		flex-direction: column;
-		gap: var(--space2XS);
 		/* --- */
 
 		/* POSITION FIXED ON SCREEN */
@@ -61,7 +59,6 @@
 			visibility 0.3s;
 		user-select: none;
 		line-height: normal;
-
 		/*  */
 
 		box-shadow: var(--boxShadow);
@@ -79,6 +76,7 @@
 	@media (min-width: 768px) {
 		.bck2top {
 			padding: var(--spaceXS);
+			width: 56px;
 		}
 	}
 

@@ -34,7 +34,7 @@
 	}
 	.dark-pagination-nav :global(.option.number),
 	.dark-pagination-nav :global(.option.ellipsis) {
-		padding: 10px 15px;
+		padding: 0.7rem 1rem;
 	}
 	.dark-pagination-nav :global(.option:hover) {
 		background: #000;
