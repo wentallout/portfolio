@@ -1,3 +1,4 @@
+// import { enhancedImages } from '@sveltejs/enhanced-img';
 import { sveltekit } from '@sveltejs/kit/vite';
 // import { visualizer } from 'rollup-plugin-visualizer';
 import Icons from 'unplugin-icons/vite';
@@ -13,6 +14,7 @@ const config = {
 	},
 
 	plugins: [
+		// enhancedImages(),
 		sveltekit(),
 
 		Icons({ compiler: 'svelte', defaultClass: 'icon' }),

@@ -1,6 +1,6 @@
 <script>
 	/** @type {{href: any, ariaLabel?: string, style?: string, children?: import('svelte').Snippet}} */
-	let { href, ariaLabel = '', style = '', children } = $props();
+	let { ariaLabel = '', children, href, style = '' } = $props();
 </script>
 
 <a

@@ -5,7 +5,7 @@
 
 	const categories = new Set(data.blogs.flatMap((blog) => blog.meta.categories));
 
-	let uniqueCategories = Array.from(categories);
+	let uniqueCategories = Array.from(categories).sort((a, b) => a.localeCompare(b));
 </script>
 
 <div class="category">

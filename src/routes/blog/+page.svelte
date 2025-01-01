@@ -1,5 +1,6 @@
 <script>
 	import BlogCard from '$components/blog/BlogCard.svelte';
+	import DarkPaginationNav from '$components/common/DarkPaginationNav.svelte';
 	import PageTitle from '$components/common/PageTitle.svelte';
 	import TextInput from '$components/input/TextInput.svelte';
 	import { MagnifyingGlass } from '$lib/assets/icons/icons';
@@ -9,7 +10,10 @@
 	import BlogTagsList from '$sections/blog/BlogTagsList.svelte';
 	import MiniSearch from 'minisearch';
 	import { onMount } from 'svelte';
-	import { DarkPaginationNav, paginate } from 'svelte-paginate';
+
+	const paginate = ({ currentPage, items, pageSize }) => {
+		return items.slice((currentPage - 1) * pageSize, (currentPage - 1) * pageSize + pageSize);
+	};
 
 	/** @type {{data: any}} */
 	let { data } = $props();

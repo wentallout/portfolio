@@ -1,7 +1,10 @@
 <script>
-
 	/** @type {{label?: string, placeholder?: string, name?: string}} */
-	let { label = 'message', placeholder = 'Something you want to tell me. Ex: jobs, ideas', name = '' } = $props();
+	let {
+		label = 'message',
+		name = '',
+		placeholder = 'Something you want to tell me. Ex: jobs, ideas'
+	} = $props();
 </script>
 
 <label class="label text-small" for={label}>{label}</label>
@@ -26,6 +29,7 @@
 		resize: vertical;
 
 		border-radius: var(--borderRadiusSM);
+		background-color: var(--colorBgLayout);
 	}
 
 	.textarea:focus-visible {

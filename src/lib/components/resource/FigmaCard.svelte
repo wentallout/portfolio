@@ -40,7 +40,7 @@
 	.fcard {
 		transition: var(--transition);
 		box-shadow: var(--boxShadow);
-		border-radius: var(--borderRadius);
+
 		overflow: hidden;
 		flex-grow: 1;
 		position: relative;
