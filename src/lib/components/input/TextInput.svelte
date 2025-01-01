@@ -1,22 +1,15 @@
 <script>
-	
-	/** @type {{label: any, type?: string, placeholder?: string, value?: string, name?: string, autoSuggestList?: any, list?: string, icon?: import('svelte').Snippet}} */
 	let {
-		label,
-		type = 'text',
-		placeholder = '',
-		inputValue = '',
-		name = '',
 		autoSuggestList = [],
-		list = '',
+		handleOnInput,
 		icon,
-		handleOnInput
+		inputValue = '',
+		label,
+		list = '',
+		name = '',
+		placeholder = '',
+		type = 'text'
 	} = $props();
-	
-
-	// $effect(() => {
-	// 	autoSuggestList;
-	// });
 </script>
 
 {#if label}
@@ -34,11 +27,11 @@
 		{name}
 		class="input"
 		list={list || null}
+		oninput={handleOnInput}
 		{placeholder}
 		required
 		{type}
-		value={inputValue}
-		oninput={handleOnInput} />
+		value={inputValue} />
 
 	{#if list}
 		<datalist id={list}>
@@ -58,6 +51,7 @@
 		border: 1px solid var(--colorBorder);
 		margin-bottom: var(--spaceS);
 		border-radius: var(--borderRadiusSM);
+		background-color: var(--colorBgLayout);
 	}
 
 	.label {
@@ -74,7 +68,6 @@
 	}
 
 	.input {
-		background-color: transparent;
 		/* FONT */
 		font-family: inherit;
 		color: var(--colorText) !important;

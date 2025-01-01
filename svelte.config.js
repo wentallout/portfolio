@@ -3,9 +3,9 @@ import { mdsvex } from 'mdsvex';
 import rehypeAutolinkHeadings from 'rehype-autolink-headings';
 import rehypeExternalLinks from 'rehype-external-links';
 import rehypeSlug from 'rehype-slug';
+import rehypeUnwrapImages from 'rehype-unwrap-images';
 import remarkGfm from 'remark-gfm';
 import remarkSectionize from 'remark-sectionize';
-import remarkUnwrapImages from 'remark-unwrap-images';
 import { sveltePreprocess } from 'svelte-preprocess';
 import sequence from 'svelte-sequential-preprocessor';
 
@@ -47,13 +47,14 @@ const config = {
 			extensions: ['.svelte.md', '.md', '.svx'],
 			rehypePlugins: [
 				rehypeSlug,
+				rehypeUnwrapImages,
 				[
 					rehypeExternalLinks,
 					{ rel: ['nofollow', 'noopener', 'noreferrer', 'external'], target: '_blank' }
 				],
 				[rehypeAutolinkHeadings, { behavior: 'wrap' }]
 			],
-			remarkPlugins: [remarkUnwrapImages, remarkGfm, remarkSectionize]
+			remarkPlugins: [remarkGfm, remarkSectionize]
 		})
 	])
 };

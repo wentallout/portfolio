@@ -1,9 +1,9 @@
 <script>
 	/** @type {{width: any, height: any}} */
-	let { width, height } = $props();
+	let { height, width } = $props();
 </script>
 
-<svg {width} {height} viewBox="0 0 747 747" fill="none" xmlns="http://www.w3.org/2000/svg">
+<svg fill="none" {height} viewBox="0 0 747 747" {width} xmlns="http://www.w3.org/2000/svg">
 	<path
 		d="M125.432 516.253C125.432 521.087 129.349 525.003 134.182 525.003H227.515C232.349 525.003 236.265 521.087 236.265 516.253C236.265 511.42 232.349 507.503 227.515 507.503H134.182C129.349 507.503 125.432 511.42 125.432 516.253Z"
 		fill="var(--colorText)" />

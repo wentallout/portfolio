@@ -1,16 +1,12 @@
 <script>
 	import '$styles/global.css';
 	import '$styles/splash.css';
-
-	import Footer from '$components/layout/footer/Footer.svelte';
-	import NavBar from '$lib/components/layout/header/NavBar.svelte';
-
-	import VideoCover from '$lib/components/layout/header/VideoCover.svelte';
-
-	import Misc from '$sections/Misc.svelte';
-
 	import { onNavigate } from '$app/navigation';
 	import BgDeco from '$components/common/BgDeco.svelte';
+	import Footer from '$components/layout/footer/Footer.svelte';
+	import NavBar from '$lib/components/layout/header/NavBar.svelte';
+	import VideoCover from '$lib/components/layout/header/VideoCover.svelte';
+	import Misc from '$sections/Misc.svelte';
 	/** @type {{children?: import('svelte').Snippet}} */
 	let { children } = $props();
 
@@ -30,8 +26,8 @@
 	<meta name="view-transition" content="same-origin" />
 	<script
 		async
-		src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2238795577080818"
-		crossorigin="anonymous"></script>
+		crossorigin="anonymous"
+		src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2238795577080818"></script>
 </svelte:head>
 
 <BgDeco />

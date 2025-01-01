@@ -15,9 +15,7 @@
 <style>
 	.post-container {
 		margin-top: var(--space3XL);
-
 		gap: var(--spaceM);
-
 		display: grid;
 		grid-template-columns: 1fr auto;
 	}

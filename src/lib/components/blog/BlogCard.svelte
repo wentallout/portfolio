@@ -1,18 +1,19 @@
 <script>
 	import MouseGlow from '$components/common/MouseGlow.svelte';
 	import { CaretRight } from '$lib/assets/icons/icons';
-	import { fade } from 'svelte/transition';
+
 	/** @type {{blogLink?: string, blogTitle?: string, blogDate?: string, blogTags?: any, hasTags?: boolean}} */
 	let {
 		blogDate = '',
+		blogId = '',
 		blogLink = '',
-		blogTags = ['category1', 'category2'],
+		blogTags = ['blogTag1', 'blogTag2'],
 		blogTitle = 'blogTitle',
 		hasTags = true
 	} = $props();
 </script>
 
-<a class="blog custom-border" href={blogLink} transition:fade={{ duration: 300 }}>
+<a class="blog custom-border" href={blogLink}>
 	<MouseGlow />
 	<article class="blog__info">
 		{#if hasTags}
@@ -107,31 +108,5 @@
 		/* --- */
 
 		text-wrap: balance;
-	}
-
-	.blog__date {
-		/* FLEX */
-		display: flex;
-		justify-content: left;
-		align-items: center;
-		flex-direction: row;
-		/* --- */
-
-		/* FONT */
-		font-weight: var(--fontWeightLarge);
-		color: var(--colorTextTertiary);
-		font-size: var(--fontSizeXL);
-		/* --- */
-
-		opacity: 0;
-		position: absolute;
-		top: 50%;
-		bottom: 50%;
-		right: 1%;
-		transform: rotate(90deg);
-	}
-
-	.blog:hover .blog__date {
-		opacity: 0.1;
 	}
 </style>

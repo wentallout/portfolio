@@ -171,6 +171,7 @@
 		width: 100%;
 		padding: var(--spaceXS);
 		cursor: pointer;
+		background-color: hsl(from var(--colorBgLayout) h s l / 80%);
 	}
 
 	@media (min-width: 768px) {

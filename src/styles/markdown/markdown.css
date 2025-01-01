@@ -31,18 +31,14 @@
 	transition: var(--transition);
 
 	text-wrap: balance;
-    
 
-	&:hover 
-	{
+	&:hover {
 		color: var(--colorPrimaryHover);
 	}
 
-	&:active
-	{
+	&:active {
 		color: var(--colorPrimaryActive);
 	}
-	
 }
 
 .markdown h2:first-child {
@@ -65,8 +61,6 @@
 	/* --- */
 }
 
-
-
 .markdown h3 {
 	/* SPACING */
 	margin-top: var(--spaceL);
@@ -78,7 +72,6 @@
 	font-size: var(--fontSizeMid);
 	line-height: var(--lineHeightMid);
 	/* --- */
-
 }
 
 .markdown h4 {
@@ -127,7 +120,8 @@
 }
 
 .markdown
-	p>a:not(
+	p
+	> a:not(
 		.toc a,
 		.markdown h2 a,
 		.markdown h3 a,
@@ -141,15 +135,13 @@
 	/* text-decoration-skip-ink: none; */
 
 	&:hover {
-		color:var(--colorInfoHover);
+		color: var(--colorInfoHover);
 	}
 
 	&:active {
-		color:var(--colorInfoActive);
+		color: var(--colorInfoActive);
 	}
 }
-
-
 
 .markdown li:not(.toc li) {
 	margin-bottom: var(--space3XS);
@@ -186,8 +178,7 @@ blockquote p {
 pre {
 	padding: var(--spaceS);
 	border-radius: var(--borderRadiusLight);
-	overflow: auto;
-	max-width: var(--text-width);
+	overflow: scroll;
 }
 
 table {
@@ -248,17 +239,8 @@ aside.toc > nav {
 	max-width: 240px;
 }
 
-
-
-
-p > code 
-{
+p > code {
 	background-color: #1e1e1e;
 	padding: 4px 8px;
 	margin: 4px;
-}
-
-pre[class*='language-'],
-code[class*='language-'] {
-	max-width: 100%;
 }

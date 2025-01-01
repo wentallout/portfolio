@@ -1,25 +1,24 @@
 <script>
-	import { onMount } from 'svelte';
 	import { gsap } from 'gsap';
-
 	import { TextPlugin } from 'gsap/dist/TextPlugin.js';
+	import { onMount } from 'svelte';
 
 	let logoDeco = $state();
 	onMount(() => {
-		const phrases = ['WENT ALL OUT', 'Khoa Nguyen'];
+		const phrases = ['wentallout', 'Khoa Nguyen'];
 		let i = 0;
 
 		const typePhrase = () => {
 			if (logoDeco) {
 				gsap.to(logoDeco, {
 					duration: 1,
-					text: {
-						value: phrases[i % phrases.length],
-						padSpace: true
-					},
 					ease: 'power2.inOut',
 					onComplete: () => {
 						removePhrase();
+					},
+					text: {
+						padSpace: true,
+						value: phrases[i % phrases.length]
 					}
 				});
 			}
@@ -29,15 +28,15 @@
 			if (logoDeco) {
 				gsap.to(logoDeco, {
 					duration: 1,
-					text: {
-						value: '',
-						padSpace: true,
-						rtl: true
-					},
 					ease: 'power2.inOut',
 					onComplete: () => {
 						i++;
 						typePhrase();
+					},
+					text: {
+						padSpace: true,
+						rtl: true,
+						value: ''
 					}
 				});
 			}
@@ -50,14 +49,14 @@
 
 <div class="cover__logo" aria-label="home">
 	<img
-		width="160"
-		height="160"
 		id="personlogo"
 		class="logo__main rotate"
 		alt="2nd logo"
-		title="wentallout logo"
+		height="160"
+		loading="eager"
 		src="/images/brand-logo.svg"
-		loading="eager" />
+		title="wentallout logo"
+		width="160" />
 	<div bind:this={logoDeco} class="logo__deco">went all out</div>
 </div>
 
