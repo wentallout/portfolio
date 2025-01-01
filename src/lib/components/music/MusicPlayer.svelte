@@ -179,10 +179,16 @@
 
 	.player__btns {
 		display: grid;
-		grid-template-columns: 1fr auto;
+		grid-template-columns: 1fr;
 		gap: var(--spaceS);
 		margin-bottom: var(--spaceM);
 		width: 100%;
+	}
+
+	@media (min-width: 768px) {
+		.player__btns {
+			grid-template-columns: 1fr auto;
+		}
 	}
 
 	.seekBar__control {

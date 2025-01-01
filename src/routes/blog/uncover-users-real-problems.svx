@@ -1,0 +1,45 @@
+---
+title: Uncover users real problems
+date: 2024-12-24
+categories:
+    - ux
+    - user research
+---
+
+Uncovering your users' real problems is crucial for product success. Here's a concise guide to help you achieve this:
+
+## 1. Identify the Right Users
+
+Early Stage: Engage a broad audience to gather diverse insights.
+
+Later Stage: Focus on your ideal customer profile for targeted feedback.
+
+## 2. Choose Optimal Timing
+
+Ask questions when users can provide immediate, relevant feedback.
+
+## 3. Probe Deeply
+
+Avoid surface-level questions; delve into users' workflows and challenges.
+
+Use open-ended questions to uncover underlying issues.
+
+## 4. Simplify Your Questions
+
+Be concise and clear to respect users' time.
+
+Avoid jargon; ensure questions are easy to understand.
+
+## 5. Prioritize Feedback
+
+Focus on feedback from detractors to identify areas for improvement.
+
+Implement changes that can convert detractors into promoters.
+
+## 6. Share Insights and Plan
+
+Disseminate findings with your team using dashboards or reports.
+
+Prioritize actions based on impact and feasibility.
+
+Implementing these strategies can lead to a deeper understanding of your users' needs, resulting in a more successful product.

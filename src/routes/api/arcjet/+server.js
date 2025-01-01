@@ -1,5 +1,5 @@
 import { error, json } from '@sveltejs/kit';
-import { aj } from '$lib/server/arcjet.js';
+import { aj } from '$lib/server/arcjet.ts';
 
 export async function GET(event) {
 	const decision = await aj.protect(event, { requested: 5 }); // Deduct 5 tokens from the bucket
