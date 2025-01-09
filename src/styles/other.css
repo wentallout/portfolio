@@ -120,6 +120,7 @@ input[type='range']:focus::-webkit-slider-runnable-track {
 .custom-border {
 	position: relative;
 	border-radius: var(--borderRadiusLight);
+	border: 1px solid var(--colorBorder);
 }
 
 .custom-border:before {
