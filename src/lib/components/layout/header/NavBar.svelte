@@ -42,6 +42,7 @@
 		</nav>
 		<button
 			class="hamburger"
+			class:nav--scrolldown={scrollY > 0}
 			aria-label="navigation button"
 			onclick={openNav}
 			onkeydown={openNav}
@@ -98,13 +99,11 @@
 	}
 
 	.nav--scrolldown {
-		/* background: color-mix(in srgb, var(--colorBgLayout) 80%, transparent); */
-		/* relative color */
 		background-color: hsl(from var(--colorBgLayout) h s l / 80%);
 
 		backdrop-filter: blur(5px);
 		color: var(--colorText);
-		border: 1px solid var(--colorBorder);
+		border: 1px solid var(--colorBorderSecondary);
 		box-shadow: 0 2px 2px -2px rgba(0, 0, 0, 0.2);
 	}
 
@@ -171,7 +170,7 @@
 		width: 100%;
 		padding: var(--spaceXS);
 		cursor: pointer;
-		background-color: hsl(from var(--colorBgLayout) h s l / 80%);
+		transition: var(--transition);
 	}
 
 	@media (min-width: 768px) {

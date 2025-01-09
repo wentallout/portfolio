@@ -26,26 +26,3 @@ export const handle: Handle = async ({ event, resolve }) => {
 	// Continue with the route
 	return response;
 };
-
-const PUBLIC_DOMAIN = 'wentallout.io.vn';
-
-const directives = {
-	'base-uri': ["'self'"],
-	'child-src': ["'self'"],
-	'font-src': ["'self'", 'data:', 'https://*.cloudfront.net'],
-	'form-action': ["'self'"],
-	'frame-ancestors': ["'self'"],
-	'frame-src': [
-		"'self'",
-		'https://w.soundcloud.com',
-		'https://www.youtube-nocookie.com',
-		'https://open.spotify.com',
-		'https://my.spline.design',
-		'https://giscus.app'
-	],
-	'manifest-src': ["'self'"],
-	'media-src': ['*'],
-	'object-src': ["'none'"],
-	'style-src': ["'self'", "'unsafe-inline'", 'https://*.cloudfront.net'],
-	'worker-src': ["'self'"]
-};

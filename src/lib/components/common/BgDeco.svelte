@@ -22,7 +22,7 @@
 	.bg-noise {
 		width: 100%;
 		height: 100%;
-		background-size: 80px;
+		background-size: 40px;
 		background-repeat: repeat;
 		background-image: url(/images/noise.png);
 		opacity: 0.06;
