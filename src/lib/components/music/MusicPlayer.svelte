@@ -33,7 +33,20 @@
 
 	function playMusic() {
 		$isPlaying = true;
-		$audioPlayerEl.play();
+		let playPromise = $audioPlayerEl.play();
+
+		if (playPromise !== undefined) {
+			playPromise
+				.then((_) => {
+					// Automatic playback started!
+					// Show playing UI.
+					// We can now safely pause video...
+					video.pause();
+				})
+				.catch((error) => {
+					console.log(error);
+				});
+		}
 	}
 
 	function pauseMusic() {
@@ -250,6 +263,9 @@
 	.controls {
 		display: grid;
 		grid-template-columns: 1fr 1fr 1fr;
+		border-radius: var(--borderRadiusLight);
+		overflow: hidden;
+		border: 1px solid var(--colorBorder);
 	}
 
 	.mp-btn {
@@ -271,10 +287,6 @@
 
 	.play-btn {
 		background-color: var(--colorPrimary);
-	}
-
-	.other-btn {
-		border: 1px solid var(--colorBorder);
 	}
 
 	.player {

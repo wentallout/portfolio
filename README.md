@@ -78,6 +78,8 @@ Slug
 - [SSR](https://kit.svelte.dev/docs/seo#out-of-the-box-ssr)
 - [sitemap](https://github.com/jasongitmail/super-sitemap)
 
+⭐ High Security: CSP Rules (`csp-directives.mjs`)
+
 ⭐ Responsive
 
 ⭐ PWA: Works OFFLINE

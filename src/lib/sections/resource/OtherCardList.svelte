@@ -1,4 +1,4 @@
-<div class="other-container">
+<div class="container">
 	<a class="other" href="/music">
 		<img class="other__image" alt="music" src="images/music.webp" />
 		<div class="other__title text-large">Music</div>
@@ -15,7 +15,7 @@
 </div>
 
 <style>
-	.other-container {
+	.container {
 		display: flex;
 		flex-direction: row;
 		flex-wrap: wrap;
@@ -24,7 +24,7 @@
 		gap: var(--spaceM);
 	}
 
-	.other-container > * {
+	.container > * {
 		flex: 1 1 20ch;
 	}
 
@@ -51,6 +51,8 @@
 		overflow: hidden;
 
 		border: 1px solid var(--colorBorder);
+
+		border-radius: var(--borderRadiusLight);
 	}
 
 	.other:before {
@@ -69,7 +71,7 @@
 	}
 
 	.other:hover .other__image {
-		scale: 1.1;
+		scale: 1.2;
 	}
 
 	.other:hover .other__title {

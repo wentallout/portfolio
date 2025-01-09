@@ -54,11 +54,7 @@
 		alt="music visualizer logo"
 		src="/images/brand-logo.svg" />
 
-	<img
-		class="visualizer__dancer"
-		class:dancer-active={$isPlaying}
-		alt="gojo"
-		src="/images/dancing.webp" />
+
 </div>
 
 <style>
