@@ -89,7 +89,7 @@
 	}
 
 	.principle__section {
-		padding: var(--spaceL);
+		padding: var(--spaceCard);
 		display: flex;
 		flex-direction: column;
 		gap: var(--space2XS);

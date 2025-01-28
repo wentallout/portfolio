@@ -15,13 +15,7 @@
 	<MouseGlow />
 	<article class="project">
 		<div class="project__thumbnail">
-			<img
-				alt={projectName}
-				height="400"
-				loading="lazy"
-				src={thumbnail}
-				title={projectName}
-				width="400" />
+			<img alt={projectName} loading="lazy" src={thumbnail} title={projectName} />
 		</div>
 		<div class="project__info">
 			<div class="project__title">
@@ -50,6 +44,10 @@
 <style lang="postcss">
 	.project {
 		display: flex;
+
+		display: grid;
+		grid-template-columns: 1fr;
+
 		position: relative;
 		width: 100%;
 		flex-direction: column;
@@ -69,6 +67,30 @@
 			box-shadow: -1px 1px var(--colorPrimaryActive);
 			transform: translate(1px, -1px);
 		}
+	}
+
+	@media (min-width: 992px) {
+		.project {
+			grid-template-columns: 400px 1fr;
+		}
+	}
+
+	.project__thumbnail {
+		width: 100%;
+		height: 100%;
+
+		margin-bottom: auto;
+
+		background-color: transparent;
+		position: relative;
+
+		overflow: hidden;
+	}
+
+	.project__thumbnail img {
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
 	}
 
 	.project-container {
@@ -98,43 +120,16 @@
 		flex-grow: 2;
 		flex-direction: column;
 		position: relative;
-		padding: var(--spaceS) var(--spaceL);
+		padding: var(--spaceCard);
 		gap: var(--spaceM);
 		color: var(--colorTextSecondary);
 		background: var(--colorBgGradientSubtle);
-	}
-
-	@media (min-width: 768px) {
-		.project__info {
-			padding: var(--spaceM) var(--spaceXL);
-		}
 	}
 
 	.name {
 		color: var(--colorText);
 		font-weight: var(--fontWeightLarge);
 		font-family: var(--fontFancy);
-	}
-
-	.project__thumbnail {
-		height: 30dvh; /* Fill the card vertically */
-		width: auto; /* Maintain aspect ratio */
-		object-fit: cover; /* Fill the box, covering any empty space */
-		aspect-ratio: 1/1;
-
-		margin-bottom: auto;
-		object-fit: cover;
-		background-color: transparent;
-		position: relative;
-
-		overflow: hidden;
-	}
-
-	@media (min-width: 992px) {
-		.project__thumbnail {
-			height: 100%;
-			max-width: 400px;
-		}
 	}
 
 	.info__section {
@@ -157,6 +152,7 @@
 	.section__label {
 		color: var(--colorText);
 		min-width: 10%;
+		font-weight: 600;
 	}
 
 	.section__desc {
