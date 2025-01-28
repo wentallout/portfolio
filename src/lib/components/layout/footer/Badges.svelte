@@ -3,25 +3,6 @@
 	import LogoNotAi from '$lib/assets/icons/LogoNotAI.svelte';
 	import LogoSvelte from '$lib/assets/icons/LogoSvelte.svelte';
 	import { onMount } from 'svelte';
-
-	onMount(() => {
-		document.addEventListener(
-			'DOMContentLoaded',
-			function () {
-				var e = 'dmca-badge';
-				var t = 'refurl';
-				var n = document.querySelectorAll('a.' + e);
-				if (n[0].getAttribute('href').indexOf('refurl') < 0) {
-					for (var r = 0; r < n.length; r++) {
-						var i = n[r];
-						i.href =
-							i.href + (i.href.indexOf('?') === -1 ? '?' : '&') + t + '=' + document.location;
-					}
-				}
-			},
-			false
-		);
-	});
 </script>
 
 <div class="badges">
@@ -76,18 +57,7 @@
 			title="green hosting"
 			width="200px" />
 	</ExLink>
-
-	<a
-		class="dmca-badge"
-		href="//www.dmca.com/Protection/Status.aspx?ID=3ed85d25-4eff-4e86-905a-dfa12904ade1"
-		title="DMCA.com Protection Status">
-		<img
-			alt="DMCA.com Protection Status"
-			src="https://images.dmca.com/Badges/dmca_protected_sml_120n.png?ID=3ed85d25-4eff-4e86-905a-dfa12904ade1" />
-	</a>
 </div>
-
-<!-- <script src="https://images.dmca.com/Badges/DMCABadgeHelper.min.js"> </script> -->
 
 <style>
 	.badges {
@@ -96,18 +66,26 @@
 		margin-bottom: var(--spaceS);
 
 		display: grid;
-		grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+		grid-template-columns: 1fr 1fr;
 
 		border-top: 1px solid var(--colorBorderSecondary);
 		border-left: 1px solid var(--colorBorderSecondary);
+		overflow: visible;
 	}
 
-	:global(.badge > a) {
+	@media (min-width: 768px) {
+		.badges {
+			grid-template-columns: 1fr 1fr 1fr 1fr;
+		}
+	}
+
+	:global(.badges > a) {
 		display: grid;
 		place-items: center;
 		border-bottom: 1px solid var(--colorBorderSecondary);
 		border-right: 1px solid var(--colorBorderSecondary);
 		padding: var(--spaceS);
+		overflow: visible;
 	}
 
 	.badge__img {

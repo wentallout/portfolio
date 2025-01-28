@@ -1,13 +1,10 @@
 <script>
-	import SectionTitle from '$sections/SectionTitle.svelte';
-
-	import ResponsiveWebArt from '$lib/assets/arts/ResponsiveWebArt.svelte';
-
 	import Button from '$components/button/Button.svelte';
-	import AbTestingArt from '$lib/assets/arts/ABTestingArt.svelte';
-
-	import { CalendarCheck, HandHeart } from '$lib/assets/icons/icons';
 	import MouseGlow from '$components/common/MouseGlow.svelte';
+	import AbTestingArt from '$lib/assets/arts/ABTestingArt.svelte';
+	import ResponsiveWebArt from '$lib/assets/arts/ResponsiveWebArt.svelte';
+	import { CalendarCheck, HandHeart } from '$lib/assets/icons/icons';
+	import SectionTitle from '$sections/SectionTitle.svelte';
 </script>
 
 <section>
@@ -18,7 +15,7 @@
 			<HandHeart {...sectionIcon} />
 		{/snippet}
 	</SectionTitle>
-	<div class="service-container custom-border">
+	<div class="service-container">
 		<MouseGlow />
 		<div class="service">
 			<div class="service__section">
@@ -89,6 +86,10 @@
 		background: var(--colorBgGradientSubtle);
 		box-shadow: var(--boxShadow);
 		padding: var(--spaceL) var(--spaceXL);
+
+		position: relative;
+		border-radius: var(--borderRadiusLight);
+		border: 1px solid var(--colorBorderSecondary);
 	}
 
 	.service {

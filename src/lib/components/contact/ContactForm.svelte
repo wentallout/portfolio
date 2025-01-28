@@ -1,23 +1,21 @@
 <script>
-	import ExLink from '$components/common/ExLink.svelte';
 	import Button from '$components/button/Button.svelte';
+	import CopyToClipboard from '$components/common/CopyToClipboard.svelte';
+	import ExLink from '$components/common/ExLink.svelte';
 	import TextArea from '$components/input/TextArea.svelte';
 	import TextInput from '$components/input/TextInput.svelte';
-
-	import SectionTitle from '$sections/SectionTitle.svelte';
-	import CopyToClipboard from '$components/common/CopyToClipboard.svelte';
-
-	import { getUserLocalTime, getVietnamTime } from '$lib/utils/time';
-	import { slide } from 'svelte/transition';
 	import {
+		ArrowCounterClockwise,
 		At,
 		Clock,
-		Phone,
-		User,
-		ArrowCounterClockwise,
+		EnvelopeSimple,
 		PaperPlaneRight,
-		EnvelopeSimple
+		Phone,
+		User
 	} from '$lib/assets/icons/icons';
+	import { getUserLocalTime, getVietnamTime } from '$lib/utils/time';
+	import SectionTitle from '$sections/SectionTitle.svelte';
+	import { slide } from 'svelte/transition';
 
 	let localTime = $state();
 	let vietnamTime = $state();
@@ -41,14 +39,14 @@
 		<form name="contact" class="contact" data-netlify="true" method="post">
 			<input name="form-name" type="hidden" value="contact" />
 
-			<TextInput name="name" label="Name" type="text" placeholder="John Doe">
+			<TextInput name="name" label="Name" placeholder="John Doe" type="text">
 				{#snippet icon()}
 					<span>
 						<User />
 					</span>
 				{/snippet}
 			</TextInput>
-			<TextInput name="email" label="Email" type="email" placeholder="username@gmail.com">
+			<TextInput name="email" label="Email" placeholder="username@gmail.com" type="email">
 				{#snippet icon()}
 					<span>
 						<At />
@@ -79,7 +77,7 @@
 			</div>
 		</form>
 		<div class="contact__other">
-			<div class="contact__address custom-border">
+			<div class="contact__address">
 				<ExLink href="mailto:wentallout@gmail.com">
 					<div class="address__title text-base">
 						<EnvelopeSimple />
@@ -91,7 +89,7 @@
 				</CopyToClipboard>
 			</div>
 
-			<div class="contact__address custom-border">
+			<div class="contact__address">
 				<ExLink href="tel:+84929066331">
 					<div class="address__title text-base">
 						<Phone />
@@ -103,7 +101,7 @@
 				</CopyToClipboard>
 			</div>
 
-			<div class="contact__address custom-border">
+			<div class="contact__address">
 				<div class="address__title text-base">
 					<Clock />
 					<div>Working hours</div>
@@ -165,6 +163,10 @@
 		transition: var(--transition);
 		box-shadow: var(--boxShadow);
 		background: var(--colorBgGradientSubtle);
+
+		position: relative;
+		border-radius: var(--borderRadiusLight);
+		border: 1px solid var(--colorBorderSecondary);
 	}
 
 	.address__title {

@@ -1,7 +1,6 @@
 <script>
 	import { CaretDown } from '$lib/assets/icons/icons';
 	// IMPORTS
-
 	import { slide } from 'svelte/transition';
 
 	// PROPS
@@ -13,8 +12,8 @@
 	}
 </script>
 
-<div class="accordion custom-border">
-	<button class="accordion__btn" type="button" onclick={handleOpen} onkeydown={handleOpen}>
+<div class="accordion">
+	<button class="accordion__btn" onclick={handleOpen} onkeydown={handleOpen} type="button">
 		<p class="accordion__section text-small" class:accordion--active={isOpened}>
 			{accordionSection}
 		</p>
@@ -40,6 +39,10 @@
 		max-width: var(--text-width);
 
 		background: var(--colorBgGradientSubtle);
+
+		position: relative;
+		border-radius: var(--borderRadiusLight);
+		border: 1px solid var(--colorBorder);
 	}
 	.accordion__section {
 		text-align: left;

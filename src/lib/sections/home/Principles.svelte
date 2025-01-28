@@ -15,7 +15,7 @@
 	<div class="principle-container">
 		<div class="principle">
 			<SaosContainer animation="slide-in-left 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both">
-				<div class="principle__section custom-border">
+				<div class="principle__section">
 					<h3 class="principle__title text-base">Straightforward</h3>
 					<p class="principle__desc text-small">
 						Simplify the design by removing unnecessary steps or elements for a seamless user
@@ -25,7 +25,7 @@
 			</SaosContainer>
 
 			<SaosContainer animation="slide-in-left 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both">
-				<div class="principle__section custom-border">
+				<div class="principle__section">
 					<h3 class="principle__title text-base">Test</h3>
 					<p class="principle__desc text-small">
 						Continuously test and iterate the design to ensure it meets users' needs and
@@ -35,7 +35,7 @@
 			</SaosContainer>
 
 			<SaosContainer animation="slide-in-left 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both">
-				<div class="principle__section custom-border">
+				<div class="principle__section">
 					<h3 class="principle__title text-base">Instructional</h3>
 					<p class="principle__desc text-small">
 						Provide clear instructions and guidance to users, if necessary, to ensure ease of
@@ -45,7 +45,7 @@
 			</SaosContainer>
 
 			<SaosContainer animation="slide-in-left 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both">
-				<div class="principle__section custom-border">
+				<div class="principle__section">
 					<h3 class="principle__title text-base">Readable</h3>
 					<p class="principle__desc text-small">
 						Optimize readability by choosing appropriate fonts, colors, and spacing for comfortable
@@ -98,6 +98,10 @@
 		box-shadow: var(--boxShadow);
 		background-color: var(--colorBgContainer);
 		background: var(--colorBgGradientSubtle);
+
+		position: relative;
+		border-radius: var(--borderRadiusLight);
+		border: 1px solid var(--colorBorderSecondary);
 	}
 
 	.principle__title {

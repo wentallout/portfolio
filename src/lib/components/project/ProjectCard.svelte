@@ -13,7 +13,7 @@
 
 <a class="project-container" href={linkToDetail}>
 	<MouseGlow />
-	<article class="project custom-border">
+	<article class="project">
 		<div class="project__thumbnail">
 			<img
 				alt={projectName}
@@ -48,10 +48,6 @@
 </a>
 
 <style lang="postcss">
-	.project-container {
-		position: relative;
-	}
-
 	.project {
 		display: flex;
 		position: relative;
@@ -61,6 +57,10 @@
 		box-shadow: var(--boxShadow);
 		overflow: hidden;
 
+		position: relative;
+		border-radius: var(--borderRadiusLight);
+		border: 1px solid var(--colorBorderSecondary);
+
 		&:hover {
 			box-shadow: -6px 6px var(--colorPrimaryHover);
 			transform: translate(6px, -6px);
@@ -69,6 +69,10 @@
 			box-shadow: -1px 1px var(--colorPrimaryActive);
 			transform: translate(1px, -1px);
 		}
+	}
+
+	.project-container {
+		position: relative;
 	}
 
 	@media (min-width: 992px) {

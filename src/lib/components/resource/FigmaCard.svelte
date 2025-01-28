@@ -16,7 +16,7 @@
 <ExLink style="display:flex;position:relative" {href}>
 	<MouseGlow />
 
-	<div class="fcard custom-border">
+	<div class="fcard">
 		{#if thumbnailUrl && thumbnailUrl.length > 0}
 			<img
 				class="fcard__thumbnail"
@@ -40,6 +40,10 @@
 	.fcard {
 		transition: var(--transition);
 		box-shadow: var(--boxShadow);
+
+		position: relative;
+		border-radius: var(--borderRadiusLight);
+		border: 1px solid var(--colorBorderSecondary);
 
 		overflow: hidden;
 		flex-grow: 1;

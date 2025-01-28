@@ -5,7 +5,6 @@
 	import NavigationArt from '$lib/assets/arts/NavigationArt.svelte';
 	import ProcessArt from '$lib/assets/arts/ProcessArt.svelte';
 	import { Toolbox } from '$lib/assets/icons/icons';
-
 	import SectionTitle from '$sections/SectionTitle.svelte';
 </script>
 
@@ -19,7 +18,7 @@
 			</SectionTitle>
 
 			<div class="tool__block">
-				<div class="block__section custom-border">
+				<div class="block__section">
 					<div class="section__svg">
 						<ProcessArt height="120" width="120" />
 					</div>
@@ -31,7 +30,7 @@
 					</div>
 				</div>
 
-				<div class="block__section custom-border">
+				<div class="block__section">
 					<div class="section__svg">
 						<NavigationArt height="120" width="120" />
 					</div>
@@ -42,7 +41,7 @@
 					</div>
 				</div>
 
-				<div class="block__section custom-border">
+				<div class="block__section">
 					<div class="section__svg">
 						<GraphicDesignArt height="120" width="120" />
 					</div>
@@ -54,7 +53,7 @@
 					</div>
 				</div>
 
-				<div class="block__section custom-border">
+				<div class="block__section">
 					<div class="section__svg">
 						<FrontendArt height="120" width="120" />
 					</div>
@@ -106,9 +105,12 @@
 	}
 
 	.block__section {
+		/* FLEX */
 		display: flex;
 		flex-direction: column;
 		align-items: center;
+		/* --- */
+
 		position: relative;
 
 		padding: var(--spaceL);
@@ -120,9 +122,10 @@
 		background-color: var(--colorBgLayout);
 		box-shadow: var(--boxShadow);
 
-		border-radius: var(--borderRadiusLight);
-
 		background: var(--colorBgGradientSubtle);
+
+		border-radius: var(--borderRadiusLight);
+		border: 1px solid var(--colorBorderSecondary);
 	}
 
 	.block__section:hover {
