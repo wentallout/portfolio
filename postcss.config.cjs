@@ -1,3 +1,4 @@
+const postcssCascadeLayers = require('@csstools/postcss-cascade-layers');
 const postcssGlobalData = require('@csstools/postcss-global-data');
 const autoprefixer = require('autoprefixer');
 const atImport = require('postcss-import');
@@ -8,10 +9,11 @@ const config = {
 		// postcssGlobalData({
 		// 	files: ['src/styles/global-postcss.css']
 		// }),
+		postcssCascadeLayers(),
 		atImport(),
 		postcssPresetEnv({
 			features: {
-				'cascade-layers': false,
+				'cascade-layers': true,
 				'custom-media-queries': true,
 				'media-query-ranges': true,
 				'nesting-rules': true

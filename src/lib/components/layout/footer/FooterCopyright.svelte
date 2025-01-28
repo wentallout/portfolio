@@ -1,9 +1,8 @@
 <script>
-	import { COPYRIGHT_ENTITY } from '$lib/constants/entities.js';
-	import ExLink from '$components/common/ExLink.svelte';
-
-	import Badges from '$components/layout/footer/Badges.svelte';
 	import { VERSION } from '@sveltejs/kit';
+	import ExLink from '$components/common/ExLink.svelte';
+	import Badges from '$components/layout/footer/Badges.svelte';
+	import { COPYRIGHT_ENTITY } from '$lib/constants/entities.js';
 
 	let currentYear = new Date().getFullYear();
 </script>
@@ -17,7 +16,7 @@
 
 	<div class="end__text">
 		Made by Khoa with
-		<a target="_blank" href="https://svelte.dev">
+		<a href="https://svelte.dev" target="_blank">
 			<span class="end__svelte">SvelteKit {VERSION}</span>
 		</a>
 	</div>
