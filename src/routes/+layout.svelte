@@ -2,6 +2,7 @@
 	import '$styles/global.css';
 	import '$styles/splash.css';
 	import { onNavigate } from '$app/navigation';
+	import AdGoogle from '$components/common/AdGoogle.svelte';
 	import BgDeco from '$components/common/BgDeco.svelte';
 	import Footer from '$components/layout/footer/Footer.svelte';
 	import NavBar from '$lib/components/layout/header/NavBar.svelte';
@@ -26,6 +27,9 @@
 	<meta name="view-transition" content="same-origin" />
 </svelte:head>
 
+<!-- <script nonce="%sveltekit.nonce%" async crossorigin="anonymous"
+		src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2238795577080818"></script> -->
+
 <BgDeco />
 <Misc />
 <VideoCover />
@@ -36,6 +40,7 @@
 </main>
 
 <Footer />
+<AdGoogle />
 
 <style lang="postcss">
 	.main-content {

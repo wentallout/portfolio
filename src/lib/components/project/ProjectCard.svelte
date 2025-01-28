@@ -98,7 +98,7 @@
 		flex-grow: 2;
 		flex-direction: column;
 		position: relative;
-		padding: var(--spaceM) var(--spaceL);
+		padding: var(--spaceS) var(--spaceL);
 		gap: var(--spaceM);
 		color: var(--colorTextSecondary);
 		background: var(--colorBgGradientSubtle);
