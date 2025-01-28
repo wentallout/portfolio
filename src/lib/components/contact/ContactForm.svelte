@@ -159,7 +159,7 @@
 		gap: var(--spaceXS);
 		/* --- */
 
-		padding: var(--spaceS) var(--spaceM);
+		padding: var(--spaceCard);
 		transition: var(--transition);
 		box-shadow: var(--boxShadow);
 		background: var(--colorBgGradientSubtle);

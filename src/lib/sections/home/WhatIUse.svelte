@@ -113,7 +113,7 @@
 
 		position: relative;
 
-		padding: var(--spaceL);
+		padding: var(--spaceCard);
 		z-index: 1;
 		/* min-height: 230px; */
 

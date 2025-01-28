@@ -85,7 +85,7 @@
 		gap: var(--spaceL);
 		background: var(--colorBgGradientSubtle);
 		box-shadow: var(--boxShadow);
-		padding: var(--spaceL) var(--spaceXL);
+		padding: var(--spaceCard);
 
 		position: relative;
 		border-radius: var(--borderRadiusLight);
