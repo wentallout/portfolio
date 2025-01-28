@@ -153,8 +153,6 @@ Slug
 
 ![Alt](https://repobeats.axiom.co/api/embed/c17a64a1c0a63ba6cef6618f14b3e39fdf67eb3f.svg 'Repobeats analytics image')
 
-[![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2Fwentallout%2Fportfolio.svg?type=large&issueType=license)](https://app.fossa.com/projects/git%2Bgithub.com%2Fwentallout%2Fportfolio?ref=badge_large&issueType=license)
-
 Featured on: [portfolioshub.com](https://www.portfolioshub.com)
 
 ## License

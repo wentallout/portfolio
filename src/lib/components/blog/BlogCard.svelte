@@ -13,7 +13,7 @@
 	} = $props();
 </script>
 
-<a class="blog custom-border" href={blogLink}>
+<a class="blog" href={blogLink}>
 	<MouseGlow />
 	<article class="blog__info">
 		{#if hasTags}
@@ -57,9 +57,14 @@
 		background: var(--colorBgGradientSubtle);
 		/* --- */
 
+		position: relative;
+		border-radius: var(--borderRadiusLight);
+		border: 1px solid var(--colorBorderSecondary);
+
 		&:hover {
 			box-shadow: -5px 5px var(--colorPrimaryHover);
 			transform: translate(5px, -5px);
+			border: 1px solid var(--colorBorder);
 		}
 	}
 
