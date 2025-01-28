@@ -6,10 +6,10 @@
 </script>
 
 <div class="badges">
-	<ExLink style="display:block" ariaLabel="not by ai" href="https://notbyai.fyi">
+	<ExLink ariaLabel="not by ai" href="https://notbyai.fyi">
 		<LogoNotAi />
 	</ExLink>
-	<ExLink style="display:block" ariaLabel="Vite" href="https://vitejs.dev/">
+	<ExLink ariaLabel="Vite" href="https://vitejs.dev/">
 		<img
 			class="badge__img"
 			alt="vite logo"
@@ -23,7 +23,7 @@
 		<LogoSvelte height="42" width="100%" />
 	</ExLink>
 
-	<ExLink style="display:block" ariaLabel="Svelte Vietnam" href="https://www.sveltevietnam.dev">
+	<ExLink ariaLabel="Svelte Vietnam" href="https://www.sveltevietnam.dev">
 		<img
 			class="badge__img"
 			alt="svelte vietnam"
@@ -34,7 +34,7 @@
 			width="auto" />
 	</ExLink>
 
-	<ExLink style="display:block" ariaLabel="Netlify" href="https://netlify.com">
+	<ExLink ariaLabel="Netlify" href="https://netlify.com">
 		<img
 			class="badge__img"
 			alt="built with netlify"
@@ -46,7 +46,6 @@
 	</ExLink>
 
 	<ExLink
-		style="display:block"
 		ariaLabel="green web foundation"
 		href="https://www.thegreenwebfoundation.org/green-web-check/?url=https%3A%2F%2Fwentallout.io.vn">
 		<img
@@ -71,6 +70,8 @@
 		border-top: 1px solid var(--colorBorderSecondary);
 		border-left: 1px solid var(--colorBorderSecondary);
 		overflow: visible;
+
+		border-radius: var(--borderRadius);
 	}
 
 	@media (min-width: 768px) {
@@ -86,6 +87,7 @@
 		border-right: 1px solid var(--colorBorderSecondary);
 		padding: var(--spaceS);
 		overflow: visible;
+		border-radius: var(--borderRadius);
 	}
 
 	.badge__img {

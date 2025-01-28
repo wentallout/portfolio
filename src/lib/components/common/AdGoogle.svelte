@@ -31,12 +31,6 @@
 			window.adsbygoogle.push({});
 		}
 	});
-
-    // <script nonce="%sveltekit.nonce%" async crossorigin="anonymous"
-    //     src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2238795577080818"></script>
-
-
-
 </script>
 
 <div class="ad-container">
