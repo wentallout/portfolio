@@ -6,7 +6,7 @@ export const audioPlayerEl = writable();
 
 export const musicList = writable([
 	{
-		audio: '/music/cantsee.mp3',
+		audio: '',
 		name: 'Cant See'
 	}
 ]);

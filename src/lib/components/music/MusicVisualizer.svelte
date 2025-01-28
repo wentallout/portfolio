@@ -53,8 +53,6 @@
 		class="visualizer__logo"
 		alt="music visualizer logo"
 		src="/images/brand-logo.svg" />
-
-
 </div>
 
 <style>
@@ -84,25 +82,6 @@
 		height: var(--energyHeight);
 		--shadow: calc(var(--energyHeight) - 100px);
 		filter: drop-shadow(0 0 var(--shadow) var(--colorPrimaryHover));
-		z-index: -1;
-	}
-
-	.visualizer__dancer {
-		position: absolute;
-		left: 50%;
-		top: 50%;
-		transform: translate(-50%, -50%);
-		height: 100%;
-		width: auto;
-		object-fit: contain;
-		margin: auto;
-		opacity: 0;
-		z-index: -1;
-		transition: var(--transition);
-	}
-
-	.dancer-active {
-		opacity: 1;
 		z-index: -1;
 	}
 </style>
