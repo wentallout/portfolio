@@ -1,11 +1,9 @@
 <script>
-	import HeroVisual from '$lib/assets/arts/HeroArt.svelte';
 	import Button from '$components/button/Button.svelte';
-
-	import { onMount } from 'svelte';
-
-	import { gsap } from 'gsap';
+	import HeroVisual from '$lib/assets/arts/HeroArt.svelte';
 	import { CalendarCheck, ThumbsUp } from '$lib/assets/icons/icons';
+	import { gsap } from 'gsap';
+	import { onMount } from 'svelte';
 	let focusText = ['website', 'app', 'game'];
 	let focusIndex = 0;
 
@@ -13,7 +11,6 @@
 		let focusElement = document.querySelector('.hero__focus');
 		function cycleWords() {
 			gsap.to(focusElement, {
-				opacity: 0,
 				duration: 0.25,
 				onComplete: () => {
 					focusElement.textContent = focusText[focusIndex];
@@ -21,22 +18,23 @@
 					gsap.fromTo(
 						focusElement,
 						{
-							textShadow: '0 0 50px currentColor', // Start state of the glow
-							opacity: 0
+							opacity: 0,
+							textShadow: '0 0 50px currentColor' // Start state of the glow
 						},
 						{
-							textShadow: '0 0 10px currentColor', // End state of the glow
-							opacity: 1,
-							ease: 'power2.out',
 							duration: 0.25,
+							ease: 'power2.out',
 							onComplete: () => {
 								// Cycle the words after the animation is complete
 								focusIndex = (focusIndex + 1) % focusText.length;
 								setTimeout(cycleWords, 1000);
-							}
+							},
+							opacity: 1,
+							textShadow: '0 0 10px currentColor' // End state of the glow
 						}
 					);
-				}
+				},
+				opacity: 0
 			});
 		}
 		cycleWords();

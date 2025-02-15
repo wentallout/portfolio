@@ -40,7 +40,8 @@
 </main>
 
 <Footer />
-<AdGoogle />
+
+<!-- <AdGoogle /> -->
 
 <style lang="postcss">
 	.main-content {
@@ -49,8 +50,5 @@
 		flex-direction: column;
 		min-height: 100dvh;
 		z-index: 1;
-	}
-
-	.main-content:before {
 	}
 </style>

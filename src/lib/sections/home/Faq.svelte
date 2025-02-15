@@ -1,9 +1,8 @@
 <script>
 	import Accordion from '$components/common/Accordion.svelte';
-	import SectionTitle from '$sections/SectionTitle.svelte';
-
 	import QuestionArt from '$lib/assets/arts/FaqArt.svelte';
 	import { Question } from '$lib/assets/icons/icons';
+	import SectionTitle from '$sections/SectionTitle.svelte';
 </script>
 
 <section>
@@ -16,16 +15,16 @@
 	<div class="faq">
 		<div class="faq__list">
 			<Accordion
-				accordionSection="Why is UI/UX design important?"
-				accordionText="Good UI/UX design is crucial for the success of digital products because it can greatly impact user engagement, retention, and conversion rates. A well-designed interface can also improve brand perception and customer loyalty." />
+				accordionSection="Why do I need to care about UI/UX?"
+				accordionText="Good UI/UX design is crucial for the success of any digital products because it can greatly impact user engagement, retention, and conversion rates. A well-designed interface can also improve brand perception and customer loyalty." />
 
 			<Accordion
 				accordionSection="How do you approach a new project?"
 				accordionText="I typically start by gathering as much information as possible about the project and the target audience. This may involve conducting user research, creating personas, and analyzing competitors. From there, I create wireframes and prototypes to test different design ideas and iterate based on user feedback." />
 
-			<Accordion
+			<!-- <Accordion
 				accordionSection="How to deal with procrastination?"
-				accordionText="Starting with something, even imperfect, helps overcome inertia and reduces pressure. To improve, set small goals, use the 5-minute rule, and reflect on progress." />
+				accordionText="Starting with something, even imperfect, helps overcome inertia and reduces pressure. To improve, set small goals, use the 5-minute rule, and reflect on progress." /> -->
 
 			<Accordion
 				accordionSection="How do you measure the success of a web project?"

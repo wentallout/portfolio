@@ -3,11 +3,11 @@
 	import SaosContainer from '$lib/components/common/SaosContainer.svelte';
 	import FeaturedProject from '$sections/home/Featured.svelte';
 	import GetInTouch from '$sections/home/GetInTouch.svelte';
-	import Hero from '$sections/home/Hero.svelte';
-	import Clients from '$sections/home/MyClients.svelte';
-	import Principles from '$sections/home/Principles.svelte';
-	import Services from '$sections/home/Services.svelte';
-	import WhatIUse from '$sections/home/WhatIUse.svelte';
+	import HeroSection from '$sections/home/HeroSection.svelte';
+	import MyClientsSection from '$sections/home/MyClientsSection.svelte';
+	import PrinciplesSection from '$sections/home/PrinciplesSection.svelte';
+	import Services from '$sections/home/ServicesSection.svelte';
+	import WhatIUseSection from '$sections/home/WhatIUseSection.svelte';
 
 	const breadcrumbs = [
 		{
@@ -25,7 +25,7 @@
 </script>
 
 <SEO {...seoProps} />
-<Hero />
+<HeroSection />
 
 <SaosContainer animation="fade-in-top 0.6s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;">
 	<Services />
@@ -36,14 +36,14 @@
 </SaosContainer>
 
 <SaosContainer animation="fade-in-top 0.6s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;">
-	<WhatIUse />
+	<WhatIUseSection />
 </SaosContainer>
 
 <SaosContainer animation="fade-in-top 0.6s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;">
-	<Principles />
+	<PrinciplesSection />
 </SaosContainer>
 
 <SaosContainer animation="fade-in-top 0.6s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;">
-	<Clients />
+	<MyClientsSection />
 </SaosContainer>
 <GetInTouch />

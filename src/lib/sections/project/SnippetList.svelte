@@ -4,79 +4,79 @@
 
 	let snippetList = [
 		{
-			title: 'Canva Magic Mouse effect',
+			desc: 'cool sparkle that follows your mouse',
 			href: 'https://codepen.io/Hyperplexed/pen/OJdpEME',
-			desc: 'cool sparkle that follows your mouse'
+			title: 'Canva Magic Mouse effect'
 		},
 		{
-			title: 'Auto Fit Text',
+			desc: 'Text that fit to its container width.',
 			href: 'https://codepen.io/wentallout/pen/KKOBVxq',
-			desc: 'Text that fit to its container width.'
+			title: 'Auto Fit Text'
 		},
 		{
-			title: '3D Card Tilt On Hover',
+			desc: '3D card that tilts on hover',
 			href: 'https://codepen.io/wentallout/pen/MWdvEzN',
-			desc: '3D card that tilts on hover'
+			title: '3D Card Tilt On Hover'
 		},
 		{
-			title: 'Truncating Long Text with CSS Ellipsis',
+			desc: 'truncate long text with css ellipsis',
 			href: 'https://codepen.io/wentallout/pen/MWdpQWW',
-			desc: 'truncate long text with css ellipsis'
+			title: 'Truncating Long Text with CSS Ellipsis'
 		},
 		{
-			title: 'Pancake Stack Layout',
+			desc: 'a commonly used layout in both desktop and mobile',
 			href: 'https://codepen.io/wentallout/pen/KKrqXMj',
-			desc: 'a commonly used layout in both desktop and mobile'
+			title: 'Pancake Stack Layout'
 		},
 		{
-			title: 'Sidebar Layout',
+			desc: 'quick way to achieve a left sidebar + right main layout',
 			href: 'https://codepen.io/wentallout/pen/LYXLzLj',
-			desc: 'quick way to achieve a left sidebar + right main layout'
+			title: 'Sidebar Layout'
 		},
 		{
-			title: 'Holy Grail Layout',
+			desc: 'classic holy grail layout using grid',
 			href: 'https://codepen.io/wentallout/pen/yLQXzqe',
-			desc: 'classic holy grail layout using grid'
+			title: 'Holy Grail Layout'
 		},
 		{
-			title: 'Responsive Hamburger Navbar without JS',
+			desc: 'hamburger navbar that skip JS.',
 			href: 'https://codepen.io/wentallout/pen/ExOmjXv',
-			desc: 'hamburger navbar that skip JS.'
+			title: 'Responsive Hamburger Navbar without JS'
 		},
 		{
-			title: 'Switcher',
+			desc: 'typicial iOS style switcher with 2 state on/off',
 			href: 'https://codepen.io/wentallout/pen/WNYjKVd',
-			desc: 'typicial iOS style switcher with 2 state on/off'
+			title: 'Switcher'
 		},
 		{
-			title: 'Avatar',
+			desc: 'avatar pure CSS',
 			href: 'https://codepen.io/wentallout/pen/dyQWjdx',
-			desc: 'avatar pure CSS'
+			title: 'Avatar'
 		},
 		{
-			title: 'Voting Bar',
+			desc: 'voting element like reddit',
 			href: 'https://codepen.io/wentallout/pen/dyQRzEv',
-			desc: 'voting element like reddit'
+			title: 'Voting Bar'
 		},
 		{
-			title: 'Panoramic Animation',
+			desc: "animate an img from left to right when it's wider than its container",
 			href: 'https://codepen.io/wentallout/pen/xxQEOzq',
-			desc: "animate an img from left to right when it's wider than its container"
+			title: 'Panoramic Animation'
 		},
 		{
-			title: 'Smooth Scroll',
+			desc: 'smooth scroll with vanilla JS',
 			href: 'https://codepen.io/wentallout/pen/ExNNvzR',
-			desc: 'smooth scroll with vanilla JS'
+			title: 'Smooth Scroll'
 		},
 		{
-			title: 'Glitchy Text Animation',
+			desc: 'futuristic glitchy text',
 			href: 'https://codepen.io/wentallout/pen/rNzBQOQ',
-			desc: 'futuristic glitchy text'
+			title: 'Glitchy Text Animation'
 		},
 		{
-			title: 'Clock',
+			desc: 'a clock in VanillaJS',
 			href: 'https://codepen.io/wentallout/pen/rNQjbPW',
-			desc: 'a clock in VanillaJS'
+			title: 'Clock'
 		}
 	];
 </script>

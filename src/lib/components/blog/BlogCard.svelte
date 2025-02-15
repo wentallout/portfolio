@@ -13,24 +13,26 @@
 	} = $props();
 </script>
 
-<a class="blog" href={blogLink}>
-	<MouseGlow />
-	<article class="blog__info">
-		{#if hasTags}
-			<div class="tags">
-				{#each blogTags as tag}
-					<span class="tag text-xs">
-						#{tag}
-					</span>
-				{/each}
-			</div>
-		{/if}
+<a href={blogLink}>
+	<article class="blog fancy-border">
+		<MouseGlow />
+		<div class="blog__info">
+			{#if hasTags}
+				<div class="tags">
+					{#each blogTags as tag}
+						<span class="tag text-xs">
+							#{tag}
+						</span>
+					{/each}
+				</div>
+			{/if}
 
-		<div class="blog__title text-small">{blogTitle}</div>
+			<div class="blog__title text-small">{blogTitle}</div>
+		</div>
+		<span class="blog__icon">
+			<CaretRight color="var(--colorText)" height="16" width="16" />
+		</span>
 	</article>
-	<span class="blog__icon">
-		<CaretRight color="var(--colorText)" height="16" width="16" />
-	</span>
 </a>
 
 <style lang="postcss">
@@ -59,7 +61,6 @@
 
 		position: relative;
 		border-radius: var(--borderRadiusLight);
-		border: 1px solid var(--colorBorderSecondary);
 
 		&:hover {
 			box-shadow: -5px 5px var(--colorPrimaryHover);
@@ -83,7 +84,7 @@
 	.tag {
 		font-weight: 300;
 		font-size: var(--fontSizeXS);
-		color: var(--colorTextQuaternary);
+		color: var(--colorTextSecondary);
 	}
 
 	.blog__info {
@@ -102,7 +103,7 @@
 
 		/* FONT */
 		font-weight: var(--fontWeightMid);
-		color: var(--colorText);
+		color: var(--colorPrimary);
 		/* --- */
 
 		/* LINE CLAMP */

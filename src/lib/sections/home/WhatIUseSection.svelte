@@ -18,7 +18,7 @@
 			</SectionTitle>
 
 			<div class="tool__block">
-				<div class="block__section">
+				<article class="block__section fancy-border">
 					<div class="section__svg">
 						<ProcessArt height="120" width="120" />
 					</div>
@@ -28,9 +28,9 @@
 						<p class="block__text text-small">Double Diamond</p>
 						<p class="block__text text-small">UX Honeycomb</p>
 					</div>
-				</div>
+				</article>
 
-				<div class="block__section">
+				<article class="block__section fancy-border">
 					<div class="section__svg">
 						<NavigationArt height="120" width="120" />
 					</div>
@@ -39,9 +39,9 @@
 						<p class="block__text text-small">Figma</p>
 						<p class="block__text text-small">Adobe XD</p>
 					</div>
-				</div>
+				</article>
 
-				<div class="block__section">
+				<article class="block__section fancy-border">
 					<div class="section__svg">
 						<GraphicDesignArt height="120" width="120" />
 					</div>
@@ -51,9 +51,9 @@
 						<p class="block__text text-small">Canva</p>
 						<p class="block__text text-small">Illustrator</p>
 					</div>
-				</div>
+				</article>
 
-				<div class="block__section">
+				<article class="block__section fancy-border">
 					<div class="section__svg">
 						<FrontendArt height="120" width="120" />
 					</div>
@@ -63,7 +63,7 @@
 						<p class="block__text text-small">TailwindCSS, Bootstrap</p>
 						<p class="block__text text-small">React, SvelteKit</p>
 					</div>
-				</div>
+				</article>
 			</div>
 		</div>
 	</section>
@@ -125,7 +125,6 @@
 		background: var(--colorBgGradientSubtle);
 
 		border-radius: var(--borderRadiusLight);
-		border: 1px solid var(--colorBorderSecondary);
 	}
 
 	.block__section:hover {
