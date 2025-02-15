@@ -1,10 +1,10 @@
 <script>
-	import SaosContainer from '$components/common/SaosContainer.svelte';
 	import ExLink from '$components/common/ExLink.svelte';
+	import SaosContainer from '$components/common/SaosContainer.svelte';
+	import { Buildings } from '$lib/assets/icons/icons';
 	import fpt from '$lib/assets/images/home/fpt.png?w=300&h=300';
 	import nashtech from '$lib/assets/images/home/nashtech.png?w=300&h=300';
 	import SectionTitle from '$sections/SectionTitle.svelte';
-	import { Buildings } from '$lib/assets/icons/icons';
 </script>
 
 <SaosContainer>
@@ -19,21 +19,21 @@
 				<ExLink href="https://www.fpt-software.com">
 					<img
 						class="logo"
-						title="FPT Software"
 						alt="FPT Software"
 						decoding="async"
 						loading="lazy"
-						src={fpt} />
+						src={fpt}
+						title="FPT Software" />
 				</ExLink>
 
 				<ExLink href="https://nashtechglobal.com">
 					<img
 						class="logo"
-						title="NashTech"
 						alt="NashTech"
 						decoding="async"
 						loading="lazy"
-						src={nashtech} />
+						src={nashtech}
+						title="NashTech" />
 				</ExLink>
 			</div>
 		</div>

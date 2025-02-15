@@ -16,7 +16,7 @@
 <ExLink style="display:flex;position:relative" {href}>
 	<MouseGlow />
 
-	<div class="fcard">
+	<article class="fcard">
 		{#if thumbnailUrl && thumbnailUrl.length > 0}
 			<img
 				class="fcard__thumbnail"
@@ -33,7 +33,7 @@
 			<div class="fcard__title text-small">{title}</div>
 			<div class="fcard__desc text-xs">{desc}</div>
 		</div>
-	</div>
+	</article>
 </ExLink>
 
 <style lang="postcss">
@@ -68,7 +68,8 @@
 	}
 
 	.fcard__title {
-		color: var(--colorText);
+		color: var(--colorPrimary);
+		font-family: var(--fontFancy);
 		overflow: hidden;
 		text-overflow: ellipsis;
 		display: -webkit-box;

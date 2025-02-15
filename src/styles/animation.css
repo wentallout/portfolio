@@ -141,3 +141,23 @@
 		opacity: 1;
 	}
 }
+
+/* @keyframes article-appear {
+	from {
+		transform: translateX(-10vw);
+		opacity: 0;
+	}
+	to {
+		transform: translateX(0);
+		opacity: 1;
+	}
+} */
+
+/* article {
+	view-timeline-name: --articleAppear;
+	animation-timeline: --articleAppear;
+	animation-name: article-appear;
+	animation-fill-mode: both;
+	animation-range: entry 0% entry 50%; 
+	animation-duration: 1ms; 
+} */

@@ -11,7 +11,9 @@ const cspDirectives = {
 		"'self'",
 		'https://googleads.g.doubleclick.net',
 		'https://www.google.com',
-		'https://ep2.adtrafficquality.google'
+		'https://ep2.adtrafficquality.google',
+		'https://w.soundcloud.com',
+		'https://giscus.app'
 	],
 	'img-src': [
 		"'self'",

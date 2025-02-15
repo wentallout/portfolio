@@ -11,15 +11,15 @@
 	} = $props();
 </script>
 
-<a class="project-container" href={linkToDetail}>
+<a class="project-container fancy-border" href={linkToDetail}>
 	<MouseGlow />
 	<article class="project">
 		<div class="project__thumbnail">
 			<img alt={projectName} loading="lazy" src={thumbnail} title={projectName} />
 		</div>
 		<div class="project__info">
-			<div class="project__title">
-				<div class="name text-mid">{projectName}</div>
+			<div class="project__title text-large">
+				{projectName}
 			</div>
 
 			<div class="info text-small">
@@ -57,7 +57,6 @@
 
 		position: relative;
 		border-radius: var(--borderRadiusLight);
-		border: 1px solid var(--colorBorderSecondary);
 
 		&:hover {
 			box-shadow: -6px 6px var(--colorPrimaryHover);
@@ -67,6 +66,14 @@
 			box-shadow: -1px 1px var(--colorPrimaryActive);
 			transform: translate(1px, -1px);
 		}
+	}
+
+	.project:hover .project__thumbnail img {
+		transition: var(--transition);
+	}
+
+	.project:hover .project__thumbnail img {
+		transform: scale(1.2);
 	}
 
 	@media (min-width: 992px) {
@@ -107,6 +114,10 @@
 		display: flex;
 		justify-content: flex-start;
 		flex-direction: column;
+		color: var(--colorPrimary);
+
+		font-weight: var(--fontWeightLarge);
+		font-family: var(--fontFancy);
 	}
 
 	.info {
@@ -122,14 +133,8 @@
 		position: relative;
 		padding: var(--spaceCard);
 		gap: var(--spaceM);
-		color: var(--colorTextSecondary);
-		background: var(--colorBgGradientSubtle);
-	}
-
-	.name {
 		color: var(--colorText);
-		font-weight: var(--fontWeightLarge);
-		font-family: var(--fontFancy);
+		background: var(--colorBgGradientSubtle);
 	}
 
 	.info__section {

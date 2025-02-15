@@ -18,7 +18,8 @@ https://bgjar.com/
 
 ## Layout Generator:
 
-- Flex + Grid: https://layout.bradwoods.io/
+- Flex + Grid: https://layout.bradwoods.io
+- Flexbox Labs: https://flexboxlabs.netlify.app
 
 ## Illustration: 
 
