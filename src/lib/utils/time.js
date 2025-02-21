@@ -1,3 +1,9 @@
+export function getKhoaAge() {
+	const currentYear = new Date().getFullYear();
+	const age = currentYear - 1999;
+	return age;
+}
+
 export function getUserLocalTime() {
 	const userLocalTime = new Date();
 	return userLocalTime.toLocaleString();

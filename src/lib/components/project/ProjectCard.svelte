@@ -18,7 +18,7 @@
 			<img alt={projectName} loading="lazy" src={thumbnail} title={projectName} />
 		</div>
 		<div class="project__info">
-			<div class="project__title text-large">
+			<div class="project__title text-large text-trim">
 				{projectName}
 			</div>
 

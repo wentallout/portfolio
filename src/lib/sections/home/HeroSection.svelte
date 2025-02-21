@@ -45,7 +45,7 @@
 	<div class="full-width">
 		<div class="hero g-container">
 			<div class="hero__block">
-				<div class="text-3xl hero__heading">
+				<div class="text-3xl hero__heading text-trim">
 					<div>
 						Tailor-made
 						<span id="hero__focus" class="hero__focus focus">

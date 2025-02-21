@@ -1,8 +1,6 @@
 <script>
 	import PageTitle from '$components/common/PageTitle.svelte';
-
-	const currentYear = new Date().getFullYear();
-	const age = currentYear - 1999;
+	import { getKhoaAge } from '$lib/utils/time';
 </script>
 
 <PageTitle pageTitle="About Me" />
@@ -12,7 +10,7 @@
 		<div class="about__title text-large">Who am I?</div>
 		<div class="about__desc text-small">
 			<ul>
-				<li>Khoa Nguyen. {age} y/o.</li>
+				<li>Khoa Nguyen. {getKhoaAge()} y/o.</li>
 				<li>Live and work in Ho Chi Minh City, Vietnam.</li>
 				<li>~2 years as Web Developer. Trained by the best UX Designers at Mirr Design</li>
 			</ul>
