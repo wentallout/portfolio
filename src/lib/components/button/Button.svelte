@@ -1,16 +1,16 @@
 <script>
 	/** @type {{label?: string, labelColor?: string, width?: any, glowColor?: string, type?: string, backgroundColor?: string, borderColor?: any, border?: any, shadowColor?: any, children?: import('svelte').Snippet}} */
 	let {
-		label = 'exampleLabel',
-		labelColor = 'var(--colorBlack)',
-		width = undefined,
-		glowColor = 'var(--colorBgElevated)',
-		type = 'submit',
 		backgroundColor = 'transparent',
 		borderColor = backgroundColor,
 		border = `1px solid ${borderColor}`,
+		children,
+		glowColor = 'var(--colorBgElevated)',
+		label = 'exampleLabel',
+		labelColor = 'var(--colorBlack)',
 		shadowColor = backgroundColor,
-		children
+		type = 'submit',
+		width = undefined
 	} = $props();
 </script>
 
@@ -18,10 +18,10 @@
 	<span style:background-color={shadowColor} class="shadow"></span>
 
 	<span
-		class="front"
 		style:background-color={backgroundColor}
 		style:border
-		style:color={labelColor}>
+		style:color={labelColor}
+		class="front">
 		{@render children?.()}
 		{label}
 	</span>
@@ -85,6 +85,7 @@
 		font-weight: var(--fontWeightLarge);
 		line-height: normal;
 		font-size: var(--fontSizeSmall);
+		text-box: trim-both cap alphabetic;
 		/* --- */
 	}
 	.pushable:hover {

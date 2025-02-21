@@ -1,27 +1,27 @@
 <script>
-	import Wall from '$lib/assets/images/common/wall.webp';
 	import Breadcrumb from '$components/layout/other/Breadcrumb.svelte';
+	import Wall from '$lib/assets/images/common/wall.webp';
 
 	/** @type {{pageTitle?: string, decoImageUrl?: any}} */
-	let { pageTitle = 'pageTitle', decoImageUrl = Wall } = $props();
+	let { decoImageUrl = Wall, pageTitle = 'pageTitle' } = $props();
 </script>
 
 <div class="full-width title">
-	<div class="title__extra">
+	<span class="title__extra">
 		{pageTitle}
-	</div>
+	</span>
 
 	<img
-		width="1920"
-		height="642"
 		class="title__bg"
 		alt="title deco"
-		title="title deco"
+		height="642"
 		loading="eager"
-		src={decoImageUrl} />
+		src={decoImageUrl}
+		title="title deco"
+		width="1920" />
 
 	<div class="title__content">
-		<h1 class="text-3xl title__text tracking-in-expand">
+		<h1 class="text-3xl title__text tracking-in-expand text-trim">
 			{pageTitle}
 		</h1>
 	</div>
@@ -45,6 +45,8 @@
 		overflow: hidden;
 		height: 30dvh;
 
+		text-box: trim-both cap alphabetic;
+
 		user-select: none;
 	}
 	.title__extra {
@@ -60,10 +62,12 @@
 		transform: translate(-50%, -50%);
 
 		font-family: var(--fontFancy);
-		opacity: 10%;
+		opacity: 15%;
 		z-index: -2;
 		font-weight: 100;
 		letter-spacing: var(--tracking-tighter);
+
+		text-box: trim-both cap alphabetic;
 	}
 
 	.title__content {

@@ -87,6 +87,7 @@
 		font-size: var(--fontSizeBase);
 		font-weight: var(--fontWeightMid);
 		color: var(--colorText);
+		text-box: trim-both cap alphabetic;
 		/* --- */
 
 		width: 100%;

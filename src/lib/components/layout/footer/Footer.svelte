@@ -1,23 +1,23 @@
 <script>
-	import FooterCopyright from '$components/layout/footer/FooterCopyright.svelte';
 	import ExLink from '$components/common/ExLink.svelte';
+	import StarBg from '$components/common/StarBg.svelte';
+	import FooterCopyright from '$components/layout/footer/FooterCopyright.svelte';
 	import Marquee from '$components/layout/other/Marquee.svelte';
-	import { navItems } from '$lib/config.js';
-
 	import {
 		EnvelopeSimple,
-		LinkedinLogo,
-		InstagramLogo,
 		GitHubLogo,
-		Phone,
-		MapPin
+		InstagramLogo,
+		LinkedinLogo,
+		MapPin,
+		Phone
 	} from '$lib/assets/icons/icons';
-
-	import StarBg from '$components/common/StarBg.svelte';
+	import { navItems } from '$lib/config.js';
 </script>
 
 <footer class="footer text-small">
 	<StarBg />
+
+	<img class="footer__koi" alt="koi" src="/images/koi.svg" />
 
 	<div class="g-container">
 		<div class="footer__list">
@@ -131,6 +131,7 @@
 
 <style>
 	.footer {
+		position: relative;
 		/* FLEX */
 		display: flex;
 		flex-direction: column;
@@ -142,7 +143,6 @@
 		padding: var(--spaceXL) 0;
 		/* --- */
 
-		position: relative;
 		overflow: hidden;
 		background-color: var(--colorBgLayout);
 	}
@@ -216,5 +216,19 @@
 		margin-bottom: var(--spaceL);
 		flex-wrap: wrap;
 		gap: var(--space2XS);
+	}
+
+	.footer__koi {
+		position: absolute;
+		right: 0;
+		top: 0%;
+		height: 100%;
+		width: auto;
+		opacity: 0.1;
+		filter: invert(1);
+	}
+
+	:global([color-scheme='light'] .footer__koi) {
+		filter: invert(0);
 	}
 </style>

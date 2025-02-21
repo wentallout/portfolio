@@ -1,6 +1,8 @@
 <script>
+	import PageTitle from '$components/common/PageTitle.svelte';
 </script>
 
+<PageTitle pageTitle="Experiment" />
 <div class="threejs">Work in progress</div>
 
 <style>

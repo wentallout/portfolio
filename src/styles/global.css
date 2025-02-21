@@ -208,3 +208,7 @@ textarea {
 	opacity: 1;
 	overflow: visible;
 }
+
+.text-trim {
+	text-box: trim-both cap alphabetic;
+}

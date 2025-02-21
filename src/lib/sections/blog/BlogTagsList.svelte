@@ -1,21 +1,21 @@
 <script>
-	import Tag from '$components/common/Tag.svelte';
-	/** @type {{data: any}} */
-	let { data } = $props();
+    import Tag from '$components/common/Tag.svelte';
+    /** @type {{data: any}} */
+    let { data } = $props();
 
-	const categories = new Set(data.blogs.flatMap((blog) => blog.meta.categories));
+    const categories = new Set(data.blogs.map((blog) => blog.meta.categories).flat());
 
-	let uniqueCategories = Array.from(categories).sort((a, b) => a.localeCompare(b));
+    let uniqueCategories = Array.from(categories).sort((a, b) => a.localeCompare(b));
 </script>
 
 <div class="category">
-	{#each uniqueCategories as category}
-		<a href="/blog/category/{category}">
-			<Tag>
-				{category}
-			</Tag>
-		</a>
-	{/each}
+    {#each uniqueCategories as category}
+        <a href="/blog/category/{category}">
+            <Tag>
+                {category}
+            </Tag>
+        </a>
+    {/each}
 </div>
 
 <style>

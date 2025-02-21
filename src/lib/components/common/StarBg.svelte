@@ -8,11 +8,11 @@
 		background-repeat: repeat-x;
 		background-position: 100%;
 		margin-bottom: var(--spaceM);
+		position: absolute;
+		top: 0;
 	}
 
 	:global([color-scheme='dark'] .stars) {
 		filter: invert(1);
-
 	}
-	
 </style>

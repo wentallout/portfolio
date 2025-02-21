@@ -28,14 +28,28 @@
 
 <svelte:window onscroll={handleOnScroll} />
 
-<button class="bck2top text-xs" class:hidden onclick={goTop} onkeyup={goTop} type="button">
+<button class="bck2top" class:hidden onclick={goTop} onkeyup={goTop} type="button">
 	<ArrowLineUp />
 </button>
 
 <style>
+	@keyframes progress {
+		0% {
+			--progress: 0%;
+		}
+
+		100% {
+			--progress: 100%;
+		}
+	}
+
+	@property --progress {
+		syntax: '<length-percentage>';
+		inherits: false;
+		initial-value: 0%;
+	}
 	.bck2top {
 		aspect-ratio: 1/1;
-
 		width: 40px;
 
 		/* FLEX */
@@ -47,8 +61,8 @@
 
 		/* POSITION FIXED ON SCREEN */
 		position: fixed;
-		right: 8px;
-		bottom: 8px;
+		right: 12px;
+		bottom: 12px;
 		z-index: var(--zIndexMax);
 		/*  */
 
@@ -63,13 +77,28 @@
 
 		box-shadow: var(--boxShadow);
 		color: var(--colorText);
-		background: color-mix(in srgb, var(--colorBgElevated) 50%, transparent);
-		backdrop-filter: blur(5px);
 
 		border-radius: var(--borderRadius);
 
+		background-image: linear-gradient(
+			var(--colorPrimary) 0% var(--progress),
+			var(--colorBgElevated) var(--progress) 100%
+		);
+
+		animation: progress linear;
+		animation-timeline: scroll();
+
 		&:hover {
-			background: color-mix(in srgb, var(--colorBgElevated) 100%, transparent);
+			filter: brightness(1.2);
+		}
+
+		&:active {
+			color: var(--colorPrimaryActive);
+		}
+
+		&.hidden {
+			opacity: 0;
+			visibility: hidden;
 		}
 	}
 
@@ -78,14 +107,5 @@
 			padding: var(--spaceXS);
 			width: 56px;
 		}
-	}
-
-	.bck2top:active {
-		color: var(--colorPrimaryActive);
-	}
-
-	.bck2top.hidden {
-		opacity: 0;
-		visibility: hidden;
 	}
 </style>
