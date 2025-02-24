@@ -1,6 +1,5 @@
 <script>
-	/** @type {{duration?: string, offset?: number, tolerance?: number, children?: import('svelte').Snippet}} */
-	let { duration = '100ms', offset = 0, tolerance = 0, children } = $props();
+	let { children, duration = '100ms', offset = 0, tolerance = 0 } = $props();
 
 	let headerClass = $state('show');
 	let y = $state(0);

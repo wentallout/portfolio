@@ -15,7 +15,7 @@
 	<div class="principle-container">
 		<div class="principle">
 			<article class="principle__section fancy-border">
-				<h3 class="principle__title text-base">Straightforward</h3>
+				<h3 class="principle__title text-base text-trim">Straightforward</h3>
 				<p class="principle__desc text-small">
 					Simplify the design by removing unnecessary steps or elements for a seamless user
 					experience and reduced cognitive load.
@@ -23,14 +23,14 @@
 			</article>
 
 			<article class="principle__section fancy-border">
-				<h3 class="principle__title text-base">Test</h3>
+				<h3 class="principle__title text-base text-trim">Test</h3>
 				<p class="principle__desc text-small">
 					Continuously test and iterate the design to ensure it meets users' needs and expectations.
 				</p>
 			</article>
 
 			<article class="principle__section fancy-border">
-				<h3 class="principle__title text-base">Instructional</h3>
+				<h3 class="principle__title text-base text-trim">Instructional</h3>
 				<p class="principle__desc text-small">
 					Provide clear instructions and guidance to users, if necessary, to ensure ease of product
 					or interface usage.
@@ -38,7 +38,7 @@
 			</article>
 
 			<article class="principle__section fancy-border">
-				<h3 class="principle__title text-base">Readable</h3>
+				<h3 class="principle__title text-base text-trim">Readable</h3>
 				<p class="principle__desc text-small">
 					Optimize readability by choosing appropriate fonts, colors, and spacing for comfortable
 					reading and reduced eye strain.
@@ -64,6 +64,11 @@
 		}
 	}
 
+	.principle__title {
+		font-weight: 600;
+		padding-block: 4px;
+	}
+
 	.principle__title:first-letter {
 		font-size: 200%;
 		color: var(--colorPrimary);
@@ -80,7 +85,7 @@
 	}
 
 	.principle__section {
-		padding: var(--spaceCard);
+		padding: var(--spaceM);
 		display: flex;
 		flex-direction: column;
 		gap: var(--space2XS);
@@ -91,10 +96,6 @@
 		background: var(--colorBgGradientSubtle);
 
 		position: relative;
-	}
-
-	.principle__title {
-		font-weight: 600;
 	}
 
 	.principle__desc {

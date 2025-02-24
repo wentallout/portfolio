@@ -2,6 +2,7 @@
 	import MouseGlow from '$components/common/MouseGlow.svelte';
 
 	let {
+		desc = '',
 		linkToDetail = '',
 		output = '',
 		projectName = '',
@@ -18,24 +19,19 @@
 			<img alt={projectName} loading="lazy" src={thumbnail} title={projectName} />
 		</div>
 		<div class="project__info">
-			<div class="project__title text-large text-trim">
+			<h2 class="project__title text-large text-trim">
 				{projectName}
-			</div>
+			</h2>
 
 			<div class="info text-small">
-				<div class="info__section">
-					<div class="section__label">About</div>
-					<div class="section__desc">{what}</div>
-				</div>
-				<div class="info__section">
-					<div class="section__label">Role</div>
-					<div class="section__desc">{role}</div>
-				</div>
+				<p class="section__label">Role</p>
+				<p class="section__desc">{role}</p>
 
-				<div class="info__section">
-					<div class="section__label">Output</div>
-					<div class="section__desc">{output}</div>
-				</div>
+				<p class="section__label">Description</p>
+				<p class="section__desc">{desc}</p>
+
+				<p class="section__label">Result</p>
+				<p class="section__desc">{output}</p>
 			</div>
 		</div>
 	</article>
@@ -122,8 +118,9 @@
 
 	.info {
 		display: grid;
-		gap: var(--spaceXS);
+		gap: var(--spaceS);
 		grid-template-rows: 1fr 1fr 1fr;
+		grid-template-columns: auto 1fr;
 	}
 
 	.project__info {
@@ -131,26 +128,15 @@
 		flex-grow: 2;
 		flex-direction: column;
 		position: relative;
-		padding: var(--spaceCard);
+		padding: var(--space-card);
 		gap: var(--spaceM);
 		color: var(--colorText);
 		background: var(--colorBgGradientSubtle);
 	}
 
-	.info__section {
-		display: flex;
-		flex-direction: column;
-		gap: var(--spaceXS);
-	}
-
 	@media (min-width: 992px) {
 		.project {
 			flex-direction: row;
-		}
-
-		.info__section {
-			flex-direction: row;
-			gap: var(--spaceM);
 		}
 	}
 

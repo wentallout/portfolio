@@ -199,7 +199,7 @@ textarea {
 	border-style: solid;
 	pointer-events: none;
 	filter: invert(66%) sepia(86%) saturate(1759%) hue-rotate(3deg) brightness(109%) contrast(101%);
-	opacity: 0.1;
+	opacity: 0.2;
 	z-index: 3;
 	transition: var(--transition);
 }

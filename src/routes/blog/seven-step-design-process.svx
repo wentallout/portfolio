@@ -1,0 +1,96 @@
+---
+title: Seven step design process
+date: 2024-24-02
+categories:
+    - design 
+---
+
+Here is the breakdown of my 7-step brand identity process:
+
+## Research & Discovery Call
+
+Every project begins with understanding. I dive deep into the client's world. 
+ 
+Who are they? Who is their audience? What problem do they solve?
+ 
+This phase helps me gather all the important details and sets a solid foundation of trust when you get on a call with your client.
+ 
+## Defining the Brand Identity Strategy
+
+With research in hand, I craft a clear brand strategy. This includes defining the value proposition and key messaging. 
+ 
+I ask: What makes this brand unique? How can we communicate that clearly? 
+ 
+This step ensures that every design decision supports the overall identity strategy.
+ 
+It will help preventing the design and copywriting to be bland branding.
+ 
+I also do a competitive analysis to see what other brands are doing in the space so we can do something different. 
+ 
+## Design Concept Development
+
+Now, I brainstorm ideas by curating custom mood boards to explore 3 different directions based on the goals and identity strategy.
+ 
+I gather a bunch of images:
+- Logos
+- Typography
+- Website hero layouts
+- Illustrations
+- Icons
+- Colours
+- Packaging
+ 
+I let the ideas flow and then narrow down to the concepts that best align with the brand's vision.
+ 
+## Design Execution
+
+Here's where the fun begins. 
+ 
+I bring the chosen concept to life by designing logos, selecting colors, typography, and all the visual elements. 
+ 
+I do this all in Adobe Illustrator, it's a work horse.
+ 
+Throwing things on my artboard and exploring many ideas even if it's weird or colourful.
+ 
+This part of the process can be messy, don't be fooled by the clean bentos you see out there. That's design in it's final form.
+ 
+## Revisions & Refinement
+
+I share the designs with the client with a Loom recording breaking down my thinking, design decisions and the overall story of the brand.
+ 
+This step is all about refinement and gauging where the clients emotions are at.
+ 
+After getting raw feedback via email or a call I implement any changes and tweaks if needed.
+ 
+## Presentation & Storytelling
+
+Gone are the days of the “magic reveal.” 
+ 
+Today, I present the work with a clear narrative and explain the thinking behind every design decision. 
+ 
+This storytelling builds trust and demonstrates the value of a structured logical process.
+ 
+Humans are emotional as well so them feeling the energy and excitement on your designs will make them excited too.
+ 
+## Final Delivery & Implementation
+
+The last step is all about handing over the assets. If this part is smooth they will remember it because it's the last thing on their mind.
+ 
+I provide all the files, guidelines, and any support needed for implementation in a Dropbox folder with the project name. A clear handover makes sure that the brand is consistently represented across all channels.
+ 
+It's what sets apart a great design from a good one. And more importantly, it's what gives my clients the confidence that they're working with someone who knows exactly what they're doing.
+
+## TLDR
+
+- 1. Research & Discovery: Understand the client, audience, and problem they solve. Build trust through a deep dive and discovery call.
+- 2. Brand Identity Strategy: Define value proposition, key messaging, and unique positioning. Analyze competitors to stand out.
+- 3. Design Concept Development: Create 3 mood board directions with logos, typography, colors, and layouts. Explore ideas, then refine the best ones.
+- 4. Design Execution: Bring concepts to life with logos, colors, and visuals in Adobe Illustrator. Experiment freely—great design starts messy.
+- 5. Revisions & Refinement: Present designs with a Loom video explaining choices. Gather client feedback and make adjustments.
+- 6. Presentation & Storytelling: No surprise reveals—explain design decisions clearly. Build trust with logic and emotional connection.
+- 7. Final Delivery & Implementation: Provide organized files, guidelines, and support. A smooth handover ensures brand consistency and lasting impact.
+ 
+
+ 
+
+ 

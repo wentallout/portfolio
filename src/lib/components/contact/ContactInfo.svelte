@@ -72,7 +72,7 @@
 		gap: var(--spaceXS);
 		/* --- */
 
-		padding: var(--spaceCard);
+		padding: var(--space-card);
 		transition: var(--transition);
 		box-shadow: var(--boxShadow);
 		background: var(--colorBgGradientSubtle);

@@ -4,6 +4,11 @@
 
 	let snippetList = [
 		{
+			desc: 'generate a palette using one hue',
+			href: 'https://codepen.io/wentallout/pen/NPWrpdX',
+			title: 'Dynamic OKLCH Color Palette'
+		},
+		{
 			desc: 'cool sparkle that follows your mouse',
 			href: 'https://codepen.io/Hyperplexed/pen/OJdpEME',
 			title: 'Canva Magic Mouse effect'

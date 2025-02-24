@@ -1,7 +1,7 @@
 <script>
 	import ExLink from '$components/common/ExLink.svelte';
-	import StarBg from '$components/common/StarBg.svelte';
 	import FooterCopyright from '$components/layout/footer/FooterCopyright.svelte';
+	import FooterDeco from '$components/layout/footer/FooterDeco.svelte';
 	import Marquee from '$components/layout/other/Marquee.svelte';
 	import {
 		EnvelopeSimple,
@@ -15,7 +15,7 @@
 </script>
 
 <footer class="footer text-small">
-	<StarBg />
+	<FooterDeco />
 
 	<img class="footer__koi" alt="koi" src="/images/koi.svg" />
 
@@ -123,7 +123,6 @@
 		</div>
 
 		<FooterCopyright />
-		<div class="footer__deco" alt="footer decoration"></div>
 	</div>
 </footer>
 
@@ -145,6 +144,10 @@
 
 		overflow: hidden;
 		background-color: var(--colorBgLayout);
+
+		border-top-left-radius: 10%;
+		border-top-right-radius: 10%;
+		box-shadow: var(--boxShadow);
 	}
 
 	.g-container {
@@ -165,17 +168,6 @@
 		&:hover {
 			color: var(--colorPrimaryHover);
 		}
-	}
-
-	.footer__deco {
-		background: url('/images/footer-skyline.webp');
-		background-repeat: repeat-x;
-		height: 53px;
-		width: 100%;
-		z-index: -1;
-		position: absolute;
-		bottom: 0;
-		left: 0;
 	}
 
 	.link {
@@ -219,11 +211,19 @@
 	}
 
 	.footer__koi {
+		/* POSITION */
 		position: absolute;
 		right: 0;
-		top: 0%;
-		height: 100%;
+		top: 50%;
+		transform: translateY(-50%);
+		/* --- */
+
+		/* SIZE */
+		height: 60%;
+		max-height: 500px;
 		width: auto;
+		/* --- */
+
 		opacity: 0.1;
 		filter: invert(1);
 	}
