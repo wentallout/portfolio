@@ -14,12 +14,12 @@
 	--container-main: calc(min(100%, var(--site-width)) - var(--site-margin) * 2);
 	--container-full: calc(100% - var(--site-margin) * 2);
 
-	--spaceCard: var(--spaceL) var(--spaceM);
+	--space-card: var(--spaceL) var(--spaceM);
 }
 
 @media (min-width: 992px) {
 	:root {
-		--spaceCard: var(--spaceL) var(--spaceL);
+		--space-card: var(--spaceL) var(--spaceL);
 	}
 }
 

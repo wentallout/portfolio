@@ -6,42 +6,41 @@
 	import stockGrabberThumbnail from '$lib/assets/images/project/stock-grabber/thumbnail.jpg';
 	import superTabManagerThumbnail from '$lib/assets/images/project/super-tab-manager/thumbnail.jpg';
 
-	/** @type {{hasMoreButton?: boolean}} */
 	let { hasMoreButton = false } = $props();
 </script>
 
 <div class="projects">
 	<ProjectCard
+		desc="A simple app to help you download multiple stock images at the same time."
 		linkToDetail="project/stock-grabber"
 		output="Features: Search, select/unselect all images, download multiple images in one zip file."
 		projectName="Stock Grabber"
 		role="Designer, Developer"
-		thumbnail={stockGrabberThumbnail}
-		what="A simple app to help you download multiple stock images at the same time." />
+		thumbnail={stockGrabberThumbnail} />
 
 	<ProjectCard
+		desc="A sleek, minimal, user-friendly Chrome extension that makes managing multiple browser tabs easier"
 		linkToDetail="project/super-tab-manager"
 		output="Features: Group similar tabs, close duplicated or harmful tabs, search tabs. UI that adapts to user's dark/light preference."
 		projectName="Super Tab Manager"
 		role="Designer, Developer"
-		thumbnail={superTabManagerThumbnail}
-		what="A sleek, minimal, user-friendly Chrome extension that makes managing multiple browser tabs easier" />
+		thumbnail={superTabManagerThumbnail} />
 
 	<ProjectCard
+		desc="Mobile app that lets people book restaurant tables easily."
 		linkToDetail="project/reza"
 		output="UI, Research, Persona, User Flow, Wireframe, Design System, Prototype, Test"
 		projectName="Reza - Restaurant Reservation App"
 		role="UI/UX Designer"
-		thumbnail={rezaSquare}
-		what="Mobile app that lets people book restaurant tables easily." />
+		thumbnail={rezaSquare} />
 
 	<ProjectCard
+		desc="A clean, minimal, highly customizable portfolio website for developers."
 		linkToDetail="project/dev-portfolio"
 		output="3 screens: Home, Projects, Contact"
 		projectName="Developer Portfolio"
 		role="UI/UX Designer"
-		thumbnail={devPortfolioSquare}
-		what="A clean, minimal, highly customizable portfolio website for developers." />
+		thumbnail={devPortfolioSquare} />
 
 	{#if hasMoreButton}
 		<div class="more">

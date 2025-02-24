@@ -1,12 +1,11 @@
 <script>
 	import ExLink from '$components/common/ExLink.svelte';
-
 	import {
-		LinkedinLogo,
-		Phone,
-		InstagramLogo,
+		EnvelopeSimple,
 		GitHubLogo,
-		EnvelopeSimple
+		InstagramLogo,
+		LinkedinLogo,
+		Phone
 	} from '$lib/assets/icons/icons';
 
 	let { style = '' } = $props();

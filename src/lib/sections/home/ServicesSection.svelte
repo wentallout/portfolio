@@ -15,7 +15,7 @@
 			<HandHeart {...sectionIcon} />
 		{/snippet}
 	</SectionTitle>
-	<div class="service-container">
+	<div class="service-container fancy-border">
 		<MouseGlow />
 		<div class="service">
 			<div class="service__section">
@@ -23,7 +23,7 @@
 					<div class="service__art">
 						<ResponsiveWebArt />
 					</div>
-					<h3 class="service__title text-mid">Website Development</h3>
+					<h3 class="service__title text-mid text-trim">Website Development</h3>
 				</div>
 
 				<ul class="service__desc text-small">
@@ -85,7 +85,7 @@
 		gap: var(--spaceL);
 		background: var(--colorBgGradientSubtle);
 		box-shadow: var(--boxShadow);
-		padding: var(--spaceCard);
+		padding: var(--space-card);
 
 		position: relative;
 		border-radius: var(--borderRadiusLight);
@@ -127,7 +127,7 @@
 	}
 
 	.service__title {
-		margin-bottom: var(--spaceM);
+		margin-bottom: var(--spaceS);
 		font-family: var(--fontFancy);
 	}
 

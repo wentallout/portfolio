@@ -106,6 +106,10 @@
 		filter: grayscale(1);
 	}
 
+	.blog:hover .blog__deco {
+		filter: none;
+	}
+
 	.blog__gradient {
 		position: absolute;
 		bottom: 0;
@@ -122,22 +126,6 @@
 		padding-bottom: var(--spaceXL);
 	}
 
-	.blog:before {
-		content: '';
-		position: absolute;
-		pointer-events: none;
-		top: 0;
-		left: 0;
-		width: 100%;
-		height: 100%;
-		background-image: url('/images/patterns/wao-pattern.svg');
-		background-repeat: repeat;
-		background-size: 200px;
-		opacity: 0.05;
-		filter: grayscale(1);
-		z-index: -9998;
-	}
-
 	.blog:after {
 		content: '';
 		position: absolute;
@@ -146,20 +134,10 @@
 		width: 100%;
 		height: 100%;
 		z-index: -9999;
-		background: url('/images/dither_it_bg-sky.png');
+		/* background: url('/images/dither_it_bg-sky.png'); */
 		background-size: cover;
 		background-position: center;
 		background-repeat: no-repeat;
-		opacity: 0.2;
-	}
-
-	:global([color-scheme='dark'] .blog:after) {
-		filter: brightness(0.5);
-	}
-
-	:global([color-scheme='light'] .blog:after) {
-		filter: greyscale(1);
-		opacity: 0.2;
 	}
 
 	.category {
