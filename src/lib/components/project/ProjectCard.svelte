@@ -65,10 +65,6 @@
 	}
 
 	.project:hover .project__thumbnail img {
-		transition: var(--transition);
-	}
-
-	.project:hover .project__thumbnail img {
 		transform: scale(1.2);
 	}
 
@@ -86,14 +82,16 @@
 
 		background-color: transparent;
 		position: relative;
-
 		overflow: hidden;
+		border-radius: var(--borderRadiusLight);
+		z-index: 0;
 	}
 
 	.project__thumbnail img {
 		width: 100%;
 		height: 100%;
 		object-fit: cover;
+		transition: var(--transition);
 	}
 
 	.project-container {

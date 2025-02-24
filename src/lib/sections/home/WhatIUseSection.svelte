@@ -157,5 +157,6 @@
 		color: var(--colorTextSecondary);
 		font-weight: var(--fontWeightSmall);
 		margin: 0;
+		border: 0;
 	}
 </style>

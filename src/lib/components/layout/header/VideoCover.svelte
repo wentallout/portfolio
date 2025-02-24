@@ -30,7 +30,7 @@
 				muted
 				playsinline
 				transition:fade={{ duration: 300 }}>
-				<source src="/videos/dark.webm" type="video/webm" />
+				<source src="/videos/night-waves.mp4" type="video/mp4" />
 			</video>
 		{/if}
 
@@ -43,7 +43,7 @@
 				muted
 				playsinline
 				transition:fade={{ duration: 300 }}>
-				<source src="/videos/light.webm" type="video/webm" />
+				<source src="/videos/light-waves.webm" type="video/webm" />
 			</video>
 		{/if}
 
@@ -70,7 +70,7 @@
 		overflow: hidden;
 		box-shadow: var(--boxShadow);
 	}
-
+	/* 
 	.cover::after {
 		pointer-events: none;
 		content: '';
@@ -78,7 +78,7 @@
 		inset: 0;
 		background: var(--smooth-border);
 		z-index: 4;
-	}
+	} */
 
 	.video {
 		position: absolute;
@@ -88,6 +88,11 @@
 		width: 100%;
 		object-fit: cover;
 		object-position: top;
+		filter: brightness(0.6);
+	}
+
+	:global([color-scheme='dark'] .video) {
+		filter: brightness(0.5);
 	}
 
 	.video__deco {
@@ -100,9 +105,13 @@
 
 		position: absolute;
 		bottom: 0;
-		opacity: 0.5;
+		opacity: 0.3;
 		z-index: 1;
 		pointer-events: none;
+	}
+
+	:global([color-scheme='dark'] .video__deco) {
+		filter: invert(1);
 	}
 
 	@media (min-width: 768px) {
