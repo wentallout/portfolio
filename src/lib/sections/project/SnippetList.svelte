@@ -4,6 +4,11 @@
 
 	let snippetList = [
 		{
+			desc: 'cool UI to compare 2 images',
+			href: 'https://codepen.io/wentallout/pen/wBvWOxG',
+			title: 'Compare component'
+		},
+		{
 			desc: 'generate a palette using one hue',
 			href: 'https://codepen.io/wentallout/pen/NPWrpdX',
 			title: 'Dynamic OKLCH Color Palette'
