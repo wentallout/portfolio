@@ -55,7 +55,7 @@
 			<input
 				id="rem"
 				name="rem"
-				style="color:var(--colorPrimary);"
+				style="color:var(--color-primary);"
 				class="converter__input"
 				oninput={() => {
 					pxInput = remInput * baseFontSize;
@@ -69,7 +69,7 @@
 
 <style>
 	.converter__copy {
-		background-color: var(--colorPrimary);
+		background-color: var(--color-primary);
 		align-self: stretch;
 		color: var(--colorBlack);
 		min-width: 40px;
@@ -80,7 +80,7 @@
 
 		&:hover {
 			cursor: pointer;
-			background-color: var(--colorPrimaryHover);
+			background-color: var(--color-primary-hover);
 		}
 
 		&:disabled {
@@ -89,7 +89,7 @@
 	}
 
 	.input-group {
-		border: 1px solid var(--colorBorder);
+		border: 1px solid var(--color-border);
 		min-height: 160px;
 		display: flex;
 		flex-direction: row;
@@ -117,6 +117,6 @@
 	.converter__label {
 		font-size: var(--fontSize3XL);
 		font-weight: 600;
-		color: var(--colorTextSecondary);
+		color: var(--color-text-secondary);
 	}
 </style>

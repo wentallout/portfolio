@@ -47,7 +47,7 @@
 			onclick={openNav}
 			onkeydown={openNav}
 			type="button">
-			<List color="var(--colorText)" height="32" width="32" />
+			<List color="var(--color-text)" height="32" width="32" />
 		</button>
 	</header>
 </VanishingHeader>
@@ -86,7 +86,7 @@
 		/* FONT */
 		font-size: var(--fontSizeBase);
 		font-weight: var(--fontWeightMid);
-		color: var(--colorText);
+		color: var(--color-text);
 		text-box: trim-both cap alphabetic;
 		/* --- */
 
@@ -100,18 +100,16 @@
 	}
 
 	.nav--scrolldown {
-		background-color: hsl(from var(--colorBgLayout) h s l / 80%);
-
+		background-color: hsl(from var(--color-bg-layout) h s l / 80%);
 		backdrop-filter: blur(5px);
-		color: var(--colorText);
-		border: 1px solid var(--colorBorderSecondary);
-		box-shadow: 0 2px 2px -2px rgba(0, 0, 0, 0.2);
+		color: var(--color-text);
+		box-shadow: var(--boxShadow);
 	}
 
 	.active-page {
 		position: relative;
 		border-bottom: 1px solid transparent;
-		color: var(--colorPrimary);
+		color: var(--color-primary);
 	}
 
 	.active-page::after {
@@ -123,12 +121,12 @@
 
 		width: 100%;
 		inset: 0 -10px 30px;
-		background: radial-gradient(ellipse at top, var(--colorPrimaryActive), transparent 50%);
+		background: radial-gradient(ellipse at top, var(--color-primary-active), transparent 50%);
 	}
 
 	.active-page--mobile {
-		color: var(--colorPrimaryActive) !important;
-		border-left: 4px solid var(--colorPrimaryActive);
+		color: var(--color-primary-active) !important;
+		border-left: 4px solid var(--color-primary-active);
 	}
 
 	.navlist {
@@ -144,15 +142,15 @@
 		display: none;
 		transition: linear 0.3s;
 		text-shadow:
-			-1px -1px 0 var(--colorBgLayout),
-			1px -1px 0 var(--colorBgLayout),
-			-1px 1px 0 var(--colorBgLayout),
-			1px 1px 0 var(--colorBgLayout);
+			-1px -1px 0 var(--color-bg-layout),
+			1px -1px 0 var(--color-bg-layout),
+			-1px 1px 0 var(--color-bg-layout),
+			1px 1px 0 var(--color-bg-layout);
 
 		&:hover {
 			font-weight: var(--fontWeightLarge);
-			color: var(--colorPrimaryHover);
-			border-bottom: 1px solid var(--colorPrimaryHover);
+			color: var(--color-primary-hover);
+			border-bottom: 1px solid var(--color-primary-hover);
 		}
 	}
 
@@ -208,7 +206,7 @@
 		top: 0;
 		left: 0;
 
-		background: color-mix(in srgb, var(--colorBgLayout) 70%, transparent);
+		background: color-mix(in srgb, var(--color-bg-layout) 70%, transparent);
 		backdrop-filter: blur(5px);
 		overflow: hidden;
 		transition: var(--transition);
@@ -245,7 +243,7 @@
 		outline: 1px solid transparent;
 		font-weight: var(--fontWeightMid);
 
-		color: var(--colorText);
+		color: var(--color-text);
 	}
 
 	.closebtn {
@@ -257,7 +255,7 @@
 		justify-content: center;
 		align-items: center;
 
-		background-color: var(--colorPrimary);
+		background-color: var(--color-primary);
 		top: 0;
 		cursor: pointer;
 
@@ -272,7 +270,7 @@
 	}
 
 	.social {
-		border-top: 1px solid var(--colorBorder);
+		border-top: 1px solid var(--color-border);
 		margin-top: auto; /* This pushes the social buttons to the bottom */
 	}
 

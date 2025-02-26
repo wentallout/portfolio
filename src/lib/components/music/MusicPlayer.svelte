@@ -130,7 +130,7 @@
 		<div class="player__btns">
 			<div class="controls">
 				<button class="mp-btn other-btn" onclick={prev} type="button">
-					<SkipBack color="var(--colorTextQuaternary)" height="24" width="24" />
+					<SkipBack color="var(--color-text-quaternary)" height="24" width="24" />
 				</button>
 
 				{#if $isPlaying}
@@ -144,16 +144,16 @@
 				{/if}
 
 				<button class="mp-btn other-btn" onclick={next} type="button">
-					<SkipForward color="var(--colorTextQuaternary)" height="24" width="24" />
+					<SkipForward color="var(--color-text-quaternary)" height="24" width="24" />
 				</button>
 			</div>
 
 			<div class="player__volume">
 				<button class="mute__btn" onclick={mute} onkeydown={mute} type="button">
 					{#if muted}
-						<SpeakerX color="var(--colorTextQuaternary)" height="24" width="24" />
+						<SpeakerX color="var(--color-text-quaternary)" height="24" width="24" />
 					{:else}
-						<SpeakerHigh color="var(--colorText)" height="24" width="24" />
+						<SpeakerHigh color="var(--color-text)" height="24" width="24" />
 					{/if}
 				</button>
 				<input
@@ -220,11 +220,11 @@
 
 	.info__current {
 		font-weight: var(--fontWeightXS);
-		color: var(--colorPrimary);
+		color: var(--color-primary);
 	}
 
 	.info__name {
-		color: var(--colorText);
+		color: var(--color-text);
 		font-weight: var(--fontWeightLarge);
 		text-align: center;
 	}
@@ -235,7 +235,7 @@
 
 	.info__duration {
 		font-weight: var(--fontWeightXS);
-		color: var(--colorTextQuaternary);
+		color: var(--color-text-quaternary);
 	}
 
 	.info__time {
@@ -265,7 +265,7 @@
 		grid-template-columns: 1fr 1fr 1fr;
 		border-radius: var(--borderRadiusLight);
 		overflow: hidden;
-		border: 1px solid var(--colorBorder);
+		border: 1px solid var(--color-border);
 	}
 
 	.mp-btn {
@@ -275,7 +275,7 @@
 
 		padding: var(--spaceXS);
 		flex-direction: row;
-		background-color: var(--colorBgContainer);
+		background-color: var(--color-bg-container);
 		border: 0;
 		transition: var(--transition);
 	}
@@ -286,7 +286,7 @@
 	}
 
 	.play-btn {
-		background-color: var(--colorPrimary);
+		background-color: var(--color-primary);
 	}
 
 	.player {
@@ -295,7 +295,7 @@
 		justify-content: center;
 		align-items: center;
 		width: 100%;
-		background-color: var(--colorBgContainer);
+		background-color: var(--color-bg-container);
 
 		overflow: hidden;
 	}
@@ -311,7 +311,7 @@
 
 	.song-active {
 		position: relative;
-		background: var(--colorPrimary);
+		background: var(--color-primary);
 		color: var(--colorBlack);
 	}
 
@@ -326,7 +326,7 @@
 		opacity: 0.4;
 
 		font-family: var(--fontFancy);
-		-webkit-text-stroke: 1px var(--colorText);
+		-webkit-text-stroke: 1px var(--color-text);
 		-webkit-text-fill-color: transparent;
 		font-weight: 100;
 	}
@@ -334,7 +334,7 @@
 	.song-name {
 		z-index: 1;
 		font-weight: var(--fontWeightXS);
-		color: var(--colorText);
+		color: var(--color-text);
 	}
 
 	.song-active .song-name {
@@ -354,7 +354,7 @@
 		transition: var(--transition);
 
 		&:hover {
-			background-color: var(--colorBgElevated);
+			background-color: var(--color-bg-elevated);
 			cursor: pointer;
 		}
 	}
@@ -369,7 +369,7 @@
 		z-index: 2;
 		margin-left: auto;
 		transition: var(--transition);
-		outline: 1px solid var(--colorTextQuaternary);
+		outline: 1px solid var(--color-text-quaternary);
 
 		&:hover {
 			scale: 1.2;

@@ -53,15 +53,6 @@
 
 		position: relative;
 		border-radius: var(--borderRadiusLight);
-
-		&:hover {
-			box-shadow: -6px 6px var(--colorPrimaryHover);
-			transform: translate(6px, -6px);
-		}
-		&:active {
-			box-shadow: -1px 1px var(--colorPrimaryActive);
-			transform: translate(1px, -1px);
-		}
 	}
 
 	.project:hover .project__thumbnail img {
@@ -108,7 +99,7 @@
 		display: flex;
 		justify-content: flex-start;
 		flex-direction: column;
-		color: var(--colorPrimary);
+		color: var(--color-primary);
 
 		font-weight: var(--fontWeightLarge);
 		font-family: var(--fontFancy);
@@ -128,8 +119,8 @@
 		position: relative;
 		padding: var(--space-card);
 		gap: var(--spaceM);
-		color: var(--colorText);
-		background: var(--colorBgGradientSubtle);
+		color: var(--color-text);
+		background: var(--color-bg-gradient-subtle);
 	}
 
 	@media (min-width: 992px) {
@@ -139,12 +130,32 @@
 	}
 
 	.section__label {
-		color: var(--colorText);
+		color: var(--color-text);
 		min-width: 10%;
 		font-weight: 600;
 	}
 
 	.section__desc {
 		max-width: var(--text-width);
+	}
+
+	@keyframes article-appear {
+		from {
+			transform: translateX(-10vw);
+			opacity: 0;
+		}
+		to {
+			transform: translateX(0);
+			opacity: 1;
+		}
+	}
+
+	.project-container {
+		view-timeline-name: --articleAppear;
+		animation-timeline: --articleAppear;
+		animation-name: article-appear;
+		animation-fill-mode: both;
+		animation-range: entry 0% entry 50%;
+		animation-duration: 100ms;
 	}
 </style>

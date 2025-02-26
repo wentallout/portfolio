@@ -6,7 +6,7 @@
 	let { children, sectionDesc = '', sectionTitle = '' } = $props();
 
 	let sectionIcon = {
-		color: 'var(--colorTextTertiary)'
+		color: 'var(--color-text-tertiary)'
 	};
 </script>
 
@@ -66,7 +66,7 @@
 
 	.section__text {
 		font-family: var(--fontFancy);
-		color: var(--colorPrimary);
+		color: var(--color-primary);
 		position: relative;
 		--before-left: 4px;
 
@@ -80,8 +80,8 @@
 		left: 4px;
 		top: 3px;
 		-webkit-text-fill-color: transparent;
-		-webkit-text-stroke: 1px var(--colorPrimaryActive);
-		color: var(--colorPrimaryHover);
+		-webkit-text-stroke: 1px var(--color-primary-active);
+		color: var(--color-primary-hover);
 		display: block;
 		position: absolute;
 		width: 100%;

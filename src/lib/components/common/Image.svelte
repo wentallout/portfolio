@@ -1,7 +1,6 @@
 <script>
 	import SaosContainer from '$components/common/SaosContainer.svelte';
 
-
 	// try not to touch this
 
 	import ExLink from '$components/common/ExLink.svelte';
@@ -46,10 +45,10 @@
 
 	.caption {
 		font-size: var(--fontSizeXS);
-		color: var(--colorTextSecondary);
+		color: var(--color-text-secondary);
 		width: 100%;
 		padding: var(--space3XS) var(--space2XS);
 
-		background-color: var(--colorBgElevated);
+		background-color: var(--color-bg-elevated);
 	}
 </style>

@@ -13,21 +13,21 @@
 
 /* -------------------------------- Nprogress START */
 #nprogress .bar {
-	background: var(--colorPrimary) !important;
+	background: var(--color-primary) !important;
 	height: 3px !important;
 }
 
 #nprogress .peg {
 	box-shadow:
-		0 0 10px var(--colorPrimary),
-		0 0 5px var(--colorPrimary) !important;
+		0 0 10px var(--color-primary),
+		0 0 5px var(--color-primary) !important;
 }
 
 #nprogress .spinner-icon {
 	width: 24px !important;
 	height: 24px !important;
-	border-top-color: var(--colorPrimary) !important;
-	border-left-color: var(--colorPrimary) !important;
+	border-top-color: var(--color-primary) !important;
+	border-left-color: var(--color-primary) !important;
 }
 
 #nprogress .spinner {
@@ -62,7 +62,7 @@ input[type='range'] {
 input[type='range']::-webkit-slider-runnable-track {
 	width: 300px;
 	height: 16px;
-	outline: 1px solid var(--colorBorderSecondary);
+	outline: 1px solid var(--color-border-secondary);
 	border: none;
 }
 
@@ -71,7 +71,7 @@ input[type='range']::-webkit-slider-thumb {
 	border: none;
 	height: 16px;
 	width: 16px;
-	background: var(--colorPrimary);
+	background: var(--color-primary);
 }
 
 input[type='range']:focus {
@@ -79,11 +79,11 @@ input[type='range']:focus {
 }
 
 input[type='range']:focus::-webkit-slider-runnable-track {
-	background: var(--colorBgElevated);
+	background: var(--color-bg-elevated);
 }
 
 .splide {
-	border: 1px solid var(--colorBorder);
+	border: 1px solid var(--color-border);
 }
 
 ::-webkit-scrollbar {
@@ -91,7 +91,7 @@ input[type='range']:focus::-webkit-slider-runnable-track {
 }
 
 ::-webkit-scrollbar-thumb {
-	background: var(--colorPrimary);
+	background: var(--color-primary);
 	box-shadow:
 		inset 2px 2px 2px hsla(0, 0%, 100%, 0.25),
 		inset -2px -2px 2px rgba(0, 0, 0, 0.25);
@@ -99,11 +99,11 @@ input[type='range']:focus::-webkit-slider-runnable-track {
 }
 
 ::-webkit-scrollbar-thumb:hover {
-	background: var(--colorPrimaryHover);
+	background: var(--color-primary-hover);
 }
 
 ::-webkit-scrollbar-thumb:active {
-	background: var(--colorPrimaryActive);
+	background: var(--color-primary-active);
 }
 
 ::-webkit-scrollbar-track {

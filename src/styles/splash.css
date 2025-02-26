@@ -22,9 +22,9 @@
 	animation-fill-mode: forwards;
 	animation-delay: calc(var(--animation-in-duration) + var(--animation-out-duration) * 0.4);
 
-	background-color: var(--colorBgLayout);
+	background-color: var(--color-bg-layout);
 
-	background: radial-gradient(125% 125% at 50% 10%, #000 40%, var(--colorPrimary) 100%);
+	background: radial-gradient(125% 125% at 50% 10%, #000 40%, var(--color-primary) 100%);
 
 	&[data-splash-skip='true'] {
 		display: none;
@@ -38,7 +38,7 @@
 
 .c-splash__deco {
 	font-size: var(--fontSizeBase);
-	color: var(--colorTextSecondary);
+	color: var(--color-text-secondary);
 }
 
 .c-splash__name {

@@ -30,7 +30,7 @@
 <div class="error">
 	<div class="error__info">
 		<h1 class="status">
-			{$page.status}
+			<div class="status__code text-3xl">{$page.status}</div>
 			<div class="">{$page.error.message}</div>
 		</h1>
 
@@ -39,7 +39,7 @@
 		</div>
 		<a class="back" href="/" rel="external">
 			<Button
-				backgroundColor="var(--colorPrimary)"
+				backgroundColor="var(--color-primary)"
 				label="Take Me Home"
 				labelColor="var(--colorBlack)">
 				<House height="16" width="16" />
@@ -73,18 +73,17 @@
 		display: flex;
 		flex-direction: column;
 		justify-content: flex-start;
-		color: var(--colorTextSecondary);
+		color: var(--color-text-secondary);
 	}
 
 	.status {
-		font-size: calc(var(--fontSizeXL) * 2);
 		margin-bottom: var(--spaceXL);
-	}
-
-	.status {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
 		color: var(--colorError);
 		font-family: var(--fontFancy);
 	}
+
 	.detail {
 		display: flex;
 		flex-direction: row;
@@ -93,7 +92,7 @@
 		gap: var(--spaceS);
 		margin-bottom: var(--spaceM);
 		display: inline-block;
-		color: var(--colorTextSecondary);
+		color: var(--color-text-secondary);
 		font-weight: var(--fontWeightSmall);
 		max-width: var(--text-width);
 	}

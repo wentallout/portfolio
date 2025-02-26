@@ -32,16 +32,16 @@
 		flex-direction: row;
 		text-align: initial;
 		align-items: center;
-		color: var(--colorTextSecondary);
+		color: var(--color-text-secondary);
 		gap: var(--space3XS);
 
 		&:hover {
 			cursor: pointer;
-			color: var(--colorPrimaryHover) !important;
+			color: var(--color-primary-hover) !important;
 		}
 	}
 
 	.indicator {
-		color: var(--colorPrimary);
+		color: var(--color-primary);
 	}
 </style>

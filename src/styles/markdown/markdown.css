@@ -18,7 +18,7 @@
 	line-height: var(--lineHeight2XL);
 	text-transform: capitalize;
 	margin-bottom: var(--spaceM);
-	color: var(--colorText);
+	color: var(--color-text);
 	letter-spacing: var(--tracking-tight);
 }
 
@@ -27,17 +27,17 @@
 .markdown h4 {
 	line-height: 120%;
 	position: relative;
-	color: var(--colorText);
+	color: var(--color-text);
 	transition: var(--transition);
 
 	text-wrap: balance;
 
 	&:hover {
-		color: var(--colorPrimaryHover);
+		color: var(--color-primary-hover);
 	}
 
 	&:active {
-		color: var(--colorPrimaryActive);
+		color: var(--color-primary-active);
 	}
 }
 
@@ -97,7 +97,7 @@
 
 .markdown p,
 .markdown li:not(.toc li) {
-	color: var(--colorText);
+	color: var(--color-text);
 	font-size: var(--fontSizeSmall);
 	line-height: var(--lineHeightSmall);
 	margin: 0;
@@ -107,7 +107,7 @@
 
 .markdown ul {
 	border-left: 2px solid transparent;
-	border-image: linear-gradient(to bottom, var(--colorText), transparent) 1 1;
+	border-image: linear-gradient(to bottom, var(--color-text), transparent) 1 1;
 }
 
 .markdown li:not(.toc li) {
@@ -118,7 +118,7 @@
 
 .markdown li::marker {
 	content: counter(list-item) '. ';
-	color: var(--colorText);
+	color: var(--color-text);
 	font-size: inherit;
 	font-weight: var(--fontWeightLarge);
 }
@@ -137,17 +137,17 @@
 		.markdown h5 a,
 		.markdown a:has(img)
 	) {
-	color: var(--colorInfo);
+	color: var(--color-info);
 	text-decoration: underline;
 	transition: var(--transition);
 	/* text-decoration-skip-ink: none; */
 
 	&:hover {
-		color: var(--colorInfoHover);
+		color: var(--color-info-hover);
 	}
 
 	&:active {
-		color: var(--colorInfoActive);
+		color: var(--color-info-active);
 	}
 }
 
@@ -168,11 +168,11 @@
 }
 
 blockquote {
-	background-color: var(--colorBgElevated);
+	background-color: var(--color-bg-elevated);
 
 	padding: var(--spaceXS);
 	font-weight: var(--fontWeightXS);
-	border-left: 4px solid var(--colorPrimary);
+	border-left: 4px solid var(--color-primary);
 	margin-top: var(--spaceS);
 	margin-bottom: var(--spaceS);
 	max-width: var(--text-width);
@@ -180,7 +180,7 @@ blockquote {
 
 blockquote p {
 	margin: 0 !important;
-	color: var(--colorPrimary) !important;
+	color: var(--color-primary) !important;
 }
 
 pre {
@@ -191,7 +191,7 @@ pre {
 
 table {
 	border-collapse: collapse;
-	background-color: var(--colorBgContainer);
+	background-color: var(--color-bg-container);
 	padding: var(--spaceS);
 
 	max-width: fit-content;
@@ -239,7 +239,7 @@ aside.toc > nav > ul > li:before {
 }
 
 :where(aside.toc > nav > ul > li) {
-	color: var(--colorTextSecondary);
+	color: var(--color-text-secondary);
 	font-weight: var(--fontWeightXS);
 }
 

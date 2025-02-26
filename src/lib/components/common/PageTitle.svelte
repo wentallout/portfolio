@@ -50,7 +50,7 @@
 		user-select: none;
 	}
 	.title__extra {
-		-webkit-text-stroke: 1.5px var(--colorText);
+		-webkit-text-stroke: 1.5px var(--color-text);
 		-webkit-text-fill-color: transparent;
 		font-size: 30vh;
 		position: absolute;
@@ -120,7 +120,7 @@
 
 	.title__text {
 		font-family: var(--fontFancy);
-		color: var(--colorText);
+		color: var(--color-text);
 		z-index: 2;
 		position: relative;
 		filter: drop-shadow(0px 0px 2px currentcolor);

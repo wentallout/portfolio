@@ -63,7 +63,7 @@
 		padding-bottom: var(--scroll-padding);
 
 		height: 30dvh;
-		background-color: var(--colorBgLayout);
+		background-color: var(--color-bg-layout);
 
 		border-bottom-left-radius: 10%;
 		border-bottom-right-radius: 10%;

@@ -50,15 +50,15 @@
 
 			<div class="contact__btn">
 				<Button
-					backgroundColor="var(--colorPrimary)"
-					glowColor="var(--colorPrimary)"
+					backgroundColor="var(--color-primary)"
+					glowColor="var(--color-primary)"
 					label="Send message"
 					type="submit">
 					<PaperPlaneRight color="var(--colorBlack)" height="16" width="16" />
 				</Button>
 
 				<Button
-					backgroundColor="var(--colorBgLayout)"
+					backgroundColor="var(--color-bg-layout)"
 					borderColor="var(--colorError)"
 					glowColor="var(--colorError)"
 					label="Reset"

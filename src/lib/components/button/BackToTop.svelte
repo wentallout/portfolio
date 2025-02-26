@@ -76,13 +76,13 @@
 		/*  */
 
 		box-shadow: var(--boxShadow);
-		color: var(--colorText);
+		color: var(--color-text);
 
 		border-radius: var(--borderRadius);
 
 		background-image: linear-gradient(
-			var(--colorPrimary) 0% var(--progress),
-			var(--colorBgElevated) var(--progress) 100%
+			var(--color-primary) 0% var(--progress),
+			var(--color-bg-elevated) var(--progress) 100%
 		);
 
 		animation: progress linear;
@@ -93,7 +93,7 @@
 		}
 
 		&:active {
-			color: var(--colorPrimaryActive);
+			color: var(--color-primary-active);
 		}
 
 		&.hidden {

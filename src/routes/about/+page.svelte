@@ -73,13 +73,13 @@
 
 	.about__title {
 		font-weight: var(--fontWeightLarge);
-		color: var(--colorText);
+		color: var(--color-text);
 		width: 100%;
 		font-family: var(--fontFancy);
 	}
 
 	.about__desc {
-		color: var(--colorTextSecondary);
+		color: var(--color-text-secondary);
 		width: 100%;
 		max-width: var(--text-width);
 	}

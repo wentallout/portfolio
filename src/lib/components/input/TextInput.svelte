@@ -48,10 +48,10 @@
 		width: 100%;
 		flex-direction: row;
 		align-items: center;
-		border: 1px solid var(--colorBorder);
+		border: 1px solid var(--color-border);
 		margin-bottom: var(--spaceS);
 		border-radius: var(--borderRadiusSM);
-		background-color: var(--colorBgLayout);
+		background-color: var(--color-bg-layout);
 	}
 
 	.label {
@@ -64,13 +64,13 @@
 	}
 
 	datalist {
-		background-color: var(--colorTextQuaternary) !important;
+		background-color: var(--color-text-quaternary) !important;
 	}
 
 	.input {
 		/* FONT */
 		font-family: inherit;
-		color: var(--colorText) !important;
+		color: var(--color-text) !important;
 		/* --- */
 		/* SPACING */
 		padding: var(--spaceXS);
@@ -83,9 +83,9 @@
 	}
 
 	.input-container:has(.input:focus-visible) {
-		outline: 1px solid var(--colorPrimaryActive);
-		box-shadow: 0px 0px 4px var(--colorPrimaryActive);
-		color: var(--colorPrimaryActive);
+		outline: 1px solid var(--color-primary-active);
+		box-shadow: 0px 0px 4px var(--color-primary-active);
+		color: var(--color-primary-active);
 	}
 
 	.input__icon {

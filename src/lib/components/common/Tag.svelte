@@ -15,14 +15,14 @@
 
 <style>
 	.tag {
-		color: var(--colorTextSecondary);
+		color: var(--color-text-secondary);
 		display: inline-block;
 		font-weight: var(--fontWeightXS);
 		width: fit-content;
 		border-radius: var(--borderRadiusLight);
 		padding: 6px 8px;
 		line-height: normal;
-		border: 1px solid var(--colorBorder);
+		border: 1px solid var(--color-border);
 		transition: var(--transition);
 		display: flex;
 		flex-direction: row;
@@ -36,7 +36,7 @@
 	}
 
 	.tag:hover {
-		background: var(--colorBgElevated);
-		color: var(--colorPrimaryHover);
+		background: var(--color-bg-elevated);
+		color: var(--color-primary-hover);
 	}
 </style>

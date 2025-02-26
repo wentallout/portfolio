@@ -7,7 +7,7 @@
 		left: 0;
 		right: 0;
 
-		background-color: var(--colorPrimary);
+		background-color: var(--color-primary);
 
 		color: var(--colorBlack);
 		font-weight: var(--fontWeightLarge);
@@ -23,7 +23,7 @@
 	}
 
 	.skipper:hover {
-		background-color: var(--colorPrimaryHover);
+		background-color: var(--color-primary-hover);
 	}
 
 	.skipper:focus {

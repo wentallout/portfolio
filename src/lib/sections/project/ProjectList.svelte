@@ -46,8 +46,8 @@
 		<div class="more">
 			<a href="/project">
 				<Button
-					backgroundColor="var(--colorPrimary)"
-					glowColor="var(--colorPrimary)"
+					backgroundColor="var(--color-primary)"
+					glowColor="var(--color-primary)"
 					label="See more projects" />
 			</a>
 		</div>

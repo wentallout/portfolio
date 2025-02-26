@@ -40,14 +40,14 @@
 	}
 
 	.marquee {
-		background-color: var(--colorBgLayout);
+		background-color: var(--color-bg-layout);
 		--gap: var(--space3XL);
 		position: relative;
 		display: flex;
 		overflow: hidden;
 		user-select: none;
 		gap: var(--gap);
-		color: var(--colorText);
+		color: var(--color-text);
 		padding: var(--spaceXS) 0;
 	}
 

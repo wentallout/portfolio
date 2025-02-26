@@ -80,6 +80,6 @@
 
 <style>
 	svg {
-		color: var(--colorText);
+		color: var(--color-text);
 	}
 </style>

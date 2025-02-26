@@ -51,13 +51,17 @@
 
 		return formattedDate;
 	}
+
+	import { page } from '$app/stores';
 </script>
 
 <header class="blog full-width">
 	<div class="blog__gradient"></div>
 	<div class="g-container">
 		<Breadcrumb />
-		<h1 class="blog__title">{data.title}</h1>
+		<h1 class="blog__title">
+			{data.title}
+		</h1>
 		<div class="blog__info text-small">
 			<div class="info__section">
 				<CalendarBlank height="20" width="20" />
@@ -158,7 +162,7 @@
 		flex-wrap: wrap;
 		gap: var(--spaceM);
 		margin-bottom: var(--spaceS);
-		color: var(--colorTextSecondary);
+		color: var(--color-text-secondary);
 
 		& .info__section {
 			display: flex;
@@ -171,11 +175,11 @@
 	.blog__title {
 		text-wrap: balance;
 		text-shadow:
-			-2px -2px 0 var(--colorBgLayout),
-			2px -2px 0 var(--colorBgLayout),
-			-2px 2px 0 var(--colorBgLayout),
-			2px 2px 0 var(--colorBgLayout);
+			-2px -2px 0 var(--color-bg-layout),
+			2px -2px 0 var(--color-bg-layout),
+			-2px 2px 0 var(--color-bg-layout),
+			2px 2px 0 var(--color-bg-layout);
 
-		color: var(--colorPrimary);
+		color: var(--color-primary);
 	}
 </style>

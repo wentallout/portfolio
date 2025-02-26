@@ -66,12 +66,12 @@
 		</div>
 		<a class="service__btn" href="https://cal.com/wentallout/web">
 			<Button
-				backgroundColor="var(--colorBgLayout)"
-				borderColor="var(--colorText)"
-				glowColor="var(--colorText)"
+				backgroundColor="var(--color-bg-layout)"
+				borderColor="var(--color-text)"
+				glowColor="var(--color-text)"
 				label="Book a Call"
-				labelColor="var(--colorText)"
-				shadowColor="var(--colorTextSecondary)">
+				labelColor="var(--color-text)"
+				shadowColor="var(--color-text-secondary)">
 				<CalendarCheck />
 			</Button>
 		</a>
@@ -83,13 +83,13 @@
 		display: flex;
 		flex-direction: column;
 		gap: var(--spaceL);
-		background: var(--colorBgGradientSubtle);
+		background: var(--color-bg-gradient-subtle);
 		box-shadow: var(--boxShadow);
 		padding: var(--space-card);
 
 		position: relative;
 		border-radius: var(--borderRadiusLight);
-		border: 1px solid var(--colorBorderSecondary);
+		border: 1px solid var(--color-border-secondary);
 	}
 
 	.service {
@@ -135,7 +135,7 @@
 		display: flex;
 		flex-direction: column;
 		gap: var(--spaceXS);
-		color: var(--colorTextSecondary);
+		color: var(--color-text-secondary);
 	}
 
 	.service__btn {

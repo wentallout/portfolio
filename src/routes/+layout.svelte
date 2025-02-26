@@ -11,21 +11,14 @@
 	/** @type {{children?: import('svelte').Snippet}} */
 	let { children } = $props();
 
-	onNavigate(() => {
-		if (!document.startViewTransition) return;
+	import { setupViewTransition } from 'sveltekit-view-transition';
 
-		return new Promise((resolve) => {
-			document.startViewTransition(async () => {
-				resolve();
-				await navigation.complete;
-			});
-		});
-	});
+	setupViewTransition();
 </script>
 
-<svelte:head>
+<!-- <svelte:head>
 	<meta name="view-transition" content="same-origin" />
-</svelte:head>
+</svelte:head> -->
 
 <!-- <script nonce="%sveltekit.nonce%" async crossorigin="anonymous"
 		src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2238795577080818"></script> -->

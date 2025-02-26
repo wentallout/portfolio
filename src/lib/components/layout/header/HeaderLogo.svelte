@@ -64,12 +64,12 @@
 	.logo__main {
 		width: 100px;
 		height: 100px;
-		filter: drop-shadow(0px 0px 10px var(--colorPrimary));
+		filter: drop-shadow(0px 0px 10px var(--color-primary));
 		transition: var(--transition);
 
 		&:hover {
-			color: var(--colorPrimaryHover);
-			filter: drop-shadow(0px 0px 10px var(--colorPrimary));
+			color: var(--color-primary-hover);
+			filter: drop-shadow(0px 0px 10px var(--color-primary));
 			animation: glitch 1.5s ease infinite;
 		}
 	}
@@ -94,7 +94,7 @@
 		top: 100%;
 		left: 50%;
 		transform: translate(-50%, -50%);
-		color: var(--colorPrimary);
+		color: var(--color-primary);
 		width: 100%;
 
 		transition: var(--transition);

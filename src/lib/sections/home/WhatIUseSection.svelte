@@ -119,16 +119,16 @@
 
 		overflow: hidden;
 		transition: var(--transition);
-		background-color: var(--colorBgLayout);
+		background-color: var(--color-bg-layout);
 		box-shadow: var(--boxShadow);
 
-		background: var(--colorBgGradientSubtle);
+		background: var(--color-bg-gradient-subtle);
 
 		border-radius: var(--borderRadiusLight);
 	}
 
 	.block__section:hover {
-		/* background-color: var(--colorBgElevated); */
+		/* background-color: var(--color-bg-elevated); */
 		transform: scale(1.1);
 		overflow: visible;
 		border: 0;
@@ -147,14 +147,14 @@
 	}
 
 	.block__title {
-		color: var(--colorText);
+		color: var(--color-text);
 		font-weight: var(--fontWeightLarge);
 		margin-top: var(--spaceM);
 		margin-bottom: var(--space2XS);
 	}
 
 	.block__text {
-		color: var(--colorTextSecondary);
+		color: var(--color-text-secondary);
 		font-weight: var(--fontWeightSmall);
 		margin: 0;
 		border: 0;

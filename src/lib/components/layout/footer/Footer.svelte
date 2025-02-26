@@ -143,7 +143,7 @@
 		/* --- */
 
 		overflow: hidden;
-		background-color: var(--colorBgLayout);
+		background-color: var(--color-bg-layout);
 
 		border-top-left-radius: 10%;
 		border-top-right-radius: 10%;
@@ -166,7 +166,7 @@
 		align-items: center;
 
 		&:hover {
-			color: var(--colorPrimaryHover);
+			color: var(--color-primary-hover);
 		}
 	}
 
@@ -192,11 +192,11 @@
 
 	.list__title {
 		font-family: var(--fontFancy);
-		color: var(--colorText);
+		color: var(--color-text);
 		font-size: var(--fontSizeBase);
 		padding-bottom: var(--space3XS);
 		border-bottom: 1px solid transparent;
-		border-image: linear-gradient(to right, var(--colorTextTertiary), transparent) 1 0%;
+		border-image: linear-gradient(to right, var(--color-text-tertiary), transparent) 1 0%;
 	}
 
 	.list__nav {

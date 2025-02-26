@@ -20,20 +20,20 @@
 		height: 7rem;
 		font-family: inherit;
 		padding: var(--spaceXS);
-		color: var(--colorText) !important;
+		color: var(--color-text) !important;
 		margin-bottom: var(--spaceS);
 		background-color: transparent;
-		border: 1px solid var(--colorBorder);
+		border: 1px solid var(--color-border);
 
 		transition: outline 0.3s;
 		resize: vertical;
 
 		border-radius: var(--borderRadiusSM);
-		background-color: var(--colorBgLayout);
+		background-color: var(--color-bg-layout);
 	}
 
 	.textarea:focus-visible {
-		outline: 1px solid var(--colorPrimary);
-		box-shadow: 0px 0px 4px var(--colorPrimary);
+		outline: 1px solid var(--color-primary);
+		box-shadow: 0px 0px 4px var(--color-primary);
 	}
 </style>

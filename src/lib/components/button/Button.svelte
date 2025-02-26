@@ -5,7 +5,7 @@
 		borderColor = backgroundColor,
 		border = `1px solid ${borderColor}`,
 		children,
-		glowColor = 'var(--colorBgElevated)',
+		glowColor = 'var(--color-bg-elevated)',
 		label = 'exampleLabel',
 		labelColor = 'var(--colorBlack)',
 		shadowColor = backgroundColor,

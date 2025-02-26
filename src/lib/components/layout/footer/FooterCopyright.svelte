@@ -33,7 +33,7 @@
 	.end__text {
 		user-select: none;
 		margin-top: var(--spaceS);
-		color: var(--colorTextSecondary);
+		color: var(--color-text-secondary);
 	}
 
 	.end__svelte {

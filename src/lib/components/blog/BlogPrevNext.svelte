@@ -60,7 +60,7 @@
 	.prevnext {
 		--min: 16ch;
 		--gap: 0;
-		border: 1px solid var(--colorBorder);
+		border: 1px solid var(--color-border);
 		display: grid;
 		grid-gap: var(--gap);
 		grid-template-columns: repeat(auto-fit, minmax(min(100%, var(--min)), 1fr));
@@ -78,16 +78,16 @@
 		justify-content: flex-start;
 		align-items: flex-start;
 		min-height: 132px;
-		border-right: 1px solid var(--colorBorder);
+		border-right: 1px solid var(--color-border);
 
 		&:hover {
-			background-color: var(--colorBgElevated);
-			color: var(--colorPrimaryHover);
+			background-color: var(--color-bg-elevated);
+			color: var(--color-primary-hover);
 		}
 	}
 
 	.prevnext__sign {
-		color: var(--colorTextSecondary);
+		color: var(--color-text-secondary);
 		font-weight: 300;
 		font-size: var(--fontSizeXS);
 	}

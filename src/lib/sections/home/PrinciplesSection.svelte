@@ -66,12 +66,13 @@
 
 	.principle__title {
 		font-weight: 600;
-		padding-block: 4px;
+		padding-block: 8px;
+		font-family: var(--fontFancy);
 	}
 
 	.principle__title:first-letter {
 		font-size: 200%;
-		color: var(--colorPrimary);
+		color: var(--color-primary);
 		padding-right: 2px;
 	}
 
@@ -85,21 +86,23 @@
 	}
 
 	.principle__section {
-		padding: var(--spaceM);
+		/* FLEX */
 		display: flex;
 		flex-direction: column;
 		gap: var(--space2XS);
+		/* --- */
 
 		border-radius: var(--borderRadiusLight);
 		box-shadow: var(--boxShadow);
-		background-color: var(--colorBgContainer);
-		background: var(--colorBgGradientSubtle);
+		background-color: var(--color-bg-container);
+		background: var(--color-bg-gradient-subtle);
 
 		position: relative;
+		padding: var(--spaceM);
 	}
 
 	.principle__desc {
-		color: var(--colorTextSecondary);
+		color: var(--color-text-secondary);
 	}
 
 	.principle__art {

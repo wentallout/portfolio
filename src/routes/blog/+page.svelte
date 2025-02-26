@@ -15,7 +15,6 @@
 		return items.slice((currentPage - 1) * pageSize, (currentPage - 1) * pageSize + pageSize);
 	};
 
-	/** @type {{data: any}} */
 	let { data } = $props();
 
 	let allBlogs = data.blogs;
@@ -117,7 +116,7 @@
 
 <style>
 	:global(.dark-pagination-nav .option:hover) {
-		background: var(--colorBgElevated) !important;
+		background: var(--color-bg-elevated) !important;
 	}
 
 	:global(.pagination-nav) {
@@ -127,11 +126,11 @@
 	}
 
 	:global(.dark-pagination-nav .option) {
-		color: var(--colorTextSecondary) !important;
+		color: var(--color-text-secondary) !important;
 	}
 
 	:global(.dark-pagination-nav .option.active) {
-		color: var(--colorPrimary) !important;
+		color: var(--color-primary) !important;
 	}
 
 	.blog-list {

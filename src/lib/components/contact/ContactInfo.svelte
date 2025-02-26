@@ -75,7 +75,7 @@
 		padding: var(--space-card);
 		transition: var(--transition);
 		box-shadow: var(--boxShadow);
-		background: var(--colorBgGradientSubtle);
+		background: var(--color-bg-gradient-subtle);
 
 		position: relative;
 		border-radius: var(--borderRadiusLight);
@@ -90,6 +90,6 @@
 	}
 
 	.address__desc {
-		color: var(--colorTextSecondary);
+		color: var(--color-text-secondary);
 	}
 </style>

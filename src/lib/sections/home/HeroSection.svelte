@@ -62,8 +62,8 @@
 				<div class="hero__btn">
 					<a href="#services">
 						<Button
-							backgroundColor="var(--colorPrimary)"
-							glowColor="var(--colorPrimary)"
+							backgroundColor="var(--color-primary)"
+							glowColor="var(--color-primary)"
 							label="Make it happen!"
 							labelColor="var(--colorBlack)">
 							<ThumbsUp />
@@ -72,11 +72,11 @@
 
 					<a href="/contact">
 						<Button
-							backgroundColor="var(--colorBgLayout)"
-							borderColor="var(--colorText)"
+							backgroundColor="var(--color-bg-layout)"
+							borderColor="var(--color-text)"
 							label="Contact"
-							labelColor="var(--colorText)"
-							shadowColor="var(--colorTextSecondary)" />
+							labelColor="var(--color-text)"
+							shadowColor="var(--color-text-secondary)" />
 					</a>
 				</div>
 			</div>
@@ -129,7 +129,7 @@
 	}
 
 	.focus {
-		color: var(--colorPrimary);
+		color: var(--color-primary);
 		display: block;
 	}
 
@@ -137,10 +137,10 @@
 		margin-bottom: var(--spaceS);
 		text-wrap: balance;
 		max-width: 40ch;
-		color: var(--colorTextSecondary);
+		color: var(--color-text-secondary);
 
 		& strong {
-			color: var(--colorPrimary);
+			color: var(--color-primary);
 		}
 	}
 

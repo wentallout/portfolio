@@ -28,16 +28,6 @@
 		flex: 1 1 20ch;
 	}
 
-	.other__image {
-		width: 100%;
-		height: 100%;
-		position: absolute;
-		z-index: 0;
-		filter: brightness(40%);
-		transition: var(--transition);
-		object-fit: cover;
-	}
-
 	.other {
 		/* FLEX */
 		display: flex;
@@ -50,9 +40,18 @@
 		height: 24dvh;
 		overflow: hidden;
 
-		border: 1px solid var(--colorBorder);
-
 		border-radius: var(--borderRadiusLight);
+		box-shadow: var(--boxShadow);
+	}
+
+	.other__image {
+		width: 100%;
+		height: 100%;
+		position: absolute;
+		z-index: 0;
+		filter: brightness(40%);
+		transition: var(--transition);
+		object-fit: cover;
 	}
 
 	.other:before {
@@ -75,7 +74,7 @@
 	}
 
 	.other:hover .other__title {
-		color: var(--colorPrimary);
+		color: var(--color-primary);
 	}
 
 	.other__title {
