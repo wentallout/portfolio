@@ -15,19 +15,19 @@
 
 <style>
 	.tag {
-		color: var(--colorTextSecondary);
+		color: var(--color-text-secondary);
 		display: inline-block;
 		font-weight: var(--fontWeightXS);
 		width: fit-content;
-		border-radius: var(--borderRadiusLight);
+		border-radius: var(--border-radius-light);
 		padding: 6px 8px;
 		line-height: normal;
-		border: 1px solid var(--colorBorder);
+		border: 1px solid var(--color-border);
 		transition: var(--transition);
 		display: flex;
 		flex-direction: row;
-		gap: var(--space2XS);
-		font-size: var(--fontSizeXS);
+		gap: var(--space-2xs);
+		font-size: var(--font-size-xs);
 		box-shadow: var(--boxShadow);
 	}
 
@@ -36,7 +36,7 @@
 	}
 
 	.tag:hover {
-		background: var(--colorBgElevated);
-		color: var(--colorPrimaryHover);
+		background: var(--color-bg-elevated);
+		color: var(--color-primary-hover);
 	}
 </style>

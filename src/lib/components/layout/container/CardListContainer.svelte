@@ -10,7 +10,7 @@
 <style>
 	.grid-container {
 		--min: 25ch;
-		--gap: var(--spaceM);
+		--gap: var(--space-mid);
 
 		display: grid;
 		grid-gap: var(--gap);

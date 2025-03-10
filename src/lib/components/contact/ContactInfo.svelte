@@ -60,7 +60,7 @@
 	.contact__other {
 		display: flex;
 		flex-direction: column;
-		gap: var(--spaceM);
+		gap: var(--space-mid);
 		justify-content: space-between;
 	}
 
@@ -69,27 +69,27 @@
 		display: flex;
 		flex-grow: 1;
 		flex-direction: column;
-		gap: var(--spaceXS);
+		gap: var(--space-xs);
 		/* --- */
 
 		padding: var(--space-card);
 		transition: var(--transition);
 		box-shadow: var(--boxShadow);
-		background: var(--colorBgGradientSubtle);
+		background: var(--color-bg-gradient-subtle);
 
 		position: relative;
-		border-radius: var(--borderRadiusLight);
+		border-radius: var(--border-radius-light);
 	}
 
 	.address__title {
 		display: flex;
 		flex-direction: row;
 		align-items: center;
-		gap: var(--space2XS);
+		gap: var(--space-2xs);
 		font-weight: 500;
 	}
 
 	.address__desc {
-		color: var(--colorTextSecondary);
+		color: var(--color-text-secondary);
 	}
 </style>

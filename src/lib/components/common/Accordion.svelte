@@ -34,15 +34,15 @@
 
 <style lang="postcss">
 	.accordion {
-		border: 1px solid var(--colorBorder);
+		border: 1px solid var(--color-border);
 		box-shadow: var(--boxShadow);
 		max-width: var(--text-width);
 
-		background: var(--colorBgGradientSubtle);
+		background: var(--color-bg-gradient-subtle);
 
 		position: relative;
-		border-radius: var(--borderRadiusLight);
-		border: 1px solid var(--colorBorder);
+		border-radius: var(--border-radius-light);
+		border: 1px solid var(--color-border);
 	}
 	.accordion__section {
 		text-align: left;
@@ -50,7 +50,7 @@
 	}
 
 	.accordion--active {
-		color: var(--colorPrimaryActive);
+		color: var(--color-primary-active);
 		font-weight: 600;
 	}
 
@@ -70,20 +70,20 @@
 		width: 100%;
 
 		cursor: pointer;
-		padding: var(--spaceXS) var(--spaceS);
+		padding: var(--space-xs) var(--space-small);
 		transition: var(--transition);
 
 		align-items: center;
 		flex-direction: row;
-		/* border: 1px solid var(--colorBorder); */
+		/* border: 1px solid var(--color-border); */
 
 		&:hover {
-			background-color: var(--colorBgElevated);
+			background-color: var(--color-bg-elevated);
 		}
 	}
 
 	.accordion__text {
-		color: var(--colorText);
-		padding: var(--spaceXS) var(--spaceS);
+		color: var(--color-text);
+		padding: var(--space-xs) var(--space-small);
 	}
 </style>

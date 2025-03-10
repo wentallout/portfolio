@@ -3,11 +3,12 @@
 	import DarkPaginationNav from '$components/common/DarkPaginationNav.svelte';
 	import PageTitle from '$components/common/PageTitle.svelte';
 	import TextInput from '$components/input/TextInput.svelte';
-	import { MagnifyingGlass } from '$lib/assets/icons/icons';
+	import { Article, MagnifyingGlass } from '$lib/assets/icons/icons';
 	import LoadingBarSpinner from '$lib/assets/icons/LoadingBarSpinner.svelte';
 	import { allBlogStore } from '$lib/stores/blogStore';
 	import BlogListContainer from '$sections/blog/BlogListContainer.svelte';
 	import BlogTagsList from '$sections/blog/BlogTagsList.svelte';
+	import SectionTitle from '$sections/SectionTitle.svelte';
 	import MiniSearch from 'minisearch';
 	import { onMount } from 'svelte';
 
@@ -15,7 +16,6 @@
 		return items.slice((currentPage - 1) * pageSize, (currentPage - 1) * pageSize + pageSize);
 	};
 
-	/** @type {{data: any}} */
 	let { data } = $props();
 
 	let allBlogs = data.blogs;
@@ -62,6 +62,12 @@
 <PageTitle pageTitle="Blogs" />
 
 <section class="blog-list">
+	<SectionTitle sectionTitle="Blogs">
+		{#snippet children({ sectionIcon })}
+			<Article {...sectionIcon} />
+		{/snippet}
+	</SectionTitle>
+
 	<search>
 		<TextInput
 			autoSuggestList={autoSuggest}
@@ -117,25 +123,25 @@
 
 <style>
 	:global(.dark-pagination-nav .option:hover) {
-		background: var(--colorBgElevated) !important;
+		background: var(--color-bg-elevated) !important;
 	}
 
 	:global(.pagination-nav) {
 		background-color: transparent !important;
-		border-radius: var(--borderRadiusLight) !important;
+		border-radius: var(--border-radius-light) !important;
 		box-shadow: none !important;
 	}
 
 	:global(.dark-pagination-nav .option) {
-		color: var(--colorTextSecondary) !important;
+		color: var(--color-text-secondary) !important;
 	}
 
 	:global(.dark-pagination-nav .option.active) {
-		color: var(--colorPrimary) !important;
+		color: var(--color-primary) !important;
 	}
 
 	.blog-list {
-		margin-top: var(--spaceM);
+		margin-top: var(--space-mid);
 		min-height: 100dvh;
 	}
 </style>

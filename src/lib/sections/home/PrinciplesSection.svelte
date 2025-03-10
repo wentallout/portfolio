@@ -55,7 +55,7 @@
 	.principle-container {
 		display: grid;
 		grid-template-columns: 1fr; /* Two columns with equal width */
-		gap: var(--spaceM); /* Gap between grid items */
+		gap: var(--space-mid); /* Gap between grid items */
 	}
 
 	@media (min-width: 768px) {
@@ -66,18 +66,19 @@
 
 	.principle__title {
 		font-weight: 600;
-		padding-block: 4px;
+		padding-block: 8px;
+		font-family: var(--font-fancy);
 	}
 
 	.principle__title:first-letter {
 		font-size: 200%;
-		color: var(--colorPrimary);
+		color: var(--color-primary);
 		padding-right: 2px;
 	}
 
 	.principle {
 		display: flex;
-		gap: var(--spaceM);
+		gap: var(--space-mid);
 		flex-direction: column;
 
 		position: relative;
@@ -85,21 +86,23 @@
 	}
 
 	.principle__section {
-		padding: var(--spaceM);
+		/* FLEX */
 		display: flex;
 		flex-direction: column;
-		gap: var(--space2XS);
+		gap: var(--space-2xs);
+		/* --- */
 
-		border-radius: var(--borderRadiusLight);
+		border-radius: var(--border-radius-light);
 		box-shadow: var(--boxShadow);
-		background-color: var(--colorBgContainer);
-		background: var(--colorBgGradientSubtle);
+		background-color: var(--color-bg-container);
+		background: var(--color-bg-gradient-subtle);
 
 		position: relative;
+		padding: var(--space-mid);
 	}
 
 	.principle__desc {
-		color: var(--colorTextSecondary);
+		color: var(--color-text-secondary);
 	}
 
 	.principle__art {

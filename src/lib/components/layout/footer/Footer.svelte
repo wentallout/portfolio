@@ -2,7 +2,8 @@
 	import ExLink from '$components/common/ExLink.svelte';
 	import FooterCopyright from '$components/layout/footer/FooterCopyright.svelte';
 	import FooterDeco from '$components/layout/footer/FooterDeco.svelte';
-	import Marquee from '$components/layout/other/Marquee.svelte';
+	import Blinkies from '$components/other/Blinkies.svelte';
+	import Marquee from '$components/other/Marquee.svelte';
 	import {
 		EnvelopeSimple,
 		GitHubLogo,
@@ -24,7 +25,9 @@
 			<div class="list">
 				<div class="list__title">About</div>
 				<ul class="list__nav">
-					<li class="nav-list__link">Affordable websites for your business.</li>
+					<li class="nav-list__link">
+						Khoa Nguyen. Provide affordable websites for your business.
+					</li>
 					<li class="nav-list__link">
 						<a class="link" href="/about">More about me </a>
 					</li>
@@ -52,6 +55,12 @@
 						<a href="/resource/tool">REM Converter</a>
 					</li>
 					<li class="nav-list__link">
+						<a href="https://www.realtimecolors.com">Color palette generator</a>
+					</li>
+					<li class="nav-list__link">
+						<a href="https://fluid-type.tolin.ski">Fluid Type Calculator</a>
+					</li>
+					<li class="nav-list__link">
 						<a href="/rss.xml">RSS</a>
 					</li>
 					<li class="nav-list__link">
@@ -70,7 +79,7 @@
 						<ExLink href="https://goo.gl/maps/GLt6uhYWwU91fXz49">
 							<div class="nav-list__link">
 								<MapPin />
-								Ho Chi Minh City
+								Ho Chi Minh City, Vietnam
 							</div>
 						</ExLink>
 					</li>
@@ -128,6 +137,8 @@
 
 <Marquee />
 
+<Blinkies />
+
 <style>
 	.footer {
 		position: relative;
@@ -139,11 +150,11 @@
 		/* SIZE */
 		max-width: 100vw;
 		width: 100%;
-		padding: var(--spaceXL) 0;
+		padding: var(--space-xl) 0;
 		/* --- */
 
 		overflow: hidden;
-		background-color: var(--colorBgLayout);
+		background-color: var(--color-bg-layout);
 
 		border-top-left-radius: 10%;
 		border-top-right-radius: 10%;
@@ -162,11 +173,11 @@
 	.nav-list__link {
 		display: flex;
 		flex-direction: row;
-		gap: var(--space2XS);
+		gap: var(--space-2xs);
 		align-items: center;
 
 		&:hover {
-			color: var(--colorPrimaryHover);
+			color: var(--color-primary-hover);
 		}
 	}
 
@@ -177,7 +188,7 @@
 	.footer__list {
 		overflow: hidden;
 		--min: 20ch;
-		--gap: var(--spaceL);
+		--gap: var(--space-large);
 
 		display: grid;
 		grid-gap: var(--gap);
@@ -187,27 +198,28 @@
 	.list {
 		display: flex;
 		flex-direction: column;
-		gap: var(--spaceM);
+		gap: var(--space-mid);
 	}
 
 	.list__title {
-		font-family: var(--fontFancy);
-		color: var(--colorText);
-		font-size: var(--fontSizeBase);
-		padding-bottom: var(--space3XS);
+		font-family: var(--font-fancy);
+		color: var(--color-text);
+		font-size: var(--font-size-base);
+		padding-bottom: var(--space-3xs);
 		border-bottom: 1px solid transparent;
-		border-image: linear-gradient(to right, var(--colorTextTertiary), transparent) 1 0%;
+		border-image: linear-gradient(to right, var(--color-text-tertiary), transparent) 1 0%;
 	}
 
 	.list__nav {
 		display: flex;
+		flex-wrap: wrap;
 		flex-direction: column;
 		justify-content: left;
 		align-items: flex-start;
 		margin: 0;
-		margin-bottom: var(--spaceL);
-		flex-wrap: wrap;
-		gap: var(--space2XS);
+		margin-bottom: var(--space-large);
+
+		gap: var(--space-2xs);
 	}
 
 	.footer__koi {

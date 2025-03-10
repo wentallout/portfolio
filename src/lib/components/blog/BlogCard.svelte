@@ -2,7 +2,6 @@
 	import MouseGlow from '$components/common/MouseGlow.svelte';
 	import { CaretRight } from '$lib/assets/icons/icons';
 
-	/** @type {{blogLink?: string, blogTitle?: string, blogDate?: string, blogTags?: any, hasTags?: boolean}} */
 	let {
 		blogDate = '',
 		blogId = '',
@@ -27,10 +26,12 @@
 				</div>
 			{/if}
 
-			<div class="blog__title text-small">{blogTitle}</div>
+			<h5 class="blog__title text-small">
+				{blogTitle}
+			</h5>
 		</div>
 		<span class="blog__icon">
-			<CaretRight color="var(--colorText)" height="16" width="16" />
+			<CaretRight color="var(--color-text)" height="16" width="16" />
 		</span>
 	</article>
 </a>
@@ -47,7 +48,7 @@
 		/* SIZE */
 		width: 100%;
 		height: 140px;
-		padding: var(--space2XS) var(--spaceM);
+		padding: var(--space-2xs) var(--space-mid);
 		/* --- */
 
 		/* OTHER */
@@ -56,16 +57,16 @@
 		overflow: hidden;
 
 		box-shadow: var(--boxShadow);
-		background: var(--colorBgGradientSubtle);
+		background: var(--color-bg-gradient-subtle);
 		/* --- */
 
 		position: relative;
-		border-radius: var(--borderRadiusLight);
+		border-radius: var(--border-radius-light);
 
 		&:hover {
-			box-shadow: -5px 5px var(--colorPrimaryHover);
+			box-shadow: -5px 5px var(--color-bg-elevated);
 			transform: translate(5px, -5px);
-			border: 1px solid var(--colorBorder);
+			border: 1px solid var(--color-border);
 		}
 	}
 
@@ -77,14 +78,14 @@
 		display: flex;
 		flex-direction: row;
 		flex-wrap: wrap;
-		gap: var(--space2XS);
+		gap: var(--space-2xs);
 		transition: var(--transition);
 	}
 
 	.tag {
 		font-weight: 300;
-		font-size: var(--fontSizeXS);
-		color: var(--colorTextSecondary);
+		font-size: var(--font-size-xs);
+		color: var(--color-text-secondary);
 	}
 
 	.blog__info {
@@ -103,7 +104,7 @@
 
 		/* FONT */
 		font-weight: var(--fontWeightMid);
-		color: var(--colorPrimary);
+		color: var(--color-text);
 		/* --- */
 
 		/* LINE CLAMP */
@@ -113,6 +114,6 @@
 		text-overflow: ellipsis;
 		/* --- */
 
-		text-wrap: balance;
+		text-wrap: pretty;
 	}
 </style>

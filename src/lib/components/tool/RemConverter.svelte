@@ -1,5 +1,5 @@
 <script>
-	import Breadcrumb from '$components/layout/other/Breadcrumb.svelte';
+	import Breadcrumb from '$components/other/Breadcrumb.svelte';
 	import { Copy, Wrench } from '$lib/assets/icons/icons';
 	import SectionTitle from '$sections/SectionTitle.svelte';
 	let baseFontSize = 16;
@@ -55,7 +55,7 @@
 			<input
 				id="rem"
 				name="rem"
-				style="color:var(--colorPrimary);"
+				style="color:var(--color-primary);"
 				class="converter__input"
 				oninput={() => {
 					pxInput = remInput * baseFontSize;
@@ -69,9 +69,9 @@
 
 <style>
 	.converter__copy {
-		background-color: var(--colorPrimary);
+		background-color: var(--color-primary);
 		align-self: stretch;
-		color: var(--colorBlack);
+		color: var(--color-black);
 		min-width: 40px;
 
 		display: flex;
@@ -80,7 +80,7 @@
 
 		&:hover {
 			cursor: pointer;
-			background-color: var(--colorPrimaryHover);
+			background-color: var(--color-primary-hover);
 		}
 
 		&:disabled {
@@ -89,18 +89,18 @@
 	}
 
 	.input-group {
-		border: 1px solid var(--colorBorder);
+		border: 1px solid var(--color-border);
 		min-height: 160px;
 		display: flex;
 		flex-direction: row;
 		align-items: center;
-		gap: var(--spaceS);
+		gap: var(--space-small);
 	}
 
 	.converter__input {
 		width: 100%;
 		height: 100%;
-		font-size: var(--fontSize3XL);
+		font-size: var(--font-size-3xl);
 		appearance: none;
 
 		&:focus-visible {
@@ -111,12 +111,12 @@
 	.converter {
 		display: flex;
 		flex-direction: column;
-		gap: var(--spaceL);
+		gap: var(--space-large);
 	}
 
 	.converter__label {
-		font-size: var(--fontSize3XL);
+		font-size: var(--font-size-3xl);
 		font-weight: 600;
-		color: var(--colorTextSecondary);
+		color: var(--color-text-secondary);
 	}
 </style>

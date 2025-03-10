@@ -1,7 +1,7 @@
 <script>
 	import ExLink from '$components/common/ExLink.svelte';
 	import Tag from '$components/common/Tag.svelte';
-	import Breadcrumb from '$components/layout/other/Breadcrumb.svelte';
+	import Breadcrumb from '$components/other/Breadcrumb.svelte';
 	import { CalendarBlank, Pen } from '$lib/assets/icons/icons';
 	import { onMount } from 'svelte';
 
@@ -51,13 +51,17 @@
 
 		return formattedDate;
 	}
+
+	import { page } from '$app/stores';
 </script>
 
 <header class="blog full-width">
 	<div class="blog__gradient"></div>
 	<div class="g-container">
 		<Breadcrumb />
-		<h1 class="blog__title">{data.title}</h1>
+		<h1 class="blog__title">
+			{data.title}
+		</h1>
 		<div class="blog__info text-small">
 			<div class="info__section">
 				<CalendarBlank height="20" width="20" />
@@ -94,9 +98,9 @@
 <style>
 	.blog__deco {
 		width: 100%;
-		height: 150px;
-		background-image: url('/images/beat-mix.png');
-		background-repeat: repeat-x;
+		height: 100%;
+		background-image: url('/images/old-house.avif');
+		background-repeat: none;
 		rotate: 360deg;
 		position: absolute;
 		left: 0;
@@ -104,6 +108,8 @@
 		z-index: -1;
 		opacity: 0.2;
 		filter: grayscale(1);
+		background-size: cover;
+		background-position: center;
 	}
 
 	.blog:hover .blog__deco {
@@ -122,8 +128,8 @@
 
 	.blog {
 		position: relative;
-		padding-top: var(--spaceXL);
-		padding-bottom: var(--spaceXL);
+		padding-top: var(--space-xl);
+		padding-bottom: var(--space-xl);
 	}
 
 	.blog:after {
@@ -143,7 +149,7 @@
 	.category {
 		display: flex;
 		flex-direction: row;
-		gap: var(--spaceXS);
+		gap: var(--space-xs);
 		z-index: 9999;
 	}
 
@@ -156,9 +162,9 @@
 		display: flex;
 		flex-direction: row;
 		flex-wrap: wrap;
-		gap: var(--spaceM);
-		margin-bottom: var(--spaceS);
-		color: var(--colorTextSecondary);
+		gap: var(--space-mid);
+		margin-bottom: var(--space-small);
+		color: var(--color-text-secondary);
 
 		& .info__section {
 			display: flex;
@@ -171,11 +177,11 @@
 	.blog__title {
 		text-wrap: balance;
 		text-shadow:
-			-2px -2px 0 var(--colorBgLayout),
-			2px -2px 0 var(--colorBgLayout),
-			-2px 2px 0 var(--colorBgLayout),
-			2px 2px 0 var(--colorBgLayout);
+			-2px -2px 0 var(--color-bg-layout),
+			2px -2px 0 var(--color-bg-layout),
+			-2px 2px 0 var(--color-bg-layout),
+			2px 2px 0 var(--color-bg-layout);
 
-		color: var(--colorPrimary);
+		color: var(--color-primary);
 	}
 </style>

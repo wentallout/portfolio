@@ -1,0 +1,37 @@
+---
+title: Learn GSAP
+date: 2025-03-10
+categories:
+    - frontend
+    - javascript
+---
+
+
+## YouTube
+
+2023: [Master JavaScript Animations With GSAP | Learn GSAP From Scratch |](https://www.youtube.com/watch?v=aMTRukxrjuE)
+
+## Popular Web Animation Technique
+
+- Scroll tracking: ScrollTrigger by GSAP, useScroll by Framer Motion (need to combine with Smooth scroll like LENIS or locomotive-scroll)
+- Viewport Detection (Intersection Observer API or just use ScrollTrigger or useInView)
+- Sticky Position (`position: sticky; top:10px`): very powerful and easy to implement
+- Easing (More info: https://motion.zajno.com/)
+- Text Splitting: GSAP SplitText or SplitType. Can be bad for accessibility
+
+### Subtle technique
+
+- Map function (math): `gsap.utils.mapRange(-10,10,100,200,0)`
+- LERP (Linear Interpolation): use it for cursor stuff
+```js
+const lerp = function(start,end,t)
+{
+    return start * (1 - t) + end *t;
+}
+```
+- SHADER (must know if you want experimental, artistic stuff)
+
+## Reference
+
+https://www.youtube.com/watch?v=9eHEOAn2FOA
+

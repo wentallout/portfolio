@@ -72,27 +72,27 @@
 		transform: translateX(172px) rotateY(90deg);
 		background: linear-gradient(
 			90deg,
-			var(--colorText) 0%,
-			var(--colorBgLayout) 5%,
-			var(--colorText) 10%,
-			var(--colorBgLayout) 15%,
-			var(--colorText) 20%,
-			var(--colorBgLayout) 25%,
-			var(--colorText) 30%,
-			var(--colorBgLayout) 35%,
-			var(--colorText) 40%,
-			var(--colorBgLayout) 45%,
-			var(--colorText) 50%,
-			var(--colorBgLayout) 55%,
-			var(--colorText) 60%,
-			var(--colorBgLayout) 65%,
-			var(--colorText) 70%,
-			var(--colorBgLayout) 75%,
-			var(--colorText) 80%,
-			var(--colorBgLayout) 85%,
-			var(--colorText) 90%,
-			var(--colorBgLayout) 95%,
-			var(--colorText) 100%
+			var(--color-text) 0%,
+			var(--color-bg-layout) 5%,
+			var(--color-text) 10%,
+			var(--color-bg-layout) 15%,
+			var(--color-text) 20%,
+			var(--color-bg-layout) 25%,
+			var(--color-text) 30%,
+			var(--color-bg-layout) 35%,
+			var(--color-text) 40%,
+			var(--color-bg-layout) 45%,
+			var(--color-text) 50%,
+			var(--color-bg-layout) 55%,
+			var(--color-text) 60%,
+			var(--color-bg-layout) 65%,
+			var(--color-text) 70%,
+			var(--color-bg-layout) 75%,
+			var(--color-text) 80%,
+			var(--color-bg-layout) 85%,
+			var(--color-text) 90%,
+			var(--color-bg-layout) 95%,
+			var(--color-text) 100%
 		);
 	}
 
@@ -105,7 +105,7 @@
 		content: ' ';
 
 		transform: translateZ(-25px);
-		background-color: var(--colorTextSecondary);
+		background-color: var(--color-text-secondary);
 		border-radius: 0 2px 2px 0;
 	}
 

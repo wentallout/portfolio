@@ -14,6 +14,7 @@ export const GET = async () => {
 
 		return json(sortedBlogs);
 	} catch (error) {
+		console.log(error);
 		return {
 			body: { error: 'Failed to fetch blogs' },
 			status: 500

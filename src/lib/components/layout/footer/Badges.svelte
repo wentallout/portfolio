@@ -62,16 +62,16 @@
 	.badges {
 		width: 100%;
 
-		margin-bottom: var(--spaceS);
+		margin-bottom: var(--space-small);
 
 		display: grid;
 		grid-template-columns: 1fr 1fr;
 
-		border-top: 1px solid var(--colorBorderSecondary);
-		border-left: 1px solid var(--colorBorderSecondary);
+		border-top: 1px solid var(--color-border-secondary);
+		border-left: 1px solid var(--color-border-secondary);
 		overflow: visible;
 
-		border-radius: var(--borderRadius);
+		border-radius: var(--border-radius);
 	}
 
 	@media (min-width: 768px) {
@@ -83,11 +83,11 @@
 	:global(.badges > a) {
 		display: grid;
 		place-items: center;
-		border-bottom: 1px solid var(--colorBorderSecondary);
-		border-right: 1px solid var(--colorBorderSecondary);
-		padding: var(--spaceS);
+		border-bottom: 1px solid var(--color-border-secondary);
+		border-right: 1px solid var(--color-border-secondary);
+		padding: var(--space-small);
 		overflow: visible;
-		border-radius: var(--borderRadius);
+		border-radius: var(--border-radius);
 	}
 
 	.badge__img {

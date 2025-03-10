@@ -66,12 +66,12 @@
 		</div>
 		<a class="service__btn" href="https://cal.com/wentallout/web">
 			<Button
-				backgroundColor="var(--colorBgLayout)"
-				borderColor="var(--colorText)"
-				glowColor="var(--colorText)"
+				backgroundColor="var(--color-bg-layout)"
+				borderColor="var(--color-text)"
+				glowColor="var(--color-text)"
 				label="Book a Call"
-				labelColor="var(--colorText)"
-				shadowColor="var(--colorTextSecondary)">
+				labelColor="var(--color-text)"
+				shadowColor="var(--color-text-secondary)">
 				<CalendarCheck />
 			</Button>
 		</a>
@@ -82,19 +82,19 @@
 	.service-container {
 		display: flex;
 		flex-direction: column;
-		gap: var(--spaceL);
-		background: var(--colorBgGradientSubtle);
+		gap: var(--space-large);
+		background: var(--color-bg-gradient-subtle);
 		box-shadow: var(--boxShadow);
 		padding: var(--space-card);
 
 		position: relative;
-		border-radius: var(--borderRadiusLight);
-		border: 1px solid var(--colorBorderSecondary);
+		border-radius: var(--border-radius-light);
+		border: 1px solid var(--color-border-secondary);
 	}
 
 	.service {
 		--min: 30ch;
-		--gap: var(--space2XL);
+		--gap: var(--space-2xl);
 
 		display: grid;
 		grid-gap: var(--gap);
@@ -111,15 +111,15 @@
 	.service__thumbnail {
 		display: flex;
 		flex-direction: column;
-		gap: var(--spaceS);
+		gap: var(--space-small);
 		align-items: center;
 		flex-grow: 0;
 	}
 
 	.service__section {
-		border-radius: var(--borderRadiusLight);
+		border-radius: var(--border-radius-light);
 
-		gap: var(--spaceM);
+		gap: var(--space-mid);
 
 		display: flex;
 		flex-direction: column;
@@ -127,15 +127,15 @@
 	}
 
 	.service__title {
-		margin-bottom: var(--spaceS);
-		font-family: var(--fontFancy);
+		margin-bottom: var(--space-small);
+		font-family: var(--font-fancy);
 	}
 
 	.service__desc {
 		display: flex;
 		flex-direction: column;
-		gap: var(--spaceXS);
-		color: var(--colorTextSecondary);
+		gap: var(--space-xs);
+		color: var(--color-text-secondary);
 	}
 
 	.service__btn {

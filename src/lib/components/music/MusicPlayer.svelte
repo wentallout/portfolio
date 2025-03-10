@@ -130,30 +130,30 @@
 		<div class="player__btns">
 			<div class="controls">
 				<button class="mp-btn other-btn" onclick={prev} type="button">
-					<SkipBack color="var(--colorTextQuaternary)" height="24" width="24" />
+					<SkipBack color="var(--color-text-quaternary)" height="24" width="24" />
 				</button>
 
 				{#if $isPlaying}
 					<button class="mp-btn play-btn" onclick={pauseMusic} type="button">
-						<Pause color="var(--colorBlack)" height="24" width="24" />
+						<Pause color="var(--color-black)" height="24" width="24" />
 					</button>
 				{:else}
 					<button class="mp-btn play-btn" onclick={playMusic} type="button">
-						<PlayFill color="var(--colorBlack)" height="24" width="24" />
+						<PlayFill color="var(--color-black)" height="24" width="24" />
 					</button>
 				{/if}
 
 				<button class="mp-btn other-btn" onclick={next} type="button">
-					<SkipForward color="var(--colorTextQuaternary)" height="24" width="24" />
+					<SkipForward color="var(--color-text-quaternary)" height="24" width="24" />
 				</button>
 			</div>
 
 			<div class="player__volume">
 				<button class="mute__btn" onclick={mute} onkeydown={mute} type="button">
 					{#if muted}
-						<SpeakerX color="var(--colorTextQuaternary)" height="24" width="24" />
+						<SpeakerX color="var(--color-text-quaternary)" height="24" width="24" />
 					{:else}
-						<SpeakerHigh color="var(--colorText)" height="24" width="24" />
+						<SpeakerHigh color="var(--color-text)" height="24" width="24" />
 					{/if}
 				</button>
 				<input
@@ -193,8 +193,8 @@
 	.player__btns {
 		display: grid;
 		grid-template-columns: 1fr;
-		gap: var(--spaceS);
-		margin-bottom: var(--spaceM);
+		gap: var(--space-small);
+		margin-bottom: var(--space-mid);
 		width: 100%;
 	}
 
@@ -215,16 +215,16 @@
 	.player__volume {
 		display: flex;
 		align-items: center;
-		gap: var(--spaceS);
+		gap: var(--space-small);
 	}
 
 	.info__current {
 		font-weight: var(--fontWeightXS);
-		color: var(--colorPrimary);
+		color: var(--color-primary);
 	}
 
 	.info__name {
-		color: var(--colorText);
+		color: var(--color-text);
 		font-weight: var(--fontWeightLarge);
 		text-align: center;
 	}
@@ -235,7 +235,7 @@
 
 	.info__duration {
 		font-weight: var(--fontWeightXS);
-		color: var(--colorTextQuaternary);
+		color: var(--color-text-quaternary);
 	}
 
 	.info__time {
@@ -243,10 +243,10 @@
 		flex-direction: row;
 		align-items: center;
 		justify-content: space-between;
-		gap: var(--spaceS);
-		color: var(--colorWhite);
+		gap: var(--space-small);
+		color: var(--color-white);
 		width: 100%;
-		margin-bottom: var(--spaceM);
+		margin-bottom: var(--space-mid);
 	}
 
 	.player__current {
@@ -255,7 +255,7 @@
 		flex-direction: column;
 		align-items: center;
 		width: 100%;
-		padding: var(--spaceM) var(--spaceS);
+		padding: var(--space-mid) var(--space-small);
 	}
 
 	/* MUSIC PLAYER BUTTONS */
@@ -263,9 +263,9 @@
 	.controls {
 		display: grid;
 		grid-template-columns: 1fr 1fr 1fr;
-		border-radius: var(--borderRadiusLight);
+		border-radius: var(--border-radius-light);
 		overflow: hidden;
-		border: 1px solid var(--colorBorder);
+		border: 1px solid var(--color-border);
 	}
 
 	.mp-btn {
@@ -273,9 +273,9 @@
 		justify-content: center;
 		align-items: center;
 
-		padding: var(--spaceXS);
+		padding: var(--space-xs);
 		flex-direction: row;
-		background-color: var(--colorBgContainer);
+		background-color: var(--color-bg-container);
 		border: 0;
 		transition: var(--transition);
 	}
@@ -286,7 +286,7 @@
 	}
 
 	.play-btn {
-		background-color: var(--colorPrimary);
+		background-color: var(--color-primary);
 	}
 
 	.player {
@@ -295,7 +295,7 @@
 		justify-content: center;
 		align-items: center;
 		width: 100%;
-		background-color: var(--colorBgContainer);
+		background-color: var(--color-bg-container);
 
 		overflow: hidden;
 	}
@@ -311,8 +311,8 @@
 
 	.song-active {
 		position: relative;
-		background: var(--colorPrimary);
-		color: var(--colorBlack);
+		background: var(--color-primary);
+		color: var(--color-black);
 	}
 
 	.song-active::before {
@@ -325,8 +325,8 @@
 		right: 0;
 		opacity: 0.4;
 
-		font-family: var(--fontFancy);
-		-webkit-text-stroke: 1px var(--colorText);
+		font-family: var(--font-fancy);
+		-webkit-text-stroke: 1px var(--color-text);
 		-webkit-text-fill-color: transparent;
 		font-weight: 100;
 	}
@@ -334,12 +334,12 @@
 	.song-name {
 		z-index: 1;
 		font-weight: var(--fontWeightXS);
-		color: var(--colorText);
+		color: var(--color-text);
 	}
 
 	.song-active .song-name {
 		font-weight: var(--fontWeightLarge);
-		color: var(--colorBlack);
+		color: var(--color-black);
 	}
 
 	.cs {
@@ -347,14 +347,14 @@
 		flex-wrap: wrap;
 		flex-direction: row;
 		align-items: center;
-		padding: var(--spaceXS) var(--spaceS);
+		padding: var(--space-xs) var(--space-small);
 	}
 
 	.song {
 		transition: var(--transition);
 
 		&:hover {
-			background-color: var(--colorBgElevated);
+			background-color: var(--color-bg-elevated);
 			cursor: pointer;
 		}
 	}
@@ -369,7 +369,7 @@
 		z-index: 2;
 		margin-left: auto;
 		transition: var(--transition);
-		outline: 1px solid var(--colorTextQuaternary);
+		outline: 1px solid var(--color-text-quaternary);
 
 		&:hover {
 			scale: 1.2;

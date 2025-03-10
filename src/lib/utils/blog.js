@@ -24,5 +24,7 @@ export const fetchMarkdownBlogs = async () => {
 export const getBlogSlugs = async () => {
 	const allBlogs = await fetchMarkdownBlogs();
 
-	return allBlogs.map((blog) => blog.path.replace(/^\/blog\//, ''));
+	if (allBlogs.length > 0) {
+		return allBlogs.map((blog) => blog.path.replace(/^\/blog\//, ''));
+	}
 };

@@ -2,7 +2,7 @@
 	import SectionTitle from '$sections/SectionTitle.svelte';
 
 	import BlogTagsList from '$sections/blog/BlogTagsList.svelte';
-	import Breadcrumb from '$components/layout/other/Breadcrumb.svelte';
+	import Breadcrumb from '$components/other/Breadcrumb.svelte';
 	import { Folder } from '$lib/assets/icons/icons';
 	/** @type {{data: any}} */
 	let { data } = $props();

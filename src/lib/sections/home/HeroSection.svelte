@@ -62,21 +62,21 @@
 				<div class="hero__btn">
 					<a href="#services">
 						<Button
-							backgroundColor="var(--colorPrimary)"
-							glowColor="var(--colorPrimary)"
+							backgroundColor="var(--color-primary)"
+							glowColor="var(--color-primary)"
 							label="Make it happen!"
-							labelColor="var(--colorBlack)">
+							labelColor="var(--color-black)">
 							<ThumbsUp />
 						</Button>
 					</a>
 
 					<a href="/contact">
 						<Button
-							backgroundColor="var(--colorBgLayout)"
-							borderColor="var(--colorText)"
+							backgroundColor="var(--color-bg-layout)"
+							borderColor="var(--color-text)"
 							label="Contact"
-							labelColor="var(--colorText)"
-							shadowColor="var(--colorTextSecondary)" />
+							labelColor="var(--color-text)"
+							shadowColor="var(--color-text-secondary)" />
 					</a>
 				</div>
 			</div>
@@ -106,8 +106,8 @@
 	.hero__block {
 		display: flex;
 
-		padding-top: var(--spaceL);
-		padding-bottom: var(--spaceL);
+		padding-top: var(--space-large);
+		padding-bottom: var(--space-large);
 
 		flex-direction: column;
 		position: relative;
@@ -116,40 +116,40 @@
 
 	@media (min-width: 768px) {
 		.hero__block {
-			padding-top: var(--spaceXL);
-			padding-bottom: var(--spaceXL);
+			padding-top: var(--space-xl);
+			padding-bottom: var(--space-xl);
 			max-width: 60%;
 		}
 	}
 
 	.hero__heading {
-		font-family: var(--fontFancy);
-		margin-bottom: var(--spaceL);
+		font-family: var(--font-fancy);
+		margin-bottom: var(--space-large);
 		letter-spacing: var(--tracking-tighter);
 	}
 
 	.focus {
-		color: var(--colorPrimary);
+		color: var(--color-primary);
 		display: block;
 	}
 
 	.hero__text {
-		margin-bottom: var(--spaceS);
+		margin-bottom: var(--space-small);
 		text-wrap: balance;
 		max-width: 40ch;
-		color: var(--colorTextSecondary);
+		color: var(--color-text-secondary);
 
 		& strong {
-			color: var(--colorPrimary);
+			color: var(--color-primary);
 		}
 	}
 
 	.hero__btn {
-		margin-top: var(--spaceL);
+		margin-top: var(--space-large);
 		width: 100%;
 		display: flex;
 		flex-direction: row;
-		gap: var(--spaceS);
+		gap: var(--space-small);
 		flex-wrap: wrap;
 	}
 </style>

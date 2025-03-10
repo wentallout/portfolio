@@ -7,15 +7,15 @@
 		left: 0;
 		right: 0;
 
-		background-color: var(--colorPrimary);
+		background-color: var(--color-primary);
 
-		color: var(--colorBlack);
+		color: var(--color-black);
 		font-weight: var(--fontWeightLarge);
-		padding: var(--spaceS);
+		padding: var(--space-small);
 		translate: 0 -100%;
 		transition: translate 150ms ease-in-out;
 
-		z-index: var(--zIndexMax);
+		z-index: var(--z-index-max);
 
 		display: flex;
 		justify-content: center;
@@ -23,7 +23,7 @@
 	}
 
 	.skipper:hover {
-		background-color: var(--colorPrimaryHover);
+		background-color: var(--color-primary-hover);
 	}
 
 	.skipper:focus {

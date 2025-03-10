@@ -12,11 +12,11 @@
 		class:circle--right={$theme === 'light'}>
 		{#if $theme === 'dark'}
 			<div>
-				<Moon class="icon" color="var(--colorText)" height="16" width="16" />
+				<Moon class="icon" color="var(--color-text)" height="16" width="16" />
 			</div>
 		{:else if $theme === 'light'}
 			<div>
-				<Sun class="icon" color="var(--colorText)" height="16" width="16" />
+				<Sun class="icon" color="var(--color-text)" height="16" width="16" />
 			</div>
 		{/if}
 	</div>
@@ -29,12 +29,12 @@
 
 		display: flex;
 
-		border-radius: var(--borderRadius);
-		border: 1px solid var(--colorTextQuaternary);
+		border-radius: var(--border-radius);
+		border: 1px solid var(--color-text-quaternary);
 		overflow: hidden;
-		background-color: var(--colorBgContainer);
+		background-color: var(--color-bg-container);
 		height: fit-content;
-		z-index: var(--zIndexMax);
+		z-index: var(--z-index-max);
 		position: absolute;
 		top: 50%;
 		right: 0;
@@ -51,7 +51,7 @@
 		height: calc(var(--pillWidth) / 2);
 		aspect-ratio: 1/1;
 		border-radius: 50%;
-		background-color: var(--colorBgElevated);
+		background-color: var(--color-bg-elevated);
 		box-shadow: var(--boxShadow);
 		display: flex;
 		justify-content: center;
@@ -60,7 +60,7 @@
 		transition: transform 0.3s cubic-bezier(0.68, -0.55, 0.27, 1.55);
 
 		&:hover {
-			border: 1px solid var(--colorPrimaryHover);
+			border: 1px solid var(--color-primary-hover);
 		}
 	}
 

@@ -44,11 +44,11 @@
 		flex-direction: row;
 		align-items: center;
 		flex-wrap: wrap;
-		gap: var(--space3XS);
+		gap: var(--space-3xs);
 
 		position: relative;
 		margin-top: var(--scroll-padding);
-		margin-bottom: var(--spaceXL);
+		margin-bottom: var(--space-xl);
 
 		background-color: transparent;
 
@@ -60,17 +60,17 @@
 		pointer-events: none;
 		display: inline-block;
 		font-weight: var(--fontWeightXS);
-		color: var(--colorTextSecondary);
+		color: var(--color-text-secondary);
 	}
 
 	.breadcrumb__clickable {
 		font-weight: var(--fontWeightXS);
 		display: inline-flex;
-		color: var(--colorPrimary);
+		color: var(--color-primary);
 	}
 
 	.breadcrumb__clickable:hover {
-		color: var(--colorPrimaryHover);
+		color: var(--color-primary-hover);
 		text-underline-offset: 1px;
 	}
 </style>

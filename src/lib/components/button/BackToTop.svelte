@@ -63,7 +63,7 @@
 		position: fixed;
 		right: 12px;
 		bottom: 12px;
-		z-index: var(--zIndexMax);
+		z-index: var(--z-index-max);
 		/*  */
 
 		/* OTHER */
@@ -76,13 +76,13 @@
 		/*  */
 
 		box-shadow: var(--boxShadow);
-		color: var(--colorText);
+		color: var(--color-text);
 
-		border-radius: var(--borderRadius);
+		border-radius: var(--border-radius);
 
 		background-image: linear-gradient(
-			var(--colorPrimary) 0% var(--progress),
-			var(--colorBgElevated) var(--progress) 100%
+			var(--color-primary) 0% var(--progress),
+			var(--color-bg-elevated) var(--progress) 100%
 		);
 
 		animation: progress linear;
@@ -93,7 +93,7 @@
 		}
 
 		&:active {
-			color: var(--colorPrimaryActive);
+			color: var(--color-primary-active);
 		}
 
 		&.hidden {
@@ -104,7 +104,7 @@
 
 	@media (min-width: 768px) {
 		.bck2top {
-			padding: var(--spaceXS);
+			padding: var(--space-xs);
 			width: 56px;
 		}
 	}

@@ -44,7 +44,7 @@
 <style>
 	.faq {
 		display: grid;
-		gap: var(--spaceXL);
+		gap: var(--space-xl);
 		align-items: center;
 		grid-template-columns: 1fr;
 	}
@@ -62,6 +62,6 @@
 	.faq__list {
 		display: flex;
 		flex-direction: column;
-		gap: var(--spaceM);
+		gap: var(--space-mid);
 	}
 </style>

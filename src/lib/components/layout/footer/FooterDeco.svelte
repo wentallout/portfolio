@@ -8,7 +8,7 @@
 		background-image: url(/images/water-waves.svg);
 		background-repeat: repeat-x;
 		background-position: 0;
-		margin-bottom: var(--spaceM);
+		margin-bottom: var(--space-mid);
 
 		position: absolute;
 		top: 0;

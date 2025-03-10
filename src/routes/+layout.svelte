@@ -11,24 +11,31 @@
 	/** @type {{children?: import('svelte').Snippet}} */
 	let { children } = $props();
 
-	onNavigate(() => {
-		if (!document.startViewTransition) return;
+	import { onMount } from 'svelte';
+	import { setupViewTransition } from 'sveltekit-view-transition';
 
-		return new Promise((resolve) => {
-			document.startViewTransition(async () => {
-				resolve();
-				await navigation.complete;
-			});
+	setupViewTransition();
+
+	let soundEle = $state();
+
+	onMount(() => {
+		document.addEventListener('click', (e) => {
+			if (e.target.tagName === 'BUTTON' || e.target.tagName === 'A') {
+				soundEle.currentTime = 0; // Restart sound
+				soundEle.play();
+			}
 		});
 	});
 </script>
 
-<svelte:head>
+<!-- <svelte:head>
 	<meta name="view-transition" content="same-origin" />
-</svelte:head>
+</svelte:head> -->
 
 <!-- <script nonce="%sveltekit.nonce%" async crossorigin="anonymous"
 		src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2238795577080818"></script> -->
+
+<audio bind:this={soundEle} id="clickSound" class="websound" src="/sounds/click.mp3"></audio>
 
 <BgDeco />
 <Misc />
@@ -44,6 +51,10 @@
 <!-- <AdGoogle /> -->
 
 <style lang="postcss">
+	.websound {
+		display: none;
+	}
+
 	.main-content {
 		position: relative;
 		display: flex;

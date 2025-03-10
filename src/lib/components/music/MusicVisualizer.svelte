@@ -81,7 +81,7 @@
 		margin: auto;
 		height: var(--energyHeight);
 		--shadow: calc(var(--energyHeight) - 100px);
-		filter: drop-shadow(0 0 var(--shadow) var(--colorPrimaryHover));
+		filter: drop-shadow(0 0 var(--shadow) var(--color-primary-hover));
 		z-index: -1;
 	}
 </style>

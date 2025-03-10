@@ -1,7 +1,7 @@
 <script>
 	import BlogCard from '$components/blog/BlogCard.svelte';
 	import BlogListContainer from '$sections/blog/BlogListContainer.svelte';
-	import Breadcrumb from '$lib/components/layout/other/Breadcrumb.svelte';
+	import Breadcrumb from '$components/other/Breadcrumb.svelte';
 
 	/** @type {{data: any}} */
 	let { data } = $props();
@@ -27,21 +27,21 @@
 
 <style>
 	.extra-margin {
-		margin-top: var(--spaceM);
+		margin-top: var(--space-mid);
 	}
 
 	.result {
 		margin-top: 0;
-		margin-bottom: var(--spaceM);
+		margin-bottom: var(--space-mid);
 		color: var(--neutral-900);
-		font-family: var(--fontFancy);
+		font-family: var(--font-fancy);
 	}
 
 	.result__title {
-		color: var(--colorTextSecondary);
+		color: var(--color-text-secondary);
 	}
 
 	.result__category {
-		color: var(--colorPrimary);
+		color: var(--color-primary);
 	}
 </style>

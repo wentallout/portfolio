@@ -2,6 +2,7 @@ import ArrowCounterClockwise from '~icons/ph/arrow-counter-clockwise';
 import ArrowLeft from '~icons/ph/arrow-left';
 import ArrowLineUp from '~icons/ph/arrow-line-up';
 import ArrowRight from '~icons/ph/arrow-right';
+import Article from '~icons/ph/article-ny-times';
 import At from '~icons/ph/at';
 import Books from '~icons/ph/books';
 import BoundingBox from '~icons/ph/bounding-box';
@@ -59,6 +60,7 @@ export {
 	ArrowLeft,
 	ArrowLineUp,
 	ArrowRight,
+	Article,
 	At,
 	Books,
 	BoundingBox,

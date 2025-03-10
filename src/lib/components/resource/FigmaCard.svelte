@@ -3,7 +3,6 @@
 	import MouseGlow from '$components/common/MouseGlow.svelte';
 	import { fade } from 'svelte/transition';
 
-	/** @type {{title?: string, desc?: string, href?: string, thumbnailUrl?: string}} */
 	let { desc = 'author', href, thumbnailUrl, title = 'insert title' } = $props();
 
 	let imageEl = $state();
@@ -51,17 +50,15 @@
 		box-shadow: var(--boxShadow);
 
 		position: relative;
-		border-radius: var(--borderRadiusLight);
-		border: 1px solid var(--colorBorderSecondary);
+		border-radius: var(--border-radius-light);
 
 		overflow: hidden;
 		flex-grow: 1;
 		position: relative;
-
-		background: var(--colorBgGradientSubtle);
+		background: var(--color-bg-gradient-subtle);
 
 		&:hover {
-			box-shadow: -5px 5px var(--colorPrimaryHover);
+			box-shadow: -5px 5px var(--color-bg-elevated);
 			transform: translate(5px, -5px);
 		}
 	}
@@ -80,12 +77,11 @@
 
 	.fcard__info {
 		width: 100%;
-		padding: var(--space2XS) var(--spaceS);
+		padding: var(--space-2xs) var(--space-small);
 	}
 
 	.fcard__title {
-		color: var(--colorPrimary);
-		font-family: var(--fontFancy);
+		font-family: var(--font-fancy);
 		overflow: hidden;
 		text-overflow: ellipsis;
 		display: -webkit-box;
@@ -94,7 +90,11 @@
 		font-weight: 500;
 	}
 
+	.fcard:hover .fcard__title {
+		color: var(--color-primary-hover);
+	}
+
 	.fcard__desc {
-		color: var(--colorTextSecondary);
+		color: var(--color-text-secondary);
 	}
 </style>
