@@ -82,19 +82,19 @@
 	.service-container {
 		display: flex;
 		flex-direction: column;
-		gap: var(--spaceL);
+		gap: var(--space-large);
 		background: var(--color-bg-gradient-subtle);
 		box-shadow: var(--boxShadow);
 		padding: var(--space-card);
 
 		position: relative;
-		border-radius: var(--borderRadiusLight);
+		border-radius: var(--border-radius-light);
 		border: 1px solid var(--color-border-secondary);
 	}
 
 	.service {
 		--min: 30ch;
-		--gap: var(--space2XL);
+		--gap: var(--space-2xl);
 
 		display: grid;
 		grid-gap: var(--gap);
@@ -111,15 +111,15 @@
 	.service__thumbnail {
 		display: flex;
 		flex-direction: column;
-		gap: var(--spaceS);
+		gap: var(--space-small);
 		align-items: center;
 		flex-grow: 0;
 	}
 
 	.service__section {
-		border-radius: var(--borderRadiusLight);
+		border-radius: var(--border-radius-light);
 
-		gap: var(--spaceM);
+		gap: var(--space-mid);
 
 		display: flex;
 		flex-direction: column;
@@ -127,14 +127,14 @@
 	}
 
 	.service__title {
-		margin-bottom: var(--spaceS);
-		font-family: var(--fontFancy);
+		margin-bottom: var(--space-small);
+		font-family: var(--font-fancy);
 	}
 
 	.service__desc {
 		display: flex;
 		flex-direction: column;
-		gap: var(--spaceXS);
+		gap: var(--space-xs);
 		color: var(--color-text-secondary);
 	}
 

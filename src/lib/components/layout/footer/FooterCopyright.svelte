@@ -32,12 +32,12 @@
 	}
 	.end__text {
 		user-select: none;
-		margin-top: var(--spaceS);
+		margin-top: var(--space-small);
 		color: var(--color-text-secondary);
 	}
 
 	.end__svelte {
-		color: var(--colorSvelte);
+		color: var(--color-svelte);
 		font-weight: 600;
 	}
 </style>

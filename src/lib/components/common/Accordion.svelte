@@ -41,7 +41,7 @@
 		background: var(--color-bg-gradient-subtle);
 
 		position: relative;
-		border-radius: var(--borderRadiusLight);
+		border-radius: var(--border-radius-light);
 		border: 1px solid var(--color-border);
 	}
 	.accordion__section {
@@ -70,7 +70,7 @@
 		width: 100%;
 
 		cursor: pointer;
-		padding: var(--spaceXS) var(--spaceS);
+		padding: var(--space-xs) var(--space-small);
 		transition: var(--transition);
 
 		align-items: center;
@@ -84,6 +84,6 @@
 
 	.accordion__text {
 		color: var(--color-text);
-		padding: var(--spaceXS) var(--spaceS);
+		padding: var(--space-xs) var(--space-small);
 	}
 </style>

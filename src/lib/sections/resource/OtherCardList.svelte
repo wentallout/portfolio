@@ -21,7 +21,7 @@
 		flex-wrap: wrap;
 
 		overflow: hidden;
-		gap: var(--spaceM);
+		gap: var(--space-mid);
 	}
 
 	.container > * {
@@ -35,12 +35,12 @@
 		align-items: center;
 
 		position: relative;
-		padding: var(--spaceM);
+		padding: var(--space-mid);
 
 		height: 24dvh;
 		overflow: hidden;
 
-		border-radius: var(--borderRadiusLight);
+		border-radius: var(--border-radius-light);
 		box-shadow: var(--boxShadow);
 	}
 
@@ -80,6 +80,6 @@
 	.other__title {
 		z-index: 3;
 		font-weight: var(--fontWeightLarge);
-		color: var(--colorWhite);
+		color: var(--color-white);
 	}
 </style>

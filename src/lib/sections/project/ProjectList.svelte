@@ -69,6 +69,6 @@
 	.projects {
 		display: flex;
 		flex-direction: column;
-		gap: var(--spaceXL);
+		gap: var(--space-xl);
 	}
 </style>

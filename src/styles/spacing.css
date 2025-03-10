@@ -1,25 +1,25 @@
 :root {
-	--space3XS: clamp(0.25rem, calc(0.23rem + 0.08vw), 0.31rem);
-	--space2XS: clamp(0.56rem, calc(0.55rem + 0.08vw), 0.63rem);
-	--spaceXS: clamp(0.81rem, calc(0.78rem + 0.17vw), 0.94rem);
-	--spaceS: clamp(1.06rem, calc(1.01rem + 0.25vw), 1.25rem);
-	--spaceM: clamp(1.63rem, calc(1.56rem + 0.34vw), 1.88rem);
-	--spaceL: clamp(2.13rem, calc(2.02rem + 0.51vw), 2.5rem);
-	--spaceXL: clamp(3.19rem, calc(3.03rem + 0.76vw), 3.75rem);
-	--space2XL: clamp(4.25rem, calc(4.05rem + 1.02vw), 5rem);
-	--space3XL: clamp(6.38rem, calc(6.07rem + 1.53vw), 7.5rem);
+	--space-3xs: clamp(0.25rem, calc(0.23rem + 0.08vw), 0.31rem);
+	--space-2xs: clamp(0.56rem, calc(0.55rem + 0.08vw), 0.63rem);
+	--space-xs: clamp(0.81rem, calc(0.78rem + 0.17vw), 0.94rem);
+	--space-small: clamp(1.06rem, calc(1.01rem + 0.25vw), 1.25rem);
+	--space-mid: clamp(1.63rem, calc(1.56rem + 0.34vw), 1.88rem);
+	--space-large: clamp(2.13rem, calc(2.02rem + 0.51vw), 2.5rem);
+	--space-xl: clamp(3.19rem, calc(3.03rem + 0.76vw), 3.75rem);
+	--space-2xl: clamp(4.25rem, calc(4.05rem + 1.02vw), 5rem);
+	--space-3xl: clamp(6.38rem, calc(6.07rem + 1.53vw), 7.5rem);
 
 	--site-width: 72rem;
 	--site-margin: 1.5rem;
 	--container-main: calc(min(100%, var(--site-width)) - var(--site-margin) * 2);
 	--container-full: calc(100% - var(--site-margin) * 2);
 
-	--space-card: var(--spaceL) var(--spaceM);
+	--space-card: var(--space-large) var(--space-mid);
 }
 
 @media (min-width: 992px) {
 	:root {
-		--space-card: var(--spaceL) var(--spaceL);
+		--space-card: var(--space-large) var(--space-large);
 	}
 }
 

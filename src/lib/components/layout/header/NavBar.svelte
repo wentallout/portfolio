@@ -59,7 +59,7 @@
 		onclick={closeNav}
 		onkeydown={closeNav}
 		type="button">
-		<X color="var(--colorBlack)" height="32" width="32" />
+		<X color="var(--color-black)" height="32" width="32" />
 	</button>
 	<div class="overlay-content">
 		{#each navItems as navItem}
@@ -84,7 +84,7 @@
 
 	.nav {
 		/* FONT */
-		font-size: var(--fontSizeBase);
+		font-size: var(--font-size-base);
 		font-weight: var(--fontWeightMid);
 		color: var(--color-text);
 		text-box: trim-both cap alphabetic;
@@ -92,8 +92,8 @@
 
 		width: 100%;
 		display: flex;
-		border-bottom-left-radius: var(--borderRadius);
-		border-bottom-right-radius: var(--borderRadius);
+		border-bottom-left-radius: var(--border-radius);
+		border-bottom-right-radius: var(--border-radius);
 		transition: background var(--transition);
 		background: transparent;
 		will-change: padding;
@@ -167,7 +167,7 @@
 		/* --- */
 
 		width: 100%;
-		padding: var(--spaceXS);
+		padding: var(--space-xs);
 		cursor: pointer;
 		transition: var(--transition);
 	}
@@ -188,7 +188,7 @@
 	}
 
 	.item {
-		padding: var(--spaceS);
+		padding: var(--space-small);
 		display: flex;
 		justify-content: center;
 		align-items: center;
@@ -202,7 +202,7 @@
 		width: 100%;
 
 		position: fixed;
-		z-index: var(--zIndexMax);
+		z-index: var(--z-index-max);
 		top: 0;
 		left: 0;
 
@@ -226,9 +226,9 @@
 	}
 
 	.overlay-item {
-		padding: var(--spaceL) var(--spaceM);
+		padding: var(--space-large) var(--space-mid);
 
-		color: var(--colorWhite);
+		color: var(--color-white);
 
 		/* FLEX */
 		display: flex;
@@ -259,7 +259,7 @@
 		top: 0;
 		cursor: pointer;
 
-		/* padding: var(--spaceXS); */
+		/* padding: var(--space-xs); */
 		cursor: pointer;
 	}
 

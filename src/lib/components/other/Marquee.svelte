@@ -32,7 +32,7 @@
 	.container {
 		width: 100%;
 		max-width: 100vw;
-		font-size: var(--fontSizeSmall);
+		font-size: var(--font-size-small);
 		line-height: 1;
 		position: relative;
 		overflow: hidden;
@@ -41,14 +41,14 @@
 
 	.marquee {
 		background-color: var(--color-bg-layout);
-		--gap: var(--space3XL);
+		--gap: var(--space-3xl);
 		position: relative;
 		display: flex;
 		overflow: hidden;
 		user-select: none;
 		gap: var(--gap);
 		color: var(--color-text);
-		padding: var(--spaceXS) 0;
+		padding: var(--space-xs) 0;
 	}
 
 	.marquee__content {
@@ -59,7 +59,7 @@
 		min-width: 100%;
 		animation: scroll 20s linear infinite;
 		animation-direction: reverse;
-		font-family: var(--fontFancy);
+		font-family: var(--font-fancy);
 	}
 
 	.marquee:hover .marquee__content {

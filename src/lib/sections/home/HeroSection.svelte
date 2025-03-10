@@ -65,7 +65,7 @@
 							backgroundColor="var(--color-primary)"
 							glowColor="var(--color-primary)"
 							label="Make it happen!"
-							labelColor="var(--colorBlack)">
+							labelColor="var(--color-black)">
 							<ThumbsUp />
 						</Button>
 					</a>
@@ -106,8 +106,8 @@
 	.hero__block {
 		display: flex;
 
-		padding-top: var(--spaceL);
-		padding-bottom: var(--spaceL);
+		padding-top: var(--space-large);
+		padding-bottom: var(--space-large);
 
 		flex-direction: column;
 		position: relative;
@@ -116,15 +116,15 @@
 
 	@media (min-width: 768px) {
 		.hero__block {
-			padding-top: var(--spaceXL);
-			padding-bottom: var(--spaceXL);
+			padding-top: var(--space-xl);
+			padding-bottom: var(--space-xl);
 			max-width: 60%;
 		}
 	}
 
 	.hero__heading {
-		font-family: var(--fontFancy);
-		margin-bottom: var(--spaceL);
+		font-family: var(--font-fancy);
+		margin-bottom: var(--space-large);
 		letter-spacing: var(--tracking-tighter);
 	}
 
@@ -134,7 +134,7 @@
 	}
 
 	.hero__text {
-		margin-bottom: var(--spaceS);
+		margin-bottom: var(--space-small);
 		text-wrap: balance;
 		max-width: 40ch;
 		color: var(--color-text-secondary);
@@ -145,11 +145,11 @@
 	}
 
 	.hero__btn {
-		margin-top: var(--spaceL);
+		margin-top: var(--space-large);
 		width: 100%;
 		display: flex;
 		flex-direction: row;
-		gap: var(--spaceS);
+		gap: var(--space-small);
 		flex-wrap: wrap;
 	}
 </style>

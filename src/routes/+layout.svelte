@@ -11,9 +11,21 @@
 	/** @type {{children?: import('svelte').Snippet}} */
 	let { children } = $props();
 
+	import { onMount } from 'svelte';
 	import { setupViewTransition } from 'sveltekit-view-transition';
 
 	setupViewTransition();
+
+	let soundEle = $state();
+
+	onMount(() => {
+		document.addEventListener('click', (e) => {
+			if (e.target.tagName === 'BUTTON' || e.target.tagName === 'A') {
+				soundEle.currentTime = 0; // Restart sound
+				soundEle.play();
+			}
+		});
+	});
 </script>
 
 <!-- <svelte:head>
@@ -22,6 +34,8 @@
 
 <!-- <script nonce="%sveltekit.nonce%" async crossorigin="anonymous"
 		src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2238795577080818"></script> -->
+
+<audio bind:this={soundEle} id="clickSound" class="websound" src="/sounds/click.mp3"></audio>
 
 <BgDeco />
 <Misc />
@@ -37,6 +51,10 @@
 <!-- <AdGoogle /> -->
 
 <style lang="postcss">
+	.websound {
+		display: none;
+	}
+
 	.main-content {
 		position: relative;
 		display: flex;

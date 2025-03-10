@@ -11,9 +11,9 @@
 	font-display: swap;
 	font-weight: 300 600;
 	src: url($lib/fonts/inter.woff2) format('woff2-variations');
-	unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304,
-		U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF,
-		U+FFFD;
+	unicode-range:
+		U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329,
+		U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
 }
 
 pre code {
@@ -35,28 +35,28 @@ pre code {
 }
 
 :root {
-	--fontNormal: 'Inter', 'Inter-fallback';
-	--fontFancy: 'Chakra', 'Chakra Petch-fallback';
+	--font-normal: 'Inter', 'Inter-fallback';
+	--font-fancy: 'Chakra', 'Chakra Petch-fallback';
 
 	/* FONT SIZE */
-	--fontSizeXS: clamp(0.9rem, calc(0.9rem + -0.05vw), 0.92rem);
-	--fontSizeSmall: clamp(1rem, calc(1rem + 0.07vw), 1rem);
-	--fontSizeBase: clamp(1.06rem, calc(1.01rem + 0.25vw), 1.25rem);
-	--fontSizeMid: clamp(1.28rem, calc(1.17rem + 0.53vw), 1.67rem);
-	--fontSizeLarge: clamp(1.53rem, calc(1.34rem + 0.94vw), 2.22rem);
-	--fontSizeXL: clamp(1.84rem, calc(1.53rem + 1.52vw), 2.96rem);
-	--fontSize2XL: clamp(2.2rem, calc(1.73rem + 2.36vw), 3.95rem);
-	--fontSize3XL: clamp(2.64rem, calc(1.93rem + 3.55vw), 5.26rem);
+	--font-size-xs: clamp(0.9rem, calc(0.9rem + -0.05vw), 0.92rem);
+	--font-size-small: clamp(1rem, calc(1rem + 0.07vw), 1rem);
+	--font-size-base: clamp(1.06rem, calc(1.01rem + 0.25vw), 1.25rem);
+	--font-size-mid: clamp(1.28rem, calc(1.17rem + 0.53vw), 1.67rem);
+	--font-size-large: clamp(1.53rem, calc(1.34rem + 0.94vw), 2.22rem);
+	--font-size-xl: clamp(1.84rem, calc(1.53rem + 1.52vw), 2.96rem);
+	--font-size-2xl: clamp(2.2rem, calc(1.73rem + 2.36vw), 3.95rem);
+	--font-size-3xl: clamp(2.64rem, calc(1.93rem + 3.55vw), 5.26rem);
 
 	/* LINE HEIGHT */
-	--lineHeightXS: 1.8;
-	--lineHeightSmall: 1.8;
-	--lineHeightBase: 1.6;
-	--lineHeightMid: 1.6;
-	--lineHeightLarge: 1.2;
-	--lineHeightXL: 1.2;
-	--lineHeight2XL: 1.2;
-	--lineHeight3XL: 1.2;
+	--line-height-xs: 1.8;
+	--line-height-small: 1.8;
+	--line-height-base: 1.6;
+	--line-height-mid: 1.6;
+	--line-height-large: 1.2;
+	--line-height-xl: 1.2;
+	--line-height-2xl: 1.2;
+	--line-height-3xl: 1.2;
 
 	--tracking-tighter: -0.05em;
 	--tracking-tight: -0.025em;
@@ -84,57 +84,57 @@ pre code {
 body {
 	text-rendering: optimizeLegibility;
 	-webkit-font-smoothing: antialiased;
-	font-family: var(--fontNormal);
+	font-family: var(--font-normal);
 	font-weight: var(--fontWeightSmall);
-	font-size: var(--fontSizeSmall);
-	line-height: var(--lineHeightSmall);
+	font-size: var(--font-size-small);
+	line-height: var(--line-height-small);
 }
 
 .text-xs {
-	font-size: var(--fontSizeXS);
-	line-height: var(--lineHeightXS);
+	font-size: var(--font-size-xs);
+	line-height: var(--line-height-xs);
 	/* letter-spacing: -0.006em; */
 }
 
 .text-small {
-	font-size: var(--fontSizeSmall);
-	line-height: var(--lineHeightSmall);
+	font-size: var(--font-size-small);
+	line-height: var(--line-height-small);
 	/* letter-spacing: -0.011em; */
 }
 
 .text-base {
-	font-size: var(--fontSizeBase);
-	line-height: var(--lineHeightBase);
+	font-size: var(--font-size-base);
+	line-height: var(--line-height-base);
 	letter-spacing: -0.017em;
 }
 
 .text-mid {
-	font-size: var(--fontSizeMid);
-	line-height: var(--lineHeightMid);
+	font-size: var(--font-size-mid);
+	line-height: var(--line-height-mid);
 	letter-spacing: -0.02em;
 }
 
 .text-large {
-	font-size: var(--fontSizeLarge);
-	line-height: var(--lineHeightLarge);
+	font-size: var(--font-size-large);
+	line-height: var(--line-height-large);
 	letter-spacing: -0.021em;
 }
 
 .text-xl {
-	font-size: var(--fontSizeXL);
-	line-height: var(--lineHeightXL);
+	font-size: var(--font-size-xl);
+	line-height: var(--line-height-xl);
 	letter-spacing: -0.022em;
 }
 
 .text-2xl {
-	font-size: var(--fontSize2XL);
-	line-height: var(--lineHeight2XL);
+	font-size: var(--font-size-2xl);
+	line-height: var(--line-height-2xl);
 	letter-spacing: -0.022em;
 }
 
 .text-3xl {
-	font-size: var(--fontSize3XL);
-	line-height: var(--lineHeight3XL);
+	font-size: var(--font-size-3xl);
+	line-height: var(--line-height-3xl);
 	letter-spacing: -0.022em;
 }
 

@@ -63,7 +63,7 @@
 		position: fixed;
 		right: 12px;
 		bottom: 12px;
-		z-index: var(--zIndexMax);
+		z-index: var(--z-index-max);
 		/*  */
 
 		/* OTHER */
@@ -78,7 +78,7 @@
 		box-shadow: var(--boxShadow);
 		color: var(--color-text);
 
-		border-radius: var(--borderRadius);
+		border-radius: var(--border-radius);
 
 		background-image: linear-gradient(
 			var(--color-primary) 0% var(--progress),
@@ -104,7 +104,7 @@
 
 	@media (min-width: 768px) {
 		.bck2top {
-			padding: var(--spaceXS);
+			padding: var(--space-xs);
 			width: 56px;
 		}
 	}

@@ -33,7 +33,7 @@
 		text-align: initial;
 		align-items: center;
 		color: var(--color-text-secondary);
-		gap: var(--space3XS);
+		gap: var(--space-3xs);
 
 		&:hover {
 			cursor: pointer;

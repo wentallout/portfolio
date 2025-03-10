@@ -8,16 +8,16 @@
 }
 
 .markdown section {
-	margin-top: var(--spaceL);
-	margin-bottom: var(--spaceXL);
+	margin-top: var(--space-large);
+	margin-bottom: var(--space-xl);
 }
 
 .markdown h1 {
-	font-family: var(--fontFancy);
-	font-size: var(--fontSize2XL);
-	line-height: var(--lineHeight2XL);
+	font-family: var(--font-fancy);
+	font-size: var(--font-size-2xl);
+	line-height: var(--line-height-2xl);
 	text-transform: capitalize;
-	margin-bottom: var(--spaceM);
+	margin-bottom: var(--space-mid);
 	color: var(--color-text);
 	letter-spacing: var(--tracking-tight);
 }
@@ -59,49 +59,49 @@
 
 .markdown h2 {
 	/* SPACING */
-	margin-bottom: var(--spaceS);
+	margin-bottom: var(--space-mid);
 	/* --- */
 	position: relative;
 	/* FONT */
-	font-family: var(--fontFancy);
-	font-size: var(--fontSizeXL);
-	line-height: var(--lineHeightLarge);
+	font-family: var(--font-fancy);
+	font-size: var(--font-size-xl);
+	line-height: var(--line-height-large);
 	/* --- */
 }
 
 .markdown h3 {
 	/* SPACING */
-	margin-top: var(--spaceL);
-	margin-bottom: var(--spaceS);
+	margin-top: var(--space-large);
+	margin-bottom: var(--space-mid);
 	/* --- */
 
 	/* FONT */
 	font-weight: var(--fontWeightLarge);
-	font-size: var(--fontSizeMid);
-	line-height: var(--lineHeightMid);
+	font-size: var(--font-size-mid);
+	line-height: var(--line-height-mid);
 	/* --- */
 }
 
 .markdown h4 {
 	/* SPACING */
-	margin-top: var(--spaceM);
-	margin-bottom: var(--spaceS);
+	margin-top: var(--space-large);
+	margin-bottom: var(--space-small);
 	/* --- */
 
 	/* FONT */
 	font-weight: var(--fontWeightLarge);
-	font-size: var(--fontSizeBase);
-	line-height: var(--lineHeightBase);
+	font-size: var(--font-size-base);
+	line-height: var(--line-height-base);
 	/* --- */
 }
 
 .markdown p,
 .markdown li:not(.toc li) {
 	color: var(--color-text);
-	font-size: var(--fontSizeSmall);
-	line-height: var(--lineHeightSmall);
+	font-size: var(--font-size-small);
+	line-height: var(--line-height-small);
 	margin: 0;
-	margin-bottom: var(--spaceS);
+	margin-bottom: var(--space-xs);
 	max-width: var(--text-width);
 }
 
@@ -152,7 +152,7 @@
 }
 
 .markdown li:not(.toc li) {
-	margin-bottom: var(--space3XS);
+	margin-bottom: var(--space-3xs);
 }
 
 .task-list-item:before {
@@ -160,7 +160,7 @@
 }
 
 .markdown ul {
-	margin-bottom: var(--spaceS);
+	margin-bottom: var(--space-small);
 }
 
 .markdown ol li::before {
@@ -170,11 +170,11 @@
 blockquote {
 	background-color: var(--color-bg-elevated);
 
-	padding: var(--spaceXS);
+	padding: var(--space-xs);
 	font-weight: var(--fontWeightXS);
 	border-left: 4px solid var(--color-primary);
-	margin-top: var(--spaceS);
-	margin-bottom: var(--spaceS);
+	margin-top: var(--space-small);
+	margin-bottom: var(--space-small);
 	max-width: var(--text-width);
 }
 
@@ -184,19 +184,19 @@ blockquote p {
 }
 
 pre {
-	padding: var(--spaceS);
-	border-radius: var(--borderRadiusLight);
+	padding: var(--space-small);
+	border-radius: var(--border-radius-light);
 	overflow: scroll;
 }
 
 table {
 	border-collapse: collapse;
 	background-color: var(--color-bg-container);
-	padding: var(--spaceS);
+	padding: var(--space-small);
 
 	max-width: fit-content;
 	overflow: auto;
-	border-radius: var(--borderRadiusLight);
+	border-radius: var(--border-radius-light);
 	box-shadow: var(--boxShadow);
 }
 

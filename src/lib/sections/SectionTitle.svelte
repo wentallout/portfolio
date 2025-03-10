@@ -1,5 +1,6 @@
 <script>
 	import SaosContainer from '$components/common/SaosContainer.svelte';
+	import { imageReveal, textReveal } from '$lib/actions/gsapAnimation';
 	import SectionDesc from '$sections/SectionDesc.svelte';
 
 	/** @type {{sectionTitle?: string, sectionDesc?: string, children?: import('svelte').Snippet<[any]>}} */
@@ -10,26 +11,28 @@
 	};
 </script>
 
-<SaosContainer animation="fade-in-left 0.6s cubic-bezier(0.39, 0.575, 0.565, 1) both">
-	<div class="section">
-		<div class="section__title text-trim text-large">
-			<div class="section__icon">
-				{@render children?.({ sectionIcon })}
-			</div>
-			<h2 id={sectionTitle.toLowerCase()} class="section__text" data-title={sectionTitle}>
-				{sectionTitle}
-			</h2>
+<div class="section">
+	<div class="section__title text-trim text-large">
+		<div class="section__icon" use:imageReveal>
+			{@render children?.({ sectionIcon })}
 		</div>
-
-		{#if sectionDesc !== ''}
-			<SectionDesc text={sectionDesc} />
-		{/if}
+		<h2
+			id={sectionTitle.toLowerCase()}
+			class="section__text"
+			data-title={sectionTitle}
+			use:textReveal>
+			{sectionTitle}
+		</h2>
 	</div>
-</SaosContainer>
+
+	{#if sectionDesc !== ''}
+		<SectionDesc text={sectionDesc} />
+	{/if}
+</div>
 
 <style>
 	.section {
-		margin-bottom: var(--spaceXL);
+		margin-bottom: var(--space-xl);
 		width: 100%;
 	}
 
@@ -38,10 +41,10 @@
 		display: flex;
 		justify-content: left;
 		align-items: center;
-		gap: var(--spaceS);
+		gap: var(--space-mid);
 		/*  */
 
-		margin-bottom: var(--spaceS);
+		margin-bottom: var(--space-small);
 		position: relative;
 	}
 
@@ -50,13 +53,14 @@
 		justify-content: center;
 		align-items: center;
 		position: relative;
+		font-size: 0.8em;
 	}
 	.section__icon::before {
 		content: '';
-		background: url('/images/crosshair.svg') no-repeat center / contain;
-		width: 200%;
-		height: 200%;
-		opacity: 0.3;
+		background: url('/images/brush-circle.svg') no-repeat center / contain;
+		width: 180%;
+		height: 180%;
+		opacity: 0.2;
 
 		position: absolute;
 		top: 50%;
@@ -64,9 +68,13 @@
 		transform: translate(-50%, -50%);
 	}
 
+	:global([color-scheme='dark'] .section__icon::before) {
+		filter: invert(1);
+	}
+
 	.section__text {
-		font-family: var(--fontFancy);
-		color: var(--color-primary);
+		font-family: var(--font-fancy);
+
 		position: relative;
 		--before-left: 4px;
 

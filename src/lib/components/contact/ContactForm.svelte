@@ -54,18 +54,18 @@
 					glowColor="var(--color-primary)"
 					label="Send message"
 					type="submit">
-					<PaperPlaneRight color="var(--colorBlack)" height="16" width="16" />
+					<PaperPlaneRight color="var(--color-black)" height="16" width="16" />
 				</Button>
 
 				<Button
 					backgroundColor="var(--color-bg-layout)"
-					borderColor="var(--colorError)"
-					glowColor="var(--colorError)"
+					borderColor="var(--color-error)"
+					glowColor="var(--color-error)"
 					label="Reset"
-					labelColor="var(--colorError)"
-					shadowColor="var(--colorError)"
+					labelColor="var(--color-error)"
+					shadowColor="var(--color-error)"
 					type="reset">
-					<ArrowCounterClockwise color="var(--colorError)" height="16" width="16" />
+					<ArrowCounterClockwise color="var(--color-error)" height="16" width="16" />
 				</Button>
 			</div>
 		</form>
@@ -77,7 +77,7 @@
 <style>
 	.form-container {
 		display: grid;
-		gap: var(--spaceXL);
+		gap: var(--space-xl);
 		align-items: start;
 		grid-template-columns: 1fr;
 	}
@@ -96,11 +96,11 @@
 	}
 
 	.contact__btn {
-		margin-top: var(--spaceM);
+		margin-top: var(--space-mid);
 		width: 100%;
 
 		display: flex;
 		flex-wrap: wrap;
-		gap: var(--spaceS);
+		gap: var(--space-small);
 	}
 </style>

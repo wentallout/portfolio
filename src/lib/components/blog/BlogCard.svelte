@@ -48,7 +48,7 @@
 		/* SIZE */
 		width: 100%;
 		height: 140px;
-		padding: var(--space2XS) var(--spaceM);
+		padding: var(--space-2xs) var(--space-mid);
 		/* --- */
 
 		/* OTHER */
@@ -61,10 +61,10 @@
 		/* --- */
 
 		position: relative;
-		border-radius: var(--borderRadiusLight);
+		border-radius: var(--border-radius-light);
 
 		&:hover {
-			box-shadow: -5px 5px var(--color-primary-hover);
+			box-shadow: -5px 5px var(--color-bg-elevated);
 			transform: translate(5px, -5px);
 			border: 1px solid var(--color-border);
 		}
@@ -78,13 +78,13 @@
 		display: flex;
 		flex-direction: row;
 		flex-wrap: wrap;
-		gap: var(--space2XS);
+		gap: var(--space-2xs);
 		transition: var(--transition);
 	}
 
 	.tag {
 		font-weight: 300;
-		font-size: var(--fontSizeXS);
+		font-size: var(--font-size-xs);
 		color: var(--color-text-secondary);
 	}
 
@@ -104,7 +104,7 @@
 
 		/* FONT */
 		font-weight: var(--fontWeightMid);
-		color: var(--color-primary);
+		color: var(--color-text);
 		/* --- */
 
 		/* LINE CLAMP */

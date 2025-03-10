@@ -79,12 +79,12 @@
 
 :root {
 	/* SYSTEM */
-	--colorSuccess: #49aa19;
-	--colorWarning: #d89614;
-	--colorError: #dc4446;
+	--color-success: #49aa19;
+	--color-warning: #d89614;
+	--color-error: #dc4446;
 
-	--colorBlack: #121212;
-	--colorWhite: rgba(255, 255, 255, 0.8);
+	--color-black: #121212;
+	--color-white: rgba(255, 255, 255, 0.8);
 
 	--boxShadow:
 		0 6px 16px 0 rgba(0, 0, 0, 0.08), 0 3px 6px -4px rgba(0, 0, 0, 0.12),
@@ -94,7 +94,7 @@
 	caret-color: var(--color-primary);
 
 	/* OTHER */
-	--colorSvelte: #ff3e00;
+	--color-svelte: #ff3e00;
 	/* --- */
 }
 

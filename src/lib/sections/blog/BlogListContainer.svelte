@@ -10,13 +10,13 @@
 <style>
 	.blogs {
 		/* CUSTOM VALUE */
-		--min: 30ch;
-		--gap: var(--spaceS);
+		--min: 36ch;
+		--gap: var(--space-small);
 		/* --- */
 
 		/* SPACING */
-		margin-top: var(--spaceL);
-		margin-bottom: var(--spaceL);
+		margin-top: var(--space-large);
+		margin-bottom: var(--space-large);
 		/* --- */
 
 		/* GRID */

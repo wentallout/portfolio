@@ -52,11 +52,15 @@
 		overflow: hidden;
 
 		position: relative;
-		border-radius: var(--borderRadiusLight);
+		border-radius: var(--border-radius-light);
 	}
 
 	.project:hover .project__thumbnail img {
-		transform: scale(1.2);
+		transform: var(--transition);
+	}
+
+	.project:hover .project__title {
+		color: var(--color-primary-hover);
 	}
 
 	@media (min-width: 992px) {
@@ -74,7 +78,7 @@
 		background-color: transparent;
 		position: relative;
 		overflow: hidden;
-		border-radius: var(--borderRadiusLight);
+		border-radius: var(--border-radius-light);
 		z-index: 0;
 	}
 
@@ -99,15 +103,14 @@
 		display: flex;
 		justify-content: flex-start;
 		flex-direction: column;
-		color: var(--color-primary);
 
 		font-weight: var(--fontWeightLarge);
-		font-family: var(--fontFancy);
+		font-family: var(--font-fancy);
 	}
 
 	.info {
 		display: grid;
-		gap: var(--spaceS);
+		gap: var(--space-small);
 		grid-template-rows: 1fr 1fr 1fr;
 		grid-template-columns: auto 1fr;
 	}
@@ -118,7 +121,7 @@
 		flex-direction: column;
 		position: relative;
 		padding: var(--space-card);
-		gap: var(--spaceM);
+		gap: var(--space-mid);
 		color: var(--color-text);
 		background: var(--color-bg-gradient-subtle);
 	}

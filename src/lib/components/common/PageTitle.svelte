@@ -1,5 +1,5 @@
 <script>
-	import Breadcrumb from '$components/layout/other/Breadcrumb.svelte';
+	import Breadcrumb from '$components/other/Breadcrumb.svelte';
 	import Wall from '$lib/assets/images/common/wall.webp';
 
 	/** @type {{pageTitle?: string, decoImageUrl?: any}} */
@@ -37,11 +37,11 @@
 		justify-content: center;
 		align-items: center;
 		flex-direction: column;
-		gap: var(--spaceS);
+		gap: var(--space-small);
 		/*  */
 
-		padding-top: var(--spaceM);
-		padding-bottom: var(--spaceM);
+		padding-top: var(--space-mid);
+		padding-bottom: var(--space-mid);
 		overflow: hidden;
 		height: 30dvh;
 
@@ -61,7 +61,7 @@
 		left: 50%;
 		transform: translate(-50%, -50%);
 
-		font-family: var(--fontFancy);
+		font-family: var(--font-fancy);
 		opacity: 15%;
 		z-index: -2;
 		font-weight: 100;
@@ -75,7 +75,7 @@
 		flex-direction: row;
 		justify-content: center;
 		align-items: center;
-		gap: var(--spaceM);
+		gap: var(--space-mid);
 	}
 
 	.title::after {
@@ -119,7 +119,7 @@
 	}
 
 	.title__text {
-		font-family: var(--fontFancy);
+		font-family: var(--font-fancy);
 		color: var(--color-text);
 		z-index: 2;
 		position: relative;

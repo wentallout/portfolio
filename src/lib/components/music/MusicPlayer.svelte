@@ -135,11 +135,11 @@
 
 				{#if $isPlaying}
 					<button class="mp-btn play-btn" onclick={pauseMusic} type="button">
-						<Pause color="var(--colorBlack)" height="24" width="24" />
+						<Pause color="var(--color-black)" height="24" width="24" />
 					</button>
 				{:else}
 					<button class="mp-btn play-btn" onclick={playMusic} type="button">
-						<PlayFill color="var(--colorBlack)" height="24" width="24" />
+						<PlayFill color="var(--color-black)" height="24" width="24" />
 					</button>
 				{/if}
 
@@ -193,8 +193,8 @@
 	.player__btns {
 		display: grid;
 		grid-template-columns: 1fr;
-		gap: var(--spaceS);
-		margin-bottom: var(--spaceM);
+		gap: var(--space-small);
+		margin-bottom: var(--space-mid);
 		width: 100%;
 	}
 
@@ -215,7 +215,7 @@
 	.player__volume {
 		display: flex;
 		align-items: center;
-		gap: var(--spaceS);
+		gap: var(--space-small);
 	}
 
 	.info__current {
@@ -243,10 +243,10 @@
 		flex-direction: row;
 		align-items: center;
 		justify-content: space-between;
-		gap: var(--spaceS);
-		color: var(--colorWhite);
+		gap: var(--space-small);
+		color: var(--color-white);
 		width: 100%;
-		margin-bottom: var(--spaceM);
+		margin-bottom: var(--space-mid);
 	}
 
 	.player__current {
@@ -255,7 +255,7 @@
 		flex-direction: column;
 		align-items: center;
 		width: 100%;
-		padding: var(--spaceM) var(--spaceS);
+		padding: var(--space-mid) var(--space-small);
 	}
 
 	/* MUSIC PLAYER BUTTONS */
@@ -263,7 +263,7 @@
 	.controls {
 		display: grid;
 		grid-template-columns: 1fr 1fr 1fr;
-		border-radius: var(--borderRadiusLight);
+		border-radius: var(--border-radius-light);
 		overflow: hidden;
 		border: 1px solid var(--color-border);
 	}
@@ -273,7 +273,7 @@
 		justify-content: center;
 		align-items: center;
 
-		padding: var(--spaceXS);
+		padding: var(--space-xs);
 		flex-direction: row;
 		background-color: var(--color-bg-container);
 		border: 0;
@@ -312,7 +312,7 @@
 	.song-active {
 		position: relative;
 		background: var(--color-primary);
-		color: var(--colorBlack);
+		color: var(--color-black);
 	}
 
 	.song-active::before {
@@ -325,7 +325,7 @@
 		right: 0;
 		opacity: 0.4;
 
-		font-family: var(--fontFancy);
+		font-family: var(--font-fancy);
 		-webkit-text-stroke: 1px var(--color-text);
 		-webkit-text-fill-color: transparent;
 		font-weight: 100;
@@ -339,7 +339,7 @@
 
 	.song-active .song-name {
 		font-weight: var(--fontWeightLarge);
-		color: var(--colorBlack);
+		color: var(--color-black);
 	}
 
 	.cs {
@@ -347,7 +347,7 @@
 		flex-wrap: wrap;
 		flex-direction: row;
 		align-items: center;
-		padding: var(--spaceXS) var(--spaceS);
+		padding: var(--space-xs) var(--space-small);
 	}
 
 	.song {

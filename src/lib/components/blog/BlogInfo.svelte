@@ -1,7 +1,7 @@
 <script>
 	import ExLink from '$components/common/ExLink.svelte';
 	import Tag from '$components/common/Tag.svelte';
-	import Breadcrumb from '$components/layout/other/Breadcrumb.svelte';
+	import Breadcrumb from '$components/other/Breadcrumb.svelte';
 	import { CalendarBlank, Pen } from '$lib/assets/icons/icons';
 	import { onMount } from 'svelte';
 
@@ -98,9 +98,9 @@
 <style>
 	.blog__deco {
 		width: 100%;
-		height: 150px;
-		background-image: url('/images/beat-mix.png');
-		background-repeat: repeat-x;
+		height: 100%;
+		background-image: url('/images/old-house.avif');
+		background-repeat: none;
 		rotate: 360deg;
 		position: absolute;
 		left: 0;
@@ -108,6 +108,8 @@
 		z-index: -1;
 		opacity: 0.2;
 		filter: grayscale(1);
+		background-size: cover;
+		background-position: center;
 	}
 
 	.blog:hover .blog__deco {
@@ -126,8 +128,8 @@
 
 	.blog {
 		position: relative;
-		padding-top: var(--spaceXL);
-		padding-bottom: var(--spaceXL);
+		padding-top: var(--space-xl);
+		padding-bottom: var(--space-xl);
 	}
 
 	.blog:after {
@@ -147,7 +149,7 @@
 	.category {
 		display: flex;
 		flex-direction: row;
-		gap: var(--spaceXS);
+		gap: var(--space-xs);
 		z-index: 9999;
 	}
 
@@ -160,8 +162,8 @@
 		display: flex;
 		flex-direction: row;
 		flex-wrap: wrap;
-		gap: var(--spaceM);
-		margin-bottom: var(--spaceS);
+		gap: var(--space-mid);
+		margin-bottom: var(--space-small);
 		color: var(--color-text-secondary);
 
 		& .info__section {

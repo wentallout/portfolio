@@ -12,7 +12,10 @@
 			<ul>
 				<li>Khoa Nguyen. {getKhoaAge()} y/o.</li>
 				<li>Live and work in Ho Chi Minh City, Vietnam.</li>
-				<li>~2 years as Web Developer. Trained by the best UX Designers at Mirr Design</li>
+				<li>
+					~2 years as a Freelance Web Developer/Designer. Trained by the best UX Designers at Mirr
+					Design
+				</li>
 			</ul>
 		</div>
 	</div>
@@ -20,16 +23,8 @@
 	<div class="about__info">
 		<div class="about__title text-large">My mission</div>
 		<div class="about__desc text-small">
-			My mission is to create intuitive and user-centric designs that simplify complex concepts and
-			make technology accessible to all.
-		</div>
-	</div>
-
-	<div class="about__info">
-		<div class="about__title text-large">My story</div>
-		<div class="about__desc text-small">
-			With a background in frontend development and design, I've honed my skills through hands-on
-			experience and learning from challenges, failures, and successes.
+			My mission is to create products that simplify complex concepts and make technology accessible
+			to all.
 		</div>
 	</div>
 
@@ -40,18 +35,6 @@
 			into my work.
 		</div>
 	</div>
-
-	<div class="about__info">
-		<div class="about__title text-large">My hobbies</div>
-		<div class="about__desc text-small">
-			<ul>
-				<li>Video Games</li>
-				<li>Mechanical Keyboard</li>
-				<li>A.I</li>
-				<li>Music</li>
-			</ul>
-		</div>
-	</div>
 </section>
 
 <style>
@@ -59,23 +42,23 @@
 		display: flex;
 		flex-direction: column;
 
-		padding: var(--spaceL) 0;
+		padding: var(--space-large) 0;
 	}
 
 	.about__info {
 		display: flex;
-		gap: var(--spaceS);
+		gap: var(--space-small);
 		flex-direction: column;
 
-		padding-top: var(--spaceS);
-		padding-bottom: var(--spaceXL);
+		padding-top: var(--space-small);
+		padding-bottom: var(--space-xl);
 	}
 
 	.about__title {
 		font-weight: var(--fontWeightLarge);
 		color: var(--color-text);
 		width: 100%;
-		font-family: var(--fontFancy);
+		font-family: var(--font-fancy);
 	}
 
 	.about__desc {

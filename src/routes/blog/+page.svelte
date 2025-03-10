@@ -3,11 +3,12 @@
 	import DarkPaginationNav from '$components/common/DarkPaginationNav.svelte';
 	import PageTitle from '$components/common/PageTitle.svelte';
 	import TextInput from '$components/input/TextInput.svelte';
-	import { MagnifyingGlass } from '$lib/assets/icons/icons';
+	import { Article, MagnifyingGlass } from '$lib/assets/icons/icons';
 	import LoadingBarSpinner from '$lib/assets/icons/LoadingBarSpinner.svelte';
 	import { allBlogStore } from '$lib/stores/blogStore';
 	import BlogListContainer from '$sections/blog/BlogListContainer.svelte';
 	import BlogTagsList from '$sections/blog/BlogTagsList.svelte';
+	import SectionTitle from '$sections/SectionTitle.svelte';
 	import MiniSearch from 'minisearch';
 	import { onMount } from 'svelte';
 
@@ -61,6 +62,12 @@
 <PageTitle pageTitle="Blogs" />
 
 <section class="blog-list">
+	<SectionTitle sectionTitle="Blogs">
+		{#snippet children({ sectionIcon })}
+			<Article {...sectionIcon} />
+		{/snippet}
+	</SectionTitle>
+
 	<search>
 		<TextInput
 			autoSuggestList={autoSuggest}
@@ -121,7 +128,7 @@
 
 	:global(.pagination-nav) {
 		background-color: transparent !important;
-		border-radius: var(--borderRadiusLight) !important;
+		border-radius: var(--border-radius-light) !important;
 		box-shadow: none !important;
 	}
 
@@ -134,7 +141,7 @@
 	}
 
 	.blog-list {
-		margin-top: var(--spaceM);
+		margin-top: var(--space-mid);
 		min-height: 100dvh;
 	}
 </style>

@@ -41,7 +41,7 @@
 			<Button
 				backgroundColor="var(--color-primary)"
 				label="Take Me Home"
-				labelColor="var(--colorBlack)">
+				labelColor="var(--color-black)">
 				<House height="16" width="16" />
 			</Button>
 		</a>
@@ -56,12 +56,12 @@
 		justify-content: center;
 		align-items: center;
 		flex-wrap: wrap;
-		gap: var(--spaceM);
+		gap: var(--space-mid);
 		/* --- */
 
-		padding: var(--spaceL);
+		padding: var(--space-large);
 		position: relative;
-		margin-top: var(--spaceL);
+		margin-top: var(--space-large);
 
 		height: 100dvh;
 	}
@@ -77,11 +77,11 @@
 	}
 
 	.status {
-		margin-bottom: var(--spaceXL);
+		margin-bottom: var(--space-xl);
 		display: grid;
 		grid-template-columns: 1fr 1fr;
-		color: var(--colorError);
-		font-family: var(--fontFancy);
+		color: var(--color-error);
+		font-family: var(--font-fancy);
 	}
 
 	.detail {
@@ -89,8 +89,8 @@
 		flex-direction: row;
 		justify-content: center;
 		align-items: center;
-		gap: var(--spaceS);
-		margin-bottom: var(--spaceM);
+		gap: var(--space-small);
+		margin-bottom: var(--space-mid);
 		display: inline-block;
 		color: var(--color-text-secondary);
 		font-weight: var(--fontWeightSmall);

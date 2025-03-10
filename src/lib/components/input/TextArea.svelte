@@ -13,22 +13,22 @@
 <style>
 	.label {
 		font-weight: var(--fontWeightMid);
-		margin-bottom: var(--space3XS);
+		margin-bottom: var(--space-3xs);
 	}
 
 	.textarea {
 		height: 7rem;
 		font-family: inherit;
-		padding: var(--spaceXS);
+		padding: var(--space-xs);
 		color: var(--color-text) !important;
-		margin-bottom: var(--spaceS);
+		margin-bottom: var(--space-small);
 		background-color: transparent;
 		border: 1px solid var(--color-border);
 
 		transition: outline 0.3s;
 		resize: vertical;
 
-		border-radius: var(--borderRadiusSM);
+		border-radius: var(--border-radius-lighter);
 		background-color: var(--color-bg-layout);
 	}
 

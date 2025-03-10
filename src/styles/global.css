@@ -23,7 +23,7 @@ html {
 	min-height: 101vh;
 	color: var(--color-text);
 	scrollbar-gutter: stable;
-	cursor: var(--cursorDefault);
+	cursor: var(--cursor-default);
 }
 
 @media (hover: hover) and (pointer: fine) {
@@ -47,14 +47,14 @@ html {
 	input[type='tel'],
 	input[type='email'],
 	input[type='search'] {
-		cursor: var(--cursorText);
+		cursor: var(--cursor-text);
 	}
 
 	a,
 	a *,
 	button,
 	button * {
-		cursor: var(--cursorPointer);
+		cursor: var(--cursor-pointer);
 	}
 }
 
@@ -93,7 +93,7 @@ address {
 
 section {
 	max-width: 100%;
-	margin-bottom: calc(var(--space3XL) * 2);
+	margin-bottom: calc(var(--space-3xl) * 2);
 }
 
 svg {
@@ -202,11 +202,14 @@ textarea {
 	left: -3px;
 	border-style: solid;
 	pointer-events: none;
-	filter: invert(66%) sepia(86%) saturate(1759%) hue-rotate(3deg) brightness(109%) contrast(101%);
+
 	opacity: 0.1;
 	z-index: 3;
 	transition: var(--transition);
 }
+
+
+
 
 .fancy-border:hover::before {
 	opacity: 1;

@@ -49,14 +49,14 @@
 		flex-direction: row;
 		align-items: center;
 		border: 1px solid var(--color-border);
-		margin-bottom: var(--spaceS);
-		border-radius: var(--borderRadiusSM);
+		margin-bottom: var(--space-small);
+		border-radius: var(--border-radius-lighter);
 		background-color: var(--color-bg-layout);
 	}
 
 	.label {
 		font-weight: var(--fontWeightMid);
-		margin-bottom: var(--space3XS);
+		margin-bottom: var(--space-3xs);
 	}
 
 	datalist option {
@@ -73,7 +73,7 @@
 		color: var(--color-text) !important;
 		/* --- */
 		/* SPACING */
-		padding: var(--spaceXS);
+		padding: var(--space-xs);
 		/* --- */
 		width: 100%;
 		height: 3.5rem;
@@ -89,6 +89,6 @@
 	}
 
 	.input__icon {
-		padding-left: var(--spaceXS);
+		padding-left: var(--space-xs);
 	}
 </style>

@@ -98,7 +98,7 @@
 		width: 100%;
 
 		transition: var(--transition);
-		font-family: var(--fontFancy);
+		font-family: var(--font-fancy);
 
 		/* FLEX */
 		display: flex;

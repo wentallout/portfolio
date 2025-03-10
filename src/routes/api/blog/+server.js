@@ -4,7 +4,6 @@ import { fetchMarkdownBlogs } from '$lib/utils/blog.js';
 export const GET = async () => {
 	try {
 		const blogs = await fetchMarkdownBlogs();
-		console.log(blogs);
 
 		// Ensure that blogs have a date property before sorting
 		const sortedBlogs = blogs.sort((a, b) => {

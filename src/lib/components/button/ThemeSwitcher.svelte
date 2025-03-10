@@ -29,12 +29,12 @@
 
 		display: flex;
 
-		border-radius: var(--borderRadius);
+		border-radius: var(--border-radius);
 		border: 1px solid var(--color-text-quaternary);
 		overflow: hidden;
 		background-color: var(--color-bg-container);
 		height: fit-content;
-		z-index: var(--zIndexMax);
+		z-index: var(--z-index-max);
 		position: absolute;
 		top: 50%;
 		right: 0;

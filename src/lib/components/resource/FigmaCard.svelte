@@ -50,7 +50,7 @@
 		box-shadow: var(--boxShadow);
 
 		position: relative;
-		border-radius: var(--borderRadiusLight);
+		border-radius: var(--border-radius-light);
 
 		overflow: hidden;
 		flex-grow: 1;
@@ -58,7 +58,7 @@
 		background: var(--color-bg-gradient-subtle);
 
 		&:hover {
-			box-shadow: -5px 5px var(--color-primary-hover);
+			box-shadow: -5px 5px var(--color-bg-elevated);
 			transform: translate(5px, -5px);
 		}
 	}
@@ -77,18 +77,21 @@
 
 	.fcard__info {
 		width: 100%;
-		padding: var(--space2XS) var(--spaceS);
+		padding: var(--space-2xs) var(--space-small);
 	}
 
 	.fcard__title {
-		color: var(--color-primary);
-		font-family: var(--fontFancy);
+		font-family: var(--font-fancy);
 		overflow: hidden;
 		text-overflow: ellipsis;
 		display: -webkit-box;
 		-webkit-line-clamp: 2;
 		-webkit-box-orient: vertical;
 		font-weight: 500;
+	}
+
+	.fcard:hover .fcard__title {
+		color: var(--color-primary-hover);
 	}
 
 	.fcard__desc {

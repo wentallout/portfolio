@@ -7,8 +7,8 @@
 
 <style>
 	.invalid {
-		color: var(--colorError);
+		color: var(--color-error);
 		margin-top: -12px;
-		margin-bottom: var(--spaceM);
+		margin-bottom: var(--space-mid);
 	}
 </style>

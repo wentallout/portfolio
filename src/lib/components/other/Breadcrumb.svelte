@@ -44,11 +44,11 @@
 		flex-direction: row;
 		align-items: center;
 		flex-wrap: wrap;
-		gap: var(--space3XS);
+		gap: var(--space-3xs);
 
 		position: relative;
 		margin-top: var(--scroll-padding);
-		margin-bottom: var(--spaceXL);
+		margin-bottom: var(--space-xl);
 
 		background-color: transparent;
 

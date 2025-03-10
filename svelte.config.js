@@ -29,10 +29,10 @@ const config = {
 			directives: cspDirectives,
 			mode: 'nonce'
 		},
-
 		env: {
 			dir: '.'
 		},
+
 		prerender: {
 			crawl: true,
 			entries: ['*'],
@@ -54,7 +54,14 @@ const config = {
 			],
 			remarkPlugins: [remarkGfm, remarkSectionize]
 		})
-	])
+	]),
+	vitePlugin: {
+		inspector: {
+			showToggleButton: 'always',
+			toggleButtonPos: 'bottom-right',
+			toggleKeyCombo: 'alt-x'
+		}
+	}
 };
 
 export default config;

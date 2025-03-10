@@ -7,7 +7,7 @@
 		children,
 		glowColor = 'var(--color-bg-elevated)',
 		label = 'exampleLabel',
-		labelColor = 'var(--colorBlack)',
+		labelColor = 'var(--color-black)',
 		shadowColor = backgroundColor,
 		type = 'submit',
 		width = undefined
@@ -37,7 +37,7 @@
 		outline-offset: 4px;
 		transition: filter 250ms;
 		width: 100%;
-		border-radius: var(--borderRadiusLight);
+		border-radius: var(--border-radius-light);
 
 		box-shadow: var(--boxShadow);
 	}
@@ -57,7 +57,7 @@
 
 		width: 100%;
 		height: 100%;
-		border-radius: var(--borderRadiusLight);
+		border-radius: var(--border-radius-light);
 		filter: brightness(0.7);
 		will-change: transform;
 		transform: translateY(2px);
@@ -73,7 +73,7 @@
 		gap: 4px;
 		position: relative;
 		padding: 12px 42px;
-		border-radius: var(--borderRadiusLight);
+		border-radius: var(--border-radius-light);
 
 		color: white;
 
@@ -84,7 +84,7 @@
 		/* FONT */
 		font-weight: var(--fontWeightLarge);
 		line-height: normal;
-		font-size: var(--fontSizeSmall);
+		font-size: var(--font-size-small);
 		text-box: trim-both cap alphabetic;
 		/* --- */
 	}

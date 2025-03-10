@@ -48,8 +48,6 @@
 		{/if}
 
 		<HeaderLogo />
-
-		<div class="video__deco"></div>
 	</div>
 {/if}
 
@@ -93,21 +91,6 @@
 
 	:global([color-scheme='dark'] .video) {
 		filter: brightness(0.5);
-	}
-
-	.video__deco {
-		height: 72px;
-		background-size: contain;
-		width: 100%;
-		background-image: url(/images/water-waves.svg);
-		background-repeat: repeat-x;
-		background-position: 0;
-
-		position: absolute;
-		bottom: 0;
-		opacity: 0.3;
-		z-index: 1;
-		pointer-events: none;
 	}
 
 	:global([color-scheme='dark'] .video__deco) {

@@ -66,14 +66,16 @@
 		grid-template-columns: repeat(auto-fit, minmax(min(100%, var(--min)), 1fr));
 		overflow: hidden;
 		border-right: 0;
+
+		border-radius: var(--border-radius);
 	}
 	.prevnext__btn {
 		position: relative;
 		text-decoration: none !important;
-		padding: var(--spaceXS) var(--spaceS);
+		padding: var(--space-xs) var(--space-small);
 		transition: var(--transition);
 		display: flex;
-		gap: var(--spaceS);
+		gap: var(--space-small);
 		flex-direction: column;
 		justify-content: flex-start;
 		align-items: flex-start;
@@ -89,7 +91,7 @@
 	.prevnext__sign {
 		color: var(--color-text-secondary);
 		font-weight: 300;
-		font-size: var(--fontSizeXS);
+		font-size: var(--font-size-xs);
 	}
 
 	.prevnext__title {

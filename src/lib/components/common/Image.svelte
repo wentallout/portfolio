@@ -1,40 +1,36 @@
 <script>
-	import SaosContainer from '$components/common/SaosContainer.svelte';
-
-	// try not to touch this
-
 	import ExLink from '$components/common/ExLink.svelte';
+	import { imageReveal } from '$lib/actions/gsapAnimation';
+
 	/** @type {{src?: string, alt?: string, width?: string, height?: string, loading?: string, decoding?: string}} */
 	let {
-		src = '',
 		alt = '',
-		width = 'auto',
+		decoding = 'async',
 		height = 'auto',
 		loading = 'lazy',
-		decoding = 'async'
+		src = '',
+		width = 'auto'
 	} = $props();
 </script>
 
-<SaosContainer animation="imgAni 0.3s">
-	<ExLink ariaLabel={alt} href={src}>
-		<figure>
-			<img alt="Image of {alt}" {decoding} {height} {loading} {src} {width} />
-			{#if alt !== ''}
-				<figcaption class="caption text-xs">
-					{alt}
-				</figcaption>
-			{/if}
-		</figure>
-	</ExLink>
-</SaosContainer>
+<ExLink ariaLabel={alt} href={src}>
+	<figure>
+		<img alt="Image of {alt}" {decoding} {height} {loading} {src} {width} use:imageReveal />
+		{#if alt !== ''}
+			<figcaption class="caption text-xs">
+				{alt}
+			</figcaption>
+		{/if}
+	</figure>
+</ExLink>
 
 <style>
 	figure {
 		max-width: 100%;
 		margin-left: auto;
 		margin-right: auto;
-		margin-bottom: var(--space3XL);
-		border-radius: var(--borderRadiusSM);
+		margin-bottom: var(--space-3xl);
+		border-radius: var(--border-radius-lighter);
 		overflow: hidden;
 		box-shadow: var(--boxShadow);
 	}
@@ -44,10 +40,10 @@
 	}
 
 	.caption {
-		font-size: var(--fontSizeXS);
+		font-size: var(--font-size-xs);
 		color: var(--color-text-secondary);
 		width: 100%;
-		padding: var(--space3XS) var(--space2XS);
+		padding: var(--space-3xs) var(--space-2xs);
 
 		background-color: var(--color-bg-elevated);
 	}

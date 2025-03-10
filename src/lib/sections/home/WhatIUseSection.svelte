@@ -18,7 +18,7 @@
 			</SectionTitle>
 
 			<div class="tool__block">
-				<article class="block__section fancy-border">
+				<article class="block__section">
 					<div class="section__svg">
 						<ProcessArt height="120" width="120" />
 					</div>
@@ -30,7 +30,7 @@
 					</div>
 				</article>
 
-				<article class="block__section fancy-border">
+				<article class="block__section">
 					<div class="section__svg">
 						<NavigationArt height="120" width="120" />
 					</div>
@@ -41,7 +41,7 @@
 					</div>
 				</article>
 
-				<article class="block__section fancy-border">
+				<article class="block__section">
 					<div class="section__svg">
 						<GraphicDesignArt height="120" width="120" />
 					</div>
@@ -53,7 +53,7 @@
 					</div>
 				</article>
 
-				<article class="block__section fancy-border">
+				<article class="block__section">
 					<div class="section__svg">
 						<FrontendArt height="120" width="120" />
 					</div>
@@ -97,7 +97,7 @@
 		width: 100%;
 		--min: 240px;
 		display: grid;
-		grid-gap: var(--spaceM);
+		grid-gap: var(--space-mid);
 		grid-template-columns: repeat(auto-fit, minmax(min(100%, var(--min)), 1fr));
 		justify-content: center;
 		align-content: center;
@@ -121,10 +121,8 @@
 		transition: var(--transition);
 		background-color: var(--color-bg-layout);
 		box-shadow: var(--boxShadow);
-
 		background: var(--color-bg-gradient-subtle);
-
-		border-radius: var(--borderRadiusLight);
+		border-radius: var(--border-radius-light);
 	}
 
 	.block__section:hover {
@@ -132,7 +130,7 @@
 		transform: scale(1.1);
 		overflow: visible;
 		border: 0;
-		z-index: var(--zIndexMax);
+		z-index: var(--z-index-max);
 		outline: 0;
 	}
 
@@ -149,8 +147,8 @@
 	.block__title {
 		color: var(--color-text);
 		font-weight: var(--fontWeightLarge);
-		margin-top: var(--spaceM);
-		margin-bottom: var(--space2XS);
+		margin-top: var(--space-mid);
+		margin-bottom: var(--space-2xs);
 	}
 
 	.block__text {

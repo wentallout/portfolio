@@ -1,5 +1,5 @@
 <script>
-	import Breadcrumb from '$components/layout/other/Breadcrumb.svelte';
+	import Breadcrumb from '$components/other/Breadcrumb.svelte';
 	import { Copy, Wrench } from '$lib/assets/icons/icons';
 	import SectionTitle from '$sections/SectionTitle.svelte';
 	let baseFontSize = 16;
@@ -71,7 +71,7 @@
 	.converter__copy {
 		background-color: var(--color-primary);
 		align-self: stretch;
-		color: var(--colorBlack);
+		color: var(--color-black);
 		min-width: 40px;
 
 		display: flex;
@@ -94,13 +94,13 @@
 		display: flex;
 		flex-direction: row;
 		align-items: center;
-		gap: var(--spaceS);
+		gap: var(--space-small);
 	}
 
 	.converter__input {
 		width: 100%;
 		height: 100%;
-		font-size: var(--fontSize3XL);
+		font-size: var(--font-size-3xl);
 		appearance: none;
 
 		&:focus-visible {
@@ -111,11 +111,11 @@
 	.converter {
 		display: flex;
 		flex-direction: column;
-		gap: var(--spaceL);
+		gap: var(--space-large);
 	}
 
 	.converter__label {
-		font-size: var(--fontSize3XL);
+		font-size: var(--font-size-3xl);
 		font-weight: 600;
 		color: var(--color-text-secondary);
 	}
