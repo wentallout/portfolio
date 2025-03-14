@@ -38,6 +38,7 @@
 						<h3 class="block__title text-base">Prototyping</h3>
 						<p class="block__text text-small">Figma</p>
 						<p class="block__text text-small">Adobe XD</p>
+						<p class="block__text text-small">Penpot</p>
 					</div>
 				</article>
 

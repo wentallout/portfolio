@@ -1,5 +1,5 @@
 ---
-title: Learn GSAP
+title: Learn advanced web animation with GSAP and Three.js
 date: 2025-03-10
 categories:
     - frontend
@@ -31,7 +31,28 @@ const lerp = function(start,end,t)
 ```
 - SHADER (must know if you want experimental, artistic stuff)
 
-## Reference
+
+## Code examples
+
+https://blog.olivierlarose.com/courses/web-animation-course
+
+## Youtube Reference
 
 https://www.youtube.com/watch?v=9eHEOAn2FOA
+
+https://www.youtube.com/watch?v=vqXLGX0szIQ
+
+## GSAP Cheatsheet
+
+[GSAP Cheat Sheet](https://gsap.com/cheatsheet)
+
+## WebGL or ThreeJS
+
+ https://threejs.org/
+
+ https://threejs-journey.com/
+
+ https://thebookofshaders.com/
+
+ https://webglfundamentals.org/
 

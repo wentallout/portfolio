@@ -67,9 +67,11 @@
 				<CalendarBlank height="20" width="20" />
 				Last updated:
 				{#if data.date}
-					{getDate(data.date)}
-					({formatRelativeTime(data.date)}
-				{/if})
+					<time>
+						{getDate(data.date)}
+						({formatRelativeTime(data.date)})
+					</time>
+				{/if}
 				<!-- <Time relative timestamp={data.date} /> -->
 			</div>
 			<div class="info__section">

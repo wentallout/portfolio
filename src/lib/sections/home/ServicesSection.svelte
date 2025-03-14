@@ -9,7 +9,7 @@
 
 <section>
 	<SectionTitle
-		sectionDesc="I offer cost-effective web services that deliver outstanding value"
+		sectionDesc="Need a website? Let’s talk! If we’re a great fit, I’ll provide a time & cost estimate."
 		sectionTitle="Services">
 		{#snippet children({ sectionIcon })}
 			<HandHeart {...sectionIcon} />
@@ -50,7 +50,7 @@
 					<div class="service__art">
 						<AbTestingArt />
 					</div>
-					<h3 class="service__title text-mid">Design/Redesign Website</h3>
+					<h3 class="service__title text-mid">Website Design/Redesign</h3>
 				</div>
 
 				<ul class="service__desc text-small">

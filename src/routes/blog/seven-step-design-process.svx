@@ -1,6 +1,6 @@
 ---
 title: Seven step design process
-date: 2024-24-02
+date: 2025-03-14
 categories:
     - design 
 ---

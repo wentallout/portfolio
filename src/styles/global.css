@@ -203,16 +203,18 @@ textarea {
 	border-style: solid;
 	pointer-events: none;
 
-	opacity: 0.1;
+	opacity: 0;
 	z-index: 3;
 	transition: var(--transition);
+	filter: invert(1);
 }
 
-
-
+[color-scheme='light'] .fancy-border:before {
+	filter: none;
+}
 
 .fancy-border:hover::before {
-	opacity: 1;
+	opacity: 0.5;
 	overflow: visible;
 }
 

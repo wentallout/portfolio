@@ -6,39 +6,6 @@
 	import { onMount } from 'svelte';
 	let focusText = ['website', 'app', 'game'];
 	let focusIndex = 0;
-
-	onMount(() => {
-		let focusElement = document.querySelector('.hero__focus');
-		function cycleWords() {
-			gsap.to(focusElement, {
-				duration: 0.25,
-				onComplete: () => {
-					focusElement.textContent = focusText[focusIndex];
-					// Use gsap.fromTo() to animate the glow
-					gsap.fromTo(
-						focusElement,
-						{
-							opacity: 0,
-							textShadow: '0 0 50px currentColor' // Start state of the glow
-						},
-						{
-							duration: 0.25,
-							ease: 'power2.out',
-							onComplete: () => {
-								// Cycle the words after the animation is complete
-								focusIndex = (focusIndex + 1) % focusText.length;
-								setTimeout(cycleWords, 1000);
-							},
-							opacity: 1,
-							textShadow: '0 0 10px currentColor' // End state of the glow
-						}
-					);
-				},
-				opacity: 0
-			});
-		}
-		cycleWords();
-	});
 </script>
 
 <section>
@@ -50,13 +17,19 @@
 						Tailor-made
 						<span id="hero__focus" class="hero__focus focus">
 							<span class="word">websites</span>
-							<span class="word">apps</span>
 						</span>
 						with precision.
 					</div>
 				</div>
 				<div class="hero__text text-base">
-					Hi, I'm <strong>Khoa Nguyen</strong>. I help people create amazing digital products.
+					<p>
+						Hi, I’m <strong>Khoa Nguyen</strong>. I craft stunning websites that help businesses
+						stand out and succeed.
+					</p>
+					<p>
+						Want a modern, powerful website that <strong>drives results</strong>?
+					</p>
+					<p>Let’s talk!</p>
 				</div>
 
 				<div class="hero__btn">
@@ -64,20 +37,20 @@
 						<Button
 							backgroundColor="var(--color-primary)"
 							glowColor="var(--color-primary)"
-							label="Make it happen!"
+							label="Book a call"
 							labelColor="var(--color-black)">
 							<ThumbsUp />
 						</Button>
 					</a>
 
-					<a href="/contact">
+					<!-- <a href="/contact">
 						<Button
 							backgroundColor="var(--color-bg-layout)"
 							borderColor="var(--color-text)"
 							label="Contact"
 							labelColor="var(--color-text)"
 							shadowColor="var(--color-text-secondary)" />
-					</a>
+					</a> -->
 				</div>
 			</div>
 		</div>
@@ -126,6 +99,7 @@
 		font-family: var(--font-fancy);
 		margin-bottom: var(--space-large);
 		letter-spacing: var(--tracking-tighter);
+		line-height: var(--line-height-large);
 	}
 
 	.focus {
@@ -135,13 +109,12 @@
 
 	.hero__text {
 		margin-bottom: var(--space-small);
-		text-wrap: balance;
-		max-width: 40ch;
-		color: var(--color-text-secondary);
+		text-wrap: pretty;
+		max-width: 65ch;
 
-		& strong {
-			color: var(--color-primary);
-		}
+		display: flex;
+		flex-direction: column;
+		gap: var(--space-small);
 	}
 
 	.hero__btn {
