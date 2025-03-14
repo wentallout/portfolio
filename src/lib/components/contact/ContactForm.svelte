@@ -21,7 +21,7 @@
 
 <section>
 	<SectionTitle
-		sectionDesc="Tell me about your next big project. I'll be happy to contribute."
+		sectionDesc="If you need a modern and powerful website for your business, startup or yourself, I am available for work. You can email me directly at wentallout@gmail.com"
 		sectionTitle="Get in touch">
 		{#snippet children({ sectionIcon })}
 			<EnvelopeSimple {...sectionIcon} />

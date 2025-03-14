@@ -58,8 +58,8 @@ const config = {
 	vitePlugin: {
 		inspector: {
 			showToggleButton: 'always',
-			toggleButtonPos: 'bottom-right',
-			toggleKeyCombo: 'alt-x'
+			toggleButtonPos: 'top-left',
+			toggleKeyCombo: 'shift-x'
 		}
 	}
 };

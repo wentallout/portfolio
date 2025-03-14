@@ -30,9 +30,9 @@
 				{blogTitle}
 			</h5>
 		</div>
-		<span class="blog__icon">
+		<!-- <span class="blog__icon">
 			<CaretRight color="var(--color-text)" height="16" width="16" />
-		</span>
+		</span> -->
 	</article>
 </a>
 

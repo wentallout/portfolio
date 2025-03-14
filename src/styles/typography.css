@@ -138,6 +138,11 @@ body {
 	letter-spacing: -0.022em;
 }
 
+strong {
+	font-weight: 600;
+	color: var(--color-primary);
+}
+
 /* LETTER SPACING TABLE */
 /* 6	0.043
 	7	0.032
