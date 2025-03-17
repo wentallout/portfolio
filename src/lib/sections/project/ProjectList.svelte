@@ -4,7 +4,7 @@
 	import devPortfolioSquare from '$lib/assets/images/project/dev-portfolio/thumbnail.png';
 	import rezaSquare from '$lib/assets/images/project/reza/rezaSquare.jpg';
 	import stockGrabberThumbnail from '$lib/assets/images/project/stock-grabber/thumbnail.jpg';
-	import superTabManagerThumbnail from '$lib/assets/images/project/super-tab-manager/thumbnail.jpg';
+	import superTabManagerThumbnail from '$lib/assets/images/project/super-tab-manager/thumbnail.png';
 
 	let { hasMoreButton = false } = $props();
 </script>

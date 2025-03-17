@@ -22,7 +22,8 @@ const cspDirectives = {
 		'https://pagead2.googlesyndication.com',
 		'https://ep1.adtrafficquality.google',
 		'https://shots.codepen.io',
-		'https://images.dmca.com'
+		'https://images.dmca.com',
+		'https://api.producthunt.com'
 	],
 	'manifest-src': ["'self'"],
 	'media-src': ["'self'", 'data:'],
