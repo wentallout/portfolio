@@ -29,7 +29,7 @@
 		max-width: 100%;
 		margin-left: auto;
 		margin-right: auto;
-		margin-bottom: var(--space-3xl);
+		margin-bottom: var(--space-xl);
 		border-radius: var(--border-radius-lighter);
 		overflow: hidden;
 		box-shadow: var(--boxShadow);

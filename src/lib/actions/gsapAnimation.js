@@ -22,7 +22,7 @@ export function imageReveal(element) {
 	});
 
 	tl.to(element, {
-		duration: 0.8,
+		duration: 0.3,
 		ease: 'power2.out',
 		filter: 'blur(0px) brightness(1)',
 		opacity: 1,
@@ -85,11 +85,11 @@ export function textReveal(element) {
 	});
 
 	tl.to(wrappedChars, {
-		duration: 0.75,
+		duration: 0.3,
 		ease: 'back.out(1.7)',
 		opacity: 1,
 		rotateX: 0,
-		stagger: 0.03,
+		stagger: 0.01,
 		y: 0
 	});
 

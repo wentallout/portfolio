@@ -97,9 +97,8 @@
 
 	.hero__heading {
 		font-family: var(--font-fancy);
-		margin-bottom: var(--space-large);
+		margin-bottom: var(--space-2xl);
 		letter-spacing: var(--tracking-tighter);
-		line-height: var(--line-height-large);
 	}
 
 	.focus {
