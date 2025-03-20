@@ -139,9 +139,4 @@
 	:global(.dark-pagination-nav .option.active) {
 		color: var(--color-primary) !important;
 	}
-
-	.blog-list {
-		margin-top: var(--space-mid);
-		min-height: 100dvh;
-	}
 </style>

@@ -43,7 +43,8 @@
 	<PrinciplesSection />
 </SaosContainer>
 
-<SaosContainer animation="fade-in-top 0.6s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;">
+<!-- <SaosContainer animation="fade-in-top 0.6s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;">
 	<MyClientsSection />
-</SaosContainer>
+</SaosContainer> -->
+
 <GetInTouch />

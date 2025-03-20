@@ -23,6 +23,10 @@ import whatitdoes from '$lib/assets/images/project/super-tab-manager/stm3.png';
 
 [📦 View Source Code](https://github.com/wentallout/super-tab-manager)
 
+## Testing
+
+[Manual Test Cases](https://docs.google.com/spreadsheets/d/1BVcjhSB4YmWp25bV709_iKH67pDhE4qlNbUchaNq2UA/edit?usp=sharing)
+
 ## The Problem
 
 My Chrome browser was running like a potato with 50+ tabs open - Stack Overflow, documentation, and YouTube tutorials everywhere. Finding that one specific tab felt like searching for a needle in a haystack.
