@@ -6,7 +6,7 @@
 </script>
 
 <section>
-	<SectionTitle sectionDesc="My guidelines for a good design." sectionTitle="Design Principles">
+	<SectionTitle sectionDesc="My guidelines for a good project." sectionTitle="P.U.M.P Principles">
 		{#snippet children({ sectionIcon })}
 			<Scales {...sectionIcon} />
 		{/snippet}
@@ -15,33 +15,34 @@
 	<div class="principle-container">
 		<div class="principle">
 			<article class="principle__section fancy-border">
-				<h3 class="principle__title text-base text-trim">Straightforward</h3>
+				<h3 class="principle__title text-base text-trim">Profit-Driven</h3>
 				<p class="principle__desc text-small">
-					Simplify the design by removing unnecessary steps or elements for a seamless user
-					experience and reduced cognitive load.
+					Every feature and design decision must have clear ROI. Focus on elements that drive
+					revenue and business growth.
 				</p>
 			</article>
 
 			<article class="principle__section fancy-border">
-				<h3 class="principle__title text-base text-trim">Test</h3>
+				<h3 class="principle__title text-base text-trim">User First</h3>
 				<p class="principle__desc text-small">
-					Continuously test and iterate the design to ensure it meets users' needs and expectations.
+					Design for real user needs, not assumptions. Solve specific problems that users will pay
+					to fix.
 				</p>
 			</article>
 
 			<article class="principle__section fancy-border">
-				<h3 class="principle__title text-base text-trim">Instructional</h3>
+				<h3 class="principle__title text-base text-trim">Measure</h3>
 				<p class="principle__desc text-small">
-					Provide clear instructions and guidance to users, if necessary, to ensure ease of product
-					or interface usage.
+					Track key metrics and user behavior. Use data to make improvements that impact the bottom
+					line.
 				</p>
 			</article>
 
 			<article class="principle__section fancy-border">
-				<h3 class="principle__title text-base text-trim">Readable</h3>
+				<h3 class="principle__title text-base text-trim">Prove</h3>
 				<p class="principle__desc text-small">
-					Optimize readability by choosing appropriate fonts, colors, and spacing for comfortable
-					reading and reduced eye strain.
+					Build trust through social proof, case studies, and transparent pricing. Show clear value
+					to convert visitors into customers.
 				</p>
 			</article>
 		</div>

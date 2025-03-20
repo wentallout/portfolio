@@ -2,7 +2,6 @@
 	import ExLink from '$components/common/ExLink.svelte';
 	import FooterCopyright from '$components/layout/footer/FooterCopyright.svelte';
 	import FooterDeco from '$components/layout/footer/FooterDeco.svelte';
-	import Blinkies from '$components/other/Blinkies.svelte';
 	import Marquee from '$components/other/Marquee.svelte';
 	import {
 		EnvelopeSimple,
@@ -136,8 +135,6 @@
 </footer>
 
 <Marquee />
-
-<Blinkies />
 
 <style>
 	.footer {
