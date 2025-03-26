@@ -9,7 +9,7 @@
 
 .markdown section {
 	margin-top: var(--space-large);
-	margin-bottom: var(--space-xl);
+	margin-bottom: var(--space-2xl);
 }
 
 .markdown h1 {
@@ -29,6 +29,7 @@
 	position: relative;
 	color: var(--color-text);
 	transition: var(--transition);
+	font-family: var(--font-fancy);
 
 	&:hover {
 		color: var(--color-primary-hover);
@@ -61,7 +62,7 @@
 	/* --- */
 	position: relative;
 	/* FONT */
-	font-family: var(--font-fancy);
+
 	font-size: var(--font-size-xl);
 	line-height: var(--line-height-large);
 	/* --- */
