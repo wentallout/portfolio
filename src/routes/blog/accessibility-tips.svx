@@ -1,5 +1,5 @@
 ---
-title: Accessibility tips (with svelte solution)
+title: Accessibility tips (with solutions)
 date: 2023-11-26
 categories:
     - fundamental
@@ -37,11 +37,6 @@ categories:
 - Equal Opportunity Act, Germany
 - Stanca Act
 
-## How much of this is the developer's responsibility?
-
-- 
--
-- If you are a solo or freelance developer
 
 ## Disclaimer
 

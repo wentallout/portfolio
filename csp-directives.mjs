@@ -23,7 +23,8 @@ const cspDirectives = {
 		'https://ep1.adtrafficquality.google',
 		'https://shots.codepen.io',
 		'https://images.dmca.com',
-		'https://api.producthunt.com'
+		'https://api.producthunt.com',
+		'https://i.imgur.com'
 	],
 	'manifest-src': ["'self'"],
 	'media-src': ["'self'", 'data:'],

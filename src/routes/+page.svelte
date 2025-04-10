@@ -28,11 +28,11 @@
 <HeroSection />
 
 <SaosContainer animation="fade-in-top 0.6s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;">
-	<Services />
+	<FeaturedProject />
 </SaosContainer>
 
 <SaosContainer animation="fade-in-top 0.6s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;">
-	<FeaturedProject />
+	<Services />
 </SaosContainer>
 
 <SaosContainer animation="fade-in-top 0.6s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;">
@@ -43,8 +43,6 @@
 	<PrinciplesSection />
 </SaosContainer>
 
-<!-- <SaosContainer animation="fade-in-top 0.6s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;">
-	<MyClientsSection />
-</SaosContainer> -->
+
 
 <GetInTouch />

@@ -9,7 +9,7 @@
 	--space-2xl: clamp(4.25rem, calc(4.05rem + 1.02vw), 5rem);
 	--space-3xl: clamp(6.38rem, calc(6.07rem + 1.53vw), 7.5rem);
 
-	--site-width: 72rem;
+	--site-width: 80rem;
 	--site-margin: 1.5rem;
 	--container-main: calc(min(100%, var(--site-width)) - var(--site-margin) * 2);
 	--container-full: calc(100% - var(--site-margin) * 2);

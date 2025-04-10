@@ -1,5 +1,7 @@
 <script>
 	import Button from '$components/button/Button.svelte';
+	import GlassButton from '$components/button/GlassButton.svelte';
+	import PrimaryButton from '$components/button/PrimaryButton.svelte';
 	import HeroVisual from '$lib/assets/arts/HeroArt.svelte';
 	import { CalendarCheck, ThumbsUp } from '$lib/assets/icons/icons';
 	import { gsap } from 'gsap';
@@ -34,23 +36,10 @@
 
 				<div class="hero__btn">
 					<a href="#services">
-						<Button
-							backgroundColor="var(--color-primary)"
-							glowColor="var(--color-primary)"
-							label="Book a call"
-							labelColor="var(--color-black)">
+						<PrimaryButton label="Book a call">
 							<ThumbsUp />
-						</Button>
+						</PrimaryButton>
 					</a>
-
-					<!-- <a href="/contact">
-						<Button
-							backgroundColor="var(--color-bg-layout)"
-							borderColor="var(--color-text)"
-							label="Contact"
-							labelColor="var(--color-text)"
-							shadowColor="var(--color-text-secondary)" />
-					</a> -->
 				</div>
 			</div>
 		</div>

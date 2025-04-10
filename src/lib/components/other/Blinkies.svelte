@@ -18,5 +18,6 @@
 		flex-wrap: wrap;
 		gap: var(--space-small);
 		margin-bottom: var(--space-large);
+		justify-content: space-around;
 	}
 </style>

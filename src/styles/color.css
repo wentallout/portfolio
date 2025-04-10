@@ -95,7 +95,7 @@
 
 	/* OTHER */
 	--color-svelte: #ff3e00;
-	/* --- */
+	--color-primary-rgb: 0, 123, 255; /* Replace with your primary color RGB values */
 }
 
 ::placeholder {
@@ -115,3 +115,4 @@ body {
 	min-height: 100dvh;
 	position: relative;
 }
+

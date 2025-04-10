@@ -1,114 +1,181 @@
 <script>
-	/** @type {{label?: string, labelColor?: string, width?: any, glowColor?: string, type?: string, backgroundColor?: string, borderColor?: any, border?: any, shadowColor?: any, children?: import('svelte').Snippet}} */
+	import { gsap } from 'gsap';
+	import { onMount } from 'svelte';
+
+	/** @type {{label?: string, labelColor?: string, width?: any, glassColor?: string, glowColor?: string, type?: string, glassOpacity?: number, borderWidth?: string, children?: import('svelte').Snippet}} */
 	let {
-		backgroundColor = 'transparent',
-		borderColor = backgroundColor,
-		border = `1px solid ${borderColor}`,
-		children,
-		glowColor = 'var(--color-bg-elevated)',
 		label = 'exampleLabel',
-		labelColor = 'var(--color-black)',
-		shadowColor = backgroundColor,
+		labelColor = 'var(--color-text)',
+		glassColor = 'rgba(255, 255, 255, 0.1)',
+		glowColor = 'rgba(255, 255, 255, 0.5)',
+		glassOpacity = 0.7,
+		borderWidth = '1px',
 		type = 'submit',
-		width = undefined
+		width = undefined,
+		children
 	} = $props();
+
+	let buttonEl;
+	let contentEl;
+
+	onMount(() => {
+		// Initial setup
+		gsap.set(contentEl, { opacity: 0.9, scale: 1 });
+
+		// Hover animation
+		buttonEl.addEventListener('mouseenter', () => {
+			gsap.to(contentEl, {
+				opacity: 1,
+				scale: 1.02,
+				duration: 0.3,
+				ease: 'power2.out'
+			});
+
+			// Create floating particles effect
+			createParticles();
+		});
+
+		buttonEl.addEventListener('mouseleave', () => {
+			gsap.to(contentEl, {
+				opacity: 0.9,
+				scale: 1,
+				duration: 0.3,
+				ease: 'power2.in'
+			});
+		});
+	});
+
+	function createParticles() {
+		const particles = 5;
+		for (let i = 0; i < particles; i++) {
+			const particle = document.createElement('div');
+			particle.className = 'particle';
+			buttonEl.appendChild(particle);
+
+			const randomX = Math.random() * 100 - 50;
+			const randomDelay = Math.random() * 0.2;
+
+			gsap.set(particle, {
+				left: '50%',
+				top: '50%',
+				scale: 0,
+				opacity: 1
+			});
+
+			gsap.to(particle, {
+				x: randomX,
+				y: -60,
+				scale: 2,
+				opacity: 0,
+				duration: 1,
+				delay: randomDelay,
+				ease: 'power2.out',
+				onComplete: () => particle.remove()
+			});
+		}
+	}
 </script>
 
-<button style:--glow-color={glowColor} style:width class="pushable" {type}>
-	<span style:background-color={shadowColor} class="shadow"></span>
-
-	<span
-		style:background-color={backgroundColor}
-		style:border
-		style:color={labelColor}
-		class="front">
+<button
+	bind:this={buttonEl}
+	class="glass-btn"
+	style:--glass-color={glassColor}
+	style:--glass-opacity={glassOpacity}
+	style:--border-width={borderWidth}
+	style:--label-color={labelColor}
+	style:--glow-color={glowColor}
+	style:width
+	{type}>
+	<span bind:this={contentEl} class="glass-content">
 		{@render children?.()}
 		{label}
 	</span>
 </button>
 
 <style>
-	.pushable {
+	.glass-btn {
 		position: relative;
-		border: none;
-		background: transparent;
-		padding: 0;
-		cursor: pointer;
-		outline-offset: 4px;
-		transition: filter 250ms;
-		width: 100%;
+		padding: 12px 32px;
+		background: var(--glass-color);
+		border: var(--border-width) solid rgba(255, 255, 255, 0.1);
 		border-radius: var(--border-radius-light);
-
-		box-shadow: var(--boxShadow);
+		backdrop-filter: blur(10px);
+		-webkit-backdrop-filter: blur(10px);
+		box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.1);
+		cursor: pointer;
+		transition: all 0.3s ease;
+		overflow: hidden;
+		width: 100%;
 	}
 
 	@media (min-width: 768px) {
-		.pushable {
+		.glass-btn {
 			width: fit-content;
 		}
 	}
 
-	.shadow {
-		/* POSITION */
+	.glass-btn::before {
+		content: '';
 		position: absolute;
 		top: 0;
 		left: 0;
-		/* --- */
-
 		width: 100%;
 		height: 100%;
-		border-radius: var(--border-radius-light);
-		filter: brightness(0.7);
-		will-change: transform;
-		transform: translateY(2px);
-		transition: transform 600ms cubic-bezier(0.3, 0.7, 0.4, 1);
+		background: linear-gradient(
+			120deg,
+			transparent,
+			rgba(255, 255, 255, 0.2),
+			transparent
+		);
+		transform: translateX(-100%);
+		transition: 0.6s;
 	}
 
-	.front {
+	.glass-content {
 		display: flex;
-		flex-direction: row;
-		flex-wrap: nowrap;
 		align-items: center;
 		justify-content: center;
-		gap: 4px;
-		position: relative;
-		padding: 12px 42px;
-		border-radius: var(--border-radius-light);
-
-		color: white;
-
-		will-change: transform;
-		transform: translateY(-2px);
-		transition: transform 600ms cubic-bezier(0.3, 0.7, 0.4, 1);
-
-		/* FONT */
+		gap: 8px;
+		color: var(--label-color);
 		font-weight: var(--fontWeightLarge);
-		line-height: normal;
 		font-size: var(--font-size-small);
-		text-box: trim-both cap alphabetic;
-		/* --- */
+		z-index: 1;
+		position: relative;
 	}
-	.pushable:hover {
-		filter: brightness(110%);
-		filter: drop-shadow(0 0 5px var(--glow-color));
-	}
-	.pushable:hover .front {
-		transform: translateY(-6px);
-		transition: transform 250ms cubic-bezier(0.3, 0.7, 0.4, 1.5);
-	}
-	.pushable:active .front {
+
+	/* Hover Effects */
+	.glass-btn:hover {
 		transform: translateY(-2px);
-		transition: transform 34ms;
+		box-shadow: 
+			0 10px 40px 0 rgba(0, 0, 0, 0.2),
+			0 0 20px var(--glow-color),
+			0 0 40px rgba(var(--glow-color), 0.5);
+		background: color-mix(in srgb, var(--glass-color), transparent calc((1 - var(--glass-opacity)) * 100%));
 	}
-	.pushable:hover .shadow {
-		transform: translateY(4px);
-		transition: transform 250ms cubic-bezier(0.3, 0.7, 0.4, 1.5);
+
+	.glass-btn:hover::before {
+		transform: translateX(100%);
 	}
-	.pushable:active .shadow {
-		transform: translateY(1px);
-		transition: transform 34ms;
+
+	.glass-btn:active {
+		transform: translateY(0);
 	}
-	.pushable:focus:not(:focus-visible) {
-		outline: none;
+
+	/* Focus styles */
+	.glass-btn:focus-visible {
+		outline: 2px solid var(--color-primary);
+		outline-offset: 2px;
+	}
+
+	/* Particle effect */
+	.particle {
+		position: absolute;
+		width: 4px;
+		height: 4px;
+		background: var(--glow-color);
+		border-radius: 50%;
+		pointer-events: none;
+		z-index: 0;
 	}
 </style>
+

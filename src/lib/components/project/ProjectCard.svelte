@@ -144,7 +144,7 @@
 
 	@keyframes article-appear {
 		from {
-			transform: translateX(-10vw);
+			transform: translateX(-5vw);
 			opacity: 0;
 		}
 		to {
