@@ -4,15 +4,15 @@
 
 	/** @type {{label?: string, labelColor?: string, width?: any, glassColor?: string, glowColor?: string, type?: string, glassOpacity?: number, borderWidth?: string, children?: import('svelte').Snippet}} */
 	let {
+		borderWidth = '1px',
+		children,
+		glassColor = 'rgba(255, 255, 255, 0.1)',
+		glassOpacity = 0.7,
+		glowColor = 'rgba(255, 255, 255, 0.5)',
 		label = 'exampleLabel',
 		labelColor = 'var(--color-text)',
-		glassColor = 'rgba(255, 255, 255, 0.1)',
-		glowColor = 'rgba(255, 255, 255, 0.5)',
-		glassOpacity = 0.7,
-		borderWidth = '1px',
 		type = 'submit',
-		width = undefined,
-		children
+		width = undefined
 	} = $props();
 
 	let buttonEl;
@@ -25,10 +25,10 @@
 		// Hover animation
 		buttonEl.addEventListener('mouseenter', () => {
 			gsap.to(contentEl, {
-				opacity: 1,
-				scale: 1.02,
 				duration: 0.3,
-				ease: 'power2.out'
+				ease: 'power2.out',
+				opacity: 1,
+				scale: 1.02
 			});
 
 			// Create floating particles effect
@@ -37,10 +37,10 @@
 
 		buttonEl.addEventListener('mouseleave', () => {
 			gsap.to(contentEl, {
-				opacity: 0.9,
-				scale: 1,
 				duration: 0.3,
-				ease: 'power2.in'
+				ease: 'power2.in',
+				opacity: 0.9,
+				scale: 1
 			});
 		});
 	});
@@ -57,20 +57,20 @@
 
 			gsap.set(particle, {
 				left: '50%',
-				top: '50%',
+				opacity: 1,
 				scale: 0,
-				opacity: 1
+				top: '50%'
 			});
 
 			gsap.to(particle, {
-				x: randomX,
-				y: -60,
-				scale: 2,
-				opacity: 0,
-				duration: 1,
 				delay: randomDelay,
+				duration: 1,
 				ease: 'power2.out',
-				onComplete: () => particle.remove()
+				onComplete: () => particle.remove(),
+				opacity: 0,
+				scale: 2,
+				x: randomX,
+				y: -60
 			});
 		}
 	}
@@ -78,13 +78,13 @@
 
 <button
 	bind:this={buttonEl}
-	class="glass-btn"
 	style:--glass-color={glassColor}
 	style:--glass-opacity={glassOpacity}
 	style:--border-width={borderWidth}
 	style:--label-color={labelColor}
 	style:--glow-color={glowColor}
 	style:width
+	class="glass-btn"
 	{type}>
 	<span bind:this={contentEl} class="glass-content">
 		{@render children?.()}
@@ -121,12 +121,7 @@
 		left: 0;
 		width: 100%;
 		height: 100%;
-		background: linear-gradient(
-			120deg,
-			transparent,
-			rgba(255, 255, 255, 0.2),
-			transparent
-		);
+		background: linear-gradient(120deg, transparent, rgba(255, 255, 255, 0.2), transparent);
 		transform: translateX(-100%);
 		transition: 0.6s;
 	}
@@ -146,11 +141,15 @@
 	/* Hover Effects */
 	.glass-btn:hover {
 		transform: translateY(-2px);
-		box-shadow: 
+		box-shadow:
 			0 10px 40px 0 rgba(0, 0, 0, 0.2),
 			0 0 20px var(--glow-color),
 			0 0 40px rgba(var(--glow-color), 0.5);
-		background: color-mix(in srgb, var(--glass-color), transparent calc((1 - var(--glass-opacity)) * 100%));
+		background: color-mix(
+			in srgb,
+			var(--glass-color),
+			transparent calc((1 - var(--glass-opacity)) * 100%)
+		);
 	}
 
 	.glass-btn:hover::before {
@@ -178,4 +177,3 @@
 		z-index: 0;
 	}
 </style>
-

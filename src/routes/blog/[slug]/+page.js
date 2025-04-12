@@ -11,9 +11,10 @@ export async function load({ params }) {
 			categories,
 			content,
 			date,
+			slug: params.slug,
 			title
 		};
 	} catch (err) {
-		error(404);
+		throw error(404);
 	}
 }

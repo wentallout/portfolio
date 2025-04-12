@@ -1,5 +1,6 @@
 <script>
-	import Button from '$components/button/Button.svelte';
+	import PrimaryButton from '$components/button/PrimaryButton.svelte';
+	import SecondaryButton from '$components/button/SecondaryButton.svelte';
 	import CopyToClipboard from '$components/common/CopyToClipboard.svelte';
 	import ExLink from '$components/common/ExLink.svelte';
 	import TextArea from '$components/input/TextArea.svelte';
@@ -49,15 +50,22 @@
 			<TextArea name="message" label="Message" />
 
 			<div class="contact__btn">
-				<Button
+				<!-- <Button
 					backgroundColor="var(--color-primary)"
 					glowColor="var(--color-primary)"
 					label="Send message"
 					type="submit">
-					<PaperPlaneRight color="var(--color-black)" height="16" width="16" />
-				</Button>
+				</Button> -->
 
-				<Button
+				<PrimaryButton label="Send message">
+					<PaperPlaneRight color="var(--color-black)" height="16" width="16" />
+				</PrimaryButton>
+
+				<SecondaryButton type="reset">
+					<ArrowCounterClockwise color="var(--color-error)" height="16" width="16" />
+				</SecondaryButton>
+
+				<!-- <Button
 					backgroundColor="var(--color-bg-layout)"
 					borderColor="var(--color-error)"
 					glowColor="var(--color-error)"
@@ -65,8 +73,8 @@
 					labelColor="var(--color-error)"
 					shadowColor="var(--color-error)"
 					type="reset">
-					<ArrowCounterClockwise color="var(--color-error)" height="16" width="16" />
-				</Button>
+					
+				</Button> -->
 			</div>
 		</form>
 

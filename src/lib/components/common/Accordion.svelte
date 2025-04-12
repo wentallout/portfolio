@@ -69,7 +69,7 @@
 		width: 100%;
 
 		cursor: pointer;
-		padding: var(--space-xs) var(--space-small);
+		padding: var(--space-small);
 		transition: var(--transition);
 
 		align-items: center;
@@ -83,6 +83,6 @@
 
 	.accordion__text {
 		color: var(--color-text);
-		padding: var(--space-xs) var(--space-small);
+		padding: var(--space-small);
 	}
 </style>

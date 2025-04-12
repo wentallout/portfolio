@@ -6,8 +6,6 @@
 	import rezaSquare from '$lib/assets/images/project/reza/rezaSquare.jpg';
 	import stockGrabberThumbnail from '$lib/assets/images/project/stock-grabber/thumbnail.jpg';
 	import superTabManagerThumbnail from '$lib/assets/images/project/super-tab-manager/thumbnail.png';
-
-	let { hasMoreButton = false } = $props();
 </script>
 
 <div class="projects">
@@ -50,17 +48,6 @@
 		projectName="Developer Portfolio"
 		role="UI/UX Designer"
 		thumbnail={devPortfolioSquare} />
-
-	{#if hasMoreButton}
-		<div class="more">
-			<a href="/project">
-				<Button
-					backgroundColor="var(--color-primary)"
-					glowColor="var(--color-primary)"
-					label="See more projects" />
-			</a>
-		</div>
-	{/if}
 </div>
 
 <style>

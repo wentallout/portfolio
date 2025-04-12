@@ -2,11 +2,11 @@
 	import Button from '$components/button/Button.svelte';
 	import GlassButton from '$components/button/GlassButton.svelte';
 	import PrimaryButton from '$components/button/PrimaryButton.svelte';
+	import { tooltip } from '$lib/actions/tooltip';
 	import HeroVisual from '$lib/assets/arts/HeroArt.svelte';
 	import { CalendarCheck, ThumbsUp } from '$lib/assets/icons/icons';
-	import { gsap } from 'gsap';
 	import { onMount } from 'svelte';
-	let focusText = ['website', 'app', 'game'];
+
 	let focusIndex = 0;
 </script>
 
@@ -26,19 +26,20 @@
 				<div class="hero__text text-base">
 					<p>
 						Hi, I’m <strong>Khoa Nguyen</strong>. I craft stunning websites that help businesses
-						stand out and succeed.
+						stand out and succeed. I'm have 2 years of experience in web development and UI/UX.
 					</p>
 					<p>
 						Want a modern, powerful website that <strong>drives results</strong>?
 					</p>
-					<p>Let’s talk!</p>
 				</div>
 
 				<div class="hero__btn">
 					<a href="#services">
-						<PrimaryButton label="Book a call">
-							<ThumbsUp />
-						</PrimaryButton>
+						<div use:tooltip={{ position: 'top', text: 'Check out our services' }}>
+							<PrimaryButton label="Book a call">
+								<ThumbsUp />
+							</PrimaryButton>
+						</div>
 					</a>
 				</div>
 			</div>

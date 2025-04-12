@@ -2,7 +2,7 @@
 	import GlassButton from './GlassButton.svelte';
 
 	/** @type {{label?: string, children?: import('svelte').Snippet}} */
-	let { label, children } = $props();
+	let { children, label } = $props();
 </script>
 
 <GlassButton

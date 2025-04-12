@@ -9,7 +9,7 @@
 		glassColor = 'rgba(255, 255, 255, 0.1)',
 		glassOpacity = 0.7,
 		glowColor = 'rgba(255, 255, 255, 0.5)',
-		label = 'exampleLabel',
+		label = '',
 		labelColor = 'var(--color-text)',
 		type = 'submit',
 		width = undefined

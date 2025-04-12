@@ -8,7 +8,10 @@
 	let { data } = $props();
 </script>
 
-<SEO title={data.title} />
+<SEO 
+	title={data.title} 
+	path={`/blog/${data.slug}`}
+/>
 
 <article>
 	<PostInfo {data} hasCategory="true" />

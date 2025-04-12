@@ -100,7 +100,7 @@
 		background: var(--color-bg-gradient-subtle);
 
 		position: relative;
-		padding: var(--space-mid);
+		padding: var(--space-large) var(--space-mid);
 	}
 
 	.principle__desc {
