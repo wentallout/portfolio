@@ -56,7 +56,8 @@
 	.principle-container {
 		display: grid;
 		grid-template-columns: 1fr; /* Two columns with equal width */
-		gap: var(--space-mid); /* Gap between grid items */
+		gap: var(--space-xl);
+		align-items: start;
 	}
 
 	@media (min-width: 768px) {
@@ -99,7 +100,7 @@
 		background: var(--color-bg-gradient-subtle);
 
 		position: relative;
-		padding: var(--space-mid);
+		padding: var(--space-large) var(--space-mid);
 	}
 
 	.principle__desc {

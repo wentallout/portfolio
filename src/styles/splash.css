@@ -43,6 +43,7 @@
 	z-index: -1;
 	background-image: url('/images/castle.avif');
 	filter: brightness(0.15);
+	background-color: var(--color-bg-layout);
 }
 
 .c-splash__deco {

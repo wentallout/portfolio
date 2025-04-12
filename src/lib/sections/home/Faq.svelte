@@ -47,6 +47,7 @@
 		gap: var(--space-xl);
 		align-items: center;
 		grid-template-columns: 1fr;
+		align-items: start;
 	}
 
 	@media (min-width: 768px) {

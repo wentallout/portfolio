@@ -2,6 +2,7 @@
 	import PageTitle from '$components/common/PageTitle.svelte';
 	import Blinkies from '$components/other/Blinkies.svelte';
 	import { getKhoaAge } from '$lib/utils/time';
+	import MyClientsSection from '$sections/home/MyClientsSection.svelte';
 </script>
 
 <PageTitle pageTitle="About Me" />
@@ -53,9 +54,10 @@
 				My Playlist</a>
 		</div>
 	</div>
-</section>
 
-<Blinkies />
+	<MyClientsSection />
+	<Blinkies />
+</section>
 
 <style>
 	.about {

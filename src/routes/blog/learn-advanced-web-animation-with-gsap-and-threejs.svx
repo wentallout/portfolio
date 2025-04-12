@@ -36,6 +36,8 @@ const lerp = function(start,end,t)
 
 https://blog.olivierlarose.com/courses/web-animation-course
 
+Sticky footer: https://blog.olivierlarose.com/tutorials/sticky-footer
+
 ## Youtube Reference
 
 https://www.youtube.com/watch?v=9eHEOAn2FOA

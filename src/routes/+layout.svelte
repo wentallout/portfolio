@@ -26,6 +26,8 @@
 			}
 		});
 	});
+
+	import WaterRipple from '$lib/components/common/WaterRipple.svelte';
 </script>
 
 <!-- <svelte:head>
@@ -42,13 +44,14 @@
 <VideoCover />
 <NavBar />
 
-<main id="main-content" class="main-content g-container">
-	{@render children?.()}
-</main>
-
+<WaterRipple>
+	<main id="main-content" class="main-content g-container">
+		{@render children?.()}
+	</main>
+</WaterRipple>
 <Footer />
 
-<!-- <AdGoogle /> -->
+<!-- Single instance of AquaticTrail at the top level -->
 
 <style lang="postcss">
 	.websound {

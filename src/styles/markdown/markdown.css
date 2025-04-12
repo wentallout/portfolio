@@ -104,11 +104,6 @@
 	max-width: var(--text-width);
 }
 
-.markdown ul {
-	border-left: 2px solid transparent;
-	border-image: linear-gradient(to bottom, var(--color-text), transparent) 1 1;
-}
-
 .markdown li:not(.toc li) {
 	margin-bottom: 0;
 	padding-left: 1ch;

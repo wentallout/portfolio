@@ -41,6 +41,102 @@ export function imageReveal(element) {
 
 /**
  * @param {HTMLElement} element
+ * @param {{
+ *   duration?: number,
+ *   stagger?: number,
+ *   strokeColor?: string,
+ *   scrollTrigger?: boolean
+ * }} options
+ */
+export function svgPathDraw(element, options = {}) {
+	const {
+		duration = 1,
+		scrollTrigger = true,
+		stagger = 1.5,
+		strokeColor = 'var(--color-text)'
+	} = options;
+
+	// Get all paths within the SVG
+	const paths = element.querySelectorAll('path');
+
+	// Set up initial state for each path
+	paths.forEach((path) => {
+		const length = path.getTotalLength();
+		gsap.set(path, {
+			fill: 'transparent', // Start with transparent fill
+			opacity: 0,
+			stroke: strokeColor,
+			strokeDasharray: length,
+			strokeDashoffset: length
+		});
+	});
+
+	// Hide the entire SVG initially
+	gsap.set(element, {
+		opacity: 1,
+		visibility: 'visible'
+	});
+
+	// Create animation timeline
+	const tl = gsap.timeline({
+		defaults: { ease: 'power2.inOut' },
+		scrollTrigger: scrollTrigger
+			? {
+					end: 'bottom 20%',
+					once: true,
+					start: 'top 80%',
+					toggleActions: 'play none none none',
+					trigger: element
+				}
+			: false
+	});
+
+	// Animate paths
+	tl.to(paths, {
+		duration: duration,
+		opacity: 1,
+		stagger: {
+			amount: stagger,
+			from: 'start'
+		},
+		strokeDashoffset: 0
+	})
+		.to(
+			paths,
+			{
+				duration: duration / 2,
+				fill: (i, target) => target.getAttribute('fill') || 'none',
+				stagger: {
+					amount: stagger / 2,
+					from: 'start'
+				}
+			},
+			`-${duration / 2}` // Start fill animation halfway through the stroke animation
+		)
+		.to(paths, {
+			duration: duration / 4,
+			stagger: {
+				amount: stagger / 4,
+				from: 'start'
+			},
+			stroke: 'transparent'
+		});
+
+	return {
+		destroy() {
+			if (tl) tl.kill();
+			// Reset paths to their original state
+			paths.forEach((path) => {
+				gsap.set(path, {
+					clearProps: 'all'
+				});
+			});
+		}
+	};
+}
+
+/**
+ * @param {HTMLElement} element
  */
 export function textReveal(element) {
 	const text = element.textContent || '';

@@ -11,7 +11,7 @@
 				<Star {...sectionIcon} />
 			{/snippet}
 		</SectionTitle>
-		<ProjectList hasMoreButton={true} />
+		<ProjectList />
 	</div>
 </section>
 

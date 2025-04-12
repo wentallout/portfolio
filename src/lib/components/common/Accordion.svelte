@@ -34,7 +34,6 @@
 
 <style lang="postcss">
 	.accordion {
-		border: 1px solid var(--color-border);
 		box-shadow: var(--boxShadow);
 		max-width: var(--text-width);
 
@@ -42,7 +41,7 @@
 
 		position: relative;
 		border-radius: var(--border-radius-light);
-		border: 1px solid var(--color-border);
+		overflow: hidden;
 	}
 	.accordion__section {
 		text-align: left;
@@ -70,7 +69,7 @@
 		width: 100%;
 
 		cursor: pointer;
-		padding: var(--space-xs) var(--space-small);
+		padding: var(--space-small);
 		transition: var(--transition);
 
 		align-items: center;
@@ -84,6 +83,6 @@
 
 	.accordion__text {
 		color: var(--color-text);
-		padding: var(--space-xs) var(--space-small);
+		padding: var(--space-small);
 	}
 </style>

@@ -89,7 +89,6 @@
 
 		position: relative;
 		border-radius: var(--border-radius-light);
-		border: 1px solid var(--color-border-secondary);
 	}
 
 	.service {
