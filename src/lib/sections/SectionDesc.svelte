@@ -1,12 +1,12 @@
 <script>
 	import { textReveal } from '$lib/actions/gsapAnimation';
 
-	/** @type {{text?: string}} */
-	let { text = '' } = $props();
+	/** @type {{text?: string, unsplitAfter?: number}} */
+	let { text = '', unsplitAfter = 0 } = $props();
 </script>
 
 {#if text !== ''}
-	<p class="section-description text-small" use:textReveal>
+	<p class="section-description text-small" use:textReveal={{ unsplitAfter }}>
 		{text}
 	</p>
 {/if}

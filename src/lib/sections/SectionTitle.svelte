@@ -3,8 +3,8 @@
 	import { imageReveal, textReveal } from '$lib/actions/gsapAnimation';
 	import SectionDesc from '$sections/SectionDesc.svelte';
 
-	/** @type {{sectionTitle?: string, sectionDesc?: string, children?: import('svelte').Snippet<[any]>}} */
-	let { children, sectionDesc = '', sectionTitle = '' } = $props();
+	/** @type {{sectionTitle?: string, sectionDesc?: string, unsplitAfter?: number, children?: import('svelte').Snippet<[any]>}} */
+	let { children, sectionDesc = '', sectionTitle = '', unsplitAfter = 0 } = $props();
 
 	let sectionIcon = {
 		color: 'var(--color-text-tertiary)'
@@ -20,13 +20,13 @@
 			id={sectionTitle.toLowerCase()}
 			class="section__text"
 			data-title={sectionTitle}
-			use:textReveal>
+			use:textReveal={{ unsplitAfter }}>
 			{sectionTitle}
 		</h2>
 	</div>
 
 	{#if sectionDesc !== ''}
-		<SectionDesc text={sectionDesc} />
+		<SectionDesc text={sectionDesc} {unsplitAfter} />
 	{/if}
 </div>
 

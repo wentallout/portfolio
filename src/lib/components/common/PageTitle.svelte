@@ -1,5 +1,6 @@
 <script>
 	import Breadcrumb from '$components/other/Breadcrumb.svelte';
+	import { parallaxBg } from '$lib/actions/parallaxEffect';
 	import Wall from '$lib/assets/images/common/wall.webp';
 
 	/** @type {{pageTitle?: string, decoImageUrl?: any}} */
@@ -11,14 +12,16 @@
 		{pageTitle}
 	</span>
 
-	<img
+	<div
+		style="background-image: url('{decoImageUrl}')"
 		class="title__bg"
-		alt="title deco"
-		height="642"
-		loading="eager"
-		src={decoImageUrl}
-		title="title deco"
-		width="1920" />
+		use:parallaxBg={{
+			end: 'bottom top',
+			scrubAmount: 1.5,
+			speed: 0.3,
+			start: 'top bottom'
+		}}>
+	</div>
 
 	<div class="title__content">
 		<h1 class="text-3xl title__text tracking-in-expand text-trim">
@@ -96,26 +99,17 @@
 		width: 100%;
 		height: 100%;
 		object-fit: cover;
-		animation: pageTitleAni 50s infinite ease-in-out;
 		filter: grayscale() brightness(0.3);
-		object-position: top;
+		background-size: cover;
+		background-position: center;
+		will-change: transform, background-position;
+		transform: translateZ(0);
+		opacity: 0.4;
 	}
 
 	:global([color-scheme='light'] .title__bg) {
 		filter: grayscale() invert();
 		opacity: 0.2;
-	}
-
-	@keyframes pageTitleAni {
-		0% {
-			object-position: top;
-		}
-		50% {
-			object-position: bottom;
-		}
-		100% {
-			object-position: top;
-		}
 	}
 
 	.title__text {

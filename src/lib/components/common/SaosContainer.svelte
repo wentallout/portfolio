@@ -2,15 +2,13 @@
 	import Saos from 'saos';
 
 	let {
-		animation = 'fade-in 1.2s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;',
+		animation = 'fade-in 1.2s cubic-bezier(0.390, 0.575, 0.565, 1.000) both',
 		children,
 		once = true
 	} = $props();
-
-	//slide-in-left 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
 </script>
 
-<div class="">
+<div>
 	<Saos {animation} {once}>
 		{@render children?.()}
 	</Saos>
@@ -22,33 +20,30 @@
 	}
 
 	@keyframes -global-fade-in {
-		0% {
-			opacity: 0;
-		}
-		100% {
-			opacity: 1;
-		}
+		from { opacity: 0; }
+		to { opacity: 1; }
 	}
 
 	@keyframes -global-fade-in-top {
-		0% {
+		from {
 			transform: translateY(-50px);
 			opacity: 0;
 		}
-		100% {
+		to {
 			transform: translateY(0);
 			opacity: 1;
 		}
 	}
 
 	@keyframes -global-slide-in-left {
-		0% {
+		from {
 			transform: translateX(-1000px);
 			opacity: 0;
 		}
-		100% {
+		to {
 			transform: translateX(0);
 			opacity: 1;
 		}
 	}
 </style>
+

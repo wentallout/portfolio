@@ -153,8 +153,6 @@
 		overflow: hidden;
 		background-color: var(--color-bg-layout);
 
-		border-top-left-radius: 10%;
-		border-top-right-radius: 10%;
 		box-shadow: var(--boxShadow);
 	}
 

@@ -2,6 +2,7 @@
 	import ExLink from '$components/common/ExLink.svelte';
 	import Tag from '$components/common/Tag.svelte';
 	import Breadcrumb from '$components/other/Breadcrumb.svelte';
+	import { parallaxBg } from '$lib/actions/parallaxEffect';
 	import { CalendarBlank, Pen } from '$lib/assets/icons/icons';
 	import { onMount } from 'svelte';
 
@@ -94,7 +95,15 @@
 			{/if}
 		{/if}
 	</div>
-	<div class="blog__deco"></div>
+	<div
+		class="blog__deco"
+		use:parallaxBg={{
+			end: 'bottom top', // End when element leaves viewport
+			scrubAmount: 1.5, // Smooth scrubbing
+			speed: 0.3, // Reduced speed
+			start: 'top bottom' // Start when element comes into view
+		}}>
+	</div>
 </header>
 
 <style>
@@ -102,7 +111,7 @@
 		width: 100%;
 		height: 100%;
 		background-image: url('/images/old-house.avif');
-		background-repeat: none;
+		background-repeat: no-repeat;
 		rotate: 360deg;
 		position: absolute;
 		left: 0;
@@ -111,7 +120,13 @@
 		opacity: 0.2;
 		filter: grayscale(1);
 		background-size: cover;
-		background-position: center;
+		/* Changed initial background position to ensure full coverage */
+		background-position: 50% 50%;
+		will-change: transform, background-position;
+		transform: translateZ(0);
+		transition: filter 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+		/* Added to ensure no gaps */
+		scale: 1.1;
 	}
 
 	.blog:hover .blog__deco {
@@ -132,6 +147,7 @@
 		position: relative;
 		padding-top: var(--space-xl);
 		padding-bottom: var(--space-xl);
+		overflow: hidden;
 	}
 
 	.blog:after {

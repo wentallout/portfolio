@@ -1,5 +1,4 @@
 <script>
-	import Button from '$components/button/Button.svelte';
 	import GlassButton from '$components/button/GlassButton.svelte';
 	import PrimaryButton from '$components/button/PrimaryButton.svelte';
 	import { tooltip } from '$lib/actions/tooltip';
@@ -26,7 +25,7 @@
 				<div class="hero__text text-base">
 					<p>
 						Hi, I’m <strong>Khoa Nguyen</strong>. I craft stunning websites that help businesses
-						stand out and succeed. I'm have 2 years of experience in web development and UI/UX.
+						stand out and succeed.
 					</p>
 					<p>
 						Want a modern, powerful website that <strong>drives results</strong>?

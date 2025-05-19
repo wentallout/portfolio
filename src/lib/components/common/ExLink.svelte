@@ -16,5 +16,6 @@
 	a {
 		display: block;
 		position: relative;
+		isolation: isolate;
 	}
 </style>

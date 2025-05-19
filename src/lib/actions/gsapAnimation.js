@@ -137,8 +137,21 @@ export function svgPathDraw(element, options = {}) {
 
 /**
  * @param {HTMLElement} element
+ * @param {{
+ *   unsplitAfter?: number,
+ *   duration?: number,
+ *   stagger?: number,
+ *   ease?: string
+ * }} options
  */
-export function textReveal(element) {
+export function textReveal(element, options = {}) {
+	const {
+		duration = 0.3,
+		ease = 'back.out(1.7)',
+		stagger = 0.01,
+		unsplitAfter = 0.2 // Time in seconds to wait before unsplitting (0 = don't unsplit)
+	} = options;
+
 	const text = element.textContent || '';
 	const originalHTML = element.innerHTML;
 	const chars = text.split('');
@@ -180,14 +193,47 @@ export function textReveal(element) {
 		}
 	});
 
+	// Animate in the characters
 	tl.to(wrappedChars, {
-		duration: 0.3,
-		ease: 'back.out(1.7)',
+		duration: duration,
+		ease: ease,
 		opacity: 1,
 		rotateX: 0,
-		stagger: 0.01,
+		stagger: stagger,
 		y: 0
 	});
+
+	// If unsplitAfter is specified, add a delay and then restore the original HTML
+	if (unsplitAfter > 0) {
+		// Calculate total animation time (including stagger)
+		const animationTime = duration + stagger * (chars.length - 1);
+
+		// Add a delay after the animation completes
+		tl.add(() => {
+			// Create a new timeline for the unsplit animation
+			const unsplitTl = gsap.timeline();
+
+			// Fade out the individual characters
+			unsplitTl.to(wrappedChars, {
+				duration: 0.2,
+				ease: 'power1.in',
+				onComplete: () => {
+					// Restore the original HTML
+					element.innerHTML = originalHTML;
+
+					// Fade in the original text
+					gsap.fromTo(
+						element,
+						{ opacity: 0, y: 10 },
+						{ duration: 0.3, ease: 'power2.out', opacity: 1, y: 0 }
+					);
+				},
+				opacity: 0,
+				stagger: stagger / 2,
+				y: -20
+			});
+		}, `+=${unsplitAfter}`);
+	}
 
 	return {
 		destroy() {

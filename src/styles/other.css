@@ -121,3 +121,16 @@ input[type='range']:focus::-webkit-slider-runnable-track {
 ::-webkit-scrollbar-track {
 	background: transparent;
 }
+
+.cut-corner {
+	clip-path: polygon(
+		10px 0%,
+		/* top-left cut */ calc(100% - 10px) 0%,
+		/* top-right cut */ 100% 10px,
+		100% calc(100% - 10px),
+		calc(100% - 10px) 100%,
+		10px 100%,
+		0% calc(100% - 10px),
+		0% 10px
+	);
+}

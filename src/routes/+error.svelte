@@ -1,6 +1,6 @@
 <script>
 	import { page } from '$app/stores';
-	import Button from '$components/button/Button.svelte';
+	import PrimaryButton from '$components/button/PrimaryButton.svelte';
 	import { House } from '$lib/assets/icons/icons';
 
 	let customMessage = $state('');
@@ -38,12 +38,9 @@
 			{customMessage}
 		</div>
 		<a class="back" href="/" rel="external">
-			<Button
-				backgroundColor="var(--color-primary)"
-				label="Take Me Home"
-				labelColor="var(--color-black)">
+			<PrimaryButton label="Take Me Home">
 				<House height="16" width="16" />
-			</Button>
+			</PrimaryButton>
 		</a>
 	</div>
 </div>
@@ -63,7 +60,7 @@
 		position: relative;
 		margin-top: var(--space-large);
 
-		height: 100dvh;
+		height: 60dvh;
 	}
 	.back {
 		text-align: center;
@@ -79,9 +76,15 @@
 	.status {
 		margin-bottom: var(--space-xl);
 		display: grid;
-		grid-template-columns: 1fr 1fr;
+		align-items: center;
+		grid-template-columns: auto 1fr;
 		color: var(--color-error);
 		font-family: var(--font-fancy);
+		gap: var(--space-mid);
+	}
+
+	.status__code {
+		font-size: var(--font-size-3xl);
 	}
 
 	.detail {

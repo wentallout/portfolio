@@ -20,7 +20,7 @@
 	}
 </script>
 
-<ExLink style="display:flex;position:relative" {href}>
+<ExLink style="display:flex; border-radius: var(--border-radius-light);" {href}>
 	<MouseGlow />
 
 	<article class="fcard">
@@ -56,11 +56,6 @@
 		flex-grow: 1;
 		position: relative;
 		background: var(--color-bg-gradient-subtle);
-
-		&:hover {
-			box-shadow: -5px 5px var(--color-bg-elevated);
-			transform: translate(5px, -5px);
-		}
 	}
 
 	.fcard__thumbnail {
