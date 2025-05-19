@@ -1,5 +1,5 @@
 <script>
-	import Button from '$components/button/Button.svelte';
+	import PrimaryButton from '$components/button/PrimaryButton.svelte';
 	import MouseGlow from '$components/common/MouseGlow.svelte';
 	import AbTestingArt from '$lib/assets/arts/ABTestingArt.svelte';
 	import ResponsiveWebArt from '$lib/assets/arts/ResponsiveWebArt.svelte';
@@ -65,15 +65,9 @@
 			</div>
 		</div>
 		<a class="service__btn" href="https://cal.com/wentallout/web">
-			<Button
-				backgroundColor="var(--color-bg-layout)"
-				borderColor="var(--color-text)"
-				glowColor="var(--color-text)"
-				label="Book a Call"
-				labelColor="var(--color-text)"
-				shadowColor="var(--color-text-secondary)">
+			<PrimaryButton label="Book a Call">
 				<CalendarCheck />
-			</Button>
+			</PrimaryButton>
 		</a>
 	</div>
 </section>

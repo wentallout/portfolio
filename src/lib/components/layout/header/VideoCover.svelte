@@ -4,14 +4,10 @@
 	import { theme } from '$lib/stores/themeStore.js';
 	import { fade } from 'svelte/transition';
 
-	let showCover = $state(true);
+	let showCover = $state(false);
 
 	$effect(() => {
-		if (
-			$page.url.pathname === '/' ||
-			$page.url.pathname === '/de' ||
-			$page.url.pathname === '/vi'
-		) {
+		if ($page.url.pathname === '/') {
 			showCover = true;
 		} else {
 			showCover = false;
@@ -63,20 +59,9 @@
 		height: 30dvh;
 		background-color: var(--color-bg-layout);
 
-		border-bottom-left-radius: 10%;
-		border-bottom-right-radius: 10%;
 		overflow: hidden;
 		box-shadow: var(--boxShadow);
 	}
-	/* 
-	.cover::after {
-		pointer-events: none;
-		content: '';
-		position: absolute;
-		inset: 0;
-		background: var(--smooth-border);
-		z-index: 4;
-	} */
 
 	.video {
 		position: absolute;

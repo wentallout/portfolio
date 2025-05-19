@@ -26,6 +26,8 @@
 	let currentPage = $state(1);
 	let pageSize = 42;
 	let autoSuggest = $state();
+	let isSearching = $state(false);
+	let isInitialLoading = $state(true); // Track initial data loading
 	let miniSearch = new MiniSearch({
 		extractField: (document, fieldName) => {
 			return fieldName.split('.').reduce((doc, key) => doc && doc[key], document);
@@ -39,21 +41,46 @@
 	});
 
 	onMount(() => {
+		// Initialize data
 		filteredBlogs = [...allBlogs];
 		miniSearch.addAll(filteredBlogs);
+
+		// Mark initial loading as complete
+		isInitialLoading = false;
 	});
 
+	// Simple debounce implementation directly in the component
+	let searchTimeout;
+
 	function handleSearchInput(event) {
+		// Update the search term immediately for UI responsiveness
 		searchTerm = event.target.value.toLowerCase();
-		filteredBlogs = miniSearch.search(searchTerm, { prefix: true });
-		if (searchTerm === '') {
-			filteredBlogs = [...allBlogs];
-		}
-		currentPage = 1;
 
-		let suggestData = miniSearch.autoSuggest(searchTerm, { fuzzy: 0.2 });
+		// Show searching indicator
+		isSearching = true;
 
-		autoSuggest = suggestData.map((item) => item.suggestion);
+		// Clear any existing timeout
+		clearTimeout(searchTimeout);
+
+		// Set a new timeout to perform the search after 300ms
+		searchTimeout = setTimeout(() => {
+			// Perform the search
+			if (searchTerm === '') {
+				filteredBlogs = [...allBlogs];
+			} else {
+				filteredBlogs = miniSearch.search(searchTerm, { prefix: true });
+			}
+
+			// Reset to first page
+			currentPage = 1;
+
+			// Update auto-suggestions
+			let suggestData = miniSearch.autoSuggest(searchTerm, { fuzzy: 0.2 });
+			autoSuggest = suggestData.map((item) => item.suggestion);
+
+			// Hide searching indicator
+			isSearching = false;
+		}, 300); // 300ms debounce delay
 	}
 
 	let paginatedItems = $derived(paginate({ currentPage, items: filteredBlogs, pageSize }));
@@ -95,8 +122,24 @@
 	{/if}
 
 	<BlogListContainer>
-		{#if filteredBlogs.length === 0}
-			<LoadingBarSpinner />
+		{#if isInitialLoading}
+			<div class="search-status">
+				<LoadingBarSpinner />
+				<p>Loading blogs...</p>
+			</div>
+		{:else if isSearching}
+			<div class="search-status">
+				<LoadingBarSpinner />
+				<p>Searching...</p>
+			</div>
+		{:else if filteredBlogs.length === 0 && searchTerm !== ''}
+			<div class="search-status">
+				<p>No results found for "{searchTerm}"</p>
+			</div>
+		{:else if filteredBlogs.length === 0}
+			<div class="search-status">
+				<p>No blogs available</p>
+			</div>
 		{:else}
 			{#each paginatedItems as paginatedItem}
 				{#key paginatedItem}
@@ -138,5 +181,20 @@
 
 	:global(.dark-pagination-nav .option.active) {
 		color: var(--color-primary) !important;
+	}
+
+	.search-status {
+		grid-column: 1 / -1;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		padding: var(--space-large);
+		text-align: center;
+		color: var(--color-text-secondary);
+	}
+
+	.search-status p {
+		margin-top: var(--space-small);
 	}
 </style>

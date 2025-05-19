@@ -30,9 +30,6 @@
 				{blogTitle}
 			</h5>
 		</div>
-		<!-- <span class="blog__icon">
-			<CaretRight color="var(--color-text)" height="16" width="16" />
-		</span> -->
 	</article>
 </a>
 
@@ -62,16 +59,6 @@
 
 		position: relative;
 		border-radius: var(--border-radius-light);
-
-		&:hover {
-			box-shadow: -5px 5px var(--color-bg-elevated);
-			transform: translate(5px, -5px);
-			border: 1px solid var(--color-border);
-		}
-	}
-
-	.blog:hover .blog__icon {
-		opacity: 1;
 	}
 
 	.tags {
@@ -91,12 +78,6 @@
 	.blog__info {
 		display: flex;
 		flex-direction: column;
-	}
-
-	.blog__icon {
-		opacity: 0;
-		transition: var(--transition);
-		flex: none;
 	}
 
 	.blog__title {

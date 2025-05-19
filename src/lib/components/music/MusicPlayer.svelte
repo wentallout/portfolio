@@ -11,7 +11,13 @@
 	} from '$lib/assets/icons/icons';
 	import { audioPlayerEl, formatMusicTime, isPlaying, musicList } from '$lib/stores/musicStore.js';
 	import { onMount } from 'svelte';
+	import { Sound } from 'svelte-sound';
 	import { slide } from 'svelte/transition';
+	import { playSound } from '$lib/stores/soundStore.svelte';
+
+	// Create component-specific sounds
+	const switchSound = new Sound('/sounds/click.mp3', { volume: 0.4 });
+	const errorSound = new Sound('/sounds/click.mp3', { volume: 0.4 });
 
 	let currentSongIndex = $state(0);
 	let duration = $state();
@@ -38,13 +44,11 @@
 		if (playPromise !== undefined) {
 			playPromise
 				.then((_) => {
-					// Automatic playback started!
-					// Show playing UI.
-					// We can now safely pause video...
-					video.pause();
+					playSound(switchSound);
 				})
 				.catch((error) => {
 					console.log(error);
+					playSound(errorSound);
 				});
 		}
 	}
@@ -52,6 +56,7 @@
 	function pauseMusic() {
 		$isPlaying = false;
 		$audioPlayerEl.pause();
+		playSound(switchSound);
 	}
 
 	function prev() {

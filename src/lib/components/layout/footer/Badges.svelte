@@ -44,18 +44,6 @@
 			title="built with netlify"
 			width="auto" />
 	</ExLink>
-
-	<ExLink
-		ariaLabel="green web foundation"
-		href="https://www.thegreenwebfoundation.org/green-web-check/?url=https%3A%2F%2Fwentallout.io.vn">
-		<img
-			alt="This website runs on green hosting - verified by thegreenwebfoundation.org"
-			height="95px"
-			loading="lazy"
-			src="https://app.greenweb.org/api/v3/greencheckimage/wentallout.io.vn?nocache=true"
-			title="green hosting"
-			width="200px" />
-	</ExLink>
 </div>
 
 <style>

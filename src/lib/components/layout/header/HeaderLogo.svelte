@@ -1,6 +1,6 @@
 <script>
 	import { gsap } from 'gsap';
-	import { TextPlugin } from 'gsap/dist/TextPlugin.js';
+	import TextPlugin from 'gsap/TextPlugin';
 	import { onMount } from 'svelte';
 
 	let logoDeco = $state();
@@ -27,6 +27,7 @@
 		const removePhrase = () => {
 			if (logoDeco) {
 				gsap.to(logoDeco, {
+					delay: 3,
 					duration: 1,
 					ease: 'power2.inOut',
 					onComplete: () => {

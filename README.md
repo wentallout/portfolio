@@ -9,6 +9,8 @@
 ![GitHub commit activity](https://img.shields.io/github/commit-activity/m/wentallout/portfolio?style=for-the-badge)
 ![GitHub repo size](https://img.shields.io/github/repo-size/wentallout/portfolio?style=for-the-badge)
 
+![](https://api.checklyhq.com/v1/badges/checks/a53b93b2-8489-41a8-b1f2-a90ab0cab17a?style=flat&theme=dark&responseTime=true)
+
 ![Banner](https://raw.githubusercontent.com/wentallout/wentallout/773d77e9c040bd20e5002d41738139946d9bd85d/images/portfolio-banner.svg)
 
 ## 💻 Developing

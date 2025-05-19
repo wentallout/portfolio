@@ -1,6 +1,5 @@
 <script>
 	import '$styles/global.css';
-	import '$styles/splash.css';
 	import { onNavigate } from '$app/navigation';
 	import AdGoogle from '$components/common/AdGoogle.svelte';
 	import BgDeco from '$components/common/BgDeco.svelte';
@@ -11,23 +10,9 @@
 	/** @type {{children?: import('svelte').Snippet}} */
 	let { children } = $props();
 
-	import { onMount } from 'svelte';
-	import { setupViewTransition } from 'sveltekit-view-transition';
-
-	setupViewTransition();
-
-	let soundEle = $state();
-
-	onMount(() => {
-		document.addEventListener('click', (e) => {
-			if (e.target.tagName === 'BUTTON' || e.target.tagName === 'A') {
-				soundEle.currentTime = 0; // Restart sound
-				soundEle.play();
-			}
-		});
-	});
-
+	import SoundManager from '$lib/components/common/SoundManager.svelte';
 	import WaterRipple from '$lib/components/common/WaterRipple.svelte';
+	import { onMount } from 'svelte';
 </script>
 
 <!-- <svelte:head>
@@ -36,8 +21,6 @@
 
 <!-- <script nonce="%sveltekit.nonce%" async crossorigin="anonymous"
 		src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2238795577080818"></script> -->
-
-<audio bind:this={soundEle} id="clickSound" class="websound" src="/sounds/click.mp3"></audio>
 
 <BgDeco />
 <Misc />
@@ -51,13 +34,11 @@
 </WaterRipple>
 <Footer />
 
+<SoundManager />
+
 <!-- Single instance of AquaticTrail at the top level -->
 
 <style lang="postcss">
-	.websound {
-		display: none;
-	}
-
 	.main-content {
 		position: relative;
 		display: flex;
