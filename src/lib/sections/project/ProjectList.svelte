@@ -50,17 +50,6 @@
 </div>
 
 <style>
-	.more {
-		display: flex;
-		justify-content: center;
-		align-items: center;
-		width: 100%;
-	}
-
-	.more a {
-		display: contents;
-	}
-
 	.projects {
 		display: flex;
 		flex-direction: column;

@@ -24,7 +24,7 @@
 				</div>
 				<div class="hero__text text-base">
 					<p>
-						Hi, I’m <strong>Khoa Nguyen</strong>. I craft stunning websites that help businesses
+						Hi, I'm <strong>Khoa Nguyen</strong>. I craft stunning websites that help businesses
 						stand out and succeed.
 					</p>
 					<p>
