@@ -95,12 +95,11 @@
 		background-position: center;
 		will-change: transform, background-position;
 		transform: translateZ(0);
-		opacity: 0.4;
+		opacity: 1;
 	}
 
 	:global([color-scheme='light'] .title__bg) {
 		filter: grayscale() invert();
-		opacity: 0.2;
 	}
 
 	.title__text {

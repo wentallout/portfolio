@@ -17,10 +17,6 @@
 		);
 
 	--z-index-max: 99;
-
-	--cursor-default: url('/cursor/default.svg'), auto;
-	--cursor-pointer: url('/cursor/pointer.svg'), auto;
-	--cursor-text: url('/cursor/text.svg'), auto;
 }
 
 /* -------------------------------- Nprogress START */

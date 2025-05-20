@@ -1,6 +1,6 @@
 <script>
 	/** @type {{width: any, height: any}} */
-	let { width, height } = $props();
+	let { height, width } = $props();
 </script>
 
 <svg fill="none" {height} viewBox="0 0 747 747" {width} xmlns="http://www.w3.org/2000/svg">
