@@ -51,7 +51,8 @@
 			<a
 				class="link"
 				href="https://open.spotify.com/playlist/4rVu705DBrGDeNSec40ooy?si=6qAYnTnJT5OKiItwhOk37w">
-				My Playlist</a>
+				My Playlist
+			</a>
 		</div>
 	</div>
 

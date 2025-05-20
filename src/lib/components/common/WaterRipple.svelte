@@ -5,7 +5,7 @@
 	let containerEl;
 	let isActive = false;
 	let lastRippleTime = 0;
-	const RIPPLE_DELAY = 50; // Minimum time between ripples in ms
+	const RIPPLE_DELAY = 200; // Minimum time between ripples in ms
 
 	function createRipple(e) {
 		if (!isActive) return;
@@ -28,7 +28,7 @@
 			// Add random offset from mouse position
 			const offsetX = baseX + (Math.random() - 0.5) * 100; // ±50px offset
 			const offsetY = baseY + (Math.random() - 0.5) * 100;
-			
+
 			// Random size and duration variations
 			const scale = 2 + Math.random() * 3; // Scale between 2-5
 			const duration = 1 + Math.random() * 1; // Duration between 1-2s
@@ -36,9 +36,9 @@
 
 			gsap.set(ripple, {
 				left: offsetX,
-				top: offsetY,
 				opacity: initialOpacity,
-				scale: 0
+				scale: 0,
+				top: offsetY
 			});
 
 			gsap.to(ripple, {
@@ -79,7 +79,6 @@
 		position: relative;
 		width: 100%;
 		height: 100%;
-		overflow: hidden;
 	}
 
 	:global(.ripple) {
@@ -95,5 +94,3 @@
 		will-change: transform, opacity;
 	}
 </style>
-
-

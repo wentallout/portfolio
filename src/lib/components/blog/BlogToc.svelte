@@ -26,7 +26,7 @@
 	--toc-padding="var(--space-mid)"
 	breakpoint="992"
 	flashClickedHeadingsFor="1500"
-	keepActiveTocItemInView={false}
+	keepActiveTocItemInView={true}
 	scrollBehavior="smooth">
 	{#snippet title()}
 		<span class="toc-title text-base">

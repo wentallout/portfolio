@@ -5,37 +5,26 @@
 
 	let { desc = 'author', href, thumbnailUrl, title = 'insert title' } = $props();
 
-	let imageEl = $state();
-
-	let imageLoaded = $state();
-
 	$effect(() => {
 		if (href.includes('codepen.io')) {
 			thumbnailUrl = href.replace('codepen.io', 'shots.codepen.io') + '-800.jpg';
 		}
 	});
-
-	function onImgLoaded() {
-		imageLoaded = true;
-	}
 </script>
 
 <ExLink style="display:flex; border-radius: var(--border-radius-light);" {href}>
 	<MouseGlow />
 
 	<article class="fcard">
-		{#if thumbnailUrl && thumbnailUrl.length > 0}
-			<img
-				bind:this={imageEl}
-				class="fcard__thumbnail {imageLoaded ? 'fade-in' : ''}"
-				alt={title}
-				height="45"
-				loading="lazy"
-				onload={onImgLoaded}
-				src={thumbnailUrl}
-				{title}
-				width="800" />
-		{/if}
+		<img
+			class="fcard__thumbnail"
+			alt={title}
+			height="142"
+			loading="lazy"
+			onload={onImgLoaded}
+			src={thumbnailUrl}
+			{title}
+			width="800" />
 
 		<div class="fcard__info">
 			<div class="fcard__title text-small">{title}</div>
@@ -62,12 +51,7 @@
 		width: 100%;
 		aspect-ratio: 2/1;
 
-		opacity: 0;
 		transition: opacity 1s ease-in-out;
-	}
-
-	.fcard__thumbnail.fade-in {
-		opacity: 1;
 	}
 
 	.fcard__info {
