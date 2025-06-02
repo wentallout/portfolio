@@ -3,15 +3,6 @@ import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
 
 gsap.registerPlugin(ScrollTrigger);
 
-/**
- * @param {HTMLElement} element
- * @param {{
- *    speed?: number,
- *    start?: string,
- *    end?: string,
- *    scrubAmount?: number
- * }} options
- */
 export function parallaxBg(element, options = {}) {
 	const { end = 'bottom top', scrubAmount = 1.5, speed = 0.3, start = 'top bottom' } = options;
 

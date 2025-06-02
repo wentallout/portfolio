@@ -37,10 +37,8 @@
 	.fcard {
 		transition: var(--transition);
 		box-shadow: var(--boxShadow);
-
 		position: relative;
 		border-radius: var(--border-radius-light);
-
 		overflow: hidden;
 		flex-grow: 1;
 		position: relative;
@@ -60,7 +58,6 @@
 	}
 
 	.fcard__title {
-		font-family: var(--font-fancy);
 		overflow: hidden;
 		text-overflow: ellipsis;
 		display: -webkit-box;

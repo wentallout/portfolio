@@ -1,6 +1,5 @@
 <script>
 	import Breadcrumb from '$components/other/Breadcrumb.svelte';
-	import { parallaxBg } from '$lib/actions/parallaxEffect';
 	import Ocean from '$lib/assets/images/common/roman-ocean.webp';
 
 	/** @type {{pageTitle?: string, decoImageUrl?: any}} */
