@@ -20,9 +20,9 @@
 	--toc-mobile-bg="var(--color-bg-container)"
 	--toc-mobile-bottom="56px"
 	--toc-mobile-btn-bg="var(--color-primary)"
-	--toc-mobile-btn-border-radius="16px"
+	--toc-mobile-btn-border-radius="100%"
 	--toc-mobile-btn-padding="0px"
-	--toc-mobile-right="8px"
+	--toc-mobile-right="12px"
 	--toc-padding="var(--space-mid)"
 	breakpoint="992"
 	flashClickedHeadingsFor="1500"
@@ -30,13 +30,13 @@
 	scrollBehavior="smooth">
 	{#snippet title()}
 		<span class="toc-title text-base">
-			<ListBullets color="var(--color-text)" />
+			<ListBullets color="var(--color-text)" height="16" width="16" />
 			Contents
 		</span>
 	{/snippet}
 
 	<span slot="open-toc-icon" class="open-toc-icon">
-		<ListBullets color="var(--color-text)" />
+		<ListBullets color="var(--color-text)" height="16" width="16" />
 	</span>
 </Toc>
 

@@ -67,13 +67,14 @@
 <style>
 	.sound-toggle {
 		position: fixed;
-		bottom: var(--space-xs);
-		left: var(--space-xs);
+		top: var(--space-xs);
+		right: var(--space-xs);
 		background: var(--color-bg-layout);
 		border: none;
 		cursor: pointer;
 		padding: 0.5rem;
 		border-radius: var(--border-radius-light);
 		z-index: 100;
+		display: none;
 	}
 </style>

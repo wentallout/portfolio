@@ -1,5 +1,5 @@
 <script>
-	import CustomToc from '$components/blog/BlogToc.svelte';
+	import CustomBlogToc from '$components/blog/CustomBlogToc.svelte';
 	/** @type {{children?: import('svelte').Snippet}} */
 	let { children } = $props();
 </script>
@@ -9,7 +9,7 @@
 		{@render children?.()}
 	</div>
 
-	<CustomToc />
+	<CustomBlogToc />
 </div>
 
 <style>

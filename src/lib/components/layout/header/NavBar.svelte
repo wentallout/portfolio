@@ -104,7 +104,6 @@
 		background-color: hsl(from var(--color-bg-layout) h s l / 80%);
 		backdrop-filter: blur(5px);
 		color: var(--color-text);
-		box-shadow: var(--boxShadow);
 	}
 
 	.active-page {

@@ -1,8 +1,15 @@
-@font-face {
+/* @font-face {
 	font-family: 'Chakra';
 	font-display: swap;
 	font-style: normal;
 	src: url($lib/fonts/chakra.woff2) format('woff2');
+} */
+
+@font-face {
+	font-family: 'RoslindaleText-Regular';
+	font-display: swap;
+	font-style: normal;
+	src: url($lib/fonts/RoslindaleText-Regular.woff2) format('woff2');
 }
 
 /* @font-face {
@@ -31,15 +38,16 @@ pre code {
 }
 
 @font-face {
-	font-family: 'Chakra Petch-fallback';
-	size-adjust: 102.69%;
-	ascent-override: 101%;
+	font-family: 'RoslindaleText-Regular-fallback';
 	src: local('Arial');
+	ascent-override: 82%;
+	descent-override: 22%;
+	line-gap-override: 0%;
 }
 
 :root {
 	--font-normal: 'InterVariable', 'Inter-fallback';
-	--font-fancy: 'Chakra', 'Chakra Petch-fallback';
+	--font-fancy: 'RoslindaleText-Regular', 'RoslindaleText-Regular-fallback';
 
 	/* FONT SIZE */
 	--font-size-xs: clamp(0.9rem, calc(0.9rem + -0.05vw), 0.92rem);
@@ -171,6 +179,7 @@ strong {
 	30	-0.021
 	40	-0.022
 	80	-0.022 */
+
 [color-scheme='dark'] {
 	--fontWeightXS: 300;
 	--fontWeightSmall: 400;

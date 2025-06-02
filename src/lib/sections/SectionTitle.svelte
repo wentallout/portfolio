@@ -1,6 +1,6 @@
 <script>
 	import SaosContainer from '$components/common/SaosContainer.svelte';
-	import { imageReveal, textReveal } from '$lib/actions/gsapAnimation';
+	import { textReveal } from '$lib/actions/gsapAnimation';
 	import SectionDesc from '$sections/SectionDesc.svelte';
 
 	/** @type {{sectionTitle?: string, sectionDesc?: string, unsplitAfter?: number, children?: import('svelte').Snippet<[any]>}} */
@@ -13,7 +13,7 @@
 
 <div class="section">
 	<div class="section__title text-trim text-large">
-		<div class="section__icon" use:imageReveal>
+		<div class="section__icon">
 			{@render children?.({ sectionIcon })}
 		</div>
 		<h2
@@ -79,22 +79,5 @@
 		--before-left: 4px;
 
 		letter-spacing: var(--tracking-tight);
-	}
-
-	.section__text::before {
-		content: attr(data-title);
-		height: 100%;
-		width: 100vw;
-		left: 4px;
-		top: 3px;
-		-webkit-text-fill-color: transparent;
-		-webkit-text-stroke: 1px var(--color-primary-active);
-		color: var(--color-primary-hover);
-		display: block;
-		position: absolute;
-		width: 100%;
-		z-index: -1;
-		opacity: 0.5;
-		font-weight: 100;
 	}
 </style>
