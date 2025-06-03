@@ -1,13 +1,9 @@
 ---
 title: 'Gestalt Principles of Design'
-date: '2022-10-08'
+date: '2023-10-08'
 categories:
     - 'fundamental'
 ---
-
-<script>
-    import Image from '$components/common/Image.svelte';
-</script>
 
 ## 1. Law of Proximity
 

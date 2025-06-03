@@ -28,44 +28,31 @@ Align with your team on AI usage standards, code expectations, and practices bef
 
 ## Treat AI usage as a normal part of the development conversation
 
-Regularly discuss AI experiences, techniques, successes, and pitfalls
-with your team. Normalize AI as another tool for collective
-improvement.
+Regularly discuss AI experiences, techniques, successes, and pitfalls with your team. Normalize AI as another tool for collective improvement.
 
 ## Isolate AI changes in Git by doing separate commits
 
-Clearly identify and separate AI-generated changes within version
-control to simplify reviews, rollbacks, and tracking.
+Clearly identify and separate AI-generated changes within **version control** to simplify reviews, rollbacks, and tracking.
 
 ## Ensure that all code, whether human or AI-written, undergoes code review
 
-Maintain consistent standards by subjecting all contributions to the
-same rigorous review processes, enhancing code quality and team
-understanding.
+Maintain consistent standards by subjecting all contributions to the same rigorous review processes, enhancing code quality and team understanding.
 
 ## Don't merge code you don't understand
 
-Never integrate AI-generated code unless you thoroughly comprehend
-its functionality and implications. Understanding is critical to
-maintainability and security.
+Never integrate AI-generated code unless you thoroughly comprehend its functionality and implications. Understanding is critical to maintainability and security.
 
 ## Prioritize documentation, comments, and ADRs
 
-Clearly document the rationale, functionality, and context for AI-
-generated code. Good documentation ensures long-term clarity and
-reduces future technical debt.
+Clearly document the rationale, functionality, and context for AI-generated code. Good documentation ensures long-term clarity and reduces future technical debt.
 
 ## Share and reuse effective prompts
 
-Document prompts that lead to high-quality AI outputs. Maintain a
-repository of proven prompts to streamline future interactions and
-enhance consistency.
+Document prompts that lead to high-quality AI outputs. Maintain a repository of proven prompts to streamline future interactions and enhance consistency.
 
 ## Regularly reflect and iterate
 
-Periodically review and refine your AI development workflow. Use
-insights from past experiences to continuously enhance your team’s
-approach.
+Periodically review and refine your AI development workflow. Use insights from past experiences to continuously enhance your team’s approach.
 
 ## TLDR VERSION
 
