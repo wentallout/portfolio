@@ -1,9 +1,4 @@
 <script>
-
-	
-
-	
-
 	function generateEntityHash(entity) {
 		let hash = 0;
 
@@ -20,7 +15,6 @@
 		return hash.toString();
 	}
 
-	
 	/** @type {{article?: boolean, author: any, breadcrumbs: { name: string; slug: string }[], datePublished: any, entity: any, lastUpdated: any, featuredImage: any, metadescription: any, siteLanguage: any, siteTitle: any, siteTitleAlt: any, siteUrl: string, title: any, url: any, facebookPage: any, githubPage: any, linkedinProfile: any, telegramUsername: any, tiktokUsername: any, twitterUsername: any, entityMeta?: { url: string; faviconWidth: number; faviconHeight: number } | null}} */
 	let {
 		article = false,
@@ -28,22 +22,22 @@
 		breadcrumbs,
 		datePublished,
 		entity,
-		lastUpdated,
+		entityMeta = null,
+		facebookPage,
 		featuredImage,
+		githubPage,
+		lastUpdated,
+		linkedinProfile,
 		metadescription,
 		siteLanguage,
 		siteTitle,
 		siteTitleAlt,
 		siteUrl,
-		title,
-		url,
-		facebookPage,
-		githubPage,
-		linkedinProfile,
 		telegramUsername,
 		tiktokUsername,
+		title,
 		twitterUsername,
-		entityMeta = null
+		url
 	} = $props();
 
 	const entityHash = generateEntityHash(author);
@@ -51,21 +45,21 @@
 	const schemaOrgEntity =
 		entityMeta !== null
 			? {
-					'@type': ['Person', 'Organization'],
 					'@id': `${siteUrl}/#/schema/person/${entityHash}`,
-					name: author,
+					'@type': ['Person', 'Organization'],
 					image: {
-						'@type': 'ImageObject',
 						'@id': `${siteUrl}/#personlogo`,
+						'@type': 'ImageObject',
+						caption: author,
+						height: entityMeta.faviconHeight,
 						inLanguage: siteLanguage,
 						url: entityMeta.url,
-						width: entityMeta.faviconWidth,
-						height: entityMeta.faviconHeight,
-						caption: author
+						width: entityMeta.faviconWidth
 					},
 					logo: {
 						'@id': `${siteUrl}/#personlogo`
 					},
+					name: author,
 					sameAs: [
 						`https://twitter.com/${twitterUsername}`,
 						`https://github.com/${githubPage}`,
@@ -78,124 +72,124 @@
 			: null;
 
 	const schemaOrgWebsite = {
-		'@type': 'WebSite',
 		'@id': `${siteUrl}/#website`,
-		url: siteUrl,
-		name: siteTitle,
+		'@type': 'WebSite',
 		description: siteTitleAlt,
-		publisher: {
-			'@id': `${siteUrl}/#/schema/person/${entityHash}`
-		},
+		inLanguage: siteLanguage,
+		name: siteTitle,
 		potentialAction: [
 			{
 				'@type': 'SearchAction',
-				target: `${siteUrl}/?s={search_term_string}`,
-				'query-input': 'required name=search_term_string'
+				'query-input': 'required name=search_term_string',
+				target: `${siteUrl}/?s={search_term_string}`
 			}
 		],
-		inLanguage: siteLanguage
+		publisher: {
+			'@id': `${siteUrl}/#/schema/person/${entityHash}`
+		},
+		url: siteUrl
 	};
 
 	const schemaOrgImageObject = {
-		'@type': 'ImageObject',
 		'@id': `${url}#primaryimage`,
+		'@type': 'ImageObject',
+		caption: featuredImage.caption,
+		contentUrl: featuredImage.url,
+		height: featuredImage.height,
 		inLanguage: siteLanguage,
 		url: featuredImage.url,
-		contentUrl: featuredImage.url,
-		width: featuredImage.width,
-		height: featuredImage.height,
-		caption: featuredImage.caption
+		width: featuredImage.width
 	};
 
 	const schemaOrgBreadcrumbList = {
-		'@type': 'BreadcrumbList',
 		'@id': `${url}#breadcrumb`,
+		'@type': 'BreadcrumbList',
 		itemListElement: breadcrumbs.map((element, index) => ({
 			'@type': 'ListItem',
-			position: index + 1,
 			item: {
-				'@type': 'WebPage',
 				'@id': `${siteUrl}/${element.slug}`,
-				url: `${siteUrl}/${element.slug}`,
-				name: element.name
-			}
+				'@type': 'WebPage',
+				name: element.name,
+				url: `${siteUrl}/${element.slug}`
+			},
+			position: index + 1
 		}))
 	};
 
 	const schemaOrgWebPage = {
-		'@type': 'WebPage',
 		'@id': `${url}#webpage`,
-		url,
-		name: title,
-		isPartOf: {
-			'@id': `${siteUrl}/#website`
-		},
-		primaryImageOfPage: {
-			'@id': `${url}#primaryimage`
-		},
-		datePublished,
-		dateModified: lastUpdated,
+		'@type': 'WebPage',
 		author: {
 			'@id': `${siteUrl}/#/schema/person/${entityHash}`
 		},
-		description: metadescription,
 		breadcrumb: {
 			'@id': `${url}#breadcrumb`
 		},
+		dateModified: lastUpdated,
+		datePublished,
+		description: metadescription,
 		inLanguage: siteLanguage,
+		isPartOf: {
+			'@id': `${siteUrl}/#website`
+		},
+		name: title,
 		potentialAction: [
 			{
 				'@type': 'ReadAction',
 				target: [url]
 			}
-		]
+		],
+		primaryImageOfPage: {
+			'@id': `${url}#primaryimage`
+		},
+		url
 	};
 
 	let schemaOrgArticle = null;
 	if (article) {
 		schemaOrgArticle = {
-			'@type': 'Article',
 			'@id': `${url}#article`,
-			isPartOf: {
-				'@id': `${url}#webpage`
-			},
+			'@type': 'Article',
+			articleSection: ['blog'],
 			author: {
 				'@id': `${siteUrl}/#/schema/person/${entityHash}`
 			},
-			headline: title,
-			datePublished,
 			dateModified: lastUpdated,
+			datePublished,
+			headline: title,
+			image: {
+				'@id': `${url}#primaryimage`
+			},
+			inLanguage: siteLanguage,
+			isPartOf: {
+				'@id': `${url}#webpage`
+			},
 			mainEntityOfPage: {
 				'@id': `${url}#webpage`
 			},
 			publisher: {
 				'@id': `${siteUrl}/#/schema/person/${entityHash}`
-			},
-			image: {
-				'@id': `${url}#primaryimage`
-			},
-			articleSection: ['blog'],
-			inLanguage: siteLanguage
+			}
 		};
 	}
 
 	const schemaOrgPublisher = {
-		'@type': ['Person', 'Organization'],
 		'@id': `${siteUrl}/#/schema/person/${entityHash}`,
-		name: entity,
+		'@type': ['Person', 'Organization'],
 		image: {
-			'@type': 'ImageObject',
 			'@id': `${siteUrl}/#personlogo`,
+			'@type': 'ImageObject',
+			caption: entity,
+			contentUrl: `${siteUrl}/images/brand-logo.svg`,
+			height: 512,
 			inLanguage: siteLanguage,
 			url: `${siteUrl}/images/brand-logo.svg`,
-			contentUrl: `${siteUrl}/images/brand-logo.svg`,
-			width: 512,
-			height: 512,
-			caption: entity
+			width: 512
 		},
 		logo: {
 			'@id': `${siteUrl}/#personlogo`
 		},
+		name: entity,
 		sameAs: [
 			`https://twitter.com/${twitterUsername}`,
 			`https://github.com/${githubPage}`,

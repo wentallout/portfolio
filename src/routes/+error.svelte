@@ -30,8 +30,7 @@
 <div class="error">
 	<div class="error__info">
 		<h1 class="status">
-			<div class="status__code text-3xl">{$page.status}</div>
-			<div class="">{$page.error.message}</div>
+			<div class="status__code text-3xl">{$page.status} {$page.error.message}</div>
 		</h1>
 
 		<div class="detail text-small">
@@ -60,7 +59,7 @@
 		position: relative;
 		margin-top: var(--space-large);
 
-		height: 60dvh;
+		height: 100dvh;
 	}
 	.back {
 		text-align: center;

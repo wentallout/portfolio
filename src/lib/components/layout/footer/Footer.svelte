@@ -147,7 +147,7 @@
 		/* SIZE */
 		max-width: 100vw;
 		width: 100%;
-		padding: var(--space-xl) 0;
+		padding: var(--space-3xl) 0;
 		/* --- */
 
 		overflow: hidden;

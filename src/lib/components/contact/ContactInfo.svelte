@@ -87,6 +87,7 @@
 		align-items: center;
 		gap: var(--space-2xs);
 		font-weight: 500;
+		font-family: var(--font-fancy);
 	}
 
 	.address__desc {

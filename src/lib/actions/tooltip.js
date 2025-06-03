@@ -1,13 +1,5 @@
 import { gsap } from 'gsap';
 
-/**
- * @param {HTMLElement} node
- * @param {{
- *   text?: string,
- *   position?: 'top' | 'bottom' | 'left' | 'right',
- *   offset?: number
- * }} options
- */
 export function tooltip(node, options = {}) {
 	const { offset = 20, position = 'top', text = '' } = options;
 

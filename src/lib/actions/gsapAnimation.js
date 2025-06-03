@@ -135,15 +135,6 @@ export function svgPathDraw(element, options = {}) {
 	};
 }
 
-/**
- * @param {HTMLElement} element
- * @param {{
- *   unsplitAfter?: number,
- *   duration?: number,
- *   stagger?: number,
- *   ease?: string
- * }} options
- */
 export function textReveal(element, options = {}) {
 	const {
 		duration = 0.3,

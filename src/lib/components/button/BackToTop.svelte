@@ -29,7 +29,7 @@
 <svelte:window onscroll={handleOnScroll} />
 
 <button class="bck2top" class:hidden onclick={goTop} onkeyup={goTop} type="button">
-	<ArrowLineUp />
+	<ArrowLineUp height="16" width="16" />
 </button>
 
 <style>
@@ -51,6 +51,7 @@
 	.bck2top {
 		aspect-ratio: 1/1;
 		width: 40px;
+		border-radius: 100%;
 
 		/* FLEX */
 		display: flex;
@@ -78,8 +79,6 @@
 		box-shadow: var(--boxShadow);
 		color: var(--color-text);
 
-		border-radius: var(--border-radius);
-
 		background-image: linear-gradient(
 			var(--color-primary) 0% var(--progress),
 			var(--color-bg-elevated) var(--progress) 100%
@@ -99,13 +98,6 @@
 		&.hidden {
 			opacity: 0;
 			visibility: hidden;
-		}
-	}
-
-	@media (min-width: 768px) {
-		.bck2top {
-			padding: var(--space-xs);
-			width: 56px;
 		}
 	}
 </style>

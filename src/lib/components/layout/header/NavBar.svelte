@@ -8,12 +8,13 @@
 	import { onMount } from 'svelte';
 	let scrollY = $state();
 	let navOverlayEle = $state();
+	let navOverlayOpen = $state(false);
 
 	function openNav() {
-		navOverlayEle.style.height = '100%';
+		navOverlayOpen = true;
 	}
 	function closeNav() {
-		navOverlayEle.style.height = '0%';
+		navOverlayOpen = false;
 	}
 
 	let headerEle = $state();
@@ -52,7 +53,7 @@
 	</header>
 </VanishingHeader>
 
-<div bind:this={navOverlayEle} class="overlay">
+<div bind:this={navOverlayEle} class="overlay" class:open={navOverlayOpen}>
 	<button
 		class="closebtn"
 		aria-label="close nav menu"
@@ -103,7 +104,6 @@
 		background-color: hsl(from var(--color-bg-layout) h s l / 80%);
 		backdrop-filter: blur(5px);
 		color: var(--color-text);
-		box-shadow: var(--boxShadow);
 	}
 
 	.active-page {
@@ -198,19 +198,28 @@
 	/* ---OVERLAY--- */
 
 	.overlay {
-		height: 0%;
 		width: 100%;
-
 		position: fixed;
 		z-index: var(--z-index-max);
 		top: 0;
 		left: 0;
-
 		background: color-mix(in srgb, var(--color-bg-layout) 70%, transparent);
 		backdrop-filter: blur(5px);
 		overflow: hidden;
 		transition: var(--transition);
 		font-weight: var(--fontWeightXS);
+
+		/* Initially hidden */
+		height: 0;
+	}
+
+	.overlay.open {
+		/* Full height when open */
+		height: 100%;
+	}
+
+	.overlay.open .overlay-content {
+		/* Adjust content position when open */
 	}
 
 	.overlay-content {

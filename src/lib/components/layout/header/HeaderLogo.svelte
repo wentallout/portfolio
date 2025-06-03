@@ -71,7 +71,6 @@
 		&:hover {
 			color: var(--color-primary-hover);
 			filter: drop-shadow(0px 0px 10px var(--color-primary));
-			animation: glitch 1.5s ease infinite;
 		}
 	}
 

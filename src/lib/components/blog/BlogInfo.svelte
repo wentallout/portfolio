@@ -150,20 +150,6 @@
 		overflow: hidden;
 	}
 
-	.blog:after {
-		content: '';
-		position: absolute;
-		top: 0;
-		left: 0;
-		width: 100%;
-		height: 100%;
-		z-index: -9999;
-		/* background: url('/images/dither_it_bg-sky.png'); */
-		background-size: cover;
-		background-position: center;
-		background-repeat: no-repeat;
-	}
-
 	.category {
 		display: flex;
 		flex-direction: row;
@@ -194,12 +180,6 @@
 
 	.blog__title {
 		text-wrap: balance;
-		text-shadow:
-			-2px -2px 0 var(--color-bg-layout),
-			2px -2px 0 var(--color-bg-layout),
-			-2px 2px 0 var(--color-bg-layout),
-			2px 2px 0 var(--color-bg-layout);
-
 		color: var(--color-primary);
 	}
 </style>

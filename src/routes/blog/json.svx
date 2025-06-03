@@ -8,7 +8,10 @@ categories:
 
 ## JavaScript Object Notation (JSON)
 
-JSON (JavaScript Object Notation) is a lightweight data-interchange format that is easy for humans to read and write and easy for machines to parse and generate. It's a text-based format, consisting of name-value pairs and ordered lists of values, which is used extensively in web development and various other programming contexts. Here's a breakdown of its key characteristics:
+JSON (JavaScript Object Notation) is a lightweight data-interchange format that is easy for humans to read and write and easy for machines to parse and generate. It's a text-based format, consisting of name-value pairs and ordered lists of values, which is used extensively in web development and various other programming contexts. 
+
+
+## Key characteristics
 
 Lightweight Data Format: JSON is text-based, making it lightweight and suitable for data interchange.
 Human and Machine Readable: Its structure is simple and clear, making it readable by humans and easily parsed by machines.

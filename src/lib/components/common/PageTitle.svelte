@@ -1,10 +1,9 @@
 <script>
 	import Breadcrumb from '$components/other/Breadcrumb.svelte';
-	import { parallaxBg } from '$lib/actions/parallaxEffect';
-	import Wall from '$lib/assets/images/common/wall.webp';
+	import Ocean from '$lib/assets/images/common/roman-ocean.webp';
 
 	/** @type {{pageTitle?: string, decoImageUrl?: any}} */
-	let { decoImageUrl = Wall, pageTitle = 'pageTitle' } = $props();
+	let { decoImageUrl = Ocean, pageTitle = 'pageTitle' } = $props();
 </script>
 
 <div class="full-width title">
@@ -12,16 +11,7 @@
 		{pageTitle}
 	</span>
 
-	<div
-		style="background-image: url('{decoImageUrl}')"
-		class="title__bg"
-		use:parallaxBg={{
-			end: 'bottom top',
-			scrubAmount: 1.5,
-			speed: 0.3,
-			start: 'top bottom'
-		}}>
-	</div>
+	<div style="background-image: url('{decoImageUrl}')" class="title__bg"></div>
 
 	<div class="title__content">
 		<h1 class="text-3xl title__text tracking-in-expand text-trim">
@@ -104,12 +94,11 @@
 		background-position: center;
 		will-change: transform, background-position;
 		transform: translateZ(0);
-		opacity: 0.4;
+		opacity: 1;
 	}
 
 	:global([color-scheme='light'] .title__bg) {
 		filter: grayscale() invert();
-		opacity: 0.2;
 	}
 
 	.title__text {

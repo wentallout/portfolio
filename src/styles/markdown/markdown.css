@@ -159,6 +159,10 @@
 	margin-bottom: var(--space-small);
 }
 
+.markdown ol {
+	padding: 0 !important;
+}
+
 .markdown ol li::before {
 	content: none;
 }
