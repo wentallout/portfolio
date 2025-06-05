@@ -1,6 +1,5 @@
 <script>
 	import ExLink from '$components/common/ExLink.svelte';
-	import { imageReveal } from '$lib/actions/gsapAnimation';
 
 	/** @type {{src?: string, alt?: string, width?: string, height?: string, loading?: string, decoding?: string}} */
 	let {
@@ -15,7 +14,7 @@
 
 <ExLink ariaLabel={alt} href={src}>
 	<figure>
-		<img alt="Image of {alt}" {decoding} {height} {loading} {src} {width} use:imageReveal />
+		<img alt="Image of {alt}" {decoding} {height} {loading} {src} {width} />
 		{#if alt !== ''}
 			<figcaption class="caption text-xs">
 				{alt}
@@ -44,7 +43,6 @@
 		color: var(--color-text-secondary);
 		width: 100%;
 		padding: var(--space-3xs) var(--space-2xs);
-
 		background-color: var(--color-bg-elevated);
 	}
 </style>

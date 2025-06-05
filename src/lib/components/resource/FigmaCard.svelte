@@ -21,7 +21,6 @@
 			alt={title}
 			height="142"
 			loading="lazy"
-			onload={onImgLoaded}
 			src={thumbnailUrl}
 			{title}
 			width="800" />

@@ -12,7 +12,7 @@
 </script>
 
 <div class="section">
-	<div class="section__title text-trim text-large">
+	<div class="section__title text-trim text-xl">
 		<div class="section__icon">
 			{@render children?.({ sectionIcon })}
 		</div>

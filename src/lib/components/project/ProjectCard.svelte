@@ -103,9 +103,7 @@
 		display: flex;
 		justify-content: flex-start;
 		flex-direction: column;
-
 		font-weight: var(--fontWeightLarge);
-		font-family: var(--font-fancy);
 	}
 
 	.info {

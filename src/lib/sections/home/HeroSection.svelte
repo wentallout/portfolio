@@ -1,6 +1,7 @@
 <script>
 	import GlassButton from '$components/button/GlassButton.svelte';
 	import PrimaryButton from '$components/button/PrimaryButton.svelte';
+	import { textRevealBottom } from '$lib/actions/gsapAnimation';
 	import { tooltip } from '$lib/actions/tooltip';
 	import HeroVisual from '$lib/assets/arts/HeroArt.svelte';
 	import { CalendarCheck, ThumbsUp } from '$lib/assets/icons/icons';
@@ -14,12 +15,12 @@
 		<div class="hero g-container">
 			<div class="hero__block">
 				<div class="text-3xl hero__heading text-trim">
-					<div>
-						Tailor-made
-						<span id="hero__focus" class="hero__focus focus">
+					<div use:textRevealBottom={{ delay: 0.1, stagger: 0.03, y: 200 }}>
+						<div>Tailor-made</div>
+						<div id="hero__focus" class="hero__focus focus">
 							<span class="word">websites</span>
-						</span>
-						with precision.
+						</div>
+						<div>with precision.</div>
 					</div>
 				</div>
 				<div class="hero__text text-base">
@@ -88,6 +89,9 @@
 		font-family: var(--font-fancy);
 		margin-bottom: var(--space-2xl);
 		letter-spacing: var(--tracking-tighter);
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
 	}
 
 	.focus {

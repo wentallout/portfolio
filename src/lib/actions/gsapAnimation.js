@@ -1,5 +1,6 @@
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
+import SplitType from 'split-type';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -35,102 +36,6 @@ export function imageReveal(element) {
 			element.style.filter = '';
 			element.style.transform = '';
 			element.style.opacity = '';
-		}
-	};
-}
-
-/**
- * @param {HTMLElement} element
- * @param {{
- *   duration?: number,
- *   stagger?: number,
- *   strokeColor?: string,
- *   scrollTrigger?: boolean
- * }} options
- */
-export function svgPathDraw(element, options = {}) {
-	const {
-		duration = 1,
-		scrollTrigger = true,
-		stagger = 1.5,
-		strokeColor = 'var(--color-text)'
-	} = options;
-
-	// Get all paths within the SVG
-	const paths = element.querySelectorAll('path');
-
-	// Set up initial state for each path
-	paths.forEach((path) => {
-		const length = path.getTotalLength();
-		gsap.set(path, {
-			fill: 'transparent', // Start with transparent fill
-			opacity: 0,
-			stroke: strokeColor,
-			strokeDasharray: length,
-			strokeDashoffset: length
-		});
-	});
-
-	// Hide the entire SVG initially
-	gsap.set(element, {
-		opacity: 1,
-		visibility: 'visible'
-	});
-
-	// Create animation timeline
-	const tl = gsap.timeline({
-		defaults: { ease: 'power2.inOut' },
-		scrollTrigger: scrollTrigger
-			? {
-					end: 'bottom 20%',
-					once: true,
-					start: 'top 80%',
-					toggleActions: 'play none none none',
-					trigger: element
-				}
-			: false
-	});
-
-	// Animate paths
-	tl.to(paths, {
-		duration: duration,
-		opacity: 1,
-		stagger: {
-			amount: stagger,
-			from: 'start'
-		},
-		strokeDashoffset: 0
-	})
-		.to(
-			paths,
-			{
-				duration: duration / 2,
-				fill: (i, target) => target.getAttribute('fill') || 'none',
-				stagger: {
-					amount: stagger / 2,
-					from: 'start'
-				}
-			},
-			`-${duration / 2}` // Start fill animation halfway through the stroke animation
-		)
-		.to(paths, {
-			duration: duration / 4,
-			stagger: {
-				amount: stagger / 4,
-				from: 'start'
-			},
-			stroke: 'transparent'
-		});
-
-	return {
-		destroy() {
-			if (tl) tl.kill();
-			// Reset paths to their original state
-			paths.forEach((path) => {
-				gsap.set(path, {
-					clearProps: 'all'
-				});
-			});
 		}
 	};
 }
@@ -230,6 +135,41 @@ export function textReveal(element, options = {}) {
 		destroy() {
 			tl.kill();
 			element.innerHTML = originalHTML;
+		}
+	};
+}
+
+/**
+ * Svelte action for GSAP SplitType text reveal animation.
+ *
+ * Usage: <h1 use:textReveal={{ delay: 1, stagger: 0.075, y: 400, duration: 1 }} >Text</h1>
+ * All options are optional.
+ */
+export function textRevealBottom(node, options = {}) {
+	// Ensure overflow is hidden for reveal effect
+	node.style.overflow = 'hidden';
+	// Default animation options
+	const { delay = 1, duration = 0.2, ease = 'power4.out', stagger = 0.075, y = 200 } = options;
+
+	// Split the text into chars
+	const split = new SplitType(node, { types: 'chars' });
+
+	// Set initial state
+	gsap.set(split.chars, { y });
+
+	// Animate in
+	const anim = gsap.to(split.chars, {
+		delay,
+		duration,
+		ease,
+		stagger,
+		y: 0
+	});
+
+	return {
+		destroy() {
+			anim.kill();
+			split.revert();
 		}
 	};
 }
