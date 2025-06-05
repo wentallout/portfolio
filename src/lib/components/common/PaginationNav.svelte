@@ -9,7 +9,7 @@
 		PREVIOUS_PAGE: 'PREVIOUS_PAGE'
 	};
 
-	import { generateNavigationOptions } from './generateNavigationOptions';
+	import { generateNavigationOptions } from '../../utils/generateNavigationOptions';
 
 	const dispatch = createEventDispatcher();
 

@@ -10,7 +10,6 @@
 	/** @type {{children?: import('svelte').Snippet}} */
 	let { children } = $props();
 
-	import SoundManager from '$lib/components/common/SoundManager.svelte';
 	import WaterRipple from '$lib/components/common/WaterRipple.svelte';
 	import { onMount } from 'svelte';
 </script>
@@ -33,10 +32,6 @@
 	</main>
 </WaterRipple>
 <Footer />
-
-<SoundManager />
-
-<!-- Single instance of AquaticTrail at the top level -->
 
 <style lang="postcss">
 	.main-content {

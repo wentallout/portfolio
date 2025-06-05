@@ -4,6 +4,7 @@
 	import { CodePen, ProjectorScreen } from '$lib/assets/icons/icons';
 	import ProjectList from '$sections/project/ProjectList.svelte';
 	import SnippetList from '$sections/project/SnippetList.svelte';
+	import VideoDemoList from '$sections/project/VideoDemoList.svelte';
 	import SectionTitle from '$sections/SectionTitle.svelte';
 
 	const breadcrumbs = [
@@ -35,6 +36,16 @@
 	</SectionTitle>
 
 	<ProjectList />
+</section>
+
+<section>
+	<SectionTitle sectionTitle="Web Animations">
+		{#snippet children({ sectionIcon })}
+			<ProjectorScreen {...sectionIcon} />
+		{/snippet}
+	</SectionTitle>
+
+	<VideoDemoList />
 </section>
 
 <section>

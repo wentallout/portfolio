@@ -1,7 +1,7 @@
 import { gsap } from 'gsap';
 
 export function tooltip(node, options = {}) {
-	const { offset = 20, position = 'top', text = '' } = options;
+	const { offset = 40, position = 'top', text = '' } = options;
 
 	// Create tooltip element
 	const tooltipEl = document.createElement('div');

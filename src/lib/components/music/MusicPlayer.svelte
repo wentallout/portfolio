@@ -13,7 +13,6 @@
 	import { onMount } from 'svelte';
 	import { Sound } from 'svelte-sound';
 	import { slide } from 'svelte/transition';
-	import { playSound } from '$lib/stores/soundStore.svelte';
 
 	// Create component-specific sounds
 	const switchSound = new Sound('/sounds/click.mp3', { volume: 0.4 });

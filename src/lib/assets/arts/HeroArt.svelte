@@ -1,20 +1,10 @@
-<script>
-	import { svgPathDraw } from '$lib/actions/gsapAnimation';
-</script>
-
 <div class="hero__visual">
 	<svg
 		fill="none"
 		height="379"
 		viewBox="0 0 538 379"
 		width="538"
-		xmlns="http://www.w3.org/2000/svg"
-		use:svgPathDraw={{
-			duration: 2,
-			scrollTrigger: false, // Disable scroll trigger for hero section
-			stagger: 1.5,
-			strokeColor: 'var(--color-text)'
-		}}>
+		xmlns="http://www.w3.org/2000/svg">
 		<path d="M211.25 192.3H150.97V233.11H211.25V192.3Z" fill="var(--color-bg-layout)" />
 		<path
 			d="M211.25 233.85H150.97C150.771 233.85 150.58 233.771 150.44 233.63C150.299 233.49 150.22 233.299 150.22 233.1V192.3C150.22 192.101 150.299 191.91 150.44 191.77C150.58 191.629 150.771 191.55 150.97 191.55H211.25C211.449 191.55 211.64 191.629 211.78 191.77C211.921 191.91 212 192.101 212 192.3V233.11C211.997 233.307 211.917 233.495 211.777 233.634C211.636 233.772 211.447 233.85 211.25 233.85ZM151.72 232.35H210.5V193.05H151.72V232.35Z"
