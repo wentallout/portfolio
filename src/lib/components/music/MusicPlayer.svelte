@@ -1,4 +1,4 @@
-<script>
+<!-- <script>
 	import MusicVisualizer from '$components/music/MusicVisualizer.svelte';
 	import {
 		Download,
@@ -11,7 +11,6 @@
 	} from '$lib/assets/icons/icons';
 	import { audioPlayerEl, formatMusicTime, isPlaying, musicList } from '$lib/stores/musicStore.js';
 	import { onMount } from 'svelte';
-	import { Sound } from 'svelte-sound';
 	import { slide } from 'svelte/transition';
 
 	// Create component-specific sounds
@@ -379,4 +378,4 @@
 			scale: 1.2;
 		}
 	}
-</style>
+</style> -->
