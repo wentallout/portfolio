@@ -1,5 +1,5 @@
 <script>
-	import { page } from '$app/stores';
+	import { page } from '$app/state';
 	import HeaderLogo from '$components/layout/header/HeaderLogo.svelte';
 	import { theme } from '$lib/stores/themeStore.js';
 	import { fade } from 'svelte/transition';
@@ -7,7 +7,7 @@
 	let showCover = $state(false);
 
 	$effect(() => {
-		if ($page.url.pathname === '/') {
+		if (page.url.pathname === '/') {
 			showCover = true;
 		} else {
 			showCover = false;

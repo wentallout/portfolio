@@ -1,0 +1,65 @@
+---
+title: NVAULT - modern NFT marketplace
+date: 2025-03-19
+---
+
+<script>
+   
+import Image from '$components/common/Image.svelte';
+
+import nv1 from '$lib/assets/images/projects/nvault/nv1.png';
+import nv2 from '$lib/assets/images/projects/nvault/nv2.png';
+import nv3 from '$lib/assets/images/projects/nvault/nv3.png';
+import nv4 from '$lib/assets/images/projects/nvault/nv4.png';
+import nv5 from '$lib/assets/images/projects/nvault/nv5.png';
+
+</script>
+
+## Demo
+
+[Demo](https://nvault.netlify.app)
+
+[Source Code](https://github.com/wentallout/nvault)
+
+## What is this?
+
+NVault is a modern website using the latest web technologies. It's a fully functional NFT marketplace featuring smooth animations and responsive design.
+
+
+## Tech
+
+- Adapt to both dark and light theme.
+- Built with SvelteKit 2 (latest version) and TypeScript
+- Custom animation system using GSAP, including:
+- Matrix-style text decode effects
+- Scroll-triggered animations
+- Smooth page transitions
+- Fully responsive design that works across all devices
+- Complete test suite with Vitest and Playwright
+- Production-ready with Netlify deployment.
+
+
+## Desktop
+
+### Home 
+
+<Image src={nv1}/>
+
+### Product list
+
+<Image src={nv2}/>
+
+### Product Detail
+
+<Image src={nv3}/>
+
+### About
+
+<Image src={nv4}/>
+
+### Contact
+
+<Image src={nv5}/>
+
+## Mobile
+

@@ -1,7 +1,7 @@
 <script>
 	import { Star } from '$lib/assets/icons/icons';
-	import ProjectList from '$sections/project/ProjectList.svelte';
-	import SectionTitle from '$sections/SectionTitle.svelte';
+	import SectionTitle from '$sections/layout/SectionTitle.svelte';
+	import ProjectList from '$sections/projects/ProjectList.svelte';
 </script>
 
 <section>

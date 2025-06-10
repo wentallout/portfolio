@@ -1,6 +1,7 @@
+<!-- @migration task: review uses of `navigating` -->
 <script>
 	import NProgress from 'nprogress';
-	import { navigating } from '$app/stores';
+	import { navigating } from '$app/state';
 	import 'nprogress/nprogress.css';
 
 	NProgress.configure({
@@ -12,10 +13,10 @@
 	});
 
 	$effect(() => {
-		if ($navigating) {
+		if (navigating) {
 			NProgress.start();
 		}
-		if (!$navigating) {
+		if (!navigating) {
 			NProgress.done();
 		}
 	});

@@ -2,7 +2,7 @@
 	import PageTitle from '$components/common/PageTitle.svelte';
 	import MusicPlayer from '$components/music/MusicPlayer.svelte';
 	import { FileAudio, MusicNotes } from '$lib/assets/icons/icons';
-	import SectionTitle from '$sections/SectionTitle.svelte';
+	import SectionTitle from '$sections/layout/SectionTitle.svelte';
 	import { SoundCloud } from 'sveltekit-embed';
 </script>
 

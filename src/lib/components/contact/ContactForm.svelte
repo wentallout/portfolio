@@ -14,7 +14,7 @@
 		Phone,
 		User
 	} from '$lib/assets/icons/icons';
-	import SectionTitle from '$sections/SectionTitle.svelte';
+	import SectionTitle from '$sections/layout/SectionTitle.svelte';
 	import { slide } from 'svelte/transition';
 
 	import ContactInfo from './ContactInfo.svelte';

@@ -1,11 +1,11 @@
 <script>
-	import { page } from '$app/stores';
+	import { page } from '$app/state';
 	import PrimaryButton from '$components/button/PrimaryButton.svelte';
 	import { House } from '$lib/assets/icons/icons';
 
 	let customMessage = $state('');
 
-	switch ($page.status) {
+	switch (page.status) {
 		case 403:
 			customMessage =
 				"Sorry, you don't have permission to access this page. Please contact the website administrator for assistance.";
@@ -30,7 +30,7 @@
 <div class="error">
 	<div class="error__info">
 		<h1 class="status">
-			<div class="status__code text-3xl">{$page.status} {$page.error.message}</div>
+			<div class="status__code text-3xl">{page.status} {page.error.message}</div>
 		</h1>
 
 		<div class="detail text-small">

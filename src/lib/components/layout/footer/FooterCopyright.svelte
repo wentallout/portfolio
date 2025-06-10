@@ -2,6 +2,7 @@
 	import { VERSION } from '@sveltejs/kit';
 	import ExLink from '$components/common/ExLink.svelte';
 	import Badges from '$components/layout/footer/Badges.svelte';
+	import LogoSvelte from '$lib/assets/icons/LogoSvelte.svelte';
 	import { COPYRIGHT_ENTITY } from '$lib/constants/entities.js';
 
 	let currentYear = new Date().getFullYear();
@@ -14,12 +15,13 @@
 		{currentYear} Nguyen Dang Khoa (wentallout), All Rights Reserved.
 	</div>
 
-	<div class="end__text">
-		Made by Khoa with
-		<a href="https://svelte.dev" target="_blank">
-			<span class="end__svelte">SvelteKit {VERSION}</span>
-		</a>
-	</div>
+	<ExLink ariaLabel="SvelteKit" href="https://kit.svelte.dev">
+		<div class="end__text env__text--svelte">
+			<div class="">Made by Khoa with</div>
+			<LogoSvelte />
+			<div class="">{VERSION}</div>
+		</div>
+	</ExLink>
 </div>
 
 <style>
@@ -29,15 +31,20 @@
 		justify-content: space-between;
 		align-items: center;
 		flex-wrap: wrap;
+		font-weight: 300;
 	}
 	.end__text {
 		user-select: none;
 		margin-top: var(--space-small);
-		color: var(--color-text-secondary);
+		color: var(--color-text-tertiary);
+		display: flex;
+		flex-direction: row;
+		flex-wrap: nowrap;
+		align-items: center;
+		gap: 1ch;
 	}
 
-	.end__svelte {
+	.env__text--svelte {
 		color: var(--color-svelte);
-		font-weight: 600;
 	}
 </style>

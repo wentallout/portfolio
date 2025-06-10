@@ -2,7 +2,7 @@
 	import SaosContainer from '$components/common/SaosContainer.svelte';
 	import PrincipleArt from '$lib/assets/arts/PrincipleArt.svelte';
 	import { Scales } from '$lib/assets/icons/icons';
-	import SectionTitle from '$sections/SectionTitle.svelte';
+	import SectionTitle from '$sections/layout/SectionTitle.svelte';
 </script>
 
 <section>

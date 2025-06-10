@@ -4,7 +4,7 @@
 	import AbTestingArt from '$lib/assets/arts/ABTestingArt.svelte';
 	import ResponsiveWebArt from '$lib/assets/arts/ResponsiveWebArt.svelte';
 	import { CalendarCheck, HandHeart } from '$lib/assets/icons/icons';
-	import SectionTitle from '$sections/SectionTitle.svelte';
+	import SectionTitle from '$sections/layout/SectionTitle.svelte';
 </script>
 
 <section>

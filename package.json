@@ -19,14 +19,9 @@
 		"format": "prettier --ignore-path .gitignore --write --plugin-search-dir=. .",
 		"ngrok": "ngrok http 4173",
 		"test": "npx playwright test",
-		"test:chrome": "npx playwright test --headed --browser=chromium",
-		"test:firefox": "npx playwright test --headed --browser=firefox",
-		"test:safari": "npx playwright test --headed --browser=webkit",
-		"test:mobile": "npx playwright test --project='Mobile Chrome' --project='Mobile Safari'",
 		"test:debug": "npx playwright test --debug",
 		"test:ui": "npx playwright test --ui",
 		"test:report": "npx playwright show-report",
-		"test:runner": "node run-tests.js",
 		"knip": "knip"
 	},
 	"devDependencies": {

@@ -9,18 +9,16 @@
 	<ExLink ariaLabel="not by ai" href="https://notbyai.fyi">
 		<LogoNotAi />
 	</ExLink>
-	<ExLink ariaLabel="Vite" href="https://vitejs.dev/">
+
+	<ExLink ariaLabel="Netlify" href="https://netlify.com">
 		<img
 			class="badge__img"
-			alt="vite logo"
+			alt="built with netlify"
 			height="42"
 			loading="lazy"
-			src="/images/vite.svg"
-			title="vite logo"
+			src="/images/netlify.svg"
+			title="built with netlify"
 			width="auto" />
-	</ExLink>
-	<ExLink style="display:block" ariaLabel="SvelteKit" href="https://kit.svelte.dev">
-		<LogoSvelte height="42" width="100%" />
 	</ExLink>
 
 	<ExLink ariaLabel="Svelte Vietnam" href="https://www.sveltevietnam.dev">
@@ -33,49 +31,31 @@
 			title="svelte vietnam"
 			width="auto" />
 	</ExLink>
-
-	<ExLink ariaLabel="Netlify" href="https://netlify.com">
-		<img
-			class="badge__img"
-			alt="built with netlify"
-			height="42"
-			loading="lazy"
-			src="/images/netlify.svg"
-			title="built with netlify"
-			width="auto" />
-	</ExLink>
 </div>
 
 <style>
 	.badges {
-		width: 100%;
-
 		margin-bottom: var(--space-small);
-
 		display: grid;
-		grid-template-columns: 1fr 1fr;
-
-		border-top: 1px solid var(--color-border-secondary);
-		border-left: 1px solid var(--color-border-secondary);
+		grid-template-columns: auto auto;
 		overflow: visible;
-
-		border-radius: var(--border-radius);
+		align-items: start; /* or center or baseline */
+		justify-items: start;
+		max-width: fit-content;
+		gap: var(--space-xs);
 	}
 
 	@media (min-width: 768px) {
 		.badges {
-			grid-template-columns: 1fr 1fr 1fr 1fr;
+			grid-template-columns: auto auto auto;
 		}
 	}
 
 	:global(.badges > a) {
 		display: grid;
 		place-items: center;
-		border-bottom: 1px solid var(--color-border-secondary);
-		border-right: 1px solid var(--color-border-secondary);
-		padding: var(--space-small);
+		width: max-content;
 		overflow: visible;
-		border-radius: var(--border-radius);
 	}
 
 	.badge__img {

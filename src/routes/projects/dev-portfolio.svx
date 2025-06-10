@@ -1,0 +1,43 @@
+---
+title: Developer Portfolio
+date: 2023-10-07
+---
+
+<script>
+
+import homeDesktop from '$lib/assets/images/projects/dev-portfolio/homeDesktop.png';
+import projectsDesktop from '$lib/assets/images/projects/dev-portfolio/projectsDesktop.png';
+import contactDesktop from '$lib/assets/images/projects/dev-portfolio/contactDesktop.png';
+
+import homeMobile from '$lib/assets/images/projects/dev-portfolio/homeMobile.png';
+import projectsMobile from '$lib/assets/images/projects/dev-portfolio/projectsMobile.png';
+import contactMobile from '$lib/assets/images/projects/dev-portfolio/contactMobile.png';
+
+import color from '$lib/assets/images/projects/dev-portfolio/color.png';
+import typography from '$lib/assets/images/projects/dev-portfolio/typography.png';
+import other from '$lib/assets/images/projects/dev-portfolio/other.png';
+
+
+ import Image from '$components/common/Image.svelte';
+</script>
+
+## Design System
+
+<Image src={color} alt="Color" />
+<Image src={typography} alt="Typography" />
+<Image src={other} alt="Other" />
+
+## Desktop
+
+<Image src={homeDesktop} alt="Home (Desktop)" />
+<Image src={projectsDesktop} alt="Projects (Desktop)" />
+<Image src={contactDesktop} alt="Contact (Desktop)" />
+
+
+## Mobile
+
+<Image src={homeMobile} alt="Home (Mobile)" />
+<Image src={projectsMobile} alt="Projects (Mobile)" />
+<Image src={contactMobile} alt="Contact (Mobile)" />
+
+
