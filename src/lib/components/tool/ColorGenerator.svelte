@@ -1,7 +1,6 @@
 <script>
-	import { Wrench, Palette } from '$lib/assets/icons/icons';
-
-	import SectionTitle from '$sections/SectionTitle.svelte';
+	import { Palette, Wrench } from '$lib/assets/icons/icons';
+	import SectionTitle from '$sections/layout/SectionTitle.svelte';
 
 	let hue;
 	let saturation;

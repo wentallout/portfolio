@@ -6,7 +6,7 @@
 	import Footer from '$components/layout/footer/Footer.svelte';
 	import NavBar from '$lib/components/layout/header/NavBar.svelte';
 	import VideoCover from '$lib/components/layout/header/VideoCover.svelte';
-	import Misc from '$sections/Misc.svelte';
+	import Misc from '$sections/layout/Misc.svelte';
 	/** @type {{children?: import('svelte').Snippet}} */
 	let { children } = $props();
 
@@ -14,9 +14,9 @@
 	import { onMount } from 'svelte';
 </script>
 
-<!-- <svelte:head>
+<svelte:head>
 	<meta name="view-transition" content="same-origin" />
-</svelte:head> -->
+</svelte:head>
 
 <!-- <script nonce="%sveltekit.nonce%" async crossorigin="anonymous"
 		src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2238795577080818"></script> -->

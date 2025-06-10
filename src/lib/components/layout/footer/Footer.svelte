@@ -87,11 +87,7 @@
 						<ExLink href="mailto:wentallout@gmail.com">
 							<div class="nav-list__link">
 								<EnvelopeSimple />
-								<div class="">
-									<span>wentallout@</span>
-									<b class="obf">j</b>
-									<span>gmail.com</span>
-								</div>
+								<div class="">Email me</div>
 							</div>
 						</ExLink>
 					</li>
@@ -99,7 +95,7 @@
 						<ExLink href="tel:+84929066331">
 							<div class="nav-list__link">
 								<Phone />
-								+84 929066331
+								Call me
 							</div>
 						</ExLink>
 					</li>
@@ -148,6 +144,7 @@
 		max-width: 100vw;
 		width: 100%;
 		padding: var(--space-3xl) 0;
+		padding-bottom: 0;
 		/* --- */
 
 		overflow: hidden;

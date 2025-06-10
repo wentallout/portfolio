@@ -5,7 +5,7 @@
 	import NavigationArt from '$lib/assets/arts/NavigationArt.svelte';
 	import ProcessArt from '$lib/assets/arts/ProcessArt.svelte';
 	import { Toolbox } from '$lib/assets/icons/icons';
-	import SectionTitle from '$sections/SectionTitle.svelte';
+	import SectionTitle from '$sections/layout/SectionTitle.svelte';
 </script>
 
 <SaosContainer>

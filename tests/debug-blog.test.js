@@ -5,7 +5,7 @@ test.setTimeout(60000);
 
 test('debug blog page structure', async ({ page }) => {
   // Navigate to the blog page
-  await page.goto('/blog');
+  await page.goto('/blogs');
   
   // Take a screenshot of the page
   await page.screenshot({ path: 'blog-page.png' });

@@ -1,4 +1,4 @@
-import { getBlogSlugs } from '$lib/utils/blog.js';
+import { getBlogSlugs } from '$lib/utils/blogs.js';
 import { getProjectSlugs } from '$lib/utils/project.js';
 import * as sitemap from 'super-sitemap';
 
@@ -8,11 +8,11 @@ export const GET = async ({ params }) => {
 	let projectSlugs = await getProjectSlugs();
 
 	return await sitemap.response({
-		excludeRoutePatterns: ['/blog/category/*'],
+		excludeRoutePatterns: ['/blogs/category/*'],
 		origin: 'https://wentallout.io.vn',
 		page: params.page,
 		paramValues: {
-			'/blog/[slug]': blogSlugs,
+			'/blogs/[slug]': blogSlugs,
 			'/project/[slug]': projectSlugs
 		}
 	});

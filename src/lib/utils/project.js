@@ -1,5 +1,5 @@
 export const fetchMarkdownProjects = async () => {
-	const allProjectFiles = import.meta.glob('/src/routes/project/*.svx');
+	const allProjectFiles = import.meta.glob('/src/routes/projects/*.svx');
 
 	const iterableProjectFiles = Object.entries(allProjectFiles);
 

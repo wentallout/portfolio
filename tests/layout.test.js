@@ -21,10 +21,10 @@ test.describe('Layout and Common Elements', () => {
     expect(navLinks).toBeGreaterThan(0);
     
     // Click on a navigation link
-    await page.click('nav a[href="/blog"]');
+    await page.click('nav a[href="/blogs"]');
     
     // Check if we navigated to the correct page
-    await expect(page).toHaveURL(/\/blog/);
+    await expect(page).toHaveURL(/\/blogs/);
   });
 
   test('should have working footer', async ({ page }) => {

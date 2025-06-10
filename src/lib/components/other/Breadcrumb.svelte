@@ -1,11 +1,11 @@
 <script>
-	import { page } from '$app/stores';
+	import { page } from '$app/state';
 	import { CaretRight, House } from '$lib/assets/icons/icons';
 
 	let crumbs = $state([]);
 
 	$effect(() => {
-		const path = $page.url.pathname;
+		const path = page.url.pathname;
 
 		const segments = path.split('/').filter(Boolean);
 

@@ -33,7 +33,7 @@ Visit: [wentallout.io.vn](https://wentallout.io.vn)
 
 ## 🤩 What makes this special?
 
-A website made with SvelteKit is just incredibly fast even compared to other framework-based websites like React/Next/Vue and has great SEO out-of-the-box. You won't need a backend or CMS though, the blog posts are just markdown files you can store on your computer (see `routes/blog`).
+A website made with SvelteKit is just incredibly fast even compared to other framework-based websites like React/Next/Vue and has great SEO out-of-the-box. You won't need a backend or CMS though, the blog posts are just markdown files you can store on your computer (see `routes/blogs`).
 
 All imported images are automatically converted to `webp` and lazy loaded to optimize performance.
 
@@ -63,15 +63,14 @@ Visitors can also comment on your blogs using GitHub discussion (you might want 
 | page     | path      |
 | -------- | --------- |
 | Home     | /         |
-| Project  | /project  |
-| Blog     | /blog     |
-| Resource | /resource |
+| Projects | /projects |
+| Blogs    | /blogs    |
 | Contact  | /contact  |
 
 Slug
 
-- /project/`[slug]`
-- /blog/`[slug]`
+- /projects/`[slug]`
+- /blogs/`[slug]`
 
 ## Main Features
 
@@ -129,19 +128,17 @@ Slug
 - use `categories` (#hashtag) to filter blogs
 - multiple markdown-related plugins installed: `rehype` and `remark`
 
-⭐ Blog: Automatic Table of Contents
+⭐ Blogs: Automatic Table of Contents
 
-⭐ Blog: Code Highlight
+⭐ Blogs: Code Highlight [prism-themes](https://github.com/PrismJS/prism-themes)
 
-- Choose a theme: [prism-themes](https://github.com/PrismJS/prism-themes) then paste into `styles/prism.css`
+⭐ Blogs: Search, Pagination
 
-⭐ Blog: Search, Pagination
+⭐ Blogs: Categories/Tags
 
-⭐ Blog: Categories/Tags
+⭐ Blogs: Prev/Next Button
 
-⭐ Blog: Prev/Next Button
-
-⭐ Blog: Comment using [Giscus](https://giscus.app)
+⭐ Blogs: Comment using [Giscus](https://giscus.app)
 
 ## Background inspired by
 

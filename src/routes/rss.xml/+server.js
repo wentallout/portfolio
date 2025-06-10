@@ -7,7 +7,7 @@ import config from '$lib/config';
  * @return {Response} - a Response object containing the XML representation of the RSS feed
  */
 export async function GET({ fetch }) {
-	const response = await fetch('api/blog');
+	const response = await fetch('api/blogs');
 	const blogs = await response.json();
 
 	const headers = { 'Content-Type': 'application/xml' };

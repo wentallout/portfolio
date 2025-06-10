@@ -10,7 +10,7 @@ test('test browser', async ({ page }) => {
 
 test('should fetch and display blogs correctly', async ({ page }) => {
 	// Go to the blog page
-	await page.goto('http://localhost:3000/blog');
+	await page.goto('http://localhost:3000/blogs');
 
 	// Check if there are any blog cards in the blog list container
 	const blogCards = await page.$$('.blog');

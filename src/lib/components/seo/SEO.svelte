@@ -27,23 +27,18 @@
 	let {
 		article = false,
 		slug,
-		path = '', // Add path to props with default empty string
 		breadcrumbs = [
 			{
 				name: 'Home',
 				slug: ''
 			},
 			{
-				name: 'Project',
-				slug: 'project'
+				name: 'Projects',
+				slug: 'projects'
 			},
 			{
-				name: 'Blog',
-				slug: 'blog'
-			},
-			{
-				name: 'Resource',
-				slug: 'resource'
+				name: 'Blogs',
+				slug: 'blogs'
 			},
 			{
 				name: 'Contact',
@@ -69,6 +64,7 @@
 			alt: defaultAlt,
 			url: defaultOgSquareImage
 		},
+		path = '', // Add path to props with default empty string
 		timeToRead = 0,
 		title = '',
 		twitterImage = {
@@ -154,5 +150,3 @@
 <Twitter {...twitterProps} />
 <OpenGraph {...openGraphProps} />
 <SchemaOrg {...schemaOrgProps} />
-
-

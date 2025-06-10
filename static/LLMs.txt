@@ -1,0 +1,49 @@
+# Block all major LLMs from using my website content for training
+
+User-Agent: GPTBot
+Disallow: /
+
+User-Agent: ChatGPT-User
+Disallow: /
+
+User-Agent: ClaudeBot
+Disallow: /
+
+User-Agent: anthropic-ai
+Disallow: /
+
+User-Agent: Google-Extended
+Disallow: /
+
+User-Agent: PerplexityBot
+Disallow: /
+
+User-Agent: MistralBot
+Disallow: /
+
+User-Agent: FacebookBot
+Disallow: /
+
+User-Agent: Bytespider
+Disallow: /
+
+User-Agent: Amazonbot
+Disallow: /
+
+User-Agent: AppleBot
+Disallow: /
+
+User-Agent: CoHereBot
+Disallow: /
+
+User-Agent: YouBot
+Disallow: /
+
+User-Agent: YandexBot
+Disallow: /
+
+User-Agent: Sogou
+Disallow: /
+
+User-Agent: Baiduspider
+Disallow: /
