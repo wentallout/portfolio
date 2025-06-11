@@ -108,7 +108,7 @@
 
 	.info {
 		display: grid;
-		gap: var(--space-small);
+		gap: var(--space-s);
 		grid-template-rows: 1fr 1fr 1fr;
 		grid-template-columns: auto 1fr;
 	}

@@ -16,7 +16,7 @@
 	.blinkies {
 		display: flex;
 		flex-wrap: wrap;
-		gap: var(--space-small);
+		gap: var(--space-s);
 		margin-bottom: var(--space-large);
 		justify-content: space-around;
 	}

@@ -49,7 +49,7 @@
 		flex-direction: row;
 		align-items: center;
 		border: 1px solid var(--color-border);
-		margin-bottom: var(--space-small);
+		margin-bottom: var(--space-s);
 		border-radius: var(--border-radius-lighter);
 		background-color: var(--color-bg-layout);
 	}

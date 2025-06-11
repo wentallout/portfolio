@@ -100,13 +100,13 @@
 	}
 
 	.hero__text {
-		margin-bottom: var(--space-small);
+		margin-bottom: var(--space-s);
 		text-wrap: pretty;
 		max-width: 65ch;
 
 		display: flex;
 		flex-direction: column;
-		gap: var(--space-small);
+		gap: var(--space-s);
 	}
 
 	.hero__btn {
@@ -114,7 +114,7 @@
 		width: 100%;
 		display: flex;
 		flex-direction: row;
-		gap: var(--space-small);
+		gap: var(--space-s);
 		flex-wrap: wrap;
 	}
 </style>

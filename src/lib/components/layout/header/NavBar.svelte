@@ -188,7 +188,7 @@
 	}
 
 	.item {
-		padding: var(--space-small);
+		padding: var(--space-s);
 		display: flex;
 		justify-content: center;
 		align-items: center;

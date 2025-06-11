@@ -44,7 +44,7 @@
 		gap: var(--space-mid);
 		/*  */
 
-		margin-bottom: var(--space-small);
+		margin-bottom: var(--space-s);
 		position: relative;
 	}
 
@@ -53,14 +53,14 @@
 		justify-content: center;
 		align-items: center;
 		position: relative;
-		font-size: 0.8em;
+		font-size: 0.7em;
 	}
 	.section__icon::before {
 		content: '';
 		background: url('/images/brush-circle.svg') no-repeat center / contain;
-		width: 180%;
-		height: 180%;
-		opacity: 0.2;
+		width: 170%;
+		height: 170%;
+		opacity: 0.1;
 
 		position: absolute;
 		top: 50%;

@@ -31,6 +31,7 @@ import MagnifyingGlass from '~icons/ph/magnifying-glass';
 import MagnifyingGlassMinus from '~icons/ph/magnifying-glass-minus';
 import MagnifyingGlassPlus from '~icons/ph/magnifying-glass-plus';
 import MapPin from '~icons/ph/map-pin';
+import MonitorPlay from '~icons/ph/monitor-play';
 import Moon from '~icons/ph/moon';
 import MusicNotes from '~icons/ph/music-notes';
 import Palette from '~icons/ph/palette';
@@ -89,6 +90,7 @@ export {
 	MagnifyingGlassMinus,
 	MagnifyingGlassPlus,
 	MapPin,
+	MonitorPlay,
 	Moon,
 	MusicNotes,
 	Palette,

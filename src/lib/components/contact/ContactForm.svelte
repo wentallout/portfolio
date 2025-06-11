@@ -109,6 +109,6 @@
 
 		display: flex;
 		flex-wrap: wrap;
-		gap: var(--space-small);
+		gap: var(--space-s);
 	}
 </style>

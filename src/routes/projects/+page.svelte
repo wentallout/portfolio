@@ -1,7 +1,7 @@
 <script>
 	import PageTitle from '$components/common/PageTitle.svelte';
 	import SEO from '$components/seo/SEO.svelte';
-	import { CodePen, ProjectorScreen } from '$lib/assets/icons/icons';
+	import { CodePen, MonitorPlay, ProjectorScreen } from '$lib/assets/icons/icons';
 	import SectionTitle from '$sections/layout/SectionTitle.svelte';
 	import ProjectList from '$sections/projects/ProjectList.svelte';
 	import SnippetList from '$sections/projects/SnippetList.svelte';
@@ -29,7 +29,7 @@
 <PageTitle pageTitle="Projects" />
 
 <section>
-	<SectionTitle sectionTitle="Projects">
+	<SectionTitle sectionTitle="Things I built">
 		{#snippet children({ sectionIcon })}
 			<ProjectorScreen {...sectionIcon} />
 		{/snippet}
@@ -41,7 +41,7 @@
 <section>
 	<SectionTitle sectionTitle="Web Animations">
 		{#snippet children({ sectionIcon })}
-			<ProjectorScreen {...sectionIcon} />
+			<MonitorPlay {...sectionIcon} />
 		{/snippet}
 	</SectionTitle>
 

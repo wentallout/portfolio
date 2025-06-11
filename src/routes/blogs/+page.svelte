@@ -200,6 +200,6 @@
 	}
 
 	.search-status p {
-		margin-top: var(--space-small);
+		margin-top: var(--space-s);
 	}
 </style>

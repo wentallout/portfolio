@@ -167,7 +167,7 @@
 		flex-direction: row;
 		flex-wrap: wrap;
 		gap: var(--space-mid);
-		margin-bottom: var(--space-small);
+		margin-bottom: var(--space-s);
 		color: var(--color-text-secondary);
 
 		& .info__section {

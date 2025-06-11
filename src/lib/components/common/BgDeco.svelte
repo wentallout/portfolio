@@ -80,7 +80,7 @@
 		background:
 			linear-gradient(to right, #4f4f4f2e 1px, transparent 1px),
 			linear-gradient(to bottom, #4f4f4f2e 1px, transparent 1px);
-		background-size: var(--space-small) var(--space-large);
+		background-size: var(--space-s) var(--space-large);
 		mask-image: radial-gradient(ellipse 70% 40% at 50% 0%, #000 35%, transparent 100%);
 		background-repeat: repeat;
 		height: 100dvh;

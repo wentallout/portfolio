@@ -35,7 +35,7 @@
 
 <style>
 	.badges {
-		margin-bottom: var(--space-small);
+		margin-bottom: var(--space-s);
 		display: grid;
 		grid-template-columns: auto auto;
 		overflow: visible;

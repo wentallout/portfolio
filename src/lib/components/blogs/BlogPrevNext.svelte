@@ -75,10 +75,10 @@
 	.prevnext__btn {
 		position: relative;
 		text-decoration: none !important;
-		padding: var(--space-xs) var(--space-small);
+		padding: var(--space-xs) var(--space-s);
 		transition: var(--transition);
 		display: flex;
-		gap: var(--space-small);
+		gap: var(--space-s);
 		flex-direction: column;
 		justify-content: flex-start;
 		align-items: flex-start;

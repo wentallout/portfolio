@@ -33,7 +33,7 @@
 	.social-links {
 		display: flex;
 		flex-wrap: wrap;
-		gap: var(--space-small);
+		gap: var(--space-s);
 		flex-direction: row;
 	}
 </style>

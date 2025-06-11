@@ -15,7 +15,7 @@ export function tooltip(node, options = {}) {
 		color: 'white',
 		fontSize: '14px',
 		opacity: '0',
-		padding: 'var(--space-small)',
+		padding: 'var(--space-s)',
 		pointerEvents: 'none',
 		position: 'fixed',
 		transform: 'translate(-50%, -50%) scale(0.9)',

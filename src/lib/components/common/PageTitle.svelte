@@ -30,7 +30,7 @@
 		justify-content: center;
 		align-items: center;
 		flex-direction: column;
-		gap: var(--space-small);
+		gap: var(--space-s);
 		/*  */
 
 		padding-top: var(--space-mid);
