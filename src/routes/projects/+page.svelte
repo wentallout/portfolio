@@ -29,7 +29,7 @@
 <PageTitle pageTitle="Projects" />
 
 <section>
-	<SectionTitle sectionTitle="Projects">
+	<SectionTitle sectionTitle="Things I built">
 		{#snippet children({ sectionIcon })}
 			<ProjectorScreen {...sectionIcon} />
 		{/snippet}

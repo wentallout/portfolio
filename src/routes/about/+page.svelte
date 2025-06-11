@@ -70,10 +70,10 @@
 
 	.about__info {
 		display: flex;
-		gap: var(--space-small);
+		gap: var(--space-s);
 		flex-direction: column;
 
-		padding-top: var(--space-small);
+		padding-top: var(--space-s);
 		padding-bottom: var(--space-xl);
 	}
 

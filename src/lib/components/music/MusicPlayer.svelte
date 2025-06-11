@@ -196,7 +196,7 @@
 	.player__btns {
 		display: grid;
 		grid-template-columns: 1fr;
-		gap: var(--space-small);
+		gap: var(--space-s);
 		margin-bottom: var(--space-mid);
 		width: 100%;
 	}
@@ -218,7 +218,7 @@
 	.player__volume {
 		display: flex;
 		align-items: center;
-		gap: var(--space-small);
+		gap: var(--space-s);
 	}
 
 	.info__current {
@@ -246,7 +246,7 @@
 		flex-direction: row;
 		align-items: center;
 		justify-content: space-between;
-		gap: var(--space-small);
+		gap: var(--space-s);
 		color: var(--color-white);
 		width: 100%;
 		margin-bottom: var(--space-mid);
@@ -258,7 +258,7 @@
 		flex-direction: column;
 		align-items: center;
 		width: 100%;
-		padding: var(--space-mid) var(--space-small);
+		padding: var(--space-mid) var(--space-s);
 	}
 
 	/* MUSIC PLAYER BUTTONS */
@@ -350,7 +350,7 @@
 		flex-wrap: wrap;
 		flex-direction: row;
 		align-items: center;
-		padding: var(--space-xs) var(--space-small);
+		padding: var(--space-xs) var(--space-s);
 	}
 
 	.song {

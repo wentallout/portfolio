@@ -21,7 +21,7 @@
 		font-family: inherit;
 		padding: var(--space-xs);
 		color: var(--color-text) !important;
-		margin-bottom: var(--space-small);
+		margin-bottom: var(--space-s);
 		background-color: transparent;
 		border: 1px solid var(--color-border);
 

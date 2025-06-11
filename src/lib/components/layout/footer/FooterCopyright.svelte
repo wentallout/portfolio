@@ -35,7 +35,7 @@
 	}
 	.end__text {
 		user-select: none;
-		margin-top: var(--space-small);
+		margin-top: var(--space-s);
 		color: var(--color-text-tertiary);
 		display: flex;
 		flex-direction: row;

@@ -91,7 +91,7 @@
 		flex-direction: row;
 		justify-content: center;
 		align-items: center;
-		gap: var(--space-small);
+		gap: var(--space-s);
 		margin-bottom: var(--space-mid);
 		display: inline-block;
 		color: var(--color-text-secondary);

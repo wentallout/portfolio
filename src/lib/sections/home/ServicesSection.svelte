@@ -104,7 +104,7 @@
 	.service__thumbnail {
 		display: flex;
 		flex-direction: column;
-		gap: var(--space-small);
+		gap: var(--space-s);
 		align-items: center;
 		flex-grow: 0;
 	}
@@ -120,7 +120,7 @@
 	}
 
 	.service__title {
-		margin-bottom: var(--space-small);
+		margin-bottom: var(--space-s);
 		font-family: var(--font-fancy);
 	}
 

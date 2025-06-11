@@ -43,6 +43,4 @@
 	<PrinciplesSection />
 </SaosContainer>
 
-
-
 <GetInTouch />

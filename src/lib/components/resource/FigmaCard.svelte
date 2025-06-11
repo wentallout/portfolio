@@ -53,7 +53,7 @@
 
 	.fcard__info {
 		width: 100%;
-		padding: var(--space-2xs) var(--space-small);
+		padding: var(--space-2xs) var(--space-s);
 	}
 
 	.fcard__title {

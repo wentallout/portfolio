@@ -11,7 +11,7 @@
 	.blogs {
 		/* CUSTOM VALUE */
 		--min: 36ch;
-		--gap: var(--space-small);
+		--gap: var(--space-s);
 		/* --- */
 
 		/* SPACING */

@@ -4,6 +4,11 @@
 
 	let snippetList = [
 		{
+			desc: 'cool trendy glassy card',
+			href: 'https://codepen.io/kevinpowell/pen/XJJwaxG',
+			title: 'Frosted Glass Card'
+		},
+		{
 			desc: 'cool UI to compare 2 images',
 			href: 'https://codepen.io/wentallout/pen/wBvWOxG',
 			title: 'Compare component'

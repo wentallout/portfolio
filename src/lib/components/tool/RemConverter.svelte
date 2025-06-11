@@ -2,7 +2,7 @@
 	import Breadcrumb from '$components/other/Breadcrumb.svelte';
 	import { Copy, Wrench } from '$lib/assets/icons/icons';
 	import SectionTitle from '$sections/layout/SectionTitle.svelte';
-	SectionTitle
+	SectionTitle;
 	let baseFontSize = 16;
 	let pxInput = $state();
 	let remInput = $state();
@@ -95,7 +95,7 @@
 		display: flex;
 		flex-direction: row;
 		align-items: center;
-		gap: var(--space-small);
+		gap: var(--space-s);
 	}
 
 	.converter__input {
