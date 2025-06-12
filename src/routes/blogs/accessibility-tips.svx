@@ -7,7 +7,7 @@ categories:
 
 ## List of problems
 
-[](https://i.imgur.com/xoNg1eH.png)
+[a11y](https://i.imgur.com/xoNg1eH.png)
 
 
 ## The number of websites with basic WCAG violations is too high!

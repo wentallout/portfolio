@@ -51,7 +51,7 @@
 						<a href="/music">Music</a>
 					</li>
 					<li class="nav-list__link">
-						<a href="/resource/tool">REM Converter</a>
+						<a href="blogs/resource/tool">REM Converter</a>
 					</li>
 					<li class="nav-list__link">
 						<a href="https://www.realtimecolors.com">Color palette generator</a>

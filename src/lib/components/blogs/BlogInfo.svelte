@@ -54,6 +54,7 @@
 	}
 
 	import { page } from '$app/state';
+	import Sunset from '$lib/assets/icons/Sunset.svelte';
 </script>
 
 <header class="blog full-width">
@@ -104,9 +105,24 @@
 			start: 'top bottom' // Start when element comes into view
 		}}>
 	</div>
+
+	<div class="blog__deco2">
+		<Sunset />
+	</div>
 </header>
 
 <style>
+	.blog__deco2 {
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		z-index: -1;
+		opacity: 0.1;
+		width: 100vw;
+		height: 140px;
+		display: block;
+	}
+
 	.blog__deco {
 		width: 100%;
 		height: 100%;

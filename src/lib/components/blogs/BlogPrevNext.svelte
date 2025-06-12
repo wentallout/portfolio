@@ -1,9 +1,9 @@
-<script lang="ts">
+<script>
 	import { page } from '$app/state';
 
-	let blogs: Array<{ path: string; meta: { title: string } }> = $state([]);
-	let prevBlog: { path: string; meta: { title: string } } | null = $state();
-	let nextBlog: { path: string; meta: { title: string } } | null = $state();
+	let blogs = $state([]);
+	let prevBlog = $state();
+	let nextBlog = $state();
 
 	// Fetch blogs once on component mount
 	let blogsLoaded = $state(false);
@@ -25,14 +25,14 @@
 
 		if (currentIndex > 0) {
 			prevBlog = {
-				path: blogs[currentIndex - 1].path,
-				meta: { title: blogs[currentIndex - 1].meta.title }
+				meta: { title: blogs[currentIndex - 1].meta.title },
+				path: blogs[currentIndex - 1].path
 			};
 		}
 		if (currentIndex >= 0 && currentIndex < blogs.length - 1) {
 			nextBlog = {
-				path: blogs[currentIndex + 1].path,
-				meta: { title: blogs[currentIndex + 1].meta.title }
+				meta: { title: blogs[currentIndex + 1].meta.title },
+				path: blogs[currentIndex + 1].path
 			};
 		}
 	});
