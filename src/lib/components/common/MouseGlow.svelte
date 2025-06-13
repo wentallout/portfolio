@@ -1,12 +1,12 @@
-<script>
+<script lang="ts">
 	import { onMount } from 'svelte';
 
 	let opacity = 0.1; // Opacity of the glow
 	let parentHeight;
 	let size = 100; // Size of the glow in pixels
-	let glowElement;
-	let parentElement;
-	const updateGlowPosition = (e) => {
+	let glowElement: HTMLElement;
+	let parentElement: HTMLElement;
+	const updateGlowPosition = (e: MouseEvent) => {
 		if (!parentElement) return;
 
 		parentHeight = parentElement.offsetHeight;
@@ -16,6 +16,7 @@
 		const y = e.clientY - rect.top;
 
 		glowElement.style.background = `radial-gradient(${size}px at ${x}px ${y}px, rgba(255, 255, 255, ${opacity}), transparent 80%)`;
+		glowElement.style.borderRadius = 'inherit';
 		glowElement.style.opacity = '1';
 	};
 

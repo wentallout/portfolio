@@ -1,108 +1,115 @@
-<!-- <script>
-	import { page } from '$app/state';
-	import { onMount } from 'svelte';
+<script>
+	/**
+	 * @typedef {Object} BlogLink
+	 * @property {string} slug
+	 * @property {string} title
+	 */
 
-	let blogs = $state([]);
-	let prevBlog = $state();
-	let nextBlog = $state();
-
-	// Fetch blogs once on component mount
-	let blogsLoaded = $state(false);
-
-	async function loadBlogs() {
-		const response = await fetch('/api/blogs');
-		blogs = await response.json();
-		blogsLoaded = true;
-	}
-
-	onMount(() => {
-		loadBlogs();
-	});
-
-	// Reactively update prevBlog and nextBlog when blogs or page changes
-	$effect(() => {
-		const currentPath = page.url.pathname;
-		const currentIndex = blogs.findIndex((blog) => blog.path === currentPath);
-
-		prevBlog = null;
-		nextBlog = null;
-
-		if (currentIndex > 0) {
-			prevBlog = {
-				meta: { title: blogs[currentIndex - 1].meta.title },
-				path: blogs[currentIndex - 1].path
-			};
-		}
-		if (currentIndex >= 0 && currentIndex < blogs.length - 1) {
-			nextBlog = {
-				meta: { title: blogs[currentIndex + 1].meta.title },
-				path: blogs[currentIndex + 1].path
-			};
-		}
-	});
+	/** @type {BlogLink | null | undefined} */
+	export let prev = undefined;
+	/** @type {BlogLink | null | undefined} */
+	export let next = undefined;
 </script>
 
-{#if blogsLoaded}
-	<div class="prevnext text-small">
-		{#if prevBlog}
-			<a class="prevnext__btn" href={prevBlog.path}>
-				<div class="prevnext__sign">← Previous</div>
-				<div class="prev__text prevnext__title">
-					{prevBlog.meta.title}
-				</div>
+{#if prev || next}
+	<nav class="blog-prev-next">
+		{#if prev}
+			<a class="prev-link" href={`/blogs/${prev.slug}`} rel="prev">
+				<span class="arrow">&larr;</span>
+				<span class="text">
+					<span class="label">Previous</span>
+					<span class="title">{prev.title}</span>
+				</span>
 			</a>
+		{:else}
+			<div class="placeholder"></div>
+			<!-- Empty div to maintain layout if only next exists -->
 		{/if}
 
-		{#if nextBlog}
-			<a class="prevnext__btn next" href={nextBlog.path}>
-				<div class="prevnext__sign">Next →</div>
-				<div class="next__text prevnext__title">
-					{nextBlog.meta.title}
-				</div>
+		{#if next}
+			<a class="next-link" href={`/blogs/${next.slug}`} rel="next">
+				<span class="text">
+					<span class="label">Next</span>
+					<span class="title">{next.title}</span>
+				</span>
+				<span class="arrow">&rarr;</span>
 			</a>
+		{:else}
+			<div class="placeholder"></div>
+			<!-- Empty div to maintain layout if only prev exists -->
 		{/if}
-	</div>
+	</nav>
 {/if}
 
-<style lang="postcss">
-	.prevnext {
-		--min: 16ch;
-		--gap: 0;
-		border: 1px solid var(--color-border);
-		display: grid;
-		grid-gap: var(--gap);
-		grid-template-columns: repeat(auto-fit, minmax(min(100%, var(--min)), 1fr));
-		overflow: hidden;
-		border-right: 0;
-		border-radius: var(--border-radius);
-	}
-	.prevnext__btn {
-		position: relative;
-		text-decoration: none !important;
-		padding: var(--space-xs) var(--space-s);
-		transition: var(--transition);
+<style>
+	.blog-prev-next {
 		display: flex;
-		gap: var(--space-s);
-		flex-direction: column;
-		justify-content: flex-start;
-		align-items: flex-start;
-		min-height: 132px;
-		border-right: 1px solid var(--color-border);
+		justify-content: space-between;
+		margin-top: 2rem;
+		margin-bottom: 1rem;
+		padding-top: 1rem;
+		border-top: 1px solid var(--color-border, #eee);
+	}
 
-		&:hover {
-			background-color: var(--color-bg-elevated);
-			color: var(--color-primary-hover);
-		}
+	.blog-prev-next a {
+		display: flex;
+		align-items: center;
+		text-decoration: none;
+		color: var(--color-text-link, #007bff);
+		padding: 0.5rem 1rem;
+		border: 1px solid var(--color-border-subtle, #ddd);
+		border-radius: 4px;
+		transition:
+			background-color 0.2s ease-in-out,
+			border-color 0.2s ease-in-out;
+		max-width: 48%; /* Ensure links don't overlap too much */
 	}
-	.prevnext__sign {
-		color: var(--color-text-secondary);
-		font-weight: 300;
-		font-size: var(--font-size-xs);
+
+	.blog-prev-next a:hover {
+		background-color: var(--color-background-hover, #f8f9fa);
+		border-color: var(--color-border-hover, #ccc);
 	}
-	.prevnext__title {
+
+	.prev-link .text {
+		margin-left: 0.5rem;
+		text-align: left;
+	}
+
+	.next-link .text {
+		margin-right: 0.5rem;
+		text-align: right;
+	}
+	.next-link {
+		margin-left: auto; /* Pushes next link to the right if prev is missing */
+	}
+
+	.arrow {
+		font-size: 1.5em;
+		line-height: 1;
+	}
+
+	.text {
+		display: flex;
+		flex-direction: column;
+	}
+
+	.label {
+		font-size: 0.8em;
+		color: var(--color-text-muted, #6c757d);
+		margin-bottom: 0.25rem;
+	}
+
+	.title {
 		font-weight: 500;
+		display: -webkit-box; /* For multiline ellipsis */
+		-webkit-line-clamp: 2;
+		-webkit-box-orient: vertical;
+		overflow: hidden;
+		text-overflow: ellipsis;
+		max-height: 2.8em; /* Approx 2 lines */
+		line-height: 1.4em;
 	}
-	.next {
-		align-items: flex-end;
+	.placeholder {
+		flex-basis: 48%; /* Occupy space similar to a link */
 	}
-</style> -->
+</style>

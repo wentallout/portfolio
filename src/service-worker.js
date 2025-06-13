@@ -1,9 +1,4 @@
 /// <reference types="@sveltejs/kit" />
-/// <reference no-default-lib="true"/>
-/// <reference lib="esnext" />
-/// <reference lib="webworker" />
-
-const sw = /** @type {ServiceWorkerGlobalScope} */ (/** @type {unknown} */ (self));
 import { build, files, version } from '$service-worker';
 
 // Create a unique cache name for this deployment
@@ -63,8 +58,7 @@ self.addEventListener('fetch', (event) => {
 				throw new Error('invalid response from fetch');
 			}
 
-			// Only cache successful responses to http/https requests
-			if (response.status === 200 && event.request.url.startsWith('http')) {
+			if (response.status === 200) {
 				cache.put(event.request, response.clone());
 			}
 
