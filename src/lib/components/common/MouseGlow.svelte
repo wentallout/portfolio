@@ -26,6 +26,7 @@
 	};
 
 	onMount(() => {
+		if (!parentElement) return;
 		parentElement = glowElement.parentElement;
 		parentElement.addEventListener('mousemove', updateGlowPosition);
 		parentElement.addEventListener('mouseleave', resetGlow);

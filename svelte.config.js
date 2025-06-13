@@ -9,7 +9,7 @@ import remarkSectionize from 'remark-sectionize';
 import { sveltePreprocess } from 'svelte-preprocess';
 import sequence from 'svelte-sequential-preprocessor';
 
-import cspDirectives from './csp-directives.mjs';
+// import cspDirectives from './csp-directives.mjs';
 
 // torch_eYAF6gD0idBcJcmEPVyxVRVmuAHTrcP9mV8s7vTl
 
@@ -25,10 +25,7 @@ const config = {
 			$sections: './src/lib/sections',
 			$styles: './src/styles'
 		},
-		csp: {
-			directives: cspDirectives,
-			mode: 'nonce'
-		},
+
 		env: {
 			dir: '.'
 		},
