@@ -1,15 +1,16 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
 
-	let opacity = 0.1; // Opacity of the glow
+	let opacity = 0.1;
 	let parentHeight;
-	let size = 100; // Size of the glow in pixels
+	let size = 100;
 	let glowElement: HTMLElement;
 	let parentElement: HTMLElement;
 	const updateGlowPosition = (e: MouseEvent) => {
 		if (!parentElement) return;
 
 		parentHeight = parentElement.offsetHeight;
+		parentElement.style.overflow = `hidden`;
 		size = parentHeight;
 		const rect = parentElement.getBoundingClientRect();
 		const x = e.clientX - rect.left;
