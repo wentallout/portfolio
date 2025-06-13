@@ -94,15 +94,6 @@
 			{/if}
 		{/if}
 	</div>
-	<div
-		class="blog__deco"
-		use:parallaxBg={{
-			end: 'bottom top', // End when element leaves viewport
-			scrubAmount: 1.5, // Smooth scrubbing
-			speed: 0.3, // Reduced speed
-			start: 'top bottom' // Start when element comes into view
-		}}>
-	</div>
 
 	<div class="blog__deco2">
 		<Sunset />
@@ -115,36 +106,9 @@
 		bottom: 0;
 		left: 0;
 		z-index: -1;
-		opacity: 0.1;
-		width: 100vw;
-		height: 140px;
-		display: block;
-	}
-
-	.blog__deco {
+		opacity: 0.05;
 		width: 100%;
-		height: 100%;
-		background-image: url('/images/old-house.avif');
-		background-repeat: no-repeat;
-		rotate: 360deg;
-		position: absolute;
-		left: 0;
-		bottom: 0;
-		z-index: -1;
-		opacity: 0.2;
-		filter: grayscale(1);
-		background-size: cover;
-		/* Changed initial background position to ensure full coverage */
-		background-position: 50% 50%;
-		will-change: transform, background-position;
-		transform: translateZ(0);
-		transition: filter 0.6s cubic-bezier(0.4, 0, 0.2, 1);
-		/* Added to ensure no gaps */
-		scale: 1.1;
-	}
-
-	.blog:hover .blog__deco {
-		filter: none;
+		height: 30%;
 	}
 
 	.blog__gradient {

@@ -4,7 +4,6 @@
 	import FeaturedProject from '$sections/home/Featured.svelte';
 	import GetInTouch from '$sections/home/GetInTouch.svelte';
 	import HeroSection from '$sections/home/HeroSection.svelte';
-	import MyClientsSection from '$sections/home/MyClientsSection.svelte';
 	import PrinciplesSection from '$sections/home/PrinciplesSection.svelte';
 	import Services from '$sections/home/ServicesSection.svelte';
 	import WhatIUseSection from '$sections/home/WhatIUseSection.svelte';
