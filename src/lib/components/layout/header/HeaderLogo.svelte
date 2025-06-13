@@ -1,6 +1,6 @@
 <script>
 	import { gsap } from 'gsap';
-	import TextPlugin from 'gsap/TextPlugin';
+	import TextPlugin from 'gsap/dist/TextPlugin';
 	import { onMount } from 'svelte';
 
 	let logoDeco = $state();
@@ -44,7 +44,16 @@
 		};
 
 		gsap.registerPlugin(TextPlugin);
-		typePhrase();
+		// Defer the animation slightly to allow LCP to paint first
+		const animationTimeout = setTimeout(() => {
+			typePhrase();
+		}, 100); // Adjust delay as needed, start small
+
+		return () => {
+			clearTimeout(animationTimeout);
+			// Consider adding GSAP cleanup if animations could still be running on unmount
+			// For instance, gsap.killTweensOf(logoDeco);
+		};
 	});
 </script>
 

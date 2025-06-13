@@ -1,5 +1,5 @@
 <script>
-	import { page } from '$app/stores';
+	import { page } from '$app/state';
 	import ThemeSwitcher from '$components/button/ThemeSwitcher.svelte';
 	import SocialButtons from '$components/layout/header/SocialButtons.svelte';
 	import VanishingHeader from '$components/layout/header/VanishingHeader.svelte';
@@ -33,7 +33,7 @@
 		<nav class="nav g-container" class:nav--scrolldown={scrollY > 0} aria-label="primary menu">
 			<ul class="navlist">
 				{#each navItems as navItem}
-					<li class="navlist__item" class:active-page={$page.url.pathname === `${navItem.path}`}>
+					<li class="navlist__item" class:active-page={page.url.pathname === `${navItem.path}`}>
 						<a class="item" href={navItem.path}>
 							{navItem.title}
 						</a>
@@ -66,7 +66,7 @@
 		{#each navItems as navItem}
 			<a
 				class="overlay-item text-xl"
-				class:active-page--mobile={$page.url.pathname === `${navItem.path}`}
+				class:active-page--mobile={page.url.pathname === `${navItem.path}`}
 				href={navItem.path}
 				onclick={closeNav}>
 				{navItem.title}

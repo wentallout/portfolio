@@ -67,7 +67,6 @@
 		<div class="blog__info text-small">
 			<div class="info__section">
 				<CalendarBlank height="20" width="20" />
-				Last updated:
 				{#if data.date}
 					<time>
 						{getDate(data.date)}
@@ -78,7 +77,6 @@
 			</div>
 			<div class="info__section">
 				<Pen height="20" width="20" />
-				Written by:
 				<ExLink href="https://www.linkedin.com/in/wentallout/">Dang Khoa (@wentallout)</ExLink>
 			</div>
 		</div>

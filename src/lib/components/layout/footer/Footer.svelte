@@ -17,7 +17,7 @@
 <footer class="footer text-small">
 	<FooterDeco />
 
-	<img class="footer__koi" alt="koi" src="/images/koi.svg" />
+	<img class="footer__koi" alt="koi" loading="lazy" src="/images/koi.svg" />
 
 	<div class="g-container">
 		<div class="footer__list">

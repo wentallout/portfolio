@@ -1,7 +1,7 @@
 import type { Handle } from '@sveltejs/kit';
 
 import { error, type RequestEvent } from '@sveltejs/kit';
-import { aj } from './lib/server/arcjet';
+// import { aj } from './lib/server/arcjet';
 
 export const handle: Handle = async ({ event, resolve }) => {
 	// Ignore routes that extend the Arcjet rules - they will call `.protect` themselves
@@ -12,10 +12,10 @@ export const handle: Handle = async ({ event, resolve }) => {
 	}
 
 	// Ensure every other route is protected with shield
-	const decision = await aj.protect(event);
-	if (decision.isDenied()) {
-		return error(403, 'Forbidden');
-	}
+	// const decision = await aj.protect(event);
+	// if (decision.isDenied()) {
+	// 	return error(403, 'Forbidden');
+	// }
 
 	const response = await resolve(event, {
 		preload: ({ type }) => {

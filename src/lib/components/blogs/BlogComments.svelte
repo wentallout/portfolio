@@ -12,7 +12,7 @@
 	}
 </script>
 
-<section>
+<!-- <section>
 	<Giscus
 		id="comments"
 		{category}
@@ -27,4 +27,4 @@
 		repoId="R_kgDOH5VoSQ"
 		strict="0"
 		theme="transparent_dark" />
-</section>
+</section> -->

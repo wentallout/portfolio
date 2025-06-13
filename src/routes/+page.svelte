@@ -39,6 +39,4 @@
 	<WhatIUseSection />
 </SaosContainer>
 
-
-
 <GetInTouch />

@@ -1,5 +1,6 @@
-<script>
+<!-- <script>
 	import { page } from '$app/state';
+	import { onMount } from 'svelte';
 
 	let blogs = $state([]);
 	let prevBlog = $state();
@@ -13,7 +14,10 @@
 		blogs = await response.json();
 		blogsLoaded = true;
 	}
-	loadBlogs();
+
+	onMount(() => {
+		loadBlogs();
+	});
 
 	// Reactively update prevBlog and nextBlog when blogs or page changes
 	$effect(() => {
@@ -101,4 +105,4 @@
 	.next {
 		align-items: flex-end;
 	}
-</style>
+</style> -->

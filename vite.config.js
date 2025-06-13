@@ -3,6 +3,7 @@ import { sveltekit } from '@sveltejs/kit/vite';
 // import { visualizer } from 'rollup-plugin-visualizer';
 import Icons from 'unplugin-icons/vite';
 import { imagetools } from 'vite-imagetools';
+import devtoolsJson from 'vite-plugin-devtools-json';
 
 /** @type {import('vite').UserConfig} */
 const config = {
@@ -24,7 +25,8 @@ const config = {
 					format: 'webp'
 				});
 			}
-		})
+		}),
+		devtoolsJson()
 
 		// ,
 		// visualizer({

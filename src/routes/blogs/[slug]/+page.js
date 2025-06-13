@@ -15,6 +15,7 @@ export async function load({ params }) {
 			title
 		};
 	} catch (err) {
+		console.log(err);
 		throw error(404);
 	}
 }

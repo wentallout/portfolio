@@ -22,7 +22,7 @@
 /* -------------------------------- Nprogress START */
 #nprogress .bar {
 	background: var(--color-primary) !important;
-	height: 3px !important;
+	height: 1px !important;
 }
 
 #nprogress .peg {

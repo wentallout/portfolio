@@ -1,15 +1,15 @@
 <!-- @migration task: review uses of `navigating` -->
 <script>
-	import NProgress from 'nprogress';
 	import { navigating } from '$app/state';
+	import NProgress from 'nprogress';
 	import 'nprogress/nprogress.css';
 
 	NProgress.configure({
+		easing: 'ease',
 		minimum: 0.1,
 		showSpinner: false,
-		trickle: true,
-		easing: 'ease',
-		speed: 500
+		speed: 500,
+		trickle: true
 	});
 
 	$effect(() => {
@@ -23,3 +23,9 @@
 </script>
 
 <div class=""></div>
+
+<style>
+	div {
+		display: none;
+	}
+</style>

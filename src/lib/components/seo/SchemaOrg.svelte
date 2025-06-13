@@ -1,5 +1,6 @@
 <script>
-	function generateEntityHash(entity) {
+	function generateEntityHash(entityInput) {
+		const entity = String(entityInput || ''); // Ensure input is a string, default to empty if null/undefined
 		let hash = 0;
 
 		if (entity.length === 0) {
@@ -9,7 +10,7 @@
 		for (let i = 0; i < entity.length; i++) {
 			const char = entity.charCodeAt(i);
 			hash = (hash << 5) - hash + char;
-			hash |= 0;
+			hash |= 0; // Convert to 32bit integer
 		}
 
 		return hash.toString();
@@ -208,19 +209,17 @@
 		schemaOrgBreadcrumbList,
 		...(article ? [schemaOrgArticle] : []),
 		schemaOrgPublisher
-	];
+	].filter((item) => item !== null && item !== undefined); // Filter out any null or undefined entities from the graph
+
 	const schemaOrgObject = {
 		'@context': 'https://schema.org',
 		'@graph': schemaOrgArray
 	};
-	let jsonLdString = JSON.stringify(schemaOrgObject);
-	let jsonLdScript = `
-		<script type="application/ld+json">
-			${jsonLdString}
-		${'<'}/script>
-	`;
+	const jsonLdString = JSON.stringify(schemaOrgObject);
 </script>
 
 <svelte:head>
-	{@html jsonLdScript}
+	<script type="application/ld+json">
+		{jsonLdString}
+	</script>
 </svelte:head>
