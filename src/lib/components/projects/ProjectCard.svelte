@@ -65,7 +65,7 @@
 
 	@media (min-width: 992px) {
 		.project {
-			grid-template-columns: 400px 1fr;
+			grid-template-columns: 320px 1fr;
 		}
 	}
 
@@ -83,9 +83,8 @@
 	}
 
 	.project__thumbnail img {
-		width: 100%;
-		height: 100%;
 		object-fit: cover;
+		height: 100%;
 		transition: var(--transition);
 	}
 

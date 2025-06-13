@@ -134,6 +134,7 @@
 	style:--glow-color={glowColor}
 	style:width
 	class="glass-btn"
+	aria-label={`button for ${label}`}
 	{type}>
 	<span bind:this={contentEl} class="glass-content">
 		{@render children?.()}

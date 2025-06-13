@@ -7,6 +7,3 @@
 <MarkdownContainer>
 	{@render children?.()}
 </MarkdownContainer>
-
-<style>
-</style>

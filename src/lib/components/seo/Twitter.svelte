@@ -1,12 +1,6 @@
 <script>
 	/** @type {{article?: boolean, author: any, twitterUsername: any, image: any, timeToRead?: number}} */
-	let {
-		article = false,
-		author,
-		twitterUsername,
-		image,
-		timeToRead = 0
-	} = $props();
+	let { article = false, author, image, timeToRead = 0, twitterUsername } = $props();
 
 	/*
 	 * When there is an equivalent og tag present, Twitter takes that so check OpenGraph before

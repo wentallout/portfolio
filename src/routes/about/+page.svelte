@@ -2,7 +2,7 @@
 	import PageTitle from '$components/common/PageTitle.svelte';
 	import Blinkies from '$components/other/Blinkies.svelte';
 	import { getKhoaAge } from '$lib/utils/time';
-	import MyClientsSection from '$sections/home/MyClientsSection.svelte';
+	import PrinciplesSection from '$sections/home/PrinciplesSection.svelte';
 </script>
 
 <PageTitle pageTitle="About Me" />
@@ -14,7 +14,7 @@
 			<ul>
 				<li>Khoa Nguyen. {getKhoaAge()} y/o.</li>
 				<li>Live and work in Ho Chi Minh City, Vietnam.</li>
-				<li>~2 years as a Freelance Web Developer/Designer. Extended UX knowledge.</li>
+				<li>Freelance Web Developer/Designer. Extended UX knowledge.</li>
 			</ul>
 		</div>
 	</div>
@@ -24,21 +24,6 @@
 		<div class="about__desc text-small">
 			My mission is to create products that simplify complex concepts and make technology accessible
 			to all.
-		</div>
-	</div>
-
-	<div class="about__info">
-		<h3 class="about__title text-large">Unique Value Proposition</h3>
-		<div class="about__desc text-small">
-			I am a flexible and chill person known for seamlessly integrating the latest web design trends
-			into my work.
-		</div>
-	</div>
-
-	<div class="about__info">
-		<h3 class="about__title text-large">Hobbies</h3>
-		<div class="about__desc text-small">
-			Coding, listening to music, gaming, looking at cool UI on behance for inspirations.
 		</div>
 	</div>
 
@@ -56,7 +41,7 @@
 		</div>
 	</div>
 
-	<MyClientsSection />
+	<PrinciplesSection />
 	<Blinkies />
 </section>
 

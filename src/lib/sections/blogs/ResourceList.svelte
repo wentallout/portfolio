@@ -1,7 +1,6 @@
 <script>
 	import PageTitle from '$components/common/PageTitle.svelte';
 	import { Books, BoundingBox, HardDrives } from '$lib/assets/icons/icons';
-	import BookList from '$sections/blogs/BookList.svelte';
 	import EssentialList from '$sections/blogs/EssentialList.svelte';
 	import OtherCardList from '$sections/blogs/OtherCardList.svelte';
 	import SectionTitle from '$sections/layout/SectionTitle.svelte';
@@ -17,7 +16,6 @@
 	<div class="list-container">
 		<OtherCardList />
 		<EssentialList />
-		<BookList />
 	</div>
 </section>
 

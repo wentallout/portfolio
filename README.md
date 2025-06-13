@@ -118,8 +118,6 @@ Slug
 
 ⭐ Working Contact Form (need Netlify setup)
 
-⭐ Increased Defense against attacks: bot projectection, SQL injection, Cross-site scripting and more; works better than Web Application Firewall (WAF) [Read more](https://docs.arcjet.com/shield/concepts)
-
 ---
 
 ## Blogging Features

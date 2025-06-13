@@ -16,6 +16,6 @@
 	<PostContainer>
 		<data.content />
 	</PostContainer>
-	<BlogPrevNext />
+	<BlogPrevNext prev={data.prevBlog} next={data.nextBlog} />
 	<Comments category="Blogs" />
 </article>

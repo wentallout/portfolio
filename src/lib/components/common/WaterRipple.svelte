@@ -78,7 +78,8 @@
 	.ripple-container {
 		position: relative;
 		width: 100%;
-		height: 100%;
+		/* height: 100%; */ /* Allow height to be determined by its content to prevent layout shifts */
+		/* If you need a specific height, ensure the parent of WaterRipple has a stable height, or set a min-height here. */
 	}
 
 	:global(.ripple) {

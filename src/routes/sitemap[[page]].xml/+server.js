@@ -1,5 +1,5 @@
 import { getBlogSlugs } from '$lib/utils/blogs.js';
-import { getProjectSlugs } from '$lib/utils/project.js';
+import { getProjectSlugs } from '$lib/utils/projects.js';
 import * as sitemap from 'super-sitemap';
 
 export const GET = async ({ params }) => {
@@ -13,7 +13,7 @@ export const GET = async ({ params }) => {
 		page: params.page,
 		paramValues: {
 			'/blogs/[slug]': blogSlugs,
-			'/project/[slug]': projectSlugs
+			'/projects/[slug]': projectSlugs
 		}
 	});
 };

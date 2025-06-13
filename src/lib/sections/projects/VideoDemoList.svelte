@@ -38,7 +38,13 @@
 <style>
 	.list {
 		display: grid;
-		grid-template-columns: 1fr 1fr;
+		grid-template-columns: 1fr;
 		gap: var(--space-mid);
+	}
+
+	@media (min-width: 992px) {
+		.list {
+			grid-template-columns: 1fr 1fr;
+		}
 	}
 </style>

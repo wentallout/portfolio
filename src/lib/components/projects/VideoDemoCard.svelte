@@ -19,7 +19,7 @@
 		</video>
 	</div>
 	<div class="vid__desc">
-		<h5 class="vid__title">{title}</h5>
+		<div class="vid__title">{title}</div>
 	</div>
 </a>
 

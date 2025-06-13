@@ -1,10 +1,11 @@
 const cspDirectives = {
+	'base-uri': ["'self'"],
 	'connect-src': [
 		"'self'",
 		'https://ep1.adtrafficquality.google',
 		'https://pagead2.googlesyndication.com'
 	],
-	'default-src': ["'self'", "'unsafe-inline'", 'https://ep1.adtrafficquality.google'],
+	'default-src': ["'self'", 'https://ep1.adtrafficquality.google'],
 	'form-action': ["'self'"],
 	'frame-ancestors': ["'self'"],
 	'frame-src': [
@@ -29,14 +30,14 @@ const cspDirectives = {
 	'manifest-src': ["'self'"],
 	'media-src': ["'self'", 'data:'],
 	'object-src': ["'none'"],
-	'report-to': ["'csp-endpoint'"],
+	// 'report-to': ["'csp-endpoint'"], // 'csp-endpoint' is not a valid keyword. Use with a Report-To header.
 	'script-src': [
 		"'self'",
-		"'unsafe-inline'",
+		// SvelteKit's nonce mechanism handles inline scripts
 		'https://pagead2.googlesyndication.com',
 		'https://ep2.adtrafficquality.google'
 	],
-	'style-src': ["'self'", "'unsafe-inline'"],
+	'style-src': ["'self'"], // SvelteKit's nonce mechanism should handle inline styles from components
 	'worker-src': ["'self'"]
 };
 
