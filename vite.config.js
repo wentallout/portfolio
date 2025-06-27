@@ -1,6 +1,5 @@
 // import { enhancedImages } from '@sveltejs/enhanced-img';
 import { sveltekit } from '@sveltejs/kit/vite';
-// import { visualizer } from 'rollup-plugin-visualizer';
 import Icons from 'unplugin-icons/vite';
 import { imagetools } from 'vite-imagetools';
 import devtoolsJson from 'vite-plugin-devtools-json';
@@ -11,7 +10,8 @@ const config = {
 		cssMinify: 'lightningcss'
 	},
 	css: {
-		transformer: 'lightningcss'
+		transformer: 'lightningcss',
+		
 	},
 
 	plugins: [
@@ -27,20 +27,7 @@ const config = {
 			}
 		}),
 		devtoolsJson()
-
-		// ,
-		// visualizer({
-		// 	emitFile: true,
-		// 	filename: 'stats.html'
-		// })
-	],
-
-	preview: {
-		port: '4000'
-	},
-	server: {
-		port: '3000'
-	}
+	]
 };
 
 export default config;
