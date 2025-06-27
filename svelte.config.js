@@ -17,7 +17,7 @@ import sequence from 'svelte-sequential-preprocessor';
 const config = {
 	extensions: ['.svelte', '.svx'],
 	kit: {
-		adapter: adapter({ edge: false }),
+		adapter: adapter({ edge: true, split: false }),
 		alias: {
 			$blogImages: './src/lib/assets/images/blogs',
 			$components: './src/lib/components',
