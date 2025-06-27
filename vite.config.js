@@ -10,7 +10,8 @@ const config = {
 		cssMinify: 'lightningcss'
 	},
 	css: {
-		transformer: 'lightningcss'
+		transformer: 'lightningcss',
+		
 	},
 
 	plugins: [
