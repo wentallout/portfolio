@@ -4,6 +4,7 @@
 	import AbTestingArt from '$lib/assets/arts/ABTestingArt.svelte';
 	import ResponsiveWebArt from '$lib/assets/arts/ResponsiveWebArt.svelte';
 	import { CalendarCheck, HandHeart, ThumbsUp } from '$lib/assets/icons/icons';
+	import { CAL_BOOKING_LINK } from '$lib/constants/personal';
 	import SectionTitle from '$sections/layout/SectionTitle.svelte';
 </script>
 
@@ -26,9 +27,11 @@
 				<li>👌 Great <strong>UX & accessibility</strong></li>
 				<li>🔧 Easy <strong>maintenance & scaling</strong></li>
 			</ul>
-			<PrimaryButton label="Book a call">
-				<ThumbsUp />
-			</PrimaryButton>
+			<a href={CAL_BOOKING_LINK}>
+				<PrimaryButton label="Book a call">
+					<ThumbsUp />
+				</PrimaryButton>
+			</a>
 		</div>
 
 		<div class="services-col">

@@ -5,6 +5,7 @@
 	import { tooltip } from '$lib/actions/tooltip';
 	import HeroVisual from '$lib/assets/arts/HeroArt.svelte';
 	import { CalendarCheck, ThumbsUp } from '$lib/assets/icons/icons';
+	import { CAL_BOOKING_LINK } from '$lib/constants/personal';
 	import { onMount } from 'svelte';
 
 	let focusIndex = 0;
@@ -34,7 +35,7 @@
 				</div>
 
 				<div class="hero__btn">
-					<a href="#services">
+					<a href={CAL_BOOKING_LINK}>
 						<div use:tooltip={{ position: 'top', text: 'Check out our services' }}>
 							<PrimaryButton label="Book a call">
 								<ThumbsUp />
