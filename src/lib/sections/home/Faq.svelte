@@ -57,7 +57,7 @@
 	}
 
 	.faq__art {
-		max-width: 500px;
+		max-width: 100dvw;
 	}
 
 	.faq__list {

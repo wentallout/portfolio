@@ -1,4 +1,4 @@
-<svg fill="none" height="409" viewBox="0 0 524 409" width="524" xmlns="http://www.w3.org/2000/svg">
+<svg fill="none" viewBox="0 0 524 409" xmlns="http://www.w3.org/2000/svg">
 	<path
 		d="M465.391 257.606L255.851 315.556L106.661 123.266L316.201 65.3162L465.391 257.606Z"
 		fill="var(--color-bg-layout)" />
@@ -378,3 +378,10 @@
 		d="M292.371 46.0262L289.731 61.3362L304.311 55.9662L292.371 46.0262Z"
 		fill="var(--color-bg-layout)" />
 </svg>
+
+<style>
+	svg {
+		width: 100%;
+		height: 100%;
+	}
+</style>
