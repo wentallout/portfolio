@@ -7,11 +7,13 @@ import devtoolsJson from 'vite-plugin-devtools-json';
 /** @type {import('vite').UserConfig} */
 const config = {
 	build: {
-		cssMinify: 'lightningcss'
+		cssMinify: 'lightningcss',
+		rollupOptions: {
+			external: ['@resvg/resvg-js']
+		}
 	},
 	css: {
-		transformer: 'lightningcss',
-		
+		transformer: 'lightningcss'
 	},
 
 	plugins: [
