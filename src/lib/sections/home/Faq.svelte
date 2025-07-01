@@ -58,6 +58,7 @@
 
 	.faq__art {
 		max-width: 100dvw;
+		overflow: hidden;
 	}
 
 	.faq__list {

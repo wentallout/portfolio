@@ -1,5 +1,4 @@
 <script>
-	import { onMount } from 'svelte';
 	import { browser } from '$app/environment';
 	import PrimaryButton from '$components/button/PrimaryButton.svelte';
 	import SecondaryButton from '$components/button/SecondaryButton.svelte';
@@ -17,34 +16,35 @@
 		User
 	} from '$lib/assets/icons/icons';
 	import SectionTitle from '$sections/layout/SectionTitle.svelte';
+	import { onMount } from 'svelte';
 	import { slide } from 'svelte/transition';
 
 	import ContactInfo from './ContactInfo.svelte';
-	
+
 	// Security state
 	let csrfToken = '';
 	let isSubmitting = false;
 	let submitMessage = '';
 	let submitError = '';
-	
+
 	// Form validation
 	let formErrors = {
-		name: '',
 		email: '',
-		message: ''
+		message: '',
+		name: ''
 	};
-	
+
 	// Get CSRF token on mount
 	onMount(async () => {
 		if (browser) {
 			try {
 				const response = await fetch('/contact', {
-					method: 'GET',
 					headers: {
-						'Accept': 'application/json'
-					}
+						Accept: 'application/json'
+					},
+					method: 'GET'
 				});
-				
+
 				if (response.ok) {
 					const data = await response.json();
 					csrfToken = data.csrfToken;
@@ -54,7 +54,7 @@
 			}
 		}
 	});
-	
+
 	// Form validation functions
 	function validateName(name) {
 		if (!name || name.trim().length < 2) {
@@ -65,7 +65,7 @@
 		}
 		return '';
 	}
-	
+
 	function validateEmail(email) {
 		const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 		if (!email || !emailRegex.test(email)) {
@@ -76,7 +76,7 @@
 		}
 		return '';
 	}
-	
+
 	function validateMessage(message) {
 		if (!message || message.trim().length < 10) {
 			return 'Message must be at least 10 characters long';
@@ -85,9 +85,7 @@
 			return 'Message must be less than 2000 characters';
 		}
 		// Check for suspicious content
-		const suspiciousPatterns = [
-			/<script/i, /javascript:/i, /vbscript:/i, /onload=/i, /onerror=/i
-		];
+		const suspiciousPatterns = [/<script/i, /javascript:/i, /vbscript:/i, /onload=/i, /onerror=/i];
 		for (const pattern of suspiciousPatterns) {
 			if (pattern.test(message)) {
 				return 'Message contains invalid content';
@@ -95,58 +93,57 @@
 		}
 		return '';
 	}
-	
+
 	// Handle form submission
 	async function handleSubmit(event) {
 		event.preventDefault();
-		
+
 		if (isSubmitting) return;
-		
+
 		const formData = new FormData(event.target);
 		const name = formData.get('name');
 		const email = formData.get('email');
 		const message = formData.get('message');
-		
+
 		// Validate form
 		formErrors = {
-			name: validateName(name),
 			email: validateEmail(email),
-			message: validateMessage(message)
+			message: validateMessage(message),
+			name: validateName(name)
 		};
-		
-		const hasErrors = Object.values(formErrors).some(error => error !== '');
+
+		const hasErrors = Object.values(formErrors).some((error) => error !== '');
 		if (hasErrors) {
 			submitError = 'Please fix the errors above';
 			return;
 		}
-		
+
 		isSubmitting = true;
 		submitError = '';
 		submitMessage = '';
-		
+
 		try {
 			// Add CSRF token to form data
 			if (csrfToken) {
 				formData.append('csrf_token', csrfToken);
 			}
-			
+
 			const response = await fetch('/contact', {
-				method: 'POST',
 				body: formData,
 				headers: {
 					'X-CSRF-Token': csrfToken
-				}
+				},
+				method: 'POST'
 			});
-			
+
 			const result = await response.json();
-			
+
 			if (response.ok) {
 				submitMessage = result.message || 'Thank you for your message!';
 				event.target.reset();
 			} else {
 				submitError = result.error || 'Failed to send message. Please try again.';
 			}
-			
 		} catch (error) {
 			console.error('Form submission error:', error);
 			submitError = 'Network error. Please check your connection and try again.';
@@ -166,55 +163,48 @@
 	</SectionTitle>
 
 	<div class="form-container">
-		<form name="contact" class="contact" on:submit={handleSubmit} data-netlify="true" method="post">
+		<form name="contact" class="contact" data-netlify="true" method="post" on:submit={handleSubmit}>
 			<input name="form-name" type="hidden" value="contact" />
 			{#if csrfToken}
 				<input name="csrf_token" type="hidden" value={csrfToken} />
 			{/if}
 
-			<TextInput 
-				name="name" 
-				label="Name" 
-				placeholder="John Doe" 
-				type="text"
+			<TextInput
+				name="name"
 				error={formErrors.name}
+				label="Name"
+				placeholder="John Doe"
 				required
-			>
+				type="text">
 				{#snippet icon()}
 					<span>
 						<User />
 					</span>
 				{/snippet}
 			</TextInput>
-			
-			<TextInput 
-				name="email" 
-				label="Email" 
-				placeholder="username@gmail.com" 
-				type="email"
+
+			<TextInput
+				name="email"
 				error={formErrors.email}
+				label="Email"
+				placeholder="username@gmail.com"
 				required
-			>
+				type="email">
 				{#snippet icon()}
 					<span>
 						<At />
 					</span>
 				{/snippet}
 			</TextInput>
-			
-			<TextArea 
-				name="message" 
-				label="Message" 
-				error={formErrors.message}
-				required
-			/>
+
+			<TextArea name="message" error={formErrors.message} label="Message" required />
 
 			{#if submitMessage}
 				<div class="success-message" transition:slide>
 					{submitMessage}
 				</div>
 			{/if}
-			
+
 			{#if submitError}
 				<div class="error-message" transition:slide>
 					{submitError}
@@ -222,15 +212,14 @@
 			{/if}
 
 			<div class="contact__btn">
-				<PrimaryButton 
-					label={isSubmitting ? 'Sending...' : 'Send message'}
+				<PrimaryButton
 					disabled={isSubmitting}
-					type="submit"
-				>
+					label={isSubmitting ? 'Sending...' : 'Send message'}
+					type="submit">
 					<PaperPlaneRight color="var(--color-black)" height="16" width="16" />
 				</PrimaryButton>
 
-				<SecondaryButton type="reset" disabled={isSubmitting}>
+				<SecondaryButton disabled={isSubmitting} type="reset">
 					<ArrowCounterClockwise color="var(--color-error)" height="16" width="16" />
 				</SecondaryButton>
 			</div>
@@ -268,7 +257,7 @@
 		flex-wrap: wrap;
 		gap: var(--space-s);
 	}
-	
+
 	.success-message {
 		padding: var(--space-s);
 		background-color: var(--color-success, #10b981);
@@ -276,7 +265,7 @@
 		border-radius: var(--border-radius);
 		margin-top: var(--space-s);
 	}
-	
+
 	.error-message {
 		padding: var(--space-s);
 		background-color: var(--color-error, #ef4444);
@@ -284,3 +273,4 @@
 		border-radius: var(--border-radius);
 		margin-top: var(--space-s);
 	}
+</style>

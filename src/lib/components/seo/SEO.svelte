@@ -2,7 +2,7 @@
 	import website from '$lib/config.js';
 	const {
 		author,
-		entity,
+
 		facebookAuthorPage,
 		facebookPage,
 		githubPage,
@@ -111,7 +111,7 @@
 		author,
 		breadcrumbs,
 		datePublished,
-		entity,
+
 		entityMeta,
 		facebookPage,
 		featuredImage,
