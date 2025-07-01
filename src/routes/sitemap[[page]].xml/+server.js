@@ -7,13 +7,15 @@ export const GET = async ({ params }) => {
 
 	let projectSlugs = await getProjectSlugs();
 
-	return await sitemap.response({
-		excludeRoutePatterns: ['/blogs/category/*'],
-		origin: 'https://wentallout.io.vn',
-		page: params.page,
-		paramValues: {
-			'/blogs/[slug]': blogSlugs,
-			'/projects/[slug]': projectSlugs
-		}
-	});
+	if (blogSlugs && projectSlugs) {
+		return await sitemap.response({
+			excludeRoutePatterns: ['/blogs/category/*'],
+			origin: 'https://wentallout.io.vn',
+			page: params.page,
+			paramValues: {
+				'/blogs/[slug]': blogSlugs,
+				'/projects/[slug]': projectSlugs
+			}
+		});
+	}
 };

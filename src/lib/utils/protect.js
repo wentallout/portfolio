@@ -13,14 +13,15 @@ const BLOCKED_USER_AGENTS = [/node/i, /python/i, /curl/i, /wget/i];
  */
 export function protectRequest(request) {
 	const userAgent = request.headers.get('user-agent') || '';
-	const ip = request.headers.get('x-forwarded-for') || request.headers.get('cf-connecting-ip') || 'unknown';
+	const ip =
+		request.headers.get('x-forwarded-for') || request.headers.get('cf-connecting-ip') || 'unknown';
 
 	// Block suspicious user agents
 	for (const pattern of BLOCKED_USER_AGENTS) {
 		if (pattern.test(userAgent)) {
 			return new Response(JSON.stringify({ error: 'Blocked: Suspicious user agent' }), {
-				status: 429,
-				headers: { 'Content-Type': 'application/json' }
+				headers: { 'Content-Type': 'application/json' },
+				status: 429
 			});
 		}
 	}
@@ -31,8 +32,8 @@ export function protectRequest(request) {
 	if (now - entry.start < RATE_LIMIT_WINDOW_MS) {
 		if (entry.count >= RATE_LIMIT_MAX_REQUESTS) {
 			return new Response(JSON.stringify({ error: 'Too many requests' }), {
-				status: 429,
-				headers: { 'Content-Type': 'application/json' }
+				headers: { 'Content-Type': 'application/json' },
+				status: 429
 			});
 		}
 		entry.count++;
