@@ -28,12 +28,6 @@ const config = {
 
 		env: {
 			dir: '.'
-		},
-
-		prerender: {
-			crawl: true,
-			entries: ['*'],
-			handleHttpError: 'warn'
 		}
 	},
 	preprocess: sequence([

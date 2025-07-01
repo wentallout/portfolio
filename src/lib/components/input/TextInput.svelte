@@ -1,7 +1,7 @@
 <script>
 	let {
 		autoSuggestList = [],
-		handleOnInput,
+
 		icon,
 		inputValue = '',
 		label,
@@ -27,7 +27,6 @@
 		{name}
 		class="input"
 		list={list || null}
-		oninput={handleOnInput}
 		{placeholder}
 		required
 		{type}

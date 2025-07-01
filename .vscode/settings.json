@@ -2,5 +2,6 @@
 	"svg.preview.background": "transparent",
 	"dotenv.enableAutocloaking": false,
 	"editor.formatOnSave": true,
-	"eslint.validate": ["javascript", "javascriptreact", "svelte"]
+	"eslint.validate": ["javascript", "javascriptreact", "svelte"],
+	"codium.codeCompletion.enable": true
 }

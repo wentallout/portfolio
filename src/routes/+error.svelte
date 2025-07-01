@@ -29,9 +29,11 @@
 
 <div class="error">
 	<div class="error__info">
-		<h1 class="status">
-			<div class="status__code text-3xl">{page.status} {page.error.message}</div>
-		</h1>
+		{#if page.error}
+			<h1 class="status">
+				<div class="status__code text-3xl">{page.status} {page.error.message}</div>
+			</h1>
+		{/if}
 
 		<div class="detail text-small">
 			{customMessage}
