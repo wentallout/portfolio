@@ -73,9 +73,7 @@
 		}
 	} = $props();
 
-	const socialImageUrl = path
-		? `${siteUrl}${path}/social-image`
-		: `${siteUrl}/default-social-image`;
+	
 
 	import OpenGraph from '$components/seo/OpenGraph.svelte';
 	import SchemaOrg from '$components/seo/SchemaOrg.svelte';
@@ -140,7 +138,7 @@
 	<link href={url} rel="canonical" />
 
 	<meta content={title} property="og:title" />
-	<meta content={socialImageUrl} property="og:image" />
+	
 	<meta content="1200" property="og:image:width" />
 	<meta content="630" property="og:image:height" />
 	<meta name="twitter:card" content="summary_large_image" />
