@@ -6,7 +6,7 @@ export const load = async ({ fetch, params }) => {
 	const blogs = allBlogs.filter((post) => post.meta.categories.includes(category));
 
 	return {
-		category,
-		blogs
+		blogs,
+		category
 	};
 };
