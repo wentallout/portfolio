@@ -48,9 +48,6 @@
 				<div class="list__title">Other</div>
 				<ul class="list__nav">
 					<li class="nav-list__link">
-						<a href="/music">Music</a>
-					</li>
-					<li class="nav-list__link">
 						<a href="blogs/resource/tool">REM Converter</a>
 					</li>
 					<li class="nav-list__link">
@@ -64,9 +61,6 @@
 					</li>
 					<li class="nav-list__link">
 						<a href="https://dnsrecords.io/wentallout.io.vn">DNS</a>
-					</li>
-					<li class="nav-list__link">
-						<a href="/privacy">Privacy Policy</a>
 					</li>
 				</ul>
 			</div>

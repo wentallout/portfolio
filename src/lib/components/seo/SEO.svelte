@@ -73,8 +73,6 @@
 		}
 	} = $props();
 
-	
-
 	import OpenGraph from '$components/seo/OpenGraph.svelte';
 	import SchemaOrg from '$components/seo/SchemaOrg.svelte';
 	import Twitter from '$components/seo/Twitter.svelte';
@@ -138,12 +136,11 @@
 	<link href={url} rel="canonical" />
 
 	<meta content={title} property="og:title" />
-	
+
 	<meta content="1200" property="og:image:width" />
 	<meta content="630" property="og:image:height" />
 	<meta name="twitter:card" content="summary_large_image" />
 	<meta name="twitter:title" content={title} />
-	<meta name="twitter:image" content={socialImageUrl} />
 </svelte:head>
 <Twitter {...twitterProps} />
 <OpenGraph {...openGraphProps} />
