@@ -1,11 +1,7 @@
 import { json } from '@sveltejs/kit';
 import { fetchMarkdownBlogs } from '$lib/utils/blogs.js';
-import { protectRequest } from '$lib/utils/protect.js';
 
 export const GET = async ({ request }) => {
-	const protection = protectRequest(request);
-	if (protection) return protection;
-
 	try {
 		const blogs = await fetchMarkdownBlogs();
 		const sortedBlogs = blogs.sort((a, b) => {
