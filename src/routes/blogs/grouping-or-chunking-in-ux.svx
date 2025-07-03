@@ -17,9 +17,3 @@ If I show you a washing machine and it has 100 buttons to do different functions
 
 SOLUTION: Group relevant controls together so they make sense to user
 
-
-![](https://i.imgur.com/MnMO1O6.png)
-
-![](https://i.imgur.com/vvIqOSA.png)
-
-![](https://i.imgur.com/frveFVe.png)
