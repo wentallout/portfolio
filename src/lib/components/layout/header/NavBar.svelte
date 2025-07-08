@@ -3,6 +3,7 @@
 	import ThemeSwitcher from '$components/button/ThemeSwitcher.svelte';
 	import SocialButtons from '$components/layout/header/SocialButtons.svelte';
 	import VanishingHeader from '$components/layout/header/VanishingHeader.svelte';
+	import LiquidGlass from '$components/other/LiquidGlass.svelte';
 	import { List, X } from '$lib/assets/icons/icons';
 	import { navItems } from '$lib/config.js';
 	import { onMount } from 'svelte';
@@ -23,6 +24,8 @@
 		const navigationHeight = headerEle.offsetHeight;
 		document.documentElement.style.setProperty('--scroll-padding', navigationHeight + 'px');
 	});
+
+	LiquidGlass;
 </script>
 
 <svelte:window bind:scrollY />
@@ -30,9 +33,10 @@
 <VanishingHeader duration="300ms" offset={50} tolerance={5}>
 	<header bind:this={headerEle} class="header">
 		<ThemeSwitcher />
+
 		<nav class="nav g-container" class:nav--scrolldown={scrollY > 0} aria-label="primary menu">
 			<ul class="navlist">
-				{#each navItems as navItem}
+				{#each navItems as navItem (navItem.path)}
 					<li class="navlist__item" class:active-page={page.url.pathname === `${navItem.path}`}>
 						<a class="item" href={navItem.path}>
 							{navItem.title}
@@ -41,6 +45,7 @@
 				{/each}
 			</ul>
 		</nav>
+
 		<button
 			class="hamburger"
 			class:nav--scrolldown={scrollY > 0}
@@ -63,7 +68,7 @@
 		<X color="var(--color-black)" height="32" width="32" />
 	</button>
 	<div class="overlay-content">
-		{#each navItems as navItem}
+		{#each navItems as navItem (navItem.path)}
 			<a
 				class="overlay-item text-xl"
 				class:active-page--mobile={page.url.pathname === `${navItem.path}`}
