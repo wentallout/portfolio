@@ -1,4 +1,6 @@
 <script>
+	import { serializeSchema } from '$lib/utils/seo';
+
 	function generateEntityHash(entityInput) {
 		const entity = String(entityInput || ''); // Ensure input is a string, default to empty if null/undefined
 		let hash = 0;
@@ -215,11 +217,11 @@
 		'@context': 'https://schema.org',
 		'@graph': schemaOrgArray
 	};
-	const jsonLdString = JSON.stringify(schemaOrgObject);
+
+	const jsonLdString = serializeSchema(schemaOrgObject);
 </script>
 
 <svelte:head>
-	<script type="application/ld+json">
-		{jsonLdString}
-	</script>
+	<!-- eslint-disable-next-line svelte/no-at-html-tags -->
+	{@html jsonLdString}
 </svelte:head>
