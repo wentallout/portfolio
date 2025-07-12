@@ -12,6 +12,14 @@
 } */
 
 @font-face {
+	font-family: 'BN Nightmare';
+	src: url($lib/fonts/BNNightmareRegular.woff2) format('woff2');
+	font-weight: normal;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
 	font-family: 'Gambarino-Regular';
 	font-display: swap;
 	font-style: normal;
@@ -48,6 +56,7 @@ pre code {
 :root {
 	--font-normal: 'InterVariable', 'Inter-fallback';
 	--font-fancy: 'Gambarino-Regular', 'Gambarino-Regular-fallback';
+	--font-nightmare: 'BN Nightmare';
 
 	/* FONT SIZE */
 	--font-size-xs: clamp(0.9rem, calc(0.9rem + -0.05vw), 0.92rem);

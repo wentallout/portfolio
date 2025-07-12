@@ -43,23 +43,23 @@
 		user-select: none;
 	}
 	.title__extra {
-		-webkit-text-stroke: 1.5px var(--color-text);
-		-webkit-text-fill-color: transparent;
+		/* -webkit-text-stroke: 1.5px var(--color-text);
+		-webkit-text-fill-color: transparent; */
 		font-size: 30vh;
 		position: absolute;
-		paint-order: stroke fill;
+		/* paint-order: stroke fill; */
 
 		position: absolute;
 		top: 50%;
 		left: 50%;
 		transform: translate(-50%, -50%);
 
-		font-family: var(--font-fancy);
-		opacity: 15%;
+		font-family: 'BN Nightmare';
+		opacity: 10%;
 		z-index: -2;
 		font-weight: 100;
-		letter-spacing: var(--tracking-tighter);
-
+		letter-spacing: var(--tracking-normal);
+		color: var(--color-text);
 		text-box: trim-both cap alphabetic;
 	}
 
@@ -94,7 +94,7 @@
 		background-position: center;
 		will-change: transform, background-position;
 		transform: translateZ(0);
-		opacity: 1;
+		opacity: 0.3;
 	}
 
 	:global([color-scheme='light'] .title__bg) {
