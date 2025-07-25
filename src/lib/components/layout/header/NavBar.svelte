@@ -24,8 +24,6 @@
 		const navigationHeight = headerEle.offsetHeight;
 		document.documentElement.style.setProperty('--scroll-padding', navigationHeight + 'px');
 	});
-
-	LiquidGlass;
 </script>
 
 <svelte:window bind:scrollY />
