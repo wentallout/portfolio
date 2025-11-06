@@ -1,0 +1,47 @@
+---
+title: New design tools you need to know in 2025 (because Adobe sucks)
+date: 2025-11-06
+categories:
+    - design
+---
+
+
+## Affinity by Canva
+
+very powerful
+
+https://www.affinity.studio/
+
+## Figma Weave
+
+connect nodes and build beautiful graphics
+
+## Mocku AI
+
+https://mocku.co
+
+## Motion Edu
+
+help you learn about motion design https://motion.zajno.com
+
+## Moonchild AI
+
+https://moonchild.ai/
+
+## Bento Grid
+
+https://bento-generator.com/
+
+## Opal by Google
+
+## Subframe 
+
+https://www.subframe.com/
+
+## Tight Studio 
+
+https://tight.studio
+
+
+
+
