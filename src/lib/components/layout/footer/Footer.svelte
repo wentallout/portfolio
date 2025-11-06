@@ -67,52 +67,39 @@
 
 			<div class="list">
 				<div class="list__title">Contact</div>
-				<ul class="list__nav">
-					<li>
-						<ExLink href="https://goo.gl/maps/GLt6uhYWwU91fXz49">
-							<div class="nav-list__link">
-								<MapPin />
-								Ho Chi Minh City, Vietnam
-							</div>
-						</ExLink>
-					</li>
-
+				<ul class="list__nav list__grid">
 					<li>
 						<ExLink href="mailto:wentallout@gmail.com">
 							<div class="nav-list__link">
-								<EnvelopeSimple />
-								<div class="">Email me</div>
+								<EnvelopeSimple height="40px" width="40px" />
 							</div>
 						</ExLink>
 					</li>
 					<li>
 						<ExLink href="tel:+84929066331">
 							<div class="nav-list__link">
-								<Phone />
-								Call me
+								<Phone height="40px" width="40px" />
 							</div>
 						</ExLink>
 					</li>
 					<li>
 						<ExLink href="https://www.linkedin.com/in/wentallout">
 							<div class="nav-list__link">
-								<LinkedinLogo />Linkedin
+								<LinkedinLogo height="40px" width="40px" />
 							</div>
 						</ExLink>
 					</li>
 					<li>
 						<ExLink href="https://www.instagram.com/wentallout/saved">
 							<div class="nav-list__link">
-								<InstagramLogo />
-								Instagram
+								<InstagramLogo height="40px" width="40px" />
 							</div>
 						</ExLink>
 					</li>
 					<li>
 						<ExLink href="https://github.com/wentallout">
 							<div class="nav-list__link">
-								<GitHubLogo />
-								GitHub
+								<GitHubLogo height="40px" width="40px" />
 							</div>
 						</ExLink>
 					</li>
@@ -228,5 +215,11 @@
 
 	:global([color-scheme='light'] .footer__koi) {
 		filter: invert(0);
+	}
+
+	.list__grid {
+		display: grid;
+		grid-template-columns: auto auto auto auto auto;
+		gap: var(--space-s);
 	}
 </style>

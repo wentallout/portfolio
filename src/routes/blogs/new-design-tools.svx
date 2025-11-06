@@ -1,5 +1,5 @@
 ---
-title: New design tools you need to know in 2025 (because Adobe sucks)
+title: New design tools you need to know in 2025
 date: 2025-11-06
 categories:
     - design
