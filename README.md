@@ -114,6 +114,8 @@ Slug
 
 ⭐ RSS
 
+⭐ [Haptics](https://haptics.lochie.me) (work in progress)
+
 ⭐ Working Contact Form (need Netlify setup)
 
 ---

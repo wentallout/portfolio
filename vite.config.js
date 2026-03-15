@@ -1,4 +1,4 @@
-// import { enhancedImages } from '@sveltejs/enhanced-img';
+
 import { sveltekit } from '@sveltejs/kit/vite';
 import Icons from 'unplugin-icons/vite';
 import { imagetools } from 'vite-imagetools';
@@ -29,7 +29,10 @@ const config = {
 			}
 		}),
 		devtoolsJson()
-	]
+	],
+	server: {
+		port: 1111
+	}
 };
 
 export default config;

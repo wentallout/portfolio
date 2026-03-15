@@ -37,7 +37,7 @@
 				<div class="hero__btn">
 					<a href={CAL_BOOKING_LINK}>
 						<div use:tooltip={{ position: 'top', text: 'Check out our services' }}>
-							<PrimaryButton label="Book a call">
+							<PrimaryButton hapticPattern="success" label="Book a call">
 								<ThumbsUp />
 							</PrimaryButton>
 						</div>
