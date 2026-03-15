@@ -1,0 +1,56 @@
+---
+title: The Art of Thinking Clearly (Part 5)
+date: '2023-04-12'
+categories:
+    - 'psychology'
+---
+
+## The deception of specific cases (Conjunction Fallacy)
+
+Sometimes our brains can be tricked into believing unlikely stories that sound plausible. For example, if we hear a story about a person named Chris who has worked in developing countries and has an MBA, we might think it's more likely that Chris works for a major bank and runs its Third World foundation. But actually, it's more likely that Chris just works for a major bank, without the extra detail. This is because our brains are naturally drawn to "harmonious" or "plausible" stories, even if they're not actually more likely. This happens because our intuitive thinking is quick and automatic, while our conscious thinking is slower and more logical. So, when making important decisions, it's important to be aware of our tendency to fall for convenient details and happy endings, and not to be swayed by extra conditions that might sound plausible but actually make something less likely to happen.
+
+## It's not what you say, but how you say it (Framing)
+
+Framing is how we say things and it can change how we feel about them. For example, if we say "the trashcan is full" versus "it would be great if you could empty the trash," it can make a difference in how someone reacts. Researchers found that people make different choices based on how options are presented, like saving lives versus deaths. Framing is also used in advertising and selling things, like focusing on certain features of a car instead of others. Even authors use framing to create suspense in stories. So, it's important to remember that how we say things matters and can change how we think about them.
+
+Another example: researchers presented a group of people with two kinds of meat, ‘99% fat free’ and ‘1% fat’, and asked them to choose which was healthier. Can you guess which they picked? Bingo: respondents ranked the first type of meat as healthier, even though both were identical. Next came the choice between ‘98% fat free’ and ‘1% fat’. Again, most respondents chose the first
+option – despite its higher fat content.
+
+## Why watching and waiting is torture (Action Bias)
+
+Sometimes when people have to make decisions quickly, they feel like they have to do something even if they're not sure what the best choice is. This is called the "action bias." It's like when soccer goalkeepers try to guess which way a player will kick the ball during a penalty shot, but often end up diving to the wrong side because they feel like they have to do something instead of just waiting in the middle. This happens in other situations too, like when police officers try to break up a fight or when doctors have to decide whether to prescribe medicine or wait and see. Our brains are wired to want to take action, but sometimes it's better to wait and think carefully before making a decision. So, it's important to remember that it's okay to take your time and think things through instead of feeling like you always have to do something right away.
+
+## Why you are either the solution - or the problem (Omission Bias)
+
+Sometimes, people think that not doing something bad is better than doing something bad, even if the results are the same. For example, if someone falls into a hole and could be saved if you call for help, but you don't, some people might feel less guilty than if they pushed someone into the hole. This is called the omission bias. It also happens when we decide not to do something that could help others, like not vaccinating our children even though it's safer for them and others. It's important to remember that both actions and inactions can have consequences, and we should make responsible choices to help others and not just avoid doing harm.
+
+## Don't blame me (Self-serving bias)
+
+Sometimes, people think they're really good at things when they do well, and they blame other things when they do badly. Like when a company has a good year, the boss says it's because of their great decisions. But if the company does badly, they blame things like the economy or other people. This is called the self-serving bias. We also do it with school grades or how our investments do in the stock market. It's like saying "I'm great when things go well, but it's not my fault when things go bad." But it's not always good to think this way, because it can cause problems. So, it's important to be honest with ourselves and ask others for feedback, even if it's not always what we want to hear.
+
+## Be careful what you wish for (Hedonic Treadmill)
+
+Sometimes we think that winning the lottery or getting a big house or car will make us really happy forever. But studies show that these things only make us happy for a short time, maybe a few months. After that, we go back to feeling the same as before. It's like when you get a new toy and you're really excited at first, but then you get used to it and it's not as fun anymore. The same thing happens with other things, like jobs or relationships. We also tend to think that bad things, like losing a friend or getting hurt, will make us sad forever. But usually, after a few months, we start to feel better again. So, it's important to remember that things and events can only make us happy or sad for a little while, and the most lasting happiness comes from doing things we love and spending time with people we care about.
+
+## Do not marvel at your existence (Self-Selection Bias)
+
+Sometimes we think we're unlucky because we notice bad things happening to us more than good things. Like when we're stuck in traffic or waiting in line, it feels like it happens a lot. But really, it's just because we spend more time in those situations.
+
+Also, sometimes we only notice things that support our ideas. Like if we complain about not enough men or women at work, it's because we're part of that group. And in elections, we usually vote for the winning party.
+
+This is called "self-selection bias." It can happen when we only ask certain people for their opinion, like sending a survey only to happy customers.
+
+It's important to remember that things may not always be as they seem, and we need to look at the whole picture.
+
+## Why experience can damage our judgement (Association Bias)
+
+Sometimes our brain connects things together even if they are not really related. Like how Kevin believes his green polka-dot boxer shorts are lucky because he wore them when he had successful presentations at work. Or how he bought an expensive engagement ring because the girl at the jewelry store was stunning. These connections can also happen with our health, like how Kevin worried about his check-ups on hot days because he had two health scares before on hot days. Sometimes these connections are not true, but they can affect our decisions and make us believe false things. It's important to be careful and only learn the right lessons from our experiences.
+
+## Be wary when things get off to a great start (Beginner's Luck)
+
+Sometimes people think that if they are lucky when they try something new, it means they are really good at it. But that's not always true. For example, if someone wins a game the first time they play, they might think they're really good at it, but it could just be luck. The same thing can happen with buying companies or investing in the stock market. If someone has success at first, they might think they're really smart, but it could just be luck. It's important to be careful and not get too confident based on just a few lucky experiences. Sometimes it's better to wait and see if the success continues before jumping to conclusions.
+
+## Sweet little lies (Cognitive Dissonance)
+
+Once upon a time, there was a fox who wanted to eat some grapes from a vine. He tried to reach them, but they were too high. He tried three times, but each time he failed. Instead of admitting he couldn't reach them, he said the grapes were sour and not tasty anyway. Just like when you buy a toy or lose a game, sometimes we try to convince ourselves that we didn't really want it or it wasn't that good. It's like when you say you didn't want a toy because it was too expensive or you didn't win a game because you didn't really like it. The fox and the grapes story teaches us that sometimes we make up excuses to feel better about ourselves when we can't get what we want.
+

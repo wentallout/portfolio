@@ -1,0 +1,79 @@
+---
+title: How to test your websites on every browsers
+date: 2024-04-24
+categories:
+    - frontend 
+    - test
+    - playwright
+---
+
+## Major browsers
+
+- Chrome (64%)
+- Safari (20%)
+- Firefox (4%)
+
+Browser compatibility issues arise due to the use of different rendering engines across browsers. While some browsers, like Brave and Microsoft Edge, utilize the Chromium engine (also used by Google Chrome), others, such as Firefox and Safari, employ their own engines (Gecko and WebKit, respectively). This necessitates testing for each browser, with Chrome and Firefox being available across platforms, unlike Safari, which is exclusive to macOS. This diversity poses challenges for users on Linux or Windows systems.
+
+## How to test
+
+You can use Playwright which is used for automated testing and has the ability to test every browser — this works because Playwright ships a binary for every browser including Chromium, Firefox and WebKit using their open source builds.
+
+This is also useful to have a clean browser testing environment without extensions that can cause interference.
+
+If you’re not familiar with the JavaScript ecosystem you’re going to need `Node.js` for the `npm` package manager.
+
+## How to setup
+
+```bash
+npm init -y
+```
+
+```bash
+npm i -D @playwright/test
+```
+
+```bash
+npx playwright install
+```
+
+Update `package.json`
+
+```json
+{
+  "scripts": {
+    "test:chrome": "npx playwright test --headed --browser=chromium",
+    "test:firefox": "npx playwright test --headed --browser=firefox",
+    "test:safari": "npx playwright test --headed --browser=webkit"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.22.1"
+  }
+}
+```
+
+Add a test
+
+```js
+//tests/browser.test.ts
+import { test } from '@playwright/test'
+
+test('test browser', async ({ page }) => {
+  // point this to wherever you want
+  await page.goto('http://localhost:3000/')
+
+  // keep browser open
+  await page.pause()
+})
+
+
+```
+
+```bash
+npm run test:safari
+```
+
+## Reference
+
+https://joyofcode.xyz/test-your-site-in-every-browser
+

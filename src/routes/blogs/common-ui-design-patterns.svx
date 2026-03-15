@@ -1,0 +1,33 @@
+---
+title: Common UI Design Patterns and more
+date: 2024-05-12
+categories:
+    - fundamental
+    - ui
+---
+
+## UI Design Pattern
+
+UI design patterns are reusable solutions to common design problems. They are standard reference points for designers and developers to solve recurring UI challenges. Here's a breakdown of some common UI design patterns:
+
+- `Navigation Menu`: This is a fundamental pattern for any website or application. It helps users find what they are looking for and includes patterns like top navigation, sidebar navigation, and hamburger menus on mobile sites.
+- `Input Forms`: These are used for data entry and include patterns such as form validation, field labels, and error messaging. The goal is to make the form as intuitive and easy to use as possible.
+- `Search`: This pattern includes a search box to allow users to enter keywords to find content. It may include auto-complete functionality to suggest possible searches.
+- `Grid Layout`: A grid layout organizes content into a clean, rigid grid structure, providing a consistent and easy-to-navigate experience.
+- `Carousels`: Carousels are used to cycle through elements, typically images, in a sliding manner. They are often used for highlighting featured content.
+- `Tabs`: Tabs allow for organizing content in a high-level way, making navigation more intuitive and content more easily accessible without scrolling.
+- `Breadcrumb Navigation`: This pattern provides a trail for the user to follow back to the starting or entry point and aids in navigation, especially in deeply nested sites.
+- `Cards`: Card design is a popular pattern for mobile and desktop interfaces, where pieces of content are presented in card-like formats. This is particularly effective for presenting a large amount of content in a compact form.
+- `Notifications`: These are used to provide feedback to the user, such as success or error messages, warnings, or alerts.
+- `Infinite Scroll`: A pattern where more content loads as the user scrolls down, which can be beneficial for content-heavy sites, although it has its drawbacks in certain contexts.
+- `Lazy Loading`: This pattern involves loading only the content that is visible to the user, which can significantly improve performance, particularly for image-heavy sites.
+- `Modal Windows`: These are secondary windows that open on top of the main interface without navigating away from the current page.
+They are often used for login forms, messages, or additional info.
+
+## Conclusion
+
+UI design patterns are a valuable resource for designers and developers, providing a common language and reference point for solving common UI challenges.
+
+## Learn more:
+
+UI Design Patterns: https://ui-patterns.com/patterns

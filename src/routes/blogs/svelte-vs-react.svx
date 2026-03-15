@@ -1,0 +1,34 @@
+---
+title: Svelte vs React in 2024 and why you should make the switch right now
+date: 2023-12-01
+categories:
+    - frontend 
+    - svelte
+    - react
+---
+
+## Problems people think they will have with Svelte
+
+Some folks dismiss Svelte because they think the ecosystem is smaller than React's. But that's not entirely true. While Svelte may have fewer UI component libraries, options like SkeletonUI, Flowbite Svelte, Svelte UI, and DaisyUI exist. Plus, if you don't find what you need, you can create your own Svelte UI library. The idea that Svelte's ecosystem is too small is often an overblown excuse.
+
+## FACT: React has always been horrible to work with
+
+### State Management
+
+In ReactJS, you have various state management options like `Redux Toolkit`, `Jotai`, `Zustand`, and `MobX`. In contrast, SvelteJS provides a built-in solution called svelte/store for lightweight state management. With Svelte, you don't need to search for external libraries; you can start building right away.
+
+### Styling
+
+In React, for scoped styling, options like CSS modules, styled-components, Emotion, and JSS are available. In Svelte, styling is built into the framework using the <style></style> block, making it seamless and eliminating the need for external libraries.
+
+### Transitions
+
+In React, you have choices like `React Transition Group`, `React Motion`, and `React Move` for transitions. In Svelte, there's no need for an external library because the framework provides a built-in transition API. Svelte simplifies things by handling these features out of the box.
+
+## React will waste your development time
+
+Svelte allows you to simply use any JavaScript libraries to build your dream project, React will force you to make a wrapper for that library. You're building things just so you can use that to build other things, you're wasting your time. Svelte allows you to go straight to what you want without any frictions. Why would you want to use React?
+
+## Reference
+
+https://hackmd.io/@roguegpu/r1RKQMdt3

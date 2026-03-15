@@ -1,0 +1,58 @@
+---
+title: Understanding UX and UI
+date: 2022-09-30
+categories:
+    - fundamental
+---
+
+<script>
+    import Image from '$components/common/Image.svelte';
+</script>
+
+## What does a UX Designer do?
+
+UX Design always puts users needs first when considering design solutions in order to enhance customer satisfaction.
+
+
+UX is short for "User Experience" and is the overall experience of a user using a product or interacting with a website. The focus is on making a good user experience, where interacting with a website is pleasing and easy. A good design, clear content, fast load times and nice interactions with appropriate animations are all part of a good user experience. In common usage, "the UX" of a site or app often refers to the design and interaction combined.
+
+- Defining a problem
+- Understanding users
+- Creating personas
+- Generating tasks & user flows
+- Creating sketches -> wireframes -> prototypes
+- Usability testing
+
+## What does a UI Designer do?
+
+UI Designers make products joyful to interact with. They focus on the visual hierarchy and patterns that give visual cues to users.
+
+- Typography
+- Color scheme
+- Iconography
+- Grids, Layout, Spacing
+- Buttons, Inputs & Forms
+
+## Things to remember
+
+View everything that you do as **PROBLEM SOLVING** -> Organize, Economize and Communicate.
+
+Design should serve **USER NEEDS**. Why are they here - and what do they need to do?
+
+Hierarchy is communicated **VISUALLY**. Visual priority = user priority.
+
+Information hierarchy is mainly created by **CONTRAST**. Always consider contrast before color.
+
+When in doubt, **ALIGN EVERYTHING**. Alignment creates order, flow and stability.
+
+Purposefully design all **NEGATIVE SPACE**. Give it more attention than UI elements.
+
+Primary elements should come **FORWARD**. Secondary elements should **RECEDE**. You should work to visually differentiate the two.
+
+Maximize **SIGNAL**. Minimize **NOISE**. Keep visual focus on what matters most.
+
+=> Remember that you're solving **VISUAL PROBLEMS**. Focus on that; great UX will take care of itself.
+
+
+
+

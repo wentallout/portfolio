@@ -1,0 +1,40 @@
+---
+title: 'UX Research and Frameworks'
+date: '2023-02-08'
+categories:
+    - 'ux'
+---
+
+## Guides
+
+- [Playbooks for UX Designers](https://askplaybook.com/)
+- [Usability Heuristic Frameworks](https://lnkd.in/ei7nb6Ug)
+- [Behavior Change Strategies](https://www.makeit.tools/)
+- [User Research Prioritization](https://lnkd.in/eArMRQnw)
+- [UX Methods Resource Kit](https://lnkd.in/eshvKWuK)
+- [Seer Framework](https://lnkd.in/eWvQTipj)
+- [Product Vision Mind Map](https://lnkd.in/eFJsAZXM)
+- [Product Prioritization Framework](https://lnkd.in/eQpHwjdQ)
+- [Sensible Futures Framework](https://lnkd.in/eCZ6P3VG)
+- [UX Research Templates](https://lnkd.in/eh_k_YYH)
+- [UX templates and frameworks](https://untools.co/)
+- [Design review meetings framework](https://lnkd.in/eG-GUv6a)
+
+## Research
+
+- [UX Research Cheat Sheet](https://www.nngroup.com/articles/ux-research-cheat-sheet)
+- [When to Use Which UX Research Methods](https://www.nngroup.com/articles/which-ux-research-methods)
+
+## Usability
+
+- [Usability Testing 101](https://www.nngroup.com/articles/usability-testing-101)
+- [Usability 101: Introduction to Usability](https://www.nngroup.com/articles/usability-101-introduction-to-usability)
+- [10 Usability Heuristics for User Interface Design](https://www.nngroup.com/articles/ten-usability-heuristics/)
+
+## Journey Mapping
+
+- [Journey Mapping 101](https://www.nngroup.com/articles/journey-mapping-101)
+
+## Empathy Mapping
+
+- [Empathy Mapping: The First Step in Design Thinking](https://www.nngroup.com/articles/empathy-mapping/)

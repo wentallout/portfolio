@@ -1,0 +1,20 @@
+---
+title: Should I Use a Button or a Link?
+date: 2023-11-10
+categories:
+    - a11y
+---
+
+## The answer
+
+Use an anchor element when you need to connect two resources, and one of the following needs to happen when the element is activated:
+
+- download the linked resource
+- change the browser focus to another part of the page
+- change the browser's location to another page
+
+Use a button element when you need enable a user to perform a programmable action, such as submitting a form or opening a dialog.
+
+## Reference
+
+https://ashleemboyer.com/blog/should-i-use-a-button-or-a-link

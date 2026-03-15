@@ -1,0 +1,161 @@
+---
+title: Modern CSS one-line that will make you a pro
+date: 2023-01-25
+categories:
+    - frontend
+---
+
+## Reference
+
+https://moderncss.dev/12-modern-css-one-line-upgrades/
+
+## aspect-ratio
+
+```css
+.aspect-ratio-hd {
+  aspect-ratio: 16/9;
+}
+
+.aspect-ratio-square {
+  aspect-ratio: 1;
+}
+```
+
+## object-fit
+
+While there are a few values available for object-fit, the following are the ones you’re most likely to use:
+
+`cover` - the image resizes to cover the element, and maintains its aspect-ratio so that the content is not distorted
+
+`scale-down` - the image resizes (if needed) within the element so that it is fully visible without being clipped and maintains its aspect-ratio, which may lead to extra space (”letterboxing”) around the image if the element has a different rendered aspect-ratio
+
+
+```css
+.image {
+  object-fit: cover;
+  aspect-ratio: 1;
+
+  /* Optional: constrain image size */
+  max-block-size: 250px;
+}
+```
+
+## margin-inline
+
+```css
+/* Before */
+margin-left: auto;
+margin-right: auto;
+
+/* After */
+margin-inline: auto;
+```
+
+## text-underline-offset
+
+```css
+a:not([class]) {
+	text-underline-offset: 0.25em;
+}
+```
+
+## outline-offset 
+
+```css
+.outline-offset {
+  outline: 2px dashed blue;
+  outline-offset: var(--outline-offset, .5em);
+}
+```
+
+## scroll-margin-top/bottom
+
+```css
+[id] {
+	scroll-margin-top: 2rem;
+
+    /* Update --scroll-margin with JS if needed */
+	scroll-margin-top: var(--scroll-margin, 2rem);
+}
+```
+
+
+## color-scheme
+
+If you’re enabling adapting your entire application, set the following on the :root, which says to preference a dark theme (or flip the order to preference a light theme).
+
+```css
+:root {
+	color-scheme: dark light;
+}
+
+```
+
+[Sara Joy - Easy dark mode with color-scheme](https://www.youtube.com/watch?v=Lye56NHGtLA)
+
+## accent-color 
+
+```css
+:root {
+  accent-color: mediumvioletred;
+}
+```
+
+
+## width: fit-content
+
+```css
+.fit-content {
+  width: fit-content;
+}
+```
+
+## overscroll-behavior
+
+```css
+.sidebar, .article {
+  overscroll-behavior: contain;
+}
+```
+
+## text-wrap
+
+One of the newest properties (as of 2023) is text-wrap, which has two values that solve the type-setting problem of unbalanced lines. This includes preventing “orphans,” which describes a lonely word sitting by itself in the last text line.
+
+The first available value is `balance`, which has a goal of evening out the number of characters per line of text.
+
+There is a limitation of **6** lines of wrapped text, so the technique is best used on headlines or other shorter text passages. Limiting the scope of application also helps limit the impact on page rendering speed.
+
+```css
+:is(h1, h2, h3, h4, .text-balance) {
+  text-wrap: balance;
+
+  /* For demonstration */
+  max-inline-size: 25ch;
+}
+```
+
+The other value of pretty specifically addresses preventing orphans and can be more broadly applied. The algorithm behind pretty will evaluate the last four lines in a text block to work out adjustments as needed to ensure the last line has two or more words.
+
+```css
+p {
+  text-wrap: pretty;
+
+  /* For demonstration */
+  max-inline-size: 35ch;
+}
+
+```
+
+
+## scrollbar-gutter
+
+```css
+scrollbar-gutter: stable both-edges
+```
+
+[Scrollbar gutter](https://defensivecss.dev/tip/scrollbar-gutter/)
+
+## More
+
+https://alvaromontoro.com/blog/68055/ten-css-one-liners-for-almost-every-project

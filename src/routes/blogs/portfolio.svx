@@ -1,0 +1,36 @@
+---
+title: Portfolio DOs and DONTs
+date: '2022-09-20'
+categories:
+    - 'tips'
+    - 'portfolio'
+---
+
+## DO
+
+- Make sure your portfolio is a custom responsive website, not a PDF or PNG. **Don't bother with Behance, Dribbble**
+- Show your work: Whiteboard, sketches, personas, task/process flows, wireframes, etc.
+- Show your low-fidelity: demonstrate the iteration, the thinking, not the final product. Show the cycles of assumption and validation.
+- Show you can write: simply and clearly. Don't use big words, jargon. Make sure you spellcheck everything.
+- Focus your narratives and case studies on the work you really want to be doing.
+
+## DON'T
+
+- Make a PDF portfolio -> people don't like downloading stuff.
+- Only show images of the final UI. This should be the last thing on your page.
+- Only show high-fidelity stuff.
+- Poor grammar, typos.
+- Spend too much time talking about technical skills: Illustrator, Photoshop, etc.
+
+## Some great examples
+
+https://www.youtube.com/shorts/zNZnXVamRfY
+
+- Hit people with your expertise using a cool headline: "Former e-commerce founder turned digital product designer with a degree in biology and neuroscience"
+
+
+
+## The Perfect Design Portfolio (FULL TRAINING)
+
+https://www.youtube.com/watch?v=jpb4mPhS9E4
+

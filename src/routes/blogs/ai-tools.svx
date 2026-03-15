@@ -1,0 +1,94 @@
+---
+title: AI Design Tools
+date: 2023-01-28
+categories:
+    - freebies
+---
+
+## All-in-one
+
+This one awesome website will leads you to amazing tools
+
+-[AI Design Resource](https://aidesignresource.com/)
+
+## Images-related
+
+- [StockAI](https://www.stockai.com)
+- [Craiyon](https://www.craiyon.com) - generate images from text
+- cutout.pro - both video and images
+- designer.microsoft.com
+- https://thumbnail.ai free youtube thumbnails
+
+- https://mage.space
+
+
+## Youtube-related
+
+https://www.you-tldr.com
+
+https://www.youtube.com/watch?v=yOQ9cljJ5jE
+
+
+## Anti-anti A.I
+
+gptminus1.com
+
+
+## Alternative way to use A.I
+
+- https://perplexity.ai - provides source for its information too
+
+## Video-related
+
+- https://oxolo.com
+
+## Cooking-related
+
+https://video2recipe.com
+
+## Prompts-related
+
+https://promptvibes.com
+
+https://promptvine.com
+
+## Business-related
+
+https://aiforbiz.co
+
+## Document-related
+
+https://chatdoc.com
+
+## Trip-related
+
+https://journeyplan.co
+
+## Get a job
+
+Carefully analyzing job descriptions is an essential part of the job search process, as it enables you to understand the role comprehensively and helps you identify the skills, experiences, and accomplishments you want to emphasize in your application materials and interview responses…
+
+The problem is that job descriptions are not always easy to decipher, meaning you could miss key components that might negatively impact your candidacy.
+
+
+That’s why, in addition to carefully reading job postings yourself, I always recommend enlisting the assistance of different AI tools, like ChatGPT, Gemini, or Claude to make sure you’ve covered all the most important elements.
+
+
+Here is a solid prompt you can use:
+
+🔷 “Please analyze the following job description and identify the key components. In your response, I would like you to address the following:
+
+-What are the main responsibilities and duties of this role?
+-What are the required qualifications, skills, and experience?
+-What are the preferred qualifications, skills, and experience? 
+-What are the important keywords, phrases, or industry-specific terms a candidate might want to include in their resume and cover letter?
+-What are the key attributes or accomplishments the employer is likely looking for in an ideal candidate? 
+-What are the likeliest needs and priorities of the organization that is hiring for this position?
+
+Here is the job description:
+[Paste in the full text of the job description]”
+
+
+You could try asking those questions individually, or all at once. Either way, the AI tool should provide you with a fairly detailed analysis of what it was able to find from the job description.
+
+You’ll also, of course, want to cross-reference this with your own analysis, but this approach can be tremendously beneficial in helping you stand out from the crowd and making sure you haven't missed anything critical that could jeopardize your candidacy!

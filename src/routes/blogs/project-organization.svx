@@ -1,0 +1,17 @@
+---
+title: Project Organization
+date: 2022-10-12
+categories:
+    - fundamental
+---
+
+<script>
+import projectOrganization from '$blogImages/projectOrganization.png';
+import Image from '$components/common/Image.svelte';
+</script>
+
+
+## Folder Structure
+
+<Image src={projectOrganization} />
+

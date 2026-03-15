@@ -1,0 +1,42 @@
+---
+title: 'Logo Design Process'
+date: '2022-10-31'
+categories:
+    - 'tips'
+---
+
+<script>
+
+import Image from '$components/common/Image.svelte';
+</script>
+
+Ideas and their execution matters more. You should start learning Adobe Illustrator.
+
+## Sketch your idea first
+
+## It should fit a specific shape
+
+Let's say circle, rectangle, diamond, horizontal or vertical. For example I made a logo that can fit a square -> It's balanced.
+
+Something eye-friendly
+
+## Find some inspirations
+
+## Other links
+
+Youtube
+
+https://www.youtube.com/watch?v=lWNSmKrvIqg
+
+Behance
+
+https://www.behance.net/ahsanidrisi
+
+
+
+
+
+
+
+ 
+

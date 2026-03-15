@@ -1,0 +1,38 @@
+---
+title: Free Figma resources
+date: 2023-05-07
+categories:
+    - freebies
+---
+
+## UI Kits
+
+https://figmaelements.com
+
+https://uistore.design
+
+https://setproduct.com/freebies
+
+https://uxcrush.com
+
+https://ui8.net/ui-kits
+
+https://uplabs.com
+
+
+
+## Shadow
+
+Create realistic shadow
+ 
+[SmoothShadow](https://www.figma.com/community/plugin/788830704169694737/SmoothShadow)
+
+## Components Management
+
+[PropStar](https://www.figma.com/community/plugin/1116018586739867857/Propstar)
+
+## Stylish
+
+Tilting your screens to present your work
+
+[Skewdat](https://www.figma.com/community/plugin/741472919529947576/SkewDat)

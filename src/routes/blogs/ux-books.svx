@@ -1,0 +1,99 @@
+---
+title: Best UX Design Books you should read in 2023 + Download Links
+date: 2023-1-26
+categories:
+    - freebies
+---
+
+<script>
+    import Image from '$components/common/Image.svelte';
+    import uxBooks from '$blogImages/uxBooks.webp';
+</script>
+
+## Mega list 
+
+https://www.airtable.com/universe/expqM3OWZoJkjl7wy/the-monster-list-of-ux-books?explore=true
+
+## roadmap
+
+<Image src={uxBooks} alt="UX Books to read" imagePreset="scroll"  />
+
+## read these first
+
+Fundamental books will give you a feel for what UX design is all about. The essential reading list includes following books:
+
+- The Design of Everyday Things by Don Norman
+- Designing for Interaction by Dan Saffer
+- 100 Things Every Designer Needs to Know about People by Susan Weinschenk
+- Dont Make Me Think: A Common Sense Approach to Web Usability by Steve Krug
+- About Face: The Essentials of Interaction Design by Alan Cooper.
+
+## Checklist
+
+### Kickstart
+
+* [ ] The Design of Everyday Things
+
+### Working in small design team
+
+* [ ] The User Experience Team of One
+* [ ] Just Enough Research
+
+### Leadership and Design Management
+
+* [ ] The Making of a Manager
+
+### Into Product Management
+
+* [ ] Insprired
+* [ ] Zero To One
+
+### Want to learn basic Visual Design
+
+* [ ] The non designer Design book
+* [ ] Universal Principles of Design
+
+### Design that influences human behaviors
+
+* [ ] Hooked
+* [ ] 100 Things Every Designer Needs to know about people
+
+### Usability
+
+* [ ] Dont Make Me Think
+* [ ] Measuring the User Experience
+
+### Win design challenge for UX job
+
+* [ ] Solving Product Design exercises
+
+### Understand the core of UX
+
+#### Human Computer Interaction
+
+* [ ] Interaction Design
+* [ ] About face
+
+#### Strategic UX
+
+* [ ] The Elements of User Experience
+
+### Information Architecture
+
+* [ ] Information Architecture
+* [ ] DesigningTheSearchExperience
+
+### Research
+
+* [ ] Observing the User Experience
+* [ ] Research methods in human-computer interaction
+
+### Run a UX Project
+
+* [ ] Project Guide to UX Design
+* [ ] Sprint
+* [ ] UX for lean startups
+
+## transition from dev to designer
+
+[Link](https://xd.adobe.com/ideas/career-tips/web-developer-ux-designer-10-practical-tips-make-career-transition-happen/)

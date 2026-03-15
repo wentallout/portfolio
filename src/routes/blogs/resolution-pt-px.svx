@@ -1,0 +1,31 @@
+---
+title: 'Resolution, pt and px'
+date: '2022-10-31'
+categories:
+    - 'fundamental'
+---
+
+<script>
+
+import Image from '$components/common/Image.svelte';
+</script>
+
+
+## summary
+
+Point (pt) is a measurement of space regardless of the screen Resolution
+
+Always design at 1x where **1pt = 1px**.
+
+Typography, spacing and all vector-based elements adapt to higher pixel density per default.
+
+Images need to be exported or made available for export for higher resolution.
+
+
+## tips and tricks to design with your resolution in mind
+
+### Photoshop
+
+Standard artboard templates in Photoshop are 2x since the default dimensions for iPhone 6 are 750x1334 px when you first create an artboard-based PSD. To switch to 1x artboards, simply change the width to 375 pixels and the height to 667 pixels. Then, you can save this preset as 'iPhone 6' for future reference (instead of using Photoshop's default iPhone 6 template which is 2x). Even though the units are pixels, keep in mind that because you are designing in 1x, it is also 375x667 pts.
+ 
+

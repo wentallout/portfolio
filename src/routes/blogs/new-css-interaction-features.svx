@@ -1,0 +1,111 @@
+---
+title: New CSS interaction features
+date: 2024-09-08
+categories:
+    - frontend
+---
+
+## Scroll Snap
+
+```css
+.scroller {
+  height: 300px;
+  overflow-y: scroll;
+  scroll-snap-type: y mandatory;
+}
+
+.scroller section {
+  scroll-snap-align: start;
+}
+```
+
+## overscroll-behavior
+
+```css
+.foo {
+  height: 200px;
+  overflow: auto;
+  overscroll-behavior-y: contain;
+}
+```
+
+## scroll-behavior
+
+```css
+.foo {
+  scroll-behavior: auto;
+  scroll-behavior: smooth;
+}
+```
+
+## scrollbar-gutter
+
+```css
+.container {
+  scrollbar-gutter: stable;
+}
+```
+
+## ViewTransition API
+```css
+::view-transition-old(main-image),
+::view-transition-new(main-image) {
+  transform-origin: right top;
+}
+
+::view-transition-new(main-image) {
+  animation: 400ms ease-out both grow;
+}
+
+figure {
+  view-transition-name: main-image;
+}
+```
+
+## scroll-timeline
+
+```css
+#container {
+  height: 300px;
+  overflow-y: scroll;
+  scroll-timeline: --squareTimeline y;
+  position: relative;
+}    
+```
+
+## view-timeline 
+
+```css
+.animation {
+  view-timeline: --subjectReveal block;
+  animation-name: appear;
+  animation-fill-mode: both;
+  animation-duration: 1ms;
+}
+
+```
+
+## Discrete Properties Animations
+
+Animate to and from properties such as display: none
+
+```css
+/*   IS-OPEN STATE   */
+dialog[open] {
+  translate: 0 0;
+}
+
+/*   EXIT STATE   */
+dialog {
+  transition: translate 0.7s ease-out, display 0.7s ease-out allow-discrete;
+  translate: 0 100vh;
+}
+
+/*   0. BEFORE-OPEN STATE   */
+@starting-style {
+  dialog[open] {
+    translate: 0 100vh;
+  }
+}
+
+```

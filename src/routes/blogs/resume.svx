@@ -1,0 +1,48 @@
+---
+title: How to write "resume"
+date: 2023-02-04
+categories:
+    - 'tips'
+---
+
+## Tips
+
+- Same resume **WONT** work for all types of different jobs. Tailor your resume to the company.
+- DO NOT include your entire work history. Make sure it's related to your job first.
+- If you're experienced, go over the one-page rule and put everything on. If you're in entry level, keep it concise.
+- You need a photo (or not?)
+- Do try using color in your resume, makes people remember you.
+- Do not try humor.
+- Always include links to your social media.
+- Always check your grammar.
+
+## Bad resume
+
+only states his first name, his last name is missing.
+
+He doesn’t specify his responsibilities and achievements in the work experience section.
+He made a list of skills that’s too long and doesn’t include any soft skills.
+Jacob wrote a very abstract introduction, which doesn't say much about him as a candidate.
+He doesn’t mention any personal projects, e.g. a portfolio website he built from scratch.
+He added an unnecessary part about him working as a waiter and a call center specialist, without any explanation as to why it could be relevant.
+Jacob included his home address in the contact section but left out important links to LinkedIn and/or GitHub.
+He chose a messy and uncomfortable-to-follow layout.
+The font size is too small, which makes the resume difficult to read.
+Jacob used a photo, which is not a necessary thing to include these days.
+His resume is bland, it could be improved with a bit of color.
+
+## Good Resume example
+
+
+Jacob states his full name.
+He mentions his level of expertise, i.e. “junior front-end developer”.
+Jacob describes each of his roles and the different responsibilities he's had in the work experience section.
+He selected a good combination of soft and hard skills.
+He also included a section for his projects, mentioning his main responsibilities and biggest achievements.
+Jacob specifies the timeframe of his course in the education section. Here, he also mentions the Royal Scholarship, which represents how well he’s done.
+He included where he’s currently based, his email, and links to his LinkedIn and GitHub profiles in the contacts section.
+He chose an easy-to-follow layout, with clearly separated sections and headings in bigger font.
+He added a touch of color, making the whole page look more lively but still professional.
+Jacob didn't include a photo of himself.
+
+

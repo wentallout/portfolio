@@ -1,0 +1,26 @@
+---
+title: Questions to ask customers before designing
+date: 2023-02-12
+categories:
+    - fundamental
+---
+
+## Website
+
+### What is the primary function of your website?
+
+- To inform
+- To sell
+- To entertain
+
+Based on the function you can go deeper into defining specific website goals and what actions are required in order to achieve them.
+
+### What are currently working and not working on your website?
+
+Customers love to add unnecessary features and information to their website
+
+It's important that you only add things that are aligned with the primary purpose of the website.
+
+### What role does your website play in your customer's life
+
+- Visit once or come back over and over again?

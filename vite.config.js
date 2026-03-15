@@ -1,0 +1,38 @@
+
+import { sveltekit } from '@sveltejs/kit/vite';
+import Icons from 'unplugin-icons/vite';
+import { imagetools } from 'vite-imagetools';
+import devtoolsJson from 'vite-plugin-devtools-json';
+
+/** @type {import('vite').UserConfig} */
+const config = {
+	build: {
+		cssMinify: 'lightningcss',
+		rollupOptions: {
+			external: ['@resvg/resvg-js']
+		}
+	},
+	css: {
+		transformer: 'lightningcss'
+	},
+
+	plugins: [
+		// enhancedImages(),
+		sveltekit(),
+
+		Icons({ compiler: 'svelte', defaultClass: 'icon' }),
+		imagetools({
+			defaultDirectives: () => {
+				return new URLSearchParams({
+					format: 'webp'
+				});
+			}
+		}),
+		devtoolsJson()
+	],
+	server: {
+		port: 1111
+	}
+};
+
+export default config;

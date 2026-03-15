@@ -1,0 +1,18 @@
+---
+title: JavaScript Advanced Concept - Nullish Coalescing
+date: 2024-05-10
+categories:
+    - javascript 
+---
+
+## Nullish Coalescing
+
+Nullish coalescing is a relativly new operator that was introduced in ES2020. It is similar to the logical OR operator ||, but it only returns the right-hand side if the left-hand side is null or undefined.
+
+```js
+const foo = null ?? 'bar';
+console.log(foo); // 'bar'
+
+const foo = 0 ?? 'bar';
+console.log(foo); // 0
+```

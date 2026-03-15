@@ -1,0 +1,16 @@
+---
+title: Spacing
+date: 2023-06-10
+categories:
+    - ui
+---
+
+## Spacing between text and heading 
+
+heading - body (16px)
+
+(32px)
+
+heading - body (16px)
+
+See that 32px? that's the 2x trick.

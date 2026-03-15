@@ -1,0 +1,34 @@
+---
+title: What is multithreading
+date: 2023-12-07
+categories:
+    - fundamental
+---
+
+## Idiot explanation
+
+Alright, imagine you have a big box of toys to play with. Now, instead of playing with one toy at a time, you invite your friends to play together. Each friend can pick a different toy and play with it at the same time. That's a bit like how multi-threading works in coding!
+
+In coding, a thread is like a friend, and multi-threading lets your computer do several things at once. It's like juggling multiple tasks without dropping any! So, just like you and your friends having fun with toys simultaneously, multi-threading helps computers handle different jobs at the same time, making things faster and more efficient.
+
+In simple words, multi-threading is like teamwork for your computer, making it do many things together, quickly and smoothly!
+
+## Normal Explaination
+
+In coding, multithreading refers to the concurrent execution of multiple threads (smaller units of a process) within a single program. A thread is the smallest unit of execution within a process, and a process can have multiple threads running independently. These threads can share the same resources, such as memory space, but they have their own execution path.
+
+Multithreading is a programming and execution model that allows multiple threads to run in parallel, enabling a program to perform multiple tasks concurrently. Each thread represents a separate flow of control, and they can run concurrently, sharing the resources of the parent process. This is particularly useful for tasks that can be parallelized, as it can lead to improved performance and responsiveness.
+
+## Advantage of multithreading
+
+Parallelism: Multiple threads can execute independently, which can lead to better utilization of multi-core processors and improved performance for certain types of tasks.
+
+Responsiveness: Multithreading can enhance the responsiveness of applications, especially in user interfaces, by allowing background tasks to run concurrently with user interactions.
+
+Resource Sharing: Threads within a process share the same memory space, making it easier for them to communicate and share data.
+
+Simplified Design: In some cases, multithreading can simplify the design of complex applications by breaking them into smaller, more manageable threads.
+
+## Challenge
+
+However, multithreading also introduces challenges, such as race conditions, deadlocks, and increased complexity in debugging. Proper synchronization mechanisms and careful design are necessary to avoid these issues when working with multithreaded code.

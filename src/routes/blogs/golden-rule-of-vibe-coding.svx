@@ -1,0 +1,70 @@
+---
+title: 'The Golden Rules of Vibe Coding'
+date: 2025-06-02
+categories:
+    - ai
+    - 'vibe coding'
+---
+
+## Be specific and clear about what you want
+
+Clearly articulate your requirements, tasks, and outcomes when interacting with AI. Precise prompts yield precise results.
+
+## Always validate AI output against your intent
+
+AI-generated code must always be checked against your original goal. Verify functionality, logic, and relevance before accepting.
+
+## Treat AI as a junior developer (with supervision)
+
+Consider AI outputs as drafts that require your careful oversight. Provide feedback, refine, and ensure quality and correctness.
+
+## Use AI to expand your capabilities, not replace your thinking
+
+Leverage AI to automate routine or complex tasks, but always remain actively engaged in problem-solving and decision-making.
+
+## Coordinate upfront among the team before generating code
+
+Align with your team on AI usage standards, code expectations, and practices before starting AI-driven development.
+
+## Treat AI usage as a normal part of the development conversation
+
+Regularly discuss AI experiences, techniques, successes, and pitfalls with your team. Normalize AI as another tool for collective improvement.
+
+## Isolate AI changes in Git by doing separate commits
+
+Clearly identify and separate AI-generated changes within **version control** to simplify reviews, rollbacks, and tracking.
+
+## Ensure that all code, whether human or AI-written, undergoes code review
+
+Maintain consistent standards by subjecting all contributions to the same rigorous review processes, enhancing code quality and team understanding.
+
+## Don't merge code you don't understand
+
+Never integrate AI-generated code unless you thoroughly comprehend its functionality and implications. Understanding is critical to maintainability and security.
+
+## Prioritize documentation, comments, and ADRs
+
+Clearly document the rationale, functionality, and context for AI-generated code. Good documentation ensures long-term clarity and reduces future technical debt.
+
+## Share and reuse effective prompts
+
+Document prompts that lead to high-quality AI outputs. Maintain a repository of proven prompts to streamline future interactions and enhance consistency.
+
+## Regularly reflect and iterate
+
+Periodically review and refine your AI development workflow. Use insights from past experiences to continuously enhance your team’s approach.
+
+## TLDR VERSION
+
+1. Be Super Clear with What You Want
+2. Always Double-Check the Output
+3. Treat AI Like a Junior Developer
+4. Use AI to Boost Your Brain, Not Replace It
+5. Align With Your Team First
+6. Make AI Part of the Team Chat
+7. Use Separate Commits for AI Code
+8. Review AI Code Like Any Other Code
+9. Don't Merge What You Don't Understand
+10. Document Everything
+11. Save and Share Great Prompts
+12. Keep Learning, Keep Improving

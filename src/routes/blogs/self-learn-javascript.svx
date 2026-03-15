@@ -1,0 +1,27 @@
+---
+title: Resource for Javascript self-learning (Updated 2025)
+date: 2025-03-10
+categories:
+    - frontend
+    - javascript
+---
+
+## Eloquent Javascript
+
+https://eloquentjavascript.net/
+
+https://javascript.info/
+
+https://shamansir.github.io/JavaScript-Garden/
+
+https://exploringjs.com/
+
+https://github.com/getify/You-Dont-Know-JS/tree/2nd-ed
+
+https://bubblin.io/book/let-s-learn-es6-by-ryan-christiani#frontmatter
+
+http://jsforcats.com/
+
+## Try JS out
+
+https://babeljs.io/repl

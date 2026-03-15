@@ -1,0 +1,188 @@
+---
+title: Common Interview Questions
+date: 2023-03-18
+categories:
+    - fundamental
+---
+
+## 3 main types
+
+Background, Behavioral and Skills
+
+### Background
+
+- Name some of your favorite apps and experiences you like
+- Tell me about the trajectory of your career - what are the next steps?
+
+### Behavioral
+For behavioral questions, you need to understand the STAR method. The STAR Method: Situation, Task, Action, Result.
+
+- Situation: set the scene.
+- Task: the problems you were given.
+- Actions: specific steps you took.
+- Results: the outcome.
+
+### Cross functional role
+
+Persuading others that design you come up is the right one
+
+Questions to expect:
+- How do you deal with people on your team who have opposing viewpoints on your design?
+
+- Situation: This happened to me recently, I created a concept for a sign up screen and the engineer felt the design didn't solve the problem
+- Task: I gather data that highlight the drop off point on the page
+- Action: I set up time with him and walk him through the data and show him how the new design solve the drop off point
+- Results: He changed his mind and became a strong advocate for the design.
+
+Other way to answer like: I think it's important to have everyone onboard with the design, so I would gather some data to highlight the problem, and walk the team through my design solution so they understand how I came to that conclusion. I'd also suggest that we iterate on the design and test it after launch to make sure we are tracking the right things.
+
+Another strange question to expect: "Do you feel comfortable wireframing in Sketch".
+-> Answer: I understand the features of Sketch, but my previous companies have used different tools. I feel confident I can adapt what I know from those tools to learn it pretty quickly, especially if that's what the team uses.
+
+## Interview Experience
+
+Talking to the hiring manager
+
+What do they think:
+
+- Are you a fit for the role? 
+- Are you a fit for the team?
+- Can you handle the work?
+- What strengths would you bring to the team?
+
+They will ask you like: "Walk me through one of the projects in your portfolio, and some of the trade-offs you had to make in the design."
+
+
+How to talk about your work? Let's focus on one project first:
+- Describe the goal
+- Talk about how you achieve that goal?
+- Describe in detail any design decisions or projects related issues
+
+Question to ask them:
+- What's the design process like here?
+- What challenges is the team facing right now?
+
+
+## General Questions
+
+### 1. Could you tell me about yourself and describe your background in brief?
+
+Interviewers like to hear stories about candidates. Make sure your story has a great beginning, a riveting middle, and an end that makes the interviewer root for you to win the job.
+
+Talk about a relevant incident that made you keen on the profession you are pursuing and follow up by discussing your education. In the story, weave together how your academic training and your passion for the subject or industry the company specializes in, combined with your work experience, make you a great fit for the job. If you’ve managed a complex project or worked on an exciting, offbeat design, mention it.
+
+Example: “I come from a small town, where opportunities were limited. Since good schools were a rarity, I started using online learning to stay up to date with the best. That’s where I learned to code and then I went on to get my certification as a computer programmer. After I got my first job as a front-end coder, I continued to invest time in mastering both front- and back-end languages, tools, and frameworks.”
+
+### 2. How did you hear about this position?
+Employers want to know whether you are actively seeking out their company, heard of the role from a recruiter, or were recommended to the position by a current employee. In short, they want to know how you got to them.
+
+If someone recommended you for the position, be sure to say their name. Don’t assume that the interviewer already knows about the referral. You’ll probably want to also follow up with how you know the person who referred you. For example, if you and Steve (who recommended you) worked together previously, or if you met him over coffee at a networking event, mention it to give yourself a little more credibility. If Steve works at the company and suggested that you apply for the job, explain why he thought you’d be the perfect fit.
+
+If you sought out the role yourself, be clear about what caught your eye — extra bonus points if you can align your values with the company and their mission. You want to convince the hiring manager that you chose their company, over all other companies, for a few specific reasons.
+
+Lastly, if you were recruited, explain why you took the bait. Did this role sound like a good fit? Does it align with the direction you want to take your career? Even if you weren’t familiar with the organization prior to being recruited, be enthusiastic about what you’ve learned and honest about why you’re interested in moving forward with the process.
+
+Example: “I learned about the position through LinkedIn as I’ve been following your company’s page for a while now. I’m really passionate about the work you’re doing in X, Y, and Z areas, so I was excited to apply. The required skills match well with the skills I have, and it seems like a great opportunity for me to contribute to your mission, as well as a great next move for my career.”
+
+### 3. What type of work environment do you prefer?
+Be sure to do your homework on the organization and its culture before the interview. Your research will save you here. Your preferred environment should closely align to the company’s workplace culture (and if it doesn’t, it may not be the right fit for you). For example, you may find on the company’s website that they have a flat organizational structure or that they prioritize collaboration and autonomy. Those are key words you can mention in your answer to this question.
+
+If the interviewer tells you something about the company that you didn’t uncover in your research, like, “Our culture appears buttoned-up from the outside, but in reality, it’s a really laid-back community with little competition among employees,” try to describe an experience you’ve had that dovetails with that. Your goal is to share how your work ethic matches that of the organization’s.
+
+Example: “That sounds great to me. I like fast-paced work environments because they make me feel like I’m always learning and growing, but I really thrive when I’m collaborating with team members and helping people reach a collective goal as opposed to competing. My last internship was at an organization with a similar culture, and I really enjoyed that balance.”
+
+### 4. How do you deal with pressure or stressful situations?
+The employer wants to know: Do you hold down the fort or crumble under pressure? They want to make sure that you won’t have a meltdown when the pressure becomes intense and deadlines are looming. The ability to stay calm under pressure is a highly prized talent.
+
+Share an instance when you remained calm despite the turmoil. If it’s a skill you’re developing, acknowledge that and include the steps you’re taking to respond better to pressure in the future. For example, you could indicate that you’ve started a mindfulness practice to help you better deal with stress.
+
+Example: “I realize stressful situation are always going to come up, and I definitely have had to learn how to navigate them throughout my career. I think I get better at it with every new experience. While working on a new product launch at my last company, for example, things were not going according to plan with my team. Instead of pointing fingers, my first reaction was to take a step back and figure out some strategies around how we could we solve the problem at hand. Previously, I may have defaulted to panicking in that situation, so being calm and collected was definitely a step forward and helped me approach the situation with more clarity.”
+
+
+### 5. Do you prefer working independently or on a team?
+Your answer should be informed by the research you’ve done on the company culture and the job in question. Nevertheless, you should expect that most work environments will have some team aspect.
+
+Many positions require you to work collaboratively with other people on a daily basis, while some roles require you to work on your own. When you answer this question, highlight the best traits of your personality and how they fit the job requirements. It could also be in your interest to answer this question by highlighting the advantages and disadvantages of both situations.
+
+Example: “I enjoy a blend of the two. I like having a team to strategize with, get diverse opinions from, and reach out to for feedback. But I am also comfortable taking on assignments that require me to work independently. I find I do some of my best work when I can focus alone in a quiet space, but I really value collaborating with my teammates to come up with the best ideas.”
+
+### 6. When you’re balancing multiple projects, how do you keep yourself organized?
+Employers want to understand how you use your time and energy to stay productive and efficient. They’re also looking to understand if you have your own system for staying on track with the work beyond the company’s schedules and workflow plans. Be sure to emphasize that you adhere to deadlines and take them seriously.
+
+Discuss a specific instance when you stayed on track. Talk about the importance and urgency of the projects you were working on and how you allocated your time accordingly. Explain how you remain organized and focused on the job in front of you.
+
+Example: “I’m used to juggling projects at my current job where I’m often moving between coding one software program to another. I use the timeboxing technique to make sure they’re all on track, allocating time on my calendar for certain tasks. I’ve found it really helps me prioritize what needs to get done first, and it holds me accountable for the more repetitive day-to-day tasks I’m responsible for.”
+
+### 7. What did you do in the last year to improve your knowledge?
+
+This question may come up as a result of the pandemic. Employers want to know how people used their time differently. Know that you don’t have to feel scared about answering this question if you didn’t spend your time brushing up on skills or taking courses. We learn from any experience we have.
+
+If you spent time honing your professional skills, you might say the following.
+
+Example: “The extra time on my plate really allowed me to get introspective around where I want to take my career. I read a lot of journals to keep abreast of the latest ideas in my field, and sharpened my skills by taking some online courses, such as…” (and then be specific).
+
+If you chose to work on your personal development, you could say something like the following.
+
+Example: “Like everyone else, I, too, gained some time last year from not having to travel two hours a day to and from work. I decided to spend my time on things I love. So I got back to learning how to play the guitar and journaling. I feel it brought me closer to myself and has been really great for my mental health and productivity.”
+
+### 8. What are your salary expectations?
+Before you walk in for your first interview, you should already know what the salary is for the position you’re applying to. Check out websites such as Glassdoor, Fishbowl, or Vault.com for salary information. You could also ask people in the field by reaching out to your community on LinkedIn.
+
+Employers will always ask this question because every position is budgeted, and they want to ensure your expectations are consistent with that budget before moving forward.
+
+Remember that it’s often better to discuss a salary range rather than a specific number during the interview and leaving room for negotiation.
+
+Example: “Based on my skills and experience and on the current industry rates, I’m looking at a salary around $____” (then fill in with your desired salary range and rationale).
+
+### 9. Are you applying for other jobs?
+
+Interviewers want to know if you’re genuinely interested in this position or if it’s just one of your many options. Simply, they want to know if you’re their top choice. Honesty is the best policy. If you’re applying for other jobs, say so. You don’t have to necessarily say where you’re applying unless you have another offer. But they might want to know where in the hiring process you are with other companies. You can also mention that you’re actively looking for offers if your interviewer asks.
+
+Example: "I’ve applied to a couple of other firms, but this role is really the one I’m most excited about right now because…"
+
+### 10. From your resume it seems you took a gap year. Would you like to tell us why that was?
+
+Gap years are more popular in some cultures than others. In some professions, gap years may have a negative connotation (the industry moves too fast and you’re not up to date).
+
+Let your interviewer know that your gap year wasn’t about procrastinating over your transition from childhood to adulthood, but that it added value to the confident professional you have become. Based on what part of the world you’re in and how common these are, employers are likely looking to hear stories of what you did and how your experiences have benefitted and prepared you for this role.
+
+Provide a short explanation of why you decided to pursue a gap year, then focus on what came out of it that made a positive difference for your future.
+
+Example: “During my last year of high school, I didn’t feel ready to choose my educational path, so I took a wilderness course for a few months to sort out my life goals. It may seem a little random, but the time I spent actually helped my develop so many new skills — in the areas of leadership, communication, (etc…). During that time, I realized that I wanted to earn a degree in (state your degree) to align with my passion (say what that is).”
+
+To make a winning impression, you'll need to answer each question with poise and passion. But practicing first really helps. Meticulous preparation will allow you to appear confident and in control, helping position you as the ideal candidate when the competition is tough.
+
+
+## What to ask?
+
+### Pre-interview
+
+- Why are you looking to hire a UX/UI Designer?
+- What are the characteristics of a successful candidate? What type of person would fit into this role?
+
+---
+
+### Post-interview questions (end or during)
+
+- What does a designer's day-to-day schedule look like?
+- What other teams do I have to work closely with
+- Critical: What is the process for decision making within the team?
+- Must: How would my performance be measured in this role? is it KPI, time
+- How long does a new feature or product take to release to the market?
+
+
+## Prep
+Interview Prep
+1/ 2,3 projects that you can speak on 
+every project have a very concise summary (1,2 sentence)
+Here we built an app for 9yo to do something...
+
+2/ After I summarize the project 
+=> Tell a story about the problem and how we got here
+
+3/ Touch on your process
+- Focus on speaking with users, understand their painpoints
+- Don't rush, dont be picture perfect, casually talk through your project
+
+4/ How you measure your success
+

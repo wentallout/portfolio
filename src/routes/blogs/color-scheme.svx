@@ -1,0 +1,99 @@
+---
+title: How to come up with a color scheme
+date: 2023-05-03
+categories:
+    - color
+---
+
+## New trick: Realtime Colors
+
+https://www.youtube.com/watch?v=HAlIWRcldoc
+
+Go here: https://realtimecolors.com/
+
+## How to distribute colors?
+
+60% neutral
+30% secondary color 
+10% accent color
+
+## Does the color match your industry?
+
+Just use color psychology:
+
+Yellow makes us feel optimistic and energetic, blue feels trustworthy, purple feels sophisticated, orange feels innovative, black feels elegant, green feels hopeful, red feels exciting.
+
+
+## RGB vs CMYK
+
+RGB is meant for **digital** design.
+
+CYMK is meant for **print** design.
+
+## Color profiles
+
+RGB can display 16.7 million colors. sRGB is mostly used on Web and most Digital Devices
+
+## Neutral colors 
+
+Mostly background, borders, background for an image, models
+
+How? Go to [https://picular.co](https://picular.co) and type something like 'interior design' or 'forest'
+
+## Color harmony
+
+Get one base color from the logo/brand
+
+Then go to [adobe color](https://color.adobe.com/) or [colorsupplyyy.com](https://colorsupplyyy.com/app)
+
+Option 1: Monochromatic
+Option 2: Analogous close in your color scheme
+
+## 4 Steps
+
+Step 1: Start with one color. Pick from their brand color then generate shades and tints for it. Use monochromatic
+
+Step 2: Start adding variations. Get shades, tints, tones of a single hue (3 tones Dark Medium Light, 3 shades Dark Medium Light, 2 Tints Hue + HueAndMoreSaturation)
+
+Step 3: Add one contrast color (opposite color in the color wheel)
+
+Step 4: Add colors for Error (red), Success, Status Color (use a tint)
+
+## Color scale
+
+[0to255.com](https://0to255.com)
+[colorbox.io](https://colorbox.io)
+
+A more modern tool
+[hihayk.github.io/scale](https://hihayk.github.io/scale)
+
+You can change the darkness/lightness
+For 50%/60% lightness
+use 50% for darkness
+
+
+
+
+Meant for data visualization
+[tristen.ca](https://tristen.ca/hcl-picker)
+
+Always wireframe your design in greyscale first 
+Then pickup some color later
+
+
+### Inspiration
+
+http://www.thedayscolor.com
+
+https://www.instagram.com/awsmcolor/
+
+https://www.instagram.com/colours.cafe/    
+
+
+
+
+
+
+
+
+

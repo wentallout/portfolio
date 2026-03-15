@@ -1,0 +1,49 @@
+---
+title: Grids
+date: 2022-10-31
+categories:
+    - fundamental
+---
+
+<script>
+
+import Image from '$components/common/Image.svelte';
+</script>
+
+## Reference
+
+[How to build responsive grids in Figma](https://www.wednesday.is/writing-articles/figma-how-to-build-responsive-and-scalable-grids-for-web-design)
+
+## mobile
+
+- Columns: 4 (or 2 if your UI is simple)
+- Type: Stretch
+- Margin: 16px (or 24px)
+- Gutter: 16px (or 24px)
+
+## tablet
+
+Same value like Mobile but 8 columns
+
+- Columns: 8
+- Type: Stretch
+- Margin: 24px
+- Gutter: 16px
+
+## desktop
+
+- Columns: 12
+- Type: Stretch
+- Margin: 24px
+- Gutter: 16px (or 24px)
+
+
+
+
+
+
+
+
+
+ 
+

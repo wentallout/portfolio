@@ -1,0 +1,31 @@
+---
+title: Typography impact
+date: '2022-11-05'
+categories:
+    - 'typography'
+---
+
+<script>
+    import Image from '$components/common/Image.svelte';
+    import typoDesign from '$blogImages/typoDesign.png';
+</script>
+
+
+## Typography serves functional purpose
+
+Appropriate typography choices create:
+
+- Readability
+- Accessibility
+- Usability
+- Visual Balance
+
+All of which work together to form effective, understandable visual communication.
+
+## Typography creates emotional impact
+
+Look at these examples, what do you feel?
+
+<Image src={typoDesign} alt="strong typography design example" />
+
+

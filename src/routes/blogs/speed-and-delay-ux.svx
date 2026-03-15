@@ -1,0 +1,38 @@
+---
+title: Speed and Delays in UX
+date: 2023-10-19
+categories:
+    - ux
+---
+
+## Humans can't wait
+
+We as humans are impatient by nature so we always need things instantly. That is why we have remote controls, faster smartphones, fast planes. So if some queue is too long, normal humans will quit and leave.
+
+Websites and apps users behave in the same way & if your website or app doesn't respond for too long, they quit or choose a competitor.
+
+
+## Effect of delays on conversion and users
+
+![every seconds count](https://i.imgur.com/K3ErjZd.png)
+
+- 1 second delay in page response can lower conversion by 7% (Kissmetrics)
+- BBC has seen that they lose an additional 10% of users for every additional second it takes for their site to load (WPOstats)
+- AliExpress reduced load time by 36% and saw a 10.5% increase in orders and a 27% increase in conversion for new customers. (WPOstats)
+- Google says "Speed is a SEO ranking factor now" (Google)
+- 79% Customers will not buy again from a slow website (Webpage FX)
+
+
+83% of users expect the websites to load within 3 seconds. (Webpage FX)
+- So Optimal load time is from 1-3seconds, after this you will start losing customers.
+- Amazon & Walmart both reported 1% loss per every 100miliseconds delay in site loading
+
+## How to show delays?
+
+Show user wait time like "1 min remaining" or a percentage loading bar (56% loaded) when you want to do some loading that is going to take more than 3 seconds.
+
+Don't interupt their current task if there are some updates. Apps response times should be quick within 2 seconds
+
+![](https://i.imgur.com/wcn15Ff.png)
+
+![](https://i.imgur.com/sECf8vv.png)

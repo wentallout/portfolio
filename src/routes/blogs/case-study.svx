@@ -1,0 +1,45 @@
+---
+title : Case Study
+date: 2022-12-05
+categories: 
+    - fundamental
+---
+
+
+## Purpose of a case Study
+
+- understand the way you work 
+- understand your design process
+- understand your thought process 
+- to gauge your skillset 
+- understand how your designs have translated into real impact 
+
+## What platform?
+
+- behance
+- notion
+- your own website
+
+## How many?
+
+- your best 3
+- begin: just 2
+make sure it's relevant to the job
+
+## Common mistakes
+
+- showing only the end design is SUPER WRONG -> you need to show your design process in detail. What makes you choose this component, why you use the pattern, color, font types
+- case study not tailored to the role.
+- No problem statement mentioned. Example: trying to improve the customer experience cuz people keeps quitting the app 
+- Spelling error, alignment, spacing, blurry images.
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,178 @@
+---
+title: UI/UX Testing simplified
+date: 2023-09-04
+categories:
+    - ux
+---
+
+## What to after designing?
+
+Ok you finished designed your project, what now? you have to test it. Guess what? you need to plan your test early.
+
+### Why plan testing early?
+
+- Additional clarity on scope: What browser? What devices?
+- Less explaining: setting expectations now for what you'll test reduces misunderstanding.
+- Less stress before, during and after launch: If you've thoroughly tested everything, you can be confident everything performs as expected.
+
+Simple: Anything that isn't on the test plan? not happening.
+
+###  You can't test everything
+
+Be realistic about what matters most - because you can't do it all. Three good reasons:
+- Budgets are finite. You're working for a client... with a budget, always.
+- Schedules are finite. If testing isn't on the schedule, it'll be rushed or left out.
+- Not every scenario matters. Your website may not need to work on hundreds of devices.
+
+## Identify who you're testing for
+
+Focus on scenarios most relevant to your audience:
+- What are the most popular devices they'll use? iPad, iPhone
+- What OS/Browser are most popular among your audience? Win 10, OS X
+- What connection speeds do they have? 3G, 4G, broadband
+- How tech savvy is your demographic? Woman between 18-35, fairly tech-savvy, smartphone owner, social media user.
+
+If you don't have the luxury of surveying actual users, there is a wealth of useful statistical information available online. Here are some sites:
+
+- W3 Schools: w3schools.com/browsers
+- Net Market Share: http://www.netmarketshare.com
+- StatCounter: http://gs.statcounter.com
+
+## Prioritize browser and device support
+
+Fully Supported Browsers and devices (all content must be readable, all functionality must work properly, minimal deviation from approved UI Design)
+
+Partially supported browsers and devices: all content must be readable, navigation must work, login functionality must degrade gracefully
+
+Unsupported browsers and devices: no testing will be performed 
+
+## Decide what to test
+
+There are 6 core types of testing you should perform:
+
+- **Functionality** testing
+- **Usability** testing
+- **Errors and Exception** testing
+- **Compatibility** testing
+- **Performance** testing
+- **Security** testing
+
+### Functionality testing
+
+a. Test all links:
+
+- test all internal and outgoing links, links that jump within single pages, links used to send email, check for orphan pages (pages that can't be accessed cuz nothing links to it)
+
+b. Test forms on all pages:
+
+- Check validations on each field
+- Check default values of fields, if they exist
+- Test incorrect input into form fields
+- Test options to create, delete, view or modify forms.
+
+c. Test cookies:
+
+- Test functionality and security by enabling/disabling cookies in your browser.
+- Test to ensure cookies are encrypted before writing to the user's device.
+- For session-based cookies, check login sessions and user stats.
+
+d. Test HTML/CSS validation:
+
+- Validate the site for HTML syntax errors: http://validator.w3.org 
+- Check that the site is crawlable to search engines: https://www.google.com/webmasters/tools
+
+e. Test database connections and consistency
+- Check data integrity and errors while you edit, delete, modify the forms or do any DB related functionality.
+- Ensure all database queries are executing correctly.
+- Ensure data is retrieved correctly.
+- Ensure data is updated correctly.
+
+### Usability testing
+
+This covers navigation, content, presentation and task success. Testing can be done via several methods:
+
+- SurveyMonkey (surveymonkey.com)
+- Videotaped, moderated user sessions
+- Online services such as: 
+    - UserTesting
+    - Loop 11
+    - Optimizely
+
+a. Test ease and effectiveness of navigation:
+
+- Do users find what they need easily?
+- How long does it take them to find what they're looking for?
+- Does the structure and organization of the navigation match the user's expectation?
+- Are links labeled with terms that make sense to users?
+
+b. Test usefulness of content:
+
+- Does content match what your users want or need?
+- Can users find & read the content they need?
+- Do they understand the content?
+- Can they act on the content?
+
+c. Test the effectiveness of UI:
+
+- Do UI elements **clearly separate** navigation from content?
+- Do UI elements distract or create a barrier between the user and the content? (ads or popup)
+- Do UI elements clearly signal what can be acted upon or interacted with - and how to do so? (do buttons look like buttons?)
+- Do UI elements work together to guide the user through a particular process or task flow?
+
+d. Test task success:
+
+- Were users able to accomplish the key task they came to the site to perform?
+- If so, did they feel satisfied - or angry and frustrated?
+- If not, what prevented them from succeeding?
+- What's the consequence of each task failure - lost customers, increased support costs, inaccurate data captured?
+
+### Errors and Exceptions testing
+
+This covers what happens when things go wrong - a user enters bas information, stops a process, the system crashes, etc.
+
+- Test that interactions **between servers** are executed properly.
+- Test that errors are handled properly.
+- If the database or web server returns an error, make sure error messages are displayed appropriately to users.
+- Make sure error messages are understandable and instructive.
+- Test for transaction interruption or lost connection to a web server
+
+### Compatibility testing
+
+There are 2 main categories: browser and OS.
+
+a. Browser compatibility
+
+- Does the website display consistently in different browsers?
+- Does the website display consistently in the same browser across diffrent OS platforms?
+- Does all functionality (links, forms, etc) work properly across diffrent browsers?
+- Comprehensive list of online tools that simplify testing:
+
+
+b. OS and device compatibility
+
+- Does all functionality (links, forms, etc) work properly across different OS platforms and devices?
+- Do web service calls or API functions work properly across all OS platforms and devices?
+
+### Performance Testing
+
+This measures how well the website can accommodate heavy user activity. It should include:
+
+- Web Load Testing: what happens when a high volume of users are accessing or requesting the same page? the site should be able to handle simultaneous user requests, large input data from users, simultaneous database connections, etc.
+- Web Stress Testing: what happens when the site is stretched beyond its specification limits? How does the site and the server reacts to stress and recovers from crashes? Stress is generally tested on input fields, login processes and sign up areas.
+
+### Security Testing
+
+Security testing measures how well the website - and any user, product or transactional data it captures and transmits - is protected against hackers. Here are some ways to test security:
+
+- Paste an internal url (https) directly into the browser's address bar - without logging in. Internal pages should not open.
+- Try changing url options directly while logged in with a specific user ID. Example: if you're checking site statistics with publisher site ID=123. Try changing that ID parameter to a different site ID. Access should be denied.
+- Try some invalid entried in input fields like login username, password, or input text boxes. Check the system reaction.
+- Web directories or files should not be directly accessible - unless a specific download option exists in the UI.
+- Test whether SSL is used for security measures. If used, you should see a warning when switching from non-secure (http) pages to secure (https) pages and vice versa.
+- Check for logs of all transactions, error messages and security breach attempts on your web server (usually via CP)
+
+
+
+
+
+

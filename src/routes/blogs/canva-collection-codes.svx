@@ -1,0 +1,10 @@
+---
+title: Canva collection codes compilation
+date: 2024-07-08
+categories:
+    - design
+---
+
+## Minimal style
+
+- Monoline Frame: `set:nAFWhzFkbLw`

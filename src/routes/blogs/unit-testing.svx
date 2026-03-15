@@ -1,0 +1,57 @@
+---
+title: Unit testing
+date: 2024-05-15
+categories:
+    - testing
+---
+
+Unit Testing is a process of testing individual units or components of a software system to ensure that they are functioning correctly. It helps in identifying and fixing bugs or issues in the early stages of software development.
+
+
+## What is Unit Testing?
+
+- Software Testing technique that focuses on testing individual units or components of a software system.
+- It involves testing the smallest testable parts of an application in isolation.
+
+## Benefits of Unit Testing
+
+- Early bug detection: Unit tests help identify bugs and issues in the early stages of development, making it easier and cheaper to fix them.
+- Code maintainability: Unit tests act as documentation for the code and make it easier to understand and maintain.
+- Regression testing: Unit tests can be rerun after code changes to ensure that existing functionality is not affected.
+- Faster development: Unit tests provide quick feedback on the correctness of code, enabling faster development cycles.
+- Code refactoring: Unit tests provide confidence when refactoring code, ensuring that existing functionality is not broken.
+
+## Characteristics of Good Unit Tests
+
+- Isolated: Each unit test should be independent and not rely on the state or outcome of other tests.
+- Fast: Unit tests should execute quickly to provide rapid feedback during development.
+- Repeatable: Unit tests should produce the same results when executed multiple times.
+- Focused: Each unit test should focus on testing a specific behavior or functionality.
+- Self-validating: Unit tests should automatically determine if they pass or fail without manual intervention.
+- Maintainable: Unit tests should be easy to understand and update as the code evolves.
+
+## Unit Testing Frameworks
+
+- Popular unit testing frameworks include JUnit (Java), NUnit (.NET), pytest (Python), and Jasmine (JavaScript).
+- These frameworks provide a set of tools and conventions for writing and executing unit tests.
+
+## Steps to Write Unit Tests
+
+- Identify the unit: Determine the smallest testable part of the code that can be tested in isolation.
+- Define test cases: Identify different scenarios and inputs that need to be tested.
+- Write the test code: Use the unit testing framework to write test cases that validate the expected behavior of the unit.
+- Run the tests: Execute the unit tests and verify if they pass or fail.
+- Refactor and repeat: Update the code and tests as needed, and rerun the tests to ensure everything still works correctly.
+
+## Best Practices for Unit Testing
+
+- Test coverage: Aim for high test coverage to ensure that most of the code is tested.
+- Test naming: Use descriptive and meaningful names for test methods to improve readability.
+- Test data: Use a variety of test data, including boundary cases and edge cases, to ensure thorough testing.
+- Test organization: Group related tests together using test suites or categories for better organization.
+- Test automation: Automate the execution of unit tests to ensure they are run consistently and frequently.
+- Test-driven development (TDD): Consider using TDD, where tests are written before the code, to drive the development process.
+
+## Conclude
+
+Remember, unit testing is just one part of a comprehensive testing strategy. It should be combined with other testing techniques like integration testing and system testing to ensure the overall quality of the software.

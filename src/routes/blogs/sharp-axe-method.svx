@@ -1,0 +1,84 @@
+---
+title: Sharp Axe Method
+date: 2022-10-14
+categories:
+    - 'tips'
+---
+
+<script>
+import {YouTube} from 'sveltekit-embed';
+
+</script>
+
+## What is the Sharp Axe Method?
+
+Doing the right work upfront -> preparing correctly -> so you can save time in the long run.
+
+Having the correct mindset -> reduce the chance of getting OVERWHELMED.
+
+## Step 1: Clean your environment
+
+Take control of your life first, make sure everything is in order.
+
+Physical environment: Clean your desk, do some box breathing
+
+Digital environment: Clear up your desktop, exit every programs, tabs on your computer, delete social media apps on your phone.
+
+## Step 2: Brain dump
+
+Put your thoughts into the page, make a list of everthing you need to do, no order required. Something like:
+
+- Take out the trash
+- Fix the logo
+- Change the color
+- Remove unused components
+
+## Step 3: Categorize the todo list
+
+Use Eisenhower matrix:
+
+- Do the task (very important, very urgent)
+- Delete (not important, not urgent)
+- Schedule (very important, not urgent)
+- Delegate (very urgent, not important)
+
+Think about: what one thing, if done, would make everything else on this list easier.
+
+Or lookalike group: if a bunch of things that have the same vibe or can all be done on computer, group them.
+
+## Step 4: Schedule
+
+Start sticking your tasks on a calendar.
+
+Rule 1: Don't schedule anything that will take less than two minutes; simply do it.
+
+Rule 2: Plan visually.
+
+Rule 3: List the non-movable calendar dates first. (Deadlines, Holidays, Birthdays)
+
+Rule 4: Double the time you estimate. If you estimate a work would take four hours, you should allocate eight.
+
+Rule 5: List your tasks on your calendar in order of importance.
+
+Rule 6: Be extremely specific when describing what needs to be done.
+
+Rule 7: If something seems impossible, consider how it might appear if it were simple. Plan accordingly then.
+
+Rule 8: Plan for average me, not me at my best.
+
+Rule 9: Concentrate on finishing one activity at a time.
+
+Rule 10: Good plan = Flexible plan. Be prepared to change everything.
+
+## Step 5: Communicate
+
+Before you start any work, you should try communicate to stakeholders. If you're late on something, give your stakeholder a specific date.
+
+## Step 6: JUST DO IT
+
+The only way to chop a tree... is to start chopping.
+
+## Video
+
+<YouTube width="300" height="300" youTubeId="prMuDIiFyC4" />
+

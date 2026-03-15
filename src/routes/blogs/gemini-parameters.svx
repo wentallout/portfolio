@@ -1,0 +1,116 @@
+---
+title: Gemini parameters
+date: 2025-12-02
+categories:
+    - ai
+---
+
+## Gemini General Parameters
+
+Gemini offers many tools for developers to make the best use out of it. Among them, there are three parameters that can be inspected or tuned:
+
+- Temperature
+- Max output length
+- Token counting
+
+Note that adjusting these parameters only impacts the behavior of the model as it generates new outputs. This is not the same as model fine-tuning, which re-trains the underlying model.
+
+## Temperature
+
+The Gemini LLM is non-deterministic, meaning that the same prompt can result in wildly different outputs. But how different can they be? This is controlled by the parameter temperature.
+
+For example, if you have low temperature, all the outputs will be the same:
+
+```python
+model_name = 'gemini-1.5-flash'
+new_outputs = []
+low_temp_model = genai.GenerativeModel(model_name, generation_config={"temperature": 0})
+for i in range(5):
+  response = low_temp_model.generate_content(prompt)
+  new_outputs.append(response.text)
+for index, sentence in enumerate(new_outputs, start=1):
+    print(f"{index}. {sentence}")
+
+```
+
+Output:
+
+```
+1. Grab some friends, head to the Engineering Library for a late-night coding session fueled by pizza and caffeine, and brainstorm solutions to a challenging LeetCode problem. 
+
+2. Grab some friends, head to the Engineering Library for a late-night coding session fueled by pizza and caffeine, and brainstorm solutions to a challenging LeetCode problem. 
+
+3. Grab some friends, head to the Engineering Library for a late-night coding session fueled by pizza and caffeine, and brainstorm solutions to a challenging LeetCode problem. 
+
+4. Grab some friends, head to the Engineering Library for a late-night coding session fueled by pizza and caffeine, and brainstorm solutions to a challenging LeetCode problem. 
+
+5. Grab some friends, head to the Engineering Library for a late-night coding session fueled by pizza and caffeine, and brainstorm solutions to a challenging LeetCode problem.
+```
+
+## Using normal temperature
+
+The opposite is true as well! Here is an example of normal temperature. Note that the higher temperature is, the more random and garbled the output will become.
+
+```python
+outputs = []
+prompt = "Help me choose a fun way to spend my Friday night as a CS major at Berkeley in a single one-sentence idea"
+for i in range(5):
+  response = model.generate_content(prompt)
+  outputs.append(response.text)
+for index, sentence in enumerate(outputs, start=1):
+    print(f"{index}. {sentence}")
+
+```
+
+Output:
+
+```
+1. Grab some fellow CS majors and head to a hackathon at the nearby tech incubator for a night of caffeine-fueled coding and camaraderie. 
+
+2. Grab some fellow CS majors and head to a nearby arcade for some retro gaming and competitive fun. 
+
+3. Grab some friends, head to the bustling Sproul Plaza, and engage in a spirited debate about the latest AI breakthroughs while enjoying a late-night boba. 
+
+4. Grab a slice at La Taqueria with friends and brainstorm coding projects over late-night coffee at Philz. 
+
+5. Grab some friends, head to a campus pub trivia night, and test your knowledge while enjoying some cheap drinks and good company.
+```
+
+
+## Max Output Length
+
+Gemini (and all LLMs) generate output in the form of tokens. We can set the max_output_tokens, and therefore limit the output length:
+
+```python
+model_name = 'gemini-1.5-flash'
+short_response_model = genai.GenerativeModel(model_name, generation_config={"max_output_tokens": 5})
+prompt = "Help me choose a fun way to spend my Friday night as a CS major at Berkeley in a single one-sentence idea"
+response = short_response_model.generate_content(prompt)
+print(response.text)
+```
+
+Output:
+```
+Grab some friends and head
+```
+
+## Token Count
+
+Finally is token count. Similar to before, LLMs operate in tokens for both input and output, and are often billed at large scale. It's important to know how many tokens an input might be before giving it to the model. We can accomplish this like so:
+
+```python
+token_n_model = genai.GenerativeModel(model_name, generation_config={"temperature": 0.0})
+poem_prompt = "Write me a poem about Berkeley's campus"
+
+prompt_token_count = token_n_model.count_tokens(poem_prompt)
+output_token_count = token_n_model.count_tokens(response.text)
+print(f'Tokens in prompt: {prompt_token_count} \n Estimated tokens in output {output_token_count}')
+```
+
+Output:
+
+```
+Tokens in prompt: total_tokens: 9
+ 
+Estimated tokens in output total_tokens: 269
+```

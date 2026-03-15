@@ -1,0 +1,112 @@
+---
+title: Great game feedback examples
+date: 2024-11-02
+categories:
+    - game testing
+---
+
+## What issues did you experience during the test?
+
+I crashed to desktop when booting up the game, I received the error “202NT_045”. I was able to resolve this by making an exception in my anti-virus software. I'm on Windows 10
+
+During level 2 the trees were flickering between light and dark, this seemed to only happen when I was moving.
+
+The sound during spells was distorted and warped in certain levels, seemed to happen when a lot was going on at the time.
+
+The sound during spells was distorted and warped in certain levels, seemed to happen when a lot was going on at the time.
+
+## What did you like MOST about the game?
+
+I crashed to desktop when booting up the game, I received the error “202NT_045”. I was able to resolve this by making an exception in my anti-virus software. I'm on Windows 10.
+
+During level 2 the trees were flickering between light and dark, this seemed to only happen when I was moving.
+
+The sound during spells was distorted and warped in certain levels, seemed to happen when a lot was going on at the time.
+
+Some doors in level 6 don't open when it seems they should, maybe these are placeholder rooms but it was confusing.
+
+## How do you think the game could be improved?
+
+The keyboard controls aren't intuitive, I felt I failed missions more often due to controls than my own skills or experience, popular games that share the genre have much better mapping.
+
+The subtitles haven't been greatly localised. Common spelling errors and even code language found in dialogue during mission 3. Could do with more language support.
+
+The lack of voiced characters really puts focus on the poor subtitles during dialogue. Each character is so unique that a lot of fun could be had with unusual voices and accents.
+
+The FPS during heavy load can tank to below 30 on my 1080. The game can hang for 1-2 seconds at times too, making precision play very difficult. Loading in to missions for the first time has FPS in the single digits.
+
+## Please provide your final thoughts and feedback
+
+Couch co-op is great but I'd love to see other options such as cross-play and online multiplayer.
+
+Trading cards and achievements would be great additions, please also consider cloud saves so that I can play on different devices.
+
+A small issue but I noticed ultrawide resolutions weren't supported, which caused black bars that had an impact on immersion.
+
+The music was the strongest point of the game's design, I recommend leaning on this strength wherever possible as it really helps deliver a believable universe with genuine emotion and energy.
+
+I also think Zulra is a badass and the story should focus more on her.
+
+## VIP Feedback
+
+I had a few small issues and glitches which I have detailed below.
+
+1 - I crashed to the desktop when loading the game, presented with error “202NT_045”. It seems AVG Free anti-virus was the conflict, so I added an exception to the .exe and launcher files, which seems to have fixed the issue.
+
+PC specs:
+OS: Windows 10 64-bit
+Graphics: Nvidia GTX 650Ti
+Processor: Intel i3 2120 3.3GHz
+Memory: 4 GB RAM
+
+2 - Roughly 5 minutes in to level 2 (Forest of Dreams), trees and clouds were flickering between lit and shadowed textures, this took a hit on frame rate, which dropped roughly 5-10 frames during flickering. This happened whenever the character passed foliage layered in front of the character.
+
+3 - Repeated use of the 'Eternal Flame' spell would cause the sound effect to overlap, giving an unpleasant echo which was particularly evident during battle when there are lots of competing sounds. Using the spell just once out of combat does not present the problem.
+
+4 - In level 6 ('Dust') both blue doors in the lab don't appear to open, the sound effect is played and the diary log is updated, but you cannot gain entry. Restarting the checkpoint or level didn't help.
+
+---
+
+## VIP feedback: How do you think the game could be improved?
+
+While the game is generally very enjoyable, there were some key areas I feel could help improve the overall experience:
+
+1- Keyboard controls are confusing, the keys you'd expect to be
+related to specific actions are not what you assume and as there's no
+way to map controls you have to learn the hard way. Button prompts
+help with this, but when using the otherwise excellent controller
+controls, key prompts are still set to keyboard mapping.
+
+2 - English localisation for subtitles in the game is pretty rough.
+“There” and “Their” are commonly misspelt and during mission 3
+when conversing with 'Borak' his last response is followed by
+“close_caption_228”. With just Japanese and poor English
+localisation, I feel the game could do with a heavy focus on additional
+language support.
+
+3 - A game such as this really benefits from voice acting, even if just
+in the native language. Character design is a strong point so voices
+tailored specifically to their characteristics would really help immerse
+you in the story and the world you inhibit. This would make the
+subtitle issues less of a problem overall.
+
+4 - During combat and busy moments in the battle sections, my
+frames per section reduced to 20-30, which really impacted the
+fluidity of the gameplay. It also had occasional hitches and mini-freezes following 30+ play sessions. Texture pop and low FPS during
+texture streaming when levels were loading were also a glaring issue.
+
+---
+
+## VIP feedback: Please provide your final thoughts and feedback    
+
+This game has the potential to relate to so many different types of players, casual and hardcore, young to old. If console ports are being considered I think the game would really benefit from cross-play and online co-op. I'd love to play with my buddy on console while playing on my PC.
+
+Too many games release these days without modern quality of life features such as achievements, mod support and cloud saves. The latter is particularly important to me as I am expecting my Steam Deck to arrive soon and would love to play this between my PC and Deck and keep my in-game progress.
+
+Additional aspects ratios and resolution support would be great, the game doesn't take advantage of my ultrawide monitor at all. If you're worried about player advantage in multiplayer games, you could eliminate the extra field of view by zooming in slightly on widescreen devices or placing elements of the HUD outside the playable area.
+
+The music is by far the strongest element of the game, additional sound cues and more punchy effects during combat could take the game to a new level of sonic excellence. The music already conveys the atmosphere, builds energy during tense battles and lowers the tone during emotional moments between characters.
+
+I'd also love to know more of the back story of the character 'Zulra' -she's by far the most complex personality in the game and would be great to explore more of her history in an expansion or sequel.
+
+

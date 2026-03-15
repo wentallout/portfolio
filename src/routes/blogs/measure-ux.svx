@@ -1,0 +1,74 @@
+---
+title: 'Measure UX'
+date: '2023-03-27'
+categories:
+    - 'ux'
+---
+
+## What is it and why is it important?
+
+"The extent to which a product can be used by specified users to achieve specified goals with effectiveness, efficiency and satisfaction in a specified context of use."
+
+Breaking it down: specified users, context of use, effectiveness, efficiency, satisfaction.
+
+
+## Effectiveness
+
+The accuracy and completeness with which users achieve specified goals.
+
+- Tasks completed
+- Ratio of successes to failures
+- Objectives achieved
+- Errors in a task
+- Tasks with errors
+- Task error intensity
+
+Example:
+- Task 1: Success 100%
+- Task 2: Fail 40%, Success 60%
+
+## Efficiency
+
+The ability to do a task successfully, without wasting time or energy.
+
+- Total task time
+- Cost-effectiveness 
+- Productive vs unproductive time
+- Unnecessary actions 
+- Fatigue
+- How often help is used
+
+Example: Time taken to do
+- Task 1: 30 seconds
+- Task 2: 60min
+- Task 3: 10min
+
+## Satisfaction 
+
+After they've completed the tasks, how do users feel about the experience?
+
+### System Usability Scale 
+
+1: Strongly disagree
+
+2,3,4: k
+
+5: Strongly agree
+
+- I think that I would like to use this system frequently
+- I found the system unnecessarily complex
+- I thought the system was easy to use
+- I would need support of a technical person to use the system
+- I found the functions in this system were well integrated
+- I thought there was too much inconsistency in this system
+- Most people would learn to use this system very quickly. I found the system very cumbersome to use
+- I felt very confident using the system
+- I needed to learn many things before starting on the system
+
+### Calculating the score
+
+- Add the scores for all odd-numbered questions, then
+subtract 5 from the total to get (X).
+- Add the scores for all even-numbered questions, then
+subtract that total from 25 to get (Y).
+- Add the total scores (X+Y) and multiply by 2.5.

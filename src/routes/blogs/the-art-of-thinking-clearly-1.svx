@@ -1,0 +1,52 @@
+---
+title: The Art of Thinking Clearly (Part 1)
+date: '2022-11-26'
+categories:
+    - 'psychology'
+---
+
+## [Lesson 1] Why you should visit cemeteries  (Survivorship Bias)
+
+Sometimes, we see famous rock stars on TV, in magazines, and online, and we think they're very successful. But what we don't see are the many musicians who didn't make it big and ended up in the graveyard of failed musicians. The same goes for authors, entrepreneurs, athletes, and others. The media usually only shows successful people, so we might think that success is easy to achieve. But in reality, it's not. It's important to remember that there are many more failures than successes, and we shouldn't be fooled by survivorship bias. It's like when we hear about a friend's start-up company, we might think it will be the next big thing, but most start-ups fail. We should be skeptical of success stories and remember that there are many unsuccessful ones too. It's important to look at the whole picture and not just what's in the spotlight.
+
+## [Lesson 2] Does Harvard make you smarter? (Swimmer’s Body Illusion)
+
+Sometimes we think that doing certain things will make us better or happier, but that's not always true. For example, just because someone is good at swimming doesn't mean swimming will make them good. It's like when people say that using makeup will make you beautiful, but really, models are already pretty and that's why they advertise makeup. It's the same with going to fancy schools or getting a big job - it's not always because of the school or job itself, but because of other reasons. And sometimes people say you should try to be happier, but really, being happy is something that comes from inside you. So, be careful when you're told to do certain things - look at yourself honestly and decide what's best for you.
+
+## [Lesson 3] Why you see shapes in the clouds (Clustering Illusion)
+
+Sometimes our brains like to find patterns in things that may not really be there. For example, people have claimed to see messages from the supernatural in tape recordings, faces of religious figures in food, and even human-like formations on other planets. But often, these patterns are just coincidences or tricks of the mind. Our brains are wired to look for patterns and rules, even in random or noisy data. It's important to be skeptical and not jump to conclusions when we think we've found a pattern. Sometimes things may seem too good to be true, and it's always a good idea to seek the help of experts, like mathematicians, to test the data statistically. So, next time you think you've found a pattern, remember to question it and not always believe everything you see or hear!
+
+
+## [Lesson 4] If 50 million people say something foolish, it is still foolish (Social Proof)
+
+Social proof is when people feel that they should act the same as others around them. This can happen in many situations, like when you see a group of people staring at the sky and you look up too, or when everyone starts clapping at a concert and you join in. Sometimes people even do things that don't make sense, like leaving a tip at a coat check even though it's not necessary. This happens because we have a natural instinct to follow what others are doing, even if it's not always the right thing to do. It can be used in advertising and by people who want to convince others to believe or do something. But it's important to be skeptical and think for ourselves, even if lots of people are saying or doing something. Just because many people do something doesn't mean it's always the best or right thing to do.
+
+
+## [Lesson 5] Why you should forget the past (Sunk Cost Fallacy)
+
+Sometimes, we make mistakes by thinking that we should continue doing something just because we've already spent a lot of time, money, or effort on it. This is called the sunk cost fallacy. It's like when we went to see a movie that we didn't like, but we didn't want to leave because we already paid for the tickets. Or when a company keeps spending money on an advertising campaign that's not working, just because they've already invested a lot of money in it. Even in relationships, people sometimes stay in bad situations because they've already invested so much time and energy. But it's important to remember that what matters most is how something will be in the future, not how much we've already spent on it.
+
+
+## [Lesson 6] Don't accept free drinks (Reciprocity)
+
+Reciprocity is when people feel obliged to give or do something in return for receiving a gift or favor. It's a powerful social norm that can be used by individuals, organizations, and even companies to influence others. For example, you may have encountered people from the Hare Krishna sect at airports who offer you a flower as a gift and then ask for a donation. Many NGOs and philanthropic organizations also use similar tactics, such as sending gifts or postcards to encourage donations. Reciprocity can be a positive force for cooperation and economic growth, but it can also lead to unwanted obligations and even retaliation. It's important to be aware of the influence of reciprocity and make conscious decisions about when to accept or decline gifts or favors.
+
+## [Lesson 7] Beware the special case (Confirmation Bias (Part 1))
+
+Confirmation bias is when we only pay attention to information that agrees with what we already believe, and ignore anything that contradicts it. It can happen when we're trying to lose weight, make decisions in business, or even solve puzzles. For example, if someone believes a diet is working, they might only notice when they lose weight and ignore when they don't. It's important to be aware of this bias and actively look for evidence that challenges our beliefs, just like Charles Darwin did. In an experiment, a clever student was able to figure out a rule by deliberately trying to find evidence that disproved their initial theory. It's important to avoid confirmation bias because it can affect our lives in big ways.
+
+## [Lesson 8] Murder your darlings (Confirmation Bias 2)
+
+People tend to believe what they already think is true, and ignore information that challenges those beliefs. This is called confirmation bias, and it happens when we only pay attention to things that support what we already believe and ignore anything that goes against it. This can happen in many areas of life, like when we think all people are good or all people are bad, or when we believe in things like astrology or economics without really questioning them. It's also common in religion, philosophy, and business journalism. Even on the internet, we tend to only look at websites and news that support our views, making it hard to see other perspectives. To fight against confirmation bias, we should try to look for evidence that challenges our beliefs, even if it's hard to let go of ideas we like.
+
+## [Lesson 9] Don't bow to authority (Authority Bias)
+
+Sometimes people who are considered important, like doctors, scientists, or CEOs, can make mistakes or give bad advice. They may act like they know everything and should not be questioned, but that's not always true. For example, even economists could not predict a big financial problem in 2008. There was a famous experiment where people were told to hurt someone because an authority figure told them to, and most of them did it without questioning. Even pilots now learn to talk to their co-pilots and not just follow orders blindly. So, it's important to think for ourselves and not just believe everything authority figures say.
+
+## [Lesson 10] Leave your supermodel friends at home (Contrast Effect)
+
+Sometimes, people's judgment can be influenced by the things they see or experience before making a decision. For example, in a story about two brothers who sell suits, one of them pretends to misunderstand the price of a suit to make it seem cheaper to the customer. This is called the contrast effect. It's like when you put one hand in cold water and the other in hot water, then put them both in lukewarm water - the lukewarm water feels different to each hand. This effect can also happen when we compare prices or value of things. For example, we might think a discounted item is a better deal compared to its original price, even if it's still expensive. It's important to be aware of the contrast effect and not let it influence our decisions too much.
+
+
+

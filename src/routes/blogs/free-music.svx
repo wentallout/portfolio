@@ -1,0 +1,22 @@
+---
+title: Free Music for your project
+date: 2023-03-03
+categories:
+    - freebies
+---
+
+## Free Sound and Music
+
+- [Bensound](https://www.bensound.com)
+- [ccMixter](http://ccmixter.org/)
+- [Free Loops](http://free-loops.com)
+- [Free Music Archive](http://freemusicarchive.org/)
+- [Freesound](https://freesound.org/): Collaborative database of audio snippets, samples, recordings and bleeps.
+- [FreeSoundEffects](https://free-sound-effects.net/)
+- [Internet Archive's Netlabels Collection](https://archive.org/details/netlabels)
+- [Jamendo](https://www.jamendo.com/start) - Independent music community with a large collect of creative commons licensed music.
+- [Jukedeck](https://www.jukedeck.com) - Machine learning powered royalty-free original music.
+- [Sound Image](http://soundimage.org/) - Over 1000 tracks of free music and sound effects for your projects by Eric Matyas.
+- [SoundBible](http://soundbible.com) -  Thousands of free sound effects, sound clips, and straight up sounds.
+- [Unminus](https://www.unminus.com/) - Download Royalty Free Music for YouTube Videos, Podcasts and Apps. No Copyright CC0 Music inspired by Unsplash
+

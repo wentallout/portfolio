@@ -1,0 +1,74 @@
+---
+title: 'Tools for Crafting Color Schemes and Gradients for Web and Design'
+date: '2024-07-28'
+categories:
+    - 'color'
+    - 'freebies'
+---
+
+## Color scheme generator
+
+⭐NEW - [css-color-palette-generator](https://www.hover.dev/css-color-palette-generator)
+
+- [colorffy](https://colorffy.com)
+- [goodpalette](https://goodpalette.io) beautiful color palettes for UI (Primary + Accent + Neutral).
+- [Colormind.io](http://colormind.io)  
+- [Adobe Color](https://color.adobe.com/explore)
+
+## Get colors from an image
+
+https://www.canva.com/colors/color-palette-generator/
+http://colormind.io/image/
+
+## Colors
+
+- [Adobe Color](https://color.adobe.com) Made by Adobe, so you know it's good.
+- [Coolors](https://coolors.co)
+- [Color Hunt](https://colorhunt.co)
+- [Khroma](https://khroma.co)
+- [Muzli Colors](https://colors.muz.li)
+- [Dopely Colors](https://colors.dopely.top)
+- [Flat UI Colors](https://flatuicolors.com)
+- [My color space](https://mycolor.space) Just enter a color and generate gradients.
+- [Colorhub](https://colorhub.vercel.app) Find perfect color palette for your next project
+
+## Instagram
+
+- [Interface Colour](https://instagram.com/interface.colour)
+
+## Gradient
+
+NEW: https://www.designgradients.com
+
+- [Gradientify](https://gradientify.com/) carefully crafted gradients for your next projects.
+- [Josh's Gradient Generator](https://www.joshwcomeau.com/gradient-generator/) John Comeau gradient generator
+- https://webgradients.com
+- https://www.grabient.com
+- https://gradients.cssgears.com
+- http://colinkeany.com/blend
+- https://uigradients.com
+- https://www.gradients.io
+- https://colorspark.app/gradient
+
+## Palette Previewer
+
+⭐NEW [palettify.co](https://palettify.co)
+
+## Reference
+
+https://www.youtube.com/watch?v=7hgIzaifLN4
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

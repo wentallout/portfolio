@@ -1,0 +1,39 @@
+---
+title: 'What is WCAG?'
+date: '2022-11-26'
+categories:
+    - fundamental
+---
+
+## Checklist 
+
+https://thisiswcag.com/
+
+## WCAG
+WCAG is short for "Web Content Accessibility Guidelines". These are guidelines for web content creators (people that make websites and web apps) on how to make sure that their content or application is usable and accessible by everyone. A good intro on WCAG can be found at MDN. In some countries, it's even mandatory for certain sites to adhere to these guidelines.
+
+[Understanding WCAG](https://developer.mozilla.org/en-US/docs/Web/Accessibility/Understanding_WCAG)
+
+## The four principles
+
+[Perceivable](https://developer.mozilla.org/en-US/docs/Web/Accessibility/Understanding_WCAG/Perceivable): Users must be able to perceive it in some way, using one or more of their senses.
+
+[Operable](https://developer.mozilla.org/en-US/docs/Web/Accessibility/Understanding_WCAG/Operable): Users must be able to control UI elements (e.g. buttons must be clickable in some way — mouse, keyboard, voice command, etc.).
+
+[Understandable](https://developer.mozilla.org/en-US/docs/Web/Accessibility/Understanding_WCAG/Understandable): The content must be understandable to its users.
+
+[Robust](https://developer.mozilla.org/en-US/docs/Web/Accessibility/Understanding_WCAG/Robust): The content must be developed using well-adopted web standards that will work across different browsers, now and in the future.
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+

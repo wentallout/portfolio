@@ -1,0 +1,92 @@
+---
+title: Frontend Blogs and Podcasts
+date: 2023-06-24
+categories:
+    - frontend
+---
+
+## Blogs and Magazines
+
+- A List Apart
+- Codrops
+- CSS In Real Life
+- CSS Tricks
+- CSS Weekly
+- Dev.to
+- Frontend Focus
+- Frontend Horse
+- HeyDesigner
+- Medium
+- Modern CSS Solutions
+- Sidebar
+- SitePoint 
+- Smashing Magazine
+ 
+## Podcasts
+
+- #A11y Rules
+- The Changelog
+- CodePen Radio
+- The CSS Podcast
+- Front End Happy Hour
+- Frontend First
+- Frontend Weekend
+- Full Stack Radio https://fullstackradio.com/
+- HTTP 203 https://developers.google.com/web/shows/http203/podcast
+- JAMStack Radio
+- Ladybug Podcast https://www.youtube.com/@LadybugPodcast
+- Modern Web
+- Shop Talk Show
+- Software Engineering Daily https://softwareengineeringdaily.com/
+- Syntax
+- The Bike Shed
+- Toolsday https://spec.fm/podcasts/toolsday
+- The Undefined Podcast
+- The Web Platform Podcast
+- Web Standards
+- Working Draft Podcast
+
+## People 
+
+- Adam Argyle
+- Adam Wathan
+- Ahmad Shadeed https://ishadeed.com/
+- Andy Bell
+- Bramus Van Damme
+- Chris Coyier
+- Jake Archibald https://jakearchibald.com/
+- Jen Simmons https://www.youtube.com/layoutland
+- Jhey Tompkins https://jhey.dev/
+- Josh W. Comeau
+- Kevin Powell
+- Kyle Cook https://courses.webdevsimplified.com/
+- Lea Verou 
+- Michelle Barker https://michellebarker.co.uk/
+- Miriam Eric Suzanne
+- Rachel Andrew https://rachelandrew.co.uk/
+- Sara Soueidan
+- Stephanie Eckles
+- Una Kravets
+- Vadim Makeev
+- Wes Bos https://wesbos.com/
+
+## Sites & Courses
+
+- Codecademy
+- CSSWG (W3C CSS Working Group)
+- Design+Code
+- Egghead.io https://egghead.io/
+- freeCodeCamp
+- Frontend Masters
+- Level Up Tutorials
+- MDN
+- Newline
+- Pluralsight https://www.pluralsight.com/
+- Stack Overflow
+- W3Schools
+- Web.dev
+- Wes Bos
+
+
+
+

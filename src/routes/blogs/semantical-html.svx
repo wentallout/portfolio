@@ -1,0 +1,46 @@
+---
+title: Why you need to write Semantical HTML right now
+date: 2024-05-10
+categories:
+    - frontend 
+    - fundamental
+---
+
+## What is Semantic HTML?
+
+Semantic HTML refers to the use of HTML markup to reinforce the meaning of the information in webpages and web applications rather than merely to define its presentation or look. It involves using HTML tags that introduce meaning to the web content. This practice not only helps in creating web pages that are informational and easy to navigate but also plays a significant role in SEO (Search Engine Optimization) and accessibility.
+
+## Key points about semantic HTML
+
+### Descriptive Tags
+
+Instead of using generic tags like `<div>` and `<span>` for every element, semantic HTML encourages the use of specific tags that describe their purpose and content. For example, `<nav>` for navigation links, `<header>` for introductory content, `<footer>` for footer information, `<article>` for a self-contained composition, `<section>` for a thematic grouping of content, and `<aside>` for tangential content that could be considered separate from the main content.
+
+### Accessibility
+
+Semantic tags make it easier for screen readers and other assistive technologies to interpret the content of a webpage. This is crucial for users with disabilities. For instance, a `<nav>` element clearly indicates to a screen reader that it contains navigation links.
+
+### SEO Benefits 
+
+Search engines give higher priority to web content that is semantically structured because it's easier for them to understand the context and relevance of the content. This leads to better indexing and, as a result, better search rankings.
+
+
+### Easy to Read and Maintain
+
+Semantic HTML results in a cleaner and more organized code structure, making it easier for developers and collaborators to read, understand, and maintain the code.
+
+### Cross-Compatibility
+
+Well-structured semantic HTML is more likely to be consistently interpreted by various browsers and devices, leading to a more consistent user experience across different platforms.
+
+## Conclusion
+
+Semantic HTML is a best practice in web development, and it's essential for front-end engineers to understand and use it effectively. It helps in creating web pages that are accessible, well-structured, and easy to maintain.
+
+## Learn more
+
+Semantic HTML on web.dev: https://web.dev/learn/html/semantic-html/
+
+## Interesting HTML tag
+
+https://harrisonbroadbent.com/blog/cool-native-html-elements/

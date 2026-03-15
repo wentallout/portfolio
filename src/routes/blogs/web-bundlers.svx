@@ -1,0 +1,45 @@
+---
+title: Web Bundlers
+date: 2024-05-09
+categories:
+    - frontend
+---
+
+## What is `build`?
+
+In the context of software development and web development, the term "building" or "builds" refers to the process of converting source code files into standalone software artifacts that can be run on a computer or server. This is a crucial step in the development lifecycle, especially for a front-end engineer.
+
+
+## Concepts
+
+Definition of Building / Builds:
+
+Building (Verb): The process of compiling, linking, and packaging source code into a usable or executable form. This includes compiling code, bundling resources, and performing tasks like minification and transpilation.
+Builds (Noun): The output or artifacts generated from the building process. These could be executable programs, libraries, web application bundles, etc.
+Key Aspects of Building in Web Development:
+
+Compilation: Translating source code written in a high-level language (like JavaScript) into a form that can be executed by a browser or server. In web development, this might not be traditional compilation but could involve transpilation (converting source code from one language to another, like TypeScript to JavaScript).
+Bundling: Combining multiple files and assets (like JavaScript files, CSS files, and images) into a smaller number of files to reduce the number of HTTP requests required to load a web page.
+Minification and Optimization: Shrinking file size by removing unnecessary characters (like whitespace, comments) and optimizing code, which helps in reducing load times and improving performance.
+Transpiling: Converting modern JavaScript (ES6/ESNext) to a version compatible with older browsers. Tools like Babel are used for this purpose.
+Asset Processing: This can include processing CSS with tools like PostCSS, compiling SCSS or LESS to CSS, and optimizing images.
+Versioning and Caching: Assigning unique version numbers to build artifacts to manage caching on client browsers.
+Importance in Web Development:
+
+Building is essential in web development for optimizing the performance and compatibility of web applications. It ensures that the applications are efficient, scalable, and accessible across different browsers and devices. For front-end engineers, understanding and efficiently managing the build process is crucial for creating robust and high-performing web applications.
+
+The building process would involve a series of steps to ensure that the final product delivered to the browser is optimized, efficient, and error-free.
+
+## Learn more:
+
+Vite from Frontend Masters: https://frontendmasters.com/courses/vite/?utm_source=guides&utm_medium=website&utm_campaign=feh2024
+Build & Testing Tools Learning Path from Frontend Masters: https://frontendmasters.com/learn/build-tools/?utm_source=guides&utm_medium=website&utm_campaign=feh2024
+
+## Tools
+
+Vite: https://vitejs.dev/
+Parcel: https://parceljs.org/
+esbuild: https://esbuild.github.io/
+Rollup: https://rollupjs.org/guide/en/
+Rspack: https://www.rspack.dev/
+Lightning CSS: https://lightningcss.dev/

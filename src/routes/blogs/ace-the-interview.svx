@@ -1,0 +1,234 @@
+---
+title: Acing the interview
+date: 2024-05-01
+categories:
+    - interview
+---
+
+## It's kinda scary. But don't worry
+
+You have finally landed an interview at your dream company.
+
+But how do you make sure you can impress the many people who may interview you and convince them you are the best candidate for the job.
+
+Landing your dream job isn't just down to perfecting your portfolio, website, resume and cover letter. It's about how you present yourself the right way.
+
+There is an art to interviewing. Especially within tech.
+
+
+## The types of interviews that you may encounter
+
+- Behavioral interviews
+- Technical interviews
+- App Critique interviews
+- Portfolio and Project interviews
+
+## Behavioral interviews
+
+The behavioral interview can take on many forms and can appear at multiple stages within the interview process.
+
+It consists of questions focusing on your ability to react to certain industry situations
+
+### Before the interview
+
+You are likely to succeed in your interview if you are familiar with the 
+
+Research the company
+
+Look your interviewer up on LinkedIn, GitHub or their personal website to see if you can
+
+An interviewer is more likely to remember a candidate that htey can connect with.
+
+### What's your why?
+
+Construct a short elevator pitch, 30-second snippet of who you are, what you do and where do you see yourself going.
+
+Example: "Hi I'm Christina. I'm a musician that took her love of practicing, mentoring"
+
+"I'm currently a technical writer, creating blogs and articles for beginner to professional level engineer"
+
+You can also use your personal brand statement as your elevator pitch
+
+- 
+
+There are several interview questions, that always seem to pop up in interview situations.
+
+Common questions:
+- What is your greatest strength?
+- What is your greatest weakness?
+- Tell me about a time you had a conflict with a coworker
+- What makes you unique
+- Why should we hire you?
+
+## Other things
+
+Know the market rate for the role in your area.
+
+If you don't know what to say, respond with "What is the budget for this position?" and see what the recruiter has to say.
+
+## Questions to ask at the end
+
+- Ask about the culture, the workplace
+
+## Extra questions
+
+1/
+
+
+## The STAR Method
+
+This framework provides a solid model for answering any question by breaking it down into Situation, Task, Action, Result
+
+You can answer questions using the STAR method:
+
+- S: Situation is the context in which a problem or challenge arises. It could be a time when you worked with a team
+
+- T: Task is the responsibility that you had over the situation. It could be helping someone meet a deadline
+
+- A: Action is where you get to describe the specific steps you took to tackle
+
+- R: Result refers to the outcome that your actions produced. This is where you get to talk
+
+Give an example of a goal you reached and tell me how you achieved it.
+
+When I started working at XYZ, I had to increase the number of active users on our platform by 5% each month. To do so, I was assigned to work on the new notification system for our mobile app.
+
+In my work, I first identified opportunities to send notifications to users. Then
+
+
+### EX2: Tell me about about a time when you effectively worked under pressure
+
+
+## Technical Interview
+
+The technical interview is all about assessing your approach to problem-solving.
+
+The questions that may arise are dependant on the role.
+
+You may be asked to solve technical problems or complete coding challenges to demonstrate your abilities
+
+### How you should do to prepare for a technical interview
+
+- Understand the requirements of the position and the company's products or services.
+- Review your technical knowledge and skills, especially in areas relevant to the role (programming languages)
+- Practice your communication skills
+- Stay calm and focused
+
+The key to approaching
+
+### How to approach coding and ...
+
+STEP 1: Make sure you fully understand the problem before attempting
+STEP 2: Brainstorm possible solutions to the problem and evaluate the trade-offs between them.
+STEP 3: write clean, efficient code 
+STEP 4: Test your solution
+STEP 5: Explain your thought process to the interviewer as you solve the problem
+
+
+## App Critique Interview (for product managers and designers)
+
+Your interviewer wants to focus on how design decisions impact users and the business.
+
+Your interviewers are looking to evaluate your:
+- 1/ Design skills: typography, hiarchy, color theory, information architecture
+- 2/ Product thinking: can you identify, can you analyze
+- 3/ Communication skills:
+
+### The process
+
+Interviews will most likely be held over a video call. Make sure to talk aloud and show the interviewer your screen.
+
+Interviews will most likely select an app for you to critique
+- Yelp, Uber, Spotify
+- You may be given a choice but the interviewer will most likely select an app for you to critique
+- A successful app critique will need to be thorought and touch on nearly every facet of design
+
+Your framework should:
+- Highlight both good and bad designs.
+- Consider all design perspectives (visual, interaction, branding)
+- Demonstrate both high and low level
+
+### Solving app critique interview
+
+- Pick an approach to structure your critique: app driven, person driven or problem driven.
+
+App driven: as there is no specific flow to follow, it allows for a broad evaluation where you can analyze different elements of the app, screen-by-screen.
+
+
+Questions for App driven:
+
+- Why are 'Add' and 'Cancel' buttons in navigation tabbar?
+- What are your thoughts on
+
+Persona Driven: this approach enables you to position yourself as an advocate for the user and communicate how a user-driven approach can influence product design.
+
+Questions for Persona Driven:
+
+- Which features will a reviewer use on Yelp and how do these features achieve business goals for Yelp?
+- Go through the flow of creating a playlist on Spotify and share with a friend.
+- Analyze the Reddit home screen and the options it has. Go through the flow of creating a post.
+
+Problem Driven: this methods involves focusing the critique session on a particular problem or use case that you or the interviewer want to explore.
+
+Questions for Problem Driven:
+- If you are planning a party with friends, how will you plan to create a playlist on Spotify
+- You found it difficult to create a playlist on Spotify because (insert your reasons and go through the flow)
+- This is how I will improve it (explain your intended solution and go though the flow).
+
+### Ensure you perform the general UX audit:
+
+- The user and the problem
+- Structure
+- Interactions
+
+
+
+Questions to ask yourself when thinking about the user and the problem:
+
+- What is the primary problem they are trying to solve?
+- What was the company's
+
+
+Create a mental model of the information architecture 
+
+Questions to ask yourself when thinking about the structure:
+
+- Good use of space? Is there enough negative space?
+- How does the IA help users accomplish their tasks?
+
+
+Understanding established interacction patterns enables you to communicate the app's interaction efficiency and assess whether it enhances the user's experience.
+
+Questions to ask yourself when thinking about interactions:
+- How
+- What animations are they using and how do they make you 
+- What are the gestures required to interact with the app? Do you believe they are suitable for their situation?
+- Does the app suffer any interaction problems? If not, why? If yes, how will you improve it?
+-
+
+### User Interface
+
+Visuals serve as the initial point of contact for users, and as a result, hold the ability to influence the user's 
+
+Questions to ask yourself when thinking about the UI:
+- How is the app maintaining design consistency?
+- What is used to set user expectations and guide them to perform an action?
+- How 
+- Does overrall
+
+You will want to practice and warm up your critical thinking muscles before your interview 
+
+### Narrow down a few apps to practice:
+
+- Target apps with a broad audience
+- Avoid apps with paywalls
+- Avoid apps with sensitive data
+- **Choose apps with high complexity**
+
+
+
+
+
+
+
+

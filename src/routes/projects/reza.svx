@@ -1,0 +1,257 @@
+---
+title: Reza - Table Reservation Mobile App
+date: '2022-09-14'
+---
+<script>
+   
+   
+    import Image from '$components/common/Image.svelte';
+
+    //images
+	import thumbnail from '$lib/assets/images/projects/reza/thumbnail.jpg';
+   
+    import feature from '$lib/assets/images/projects/reza/feature.png';
+    import role from '$lib/assets/images/projects/reza/role.png';
+    import plan from '$lib/assets/images/projects/reza/plan.png';
+    import goal from '$lib/assets/images/projects/reza/goal.png';
+    import userResearch from '$lib/assets/images/projects/reza/userResearch.png';
+    import persona from '$lib/assets/images/projects/reza/persona.png';
+    import hmw1 from '$lib/assets/images/projects/reza/hmw1.png';
+    import redesign1 from '$lib/assets/images/projects/reza/redesign1.png';
+    import redesign2 from '$lib/assets/images/projects/reza/redesign2.gif';
+    import lofi from '$lib/assets/images/projects/reza/lofi.png';
+    import c1 from '$lib/assets/images/projects/reza/c1.png';
+    import c2 from '$lib/assets/images/projects/reza/c2.png';
+    import l1 from '$lib/assets/images/projects/reza/l1.png';
+    import l2 from '$lib/assets/images/projects/reza/l2.png';
+    import ds1 from '$lib/assets/images/projects/reza/ds1.png';
+    import ds2 from '$lib/assets/images/projects/reza/ds2.png';
+    import ds3 from '$lib/assets/images/projects/reza/ds3.png';
+    import rezaIcon from '$lib/assets/images/projects/reza/rezaIcon.png';
+    import reservationFlow from '$lib/assets/images/projects/reza/reservationFlow.png';
+    import searchFlow from '$lib/assets/images/projects/reza/searchFlow.png';
+    import homeScreen from '$lib/assets/images/projects/reza/homeScreen.png';
+    import searchScreen from '$lib/assets/images/projects/reza/searchScreen.png';
+    import reservationScreen from '$lib/assets/images/projects/reza/reservationScreen.png';
+    import detailScreen from '$lib/assets/images/projects/reza/detailScreen.gif';
+    import notiScreen from '$lib/assets/images/projects/reza/notiScreen.png';
+</script>
+
+## Overview
+
+<Image loading="eager" src={thumbnail} alt="reza thumbnail" />
+
+| |
+|-------|------|
+| Name | Reza |
+| Platform | Mobile (iOS) |
+| Duration | 2 weeks |
+| Team | 3 members |
+| Role | UI/UX Designer, Leader |
+| Software | Figma |     
+
+## Inspiration
+
+Imagine you need to organize a party for your group of friends. You are not a cuisine expert and you don't know all the cool places in the city. So you opened Google and search for the nearest restaurants. But, you realized you don't know much about its foods, price or how to contact them to get a table.
+
+You need a mobile app that can:
+
+- Recommend the most trendy restaurants
+- Show you its menu, price and past reviews,
+- Let you reserve a table when it's available and then remind you when it's time and guide you there.
+
+## Problem statement
+
+Customers are frustrated when they see a long queue or full table at their favorite restaurants. Restaurants can get crowded when there is a big promo and clients may leave to find a different place to eat => business lose money. We need an app that can reduce this frustration by making it easier for people to find interesting new restaurants that are available.
+
+Our vision: table reservation apps are not as popular as food ordering apps in Vietnam. People still rely on the old ways of booking a table by phone and miss out on discounts.
+
+We look at one of our competitor apps [PasGo](https://pasgo.vn) and relized some important features are missing:
+
+- Cancel your order
+- Find directions
+- Give you notifications when it's almost time to eat or nearby deals.
+
+=> We brainstorm some ideas and design an app with more features and better UX considerations.
+
+<Image src={goal} alt="project goal" />
+
+## Audience
+
+I need to visualize the kind of user that will use this product. The persona has to represent the largest amount of users so a person with a paying job will be appropriate. She's busy but like to hangout with friends in a nice place sometimes.
+
+<Image src={userResearch} alt="user research" />
+
+## Responsibilities
+
+I volunteered to be the team leader because I had more free time than my peers and I'm quite confident in my time management skill.
+
+<Image src={role} alt="role" />
+
+At every step in our process, I gave each member a task and a deadline. I don't expect them to finish on time since they still have school/work but it's still important to estimate so that **I can cut the potential risk in the future**.
+
+<Image src={plan} alt="plan" />
+
+## Constraints
+
+We were given **2 weeks** to finish our project so I decided that we should use our limited time wisely. So I tell my team to remove unnecessary ideas and focus only on the **3 most important features: Searching, Detail and Booking**.
+
+I set up a meeting time for my team at 7:00 PM every Monday, Wednesday, and Friday.
+
+We use Discord for our daily meetings and share our progress and feedback through screen share.
+
+## Process
+
+The **Design Thinking** method is a practical way to solve complex problems by finding information about the human needs.
+
+There are 5 phases to go through: **Empathize, Define, Ideate, Prototype, Test**.
+
+### Empathize
+
+In the first phase, I need to understand what my potential users want to identify issues. The goal is that I can answer the challenges they face.
+
+There are 3 possible ways to gather data:
+
+- Google Form online surveys.
+- Interview (Work in progress).
+- Competitive Analysis (Work in progress).
+
+#### Online survey
+
+Using online surveys I can gather real data from students to employees. I want to know if people actually need to make reservations at a restaurant or if they have some disadvantages.
+
+=> **Conclusion 1**: some people have created a restaurant table reservation by contacting the restaurant through their social media but that leads to a long response time from the restaurant.
+
+=> **Conclusion 2**: people went to the restaurant's location without making a reservation and were annoyed that the queue was long or there was no table left.
+
+=> **Conclusion 3**: People don't actually understand what it's like to reserve a restaurant table because they have never done it before.
+
+### Define
+
+In the second phase, I need to determine our target users based on the data I've researched and identify the pattern of problems I found from the previous phase.
+
+#### Persona
+
+Forming multiple user personas is important but for the scale of our project we stick to making one.
+
+<Image src={persona} alt="persona" />   
+
+To end Phase 2 we used the **How Might We (HMW)** question method. This is the first one we came up with:
+
+<Image src={hmw1} alt="how might we" />
+
+I made a simplified one later:
+
+- Help users check if the restaurant is full.
+- Help making a table reservation easily.
+- Help users track their reservation.
+- Help users find important info: recommended dishes and price (menu), parking lot, address, reviews
+
+### Ideate
+
+From what we have brainstormed, we prioritized certain features based on impact/effort.
+
+<Image src={feature} alt="project main features" />
+
+#### User Flow
+
+Reservation Flow:
+
+<Image src={reservationFlow} alt="reservation flow"  />
+
+Search Flow:
+
+<Image src={searchFlow} alt="searchFlow"  />
+
+#### Low Fidelity wireframe
+
+We made lofi screens for the main features we agreed on. It's highly possible that we will make wrong logical decisions in this phase so we need to get feedbacks and tweak the wireframe before phase 4.
+
+<Image src={lofi} alt="low fidelity wireframe" />
+
+    
+#### Branding
+
+I got the name from the pronunciation of "reservation" which looks like this: **/ˌrezərˈvāSH(ə)n/** . I think short, 2 syllables words are the best names for your brand.
+
+I chose red as the brand color because it makes people hungry and it has this **organic, tomato vibe** to it. I want our brand to be **friendly and comfortable**, something that make you feel relaxed after a long day at work.
+
+I used Canva and quickly made a SVG logo for my concept mobile app. There are multiple sizes for different devices for easy exports.
+
+<Image src={rezaIcon} alt="branding" />
+
+#### Design System
+
+I wanted my team to create a simple design system before moving to phase 4. This will help my team achieve the minimum consistency that is required in a typical project.
+
+<Image src={ds1} alt="design system" />   
+<Image src={ds2} alt="design system" /> 
+<Image src={ds3} alt="design system" />    
+
+
+### Prototype
+
+Phase 4 is all about creating an interactive design that will be tested by potential users in phase 5.
+
+[Link to prototype](https://www.figma.com/proto/owUrwidb8hZbdmruKhMtyS/REZA%3A-Restaurant-Reservation-App?page-id=2%3A9&node-id=275%3A5365&viewport=549%2C-598%2C0.24&scaling=scale-down&starting-point-node-id=275%3A5365)
+
+#### Home
+
+This is the screen user sees when they first open the app. I try not to overwhelm users with too much information.
+
+<Image src={homeScreen} alt="home screen UI" />
+
+#### Search
+
+This screen lets users search for a restaurant using keywords like the restaurant's name or the cuisine. The search result will be displayed in a list. You can then filter, sort your result by distance, price, rating.
+
+<Image src={searchScreen} alt="search screen UI" />
+
+#### Detail
+
+This screen shows up when user click on a restaurant from their home page or search result page.
+
+<Image src={detailScreen} alt="detail screen" />
+
+#### Reservation
+
+This screen allows users to see their booked reservations and cancel them if they want to.
+
+<Image src={reservationScreen}  alt="reservation screen UI" />
+
+#### Notification
+
+Alarm users when it's time to go to the restaurant. Also it gives them good deals or discount nearby.
+
+<Image src={notiScreen}  alt="notification screen UI" />
+
+### Test
+
+It's widely known that early, repeated testing and redesign will save time and money. We can't just work on something for months then release it without knowing how people wil react to it.
+
+Getting feedback from real users in the testing phase will give me a chance to redesign and maximize the performance of some flows.
+
+#### Detail Page Redesign
+
+I got some feedback from my instructors and found this one element that needs to be fixed to the top because the page could be long and we can't force users to scroll all the way back to the top.
+
+<Image src={redesign1} alt="the screen that needs redesign" />   
+
+=> **My redesign:**
+
+<Image src={redesign2} alt="the solution" />   
+
+There is also a Remote Usability Testing service that helps with this testing phase: [Maze](https://maze.co/).
+
+## Conclusion
+
+From this case study, I've learned a lot about the process of solving problems.
+
+Team collaboration is very important in a project because when you work alone it's easy to get tunnel visioned (limited point of view). It's important to receive feedback from everyone in the team in order to keep improving my designs.
+
+<Image src={c1} alt="conclusion" />
+<Image src={c2} alt="conclusion" />
+<Image src={l1} alt="conclusion" />
+<Image src={l2} alt="conclusion" />
+
+

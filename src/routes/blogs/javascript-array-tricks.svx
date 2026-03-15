@@ -1,0 +1,50 @@
+---
+title: Javascript Array Tricks
+date: 2024-05-10
+categories:
+- javascript 
+---
+
+Useful techniques for working with JS arrays
+
+## Create a Range of Numbers
+
+```js
+const range = Array(100).fill(0).map((_, i) => i + 1);
+
+// OR
+
+const range = [...Array(100).keys()];
+```
+
+## Remove Duplicates from an Array
+
+```js
+const unique = [...new Set(arr)];
+```
+
+## Get a Random Element
+
+```js
+const random = arr[Math.floor(Math.random() * arr.length)];
+```
+
+## Loop over a Key-Value Pair
+
+```js
+for(const [i, val] of arr.entries()) {
+    console.log(i, val);
+}
+```
+
+
+## Array Methods to Study
+
+```js
+arr.forEach();
+arr.map()
+arr.filter();
+arr.find();
+arr.findIndex();
+arr.reduce();
+```

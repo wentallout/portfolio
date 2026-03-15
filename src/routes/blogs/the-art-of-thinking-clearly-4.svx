@@ -1,0 +1,49 @@
+---
+title: The Art of Thinking Clearly (Part 4)
+date: '2023-04-11'
+categories:
+    - 'psychology'
+---
+
+## How to relieve people of their millions
+
+Inductive thinking, drawing universal conclusions from individual observations, can be both deceiving and beneficial. It can lead to risky decisions and false beliefs, but also allows us to trust in consistency. However, we must remember that certainties are always provisional and assuming past successes guarantee future outcomes is flawed reasoning. Approach inductive thinking with caution and critical thinking.
+
+## Why evil strikes harder than good
+
+Sometimes, we feel happier when we don't lose something than when we gain something of the same value. This is because our brains are wired to be more scared of losing things than excited about gaining things. It's like when you have a toy and you don't want to lose it because it's yours. This happens because a long time ago, our ancestors had to be very careful not to lose things or make mistakes, or they might get hurt or even die. So, our brains are still wired that way today. That's why sometimes people focus more on avoiding bad things than getting good things. It's important to remember this when we want to convince someone to do something or when we make decisions for ourselves.
+
+## Why teams are lazy
+
+When people work together in groups, they may not put in as much effort as they would when working alone. This is called "social loafing" and it happens because individual performance is not as visible in a group. Social loafing occurs not only in physical tasks, but also in mental tasks like meetings. However, once a certain number of people are involved in a group, performance tends to plateau. This phenomenon has implications on accountability and decision-making in groups. Making individual performances more visible can help mitigate the negative effects of social loafing.
+
+## Stumped by a sheet of paper
+
+A piece of paper is folded in half multiple times, and after 50 folds, it would be over 60 million miles thick, which is the distance between the earth and the sun. This demonstrates exponential growth, which is hard to comprehend because we are more familiar with linear growth. Linear growth is like doubling the amount when you spend twice the time collecting berries. However, exponential growth, which is percentage-based, can result in huge changes over time. For example, if something grows at 7% per year, it doubles in size every 10 years. This can have significant consequences, such as the number of traffic accidents doubling or the value of money decreasing by half in just a few years due to inflation. To understand growth rates, it's important to use a calculator or the concept of the magic number 70 for quick estimates.
+
+## Curb your enthusiasm (Winner's Curse)
+
+The winner’s curse suggests that the winner of an auction often turns out to be
+the loser.
+
+The winner's curse is a phenomenon where the winner of an auction ends up losing in the long run because they overpaid for the item or service. This often happens because the actual value of the item or service is uncertain, and the more interested parties there are, the more likely it is for bids to become overly enthusiastic. This can be seen in various auctions, from oilfield auctions to online job bids to Initial Public Offerings (IPOs) and mergers and acquisitions. To avoid falling victim to the winner's curse, it's wise to set a maximum price and deduct 20% from it as a precautionary measure.
+
+## Never ask a writer if the novel is autobiograpical (Fundamental Attribution Error)
+
+Sometimes, people think that one person is responsible for everything that happens, like when a CEO has to step down or when a team wins a game. But really, there are many other things that affect what happens, like the economy or the weather. It's like when you watch a concert and everyone talks about the singers and musicians, but they forget about the music itself. It's also like when people ask a writer if their book is about them, when it's really just a story. We're all so interested in people because we needed each other to survive a long time ago. But if we want to understand what's happening, we need to look at all the things that influence it, not just the people.
+
+## Why you shouldn't believe in the stork (False Causality)
+
+Sometimes things seem to be connected, but they may not actually cause each other. For example, in a chain of islands called the Hebrides, people believed that head lice helped cure sickness. But it was just a coincidence that the lice came back when the person got better. In another example, firefighters were called to bigger fires, but it didn't mean they caused more damage. It's important to look closely at events and not assume that one thing causes another, because sometimes there's no real connection at all. Just like how storks and babies aren't really related, even though their numbers may have seemed similar in the past.
+
+## Everyone is beautiful at the top (Halo Effect)
+
+The halo effect is when we make assumptions about a person or company based on one standout quality, like their looks or reputation, without looking deeper. For example, when Cisco, a big company, was doing well in the stock market, people thought everything about the company was great. But when the stock market crashed, people suddenly said the company had problems, even though nothing had really changed. This happens because we often judge things based on one thing we notice, without looking at the whole picture. Sometimes this can be unfair or lead to misunderstandings. To avoid the halo effect, we should look beyond surface-level things and do more research to get a better understanding.
+
+## Congratulations! you've won Russian Roulette (Alternative Paths)
+
+Imagine you meet a wealthy person who offers you $10 million if you play Russian roulette. You take the risk, but luckily the gun is empty, and you win the money. Your neighbor, on the other hand, works hard as a lawyer and saves up $10 million over 20 years. A journalist writes about both of you, but what's not visible is the risk you took compared to your neighbor's safe path. Risky success may seem exciting, but it's worth less than success achieved through hard work and without taking unnecessary risks. It's important to always consider alternative paths and not just focus on the end result.
+
+## False Prophets (Forecast Illusion)
+
+Experts often make predictions, but studies show that their accuracy is often no better than random chance. Some experts even perform poorly in their predictions, especially those who make sensational or doomsday forecasts. Experts face few negative consequences for being wrong, which incentivizes them to make more and more predictions. To improve the reliability of predictions, it is important to consider the expert's incentives and track record of past predictions. However, predicting complex systems or inventions is challenging, and it is wise to be critical when encountering predictions in the media. In short, experts' predictions should be taken with caution, and it is important to assess their track record and incentives before accepting their forecasts.

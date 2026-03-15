@@ -1,0 +1,39 @@
+---
+title: How to make a website responsive
+date: 2023-11-4
+categories:
+    - frontend
+---
+
+## What is responsive?
+
+Responsiveness means a site responds (adapts) when viewed on different devices, zoomed in or when a user changes settings like default text size.
+
+## Why 320px wide and above?
+
+320px wide emulates iPhone 12 mini, iPhone 5, Xperia Compact etc and is an accessibility requirement for all sites under WCAG Success Criterion 1.4.10 (level AA).
+
+## How to best approach responsive styling
+
+As a more general answer to your questions around when and how to add breakpoints:
+
+- Do all html before anything. Make sure the right meaningful elements are chosen for the content
+- Style the mobile design first. Shrink your viewport down, zoom and/or use device emulation view.
+- For frontend mentor challenges — where the mobile static design that's provided is 375px wide — get everything looking right at that width first.
+- Then shrink the viewport width to 320px wide and check there's still no horizontal (inline) overflow and everything works.
+
+💡 A top tip is to prefer max-width over width for your components! Also try to avoid fixed units when using flex or grid layouts, opting for % or fr units instead.
+Only once you are happy with the mobile view should you start to enlarge the viewport. Depending on design, and what layout changes are needed, add a breakpoint (min-width media query) at the point where there is room for the layout to change. Make sure you note down the media query essentials below!
+
+## Tips
+
+- Let mobile styles be your default (Data tables are probably the only exception to this!)
+- Test your solutions on small screens, making sure everything works from 320px wide and larger
+- Stop saying that responsiveness is something you need to "do" as if it's a step you build in at the end. As front end developers, we need to consider how our sites/components should adapt before we write a single line of code.
+- Get into the habit of using zoom in browser AND changing your default text size
+- Check your site on real devices whenever you can, rather than only relying on in-browser emulation
+
+
+## Reference
+
+https://fedmentor.dev/posts/responsive-meaning/

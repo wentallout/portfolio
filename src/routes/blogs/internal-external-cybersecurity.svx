@@ -1,0 +1,32 @@
+---
+title: Internal and External Threats in Cybersecurity
+date: 2024-05-06
+categories:
+    - cybersecurity
+---
+
+
+## Internal
+
+Employees, contract staff or trusted partners can accidentally or intentionally:
+
+- mishandle confidential data
+- facilitate outside attacks by connecting infected USB media into the organization’s computer system
+- invite malware onto the organization’s network by clicking on malicious emails or websites
+- threaten the operations of internal servers or network infrastructure devices.
+
+## External
+
+Amateurs or skilled attackers outside of the organization can:
+
+- exploit vulnerabilities in the network
+- gain unauthorized access to computing devices
+- use social engineering to gain unauthorized access to organizational data.
+
+## Example
+
+Remember that phishing email you received earlier from one of your customers?
+
+An investigation into this email revealed that the user accounts and access privileges of a former employee were not fully removed from the IT systems on leaving the company. In fact, this former employee, who now works for a competitor, logged into @Apollo’s customer database only three days ago.
+
+This ex-employee was able to launch an attack based on insider knowledge of the organization’s network. For this reason, internal threats have the potential to cause greater damage than external threats.

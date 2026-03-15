@@ -1,0 +1,36 @@
+---
+title: Perception of feedback timing
+date: 2023-12-27
+categories:
+    - ux
+---
+
+## Timing and placement of notifications
+
+Our mind perceives things accurately when the timing is accurate. So I have seen a lot of website's showing progress and changing buttons status too instantly that I didn't notice any change.
+
+This is very important if you are a developer. Just take an example, I clicked Add to cart button but nothing happened the
+
+## Feedback timing is important
+
+Try to give them some loading animations or once they click the button, I could have changed the text to "Purchase again" so they know they have already purchased it or added it to the cart. 
+
+Once I was using a web application and designing a wireframe. Whenever I pressed save, nothing happened. I got curious. What is happening with me? Then I saw 
+
+
+## Animation and colors of feedback
+
+You need to show some delay in feedback messages. Move them, fade them. SHow them in a color which is different from the whole page.
+
+Try to use standard which is 0.2 seconds so whenever you need to use fade on buttons or status bars or information messages 
+
+## Red notification dot
+
+You are familiar with red notification dot that appears on many App icons to show the number of new emails or even any other updates.
+
+Human nature 
+
+Placeholders that show something is loading
+
+
+

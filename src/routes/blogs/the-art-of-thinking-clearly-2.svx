@@ -1,0 +1,555 @@
+---
+title: The Art of Thinking Clearly (Part 2)
+date: 2023-04-11
+categories:
+    - psychology
+---
+
+## Why we prefer a wrong map to no map at all (Availability Bias)
+
+'Smoking can't be that bad for you: my grandfather smoked three packs of
+cigarettes a day and lived to be more than 100.' Or: 'Manhattan is really safe. I
+know someone who lives in the middle of the Village and he never locks his door.
+Not even when he goes on vacation, and his apartment has never been broken
+into.' We use statements like these to try to prove something, but they actually
+prove nothing at all. When we speak like this, we succumb to the availability bias.
+Are there more English words that start with a K or more words with K as their
+third letter? Answer: more than twice as many English words have K in third
+position than start with a K. Why do most people believe the opposite is true?
+Because we can think of words beginning with a K more quickly. They are more
+available to our memory.
+
+The availability bias says this: we create a picture of the world using the
+examples that most easily come to mind. This is absurd, of course, because in
+reality things don't happen more frequently just because we can conceive of them
+more easily.
+
+Thanks to the availability bias, we travel through life with an incorrect risk map
+in our heads. Thus, we systematically overestimate the risk of being the victim of
+a plane crash, a car accident or a murder. And we underestimate the risk of dying
+from less spectacular means, such as diabetes or stomach cancer. The chances
+of bomb attacks are much rarer than we think, and the chances of suffering
+depression are much higher. We attach too much likelihood to spectacular, flashy
+or loud outcomes. Anything silent or invisible we downgrade in our minds. Our
+brains imagine show-stopping outcomes more readily than mundane ones. We
+think dramatically, not quantitatively.
+
+Doctors often fall victim to the availability bias. They have their favourite
+treatments, which they use for all possible cases. More appropriate treatments
+may exist, but these are in the recesses of the doctors' minds. Consequently they
+practise what they know. Consultants are no better. If they come across an
+entirely new case, they do not throw up their hands and sigh: 'I really don't know
+what to tell you.' Instead they turn to one of their more familiar methods, whether
+or not it is ideal.
+
+If something is repeated often enough, it gets stored at the forefront of our
+minds. It doesn't even have to be true.
+
+The availability bias has an established seat at the corporate board's table, too.
+Board members discuss what management has submitted – usually quarterly
+figures – instead of more important things, such as a clever move by the
+competition, a slump in employee motivation or an unexpected change in
+customer behaviour. They tend not to discuss what's not on the agenda.
+
+In addition, people prefer information that is easy to obtain, be it economic data or
+recipes. They make decisions based on this information rather than on more
+relevant but harder to obtain information – often with disastrous results.
+
+It is as if you were in a foreign city without a map, and then pulled out one for your home town and simply used that.We prefer wrong information to no information. Thus, the availability bias has presented the banks with billions in losses.
+
+Solution: Fend it off by spending time with people who think differently than you think – people whose experiences and expertise are different than yours. We require others' input to overcome the availability bias.
+
+## Why 'No pain, No gain' should set alarm bells ringing
+
+The It'll-Get-Worse-Before-It-Gets-Better Fallacy
+
+A few years ago, I was on vacation in Corsica and fell sick. The symptoms were
+new to me, and the pain was growing by the day. Eventually I decided to seek
+help at a local clinic. A young doctor began to inspect me, prodding my stomach,
+gripping my shoulders and knees and then poking each vertebra. I began to
+suspect that he had no idea what my problem was, but I wasn't really sure so I
+simply endured the strange examination. To signal its end, he pulled out his
+notebook and said: 'Antibiotics. Take one tablet three times a day. It'll get worse
+before it gets better.' Glad that I now had a treatment, I dragged myself back to my
+hotel room with the prescription in hand.
+
+The pain grew worse and worse – just as the doctor had predicted. The doctor
+must have known what was wrong with me after all. But, when the pain hadn't
+subsided after three days, I called him. 'Increase the dose to five times a day. It's
+going to hurt for a while more,' he said. After two more days of agony, I finally
+called the international air ambulance. The Swiss doctor diagnosed appendicitis
+and operated on me immediately. 'Why did you wait so long?' he asked me after
+the surgery.
+
+I replied: 'It all happened exactly as the doctor said, so I trusted him.'
+'Ah, you fell victim to the it'll-get-worse-before-it-gets-better fallacy. That
+Corsican doctor had no idea. Probably just the same type of stand-in you find in
+all the tourist places in high season.'
+
+Let's take another example: a CEO is at his wits' end. Sales are in the toilet, the
+salespeople are unmotivated, and the marketing campaign has sunk without a
+trace. In his desperation, he hires a consultant. For $5,000 a day, this man
+analyses the company and comes back with his findings: 'Your sales department
+has no vision, and your brand isn't positioned clearly. It's a tricky situation. I can
+fix it for you – but not overnight. The measures will require sensitivity, and most
+likely, sales will fall further before things improve.' The CEO hires the consultant.
+A year later, sales fall, and the same thing happens the next year. Again and
+again, the consultant stresses that the company's progress corresponds closely
+to his prediction. As sales continue their slump in the third year, the CEO fires the
+consultant.
+
+A mere smokescreen, the It'll-Get-Worse-Before-It-Gets-Better Fallacy is a
+variant of the so-called confirmation bias. If the problem continues to worsen, the
+prediction is confirmed. If the situation improves unexpectedly, the customer is
+happy and the expert can attribute it to his prowess. Either way he wins.
+
+Suppose you are president of a country, and have no idea how to run it. What
+do you do? You predict 'difficult years' ahead, ask your citizens to 'tighten their
+belts', and then promise to improve the situation only after this 'delicate stage' of
+the 'cleansing', 'purification' and 'restructuring'. Naturally you leave the duration
+and severity of the period open.
+
+The best evidence of this strategy's success is Christianity: its literal followers
+believe that before we can experience heaven on earth, the world must be
+destroyed. Disasters, floods, fires, death – they are all part of the larger plan and
+must take place. Believers will view any deterioration of the situation as
+confirmation of the prophecy, and any improvement as a gift from God.
+
+In conclusion: if someone says 'It'll get worse before it gets better,' you should
+hear alarm bells ringing. But beware: situations do exist where things first dip and
+then improve. For example, a career change requires time and often incorporates
+loss of pay. The reorganisation of a business also takes time. But in all these
+cases, we can see relatively quickly if the measures are working. The milestones
+are clear and verifiable. Look to these rather than to the heavens.
+
+## EVEN TRUE STORIES ARE FAIRYTALES
+
+Story Bias
+
+Life is a muddle, as intricate as a Gordian knot. Imagine that an invisible Martian
+decides to follow you around with an equally invisible notebook, recording what
+you do, think and dream. The rundown of your life would consist of entries such
+as 'drank coffee, two sugars', 'stepped on a thumbtack and swore like a sailor',
+'dreamed that I kissed the neighbour', 'booked vacation, Maldives, now nearly out
+of money', 'found hair sticking out of ear, plucked it straight away' and so on. We
+like to knit this jumble of details into a neat story. We want our lives to form a
+pattern that can be easily followed. Many call this guiding principle 'meaning'. If
+our story advances evenly over the years, we refer to it as 'identity'. 'We try on
+stories as we try on clothes,' said Max Frisch, a famous Swiss novelist.
+We do the same with world history, shaping the details into a consistent story.
+Suddenly we 'understand' certain things; for example, why the Treaty of
+Versailles led to the Second World War, or why Alan Greenspan's loose
+monetary policy created the collapse of Lehman Brothers. We comprehend why
+the Iron Curtain had to fall or why Harry Potter became a best-seller. Here, we
+speak about 'understanding', but these things cannot be understood in the
+traditional sense. We simply build the meaning into them afterward. Stories are
+dubious entities. They simplify and distort reality, and filter things that don't fit. But
+apparently we cannot do without them. Why remains unclear. What is clear is that
+people first used stories to explain the world, before they began to think
+scientifically, making mythology older than philosophy. This has led to the story
+bias.
+
+In the media, the story bias rages like wildfire. For example: a car is driving over a bridge when the structure suddenly collapses. What do we read the next day? We hear the tale of the unlucky driver, where he came from and where he was going. We read his biography: born somewhere, grew up somewhere else,
+earned a living as something. If he survives and can give interviews, we hear
+exactly how it felt when the bridge came crashing down. The absurd thing: not
+one of these stories explains the underlying cause of the accident. Skip past the
+driver's account and consider the bridge's construction: where was the weak
+point? Was it fatigue? If not, was the bridge damaged? If so, by what? Was a
+proper design even used? Where are there other bridges of the same design?
+The problem with all these questions is that, though valid, they just don't make for
+a good yarn. Stories attract us; abstract details repel us. Consequently,
+entertaining side issues and backstories are prioritised over relevant facts. (On
+the upside, if it were not for this, we would be stuck with only non-fiction books.)
+Here are two stories from the English novelist E. M. Forster. Which one would
+you remember better? A) 'The king died, and the queen died.' B) 'The king died,
+and the queen died of grief.' Most people will retain the second story more easily.
+Here, the two deaths don't just take place successively; they are emotionally
+linked. Story A is a factual report, but story B has 'meaning'. According to
+information theory, we should be able to hold on to A better: it is shorter. But our
+brains don't work that way.
+Advertisers have learned to capitalise on this too. Instead of focusing on an
+item's benefits, they create a story around it. Objectively speaking, narratives are
+irrelevant, but still we find them irresistible. Google illustrated this masterfully in its
+Super Bowl commercial from 2010, 'Google Parisian Love'. Take a look at it on YouTube.
+
+From our own life stories to global events, we shape everything into meaningful
+stories. Doing so distorts reality and affects the quality of our decisions, but there
+is a remedy: pick these apart. Ask yourself: what are they trying to hide? Visit the
+library and spend half a day reading old newspapers. You will see that events
+that today look connected weren't so at the time. To experience the effect once
+more, try to view your life story out of context. Dig into your old journals and notes,
+and you'll see that your life has not followed a straight arrow leading to today, but has been a series of unplanned unconnected events and experiences, as we'll see in the next chapter.
+
+Whenever you hear a story, ask yourself: who is the sender, what are his intentions and what did he hide under the rug? The omitted elements might not be of relevance. But then again, they might be even more relevant than the
+elements featured in the story, such as when 'explaining' a financial crisis or the
+'cause' of war. The real issue with stories: they give us a false sense of
+understanding, which inevitably leads us to take bigger risks and urges us to take
+a stroll on thin ice.
+
+## Why you should keep a diary (Hindsight Bias)
+
+I came across the diaries of my great-uncle recently. In 1932, he emigrated from a
+tiny Swiss village to Paris to seek his fortune in the movie industry. In August
+1940, two months after Paris was occupied, he noted: 'Everyone is certain that
+the Germans will leave by the end of the year. Their officers also confirmed this to
+me. England will fall as fast as France did, and then we will finally have our
+Parisian lives back – albeit as part of Germany.' The occupation lasted four years.
+In today's history books, the German occupation of France seems to form part
+of a clear military strategy. In retrospect, the actual course of the war appears the
+most likely of all scenarios. Why? Because we have fallen victim to the hindsight bias.
+
+Let's take a more recent example: in 2007, economic experts painted a rosy
+picture for the coming years. However, just twelve months later, the financial
+markets imploded. Asked about the crisis, the same experts enumerated its
+causes: monetary expansion under Greenspan, lax validation of mortgages,
+corrupt rating agencies, low capital requirements, and so forth. In hindsight, the
+reasons for the crash seem painfully obvious.
+
+The hindsight bias is one of the most prevailing fallacies of all. We can aptly
+describe it as the 'I told you so' phenomenon: in retrospect, everything seems
+clear and inevitable. If a CEO becomes successful due to fortunate circumstances
+he will, looking back, rate the probability of his success a lot higher than it
+actually was. Similarly, following Ronald Reagan's massive election victory over
+Jimmy Carter in 1980, commentators announced his appointment to be
+foreseeable, even though the election lay on a knife-edge until a few days before
+the final vote.
+
+Today, business journalists opine that Google's dominance was
+predestined, even though each of them would have snorted had such a prediction been made in 1998.
+
+So why is the hindsight bias so perilous? Well, it makes us believe we are
+better predictors than we actually are, causing us to be arrogant about our
+knowledge and consequently to take too much risk. And not just with global
+issues: 'Have you heard? Sylvia and Chris aren't together any more. It was
+always going to go wrong, they were just so different.' Or: 'They were just so
+similar.' Or: 'They spent too much time together.' Or even: 'They barely saw one
+another.'
+
+Overcoming the hindsight bias is not easy. Studies have shown that people
+who are aware of it fall for it just as much as everyone else. So, I'm very sorry, but
+you've just wasted your time reading this chapter.
+
+If you're still with me, I have one final tip, this time from personal rather than
+professional experience: keep a journal. Write down your predictions – for
+political changes, your career, your weight, the stock market and so on. Then,
+from time to time, compare your notes with actual developments. You will be
+amazed at what a poor forecaster you are.
+
+Don't forget to read history too – not
+the retrospective, compacted theories compiled in textbooks, but the diaries, oral
+histories and historical documents from the period. If you can't live without news,
+read newspapers from five, ten or twenty years ago. This will give you a much
+better sense of just how unpredictable the world is. 
+
+Hindsight may provide temporary comfort to those overwhelmed by complexity, but as for providing
+deeper revelations about how the world works, you'll benefit by looking elsewhere.
+
+## Why you systematically overestimate your knowledge and abilities (Overconfidence Effect)
+
+Overconfidence is a common human tendency where we often overestimate our knowledge and abilities, leading to inaccurate predictions and decisions. This phenomenon has been observed in various fields, including economics, relationships, and project management. Even experts can fall victim to overconfidence.
+
+For example, surveys have shown that people tend to think they are above average in various areas, such as driving or teaching ability. Overconfidence is more prevalent in men and even self-proclaimed pessimists can still overrate themselves, albeit to a lesser extent. It's important to be aware of this bias and approach predictions and plans with skepticism, favoring a more realistic and pessimistic outlook. As an example, Johann Sebastian Bach composed around 1127 surviving works, but may have composed even more that have been lost.
+
+
+## Don't take news anchors seriously
+
+Chauffeur Knowledge
+
+After receiving the Nobel Prize for Physics in 1918, Max Planck went on tour
+across Germany. Wherever he was invited, he delivered the same lecture on new
+quantum mechanics. Over time, his chauffeur grew to know it by heart: 'It has to
+be boring giving the same speech each time, Professor Planck. How about I do it
+for you in Munich? You can sit in the front row and wear my chauffeur's cap.
+
+That'd give us both a bit of variety.' Planck liked the idea, so that evening the
+driver held a long lecture on quantum mechanics in front of a distinguished
+audience. Later, a physics professor stood up with a question. The driver
+recoiled: 'Never would I have thought that someone from such an advanced city
+as Munich would ask such a simple question! My chauffeur will answer it.'
+According to Charlie Munger, one of the world's best investors (and from whom
+I have borrowed this story), there are two types of knowledge. First, we have real
+knowledge. We see it in people who have committed a large amount of time and
+effort to understanding a topic. 
+
+The second type is chauffeur knowledge – knowledge from people who have learned to put on a show. Maybe they have a
+great voice or good hair, but the knowledge they espouse is not their own. They reel off eloquent words as if reading from a script.
+
+Unfortunately, it is increasingly difficult to separate true knowledge from
+chauffeur knowledge. With news anchors, however, it is still easy. These are
+actors. Period. Everyone knows it. And yet it continues to astound me how much
+respect these perfectly-coiffed script readers enjoy, not to mention how much they
+earn moderating panels about topics they barely fathom.
+
+With journalists, it is more difficult. Some have acquired true knowledge. Often they are veteran reporters who have specialised for years in a clearly defined area. They make a serious effort to understand the complexity of a subject and to
+communicate it. They tend to write long articles that highlight a variety of cases
+and exceptions. The majority of journalists, however, fall into the category of
+chauffeur. They conjure up articles off the tops of their heads, or rather, from
+Google searches. Their texts are one-sided, short, and – often as compensation
+for their patchy knowledge - snarky and self-satisfied in tone.
+
+The same superficiality is present in business. The larger a company, the more
+the CEO is expected to possess 'star quality'. Dedication, solemnity, and
+reliability are undervalued, at least at the top. Too often shareholders and
+business journalists seem to believe that showmanship will deliver better results,
+which is obviously not the case.
+To guard against the chauffeur effect, Warren Buffett, Munger's business
+partner, has coined a wonderful phrase, 'circle of competence'. What lies inside
+this circle you understand intuitively; what lies outside, you may only partially
+comprehend. One of Munger's best pieces of advice is: 'You have to stick within
+what I call your circle of competence. You have to know what you understand and
+what you don't understand. It's not terribly important how big the circle is. But it is
+terribly important that you know where the perimeter is.' Munger underscores this:
+'So you have to figure out what your own aptitudes are. If you play games where
+other people have the aptitudes and you don't, you're going to lose. And that's as
+close to certain as any prediction that you can make. You have to figure out
+where you've got an edge. And you've got to play within your own circle of
+competence.'
+
+In conclusion: be on the lookout for chauffeur knowledge. Do not confuse the company spokesperson, the ringmaster, the newscaster, the schmoozer, the verbiage vendor or the cliché generator with those who possess true knowledge. How do you recognise the difference There is a clear indicator: true experts recognise the limits of what they know and what they do not know. If they find themselves outside their circle of competence, they keep quiet or simply say, 'I don't know.' This they utter unapologetically, even with a certain pride. From chauffeurs, we hear every line except this.
+
+## You control less than you think
+
+Illusion of Control
+
+Every day, shortly before nine o'clock, a man with a red hat stands in a square
+and begins to wave his cap around wildly. After five minutes he disappears. One
+day, a policeman comes up to him and asks: 'What are you doing?' 'I'm keeping
+the giraffes away.' 'But there aren't any giraffes here.' 'Well, I must be doing a
+good job, then.'
+
+A friend with a broken leg was stuck in bed and asked me to pick up a lottery
+ticket for him. I went to the store, checked a few boxes, wrote his name on it and
+paid. As I handed him the copy of the ticket, he balked. 'Why did you fill it out? I
+wanted to do that. I'm never going to win anything with your numbers!'
+'Do you really think it affects the draw if you pick the numbers?' I inquired. He
+looked at me blankly.
+
+In casinos, most people throw the dice as hard as they can if they need a high
+number, and as gingerly as possible if they are hoping for a low number – which
+is as nonsensical as football fans thinking they can swing a game by
+gesticulating in front of the TV. Unfortunately they share this illusion with many
+people who also seek to influence the world by sending out the 'right' thoughts
+(vibrations, positive energy, karma?. . .?).
+
+The illusion of control is the tendency to believe that we can influence
+something over which we have absolutely no sway. This was discovered in 1965
+by two researchers, Jenkins and Ward. Their experiment was simple, consisting
+of just two switches and a light. The men were able to adjust when the switches
+connected to the light and when not. Even when the light flashed on and off at
+random, subjects were still convinced that they could influence it by flicking the
+switches.
+
+Or consider this example: an American researcher has been investigating
+acoustic sensitivity to pain. For this, he placed people in sound booths and
+increased the volume until the subjects signalled him to stop. The two rooms, A
+and B, were identical, save one thing: room B had a red panic button on the wall.
+The button was purely for show, but it gave participants the feeling that they were
+in control of the situation, leading them to withstand significantly more noise. If
+you have read Aleksandr Solzhenitsyn, Primo Levi or Viktor Frankl, this finding
+will not surprise you: the idea that people can influence their destiny even by a
+fraction encouraged these prisoners not to give up hope.
+
+Crossing the street in Los Angeles is a tricky business, but luckily, at the press
+of a button, we can stop traffic. Or can we? The button's real purpose is to make
+us believe we have an influence on the traffic lights, and thus we're better able to
+endure the wait for the signal to change with more patience. The same goes for
+'door-open' and 'door-close' buttons in elevators: many are not even connected to
+the electrical panel. Such tricks are also designed into open-plan offices: for
+some people it will always be too hot, for others too cold. Clever technicians
+create the illusion of control by installing fake temperature dials. This reduces
+energy bills – and complaints. Such ploys are called 'placebo buttons' and they
+are being pushed in all sorts of realms.
+
+Central bankers and government officials employ placebo buttons masterfully.
+Take, for instance, the federal funds rate, which is an extreme short-term rate, an
+overnight rate to be precise. While this rate doesn't affect long-term interest rates
+(which are a function of supply and demand, and an important factor in
+investment decisions), the stock market, nevertheless, reacts frenetically to its
+every change. Nobody understands why overnight interest rates can have such
+an effect on the market, but everybody thinks they do, and so they do. The same
+goes for pronouncements made by the Chairman of the Federal Reserve; markets
+move, even though these statements inject little of tangible value into the real
+economy. They are merely sound waves. And still we allow economic heads to
+continue to play with the illusory dials. It would be a real wake-up call if all
+involved realised the truth – that the world economy is a fundamentally
+uncontrollable system.
+
+And you? Do you have everything under control? Probably less than you think.
+Do not think you command your way through life like a Roman emperor. Rather,
+you are the man with the red hat. Therefore, focus on the few things of importance
+that you can really influence. 
+
+For everything else: que sera, sera.
+
+## Never pay your lawyer by the hour
+
+Incentive Super-Response Tendency
+
+To control a rat infestation, French colonial rulers in Hanoi in the nineteenth
+century passed a law: for every dead rat handed in to the authorities, the catcher
+would receive a reward. Yes, many rats were destroyed, but many were also bred specially for this purpose.
+
+In 1947, when the Dead Sea scrolls were discovered, archaeologists set a
+finder's fee for each new parchment. Instead of lots of extra scrolls being found,
+they were simply torn apart to increase the reward. Similarly, in China in the
+nineteenth century, an incentive was offered for finding dinosaur bones. Farmers
+located a few on their land, broke them into pieces and cashed in. Modern
+incentives are no better: company boards promise bonuses for achieved targets.
+And what happens? Managers invest more energy in trying to lower the targets
+than in growing the business.
+
+These are examples of the incentive super-response tendency. Credited to
+Charlie Munger, this titanic name describes a rather trivial observation: people
+respond to incentives by doing what is in their best interests. What is noteworthy
+is, first, how quickly and radically people's behaviour changes when incentives
+come into play or are altered and, second, the fact that people respond to the
+incentives themselves and not the grander intentions behind them.
+Good incentive systems comprise both intent and reward. An example: in
+Ancient Rome, engineers were made to stand underneath the construction at
+their bridges' opening ceremonies. Poor incentive systems, on the other hand,
+overlook and sometimes even pervert the underlying aim. For example, censoring
+a book makes its contents more famous and rewarding bank employees for each
+loan sold leads to a miserable credit portfolio. Making CEOs' pay public didn't
+dampen the astronomical salaries; to the contrary, it pushed them upward.
+Nobody wants to be the loser CEO in his industry.
+
+Do you want to influence the behaviour of people or organisations? You could
+always preach about values and visions, or you could appeal to reason. But in
+nearly every case, incentives work better. These need not be monetary; anything
+is useable, from good grades to Nobel Prizes to special treatment in the afterlife.
+For a long time I tried to understand what made well-educated nobles from the
+Middle Ages bid adieu to their comfortable lives, swing themselves up on to
+horses and take part in the Crusades. They were well aware that the arduous ride
+to Jerusalem lasted at least six months and passed directly through enemy
+territory, yet they took the risk. And then it came to me: the answer lies in incentive
+systems. If they came back alive, they could keep the spoils of war and live out
+their days as rich men. If they died, they automatically passed on to the afterlife as
+martyrs – with all the benefits that came with it. It was win-win.
+
+Imagine for a moment that, instead of demanding enemies' riches, warriors and
+soldiers charged by the hour. We would effectively be incentivising them to take
+as long as possible, right? So why do we do just this with lawyers, architects,
+consultants, accountants and driving instructors? 
+
+=> My advice: forget hourly rates and always negotiate a fixed price in advance.
+
+Be wary, too, of investment advisers endorsing particular financial products.
+They are not interested in your financial well-being, but in earning a commission
+on these products. The same goes for entrepreneurs' and investment bankers'
+business plans. These are often worthless because, again, the vendors have
+their own interests at heart. What is the old adage? 'Never ask a barber if you
+need a haircut.'
+
+In conclusion: keep an eye out for the incentive super-response tendency. If a
+person's or an organisation's behaviour confounds you, ask yourself what
+incentive might lie behind it. I guarantee you that you'll be able to explain 90% of
+the cases this way. What makes up the remaining 10%? Passion, idiocy, psychosis or malice.
+
+## THE DUBIOUS EFFICACY OF DOCTORS, CONSULTANTS AND PSYCHOTHERAPISTS
+
+Regression to Mean
+His back pain was sometimes better, sometimes worse. There were days when
+he felt like he could move mountains, and those when he could barely move.
+When that was the case - fortunately it happened only rarely - his wife would
+drive him to the chiropractor. The next day he would feel much more mobile and
+would recommend the therapist to everyone.
+
+Another man, younger and with a respectable golf handicap of 12, gushed in a similar fashion about his golf instructor. Whenever he played miserably, he booked an hour with the pro, and lo and behold, in the next game he fared much better.
+
+A third man, an investment adviser at a major bank, invented a sort of 'rain
+dance', which he performed in the restroom every time his stocks had performed
+extremely badly. As absurd as it seemed, he felt compelled to do it: and things
+always improved afterward.
+
+What links the three men is a fallacy: the regression-to-mean delusion.
+Suppose your region is experiencing a record period of cold weather. In all
+probability, the temperature will rise in the next few days, back toward the monthly
+average. The same goes for extreme heat, drought or rain. Weather fluctuates
+around a mean. The same is true for chronic pain, golf handicaps, stock market
+performance, luck in love, subjective happiness and test scores. In short, the
+crippling back pain would most likely have improved without a chiropractor. The handicap would have returned to 12 without additional lessons. And the
+performance of the investment adviser would also have shifted back toward the
+market average – with or without the restroom dance.
+
+Extreme performances are interspersed with less extreme ones. The most successful stock picks from the past three years are hardly going to be the most successful stocks in the coming three years. Knowing this, you can appreciate
+why some athletes would rather not make it on to the front pages of the
+newspapers: subconsciously they know that the next time they race, they
+probably won't achieve the same top result – which has nothing to do with the
+media attention, but is to do with natural variations in performance.
+
+Or, take the example of a division manager who wants to improve employee
+morale by sending the least motivated 3% of the workforce on a course. The
+result? The next time he looks at motivation levels, the same people will not make
+up the bottom few – there will be others. Was the course worth it? Hard to say,
+since the group's motivation levels would probably have returned to their
+personal norms even without the training. The situation is similar with patients
+who are hospitalised for depression. They usually leave the clinic feeling a little
+better. It is quite possible, however, that the stay contributed absolutely nothing.
+Another example: in Boston, the lowest-performing schools were entered into a
+complex support programme. The following year, the schools had moved up in
+the rankings, an improvement that the authorities attributed to the programme
+rather than to natural regression to mean.
+
+Ignoring regression to mean can have destructive consequences, such as
+teachers (or managers) concluding that the stick is better than the carrot. For
+example, following a test the highest performing students are praised, and the
+lowest are castigated. In the next exam, other students will probably – purely
+coincidentally – achieve the highest and lowest scores. Thus, the teacher concludes that reproach helps and praise hinders. A fallacy that keeps on giving.
+
+In conclusion: when you hear stories such as: 'I was sick, went to the doctor,
+and got better a few days later' or 'the company had a bad year, so we got a
+consultant in and now the results are back to normal', look out for our old friend, the regression-to-mean error
+
+## Never judge a decision by its outcome (Outcome Bias)
+
+
+A quick hypothesis: say one million monkeys speculate on the stock market. They
+buy and sell stocks like crazy and, of course, completely at random. What
+happens? After one week, about half of the monkeys will have made a profit and
+the other half a loss. The ones that made a profit can stay; the ones that made a
+loss you send home. In the second week, one half of the monkeys will still be
+riding high, while the other half will have made a loss and are sent home. And so
+on. After ten weeks, about 1,000 monkeys will be left – those who have always
+invested their money well. After twenty weeks, just one monkey will remain – this
+one always, without fail, chose the right stocks and is now a billionaire. Let's call
+him the success monkey.
+
+How does the media react? They will pounce on this animal to understand its
+'success principles'. And they will find some: perhaps the monkey eats more
+bananas than the others. Perhaps he sits in another corner of the cage. Or,
+maybe he swings headlong through the branches, or he takes long, reflective
+pauses while grooming. He must have some recipe for success, right? How else
+could he perform so brilliantly? Spot-on for twenty weeks – and that from a simple
+monkey? Impossible!
+
+The monkey story illustrates the outcome bias: we tend to evaluate decisions
+based on the result rather than on the decision process. This fallacy is also
+known as the historian error. A classic example is the Japanese attack on Pearl
+Harbor. Should the military base have been evacuated or not? From today's
+perspective: obviously, for there was plenty of evidence that an attack was
+imminent. However, only in retrospect do the signals appear so clear. At the time,
+in 1941, there was a plethora of contradictory signals. Some pointed to an attack;
+others did not. To assess the quality of the decision, we must use the information
+available at the time, filtering out everything we know about it post-attack
+(particularly that it did indeed take place).
+
+Another experiment: you must evaluate the performance of three heart
+surgeons. To do this, you ask each to carry out a difficult operation five times.
+Over the years, the probability of dying from these procedures has stabilised at
+20%. With surgeon A, no one dies. With surgeon B, one patient dies. With
+surgeon C, two die. How do you rate the performance of A, B and C? If you think
+like most people, you rate A the best, B the second best, and C the worst. And
+thus you've just fallen for the outcome bias. You can guess why: the samples are
+too small, rendering the results meaningless. You can only really judge a surgeon
+if you know something about the field, and then carefully monitor the preparation
+and execution of the operation. In other words, you assess the process and not
+the result. Alternatively, you could employ a larger sample, if you have enough
+patients who need this particular operation: 100 or 1,000 operations. For now it is
+enough to know that, with an average surgeon, there is a 33% chance that no one
+will die, a 41% chance that one person will die and a 20% chance that two people
+will die. That's a simple probability calculation. What stands out: there is no huge
+difference between zero dead and two dead. To assess the three surgeons purely
+on the basis of the outcomes would be not only negligent but also unethical.
+
+In conclusion: never judge a decision purely by its result, especially when randomness or 'external factors' play a role. A bad result does not automatically indicate a bad decision and vice versa. So rather than tearing your hair out about a wrong decision, or applauding yourself for one that may have only coincidentally led to success, remember why you chose what you did. Were your reasons rational and understandable? Then you would do well to stick with that method, even if you didn't strike lucky last time.
+

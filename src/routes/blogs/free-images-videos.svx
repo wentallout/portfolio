@@ -1,0 +1,46 @@
+---
+title: Free stock images and videos for your design
+date: 2023-1-22
+categories:
+    - freebies
+---
+
+## Images:
+
+- [Unsplash](https://unsplash.com) - Find millions of free images att one place.
+- [Pexels](https://www.pexels.com) - The best free stock photos and videos curated for you.
+- [Videovo](https://www.videvo.net) - Find free stock video footage and templates.
+- [Pixabay](https://pixabay.com) - Find royalty free images taht you didn't find on unsplash.
+- [Freepik](https://freepik.com)
+- [Kaboompics](https://kaboompics.com)
+- [FreeImages](https://freeimages.com)
+- [Burst by Shopify](https://burst.shopify.com)
+- [Stockvault](https://stockvault.net)
+- [RawPixel](https://www.rawpixel.com)
+
+## Videos
+
+A selection of websites offering high quality video stock.
+
+- [Mixkit](https://mixkit.co) - New free resource for high-quality stock videos.
+* [Coverr](http://coverr.co/) - [:copyright:](https://creativecommons.org/publicdomain/zero/1.0/) Beautiful, free, CC0 licensed videos for your homepage. 7 new videos every Monday.
+* [FreeStockVideo](https://free-stock.video/) - [:copyright:](https://creativecommons.org/publicdomain/zero/1.0/) Free Beautiful Video & Footage Clips.
+* [Life of Vids](http://www.lifeofvids.com/) - [:copyright:](https://creativecommons.org/publicdomain/zero/1.0/) Free royalty-free videos, clips & loops.
+* [Mazwai](http://mazwai.com/) - Great collection of free creative commons HD video clips & footages. Check each video for licensing terms.
+* [Pexels Videos](https://videos.pexels.com/) - [:copyright:](https://creativecommons.org/publicdomain/zero/1.0/) Completely free, CC0 licensed stock videos.
+* [Pixabay](https://pixabay.com/videos/) - [:copyright:](https://pixabay.com/service/license/) Thousands of free stock video clips & footage from community contributors.
+* [Videezy](https://www.videezy.com) - [:copyright:](https://www.videezy.com/terms) Free stock videos, 4k footage, and free HD video clips.
+* [Vidsplay](http://www.vidsplay.com/) - [:copyright:](http://www.vidsplay.com/terms.html) Free HD stock footage (Attribution required).
+* [VYOO](http://www.veed.io/vyoo) - [:copyright:](http://www.veed.io/vyoo/terms) Beautiful, Free Vertical Videos.
+
+
+## Everything you need:
+
+- [Awesome Stock Resources](https://github.com/neutraltone/awesome-stock-resources)
+
+
+
+
+
+
+

@@ -1,0 +1,34 @@
+---
+title: Whiteboarding Exercise
+date: 2023-08-23
+categories:
+    - fundamental
+---
+
+## What is it?
+
+You'll be given a design problem, and you'll asked to draw a solution on the whiteboard. They'll ask you questions while you sketch out ideas and flows.
+
+It's to test how you think about design and how detail your sketch can be.
+
+## How it works
+
+They'll give you a design challenge like: "Design an experience for a concert ticket system"
+
+## How to do it
+
+### Assumption
+
+1. Target Audience: Who will use it?
+2. Context: mobile app, web app or kiost. Where will people be using it?
+
+### Sketch out the entire experience
+
+```
+Home -> Payment Method Screen -> ? -> ? -> ?
+```
+
+They will ask questions like: "What if my credit card is declined?", "What if I want my friend to sit next to me but I don't know if they can attend or not that day?".
+
+
+

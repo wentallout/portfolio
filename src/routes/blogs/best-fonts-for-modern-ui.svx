@@ -1,0 +1,51 @@
+---
+title: Best Fonts for Modern UI in 2023
+date: 2023-11-10
+categories:
+    - ui
+---
+
+## Why Skeuomorphism Worked
+
+Familiarity Breeds Comfort: When computers were still foreign to most, these familiar icons and metaphors eased the transition.
+
+
+Users felt more at ease when they could 'drag and drop' a digital document into a 'file folder' just as they would in the physical world.
+
+Cognitive Load Reduction: Skeuomorphism reduced the cognitive load on users. 
+
+They didn't need to learn entirely new ways of interacting with a computer; instead, they could rely on their existing knowledge.
+
+Aesthetically Pleasing: Skeuomorphic designs often looked visually appealing, enhancing the user experience. 
+
+The attention to detail in replicating real-world textures, like leather or wood, added a sense of craftsmanship.
+
+## Font list
+
+- Manrope (mostly Medium or Bold)
+- Aeonik (Aeonik is very versatile and highly legible, however, this comes at a cost as the licenses might be out of reach for certain organizations and designers.
+)
+- Satoshi (What I don’t like about it is that you always need to have uneven spacing on top and bottom as it has a higher line height, which easily makes your elements visually not centered.)
+- Work Sans (Work Sans is an ideal type choice for modern user interfaces because of its simplicity and readability, making it well-suited for both body text and headlines in digital environments. )
+- IBM Plex Sans
+- Pretendard
+- Haskoy
+- Aspekta
+- Bertioga Sans
+
+- Switzer (18 styles)
+- Uncut Sans
+- Manrope
+- Srbija Sans
+- Atkinson Hyperlegible
+- DM Sans
+- Redaction https://www.redaction.us/
+- Inter
+
+
+
+
+
+
+
+

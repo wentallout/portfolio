@@ -1,0 +1,30 @@
+---
+title: Remove barriers to entry for users
+date: 2023-12-27
+categories:
+    - ux
+---
+
+## Humans don't like barriers
+
+If it's very hard for me to get something, I might quit struggling for it.
+
+So there needs to be a balance between too easy and too difficult in apps and software or even video games.
+
+Would you play a game that only have HARD difficult lelvel?
+
+## Reducing friction of online forms
+
+Online forms, login and signups are barriers that we see daily.
+
+Signup form with 15 fields to fill is a big barrier to start using that website. Let users taste your candy first and 
+
+![Conversion study from Marketo](https://i.imgur.com/12d5ARJ.png)
+
+## Let user use your app/software right now
+
+Users can't wait so let them download the demo or trial version now and test it right now. 
+
+Adobe, Sketch and all other companies are doing it because before spending money, users need to taste the candy. 
+
+Don't use "Book your demo" just use "Try now for free" button.

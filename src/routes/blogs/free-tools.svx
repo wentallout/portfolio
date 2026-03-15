@@ -1,0 +1,22 @@
+---
+title: Free Tools for your UI/UX Projects
+date: 2023-02-08
+categories:
+    - freebies
+---
+
+## Background removers & Image optimizers:
+
+- [remove.bg](https://remove.bg/) - Remove the background of your images.
+
+- [Unscreen](https://www.unscreen.com) - Remove background of your videos.
+
+- [Tinypng](https://tinypng.com) - Optimize your images for website and SEO.
+
+- [Adobe background remover](https://www.adobe.com/express/feature/image/remove-background) - Adobe's free background removal tool for your images.
+
+- [Avataaars Generator](https://getavataaars.com) - Generate avatars for your customer support and web projects.
+
+- [Influence Grid](https://influencegrid.com) - Find Tiktok Influencers for your influencer marketing campaign.
+
+- [Tweetagram](https://www.bannerbear.com/demos/tweetagram) - Turn Your tweets into Instagram posts.

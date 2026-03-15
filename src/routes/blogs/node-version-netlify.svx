@@ -1,0 +1,15 @@
+---
+title: 'Set your NodeJS version in Netlify'
+date: '2023-06-19'
+categories:
+    - 'frontend'
+---
+
+## The solution
+
+- go to your desired website
+- go to Site Settings
+- under Build & deploy
+- scroll down to Environment
+- add a new environment variable named NODE_VERSION
+- set it to your desired version (major or minor)

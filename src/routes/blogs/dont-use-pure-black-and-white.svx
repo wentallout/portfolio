@@ -1,0 +1,74 @@
+---
+title: Don't use pure black and white in your design
+date: 2023-2-2
+categories:
+    - color
+---
+
+## Pure White Alternatives (#FFFFFF)
+
+
+```js
+#F5F5FA
+#F0F0F5
+#EBEBF0
+#E6E6EB
+#E1E1E5
+
+#F9F4F4
+#F5F0F0
+#F0EBEB
+#EBE6E6
+#E5E1E1
+```
+
+## Pure Black Alternatives (#000000)
+
+
+```js
+#1F1F29
+#17171F
+#13131A
+#101014
+#0C0C0F
+
+#291F1F
+#1F1717
+#1A1313
+#141010
+#0F0C0C
+```
+
+[Pure black alternative](https://scontent.fsgn5-12.fna.fbcdn.net/v/t39.30808-6/450838431_891474563011506_2458042124733713432_n.jpg?_nc_cat=103&ccb=1-7&_nc_sid=833d8c&_nc_ohc=OnMLuYis_uUQ7kNvgFmLTZg&_nc_ht=scontent.fsgn5-12.fna&oh=00_AYC4ed-GiiGDNDZdRByr242GwH0OXvc4cR281RU3NgLAig&oe=6699353E)
+
+
+1. Charcoal Gray - Hex: #121212
+2. Dark Slate Gray - Hex: #191919
+3. Outer Space - Hex: #252525
+4. Rich Black - Hex: #0A0A0A
+5. Coffee Bean - Hex: #1B1B1B
+6. Dark Gray - Hex: #212427
+7. Oil Black - Hex: #0C0C0C
+8. Obsidian - Hex: #0B1215
+9. Ebony - Hex: #222428
+10. Black Chocolate - Hex: #100D08
+11. Gunmetal - Hex: #1D1F21
+12. Smoky Black - Hex: #101720
+13. Oxford Blue - Hex: #212A37
+14. Eerie Black - Hex: #232023
+15. Jet Black - Hex: #161618
+16. Iridium - Hex: #181818
+17. Arsenic - Hex: #11181C
+18. Charleston Green - Hex: #212124
+19. Dark Gunmetal - Hex: #222428
+20. Jet - Hex: #2A2A2A
+21. Black Olive - Hex: #242526
+22. Midnight Blue - Hex: #212121
+
+
+
+
+
+
+
+

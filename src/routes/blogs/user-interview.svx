@@ -1,0 +1,12 @@
+---
+title: UX Mandatory - User Interview Tips
+date: 2023-06-10
+categories:
+    - ux
+---
+
+## Reference
+
+https://stephaniewalter.design/blog/the-expert-guide-to-user-interviews/
+
+https://stephaniewalter.design/blog/a-cheatsheet-for-user-interview-and-follow-ups-questions/

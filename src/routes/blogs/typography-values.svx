@@ -1,0 +1,83 @@
+---
+title: How to calculate typography values like line height and letter spacing 
+date: 2023-10-23
+categories:
+    - typography
+---
+
+<script>
+    import Image from '$components/common/Image.svelte';
+    import headingFontSizes from '$blogImages/headingFontSizes.png';
+</script>
+
+## max-width
+
+```css
+article {
+  max-width: 60ch;
+}
+```
+
+https://piccalil.li/quick-tip/line-length/
+https://baymard.com/blog/line-length-readability
+
+The optimal line length for body text is **50-75 characters**
+
+On Desktop: 600px is a very good number for text-width
+
+In unstyled HTML, text runs the full width of the screen. For desktop users, that makes it difficult to track from the end of one line to the beginning of another. So let's make the lines shorter.
+
+The ideal line length is 50-75 characters (or 2-3 alphabets 😉).
+
+Much longer, and it's hard to move your eye from the end of one line to the beginning of the next. Much shorter, and the text feels like an unimportant sidebar.
+
+
+## font-size for heading
+
+<Image src="{headingFontSizes}" alt="heading font sizes" />
+
+The most popular font size for headlines is **between 29 and 32 px**.
+
+```
+headline font size = body copy font size * 2.4
+```
+
+## font-size for body
+
+The most popular font size for body copy is **between 14 and 16 px**.
+
+## line-height
+
+https://www.thegoodlineheight.com/
+
+For Heading: 110% -> 130%
+For Body: 130% - 150%
+
+
+## Left align ALWAYS
+
+If it's >3 lines of text, it's left-align
+
+Body text is always left-aligned. Hyphenation is not used at line endings. And links are underlined and/or highlighted with bold or color, sometimes only on hover.
+
+DON'T MIX ALIGNMENT (if it's centered, then center all)
+
+## 2 is magic
+
+2 diffrent font-size, use font-weight and subtle color changes to create hierachy.
+
+## Characters per line
+
+The optimal number of characters per line is between 55 and 75, but 75 to 90 is more popular.
+
+
+## Reference
+
+https://betterwebtype.com/articles/2019/06/16/5-keys-to-accessible-web-typography/
+[Spreadsheet](https://docs.google.com/spreadsheets/d/1Vcehdh4SZT5RJhzZ0i-rjCRFX_HC2Lo94hbSqiqYblQ/edit#gid=1)
+
+
+
+
+
+

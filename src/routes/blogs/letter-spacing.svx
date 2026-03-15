@@ -1,0 +1,31 @@
+---
+title: Typography for idiots - What is going on with letter-spacing?
+date: 2024-05-10
+categories:
+    - typography
+---
+
+## You usually only discuss letter spacing when it comes to Headings
+
+Headings with crispness use negative letter-spacing. (usually -0.5%, -1%, -2%)
+
+## No correct way?
+
+There's no **correct** way to achieve perfect spacing atm.
+
+[The Designer's Guide To Letter Spacing](https://www.webdesignerdepot.com/2020/07/the-designers-guide-to-letter-spacing/)
+
+## In CSS
+
+In CSS, the best unit for `letter-spacing` would be `em`.
+
+Below it's what Tailwind use for their system:
+
+```css
+--tracking-tighter: -0.05em;
+--tracking-tight: -0.025em;
+--tracking-normal: 0em;
+--tracking-wide: 0.025em;
+--tracking-wider: 0.05em;
+--tracking-widest: 0.1em;
+```

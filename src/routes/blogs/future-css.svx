@@ -1,0 +1,80 @@
+---
+title: Future CSS Features
+date: 2023-06-26
+categories:
+    - frontend
+---
+
+## Anchor Positioning
+
+```css
+.slider-link {
+  anchor-name: var(--is);
+}
+
+```
+
+## ViewTransition API
+
+```css
+::view-transition-old(main-image),
+::view-transition-new(main-image) {
+  transform-origin: right top;
+}
+
+::view-transition-new(main-image) {
+  animation: 400ms ease-out both grow;
+}
+
+figure {
+  view-transition-name: main-image;
+}
+```
+
+## Variable Fonts
+
+```css
+@font-face {
+  font-family: "Fraunces";
+  src: url("fraunces.woff2") format("woff2");
+  font-weight: 200 700;
+}
+
+h2 {
+  font-family: "Fraunces";
+  font-variation-settings: "wght" 375, "SOFT" 100;
+}
+```
+
+
+## text-wrap: balance
+
+```css
+.balanced {
+  max-inline-size: 50ch;
+  text-wrap: balance;
+}
+```
+
+## line-clamp
+
+```css
+p {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;  
+  overflow: hidden;
+}
+```
+
+## CSS Warpped 2023
+
+https://developer.chrome.com/blog/css-wrapped-2023
+
+## Gradient
+
+https://gradient.style
+
+## Learn CSS 
+
+https://web.dev/learn/css
