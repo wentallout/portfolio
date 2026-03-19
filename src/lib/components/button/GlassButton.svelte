@@ -1,14 +1,16 @@
 <script>
+	import { haptics } from '$lib/actions/haptics';
 	import { gsap } from 'gsap';
 	import { onMount } from 'svelte';
 
-	/** @type {{label?: string, labelColor?: string, width?: any, glassColor?: string, glowColor?: string, type?: string, glassOpacity?: number, borderWidth?: string, children?: import('svelte').Snippet}} */
+	/** @type {{label?: string, labelColor?: string, width?: any, glassColor?: string, glowColor?: string, type?: string, glassOpacity?: number, borderWidth?: string, children?: import('svelte').Snippet, hapticPattern?: string | number | number[] | object}} */
 	let {
 		borderWidth = '1px',
 		children,
 		glassColor = 'rgba(255, 255, 255, 0.1)',
 		glassOpacity = 0.7,
 		glowColor = 'rgba(255, 255, 255, 0.5)',
+		hapticPattern = 'medium',
 		label = '',
 		labelColor = 'var(--color-text)',
 		type = 'submit',
@@ -114,6 +116,7 @@
 			});
 
 			createSplash(x, y);
+			haptics.trigger(hapticPattern);
 		});
 
 		buttonEl.addEventListener('mouseup', () => {
