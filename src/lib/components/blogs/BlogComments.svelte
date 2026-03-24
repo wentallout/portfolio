@@ -3,13 +3,10 @@
 
 	/** @type {{category?: string}} */
 	let { category = 'Blogs' } = $props();
-	let categoryId = $state('');
 
-	if (category === 'Blogs') {
-		categoryId = 'DIC_kwDOH5VoSc4CV-u6';
-	} else {
-		categoryId = 'DIC_kwDOH5VoSc4CV-xr';
-	}
+	let categoryId = $derived(
+		category === 'Blogs' ? 'DIC_kwDOH5VoSc4CV-u6' : 'DIC_kwDOH5VoSc4CV-xr'
+	);
 </script>
 
 <!-- <section>

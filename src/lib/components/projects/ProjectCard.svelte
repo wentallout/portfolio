@@ -1,5 +1,6 @@
 <script>
 	import MouseGlow from '$components/common/MouseGlow.svelte';
+	import { haptic } from '$lib/actions/haptics';
 
 	let {
 		desc = '',
@@ -12,7 +13,7 @@
 	} = $props();
 </script>
 
-<a class="project-container fancy-border" href={linkToDetail}>
+<a use:haptic={'selection'} class="project-container fancy-border" href={linkToDetail}>
 	<MouseGlow />
 	<article class="project">
 		<div class="project__thumbnail">

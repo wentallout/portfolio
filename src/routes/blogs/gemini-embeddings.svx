@@ -25,8 +25,9 @@ print(embed_data['embedding'][:10])
 
 Printing out part of the embedding, here's the output (note that by default, the embeddings have length 768, also called its dimensionality):
 
+```
 [0.058438968, 0.00044316906, -0.009973634, -0.016529616, 0.041487474, -0.013944049, 0.080064304, 0.055516902, -0.03406745, 0.046189807]
-
+```
 
 ## Truncating Embeddings
 
@@ -45,6 +46,7 @@ Output: 10
 
 As we mentioned above, we can use embeddings specifically for tasks such as document retrieval. Here's an example of how we can do that.
 
+```
 data = 'Finally touching the grass!'
 
 embed_data_1 = genai.embed_content(
@@ -61,9 +63,11 @@ embed_data_2 = genai.embed_content(
 
 print(embed_data_1['embedding'][:10])
 print(embed_data_2['embedding'][:10])
+```
 
 Output:
 
 ```
 [-0.044086624, -0.017505981, -0.014579227, 0.013675352, -0.008016501, 0.025225215, -0.035069168, 0.034015447, 0.037304174, 0.007439849]
-[-0.023972979, -0.019189887, -0.0222573, -0.012185102, 0.019129641, 0.035173632, -0.012367243, 0.016283926, 0.022629406, 0.014976865]```
+[-0.023972979, -0.019189887, -0.0222573, -0.012185102, 0.019129641, 0.035173632, -0.012367243, 0.016283926, 0.022629406, 0.014976865]
+```

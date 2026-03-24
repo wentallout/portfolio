@@ -1,9 +1,10 @@
 <script>
 	import PaginationNav from '$components/common/PaginationNav.svelte';
+	let { onsetPage, ...rest } = $props();
 </script>
 
 <div class="dark-pagination-nav">
-	<PaginationNav {...$$props} on:setPage />
+	<PaginationNav {...rest} {onsetPage} />
 </div>
 
 <style>
