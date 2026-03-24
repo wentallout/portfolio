@@ -41,6 +41,7 @@
 			alt: defaultAlt,
 			url: defaultOgSquareImage
 		},
+		path = '',
 		slug = '',
 		timeToRead = 0,
 		title = '',
@@ -63,7 +64,7 @@
 	});
 
 	const pageTitle = $derived(`${title} | ${siteTitle}`);
-	const url = $derived(`${siteUrl}/${slug}`);
+	const url = $derived(new URL(path || `/${slug}`, siteUrl).href);
 
 	const openGraphProps = $derived({
 		article,
