@@ -69,6 +69,9 @@
 			showDropdown = false;
 			suggestions = [];
 			filteredBlogs = [...allBlogs];
+			isSearching = false;
+			clearTimeout(searchTimeout);
+			currentPage = 1;
 			return;
 		}
 
@@ -96,6 +99,9 @@
 		suggestions = [];
 		showDropdown = false;
 		selectedIndex = -1;
+		currentPage = 1;
+		isSearching = false;
+		clearTimeout(searchTimeout);
 	}
 
 	function handleKeyDown(event) {
@@ -121,9 +127,14 @@
 				filteredBlogs = suggestions.length > 0 || searchTerm === '' ? [...suggestions] : [];
 				if (searchTerm === '') filteredBlogs = [...allBlogs];
 				showDropdown = false;
+				currentPage = 1;
+				isSearching = false;
+				clearTimeout(searchTimeout);
 			}
 		} else if (event.key === 'Escape') {
 			showDropdown = false;
+			isSearching = false;
+			clearTimeout(searchTimeout);
 		}
 	}
 

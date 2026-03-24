@@ -26,7 +26,7 @@
 			{@render children?.()}
 		</div>
 	</div>
-</div>g
+</div>
 
 <style>
 	.contact__address {
