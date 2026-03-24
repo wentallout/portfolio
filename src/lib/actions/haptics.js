@@ -1,10 +1,24 @@
 import { WebHaptics } from 'web-haptics';
+import { browser } from '$app/environment';
 
 /**
- * Singleton instance of WebHaptics to be shared across the application.
- * This ensures that haptic feedback is consistent and efficient.
+ * Singleton instance of WebHaptics, lazily initialized on the client.
  */
-export const haptics = new WebHaptics();
+let hapticsInstance;
+
+/**
+ * Proxy object for WebHaptics to ensure safety during SSR.
+ */
+export const haptics = {
+	trigger(pattern) {
+		if (browser) {
+			if (!hapticsInstance) {
+				hapticsInstance = new WebHaptics();
+			}
+			hapticsInstance.trigger(pattern);
+		}
+	}
+};
 
 /**
  * Common haptic patterns for consistent feedback.
