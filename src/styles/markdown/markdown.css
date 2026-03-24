@@ -110,15 +110,6 @@
 	list-style-position: inside;
 }
 
-.markdown li::marker {
-	/* content: counter(list-item) '. '; */
-
-	content: '• ';
-	color: var(--color-text);
-	font-size: inherit;
-	font-weight: var(--fontWeightLarge);
-}
-
 .toc li::marker {
 	content: none;
 }

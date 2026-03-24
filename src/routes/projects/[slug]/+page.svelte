@@ -7,7 +7,7 @@
 	let { data } = $props();
 </script>
 
-<SEO title={data.title} />
+<SEO path={`/projects/${data.slug}`} title={data.title} />
 
 <article>
 	<PostInfo {data} />
