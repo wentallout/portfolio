@@ -57,11 +57,11 @@
 					type="submit">
 				</Button> -->
 
-				<PrimaryButton label="Send message">
+				<PrimaryButton hapticPattern="success" label="Send message">
 					<PaperPlaneRight color="var(--color-black)" height="16" width="16" />
 				</PrimaryButton>
 
-				<SecondaryButton type="reset">
+				<SecondaryButton hapticPattern="nudge" type="reset">
 					<ArrowCounterClockwise color="var(--color-error)" height="16" width="16" />
 				</SecondaryButton>
 

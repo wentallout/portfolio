@@ -1,6 +1,7 @@
 <script>
 	import { CopySimple } from '$lib/assets/icons/icons';
 	import { slide, scale } from 'svelte/transition';
+	import { haptics, hapticPatterns } from '$lib/actions/haptics';
 
 	let show = $state(false);
 
@@ -9,6 +10,7 @@
 
 	async function copyToClipboard() {
 		await navigator.clipboard.writeText(textToCopy);
+		haptics.trigger(hapticPatterns.success);
 		show = true;
 		setTimeout(() => {
 			show = false;

@@ -5,6 +5,7 @@
 	import VanishingHeader from '$components/layout/header/VanishingHeader.svelte';
 	import LiquidGlass from '$components/other/LiquidGlass.svelte';
 	import { List, X } from '$lib/assets/icons/icons';
+	import { haptic } from '$lib/actions/haptics';
 	import { navItems } from '$lib/config.js';
 	import { onMount } from 'svelte';
 	let scrollY = $state();
@@ -36,7 +37,7 @@
 			<ul class="navlist">
 				{#each navItems as navItem (navItem.path)}
 					<li class="navlist__item" class:active-page={page.url.pathname === `${navItem.path}`}>
-						<a class="item" href={navItem.path}>
+						<a use:haptic={'selection'} class="item" href={navItem.path}>
 							{navItem.title}
 						</a>
 					</li>
@@ -50,6 +51,7 @@
 			aria-label="navigation button"
 			onclick={openNav}
 			onkeydown={openNav}
+			use:haptic={'medium'}
 			type="button">
 			<List color="var(--color-text)" height="32" width="32" />
 		</button>
@@ -62,12 +64,14 @@
 		aria-label="close nav menu"
 		onclick={closeNav}
 		onkeydown={closeNav}
+		use:haptic={'medium'}
 		type="button">
 		<X color="var(--color-black)" height="32" width="32" />
 	</button>
 	<div class="overlay-content">
 		{#each navItems as navItem (navItem.path)}
 			<a
+				use:haptic={'selection'}
 				class="overlay-item text-xl"
 				class:active-page--mobile={page.url.pathname === `${navItem.path}`}
 				href={navItem.path}

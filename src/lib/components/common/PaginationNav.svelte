@@ -1,6 +1,5 @@
 <script>
 	import { ArrowLeft, ArrowRight } from '$lib/assets/icons/icons.js';
-	import { createEventDispatcher } from 'svelte';
 
 	/** Enum for symbol types */
 	const SymbolType = {
@@ -11,15 +10,14 @@
 
 	import { generateNavigationOptions } from '../../utils/generateNavigationOptions';
 
-	const dispatch = createEventDispatcher();
-
 	// Declare props using $props rune
 	let {
 		currentPage = 1,
 		limit = undefined,
 		pageSize = 1,
 		showStepOptions = false,
-		totalItems = 0
+		totalItems = 0,
+		onsetPage
 	} = $props();
 
 	// Reactive variables using $state rune
@@ -39,7 +37,7 @@
 	});
 
 	function handleOptionClick(option) {
-		dispatch('setPage', { page: option.value });
+		onsetPage?.({ detail: { page: option.value } });
 	}
 </script>
 

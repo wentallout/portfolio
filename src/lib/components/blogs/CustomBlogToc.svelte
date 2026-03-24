@@ -11,7 +11,7 @@
 	--toc-active-font-weight="400"
 	--toc-desktop-bg="transparent"
 	--toc-desktop-sticky-top="var(--scroll-padding)"
-	--toc-font-size="calc(var(--font-size-small)*90/100)"
+	--toc-font-size="var(--font-size-xs)"
 	--toc-li-border-radius="0"
 	--toc-li-color="var(--color-text-secondary)"
 	--toc-li-hover-bg="transparent"
@@ -24,16 +24,15 @@
 	--toc-mobile-btn-padding="0px"
 	--toc-mobile-right="12px"
 	--toc-padding="var(--space-mid)"
+	--toc-z-index="9999"
 	breakpoint="992"
 	flashClickedHeadingsFor="1500"
 	keepActiveTocItemInView={true}
 	scrollBehavior="smooth">
-	{#snippet title()}
-		<span class="toc-title text-base">
-			<ListBullets color="var(--color-text)" height="16" width="16" />
-			Contents
-		</span>
-	{/snippet}
+	<span slot="title" class="toc-title text-base">
+		<ListBullets color="var(--color-text)" height="16" width="16" />
+		Contents
+	</span>
 
 	<span slot="open-toc-icon" class="open-toc-icon">
 		<ListBullets color="var(--color-text)" height="16" width="16" />
@@ -48,6 +47,9 @@
 	:global(button[aria-label='Open table of contents']) {
 		background: color-mix(in srgb, var(--color-bg-elevated) 100%, transparent);
 		z-index: var(--z-index-max);
+		display: flex;
+		justify-content: center;
+		align-items: center;
 	}
 
 	:global(aside.toc > nav) {
@@ -57,6 +59,10 @@
 
 	:global(aside.toc li) {
 		line-height: 1.5;
+
+		--toc-li-font-size-min: var(--font-size-2xs);
+		--toc-li-font-size-base: var(--font-size-xs);
+		--toc-li-font-size-step: var(--font-size-small);
 	}
 
 	.open-toc-icon {
@@ -68,6 +74,7 @@
 	.toc-title {
 		display: flex;
 		align-items: center;
+
 		gap: var(--space-2xs);
 		font-family: var(--font-fancy);
 		border-style: solid;

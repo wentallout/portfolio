@@ -1,7 +1,7 @@
 <script>
 	import { page } from '$app/state';
 	import HeaderLogo from '$components/layout/header/HeaderLogo.svelte';
-	import { theme } from '$lib/stores/themeStore.js';
+	import { theme } from '$lib/stores/themeStore.svelte.js';
 	import { fade } from 'svelte/transition';
 
 	let showCover = $state(false);
@@ -17,7 +17,7 @@
 
 {#if showCover}
 	<div class="cover">
-		{#if $theme === 'dark'}
+		{#if theme.current === 'dark'}
 			<video
 				class="video"
 				autoplay
@@ -30,7 +30,7 @@
 			</video>
 		{/if}
 
-		{#if $theme === 'light'}
+		{#if theme.current === 'light'}
 			<video
 				class="video"
 				autoplay

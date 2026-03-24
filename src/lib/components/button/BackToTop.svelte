@@ -1,5 +1,6 @@
 <script>
 	import { ArrowLineUp } from '$lib/assets/icons/icons';
+	import { haptic } from '$lib/actions/haptics';
 
 	/** @type {{showOnPx?: number}} */
 	let { showOnPx = 150 } = $props();
@@ -28,7 +29,7 @@
 
 <svelte:window onscroll={handleOnScroll} />
 
-<button class="bck2top" class:hidden onclick={goTop} onkeyup={goTop} type="button">
+<button use:haptic={'medium'} class="bck2top" class:hidden onclick={goTop} onkeyup={goTop} type="button">
 	<ArrowLineUp height="16" width="16" />
 </button>
 

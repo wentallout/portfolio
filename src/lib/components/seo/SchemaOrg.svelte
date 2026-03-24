@@ -43,9 +43,9 @@
 		url
 	} = $props();
 
-	const entityHash = generateEntityHash(author);
+	const entityHash = $derived(generateEntityHash(author));
 
-	const schemaOrgEntity =
+	const schemaOrgEntity = $derived(
 		entityMeta !== null
 			? {
 					'@id': `${siteUrl}/#/schema/person/${entityHash}`,
@@ -72,9 +72,10 @@
 						facebookPage
 					]
 				}
-			: null;
+			: null
+	);
 
-	const schemaOrgWebsite = {
+	const schemaOrgWebsite = $derived({
 		'@id': `${siteUrl}/#website`,
 		'@type': 'WebSite',
 		description: siteTitleAlt,
@@ -91,9 +92,9 @@
 			'@id': `${siteUrl}/#/schema/person/${entityHash}`
 		},
 		url: siteUrl
-	};
+	});
 
-	const schemaOrgImageObject = {
+	const schemaOrgImageObject = $derived({
 		'@id': `${url}#primaryimage`,
 		'@type': 'ImageObject',
 		caption: featuredImage.caption,
@@ -102,9 +103,9 @@
 		inLanguage: siteLanguage,
 		url: featuredImage.url,
 		width: featuredImage.width
-	};
+	});
 
-	const schemaOrgBreadcrumbList = {
+	const schemaOrgBreadcrumbList = $derived({
 		'@id': `${url}#breadcrumb`,
 		'@type': 'BreadcrumbList',
 		itemListElement: breadcrumbs.map((element, index) => ({
@@ -117,9 +118,9 @@
 			},
 			position: index + 1
 		}))
-	};
+	});
 
-	const schemaOrgWebPage = {
+	const schemaOrgWebPage = $derived({
 		'@id': `${url}#webpage`,
 		'@type': 'WebPage',
 		author: {
@@ -146,37 +147,38 @@
 			'@id': `${url}#primaryimage`
 		},
 		url
-	};
+	});
 
-	let schemaOrgArticle = null;
-	if (article) {
-		schemaOrgArticle = {
-			'@id': `${url}#article`,
-			'@type': 'Article',
-			articleSection: ['blog'],
-			author: {
-				'@id': `${siteUrl}/#/schema/person/${entityHash}`
-			},
-			dateModified: lastUpdated,
-			datePublished,
-			headline: title,
-			image: {
-				'@id': `${url}#primaryimage`
-			},
-			inLanguage: siteLanguage,
-			isPartOf: {
-				'@id': `${url}#webpage`
-			},
-			mainEntityOfPage: {
-				'@id': `${url}#webpage`
-			},
-			publisher: {
-				'@id': `${siteUrl}/#/schema/person/${entityHash}`
-			}
-		};
-	}
+	const schemaOrgArticle = $derived(
+		article
+			? {
+					'@id': `${url}#article`,
+					'@type': 'Article',
+					articleSection: ['blog'],
+					author: {
+						'@id': `${siteUrl}/#/schema/person/${entityHash}`
+					},
+					dateModified: lastUpdated,
+					datePublished,
+					headline: title,
+					image: {
+						'@id': `${url}#primaryimage`
+					},
+					inLanguage: siteLanguage,
+					isPartOf: {
+						'@id': `${url}#webpage`
+					},
+					mainEntityOfPage: {
+						'@id': `${url}#webpage`
+					},
+					publisher: {
+						'@id': `${siteUrl}/#/schema/person/${entityHash}`
+					}
+				}
+			: null
+	);
 
-	const schemaOrgPublisher = {
+	const schemaOrgPublisher = $derived({
 		'@id': `${siteUrl}/#/schema/person/${entityHash}`,
 		'@type': ['Person', 'Organization'],
 		image: {
@@ -201,24 +203,26 @@
 			`https://linkedin.com/in/${linkedinProfile}`,
 			facebookPage
 		]
-	};
+	});
 
-	const schemaOrgArray = [
-		schemaOrgEntity,
-		schemaOrgWebsite,
-		schemaOrgImageObject,
-		schemaOrgWebPage,
-		schemaOrgBreadcrumbList,
-		...(article ? [schemaOrgArticle] : []),
-		schemaOrgPublisher
-	].filter((item) => item !== null && item !== undefined); // Filter out any null or undefined entities from the graph
+	const schemaOrgArray = $derived(
+		[
+			schemaOrgEntity,
+			schemaOrgWebsite,
+			schemaOrgImageObject,
+			schemaOrgWebPage,
+			schemaOrgBreadcrumbList,
+			...(article ? [schemaOrgArticle] : []),
+			schemaOrgPublisher
+		].filter((item) => item !== null && item !== undefined) // Filter out any null or undefined entities from the graph
+	);
 
-	const schemaOrgObject = {
+	const schemaOrgObject = $derived({
 		'@context': 'https://schema.org',
 		'@graph': schemaOrgArray
-	};
+	});
 
-	const jsonLdString = serializeSchema(schemaOrgObject);
+	const jsonLdString = $derived(serializeSchema(schemaOrgObject));
 </script>
 
 <svelte:head>

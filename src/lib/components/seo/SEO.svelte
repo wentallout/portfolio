@@ -1,8 +1,10 @@
 <script>
-	import website from '$lib/config.js';
-	const {
+	import {
 		author,
-
+		defaultAlt,
+		defaultOgImage,
+		defaultOgSquareImage,
+		defaultTwitterImage,
 		facebookAuthorPage,
 		facebookPage,
 		githubPage,
@@ -15,47 +17,22 @@
 		telegramUsername,
 		tiktokUsername,
 		twitterUsername
-	} = website;
+	} from '$lib/constants/personal';
 
-	import defaultOgImage from '$lib/assets/images/seo/1200x627.png';
-	import defaultFeaturedImage from '$lib/assets/images/seo/1344x896.png';
-	import defaultOgSquareImage from '$lib/assets/images/seo/400x400.png';
-	import defaultTwitterImage from '$lib/assets/images/seo/800x418.png';
-	const defaultAlt = 'cover image';
-
-	/** @type {{entityMeta?: any, lastUpdated?: any, datePublished?: any, metadescription: string, slug: any, timeToRead?: number, title?: string, article?: boolean, breadcrumbs?: any, featuredImage?: any, ogImage?: any, ogSquareImage?: any, twitterImage?: any, path?: string}} */
+	/** @type {{article?: boolean, breadcrumbs?: any, datePublished?: string, entityMeta?: any, featuredImage?: any, lastUpdated?: string, metadescription?: string, ogImage?: any, ogSquareImage?: any, path?: string, slug?: string, timeToRead?: number, title?: string, twitterImage?: any}} */
 	let {
 		article = false,
-		slug,
-		breadcrumbs = [
-			{
-				name: 'Home',
-				slug: ''
-			},
-			{
-				name: 'Projects',
-				slug: 'projects'
-			},
-			{
-				name: 'Blogs',
-				slug: 'blogs'
-			},
-			{
-				name: 'Contact',
-				slug: 'contact'
-			}
-		],
-		datePublished = new Date(),
+		breadcrumbs = [],
+		datePublished = '',
 		entityMeta = null,
 		featuredImage = {
-			alt: defaultAlt,
-			caption: 'Home page',
-			height: 448,
-			url: defaultFeaturedImage,
-			width: 672
+			url: defaultOgImage,
+			caption: defaultAlt,
+			width: 1200,
+			height: 630
 		},
-		lastUpdated = new Date(),
-		metadescription,
+		lastUpdated = '',
+		metadescription = '',
 		ogImage = {
 			alt: defaultAlt,
 			url: defaultOgImage
@@ -64,7 +41,7 @@
 			alt: defaultAlt,
 			url: defaultOgSquareImage
 		},
-		path = '', // Add path to props with default empty string
+		slug = '',
 		timeToRead = 0,
 		title = '',
 		twitterImage = {
@@ -77,18 +54,18 @@
 	import SchemaOrg from '$components/seo/SchemaOrg.svelte';
 	import Twitter from '$components/seo/Twitter.svelte';
 
-	const twitterProps = {
+	const twitterProps = $derived({
 		article,
 		author,
 		image: twitterImage,
 		timeToRead,
 		twitterUsername
-	};
+	});
 
-	const pageTitle = `${title} | ${siteTitle}`;
-	const url = `${siteUrl}/${slug}`;
+	const pageTitle = $derived(`${title} | ${siteTitle}`);
+	const url = $derived(`${siteUrl}/${slug}`);
 
-	const openGraphProps = {
+	const openGraphProps = $derived({
 		article,
 		datePublished,
 		image: ogImage,
@@ -100,9 +77,9 @@
 		squareImage: ogSquareImage,
 		url,
 		...(article ? { datePublished, facebookAuthorPage, facebookPage, lastUpdated } : {})
-	};
+	});
 
-	const schemaOrgProps = {
+	const schemaOrgProps = $derived({
 		article,
 		author,
 		breadcrumbs,
@@ -124,7 +101,7 @@
 		title: pageTitle,
 		twitterUsername,
 		url
-	};
+	});
 </script>
 
 <svelte:head>

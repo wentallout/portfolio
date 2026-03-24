@@ -3,9 +3,9 @@
 
 	let { data } = $props();
 
-	const categories = new Set(data.blogs.map((blog) => blog.meta.categories).flat());
+	const categories = $derived(new Set(data.blogs.map((blog) => blog.meta.categories).flat()));
 
-	let uniqueCategories = Array.from(categories).sort((a, b) => a.localeCompare(b));
+	const uniqueCategories = $derived(Array.from(categories).sort((a, b) => a.localeCompare(b)));
 </script>
 
 <div class="category">
