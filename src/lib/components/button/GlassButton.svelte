@@ -1,9 +1,8 @@
 <script>
 	import { haptics } from '$lib/actions/haptics';
 	import { gsap } from 'gsap';
-	import { onMount } from 'svelte';
 
-	/** @type {{label?: string, labelColor?: string, width?: any, glassColor?: string, glowColor?: string, type?: string, glassOpacity?: number, borderWidth?: string, children?: import('svelte').Snippet, hapticPattern?: string | number | number[] | object}} */
+	/** @type {{label?: string, labelColor?: string, width?: any, glassColor?: string, glowColor?: string, type?: "button" | "submit" | "reset", glassOpacity?: number, borderWidth?: string, children?: import('svelte').Snippet, hapticPattern?: string | number | number[] | object}} */
 	let {
 		borderWidth = '1px',
 		children,
@@ -18,18 +17,16 @@
 	} = $props();
 
 	let buttonEl;
-	let contentEl;
 	let isHovered = false;
 	let hoverInterval;
 
 	function createRainDrop() {
-		if (!isHovered) return;
+		if (!isHovered || !buttonEl) return;
 
 		const drop = document.createElement('div');
 		drop.className = 'raindrop';
 		buttonEl.appendChild(drop);
 
-		// Random position along the button
 		const x = Math.random() * buttonEl.offsetWidth;
 		const y = Math.random() * buttonEl.offsetHeight;
 
@@ -50,7 +47,8 @@
 	}
 
 	function createSplash(x, y) {
-		const splashes = 8; // Increased number of splashes
+		if (!buttonEl) return;
+		const splashes = 8;
 		const angleStep = (2 * Math.PI) / splashes;
 
 		for (let i = 0; i < splashes; i++) {
@@ -59,7 +57,7 @@
 			buttonEl.appendChild(splash);
 
 			const angle = angleStep * i;
-			const distance = 50; // Increased distance
+			const distance = 50;
 			const targetX = x + Math.cos(angle) * distance;
 			const targetY = y + Math.sin(angle) * distance;
 
@@ -71,7 +69,7 @@
 			});
 
 			gsap.to(splash, {
-				duration: 0.8, // Increased duration
+				duration: 0.8,
 				ease: 'power2.out',
 				left: targetX,
 				onComplete: () => splash.remove(),
@@ -82,54 +80,31 @@
 		}
 	}
 
-	onMount(() => {
-		buttonEl.addEventListener('mouseenter', () => {
-			isHovered = true;
-			hoverInterval = setInterval(createRainDrop, 200); // Increased frequency
+	function onMouseEnter() {
+		isHovered = true;
+		hoverInterval = setInterval(createRainDrop, 200);
+	}
 
-			gsap.to(buttonEl, {
-				duration: 0.15, // Reduced from 0.3
-				ease: 'power2.out',
-				scale: 1.02
-			});
-		});
+	function onMouseLeave() {
+		isHovered = false;
+		clearInterval(hoverInterval);
+	}
 
-		buttonEl.addEventListener('mouseleave', () => {
-			isHovered = false;
-			clearInterval(hoverInterval);
+	function onMouseDown(e) {
+		const rect = buttonEl.getBoundingClientRect();
+		const x = e.clientX - rect.left;
+		const y = e.clientY - rect.top;
 
-			gsap.to(buttonEl, {
-				duration: 0.15, // Reduced from 0.3
-				ease: 'power2.in',
-				scale: 1
-			});
-		});
-
-		buttonEl.addEventListener('mousedown', (e) => {
-			const rect = buttonEl.getBoundingClientRect();
-			const x = e.clientX - rect.left;
-			const y = e.clientY - rect.top;
-
-			gsap.to(buttonEl, {
-				duration: 0.1,
-				scale: 0.97 // More pronounced push effect
-			});
-
-			createSplash(x, y);
-			haptics.trigger(hapticPattern);
-		});
-
-		buttonEl.addEventListener('mouseup', () => {
-			gsap.to(buttonEl, {
-				duration: 0.15, // Reduced from 0.2
-				scale: 1.02
-			});
-		});
-	});
+		createSplash(x, y);
+		haptics.trigger(hapticPattern);
+	}
 </script>
 
 <button
 	bind:this={buttonEl}
+	onmouseenter={onMouseEnter}
+	onmouseleave={onMouseLeave}
+	onmousedown={onMouseDown}
 	style:--glass-color={glassColor}
 	style:--glass-opacity={glassOpacity}
 	style:--border-width={borderWidth}
@@ -139,7 +114,7 @@
 	class="glass-btn"
 	aria-label={`button for ${label}`}
 	{type}>
-	<span bind:this={contentEl} class="glass-content">
+	<span class="glass-content">
 		{@render children?.()}
 		{label}
 	</span>
@@ -147,6 +122,7 @@
 
 <style>
 	.glass-btn {
+		--ease-out-custom: cubic-bezier(0.23, 1, 0.32, 1);
 		position: relative;
 		padding: 12px 32px;
 		background: var(--glass-color);
@@ -161,7 +137,10 @@
 		overflow: hidden;
 		width: 100%;
 		transform-origin: center;
-		transition: all 0.15s ease; /* Reduced from 0.3s */
+		transition:
+			transform 160ms var(--ease-out-custom),
+			filter 160ms var(--ease-out-custom),
+			box-shadow 160ms var(--ease-out-custom);
 		filter: brightness(1);
 	}
 
@@ -181,18 +160,21 @@
 		font-size: var(--font-size-small);
 		z-index: 1;
 		position: relative;
-		text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1); /* Added subtle text shadow for better readability */
+		text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
 	}
 
 	.glass-btn:hover {
-		filter: brightness(1.2);
+		filter: brightness(1.1);
+		transform: scale(1.02);
 		box-shadow:
-			0 10px 40px 0 rgba(0, 0, 0, 0.1),
+			0 10px 40px 0 rgba(0, 0, 0, 0.15),
 			inset 0 0 0 1px rgba(255, 255, 255, 0.2);
 	}
 
 	.glass-btn:active {
-		filter: brightness(0.9);
+		filter: brightness(0.95);
+		transform: scale(0.97);
+		transition-duration: 80ms;
 	}
 
 	.glass-btn:focus-visible {
