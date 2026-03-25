@@ -187,7 +187,8 @@
 										<button
 											class="dropdown-item"
 											class:selected={i === selectedIndex}
-											onclick={() => handleSelect(blog)}>
+											onclick={() => handleSelect(blog)}
+											type="button">
 											<div class="item-icon">
 												<MagnifyingGlass height="14" width="14" />
 											</div>

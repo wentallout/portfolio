@@ -1,5 +1,6 @@
 import type { Handle } from '@sveltejs/kit';
 
+import { building } from '$app/environment';
 import { error, type RequestEvent } from '@sveltejs/kit';
 import type { Config } from 'web-sentinel';
 
@@ -71,15 +72,12 @@ const config: Config = {
 	rule_order: ['country', 'user_agent', 'pathname', 'search_params', 'hostname']
 };
 
-export const handle = createHandler(config);
+const sentinel = createHandler(config);
 
-// export const handle: Handle = async ({ event, resolve }) => {
-// 	const response = await resolve(event, {
-// 		preload: ({ type }) => {
-// 			return type === 'font' || type === 'js' || type === 'css';
-// 		}
-// 	});
+export const handle: Handle = async ({ event, resolve }) => {
+	if (building) {
+		return resolve(event);
+	}
 
-// 	// Continue with the route
-// 	return response;
-// };
+	return sentinel({ event, resolve });
+};
