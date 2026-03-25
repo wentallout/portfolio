@@ -1,6 +1,6 @@
 class MusicStore {
-	isPlaying = $state(false);
 	audioPlayerEl = $state();
+	isPlaying = $state(false);
 	musicList = $state([
 		{
 			audio: '',

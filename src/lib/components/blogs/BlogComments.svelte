@@ -1,21 +1,18 @@
 <script>
-	import Giscus from '$components/blogs/BlogGiscus.svelte';
+	import BlogGiscus from '$components/blogs/BlogGiscus.svelte';
 
 	/** @type {{category?: string}} */
 	let { category = 'Blogs' } = $props();
 
-	let categoryId = $derived(
-		category === 'Blogs' ? 'DIC_kwDOH5VoSc4CV-u6' : 'DIC_kwDOH5VoSc4CV-xr'
-	);
+	let categoryId = $derived(category === 'Blogs' ? 'DIC_kwDOH5VoSc4CV-u6' : 'DIC_kwDOH5VoSc4CV-xr');
 </script>
 
-<!-- <section>
-	<Giscus
+<section>
+	<BlogGiscus
 		id="comments"
 		{category}
 		{categoryId}
 		emitMetadata="1"
-		inputPosition="top"
 		lang="en"
 		loading="lazy"
 		mapping="title"
@@ -24,4 +21,4 @@
 		repoId="R_kgDOH5VoSQ"
 		strict="0"
 		theme="transparent_dark" />
-</section> -->
+</section>
