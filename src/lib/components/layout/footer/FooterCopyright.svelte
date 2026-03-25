@@ -3,7 +3,6 @@
 	import ExLink from '$components/common/ExLink.svelte';
 	import Badges from '$components/layout/footer/Badges.svelte';
 	import LogoSvelte from '$lib/assets/icons/LogoSvelte.svelte';
-	import { COPYRIGHT_ENTITY } from '$lib/constants/entities.js';
 
 	let currentYear = new Date().getFullYear();
 </script>
@@ -11,7 +10,7 @@
 <Badges />
 <div class="end text-xs">
 	<div class="end__text">
-		Copyright {`${COPYRIGHT_ENTITY}`}
+		Copyright ©
 		{currentYear} Nguyen Dang Khoa (wentallout), All Rights Reserved.
 	</div>
 

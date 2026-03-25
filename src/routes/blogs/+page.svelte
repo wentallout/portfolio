@@ -236,7 +236,7 @@
 				<p>No blogs available</p>
 			</div>
 		{:else}
-			{#each paginatedItems as paginatedItem (paginatedItem.meta.title)}
+			{#each paginatedItems as paginatedItem (paginatedItem.path)}
 				<BlogCard
 					blogDate={paginatedItem.meta.date}
 					blogLink={paginatedItem.path}
