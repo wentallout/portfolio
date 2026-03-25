@@ -1,21 +1,27 @@
 <script>
-	import { fly } from 'svelte/transition';
-
-	import { theme, toggleTheme } from '$lib/stores/themeStore.js';
+	import { fade } from 'svelte/transition';
+	import { theme } from '$lib/stores/themeStore.svelte.js';
 	import { Sun, Moon } from '$lib/assets/icons/icons';
+	import { haptic } from '$lib/actions/haptics';
 </script>
 
-<button class="pill" aria-label="Toggle theme" type="button" onclick={toggleTheme}>
+<button 
+	use:haptic={'selection'} 
+	class="pill" 
+	aria-label="Toggle theme" 
+	type="button" 
+	onclick={() => theme.toggle()}
+>
 	<div
 		class="circle"
-		class:circle--left={$theme === 'dark'}
-		class:circle--right={$theme === 'light'}>
-		{#if $theme === 'dark'}
-			<div>
+		class:circle--left={theme.current === 'dark'}
+		class:circle--right={theme.current === 'light'}>
+		{#if theme.current === 'dark'}
+			<div in:fade={{ duration: 150 }}>
 				<Moon class="icon" color="var(--color-text)" height="16" width="16" />
 			</div>
-		{:else if $theme === 'light'}
-			<div>
+		{:else}
+			<div in:fade={{ duration: 150 }}>
 				<Sun class="icon" color="var(--color-text)" height="16" width="16" />
 			</div>
 		{/if}
@@ -24,44 +30,48 @@
 
 <style lang="postcss">
 	.pill {
+		--ease-out-custom: cubic-bezier(0.23, 1, 0.32, 1);
 		--pillWidth: 48px;
 		width: var(--pillWidth);
-
 		display: flex;
-
-		border-radius: var(--border-radius);
-		border: 1px solid var(--color-text-quaternary);
+		border-radius: 999px;
+		border: 1px solid var(--color-border);
 		overflow: hidden;
-		background-color: var(--color-bg-container);
+		background-color: var(--color-bg-layout);
 		height: fit-content;
-		z-index: var(--z-index-max);
+		z-index: 100;
 		position: absolute;
 		top: 50%;
 		right: 0;
 		transform: translate(-50%, -50%);
-		transition: var(--transition);
-		padding: 2px;
+		transition: 
+			transform 160ms var(--ease-out-custom),
+			background-color 200ms var(--ease-out-custom),
+			border-color 200ms var(--ease-out-custom);
+		padding: 3px;
+		cursor: pointer;
 
 		&:hover {
-			filter: brightness(110%);
+			border-color: var(--color-text-secondary);
+			background-color: var(--color-bg-container);
+		}
+
+		&:active {
+			transform: translate(-50%, -50%) scale(0.92);
 		}
 	}
 
 	.circle {
-		height: calc(var(--pillWidth) / 2);
-		aspect-ratio: 1/1;
+		height: 20px;
+		width: 20px;
 		border-radius: 50%;
 		background-color: var(--color-bg-elevated);
-		box-shadow: var(--boxShadow);
+		box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
 		display: flex;
 		justify-content: center;
 		align-items: center;
-
-		transition: transform 0.3s cubic-bezier(0.68, -0.55, 0.27, 1.55);
-
-		&:hover {
-			border: 1px solid var(--color-primary-hover);
-		}
+		transition: transform 250ms var(--ease-out-custom);
+		pointer-events: none;
 	}
 
 	.circle--left {
@@ -69,6 +79,10 @@
 	}
 
 	.circle--right {
-		transform: translateX(calc(var(--pillWidth) / 2 - 6px));
+		transform: translateX(20px);
+	}
+
+	.icon {
+		display: block;
 	}
 </style>

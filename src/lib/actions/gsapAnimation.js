@@ -4,42 +4,6 @@ import SplitType from 'split-type';
 
 gsap.registerPlugin(ScrollTrigger);
 
-/**
- * @param {HTMLElement} element
- */
-export function imageReveal(element) {
-	// Set initial state - highly pixelated and slightly blurred
-	gsap.set(element, {
-		filter: 'blur(20px) brightness(1.2)',
-		opacity: 0,
-		scale: 1.1
-	});
-
-	const tl = gsap.timeline({
-		scrollTrigger: {
-			start: 'top 80%',
-			trigger: element
-		}
-	});
-
-	tl.to(element, {
-		duration: 0.3,
-		ease: 'power2.out',
-		filter: 'blur(0px) brightness(1)',
-		opacity: 1,
-		scale: 1
-	});
-
-	return {
-		destroy() {
-			tl.kill();
-			element.style.filter = '';
-			element.style.transform = '';
-			element.style.opacity = '';
-		}
-	};
-}
-
 export function textReveal(element, options = {}) {
 	const {
 		duration = 0.3,

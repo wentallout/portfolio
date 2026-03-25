@@ -1,3 +1,5 @@
+import * as personal from '$lib/constants/personal';
+
 export const navItems = [
 	{
 		path: '/',
@@ -17,33 +19,28 @@ export const navItems = [
 	}
 ];
 
-const facebookPageName = 'wentallout';
-const facebookAuthorPageName = 'wentallout.uiux';
-
 const website = {
-	author: 'Khoa Nguyen',
-	backgroundColor: '#121212',
-	contactEmail: 'wentallout@gmail.com',
-	description: 'Nguyen Dang Khoa - Professional UI/UX Designer and Frontend Developer since 2022',
+	author: personal.author,
+	backgroundColor: personal.backgroundColor,
+	contactEmail: personal.contactEmail,
+	description: personal.description,
 
-	facebookAuthorPage: `https://www.facebook.com/${facebookAuthorPageName}`,
-	facebookAuthorPageName,
-	facebookPage: `https://www.facebook.com/${facebookPageName}`,
-	facebookPageName,
-	githubPage: 'wentallout',
-	icon: 'static/icon-512.png',
-	linkedinProfile: 'wentallout',
+	facebookAuthorPage: personal.facebookAuthorPage,
+	facebookPage: personal.facebookPage,
+	githubPage: personal.githubPage,
+	icon: personal.icon,
+	linkedinProfile: personal.linkedinProfile,
 
-	ogLanguage: 'en_US',
-	siteLanguage: 'en-US',
-	siteShortTitle: 'Tailor-made websites for your business',
-	siteTitle: 'Tailor-made websites for your business - Khoa Nguyen',
-	siteUrl: 'https://wentallout.io.vn',
-	telegramUsername: 'wentallout',
-	themeColor: '#ffbb00',
-	tiktokUsername: '@wentallout',
-	twitterUserId: '1391413398286471168',
-	twitterUsername: 'wentallout'
+	ogLanguage: personal.ogLanguage,
+	siteLanguage: personal.siteLanguage,
+	siteShortTitle: personal.siteShortTitle,
+	siteTitle: personal.siteTitle,
+	siteUrl: personal.siteUrl,
+	telegramUsername: personal.telegramUsername,
+	themeColor: personal.themeColor,
+	tiktokUsername: personal.tiktokUsername,
+	twitterUserId: personal.twitterUserId,
+	twitterUsername: personal.twitterUsername
 };
 
-export { website as default };
+export default website;

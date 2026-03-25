@@ -68,10 +68,11 @@
 			containerEl.removeEventListener('mousemove', createRipple);
 		};
 	});
+	let { children } = $props();
 </script>
 
 <div bind:this={containerEl} class="ripple-container">
-	<slot />
+	{@render children?.()}
 </div>
 
 <style>

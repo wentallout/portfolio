@@ -114,6 +114,8 @@ Slug
 
 ⭐ RSS
 
+⭐ [Haptics](https://haptics.lochie.me)
+
 ⭐ Working Contact Form (need Netlify setup)
 
 ---
@@ -139,6 +141,14 @@ Slug
 ## Background inspired by
 
 [bg.ibelick.com](https://bg.ibelick.com)
+
+## Declutter
+
+[Knip](https://knip.dev) (Declutter your JavaScript & TypeScript projects)
+
+## Security
+
+https://www.npmjs.com/package/web-sentinel (Ultra-high performance blocking of bots and vulnerability scanners.)
 
 ## Todo
 

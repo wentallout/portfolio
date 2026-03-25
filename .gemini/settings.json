@@ -1,0 +1,14 @@
+{
+	"mcpServers": {
+		"svelte": {
+			"command": "npx",
+			"args": ["-y", "@sveltejs/mcp"]
+		}
+	},
+	"general": {
+		"defaultApprovalMode": "auto_edit"
+	},
+	"security": {
+		"enablePermanentToolApproval": true
+	}
+}

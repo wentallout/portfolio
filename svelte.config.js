@@ -52,7 +52,9 @@ const config = {
 			toggleButtonPos: 'top-left',
 			toggleKeyCombo: 'shift-x'
 		}
-	}
+		
+	},
+	
 };
 
 export default config;

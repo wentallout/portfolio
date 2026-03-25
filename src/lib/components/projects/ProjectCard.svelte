@@ -1,5 +1,6 @@
 <script>
 	import MouseGlow from '$components/common/MouseGlow.svelte';
+	import { haptic } from '$lib/actions/haptics';
 
 	let {
 		desc = '',
@@ -7,16 +8,15 @@
 		output = '',
 		projectName = '',
 		role = '',
-		thumbnail,
-		what = ''
+		thumbnail
 	} = $props();
 </script>
 
-<a class="project-container fancy-border" href={linkToDetail}>
+<a use:haptic={'selection'} class="project-container fancy-border" href={linkToDetail}>
 	<MouseGlow />
 	<article class="project">
 		<div class="project__thumbnail">
-			<img alt={projectName} loading="lazy" src={thumbnail} title={projectName} />
+			<img alt={projectName} loading="lazy" src={thumbnail} />
 		</div>
 		<div class="project__info">
 			<h2 class="project__title text-large text-trim">
@@ -38,29 +38,38 @@
 </a>
 
 <style lang="postcss">
-	.project {
-		display: flex;
+	.project-container {
+		--ease-out-custom: cubic-bezier(0.23, 1, 0.32, 1);
+		display: block;
+		position: relative;
+		text-decoration: none;
+		transition: 
+			transform 250ms var(--ease-out-custom),
+			filter 250ms var(--ease-out-custom);
+		transform-origin: center;
+		will-change: transform;
+	}
 
+	.project-container:hover {
+		transform: translateY(-4px) scale(1.01);
+		filter: brightness(1.05);
+	}
+
+	.project-container:active {
+		transform: translateY(-2px) scale(0.98);
+		transition-duration: 80ms;
+	}
+
+	.project {
 		display: grid;
 		grid-template-columns: 1fr;
-
 		position: relative;
 		width: 100%;
-		flex-direction: column;
-		transition: var(--transition);
+		transition: box-shadow 250ms var(--ease-out-custom);
 		box-shadow: var(--boxShadow);
 		overflow: hidden;
-
-		position: relative;
 		border-radius: var(--border-radius-light);
-	}
-
-	.project:hover .project__thumbnail img {
-		transform: var(--transition);
-	}
-
-	.project:hover .project__title {
-		color: var(--color-primary-hover);
+		background: var(--color-bg-gradient-subtle);
 	}
 
 	@media (min-width: 992px) {
@@ -72,30 +81,21 @@
 	.project__thumbnail {
 		width: 100%;
 		height: 100%;
-
-		margin-bottom: auto;
-
-		background-color: transparent;
 		position: relative;
 		overflow: hidden;
-		border-radius: var(--border-radius-light);
 		z-index: 0;
 	}
 
 	.project__thumbnail img {
 		object-fit: cover;
+		width: 100%;
 		height: 100%;
-		transition: var(--transition);
+		transition: transform 600ms var(--ease-out-custom);
+		will-change: transform;
 	}
 
-	.project-container {
-		position: relative;
-	}
-
-	@media (min-width: 992px) {
-		.project {
-			flex-direction: row;
-		}
+	.project-container:hover .project__thumbnail img {
+		transform: scale(1.1);
 	}
 
 	.project__title {
@@ -103,12 +103,16 @@
 		justify-content: flex-start;
 		flex-direction: column;
 		font-weight: var(--fontWeightLarge);
+		transition: color 200ms var(--ease-out-custom);
+	}
+
+	.project-container:hover .project__title {
+		color: var(--color-primary-hover);
 	}
 
 	.info {
 		display: grid;
 		gap: var(--space-s);
-		grid-template-rows: 1fr 1fr 1fr;
 		grid-template-columns: auto 1fr;
 	}
 
@@ -120,13 +124,11 @@
 		padding: var(--space-card);
 		gap: var(--space-mid);
 		color: var(--color-text);
-		background: var(--color-bg-gradient-subtle);
+		transition: background 250ms var(--ease-out-custom);
 	}
 
-	@media (min-width: 992px) {
-		.project {
-			flex-direction: row;
-		}
+	.project-container:hover .project__info {
+		background: var(--color-bg-elevated);
 	}
 
 	.section__label {
@@ -141,11 +143,11 @@
 
 	@keyframes article-appear {
 		from {
-			transform: translateX(-5vw);
+			transform: translateY(20px);
 			opacity: 0;
 		}
 		to {
-			transform: translateX(0);
+			transform: translateY(0);
 			opacity: 1;
 		}
 	}
@@ -155,7 +157,6 @@
 		animation-timeline: --articleAppear;
 		animation-name: article-appear;
 		animation-fill-mode: both;
-		animation-range: entry 0% entry 50%;
-		animation-duration: 100ms;
+		animation-range: entry 0% entry 40%;
 	}
 </style>

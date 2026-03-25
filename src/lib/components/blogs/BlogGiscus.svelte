@@ -1,16 +1,15 @@
 <script>
-	import { onMount } from 'svelte';
+	import Giscus from '@giscus/svelte';
 
-	/** @type {{id?: any, host?: string, repo: any, repoId: any, category?: any, categoryId?: any, mapping?: string, term?: any, strict?: string, reactionsEnabled?: string, emitMetadata?: string, inputPosition?: string, theme?: string, lang?: string, loading?: string}} */
 	let {
 		category = undefined,
 		categoryId = undefined,
 		emitMetadata = '0',
 		host = 'https://giscus.app',
 		id = undefined,
-		inputPosition = 'bottom',
+		inputPosition = 'top',
 		lang = 'en',
-		loading = 'eager',
+		loading = 'lazy',
 		mapping = 'pathname',
 		reactionsEnabled = '1',
 		repo,
@@ -19,20 +18,13 @@
 		term = undefined,
 		theme = 'light'
 	} = $props();
-
-	let mounted = $state(false);
-
-	onMount(async () => {
-		mounted = true;
-		await import('giscus');
-	});
 </script>
 
-{#if mounted}
+<!-- {#if mounted}
 	<giscus-widget
-		{id}
+		
 		{category}
-		categoryid={categoryId}
+		
 		emitmetadata={emitMetadata}
 		{host}
 		inputposition={inputPosition}
@@ -45,4 +37,19 @@
 		{strict}
 		{term}
 		{theme}></giscus-widget>
-{/if}
+{/if} -->
+
+<Giscus
+	{id}
+	{category}
+	{categoryId}
+	{emitMetadata}
+	{inputPosition}
+	{lang}
+	{loading}
+	{mapping}
+	{reactionsEnabled}
+	{repo}
+	{repoId}
+	{term}
+	{theme} />

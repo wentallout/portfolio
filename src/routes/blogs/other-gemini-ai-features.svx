@@ -1,0 +1,46 @@
+---
+title: Other Gemini AI features
+date: 2025-12-02
+categories:
+    - ai
+---
+
+Introduction
+The Gemini API offers several other features that have not been covered in this module. Some of these features are experimental and may not work in a Google Colab environment. Check the Gemini API Cookbook link below for the latest tutorials.
+
+Features
+
+## OAuth
+
+OAuth is a more advanced authentication technique than using an API key. It can provide better access control and can utilize Google Cloud service accounts.
+
+Authentication with OAuth Quickstart (Google AI for Developers)(opens in a new tab): https://ai.google.dev/gemini-api/docs/oauth?utm_source=udacity&utm_medium=referral&utm_campaign=gemini-api-course&utm_content=embedding
+
+## Streaming
+
+Streaming means that the model returns chunks of content as they are generated, instead of waiting until the whole generation process is complete before returning a response. This allows multiple asynchronous functions to run simultaneously instead of blocking each other.
+
+
+## Tuning (Fine-Tuning)
+
+If structured prompting is not enough to get the desired behavior from a model, fine-tuning can be used to modify the actual model weights. Tuned models can be evaluated and saved for future use.
+
+Note: OAuth is required for performing fine-tuning.
+
+## Context Caching
+
+In some cases, the same input tokens might be passed repeatedly the same model. At high enough volumes, context caching can save money when the same tokens are used multiple times.
+
+Note: Context caching is only available for some models.
+
+## Code Execution
+
+LLMs often struggle to complete tasks related to numbers, such as listing exactly 5 responses. Code execution allows you to use Python code as a tool to help the LLM with this type of task. This feature is similar to function calling, but less flexible, because it always uses a fixed, isolated Python environment rather than a configurable environment.
+
+## Resources
+
+Gemini API Cookbook (Google AI for Developers): https://ai.google.dev/gemini-api/cookbook?utm_source=udacity&utm_medium=referral&utm_campaign=gemini-api-course&utm_content=embedding
+
+Context Caching (Google AI for Developers)(opens in a new tab): https://ai.google.dev/gemini-api/docs/caching?lang=python&utm_source=udacity&utm_medium=referral&utm_campaign=gemini-api-course&utm_content=embedding
+Code Execution (Google AI for Developers): https://ai.google.dev/gemini-api/docs/code-execution?lang=python&utm_source=udacity&utm_medium=referral&utm_campaign=gemini-api-course&utm_content=embedding
+
