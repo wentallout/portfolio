@@ -9,7 +9,7 @@
 		id = undefined,
 		inputPosition = 'top',
 		lang = 'en',
-		loading = 'eager',
+		loading = 'lazy',
 		mapping = 'pathname',
 		reactionsEnabled = '1',
 		repo,
