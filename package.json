@@ -74,7 +74,7 @@
 		"svelte-sequential-preprocessor": "^2.0.3",
 		"svelte-toc": "^0.6.3",
 		"sveltekit-embed": "^0.0.22",
-		"typescript": "^6.0.2",
+		"typescript": "^5.9.3",
 		"unplugin-icons": "^23.0.1",
 		"vite": "^7.0.0",
 		"vite-imagetools": "^10.0.0",
