@@ -1,10 +1,12 @@
 <script>
 	import { gsap } from 'gsap';
-	import TextPlugin from 'gsap/dist/TextPlugin';
+	import { TextPlugin } from 'gsap/TextPlugin';
 	import { onMount } from 'svelte';
 
 	let logoDeco = $state();
 	onMount(() => {
+		gsap.registerPlugin(TextPlugin);
+
 		const phrases = ['wentallout', 'Khoa Nguyen'];
 		let i = 0;
 
@@ -43,7 +45,6 @@
 			}
 		};
 
-		gsap.registerPlugin(TextPlugin);
 		// Defer the animation slightly to allow LCP to paint first
 		const animationTimeout = setTimeout(() => {
 			typePhrase();

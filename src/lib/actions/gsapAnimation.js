@@ -1,5 +1,5 @@
 import { gsap } from 'gsap';
-import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import SplitType from 'split-type';
 
 gsap.registerPlugin(ScrollTrigger);
@@ -106,7 +106,7 @@ export function textReveal(element, options = {}) {
 /**
  * Svelte action for GSAP SplitType text reveal animation.
  *
- * Usage: <h1 use:textReveal={{ delay: 1, stagger: 0.075, y: 400, duration: 1 }} >Text</h1>
+ * Usage: <h1 use:textRevealBottom={{ delay: 1, stagger: 0.075, y: 400, duration: 1 }} >Text</h1>
  * All options are optional.
  */
 export function textRevealBottom(node, options = {}) {
