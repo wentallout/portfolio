@@ -30,6 +30,9 @@ const config = {
 		}),
 		devtoolsJson()
 	],
+	ssr: {
+		noExternal: ['gsap', 'split-type']
+	},
 	server: {
 		port: 1111
 	}
