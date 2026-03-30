@@ -4,7 +4,7 @@
 	"workspaces": {
 		".": {}
 	},
-	"svelte": {
+	"sveltekit": {
 		"entry": ["svelte.config.js", "vite.config.{js,mjs,ts,cjs,mts,cts}"]
 	}
 }
