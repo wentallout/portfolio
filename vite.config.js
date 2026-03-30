@@ -1,8 +1,7 @@
-
 import { sveltekit } from '@sveltejs/kit/vite';
 import Icons from 'unplugin-icons/vite';
 import { imagetools } from 'vite-imagetools';
-import devtoolsJson from 'vite-plugin-devtools-json';
+// import devtoolsJson from 'vite-plugin-devtools-json';
 
 /** @type {import('vite').UserConfig} */
 const config = {
@@ -17,7 +16,6 @@ const config = {
 	},
 
 	plugins: [
-		// enhancedImages(),
 		sveltekit(),
 
 		Icons({ compiler: 'svelte', defaultClass: 'icon' }),
@@ -27,11 +25,15 @@ const config = {
 					format: 'webp'
 				});
 			}
-		}),
-		devtoolsJson()
+		})
+		// devtoolsJson()
 	],
+
 	server: {
 		port: 1111
+	},
+	ssr: {
+		noExternal: ['gsap', 'split-type']
 	}
 };
 
