@@ -11,7 +11,7 @@
 </script>
 
 <a href={blogLink} use:haptic={'selection'}>
-	<article class="blog fancy-border">
+	<article class="blog">
 		<MouseGlow />
 		<div class="blog__info">
 			{#if hasTags}
@@ -46,18 +46,12 @@
 		box-shadow: var(--boxShadow);
 		background: var(--color-bg-gradient-subtle);
 		border-radius: var(--border-radius-light);
-		transition: 
+		transition:
 			transform 250ms var(--ease-out-custom),
 			box-shadow 250ms var(--ease-out-custom),
 			background-color 250ms var(--ease-out-custom);
 		transform-origin: center;
 		will-change: transform;
-	}
-
-	a:hover .blog {
-		transform: translateY(-4px) scale(1.01);
-		box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
-		background: var(--color-bg-elevated);
 	}
 
 	a:active .blog {

@@ -5,7 +5,7 @@
 	let { children, href, icon, title } = $props();
 </script>
 
-<div class="contact__address fancy-border">
+<div class="contact__address">
 	<div class="address__icon-column">
 		{@render icon?.()}
 	</div>
