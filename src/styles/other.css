@@ -19,32 +19,6 @@
 	--z-index-max: 99;
 }
 
-/* -------------------------------- Nprogress START */
-#nprogress .bar {
-	background: var(--color-primary) !important;
-	height: 1px !important;
-}
-
-#nprogress .peg {
-	box-shadow:
-		0 0 10px var(--color-primary),
-		0 0 5px var(--color-primary) !important;
-}
-
-#nprogress .spinner-icon {
-	width: 24px !important;
-	height: 24px !important;
-	border-top-color: var(--color-primary) !important;
-	border-left-color: var(--color-primary) !important;
-}
-
-#nprogress .spinner {
-	top: 20px !important;
-	right: 20px !important;
-}
-
-/* -------------------------------- Nprogress END  */
-
 .btn svg {
 	margin-right: 4px;
 }

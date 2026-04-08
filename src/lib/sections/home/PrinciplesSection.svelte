@@ -14,7 +14,7 @@
 
 	<div class="principle-container">
 		<div class="principle">
-			<article class="principle__section fancy-border">
+			<article class="principle__section">
 				<h3 class="principle__title text-base text-trim">Profit-Driven</h3>
 				<p class="principle__desc text-small">
 					Every feature and design decision must have clear ROI. Focus on elements that drive
@@ -22,7 +22,7 @@
 				</p>
 			</article>
 
-			<article class="principle__section fancy-border">
+			<article class="principle__section">
 				<h3 class="principle__title text-base text-trim">User First</h3>
 				<p class="principle__desc text-small">
 					Design for real user needs, not assumptions. Solve specific problems that users will pay
@@ -30,7 +30,7 @@
 				</p>
 			</article>
 
-			<article class="principle__section fancy-border">
+			<article class="principle__section">
 				<h3 class="principle__title text-base text-trim">Measure</h3>
 				<p class="principle__desc text-small">
 					Track key metrics and user behavior. Use data to make improvements that impact the bottom
@@ -38,7 +38,7 @@
 				</p>
 			</article>
 
-			<article class="principle__section fancy-border">
+			<article class="principle__section">
 				<h3 class="principle__title text-base text-trim">Prove</h3>
 				<p class="principle__desc text-small">
 					Build trust through social proof, case studies, and transparent pricing. Show clear value

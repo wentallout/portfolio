@@ -12,7 +12,7 @@
 	} = $props();
 </script>
 
-<a use:haptic={'selection'} class="project-container fancy-border" href={linkToDetail}>
+<a class="project-container" href={linkToDetail} use:haptic={'selection'}>
 	<MouseGlow />
 	<article class="project">
 		<div class="project__thumbnail">
@@ -43,7 +43,7 @@
 		display: block;
 		position: relative;
 		text-decoration: none;
-		transition: 
+		transition:
 			transform 250ms var(--ease-out-custom),
 			filter 250ms var(--ease-out-custom);
 		transform-origin: center;
@@ -125,10 +125,6 @@
 		gap: var(--space-mid);
 		color: var(--color-text);
 		transition: background 250ms var(--ease-out-custom);
-	}
-
-	.project-container:hover .project__info {
-		background: var(--color-bg-elevated);
 	}
 
 	.section__label {
