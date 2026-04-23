@@ -139,36 +139,6 @@ textarea {
 	}
 }
 
-.fancy-border:before {
-	content: '';
-	position: absolute;
-	border-image: url(/images/fancy-border.svg);
-	border-image-width: 24px;
-	border-image-repeat: repeat;
-	border-image-slice: 50 50 50 50 fill;
-
-	top: -3px;
-	right: -3px;
-	bottom: -3px;
-	left: -3px;
-	border-style: solid;
-	pointer-events: none;
-
-	opacity: 0;
-	z-index: 3;
-	transition: var(--transition);
-	filter: invert(1);
-}
-
-[color-scheme='light'] .fancy-border:before {
-	filter: none;
-}
-
-.fancy-border:hover::before {
-	opacity: 0.5;
-	overflow: visible;
-}
-
 .text-trim {
 	text-box: trim-both cap alphabetic;
 }

@@ -1,0 +1,15 @@
+{
+  "linkset": [
+    {
+      "anchor": "/",
+      "rel": "service-desc",
+      "href": "/api/blogs",
+      "type": "application/json"
+    },
+    {
+      "anchor": "/",
+      "rel": "service-doc",
+      "href": "/about"
+    }
+  ]
+}
