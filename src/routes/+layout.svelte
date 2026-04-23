@@ -11,6 +11,31 @@
 
 	import WaterRipple from '$lib/components/common/WaterRipple.svelte';
 	import { onMount } from 'svelte';
+
+	onMount(() => {
+		if (typeof navigator !== 'undefined' && 'modelContext' in navigator) {
+			// @ts-ignore - WebMCP is a new API
+			navigator.modelContext.provideContext({
+				tools: [
+					{
+						name: 'get_portfolio_info',
+						description: 'Get information about the portfolio projects and skills',
+						inputSchema: {
+							type: 'object',
+							properties: {}
+						},
+						execute: async () => {
+							return {
+								projects: 'Check /projects for a list of my work',
+								skills: 'Check /about for my technical stack',
+								contact: 'Use /contact to reach out'
+							};
+						}
+					}
+				]
+			});
+		}
+	});
 </script>
 
 <Misc />

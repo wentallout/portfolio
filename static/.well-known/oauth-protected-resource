@@ -1,0 +1,10 @@
+{
+  "resource": "https://wentallout.tech",
+  "authorization_servers": [
+    "https://wentallout.supabase.co/auth/v1"
+  ],
+  "scopes_supported": [
+    "read:profile",
+    "read:blogs"
+  ]
+}
