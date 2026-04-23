@@ -79,5 +79,54 @@ export const handle: Handle = async ({ event, resolve }) => {
 		return resolve(event);
 	}
 
-	return sentinel({ event, resolve });
+	const response = await sentinel({ event, resolve });
+
+	// Agent discovery Link headers (RFC 8288)
+	const links = [
+		'</.well-known/api-catalog>; rel="api-catalog"',
+		'</.well-known/agent-skills/index.json>; rel="agent-skills"',
+		'</.well-known/mcp/server-card.json>; rel="mcp-server-card"',
+		'</about>; rel="service-doc"'
+	];
+
+	const currentLink = response.headers.get('Link');
+	response.headers.set('Link', currentLink ? `${currentLink}, ${links.join(', ')}` : links.join(', '));
+
+	// Markdown for Agents (Content Negotiation)
+	const accept = event.request.headers.get('accept') || '';
+	if (accept.includes('text/markdown') && response.headers.get('content-type')?.includes('text/html')) {
+		const html = await response.text();
+
+		// Basic HTML to Markdown conversion
+		const markdown = html
+			.replace(/<script\b[^<]*(?:(?!<\/script>)<[^<]*)*<\/script>/gi, '')
+			.replace(/<style\b[^<]*(?:(?!<\/style>)<[^<]*)*<\/style>/gi, '')
+			.replace(/<header\b[^<]*(?:(?!<\/header>)<[^<]*)*<\/header>/gi, '')
+			.replace(/<footer\b[^<]*(?:(?!<\/footer>)<[^<]*)*<\/footer>/gi, '')
+			.replace(/<nav\b[^<]*(?:(?!<\/nav>)<[^<]*)*<\/nav>/gi, '')
+			.replace(/<(h[1-6])[^>]*>(.*?)<\/\1>/gi, (_, tag, content) => {
+				const level = tag[1];
+				return `\n${'#'.repeat(parseInt(level))} ${content.replace(/<[^>]+>/g, '').trim()}\n`;
+			})
+			.replace(/<p[^>]*>(.*?)<\/p>/gi, '\n$1\n')
+			.replace(/<li[^>]*>(.*?)<\/li>/gi, '\n* $1')
+			.replace(/<[^>]+>/g, '')
+			.replace(/&nbsp;/g, ' ')
+			.replace(/&amp;/g, '&')
+			.replace(/&lt;/g, '<')
+			.replace(/&gt;/g, '>')
+			.replace(/\n\s*\n/g, '\n\n')
+			.trim();
+
+		return new Response(markdown, {
+			status: response.status,
+			headers: {
+				...Object.fromEntries(response.headers.entries()),
+				'Content-Type': 'text/markdown; charset=utf-8',
+				'x-markdown-tokens': 'true'
+			}
+		});
+	}
+
+	return response;
 };

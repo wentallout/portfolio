@@ -1,0 +1,14 @@
+{
+  "serverInfo": {
+    "name": "Wentallout Portfolio Agent Service",
+    "version": "1.0.0"
+  },
+  "transport": {
+    "type": "http",
+    "endpoint": "/api/mcp"
+  },
+  "capabilities": {
+    "tools": true,
+    "resources": true
+  }
+}
