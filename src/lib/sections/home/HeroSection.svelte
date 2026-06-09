@@ -1,4 +1,5 @@
 <script>
+	import { resolve } from '$app/paths';
 	import GlassButton from '$components/button/GlassButton.svelte';
 	import PrimaryButton from '$components/button/PrimaryButton.svelte';
 	import { textRevealBottom } from '$lib/actions/gsapAnimation';
@@ -7,8 +8,9 @@
 	import { CalendarCheck, ThumbsUp } from '$lib/assets/icons/icons';
 	import { CAL_BOOKING_LINK } from '$lib/constants/personal';
 	import { onMount } from 'svelte';
-
 	let focusIndex = 0;
+
+	let calBookingLink = resolve(CAL_BOOKING_LINK);
 </script>
 
 <section>
@@ -35,7 +37,7 @@
 				</div>
 
 				<div class="hero__btn">
-					<a href={CAL_BOOKING_LINK}>
+					<a href={calBookingLink}>
 						<div use:tooltip={{ position: 'top', text: 'Check out our services' }}>
 							<PrimaryButton hapticPattern="success" label="Book a call">
 								<ThumbsUp />
