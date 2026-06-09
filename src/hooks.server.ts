@@ -81,20 +81,28 @@ export const handle: Handle = async ({ event, resolve }) => {
 
 	const response = await sentinel({ event, resolve });
 
-	// Agent discovery Link headers (RFC 8288)
-	const links = [
-		'</.well-known/api-catalog>; rel="api-catalog"',
-		'</.well-known/agent-skills/index.json>; rel="agent-skills"',
-		'</.well-known/mcp/server-card.json>; rel="mcp-server-card"',
-		'</about>; rel="service-doc"'
-	];
+	// Agent discovery Link headers (RFC 8288) - Only for HTML documents
+	if (response.headers.get('content-type')?.includes('text/html')) {
+		const links = [
+			'</.well-known/api-catalog>; rel="api-catalog"',
+			'</.well-known/agent-skills/index.json>; rel="agent-skills"',
+			'</.well-known/mcp/server-card.json>; rel="mcp-server-card"',
+			'</about>; rel="service-doc"'
+		];
 
-	const currentLink = response.headers.get('Link');
-	response.headers.set('Link', currentLink ? `${currentLink}, ${links.join(', ')}` : links.join(', '));
+		const currentLink = response.headers.get('Link');
+		response.headers.set('Link', currentLink ? `${currentLink}, ${links.join(', ')}` : links.join(', '));
+	}
 
 	// Markdown for Agents (Content Negotiation)
 	const accept = event.request.headers.get('accept') || '';
-	if (accept.includes('text/markdown') && response.headers.get('content-type')?.includes('text/html')) {
+	const isHtml = response.headers.get('content-type')?.includes('text/html');
+
+	if (isHtml) {
+		response.headers.append('Vary', 'Accept');
+	}
+
+	if (accept.includes('text/markdown') && isHtml) {
 		const html = await response.text();
 
 		// Basic HTML to Markdown conversion
@@ -108,6 +116,8 @@ export const handle: Handle = async ({ event, resolve }) => {
 				const level = tag[1];
 				return `\n${'#'.repeat(parseInt(level))} ${content.replace(/<[^>]+>/g, '').trim()}\n`;
 			})
+			.replace(/<a[^>]+href="([^"]+)"[^>]*>(.*?)<\/a>/gi, '[$2]($1)')
+			.replace(/<img[^>]+src="([^"]+)"[^>]+alt="([^"]*)"[^>]*>/gi, '![$2]($1)')
 			.replace(/<p[^>]*>(.*?)<\/p>/gi, '\n$1\n')
 			.replace(/<li[^>]*>(.*?)<\/li>/gi, '\n* $1')
 			.replace(/<[^>]+>/g, '')
@@ -118,13 +128,17 @@ export const handle: Handle = async ({ event, resolve }) => {
 			.replace(/\n\s*\n/g, '\n\n')
 			.trim();
 
+		const headers = new Headers(response.headers);
+		headers.delete('content-length');
+		headers.delete('content-encoding');
+		headers.delete('etag');
+		headers.delete('last-modified');
+		headers.set('content-type', 'text/markdown; charset=utf-8');
+		headers.set('x-markdown-tokens', 'true');
+
 		return new Response(markdown, {
 			status: response.status,
-			headers: {
-				...Object.fromEntries(response.headers.entries()),
-				'Content-Type': 'text/markdown; charset=utf-8',
-				'x-markdown-tokens': 'true'
-			}
+			headers
 		});
 	}
 

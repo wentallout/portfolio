@@ -2,6 +2,15 @@
 
 [![Netlify Status](https://api.netlify.com/api/v1/badges/7bf37fa7-ec78-4efd-aa9a-1a18a4fc62e4/deploy-status)](https://app.netlify.com/sites/khoa-design/deploys)
 
+![Package mgr · npm](https://www.shieldcn.dev/badge/Package_mgr-npm-CB3837.svg?logo=npm&variant=branded&size=sm)
+![Language · TypeScript](https://www.shieldcn.dev/badge/Language-TypeScript-3178C6.svg?logo=typescript&variant=branded&size=sm)
+![Lint · ESLint](https://www.shieldcn.dev/badge/Lint-ESLint-4B32C3.svg?logo=eslint&variant=branded&size=sm)
+![Format · Prettier](https://www.shieldcn.dev/badge/Format-Prettier-F7B93E.svg?logo=prettier&variant=branded&size=sm)
+![Bundler · Vite](https://www.shieldcn.dev/badge/Bundler-Vite-646CFF.svg?logo=vite&variant=branded&size=sm)
+![Framework · Svelte](https://www.shieldcn.dev/badge/Framework-Svelte-FF3E00.svg?logo=svelte&variant=branded&size=sm)
+![Tests · Playwright](https://www.shieldcn.dev/badge/Tests-Playwright-2EAD33.svg?logo=playwright&variant=branded&size=sm)
+![Hosting · Netlify](https://www.shieldcn.dev/badge/Hosting-Netlify-00AD9F.svg?logo=netlify&variant=branded&size=sm)
+
 ![GitHub](https://img.shields.io/github/license/wentallout/portfolio?style=for-the-badge)
 ![GitHub top language](https://img.shields.io/github/languages/top/wentallout/portfolio?style=for-the-badge)
 ![GitHub pull requests](https://img.shields.io/github/issues-pr/wentallout/portfolio?style=for-the-badge)

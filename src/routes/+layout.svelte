@@ -13,9 +13,11 @@
 	import { onMount } from 'svelte';
 
 	onMount(() => {
-		if (typeof navigator !== 'undefined' && 'modelContext' in navigator) {
-			// @ts-ignore - WebMCP is a new API
-			navigator.modelContext.provideContext({
+		// @ts-expect-error - WebMCP is a new API
+		const provideContext = navigator.modelContext?.provideContext;
+
+		if (typeof provideContext === 'function') {
+			provideContext({
 				tools: [
 					{
 						name: 'get_portfolio_info',
