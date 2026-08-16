@@ -1,9 +1,10 @@
 <script>
 	import Tag from '$components/common/Tag.svelte';
+	import { SvelteSet } from 'svelte/reactivity';
 
 	let { data } = $props();
 
-	const categories = $derived(new Set(data.blogs.map((blog) => blog.meta.categories).flat()));
+	const categories = $derived(new SvelteSet(data.blogs.map((blog) => blog.meta.categories).flat()));
 
 	const uniqueCategories = $derived(Array.from(categories).sort((a, b) => a.localeCompare(b)));
 </script>
@@ -17,5 +18,3 @@
 		</a>
 	{/each}
 </div>
-
-

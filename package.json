@@ -38,7 +38,6 @@
 		"@types/node": "^25.5.0",
 		"autoprefixer": "^10.4.27",
 		"eslint": "^10.1.0",
-		
 		"eslint-plugin-svelte": "^3.16.0",
 		"globals": "^17.4.0",
 		"glyphnav": "^2.3.1",
@@ -47,7 +46,6 @@
 		"lightningcss": "^1.32.0",
 		"mdsvex": "^0.12.7",
 		"minisearch": "^7.2.0",
-		"object-hash": "^3.0.0",
 		"postcss": "^8.5.8",
 		"postcss-html": "^1.8.1",
 		"postcss-import": "^16.1.1",
@@ -67,7 +65,6 @@
 		"split-type": "^0.3.4",
 		"stylelint": "^17.6.0",
 		"stylelint-config-recommended": "^18.0.0",
-		"stylelint-config-standard": "^40.0.0",
 		"stylelint-declaration-strict-value": "^1.11.1",
 		"stylelint-high-performance-animation": "^2.0.0",
 		"stylelint-order": "^8.1.1",
@@ -82,8 +79,7 @@
 		"typescript": "^5.9.3",
 		"unplugin-icons": "^23.0.1",
 		"vite": "^7.0.0",
-		"vite-imagetools": "^10.0.0",
-		"vite-plugin-devtools-json": "^1.0.0"
+		"vite-imagetools": "^10.0.0"
 	},
 	"trustedDependencies": [
 		"svelte-preprocess"

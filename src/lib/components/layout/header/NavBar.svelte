@@ -23,10 +23,10 @@
 
 	<div class="max-w-6xl mx-auto px-6 h-14 flex items-center justify-between relative z-10">
 		<a
-			class="font-semibold text-lg tracking-tight text-foreground flex items-center hover:opacity-90 transition-opacity"
+			class="font-fancy text-lg tracking-tight text-foreground flex items-center hover:opacity-90 transition-opacity"
 			href="/"
 			use:haptic={'selection'}>
-			Khoa Nguyen @wentallout
+			Khoa Nguyen
 		</a>
 
 		<!-- Desktop Navigation Menu -->
