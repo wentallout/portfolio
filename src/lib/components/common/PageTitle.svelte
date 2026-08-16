@@ -6,7 +6,7 @@
 </script>
 
 <div
-	class="w-full border-grid-b p-6 md:p-8 flex flex-col gap-2 select-none bg-background relative transition-colors duration-200">
+	class="w-full border-grid-b p-8 md:p-10 flex flex-col gap-3 select-none bg-background relative transition-colors duration-200">
 	<span class="grid-plus grid-plus-tl">+</span>
 	<span class="grid-plus grid-plus-tr">+</span>
 	<Breadcrumb />

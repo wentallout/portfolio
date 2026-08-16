@@ -29,7 +29,7 @@
 
 <svelte:window onscroll={handleOnScroll} />
 
-<button use:haptic={'medium'} class="bck2top" class:hidden onclick={goTop} onkeyup={goTop} type="button">
+<button use:haptic={'medium'} class="bck2top" class:hidden onclick={goTop} type="button">
 	<ArrowLineUp height="16" width="16" />
 </button>
 

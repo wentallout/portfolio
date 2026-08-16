@@ -28,7 +28,7 @@
 
 		<div class="sticky top-24 space-y-4">
 			<div class="flex items-center justify-between text-sm pb-3 border-b border-neutral-800">
-				<span class="uppercase tracking-widest text-xs text-neutral-400 font-semibold font-sans flex items-center gap-2">
+				<span class="uppercase tracking-widest text-sm text-neutral-400 font-semibold font-sans flex items-center gap-2">
 					<ListBullets color="#9ca3af" height="16" width="16" />
 					TABLE OF CONTENTS
 				</span>

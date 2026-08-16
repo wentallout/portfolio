@@ -31,7 +31,7 @@
 			<h4 class="text-base font-semibold text-white group-hover:text-rose-400 transition-colors line-clamp-2 leading-snug">
 				{title}
 			</h4>
-			<div class="flex items-center justify-between pt-2 text-xs text-neutral-400 font-sans font-medium">
+			<div class="flex items-center justify-between pt-2 text-sm text-neutral-400 font-sans font-medium">
 				<span>{desc}</span>
 				<span class="group-hover:translate-x-1 transition-transform duration-200 text-white">↗</span>
 			</div>

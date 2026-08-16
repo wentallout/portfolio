@@ -15,7 +15,7 @@
 			<div>
 				<div class="flex items-center justify-between text-sm mb-4">
 					<span
-						class="uppercase tracking-widest text-xs text-neutral-400 font-semibold">
+						class="uppercase tracking-widest text-sm text-neutral-400 font-semibold">
 						PROFILE
 					</span>
 				</div>
@@ -44,7 +44,7 @@
 			<div>
 				<div class="flex items-center justify-between text-sm mb-4">
 					<span
-						class="uppercase tracking-widest text-xs text-neutral-400 font-semibold">
+						class="uppercase tracking-widest text-sm text-neutral-400 font-semibold">
 						PURPOSE & PASSION
 					</span>
 				</div>
@@ -62,7 +62,7 @@
 		<span class="grid-plus grid-plus-tl">+</span>
 		<span class="grid-plus grid-plus-tr">+</span>
 		<div class="flex items-center justify-between text-sm mb-4">
-			<span class="uppercase tracking-widest text-xs text-neutral-400 font-semibold">
+			<span class="uppercase tracking-widest text-sm text-neutral-400 font-semibold">
 				CURATED INSPIRATION
 			</span>
 		</div>

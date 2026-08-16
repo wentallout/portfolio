@@ -19,12 +19,12 @@
 	use:haptic={'selection'}
 	class="group block relative bg-black hover:bg-neutral-950/60 transition-colors duration-300 w-full"
 >
-	<article class="p-6 md:p-8 md:grid md:grid-cols-12 gap-8 items-center w-full relative">
+	<article class="p-6 md:p-8 md:grid md:grid-cols-12 gap-6 md:gap-10 items-center w-full relative">
 		<!-- Left: Text Details -->
 		<div class="md:col-span-6 flex flex-col justify-between h-full space-y-4">
 			<div>
 				<!-- Card Header Tag & Number -->
-				<div class="flex items-center justify-between mb-3 text-xs">
+				<div class="flex items-center justify-between mb-3 text-sm">
 					<span class="uppercase tracking-widest text-[10px] text-neutral-400 font-semibold">
 						{role ? role.split(',')[0] : 'PROJECT'}
 					</span>
@@ -37,19 +37,19 @@
 				</h2>
 
 				<!-- Description -->
-				<p class="text-xs md:text-sm text-neutral-400 leading-relaxed font-normal font-sans">
+				<p class="text-sm text-neutral-400 leading-relaxed font-normal font-sans">
 					{desc}
 				</p>
 
 				{#if output}
-					<div class="mt-3 text-xs text-neutral-500 font-sans">
+					<div class="mt-4 text-sm text-neutral-500 font-sans">
 						<span class="text-neutral-400 font-medium">Deliverables:</span> {output}
 					</div>
 				{/if}
 			</div>
 
 			<!-- Action Link -->
-			<div class="pt-2 inline-flex items-center gap-1.5 text-xs text-white font-medium">
+			<div class="pt-6 inline-flex items-center gap-1.5 text-sm text-white font-medium">
 				<span class="underline underline-offset-4 decoration-neutral-600 group-hover:decoration-white transition-all">View Project</span>
 				<span class="group-hover:translate-x-1 transition-transform duration-200">→</span>
 			</div>
