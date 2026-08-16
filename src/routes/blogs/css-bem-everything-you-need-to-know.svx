@@ -5,7 +5,7 @@ categories:
     - frontend
     - fundamental
 ---
-
+.
 <script>
 import BlockInBlock from '$lib/assets/images/blogs/block-in-block-bem.png'
 

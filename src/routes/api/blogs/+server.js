@@ -11,7 +11,7 @@ export const GET = async ({ request }) => {
 		});
 		return json(sortedBlogs);
 	} catch (error) {
-		return new Response(JSON.stringify({ error: 'Failed to fetch blogs' }), {
+		return new Response(JSON.stringify({ error: String(error), stack: error.stack }), {
 			headers: { 'Content-Type': 'application/json' },
 			status: 500
 		});

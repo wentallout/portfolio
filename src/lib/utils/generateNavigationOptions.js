@@ -1,14 +1,3 @@
-export let SymbolType;
-(function (SymbolType) {
-	SymbolType['PREVIOUS_PAGE'] = 'PREVIOUS_PAGE';
-	SymbolType['NEXT_PAGE'] = 'NEXT_PAGE';
-	SymbolType['ELLIPSIS'] = 'ELLIPSIS';
-})(SymbolType || (SymbolType = {}));
-
-export const paginate = ({ currentPage, items, pageSize }) => {
-	return items.slice((currentPage - 1) * pageSize, (currentPage - 1) * pageSize + pageSize);
-};
-
 export function generateNavigationOptions({
 	currentPage,
 	limit,

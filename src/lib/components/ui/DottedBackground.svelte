@@ -222,10 +222,7 @@ void main() {
 			const r = Math.max(0, Math.min(255, parseFloat(rgbaMatch[1]))) / 255;
 			const g = Math.max(0, Math.min(255, parseFloat(rgbaMatch[2]))) / 255;
 			const b = Math.max(0, Math.min(255, parseFloat(rgbaMatch[3]))) / 255;
-			const a =
-				rgbaMatch[4] !== undefined
-					? Math.max(0, Math.min(1, parseFloat(rgbaMatch[4])))
-					: 1;
+			const a = rgbaMatch[4] !== undefined ? Math.max(0, Math.min(1, parseFloat(rgbaMatch[4]))) : 1;
 			return { r, g, b, a };
 		}
 		const hex = str.replace(/^#/, '');
@@ -291,14 +288,7 @@ void main() {
 		return ui * 0.05;
 	}
 
-	function buildGlyphAtlas(
-		gl,
-		chars,
-		fontFam,
-		fontWt,
-		fontSzPx,
-		paddingPx
-	) {
+	function buildGlyphAtlas(gl, chars, fontFam, fontWt, fontSzPx, paddingPx) {
 		const count = Math.max(1, chars.length);
 		const cols = Math.ceil(Math.sqrt(count));
 		const rows = Math.ceil(count / cols);
@@ -367,9 +357,7 @@ void main() {
 	let paletteColors = $derived(
 		Array.isArray(colors) && colors.length > 0 ? colors : DEFAULT_COLORS
 	);
-	let effPaletteCount = $derived(
-		Math.min(MAX_COLORS, Math.max(1, paletteColors.length))
-	);
+	let effPaletteCount = $derived(Math.min(MAX_COLORS, Math.max(1, paletteColors.length)));
 	let palette = $derived(buildPaletteUniforms(paletteColors));
 
 	let effectiveCharacters = $derived(
@@ -394,10 +382,7 @@ void main() {
 		)
 			return;
 		rendererRef.render({ scene: perlinMeshRef, camera: cameraRef, target: renderTargetRef });
-		dotProgramRef.uniforms.uResolution.value = [
-			glRef.canvas.width,
-			glRef.canvas.height
-		];
+		dotProgramRef.uniforms.uResolution.value = [glRef.canvas.width, glRef.canvas.height];
 		rendererRef.render({ scene: dotMeshRef, camera: cameraRef });
 	}
 
@@ -429,10 +414,7 @@ void main() {
 				renderTargetRef.setSize(gl.canvas.width, gl.canvas.height);
 			}
 			if (perlinProgramRef) {
-				perlinProgramRef.uniforms.uResolution.value = [
-					gl.canvas.width,
-					gl.canvas.height
-				];
+				perlinProgramRef.uniforms.uResolution.value = [gl.canvas.width, gl.canvas.height];
 			}
 		};
 
@@ -540,14 +522,8 @@ void main() {
 				camera,
 				target: renderTarget
 			});
-			dotProgram.uniforms.uResolution.value = [
-				gl.canvas.width,
-				gl.canvas.height
-			];
-			perlinProgram.uniforms.uResolution.value = [
-				gl.canvas.width,
-				gl.canvas.height
-			];
+			dotProgram.uniforms.uResolution.value = [gl.canvas.width, gl.canvas.height];
+			perlinProgram.uniforms.uResolution.value = [gl.canvas.width, gl.canvas.height];
 			renderer.render({ scene: dotMesh, camera });
 			rafIdRef = requestAnimationFrame(update);
 		};
@@ -595,10 +571,10 @@ void main() {
 
 <div
 	style="position: relative; width: 100%; height: 100%; background: {bgColor}; line-height: 0; min-width: 0; min-height: 0; overflow: hidden;"
-	class={className}
->
+	class={className}>
 	<div
-		style="width: {INTRINSIC_WIDTH}px; height: {INTRINSIC_HEIGHT}px; min-width: {INTRINSIC_WIDTH}px; min-height: {INTRINSIC_HEIGHT}px; visibility: hidden; position: absolute; pointer-events: none;"
-	></div>
-	<div bind:this={containerRef} style="position: absolute; inset: 0; width: 100%; height: 100%;"></div>
+		style="width: {INTRINSIC_WIDTH}px; height: {INTRINSIC_HEIGHT}px; min-width: {INTRINSIC_WIDTH}px; min-height: {INTRINSIC_HEIGHT}px; visibility: hidden; position: absolute; pointer-events: none;">
+	</div>
+	<div bind:this={containerRef} style="position: absolute; inset: 0; width: 100%; height: 100%;">
+	</div>
 </div>
