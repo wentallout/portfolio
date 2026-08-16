@@ -15,6 +15,10 @@ export const POST: RequestHandler = async ({ request }) => {
 	const body = await request.json();
 	const { method, params, id } = body;
 
+	if (typeof method !== 'string') {
+		return json({ jsonrpc: '2.0', id, error: { code: -32600, message: 'Invalid Request' } }, { status: 400 });
+	}
+
 	if (method === 'listTools') {
 		return json({
 			jsonrpc: '2.0',
@@ -35,7 +39,7 @@ export const POST: RequestHandler = async ({ request }) => {
 	}
 
 	if (method === 'callTool') {
-		if (params.name === 'get_portfolio_info') {
+		if (params?.name === 'get_portfolio_info') {
 			return json({
 				jsonrpc: '2.0',
 				id,
