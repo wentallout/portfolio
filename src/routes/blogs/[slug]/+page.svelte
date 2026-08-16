@@ -9,8 +9,8 @@
 
 <SEO path={`/blogs/${data.slug}`} title={data.title} />
 
-<article>
-	<PostInfo {data} hasCategory="true" />
+<article class="w-full bg-black relative">
+	<PostInfo {data} hasCategory={true} />
 
 	<PostContainer>
 		<data.content />

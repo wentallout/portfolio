@@ -1,85 +1,50 @@
-<div class="container">
-	<a class="other" href="blogs/music">
-		<img class="other__image" alt="music" src="images/music.webp" />
-		<div class="other__title text-large">Music</div>
-	</a>
-	<a class="other" href="blogs/resource/tool">
-		<img class="other__image" alt="tool" src="images/tool.webp" />
-		<div class="other__title text-large">Tool</div>
+<div class="grid grid-cols-1 md:grid-cols-3 grid-cols-gapless-3 gap-0 border-grid-b relative">
+	<a class="relative border-grid-r border-grid-b bg-black p-6 md:p-8 flex flex-col justify-between hover:bg-neutral-950/40 transition-all duration-300 group min-h-[160px] overflow-hidden" href="blogs/music">
+		<img class="absolute inset-0 w-full h-full object-cover brightness-40 group-hover:scale-105 transition-transform duration-500" alt="music" src="images/music.webp" />
+		<span class="grid-plus grid-plus-tl">+</span>
+		<span class="grid-plus grid-plus-tr">+</span>
+		<div class="relative z-10 flex items-center justify-between text-xs font-mono mb-8">
+			<span class="uppercase tracking-widest text-[10px] text-neutral-300 font-semibold font-mono bg-black/60 px-2 py-0.5 border-grid-all">CURATED</span>
+			<span class="text-neutral-400 font-mono">001</span>
+		</div>
+		<div class="relative z-10 text-xl font-semibold text-white group-hover:text-rose-400 transition-colors">
+			Music
+		</div>
 	</a>
 
-	<a class="other" href="blogs/resource/exp">
-		<img class="other__image" alt="experiment" src="images/exp.webp" />
-		<div class="other__title text-large">Experiment</div>
+	<a
+		class="p-6 md:p-8 border-grid-b border-grid-r relative block bg-black hover:bg-neutral-950/40 transition-colors group"
+		href="/blogs/interactive-cursor-effects">
+		<div class="relative z-10 flex items-center justify-between text-xs font-mono mb-8">
+			<span class="text-neutral-400">ARTICLE 01</span>
+			<span class="text-neutral-500">→</span>
+		</div>
+		<div class="relative z-10 text-xl font-semibold text-white group-hover:text-rose-400 transition-colors">
+			Interactive Cursor Effects in Svelte 5
+		</div>
+	</a>
+
+	<a
+		class="p-6 md:p-8 border-grid-b border-grid-r relative block bg-black hover:bg-neutral-950/40 transition-colors group"
+		href="/blogs/building-fluid-layouts">
+		<div class="relative z-10 flex items-center justify-between text-xs font-mono mb-8">
+			<span class="text-neutral-400">ARTICLE 02</span>
+			<span class="text-neutral-500">→</span>
+		</div>
+		<div class="relative z-10 text-xl font-semibold text-white group-hover:text-rose-400 transition-colors">
+			Building Fluid Blueprint Layouts with Tailwind
+		</div>
+	</a>
+
+	<a
+		class="p-6 md:p-8 border-grid-b border-grid-r relative block bg-black hover:bg-neutral-950/40 transition-colors group"
+		href="/blogs/mastering-typography-scale">
+		<div class="relative z-10 flex items-center justify-between text-xs font-mono mb-8">
+			<span class="text-neutral-400">ARTICLE 03</span>
+			<span class="text-neutral-500">→</span>
+		</div>
+		<div class="relative z-10 text-xl font-semibold text-white group-hover:text-rose-400 transition-colors">
+			Mastering Precision Typography & Type Ramps
+		</div>
 	</a>
 </div>
-
-<style>
-	.container {
-		display: flex;
-		flex-direction: row;
-		flex-wrap: wrap;
-
-		overflow: hidden;
-		gap: var(--space-mid);
-	}
-
-	.container > * {
-		flex: 1 1 20ch;
-	}
-
-	.other {
-		/* FLEX */
-		display: flex;
-		justify-content: center;
-		align-items: center;
-
-		position: relative;
-		padding: var(--space-mid);
-
-		height: 24dvh;
-		overflow: hidden;
-
-		border-radius: var(--border-radius-light);
-		box-shadow: var(--boxShadow);
-	}
-
-	.other__image {
-		width: 100%;
-		height: 100%;
-		position: absolute;
-		z-index: 0;
-		filter: brightness(40%);
-		transition: var(--transition);
-		object-fit: cover;
-	}
-
-	.other:before {
-		position: absolute;
-		display: block;
-		content: '';
-		background-repeat: repeat;
-		background-image: url(/images/pattern.svg);
-		background-color: rgba(0, 0, 0, 0.2);
-		background-size: 4px;
-		width: 100%;
-		height: 100%;
-		opacity: 0.3;
-
-		z-index: 2;
-	}
-
-	.other:hover .other__image {
-		scale: 1.2;
-	}
-
-	.other:hover .other__title {
-		color: var(--color-primary);
-	}
-
-	.other__title {
-		z-index: 3;
-		font-weight: var(--fontWeightLarge);
-		color: var(--color-white);
-	}
-</style>

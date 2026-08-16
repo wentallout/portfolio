@@ -1,40 +1,30 @@
+import tailwindcss from '@tailwindcss/vite';
 import { sveltekit } from '@sveltejs/kit/vite';
 import Icons from 'unplugin-icons/vite';
 import { imagetools } from 'vite-imagetools';
-// import devtoolsJson from 'vite-plugin-devtools-json';
 
+// import devtoolsJson from 'vite-plugin-devtools-json';
 /** @type {import('vite').UserConfig} */
 const config = {
 	build: {
 		cssMinify: 'lightningcss',
-		rollupOptions: {
-			external: ['@resvg/resvg-js']
-		}
+		rollupOptions: { external: ['@resvg/resvg-js'] }
 	},
-	css: {
-		transformer: 'lightningcss'
-	},
-
+	css: { transformer: 'lightningcss' },
 	plugins: [
+		tailwindcss(),
 		sveltekit(),
-
 		Icons({ compiler: 'svelte', defaultClass: 'icon' }),
 		imagetools({
 			defaultDirectives: () => {
-				return new URLSearchParams({
-					format: 'webp'
-				});
+				return new URLSearchParams({ format: 'webp' });
 			}
 		})
+
 		// devtoolsJson()
 	],
-
-	server: {
-		port: 1111
-	},
-	ssr: {
-		noExternal: ['gsap', 'split-type']
-	}
+	server: { port: 1111 },
+	ssr: { noExternal: ['gsap', 'split-type'] }
 };
 
 export default config;

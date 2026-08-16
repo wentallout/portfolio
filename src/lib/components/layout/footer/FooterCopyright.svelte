@@ -7,43 +7,18 @@
 	let currentYear = new Date().getFullYear();
 </script>
 
-<Badges />
-<div class="end text-xs">
-	<div class="end__text">
-		Copyright ©
-		{currentYear} Nguyen Dang Khoa (wentallout), All Rights Reserved.
+<div class="flex flex-col md:flex-row items-center justify-between gap-4 w-full text-xs text-neutral-400 font-sans select-none">
+	<div class="flex flex-wrap items-center gap-4">
+		<span>Copyright © {currentYear} Nguyen Dang Khoa (wentallout), All Rights Reserved.</span>
+		<Badges />
 	</div>
 
 	<ExLink ariaLabel="SvelteKit" href="https://kit.svelte.dev">
-		<div class="end__text env__text--svelte">
-			<div class="">Made by Khoa with</div>
-			<LogoSvelte />
-			<div class="">{VERSION}</div>
+		<div class="flex items-center gap-1.5 hover:text-white transition-colors">
+			<span>Made by Khoa with</span>
+			<LogoSvelte width="14" height="14" />
+			<span>{VERSION}</span>
 		</div>
 	</ExLink>
 </div>
 
-<style>
-	.end {
-		display: flex;
-		flex-direction: row;
-		justify-content: space-between;
-		align-items: center;
-		flex-wrap: wrap;
-		font-weight: 300;
-	}
-	.end__text {
-		user-select: none;
-		margin-top: var(--space-s);
-		color: var(--color-text-tertiary);
-		display: flex;
-		flex-direction: row;
-		flex-wrap: nowrap;
-		align-items: center;
-		gap: 1ch;
-	}
-
-	.env__text--svelte {
-		color: var(--color-svelte);
-	}
-</style>

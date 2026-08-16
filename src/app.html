@@ -10,15 +10,11 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1" />
 	<link rel="manifest" crossorigin="use-credentials" href="/manifest.webmanifest" />
 
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+		rel="stylesheet">
 	%sveltekit.head%
-
-	<script type="module">
-		let theme = localStorage.getItem('color-scheme');
-
-		theme
-			? document.documentElement.setAttribute('color-scheme', theme)
-			: localStorage.setItem('color-scheme', 'dark');
-	</script>
 </head>
 
 <body data-sveltekit-preload-data="hover">

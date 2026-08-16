@@ -7,71 +7,47 @@
 			'Usability',
 			'Accessibility',
 			'Information Architecture',
-			'Responsive Design'
+			'Responsive Design',
+			'Design Systems',
+			'Performance Optimization'
 		]
 	} = $props();
 </script>
 
-<div class="container">
-	<div class="marquee">
-		<ul class="marquee__content">
-			{#each items as item}
-				<li>{item}</li>
+<div class="w-full border-grid-b bg-black py-4 overflow-hidden relative select-none text-xs text-neutral-400">
+	<div class="flex overflow-hidden relative gap-12 group">
+		<ul class="flex shrink-0 items-center justify-around gap-12 min-w-full animate-marquee group-hover:[animation-play-state:paused]">
+			{#each items as item (item)}
+				<li class="flex items-center gap-4 whitespace-nowrap font-medium text-neutral-300 hover:text-white transition-colors font-sans">
+					<span>{item}</span>
+					<span class="text-neutral-600 text-[10px]">•</span>
+				</li>
 			{/each}
 		</ul>
 
-		<ul class="marquee__content" aria-hidden="true">
-			{#each items as item}
-				<li>{item}</li>
+		<ul class="flex shrink-0 items-center justify-around gap-12 min-w-full animate-marquee group-hover:[animation-play-state:paused]" aria-hidden="true">
+			{#each items as item (item)}
+				<li class="flex items-center gap-4 whitespace-nowrap font-medium text-neutral-300 hover:text-white transition-colors font-sans">
+					<span>{item}</span>
+					<span class="text-neutral-600 text-[10px]">•</span>
+				</li>
 			{/each}
 		</ul>
 	</div>
 </div>
 
 <style>
-	.container {
-		width: 100%;
-		max-width: 100vw;
-		font-size: var(--font-size-small);
-		line-height: 1;
-		position: relative;
-		overflow: hidden;
-		padding-block: 4px;
-	}
-
-	.marquee {
-		background-color: var(--color-bg-layout);
-		--gap: var(--space-3xl);
-		position: relative;
-		display: flex;
-		overflow: hidden;
-		user-select: none;
-		gap: var(--gap);
-		color: var(--color-text);
-		padding: var(--space-xs) 0;
-	}
-
-	.marquee__content {
-		flex-shrink: 0;
-		display: flex;
-		justify-content: space-around;
-		gap: var(--gap);
-		min-width: 100%;
-		animation: scroll 20s linear infinite;
-		animation-direction: reverse;
-		font-family: var(--font-fancy);
-	}
-
-	.marquee:hover .marquee__content {
-		animation-play-state: paused;
-	}
-
-	@keyframes scroll {
-		from {
-			transform: translateX(0);
+	@keyframes marquee {
+		0% {
+			transform: translateX(0%);
 		}
-		to {
-			transform: translateX(calc(-100% - var(--gap)));
+		100% {
+			transform: translateX(-100%);
 		}
+	}
+
+	.animate-marquee {
+		animation: marquee 25s linear infinite;
 	}
 </style>
+

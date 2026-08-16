@@ -8,8 +8,8 @@
 	const uniqueCategories = $derived(Array.from(categories).sort((a, b) => a.localeCompare(b)));
 </script>
 
-<div class="category">
-	{#each uniqueCategories as category}
+<div class="flex flex-wrap gap-2 text-xs font-sans">
+	{#each uniqueCategories as category (category)}
 		<a href="/blogs/category/{category}">
 			<Tag>
 				{category}
@@ -18,12 +18,4 @@
 	{/each}
 </div>
 
-<style>
-	.category {
-		display: flex;
-		flex-direction: row;
-		flex-wrap: wrap;
-		gap: var(--space-xs);
-		margin-bottom: var(--space-mid);
-	}
-</style>
+

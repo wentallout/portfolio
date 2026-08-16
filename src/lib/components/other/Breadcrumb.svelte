@@ -2,75 +2,31 @@
 	import { page } from '$app/state';
 	import { CaretRight, House } from '$lib/assets/icons/icons';
 
-	let crumbs = $state([]);
-
-	$effect(() => {
+	let crumbs = $derived.by(() => {
 		const path = page.url.pathname;
-
 		const segments = path.split('/').filter(Boolean);
-
-		crumbs = [
-			...segments.map((segment, index) => ({
-				label: segment.replace(/-/g, ' '),
-				href: '/' + segments.slice(0, index + 1).join('/')
-			}))
-		];
+		return segments.map((segment, index) => ({
+			label: segment.replace(/-/g, ' '),
+			href: '/' + segments.slice(0, index + 1).join('/')
+		}));
 	});
 </script>
 
-<nav id="breadcrumb" class="breadcrumb text-small" aria-label="breadcrumb">
-	{#each crumbs as crumb, i}
+<nav id="breadcrumb" aria-label="breadcrumb" class="flex items-center flex-wrap gap-2 text-sm text-neutral-400 font-sans">
+	{#each crumbs as crumb, i (crumb.href)}
 		{#if i === 0}
-			<a class="breadcrumb__clickable link" href="/">
-				<House />
+			<a class="inline-flex items-center text-neutral-400 hover:text-white transition-colors" href="/">
+				<House height="16" width="16" />
 			</a>
-			<CaretRight />
+			<CaretRight height="14" width="14" class="text-neutral-600 shrink-0" />
 		{/if}
 		{#if i === crumbs.length - 1}
-			<div class="breadcrumb__unclickable">
+			<div class="font-normal text-white capitalize select-text">
 				{crumb.label}
 			</div>
 		{:else}
-			<a class="breadcrumb__clickable link" href={crumb.href}>{crumb.label}</a>
-			<CaretRight />
+			<a class="text-neutral-400 hover:text-white transition-colors capitalize" href={crumb.href}>{crumb.label}</a>
+			<CaretRight height="14" width="14" class="text-neutral-600 shrink-0" />
 		{/if}
 	{/each}
 </nav>
-
-<style>
-	.breadcrumb {
-		/* FLEX */
-		display: flex;
-		flex-direction: row;
-		align-items: center;
-		flex-wrap: wrap;
-		gap: var(--space-3xs);
-
-		position: relative;
-		margin-top: var(--scroll-padding);
-		margin-bottom: var(--space-xl);
-
-		background-color: transparent;
-
-		top: -1px;
-		transition: var(--transition);
-	}
-
-	.breadcrumb__unclickable {
-		pointer-events: none;
-		display: inline-block;
-		font-weight: var(--fontWeightXS);
-		color: var(--color-text-secondary);
-	}
-
-	.breadcrumb__clickable {
-		font-weight: var(--fontWeightXS);
-		display: inline-flex;
-		color: var(--color-primary);
-	}
-
-	.breadcrumb__clickable:hover {
-		color: var(--color-primary-hover);
-		text-underline-offset: 1px;
-	}
-</style>

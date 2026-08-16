@@ -1,0 +1,71 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 50">
+  <!-- 
+    MATHEMATICALLY EXACT TRADITIONAL JAPANESE SEIGAIHA (青海波)
+    
+    TILING GRID GEOMETRY:
+    Tile width = 100, Tile height = 50 (Ratio 2:1)
+    
+    FAN GROUP 1 (Lower Center Fan):
+    Center Origin = (50, 50)
+    5 Concentric Upward Semicircles (radii: 50, 40, 30, 20, 10)
+    
+    FAN GROUP 2 (Upper Left Staggered Fan - 50% horizontal offset):
+    Center Origin = (0, 0)
+    5 Concentric Downward-Masked Semicircles (radii: 50, 40, 30, 20, 10)
+
+    FAN GROUP 3 (Upper Right Staggered Fan - 50% horizontal offset):
+    Center Origin = (100, 0)
+    5 Concentric Downward-Masked Semicircles (radii: 50, 40, 30, 20, 10)
+  -->
+  <defs>
+    <style>
+      .seigaiha-bg { fill: #0a0a0a; }
+      .seigaiha-arc { fill: none; stroke: #4e4e4e; stroke-width: 1.5; stroke-linecap: round; }
+    </style>
+  </defs>
+
+  <!-- Background Base Tile -->
+  <rect width="100" height="50" class="seigaiha-bg" />
+
+  <!-- 
+    ROW 1: LOWER FANS (Origin at y=50) 
+    Solid opaque background polygon masks the bottom half so it forms a distinct fan motif.
+  -->
+  <g>
+    <!-- Background Occlusion Polygon for Center Fan (Origin: 50, 50) -->
+    <path class="seigaiha-bg" d="M 0 50 A 50 50 0 0 1 100 50 Z" />
+
+    <!-- 5 Concentric Semicircular Arcs sharing Center (50, 50) -->
+    <path class="seigaiha-arc" d="M 0 50 A 50 50 0 0 1 100 50" />
+    <path class="seigaiha-arc" d="M 10 50 A 40 40 0 0 1 90 50" />
+    <path class="seigaiha-arc" d="M 20 50 A 30 30 0 0 1 80 50" />
+    <path class="seigaiha-arc" d="M 30 50 A 20 20 0 0 1 70 50" />
+    <path class="seigaiha-arc" d="M 40 50 A 10 10 0 0 1 60 50" />
+  </g>
+
+  <!-- 
+    ROW 2: UPPER STAGGERED FANS (50% Horizontal Offset, Origin at y=0)
+    Overlaps the lower row cleanly to create the traditional repeating wave fan appearance.
+  -->
+  <g>
+    <!-- Background Occlusion Polygon for Left Fan (Origin: 0, 0) -->
+    <path class="seigaiha-bg" d="M -50 0 A 50 50 0 0 0 50 0 Z" />
+
+    <!-- 5 Concentric Semicircular Arcs sharing Center (0, 0) -->
+    <path class="seigaiha-arc" d="M -50 0 A 50 50 0 0 0 50 0" />
+    <path class="seigaiha-arc" d="M -40 0 A 40 40 0 0 0 40 0" />
+    <path class="seigaiha-arc" d="M -30 0 A 30 30 0 0 0 30 0" />
+    <path class="seigaiha-arc" d="M -20 0 A 20 20 0 0 0 20 0" />
+    <path class="seigaiha-arc" d="M -10 0 A 10 10 0 0 0 10 0" />
+
+    <!-- Background Occlusion Polygon for Right Fan (Origin: 100, 0) -->
+    <path class="seigaiha-bg" d="M 50 0 A 50 50 0 0 0 150 0 Z" />
+
+    <!-- 5 Concentric Semicircular Arcs sharing Center (100, 0) -->
+    <path class="seigaiha-arc" d="M 50 0 A 50 50 0 0 0 150 0" />
+    <path class="seigaiha-arc" d="M 60 0 A 40 40 0 0 0 140 0" />
+    <path class="seigaiha-arc" d="M 70 0 A 30 30 0 0 0 130 0" />
+    <path class="seigaiha-arc" d="M 80 0 A 20 20 0 0 0 120 0" />
+    <path class="seigaiha-arc" d="M 90 0 A 10 10 0 0 0 110 0" />
+  </g>
+</svg>

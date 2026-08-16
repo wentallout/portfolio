@@ -13,36 +13,16 @@
 </script>
 
 <ExLink ariaLabel={alt} href={src}>
-	<figure>
-		<img alt="Image of {alt}" {decoding} {height} {loading} {src} {width} />
+	<figure class="my-6 border border-neutral-800 bg-neutral-950 overflow-hidden relative group">
+		<span class="grid-plus grid-plus-tl">+</span>
+		<span class="grid-plus grid-plus-tr">+</span>
+		<span class="grid-plus grid-plus-bl">+</span>
+		<span class="grid-plus grid-plus-br">+</span>
+		<img alt="Image of {alt}" class="w-full h-auto block m-0 transition-opacity duration-200 group-hover:opacity-90" {decoding} {height} {loading} {src} {width} />
 		{#if alt !== ''}
-			<figcaption class="caption text-xs">
+			<figcaption class="text-sm text-neutral-400 bg-neutral-900 border-t border-neutral-800 p-2.5 font-sans">
 				{alt}
 			</figcaption>
 		{/if}
 	</figure>
 </ExLink>
-
-<style>
-	figure {
-		max-width: 100%;
-		margin-left: auto;
-		margin-right: auto;
-		margin-bottom: var(--space-xl);
-		border-radius: var(--border-radius-lighter);
-		overflow: hidden;
-		box-shadow: var(--boxShadow);
-	}
-
-	img {
-		max-width: inherit;
-	}
-
-	.caption {
-		font-size: var(--font-size-xs);
-		color: var(--color-text-secondary);
-		width: 100%;
-		padding: var(--space-3xs) var(--space-2xs);
-		background-color: var(--color-bg-elevated);
-	}
-</style>

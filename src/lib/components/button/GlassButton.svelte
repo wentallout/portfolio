@@ -124,10 +124,10 @@
 	.glass-btn {
 		--ease-out-custom: cubic-bezier(0.23, 1, 0.32, 1);
 		position: relative;
-		padding: 12px 32px;
+		padding: 12px 28px;
 		background: var(--glass-color);
 		border: var(--border-width) solid rgba(255, 255, 255, 0.2);
-		border-radius: var(--border-radius-light);
+		border-radius: 0px;
 		backdrop-filter: blur(10px);
 		-webkit-backdrop-filter: blur(10px);
 		box-shadow:
@@ -138,9 +138,9 @@
 		width: 100%;
 		transform-origin: center;
 		transition:
-			transform 160ms var(--ease-out-custom),
-			filter 160ms var(--ease-out-custom),
-			box-shadow 160ms var(--ease-out-custom);
+			transform 160ms cubic-bezier(0.23, 1, 0.32, 1),
+			filter 160ms cubic-bezier(0.23, 1, 0.32, 1),
+			box-shadow 160ms cubic-bezier(0.23, 1, 0.32, 1);
 		filter: brightness(1);
 	}
 
@@ -156,8 +156,8 @@
 		justify-content: center;
 		gap: 8px;
 		color: var(--label-color);
-		font-weight: var(--fontWeightLarge);
-		font-size: var(--font-size-small);
+		font-weight: 600;
+		font-size: 13px;
 		z-index: 1;
 		position: relative;
 		text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
@@ -178,9 +178,10 @@
 	}
 
 	.glass-btn:focus-visible {
-		outline: 2px solid var(--color-primary);
+		outline: 2px solid #ffffff;
 		outline-offset: 2px;
 	}
+
 
 	:global(.raindrop) {
 		position: absolute;

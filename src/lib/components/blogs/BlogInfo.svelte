@@ -1,10 +1,7 @@
 <script>
 	import ExLink from '$components/common/ExLink.svelte';
-	import Tag from '$components/common/Tag.svelte';
 	import Breadcrumb from '$components/other/Breadcrumb.svelte';
-	import { parallaxBg } from '$lib/actions/parallaxEffect';
-	import { CalendarBlank, Pen } from '$lib/assets/icons/icons';
-	import { onMount } from 'svelte';
+	import { CalendarBlank, Pen, Tag as TagIcon } from '$lib/assets/icons/icons';
 
 	/** @type {{data: any, hasCategory?: boolean}} */
 	let { data, hasCategory = false } = $props();
@@ -12,15 +9,15 @@
 	function formatRelativeTime(dateString) {
 		const date = new Date(dateString);
 		const now = new Date();
-		now.setHours(0, 0, 0, 0); // reset time to midnight
-		date.setHours(0, 0, 0, 0); // reset time to midnight
+		now.setHours(0, 0, 0, 0);
+		date.setHours(0, 0, 0, 0);
 
 		const diff = now - date;
 
 		const units = [
-			{ factor: 31536000000, name: 'year' }, // 1000 * 60 * 60 * 24 * 365
-			{ factor: 2628000000, name: 'month' }, // 1000 * 60 * 60 * 24 * 30
-			{ factor: 86400000, name: 'day' } // 1000 * 60 * 60 * 24
+			{ factor: 31536000000, name: 'year' },
+			{ factor: 2628000000, name: 'month' },
+			{ factor: 86400000, name: 'day' }
 		];
 
 		for (const unit of units) {
@@ -45,119 +42,50 @@
 
 	function getDate(dateString) {
 		let input = new Date(dateString);
-
-		const formattedDate = new Intl.DateTimeFormat('en-GB', {
+		return new Intl.DateTimeFormat('en-GB', {
 			dateStyle: 'medium'
 		}).format(input);
-
-		return formattedDate;
 	}
-
-	import { page } from '$app/state';
-	import Sunset from '$lib/assets/icons/Sunset.svelte';
 </script>
 
-<header class="blog full-width">
-	<div class="blog__gradient"></div>
-	<div class="g-container">
-		<Breadcrumb />
-		<h1 class="blog__title">
-			{data.title}
-		</h1>
-		<div class="blog__info text-small">
-			<div class="info__section">
-				<CalendarBlank height="20" width="20" />
-				{#if data.date}
-					<time>
-						{getDate(data.date)}
-						({formatRelativeTime(data.date)})
-					</time>
-				{/if}
-				<!-- <Time relative timestamp={data.date} /> -->
+<header class="w-full border-grid-b p-6 md:p-8 flex flex-col gap-4 select-none bg-black relative">
+	<span class="grid-plus grid-plus-tl">+</span>
+	<span class="grid-plus grid-plus-tr">+</span>
+	<span class="grid-plus grid-plus-bl">+</span>
+	<span class="grid-plus grid-plus-br">+</span>
+
+	<Breadcrumb />
+
+	<h1
+		class="text-3xl sm:text-4xl md:text-5xl font-semibold tracking-tight text-white leading-tight font-fancy">
+		{data.title}<span class="text-rose-500">.</span>
+	</h1>
+
+	<div
+		class="flex items-center gap-4 flex-wrap text-sm text-neutral-400 font-sans pt-2 border-t border-neutral-800/60">
+		{#if data.date}
+			<div class="flex items-center gap-1.5">
+				<CalendarBlank color="#9ca3af" height="16" width="16" />
+				<time>
+					{getDate(data.date)} ({formatRelativeTime(data.date)})
+				</time>
 			</div>
-			<div class="info__section">
-				<Pen height="20" width="20" />
-				<ExLink href="https://www.linkedin.com/in/wentallout/">Dang Khoa (@wentallout)</ExLink>
-			</div>
+		{/if}
+
+		<div class="flex items-center gap-1.5">
+			<Pen color="#9ca3af" height="16" width="16" />
+			<ExLink href="https://www.linkedin.com/in/wentallout/">Dang Khoa (@wentallout)</ExLink>
 		</div>
-		{#if hasCategory}
-			{#if data.categories.length}
-				<div class="category">
-					{#each data.categories as category}
-						<a class="category__tag" href="/blogs/category/{category}">
-							<Tag>
-								{category}
-							</Tag>
-						</a>
-					{/each}
-				</div>
-			{/if}
+
+		{#if hasCategory && data.categories && data.categories.length}
+			<div class="flex items-center gap-2">
+				<TagIcon color="#9ca3af" height="16" width="16" />
+				{#each data.categories as category (category)}
+					<a class="blueprint-pill" href="/blogs/category/{category}">
+						#{category}
+					</a>
+				{/each}
+			</div>
 		{/if}
 	</div>
-
-	<div class="blog__deco2">
-		<Sunset />
-	</div>
 </header>
-
-<style>
-	.blog__deco2 {
-		position: absolute;
-		bottom: 0;
-		left: 0;
-		z-index: -1;
-		opacity: 0.05;
-		width: 100%;
-		height: 30%;
-	}
-
-	.blog__gradient {
-		position: absolute;
-		bottom: 0;
-		left: 0;
-		width: 100%;
-		height: 100px;
-		background: var(--smooth-border);
-		pointer-events: none;
-	}
-
-	.blog {
-		position: relative;
-		padding-top: var(--space-xl);
-		padding-bottom: var(--space-xl);
-		overflow: hidden;
-	}
-
-	.category {
-		display: flex;
-		flex-direction: row;
-		gap: var(--space-xs);
-		z-index: 9999;
-	}
-
-	.category__tag {
-		text-decoration: none !important;
-	}
-
-	.blog__info {
-		width: 100%;
-		display: flex;
-		flex-direction: row;
-		flex-wrap: wrap;
-		gap: var(--space-mid);
-		margin-bottom: var(--space-s);
-		color: var(--color-text-secondary);
-
-		& .info__section {
-			display: flex;
-			flex-direction: row;
-			gap: 4px;
-			align-items: center;
-		}
-	}
-
-	.blog__title {
-		text-wrap: balance;
-		color: var(--color-primary);
-	}
-</style>

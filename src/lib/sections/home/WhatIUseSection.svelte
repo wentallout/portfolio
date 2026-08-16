@@ -1,162 +1,57 @@
 <script>
-	import SaosContainer from '$components/common/SaosContainer.svelte';
-	import FrontendArt from '$lib/assets/arts/FrontendArt.svelte';
-	import GraphicDesignArt from '$lib/assets/arts/GraphicDesignArt.svelte';
-	import NavigationArt from '$lib/assets/arts/NavigationArt.svelte';
-	import ProcessArt from '$lib/assets/arts/ProcessArt.svelte';
 	import { Toolbox } from '$lib/assets/icons/icons';
 	import SectionTitle from '$sections/layout/SectionTitle.svelte';
+
+	const categories = [
+		{
+			items: ['Design Thinking', 'Double Diamond', 'UX Honeycomb', 'Atomic Design'],
+			title: 'Frameworks & UX'
+		},
+		{
+			items: ['Figma', 'Adobe XD', 'Penpot', 'Canva', 'Illustrator'],
+			title: 'Prototyping & UI'
+		},
+		{
+			items: ['HTML/CSS/JS', 'Svelte', 'Tailwind', 'React', 'GSAP'],
+			title: 'Frontend & Tech'
+		}
+	];
 </script>
 
-<SaosContainer>
-	<section>
-		<div class="tool">
-			<SectionTitle sectionTitle="What I Use">
-				{#snippet children({ sectionIcon })}
-					<Toolbox {...sectionIcon} />
-				{/snippet}
-			</SectionTitle>
+<section class="border-grid-b w-full relative">
+	<SectionTitle sectionTitle="Tech & Stack">
+		{#snippet children({ sectionIcon })}
+			<Toolbox {...sectionIcon} />
+		{/snippet}
+	</SectionTitle>
 
-			<div class="tool__block">
-				<article class="block__section">
-					<div class="section__svg">
-						<ProcessArt height="120" width="120" />
-					</div>
-					<div class="section__text">
-						<h3 class="block__title text-base">Frameworks</h3>
-						<p class="block__text text-small">Design Thinking</p>
-						<p class="block__text text-small">Double Diamond</p>
-						<p class="block__text text-small">UX Honeycomb</p>
-					</div>
-				</article>
+	<div class="grid grid-cols-1 md:grid-cols-3 gap-0 relative items-stretch">
+		{#each categories as category, i (category.title)}
+			<div
+				class="relative border-grid-r last:border-r-0 bg-black p-6 md:p-8 hover:bg-neutral-950/40 transition-all duration-300 flex flex-col justify-between h-full">
+				<span class="grid-plus grid-plus-tl">+</span>
+				<span class="grid-plus grid-plus-tr">+</span>
+				<span class="grid-plus grid-plus-bl">+</span>
+				<span class="grid-plus grid-plus-br">+</span>
 
-				<article class="block__section">
-					<div class="section__svg">
-						<NavigationArt height="120" width="120" />
+				<div>
+					<div class="flex items-center justify-between text-xs mb-4">
+						<span class="uppercase tracking-widest text-[10px] text-neutral-400 font-semibold"
+							>STACK</span>
+						<span class="text-neutral-500">00{i + 1}</span>
 					</div>
-					<div class="section__text">
-						<h3 class="block__title text-base">Prototyping</h3>
-						<p class="block__text text-small">Figma</p>
-						<p class="block__text text-small">Adobe XD</p>
-						<p class="block__text text-small">Penpot</p>
-					</div>
-				</article>
+					<h3 class="text-lg font-semibold text-white mb-4 tracking-tight">{category.title}</h3>
+				</div>
 
-				<article class="block__section">
-					<div class="section__svg">
-						<GraphicDesignArt height="120" width="120" />
-					</div>
-					<div class="section__text">
-						<h3 class="block__title text-base">Design</h3>
-						<p class="block__text text-small">Figma</p>
-						<p class="block__text text-small">Canva</p>
-						<p class="block__text text-small">Illustrator</p>
-					</div>
-				</article>
-
-				<article class="block__section">
-					<div class="section__svg">
-						<FrontendArt height="120" width="120" />
-					</div>
-					<div class="section__text">
-						<h3 class="block__title text-base">Frontend</h3>
-						<p class="block__text text-small">HTML, CSS, JS</p>
-						<p class="block__text text-small">GSAP, ScrollTrigger, Three.js</p>
-						<p class="block__text text-small">TailwindCSS, Bootstrap</p>
-						<p class="block__text text-small">React, SvelteKit</p>
-					</div>
-				</article>
+				<div class="flex flex-wrap gap-2 mt-4">
+					{#each category.items as item (item)}
+						<span
+							class="px-3 py-1 text-xs rounded-full border-grid-all bg-neutral-950 text-white font-medium hover:bg-neutral-900 transition-colors">
+							{item}
+						</span>
+					{/each}
+				</div>
 			</div>
-		</div>
-	</section>
-</SaosContainer>
-
-<style>
-	.section__svg {
-		position: absolute;
-		top: 0;
-		right: 0;
-		opacity: 0.05;
-		scale: 1.5;
-		transform: rotate(45deg);
-		transition: var(--transition);
-	}
-
-	.section__text {
-		width: 100%;
-		text-align: left;
-		flex-grow: 1;
-	}
-
-	.tool {
-		display: flex;
-		flex-direction: column;
-		justify-content: center;
-		align-items: flex-start;
-		overflow: visible;
-	}
-	.tool__block {
-		width: 100%;
-		--min: 240px;
-		display: grid;
-		grid-gap: var(--space-mid);
-		grid-template-columns: repeat(auto-fit, minmax(min(100%, var(--min)), 1fr));
-		justify-content: center;
-		align-content: center;
-		align-items: stretch;
-	}
-
-	.block__section {
-		/* FLEX */
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-		/* --- */
-
-		position: relative;
-
-		padding: var(--space-card);
-		z-index: 1;
-		/* min-height: 230px; */
-
-		overflow: hidden;
-		transition: var(--transition);
-		background-color: var(--color-bg-layout);
-		box-shadow: var(--boxShadow);
-		background: var(--color-bg-gradient-subtle);
-		border-radius: var(--border-radius-light);
-	}
-
-	.block__section:hover {
-		/* background-color: var(--color-bg-elevated); */
-		transform: scale(1.1);
-		overflow: visible;
-		border: 0;
-		z-index: var(--z-index-max);
-		outline: 0;
-	}
-
-	.block__section:hover .section__svg {
-		transform: rotate(0deg);
-	}
-
-	@media (min-width: 992px) {
-		.block__section {
-			align-items: flex-start;
-		}
-	}
-
-	.block__title {
-		color: var(--color-text);
-		font-weight: var(--fontWeightLarge);
-		margin-top: var(--space-mid);
-		margin-bottom: var(--space-2xs);
-	}
-
-	.block__text {
-		color: var(--color-text-secondary);
-		font-weight: var(--fontWeightSmall);
-		margin: 0;
-		border: 0;
-	}
-</style>
+		{/each}
+	</div>
+</section>

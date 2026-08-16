@@ -1,11 +1,11 @@
 <script>
-	import { MonitorPlay, ProjectorScreen, Star } from '$lib/assets/icons/icons';
+	import { MonitorPlay, Star } from '$lib/assets/icons/icons';
 	import SectionTitle from '$sections/layout/SectionTitle.svelte';
 	import ProjectList from '$sections/projects/ProjectList.svelte';
 	import VideoDemoList from '$sections/projects/VideoDemoList.svelte';
 </script>
 
-<section class="featured">
+<section class="border-grid-b w-full relative">
 	<SectionTitle sectionTitle="Featured">
 		{#snippet children({ sectionIcon })}
 			<Star {...sectionIcon} />
@@ -14,18 +14,16 @@
 	<ProjectList />
 </section>
 
-<section>
+<section class="border-grid-b w-full relative">
 	<SectionTitle sectionTitle="Web Animations">
 		{#snippet children({ sectionIcon })}
 			<MonitorPlay {...sectionIcon} />
 		{/snippet}
 	</SectionTitle>
-	<VideoDemoList />
+	<div class="p-6 md:p-8">
+		<VideoDemoList />
+	</div>
 </section>
 
-<style>
-	.featured {
-		display: flex;
-		flex-direction: column;
-	}
-</style>
+
+

@@ -1,158 +1,75 @@
 <script>
-	import MouseGlow from '$components/common/MouseGlow.svelte';
 	import { haptic } from '$lib/actions/haptics';
 
 	let {
 		desc = '',
+		index = 1,
 		linkToDetail = '',
 		output = '',
 		projectName = '',
 		role = '',
 		thumbnail
 	} = $props();
+
+	let formattedIndex = $derived(String(index).padStart(3, '0'));
 </script>
 
-<a class="project-container" href={linkToDetail} use:haptic={'selection'}>
-	<MouseGlow />
-	<article class="project">
-		<div class="project__thumbnail">
-			<img alt={projectName} loading="lazy" src={thumbnail} />
-		</div>
-		<div class="project__info">
-			<h2 class="project__title text-large text-trim">
-				{projectName}
-			</h2>
+<a
+	href={linkToDetail}
+	use:haptic={'selection'}
+	class="group block relative bg-black hover:bg-neutral-950/60 transition-colors duration-300 w-full"
+>
+	<article class="p-6 md:p-8 md:grid md:grid-cols-12 gap-8 items-center w-full relative">
+		<!-- Left: Text Details -->
+		<div class="md:col-span-6 flex flex-col justify-between h-full space-y-4">
+			<div>
+				<!-- Card Header Tag & Number -->
+				<div class="flex items-center justify-between mb-3 text-xs">
+					<span class="uppercase tracking-widest text-[10px] text-neutral-400 font-semibold">
+						{role ? role.split(',')[0] : 'PROJECT'}
+					</span>
+					<span class="text-neutral-500">{formattedIndex}</span>
+				</div>
 
-			<div class="info text-small">
-				<p class="section__label">Role</p>
-				<p class="section__desc">{role}</p>
+				<!-- Project Title -->
+				<h2 class="text-xl md:text-2xl font-semibold text-white mb-2 tracking-tight group-hover:text-rose-400 transition-colors">
+					{projectName}
+				</h2>
 
-				<p class="section__label">Description</p>
-				<p class="section__desc">{desc}</p>
+				<!-- Description -->
+				<p class="text-xs md:text-sm text-neutral-400 leading-relaxed font-normal font-sans">
+					{desc}
+				</p>
 
-				<p class="section__label">Result</p>
-				<p class="section__desc">{output}</p>
+				{#if output}
+					<div class="mt-3 text-xs text-neutral-500 font-sans">
+						<span class="text-neutral-400 font-medium">Deliverables:</span> {output}
+					</div>
+				{/if}
+			</div>
+
+			<!-- Action Link -->
+			<div class="pt-2 inline-flex items-center gap-1.5 text-xs text-white font-medium">
+				<span class="underline underline-offset-4 decoration-neutral-600 group-hover:decoration-white transition-all">View Project</span>
+				<span class="group-hover:translate-x-1 transition-transform duration-200">→</span>
 			</div>
 		</div>
+
+		<!-- Right: Thumbnail Image -->
+		{#if thumbnail}
+			<div class="md:col-span-6 mt-6 md:mt-0 overflow-hidden border-grid-all bg-neutral-950 aspect-video relative">
+				<img
+					alt={projectName}
+					loading="lazy"
+					src={thumbnail}
+					class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+				/>
+			</div>
+		{/if}
 	</article>
 </a>
 
-<style lang="postcss">
-	.project-container {
-		--ease-out-custom: cubic-bezier(0.23, 1, 0.32, 1);
-		display: block;
-		position: relative;
-		text-decoration: none;
-		transition:
-			transform 250ms var(--ease-out-custom),
-			filter 250ms var(--ease-out-custom);
-		transform-origin: center;
-		will-change: transform;
-	}
 
-	.project-container:hover {
-		transform: translateY(-4px) scale(1.01);
-		filter: brightness(1.05);
-	}
 
-	.project-container:active {
-		transform: translateY(-2px) scale(0.98);
-		transition-duration: 80ms;
-	}
 
-	.project {
-		display: grid;
-		grid-template-columns: 1fr;
-		position: relative;
-		width: 100%;
-		transition: box-shadow 250ms var(--ease-out-custom);
-		box-shadow: var(--boxShadow);
-		overflow: hidden;
-		border-radius: var(--border-radius-light);
-		background: var(--color-bg-gradient-subtle);
-	}
 
-	@media (min-width: 992px) {
-		.project {
-			grid-template-columns: 320px 1fr;
-		}
-	}
-
-	.project__thumbnail {
-		width: 100%;
-		height: 100%;
-		position: relative;
-		overflow: hidden;
-		z-index: 0;
-	}
-
-	.project__thumbnail img {
-		object-fit: cover;
-		width: 100%;
-		height: 100%;
-		transition: transform 600ms var(--ease-out-custom);
-		will-change: transform;
-	}
-
-	.project-container:hover .project__thumbnail img {
-		transform: scale(1.1);
-	}
-
-	.project__title {
-		display: flex;
-		justify-content: flex-start;
-		flex-direction: column;
-		font-weight: var(--fontWeightLarge);
-		transition: color 200ms var(--ease-out-custom);
-	}
-
-	.project-container:hover .project__title {
-		color: var(--color-primary-hover);
-	}
-
-	.info {
-		display: grid;
-		gap: var(--space-s);
-		grid-template-columns: auto 1fr;
-	}
-
-	.project__info {
-		display: flex;
-		flex-grow: 2;
-		flex-direction: column;
-		position: relative;
-		padding: var(--space-card);
-		gap: var(--space-mid);
-		color: var(--color-text);
-		transition: background 250ms var(--ease-out-custom);
-	}
-
-	.section__label {
-		color: var(--color-text);
-		min-width: 10%;
-		font-weight: 600;
-	}
-
-	.section__desc {
-		max-width: var(--text-width);
-	}
-
-	@keyframes article-appear {
-		from {
-			transform: translateY(20px);
-			opacity: 0;
-		}
-		to {
-			transform: translateY(0);
-			opacity: 1;
-		}
-	}
-
-	.project-container {
-		view-timeline-name: --articleAppear;
-		animation-timeline: --articleAppear;
-		animation-name: article-appear;
-		animation-fill-mode: both;
-		animation-range: entry 0% entry 40%;
-	}
-</style>
