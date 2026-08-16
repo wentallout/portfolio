@@ -1,14 +1,24 @@
 <script>
-	import MouseGlow from '$components/common/MouseGlow.svelte';
 	import { fade } from 'svelte/transition';
 
 	let { link = '', repoUrl = '', title = '', vidDemo = '' } = $props();
 </script>
 
-<a class="vid-container" aria-label="link to demo" href={link} target="_blank">
-	<div class="vid">
+<a
+	aria-label={`link to ${title}`}
+	class="group flex flex-col justify-between border-grid-r border-grid-b bg-black hover:bg-neutral-950/60 transition-all duration-300 relative h-full w-full"
+	href={link}
+	target="_blank"
+	rel="noreferrer"
+>
+	<span class="grid-plus grid-plus-tl">+</span>
+	<span class="grid-plus grid-plus-tr">+</span>
+	<span class="grid-plus grid-plus-bl">+</span>
+	<span class="grid-plus grid-plus-br">+</span>
+
+	<div class="w-full aspect-video bg-neutral-950 border-grid-b overflow-hidden relative">
 		<video
-			class="vid__demo"
+			class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
 			autoplay
 			fetchpriority="high"
 			loop
@@ -18,36 +28,14 @@
 			<source src={vidDemo} type="video/mp4" />
 		</video>
 	</div>
-	<div class="vid__desc">
-		<div class="vid__title">{title}</div>
+
+	<div class="p-6 bg-black flex items-center justify-between flex-1">
+		<h4 class="text-base font-semibold text-white group-hover:text-rose-400 transition-colors">
+			{title}
+		</h4>
+		<span class="text-sm text-neutral-400 group-hover:text-white group-hover:translate-x-1 transition-all duration-200">
+			↗
+		</span>
 	</div>
 </a>
 
-<style lang="postcss">
-	.vid-container {
-		display: flex;
-		flex-direction: column;
-		flex-wrap: nowrap;
-	}
-
-	.vid {
-		display: flex;
-		border: 1px dotted var(--color-border-secondary);
-	}
-
-	.vid__demo {
-		width: 100%;
-	}
-
-	.vid__desc {
-		border: 1px solid var(--color-border-secondary);
-		border-top: 0;
-		padding: var(--space-xs) var(--space-xs);
-		border-bottom-left-radius: var(--border-radius-light);
-		border-bottom-right-radius: var(--border-radius-light);
-	}
-
-	.vid__title {
-		font-weight: 600;
-	}
-</style>

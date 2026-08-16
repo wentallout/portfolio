@@ -32,12 +32,16 @@
 		"@playwright/test": "^1.58.2",
 		"@sveltejs/adapter-netlify": "^6.0.4",
 		"@sveltejs/kit": "^2.55.0",
+		"@tailwindcss/forms": "^0.5.11",
+		"@tailwindcss/typography": "^0.5.19",
+		"@tailwindcss/vite": "^4.3.0",
 		"@types/node": "^25.5.0",
 		"autoprefixer": "^10.4.27",
 		"eslint": "^10.1.0",
-		"eslint-plugin-perfectionist": "^5.7.0",
+		
 		"eslint-plugin-svelte": "^3.16.0",
 		"globals": "^17.4.0",
+		"glyphnav": "^2.3.1",
 		"gsap": "^3.14.2",
 		"knip": "^6.1.0",
 		"lightningcss": "^1.32.0",
@@ -51,6 +55,7 @@
 		"postcss-preset-env": "^11.2.0",
 		"prettier": "^3.8.1",
 		"prettier-plugin-svelte": "^3.5.1",
+		"prettier-plugin-tailwindcss": "^0.8.0",
 		"rehype-autolink-headings": "^7.1.0",
 		"rehype-external-links": "^3.0.0",
 		"rehype-slug": "^6.0.0",
@@ -73,6 +78,7 @@
 		"svelte-sequential-preprocessor": "^2.0.3",
 		"svelte-toc": "^0.6.3",
 		"sveltekit-embed": "^0.0.22",
+		"tailwindcss": "^4.3.0",
 		"typescript": "^5.9.3",
 		"unplugin-icons": "^23.0.1",
 		"vite": "^7.0.0",
@@ -85,6 +91,8 @@
 	"dependencies": {
 		"@arcjet/inspect": "^1.3.0",
 		"@giscus/svelte": "^3.1.0",
+		"mode-watcher": "^1.1.0",
+		"ogl": "^1.0.11",
 		"web-haptics": "^0.0.6",
 		"web-sentinel": "^0.1.5"
 	}

@@ -145,236 +145,172 @@
 	let paginatedItems = $derived(paginate({ currentPage, items: filteredBlogs, pageSize }));
 </script>
 
-<PageTitle pageTitle="Blogs" />
+<div class="w-full bg-black relative">
+	<PageTitle pageTitle="Blogs" />
 
-<section class="blog-list" onclick={() => (showDropdown = false)}>
-	<SectionTitle
-		sectionDesc="I love web design, A.I and the things we can build to make our lives easier."
-		sectionTitle="Thoughts and guides">
-		{#snippet children({ sectionIcon })}
-			<Article {...sectionIcon} />
-		{/snippet}
-	</SectionTitle>
-
-	<search onclick={(e) => e.stopPropagation()}>
-		<TextInput
-			{handleClear}
-			handleOnInput={handleSearchInput}
-			inputValue={searchTerm}
-			onkeydown={handleKeyDown}
-			placeholder="Search blogs...">
-			{#snippet icon()}
-				<span>
-					<MagnifyingGlass />
-				</span>
+	<section
+		class="border-grid-b w-full relative"
+		onclick={() => (showDropdown = false)}
+		onkeydown={() => (showDropdown = false)}
+		role="presentation">
+		<SectionTitle
+			sectionDesc="Articles on frontend architecture, Svelte 5, modern CSS, UI/UX design, and tech insights."
+			sectionTitle="Thoughts, Tutorials & Guides">
+			{#snippet children({ sectionIcon })}
+				<Article {...sectionIcon} />
 			{/snippet}
-			{#snippet dropdown()}
-				{#if showDropdown && searchTerm !== ''}
-					<div class="search-dropdown">
-						{#if isSearching}
-							<div class="dropdown-status">
-								<LoadingBarSpinner />
-								<span>Searching...</span>
+		</SectionTitle>
+
+		<!-- Searonclick={(e) => e.stopPropagation()} role="presentation"
+		<div class="p-6 md:p-8 border-grid-b bg-black relative">
+			<span class="grid-plus grid-plus-tl">+</span>
+			<span class="grid-plus grid-plus-tr">+</span>
+			<search
+				role="presentation"
+				onclick={(e) => e.stopPropagation()}
+				onkeydown={(e) => e.stopPropagation()}>
+				<TextInput
+					{handleClear}
+					handleOnInput={handleSearchInput}
+					inputValue={searchTerm}
+					onkeydown={handleKeyDown}
+					placeholder="Search articles by title or topic...">
+					{#snippet icon()}
+						<span>
+							<MagnifyingGlass />
+						</span>
+					{/snippet}
+					{#snippet dropdown()}
+						{#if showDropdown && searchTerm !== ''}
+							<div
+								class="absolute top-full left-0 z-50 w-full mt-1 bg-neutral-950 border border-neutral-800 shadow-2xl overflow-hidden max-h-96 overflow-y-auto font-sans">
+								{#if isSearching}
+									<div class="flex items-center justify-center p-4 gap-2 text-sm text-neutral-400">
+										<LoadingBarSpinner />
+										<span>Searching articles...</span>
+									</div>
+								{:else if suggestions.length === 0}
+									<div class="flex items-center justify-center p-4 gap-2 text-sm text-neutral-400">
+										<span>No articles matching "{searchTerm}"</span>
+									</div>
+								{:else}
+									<ul class="p-1 m-0 list-none">
+										{#each suggestions.slice(0, 8) as blog, i (blog.path)}
+											<li>
+												<button
+													class="w-full flex items-center p-2.5 gap-2.5 border-none bg-transparent hover:bg-neutral-900 focus:bg-neutral-900 cursor-pointer text-left transition-colors font-sans text-sm rounded-none {i ===
+													selectedIndex
+														? 'bg-neutral-900'
+														: ''}"
+													onclick={() => handleSelect(blog)}
+													type="button">
+													<div class="text-neutral-400 flex items-center justify-center shrink-0">
+														<MagnifyingGlass height="14" width="14" />
+													</div>
+													<div class="flex flex-col overflow-hidden min-w-0">
+														<span class="text-white text-sm font-medium truncate"
+															>{blog.meta.title}</span>
+													</div>
+												</button>
+											</li>
+										{/each}
+									</ul>
+								{/if}
 							</div>
-						{:else if suggestions.length === 0}
-							<div class="dropdown-status">
-								<span>No results found for "{searchTerm}"</span>
-							</div>
-						{:else}
-							<ul class="dropdown-list">
-								{#each suggestions.slice(0, 8) as blog, i (blog.path)}
-									<li>
-										<button
-											class="dropdown-item"
-											class:selected={i === selectedIndex}
-											onclick={() => handleSelect(blog)}
-											type="button">
-											<div class="item-icon">
-												<MagnifyingGlass height="14" width="14" />
-											</div>
-											<div class="item-content">
-												<span class="item-title">{blog.meta.title}</span>
-											</div>
-										</button>
-									</li>
-								{/each}
-							</ul>
 						{/if}
-					</div>
-				{/if}
-			{/snippet}
-		</TextInput>
-	</search>
-	<BlogTagsList {data} />
+					{/snippet}
+				</TextInput>
+			</search>
+		</div>
 
-	{#if filteredBlogs.length != 0}
-		<DarkPaginationNav
-			{currentPage}
-			limit={1}
-			onsetPage={(e) => (currentPage = e.detail.page)}
-			{pageSize}
-			showStepOptions={true}
-			totalItems={filteredBlogs.length} />
-	{/if}
+		<!-- Tags Blueprint Row -->
+		<div class="p-6 md:p-8 border-grid-b bg-black relative">
+			<span class="grid-plus grid-plus-tl">+</span>
+			<span class="grid-plus grid-plus-tr">+</span>
+			<BlogTagsList {data} />
+		</div>
 
-	<BlogListContainer>
-		{#if isInitialLoading}
-			<div class="search-status">
-				<LoadingBarSpinner />
-				<p>Loading blogs...</p>
+		{#if filteredBlogs.length != 0}
+			<div class="p-4 border-grid-b bg-black flex justify-center relative">
+				<DarkPaginationNav
+					{currentPage}
+					limit={1}
+					onsetPage={(e) => (currentPage = e.detail.page)}
+					{pageSize}
+					showStepOptions={true}
+					totalItems={filteredBlogs.length} />
 			</div>
-		{:else if isSearching}
-			<div class="search-status">
-				<LoadingBarSpinner />
-				<p>Searching...</p>
-			</div>
-		{:else if filteredBlogs.length === 0 && searchTerm !== ''}
-			<div class="search-status">
-				<p>No results found for "{searchTerm}"</p>
-			</div>
-		{:else if filteredBlogs.length === 0}
-			<div class="search-status">
-				<p>No blogs available</p>
-			</div>
-		{:else}
-			{#each paginatedItems as paginatedItem (paginatedItem.path)}
-				<BlogCard
-					blogDate={paginatedItem.meta.date}
-					blogLink={paginatedItem.path}
-					blogTags={paginatedItem.meta.categories}
-					blogTitle={paginatedItem.meta.title} />
-			{/each}
 		{/if}
-	</BlogListContainer>
 
-	{#if filteredBlogs.length != 0}
-		<DarkPaginationNav
-			{currentPage}
-			limit={1}
-			onsetPage={(e) => (currentPage = e.detail.page)}
-			{pageSize}
-			showStepOptions={true}
-			totalItems={filteredBlogs.length} />
-	{/if}
-</section>
+		<BlogListContainer>
+			{#if isInitialLoading}
+				<div
+					class="col-span-full flex flex-col items-center justify-center p-12 text-center text-sm text-neutral-400 font-sans gap-2">
+					<LoadingBarSpinner />
+					<p>Gathering articles...</p>
+				</div>
+			{:else if isSearching}
+				<div
+					class="col-span-full flex flex-col items-center justify-center p-12 text-center text-sm text-neutral-400 font-sans gap-2">
+					<LoadingBarSpinner />
+					<p>Searching articles...</p>
+				</div>
+			{:else if filteredBlogs.length === 0 && searchTerm !== ''}
+				<div
+					class="col-span-full flex flex-col items-center justify-center p-12 text-center text-sm text-neutral-400 font-sans gap-1">
+					<p class="text-white font-medium">No matching articles found</p>
+					<p class="text-neutral-400">
+						We couldn't find any articles matching "{searchTerm}". Try searching another topic!
+					</p>
+				</div>
+			{:else if filteredBlogs.length === 0}
+				<div
+					class="col-span-full flex flex-col items-center justify-center p-12 text-center text-sm text-neutral-400 font-sans">
+					<p>No articles available at the moment.</p>
+				</div>
+			{:else}
+				{#each paginatedItems as paginatedItem (paginatedItem.path)}
+					<BlogCard
+						blogDate={paginatedItem.meta.date}
+						blogLink={paginatedItem.path}
+						blogTags={paginatedItem.meta.categories}
+						blogTitle={paginatedItem.meta.title} />
+				{/each}
+			{/if}
+		</BlogListContainer>
 
-<ResourceList />
+		{#if filteredBlogs.length != 0}
+			<div class="p-4 border-grid-b bg-black flex justify-center relative">
+				<DarkPaginationNav
+					{currentPage}
+					limit={1}
+					onsetPage={(e) => (currentPage = e.detail.page)}
+					{pageSize}
+					showStepOptions={true}
+					totalItems={filteredBlogs.length} />
+			</div>
+		{/if}
+	</section>
+
+	<ResourceList />
+</div>
 
 <style>
 	:global(.dark-pagination-nav .option:hover) {
-		background: var(--color-bg-elevated) !important;
+		background: var(--popover) !important;
 	}
 
 	:global(.pagination-nav) {
 		background-color: transparent !important;
-		border-radius: var(--border-radius-light) !important;
+		border-radius: 0 !important;
 		box-shadow: none !important;
 	}
 
 	:global(.dark-pagination-nav .option) {
-		color: var(--color-text-secondary) !important;
+		color: var(--muted-foreground) !important;
 	}
 
 	:global(.dark-pagination-nav .option.active) {
-		color: var(--color-primary) !important;
-	}
-
-	.search-status {
-		grid-column: 1 / -1;
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-		justify-content: center;
-		padding: var(--space-large);
-		text-align: center;
-		color: var(--color-text-secondary);
-	}
-
-	.search-status p {
-		margin-top: var(--space-s);
-	}
-
-	.search-dropdown {
-		background: var(--color-bg-elevated);
-		border-radius: var(--border-radius-light);
-		box-shadow: var(--boxShadow);
-		overflow: hidden;
-		width: 100%;
-		max-height: 400px;
-		overflow-y: auto;
-		animation: slideDown 0.2s ease-out;
-	}
-
-	@keyframes slideDown {
-		from {
-			opacity: 0;
-			transform: translateY(-10px);
-		}
-		to {
-			opacity: 1;
-			transform: translateY(0);
-		}
-	}
-
-	.dropdown-status {
-		display: flex;
-		align-items: center;
-		justify-content: center;
-		padding: var(--space-mid);
-		gap: var(--space-s);
-		color: var(--color-text-secondary);
-	}
-
-	.dropdown-list {
-		list-style: none;
-		padding: var(--space-3xs);
-		margin: 0;
-	}
-
-	.dropdown-item {
-		width: 100%;
-		display: flex;
-		align-items: center;
-		padding: var(--space-3xs);
-		gap: var(--space-s);
-		border: none;
-		background: transparent;
-		cursor: pointer;
-		text-align: left;
-		transition: var(--transition);
-		border-radius: var(--border-radius-light);
-	}
-
-	.dropdown-item:hover,
-	.dropdown-item.selected {
-		background: var(--color-bg-layout);
-	}
-
-	.item-icon {
-		color: var(--color-text-secondary);
-		display: flex;
-		align-items: center;
-		justify-content: center;
-	}
-
-	.item-content {
-		display: flex;
-		flex-direction: column;
-		overflow: hidden;
-	}
-
-	.item-title {
-		color: var(--color-text);
-		font-weight: var(--fontWeightMid);
-		font-size: var(--font-size-small);
-		white-space: nowrap;
-		overflow: hidden;
-		text-overflow: ellipsis;
-	}
-
-	.item-desc {
-		color: var(--color-text-secondary);
-		font-size: var(--font-size-2xs);
-		text-transform: capitalize;
+		color: var(--foreground) !important;
 	}
 </style>

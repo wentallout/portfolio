@@ -22,9 +22,9 @@ const config = {
 			$blogImages: './src/lib/assets/images/blogs',
 			$components: './src/lib/components',
 			$projectImages: './src/lib/assets/images/projects',
-			$sections: './src/lib/sections',
-			$styles: './src/styles'
+			$sections: './src/lib/sections'
 		},
+
 
 		env: {
 			dir: '.'

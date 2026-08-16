@@ -6,10 +6,11 @@
 </script>
 
 <GlassButton
-	glassColor="var(--color-primary)"
-	glowColor="var(--color-black)"
+	glassColor="#ffffff"
+	glowColor="#ffffff"
 	{hapticPattern}
 	{label}
-	labelColor="var(--color-black)">
+	labelColor="#000000">
 	{@render children?.()}
 </GlassButton>
+

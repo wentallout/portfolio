@@ -1,225 +1,129 @@
 <script>
 	import ExLink from '$components/common/ExLink.svelte';
 	import FooterCopyright from '$components/layout/footer/FooterCopyright.svelte';
-	import FooterDeco from '$components/layout/footer/FooterDeco.svelte';
 	import Marquee from '$components/other/Marquee.svelte';
-	import {
-		EnvelopeSimple,
-		GitHubLogo,
-		InstagramLogo,
-		LinkedinLogo,
-		MapPin,
-		Phone
-	} from '$lib/assets/icons/icons';
+	import { EnvelopeSimple, GitHubLogo, LinkedinLogo, Phone } from '$lib/assets/icons/icons';
 	import { navItems } from '$lib/config.js';
+	import DottedBackground from '$lib/components/ui/DottedBackground.svelte';
 </script>
 
-<footer class="footer text-small">
-	<FooterDeco />
+<footer class="w-full bg-black relative text-xs text-neutral-400 font-sans overflow-hidden">
+	<div class="absolute inset-0 z-0 opacity-40 pointer-events-none">
+		<DottedBackground
+			bgColor="transparent"
+			colors={["#FFFFFF", "#888888", "#222222"]}
+			cellSize={4}
+			frequency={2}
+			speed={4}
+		/>
+	</div>
 
-	<img class="footer__koi" alt="koi" loading="lazy" src="/images/koi.svg" />
-
-	<div class="g-container">
-		<div class="footer__list">
-			<div class="list">
-				<div class="list__title">About</div>
-				<ul class="list__nav">
-					<li class="nav-list__link">
-						Khoa Nguyen. Provide affordable websites for your business.
-					</li>
-					<li class="nav-list__link">
-						<a class="link" href="/about">More about me </a>
-					</li>
-				</ul>
-			</div>
-
-			<div class="list">
-				<div class="list__title">Navigate</div>
-				<ul class="list__nav">
-					{#each navItems as navItem}
-						<li class="nav-list__link">
-							<a href={navItem.path}>{navItem.title}</a>
-						</li>
-					{/each}
-				</ul>
-			</div>
-
-			<div class="list">
-				<div class="list__title">Other</div>
-				<ul class="list__nav">
-					<li class="nav-list__link">
-						<a href="blogs/resource/tool">REM Converter</a>
-					</li>
-					<li class="nav-list__link">
-						<a href="https://www.realtimecolors.com">Color palette generator</a>
-					</li>
-					<li class="nav-list__link">
-						<a href="https://fluid-type.tolin.ski">Fluid Type Calculator</a>
-					</li>
-					<li class="nav-list__link">
-						<a href="/rss.xml">RSS</a>
-					</li>
-					<li class="nav-list__link">
-						<a href="https://dnsrecords.io/wentallout.io.vn">DNS</a>
-					</li>
-				</ul>
-			</div>
-
-			<div class="list">
-				<div class="list__title">Contact</div>
-				<ul class="list__nav list__grid">
-					<li>
-						<ExLink href="mailto:wentallout@gmail.com">
-							<div class="nav-list__link">
-								<EnvelopeSimple height="40px" width="40px" />
-							</div>
-						</ExLink>
-					</li>
-					<li>
-						<ExLink href="tel:+84929066331">
-							<div class="nav-list__link">
-								<Phone height="40px" width="40px" />
-							</div>
-						</ExLink>
-					</li>
-					<li>
-						<ExLink href="https://www.linkedin.com/in/wentallout">
-							<div class="nav-list__link">
-								<LinkedinLogo height="40px" width="40px" />
-							</div>
-						</ExLink>
-					</li>
-					<li>
-						<ExLink href="https://www.instagram.com/wentallout/saved">
-							<div class="nav-list__link">
-								<InstagramLogo height="40px" width="40px" />
-							</div>
-						</ExLink>
-					</li>
-					<li>
-						<ExLink href="https://github.com/wentallout">
-							<div class="nav-list__link">
-								<GitHubLogo height="40px" width="40px" />
-							</div>
-						</ExLink>
-					</li>
-				</ul>
-			</div>
+	<!-- 4-Column Blueprint Grid Matrix -->
+	<div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-0 border-grid-b relative z-10">
+		<!-- Column 1: About -->
+		<div class="border-grid-r p-6 md:p-8 space-y-4 relative">
+			<span class="grid-plus grid-plus-tl">+</span>
+			<span class="grid-plus grid-plus-tr">+</span>
+			<h4 class="text-xs font-semibold text-white uppercase tracking-widest text-neutral-400">
+				ABOUT
+			</h4>
+			<p class="text-neutral-400 leading-relaxed text-xs font-sans font-normal">
+				Khoa Nguyen. Tailor-made, high-performance websites for businesses & creators.
+			</p>
+			<a class="inline-block text-rose-300 hover:text-white transition-colors" href="/about">
+				More about me →
+			</a>
 		</div>
 
+		<!-- Column 2: Navigate -->
+		<div class="border-grid-r p-6 md:p-8 space-y-4 relative">
+			<span class="grid-plus grid-plus-tr">+</span>
+			<h4 class="text-xs font-semibold text-white uppercase tracking-widest text-neutral-400">
+				NAVIGATE
+			</h4>
+			<ul class="space-y-2.5">
+				{#each navItems as navItem (navItem.path)}
+					<li>
+						<a class="hover:text-white transition-colors" href={navItem.path}>
+							{navItem.title}
+						</a>
+					</li>
+				{/each}
+			</ul>
+		</div>
+
+		<!-- Column 3: Tools & Resources -->
+		<div class="border-grid-r p-6 md:p-8 space-y-4 relative">
+			<span class="grid-plus grid-plus-tr">+</span>
+			<h4 class="text-xs font-semibold text-white uppercase tracking-widest text-neutral-400">
+				TOOLS & RESOURCES
+			</h4>
+			<ul class="space-y-2.5">
+				<li>
+					<a class="hover:text-white transition-colors" href="/blogs">Figma Resources</a>
+				</li>
+				<li>
+					<a
+						class="hover:text-white transition-colors"
+						href="https://www.realtimecolors.com"
+						rel="noreferrer"
+						target="_blank">Color Palette Generator ↗</a>
+				</li>
+				<li>
+					<a
+						class="hover:text-white transition-colors"
+						href="https://fluid-type.tolin.ski"
+						rel="noreferrer"
+						target="_blank">Fluid Type Calculator ↗</a>
+				</li>
+				<li>
+					<a class="hover:text-white transition-colors" href="/rss.xml">RSS Feed</a>
+				</li>
+			</ul>
+		</div>
+
+		<!-- Column 4: Connect -->
+		<div class="p-8 md:p-10 space-y-4 relative">
+			<span class="grid-plus grid-plus-tr">+</span>
+			<h4 class="text-xs font-semibold text-white uppercase tracking-widest text-neutral-400">
+				CONNECT
+			</h4>
+			<div class="flex items-center gap-2.5 pt-1">
+				<ExLink href="mailto:wentallout@gmail.com">
+					<div
+						class="p-2.5 bg-black border-grid-all hover:bg-neutral-900 text-neutral-300 hover:text-white transition-colors">
+						<EnvelopeSimple height="16" width="16" />
+					</div>
+				</ExLink>
+				<ExLink href="tel:+84929066331">
+					<div
+						class="p-2.5 bg-black border-grid-all hover:bg-neutral-900 text-neutral-300 hover:text-white transition-colors">
+						<Phone height="16" width="16" />
+					</div>
+				</ExLink>
+				<ExLink href="https://www.linkedin.com/in/wentallout">
+					<div
+						class="p-2.5 bg-black border-grid-all hover:bg-neutral-900 text-neutral-300 hover:text-white transition-colors">
+						<LinkedinLogo height="16" width="16" />
+					</div>
+				</ExLink>
+				<ExLink href="https://github.com/wentallout">
+					<div
+						class="p-2.5 bg-black border-grid-all hover:bg-neutral-900 text-neutral-300 hover:text-white transition-colors">
+						<GitHubLogo height="16" width="16" />
+					</div>
+				</ExLink>
+			</div>
+		</div>
+	</div>
+
+	<!-- Copyright Row -->
+	<div class="p-6 md:p-8 text-center relative border-grid-b z-10">
+		<span class="grid-plus grid-plus-tl">+</span>
+		<span class="grid-plus grid-plus-tr">+</span>
 		<FooterCopyright />
 	</div>
 </footer>
 
 <Marquee />
 
-<style>
-	.footer {
-		position: relative;
-		/* FLEX */
-		display: flex;
-		flex-direction: column;
-		/* --- */
-
-		/* SIZE */
-		max-width: 100vw;
-		width: 100%;
-		padding: var(--space-3xl) 0;
-		padding-bottom: 0;
-		/* --- */
-
-		overflow: hidden;
-		background-color: var(--color-bg-layout);
-
-		box-shadow: var(--boxShadow);
-	}
-
-	.g-container {
-		z-index: 3;
-		background: transparent;
-	}
-
-	:global([color-scheme='light'] .bg) {
-		display: none;
-	}
-
-	.nav-list__link {
-		display: flex;
-		flex-direction: row;
-		gap: var(--space-2xs);
-		align-items: center;
-
-		&:hover {
-			color: var(--color-primary-hover);
-		}
-	}
-
-	.link {
-		display: inline;
-	}
-
-	.footer__list {
-		overflow: hidden;
-		--min: 20ch;
-		--gap: var(--space-large);
-
-		display: grid;
-		grid-gap: var(--gap);
-		grid-template-columns: repeat(auto-fit, minmax(min(100%, var(--min)), 1fr));
-	}
-
-	.list {
-		display: flex;
-		flex-direction: column;
-		gap: var(--space-mid);
-	}
-
-	.list__title {
-		font-family: var(--font-fancy);
-		color: var(--color-text);
-		font-size: var(--font-size-base);
-		padding-bottom: var(--space-3xs);
-		border-bottom: 1px solid transparent;
-		border-image: linear-gradient(to right, var(--color-text-tertiary), transparent) 1 0%;
-	}
-
-	.list__nav {
-		display: flex;
-		flex-wrap: wrap;
-		flex-direction: column;
-		justify-content: left;
-		align-items: flex-start;
-		margin: 0;
-		margin-bottom: var(--space-large);
-
-		gap: var(--space-2xs);
-	}
-
-	.footer__koi {
-		/* POSITION */
-		position: absolute;
-		right: 0;
-		top: 50%;
-		transform: translateY(-50%);
-		/* --- */
-
-		/* SIZE */
-		height: 60%;
-		max-height: 500px;
-		width: auto;
-		/* --- */
-
-		opacity: 0.1;
-		filter: invert(1);
-	}
-
-	:global([color-scheme='light'] .footer__koi) {
-		filter: invert(0);
-	}
-
-	.list__grid {
-		display: grid;
-		grid-template-columns: auto auto auto auto auto;
-		gap: var(--space-s);
-	}
-</style>

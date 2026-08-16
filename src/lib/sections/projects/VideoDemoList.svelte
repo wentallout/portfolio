@@ -29,22 +29,9 @@
 	];
 </script>
 
-<div class="list">
-	{#each demos as demo}
+<div class="grid grid-cols-1 md:grid-cols-2 grid-cols-gapless-2 gap-0 border-grid-b w-full relative items-stretch">
+	{#each demos as demo (demo.title)}
 		<VideoDemoCard link={demo.link} title={demo.title} vidDemo={demo.vidDemo} />
 	{/each}
 </div>
 
-<style>
-	.list {
-		display: grid;
-		grid-template-columns: 1fr;
-		gap: var(--space-mid);
-	}
-
-	@media (min-width: 992px) {
-		.list {
-			grid-template-columns: 1fr 1fr;
-		}
-	}
-</style>

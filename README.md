@@ -53,19 +53,17 @@ Visitors can also comment on your blogs using GitHub discussion (you might want 
 - HTML: Semantic and SEO-focused
 - CSS: Vanilla CSS with BEM naming scheme
 - JS: VanillaJS/Svelte
-- Linting optimized for aesthetics: alphabetical style [perfectionist.dev](https://perfectionist.dev/)
 - [eslint-plugin-svelte](https://sveltejs.github.io/eslint-plugin-svelte/user-guide)
 
-## 💅 Styling
+## 💅 Styling & Design System
 
-`src/styles`
+`100% Edge-to-Edge Gapless Blueprint Matrix Grid`
 
-- `reset.css` custom CSS Reset by [joshwcomeau](https://www.joshwcomeau.com/css/custom-css-reset/)
-- `global.css` global styles and importing all other css files
-- `spacing.css` spacing for `margin`, `padding` and the whole page layout in general. Check out [utopia.fyi](https://utopia.fyi/) for more information about this spacing system.
-- `typography.css` typography-related stuff like `font-size`, `line-height`, `letter-spacing`, `font-weight`
-- `color.css` text colors, border colors, background colors (2 color schemes: `light` and `dark`)
-- `animation.css` for anything animate.
+- **Visual Architecture**: Single-directional 1px `#262626` borders (`border-grid-r`, `border-grid-b`), centered 11px `+` intersection crosshairs (`grid-plus`), and 0 floating inset padding boxes.
+- **Typography**: Primary copy and code in `Inter`, accent headings in `Gambarino`. Zero `font-mono` overrides.
+- **Centralized UX Copy**: Centralized navigation, page titles, and section headers in `src/lib/constants/uxCopy.js`.
+- **Reusable Utility Layer**: Predefined CSS utility classes in `layout.css` (`.blueprint-card`, `.blueprint-section`, `.blueprint-header`, `.blueprint-input`, `.blueprint-pill`).
+- **Responsive Layout**: Full-width project rows, gapless 3-column blog & resource cards with 16:9 media previews (`aspect-video`), and equal column height stretch (`items-stretch`).
 
 ## 🗺 Sitemap
 
@@ -74,6 +72,7 @@ Visitors can also comment on your blogs using GitHub discussion (you might want 
 | Home     | /         |
 | Projects | /projects |
 | Blogs    | /blogs    |
+| About    | /about    |
 | Contact  | /contact  |
 
 Slug
@@ -83,94 +82,49 @@ Slug
 
 ## Main Features
 
-⭐ SEO
+⭐ Svelte 5 Runes (`$state`, `$derived`, `$effect`) & SvelteKit 2.55+
 
-- [SSR](https://kit.svelte.dev/docs/seo#out-of-the-box-ssr)
-- [sitemap](https://github.com/jasongitmail/super-sitemap)
+⭐ 100% Edge-to-Edge Gapless Blueprint Matrix Design System
 
-⭐ Responsive
+⭐ SEO & Out-of-the-Box SSR with `super-sitemap`
 
-⭐ PWA: Works OFFLINE
+⭐ Responsive & PWA Offline Support
 
-⭐ Dark/Light Mode Toggle Button
+⭐ Centralized UX Copy & Navigation System (`src/lib/constants/uxCopy.js`)
 
-⭐ Dynamic Breadcrumb (`Breadcrumb.svelte`)
+⭐ Dark Mode Blueprint Styling
 
-⭐ Font Optimization
+⭐ Dynamic Self-Contained Header Rows (`PageTitle.svelte`, `SectionTitle.svelte`)
 
-- Self-host: [Google Web Font Helper](https://gwfh.mranftl.com/fonts)
-- font-family: [Inter](https://rsms.me/inter/). [Read more about Inter](https://beautifulwebtype.com/inter)
-- Subset: [Subset Variable Font Guide](https://barrd.dev/article/create-a-variable-font-subset-for-smaller-file-size/)
-- Reduce Font CLS (Cumulative Layout Shift): [Automatic font matching](https://deploy-preview-15--upbeat-shirley-608546.netlify.app/perfect-ish-font-fallback)
+⭐ Font Optimization: Local `InterVariable` WebP/WOFF2 font loading
 
-⭐ Icons
+⭐ Icons: Phosphor icons (`unplugin-icons` / `ph`)
 
-- `unplugin-icons`
-- Icon family: [phosphoricons](https://phosphoricons.com/)
-- [Browse phosphor icons](https://icon-sets.iconify.design/ph)
+⭐ Image Optimization: Compressed & converted into `webp` using `vite-imagetools` with `loading="lazy"`
 
-⭐ Images
+⭐ Routing: Filesystem-based router with smooth `svelte/transition` page transitions
 
-- Compressed and Converted into `webp` using`vite-imagetools`
-- `loading = 'lazy'`
+⭐ RSS Feed (`/rss.xml`)
 
-⭐ Routing: built-in [filesystem-based router](https://kit.svelte.dev/docs/routing)
+⭐ Haptic Feedback System (`haptics.ts`)
 
-⭐ Page Transition Animation
-
-- `svelte/transiton`
-- [nprogress](https://www.npmjs.com/package/nprogress)
-
-⭐ RSS
-
-⭐ [Haptics](https://haptics.lochie.me)
-
-⭐ Working Contact Form (need Netlify setup)
+⭐ Working Netlify Contact Form with sharp blueprint inputs
 
 ---
 
 ## Blogging Features
 
-- Use markdown to write blogs [mdsvex](https://github.com/pngwn/MDsveX)
-- use `categories` (#hashtag) to filter blogs
-- multiple markdown-related plugins installed: `rehype` and `remark`
-
-⭐ Blogs: Automatic Table of Contents
-
-⭐ Blogs: Code Highlight [prism-themes](https://github.com/PrismJS/prism-themes)
-
-⭐ Blogs: Search, Pagination
-
-⭐ Blogs: Categories/Tags
-
-⭐ Blogs: Prev/Next Button
-
-⭐ Blogs: Comment using [Giscus](https://giscus.app)
-
-## Background inspired by
-
-[bg.ibelick.com](https://bg.ibelick.com)
-
-## Declutter
-
-[Knip](https://knip.dev) (Declutter your JavaScript & TypeScript projects)
-
-## Security
-
-https://www.npmjs.com/package/web-sentinel (Ultra-high performance blocking of bots and vulnerability scanners.)
-
-## Todo
-
-💡 [Splash screen](https://www.sveltevietnam.dev/en/blog/20231220-behind-the-screen-progressive-splashscreen)
-
-## Stat
-
-![Alt](https://repobeats.axiom.co/api/embed/c17a64a1c0a63ba6cef6618f14b3e39fdf67eb3f.svg 'Repobeats analytics image')
-
-Featured on: [portfolioshub.com](https://www.portfolioshub.com)
+- Use markdown to write blogs via [mdsvex](https://github.com/pngwn/MDsveX)
+- Filter by categories & tags (#hashtag)
+- Markdown extensions via `rehype` and `remark`
+- Automatic Table of Contents
+- Code Syntax Highlighting via [prism-themes](https://github.com/PrismJS/prism-themes)
+- MiniSearch client-side fuzzy search & pagination
+- Comments via [Giscus](https://giscus.app)
 
 ## License
 
 [Published under MIT License](https://github.com/wentallout/portfolio/blob/master/LICENSE.md)
 
 [⬆ Back to Top](#portfolio)
+

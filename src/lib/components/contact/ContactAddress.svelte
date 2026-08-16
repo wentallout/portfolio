@@ -5,69 +5,32 @@
 	let { children, href, icon, title } = $props();
 </script>
 
-<div class="contact__address">
-	<div class="address__icon-column">
+<div class="p-6 md:p-8 border-grid-b last:border-b-0 flex items-start gap-4 w-full relative flex-1 bg-black hover:bg-neutral-950/40 transition-colors">
+	<span class="grid-plus grid-plus-bl">+</span>
+	<span class="grid-plus grid-plus-br">+</span>
+
+	<div class="text-neutral-400 shrink-0 pt-0.5">
 		{@render icon?.()}
 	</div>
 
-	<div class="address__text-column">
+	<div class="flex flex-col gap-1.5 min-w-0 flex-1">
 		{#if href}
 			<ExLink {href}>
-				<div class="address__title text-base">
+				<div class="text-sm font-semibold text-white hover:text-rose-400 transition-colors">
 					{title}
 				</div>
 			</ExLink>
 		{:else}
-			<div class="address__title text-base">
+			<div class="text-sm font-semibold text-white">
 				{title}
 			</div>
 		{/if}
-		<div class="address__content">
+		<div class="text-sm text-neutral-400 space-y-1 font-normal">
 			{@render children?.()}
 		</div>
 	</div>
 </div>
 
-<style>
-	.contact__address {
-		display: grid;
-		grid-template-columns: auto 1fr;
-		gap: var(--space-s);
 
-		padding: var(--space-card);
-		transition: var(--transition);
-		box-shadow: var(--boxShadow);
-		background: var(--color-bg-gradient-subtle);
 
-		position: relative;
-		border-radius: var(--border-radius-light);
-	}
 
-	.address__icon-column {
-		display: flex;
-		align-items: flex-start;
-
-		color: var(--color-text);
-	}
-
-	.address__text-column {
-		display: flex;
-		flex-direction: column;
-		gap: var(--space-2xs);
-	}
-
-	.address__title {
-		font-weight: 500;
-		text-box: cap alphabetic;
-	}
-
-	.address__content {
-		display: flex;
-		flex-direction: column;
-		gap: var(--space-xs);
-	}
-
-	:global(.address__desc) {
-		color: var(--color-text-secondary);
-	}
-</style>

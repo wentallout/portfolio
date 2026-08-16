@@ -1,22 +1,21 @@
 <script>
-	import { fade } from 'svelte/transition';
-	import { theme } from '$lib/stores/themeStore.svelte.js';
-	import { Sun, Moon } from '$lib/assets/icons/icons';
 	import { haptic } from '$lib/actions/haptics';
+	import { Moon, Sun } from '$lib/assets/icons/icons';
+	import { mode, toggleMode } from 'mode-watcher';
+	import { fade } from 'svelte/transition';
 </script>
 
-<button 
-	use:haptic={'selection'} 
-	class="pill" 
-	aria-label="Toggle theme" 
-	type="button" 
-	onclick={() => theme.toggle()}
->
+<button
+	class="pill"
+	aria-label="Toggle theme"
+	onclick={toggleMode}
+	type="button"
+	use:haptic={'selection'}>
 	<div
 		class="circle"
-		class:circle--left={theme.current === 'dark'}
-		class:circle--right={theme.current === 'light'}>
-		{#if theme.current === 'dark'}
+		class:circle--left={mode.current === 'dark'}
+		class:circle--right={mode.current === 'light'}>
+		{#if mode.current === 'dark'}
 			<div in:fade={{ duration: 150 }}>
 				<Moon class="icon" color="var(--color-text)" height="16" width="16" />
 			</div>
@@ -44,7 +43,7 @@
 		top: 50%;
 		right: 0;
 		transform: translate(-50%, -50%);
-		transition: 
+		transition:
 			transform 160ms var(--ease-out-custom),
 			background-color 200ms var(--ease-out-custom),
 			border-color 200ms var(--ease-out-custom);

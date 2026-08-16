@@ -1,101 +1,39 @@
 <script>
-	import MouseGlow from '$components/common/MouseGlow.svelte';
 	import { haptic } from '$lib/actions/haptics';
 
 	let {
+		blogDate = '',
 		blogLink = '',
-		blogTags = ['blogTag1', 'blogTag2'],
+		blogTags = [],
 		blogTitle = 'blogTitle',
 		hasTags = true
 	} = $props();
 </script>
 
-<a href={blogLink} use:haptic={'selection'}>
-	<article class="blog">
-		<MouseGlow />
-		<div class="blog__info">
-			{#if hasTags}
-				<div class="tags">
-					{#each blogTags as tag}
-						<span class="tag text-xs">
-							#{tag}
-						</span>
-					{/each}
-				</div>
-			{/if}
+<a
+	class="border-grid-r border-grid-b relative bg-background hover:bg-card p-6 md:p-8 flex flex-col justify-between transition-all duration-300 group min-h-[220px]"
+	href={blogLink}
+	use:haptic={'selection'}>
+	<span class="grid-plus grid-plus-tl">+</span>
+	<span class="grid-plus grid-plus-tr">+</span>
+	<span class="grid-plus grid-plus-bl">+</span>
+	<span class="grid-plus grid-plus-br">+</span>
 
-			<h5 class="blog__title text-small">
-				{blogTitle}
-			</h5>
-		</div>
-	</article>
+	<div>
+		{#if hasTags && blogTags && blogTags.length > 0}
+			<div class="flex flex-wrap items-center gap-1.5 mb-4">
+				{#each blogTags as tag (tag)}
+					<span
+						class="text-[10px] uppercase tracking-wider text-muted-foreground bg-card border-grid-all px-2 py-0.5 font-medium">
+						{tag}
+					</span>
+				{/each}
+			</div>
+		{/if}
+
+		<h3
+			class="text-base md:text-lg font-semibold text-foreground group-hover:text-rose-400 transition-colors leading-snug line-clamp-3">
+			{blogTitle}
+		</h3>
+	</div>
 </a>
-
-<style lang="postcss">
-	.blog {
-		--ease-out-custom: cubic-bezier(0.23, 1, 0.32, 1);
-		display: flex;
-		flex-direction: row;
-		justify-content: space-between;
-		align-items: center;
-		width: 100%;
-		height: 140px;
-		padding: var(--space-2xs) var(--space-mid);
-		position: relative;
-		overflow: hidden;
-		box-shadow: var(--boxShadow);
-		background: var(--color-bg-gradient-subtle);
-		border-radius: var(--border-radius-light);
-		transition:
-			transform 250ms var(--ease-out-custom),
-			box-shadow 250ms var(--ease-out-custom),
-			background-color 250ms var(--ease-out-custom);
-		transform-origin: center;
-		will-change: transform;
-	}
-
-	a:active .blog {
-		transform: translateY(-2px) scale(0.98);
-		transition-duration: 80ms;
-	}
-
-	.tags {
-		display: flex;
-		flex-direction: row;
-		flex-wrap: wrap;
-		gap: var(--space-2xs);
-		margin-bottom: var(--space-xs);
-	}
-
-	.tag {
-		font-weight: 300;
-		font-size: var(--font-size-xs);
-		color: var(--color-text-secondary);
-		transition: color 200ms var(--ease-out-custom);
-	}
-
-	a:hover .tag {
-		color: var(--color-primary-hover);
-	}
-
-	.blog__info {
-		display: flex;
-		flex-direction: column;
-	}
-
-	.blog__title {
-		overflow: hidden;
-		font-weight: var(--fontWeightMid);
-		color: var(--color-text);
-		display: -webkit-box;
-		-webkit-line-clamp: 2;
-		-webkit-box-orient: vertical;
-		text-overflow: ellipsis;
-		text-wrap: pretty;
-		transition: color 200ms var(--ease-out-custom);
-	}
-
-	a:hover .blog__title {
-		color: var(--color-primary);
-	}
-</style>

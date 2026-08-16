@@ -6,12 +6,16 @@ export const navItems = [
 		title: 'Home'
 	},
 	{
+		path: '/blogs',
+		title: 'Blogs'
+	},
+	{
 		path: '/projects',
 		title: 'Projects'
 	},
 	{
-		path: '/blogs',
-		title: 'Blogs'
+		path: '/about',
+		title: 'About'
 	},
 	{
 		path: '/contact',

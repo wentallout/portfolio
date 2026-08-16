@@ -24,6 +24,10 @@
 
 <SEO {...seoProps} />
 
-<PageTitle pageTitle="Contact" />
+<div class="w-full bg-black relative">
+	<PageTitle pageTitle="Contact" />
+	<ContactForm />
+</div>
 
-<ContactForm />
+
+

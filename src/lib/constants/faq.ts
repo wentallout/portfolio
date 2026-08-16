@@ -1,23 +1,23 @@
 export const FAQ_LIST = [
 	{
 		answer:
-			'Good UI/UX design is crucial for the success of any digital products because it can greatly impact user engagement, retention, and conversion rates. A well-designed interface can also improve brand perception and customer loyalty.',
-		question: 'Why do I need to care about UI/UX?'
+			'Design is how your visitors experience your brand and make decisions. Great UI/UX removes friction, makes your messaging clear, and turns casual browsing into meaningful client engagements.',
+		question: 'Why does UI/UX matter so much for my website?'
 	},
 	{
 		answer:
-			'I typically start by gathering as much information as possible about the project and the target audience. This may involve conducting user research, creating personas, and analyzing competitors. From there, I create wireframes and prototypes to test different design ideas and iterate based on user feedback.',
-		question: 'How do you approach a new project?'
+			'We start with a friendly conversation about your goals and target audience. From there, I structure the user journey, sketch out wireframes, and craft polished UI before writing clean, high-performance code.',
+		question: 'What is your process for a new project?'
 	},
 	{
 		answer:
-			'Success is measured by low bounce rates, user engagement, conversion rates (sign-up, purchases), performance (fast load times below 3 seconds, responsiveness), and SEO improvements like higher traffic and rankings. Client satisfaction and meeting project goals are equally crucial for overall success.',
-		question: 'How do you measure the success of a web project?'
+			'We measure success by real business outcomes: fast page loads (under 3 seconds), effortless navigation, strong visitor engagement, high conversion rates, and a site you feel proud to share.',
+		question: 'How do we measure the success of our project?'
 	},
 	{
 		answer:
-			"I take the time to understand the feedback and consider it carefully before making any changes. I also ask follow-up questions to clarify any confusion and ensure that I'm addressing the feedback effectively.",
-		question: 'How do you handle design feedback and criticism?'
+			'Collaboratively and openly! Feedback is a vital part of refining the work. I listen closely to your thoughts, explain the reasoning behind design choices, and adapt the site until it fits your vision perfectly.',
+		question: 'How do you handle design feedback?'
 	}
 ];
 

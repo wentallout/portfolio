@@ -12,94 +12,28 @@
 	}
 </script>
 
-<div class="accordion">
+<div class="border-grid-b w-full relative bg-black">
 	<button 
-		class="accordion__btn" 
+		class="w-full py-5 px-6 md:px-8 flex items-center justify-between text-left hover:bg-neutral-950/40 transition-colors group cursor-pointer" 
 		onclick={handleToggle} 
 		use:haptic={'selection'}
 		type="button"
 		aria-expanded={isOpened}
 	>
-		<p class="accordion__section text-small" class:accordion--active={isOpened}>
+		<span class="text-sm sm:text-base font-semibold text-neutral-200 group-hover:text-white transition-colors font-sans">
 			{accordionSection}
-		</p>
-		<div class="caret" class:caret-active={isOpened}>
+		</span>
+		<div class="text-neutral-400 group-hover:text-white transition-transform duration-300 shrink-0 ml-4 {isOpened ? 'rotate-180 text-rose-400' : ''}">
 			<CaretDown height="16" width="16" />
 		</div>
 	</button>
 
 	{#if isOpened}
 		<div
-			class="accordion__text text-small"
-			transition:slide={{ duration: 300, easing: quintOut }}>
+			class="px-6 md:px-8 pb-6 text-sm text-neutral-400 leading-relaxed font-sans border-grid-t pt-4 bg-neutral-950/30"
+			transition:slide={{ duration: 250, easing: quintOut }}>
 			{accordionText}
 		</div>
 	{/if}
 </div>
 
-<style lang="postcss">
-	.accordion {
-		--ease-out-custom: cubic-bezier(0.23, 1, 0.32, 1);
-		box-shadow: var(--boxShadow);
-		max-width: var(--text-width);
-		background: var(--color-bg-gradient-subtle);
-		position: relative;
-		border-radius: var(--border-radius-light);
-		overflow: hidden;
-		transition: background-color 200ms var(--ease-out-custom);
-	}
-
-	.accordion__section {
-		text-align: left;
-		text-wrap: balance;
-		transition: color 200ms var(--ease-out-custom), font-weight 200ms var(--ease-out-custom);
-	}
-
-	.accordion--active {
-		color: var(--color-primary-active);
-		font-weight: 600;
-	}
-
-	.caret {
-		display: flex;
-		align-items: center;
-		justify-content: center;
-		transition: transform 300ms var(--ease-out-custom);
-		color: var(--color-text-secondary);
-	}
-
-	.caret-active {
-		transform: rotate(180deg);
-		color: var(--color-primary-active);
-	}
-
-	.accordion__btn {
-		display: flex;
-		justify-content: space-between;
-		width: 100%;
-		cursor: pointer;
-		padding: var(--space-s);
-		background: none;
-		border: none;
-		align-items: center;
-		flex-direction: row;
-		transition: 
-			background-color 200ms var(--ease-out-custom),
-			transform 160ms var(--ease-out-custom);
-		
-		&:hover {
-			background-color: var(--color-bg-elevated);
-		}
-
-		&:active {
-			transform: scale(0.99);
-		}
-	}
-
-	.accordion__text {
-		color: var(--color-text);
-		padding: var(--space-s);
-		line-height: 1.6;
-		border-top: 1px solid rgba(var(--color-primary-rgb), 0.1);
-	}
-</style>

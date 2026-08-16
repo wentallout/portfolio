@@ -12,56 +12,55 @@
 			linkToDetail: '/projects/nvault',
 			output: '5 Pages: Home, Shop, About, Contact, Product Detail',
 			projectName: 'NVAULT - Modern NFT Market',
-			role: 'Designer, Developer',
+			role: 'DESIGN SYSTEM',
 			thumbnail: nvaultThumbnail
 		},
 		{
-			desc: 'A sleek, minimal, user-friendly Chrome extension that makes managing multiple browser tabs easier',
+			desc: 'A sleek, minimal, user-friendly Chrome extension that makes managing multiple browser tabs easier.',
 			linkToDetail: '/projects/super-tab-manager',
-			output:
-				"Features: Group similar tabs, close duplicated or harmful tabs, search tabs. UI that adapts to user's dark/light preference.",
+			output: "Group similar tabs, close duplicate tabs, search tabs effortlessly.",
 			projectName: 'Super Tab Manager',
-			role: 'Designer, Developer',
+			role: 'BROWSER EXTENSION',
 			thumbnail: superTabManagerThumbnail
 		},
 		{
 			desc: 'A simple app to help you download multiple stock images at the same time.',
 			linkToDetail: '/projects/stock-grabber',
-			output:
-				'Features: Search, select/unselect all images, download multiple images in one zip file.',
+			output: 'Search, multi-select, and download stock images in one ZIP.',
 			projectName: 'Stock Grabber',
-			role: 'Designer, Developer',
+			role: 'UTILITY APP',
 			thumbnail: stockGrabberThumbnail
 		},
 		{
-			desc: 'Mobile app that lets people book restaurant tables easily.',
+			desc: 'Mobile app that lets people book restaurant tables easily with real-time reservation system.',
 			linkToDetail: '/projects/reza',
-			output: 'UI, Research, Persona, User Flow, Wireframe, Design System, Prototype, Test',
-			projectName: 'Reza - Restaurant Reservation App',
-			role: 'UI/UX Designer',
+			output: 'User research, wireframing, design system, interactive prototyping.',
+			projectName: 'Reza - Table Reservation',
+			role: 'MOBILE APP',
 			thumbnail: rezaSquare
 		},
 		{
 			desc: 'A clean, minimal, highly customizable portfolio website for developers.',
 			linkToDetail: '/projects/dev-portfolio',
-			output: '3 screens: Home, Projects, Contact',
+			output: 'Minimalist web design system.',
 			projectName: 'Developer Portfolio',
-			role: 'UI/UX Designer',
+			role: 'WEB DESIGN',
 			thumbnail: devPortfolioSquare
 		}
 	];
 </script>
 
-<div class="projects">
-	{#each projects as project}
-		<ProjectCard {...project} />
+<div class="flex flex-col w-full relative">
+	{#each projects as project, i (project.projectName)}
+		<div class="w-full border-grid-b relative bg-black">
+			<span class="grid-plus grid-plus-tl">+</span>
+			<span class="grid-plus grid-plus-tr">+</span>
+			<ProjectCard {...project} index={i + 1} />
+		</div>
 	{/each}
 </div>
 
-<style>
-	.projects {
-		display: flex;
-		flex-direction: column;
-		gap: var(--space-xl);
-	}
-</style>
+
+
+
+

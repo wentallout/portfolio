@@ -113,16 +113,17 @@ export function textRevealBottom(node, options = {}) {
 	// Ensure overflow is hidden for reveal effect
 	node.style.overflow = 'hidden';
 	// Default animation options
-	const { delay = 1, duration = 0.2, ease = 'power4.out', stagger = 0.075, y = 200 } = options;
+	const { delay = 0.1, duration = 0.6, ease = 'power3.out', stagger = 0.08, y = 100 } = options;
 
-	// Split the text into chars
-	const split = new SplitType(node, { types: 'chars' });
+	// Split text into lines and words to preserve natural layout line wrapping
+	const split = new SplitType(node, { types: 'lines, words' });
 
-	// Set initial state
-	gsap.set(split.chars, { y });
+	// Set initial state on line wrappers
+	gsap.set(split.lines, { overflow: 'hidden' });
+	gsap.set(split.words, { y });
 
-	// Animate in
-	const anim = gsap.to(split.chars, {
+	// Animate in words cleanly
+	const anim = gsap.to(split.words, {
 		delay,
 		duration,
 		ease,

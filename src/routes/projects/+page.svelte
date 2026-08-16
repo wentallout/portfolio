@@ -26,36 +26,40 @@
 </script>
 
 <SEO {...seoProps} />
-<PageTitle pageTitle="Projects" />
 
-<section>
-	<SectionTitle sectionTitle="Things I built">
-		{#snippet children({ sectionIcon })}
-			<ProjectorScreen {...sectionIcon} />
-		{/snippet}
-	</SectionTitle>
+<div class="w-full bg-black relative">
+	<PageTitle pageTitle="Projects" />
 
-	<ProjectList />
-</section>
+	<section class="border-grid-b w-full relative">
+		<SectionTitle
+			sectionDesc="A curated collection of client websites, digital applications, and personal tools built with precision."
+			sectionTitle="Selected Client & Personal Work">
+			{#snippet children({ sectionIcon })}
+				<ProjectorScreen {...sectionIcon} />
+			{/snippet}
+		</SectionTitle>
+		<ProjectList />
+	</section>
 
-<section>
-	<SectionTitle sectionTitle="Web Animations">
-		{#snippet children({ sectionIcon })}
-			<MonitorPlay {...sectionIcon} />
-		{/snippet}
-	</SectionTitle>
+	<section class="border-grid-b w-full relative">
+		<SectionTitle
+			sectionDesc="Interactive experiments focusing on fluid interactions, micro-animations, and visual delight."
+			sectionTitle="Web Animations & Demos">
+			{#snippet children({ sectionIcon })}
+				<MonitorPlay {...sectionIcon} />
+			{/snippet}
+		</SectionTitle>
+		<VideoDemoList />
+	</section>
 
-	<VideoDemoList />
-</section>
-
-<section>
-	<SectionTitle
-		sectionDesc="Code snippets for common frontend problems"
-		sectionTitle="Code Snippets">
-		{#snippet children({ sectionIcon })}
-			<CodePen {...sectionIcon} />
-		{/snippet}
-	</SectionTitle>
-
-	<SnippetList />
-</section>
+	<section class="border-grid-b w-full relative">
+		<SectionTitle
+			sectionDesc="Handcrafted, open-source code snippets and components for common frontend challenges."
+			sectionTitle="Code Snippets & Utilities">
+			{#snippet children({ sectionIcon })}
+				<CodePen {...sectionIcon} />
+			{/snippet}
+		</SectionTitle>
+		<SnippetList />
+	</section>
+</div>

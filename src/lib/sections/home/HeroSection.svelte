@@ -1,123 +1,128 @@
 <script>
 	import { resolve } from '$app/paths';
-	import GlassButton from '$components/button/GlassButton.svelte';
-	import PrimaryButton from '$components/button/PrimaryButton.svelte';
 	import { textRevealBottom } from '$lib/actions/gsapAnimation';
 	import { tooltip } from '$lib/actions/tooltip';
-	import HeroVisual from '$lib/assets/arts/HeroArt.svelte';
-	import { CalendarCheck, ThumbsUp } from '$lib/assets/icons/icons';
 	import { CAL_BOOKING_LINK } from '$lib/constants/personal';
-	import { onMount } from 'svelte';
-	let focusIndex = 0;
 
 	let calBookingLink = resolve(CAL_BOOKING_LINK);
 </script>
 
-<section>
-	<div class="full-width">
-		<div class="hero g-container">
-			<div class="hero__block">
-				<div class="text-3xl hero__heading text-trim">
-					<div use:textRevealBottom={{ delay: 0.1, stagger: 0.03, y: 200 }}>
-						<div>Tailor-made</div>
-						<div id="hero__focus" class="hero__focus focus">
-							<span class="word">websites</span>
-						</div>
-						<div>with precision.</div>
-					</div>
-				</div>
-				<div class="hero__text text-base">
-					<p>
-						Hi, I'm <strong>Khoa Nguyen</strong>. I craft stunning websites that help businesses
-						stand out and succeed.
-					</p>
-					<p>
-						Want a modern, powerful website that <strong>drives results</strong>?
-					</p>
-				</div>
+<div class="w-full bg-black relative border-grid-b select-none overflow-hidden">
+	<!-- Top Grid Row 1 (Perfect 1:1 Squares) -->
+	<div class="grid grid-cols-10 border-grid-b w-full relative z-10">
+		{#each Array(10) as _, i (i)}
+			<div class="aspect-square border-grid-r last:border-r-0 relative">
+				<span class="grid-plus grid-plus-tr">+</span>
+				<span class="grid-plus grid-plus-br">+</span>
+			</div>
+		{/each}
+	</div>
 
-				<div class="hero__btn">
-					<a href={calBookingLink}>
-						<div use:tooltip={{ position: 'top', text: 'Check out our services' }}>
-							<PrimaryButton hapticPattern="success" label="Book a call">
-								<ThumbsUp />
-							</PrimaryButton>
-						</div>
+	<!-- Top Grid Row 2 (Perfect 1:1 Squares) -->
+	<div class="grid grid-cols-10 border-grid-b w-full relative z-10">
+		{#each Array(10) as _, i (i)}
+			<div class="aspect-square border-grid-r last:border-r-0 relative">
+				<span class="grid-plus grid-plus-tr">+</span>
+				<span class="grid-plus grid-plus-br">+</span>
+			</div>
+		{/each}
+	</div>
+
+	<!-- Central Hero Area with Left & Right 1:1 Square Grid Column Frames -->
+	<div class="grid grid-cols-10 border-grid-b w-full relative z-10">
+		<!-- Left Border Column (Col 1: Stacked 1:1 Squares) -->
+		<div class="hidden md:flex flex-col col-span-1 border-grid-r h-full relative">
+			<div class="aspect-square border-grid-b relative">
+				<span class="grid-plus grid-plus-tr">+</span><span class="grid-plus grid-plus-br">+</span>
+			</div>
+			<div class="aspect-square border-grid-b relative">
+				<span class="grid-plus grid-plus-tr">+</span><span class="grid-plus grid-plus-br">+</span>
+			</div>
+			<div class="aspect-square border-grid-b relative">
+				<span class="grid-plus grid-plus-tr">+</span><span class="grid-plus grid-plus-br">+</span>
+			</div>
+			<div class="aspect-square border-grid-b relative">
+				<span class="grid-plus grid-plus-tr">+</span><span class="grid-plus grid-plus-br">+</span>
+			</div>
+			<div class="aspect-square relative"><span class="grid-plus grid-plus-tr">+</span></div>
+		</div>
+
+		<!-- Central Hero Card -->
+		<div
+			class="col-span-10 md:col-span-8 p-8 md:p-20 flex flex-col items-start justify-center text-left bg-background relative border-grid-r z-20 transition-colors duration-200">
+			<span class="grid-plus grid-plus-tl">+</span>
+			<span class="grid-plus grid-plus-tr">+</span>
+			<span class="grid-plus grid-plus-bl">+</span>
+			<span class="grid-plus grid-plus-br">+</span>
+
+			<div class="max-w-2xl flex flex-col items-start text-left">
+				<!-- Hero Headline -->
+				<h1
+					class="text-3xl sm:text-5xl md:text-6xl font-semibold tracking-tight text-foreground mb-6 leading-[1.1]"
+					use:textRevealBottom={{ delay: 0.1, stagger: 0.03, y: 30 }}>
+					Crafting products that feel thoughtful & precise<span class="text-primary">.</span>
+				</h1>
+
+				<!-- Hero Subtitle -->
+				<p
+					class="text-sm sm:text-base text-muted-foreground max-w-xl font-normal leading-relaxed mb-8 text-pretty">
+					Hi, I'm Khoa — a designer and developer based in Ho Chi Minh City. I build custom, fast,
+					and intuitive web experiences from initial concept to clean production code.
+				</p>
+
+				<!-- Action Buttons -->
+				<div class="flex flex-wrap items-center justify-start gap-3">
+					<a
+						class="px-6 py-2.5 bg-primary text-primary-foreground font-semibold text-base hover:bg-primary/90 active:scale-95 transition-all duration-200 shadow-md inline-flex items-center gap-2"
+						href="/projects">
+						My Projects
+					</a>
+
+					<a
+						class="px-6 text-base py-2.5 bg-background border border-border text-foreground font-medium hover:bg-card active:scale-95 transition-all duration-200"
+						href={calBookingLink}
+						use:tooltip={{ position: 'top', text: 'Schedule a friendly discovery call' }}>
+						Book a Call
 					</a>
 				</div>
 			</div>
 		</div>
-		<HeroVisual />
+
+		<!-- Right Border Column (Col 10: Stacked 1:1 Squares) -->
+		<div class="hidden md:flex flex-col col-span-1 h-full relative">
+			<div class="aspect-square border-grid-b relative">
+				<span class="grid-plus grid-plus-tr">+</span><span class="grid-plus grid-plus-br">+</span>
+			</div>
+			<div class="aspect-square border-grid-b relative">
+				<span class="grid-plus grid-plus-tr">+</span><span class="grid-plus grid-plus-br">+</span>
+			</div>
+			<div class="aspect-square border-grid-b relative">
+				<span class="grid-plus grid-plus-tr">+</span><span class="grid-plus grid-plus-br">+</span>
+			</div>
+			<div class="aspect-square border-grid-b relative">
+				<span class="grid-plus grid-plus-tr">+</span><span class="grid-plus grid-plus-br">+</span>
+			</div>
+			<div class="aspect-square relative"><span class="grid-plus grid-plus-tr">+</span></div>
+		</div>
 	</div>
-</section>
 
-<style>
-	.full-width {
-		position: relative;
-	}
+	<!-- Bottom Grid Row 1 (Perfect 1:1 Squares) -->
+	<div class="grid grid-cols-10 border-grid-b w-full relative z-10">
+		{#each Array(10) as _, i (i)}
+			<div class="aspect-square border-grid-r last:border-r-0 relative">
+				<span class="grid-plus grid-plus-tr">+</span>
+				<span class="grid-plus grid-plus-br">+</span>
+			</div>
+		{/each}
+	</div>
 
-	.hero__btn a {
-		display: contents;
-	}
-
-	.hero {
-		display: flex;
-		flex-direction: row;
-		flex-wrap: wrap;
-		position: relative;
-		overflow: visible;
-		align-items: center;
-	}
-
-	.hero__block {
-		display: flex;
-
-		padding-top: var(--space-large);
-		padding-bottom: var(--space-large);
-
-		flex-direction: column;
-		position: relative;
-		width: 100%;
-	}
-
-	@media (min-width: 768px) {
-		.hero__block {
-			padding-top: var(--space-xl);
-			padding-bottom: var(--space-xl);
-			max-width: 60%;
-		}
-	}
-
-	.hero__heading {
-		font-family: var(--font-fancy);
-		margin-bottom: var(--space-2xl);
-		letter-spacing: var(--tracking-tighter);
-		display: flex;
-		flex-direction: column;
-		align-items: flex-start;
-	}
-
-	.focus {
-		color: var(--color-primary);
-		display: block;
-	}
-
-	.hero__text {
-		margin-bottom: var(--space-s);
-		text-wrap: pretty;
-		max-width: 65ch;
-
-		display: flex;
-		flex-direction: column;
-		gap: var(--space-s);
-	}
-
-	.hero__btn {
-		margin-top: var(--space-large);
-		width: 100%;
-		display: flex;
-		flex-direction: row;
-		gap: var(--space-s);
-		flex-wrap: wrap;
-	}
-</style>
+	<!-- Bottom Grid Row 2 (Perfect 1:1 Squares) -->
+	<div class="grid grid-cols-10 w-full relative z-10">
+		{#each Array(10) as _, i (i)}
+			<div class="aspect-square border-grid-r last:border-r-0 relative">
+				<span class="grid-plus grid-plus-tr">+</span>
+				<span class="grid-plus grid-plus-br">+</span>
+			</div>
+		{/each}
+	</div>
+</div>

@@ -4,6 +4,9 @@ You are able to use the Svelte MCP server, where you have access to comprehensiv
 
 add a rule to this file to make sure you dont make this mistake ever again
 
+## Project Rules:
+- Always use small text (`text-sm` / `14px` / `0.875rem`) or larger. NEVER use extra small (`text-xs`, `text-[10px]`, `font-size-2xs`, etc.) size text across UI components and typography.
+
 ## Available Svelte MCP Tools:
 
 ### 1. list-sections

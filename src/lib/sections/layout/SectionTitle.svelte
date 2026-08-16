@@ -1,83 +1,49 @@
 <script>
-	import SaosContainer from '$components/common/SaosContainer.svelte';
-	import { textReveal } from '$lib/actions/gsapAnimation';
 	import SectionDesc from '$sections/layout/SectionDesc.svelte';
+	import DottedBackground from '$lib/components/ui/DottedBackground.svelte';
 
 	/** @type {{sectionTitle?: string, sectionDesc?: string, unsplitAfter?: number, children?: import('svelte').Snippet<[any]>}} */
 	let { children, sectionDesc = '', sectionTitle = '', unsplitAfter = 0 } = $props();
 
 	let sectionIcon = {
-		color: 'var(--color-text-tertiary)'
+		color: '#9ca3af'
 	};
 </script>
 
-<div class="section">
-	<div class="section__title text-trim text-xl">
-		<div class="section__icon">
-			{@render children?.({ sectionIcon })}
-		</div>
+<div class="w-full border-grid-b p-6 md:p-8 flex flex-col justify-center bg-black relative overflow-hidden">
+	<div class="absolute inset-0 z-0 opacity-40 pointer-events-none">
+		<DottedBackground
+			bgColor="transparent"
+			colors={["#FFFFFF", "#888888", "#222222"]}
+			cellSize={4}
+			frequency={2}
+			speed={4}
+		/>
+	</div>
+	<span class="grid-plus grid-plus-tl z-10">+</span>
+	<span class="grid-plus grid-plus-tr z-10">+</span>
+
+	<div class="flex items-center gap-3 relative z-10">
+		{#if children}
+			<div class="text-neutral-400 shrink-0 flex items-center justify-center">
+				{@render children?.({ sectionIcon })}
+			</div>
+		{/if}
 		<h2
 			id={sectionTitle.toLowerCase()}
-			class="section__text"
-			data-title={sectionTitle}
-			use:textReveal={{ unsplitAfter }}>
+			class="text-xl md:text-2xl font-semibold tracking-tight text-white"
+		>
 			{sectionTitle}
 		</h2>
 	</div>
 
 	{#if sectionDesc !== ''}
-		<SectionDesc text={sectionDesc} {unsplitAfter} />
+		<div class="mt-2 text-sm text-neutral-400 font-normal leading-relaxed font-sans relative z-10">
+			<SectionDesc text={sectionDesc} {unsplitAfter} />
+		</div>
 	{/if}
 </div>
 
-<style>
-	.section {
-		margin-bottom: var(--space-xl);
-		width: 100%;
-	}
 
-	.section__title {
-		/* FLEX */
-		display: flex;
-		justify-content: left;
-		align-items: center;
-		gap: var(--space-mid);
-		/*  */
 
-		margin-bottom: var(--space-s);
-		position: relative;
-	}
 
-	.section__icon {
-		display: flex;
-		justify-content: center;
-		align-items: center;
-		position: relative;
-		font-size: 0.7em;
-	}
-	.section__icon::before {
-		content: '';
-		background: url('/images/brush-circle.svg') no-repeat center / contain;
-		width: 170%;
-		height: 170%;
-		opacity: 0.1;
-
-		position: absolute;
-		top: 50%;
-		left: 50%;
-		transform: translate(-50%, -50%);
-	}
-
-	:global([color-scheme='dark'] .section__icon::before) {
-		filter: invert(1);
-	}
-
-	.section__text {
-		font-family: var(--font-fancy);
-
-		position: relative;
-		--before-left: 4px;
-
-		letter-spacing: var(--tracking-tight);
-	}
-</style>
