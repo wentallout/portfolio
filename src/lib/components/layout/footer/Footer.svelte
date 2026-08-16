@@ -7,12 +7,12 @@
 	import DottedBackground from '$lib/components/ui/DottedBackground.svelte';
 </script>
 
-<footer class="w-full bg-black relative text-xs text-neutral-400 font-sans overflow-hidden">
-	<div class="absolute inset-0 z-0 opacity-40 pointer-events-none">
+<footer class="w-full bg-black relative text-sm text-neutral-400 font-sans overflow-hidden">
+	<div class="absolute inset-0 z-0 opacity-30 pointer-events-none">
 		<DottedBackground
 			bgColor="transparent"
-			colors={["#FFFFFF", "#888888", "#222222"]}
-			cellSize={4}
+			colors={["#000000", "#FB7185", "#FFBB00"]}
+			cellSize={2}
 			frequency={2}
 			speed={4}
 		/>
@@ -24,10 +24,10 @@
 		<div class="border-grid-r p-6 md:p-8 space-y-4 relative">
 			<span class="grid-plus grid-plus-tl">+</span>
 			<span class="grid-plus grid-plus-tr">+</span>
-			<h4 class="text-xs font-semibold text-white uppercase tracking-widest text-neutral-400">
+			<h4 class="text-sm font-semibold text-white uppercase tracking-widest text-neutral-400">
 				ABOUT
 			</h4>
-			<p class="text-neutral-400 leading-relaxed text-xs font-sans font-normal">
+			<p class="text-neutral-400 leading-relaxed text-sm font-sans font-normal">
 				Khoa Nguyen. Tailor-made, high-performance websites for businesses & creators.
 			</p>
 			<a class="inline-block text-rose-300 hover:text-white transition-colors" href="/about">
@@ -38,7 +38,7 @@
 		<!-- Column 2: Navigate -->
 		<div class="border-grid-r p-6 md:p-8 space-y-4 relative">
 			<span class="grid-plus grid-plus-tr">+</span>
-			<h4 class="text-xs font-semibold text-white uppercase tracking-widest text-neutral-400">
+			<h4 class="text-sm font-semibold text-white uppercase tracking-widest text-neutral-400">
 				NAVIGATE
 			</h4>
 			<ul class="space-y-2.5">
@@ -55,7 +55,7 @@
 		<!-- Column 3: Tools & Resources -->
 		<div class="border-grid-r p-6 md:p-8 space-y-4 relative">
 			<span class="grid-plus grid-plus-tr">+</span>
-			<h4 class="text-xs font-semibold text-white uppercase tracking-widest text-neutral-400">
+			<h4 class="text-sm font-semibold text-white uppercase tracking-widest text-neutral-400">
 				TOOLS & RESOURCES
 			</h4>
 			<ul class="space-y-2.5">
@@ -85,7 +85,7 @@
 		<!-- Column 4: Connect -->
 		<div class="p-8 md:p-10 space-y-4 relative">
 			<span class="grid-plus grid-plus-tr">+</span>
-			<h4 class="text-xs font-semibold text-white uppercase tracking-widest text-neutral-400">
+			<h4 class="text-sm font-semibold text-white uppercase tracking-widest text-neutral-400">
 				CONNECT
 			</h4>
 			<div class="flex items-center gap-2.5 pt-1">

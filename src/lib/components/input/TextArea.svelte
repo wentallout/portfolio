@@ -11,7 +11,7 @@
 
 <div class="w-full space-y-2 mb-5 font-sans group">
 	{#if label}
-		<label class="block text-xs font-semibold text-neutral-400 uppercase tracking-wider font-sans" for={label}>
+		<label class="block text-sm font-semibold text-neutral-400 uppercase tracking-wider font-sans" for={label}>
 			{label}
 		</label>
 	{/if}

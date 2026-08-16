@@ -14,7 +14,7 @@
 	} = $props();
 </script>
 
-<div class="w-full border-grid-b bg-black py-4 overflow-hidden relative select-none text-xs text-neutral-400">
+<div class="w-full border-grid-b bg-black py-4 overflow-hidden relative select-none text-sm text-neutral-400">
 	<div class="flex overflow-hidden relative gap-12 group">
 		<ul class="flex shrink-0 items-center justify-around gap-12 min-w-full animate-marquee group-hover:[animation-play-state:paused]">
 			{#each items as item (item)}

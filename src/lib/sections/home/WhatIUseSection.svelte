@@ -35,18 +35,18 @@
 				<span class="grid-plus grid-plus-br">+</span>
 
 				<div>
-					<div class="flex items-center justify-between text-xs mb-4">
+					<div class="flex items-center justify-between text-sm mb-4">
 						<span class="uppercase tracking-widest text-[10px] text-neutral-400 font-semibold"
 							>STACK</span>
 						<span class="text-neutral-500">00{i + 1}</span>
 					</div>
-					<h3 class="text-lg font-semibold text-white mb-4 tracking-tight">{category.title}</h3>
+					<h3 class="text-xl font-semibold text-white mb-4 tracking-tight">{category.title}</h3>
 				</div>
 
 				<div class="flex flex-wrap gap-2 mt-4">
 					{#each category.items as item (item)}
 						<span
-							class="px-3 py-1 text-xs rounded-full border-grid-all bg-neutral-950 text-white font-medium hover:bg-neutral-900 transition-colors">
+							class="px-3 py-1 text-sm rounded-full border-grid-all bg-neutral-950 text-white font-medium hover:bg-neutral-900 transition-colors">
 							{item}
 						</span>
 					{/each}

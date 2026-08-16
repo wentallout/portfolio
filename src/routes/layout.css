@@ -176,6 +176,17 @@
 	* {
 		font-family: 'Inter', sans-serif;
 	}
+
+	/* Keyboard focus indicator - clear, consistent, visible in both themes */
+	:where(a, button, input, textarea, select, summary, [tabindex], [role='button']):focus-visible {
+		outline: 2px solid var(--ring);
+		outline-offset: 2px;
+	}
+
+	/* Keep the outline only for keyboard navigation, not mouse clicks */
+	:focus:not(:focus-visible) {
+		outline: none;
+	}
 }
 
 .font-fancy,

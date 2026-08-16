@@ -29,7 +29,7 @@
 
 <div class="inline-flex items-center gap-2 relative">
 	<button
-		class="inline-flex items-center gap-1.5 text-neutral-300 hover:text-white transition-colors text-xs font-medium group cursor-pointer"
+		class="inline-flex items-center gap-1.5 text-neutral-300 hover:text-white transition-colors text-sm font-medium group cursor-pointer"
 		type="button"
 		onclick={copyToClipboard}
 		aria-label="Copy to clipboard"

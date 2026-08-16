@@ -20,8 +20,8 @@
 			<span class="grid-plus grid-plus-br">+</span>
 
 			<div class="relative z-10">
-				<div class="flex items-center justify-between text-xs mb-4">
-					<span class="uppercase tracking-widest text-xs text-muted-foreground font-semibold">
+				<div class="flex items-center justify-between text-sm mb-4">
+					<span class="uppercase tracking-widest text-sm text-muted-foreground font-semibold">
 						WHAT I OFFER
 					</span>
 					<span class="text-muted-foreground">001</span>
@@ -53,7 +53,7 @@
 
 			<a
 				href={CAL_BOOKING_LINK}
-				class="relative z-10 inline-flex items-center gap-1.5 text-xs text-foreground underline underline-offset-4 decoration-neutral-600 hover:decoration-foreground transition-all font-medium"
+				class="relative z-10 inline-flex items-center gap-1.5 text-sm text-foreground underline underline-offset-4 decoration-neutral-600 hover:decoration-foreground transition-all font-medium"
 			>
 				<span>Let's Chat About Your Project</span>
 				<span>→</span>
@@ -61,35 +61,35 @@
 		</div>
 
 		<!-- Feature Blueprint Box -->
-		<div class="md:col-span-5 relative bg-background p-6 md:p-8 flex flex-col justify-between hover:bg-card transition-all duration-300 h-full">
+		<div class="md:col-span-5 relative bg-black p-6 md:p-8 flex flex-col justify-between hover:bg-neutral-950/60 transition-all duration-300 h-full">
 			<span class="grid-plus grid-plus-tl">+</span>
 			<span class="grid-plus grid-plus-tr">+</span>
 			<span class="grid-plus grid-plus-bl">+</span>
 			<span class="grid-plus grid-plus-br">+</span>
 
 			<div>
-				<div class="flex items-center justify-between text-xs mb-4">
-					<span class="uppercase tracking-widest text-xs text-neutral-400 font-semibold">
+				<div class="flex items-center justify-between text-sm mb-4">
+					<span class="uppercase tracking-widest text-sm text-neutral-400 font-semibold">
 						HOW WE WORK TOGETHER
 					</span>
 					<span class="text-neutral-500">002</span>
 				</div>
 
-				<h3 class="text-2xl font-semibold text-white mb-4 tracking-tight">
+				<h3 class="text-2xl font-semibold text-white mb-5 tracking-tight">
 					One Point of Contact, End-to-End
 				</h3>
-				<p class="text-sm text-neutral-400 leading-relaxed mb-6 font-normal">
+				<p class="text-sm text-neutral-400 leading-relaxed mb-8 font-normal">
 					No communication gaps or handoff delays. I take your project personally from initial UX wireframes to final pixel-perfect deployment.
 				</p>
 			</div>
 
-			<div class="grid grid-cols-2 gap-3 pt-4 border-grid-t text-xs text-neutral-300">
+			<div class="grid grid-cols-2 gap-3 pt-6 border-grid-t text-sm text-neutral-300">
 				<div class="p-3 bg-neutral-950 border-grid-all">
-					<div class="text-neutral-500 text-xs mb-1">01 / DESIGN</div>
+					<div class="text-neutral-500 text-sm mb-1">01 / DESIGN</div>
 					<div class="font-semibold text-white">UI/UX & Design Systems</div>
 				</div>
 				<div class="p-3 bg-neutral-950 border-grid-all">
-					<div class="text-neutral-500 text-xs mb-1">02 / CODE</div>
+					<div class="text-neutral-500 text-sm mb-1">02 / CODE</div>
 					<div class="font-semibold text-white">Svelte & Production Web</div>
 				</div>
 			</div>

@@ -7,7 +7,7 @@
 	let currentYear = new Date().getFullYear();
 </script>
 
-<div class="flex flex-col md:flex-row items-center justify-between gap-4 w-full text-xs text-neutral-400 font-sans select-none">
+<div class="flex flex-col md:flex-row items-center justify-between gap-4 w-full text-sm text-neutral-400 font-sans select-none">
 	<div class="flex flex-wrap items-center gap-4">
 		<span>Copyright © {currentYear} Nguyen Dang Khoa (wentallout), All Rights Reserved.</span>
 		<Badges />

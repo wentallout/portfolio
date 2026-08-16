@@ -9,7 +9,7 @@
 	const uniqueCategories = $derived(Array.from(categories).sort((a, b) => a.localeCompare(b)));
 </script>
 
-<div class="flex flex-wrap gap-2 text-xs font-sans">
+<div class="flex flex-wrap gap-2 text-sm font-sans">
 	{#each uniqueCategories as category (category)}
 		<a href="/blogs/category/{category}">
 			<Tag>

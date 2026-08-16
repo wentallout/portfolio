@@ -12,11 +12,11 @@
 
 <header
 	class="sticky top-0 z-40 w-full border-grid-b bg-background/90 backdrop-blur-md transition-all duration-200 relative overflow-hidden">
-	<div class="absolute inset-0 z-0 opacity-40 pointer-events-none">
+	<div class="absolute inset-0 z-0 opacity-30 pointer-events-none">
 		<DottedBackground
 			bgColor="transparent"
-			cellSize={4}
-			colors={['#FFFFFF', '#888888', '#222222']}
+			cellSize={2}
+			colors={['#000000', '#FB7185', '#FFBB00']}
 			frequency={2}
 			speed={4} />
 	</div>
@@ -37,7 +37,7 @@
 						? page.url.pathname === '/'
 						: page.url.pathname.startsWith(navItem.path)}
 				<a
-					class="text-xs md:text-sm font-medium transition-colors {active
+					class="text-sm font-medium transition-colors {active
 						? 'text-foreground font-semibold underline underline-offset-4 decoration-primary'
 						: 'text-muted-foreground hover:text-foreground'}"
 					href={navItem.path}
