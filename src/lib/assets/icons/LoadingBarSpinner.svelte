@@ -3,7 +3,7 @@
 	let { ...props } = $props();
 </script>
 
-<svg height="2rem" viewBox="0 0 24 24" width="2rem" xmlns="http://www.w3.org/2000/svg" {...props}
+<svg height="2rem" viewBox="0 0 24 24" width="2rem" xmlns="http://www.w3.org/2000/svg" class="text-foreground" {...props}
 	><rect fill="currentColor" height="12" width="2.8" x="1" y="6"
 		><animate
 			id="svgSpinnersBarsScale0"
@@ -77,9 +77,3 @@
 			keySplines=".36,.61,.3,.98;.36,.61,.3,.98"
 			values="12;22;12" /></rect
 	></svg>
-
-<style>
-	svg {
-		color: var(--color-text);
-	}
-</style>

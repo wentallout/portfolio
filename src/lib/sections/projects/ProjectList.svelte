@@ -52,9 +52,7 @@
 
 <div class="flex flex-col w-full relative">
 	{#each projects as project, i (project.projectName)}
-		<div class="w-full border-grid-b relative bg-black">
-			<span class="grid-plus grid-plus-tl">+</span>
-			<span class="grid-plus grid-plus-tr">+</span>
+		<div class="w-full relative bg-background">
 			<ProjectCard {...project} index={i + 1} />
 		</div>
 	{/each}

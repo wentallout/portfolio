@@ -2,19 +2,8 @@
 	import { haptics } from '$lib/actions/haptics';
 	import { gsap } from 'gsap';
 
-	/** @type {{label?: string, labelColor?: string, width?: any, glassColor?: string, glowColor?: string, type?: "button" | "submit" | "reset", glassOpacity?: number, borderWidth?: string, children?: import('svelte').Snippet, hapticPattern?: string | number | number[] | object}} */
-	let {
-		borderWidth = '1px',
-		children,
-		glassColor = 'rgba(255, 255, 255, 0.1)',
-		glassOpacity = 0.7,
-		glowColor = 'rgba(255, 255, 255, 0.5)',
-		hapticPattern = 'medium',
-		label = '',
-		labelColor = 'var(--color-text)',
-		type = 'submit',
-		width = undefined
-	} = $props();
+	/** @type {{label?: string, type?: "button" | "submit" | "reset", children?: import('svelte').Snippet, hapticPattern?: string | number | number[] | object}} */
+	let { children, hapticPattern = 'medium', label = '', type = 'submit' } = $props();
 
 	let buttonEl;
 	let isHovered = false;
@@ -105,105 +94,11 @@
 	onmouseenter={onMouseEnter}
 	onmouseleave={onMouseLeave}
 	onmousedown={onMouseDown}
-	style:--glass-color={glassColor}
-	style:--glass-opacity={glassOpacity}
-	style:--border-width={borderWidth}
-	style:--label-color={labelColor}
-	style:--glow-color={glowColor}
-	style:width
-	class="glass-btn"
+	class="relative w-full md:w-fit px-7 py-3 bg-white/10 backdrop-blur-md border border-white/20 shadow-[0_8px_32px_rgba(0,0,0,0.1),inset_0_0_0_1px_rgba(255,255,255,0.1)] cursor-pointer overflow-hidden origin-center transition-[transform,filter,box-shadow] duration-150 hover:brightness-110 hover:scale-[1.02] hover:shadow-[0_10px_40px_rgba(0,0,0,0.15)] active:brightness-95 active:scale-[0.97] focus-visible:outline-2 focus-visible:outline-white focus-visible:outline-offset-2"
 	aria-label={`button for ${label}`}
 	{type}>
-	<span class="glass-content">
+	<span class="flex items-center justify-center gap-2 text-sm font-medium relative z-10 text-foreground">
 		{@render children?.()}
 		{label}
 	</span>
 </button>
-
-<style>
-	.glass-btn {
-		--ease-out-custom: cubic-bezier(0.23, 1, 0.32, 1);
-		position: relative;
-		padding: 12px 28px;
-		background: var(--glass-color);
-		border: var(--border-width) solid rgba(255, 255, 255, 0.2);
-		border-radius: 0px;
-		backdrop-filter: blur(10px);
-		-webkit-backdrop-filter: blur(10px);
-		box-shadow:
-			0 8px 32px 0 rgba(0, 0, 0, 0.1),
-			inset 0 0 0 1px rgba(255, 255, 255, 0.1);
-		cursor: pointer;
-		overflow: hidden;
-		width: 100%;
-		transform-origin: center;
-		transition:
-			transform 160ms cubic-bezier(0.23, 1, 0.32, 1),
-			filter 160ms cubic-bezier(0.23, 1, 0.32, 1),
-			box-shadow 160ms cubic-bezier(0.23, 1, 0.32, 1);
-		filter: brightness(1);
-	}
-
-	@media (min-width: 768px) {
-		.glass-btn {
-			width: fit-content;
-		}
-	}
-
-	.glass-content {
-		display: flex;
-		align-items: center;
-		justify-content: center;
-		gap: 8px;
-		color: var(--label-color);
-		font-weight: 600;
-		font-size: 13px;
-		z-index: 1;
-		position: relative;
-		text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
-	}
-
-	.glass-btn:hover {
-		filter: brightness(1.1);
-		transform: scale(1.02);
-		box-shadow:
-			0 10px 40px 0 rgba(0, 0, 0, 0.15),
-			inset 0 0 0 1px rgba(255, 255, 255, 0.2);
-	}
-
-	.glass-btn:active {
-		filter: brightness(0.95);
-		transform: scale(0.97);
-		transition-duration: 80ms;
-	}
-
-	.glass-btn:focus-visible {
-		outline: 2px solid #ffffff;
-		outline-offset: 2px;
-	}
-
-
-	:global(.raindrop) {
-		position: absolute;
-		width: 10px;
-		height: 10px;
-		border: 2px solid var(--glow-color);
-		background: transparent;
-		border-radius: 50%;
-		pointer-events: none;
-		z-index: 0;
-		filter: blur(0.5px);
-	}
-
-	:global(.splash) {
-		position: absolute;
-		width: 8px;
-		height: 8px;
-		border: 1.5px solid var(--glow-color);
-		background: transparent;
-		border-radius: 50%;
-		pointer-events: none;
-		z-index: 0;
-		filter: blur(0.5px);
-	}
-</style>

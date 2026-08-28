@@ -24,7 +24,7 @@
 
 <SEO {...seoProps} />
 
-<div class="w-full bg-black relative">
+<div class="w-full bg-background relative">
 	<PageTitle pageTitle="Contact" />
 	<ContactForm />
 </div>

@@ -9,7 +9,7 @@
 
 <SEO path={`/projects/${data.slug}`} title={data.title} />
 
-<article class="w-full bg-black relative">
+<article class="w-full bg-background relative">
 	<PostInfo {data} />
 
 	<PostContainer>

@@ -145,11 +145,11 @@
 	let paginatedItems = $derived(paginate({ currentPage, items: filteredBlogs, pageSize }));
 </script>
 
-<div class="w-full bg-black relative">
+<div class="w-full bg-background relative">
 	<PageTitle pageTitle="Blogs" />
 
 	<section
-		class="border-grid-b w-full relative"
+		class="w-full relative border-grid-b"
 		onclick={() => (showDropdown = false)}
 		onkeydown={() => (showDropdown = false)}
 		role="presentation">
@@ -161,10 +161,8 @@
 			{/snippet}
 		</SectionTitle>
 
-		<!-- Searonclick={(e) => e.stopPropagation()} role="presentation"
-		<div class="p-6 md:p-8 border-grid-b bg-black relative">
-			<span class="grid-plus grid-plus-tl">+</span>
-			<span class="grid-plus grid-plus-tr">+</span>
+		<!-- Search -->
+		<div class="p-6 bg-background relative">
 			<search
 				role="presentation"
 				onclick={(e) => e.stopPropagation()}
@@ -183,14 +181,16 @@
 					{#snippet dropdown()}
 						{#if showDropdown && searchTerm !== ''}
 							<div
-								class="absolute top-full left-0 z-50 w-full mt-1 bg-neutral-950 border border-neutral-800 shadow-2xl overflow-hidden max-h-96 overflow-y-auto font-sans">
+								class="absolute top-full left-0 z-50 w-full mt-1 bg-card border border-border shadow-2xl overflow-hidden max-h-96 overflow-y-auto font-sans">
 								{#if isSearching}
-									<div class="flex items-center justify-center p-4 gap-2 text-sm text-neutral-400">
+									<div
+										class="flex items-center justify-center p-4 gap-2 text-sm text-muted-foreground">
 										<LoadingBarSpinner />
 										<span>Searching articles...</span>
 									</div>
 								{:else if suggestions.length === 0}
-									<div class="flex items-center justify-center p-4 gap-2 text-sm text-neutral-400">
+									<div
+										class="flex items-center justify-center p-4 gap-2 text-sm text-muted-foreground">
 										<span>No articles matching "{searchTerm}"</span>
 									</div>
 								{:else}
@@ -198,17 +198,18 @@
 										{#each suggestions.slice(0, 8) as blog, i (blog.path)}
 											<li>
 												<button
-													class="w-full flex items-center p-2.5 gap-2.5 border-none bg-transparent hover:bg-neutral-900 focus:bg-neutral-900 cursor-pointer text-left transition-colors font-sans text-sm rounded-none {i ===
+													class="w-full flex items-center p-2.5 gap-2.5 border-none bg-transparent hover:bg-accent focus:bg-accent cursor-pointer text-left transition-colors font-sans text-sm rounded-none {i ===
 													selectedIndex
-														? 'bg-neutral-900'
+														? 'bg-muted'
 														: ''}"
 													onclick={() => handleSelect(blog)}
 													type="button">
-													<div class="text-neutral-400 flex items-center justify-center shrink-0">
+													<div
+														class="text-muted-foreground flex items-center justify-center shrink-0">
 														<MagnifyingGlass height="14" width="14" />
 													</div>
 													<div class="flex flex-col overflow-hidden min-w-0">
-														<span class="text-white text-sm font-medium truncate"
+														<span class="text-foreground text-sm font-medium truncate"
 															>{blog.meta.title}</span>
 													</div>
 												</button>
@@ -224,14 +225,12 @@
 		</div>
 
 		<!-- Tags Blueprint Row -->
-		<div class="p-6 md:p-8 border-grid-b bg-black relative">
-			<span class="grid-plus grid-plus-tl">+</span>
-			<span class="grid-plus grid-plus-tr">+</span>
+		<div class="p-6 bg-background relative">
 			<BlogTagsList {data} />
 		</div>
 
 		{#if filteredBlogs.length != 0}
-			<div class="p-4 border-grid-b bg-black flex justify-center relative">
+			<div class="p-4 bg-background flex justify-center relative">
 				<DarkPaginationNav
 					{currentPage}
 					limit={1}
@@ -245,27 +244,27 @@
 		<BlogListContainer>
 			{#if isInitialLoading}
 				<div
-					class="col-span-full flex flex-col items-center justify-center p-12 text-center text-sm text-neutral-400 font-sans gap-2">
+					class="col-span-full flex flex-col items-center justify-center p-12 text-center text-sm text-muted-foreground font-sans gap-2">
 					<LoadingBarSpinner />
 					<p>Gathering articles...</p>
 				</div>
 			{:else if isSearching}
 				<div
-					class="col-span-full flex flex-col items-center justify-center p-12 text-center text-sm text-neutral-400 font-sans gap-2">
+					class="col-span-full flex flex-col items-center justify-center p-12 text-center text-sm text-muted-foreground font-sans gap-2">
 					<LoadingBarSpinner />
 					<p>Searching articles...</p>
 				</div>
 			{:else if filteredBlogs.length === 0 && searchTerm !== ''}
 				<div
-					class="col-span-full flex flex-col items-center justify-center p-12 text-center text-sm text-neutral-400 font-sans gap-1">
-					<p class="text-white font-medium">No matching articles found</p>
-					<p class="text-neutral-400">
+					class="col-span-full flex flex-col items-center justify-center p-12 text-center text-sm text-muted-foreground font-sans gap-1">
+					<p class="text-foreground font-medium">No matching articles found</p>
+					<p class="text-muted-foreground">
 						We couldn't find any articles matching "{searchTerm}". Try searching another topic!
 					</p>
 				</div>
 			{:else if filteredBlogs.length === 0}
 				<div
-					class="col-span-full flex flex-col items-center justify-center p-12 text-center text-sm text-neutral-400 font-sans">
+					class="col-span-full flex flex-col items-center justify-center p-12 text-center text-sm text-muted-foreground font-sans">
 					<p>No articles available at the moment.</p>
 				</div>
 			{:else}
@@ -280,7 +279,7 @@
 		</BlogListContainer>
 
 		{#if filteredBlogs.length != 0}
-			<div class="p-4 border-grid-b bg-black flex justify-center relative">
+			<div class="p-4 bg-background flex justify-center relative">
 				<DarkPaginationNav
 					{currentPage}
 					limit={1}
@@ -294,23 +293,3 @@
 
 	<ResourceList />
 </div>
-
-<style>
-	:global(.dark-pagination-nav .option:hover) {
-		background: var(--popover) !important;
-	}
-
-	:global(.pagination-nav) {
-		background-color: transparent !important;
-		border-radius: 0 !important;
-		box-shadow: none !important;
-	}
-
-	:global(.dark-pagination-nav .option) {
-		color: var(--muted-foreground) !important;
-	}
-
-	:global(.dark-pagination-nav .option.active) {
-		color: var(--foreground) !important;
-	}
-</style>

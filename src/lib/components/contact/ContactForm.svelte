@@ -16,7 +16,7 @@
 
 
 
-<section class="border-grid-b w-full relative">
+<section class="w-full relative border-grid-b">
 	<SectionTitle
 		sectionDesc="Whether you have a specific project in mind, need advice on website design, or just want to say hello, feel free to send a message below or email me directly at wentallout@gmail.com. I'd love to hear from you!"
 		sectionTitle="Get in touch">
@@ -27,11 +27,7 @@
 
 	<div class="grid grid-cols-1 md:grid-cols-12 gap-0 relative items-stretch">
 		<!-- Form Side -->
-		<div class="md:col-span-7 relative border-grid-r bg-black p-6 md:p-8 flex flex-col justify-between h-full">
-			<span class="grid-plus grid-plus-tl">+</span>
-			<span class="grid-plus grid-plus-tr">+</span>
-			<span class="grid-plus grid-plus-bl">+</span>
-			<span class="grid-plus grid-plus-br">+</span>
+		<div class="md:col-span-7 relative bg-background signature-padding flex flex-col justify-between h-full">
 
 			<form name="contact" class="space-y-4 w-full" data-netlify="true" method="post">
 				<input name="form-name" type="hidden" value="contact" />
@@ -67,11 +63,7 @@
 		</div>
 
 		<!-- Info Side (Gapless Blueprint Matrix Column) -->
-		<div class="md:col-span-5 relative bg-black flex flex-col h-full">
-			<span class="grid-plus grid-plus-tl">+</span>
-			<span class="grid-plus grid-plus-tr">+</span>
-			<span class="grid-plus grid-plus-bl">+</span>
-			<span class="grid-plus grid-plus-br">+</span>
+		<div class="md:col-span-5 relative bg-background flex flex-col h-full">
 			<ContactInfo />
 		</div>
 	</div>

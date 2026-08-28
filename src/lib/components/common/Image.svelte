@@ -13,14 +13,10 @@
 </script>
 
 <ExLink ariaLabel={alt} href={src}>
-	<figure class="my-6 border border-neutral-800 bg-neutral-950 overflow-hidden relative group">
-		<span class="grid-plus grid-plus-tl">+</span>
-		<span class="grid-plus grid-plus-tr">+</span>
-		<span class="grid-plus grid-plus-bl">+</span>
-		<span class="grid-plus grid-plus-br">+</span>
+	<figure class="my-6 border border-border bg-card overflow-hidden relative group">
 		<img alt="Image of {alt}" class="w-full h-auto block m-0 transition-opacity duration-200 group-hover:opacity-90" {decoding} {height} {loading} {src} {width} />
 		{#if alt !== ''}
-			<figcaption class="text-sm text-neutral-400 bg-neutral-900 border-t border-neutral-800 p-2.5 font-sans">
+			<figcaption class="text-sm text-muted-foreground bg-muted border-t border-border p-2.5 font-sans">
 				{alt}
 			</figcaption>
 		{/if}

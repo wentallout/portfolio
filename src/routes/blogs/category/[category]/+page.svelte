@@ -7,7 +7,7 @@
 	let { data } = $props();
 </script>
 
-<div class="w-full bg-black relative">
+<div class="w-full bg-background relative">
 	<PageTitle pageTitle={`Category: #${data.category}`} />
 
 	<BlogListContainer>

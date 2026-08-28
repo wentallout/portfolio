@@ -24,7 +24,7 @@ const config = {
 		// devtoolsJson()
 	],
 	server: { port: 1111 },
-	ssr: { noExternal: ['gsap', 'split-type'] }
+	ssr: { noExternal: ['gsap', 'split-type', 'motion'] }
 };
 
 export default config;

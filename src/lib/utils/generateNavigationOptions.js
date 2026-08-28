@@ -1,3 +1,9 @@
+const SymbolType = {
+	ELLIPSIS: 'ELLIPSIS',
+	NEXT_PAGE: 'NEXT_PAGE',
+	PREVIOUS_PAGE: 'PREVIOUS_PAGE'
+};
+
 export function generateNavigationOptions({
 	currentPage,
 	limit,

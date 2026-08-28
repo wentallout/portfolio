@@ -1,20 +1,18 @@
 <script>
-	import { textReveal } from '$lib/actions/gsapAnimation';
+	import BlurText from '$lib/components/BlurText.svelte';
 
 	/** @type {{text?: string, unsplitAfter?: number}} */
 	let { text = '', unsplitAfter = 0 } = $props();
 </script>
 
 {#if text !== ''}
-	<p class="section-description text-small" use:textReveal={{ unsplitAfter }}>
+	<BlurText
 		{text}
-	</p>
+		animateBy="words"
+		delay={40}
+		direction="top"
+		threshold={0.2}
+		stepDuration={0.25}
+		class="text-sm text-muted-foreground font-normal leading-relaxed max-w-xl text-left"
+	/>
 {/if}
-
-<style>
-	.section-description {
-		max-width: var(--text-width);
-		text-align: left;
-		color: var(--color-text-secondary);
-	}
-</style>

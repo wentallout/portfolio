@@ -1,7 +1,4 @@
 <script>
-	import CardListContainer from '$components/layout/container/CardListContainer.svelte';
-	import FigmaCard from '$components/resource/FigmaCard.svelte';
-
 	let snippetList = [
 		{
 			desc: 'cool trendy glassy card',
@@ -96,8 +93,27 @@
 	];
 </script>
 
-<CardListContainer>
-	{#each snippetList as snippet}
-		<FigmaCard {...snippet} />
+<ul class="flex flex-col w-full">
+	{#each snippetList as snippet (snippet.href)}
+		<li class="w-full">
+			<a
+				href={snippet.href}
+				target="_blank"
+				rel="external nofollow noopener noreferrer"
+				class="group flex items-center justify-between gap-4 signature-padding py-4 hover:bg-card transition-colors duration-200"
+			>
+				<span class="flex items-center gap-3 min-w-0 flex-1">
+					<span class="text-sm md:text-base font-medium text-foreground shrink-0 truncate">
+						{snippet.title}
+					</span>
+					<span class="text-sm text-muted-foreground truncate hidden sm:inline">— {snippet.desc}</span>
+					<span class="text-sm text-muted-foreground truncate sm:hidden">{snippet.desc}</span>
+				</span>
+				<span
+					class="text-sm text-muted-foreground group-hover:text-foreground group-hover:translate-x-0.5 transition-all duration-200 shrink-0"
+					aria-hidden="true">↗</span
+				>
+			</a>
+		</li>
 	{/each}
-</CardListContainer>
+</ul>

@@ -101,8 +101,7 @@
 	--grid-plus-color: #737373;
 }
 
-.dark,
-[color-scheme='dark'] {
+.dark {
 	/* Dark Mode System Tokens */
 	--background: oklch(0.145 0 0);
 	--foreground: oklch(0.985 0 0);
@@ -326,6 +325,13 @@
 	color: var(--accent-foreground);
 }
 
+.signature-padding {
+	padding-top: 1.5rem; /* pt-6 */
+	padding-left: 1.5rem; /* pl-6 */
+	padding-right: 1.5rem; /* pr-6 */
+	padding-bottom: 5rem; /* pb-20 */
+}
+
 /* Intersection plus tick mark - perfectly centered at 0,0 pixel intersection */
 .grid-plus {
 	position: absolute;
@@ -380,4 +386,9 @@
 .tooltip p {
 	margin: 0;
 	white-space: nowrap;
+}
+
+.icon {
+	width: 2ch !important;
+	height: 2ch !important;
 }

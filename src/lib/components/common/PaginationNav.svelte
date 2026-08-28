@@ -1,4 +1,5 @@
 <script>
+	import { generateNavigationOptions } from '../../utils/generateNavigationOptions';
 	import { ArrowLeft, ArrowRight } from '$lib/assets/icons/icons.js';
 
 	/** Enum for symbol types */
@@ -7,8 +8,6 @@
 		NEXT_PAGE: 'NEXT_PAGE',
 		PREVIOUS_PAGE: 'PREVIOUS_PAGE'
 	};
-
-	import { generateNavigationOptions } from '../../utils/generateNavigationOptions';
 
 	// Declare props using $props rune
 	let {
@@ -41,21 +40,25 @@
 	}
 </script>
 
-<div class="pagination-nav">
+<div class="flex justify-center items-center bg-card border border-border overflow-hidden">
 	{#each options as option}
-		<span
-			class="option"
-			class:active={option.type === 'number' && option.value === currentPage}
-			class:disabled={(option.type === 'symbol' &&
+		{@const isActive = option.type === 'number' && option.value === currentPage}
+		{@const isDisabled =
+			(option.type === 'symbol' &&
 				option.symbol === SymbolType.NEXT_PAGE &&
 				currentPage >= totalPages) ||
-				(option.type === 'symbol' &&
-					option.symbol === SymbolType.PREVIOUS_PAGE &&
-					currentPage <= 1)}
-			class:ellipsis={option.type === 'symbol' && option.symbol === SymbolType.ELLIPSIS}
-			class:next={option.type === 'symbol' && option.symbol === SymbolType.NEXT_PAGE}
-			class:number={option.type === 'number'}
-			class:prev={option.type === 'symbol' && option.symbol === SymbolType.PREVIOUS_PAGE}
+			(option.type === 'symbol' &&
+				option.symbol === SymbolType.PREVIOUS_PAGE &&
+				currentPage <= 1)}
+		<span
+			class="inline-flex items-center justify-center min-w-10 h-10 px-3.5 text-sm leading-none border-r border-border shrink-0 select-none transition-colors duration-200 last:border-r-0 {isActive
+				? 'bg-muted text-foreground'
+				: 'text-muted-foreground hover:bg-muted hover:text-foreground cursor-pointer'} {isDisabled
+				? 'opacity-40 pointer-events-none'
+				: ''} {(option.type === 'symbol' && option.symbol === SymbolType.ELLIPSIS) ||
+			option.type === 'number'
+				? 'px-4'
+				: ''}"
 			onclick={() => handleOptionClick(option)}
 			role="presentation">
 			{#if option.type === 'number'}

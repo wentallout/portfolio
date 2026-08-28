@@ -21,26 +21,22 @@
 
 <div class="w-full space-y-2 mb-5 font-sans group">
 	{#if label}
-		<label class="block text-sm font-semibold text-neutral-400 uppercase tracking-wider font-sans" for={label}>
+		<label class="block text-sm font-medium text-muted-foreground uppercase tracking-wider font-sans" for={label}>
 			{label}
 		</label>
 	{/if}
 
 	<div class="relative w-full">
 		<div
-			class="flex items-center w-full border-grid-all bg-[var(--background)] relative transition-all duration-200 focus-within:border-[var(--foreground)] group-hover:border-neutral-500"
+			class="flex items-center w-full border-grid-all bg-[var(--background)] relative transition-all duration-200 focus-within:border-[var(--foreground)] group-hover:border-muted-foreground"
 			class:ring-1={isFocused}
 			class:ring-[var(--foreground)]={isFocused}
 		>
 			{#if isFocused}
-				<span class="grid-plus grid-plus-tl">+</span>
-				<span class="grid-plus grid-plus-tr">+</span>
-				<span class="grid-plus grid-plus-bl">+</span>
-				<span class="grid-plus grid-plus-br">+</span>
 			{/if}
 
 			{#if icon}
-				<div class="pl-4 pr-1 flex items-center text-neutral-400 group-focus-within:text-foreground transition-colors">
+				<div class="pl-4 pr-1 flex items-center text-muted-foreground group-focus-within:text-foreground transition-colors">
 					{@render icon?.()}
 				</div>
 			{/if}
@@ -48,7 +44,7 @@
 			<input
 				id={label}
 				{name}
-				class="w-full h-12 px-3 bg-transparent border-0 border-none outline-none text-sm text-[var(--foreground)] placeholder:text-neutral-500 focus:outline-none focus:ring-0 focus:border-none shadow-none font-sans"
+				class="w-full h-12 px-3 bg-transparent border-0 border-none outline-none text-sm text-[var(--foreground)] placeholder:text-muted-foreground focus:outline-none focus:ring-0 focus:border-none shadow-none font-sans"
 				list={list || null}
 				onblur={() => (isFocused = false)}
 				onfocus={() => (isFocused = true)}
@@ -62,7 +58,7 @@
 
 			{#if inputValue && handleClear}
 				<button
-					class="pr-4 text-neutral-400 hover:text-foreground transition-colors cursor-pointer"
+					class="pr-4 text-muted-foreground hover:text-foreground transition-colors cursor-pointer"
 					onclick={handleClear}
 					type="button"
 					aria-label="Clear input"

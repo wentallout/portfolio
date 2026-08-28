@@ -48,21 +48,16 @@
 	}
 </script>
 
-<header class="w-full border-grid-b p-6 md:p-8 flex flex-col gap-4 select-none bg-black relative">
-	<span class="grid-plus grid-plus-tl">+</span>
-	<span class="grid-plus grid-plus-tr">+</span>
-	<span class="grid-plus grid-plus-bl">+</span>
-	<span class="grid-plus grid-plus-br">+</span>
-
+<header
+	class="w-full border-grid-b signature-padding flex flex-col gap-4 select-none bg-background relative">
 	<Breadcrumb />
 
 	<h1
-		class="text-3xl sm:text-4xl md:text-5xl font-semibold tracking-tight text-white leading-tight font-fancy">
+		class="text-2xl sm:text-2xl md:text-2xl font-medium tracking-tight text-foreground leading-tight font-fancy">
 		{data.title}<span class="text-rose-500">.</span>
 	</h1>
 
-	<div
-		class="flex items-center gap-4 flex-wrap text-sm text-neutral-400 font-sans pt-2 border-t border-neutral-800/60">
+	<div class="flex items-center gap-4 flex-wrap text-sm text-muted-foreground font-sans pt-2">
 		{#if data.date}
 			<div class="flex items-center gap-1.5">
 				<CalendarBlank color="#9ca3af" height="16" width="16" />
