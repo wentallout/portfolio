@@ -29,7 +29,7 @@
 	];
 </script>
 
-<div class="grid grid-cols-1 md:grid-cols-2 grid-cols-gapless-2 gap-0 border-grid-b w-full relative items-stretch">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-0 w-full relative items-stretch">
 	{#each demos as demo (demo.title)}
 		<VideoDemoCard link={demo.link} title={demo.title} vidDemo={demo.vidDemo} />
 	{/each}

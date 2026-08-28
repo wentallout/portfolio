@@ -27,7 +27,7 @@
 
 <SEO {...seoProps} />
 
-<div class="w-full bg-black relative">
+<div class="w-full bg-background relative">
 	<PageTitle pageTitle="Projects" />
 
 	<section class="border-grid-b w-full relative">
@@ -55,7 +55,7 @@
 	<section class="border-grid-b w-full relative">
 		<SectionTitle
 			sectionDesc="Handcrafted, open-source code snippets and components for common frontend challenges."
-			sectionTitle="Code Snippets & Utilities">
+			sectionTitle="Code Snippets">
 			{#snippet children({ sectionIcon })}
 				<CodePen {...sectionIcon} />
 			{/snippet}

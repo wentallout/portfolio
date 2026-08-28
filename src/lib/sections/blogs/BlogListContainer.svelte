@@ -3,7 +3,7 @@
 	let { children } = $props();
 </script>
 
-<div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 grid-cols-gapless-3 gap-0 border-grid-b w-full relative items-stretch">
+<div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 grid-cols-gapless-3 gap-0 w-full relative items-stretch">
 	{@render children?.()}
 </div>
 

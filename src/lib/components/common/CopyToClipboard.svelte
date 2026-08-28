@@ -29,14 +29,14 @@
 
 <div class="inline-flex items-center gap-2 relative">
 	<button
-		class="inline-flex items-center gap-1.5 text-neutral-300 hover:text-white transition-colors text-sm font-medium group cursor-pointer"
+		class="inline-flex items-center gap-1.5 text-muted-foreground hover:text-foreground transition-colors text-sm font-medium group cursor-pointer"
 		type="button"
 		onclick={copyToClipboard}
 		aria-label="Copy to clipboard"
 	>
 		<span class="inline-flex items-center gap-1.5">
 			{@render children?.()}
-			<CopySimple class="shrink-0 text-neutral-400 group-hover:text-rose-400 transition-colors" height="14" width="14" />
+			<CopySimple class="shrink-0 text-muted-foreground group-hover:text-rose-400 transition-colors" height="14" width="14" />
 		</span>
 	</button>
 	
@@ -44,7 +44,7 @@
 		<div 
 			in:fly={{ y: 6, duration: 250, easing: quintOut }} 
 			out:fade={{ duration: 150 }} 
-			class="absolute left-full ml-2 px-2 py-0.5 bg-neutral-900 text-rose-300 text-[10px] font-medium border-grid-all whitespace-nowrap pointer-events-none"
+			class="absolute left-full ml-2 px-2 py-0.5 bg-muted text-rose-300 text-sm font-medium border-grid-all whitespace-nowrap pointer-events-none"
 		>
 			Copied!
 		</div>

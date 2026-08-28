@@ -1,27 +1,7 @@
 import * as personal from '$lib/constants/personal';
+import { navItems } from '$lib/constants/uxCopy.js';
 
-export const navItems = [
-	{
-		path: '/',
-		title: 'Home'
-	},
-	{
-		path: '/blogs',
-		title: 'Blogs'
-	},
-	{
-		path: '/projects',
-		title: 'Projects'
-	},
-	{
-		path: '/about',
-		title: 'About'
-	},
-	{
-		path: '/contact',
-		title: 'Contact'
-	}
-];
+export { navItems };
 
 const website = {
 	author: personal.author,

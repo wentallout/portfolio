@@ -32,22 +32,22 @@
 			<Wrench {...sectionIcon} />
 		{/snippet}
 	</SectionTitle>
-	<div class="converter">
-		<div class="input-group">
+	<div class="flex flex-col gap-8">
+		<div class="flex flex-row items-center gap-4 border border-border min-h-40">
 			<button
-				class="converter__copy"
+				class="bg-primary text-primary-foreground min-w-10 self-stretch flex justify-center items-center hover:bg-[var(--brand-yellow-hover)] disabled:opacity-0 cursor-pointer"
 				disabled={!pxInput}
 				onclick={copyToClipboard(pxInput)}
 				type="button">
 				<Copy height="24" width="24" />
 			</button>
-			<input id="px" name="px" class="converter__input" type="number" bind:value={pxInput} />
-			<label class="converter__label" for="px">PX</label>
+			<input id="px" name="px" class="w-full h-full text-2xl appearance-none bg-transparent outline-none focus:outline-none px-2" type="number" bind:value={pxInput} />
+			<label class="text-2xl font-medium text-muted-foreground pr-4" for="px">PX</label>
 		</div>
 
-		<div class="input-group">
+		<div class="flex flex-row items-center gap-4 border border-border min-h-40">
 			<button
-				class="converter__copy"
+				class="bg-primary text-primary-foreground min-w-10 self-stretch flex justify-center items-center hover:bg-[var(--brand-yellow-hover)] disabled:opacity-0 cursor-pointer"
 				disabled={!remInput}
 				onclick={copyToClipboard(remInput)}
 				type="button">
@@ -56,68 +56,13 @@
 			<input
 				id="rem"
 				name="rem"
-				style="color:var(--color-primary);"
-				class="converter__input"
+				class="w-full h-full text-2xl appearance-none bg-transparent outline-none focus:outline-none px-2 text-primary"
 				oninput={() => {
 					pxInput = remInput * baseFontSize;
 				}}
 				type="number"
 				bind:value={remInput} />
-			<label class="converter__label" for="rem">REM</label>
+			<label class="text-2xl font-medium text-muted-foreground pr-4" for="rem">REM</label>
 		</div>
 	</div>
 </section>
-
-<style>
-	.converter__copy {
-		background-color: var(--color-primary);
-		align-self: stretch;
-		color: var(--color-black);
-		min-width: 40px;
-
-		display: flex;
-		justify-content: center;
-		align-items: center;
-
-		&:hover {
-			cursor: pointer;
-			background-color: var(--color-primary-hover);
-		}
-
-		&:disabled {
-			opacity: 0;
-		}
-	}
-
-	.input-group {
-		border: 1px solid var(--color-border);
-		min-height: 160px;
-		display: flex;
-		flex-direction: row;
-		align-items: center;
-		gap: var(--space-s);
-	}
-
-	.converter__input {
-		width: 100%;
-		height: 100%;
-		font-size: var(--font-size-3xl);
-		appearance: none;
-
-		&:focus-visible {
-			outline: 0;
-		}
-	}
-
-	.converter {
-		display: flex;
-		flex-direction: column;
-		gap: var(--space-large);
-	}
-
-	.converter__label {
-		font-size: var(--font-size-3xl);
-		font-weight: 600;
-		color: var(--color-text-secondary);
-	}
-</style>

@@ -27,77 +27,21 @@
 	}
 </script>
 
-<div class="error">
-	<div class="error__info">
+<div class="flex flex-col justify-center items-center flex-wrap gap-6 p-8 relative mt-8 h-dvh">
+	<div class="flex flex-col justify-start text-muted-foreground">
 		{#if page.error}
-			<h1 class="status">
-				<div class="status__code text-3xl">{page.status} {page.error.message}</div>
+			<h1 class="mb-8 grid items-center grid-cols-[auto_1fr] gap-6 text-destructive font-fancy">
+				<div class="text-2xl">{page.status} {page.error.message}</div>
 			</h1>
 		{/if}
 
-		<div class="detail text-small">
+		<div class="text-sm text-muted-foreground mb-6 max-w-xl">
 			{customMessage}
 		</div>
-		<a class="back" href="/" rel="external">
+		<a class="text-center" href="/" rel="external">
 			<PrimaryButton label="Take Me Home">
 				<House height="16" width="16" />
 			</PrimaryButton>
 		</a>
 	</div>
 </div>
-
-<style>
-	.error {
-		/* FLEX */
-		display: flex;
-		flex-direction: column;
-		justify-content: center;
-		align-items: center;
-		flex-wrap: wrap;
-		gap: var(--space-mid);
-		/* --- */
-
-		padding: var(--space-large);
-		position: relative;
-		margin-top: var(--space-large);
-
-		height: 100dvh;
-	}
-	.back {
-		text-align: center;
-	}
-
-	.error__info {
-		display: flex;
-		flex-direction: column;
-		justify-content: flex-start;
-		color: var(--color-text-secondary);
-	}
-
-	.status {
-		margin-bottom: var(--space-xl);
-		display: grid;
-		align-items: center;
-		grid-template-columns: auto 1fr;
-		color: var(--color-error);
-		font-family: var(--font-fancy);
-		gap: var(--space-mid);
-	}
-
-	.status__code {
-		font-size: var(--font-size-3xl);
-	}
-
-	.detail {
-		display: flex;
-		flex-direction: row;
-		justify-content: center;
-		align-items: center;
-		gap: var(--space-s);
-		margin-bottom: var(--space-mid);
-		display: inline-block;
-		color: var(--color-text-secondary);
-		font-weight: var(--fontWeightSmall);
-		max-width: var(--text-width);
-	}
-</style>

@@ -29,76 +29,10 @@
 
 <svelte:window onscroll={handleOnScroll} />
 
-<button use:haptic={'medium'} class="bck2top" class:hidden onclick={goTop} type="button">
+<button
+	use:haptic={'medium'}
+	class="fixed right-3 bottom-3 z-50 flex flex-col justify-center items-center aspect-square w-10 rounded-full bg-primary text-primary-foreground shadow-md select-none transition-opacity duration-300 hover:brightness-110 active:text-[var(--brand-yellow-active)] {hidden ? 'opacity-0 invisible' : 'opacity-100 visible'}"
+	onclick={goTop}
+	type="button">
 	<ArrowLineUp height="16" width="16" />
 </button>
-
-<style>
-	@keyframes progress {
-		0% {
-			--progress: 0%;
-		}
-
-		100% {
-			--progress: 100%;
-		}
-	}
-
-	@property --progress {
-		syntax: '<length-percentage>';
-		inherits: false;
-		initial-value: 0%;
-	}
-	.bck2top {
-		aspect-ratio: 1/1;
-		width: 40px;
-		border-radius: 100%;
-
-		/* FLEX */
-		display: flex;
-		justify-content: center;
-		align-items: center;
-		flex-direction: column;
-		/* --- */
-
-		/* POSITION FIXED ON SCREEN */
-		position: fixed;
-		right: 12px;
-		bottom: 12px;
-		z-index: var(--z-index-max);
-		/*  */
-
-		/* OTHER */
-		opacity: 1;
-		transition:
-			opacity 0.3s,
-			visibility 0.3s;
-		user-select: none;
-		line-height: normal;
-		/*  */
-
-		box-shadow: var(--boxShadow);
-		color: var(--color-text);
-
-		background-image: linear-gradient(
-			var(--color-primary) 0% var(--progress),
-			var(--color-bg-elevated) var(--progress) 100%
-		);
-
-		animation: progress linear;
-		animation-timeline: scroll();
-
-		&:hover {
-			filter: brightness(1.2);
-		}
-
-		&:active {
-			color: var(--color-primary-active);
-		}
-
-		&.hidden {
-			opacity: 0;
-			visibility: hidden;
-		}
-	}
-</style>

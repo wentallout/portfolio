@@ -8,14 +8,7 @@
 	aria-label={ariaLabel}
 	{href}
 	rel="external nofollow noopener noreferrer"
-	target="_blank">
+	target="_blank"
+	class="block relative isolate">
 	{@render children?.()}
 </a>
-
-<style>
-	a {
-		display: block;
-		position: relative;
-		isolation: isolate;
-	}
-</style>

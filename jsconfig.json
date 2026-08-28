@@ -16,8 +16,6 @@
 		"skipLibCheck": true,
 		"sourceMap": true,
 		"strict": true,
-		"verbatimModuleSyntax": true,
-		"noUnusedLocals": true, // Report errors on unused local variables.
-		"noUnusedParameters": true
+		"verbatimModuleSyntax": true
 	}
 }

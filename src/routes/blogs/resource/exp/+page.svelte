@@ -3,6 +3,3 @@
 </script>
 
 <PageTitle pageTitle="Experiment" />
-
-<style>
-</style>

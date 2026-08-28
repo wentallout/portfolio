@@ -6,17 +6,12 @@
 
 <a
 	aria-label={`link to ${title}`}
-	class="group flex flex-col justify-between border-grid-r border-grid-b bg-black hover:bg-neutral-950/60 transition-all duration-300 relative h-full w-full"
+	class="group flex flex-col justify-between bg-background hover:bg-card transition-all duration-300 relative h-full w-full overflow-hidden"
 	href={link}
 	target="_blank"
 	rel="noreferrer"
 >
-	<span class="grid-plus grid-plus-tl">+</span>
-	<span class="grid-plus grid-plus-tr">+</span>
-	<span class="grid-plus grid-plus-bl">+</span>
-	<span class="grid-plus grid-plus-br">+</span>
-
-	<div class="w-full aspect-video bg-neutral-950 border-grid-b overflow-hidden relative">
+	<div class="w-full aspect-video bg-card overflow-hidden relative">
 		<video
 			class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
 			autoplay
@@ -29,11 +24,11 @@
 		</video>
 	</div>
 
-	<div class="p-6 bg-black flex items-center justify-between flex-1">
-		<h4 class="text-base font-semibold text-white group-hover:text-rose-400 transition-colors">
+	<div class="signature-padding bg-background flex items-center justify-between flex-1">
+		<h4 class="text-base font-medium text-foreground group-hover:text-rose-400 transition-colors">
 			{title}
 		</h4>
-		<span class="text-sm text-neutral-400 group-hover:text-white group-hover:translate-x-1 transition-all duration-200">
+		<span class="text-sm text-muted-foreground group-hover:text-foreground group-hover:translate-x-1 transition-all duration-200">
 			↗
 		</span>
 	</div>

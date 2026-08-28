@@ -11,23 +11,20 @@
 		{/snippet}
 	</SectionTitle>
 
-<div class="grid grid-cols-1 md:grid-cols-12 gap-0 relative items-stretch">
+	<div class="grid grid-cols-1 md:grid-cols-12 gap-0 relative items-stretch">
 		<!-- Services Info Card (Blueprint Card) -->
-		<div class="md:col-span-7 relative border-grid-r bg-background p-6 md:p-8 flex flex-col justify-between hover:bg-card transition-all duration-300 h-full overflow-hidden">
-			<span class="grid-plus grid-plus-tl">+</span>
-			<span class="grid-plus grid-plus-tr">+</span>
-			<span class="grid-plus grid-plus-bl">+</span>
-			<span class="grid-plus grid-plus-br">+</span>
+		<div
+			class="md:col-span-7 relative bg-background signature-padding flex flex-col justify-between hover:bg-card transition-all duration-300 h-full overflow-hidden">
 
 			<div class="relative z-10">
 				<div class="flex items-center justify-between text-sm mb-4">
-					<span class="uppercase tracking-widest text-sm text-muted-foreground font-semibold">
+					<span class="uppercase tracking-widest text-sm text-muted-foreground font-medium">
 						WHAT I OFFER
 					</span>
 					<span class="text-muted-foreground">001</span>
 				</div>
 
-				<h3 class="text-2xl font-semibold text-foreground mb-6 tracking-tight">
+				<h3 class="text-2xl font-medium text-foreground mb-6 tracking-tight">
 					Tailor-made Website Design & Frontend Development
 				</h3>
 
@@ -38,66 +35,66 @@
 					</li>
 					<li class="flex items-center gap-3">
 						<span class="text-foreground">✓</span>
-						<span>Built from scratch with <strong class="text-foreground font-medium">SvelteKit, JavaScript, HTML & custom CSS</strong></span>
+						<span
+							>Built from scratch with <strong class="text-foreground font-medium"
+								>SvelteKit, JavaScript, HTML & custom CSS</strong
+							></span>
 					</li>
 					<li class="flex items-center gap-3">
 						<span class="text-foreground">✓</span>
-						<span><strong class="text-foreground font-medium">Truly Responsive:</strong> Meticulously crafted for mobile, tablet, and widescreen viewports</span>
+						<span
+							><strong class="text-foreground font-medium">Truly Responsive:</strong> Meticulously crafted
+							for mobile, tablet, and widescreen viewports</span>
 					</li>
 					<li class="flex items-center gap-3">
 						<span class="text-foreground">✓</span>
-						<span>Grounded in <strong class="text-foreground font-medium">thoughtful UX, accessibility, fast loading, and organic SEO</strong></span>
+						<span
+							>Grounded in <strong class="text-foreground font-medium"
+								>thoughtful UX, accessibility, fast loading, and organic SEO</strong
+							></span>
 					</li>
 				</ul>
 			</div>
 
 			<a
 				href={CAL_BOOKING_LINK}
-				class="relative z-10 inline-flex items-center gap-1.5 text-sm text-foreground underline underline-offset-4 decoration-neutral-600 hover:decoration-foreground transition-all font-medium"
-			>
-				<span>Let's Chat About Your Project</span>
+				class="relative z-10 inline-flex items-center gap-1.5 text-sm text-foreground underline underline-offset-4 decoration-muted-foreground hover:decoration-foreground transition-all font-medium">
+				<span>Let's Chat</span>
 				<span>→</span>
 			</a>
 		</div>
 
 		<!-- Feature Blueprint Box -->
-		<div class="md:col-span-5 relative bg-black p-6 md:p-8 flex flex-col justify-between hover:bg-neutral-950/60 transition-all duration-300 h-full">
-			<span class="grid-plus grid-plus-tl">+</span>
-			<span class="grid-plus grid-plus-tr">+</span>
-			<span class="grid-plus grid-plus-bl">+</span>
-			<span class="grid-plus grid-plus-br">+</span>
+		<div
+			class="md:col-span-5 relative bg-background signature-padding flex flex-col justify-between hover:bg-card transition-all duration-300 h-full">
 
 			<div>
 				<div class="flex items-center justify-between text-sm mb-4">
-					<span class="uppercase tracking-widest text-sm text-neutral-400 font-semibold">
+					<span class="uppercase tracking-widest text-sm text-muted-foreground font-medium">
 						HOW WE WORK TOGETHER
 					</span>
-					<span class="text-neutral-500">002</span>
+					<span class="text-muted-foreground">002</span>
 				</div>
 
-				<h3 class="text-2xl font-semibold text-white mb-5 tracking-tight">
+				<h3 class="text-2xl font-medium text-foreground mb-5 tracking-tight">
 					One Point of Contact, End-to-End
 				</h3>
-				<p class="text-sm text-neutral-400 leading-relaxed mb-8 font-normal">
-					No communication gaps or handoff delays. I take your project personally from initial UX wireframes to final pixel-perfect deployment.
+				<p class="text-sm text-muted-foreground leading-relaxed mb-8 font-normal">
+					No communication gaps or handoff delays. I take your project personally from initial UX
+					wireframes to final pixel-perfect deployment.
 				</p>
 			</div>
 
-			<div class="grid grid-cols-2 gap-3 pt-6 border-grid-t text-sm text-neutral-300">
-				<div class="p-3 bg-neutral-950 border-grid-all">
-					<div class="text-neutral-500 text-sm mb-1">01 / DESIGN</div>
-					<div class="font-semibold text-white">UI/UX & Design Systems</div>
+			<div class="grid grid-cols-2 gap-3 pt-6 text-sm text-muted-foreground">
+				<div class="p-3 bg-card border border-border">
+					<div class="text-muted-foreground text-sm mb-1">01 / DESIGN</div>
+					<div class="font-medium text-foreground">UI/UX & Design Systems</div>
 				</div>
-				<div class="p-3 bg-neutral-950 border-grid-all">
-					<div class="text-neutral-500 text-sm mb-1">02 / CODE</div>
-					<div class="font-semibold text-white">Svelte & Production Web</div>
+				<div class="p-3 bg-card border border-border">
+					<div class="text-muted-foreground text-sm mb-1">02 / CODE</div>
+					<div class="font-medium text-foreground">Svelte & Production Web</div>
 				</div>
 			</div>
 		</div>
 	</div>
-
 </section>
-
-
-
-

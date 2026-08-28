@@ -20,9 +20,7 @@
 			<MonitorPlay {...sectionIcon} />
 		{/snippet}
 	</SectionTitle>
-	<div class="p-6 md:p-8">
-		<VideoDemoList />
-	</div>
+	<VideoDemoList />
 </section>
 
 

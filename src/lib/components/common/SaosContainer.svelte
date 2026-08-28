@@ -8,45 +8,8 @@
 	} = $props();
 </script>
 
-<div>
+<div class="relative">
 	<Saos {animation} {once}>
 		{@render children?.()}
 	</Saos>
 </div>
-
-<style>
-	div {
-		position: relative;
-	}
-
-	@keyframes -global-fade-in {
-		from {
-			opacity: 0;
-		}
-		to {
-			opacity: 1;
-		}
-	}
-
-	@keyframes -global-fade-in-top {
-		from {
-			transform: translateY(-50px);
-			opacity: 0;
-		}
-		to {
-			transform: translateY(0);
-			opacity: 1;
-		}
-	}
-
-	@keyframes -global-slide-in-left {
-		from {
-			transform: translateX(-1000px);
-			opacity: 0;
-		}
-		to {
-			transform: translateX(0);
-			opacity: 1;
-		}
-	}
-</style>

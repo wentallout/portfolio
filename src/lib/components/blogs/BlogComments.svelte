@@ -8,18 +8,14 @@
 	let categoryId = $derived(category === 'Blogs' ? 'DIC_kwDOH5VoSc4CV-u6' : 'DIC_kwDOH5VoSc4CV-xr');
 </script>
 
-<section class="w-full border-grid-b p-6 md:p-8 bg-black relative">
-	<span class="grid-plus grid-plus-tl">+</span>
-	<span class="grid-plus grid-plus-tr">+</span>
-	<span class="grid-plus grid-plus-bl">+</span>
-	<span class="grid-plus grid-plus-br">+</span>
+<section class="w-full border-grid-b signature-padding bg-background relative">
 
 	<div class="flex items-center justify-between text-sm mb-6">
-		<span class="uppercase tracking-widest text-sm text-neutral-400 font-semibold font-sans flex items-center gap-2">
+		<span class="uppercase tracking-widest text-sm text-muted-foreground font-medium font-sans flex items-center gap-2">
 			<Article color="#9ca3af" height="16" width="16" />
 			DISCUSSION
 		</span>
-		<span class="text-neutral-500 font-sans">COMMENTS</span>
+		<span class="text-muted-foreground font-sans">COMMENTS</span>
 	</div>
 
 	<BlogGiscus
@@ -34,5 +30,5 @@
 		repo="wentallout/portfolio"
 		repoId="R_kgDOH5VoSQ"
 		strict="0"
-		theme="transparent_dark" />
+		theme="preferred_color_scheme" />
 </section>
