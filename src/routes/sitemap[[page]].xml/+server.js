@@ -1,6 +1,6 @@
 import { getBlogSlugs } from '$lib/utils/blogs.js';
 import { getProjectSlugs } from '$lib/utils/projects.js';
-import * as sitemap from 'super-sitemap';
+import * as sitemap from 'super-sitemap/sveltekit';
 
 export const GET = async ({ params }) => {
 	let blogSlugs = await getBlogSlugs();
