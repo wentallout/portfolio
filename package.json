@@ -29,7 +29,6 @@
     "knip": "knip"
   },
   "devDependencies": {
-    "@arcjet/sveltekit": "^1.11.0",
     "@csstools/postcss-cascade-layers": "^6.0.0",
     "@csstools/postcss-global-data": "^4.0.0",
     "@fontsource-variable/jetbrains-mono": "^5.3.0",
@@ -85,6 +84,7 @@
   },
   "dependencies": {
     "@arcjet/inspect": "^1.11.0",
+    "@arcjet/sveltekit": "^1.11.0",
     "@giscus/svelte": "^3.1.0",
     "mode-watcher": "^1.1.0",
     "motion": "^13.1.1",

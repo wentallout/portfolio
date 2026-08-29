@@ -11,6 +11,9 @@ importers:
       '@arcjet/inspect':
         specifier: ^1.11.0
         version: 1.11.0
+      '@arcjet/sveltekit':
+        specifier: ^1.11.0
+        version: 1.11.0(svelte@5.56.10)
       '@giscus/svelte':
         specifier: ^3.1.0
         version: 3.1.0(svelte@5.56.10)
@@ -33,9 +36,6 @@ importers:
         specifier: ^0.1.5
         version: 0.1.5
     devDependencies:
-      '@arcjet/sveltekit':
-        specifier: ^1.11.0
-        version: 1.11.0(svelte@5.56.10)
       '@csstools/postcss-cascade-layers':
         specifier: ^6.0.0
         version: 6.0.0(postcss@8.5.26)

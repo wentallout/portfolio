@@ -26,7 +26,7 @@ const config = {
 	optimizeDeps: {
 		exclude: ['mode-watcher', '@giscus/svelte', 'svelte-toc', 'sveltekit-embed', 'saos']
 	},
-	ssr: { noExternal: ['gsap', 'split-type', 'motion'] }
+	ssr: { noExternal: ['gsap', 'split-type', 'motion', /@arcjet\/.*/, 'arcjet'] }
 };
 
 export default config;
