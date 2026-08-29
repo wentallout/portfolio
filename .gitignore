@@ -110,3 +110,4 @@ playwright/.cache/
 
 # Local Netlify folder
 .netlify
+.fallow/

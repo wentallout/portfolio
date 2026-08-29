@@ -5,6 +5,7 @@ export async function load({ params }) {
 
 	return {
 		content,
+		// fallow-ignore-next-line unused-load-data-key
 		date,
 		slug: params.slug,
 		title

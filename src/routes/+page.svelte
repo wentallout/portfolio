@@ -1,5 +1,6 @@
 <script>
 	import SEO from '$components/seo/SEO.svelte';
+	import { META_DESCRIPTIONS, PAGE_TITLES } from '$lib/constants/labels';
 	import FeaturedProject from '$sections/home/Featured.svelte';
 	import GetInTouch from '$sections/home/GetInTouch.svelte';
 	import HeroSection from '$sections/home/HeroSection.svelte';
@@ -8,16 +9,16 @@
 
 	const breadcrumbs = [
 		{
-			name: 'Home',
+			name: PAGE_TITLES.home,
 			slug: ''
 		}
 	];
 
 	const seoProps = {
 		breadcrumbs,
-		metadescription: 'Welcome to Portfolio of Khoa',
+		metadescription: META_DESCRIPTIONS.home,
 		slug: '',
-		title: 'Home'
+		title: PAGE_TITLES.home
 	};
 </script>
 

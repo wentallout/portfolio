@@ -7,10 +7,9 @@ import { imagetools } from 'vite-imagetools';
 /** @type {import('vite').UserConfig} */
 const config = {
 	build: {
-		cssMinify: 'lightningcss',
 		rollupOptions: { external: ['@resvg/resvg-js'] }
 	},
-	css: { transformer: 'lightningcss' },
+
 	plugins: [
 		tailwindcss(),
 		sveltekit(),
@@ -24,6 +23,9 @@ const config = {
 		// devtoolsJson()
 	],
 	server: { port: 1111 },
+	optimizeDeps: {
+		exclude: ['mode-watcher', '@giscus/svelte', 'svelte-toc', 'sveltekit-embed', 'saos']
+	},
 	ssr: { noExternal: ['gsap', 'split-type', 'motion'] }
 };
 

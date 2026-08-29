@@ -1,11 +1,10 @@
 <script>
-	import { resolve } from '$app/paths';
 	import { tooltip } from '$lib/actions/tooltip';
 	import Ballpit from '$lib/components/Ballpit.svelte';
 	import BlurText from '$lib/components/BlurText.svelte';
 	import { CAL_BOOKING_LINK } from '$lib/constants/personal';
 
-	let calBookingLink = resolve(CAL_BOOKING_LINK);
+	const calBookingLink = CAL_BOOKING_LINK;
 </script>
 
 <div class="w-full bg-transparent relative border-grid-b select-none overflow-hidden">
@@ -22,7 +21,7 @@
 			ambientColor={0xffffff}
 			ambientIntensity={1}
 			lightIntensity={120}
-			colors={[0x6366f1, 0x8b5cf6, 0x06b6d4, 0xe2e8f0, 0x0f172a]}
+			colors={[0xffbb00, 0xe0a400, 0xc79200, 0x525252, 0x171717]}
 			class="opacity-80 dark:opacity-60" />
 		<!-- soft fade so balls don't clash with grid edges -->
 		<div

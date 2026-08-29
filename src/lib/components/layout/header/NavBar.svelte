@@ -19,34 +19,37 @@
 		aria-hidden="true">
 	</div>
 
-	<div class="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between relative z-10">
-		<a
-			class="font-fancy text-base tracking-tight text-foreground flex items-center hover:opacity-90 transition-opacity"
-			href="/"
-			use:haptic={'selection'}>
-			Khoa Nguyen
-		</a>
+	<div class="max-w-6xl mx-auto px-6 py-4 grid grid-cols-2 items-center relative z-10">
+		<!-- Left: Logo + Navigation Links -->
+		<div class="flex items-center gap-6">
+			<a
+				class="font-fancy text-base tracking-tight text-foreground flex items-center hover:opacity-90 transition-opacity"
+				href="/"
+				use:haptic={'selection'}>
+				Khoa Nguyen
+			</a>
 
-		<!-- Desktop Navigation Menu -->
-		<nav class="hidden md:flex items-center gap-6" aria-label="primary menu">
-			{#each navItems as navItem (navItem.path)}
-				{@const active =
-					navItem.path === '/'
-						? page.url.pathname === '/'
-						: page.url.pathname.startsWith(navItem.path)}
-				<a
-					class="text-sm font-medium transition-colors {active
-						? 'text-foreground font-medium underline underline-offset-4 decoration-primary'
-						: 'text-foreground/65 dark:text-foreground/75 hover:text-foreground'}"
-					href={navItem.path}
-					use:haptic={'selection'}>
-					{navItem.title}
-				</a>
-			{/each}
-		</nav>
+			<!-- Desktop Navigation Menu -->
+			<nav class="hidden md:flex items-center gap-6" aria-label="primary menu">
+				{#each navItems as navItem (navItem.path)}
+					{@const active =
+						navItem.path === '/'
+							? page.url.pathname === '/'
+							: page.url.pathname.startsWith(navItem.path)}
+					<a
+						class="text-sm font-medium transition-colors {active
+							? 'text-foreground font-medium underline underline-offset-4 decoration-primary'
+							: 'text-foreground/65 dark:text-foreground/75 hover:text-foreground'}"
+						href={navItem.path}
+						use:haptic={'selection'}>
+						{navItem.title}
+					</a>
+				{/each}
+			</nav>
+		</div>
 
-		<!-- Right Utilities -->
-		<div class="flex items-center gap-2">
+		<!-- Right: Theme Switcher -->
+		<div class="flex items-center justify-end gap-2">
 			<ThemeSwitcher />
 		</div>
 	</div>

@@ -42,4 +42,4 @@ Parcel: https://parceljs.org/
 esbuild: https://esbuild.github.io/
 Rollup: https://rollupjs.org/guide/en/
 Rspack: https://www.rspack.dev/
-Lightning CSS: https://lightningcss.dev/
+

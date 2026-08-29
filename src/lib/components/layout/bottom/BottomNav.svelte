@@ -28,9 +28,9 @@
 		<a
 			href={item.path}
 			use:haptic={'selection'}
-			class="flex flex-col items-center gap-1 px-3 py-1 rounded-lg transition-all duration-200 text-sm font-mono tracking-tight {active ? 'text-foreground font-medium' : 'text-muted-foreground hover:text-foreground'}"
+			class="flex flex-col items-center gap-1 px-3 py-1 rounded-lg transition-all duration-200 text-sm font-mono tracking-tight {active ? 'text-primary font-medium' : 'text-muted-foreground hover:text-foreground'}"
 		>
-			<div class="transition-transform duration-200 {active ? 'scale-110 text-foreground' : 'text-muted-foreground'}">
+			<div class="transition-transform duration-200 {active ? 'scale-110 text-primary' : 'text-muted-foreground'}">
 				<item.icon width="18" height="18" />
 			</div>
 			<span>{item.title}</span>

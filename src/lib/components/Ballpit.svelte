@@ -201,7 +201,11 @@
 				if (m.isMesh && m.material && typeof m.material === 'object') {
 					Object.keys(m.material).forEach((k) => {
 						const p = (m.material as Record<string, unknown>)[k];
-						if (p && typeof p === 'object' && typeof (p as { dispose?: () => void }).dispose === 'function')
+						if (
+							p &&
+							typeof p === 'object' &&
+							typeof (p as { dispose?: () => void }).dispose === 'function'
+						)
 							(p as { dispose: () => void }).dispose();
 					});
 					m.material.dispose?.();
@@ -399,7 +403,7 @@ void main() {
 
 	const DEFAULT_CONFIG = {
 		count: 200,
-		colors: [0, 0, 0],
+		colors: [0xffbb00, 0xe0a400, 0xc79200],
 		ambientColor: 0xffffff,
 		ambientIntensity: 1,
 		lightIntensity: 200,

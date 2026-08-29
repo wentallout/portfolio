@@ -1,16 +1,11 @@
 <script>
 	import GlassButton from './GlassButton.svelte';
 
-	/** @type {{label?: string, children?: import('svelte').Snippet, hapticPattern?: string | number | number[] | object}} */
-	let { children, hapticPattern = 'medium', label } = $props();
+	/** @type {{children?: import('svelte').Snippet, label?: string, type?: "button" | "submit" | "reset", hapticPattern?: string | number | number[] | object}} */
+	let { children, hapticPattern = 'medium', label, type = 'submit' } = $props();
 </script>
 
-<GlassButton
-	glassColor="#ffffff"
-	glowColor="#ffffff"
-	{hapticPattern}
-	{label}
-	labelColor="#000000">
+<GlassButton {hapticPattern} {label} {type} variant="primary">
 	{@render children?.()}
 </GlassButton>
 

@@ -1,25 +1,19 @@
+import { PAGE_TITLES } from './labels.js';
+
 // Unified UX copy — single source of truth for navigation labels and site copy
-// Edit titles here to update both desktop (NavBar) and mobile (BottomNav)
+// Edit titles in labels.js to update both desktop (NavBar) and mobile (BottomNav)
 
 export const navItems = [
 	{
-		path: '/',
-		title: 'Home'
-	},
-	{
 		path: '/blogs',
-		title: 'Blogs'
+		title: PAGE_TITLES.blogs
 	},
 	{
 		path: '/projects',
-		title: 'Projects'
-	},
-	{
-		path: '/about',
-		title: 'About'
+		title: PAGE_TITLES.projects
 	},
 	{
 		path: '/contact',
-		title: 'Contact'
+		title: PAGE_TITLES.contact
 	}
 ];

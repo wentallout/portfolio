@@ -1,5 +1,6 @@
 <script>
-	import SectionDesc from '$sections/layout/SectionDesc.svelte';
+	import BlurText from '$lib/components/BlurText.svelte';
+	
 
 	/** @type {{sectionTitle?: string, sectionDesc?: string, unsplitAfter?: number, children?: import('svelte').Snippet<[any]>}} */
 	let { children, sectionDesc = '', sectionTitle = '', unsplitAfter = 0 } = $props();
@@ -11,17 +12,17 @@
 
 <div
 	class="w-full signature-padding flex flex-col justify-center bg-background relative overflow-hidden">
-	<div class="flex items-center gap-4 relative z-10">
+	<div class="flex items-center gap-6 relative text-4xl">
+		<h2
+			id={sectionTitle.toLowerCase()}
+			class="font-medium tracking-tight text-foreground font-fancy">
+			<BlurText animateBy="words" direction="top" text={sectionTitle} class="font-fancy" />
+		</h2>
 		{#if children}
 			<div class="text-muted-foreground shrink-0 flex items-center justify-center">
 				{@render children?.({ sectionIcon })}
 			</div>
 		{/if}
-		<h2
-			id={sectionTitle.toLowerCase()}
-			class="text-2xl md:text-2xl font-medium tracking-tight text-foreground">
-			{sectionTitle}
-		</h2>
 	</div>
 
 	{#if sectionDesc !== ''}

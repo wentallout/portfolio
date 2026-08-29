@@ -1,4 +1,9 @@
 @import 'tailwindcss';
+@import 'tw-animate-css';
+@import 'shadcn-svelte/tailwind.css';
+@import '@fontsource-variable/jetbrains-mono';
+
+@custom-variant dark (&:is(.dark *));
 @plugin '@tailwindcss/forms';
 @plugin '@tailwindcss/typography';
 
@@ -21,6 +26,27 @@
 	--color-border: var(--border);
 	--color-input: var(--input);
 	--color-ring: var(--ring);
+	--font-mono: 'JetBrains Mono Variable', monospace;
+	--color-sidebar-ring: var(--sidebar-ring);
+	--color-sidebar-border: var(--sidebar-border);
+	--color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+	--color-sidebar-accent: var(--sidebar-accent);
+	--color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+	--color-sidebar-primary: var(--sidebar-primary);
+	--color-sidebar-foreground: var(--sidebar-foreground);
+	--color-sidebar: var(--sidebar);
+	--color-chart-5: var(--chart-5);
+	--color-chart-4: var(--chart-4);
+	--color-chart-3: var(--chart-3);
+	--color-chart-2: var(--chart-2);
+	--color-chart-1: var(--chart-1);
+	--radius-sm: calc(var(--radius) * 0.6);
+	--radius-md: calc(var(--radius) * 0.8);
+	--radius-lg: var(--radius);
+	--radius-xl: calc(var(--radius) * 1.4);
+	--radius-2xl: calc(var(--radius) * 1.8);
+	--radius-3xl: calc(var(--radius) * 2.2);
+	--radius-4xl: calc(var(--radius) * 2.6);
 }
 
 @font-face {
@@ -48,45 +74,40 @@
 	--font-fancy: 'Nightmare', serif;
 	--radius: 0.625rem;
 
-	/* Brand & System Tokens */
-	--brand-yellow: #ffbb00;
-	--brand-yellow-hover: #e0a400;
-	--brand-yellow-active: #c79200;
-
-	/* Light Mode System Tokens */
-	--background: oklch(1 0 0);
-	--foreground: oklch(0.145 0 0);
-	--card: oklch(1 0 0);
-	--card-foreground: oklch(0.145 0 0);
-	--popover: oklch(1 0 0);
-	--popover-foreground: oklch(0.145 0 0);
-	--primary: #ffbb00;
-	--primary-foreground: #121212;
-	--secondary: oklch(0.97 0 0);
-	--secondary-foreground: oklch(0.205 0 0);
-	--muted: oklch(0.97 0 0);
-	--muted-foreground: oklch(0.556 0 0);
-	--accent: oklch(0.97 0 0);
-	--accent-foreground: oklch(0.205 0 0);
+	/* Light Mode System Tokens (Kin Washi & Aizome Indigo) */
+	--background: oklch(0.985 0.005 85); /* Warm Washi paper background */
+	--foreground: oklch(0.2 0.03 230); /* Deep Aizome / Charcoal */
+	--card: oklch(0.995 0.003 85);
+	--card-foreground: oklch(0.2 0.03 230);
+	--popover: oklch(0.995 0.003 85);
+	--popover-foreground: oklch(0.2 0.03 230);
+	--primary: oklch(0.74 0.16 85); /* Kintsugi Gold */
+	--primary-foreground: oklch(0.18 0.04 230);
+	--secondary: oklch(0.94 0.015 220); /* Light Seigaiha mist */
+	--secondary-foreground: oklch(0.24 0.04 230);
+	--muted: oklch(0.95 0.01 220);
+	--muted-foreground: oklch(0.48 0.03 230);
+	--accent: oklch(0.74 0.16 85 / 15%); /* Gold accent tint */
+	--accent-foreground: oklch(0.2 0.03 230);
 	--destructive: oklch(0.577 0.245 27.325);
-	--border: oklch(0.922 0 0);
-	--input: oklch(0.922 0 0);
-	--ring: #ffbb00;
-	--chart-1: oklch(0.646 0.222 41.116);
-	--chart-2: oklch(0.6 0.118 184.704);
-	--chart-3: oklch(0.398 0.07 227.392);
-	--chart-4: oklch(0.828 0.189 84.429);
-	--chart-5: oklch(0.769 0.188 70.08);
-	--sidebar: oklch(0.985 0 0);
-	--sidebar-foreground: oklch(0.145 0 0);
-	--sidebar-primary: #ffbb00;
-	--sidebar-primary-foreground: #121212;
-	--sidebar-accent: oklch(0.97 0 0);
-	--sidebar-accent-foreground: oklch(0.205 0 0);
-	--sidebar-border: oklch(0.922 0 0);
-	--sidebar-ring: #ffbb00;
+	--border: oklch(0.9 0.01 220);
+	--input: oklch(0.9 0.01 220);
+	--ring: oklch(0.74 0.16 85);
+	--chart-1: oklch(0.74 0.16 85);
+	--chart-2: oklch(0.38 0.06 220);
+	--chart-3: oklch(0.5 0.05 220);
+	--chart-4: oklch(0.65 0.08 85);
+	--chart-5: oklch(0.28 0.04 230);
+	--sidebar: oklch(0.98 0.005 85);
+	--sidebar-foreground: oklch(0.2 0.03 230);
+	--sidebar-primary: oklch(0.74 0.16 85);
+	--sidebar-primary-foreground: oklch(0.18 0.04 230);
+	--sidebar-accent: oklch(0.94 0.015 220);
+	--sidebar-accent-foreground: oklch(0.2 0.03 230);
+	--sidebar-border: oklch(0.9 0.01 220);
+	--sidebar-ring: oklch(0.74 0.16 85);
 
-	/* Legacy Component Variable Mappings */
+	/* Component Variable Mappings */
 	--color-bg-layout: var(--background);
 	--color-bg-container: var(--card);
 	--color-bg-elevated: var(--popover);
@@ -95,47 +116,47 @@
 	--color-border: var(--border);
 	--color-border-secondary: var(--border);
 	--color-primary: var(--primary);
-	--color-primary-hover: var(--brand-yellow-hover);
-	--color-primary-active: var(--brand-yellow-active);
-	--grid-border-color: #e5e5e5;
-	--grid-plus-color: #737373;
+	--color-primary-hover: oklch(0.68 0.16 85);
+	--color-primary-active: oklch(0.6 0.16 85);
+	--grid-border-color: oklch(0.9 0.01 220);
+	--grid-plus-color: oklch(0.74 0.16 85);
 }
 
 .dark {
-	/* Dark Mode System Tokens */
-	--background: oklch(0.145 0 0);
-	--foreground: oklch(0.985 0 0);
-	--card: oklch(0.205 0 0);
-	--card-foreground: oklch(0.985 0 0);
-	--popover: oklch(0.269 0 0);
-	--popover-foreground: oklch(0.985 0 0);
-	--primary: #ffbb00;
-	--primary-foreground: #121212;
-	--secondary: oklch(0.269 0 0);
-	--secondary-foreground: oklch(0.985 0 0);
-	--muted: oklch(0.269 0 0);
-	--muted-foreground: oklch(0.708 0 0);
-	--accent: oklch(0.371 0 0);
-	--accent-foreground: oklch(0.985 0 0);
+	/* Dark Mode System Tokens (Urushi Night & Metallic Kintsugi Gold) */
+	--background: oklch(0.18 0.025 230); /* Deep Japanese Indigo / Urushi Night */
+	--foreground: oklch(0.96 0.008 85); /* Off-white / Washi Silk */
+	--card: oklch(0.22 0.03 230);
+	--card-foreground: oklch(0.96 0.008 85);
+	--popover: oklch(0.22 0.03 230);
+	--popover-foreground: oklch(0.96 0.008 85);
+	--primary: oklch(0.74 0.16 85); /* Kintsugi Gold seam */
+	--primary-foreground: oklch(0.15 0.03 230);
+	--secondary: oklch(0.27 0.035 230);
+	--secondary-foreground: oklch(0.96 0.008 85);
+	--muted: oklch(0.27 0.035 230);
+	--muted-foreground: oklch(0.72 0.02 220);
+	--accent: oklch(0.74 0.16 85 / 20%);
+	--accent-foreground: oklch(0.96 0.008 85);
 	--destructive: oklch(0.704 0.191 22.216);
-	--border: oklch(1 0 0 / 10%);
-	--input: oklch(1 0 0 / 15%);
-	--ring: #ffbb00;
-	--chart-1: oklch(0.488 0.243 264.376);
-	--chart-2: oklch(0.696 0.17 162.48);
-	--chart-3: oklch(0.769 0.188 70.08);
-	--chart-4: oklch(0.627 0.265 303.9);
-	--chart-5: oklch(0.645 0.246 16.439);
-	--sidebar: oklch(0.205 0 0);
-	--sidebar-foreground: oklch(0.985 0 0);
-	--sidebar-primary: #ffbb00;
-	--sidebar-primary-foreground: #121212;
-	--sidebar-accent: oklch(0.269 0 0);
-	--sidebar-accent-foreground: oklch(0.985 0 0);
-	--sidebar-border: oklch(1 0 0 / 10%);
-	--sidebar-ring: #ffbb00;
+	--border: oklch(0.3 0.03 230);
+	--input: oklch(0.3 0.03 230);
+	--ring: oklch(0.74 0.16 85);
+	--chart-1: oklch(0.74 0.16 85);
+	--chart-2: oklch(0.55 0.07 220);
+	--chart-3: oklch(0.45 0.05 220);
+	--chart-4: oklch(0.78 0.14 85);
+	--chart-5: oklch(0.3 0.04 230);
+	--sidebar: oklch(0.2 0.028 230);
+	--sidebar-foreground: oklch(0.96 0.008 85);
+	--sidebar-primary: oklch(0.74 0.16 85);
+	--sidebar-primary-foreground: oklch(0.15 0.03 230);
+	--sidebar-accent: oklch(0.27 0.035 230);
+	--sidebar-accent-foreground: oklch(0.96 0.008 85);
+	--sidebar-border: oklch(0.3 0.03 230);
+	--sidebar-ring: oklch(0.74 0.16 85);
 
-	/* Legacy Component Variable Mappings */
+	/* Component Variable Mappings */
 	--color-bg-layout: var(--background);
 	--color-bg-container: var(--card);
 	--color-bg-elevated: var(--popover);
@@ -144,10 +165,10 @@
 	--color-border: var(--border);
 	--color-border-secondary: var(--border);
 	--color-primary: var(--primary);
-	--color-primary-hover: var(--brand-yellow-hover);
-	--color-primary-active: var(--brand-yellow-active);
-	--grid-border-color: #262626;
-	--grid-plus-color: #525252;
+	--color-primary-hover: oklch(0.68 0.16 85);
+	--color-primary-active: oklch(0.6 0.16 85);
+	--grid-border-color: oklch(0.3 0.03 230);
+	--grid-plus-color: oklch(0.74 0.16 85);
 }
 
 @layer base {
@@ -170,10 +191,14 @@
 		transition:
 			background-color 200ms ease,
 			color 200ms ease;
+
+		@apply bg-background text-foreground;
 	}
 
 	* {
 		font-family: 'Inter', sans-serif;
+
+		@apply border-border outline-ring/50;
 	}
 
 	/* Keyboard focus indicator - clear, consistent, visible in both themes */
@@ -391,4 +416,33 @@
 .icon {
 	width: 2ch !important;
 	height: 2ch !important;
+}
+
+/* Layout Outer Gutter Background */
+.layout-gutter-bg {
+	position: relative;
+}
+
+.layout-gutter-bg::before {
+	content: '';
+	position: absolute;
+	inset: 0;
+	pointer-events: none;
+
+	opacity: 0.2;
+	mask-image: url('/seigaiha.svg');
+	mask-size: 56px 28px;
+	mask-repeat: repeat;
+	-webkit-mask-image: url('/seigaiha.svg');
+	-webkit-mask-size: 56px 28px;
+	-webkit-mask-repeat: repeat;
+}
+
+.layout-gutter-bg {
+	background-color: var(--background);
+}
+
+.layout-gutter-bg::before {
+	background-color: var(--muted-foreground);
+	opacity: 0.1;
 }

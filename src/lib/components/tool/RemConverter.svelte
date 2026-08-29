@@ -35,7 +35,7 @@
 	<div class="flex flex-col gap-8">
 		<div class="flex flex-row items-center gap-4 border border-border min-h-40">
 			<button
-				class="bg-primary text-primary-foreground min-w-10 self-stretch flex justify-center items-center hover:bg-[var(--brand-yellow-hover)] disabled:opacity-0 cursor-pointer"
+				class="bg-primary text-primary-foreground min-w-10 self-stretch flex justify-center items-center hover:bg-primary/90 disabled:opacity-0 cursor-pointer"
 				disabled={!pxInput}
 				onclick={copyToClipboard(pxInput)}
 				type="button">
@@ -47,7 +47,7 @@
 
 		<div class="flex flex-row items-center gap-4 border border-border min-h-40">
 			<button
-				class="bg-primary text-primary-foreground min-w-10 self-stretch flex justify-center items-center hover:bg-[var(--brand-yellow-hover)] disabled:opacity-0 cursor-pointer"
+				class="bg-primary text-primary-foreground min-w-10 self-stretch flex justify-center items-center hover:bg-primary/90 disabled:opacity-0 cursor-pointer"
 				disabled={!remInput}
 				onclick={copyToClipboard(remInput)}
 				type="button">

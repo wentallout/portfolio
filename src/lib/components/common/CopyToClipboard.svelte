@@ -36,7 +36,7 @@
 	>
 		<span class="inline-flex items-center gap-1.5">
 			{@render children?.()}
-			<CopySimple class="shrink-0 text-muted-foreground group-hover:text-rose-400 transition-colors" height="14" width="14" />
+			<CopySimple class="shrink-0 text-muted-foreground group-hover:text-primary transition-colors" height="14" width="14" />
 		</span>
 	</button>
 	
@@ -44,7 +44,7 @@
 		<div 
 			in:fly={{ y: 6, duration: 250, easing: quintOut }} 
 			out:fade={{ duration: 150 }} 
-			class="absolute left-full ml-2 px-2 py-0.5 bg-muted text-rose-300 text-sm font-medium border-grid-all whitespace-nowrap pointer-events-none"
+			class="absolute left-full ml-2 px-2 py-0.5 bg-primary text-primary-foreground text-sm font-medium border-grid-all whitespace-nowrap pointer-events-none"
 		>
 			Copied!
 		</div>

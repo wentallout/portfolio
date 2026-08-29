@@ -3,6 +3,7 @@ You are able to use the Svelte MCP server, where you have access to comprehensiv
 ## Every time you make a mistake
 
 add a rule to this file to make sure you dont make this mistake ever again
+- Never create custom brand color variable aliases (like `--brand-yellow` or `--brand-gold`). Always rely directly on native shadcn theme tokens (`var(--primary)`, `bg-primary`, `text-primary`, etc.).
 
 ## Project Rules:
 - Always use small text (`text-sm` / `14px` / `0.875rem`) or larger. NEVER use extra small (`text-xs`, `text-[10px]`, `font-size-2xs`, etc.) size text across UI components and typography.

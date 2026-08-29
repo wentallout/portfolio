@@ -14,7 +14,7 @@
 	<div class="flex flex-col gap-1.5 min-w-0 flex-1">
 		{#if href}
 			<ExLink {href}>
-				<div class="text-sm font-medium text-foreground hover:text-rose-400 transition-colors">
+				<div class="text-sm font-medium text-foreground hover:text-primary transition-colors">
 					{title}
 				</div>
 			</ExLink>

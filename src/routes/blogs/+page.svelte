@@ -1,10 +1,11 @@
 <script>
 	import BlogCard from '$components/blogs/BlogCard.svelte';
 	import DarkPaginationNav from '$components/common/DarkPaginationNav.svelte';
-	import PageTitle from '$components/common/PageTitle.svelte';
+	import Breadcrumb from '$components/other/Breadcrumb.svelte';
 	import TextInput from '$components/input/TextInput.svelte';
 	import { Article, MagnifyingGlass } from '$lib/assets/icons/icons';
 	import LoadingBarSpinner from '$lib/assets/icons/LoadingBarSpinner.svelte';
+	import { PAGE_TITLES, SECTION_TITLES } from '$lib/constants/labels';
 	import { blogs } from '$lib/stores/blogStore.svelte.js';
 	import BlogListContainer from '$sections/blogs/BlogListContainer.svelte';
 	import BlogTagsList from '$sections/blogs/BlogTagsList.svelte';
@@ -146,16 +147,16 @@
 </script>
 
 <div class="w-full bg-background relative">
-	<PageTitle pageTitle="Blogs" />
+	<div class="px-6 py-4 border-grid-b bg-background">
+		<Breadcrumb minDepth={1} />
+	</div>
 
 	<section
 		class="w-full relative border-grid-b"
 		onclick={() => (showDropdown = false)}
 		onkeydown={() => (showDropdown = false)}
 		role="presentation">
-		<SectionTitle
-			sectionDesc="Articles on frontend architecture, Svelte 5, modern CSS, UI/UX design, and tech insights."
-			sectionTitle="Thoughts, Tutorials & Guides">
+		<SectionTitle sectionTitle={SECTION_TITLES.thoughts}>
 			{#snippet children({ sectionIcon })}
 				<Article {...sectionIcon} />
 			{/snippet}
@@ -270,7 +271,6 @@
 			{:else}
 				{#each paginatedItems as paginatedItem (paginatedItem.path)}
 					<BlogCard
-						blogDate={paginatedItem.meta.date}
 						blogLink={paginatedItem.path}
 						blogTags={paginatedItem.meta.categories}
 						blogTitle={paginatedItem.meta.title} />
