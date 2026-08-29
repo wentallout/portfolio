@@ -72,13 +72,8 @@
 			y: window.innerHeight / 2
 		});
 
-		const createSpin = () => {
-			spinTl?.kill();
-			spinTl = gsap
-				.timeline({ repeat: -1 })
-				.to(cursor, { rotation: '+=360', duration: spinDuration, ease: 'none' });
-		};
-		createSpin();
+		gsap.set(cursor, { rotation: 0 });
+
 
 		tickerFn = () => {
 			if (!targetCornerPositions || !cursor) return;
@@ -201,21 +196,8 @@
 				});
 
 				resumeTimeout = setTimeout(() => {
-					if (!activeTarget && cursor && spinTl) {
-						const r = gsap.getProperty(cursor, 'rotation') as number;
-						const norm = r % 360;
-						spinTl.kill();
-						spinTl = gsap
-							.timeline({ repeat: -1 })
-							.to(cursor, { rotation: '+=360', duration: spinDuration, ease: 'none' });
-						gsap.to(cursor, {
-							rotation: norm + 360,
-							duration: spinDuration * (1 - norm / 360),
-							ease: 'none',
-							onComplete: () => {
-								spinTl?.restart();
-							}
-						});
+					if (!activeTarget && cursor) {
+						gsap.set(cursor, { rotation: 0 });
 					}
 					resumeTimeout = null;
 				}, 50);

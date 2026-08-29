@@ -31,19 +31,14 @@
 <footer class="w-full bg-background relative text-sm font-sans overflow-hidden">
 	<!-- animated dotted background -->
 	<div
-		class="absolute inset-0 z-0 opacity-80 dark:opacity-90 pointer-events-none"
+		class="absolute inset-0 z-0 opacity-5 dark:opacity-60 pointer-events-none"
 		aria-hidden="true">
 		<DottedBackground
 			bgColor="transparent"
 			cellSize={2}
-			colors={['var(--foreground)', 'var(--primary)']}
+			colors={['var(--background)', 'var(--muted)']}
 			frequency={2}
 			speed={5} />
-	</div>
-	<!-- subtle gradient vignette for text legibility -->
-	<div
-		class="absolute inset-0 z-[1] bg-gradient-to-t from-background/90 via-background/60 to-background/40 pointer-events-none"
-		aria-hidden="true">
 	</div>
 
 	<!-- 4-Column Blueprint Grid Matrix -->

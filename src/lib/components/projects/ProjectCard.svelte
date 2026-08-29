@@ -15,9 +15,9 @@
 </script>
 
 <a
+	class="group block relative bg-background hover:bg-card transition-colors duration-300 w-full overflow-hidden"
 	href={linkToDetail}
-	use:haptic={'selection'}
-	class="group block relative bg-background hover:bg-card transition-colors duration-300 w-full overflow-hidden">
+	use:haptic={'selection'}>
 	<article class="md:grid md:grid-cols-12 gap-0 items-stretch w-full relative">
 		<!-- Left: Text Details -->
 		<div class="md:col-span-6 flex flex-col justify-between h-full space-y-4 signature-padding">
@@ -53,7 +53,8 @@
 				<span
 					class="underline underline-offset-4 decoration-muted-foreground group-hover:decoration-primary group-hover:text-primary transition-all"
 					>View Project</span>
-				<span class="group-hover:translate-x-1 group-hover:text-primary transition-all duration-200">→</span>
+				<span class="group-hover:translate-x-1 group-hover:text-primary transition-all duration-200"
+					>→</span>
 			</div>
 		</div>
 

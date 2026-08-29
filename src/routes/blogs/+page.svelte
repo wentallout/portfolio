@@ -3,7 +3,7 @@
 	import DarkPaginationNav from '$components/common/DarkPaginationNav.svelte';
 	import Breadcrumb from '$components/other/Breadcrumb.svelte';
 	import TextInput from '$components/input/TextInput.svelte';
-	import { Article, MagnifyingGlass } from '$lib/assets/icons/icons';
+	import { MagnifyingGlass } from '$lib/assets/icons/icons';
 	import LoadingBarSpinner from '$lib/assets/icons/LoadingBarSpinner.svelte';
 	import { PAGE_TITLES, SECTION_TITLES } from '$lib/constants/labels';
 	import { blogs } from '$lib/stores/blogStore.svelte.js';
@@ -156,11 +156,7 @@
 		onclick={() => (showDropdown = false)}
 		onkeydown={() => (showDropdown = false)}
 		role="presentation">
-		<SectionTitle sectionTitle={SECTION_TITLES.thoughts}>
-			{#snippet children({ sectionIcon })}
-				<Article {...sectionIcon} />
-			{/snippet}
-		</SectionTitle>
+		<SectionTitle sectionTitle={SECTION_TITLES.thoughts} />
 
 		<!-- Search -->
 		<div class="p-6 bg-background relative">

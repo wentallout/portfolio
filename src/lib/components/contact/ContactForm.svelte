@@ -6,7 +6,6 @@
 	import {
 		ArrowCounterClockwise,
 		At,
-		EnvelopeSimple,
 		PaperPlaneRight,
 		User
 	} from '$lib/assets/icons/icons';
@@ -16,11 +15,7 @@
 </script>
 
 <section class="w-full relative border-grid-b">
-	<SectionTitle sectionTitle={SECTION_TITLES.getInTouch}>
-		{#snippet children({ sectionIcon })}
-			<EnvelopeSimple {...sectionIcon} />
-		{/snippet}
-	</SectionTitle>
+	<SectionTitle sectionTitle={SECTION_TITLES.getInTouch} />
 
 	<div class="grid grid-cols-1 md:grid-cols-12 gap-0 relative items-stretch">
 		<!-- Form Side -->

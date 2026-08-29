@@ -350,11 +350,13 @@
 	color: var(--accent-foreground);
 }
 
-.signature-padding {
-	padding-top: 1.5rem; /* pt-6 */
-	padding-left: 1.5rem; /* pl-6 */
-	padding-right: 1.5rem; /* pr-6 */
-	padding-bottom: 5rem; /* pb-20 */
+@layer utilities {
+	.signature-padding {
+		padding-top: 1.5rem; /* pt-6 */
+		padding-left: 1.5rem; /* pl-6 */
+		padding-right: 1.5rem; /* pr-6 */
+		padding-bottom: 5rem; /* pb-20 */
+	}
 }
 
 /* Intersection plus tick mark - perfectly centered at 0,0 pixel intersection */

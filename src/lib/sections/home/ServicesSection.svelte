@@ -1,16 +1,11 @@
 <script>
-	import { HandHeart } from '$lib/assets/icons/icons';
 	import { SECTION_TITLES } from '$lib/constants/labels';
 	import { CAL_BOOKING_LINK } from '$lib/constants/personal';
 	import SectionTitle from '$sections/layout/SectionTitle.svelte';
 </script>
 
 <section class="border-grid-b w-full relative">
-	<SectionTitle sectionTitle={SECTION_TITLES.services}>
-		{#snippet children({ sectionIcon })}
-			<HandHeart {...sectionIcon} />
-		{/snippet}
-	</SectionTitle>
+	<SectionTitle sectionTitle={SECTION_TITLES.services} />
 
 	<div class="grid grid-cols-1 md:grid-cols-2 gap-0 relative items-stretch">
 		<!-- Services Info Card (Blueprint Card) -->

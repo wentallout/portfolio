@@ -1,7 +1,6 @@
 <script>
 	import Breadcrumb from '$components/other/Breadcrumb.svelte';
 	import SEO from '$components/seo/SEO.svelte';
-	import { CodePen, MonitorPlay, ProjectorScreen } from '$lib/assets/icons/icons';
 	import { META_DESCRIPTIONS, PAGE_TITLES, SECTION_TITLES } from '$lib/constants/labels';
 	import SectionTitle from '$sections/layout/SectionTitle.svelte';
 	import ProjectList from '$sections/projects/ProjectList.svelte';
@@ -34,29 +33,17 @@
 	</div>
 
 	<section class="border-grid-b w-full relative">
-		<SectionTitle sectionTitle={SECTION_TITLES.featured}>
-			{#snippet children({ sectionIcon })}
-				<ProjectorScreen {...sectionIcon} />
-			{/snippet}
-		</SectionTitle>
+		<SectionTitle sectionTitle={SECTION_TITLES.featured} />
 		<ProjectList />
 	</section>
 
 	<section class="border-grid-b w-full relative">
-		<SectionTitle sectionTitle={SECTION_TITLES.webDemos}>
-			{#snippet children({ sectionIcon })}
-				<MonitorPlay {...sectionIcon} />
-			{/snippet}
-		</SectionTitle>
+		<SectionTitle sectionTitle={SECTION_TITLES.webDemos} />
 		<VideoDemoList />
 	</section>
 
 	<section class="border-grid-b w-full relative">
-		<SectionTitle sectionTitle={SECTION_TITLES.codeSnippets}>
-			{#snippet children({ sectionIcon })}
-				<CodePen {...sectionIcon} />
-			{/snippet}
-		</SectionTitle>
+		<SectionTitle sectionTitle={SECTION_TITLES.codeSnippets} />
 		<SnippetList />
 	</section>
 </div>

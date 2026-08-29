@@ -31,8 +31,7 @@
 	<!-- Top Grid Row (single — reduced from 2 for compact hero) -->
 	<div class="hidden sm:grid grid-cols-10 border-grid-b w-full relative z-10">
 		{#each Array(10) as _, i (i)}
-			<div class="aspect-square border-grid-r last:border-r-0 relative">
-			</div>
+			<div class="aspect-square border-grid-r last:border-r-0 relative"></div>
 		{/each}
 	</div>
 
@@ -40,35 +39,31 @@
 	<div class="grid grid-cols-10 border-grid-b w-full relative z-10">
 		<!-- Left Border Column (compact — 3:1 squares) -->
 		<div class="hidden md:flex flex-col col-span-1 border-grid-r h-full relative">
-			<div class="aspect-square border-grid-b relative">
-			</div>
-			<div class="aspect-square border-grid-b relative">
-			</div>
+			<div class="aspect-square border-grid-b relative"></div>
+			<div class="aspect-square border-grid-b relative"></div>
 		</div>
 
 		<!-- Central Hero Card — compact padding, glassy -->
 		<div
 			class="col-span-10 md:col-span-8 px-8 py-10 sm:px-10 sm:py-12 md:px-12 md:py-14 lg:px-14 flex flex-col items-start justify-center text-left relative border-grid-r z-20 transition-colors duration-200 bg-background/75 dark:bg-background/60 backdrop-blur-xl backdrop-saturate-150 supports-[backdrop-filter]:bg-background/65 shadow-[0_8px_32px_rgba(0,0,0,0.08)] border border-border/50">
-
 			<div class="max-w-2xl flex flex-col items-start text-left">
 				<!-- Hero Headline with BlurText animation -->
 				<h1
 					class="text-2xl sm:text-2xl md:text-2xl font-medium tracking-tight text-foreground mb-6 leading-[1.05] w-full flex flex-wrap items-baseline gap-x-[0.15em]">
 					<BlurText
-						class="text-2xl sm:text-2xl md:text-2xl font-medium tracking-tight leading-[1.05] text-foreground"
+						class="text-5xl sm:text-2xl md:text-5xl font-medium tracking-tight leading-[1.1] text-foreground"
 						animateBy="words"
-						delay={80}
 						direction="top"
 						stepDuration={0.35}
 						text="Crafting products that feel thoughtful & precise"
-						threshold={0.1} /><span class="text-primary">.</span>
+						threshold={0.1} />
 				</h1>
 
 				<!-- Hero Subtitle -->
 				<p
 					class="text-sm sm:text-base text-muted-foreground max-w-xl font-normal leading-relaxed mb-8 text-pretty">
-					Hi, I'm Khoa — a designer and developer based in Ho Chi Minh City. I build custom, fast,
-					and intuitive web experiences from initial concept to clean production code.
+					Hi, I'm Khoa — a developer based in Ho Chi Minh City. I build fast and intuitive web
+					experiences from initial concept to clean production code.
 				</p>
 
 				<!-- Action Buttons -->
@@ -91,18 +86,15 @@
 
 		<!-- Right Border Column (compact — 3:1 squares) -->
 		<div class="hidden md:flex flex-col col-span-1 h-full relative">
-			<div class="aspect-square border-grid-b relative">
-			</div>
-			<div class="aspect-square border-grid-b relative">
-			</div>
+			<div class="aspect-square border-grid-b relative"></div>
+			<div class="aspect-square border-grid-b relative"></div>
 		</div>
 	</div>
 
 	<!-- Bottom Grid Row (single — reduced from 2 for compact hero) -->
 	<div class="hidden sm:grid grid-cols-10 w-full relative z-10">
 		{#each Array(10) as _, i (i)}
-			<div class="aspect-square border-grid-r last:border-r-0 relative">
-			</div>
+			<div class="aspect-square border-grid-r last:border-r-0 relative"></div>
 		{/each}
 	</div>
 </div>

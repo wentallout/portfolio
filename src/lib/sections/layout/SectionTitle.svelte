@@ -2,12 +2,8 @@
 	import BlurText from '$lib/components/BlurText.svelte';
 	
 
-	/** @type {{sectionTitle?: string, sectionDesc?: string, unsplitAfter?: number, children?: import('svelte').Snippet<[any]>}} */
-	let { children, sectionDesc = '', sectionTitle = '', unsplitAfter = 0 } = $props();
-
-	let sectionIcon = {
-		color: '#9ca3af'
-	};
+	/** @type {{sectionTitle?: string, sectionDesc?: string, unsplitAfter?: number}} */
+	let { sectionDesc = '', sectionTitle = '', unsplitAfter = 0 } = $props();
 </script>
 
 <div
@@ -18,11 +14,6 @@
 			class="font-medium tracking-tight text-foreground font-fancy">
 			<BlurText animateBy="words" direction="top" text={sectionTitle} class="font-fancy" />
 		</h2>
-		{#if children}
-			<div class="text-muted-foreground shrink-0 flex items-center justify-center">
-				{@render children?.({ sectionIcon })}
-			</div>
-		{/if}
 	</div>
 
 	{#if sectionDesc !== ''}

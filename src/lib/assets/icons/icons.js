@@ -35,7 +35,18 @@ import User from '~icons/ph/user';
 import Wrench from '~icons/ph/wrench';
 import X from '~icons/ph/x';
 
+import Compass from '~icons/ph/Compass';
+import Grid from '~icons/ph/Compass';
+import Sparkle from '~icons/ph/Sparkle';
+import Palette from '~icons/ph/Palette';
+import TextT from '~icons/ph/TextT';
+
 export {
+	TextT,
+	Palette,
+	Sparkle,
+	Grid,
+	Compass,
 	ArrowCounterClockwise,
 	ArrowLeft,
 	ArrowLineUp,
