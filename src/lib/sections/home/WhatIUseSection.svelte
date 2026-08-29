@@ -1,5 +1,4 @@
 <script>
-	import { Toolbox } from '$lib/assets/icons/icons';
 	import { SECTION_TITLES } from '$lib/constants/labels';
 	import SectionTitle from '$sections/layout/SectionTitle.svelte';
 
@@ -20,11 +19,7 @@
 </script>
 
 <section class="border-grid-b w-full relative">
-	<SectionTitle sectionTitle={SECTION_TITLES.techStack}>
-		{#snippet children({ sectionIcon })}
-			<Toolbox {...sectionIcon} />
-		{/snippet}
-	</SectionTitle>
+	<SectionTitle sectionTitle={SECTION_TITLES.techStack} />
 
 	<div class="grid grid-cols-1 md:grid-cols-3 gap-0 relative items-stretch">
 		{#each categories as category, i (category.title)}

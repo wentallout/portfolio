@@ -1,7 +1,6 @@
 <script>
 	import Breadcrumb from '$components/other/Breadcrumb.svelte';
 	import SectionTitle from '$sections/layout/SectionTitle.svelte';
-	import { Sparkle, Palette, TextT, Grid, Compass } from '$lib/assets/icons/icons';
 
 	const colorsList = [
 		{
@@ -93,115 +92,102 @@
 
 <Breadcrumb />
 
-<div class="space-y-12 signature-padding">
-	<!-- Header Banner -->
-	<header class="space-y-4 border-b border-border pb-8">
-		<div class="flex items-center gap-3 text-primary">
-			<Sparkle height="24" width="24" />
-			<span class="font-mono text-xs uppercase tracking-widest font-semibold">Specification v2.0</span>
-		</div>
-		<h1 class="font-fancy text-3xl md:text-5xl text-foreground">
-			Kintsugi & Seigaiha Design System
-		</h1>
-		<p class="text-muted-foreground text-sm md:text-base max-w-3xl leading-relaxed">
-			A Japanese aesthetic design system blending the art of golden joinery (Kintsugi) and ocean wave tranquility (Seigaiha) with modern blueprint precision and OKLCH color spaces.
-		</p>
-	</header>
+<!-- Header Banner -->
+<header class="space-y-4 border-b border-border signature-padding">
+	<h1 class="font-fancy text-3xl md:text-5xl text-foreground">Kintsugi & Seigaiha Design System</h1>
+	<p class="text-muted-foreground text-sm md:text-base max-w-3xl leading-relaxed">
+		A Japanese aesthetic design system blending the art of golden joinery (Kintsugi) and ocean wave
+		tranquility (Seigaiha) with modern blueprint precision and OKLCH color spaces.
+	</p>
+</header>
 
-	<!-- Section 1: Philosophy -->
-	<section class="space-y-6">
-		<SectionTitle sectionTitle="1. Philosophical Foundations">
-			{#snippet children({ sectionIcon })}
-				<Compass {...sectionIcon} />
-			{/snippet}
-		</SectionTitle>
+<!-- Section 1: Philosophy -->
+<section class="space-y-6">
+	<SectionTitle sectionTitle="1. Philosophical Foundations" />
 
-		<div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-			{#each philosophyItems as item (item.title)}
-				<div class="blueprint-card space-y-3">
-					<h3 class="font-sans font-medium text-base text-foreground">{item.title}</h3>
-					<p class="text-sm text-muted-foreground leading-relaxed">{item.desc}</p>
+	<div class="grid grid-cols-1 md:grid-cols-3 border-t">
+		{#each philosophyItems as item (item.title)}
+			<div class="blueprint-card space-y-3">
+				<h3 class="font-sans font-medium text-base text-foreground">{item.title}</h3>
+				<p class="text-sm text-muted-foreground leading-relaxed">{item.desc}</p>
+			</div>
+		{/each}
+	</div>
+</section>
+
+<!-- Section 2: Color Palette -->
+<section class="space-y-6">
+	<SectionTitle sectionTitle="2. Color System (OKLCH)" />
+
+	<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+		{#each colorsList as color (color.name)}
+			<div class="border border-border p-5 bg-card space-y-4">
+				<div
+					style="background-color: {color.token}; color: {color.name.includes('Kin Washi')
+						? '#1C2D37'
+						: '#FAF9F5'};"
+					class="w-full h-24 border border-border shadow-inner flex items-end justify-end p-2 text-xs font-mono">
+					{color.hex}
 				</div>
-			{/each}
-		</div>
-	</section>
-
-	<!-- Section 2: Color Palette -->
-	<section class="space-y-6">
-		<SectionTitle sectionTitle="2. Color System (OKLCH)">
-			{#snippet children({ sectionIcon })}
-				<Palette {...sectionIcon} />
-			{/snippet}
-		</SectionTitle>
-
-		<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-			{#each colorsList as color (color.name)}
-				<div class="border border-border p-5 bg-card space-y-4">
-					<div
-						class="w-full h-24 border border-border shadow-inner flex items-end justify-end p-2 text-xs font-mono"
-						style="background-color: {color.token}; color: {color.name.includes('Kin Washi') ? '#1C2D37' : '#FAF9F5'};">
-						{color.hex}
-					</div>
-					<div>
-						<h4 class="font-sans font-medium text-sm text-foreground">{color.name}</h4>
-						<p class="font-mono text-xs text-primary mt-0.5">{color.token}</p>
-						<p class="text-xs text-muted-foreground mt-2 leading-normal">{color.desc}</p>
-					</div>
-				</div>
-			{/each}
-		</div>
-	</section>
-
-	<!-- Section 3: Typography -->
-	<section class="space-y-6">
-		<SectionTitle sectionTitle="3. Typography Scale">
-			{#snippet children({ sectionIcon })}
-				<TextT {...sectionIcon} />
-			{/snippet}
-		</SectionTitle>
-
-		<div class="border border-border divide-y divide-border bg-card">
-			{#each typographyList as type (type.role)}
-				<div class="p-6 space-y-2">
-					<div class="flex flex-wrap justify-between text-xs text-muted-foreground font-mono">
-						<span>{type.role}</span>
-						<span>{type.family}</span>
-					</div>
-					<div class={type.class}>
-						{type.sample}
-					</div>
-				</div>
-			{/each}
-		</div>
-	</section>
-
-	<!-- Section 4: Blueprint Grid & Spacing -->
-	<section class="space-y-6">
-		<SectionTitle sectionTitle="4. Blueprint Grid & Spacing">
-			{#snippet children({ sectionIcon })}
-				<Grid {...sectionIcon} />
-			{/snippet}
-		</SectionTitle>
-
-		<div class="blueprint-card space-y-4">
-			<h3 class="font-sans font-medium text-base text-foreground">Gapless Grid System & Intersection Markers</h3>
-			<p class="text-sm text-muted-foreground leading-relaxed">
-				All container components adhere to crisp 1px borders (`border-grid-r`, `border-grid-b`) with gold intersection ticks (`+` / `grid-plus`) positioned at pixel origins to mirror architectural drafting blueprints.
-			</p>
-			<div class="grid grid-cols-2 md:grid-cols-4 gap-4 pt-2">
-				<div class="p-4 border border-border bg-background text-center font-mono text-xs text-muted-foreground">
-					p-6 (1.5rem / 24px)
-				</div>
-				<div class="p-4 border border-border bg-background text-center font-mono text-xs text-muted-foreground">
-					pb-20 (5rem / 80px)
-				</div>
-				<div class="p-4 border border-border bg-background text-center font-mono text-xs text-muted-foreground">
-					gap-0 (Matrix)
-				</div>
-				<div class="p-4 border border-border bg-background text-center font-mono text-xs text-muted-foreground">
-					min text-sm (14px)
+				<div>
+					<h4 class="font-sans font-medium text-sm text-foreground">{color.name}</h4>
+					<p class="font-mono text-xs text-primary mt-0.5">{color.token}</p>
+					<p class="text-xs text-muted-foreground mt-2 leading-normal">{color.desc}</p>
 				</div>
 			</div>
+		{/each}
+	</div>
+</section>
+
+<!-- Section 3: Typography -->
+<section class="space-y-6">
+	<SectionTitle sectionTitle="3. Typography Scale" />
+
+	<div class="border border-border divide-y divide-border bg-card">
+		{#each typographyList as type (type.role)}
+			<div class="p-6 space-y-2">
+				<div class="flex flex-wrap justify-between text-xs text-muted-foreground font-mono">
+					<span>{type.role}</span>
+					<span>{type.family}</span>
+				</div>
+				<div class={type.class}>
+					{type.sample}
+				</div>
+			</div>
+		{/each}
+	</div>
+</section>
+
+<!-- Section 4: Blueprint Grid & Spacing -->
+<section class="space-y-6">
+	<SectionTitle sectionTitle="4. Blueprint Grid & Spacing" />
+
+	<div class="blueprint-card space-y-4">
+		<h3 class="font-sans font-medium text-base text-foreground">
+			Gapless Grid System & Intersection Markers
+		</h3>
+		<p class="text-sm text-muted-foreground leading-relaxed">
+			All container components adhere to crisp 1px borders (`border-grid-r`, `border-grid-b`) with
+			gold intersection ticks (`+` / `grid-plus`) positioned at pixel origins to mirror
+			architectural drafting blueprints.
+		</p>
+		<div class="grid grid-cols-2 md:grid-cols-4 gap-4 pt-2">
+			<div
+				class="p-4 border border-border bg-background text-center font-mono text-xs text-muted-foreground">
+				p-6 (1.5rem / 24px)
+			</div>
+			<div
+				class="p-4 border border-border bg-background text-center font-mono text-xs text-muted-foreground">
+				pb-20 (5rem / 80px)
+			</div>
+			<div
+				class="p-4 border border-border bg-background text-center font-mono text-xs text-muted-foreground">
+				gap-0 (Matrix)
+			</div>
+			<div
+				class="p-4 border border-border bg-background text-center font-mono text-xs text-muted-foreground">
+				min text-sm (14px)
+			</div>
 		</div>
-	</section>
-</div>
+	</div>
+</section>

@@ -1,15 +1,10 @@
 <script>
-	import { BoundingBox } from '$lib/assets/icons/icons';
 	import EssentialList from '$sections/blogs/EssentialList.svelte';
 	import SectionTitle from '$sections/layout/SectionTitle.svelte';
 </script>
 
 <section class="w-full relative border-grid-b">
-	<SectionTitle sectionTitle="Resource">
-		{#snippet children({ sectionIcon })}
-			<BoundingBox {...sectionIcon} />
-		{/snippet}
-	</SectionTitle>
+	<SectionTitle sectionTitle="Resource" />
 
 	<div class="w-full relative">
 		<EssentialList />

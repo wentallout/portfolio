@@ -1,6 +1,5 @@
 <script lang="ts">
 	import Accordion from '$components/common/Accordion.svelte';
-	import { Question } from '$lib/assets/icons/icons';
 	import { FAQ_JSON_LD, FAQ_LIST } from '$lib/constants/faq';
 	import { SECTION_TITLES } from '$lib/constants/labels';
 	import { serializeSchema } from '$lib/utils/seo';
@@ -15,11 +14,7 @@
 </svelte:head>
 
 <section class="border-grid-b w-full relative">
-	<SectionTitle sectionTitle={SECTION_TITLES.faq}>
-		{#snippet children({ sectionIcon })}
-			<Question {...sectionIcon} />
-		{/snippet}
-	</SectionTitle>
+	<SectionTitle sectionTitle={SECTION_TITLES.faq} />
 
 	<div class="w-full relative">
 		{#each FAQ_LIST as faq (faq.question)}

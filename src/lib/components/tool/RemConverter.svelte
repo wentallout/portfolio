@@ -1,8 +1,7 @@
 <script>
 	import Breadcrumb from '$components/other/Breadcrumb.svelte';
-	import { Copy, Wrench } from '$lib/assets/icons/icons';
+	import { Copy } from '$lib/assets/icons/icons';
 	import SectionTitle from '$sections/layout/SectionTitle.svelte';
-	SectionTitle;
 	let baseFontSize = 16;
 	let pxInput = $state();
 	let remInput = $state();
@@ -27,11 +26,7 @@
 <Breadcrumb />
 
 <section>
-	<SectionTitle sectionTitle="PX to REM Converter">
-		{#snippet children({ sectionIcon })}
-			<Wrench {...sectionIcon} />
-		{/snippet}
-	</SectionTitle>
+	<SectionTitle sectionTitle="PX to REM Converter" />
 	<div class="flex flex-col gap-8">
 		<div class="flex flex-row items-center gap-4 border border-border min-h-40">
 			<button
