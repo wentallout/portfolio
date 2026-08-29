@@ -266,23 +266,23 @@
 	>
 		<div
 			bind:this={dot}
-			class="absolute top-1/2 left-1/2 w-1 h-1 bg-white rounded-full -translate-x-1/2 -translate-y-1/2"
+			class="absolute top-1/2 left-1/2 w-1 h-1 bg-foreground rounded-full -translate-x-1/2 -translate-y-1/2 transition-colors duration-200"
 			style="will-change:transform;"
 		></div>
 		<div
-			class="target-cursor-corner absolute top-1/2 left-1/2 w-3 h-3 border-[3px] border-white -translate-x-[150%] -translate-y-[150%] border-r-0 border-b-0"
+			class="target-cursor-corner absolute top-1/2 left-1/2 w-3 h-3 border-[3px] border-foreground -translate-x-[150%] -translate-y-[150%] border-r-0 border-b-0 transition-colors duration-200"
 			style="will-change:transform;"
 		></div>
 		<div
-			class="target-cursor-corner absolute top-1/2 left-1/2 w-3 h-3 border-[3px] border-white translate-x-1/2 -translate-y-[150%] border-l-0 border-b-0"
+			class="target-cursor-corner absolute top-1/2 left-1/2 w-3 h-3 border-[3px] border-foreground translate-x-1/2 -translate-y-[150%] border-l-0 border-b-0 transition-colors duration-200"
 			style="will-change:transform;"
 		></div>
 		<div
-			class="target-cursor-corner absolute top-1/2 left-1/2 w-3 h-3 border-[3px] border-white translate-x-1/2 translate-y-1/2 border-l-0 border-t-0"
+			class="target-cursor-corner absolute top-1/2 left-1/2 w-3 h-3 border-[3px] border-foreground translate-x-1/2 translate-y-1/2 border-l-0 border-t-0 transition-colors duration-200"
 			style="will-change:transform;"
 		></div>
 		<div
-			class="target-cursor-corner absolute top-1/2 left-1/2 w-3 h-3 border-[3px] border-white -translate-x-[150%] translate-y-1/2 border-r-0 border-t-0"
+			class="target-cursor-corner absolute top-1/2 left-1/2 w-3 h-3 border-[3px] border-foreground -translate-x-[150%] translate-y-1/2 border-r-0 border-t-0 transition-colors duration-200"
 			style="will-change:transform;"
 		></div>
 	</div>

@@ -3,7 +3,7 @@
  *
  * @return {Array} An array of objects containing metadata and path of each project.
  */
-export const fetchMarkdownProjects = async () => {
+const fetchMarkdownProjects = async () => {
 	const allProjectFiles = import.meta.glob('/src/routes/projects/*.svx');
 
 	const iterableProjectFiles = Object.entries(allProjectFiles);

@@ -2,6 +2,7 @@
 	import Accordion from '$components/common/Accordion.svelte';
 	import { Question } from '$lib/assets/icons/icons';
 	import { FAQ_JSON_LD, FAQ_LIST } from '$lib/constants/faq';
+	import { SECTION_TITLES } from '$lib/constants/labels';
 	import { serializeSchema } from '$lib/utils/seo';
 	import SectionTitle from '$sections/layout/SectionTitle.svelte';
 
@@ -14,7 +15,7 @@
 </svelte:head>
 
 <section class="border-grid-b w-full relative">
-	<SectionTitle sectionTitle="Frequently Asked Questions">
+	<SectionTitle sectionTitle={SECTION_TITLES.faq}>
 		{#snippet children({ sectionIcon })}
 			<Question {...sectionIcon} />
 		{/snippet}

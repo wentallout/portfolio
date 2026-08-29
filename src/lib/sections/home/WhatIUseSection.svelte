@@ -1,5 +1,6 @@
 <script>
 	import { Toolbox } from '$lib/assets/icons/icons';
+	import { SECTION_TITLES } from '$lib/constants/labels';
 	import SectionTitle from '$sections/layout/SectionTitle.svelte';
 
 	const categories = [
@@ -19,7 +20,7 @@
 </script>
 
 <section class="border-grid-b w-full relative">
-	<SectionTitle sectionTitle="Tech & Stack">
+	<SectionTitle sectionTitle={SECTION_TITLES.techStack}>
 		{#snippet children({ sectionIcon })}
 			<Toolbox {...sectionIcon} />
 		{/snippet}
@@ -29,15 +30,7 @@
 		{#each categories as category, i (category.title)}
 			<div
 				class="relative bg-background signature-padding hover:bg-card transition-all duration-300 flex flex-col justify-between h-full">
-
-				<div>
-					<div class="flex items-center justify-between text-sm mb-4">
-						<span class="uppercase tracking-widest text-sm text-muted-foreground font-medium"
-							>STACK</span>
-						<span class="text-muted-foreground">00{i + 1}</span>
-					</div>
-					<h3 class="text-2xl font-medium text-foreground mb-4 tracking-tight">{category.title}</h3>
-				</div>
+				<h3 class="text-2xl font-medium text-foreground mb-4 tracking-tight">{category.title}</h3>
 
 				<div class="flex flex-wrap gap-2 mt-4">
 					{#each category.items as item (item)}

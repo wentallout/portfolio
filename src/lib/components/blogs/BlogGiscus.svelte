@@ -20,30 +20,12 @@
 	} = $props();
 </script>
 
-<!-- {#if mounted}
-	<giscus-widget
-		
-		{category}
-		
-		emitmetadata={emitMetadata}
-		{host}
-		inputposition={inputPosition}
-		{lang}
-		{loading}
-		{mapping}
-		reactionsenabled={reactionsEnabled}
-		{repo}
-		repoid={repoId}
-		{strict}
-		{term}
-		{theme}></giscus-widget>
-{/if} -->
-
 <Giscus
 	{id}
 	{category}
 	{categoryId}
 	{emitMetadata}
+	{host}
 	{inputPosition}
 	{lang}
 	{loading}
@@ -51,5 +33,6 @@
 	{reactionsEnabled}
 	{repo}
 	{repoId}
+	{strict}
 	{term}
 	{theme} />

@@ -1,7 +1,7 @@
 <script>
 	import { fade } from 'svelte/transition';
 
-	let { link = '', repoUrl = '', title = '', vidDemo = '' } = $props();
+	let { link = '', title = '', vidDemo = '' } = $props();
 </script>
 
 <a
@@ -25,10 +25,10 @@
 	</div>
 
 	<div class="signature-padding bg-background flex items-center justify-between flex-1">
-		<h4 class="text-base font-medium text-foreground group-hover:text-rose-400 transition-colors">
+		<h4 class="text-base font-medium text-foreground group-hover:text-primary transition-colors">
 			{title}
 		</h4>
-		<span class="text-sm text-muted-foreground group-hover:text-foreground group-hover:translate-x-1 transition-all duration-200">
+		<span class="text-sm text-muted-foreground group-hover:text-primary group-hover:translate-x-1 transition-all duration-200">
 			↗
 		</span>
 	</div>

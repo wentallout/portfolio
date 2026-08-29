@@ -31,7 +31,7 @@
 
 				<!-- Project Title -->
 				<h2
-					class="text-2xl md:text-2xl font-medium text-foreground mb-2 tracking-tight group-hover:text-rose-400 transition-colors">
+					class="text-2xl md:text-2xl font-medium text-foreground mb-2 tracking-tight group-hover:text-primary transition-colors">
 					{projectName}
 				</h2>
 
@@ -51,9 +51,9 @@
 			<!-- Action Link -->
 			<div class="pt-6 inline-flex items-center gap-1.5 text-sm text-foreground font-medium">
 				<span
-					class="underline underline-offset-4 decoration-muted-foreground group-hover:decoration-white transition-all"
+					class="underline underline-offset-4 decoration-muted-foreground group-hover:decoration-primary group-hover:text-primary transition-all"
 					>View Project</span>
-				<span class="group-hover:translate-x-1 transition-transform duration-200">→</span>
+				<span class="group-hover:translate-x-1 group-hover:text-primary transition-all duration-200">→</span>
 			</div>
 		</div>
 

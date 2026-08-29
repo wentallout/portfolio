@@ -1,5 +1,7 @@
 <script>
-	import PageTitle from '$components/common/PageTitle.svelte';
+	import Breadcrumb from '$components/other/Breadcrumb.svelte';
 </script>
 
-<PageTitle pageTitle="Experiment" />
+<div class="px-6 py-4 border-grid-b bg-background">
+	<Breadcrumb minDepth={1} />
+</div>

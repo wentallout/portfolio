@@ -24,12 +24,12 @@
 		</div>
 
 		<div class="signature-padding flex flex-col justify-between flex-1 space-y-2 bg-background">
-			<h4 class="text-base font-medium text-foreground group-hover:text-rose-400 transition-colors line-clamp-2 leading-snug">
+			<h4 class="text-base font-medium text-foreground group-hover:text-primary transition-colors line-clamp-2 leading-snug">
 				{title}
 			</h4>
 			<div class="flex items-center justify-between pt-2 text-sm text-muted-foreground font-sans font-medium">
 				<span>{desc}</span>
-				<span class="group-hover:translate-x-1 transition-transform duration-200 text-foreground">↗</span>
+				<span class="group-hover:translate-x-1 transition-transform duration-200 group-hover:text-primary">↗</span>
 			</div>
 		</div>
 	</ExLink>

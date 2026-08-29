@@ -5,7 +5,7 @@
 </script>
 
 <section class="w-full relative border-grid-b">
-	<SectionTitle sectionDesc="Design templates and essential resources." sectionTitle="Resource">
+	<SectionTitle sectionTitle="Resource">
 		{#snippet children({ sectionIcon })}
 			<BoundingBox {...sectionIcon} />
 		{/snippet}

@@ -53,8 +53,8 @@
 	<Breadcrumb />
 
 	<h1
-		class="text-2xl sm:text-2xl md:text-2xl font-medium tracking-tight text-foreground leading-tight font-fancy">
-		{data.title}<span class="text-rose-500">.</span>
+		class="text-6xl sm:text-4xl md:text-5xl font-medium tracking-tight text-foreground leading-tight font-fancy">
+		{data.title}
 	</h1>
 
 	<div class="flex items-center gap-4 flex-wrap text-sm text-muted-foreground font-sans pt-2">

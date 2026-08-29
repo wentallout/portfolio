@@ -19,6 +19,7 @@
 			| ((t: number) => number);
 		onAnimationComplete?: () => void;
 		stepDuration?: number;
+		as?: string;
 	};
 
 	let {
@@ -33,13 +34,14 @@
 		animationTo,
 		easing = (t: number) => t,
 		onAnimationComplete,
-		stepDuration = 0.35
+		stepDuration = 0.35,
+		as = 'span'
 	}: Props = $props();
 
 	const elements = $derived(animateBy === 'words' ? text.split(' ') : text.split(''));
 
 	let inView = $state(false);
-	let containerEl: HTMLParagraphElement | undefined = $state();
+	let containerEl: HTMLElement | undefined = $state();
 	let spanEls: (HTMLSpanElement | undefined)[] = $state([]);
 
 	$effect(() => {
@@ -164,10 +166,10 @@
 	});
 </script>
 
-<p bind:this={containerEl} class="blur-text {className} flex flex-wrap">
+<svelte:element this={as} bind:this={containerEl} class="blur-text {className} inline-flex flex-wrap font-[inherit]">
 	{#each elements as segment, index (index)}
-		<span bind:this={spanEls[index]} class="inline-block will-change-transform">
+		<span bind:this={spanEls[index]} class="inline-block will-change-transform font-[inherit] {className}">
 			{segment === ' ' ? '\u00A0' : segment}{animateBy === 'words' && index < elements.length - 1 ? '\u00A0' : ''}
 		</span>
 	{/each}
-</p>
+</svelte:element>

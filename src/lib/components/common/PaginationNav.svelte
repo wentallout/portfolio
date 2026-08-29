@@ -52,7 +52,7 @@
 				currentPage <= 1)}
 		<span
 			class="inline-flex items-center justify-center min-w-10 h-10 px-3.5 text-sm leading-none border-r border-border shrink-0 select-none transition-colors duration-200 last:border-r-0 {isActive
-				? 'bg-muted text-foreground'
+				? 'bg-primary text-primary-foreground font-medium'
 				: 'text-muted-foreground hover:bg-muted hover:text-foreground cursor-pointer'} {isDisabled
 				? 'opacity-40 pointer-events-none'
 				: ''} {(option.type === 'symbol' && option.symbol === SymbolType.ELLIPSIS) ||

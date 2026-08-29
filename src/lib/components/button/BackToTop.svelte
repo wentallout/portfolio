@@ -31,7 +31,7 @@
 
 <button
 	use:haptic={'medium'}
-	class="fixed right-3 bottom-3 z-50 flex flex-col justify-center items-center aspect-square w-10 rounded-full bg-primary text-primary-foreground shadow-md select-none transition-opacity duration-300 hover:brightness-110 active:text-[var(--brand-yellow-active)] {hidden ? 'opacity-0 invisible' : 'opacity-100 visible'}"
+	class="fixed right-3 bottom-3 z-50 flex flex-col justify-center items-center aspect-square w-10 rounded-full bg-primary text-primary-foreground shadow-md select-none transition-opacity duration-300 hover:brightness-110 active:opacity-80 {hidden ? 'opacity-0 invisible' : 'opacity-100 visible'}"
 	onclick={goTop}
 	type="button">
 	<ArrowLineUp height="16" width="16" />
