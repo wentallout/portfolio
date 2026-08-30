@@ -1,12 +1,12 @@
-<script>
-	import ExLink from '$components/common/ExLink.svelte';
-	import FooterCopyright from '$components/layout/footer/FooterCopyright.svelte';
-	import FooterColumn from '$components/layout/footer/FooterColumn.svelte';
-	import FooterSocialButton from '$components/layout/footer/FooterSocialButton.svelte';
+<script lang="ts">
+	import ExLink from '#lib/components/common/ExLink.svelte';
+	import FooterCopyright from '#lib/components/layout/footer/FooterCopyright.svelte';
+	import FooterColumn from '#lib/components/layout/footer/FooterColumn.svelte';
+	import FooterSocialButton from '#lib/components/layout/footer/FooterSocialButton.svelte';
 
-	import { EnvelopeSimple, GitHubLogo, LinkedinLogo, Phone } from '$lib/assets/icons/icons';
-	import { navItems } from '$lib/config.js';
-	import DottedBackground from '$lib/components/ui/DottedBackground.svelte';
+	import { EnvelopeSimple, GitHubLogo, LinkedinLogo, Phone } from '#lib/assets/icons/icons.js';
+	import { navItems } from '#lib/config.js';
+	import DottedBackground from '#lib/components/ui/DottedBackground.svelte';
 
 	const resourceLinks = [
 		{ href: '/design-system', label: 'Design System' },
@@ -77,7 +77,7 @@
 				{#each resourceLinks as item (item.href)}
 					<li>
 						{#if item.isExternal}
-							<ExLink href={item.href} ariaLabel={item.label}>
+							<ExLink ariaLabel={item.label} href={item.href}>
 								<span
 									class="hover:text-foreground hover:underline underline-offset-4 decoration-border transition-colors">
 									{item.label}
@@ -99,7 +99,7 @@
 		<FooterColumn title="CONNECT">
 			<div class="flex items-center gap-2.5 pt-1">
 				{#each socialLinks as link (link.href)}
-					<FooterSocialButton href={link.href} ariaLabel={link.label}>
+					<FooterSocialButton ariaLabel={link.label} href={link.href}>
 						<link.icon height="16" width="16" />
 					</FooterSocialButton>
 				{/each}

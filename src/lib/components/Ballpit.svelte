@@ -349,6 +349,47 @@
 				vel.toArray(velocityData, base);
 			}
 		}
+
+		applyExplosion(center: Vector3, radius = 4.2, force = 0.42) {
+			let popped = 0;
+			for (let idx = 1; idx < this.config.count; idx++) {
+				const base = 3 * idx;
+				const size = this.sizeData[idx];
+				if (size < 0.05) continue;
+				const pos = new Vector3().fromArray(this.positionData, base);
+				const vel = new Vector3().fromArray(this.velocityData, base);
+				const diff = new Vector3().copy(pos).sub(center);
+				const dist = diff.length();
+				const hitRadius = radius + size;
+				if (dist < hitRadius) {
+					const dir = dist === 0 ? new Vector3(randSpread(), randSpread(), randSpread()).normalize() : diff.normalize();
+					const falloff = 1 - dist / hitRadius;
+					// strong outward + slight upward lift for satisfying blow-up
+					const impulse = dir.multiplyScalar(force * (0.7 + falloff * 1.6));
+					impulse.y += 0.06;
+					vel.add(impulse);
+					vel.add(new Vector3(randSpread() * 0.05, randSpread() * 0.05, randSpread() * 0.05));
+					// pop close balls dramatically
+					if (dist < radius * 0.62) {
+						this.sizeData[idx] *= 0.35;
+						popped++;
+						setTimeout(() => {
+							this.sizeData[idx] = 0;
+						}, 120);
+						setTimeout(() => {
+							this.sizeData[idx] = MathUtils.randFloat(this.config.minSize, this.config.maxSize);
+							new Vector3(MathUtils.randFloatSpread(3), MathUtils.randFloatSpread(2), MathUtils.randFloatSpread(2)).toArray(this.velocityData, base);
+						}, 1800);
+					}
+					vel.toArray(this.velocityData, base);
+				}
+			}
+			return popped;
+		}
+	}
+
+	function randSpread() {
+		return (Math.random() - 0.5) * 2;
 	}
 
 	class Y extends MeshPhysicalMaterial {
@@ -414,7 +455,7 @@ void main() {
 		gravity: 0.5,
 		friction: 0.9975,
 		wallBounce: 0.95,
-		maxVelocity: 0.15,
+		maxVelocity: 0.35,
 		maxX: 5,
 		maxY: 5,
 		maxZ: 2,
@@ -530,38 +571,32 @@ void main() {
 		canvas.style.userSelect = 'none';
 
 		const nPos = new Vector2();
-		let hovering = false;
-		const onPointerMove = (e: PointerEvent) => {
+		// Hover pickup disabled — balls float freely until shot
+		spheres.config.controlSphere0 = false;
+		spheres.config.followCursor = false;
+		// Global shoot → world explosion (every click) — disabled on mobile for perf
+		const isMobileShoot = () =>
+			('ontouchstart' in window || navigator.maxTouchPoints > 0) &&
+			window.innerWidth <= 768;
+		const onShoot = (e: Event) => {
+			if (isMobileShoot()) return;
+			const detail = (e as CustomEvent).detail as { x: number; y: number } | undefined;
+			if (!detail) return;
+			// SOUND HOOK: play ball pop / explosion sound here
+			// e.g. new Audio('/sounds/pop.mp3').play().catch(()=>{});
 			const rect = canvas.getBoundingClientRect();
-			if (
-				e.clientX < rect.left ||
-				e.clientX > rect.right ||
-				e.clientY < rect.top ||
-				e.clientY > rect.bottom
-			) {
-				if (hovering) {
-					hovering = false;
-					spheres.config.controlSphere0 = false;
-				}
-				return;
-			}
-			hovering = true;
+			// proper canvas-space mapping for accurate hit
 			nPos.set(
-				((e.clientX - rect.left) / rect.width) * 2 - 1,
-				(-(e.clientY - rect.top) / rect.height) * 2 + 1
+				((detail.x - rect.left) / rect.width) * 2 - 1,
+				(-(detail.y - rect.top) / rect.height) * 2 + 1
 			);
 			raycaster.setFromCamera(nPos, threeInstance.camera);
 			threeInstance.camera.getWorldDirection(plane.normal);
 			raycaster.ray.intersectPlane(plane, intersection);
-			spheres.physics.center.copy(intersection);
-			spheres.config.controlSphere0 = true;
+			// stronger blow-up: larger radius + higher force
+			spheres.physics.applyExplosion(intersection, 4.2, 0.42);
 		};
-		const onPointerLeave = () => {
-			hovering = false;
-			spheres.config.controlSphere0 = false;
-		};
-		document.body.addEventListener('pointermove', onPointerMove);
-		canvas.addEventListener('pointerleave', onPointerLeave);
+		window.addEventListener('game:shoot', onShoot as EventListener);
 
 		threeInstance.onBeforeRender = (deltaInfo) => {
 			if (!isPaused) spheres.update(deltaInfo);
@@ -583,8 +618,7 @@ void main() {
 				isPaused = !isPaused;
 			},
 			dispose() {
-				document.body.removeEventListener('pointermove', onPointerMove);
-				canvas.removeEventListener('pointerleave', onPointerLeave);
+				window.removeEventListener('game:shoot', onShoot as EventListener);
 				threeInstance.dispose();
 			}
 		};

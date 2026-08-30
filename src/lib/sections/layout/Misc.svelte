@@ -1,8 +1,8 @@
-<script>
-	import BackToTop from '$components/button/BackToTop.svelte';
-	import SkipLink from '$components/button/SkipLink.svelte';
-	import ScrollProgressBar from '$components/other/ScrollProgressBar.svelte';
-	import PWA from '$components/pwa/PWA.svelte';
+<script lang="ts">
+	import BackToTop from '#lib/components/button/BackToTop.svelte';
+	import SkipLink from '#lib/components/button/SkipLink.svelte';
+	import ScrollProgressBar from '#lib/components/other/ScrollProgressBar.svelte';
+	import PWA from '#lib/components/pwa/PWA.svelte';
 </script>
 
 <SkipLink />

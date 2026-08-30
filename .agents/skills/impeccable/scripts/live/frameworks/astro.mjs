@@ -17,31 +17,31 @@ import { findConfigFile, hasAnyDependency, literalConfigFiles } from './detect-u
 const ASTRO_CONFIG_RE = /^astro\.config\.(?:js|mjs|cjs|ts|mts|cts)$/;
 
 export function detectAstroProject(cwd = process.cwd(), config = null) {
-  const configFile = findConfigFile(cwd, ASTRO_CONFIG_RE);
-  if (configFile) return { configFile, via: 'config' };
-  if (hasAnyDependency(cwd, ['astro'])) return { configFile: null, via: 'package' };
-  // A tree of .astro entry templates with no astro.config still belongs to
-  // Astro; the configured injection target names it.
-  const entry = literalConfigFiles(cwd, config).find((rel) => rel.endsWith('.astro'));
-  if (entry) return { configFile: null, via: 'config-files', entry };
-  return null;
+	const configFile = findConfigFile(cwd, ASTRO_CONFIG_RE);
+	if (configFile) return { configFile, via: 'config' };
+	if (hasAnyDependency(cwd, ['astro'])) return { configFile: null, via: 'package' };
+	// A tree of .astro entry templates with no astro.config still belongs to
+	// Astro; the configured injection target names it.
+	const entry = literalConfigFiles(cwd, config).find((rel) => rel.endsWith('.astro'));
+	if (entry) return { configFile: null, via: 'config-files', entry };
+	return null;
 }
 
 export const astro = {
-  name: 'astro',
+	name: 'astro',
 
-  detect(cwd, config) {
-    return detectAstroProject(cwd, config);
-  },
+	detect(cwd, config) {
+		return detectAstroProject(cwd, config);
+	},
 
-  inject: { kind: 'tag' },
+	inject: { kind: 'tag' },
 
-  source: {
-    extensions: ['.astro'],
-    preview: 'source',
-    styleMode: 'astro-global-prefixed',
-    styleTag: '<style is:inline data-impeccable-css="SESSION_ID">',
-    commentSyntax: 'html',
-    injectScriptAttrs: 'is:inline ',
-  },
+	source: {
+		extensions: ['.astro'],
+		preview: 'source',
+		styleMode: 'astro-global-prefixed',
+		styleTag: '<style is:inline data-impeccable-css="SESSION_ID">',
+		commentSyntax: 'html',
+		injectScriptAttrs: 'is:inline '
+	}
 };

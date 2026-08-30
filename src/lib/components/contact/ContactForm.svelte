@@ -1,26 +1,20 @@
-<script>
-	import PrimaryButton from '$components/button/PrimaryButton.svelte';
-	import SecondaryButton from '$components/button/SecondaryButton.svelte';
-	import TextArea from '$components/input/TextArea.svelte';
-	import TextInput from '$components/input/TextInput.svelte';
-	import {
-		ArrowCounterClockwise,
-		At,
-		PaperPlaneRight,
-		User
-	} from '$lib/assets/icons/icons';
-	import { SECTION_TITLES } from '$lib/constants/labels';
-	import SectionTitle from '$sections/layout/SectionTitle.svelte';
+<script lang="ts">
+	import PrimaryButton from '#lib/components/button/PrimaryButton.svelte';
+	import SecondaryButton from '#lib/components/button/SecondaryButton.svelte';
+	import TextArea from '#lib/components/input/TextArea.svelte';
+	import TextInput from '#lib/components/input/TextInput.svelte';
+	import { ArrowCounterClockwise, At, PaperPlaneRight, User } from '#lib/assets/icons/icons.js';
+	import { SECTION_TITLES } from '#lib/constants/labels.js';
+	import SectionTitle from '#lib/sections/layout/SectionTitle.svelte';
 	import ContactInfo from './ContactInfo.svelte';
 </script>
 
 <section class="w-full relative border-grid-b">
 	<SectionTitle sectionTitle={SECTION_TITLES.getInTouch} />
 
-	<div class="grid grid-cols-1 md:grid-cols-12 gap-0 relative items-stretch">
+	<div class="grid grid-cols-1 md:grid-cols-2 gap-0 relative items-stretch">
 		<!-- Form Side -->
-		<div
-			class="md:col-span-7 relative bg-background signature-padding flex flex-col justify-between h-full">
+		<div class="relative bg-background signature-padding flex flex-col justify-between h-full">
 			<form name="contact" class="space-y-4 w-full" data-netlify="true" method="post">
 				<input name="form-name" type="hidden" value="contact" />
 
@@ -55,7 +49,7 @@
 		</div>
 
 		<!-- Info Side (Gapless Blueprint Matrix Column) -->
-		<div class="md:col-span-5 relative bg-background flex flex-col h-full">
+		<div class="relative bg-background flex flex-col h-full">
 			<ContactInfo />
 		</div>
 	</div>

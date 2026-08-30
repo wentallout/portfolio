@@ -46,8 +46,8 @@ export { slugFromTarget } from './lib/target-slug.mjs';
  * Plain colons aren't allowed on Windows filesystems.
  */
 export function nowFilenameStamp(date = new Date()) {
-  const iso = date.toISOString();           // 2026-05-12T18:30:00.123Z
-  return iso.replace(/[:.]/g, '-').replace(/-\d+Z$/, 'Z');
+	const iso = date.toISOString(); // 2026-05-12T18:30:00.123Z
+	return iso.replace(/[:.]/g, '-').replace(/-\d+Z$/, 'Z');
 }
 
 /**
@@ -58,50 +58,54 @@ export function nowFilenameStamp(date = new Date()) {
  * Returns the absolute path written.
  */
 export function writeSnapshot({ slug, meta, body, cwd = process.cwd(), now = new Date() }) {
-  if (!slug) throw new Error('writeSnapshot requires a slug');
-  const dir = getCritiqueDir(cwd);
-  fs.mkdirSync(dir, { recursive: true });
-  const timestamp = nowFilenameStamp(now);
-  const filePath = path.join(dir, `${timestamp}__${slug}.md`);
-  // Spread `meta` first so internally computed `timestamp` and `slug`
-  // always win. Otherwise a caller-supplied meta blob (parsed from the
-  // IMPECCABLE_CRITIQUE_META env var) could clobber them, leaving the
-  // filename in disagreement with its frontmatter and corrupting trends.
-  const front = serializeFrontmatter({ ...meta, timestamp, slug });
-  fs.writeFileSync(filePath, `${front}\n${body.trim()}\n`, 'utf-8');
-  return filePath;
+	if (!slug) throw new Error('writeSnapshot requires a slug');
+	const dir = getCritiqueDir(cwd);
+	fs.mkdirSync(dir, { recursive: true });
+	const timestamp = nowFilenameStamp(now);
+	const filePath = path.join(dir, `${timestamp}__${slug}.md`);
+	// Spread `meta` first so internally computed `timestamp` and `slug`
+	// always win. Otherwise a caller-supplied meta blob (parsed from the
+	// IMPECCABLE_CRITIQUE_META env var) could clobber them, leaving the
+	// filename in disagreement with its frontmatter and corrupting trends.
+	const front = serializeFrontmatter({ ...meta, timestamp, slug });
+	fs.writeFileSync(filePath, `${front}\n${body.trim()}\n`, 'utf-8');
+	return filePath;
 }
 
 function serializeFrontmatter(obj) {
-  const lines = ['---'];
-  for (const [key, value] of Object.entries(obj)) {
-    if (value === undefined || value === null) continue;
-    const str = typeof value === 'string' ? value : String(value);
-    // Quote strings that contain : or # to keep parsing simple.
-    const needsQuotes = typeof value === 'string' && /[:#]/.test(str);
-    lines.push(`${key}: ${needsQuotes ? JSON.stringify(str) : str}`);
-  }
-  lines.push('---');
-  return lines.join('\n');
+	const lines = ['---'];
+	for (const [key, value] of Object.entries(obj)) {
+		if (value === undefined || value === null) continue;
+		const str = typeof value === 'string' ? value : String(value);
+		// Quote strings that contain : or # to keep parsing simple.
+		const needsQuotes = typeof value === 'string' && /[:#]/.test(str);
+		lines.push(`${key}: ${needsQuotes ? JSON.stringify(str) : str}`);
+	}
+	lines.push('---');
+	return lines.join('\n');
 }
 
 function parseFrontmatter(text) {
-  const match = text.match(/^---\r?\n([\s\S]*?)\r?\n---/);
-  if (!match) return {};
-  const out = {};
-  for (const line of match[1].split(/\r?\n/)) {
-    const colon = line.indexOf(':');
-    if (colon < 0) continue;
-    const key = line.slice(0, colon).trim();
-    let value = line.slice(colon + 1).trim();
-    if (/^".*"$/.test(value)) {
-      try { value = JSON.parse(value); } catch { /* leave as-is */ }
-    } else if (/^-?\d+$/.test(value)) {
-      value = Number(value);
-    }
-    out[key] = value;
-  }
-  return out;
+	const match = text.match(/^---\r?\n([\s\S]*?)\r?\n---/);
+	if (!match) return {};
+	const out = {};
+	for (const line of match[1].split(/\r?\n/)) {
+		const colon = line.indexOf(':');
+		if (colon < 0) continue;
+		const key = line.slice(0, colon).trim();
+		let value = line.slice(colon + 1).trim();
+		if (/^".*"$/.test(value)) {
+			try {
+				value = JSON.parse(value);
+			} catch {
+				/* leave as-is */
+			}
+		} else if (/^-?\d+$/.test(value)) {
+			value = Number(value);
+		}
+		out[key] = value;
+	}
+	return out;
 }
 
 /**
@@ -110,19 +114,20 @@ function parseFrontmatter(text) {
 const SNAPSHOT_FILENAME = /^\d{4}-\d{2}-\d{2}T\d{2}-\d{2}-\d{2}Z__.+\.md$/;
 
 function listSnapshots(suffix, cwd) {
-  const dir = getCritiqueDir(cwd);
-  if (!fs.existsSync(dir)) return [];
-  return fs.readdirSync(dir)
-    .filter((f) => SNAPSHOT_FILENAME.test(f) && f.endsWith(suffix))
-    .sort()
-    .map((f) => path.join(dir, f));
+	const dir = getCritiqueDir(cwd);
+	if (!fs.existsSync(dir)) return [];
+	return fs
+		.readdirSync(dir)
+		.filter((f) => SNAPSHOT_FILENAME.test(f) && f.endsWith(suffix))
+		.sort()
+		.map((f) => path.join(dir, f));
 }
 
 function readLatestSnapshotMatching(suffix, cwd) {
-  const filePath = listSnapshots(suffix, cwd).at(-1);
-  if (!filePath) return null;
-  const body = fs.readFileSync(filePath, 'utf-8');
-  return { path: filePath, body, meta: parseFrontmatter(body) };
+	const filePath = listSnapshots(suffix, cwd).at(-1);
+	if (!filePath) return null;
+	const body = fs.readFileSync(filePath, 'utf-8');
+	return { path: filePath, body, meta: parseFrontmatter(body) };
 }
 
 /**
@@ -130,12 +135,12 @@ function readLatestSnapshotMatching(suffix, cwd) {
  * to find its fix backlog when the slug matches.
  */
 export function readLatestSnapshot(slug, { cwd = process.cwd() } = {}) {
-  return readLatestSnapshotMatching(`__${slug}.md`, cwd);
+	return readLatestSnapshotMatching(`__${slug}.md`, cwd);
 }
 
 /** Return the most recent snapshot across all targets, or null. */
 export function readLatestSnapshotAcrossTargets({ cwd = process.cwd() } = {}) {
-  return readLatestSnapshotMatching('.md', cwd);
+	return readLatestSnapshotMatching('.md', cwd);
 }
 
 /**
@@ -143,9 +148,9 @@ export function readLatestSnapshotAcrossTargets({ cwd = process.cwd() } = {}) {
  * Critique appends a one-line trend to its output using this.
  */
 export function readTrend(slug, { limit = 5, cwd = process.cwd() } = {}) {
-  const all = listSnapshots(`__${slug}.md`, cwd);
-  const slice = all.slice(-limit);
-  return slice.map((file) => parseFrontmatter(fs.readFileSync(file, 'utf-8')));
+	const all = listSnapshots(`__${slug}.md`, cwd);
+	const slice = all.slice(-limit);
+	return slice.map((file) => parseFrontmatter(fs.readFileSync(file, 'utf-8')));
 }
 
 // ---- CLI ---------------------------------------------------------------
@@ -154,63 +159,75 @@ export function readTrend(slug, { limit = 5, cwd = process.cwd() } = {}) {
 // callers never have to run the slug step separately. Anything containing a
 // path or URL marker is resolved through slugFromTarget.
 function coerceSlug(value) {
-  if (!value) return null;
-  if (/^[a-z0-9-]+$/.test(value) && !value.includes('/')) return value;
-  return slugFromTarget(value);
+	if (!value) return null;
+	if (/^[a-z0-9-]+$/.test(value) && !value.includes('/')) return value;
+	return slugFromTarget(value);
 }
 
 function main(argv) {
-  const [cmd, ...args] = argv;
-  switch (cmd) {
-    case 'slug': {
-      const slug = slugFromTarget(args[0]);
-      if (!slug) { process.stderr.write('no stable slug for input\n'); process.exit(1); }
-      process.stdout.write(`${slug}\n`);
-      return;
-    }
-    case 'write': {
-      const [slugArg, bodyFile] = args;
-      const slug = coerceSlug(slugArg);
-      if (!slug || !bodyFile) { process.stderr.write('usage: write <slug-or-target> <body-file>\n'); process.exit(1); }
-      const raw = fs.readFileSync(bodyFile, 'utf-8');
-      // The body file may be a full report. The caller passes the meta as
-      // a JSON object on stdin if it wants structured frontmatter; otherwise
-      // we write with minimal metadata.
-      let meta = {};
-      const metaArg = process.env.IMPECCABLE_CRITIQUE_META;
-      if (metaArg) {
-        try { meta = JSON.parse(metaArg); } catch { /* ignore */ }
-      }
-      const out = writeSnapshot({ slug, meta, body: raw });
-      process.stdout.write(`${out}\n`);
-      return;
-    }
-    case 'latest': {
-      const latest = readLatestSnapshot(coerceSlug(args[0]));
-      if (!latest) { process.exit(2); }
-      process.stdout.write(latest.body);
-      return;
-    }
-    case 'trend': {
-      const rows = readTrend(coerceSlug(args[0]), { limit: args[1] ? Number(args[1]) : 5 });
-      process.stdout.write(JSON.stringify(rows, null, 2) + '\n');
-      return;
-    }
-    default:
-      process.stderr.write('usage: critique-storage.mjs <slug|write|latest|trend> [args]\n');
-      process.exit(1);
-  }
+	const [cmd, ...args] = argv;
+	switch (cmd) {
+		case 'slug': {
+			const slug = slugFromTarget(args[0]);
+			if (!slug) {
+				process.stderr.write('no stable slug for input\n');
+				process.exit(1);
+			}
+			process.stdout.write(`${slug}\n`);
+			return;
+		}
+		case 'write': {
+			const [slugArg, bodyFile] = args;
+			const slug = coerceSlug(slugArg);
+			if (!slug || !bodyFile) {
+				process.stderr.write('usage: write <slug-or-target> <body-file>\n');
+				process.exit(1);
+			}
+			const raw = fs.readFileSync(bodyFile, 'utf-8');
+			// The body file may be a full report. The caller passes the meta as
+			// a JSON object on stdin if it wants structured frontmatter; otherwise
+			// we write with minimal metadata.
+			let meta = {};
+			const metaArg = process.env.IMPECCABLE_CRITIQUE_META;
+			if (metaArg) {
+				try {
+					meta = JSON.parse(metaArg);
+				} catch {
+					/* ignore */
+				}
+			}
+			const out = writeSnapshot({ slug, meta, body: raw });
+			process.stdout.write(`${out}\n`);
+			return;
+		}
+		case 'latest': {
+			const latest = readLatestSnapshot(coerceSlug(args[0]));
+			if (!latest) {
+				process.exit(2);
+			}
+			process.stdout.write(latest.body);
+			return;
+		}
+		case 'trend': {
+			const rows = readTrend(coerceSlug(args[0]), { limit: args[1] ? Number(args[1]) : 5 });
+			process.stdout.write(JSON.stringify(rows, null, 2) + '\n');
+			return;
+		}
+		default:
+			process.stderr.write('usage: critique-storage.mjs <slug|write|latest|trend> [args]\n');
+			process.exit(1);
+	}
 }
 
 function isMainModule() {
-  if (!process.argv[1]) return false;
-  try {
-    return fs.realpathSync(fileURLToPath(import.meta.url)) === fs.realpathSync(process.argv[1]);
-  } catch {
-    // pathToFileURL normalizes Windows paths; keep it as a fallback for any
-    // environment where realpath is unavailable.
-    return import.meta.url === pathToFileURL(process.argv[1]).href;
-  }
+	if (!process.argv[1]) return false;
+	try {
+		return fs.realpathSync(fileURLToPath(import.meta.url)) === fs.realpathSync(process.argv[1]);
+	} catch {
+		// pathToFileURL normalizes Windows paths; keep it as a fallback for any
+		// environment where realpath is unavailable.
+		return import.meta.url === pathToFileURL(process.argv[1]).href;
+	}
 }
 
 // Why the realpath check: generated skills are often reached through symlinked
@@ -218,5 +235,5 @@ function isMainModule() {
 // Node resolves import.meta.url to the real file, while process.argv[1] keeps
 // the symlink path. Comparing canonical paths prevents a silent exit-0 no-op.
 if (isMainModule()) {
-  main(process.argv.slice(2));
+	main(process.argv.slice(2));
 }

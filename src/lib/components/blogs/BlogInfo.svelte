@@ -1,14 +1,15 @@
-<script>
-	import ExLink from '$components/common/ExLink.svelte';
-	import Breadcrumb from '$components/other/Breadcrumb.svelte';
-	import { CalendarBlank, Pen, Tag as TagIcon } from '$lib/assets/icons/icons';
+<script lang="ts">
+	import ExLink from '#lib/components/common/ExLink.svelte';
+	import Breadcrumb from '#lib/components/other/Breadcrumb.svelte';
+	import { CalendarBlank, Pen, Tag as TagIcon } from '#lib/assets/icons/icons.js';
+	import { SvelteDate } from 'svelte/reactivity';
 
 	/** @type {{data: any, hasCategory?: boolean}} */
 	let { data, hasCategory = false } = $props();
 
 	function formatRelativeTime(dateString) {
-		const date = new Date(dateString);
-		const now = new Date();
+		const date = new SvelteDate(dateString);
+		const now = new SvelteDate();
 		now.setHours(0, 0, 0, 0);
 		date.setHours(0, 0, 0, 0);
 

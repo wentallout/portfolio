@@ -1,10 +1,10 @@
-import { env } from '$env/dynamic/private';
+import { ARCJET_KEY } from '$app/env/private';
 import arcjet, { detectBot, shield, tokenBucket } from '@arcjet/sveltekit';
 import { isSpoofedBot } from '@arcjet/inspect';
-import { error, json, type RequestEvent } from '@sveltejs/kit';
+import { error, type RequestEvent } from '@sveltejs/kit';
 
 const aj = arcjet({
-	key: env.ARCJET_KEY!, // Get your site key from https://app.arcjet.com
+	key: ARCJET_KEY!, // Get your site key from https://app.arcjet.com
 	characteristics: ['ip.src'], // Track requests by IP
 	rules: [
 		// Shield protects your app from common attacks e.g. SQL injection
@@ -53,5 +53,5 @@ export async function GET(event: RequestEvent) {
 		return error(403, 'Forbidden');
 	}
 
-	return json({ message: 'Hello World' });
+	return Response.json({ message: 'Hello World' });
 }

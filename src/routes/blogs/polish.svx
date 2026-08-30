@@ -6,8 +6,8 @@ categories:
 ---
 
 <script>
-    import Image from '$components/common/Image.svelte';
-    import polishRhythm from '$blogImages/polishRhythm.png';
+    import Image from '#lib/components/common/Image.svelte';
+    import polishRhythm from '#lib/assets/images/blogs/polishRhythm.png';
 </script>
 
 ## polish the right thing

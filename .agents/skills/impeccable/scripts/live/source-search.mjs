@@ -26,7 +26,15 @@ import { matchesTemplateExtension } from '../lib/template-extensions.mjs';
  * into `lib`, so the real #374 bug was the extension list, not this array.
  */
 export const SOURCE_SEARCH_DIRS = Object.freeze([
-  'src', 'app', 'pages', 'components', 'public', 'views', 'templates', 'lib', '.',
+	'src',
+	'app',
+	'pages',
+	'components',
+	'public',
+	'views',
+	'templates',
+	'lib',
+	'.'
 ]);
 
 /**
@@ -57,49 +65,72 @@ const MAX_DEPTH = 5;
  * @param {(filePath: string) => boolean} [opts.fileFilter] return false to reject a candidate
  * @returns {string|null} absolute path of the first match
  */
-export function findSourceFile({ query, cwd, extensions, skipDirs = NEVER_SOURCE_DIRS, fileFilter }) {
-  const skip = new Set(skipDirs);
-  const seen = new Set();
-  for (const dir of SOURCE_SEARCH_DIRS) {
-    const absDir = path.join(cwd, dir);
-    if (!fs.existsSync(absDir)) continue;
-    const result = walk(absDir, query, extensions, skip, fileFilter, seen, 0);
-    if (result) return result;
-  }
-  return null;
+export function findSourceFile({
+	query,
+	cwd,
+	extensions,
+	skipDirs = NEVER_SOURCE_DIRS,
+	fileFilter
+}) {
+	const skip = new Set(skipDirs);
+	const seen = new Set();
+	for (const dir of SOURCE_SEARCH_DIRS) {
+		const absDir = path.join(cwd, dir);
+		if (!fs.existsSync(absDir)) continue;
+		const result = walk(absDir, query, extensions, skip, fileFilter, seen, 0);
+		if (result) return result;
+	}
+	return null;
 }
 
 function walk(dir, query, extensions, skip, fileFilter, seen, depth) {
-  if (depth > MAX_DEPTH) return null;
-  // A broken symlink anywhere in the tree used to throw straight out of
-  // live-wrap's copy of this walk, killing the whole wrap.
-  let realDir;
-  try { realDir = fs.realpathSync(dir); } catch { return null; }
-  if (seen.has(realDir)) return null;
-  seen.add(realDir);
+	if (depth > MAX_DEPTH) return null;
+	// A broken symlink anywhere in the tree used to throw straight out of
+	// live-wrap's copy of this walk, killing the whole wrap.
+	let realDir;
+	try {
+		realDir = fs.realpathSync(dir);
+	} catch {
+		return null;
+	}
+	if (seen.has(realDir)) return null;
+	seen.add(realDir);
 
-  let entries;
-  try { entries = fs.readdirSync(dir, { withFileTypes: true }); }
-  catch { return null; }
+	let entries;
+	try {
+		entries = fs.readdirSync(dir, { withFileTypes: true });
+	} catch {
+		return null;
+	}
 
-  // Files before directories: a match in the current directory beats one
-  // nested deeper.
-  for (const entry of entries) {
-    if (!entry.isFile()) continue;
-    if (!matchesTemplateExtension(entry.name, extensions)) continue;
-    const filePath = path.join(dir, entry.name);
-    if (fileFilter && !fileFilter(filePath)) continue;
-    try {
-      if (fs.readFileSync(filePath, 'utf-8').includes(query)) return filePath;
-    } catch { /* unreadable, skip */ }
-  }
+	// Files before directories: a match in the current directory beats one
+	// nested deeper.
+	for (const entry of entries) {
+		if (!entry.isFile()) continue;
+		if (!matchesTemplateExtension(entry.name, extensions)) continue;
+		const filePath = path.join(dir, entry.name);
+		if (fileFilter && !fileFilter(filePath)) continue;
+		try {
+			if (fs.readFileSync(filePath, 'utf-8').includes(query)) return filePath;
+		} catch {
+			/* unreadable, skip */
+		}
+	}
 
-  for (const entry of entries) {
-    if (!entry.isDirectory()) continue;
-    if (skip.has(entry.name)) continue;
-    const result = walk(path.join(dir, entry.name), query, extensions, skip, fileFilter, seen, depth + 1);
-    if (result) return result;
-  }
+	for (const entry of entries) {
+		if (!entry.isDirectory()) continue;
+		if (skip.has(entry.name)) continue;
+		const result = walk(
+			path.join(dir, entry.name),
+			query,
+			extensions,
+			skip,
+			fileFilter,
+			seen,
+			depth + 1
+		);
+		if (result) return result;
+	}
 
-  return null;
+	return null;
 }

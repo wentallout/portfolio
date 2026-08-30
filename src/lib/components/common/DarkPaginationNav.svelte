@@ -1,5 +1,5 @@
-<script>
-	import PaginationNav from '$components/common/PaginationNav.svelte';
+<script lang="ts">
+	import PaginationNav from '#lib/components/common/PaginationNav.svelte';
 	let { onsetPage, ...rest } = $props();
 </script>
 

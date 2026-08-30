@@ -1,11 +1,11 @@
-<script>
-	import Breadcrumb from '$components/other/Breadcrumb.svelte';
-	import SEO from '$components/seo/SEO.svelte';
-	import { META_DESCRIPTIONS, PAGE_TITLES, SECTION_TITLES } from '$lib/constants/labels';
-	import SectionTitle from '$sections/layout/SectionTitle.svelte';
-	import ProjectList from '$sections/projects/ProjectList.svelte';
-	import SnippetList from '$sections/projects/SnippetList.svelte';
-	import VideoDemoList from '$sections/projects/VideoDemoList.svelte';
+<script lang="ts">
+	import Breadcrumb from '#lib/components/other/Breadcrumb.svelte';
+	import SEO from '#lib/components/seo/SEO.svelte';
+	import { META_DESCRIPTIONS, PAGE_TITLES, SECTION_TITLES } from '#lib/constants/labels.js';
+	import SectionTitle from '#lib/sections/layout/SectionTitle.svelte';
+	import ProjectList from '#lib/sections/projects/ProjectList.svelte';
+	import SnippetList from '#lib/sections/projects/SnippetList.svelte';
+	import VideoDemoList from '#lib/sections/projects/VideoDemoList.svelte';
 
 	const breadcrumbs = [
 		{

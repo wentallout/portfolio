@@ -1,6 +1,6 @@
-<script>
-	import CustomBlogToc from '$components/blogs/CustomBlogToc.svelte';
-	import { ListBullets } from '$lib/assets/icons/icons';
+<script lang="ts">
+	import CustomBlogToc from '#lib/components/blogs/CustomBlogToc.svelte';
+	import { ListBullets } from '#lib/assets/icons/icons.js';
 
 	/** @type {{children?: import('svelte').Snippet}} */
 	let { children } = $props();

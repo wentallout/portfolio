@@ -11,6 +11,7 @@ Run comprehensive checks across 5 dimensions. Score each dimension 0-4 using the
 ### 1. Accessibility (A11y)
 
 **Check for**:
+
 - **Contrast issues**: Text contrast ratios < 4.5:1 (or 7:1 for AAA)
 - **Motion sensitivity**: `prefers-reduced-motion` needs an intentional alternative that preserves state change and hierarchy; flag a global `0.01ms` kill that destroys useful feedback, flashing above threshold, and motion that blocks focus, reading, or task completion
 - **Missing ARIA**: Interactive elements without proper roles, labels, or states
@@ -24,6 +25,7 @@ Run comprehensive checks across 5 dimensions. Score each dimension 0-4 using the
 ### 2. Performance
 
 **Check for**:
+
 - **Layout thrashing**: Reading/writing layout properties in loops
 - **Expensive animations**: Casual layout-property animation, unbounded blur/filter/shadow effects, or effects that visibly drop frames
 - **Missing optimization**: Images without lazy loading, unoptimized assets
@@ -36,6 +38,7 @@ Run comprehensive checks across 5 dimensions. Score each dimension 0-4 using the
 ### 3. Theming
 
 **Check for**:
+
 - **Hard-coded colors**: Colors not using design tokens
 - **Broken dark mode**: Missing dark mode variants, poor contrast in dark theme
 - **Inconsistent tokens**: Using wrong tokens, mixing token types
@@ -46,6 +49,7 @@ Run comprehensive checks across 5 dimensions. Score each dimension 0-4 using the
 ### 4. Responsive Design
 
 **Check for**:
+
 - **Fixed widths**: Hard-coded widths that break on mobile
 - **Touch targets**: Interactive elements < 44x44px
 - **Horizontal scroll**: Content overflow on narrow viewports
@@ -64,21 +68,23 @@ Run the bundled detector and verify each finding in context. Look for repeated i
 
 ### Audit Health Score
 
-| # | Dimension | Score | Key Finding |
-|---|-----------|-------|-------------|
-| 1 | Accessibility | ? | [most critical a11y issue or "--"] |
-| 2 | Performance | ? | |
-| 3 | Responsive Design | ? | |
-| 4 | Theming | ? | |
-| 5 | Implementation Integrity | ? | |
-| **Total** | | **??/20** | **[Rating band]** |
+| #         | Dimension                | Score     | Key Finding                        |
+| --------- | ------------------------ | --------- | ---------------------------------- |
+| 1         | Accessibility            | ?         | [most critical a11y issue or "--"] |
+| 2         | Performance              | ?         |                                    |
+| 3         | Responsive Design        | ?         |                                    |
+| 4         | Theming                  | ?         |                                    |
+| 5         | Implementation Integrity | ?         |                                    |
+| **Total** |                          | **??/20** | **[Rating band]**                  |
 
 **Rating bands**: 18-20 Excellent (minor polish), 14-17 Good (address weak dimensions), 10-13 Acceptable (significant work needed), 6-9 Poor (major overhaul), 0-5 Critical (fundamental issues)
 
 ### Implementation Integrity Verdict
+
 **Start here.** Pass/fail: does the implementation express a coherent product-specific system? Cite verified evidence and detector findings.
 
 ### Executive Summary
+
 - Audit Health Score: **??/20** ([rating band])
 - Total issues found (count by severity: P0/P1/P2/P3)
 - Top 3-5 critical issues
@@ -87,12 +93,14 @@ Run the bundled detector and verify each finding in context. Look for repeated i
 ### Detailed Findings by Severity
 
 Tag every issue with **P0-P3 severity**:
+
 - **P0 Blocking**: Prevents task completion. Fix immediately
 - **P1 Major**: Significant difficulty or WCAG AA violation. Fix before release
 - **P2 Minor**: Annoyance, workaround exists. Fix in next pass
 - **P3 Polish**: Nice-to-fix, no real user impact. Fix if time permits
 
 For each issue, document:
+
 - **[P?] Issue name**
 - **Location**: Component, file, line
 - **Category**: Accessibility / Performance / Theming / Responsive / Implementation Integrity
@@ -104,6 +112,7 @@ For each issue, document:
 ### Patterns & Systemic Issues
 
 Identify recurring problems that indicate systemic gaps rather than one-off mistakes:
+
 - "Hard-coded colors appear in 15+ components, should use design tokens"
 - "Touch targets consistently too small (<44px) throughout mobile experience"
 
@@ -129,6 +138,7 @@ After presenting the summary, tell the user:
 **IMPORTANT**: Be thorough but actionable. Too many P3 issues creates noise. Focus on what actually matters.
 
 **NEVER**:
+
 - Report issues without explaining impact (why does this matter?)
 - Provide generic recommendations (be specific and actionable)
 - Skip positive findings (celebrate what works)

@@ -1,7 +1,6 @@
-import type { Handle } from '@sveltejs/kit';
-
-import { building } from '$app/environment';
+import type { Handle } from '@sveltejs/kit/hooks';
 import { error, type RequestEvent } from '@sveltejs/kit';
+import { building } from '$app/env';
 import type { Config } from 'web-sentinel';
 
 import { createHandler } from 'web-sentinel/hooks';
@@ -91,7 +90,10 @@ export const handle: Handle = async ({ event, resolve }) => {
 		];
 
 		const currentLink = response.headers.get('Link');
-		response.headers.set('Link', currentLink ? `${currentLink}, ${links.join(', ')}` : links.join(', '));
+		response.headers.set(
+			'Link',
+			currentLink ? `${currentLink}, ${links.join(', ')}` : links.join(', ')
+		);
 	}
 
 	// Markdown for Agents (Content Negotiation)
@@ -112,8 +114,9 @@ export const handle: Handle = async ({ event, resolve }) => {
 			.replace(/<header\b[^<]*(?:(?!<\/header>)<[^<]*)*<\/header>/gi, '')
 			.replace(/<footer\b[^<]*(?:(?!<\/footer>)<[^<]*)*<\/footer>/gi, '')
 			.replace(/<nav\b[^<]*(?:(?!<\/nav>)<[^<]*)*<\/nav>/gi, '')
-			.replace(/<(h[1-6])[^>]*>(.*?)<\/\1>/gi, (_, tag, content) => {
+			.replace(/<(h[1-6])[^>]*>(.*?)<\/\1>/gi, (_: string, tag: string, content: string) => {
 				const level = tag[1];
+
 				return `\n${'#'.repeat(parseInt(level))} ${content.replace(/<[^>]+>/g, '').trim()}\n`;
 			})
 			.replace(/<a[^>]+href="([^"]+)"[^>]*>(.*?)<\/a>/gi, '[$2]($1)')

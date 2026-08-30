@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
 	import GlassButton from './GlassButton.svelte';
 
 	/** @type {{children?: import('svelte').Snippet, label?: string, type?: "button" | "submit" | "reset", hapticPattern?: string | number | number[] | object}} */
@@ -8,4 +8,3 @@
 <GlassButton {hapticPattern} {label} {type} variant="primary">
 	{@render children?.()}
 </GlassButton>
-

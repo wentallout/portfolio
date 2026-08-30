@@ -7,6 +7,7 @@ version: 4.1.1
 This skill gives you the tools and permission to create design that earns to be called out-of-distribution craft: Whereas before, your design work would have been safe, timid and measured, you now approach every design task as a award-winning design director with impeccable understanding for what makes exceptional design work: production-grade code, peak creativity, a clear POV, deep understanding of the needs of the client and users, and exceptional craft.
 
 Core principles:
+
 - Go all out. No hedging, no shortcuts. The deliverable must be complete (except assets the user must provide).
 - Dream big and bold. Distinct, beautiful, outstanding and highly inspiring work.
 - Verify in bounded passes, not a loop, and the ceiling covers the whole cycle: screenshots, defect scans, micro-edits, and rebuilds alike. Build fully, inspect once with a batched round (desktop and mobile together on the web; the shipped device classes on a native platform), fix everything it shows in one batch, confirm with at most one more round, and stop polishing. Open-ended self-QA burns the user's money doing worse what the finish handoffs do better.
@@ -36,31 +37,31 @@ Choose the mode from the requested surface, not the product, and persist it only
 
 ## Commands
 
-| Command | Category | Description | Reference |
-|---|---|---|---|
-| `craft [feature]` | Build | Deprecated alias for an ordinary new-work request | [reference/craft.md](reference/craft.md) |
-| `shape [feature]` | Build | Plan UX/UI before writing code | [reference/shape.md](reference/shape.md) |
-| `init` | Build | Capture durable product context in PRODUCT.md | [reference/init.md](reference/init.md) |
-| `document` | Build | Generate DESIGN.md from existing project code | [reference/document.md](reference/document.md) |
-| `extract [target]` | Build | Pull reusable tokens and components into design system | [reference/extract.md](reference/extract.md) |
-| `critique [target]` | Evaluate | UX design review with heuristic scoring | [reference/critique.md](reference/critique.md) |
-| `audit [target]` | Evaluate | Technical quality checks (a11y, perf, responsive) | [reference/audit.md](reference/audit.md) · native: [reference/audit.native.md](reference/audit.native.md) |
-| `polish [target]` | Refine | Final quality pass before shipping | [reference/polish.md](reference/polish.md) |
-| `bolder [target]` | Refine | Amplify safe or bland designs | [reference/bolder.md](reference/bolder.md) |
-| `quieter [target]` | Refine | Tone down aggressive or overstimulating designs | [reference/quieter.md](reference/quieter.md) |
-| `distill [target]` | Refine | Strip to essence, remove complexity | [reference/distill.md](reference/distill.md) |
-| `harden [target]` | Refine | Production-ready: errors, i18n, edge cases | [reference/harden.md](reference/harden.md) |
-| `onboard [target]` | Refine | Design first-run flows, empty states, activation | [reference/onboard.md](reference/onboard.md) |
-| `animate [target]` | Enhance | Add purposeful animations and motion | [reference/animate.md](reference/animate.md) |
-| `colorize [target]` | Enhance | Add strategic color to monochromatic UIs | [reference/colorize.md](reference/colorize.md) |
-| `typeset [target]` | Enhance | Improve typography hierarchy and fonts | [reference/typeset.md](reference/typeset.md) |
-| `layout [target]` | Enhance | Fix spacing, rhythm, and visual hierarchy | [reference/layout.md](reference/layout.md) |
-| `delight [target]` | Enhance | Add personality and memorable touches | [reference/delight.md](reference/delight.md) |
-| `overdrive [target]` | Enhance | Push past conventional limits | [reference/overdrive.md](reference/overdrive.md) |
-| `clarify [target]` | Fix | Improve UX copy, labels, and error messages | [reference/clarify.md](reference/clarify.md) |
-| `adapt [target]` | Fix | Adapt for different devices and screen sizes | [reference/adapt.md](reference/adapt.md) · native: [reference/adapt.native.md](reference/adapt.native.md) |
-| `optimize [target]` | Fix | Diagnose and fix UI performance | [reference/optimize.md](reference/optimize.md) |
-| `live` | Iterate | Visual variant mode: pick elements in the browser, generate alternatives | [reference/live.md](reference/live.md) |
+| Command              | Category | Description                                                              | Reference                                                                                                 |
+| -------------------- | -------- | ------------------------------------------------------------------------ | --------------------------------------------------------------------------------------------------------- |
+| `craft [feature]`    | Build    | Deprecated alias for an ordinary new-work request                        | [reference/craft.md](reference/craft.md)                                                                  |
+| `shape [feature]`    | Build    | Plan UX/UI before writing code                                           | [reference/shape.md](reference/shape.md)                                                                  |
+| `init`               | Build    | Capture durable product context in PRODUCT.md                            | [reference/init.md](reference/init.md)                                                                    |
+| `document`           | Build    | Generate DESIGN.md from existing project code                            | [reference/document.md](reference/document.md)                                                            |
+| `extract [target]`   | Build    | Pull reusable tokens and components into design system                   | [reference/extract.md](reference/extract.md)                                                              |
+| `critique [target]`  | Evaluate | UX design review with heuristic scoring                                  | [reference/critique.md](reference/critique.md)                                                            |
+| `audit [target]`     | Evaluate | Technical quality checks (a11y, perf, responsive)                        | [reference/audit.md](reference/audit.md) · native: [reference/audit.native.md](reference/audit.native.md) |
+| `polish [target]`    | Refine   | Final quality pass before shipping                                       | [reference/polish.md](reference/polish.md)                                                                |
+| `bolder [target]`    | Refine   | Amplify safe or bland designs                                            | [reference/bolder.md](reference/bolder.md)                                                                |
+| `quieter [target]`   | Refine   | Tone down aggressive or overstimulating designs                          | [reference/quieter.md](reference/quieter.md)                                                              |
+| `distill [target]`   | Refine   | Strip to essence, remove complexity                                      | [reference/distill.md](reference/distill.md)                                                              |
+| `harden [target]`    | Refine   | Production-ready: errors, i18n, edge cases                               | [reference/harden.md](reference/harden.md)                                                                |
+| `onboard [target]`   | Refine   | Design first-run flows, empty states, activation                         | [reference/onboard.md](reference/onboard.md)                                                              |
+| `animate [target]`   | Enhance  | Add purposeful animations and motion                                     | [reference/animate.md](reference/animate.md)                                                              |
+| `colorize [target]`  | Enhance  | Add strategic color to monochromatic UIs                                 | [reference/colorize.md](reference/colorize.md)                                                            |
+| `typeset [target]`   | Enhance  | Improve typography hierarchy and fonts                                   | [reference/typeset.md](reference/typeset.md)                                                              |
+| `layout [target]`    | Enhance  | Fix spacing, rhythm, and visual hierarchy                                | [reference/layout.md](reference/layout.md)                                                                |
+| `delight [target]`   | Enhance  | Add personality and memorable touches                                    | [reference/delight.md](reference/delight.md)                                                              |
+| `overdrive [target]` | Enhance  | Push past conventional limits                                            | [reference/overdrive.md](reference/overdrive.md)                                                          |
+| `clarify [target]`   | Fix      | Improve UX copy, labels, and error messages                              | [reference/clarify.md](reference/clarify.md)                                                              |
+| `adapt [target]`     | Fix      | Adapt for different devices and screen sizes                             | [reference/adapt.md](reference/adapt.md) · native: [reference/adapt.native.md](reference/adapt.native.md) |
+| `optimize [target]`  | Fix      | Diagnose and fix UI performance                                          | [reference/optimize.md](reference/optimize.md)                                                            |
+| `live`               | Iterate  | Visual variant mode: pick elements in the browser, generate alternatives | [reference/live.md](reference/live.md)                                                                    |
 
 Routing:
 

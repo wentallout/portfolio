@@ -1,8 +1,8 @@
-<script>
-	import { tooltip } from '$lib/actions/tooltip';
-	import Ballpit from '$lib/components/Ballpit.svelte';
-	import BlurText from '$lib/components/BlurText.svelte';
-	import { CAL_BOOKING_LINK } from '$lib/constants/personal';
+<script lang="ts">
+	import { tooltip } from '#lib/actions/tooltip.js';
+	import Ballpit from '#lib/components/Ballpit.svelte';
+	import BlurText from '#lib/components/BlurText.svelte';
+	import { CAL_BOOKING_LINK } from '#lib/constants/personal.js';
 
 	const calBookingLink = CAL_BOOKING_LINK;
 </script>
@@ -11,18 +11,18 @@
 	<!-- Ballpit background — behind glass card, fills entire hero -->
 	<div class="absolute inset-0 z-0 overflow-hidden pointer-events-none" aria-hidden="true">
 		<Ballpit
-			count={120}
-			gravity={0.45}
-			friction={0.9975}
-			wallBounce={0.95}
-			followCursor={true}
-			minSize={0.5}
-			maxSize={1}
+			class="opacity-80 dark:opacity-60"
 			ambientColor={0xffffff}
 			ambientIntensity={1}
-			lightIntensity={120}
 			colors={[0xffbb00, 0xe0a400, 0xc79200, 0x525252, 0x171717]}
-			class="opacity-80 dark:opacity-60" />
+			count={120}
+			followCursor={true}
+			friction={0.9975}
+			gravity={0.45}
+			lightIntensity={120}
+			maxSize={1}
+			minSize={0.5}
+			wallBounce={0.95} />
 		<!-- soft fade so balls don't clash with grid edges -->
 		<div
 			class="absolute inset-0 bg-gradient-to-b from-background/10 via-transparent to-background/20 pointer-events-none">

@@ -1,24 +1,25 @@
 <!doctype html>
 <html lang="en" dir="ltr">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" href="%sveltekit.assets%/favicon.ico" sizes="any" />
+		<link rel="icon" href="%sveltekit.assets%/favicon.svg" type="image/svg+xml" />
+		<link rel="apple-touch-icon" href="%sveltekit.assets%/apple-touch-icon.png" />
+		<link rel="alternate" type="application/atom+xml" href="/rss.xml" />
+		<link rel="ai-catalog" href="/.well-known/ai-catalog.json" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<link rel="manifest" crossorigin="use-credentials" href="/manifest.webmanifest" />
 
-<head>
-	<meta charset="utf-8" />
-	<link rel="icon" href="%sveltekit.assets%/favicon.ico" sizes="any" />
-	<link rel="icon" href="%sveltekit.assets%/favicon.svg" type="image/svg+xml" />
-	<link rel="apple-touch-icon" href="%sveltekit.assets%/apple-touch-icon.png" />
-	<link rel="alternate" type="application/atom+xml" href="/rss.xml" />
-	<meta name="viewport" content="width=device-width, initial-scale=1" />
-	<link rel="manifest" crossorigin="use-credentials" href="/manifest.webmanifest" />
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+			rel="stylesheet"
+		/>
+		%sveltekit.head%
+	</head>
 
-	<link rel="preconnect" href="https://fonts.googleapis.com">
-	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
-		rel="stylesheet">
-	%sveltekit.head%
-</head>
-
-<body data-sveltekit-preload-data="hover">
-	<div>%sveltekit.body%</div>
-</body>
-
+	<body data-sveltekit-preload-data="hover">
+		<div>%sveltekit.body%</div>
+	</body>
 </html>

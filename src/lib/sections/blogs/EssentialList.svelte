@@ -1,9 +1,9 @@
-<script>
-	import CardListContainer from '$components/layout/container/CardListContainer.svelte';
-	import FigmaCard from '$components/resource/FigmaCard.svelte';
-	import FluentDesign from '$lib/assets/images/resource/fluent-design.png';
-	import iOSThumbnail from '$lib/assets/images/resource/ios-design.png';
-	import UXDeli from '$lib/assets/images/resource/ux-deli.png';
+<script lang="ts">
+	import CardListContainer from '#lib/components/layout/container/CardListContainer.svelte';
+	import FigmaCard from '#lib/components/resource/FigmaCard.svelte';
+	import FluentDesign from '#lib/assets/images/resource/fluent-design.png';
+	import iOSThumbnail from '#lib/assets/images/resource/ios-design.png';
+	import UXDeli from '#lib/assets/images/resource/ux-deli.png';
 </script>
 
 <CardListContainer>

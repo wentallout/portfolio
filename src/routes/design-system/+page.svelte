@@ -1,6 +1,6 @@
-<script>
-	import Breadcrumb from '$components/other/Breadcrumb.svelte';
-	import SectionTitle from '$sections/layout/SectionTitle.svelte';
+<script lang="ts">
+	import Breadcrumb from '#lib/components/other/Breadcrumb.svelte';
+	import SectionTitle from '#lib/sections/layout/SectionTitle.svelte';
 
 	const colorsList = [
 		{

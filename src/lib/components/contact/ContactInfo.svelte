@@ -1,8 +1,8 @@
-<script>
-	import CopyToClipboard from '$components/common/CopyToClipboard.svelte';
-	import ContactAddress from '$components/contact/ContactAddress.svelte';
-	import { Clock, EnvelopeSimple, Phone } from '$lib/assets/icons/icons';
-	import { getUserLocalTime, getVietnamTime } from '$lib/utils/time';
+<script lang="ts">
+	import CopyToClipboard from '#lib/components/common/CopyToClipboard.svelte';
+	import ContactAddress from '#lib/components/contact/ContactAddress.svelte';
+	import { Clock, EnvelopeSimple, Phone } from '#lib/assets/icons/icons.js';
+	import { getUserLocalTime, getVietnamTime } from '#lib/utils/time.js';
 
 	let localTime = $state(getUserLocalTime());
 	let vietnamTime = $state(getVietnamTime());
@@ -40,10 +40,12 @@
 		{#snippet icon()}
 			<Clock height="20" width="20" />
 		{/snippet}
-		<div class="text-sm text-muted-foreground font-sans">Monday - Friday 9:00 AM to 7:00 PM (ICT)</div>
+		<div class="text-sm text-muted-foreground font-sans">
+			Monday - Friday 9:00 AM to 7:00 PM (ICT)
+		</div>
 		<div class="text-sm text-muted-foreground font-sans">Your local time: {localTime}</div>
-		<div class="text-sm text-muted-foreground font-sans">My local time (Vietnam): {vietnamTime}</div>
+		<div class="text-sm text-muted-foreground font-sans">
+			My local time (Vietnam): {vietnamTime}
+		</div>
 	</ContactAddress>
 </div>
-
-

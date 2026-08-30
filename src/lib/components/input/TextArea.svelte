@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
 	/** @type {{label?: string, placeholder?: string, name?: string}} */
 	let {
 		label = 'message',
@@ -11,7 +11,9 @@
 
 <div class="w-full space-y-2 mb-5 font-sans group">
 	{#if label}
-		<label class="block text-sm font-medium text-muted-foreground uppercase tracking-wider font-sans" for={label}>
+		<label
+			class="block text-sm font-medium text-muted-foreground uppercase tracking-wider font-sans"
+			for={label}>
 			{label}
 		</label>
 	{/if}
@@ -20,9 +22,9 @@
 		<div
 			class="relative w-full border-grid-all bg-[var(--background)] transition-all duration-200 focus-within:border-[var(--foreground)] group-hover:border-muted-foreground"
 			class:ring-1={isFocused}
-			class:ring-[var(--foreground)]={isFocused}
-		>
+			class:ring-[var(--foreground)]={isFocused}>
 			{#if isFocused}
+
 			{/if}
 
 			<textarea
@@ -32,11 +34,7 @@
 				onblur={() => (isFocused = false)}
 				onfocus={() => (isFocused = true)}
 				{placeholder}
-				required
-			></textarea>
+				required></textarea>
 		</div>
 	</div>
 </div>
-
-
-

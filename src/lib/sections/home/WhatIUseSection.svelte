@@ -1,6 +1,6 @@
-<script>
-	import { SECTION_TITLES } from '$lib/constants/labels';
-	import SectionTitle from '$sections/layout/SectionTitle.svelte';
+<script lang="ts">
+	import { SECTION_TITLES } from '#lib/constants/labels.js';
+	import SectionTitle from '#lib/sections/layout/SectionTitle.svelte';
 
 	const categories = [
 		{

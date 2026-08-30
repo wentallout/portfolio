@@ -1,5 +1,7 @@
 <script lang="ts">
-	import { gsap } from 'gsap';
+import { gsap } from 'gsap';
+import { tryShoot, isReloading, reloading } from '#lib/stores/revolver.svelte';
+import { get } from 'svelte/store';
 
 	type Props = {
 		targetSelector?: string;
@@ -7,6 +9,7 @@
 		hideDefaultCursor?: boolean;
 		hoverDuration?: number;
 		parallaxOn?: boolean;
+		enableShooting?: boolean;
 	};
 
 	let {
@@ -14,7 +17,8 @@
 		spinDuration = 2,
 		hideDefaultCursor = true,
 		hoverDuration = 0.2,
-		parallaxOn = true
+		parallaxOn = true,
+		enableShooting = true
 	}: Props = $props();
 
 	// Programmatic auto-target: broaden default `.cursor-target` to all interactive
@@ -33,18 +37,51 @@
 	let cursor: HTMLDivElement;
 	// svelte-ignore non_reactive_update
 	let dot: HTMLDivElement;
+	let bullet: HTMLDivElement;
+	// svelte-ignore non_reactive_update
+	let casing: HTMLDivElement;
+	// svelte-ignore non_reactive_update
+	let barrelIcon: HTMLDivElement;
 
 	const isMobile = (() => {
 		if (typeof window === 'undefined') return false;
 		const hasTouch = 'ontouchstart' in window || navigator.maxTouchPoints > 0;
 		const small = window.innerWidth <= 768;
-		const ua = navigator.userAgent || navigator.vendor || (window as unknown as { opera?: string }).opera || '';
+		const ua =
+			navigator.userAgent ||
+			navigator.vendor ||
+			(window as unknown as { opera?: string }).opera ||
+			'';
 		const re = /android|webos|iphone|ipad|ipod|blackberry|iemobile|opera mini/i;
 		return (hasTouch && small) || re.test(ua.toLowerCase());
 	})();
 
+	// Barrel cursor during reload — don't hide default cursor, just swap visuals; never block clicks
+	let unsubscribeReload: (() => void) | null = null;
+
 	$effect(() => {
 		if (isMobile || !cursor) return;
+		// subscribe to reloading to swap cursor -> barrel
+		unsubscribeReload?.();
+		unsubscribeReload = reloading.subscribe((isReloadingNow) => {
+			if (!cursor || !dot) return;
+			const corners = cursor.querySelectorAll<HTMLDivElement>('.target-cursor-corner');
+			if (isReloadingNow) {
+				gsap.to(dot, { opacity: 0, scale: 0, duration: 0.15, overwrite: true });
+				corners.forEach((c) => gsap.to(c, { opacity: 0, scale: 0, duration: 0.15, overwrite: true }));
+				if (barrelIcon) gsap.to(barrelIcon, { opacity: 1, scale: 1, duration: 0.2, ease: 'back.out(1.4)', overwrite: true });
+				if (barrelIcon) {
+					gsap.to(barrelIcon, { rotation: 360, duration: 0.9, ease: 'power2.inOut', repeat: -1 });
+				}
+			} else {
+				gsap.to(dot, { opacity: 1, scale: 1, duration: 0.15, overwrite: true });
+				corners.forEach((c) => gsap.to(c, { opacity: 1, scale: 1, duration: 0.15, overwrite: true }));
+				if (barrelIcon) {
+					gsap.killTweensOf(barrelIcon);
+					gsap.to(barrelIcon, { opacity: 0, scale: 0.7, rotation: 0, duration: 0.15, overwrite: true });
+				}
+			}
+		});
 
 		const corners = cursor.querySelectorAll<HTMLDivElement>('.target-cursor-corner');
 		const constants = { borderWidth: 3, cornerSize: 12 };
@@ -73,7 +110,6 @@
 		});
 
 		gsap.set(cursor, { rotation: 0 });
-
 
 		tickerFn = () => {
 			if (!targetCornerPositions || !cursor) return;
@@ -127,6 +163,98 @@
 		};
 		window.addEventListener('mousedown', mouseDown);
 		window.addEventListener('mouseup', mouseUp);
+
+		// Shooting: every left-click globally spawns bullet + dispatches game:shoot (revolver-limited)
+		let lastShot = 0;
+		const onShootClick = (e: MouseEvent) => {
+			if (!enableShooting) return;
+			if (e.button !== 0) return;
+			const now = Date.now();
+			if (now - lastShot < 100) return;
+			lastShot = now;
+
+			// revolver ammo check — blocks shoot when empty/reloading and auto-triggers reload
+			if (!tryShoot()) {
+				// SOUND HOOK: empty click / reload sound
+				// if (isReloading()) new Audio('/sounds/reload.mp3').play().catch(()=>{});
+				// else new Audio('/sounds/empty.mp3').play().catch(()=>{});
+				gsap.to(cursor, { x: '+=2', duration: 0.06, yoyo: true, repeat: 3, ease: 'power2.out' });
+				return;
+			}
+
+			// SOUND HOOK: play shoot sound here
+			// e.g. new Audio('/sounds/shoot.mp3').play().catch(()=>{});
+
+			// muzzle flash
+			if (dot) {
+				gsap.killTweensOf(dot);
+				gsap.to(dot, { scale: 1.9, duration: 0.07, yoyo: true, repeat: 1, ease: 'power2.out' });
+			}
+			if (cursor) gsap.to(cursor, { scale: 1.18, duration: 0.07, yoyo: true, repeat: 1, ease: 'power2.out' });
+
+			// realistic revolver bullet trail (brass + tip)
+			if (bullet) {
+				gsap.killTweensOf(bullet);
+				gsap.set(bullet, { opacity: 1, scaleY: 1, y: 0, x: 0, scaleX: 1 });
+				gsap.to(bullet, {
+					y: -46,
+					opacity: 0,
+					scaleY: 0.6,
+					duration: 0.28,
+					ease: 'power2.out',
+					overwrite: true
+				});
+			}
+			// casing eject puff
+			if (casing) {
+				gsap.killTweensOf(casing);
+				gsap.set(casing, { opacity: 1, x: 0, y: 0, rotation: 0 });
+				gsap.to(casing, {
+					x: 14 + Math.random() * 10,
+					y: 10 + Math.random() * 8,
+					rotation: 180 + Math.random() * 180,
+					opacity: 0,
+					duration: 0.45,
+					ease: 'power1.out'
+				});
+			}
+			// real muzzle smoke at cursor (gunpowder puff)
+			{
+				const mx = e.clientX;
+				const my = e.clientY;
+				for (let i = 0; i < 2; i++) {
+					const puff = document.createElement('div');
+					Object.assign(puff.style, {
+						position: 'fixed',
+						left: mx + (Math.random() - 0.5) * 8 + 'px',
+						top: my + (Math.random() - 0.5) * 8 + 'px',
+						width: 10 + Math.random() * 14 + 'px',
+						height: 10 + Math.random() * 14 + 'px',
+						borderRadius: '50%',
+						background:
+							'radial-gradient(circle at 35% 35%, rgba(255,255,255,0.65) 0%, rgba(200,200,195,0.38) 38%, transparent 70%)',
+						filter: 'blur(0.8px)',
+						pointerEvents: 'none',
+						zIndex: '9998',
+						opacity: '0.5'
+					} as CSSStyleDeclaration);
+					document.body.appendChild(puff);
+					gsap.to(puff, {
+						y: -18 - Math.random() * 14,
+						x: (Math.random() - 0.5) * 12,
+						scale: 1.5,
+						opacity: 0,
+						duration: 0.45 + Math.random() * 0.2,
+						ease: 'power1.out',
+						delay: i * 0.04,
+						onComplete: () => puff.remove()
+					});
+				}
+			}
+
+			window.dispatchEvent(new CustomEvent('game:shoot', { detail: { x: e.clientX, y: e.clientY } }));
+		};
+		window.addEventListener('click', onShootClick, { capture: true });
 
 		const enterHandler = (ev: MouseEvent) => {
 			const direct = ev.target as Element;
@@ -226,6 +354,7 @@
 		observer.observe(document.body, { childList: true, subtree: true });
 
 		return () => {
+			unsubscribeReload?.();
 			observer.disconnect();
 			if (tickerFn) gsap.ticker.remove(tickerFn);
 			window.removeEventListener('mousemove', moveHandler);
@@ -233,6 +362,7 @@
 			window.removeEventListener('scroll', scrollHandler);
 			window.removeEventListener('mousedown', mouseDown);
 			window.removeEventListener('mouseup', mouseUp);
+			window.removeEventListener('click', onShootClick, { capture: true } as unknown as EventListenerOptions);
 			if (activeTarget) cleanupTarget(activeTarget);
 			spinTl?.kill();
 			document.body.style.cursor = originalCursor;
@@ -244,28 +374,58 @@
 	<div
 		bind:this={cursor}
 		class="fixed top-0 left-0 w-0 h-0 pointer-events-none z-[9999]"
-		style="will-change:transform;"
-	>
+		style="will-change:transform;">
+		<div
+			bind:this={bullet}
+			class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 opacity-0 pointer-events-none"
+			style="will-change:transform, opacity; width: 5px; height: 14px;">
+			<div class="w-full h-[9px] rounded-[1px]" style="background: linear-gradient(90deg, #854d0e, #facc15 50%, #a16207); box-shadow: inset 0 1px 0 rgba(255,255,255,0.5);"></div>
+			<div class="w-[5px] h-[5px] mx-auto -mt-[1px]" style="background: #e5e7eb; clip-path: polygon(10% 0%, 90% 0%, 50% 100%); box-shadow: 0 1px 2px rgba(0,0,0,0.3);"></div>
+		</div>
+		<div
+			bind:this={casing}
+			class="absolute top-1/2 left-1/2 w-[4px] h-[7px] rounded-[1px] bg-amber-400 opacity-0 pointer-events-none -translate-x-1/2 -translate-y-1/2 border border-amber-700"
+			style="will-change:transform, opacity;">
+		</div>
 		<div
 			bind:this={dot}
 			class="absolute top-1/2 left-1/2 w-1 h-1 bg-foreground rounded-full -translate-x-1/2 -translate-y-1/2 transition-colors duration-200"
-			style="will-change:transform;"
-		></div>
+			style="will-change:transform;">
+		</div>
+		<!-- Reload barrel — replaces dot/corners during reload -->
 		<div
-			class="target-cursor-corner absolute top-1/2 left-1/2 w-3 h-3 border-[3px] border-foreground -translate-x-[150%] -translate-y-[150%] border-r-0 border-b-0 transition-colors duration-200"
-			style="will-change:transform;"
-		></div>
+			bind:this={barrelIcon}
+			class="absolute top-1/2 left-1/2 w-[28px] h-[28px] -translate-x-1/2 -translate-y-1/2 pointer-events-none opacity-0 scale-70"
+			style="will-change:transform, opacity;">
+			<div
+				class="absolute inset-0 rounded-full"
+				style="border: 1px solid var(--border); background: color-mix(in oklch, var(--muted) 72%, transparent);">
+			</div>
+			<div class="absolute inset-[3px] rounded-full flex items-center justify-center">
+				{#each Array(6) as _, i (i)}
+					<div
+						class="absolute w-[5px] h-[5px] rounded-full"
+						style="left:50%; top:50%; transform: translate(-50%,-50%) rotate({i * 60}deg) translateY(-8px); background: color-mix(in oklch, var(--muted-foreground) 70%, transparent); border: 0.5px solid var(--border);">
+					</div>
+				{/each}
+				<div class="w-[5px] h-[5px] rounded-full" style="background: var(--muted-foreground); opacity:0.7;"></div>
+			</div>
+		</div>
 		<div
-			class="target-cursor-corner absolute top-1/2 left-1/2 w-3 h-3 border-[3px] border-foreground translate-x-1/2 -translate-y-[150%] border-l-0 border-b-0 transition-colors duration-200"
-			style="will-change:transform;"
-		></div>
+			class="target-cursor-corner absolute top-1/2 left-1/2 w-3 h-3 border-[1px] border-foreground -translate-x-[150%] -translate-y-[150%] border-r-0 border-b-0 transition-colors duration-200"
+			style="will-change:transform;">
+		</div>
 		<div
-			class="target-cursor-corner absolute top-1/2 left-1/2 w-3 h-3 border-[3px] border-foreground translate-x-1/2 translate-y-1/2 border-l-0 border-t-0 transition-colors duration-200"
-			style="will-change:transform;"
-		></div>
+			class="target-cursor-corner absolute top-1/2 left-1/2 w-3 h-3 border-[1px] border-foreground translate-x-1/2 -translate-y-[150%] border-l-0 border-b-0 transition-colors duration-200"
+			style="will-change:transform;">
+		</div>
 		<div
-			class="target-cursor-corner absolute top-1/2 left-1/2 w-3 h-3 border-[3px] border-foreground -translate-x-[150%] translate-y-1/2 border-r-0 border-t-0 transition-colors duration-200"
-			style="will-change:transform;"
-		></div>
+			class="target-cursor-corner absolute top-1/2 left-1/2 w-3 h-3 border-[1px] border-foreground translate-x-1/2 translate-y-1/2 border-l-0 border-t-0 transition-colors duration-200"
+			style="will-change:transform;">
+		</div>
+		<div
+			class="target-cursor-corner absolute top-1/2 left-1/2 w-3 h-3 border-[1px] border-foreground -translate-x-[150%] translate-y-1/2 border-r-0 border-t-0 transition-colors duration-200"
+			style="will-change:transform;">
+		</div>
 	</div>
 {/if}

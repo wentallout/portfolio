@@ -7,12 +7,12 @@ categories:
 ---
 .
 <script>
-import BlockInBlock from '$lib/assets/images/blogs/block-in-block-bem.png'
+import BlockInBlock from '#lib/assets/images/blogs/block-in-block-bem.png'
 
- import Image from '$components/common/Image.svelte';
-import BlockInBlockAirBnb from '$lib/assets/images/blogs/blocks-in-blocks-airbnb.png'
+ import Image from '#lib/components/common/Image.svelte';
+import BlockInBlockAirBnb from '#lib/assets/images/blogs/blocks-in-blocks-airbnb.png'
 
-import AirBnbEx from '$lib/assets/images/blogs/airbnb-experiences.png'
+import AirBnbEx from '#lib/assets/images/blogs/airbnb-experiences.png'
 
 
 </script>

@@ -1,7 +1,7 @@
-<script>
-	import { SECTION_TITLES } from '$lib/constants/labels';
-	import { CAL_BOOKING_LINK } from '$lib/constants/personal';
-	import SectionTitle from '$sections/layout/SectionTitle.svelte';
+<script lang="ts">
+	import { SECTION_TITLES } from '#lib/constants/labels.js';
+	import { CAL_BOOKING_LINK } from '#lib/constants/personal.js';
+	import SectionTitle from '#lib/sections/layout/SectionTitle.svelte';
 </script>
 
 <section class="border-grid-b w-full relative">
@@ -45,8 +45,8 @@
 			</div>
 
 			<a
-				href={CAL_BOOKING_LINK}
-				class="relative z-10 inline-flex items-center gap-1.5 text-sm text-foreground underline underline-offset-4 decoration-muted-foreground hover:decoration-foreground transition-all font-medium">
+				class="relative z-10 inline-flex items-center gap-1.5 text-sm text-foreground underline underline-offset-4 decoration-muted-foreground hover:decoration-foreground transition-all font-medium"
+				href={CAL_BOOKING_LINK}>
 				<span>Let's Chat</span>
 				<span>→</span>
 			</a>

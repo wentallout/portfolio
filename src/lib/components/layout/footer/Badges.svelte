@@ -1,9 +1,10 @@
-<script>
-	import ExLink from '$components/common/ExLink.svelte';
-	import LogoNotAi from '$lib/assets/icons/LogoNotAI.svelte';
+<script lang="ts">
+	import ExLink from '#lib/components/common/ExLink.svelte';
+	import LogoNotAi from '#lib/assets/icons/LogoNotAI.svelte';
 </script>
 
-<div class="inline-flex items-center gap-3 grayscale opacity-40 hover:opacity-100 transition-opacity">
+<div
+	class="inline-flex items-center gap-3 grayscale opacity-40 hover:opacity-100 transition-opacity">
 	<ExLink ariaLabel="not by ai" href="https://notbyai.fyi">
 		<div class="h-6 flex items-center">
 			<LogoNotAi />
@@ -12,20 +13,17 @@
 
 	<ExLink ariaLabel="Netlify" href="https://netlify.com">
 		<img
-			alt="built with netlify"
 			class="h-5 w-auto object-contain"
+			alt="built with netlify"
 			loading="lazy"
-			src="/images/netlify.svg"
-		/>
+			src="/images/netlify.svg" />
 	</ExLink>
 
 	<ExLink ariaLabel="Svelte Vietnam" href="https://www.sveltevietnam.dev">
 		<img
-			alt="svelte vietnam"
 			class="h-5 w-auto object-contain"
+			alt="svelte vietnam"
 			loading="lazy"
-			src="/images/sveltevn.webp"
-		/>
+			src="/images/sveltevn.webp" />
 	</ExLink>
 </div>
-

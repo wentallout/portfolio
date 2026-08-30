@@ -1,8 +1,8 @@
-<script>
-	import Comments from '$components/blogs/BlogComments.svelte';
-	import PostContainer from '$components/blogs/BlogContainer.svelte';
-	import PostInfo from '$components/blogs/BlogInfo.svelte';
-	import SEO from '$components/seo/SEO.svelte';
+<script lang="ts">
+	import Comments from '#lib/components/blogs/BlogComments.svelte';
+	import PostContainer from '#lib/components/blogs/BlogContainer.svelte';
+	import PostInfo from '#lib/components/blogs/BlogInfo.svelte';
+	import SEO from '#lib/components/seo/SEO.svelte';
 	/** @type {{data: any}} */
 	let { data } = $props();
 </script>

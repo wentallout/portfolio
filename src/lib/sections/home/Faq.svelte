@@ -1,9 +1,9 @@
 <script lang="ts">
-	import Accordion from '$components/common/Accordion.svelte';
-	import { FAQ_JSON_LD, FAQ_LIST } from '$lib/constants/faq';
-	import { SECTION_TITLES } from '$lib/constants/labels';
-	import { serializeSchema } from '$lib/utils/seo';
-	import SectionTitle from '$sections/layout/SectionTitle.svelte';
+	import Accordion from '#lib/components/common/Accordion.svelte';
+	import { FAQ_JSON_LD, FAQ_LIST } from '#lib/constants/faq.js';
+	import { SECTION_TITLES } from '#lib/constants/labels.js';
+	import { serializeSchema } from '#lib/utils/seo.js';
+	import SectionTitle from '#lib/sections/layout/SectionTitle.svelte';
 
 	let schema = serializeSchema(FAQ_JSON_LD);
 </script>
@@ -22,5 +22,3 @@
 		{/each}
 	</div>
 </section>
-
-

@@ -9,63 +9,65 @@ import { manualApplyResumeHint, mountFailureAction, renderSummary } from './live
 import { enterLiveRoot } from './live/roots.mjs';
 
 function readServerInfo() {
-  return readLiveServerInfo(process.cwd())?.info || null;
+	return readLiveServerInfo(process.cwd())?.info || null;
 }
 
 async function fetchServerStatus(info) {
-  if (!info) return null;
-  try {
-    const res = await fetch(`http://localhost:${info.port}/status?token=${info.token}`);
-    if (!res.ok) return null;
-    return await res.json();
-  } catch {
-    return null;
-  }
+	if (!info) return null;
+	try {
+		const res = await fetch(`http://localhost:${info.port}/status?token=${info.token}`);
+		if (!res.ok) return null;
+		return await res.json();
+	} catch {
+		return null;
+	}
 }
 
 export async function statusCli() {
-  const info = readServerInfo();
-  const server = await fetchServerStatus(info);
-  const store = createLiveSessionStore({ cwd: process.cwd() });
-  const activeSessions = store.listActiveSessions();
-  const manualApply = findPendingManualApply(server, activeSessions);
-  const sessions = server?.activeSessions || activeSessions;
-  const renderFailure = sessions.find((session) => session?.renderState === 'failed') || null;
-  const payload = {
-    liveServer: server ? {
-      status: server.status,
-      port: server.port,
-      connectedClients: server.connectedClients,
-      agentPolling: server.agentPolling,
-      pendingEvents: server.pendingEvents,
-    } : null,
-    activeSessions: sessions,
-    render: sessions.map((session) => ({ id: session?.id ?? null, ...renderSummary(session) })),
-    recoveryHint: recoveryHint({ server, manualApply, renderFailure }),
-  };
-  console.log(JSON.stringify(payload, null, 2));
+	const info = readServerInfo();
+	const server = await fetchServerStatus(info);
+	const store = createLiveSessionStore({ cwd: process.cwd() });
+	const activeSessions = store.listActiveSessions();
+	const manualApply = findPendingManualApply(server, activeSessions);
+	const sessions = server?.activeSessions || activeSessions;
+	const renderFailure = sessions.find((session) => session?.renderState === 'failed') || null;
+	const payload = {
+		liveServer: server
+			? {
+					status: server.status,
+					port: server.port,
+					connectedClients: server.connectedClients,
+					agentPolling: server.agentPolling,
+					pendingEvents: server.pendingEvents
+				}
+			: null,
+		activeSessions: sessions,
+		render: sessions.map((session) => ({ id: session?.id ?? null, ...renderSummary(session) })),
+		recoveryHint: recoveryHint({ server, manualApply, renderFailure })
+	};
+	console.log(JSON.stringify(payload, null, 2));
 }
 
 function recoveryHint({ server, manualApply, renderFailure }) {
-  if (manualApply) return manualApplyResumeHint(manualApply);
-  if (renderFailure) return mountFailureAction(renderFailure);
-  if (server) {
-    return 'Run live-poll.mjs to continue pending work, or live-complete.mjs --id <session> after manual cleanup.';
-  }
-  return 'Start live-server.mjs to requeue pending durable events, then run live-poll.mjs.';
+	if (manualApply) return manualApplyResumeHint(manualApply);
+	if (renderFailure) return mountFailureAction(renderFailure);
+	if (server) {
+		return 'Run live-poll.mjs to continue pending work, or live-complete.mjs --id <session> after manual cleanup.';
+	}
+	return 'Start live-server.mjs to requeue pending durable events, then run live-poll.mjs.';
 }
 
 function findPendingManualApply(server, activeSessions) {
-  const fromServer = server?.pendingEvents?.find((event) => event?.type === 'manual_edit_apply');
-  if (fromServer) return fromServer;
-  const fromSession = activeSessions
-    ?.map((session) => session.pendingEvent)
-    .find((event) => event?.type === 'manual_edit_apply');
-  return fromSession || null;
+	const fromServer = server?.pendingEvents?.find((event) => event?.type === 'manual_edit_apply');
+	if (fromServer) return fromServer;
+	const fromSession = activeSessions
+		?.map((session) => session.pendingEvent)
+		.find((event) => event?.type === 'manual_edit_apply');
+	return fromSession || null;
 }
 
 const _running = process.argv[1];
 if (_running?.endsWith('live-status.mjs') || _running?.endsWith('live-status.mjs/')) {
-  enterLiveRoot();
-  statusCli();
+	enterLiveRoot();
+	statusCli();
 }

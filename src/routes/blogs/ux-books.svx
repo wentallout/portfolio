@@ -6,8 +6,8 @@ categories:
 ---
 
 <script>
-    import Image from '$components/common/Image.svelte';
-    import uxBooks from '$blogImages/uxBooks.webp';
+    import Image from '#lib/components/common/Image.svelte';
+    import uxBooks from '#lib/assets/images/blogs/uxBooks.webp';
 </script>
 
 ## Mega list 

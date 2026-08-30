@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
 	let snippetList = [
 		{
 			desc: 'cool trendy glassy card',

@@ -1,8 +1,8 @@
-<script>
-	import BlurText from '$components/BlurText.svelte';
-	import Breadcrumb from '$components/other/Breadcrumb.svelte';
-	import { PROFILE_COPY } from '$lib/constants/labels';
-	import { getKhoaAge } from '$lib/utils/time';
+<script lang="ts">
+	import BlurText from '#lib/components/BlurText.svelte';
+	import Breadcrumb from '#lib/components/other/Breadcrumb.svelte';
+	import { PROFILE_COPY } from '#lib/constants/labels.js';
+	import { getKhoaAge } from '#lib/utils/time.js';
 </script>
 
 <div class="w-full bg-background relative">
@@ -23,10 +23,10 @@
 
 				<h3 class="text-2xl font-medium text-foreground mb-4">
 					<BlurText
-						text={PROFILE_COPY.profileHeading}
+						class="font-medium tracking-tight text-foreground text-2xl"
 						animateBy="words"
 						direction="top"
-						class="font-medium tracking-tight text-foreground text-2xl" />
+						text={PROFILE_COPY.profileHeading} />
 				</h3>
 				<ul class="space-y-3 text-sm text-muted-foreground font-normal">
 					<li class="flex items-center gap-2">
@@ -56,10 +56,10 @@
 
 				<h3 class="text-2xl font-medium text-foreground mb-4">
 					<BlurText
-						text={PROFILE_COPY.purposeHeading}
+						class="font-medium tracking-tight text-foreground text-2xl"
 						animateBy="words"
 						direction="top"
-						class="font-medium tracking-tight text-foreground text-2xl" />
+						text={PROFILE_COPY.purposeHeading} />
 				</h3>
 				<p class="text-sm text-muted-foreground leading-relaxed font-normal">
 					{PROFILE_COPY.purposeBody}
@@ -78,10 +78,10 @@
 
 		<h3 class="text-2xl font-medium text-foreground mb-4">
 			<BlurText
-				text={PROFILE_COPY.inspirationHeading}
+				class="font-medium tracking-tight text-foreground text-2xl"
 				animateBy="words"
 				direction="top"
-				class="font-medium tracking-tight text-foreground text-2xl" />
+				text={PROFILE_COPY.inspirationHeading} />
 		</h3>
 		<div class="flex flex-wrap gap-4 text-sm">
 			<a

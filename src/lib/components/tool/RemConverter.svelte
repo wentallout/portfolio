@@ -1,7 +1,7 @@
-<script>
-	import Breadcrumb from '$components/other/Breadcrumb.svelte';
-	import { Copy } from '$lib/assets/icons/icons';
-	import SectionTitle from '$sections/layout/SectionTitle.svelte';
+<script lang="ts">
+	import Breadcrumb from '#lib/components/other/Breadcrumb.svelte';
+	import { Copy } from '#lib/assets/icons/icons.js';
+	import SectionTitle from '#lib/sections/layout/SectionTitle.svelte';
 	let baseFontSize = 16;
 	let pxInput = $state();
 	let remInput = $state();
@@ -36,7 +36,12 @@
 				type="button">
 				<Copy height="24" width="24" />
 			</button>
-			<input id="px" name="px" class="w-full h-full text-2xl appearance-none bg-transparent outline-none focus:outline-none px-2" type="number" bind:value={pxInput} />
+			<input
+				id="px"
+				name="px"
+				class="w-full h-full text-2xl appearance-none bg-transparent outline-none focus:outline-none px-2"
+				type="number"
+				bind:value={pxInput} />
 			<label class="text-2xl font-medium text-muted-foreground pr-4" for="px">PX</label>
 		</div>
 

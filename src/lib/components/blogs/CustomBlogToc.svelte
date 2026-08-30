@@ -1,5 +1,5 @@
-<script>
-	import { ListBullets } from '$lib/assets/icons/icons';
+<script lang="ts">
+	import { ListBullets } from '#lib/assets/icons/icons.js';
 	import Toc from 'svelte-toc';
 </script>
 

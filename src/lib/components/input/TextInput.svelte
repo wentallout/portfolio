@@ -1,5 +1,5 @@
-<script>
-	import { X } from '$lib/assets/icons/icons';
+<script lang="ts">
+	import { X } from '#lib/assets/icons/icons.js';
 
 	let {
 		autoSuggestList = [],
@@ -21,7 +21,9 @@
 
 <div class="w-full space-y-2 mb-5 font-sans group">
 	{#if label}
-		<label class="block text-sm font-medium text-muted-foreground uppercase tracking-wider font-sans" for={label}>
+		<label
+			class="block text-sm font-medium text-muted-foreground uppercase tracking-wider font-sans"
+			for={label}>
 			{label}
 		</label>
 	{/if}
@@ -30,13 +32,12 @@
 		<div
 			class="flex items-center w-full border-grid-all bg-[var(--background)] relative transition-all duration-200 focus-within:border-[var(--foreground)] group-hover:border-muted-foreground"
 			class:ring-1={isFocused}
-			class:ring-[var(--foreground)]={isFocused}
-		>
-			{#if isFocused}
-			{/if}
+			class:ring-[var(--foreground)]={isFocused}>
+			
 
 			{#if icon}
-				<div class="pl-4 pr-1 flex items-center text-muted-foreground group-focus-within:text-foreground transition-colors">
+				<div
+					class="pl-4 pr-1 flex items-center text-muted-foreground group-focus-within:text-foreground transition-colors">
 					{@render icon?.()}
 				</div>
 			{/if}
@@ -53,16 +54,14 @@
 				{placeholder}
 				required
 				{type}
-				value={inputValue}
-			/>
+				value={inputValue} />
 
 			{#if inputValue && handleClear}
 				<button
 					class="pr-4 text-muted-foreground hover:text-foreground transition-colors cursor-pointer"
-					onclick={handleClear}
-					type="button"
 					aria-label="Clear input"
-				>
+					onclick={handleClear}
+					type="button">
 					<X height="16" width="16" />
 				</button>
 			{/if}
@@ -83,6 +82,3 @@
 		{/if}
 	</div>
 </div>
-
-
-

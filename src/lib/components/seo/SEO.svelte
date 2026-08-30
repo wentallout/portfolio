@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
 	import {
 		author,
 		defaultAlt,
@@ -17,7 +17,7 @@
 		telegramUsername,
 		tiktokUsername,
 		twitterUsername
-	} from '$lib/constants/personal';
+	} from '#lib/constants/personal.js';
 
 	/** @type {{article?: boolean, breadcrumbs?: any, datePublished?: string, entityMeta?: any, featuredImage?: any, lastUpdated?: string, metadescription?: string, ogImage?: any, ogSquareImage?: any, path?: string, slug?: string, timeToRead?: number, title?: string, twitterImage?: any}} */
 	let {
@@ -51,9 +51,9 @@
 		}
 	} = $props();
 
-	import OpenGraph from '$components/seo/OpenGraph.svelte';
-	import SchemaOrg from '$components/seo/SchemaOrg.svelte';
-	import Twitter from '$components/seo/Twitter.svelte';
+	import OpenGraph from '#lib/components/seo/OpenGraph.svelte';
+	import SchemaOrg from '#lib/components/seo/SchemaOrg.svelte';
+	import Twitter from '#lib/components/seo/Twitter.svelte';
 
 	const twitterProps = $derived({
 		article,

@@ -1,9 +1,15 @@
-<script>
+<script lang="ts">
 	/** @type {{[key: string]: any}} */
 	let { ...props } = $props();
 </script>
 
-<svg height="2rem" viewBox="0 0 24 24" width="2rem" xmlns="http://www.w3.org/2000/svg" class="text-foreground" {...props}
+<svg
+	class="text-foreground"
+	height="2rem"
+	viewBox="0 0 24 24"
+	width="2rem"
+	xmlns="http://www.w3.org/2000/svg"
+	{...props}
 	><rect fill="currentColor" height="12" width="2.8" x="1" y="6"
 		><animate
 			id="svgSpinnersBarsScale0"
