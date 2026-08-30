@@ -59,7 +59,7 @@ export default defineConfig({
 	optimizeDeps: {
 		exclude: ['mode-watcher', '@giscus/svelte', 'svelte-toc', 'sveltekit-embed', 'saos']
 	},
-	ssr: { noExternal: ['gsap', 'split-type', 'motion', /@arcjet\/.*/, 'arcjet'] },
+	ssr: { noExternal: ['cookie', 'set-cookie-parser', 'gsap', 'split-type', 'motion', /@arcjet\/.*/, 'arcjet'] },
 	test: {
 		projects: [
 			{
