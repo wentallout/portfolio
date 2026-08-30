@@ -2,6 +2,9 @@
   command = "pnpm run build"
   publish = "build/"
 
+[build.environment]
+  NODE_VERSION = "24"
+
 [[headers]]
   for = "/sitemap.xml"
   [headers.values]

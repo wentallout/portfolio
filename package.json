@@ -4,6 +4,7 @@
 	"version": "1.0.0",
 	"packageManager": "pnpm@11.14.0",
 	"engines": {
+		"node": ">=22.21.0",
 		"pnpm": ">=11"
 	},
 	"repository": {
