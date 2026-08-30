@@ -4,12 +4,12 @@ date: 2025-03-19
 ---
 
 <script>
-import Image from '$components/common/Image.svelte';
-import nv1 from '$lib/assets/images/projects/nvault/nv1.png';
-import nv2 from '$lib/assets/images/projects/nvault/nv2.png';
-import nv3 from '$lib/assets/images/projects/nvault/nv3.png';
-import nv4 from '$lib/assets/images/projects/nvault/nv4.png';
-import nv5 from '$lib/assets/images/projects/nvault/nv5.png';
+import Image from '#lib/components/common/Image.svelte';
+import nv1 from '#lib/assets/images/projects/nvault/nv1.png';
+import nv2 from '#lib/assets/images/projects/nvault/nv2.png';
+import nv3 from '#lib/assets/images/projects/nvault/nv3.png';
+import nv4 from '#lib/assets/images/projects/nvault/nv4.png';
+import nv5 from '#lib/assets/images/projects/nvault/nv5.png';
 </script>
 
 ## Demo

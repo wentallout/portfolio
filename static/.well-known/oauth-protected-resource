@@ -1,10 +1,6 @@
 {
-  "resource": "https://wentallout.tech",
-  "authorization_servers": [
-    "https://wentallout.supabase.co/auth/v1"
-  ],
-  "scopes_supported": [
-    "read:profile",
-    "read:blogs"
-  ]
+  "resource": "https://wentallout.io.vn",
+  "authorization_servers": ["https://wentallout.io.vn"],
+  "scopes_supported": ["read:profile", "read:blogs", "read:projects"],
+  "bearer_methods_supported": ["header"]
 }

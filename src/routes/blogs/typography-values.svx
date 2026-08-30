@@ -6,8 +6,8 @@ categories:
 ---
 
 <script>
-    import Image from '$components/common/Image.svelte';
-    import headingFontSizes from '$blogImages/headingFontSizes.png';
+    import Image from '#lib/components/common/Image.svelte';
+    import headingFontSizes from '#lib/assets/images/blogs/headingFontSizes.png';
 </script>
 
 ## max-width

@@ -33,6 +33,6 @@ Show user wait time like "1 min remaining" or a percentage loading bar (56% load
 
 Don't interupt their current task if there are some updates. Apps response times should be quick within 2 seconds
 
-![](https://i.imgur.com/wcn15Ff.png)
+![wcn15Ff](https://i.imgur.com/wcn15Ff.png)
 
-![](https://i.imgur.com/sECf8vv.png)
+![sECf8vv](https://i.imgur.com/sECf8vv.png)

@@ -1,9 +1,9 @@
-<script>
+<script lang="ts">
 	import { page } from '$app/state';
-	import ThemeSwitcher from '$components/button/ThemeSwitcher.svelte';
-	import { haptic } from '$lib/actions/haptics';
+	import ThemeSwitcher from '#lib/components/button/ThemeSwitcher.svelte';
+	import { haptic } from '#lib/actions/haptics.js';
 
-	import { navItems } from '$lib/config.js';
+	import { navItems } from '#lib/config.js';
 
 	let scrollY = $state(0);
 </script>

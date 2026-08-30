@@ -1,6 +1,6 @@
-<script>
-	import EssentialList from '$sections/blogs/EssentialList.svelte';
-	import SectionTitle from '$sections/layout/SectionTitle.svelte';
+<script lang="ts">
+	import EssentialList from '#lib/sections/blogs/EssentialList.svelte';
+	import SectionTitle from '#lib/sections/layout/SectionTitle.svelte';
 </script>
 
 <section class="w-full relative border-grid-b">
@@ -10,5 +10,3 @@
 		<EssentialList />
 	</div>
 </section>
-
-

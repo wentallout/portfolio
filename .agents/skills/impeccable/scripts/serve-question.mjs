@@ -107,16 +107,18 @@ import { fileURLToPath } from 'node:url';
 import { openSystemBrowser } from './lib/open-system-browser.mjs';
 
 function arg(name, fallback = null) {
-  const i = process.argv.indexOf(`--${name}`);
-  if (i === -1) return fallback;
-  const v = process.argv[i + 1];
-  return v && !v.startsWith('--') ? v : fallback;
+	const i = process.argv.indexOf(`--${name}`);
+	if (i === -1) return fallback;
+	const v = process.argv[i + 1];
+	return v && !v.startsWith('--') ? v : fallback;
 }
 const hasFlag = (name) => process.argv.includes(`--${name}`);
 
 if (process.env.IMPECCABLE_QUESTION_DISABLED) {
-  console.log('serve-question: disabled in this session (no browser); use the structured question tool instead.');
-  process.exit(2);
+	console.log(
+		'serve-question: disabled in this session (no browser); use the structured question tool instead.'
+	);
+	process.exit(2);
 }
 // Headless self-detection, applied only where a browser is actually wanted.
 // --no-open means the caller opens the URL itself, and --wait / --stop /
@@ -124,16 +126,19 @@ if (process.env.IMPECCABLE_QUESTION_DISABLED) {
 // was already settled at --start, --stop kills one, --schema prints text. A
 // spurious exit 2 from those breaks the documented loop, which polls --wait
 // while it exits 3 and reads --schema before building a payload.
-const wantsBrowser = !hasFlag('no-open') && !hasFlag('wait') && !hasFlag('stop') && !hasFlag('schema');
+const wantsBrowser =
+	!hasFlag('no-open') && !hasFlag('wait') && !hasFlag('stop') && !hasFlag('schema');
 if (wantsBrowser && !process.env.IMPECCABLE_QUESTION_FORCE) {
-  const headless =
-    process.env.CI ||
-    (process.env.SSH_CONNECTION && !process.env.DISPLAY) ||
-    (process.platform === 'linux' && !process.env.DISPLAY && !process.env.WAYLAND_DISPLAY);
-  if (headless) {
-    console.log('serve-question: no browser detected in this environment (CI/headless/remote); use the structured question tool instead. Set IMPECCABLE_QUESTION_FORCE=1 to serve anyway.');
-    process.exit(2);
-  }
+	const headless =
+		process.env.CI ||
+		(process.env.SSH_CONNECTION && !process.env.DISPLAY) ||
+		(process.platform === 'linux' && !process.env.DISPLAY && !process.env.WAYLAND_DISPLAY);
+	if (headless) {
+		console.log(
+			'serve-question: no browser detected in this environment (CI/headless/remote); use the structured question tool instead. Set IMPECCABLE_QUESTION_FORCE=1 to serve anyway.'
+		);
+		process.exit(2);
+	}
 }
 
 // Both answer channels (blocking stdout and --wait collection) print through
@@ -142,37 +147,53 @@ if (wantsBrowser && !process.env.IMPECCABLE_QUESTION_FORCE) {
 // working turn, because a build that never reopens the chosen world's board
 // and hero calibrates on nothing.
 function printAnswer(raw) {
-  console.log(`ANSWER: ${raw}`);
-  try {
-    const a = JSON.parse(raw);
-    if (a.hero || a.board) {
-      console.log("CHOSEN CARD: open the chosen world's board and hero images now, before any code. When your harness only reads files, or runs sandboxed, download them INTO the workspace and open the relative path; a sandboxed viewer rejects absolute paths outside it. They set the craft bar the build must reach.");
-    }
-    if (a.comp) {
-      console.log('CHOSEN COMP: the decision comp at that path is compositional option one. On a comp-led build the comp round adds two variations beside it; on a code-led build it returns at the finish review as the critique reference. Never regenerate it from scratch.');
-    }
-    if (a.optionId === 'canon') {
-      console.log('CANON CHOSEN: the user picked the category standard on purpose. Ask once for two or three products this should sit alongside; their craft level becomes the quality bar. Execute the canon at full commitment, conventions embraced without irony or smuggled quirk.');
-    }
-    if (a.optionId === 'reroll' && a.register) {
-      console.log(`REGISTER: the user steered the next hand to the ${a.register} register. Re-run concept-seed with the same key, the next --reroll round, and --register ${a.register}, then follow what it prints; the register is the user's steering, never yours to pre-select.`);
-    }
-    if (a.followup && a.optionId !== 'reroll') {
-      console.log('FOLLOWUP OPEN: the table stays open and the page is showing a loading hand. Deliver the next round now with --update --key <key> --payload <file>, then collect it with --wait; never leave the page waiting on a round you have not sent.');
-    }
-    if (a.buildPath === 'comp' || a.buildPath === 'code') {
-      // The page never writes the flip itself, but "never write it" overstated
-      // that into a rule the agent then applied to new-work's one-time offer,
-      // which exists for exactly this case: a flip on a project that had no
-      // recorded default is the only moment the preference is ever asked for.
-      const origin = a.buildPathFlipped
-        ? 'flipped on the page, so it binds this session only, and the page never writes it back; the sole exception is new-work’s one-time offer, on a project that had no recorded default at all, which asks after the round closes and writes the answer to .impeccable/config.json'
-        : 'the round’s recorded default';
-      console.log(`BUILD PATH: ${a.buildPath} (${origin}). ${a.buildPath === 'comp'
-        ? 'Comp-led: the chosen card’s comp is law; generate it before building when it does not exist yet, and the finish review audits the build against it.'
-        : 'Code-led: no comp is owed; a comp that already rendered rides at the finish review as the critique reference, and the ambition lives in the direction contract.'}`);
-    }
-  } catch { /* raw answer */ }
+	console.log(`ANSWER: ${raw}`);
+	try {
+		const a = JSON.parse(raw);
+		if (a.hero || a.board) {
+			console.log(
+				"CHOSEN CARD: open the chosen world's board and hero images now, before any code. When your harness only reads files, or runs sandboxed, download them INTO the workspace and open the relative path; a sandboxed viewer rejects absolute paths outside it. They set the craft bar the build must reach."
+			);
+		}
+		if (a.comp) {
+			console.log(
+				'CHOSEN COMP: the decision comp at that path is compositional option one. On a comp-led build the comp round adds two variations beside it; on a code-led build it returns at the finish review as the critique reference. Never regenerate it from scratch.'
+			);
+		}
+		if (a.optionId === 'canon') {
+			console.log(
+				'CANON CHOSEN: the user picked the category standard on purpose. Ask once for two or three products this should sit alongside; their craft level becomes the quality bar. Execute the canon at full commitment, conventions embraced without irony or smuggled quirk.'
+			);
+		}
+		if (a.optionId === 'reroll' && a.register) {
+			console.log(
+				`REGISTER: the user steered the next hand to the ${a.register} register. Re-run concept-seed with the same key, the next --reroll round, and --register ${a.register}, then follow what it prints; the register is the user's steering, never yours to pre-select.`
+			);
+		}
+		if (a.followup && a.optionId !== 'reroll') {
+			console.log(
+				'FOLLOWUP OPEN: the table stays open and the page is showing a loading hand. Deliver the next round now with --update --key <key> --payload <file>, then collect it with --wait; never leave the page waiting on a round you have not sent.'
+			);
+		}
+		if (a.buildPath === 'comp' || a.buildPath === 'code') {
+			// The page never writes the flip itself, but "never write it" overstated
+			// that into a rule the agent then applied to new-work's one-time offer,
+			// which exists for exactly this case: a flip on a project that had no
+			// recorded default is the only moment the preference is ever asked for.
+			const origin = a.buildPathFlipped
+				? 'flipped on the page, so it binds this session only, and the page never writes it back; the sole exception is new-work’s one-time offer, on a project that had no recorded default at all, which asks after the round closes and writes the answer to .impeccable/config.json'
+				: 'the round’s recorded default';
+			console.log(
+				`BUILD PATH: ${a.buildPath} (${origin}). ${
+					a.buildPath === 'comp'
+						? 'Comp-led: the chosen card’s comp is law; generate it before building when it does not exist yet, and the finish review audits the build against it.'
+						: 'Code-led: no comp is owed; a comp that already rendered rides at the finish review as the critique reference, and the ambition lives in the direction contract.'
+				}`
+			);
+		}
+	} catch {
+		/* raw answer */
+	}
 }
 
 const payloadPath = arg('payload');
@@ -188,138 +209,290 @@ const answerFile = (key) => path.join(QUESTION_DIR, `${key}.answer.json`);
 const flipFile = (key) => path.join(QUESTION_DIR, `${key}.flip.json`);
 
 if (hasFlag('schema')) {
-  console.log(JSON.stringify({
-    title: 'Choose the visual world',
-    question: 'The roll assigned Fillmore Handbill. Keep it, take an alternate, or re-roll.',
-    options: [
-      { id: 'assigned', label: 'Fillmore Handbill', kicker: 'THE ROLL', lineage: '1966-71 Fillmore psychedelic handbills', thesis: 'The gig poster that treats every release like a one-night stand.', palette: ['#e8452c', '#f5d64c', '#1b2a52', '#f3ead8'], materials: ['letterpress', 'split-fountain ink'], viewport: 'A full-bleed dated bill with the product name in warped display type.', risk: 'Reads nostalgic when the type is set timidly.', raised: [{ from: 'challenger-microfiche', raise: 'The bill now owns its whole viewport as one continuous printed sheet.' }], comp: '.impeccable/mocks/decision/assigned.webp', hero: 'https://impeccable.style/worlds/cards/posters-covers-sleeves-fillmore-handbill-hero.webp', board: 'https://impeccable.style/worlds/cards/posters-covers-sleeves-fillmore-handbill.webp' },
-      { id: 'model-pick', label: 'The Broadside Ballad', kicker: 'IMPECCABLE’S PICK', lineage: 'street-sold ballad sheets', thesis: 'Every release printed as the day’s ballad sheet.', palette: ['#1f1c18', '#efe5d0', '#a33327'], materials: ['woodcut', 'rag paper'], viewport: 'One tall sheet, the newest release as today’s ballad.', risk: 'Also the direction most runs in this category land on.', comp: '.impeccable/mocks/decision/model-pick.webp' },
-      { id: 'challenger-teletext', label: 'Teletext Service', verdict: 'competitive', lineage: 'broadcast teletext magazines', thesis: 'The catalog as a broadcast index: pages, not sections.', palette: ['#0000c0', '#ffff00', '#00c000', '#ffffff'], materials: ['block mosaic', 'phosphor glow'], viewport: 'P100 index page, releases as numbered rows.', case: 'Fuses cleanly: releases map to numbered pages; loses narrowly on clarity.', risk: 'Reads retro-novelty when the grid is not strict.', comp: '.impeccable/mocks/decision/challenger-teletext.webp', hero: 'https://impeccable.style/worlds/cards/broadcast-programming-teletext-service-hero.webp' },
-      { id: 'challenger-microfiche', label: 'Microfiche Reader', verdict: 'declined', lineage: 'library microfiche stations', palette: ['#101418', '#9fb4c0'], materials: ['film grain', 'backlit glass'], case: 'Fuses poorly: listeners do not identify with archival retrieval.', kept: 'Total environmental commitment.', hero: 'https://impeccable.style/worlds/cards/archives-microfiche-reader-hero.webp' },
-    ],
-    reroll: { registers: ['safer', 'bolder'] },
-    buildPath: { value: 'comp', toggle: true },
-    canon: true,
-    canonCard: { label: 'The category standard', thesis: 'What this category ships, executed impeccably.', palette: ['#ffffff', '#111827', '#2563eb'], materials: ['clean grid', 'product photography'], viewport: 'The arrangement a visitor expects, at full craft.', risk: 'Indistinguishable from the competition by design.', comp: '.impeccable/mocks/decision/canon.webp' },
-    steer: true,
-  }, null, 2));
-  console.log('\nOption ids return verbatim in ANSWER; "reroll" and "canon" are reserved. hero/board/comp accept URLs or local paths; comp slots may point at files that do not exist yet (serve first, generate after; the page polls until they land, so never block serving on generation). hero on a challenger is the inspiration it draws from and renders picture-in-picture beside the comp, never as the promise of the build. verdict routes rendering: "wins" and "competitive" challengers keep full cards, "declined" ones render demoted after them (narrow, quiet, art as a labeled thumb, "Adopt anyway"), with their kept line on the front; the page reorders declined cards to the end on its own. raised on the assigned card renders each donation as a named raise line. Salience parity: when the assigned card declares no comp (no image generation this round), catalog art on every card demotes to a labeled thumb, so what looks important is the verdict’s call, never rendering luck. canonCard renders the standing exit as a subordinate card with the same anatomy; without it, canon stays a quiet footer action. Include canon only for visual-direction rounds; never present it as your own recommendation. The pick card is a kicker convention, not a field: kicker "IMPECCABLE’S PICK" on your top-ranked grounded candidate, one at most, never in the lead slot. Every card gets the full anatomy, challengers, canon, and declined included: thesis, palette, materials, viewport, risk; the seed already hands you each challenger’s system rules, so a card with no palette chips is an authoring gap, not a data gap. Keep thesis and each fact to one short sentence: the card front shows thesis, identity, and a two-line risk, while first viewport and the case read on the card back behind the Details chip, so long facts cost the reader a flip, not the page its scanability. A card with no imagery at all has no back; its full read renders on the front, so a text-only round loses nothing. A card may instead declare "wireframe" ({"cols":12,"rows":10,"regions":[{"label":"nav rail","x":0,"y":0,"w":3,"h":10,"accent":true}]}): the page draws it as a layout schematic in the media slot; surface-scope rounds use it on code-led builds, it never counts toward salience, and the card keeps its full read on the front. The comp slot carries the card’s full-fidelity direction comp (the legacy key "sketch" is accepted as an alias). Comp aspect follows the surface: portrait at device viewport for native or mobile-first surfaces, landscape otherwise; the page adapts its cards to either. reroll accepts true or { "registers": ["safer", "bolder"] }: the register buttons steer the next hand along the familiar-to-bold axis, the answer carries "register", and you re-run concept-seed with --register <value> for the next round; offer the registers on direction rounds, and never pre-select one. buildPath rides the payload as { "value": "comp"|"code", "toggle": true }: the value is the recorded default (.impeccable/config.json buildPath, or .impeccable/config.local.json where one machine differs) and the toggle renders a footer switch whose flip binds that session only; the ANSWER then carries buildPath plus buildPathFlipped. On a code-led round each card still declares its comp path as a flip reserve: wireframes render, and a flip to comp makes --wait return once with BUILD PATH FLIPPED so you generate the comps into the declared slots while the round stays open; a flip back to code is free, and a comp that already landed stays as the critique reference. The toggle may only be offered when image generation exists: a harness with no image tool and no API key never sets toggle: true, so the choice never renders where comps cannot be made, and code-led simply rides as the untoggleable value. followup: true keeps the table open after a pick for a second round via --update; send the next payload immediately, the page is waiting on it.');
-  process.exit(0);
+	console.log(
+		JSON.stringify(
+			{
+				title: 'Choose the visual world',
+				question: 'The roll assigned Fillmore Handbill. Keep it, take an alternate, or re-roll.',
+				options: [
+					{
+						id: 'assigned',
+						label: 'Fillmore Handbill',
+						kicker: 'THE ROLL',
+						lineage: '1966-71 Fillmore psychedelic handbills',
+						thesis: 'The gig poster that treats every release like a one-night stand.',
+						palette: ['#e8452c', '#f5d64c', '#1b2a52', '#f3ead8'],
+						materials: ['letterpress', 'split-fountain ink'],
+						viewport: 'A full-bleed dated bill with the product name in warped display type.',
+						risk: 'Reads nostalgic when the type is set timidly.',
+						raised: [
+							{
+								from: 'challenger-microfiche',
+								raise: 'The bill now owns its whole viewport as one continuous printed sheet.'
+							}
+						],
+						comp: '.impeccable/mocks/decision/assigned.webp',
+						hero: 'https://impeccable.style/worlds/cards/posters-covers-sleeves-fillmore-handbill-hero.webp',
+						board:
+							'https://impeccable.style/worlds/cards/posters-covers-sleeves-fillmore-handbill.webp'
+					},
+					{
+						id: 'model-pick',
+						label: 'The Broadside Ballad',
+						kicker: 'IMPECCABLE’S PICK',
+						lineage: 'street-sold ballad sheets',
+						thesis: 'Every release printed as the day’s ballad sheet.',
+						palette: ['#1f1c18', '#efe5d0', '#a33327'],
+						materials: ['woodcut', 'rag paper'],
+						viewport: 'One tall sheet, the newest release as today’s ballad.',
+						risk: 'Also the direction most runs in this category land on.',
+						comp: '.impeccable/mocks/decision/model-pick.webp'
+					},
+					{
+						id: 'challenger-teletext',
+						label: 'Teletext Service',
+						verdict: 'competitive',
+						lineage: 'broadcast teletext magazines',
+						thesis: 'The catalog as a broadcast index: pages, not sections.',
+						palette: ['#0000c0', '#ffff00', '#00c000', '#ffffff'],
+						materials: ['block mosaic', 'phosphor glow'],
+						viewport: 'P100 index page, releases as numbered rows.',
+						case: 'Fuses cleanly: releases map to numbered pages; loses narrowly on clarity.',
+						risk: 'Reads retro-novelty when the grid is not strict.',
+						comp: '.impeccable/mocks/decision/challenger-teletext.webp',
+						hero: 'https://impeccable.style/worlds/cards/broadcast-programming-teletext-service-hero.webp'
+					},
+					{
+						id: 'challenger-microfiche',
+						label: 'Microfiche Reader',
+						verdict: 'declined',
+						lineage: 'library microfiche stations',
+						palette: ['#101418', '#9fb4c0'],
+						materials: ['film grain', 'backlit glass'],
+						case: 'Fuses poorly: listeners do not identify with archival retrieval.',
+						kept: 'Total environmental commitment.',
+						hero: 'https://impeccable.style/worlds/cards/archives-microfiche-reader-hero.webp'
+					}
+				],
+				reroll: { registers: ['safer', 'bolder'] },
+				buildPath: { value: 'comp', toggle: true },
+				canon: true,
+				canonCard: {
+					label: 'The category standard',
+					thesis: 'What this category ships, executed impeccably.',
+					palette: ['#ffffff', '#111827', '#2563eb'],
+					materials: ['clean grid', 'product photography'],
+					viewport: 'The arrangement a visitor expects, at full craft.',
+					risk: 'Indistinguishable from the competition by design.',
+					comp: '.impeccable/mocks/decision/canon.webp'
+				},
+				steer: true
+			},
+			null,
+			2
+		)
+	);
+	console.log(
+		'\nOption ids return verbatim in ANSWER; "reroll" and "canon" are reserved. hero/board/comp accept URLs or local paths; comp slots may point at files that do not exist yet (serve first, generate after; the page polls until they land, so never block serving on generation). hero on a challenger is the inspiration it draws from and renders picture-in-picture beside the comp, never as the promise of the build. verdict routes rendering: "wins" and "competitive" challengers keep full cards, "declined" ones render demoted after them (narrow, quiet, art as a labeled thumb, "Adopt anyway"), with their kept line on the front; the page reorders declined cards to the end on its own. raised on the assigned card renders each donation as a named raise line. Salience parity: when the assigned card declares no comp (no image generation this round), catalog art on every card demotes to a labeled thumb, so what looks important is the verdict’s call, never rendering luck. canonCard renders the standing exit as a subordinate card with the same anatomy; without it, canon stays a quiet footer action. Include canon only for visual-direction rounds; never present it as your own recommendation. The pick card is a kicker convention, not a field: kicker "IMPECCABLE’S PICK" on your top-ranked grounded candidate, one at most, never in the lead slot. Every card gets the full anatomy, challengers, canon, and declined included: thesis, palette, materials, viewport, risk; the seed already hands you each challenger’s system rules, so a card with no palette chips is an authoring gap, not a data gap. Keep thesis and each fact to one short sentence: the card front shows thesis, identity, and a two-line risk, while first viewport and the case read on the card back behind the Details chip, so long facts cost the reader a flip, not the page its scanability. A card with no imagery at all has no back; its full read renders on the front, so a text-only round loses nothing. A card may instead declare "wireframe" ({"cols":12,"rows":10,"regions":[{"label":"nav rail","x":0,"y":0,"w":3,"h":10,"accent":true}]}): the page draws it as a layout schematic in the media slot; surface-scope rounds use it on code-led builds, it never counts toward salience, and the card keeps its full read on the front. The comp slot carries the card’s full-fidelity direction comp (the legacy key "sketch" is accepted as an alias). Comp aspect follows the surface: portrait at device viewport for native or mobile-first surfaces, landscape otherwise; the page adapts its cards to either. reroll accepts true or { "registers": ["safer", "bolder"] }: the register buttons steer the next hand along the familiar-to-bold axis, the answer carries "register", and you re-run concept-seed with --register <value> for the next round; offer the registers on direction rounds, and never pre-select one. buildPath rides the payload as { "value": "comp"|"code", "toggle": true }: the value is the recorded default (.impeccable/config.json buildPath, or .impeccable/config.local.json where one machine differs) and the toggle renders a footer switch whose flip binds that session only; the ANSWER then carries buildPath plus buildPathFlipped. On a code-led round each card still declares its comp path as a flip reserve: wireframes render, and a flip to comp makes --wait return once with BUILD PATH FLIPPED so you generate the comps into the declared slots while the round stays open; a flip back to code is free, and a comp that already landed stays as the critique reference. The toggle may only be offered when image generation exists: a harness with no image tool and no API key never sets toggle: true, so the choice never renders where comps cannot be made, and code-led simply rides as the untoggleable value. followup: true keeps the table open after a pick for a second round via --update; send the next payload immediately, the page is waiting on it.'
+	);
+	process.exit(0);
 }
 
 if (hasFlag('wait')) {
-  const key = arg('key');
-  if (!key) { console.error('serve-question: --wait needs --key'); process.exit(1); }
-  const pollSec = Number(arg('poll', '60'));
-  const deadline = Date.now() + pollSec * 1000;
-  const answered = () => fs.existsSync(answerFile(key));
-  // Liveness must survive sandboxes: a sandboxed --wait cannot signal the
-  // daemon (kill throws EPERM even for a living process), so a fresh page
-  // heartbeat in the state file is the primary proof of life, the kill probe
-  // is secondary, and EPERM specifically means "exists, but the sandbox
-  // blocks signals", never "dead". Treating EPERM as death told one session
-  // the user had walked away while they were still reading the board.
-  const alive = () => {
-    try {
-      const state = JSON.parse(fs.readFileSync(stateFile(key), 'utf8'));
-      if (state.lastBeat && Date.now() - state.lastBeat < 12000) return true;
-      try { process.kill(state.pid, 0); return true; }
-      catch (err) { return err.code === 'EPERM'; }
-    } catch { return false; }
-  };
-  let sawClose = false;
-  while (Date.now() < deadline) {
-    if (answered()) break;
-    // A build-path flip is its own event, not an answer: the round stays
-    // open, and the agent's job right now is comps, not code.
-    if (fs.existsSync(flipFile(key))) {
-      try { fs.rmSync(flipFile(key)); } catch { /* consumed elsewhere */ }
-      console.log('BUILD PATH FLIPPED: comp (for this session only; never write it to settings). The table is still open and the page shows shimmer where the images will land: generate each open card’s comp into its declared path now, lead first, then collect the answer with --wait again. A card whose comp already exists needs nothing.');
-      process.exit(0);
-    }
-    if (!alive()) {
-      console.log('serve-question: the question server is gone with no answer. This is a server failure, not a user decision: restart it with --start and the same payload, reopen the URL for the user, and wait again. Never proceed without their choice while their browser session is open.');
-      process.exit(2);
-    }
-    try {
-      const state = JSON.parse(fs.readFileSync(stateFile(key), 'utf8'));
-      if (state.lastBeat && Date.now() - state.lastBeat > 15000) { sawClose = true; break; }
-    } catch { /* state mid-write */ }
-    await new Promise((r) => setTimeout(r, 1000));
-  }
-  if (sawClose && !answered()) {
-    console.log('PAGE CLOSED: the question page went away without an answer; re-present, reopen the URL, or fall back to the structured question tool');
-    process.exit(4);
-  }
-  if (!answered()) { console.log(`WAITING: no answer yet after ${pollSec}s; run --wait --key ${key} again`); process.exit(3); }
-  const collected = fs.readFileSync(answerFile(key), 'utf8').trim();
-  printAnswer(collected);
-  // A re-roll or a followup-round pick keeps the table open: the server stays
-  // alive awaiting --update, so only the answer file is consumed. Terminal
-  // choices clean up fully.
-  let keepsTableOpen = false;
-  try {
-    const parsedAnswer = JSON.parse(collected);
-    keepsTableOpen = parsedAnswer.optionId === 'reroll' || parsedAnswer.followup === true;
-  } catch { /* treat as terminal */ }
-  try { fs.rmSync(answerFile(key)); } catch { /* already gone */ }
-  if (!keepsTableOpen) { try { fs.rmSync(stateFile(key)); } catch { /* already gone */ } }
-  process.exit(0);
+	const key = arg('key');
+	if (!key) {
+		console.error('serve-question: --wait needs --key');
+		process.exit(1);
+	}
+	const pollSec = Number(arg('poll', '60'));
+	const deadline = Date.now() + pollSec * 1000;
+	const answered = () => fs.existsSync(answerFile(key));
+	// Liveness must survive sandboxes: a sandboxed --wait cannot signal the
+	// daemon (kill throws EPERM even for a living process), so a fresh page
+	// heartbeat in the state file is the primary proof of life, the kill probe
+	// is secondary, and EPERM specifically means "exists, but the sandbox
+	// blocks signals", never "dead". Treating EPERM as death told one session
+	// the user had walked away while they were still reading the board.
+	const alive = () => {
+		try {
+			const state = JSON.parse(fs.readFileSync(stateFile(key), 'utf8'));
+			if (state.lastBeat && Date.now() - state.lastBeat < 12000) return true;
+			try {
+				process.kill(state.pid, 0);
+				return true;
+			} catch (err) {
+				return err.code === 'EPERM';
+			}
+		} catch {
+			return false;
+		}
+	};
+	let sawClose = false;
+	while (Date.now() < deadline) {
+		if (answered()) break;
+		// A build-path flip is its own event, not an answer: the round stays
+		// open, and the agent's job right now is comps, not code.
+		if (fs.existsSync(flipFile(key))) {
+			try {
+				fs.rmSync(flipFile(key));
+			} catch {
+				/* consumed elsewhere */
+			}
+			console.log(
+				'BUILD PATH FLIPPED: comp (for this session only; never write it to settings). The table is still open and the page shows shimmer where the images will land: generate each open card’s comp into its declared path now, lead first, then collect the answer with --wait again. A card whose comp already exists needs nothing.'
+			);
+			process.exit(0);
+		}
+		if (!alive()) {
+			console.log(
+				'serve-question: the question server is gone with no answer. This is a server failure, not a user decision: restart it with --start and the same payload, reopen the URL for the user, and wait again. Never proceed without their choice while their browser session is open.'
+			);
+			process.exit(2);
+		}
+		try {
+			const state = JSON.parse(fs.readFileSync(stateFile(key), 'utf8'));
+			if (state.lastBeat && Date.now() - state.lastBeat > 15000) {
+				sawClose = true;
+				break;
+			}
+		} catch {
+			/* state mid-write */
+		}
+		await new Promise((r) => setTimeout(r, 1000));
+	}
+	if (sawClose && !answered()) {
+		console.log(
+			'PAGE CLOSED: the question page went away without an answer; re-present, reopen the URL, or fall back to the structured question tool'
+		);
+		process.exit(4);
+	}
+	if (!answered()) {
+		console.log(`WAITING: no answer yet after ${pollSec}s; run --wait --key ${key} again`);
+		process.exit(3);
+	}
+	const collected = fs.readFileSync(answerFile(key), 'utf8').trim();
+	printAnswer(collected);
+	// A re-roll or a followup-round pick keeps the table open: the server stays
+	// alive awaiting --update, so only the answer file is consumed. Terminal
+	// choices clean up fully.
+	let keepsTableOpen = false;
+	try {
+		const parsedAnswer = JSON.parse(collected);
+		keepsTableOpen = parsedAnswer.optionId === 'reroll' || parsedAnswer.followup === true;
+	} catch {
+		/* treat as terminal */
+	}
+	try {
+		fs.rmSync(answerFile(key));
+	} catch {
+		/* already gone */
+	}
+	if (!keepsTableOpen) {
+		try {
+			fs.rmSync(stateFile(key));
+		} catch {
+			/* already gone */
+		}
+	}
+	process.exit(0);
 }
 
 if (hasFlag('stop')) {
-  const key = arg('key');
-  if (!key) { console.error('serve-question: --stop needs --key'); process.exit(1); }
-  try { process.kill(JSON.parse(fs.readFileSync(stateFile(key), 'utf8')).pid); } catch { /* dead already */ }
-  try { fs.rmSync(answerFile(key)); } catch {}
-  try { fs.rmSync(stateFile(key)); } catch {}
-  console.log('stopped');
-  process.exit(0);
+	const key = arg('key');
+	if (!key) {
+		console.error('serve-question: --stop needs --key');
+		process.exit(1);
+	}
+	try {
+		process.kill(JSON.parse(fs.readFileSync(stateFile(key), 'utf8')).pid);
+	} catch {
+		/* dead already */
+	}
+	try {
+		fs.rmSync(answerFile(key));
+	} catch {}
+	try {
+		fs.rmSync(stateFile(key));
+	} catch {}
+	console.log('stopped');
+	process.exit(0);
 }
 
 if (hasFlag('update')) {
-  const key = arg('key');
-  if (!key || !payloadPath) { console.error('serve-question: --update needs --key and --payload'); process.exit(1); }
-  JSON.parse(fs.readFileSync(payloadPath, 'utf8'));
-  try { process.kill(JSON.parse(fs.readFileSync(stateFile(key), 'utf8')).pid, 0); }
-  catch { console.error('serve-question: no live question server for that key'); process.exit(2); }
-  fs.copyFileSync(payloadPath, path.join(QUESTION_DIR, `${key}.next.json`));
-  console.log('next round delivered; the page reloads itself');
-  process.exit(0);
+	const key = arg('key');
+	if (!key || !payloadPath) {
+		console.error('serve-question: --update needs --key and --payload');
+		process.exit(1);
+	}
+	JSON.parse(fs.readFileSync(payloadPath, 'utf8'));
+	try {
+		process.kill(JSON.parse(fs.readFileSync(stateFile(key), 'utf8')).pid, 0);
+	} catch {
+		console.error('serve-question: no live question server for that key');
+		process.exit(2);
+	}
+	fs.copyFileSync(payloadPath, path.join(QUESTION_DIR, `${key}.next.json`));
+	console.log('next round delivered; the page reloads itself');
+	process.exit(0);
 }
 
 if (hasFlag('start')) {
-  if (!payloadPath) { console.error('serve-question: --start needs --payload <file>'); process.exit(1); }
-  JSON.parse(fs.readFileSync(payloadPath, 'utf8'));
-  fs.mkdirSync(QUESTION_DIR, { recursive: true });
-  const key = arg('key') || Math.random().toString(16).slice(2, 10);
-  // In start mode the agent is alive and owns browser routing; the server
-  // only opens the system browser itself when --open forces it.
-  // The daemon's output lands in a per-key log so a startup failure can say
-  // what actually went wrong instead of only that it did.
-  const logFile = path.join(QUESTION_DIR, `${key}.log`);
-  const logFd = fs.openSync(logFile, 'a');
-  const child = spawn(process.execPath, [
-    fileURLToPath(import.meta.url), '--payload', payloadPath, '--detached-serve', '--key', key,
-    '--timeout', String(timeoutSec), ...(hasFlag('open') ? [] : ['--no-open']),
-  ], { detached: true, stdio: ['ignore', logFd, logFd] });
-  child.unref();
-  fs.closeSync(logFd);
-  const deadline = Date.now() + 8000;
-  while (Date.now() < deadline && !fs.existsSync(stateFile(key))) await new Promise((r) => setTimeout(r, 100));
-  if (!fs.existsSync(stateFile(key))) {
-    let tail = '';
-    try { tail = fs.readFileSync(logFile, 'utf8').trim().split('\n').slice(-4).join('\n  '); } catch { /* log never written */ }
-    console.error(`serve-question: server failed to start${tail ? `\n  ${tail}` : ''}`);
-    console.error(`serve-question: log at ${path.relative(process.cwd(), logFile) || logFile}. A sandboxed exec that cannot listen on localhost causes exactly this; rerun this command once through the harness's network-enabled or unsandboxed command tool before falling back.`);
-    process.exit(1);
-  }
-  const state = JSON.parse(fs.readFileSync(stateFile(key), 'utf8'));
-  console.log(`QUESTION URL: ${state.url}`);
-  console.log(`QUESTION KEY: ${key}`);
-  console.log('Open the URL for the user now: in-app browser when the harness has one, otherwise the system opener (macOS `open`, Linux `xdg-open`), otherwise show the URL.');
-  console.log(`Then collect the answer with: node ${fileURLToPath(import.meta.url)} --wait --key ${key}`);
-  process.exit(0);
+	if (!payloadPath) {
+		console.error('serve-question: --start needs --payload <file>');
+		process.exit(1);
+	}
+	JSON.parse(fs.readFileSync(payloadPath, 'utf8'));
+	fs.mkdirSync(QUESTION_DIR, { recursive: true });
+	const key = arg('key') || Math.random().toString(16).slice(2, 10);
+	// In start mode the agent is alive and owns browser routing; the server
+	// only opens the system browser itself when --open forces it.
+	// The daemon's output lands in a per-key log so a startup failure can say
+	// what actually went wrong instead of only that it did.
+	const logFile = path.join(QUESTION_DIR, `${key}.log`);
+	const logFd = fs.openSync(logFile, 'a');
+	const child = spawn(
+		process.execPath,
+		[
+			fileURLToPath(import.meta.url),
+			'--payload',
+			payloadPath,
+			'--detached-serve',
+			'--key',
+			key,
+			'--timeout',
+			String(timeoutSec),
+			...(hasFlag('open') ? [] : ['--no-open'])
+		],
+		{ detached: true, stdio: ['ignore', logFd, logFd] }
+	);
+	child.unref();
+	fs.closeSync(logFd);
+	const deadline = Date.now() + 8000;
+	while (Date.now() < deadline && !fs.existsSync(stateFile(key)))
+		await new Promise((r) => setTimeout(r, 100));
+	if (!fs.existsSync(stateFile(key))) {
+		let tail = '';
+		try {
+			tail = fs.readFileSync(logFile, 'utf8').trim().split('\n').slice(-4).join('\n  ');
+		} catch {
+			/* log never written */
+		}
+		console.error(`serve-question: server failed to start${tail ? `\n  ${tail}` : ''}`);
+		console.error(
+			`serve-question: log at ${path.relative(process.cwd(), logFile) || logFile}. A sandboxed exec that cannot listen on localhost causes exactly this; rerun this command once through the harness's network-enabled or unsandboxed command tool before falling back.`
+		);
+		process.exit(1);
+	}
+	const state = JSON.parse(fs.readFileSync(stateFile(key), 'utf8'));
+	console.log(`QUESTION URL: ${state.url}`);
+	console.log(`QUESTION KEY: ${key}`);
+	console.log(
+		'Open the URL for the user now: in-app browser when the harness has one, otherwise the system opener (macOS `open`, Linux `xdg-open`), otherwise show the URL.'
+	);
+	console.log(
+		`Then collect the answer with: node ${fileURLToPath(import.meta.url)} --wait --key ${key}`
+	);
+	process.exit(0);
 }
 
 let raw;
@@ -340,211 +513,271 @@ let buildPathDefault = null;
 let liveBuildPath = null;
 
 function loadRound(json) {
-  const parsed = JSON.parse(json);
-  if (!parsed || !Array.isArray(parsed.options) || parsed.options.length === 0) {
-    throw new Error('payload needs an options array');
-  }
-  localImages = [];
-  const imageSrc = (value) => {
-    if (!value) return null;
-    if (/^https?:\/\//.test(value)) return value;
-    const abs = path.resolve(value);
-    if (!fs.existsSync(abs)) return null;
-    localImages.push(abs);
-    return `/img/${localImages.length - 1}`;
-  };
-  // Comps stream in after the page is served, so their slots register
-  // whether or not the file exists yet; /img answers 404 until it lands and
-  // the page polls the slot. Remote comp URLs pass through untouched.
-  const compSrc = (value) => {
-    if (!value) return null;
-    if (/^https?:\/\//.test(value)) return value;
-    localImages.push(path.resolve(value));
-    return `/img/${localImages.length - 1}`;
-  };
-  payload = parsed;
-  const decorate = (option) => ({
-    ...option,
-    heroSrc: imageSrc(option.hero),
-    boardSrc: imageSrc(option.board),
-    compSrc: compSrc(option.comp ?? option.sketch),
-  });
-  options = parsed.options.map(decorate);
-  // The verdict routes rendering: full cards first, then the canon, then the
-  // declined cards dead last in their own payload order. The reorder happens
-  // here so a payload that interleaves them still renders the weighing's
-  // shape, and the deck reads as a gradient of standing: contenders, the
-  // familiar door, then the demoted row.
-  const declined = options.filter((o) => o.verdict === 'declined');
-  options = options.filter((o) => o.verdict !== 'declined');
-  // The standing exit as a full card: same anatomy, reserved id, rendered
-  // subordinate by the page. Without it, canon stays the quiet footer action.
-  if (parsed.canonCard && typeof parsed.canonCard === 'object') {
-    options = [...options, { ...decorate(parsed.canonCard), id: 'canon', isCanon: true }];
-  }
-  options = [...options, ...declined];
-  buildPathDefault = (parsed.buildPath && (parsed.buildPath.value === 'comp' || parsed.buildPath.value === 'code'))
-    ? { value: parsed.buildPath.value, toggle: parsed.buildPath.toggle === true }
-    : null;
-  liveBuildPath = buildPathDefault?.value ?? null;
+	const parsed = JSON.parse(json);
+	if (!parsed || !Array.isArray(parsed.options) || parsed.options.length === 0) {
+		throw new Error('payload needs an options array');
+	}
+	localImages = [];
+	const imageSrc = (value) => {
+		if (!value) return null;
+		if (/^https?:\/\//.test(value)) return value;
+		const abs = path.resolve(value);
+		if (!fs.existsSync(abs)) return null;
+		localImages.push(abs);
+		return `/img/${localImages.length - 1}`;
+	};
+	// Comps stream in after the page is served, so their slots register
+	// whether or not the file exists yet; /img answers 404 until it lands and
+	// the page polls the slot. Remote comp URLs pass through untouched.
+	const compSrc = (value) => {
+		if (!value) return null;
+		if (/^https?:\/\//.test(value)) return value;
+		localImages.push(path.resolve(value));
+		return `/img/${localImages.length - 1}`;
+	};
+	payload = parsed;
+	const decorate = (option) => ({
+		...option,
+		heroSrc: imageSrc(option.hero),
+		boardSrc: imageSrc(option.board),
+		compSrc: compSrc(option.comp ?? option.sketch)
+	});
+	options = parsed.options.map(decorate);
+	// The verdict routes rendering: full cards first, then the canon, then the
+	// declined cards dead last in their own payload order. The reorder happens
+	// here so a payload that interleaves them still renders the weighing's
+	// shape, and the deck reads as a gradient of standing: contenders, the
+	// familiar door, then the demoted row.
+	const declined = options.filter((o) => o.verdict === 'declined');
+	options = options.filter((o) => o.verdict !== 'declined');
+	// The standing exit as a full card: same anatomy, reserved id, rendered
+	// subordinate by the page. Without it, canon stays the quiet footer action.
+	if (parsed.canonCard && typeof parsed.canonCard === 'object') {
+		options = [...options, { ...decorate(parsed.canonCard), id: 'canon', isCanon: true }];
+	}
+	options = [...options, ...declined];
+	buildPathDefault =
+		parsed.buildPath && (parsed.buildPath.value === 'comp' || parsed.buildPath.value === 'code')
+			? { value: parsed.buildPath.value, toggle: parsed.buildPath.toggle === true }
+			: null;
+	liveBuildPath = buildPathDefault?.value ?? null;
 }
-try { loadRound(raw); } catch (error) { console.error(`serve-question: ${error.message}`); process.exit(1); }
+try {
+	loadRound(raw);
+} catch (error) {
+	console.error(`serve-question: ${error.message}`);
+	process.exit(1);
+}
 const detachedKey = hasFlag('detached-serve') ? arg('key') : null;
-const nextFile = () => detachedKey ? path.join(QUESTION_DIR, `${detachedKey}.next.json`) : null;
+const nextFile = () => (detachedKey ? path.join(QUESTION_DIR, `${detachedKey}.next.json`) : null);
 
-const esc = (s) => String(s ?? '').replace(/[&<>"]/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
+const esc = (s) =>
+	String(s ?? '').replace(
+		/[&<>"]/g,
+		(c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' })[c]
+	);
 
 function page() {
-  const flipChip = (label) => `<button type="button" class="chip flip" aria-label="Flip the card"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4a8 8 0 1 1-8 8" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/><path d="M4 5.5V12h6.5" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg><span>${label}</span></button>`;
-  const expandChip = `<button type="button" class="chip expand" aria-label="Expand the image"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 9V4h5M20 15v5h-5M20 9V4h-5M4 15v5h5" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></button>`;
-  // Structured anatomy: chips and one-line facts render when the payload
-  // carries them; a plain body falls back to the prose block. Palette chips
-  // and material tags give a text-only direction an immediate identity that
-  // no generation luck can distort.
-  const fact = (label, value, cls = '') => value ? `<p class="fact${cls ? ` ${cls}` : ''}"><span class="fact-label">${label}</span>${esc(value)}</p>` : '';
-  const demoted = (option) => option.verdict === 'declined';
-  // The build path (comp-led vs code-led) is a workflow preference, not a
-  // design decision: the payload carries the recorded default and whether
-  // the page offers the toggle. On a code-led round a declared comp path is
-  // a flip reserve, not a face: wireframes render, and the slot only starts
-  // shimmering when the user flips to comp.
-  const buildPath = buildPathDefault;
-  const codeLed = buildPath?.value === 'code';
-  // Salience parity: a card's imagery weight is capped by the assigned card's.
-  // When the lead card has no media at all (no image generation this round,
-  // and no catalog art of its own), full-bleed catalog art beside a text-only
-  // assigned card would let rendering luck outvote the weighing: users click
-  // the colorful thing. Declined cards are thumb-only regardless; the verdict
-  // demoted them, and a full-bleed hero would promote them right back.
-  const identityRound = !(options[0] && (options[0].compSrc || options[0].heroSrc || options[0].boardSrc));
-  // A declined card never renders a full media face, comp included: even a
-  // declared comp would buy back the salience the verdict took away.
-  const faceComp = (option) => (demoted(option) || codeLed) ? null : option.compSrc;
-  const thumbOnly = (option) => !faceComp(option) && Boolean(option.heroSrc || option.boardSrc) && (demoted(option) || identityRound);
-  const hasMedia = (option) => Boolean(faceComp(option) || ((option.heroSrc || option.boardSrc) && !thumbOnly(option)));
-  // The back exists to keep long facts off a card whose front is an image;
-  // a card with no art has no flip chip to reach it, so it gets no back and
-  // the full read lives on the front instead.
-  const hasBack = (option) => hasMedia(option) && Boolean(option.viewport || option.case || (option.boardSrc && option.heroSrc));
-  const anatomy = (option) => {
-    const rows = [];
-    if (option.thesis) rows.push(`<p class="thesis">${esc(option.thesis)}</p>`);
-    const idBits = [];
-    if (Array.isArray(option.palette) && option.palette.length) {
-      idBits.push(`<span class="swatches">${option.palette.slice(0, 6).map((c) => `<i style="background:${esc(c)}" title="${esc(c)}"></i>`).join('')}</span>`);
-    }
-    if (Array.isArray(option.materials) && option.materials.length) {
-      idBits.push(option.materials.slice(0, 4).map((m) => `<span class="tag">${esc(m)}</span>`).join(''));
-    }
-    if (idBits.length) rows.push(`<div class="identity">${idBits.join('')}</div>`);
-    // Donations from declined challengers render as named raise lines: the
-    // assigned card arrives already raised by the hand it beat, and the raise
-    // is readable, because a raise nobody can read did not happen. One raise
-    // renders inline; several become a compact cycler (click advances), so a
-    // generous hand cannot blow the card out of proportion.
-    if (Array.isArray(option.raised) && option.raised.length) {
-      const nameOf = (id) => options.find((o) => o.id === id)?.label || String(id ?? '');
-      const raiseLines = option.raised.slice(0, 6).map((r) => `<p class="raise"><span class="fact-label">From ${esc(nameOf(r.from))}</span>${esc(r.raise || r.kept || '')}</p>`);
-      const raisesHead = (count) => `<div class="raises-head"><span class="fact-label">Improved by Impeccable's worlds</span>${count > 1 ? `<span class="raises-count" data-raises-count>1/${count}</span>` : ''}</div>`;
-      if (raiseLines.length > 1) {
-        rows.push(`<div class="raises raises-cycle" role="button" tabindex="0" title="Click or press Enter for the next improvement" aria-label="How Impeccable's worlds improved this direction; activate to see the next improvement">
+	const flipChip = (label) =>
+		`<button type="button" class="chip flip" aria-label="Flip the card"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4a8 8 0 1 1-8 8" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/><path d="M4 5.5V12h6.5" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg><span>${label}</span></button>`;
+	const expandChip = `<button type="button" class="chip expand" aria-label="Expand the image"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 9V4h5M20 15v5h-5M20 9V4h-5M4 15v5h5" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></button>`;
+	// Structured anatomy: chips and one-line facts render when the payload
+	// carries them; a plain body falls back to the prose block. Palette chips
+	// and material tags give a text-only direction an immediate identity that
+	// no generation luck can distort.
+	const fact = (label, value, cls = '') =>
+		value
+			? `<p class="fact${cls ? ` ${cls}` : ''}"><span class="fact-label">${label}</span>${esc(value)}</p>`
+			: '';
+	const demoted = (option) => option.verdict === 'declined';
+	// The build path (comp-led vs code-led) is a workflow preference, not a
+	// design decision: the payload carries the recorded default and whether
+	// the page offers the toggle. On a code-led round a declared comp path is
+	// a flip reserve, not a face: wireframes render, and the slot only starts
+	// shimmering when the user flips to comp.
+	const buildPath = buildPathDefault;
+	const codeLed = buildPath?.value === 'code';
+	// Salience parity: a card's imagery weight is capped by the assigned card's.
+	// When the lead card has no media at all (no image generation this round,
+	// and no catalog art of its own), full-bleed catalog art beside a text-only
+	// assigned card would let rendering luck outvote the weighing: users click
+	// the colorful thing. Declined cards are thumb-only regardless; the verdict
+	// demoted them, and a full-bleed hero would promote them right back.
+	const identityRound = !(
+		options[0] &&
+		(options[0].compSrc || options[0].heroSrc || options[0].boardSrc)
+	);
+	// A declined card never renders a full media face, comp included: even a
+	// declared comp would buy back the salience the verdict took away.
+	const faceComp = (option) => (demoted(option) || codeLed ? null : option.compSrc);
+	const thumbOnly = (option) =>
+		!faceComp(option) &&
+		Boolean(option.heroSrc || option.boardSrc) &&
+		(demoted(option) || identityRound);
+	const hasMedia = (option) =>
+		Boolean(faceComp(option) || ((option.heroSrc || option.boardSrc) && !thumbOnly(option)));
+	// The back exists to keep long facts off a card whose front is an image;
+	// a card with no art has no flip chip to reach it, so it gets no back and
+	// the full read lives on the front instead.
+	const hasBack = (option) =>
+		hasMedia(option) &&
+		Boolean(option.viewport || option.case || (option.boardSrc && option.heroSrc));
+	const anatomy = (option) => {
+		const rows = [];
+		if (option.thesis) rows.push(`<p class="thesis">${esc(option.thesis)}</p>`);
+		const idBits = [];
+		if (Array.isArray(option.palette) && option.palette.length) {
+			idBits.push(
+				`<span class="swatches">${option.palette
+					.slice(0, 6)
+					.map((c) => `<i style="background:${esc(c)}" title="${esc(c)}"></i>`)
+					.join('')}</span>`
+			);
+		}
+		if (Array.isArray(option.materials) && option.materials.length) {
+			idBits.push(
+				option.materials
+					.slice(0, 4)
+					.map((m) => `<span class="tag">${esc(m)}</span>`)
+					.join('')
+			);
+		}
+		if (idBits.length) rows.push(`<div class="identity">${idBits.join('')}</div>`);
+		// Donations from declined challengers render as named raise lines: the
+		// assigned card arrives already raised by the hand it beat, and the raise
+		// is readable, because a raise nobody can read did not happen. One raise
+		// renders inline; several become a compact cycler (click advances), so a
+		// generous hand cannot blow the card out of proportion.
+		if (Array.isArray(option.raised) && option.raised.length) {
+			const nameOf = (id) => options.find((o) => o.id === id)?.label || String(id ?? '');
+			const raiseLines = option.raised
+				.slice(0, 6)
+				.map(
+					(r) =>
+						`<p class="raise"><span class="fact-label">From ${esc(nameOf(r.from))}</span>${esc(r.raise || r.kept || '')}</p>`
+				);
+			const raisesHead = (count) =>
+				`<div class="raises-head"><span class="fact-label">Improved by Impeccable's worlds</span>${count > 1 ? `<span class="raises-count" data-raises-count>1/${count}</span>` : ''}</div>`;
+			if (raiseLines.length > 1) {
+				rows.push(`<div class="raises raises-cycle" role="button" tabindex="0" title="Click or press Enter for the next improvement" aria-label="How Impeccable's worlds improved this direction; activate to see the next improvement">
               ${raisesHead(raiseLines.length)}
               ${raiseLines.join('')}
               <span class="sr-live" aria-live="polite"></span>
             </div>`);
-      } else {
-        rows.push(`<div class="raises">${raisesHead(1)}${raiseLines[0]}</div>`);
-      }
-    }
-    // Demoted art stays reachable as a labeled thumb: the catalog world
-    // explains where the direction comes from without buying it back the
-    // salience the verdict took away.
-    if (thumbOnly(option)) {
-      rows.push(`<figure class="inspo" title="Inspiration: the world this direction draws from. Your page will not look like this image."><img src="${esc(option.heroSrc || option.boardSrc)}" alt=""><figcaption>inspired by</figcaption></figure>`);
-    }
-    // The front carries only what the choice needs: thesis, identity, and the
-    // honest risk clamped to two lines. First viewport and the case read on
-    // the card's back; once the comp lands, the first viewport is a picture.
-    // With no art there is no back, so the full read fills the room the
-    // image would have taken.
-    if (hasMedia(option)) {
-      rows.push(fact('Risk', option.risk, 'clamp'));
-    } else {
-      rows.push(fact('First viewport', option.viewport));
-      rows.push(fact('The case', option.case));
-      rows.push(fact('Kept', option.kept));
-      rows.push(fact('Risk', option.risk));
-    }
-    if (!option.thesis && option.body) rows.push(`<p class="detail">${esc(option.body)}</p>`);
-    else if (option.body && option.thesis && !hasBack(option)) rows.push(`<p class="detail more">${esc(option.body)}</p>`);
-    return rows.join('\n            ');
-  };
-  const backFacts = (option) => [
-    fact('First viewport', option.viewport),
-    fact('The case', option.case),
-    fact('Kept', option.kept),
-    fact('Risk', option.risk),
-    option.body && option.thesis ? `<p class="detail more">${esc(option.body)}</p>` : '',
-  ].filter(Boolean).join('\n            ');
-  const media = (option) => {
-    const inspirationSrc = option.heroSrc || option.boardSrc;
-    const inspiration = inspirationSrc ? `<figure class="pip" title="Inspiration: the world this direction draws from. Your page will not look like this image.">
+			} else {
+				rows.push(`<div class="raises">${raisesHead(1)}${raiseLines[0]}</div>`);
+			}
+		}
+		// Demoted art stays reachable as a labeled thumb: the catalog world
+		// explains where the direction comes from without buying it back the
+		// salience the verdict took away.
+		if (thumbOnly(option)) {
+			rows.push(
+				`<figure class="inspo" title="Inspiration: the world this direction draws from. Your page will not look like this image."><img src="${esc(option.heroSrc || option.boardSrc)}" alt=""><figcaption>inspired by</figcaption></figure>`
+			);
+		}
+		// The front carries only what the choice needs: thesis, identity, and the
+		// honest risk clamped to two lines. First viewport and the case read on
+		// the card's back; once the comp lands, the first viewport is a picture.
+		// With no art there is no back, so the full read fills the room the
+		// image would have taken.
+		if (hasMedia(option)) {
+			rows.push(fact('Risk', option.risk, 'clamp'));
+		} else {
+			rows.push(fact('First viewport', option.viewport));
+			rows.push(fact('The case', option.case));
+			rows.push(fact('Kept', option.kept));
+			rows.push(fact('Risk', option.risk));
+		}
+		if (!option.thesis && option.body) rows.push(`<p class="detail">${esc(option.body)}</p>`);
+		else if (option.body && option.thesis && !hasBack(option))
+			rows.push(`<p class="detail more">${esc(option.body)}</p>`);
+		return rows.join('\n            ');
+	};
+	const backFacts = (option) =>
+		[
+			fact('First viewport', option.viewport),
+			fact('The case', option.case),
+			fact('Kept', option.kept),
+			fact('Risk', option.risk),
+			option.body && option.thesis ? `<p class="detail more">${esc(option.body)}</p>` : ''
+		]
+			.filter(Boolean)
+			.join('\n            ');
+	const media = (option) => {
+		const inspirationSrc = option.heroSrc || option.boardSrc;
+		const inspiration = inspirationSrc
+			? `<figure class="pip" title="Inspiration: the world this direction draws from. Your page will not look like this image.">
               <img src="${esc(inspirationSrc)}" alt="">
               <figcaption>inspiration</figcaption>
-            </figure>` : '';
-    const details = hasBack(option) ? flipChip('Details') : '';
-    // Thumb-only art renders inside the body via anatomy(), never as a face,
-    // and a declined card's comp slot is ignored outright.
-    if (thumbOnly(option)) return '';
-    if (faceComp(option)) {
-      const textOnlyFacts = backFacts(option);
-      return `<div class="media comp-pending" data-comp="${esc(option.compSrc)}">
+            </figure>`
+			: '';
+		const details = hasBack(option) ? flipChip('Details') : '';
+		// Thumb-only art renders inside the body via anatomy(), never as a face,
+		// and a declined card's comp slot is ignored outright.
+		if (thumbOnly(option)) return '';
+		if (faceComp(option)) {
+			const textOnlyFacts = backFacts(option);
+			return `<div class="media comp-pending" data-comp="${esc(option.compSrc)}">
             <div class="shimmer"><span class="comp-note">rendering&hellip;</span></div>
             <img class="comp" alt="" hidden>
             ${inspiration}
             <template class="text-only-facts">${textOnlyFacts}</template>
             <div class="chips">${expandChip}${details}</div>
           </div>`;
-    }
-    if (option.heroSrc || option.boardSrc) {
-      // Without a comp the catalog art is the card's face; it stays a
-      // labeled reference so it never reads as the promise of the build.
-      return `<div class="media" title="Inspiration: the world this direction draws from. Your page will not look like this image.">
+		}
+		if (option.heroSrc || option.boardSrc) {
+			// Without a comp the catalog art is the card's face; it stays a
+			// labeled reference so it never reads as the promise of the build.
+			return `<div class="media" title="Inspiration: the world this direction draws from. Your page will not look like this image.">
             <img src="${esc(option.heroSrc || option.boardSrc)}" alt="">
             <p class="media-label">inspiration</p>
             <div class="chips">${expandChip}${details}</div>
           </div>`;
-    }
-    return '';
-  };
-  // Wireframe media: a code-led card's layout schematic, authored as grid
-  // regions in the payload and drawn by the page; boxes and labels, no art.
-  // It fills the media slot only when the card has no imagery, and it never
-  // counts toward salience or earns a card back: the full read stays on the
-  // front, exactly like a text-only card.
-  const wire = (option) => {
-    const frame = option.wireframe;
-    if (!frame || !Array.isArray(frame.regions) || !frame.regions.length || media(option) || demoted(option)) return '';
-    const cols = Number(frame.cols) > 0 ? Number(frame.cols) : 12;
-    const rows = Number(frame.rows) > 0 ? Number(frame.rows) : 10;
-    const pct = (n, total) => `${Math.max(0, Math.min(100, (n / total) * 100)).toFixed(2)}%`;
-    const cells = frame.regions.slice(0, 12).map((region) => {
-      const x = Number(region.x) || 0;
-      const y = Number(region.y) || 0;
-      const w = Math.max(Number(region.w) || 1, 0.5);
-      const h = Math.max(Number(region.h) || 1, 0.5);
-      return `<div class="wire-region${region.accent ? ' accent' : ''}" style="left:${pct(x, cols)};top:${pct(y, rows)};width:${pct(w, cols)};height:${pct(h, rows)}"><span>${esc(region.label || '')}</span></div>`;
-    }).join('');
-    return `<div class="media wire" role="img" aria-label="Layout schematic">
+		}
+		return '';
+	};
+	// Wireframe media: a code-led card's layout schematic, authored as grid
+	// regions in the payload and drawn by the page; boxes and labels, no art.
+	// It fills the media slot only when the card has no imagery, and it never
+	// counts toward salience or earns a card back: the full read stays on the
+	// front, exactly like a text-only card.
+	const wire = (option) => {
+		const frame = option.wireframe;
+		if (
+			!frame ||
+			!Array.isArray(frame.regions) ||
+			!frame.regions.length ||
+			media(option) ||
+			demoted(option)
+		)
+			return '';
+		const cols = Number(frame.cols) > 0 ? Number(frame.cols) : 12;
+		const rows = Number(frame.rows) > 0 ? Number(frame.rows) : 10;
+		const pct = (n, total) => `${Math.max(0, Math.min(100, (n / total) * 100)).toFixed(2)}%`;
+		const cells = frame.regions
+			.slice(0, 12)
+			.map((region) => {
+				const x = Number(region.x) || 0;
+				const y = Number(region.y) || 0;
+				const w = Math.max(Number(region.w) || 1, 0.5);
+				const h = Math.max(Number(region.h) || 1, 0.5);
+				return `<div class="wire-region${region.accent ? ' accent' : ''}" style="left:${pct(x, cols)};top:${pct(y, rows)};width:${pct(w, cols)};height:${pct(h, rows)}"><span>${esc(region.label || '')}</span></div>`;
+			})
+			.join('');
+		return `<div class="media wire" role="img" aria-label="Layout schematic">
             <div class="wire-field">${cells}</div>
             <p class="media-label">layout</p>
           </div>`;
-  };
-  const chooseLabel = (option) => option.isCanon ? 'Play it straight' : demoted(option) ? 'Adopt anyway' : 'Build this';
-  const cards = options.map((option, index) => `
-    <article class="card${option.isCanon ? ' canon' : ''}${demoted(option) ? ' declined' : ''}" style="--fan:${index === 0 ? '0deg' : (index % 2 ? '1.4deg' : '-1.2deg')};--deal:${index * 90}ms" data-id="${esc(option.id)}"${codeLed && option.compSrc && !demoted(option) ? ` data-comp-slot="${esc(option.compSrc)}"` : ''}>
+	};
+	const chooseLabel = (option) =>
+		option.isCanon ? 'Play it straight' : demoted(option) ? 'Adopt anyway' : 'Build this';
+	const cards = options
+		.map(
+			(option, index) => `
+    <article class="card${option.isCanon ? ' canon' : ''}${demoted(option) ? ' declined' : ''}" style="--fan:${index === 0 ? '0deg' : index % 2 ? '1.4deg' : '-1.2deg'};--deal:${index * 90}ms" data-id="${esc(option.id)}"${codeLed && option.compSrc && !demoted(option) ? ` data-comp-slot="${esc(option.compSrc)}"` : ''}>
       <div class="card-inner">
-        <div class="face front${index === 0 ? ' lead' : ''}${(media(option) || wire(option)) ? '' : ' text-only'}">
+        <div class="face front${index === 0 ? ' lead' : ''}${media(option) || wire(option) ? '' : ' text-only'}">
           ${option.kicker ? `<span class="kicker">${esc(option.kicker)}</span>` : demoted(option) ? '<span class="kicker declined-k">Declined</span>' : option.isCanon ? '<span class="kicker standing">The standing door</span>' : ''}
           ${media(option) || wire(option)}
           <div class="body">
@@ -554,20 +787,30 @@ function page() {
             <button class="choose" data-id="${esc(option.id)}">${chooseLabel(option)}</button>
           </div>
         </div>
-        ${hasBack(option) ? `<div class="face back${index === 0 ? ' lead' : ''}">
-          ${option.boardSrc ? `<div class="media back-media">
+        ${
+					hasBack(option)
+						? `<div class="face back${index === 0 ? ' lead' : ''}">
+          ${
+						option.boardSrc
+							? `<div class="media back-media">
             <img src="${esc(option.boardSrc)}" alt="">
             <div class="chips">${expandChip}${flipChip('Front')}</div>
-          </div>` : `<div class="back-head"><p class="tier">The full read &middot; ${esc(option.label)}</p>${flipChip('Front')}</div>`}
+          </div>`
+							: `<div class="back-head"><p class="tier">The full read &middot; ${esc(option.label)}</p>${flipChip('Front')}</div>`
+					}
           <div class="body back-body">
             ${option.boardSrc ? `<p class="tier">The full read &middot; ${esc(option.label)}</p>` : ''}
             ${backFacts(option)}
             <button class="choose" data-id="${esc(option.id)}">${chooseLabel(option)}</button>
           </div>
-        </div>` : ''}
+        </div>`
+						: ''
+				}
       </div>
-    </article>`).join('\n');
-  return `<!doctype html>
+    </article>`
+		)
+		.join('\n');
+	return `<!doctype html>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>${esc(payload.title || 'impeccable · decision')}</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -882,7 +1125,9 @@ function page() {
 <div id="scrim" aria-hidden="true"></div>
 <div id="lightbox" hidden><img alt=""></div>
 <template id="tpl-expand-chip">${expandChip}</template>
-${buildPath?.toggle ? `<div id="bp-confirm" role="dialog" aria-modal="true" aria-labelledby="bp-confirm-title" hidden>
+${
+	buildPath?.toggle
+		? `<div id="bp-confirm" role="dialog" aria-modal="true" aria-labelledby="bp-confirm-title" hidden>
   <div class="bp-confirm-panel">
     <h2 id="bp-confirm-title">Flip to comp-first?</h2>
     <p>The agent starts rendering a comp for every open card right away, about a minute or two per card on your image provider, and the images land on the cards as they finish. This flip binds this session only.</p>
@@ -891,7 +1136,9 @@ ${buildPath?.toggle ? `<div id="bp-confirm" role="dialog" aria-modal="true" aria
       <button type="button" class="bp-confirm-stay" data-cancel>Keep code-first</button>
     </div>
   </div>
-</div>` : ''}
+</div>`
+		: ''
+}
 <header>
   <div class="brand">
     <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M5 2.5 L13.5 2.5 L5.5 21.5 L5 21.5 Q2.5 21.5 2.5 19 L2.5 5 Q2.5 2.5 5 2.5 Z"/><path d="M16.5 2.5 L19 2.5 Q21.5 2.5 21.5 5 L21.5 19 Q21.5 21.5 19 21.5 L8.5 21.5 Z"/></svg>
@@ -903,13 +1150,17 @@ ${buildPath?.toggle ? `<div id="bp-confirm" role="dialog" aria-modal="true" aria
     <div class="headline">
       <svg class="headline-die" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="4" fill="none" stroke="currentColor" stroke-width="1.6"/><circle cx="8.4" cy="8.4" r="1.5" fill="currentColor"/><circle cx="15.6" cy="8.4" r="1.5" fill="currentColor"/><circle cx="8.4" cy="15.6" r="1.5" fill="currentColor"/><circle cx="15.6" cy="15.6" r="1.5" fill="currentColor"/><circle cx="12" cy="12" r="1.5" fill="currentColor"/></svg>
       <h1>${esc(payload.title || 'Choose a direction')}</h1>
-      ${buildPath?.toggle ? `<div id="build-path" data-default="${buildPath.value}">
+      ${
+				buildPath?.toggle
+					? `<div id="build-path" data-default="${buildPath.value}">
         <div class="bp-switch" role="radiogroup" aria-label="Build path">
           <button type="button" class="bp-opt" data-bp="comp" role="radio" aria-checked="false">Comp first</button>
           <button type="button" class="bp-opt" data-bp="code" role="radio" aria-checked="false">Code first</button>
         </div>
         <p class="bp-note" data-bp-note></p>
-      </div>` : ''}
+      </div>`
+					: ''
+			}
     </div>
     ${payload.question ? `<p class="question">${esc(payload.question)}</p>` : ''}
     <div class="deck-shell">
@@ -924,16 +1175,23 @@ ${buildPath?.toggle ? `<div id="bp-confirm" role="dialog" aria-modal="true" aria
 <footer>
   ${payload.steer ? '<input id="steer" placeholder="Optional steer: what should be different or kept?">' : ''}
   ${(() => {
-    if (!payload.reroll) return '';
-    const die = '<svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="4" fill="none" stroke="currentColor" stroke-width="1.6"/><circle cx="8.4" cy="8.4" r="1.5" fill="currentColor"/><circle cx="15.6" cy="8.4" r="1.5" fill="currentColor"/><circle cx="8.4" cy="15.6" r="1.5" fill="currentColor"/><circle cx="15.6" cy="15.6" r="1.5" fill="currentColor"/><circle cx="12" cy="12" r="1.5" fill="currentColor"/></svg>';
-    const registers = Array.isArray(payload.reroll.registers) ? payload.reroll.registers.filter((r) => r === 'safer' || r === 'bolder') : [];
-    // The registers are the user's steering wheel on the familiar-to-bold
-    // axis; the plain re-roll sits between them so the spatial order matches
-    // the axis it names.
-    const safer = registers.includes('safer') ? '<button class="reroll-btn" id="reroll-safer" title="Deal the familiar register: conventional grounded directions plus the category standard against named competitors"><span>&larr; Safer hand</span></button>' : '';
-    const bolder = registers.includes('bolder') ? '<button class="reroll-btn" id="reroll-bolder" title="Deal foreign forms only, at full commitment"><span>Bolder hand &rarr;</span></button>' : '';
-    return `${safer}<button class="reroll-btn" id="reroll">${die}<span>Re-roll</span></button>${bolder}`;
-  })()}
+		if (!payload.reroll) return '';
+		const die =
+			'<svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="4" fill="none" stroke="currentColor" stroke-width="1.6"/><circle cx="8.4" cy="8.4" r="1.5" fill="currentColor"/><circle cx="15.6" cy="8.4" r="1.5" fill="currentColor"/><circle cx="8.4" cy="15.6" r="1.5" fill="currentColor"/><circle cx="15.6" cy="15.6" r="1.5" fill="currentColor"/><circle cx="12" cy="12" r="1.5" fill="currentColor"/></svg>';
+		const registers = Array.isArray(payload.reroll.registers)
+			? payload.reroll.registers.filter((r) => r === 'safer' || r === 'bolder')
+			: [];
+		// The registers are the user's steering wheel on the familiar-to-bold
+		// axis; the plain re-roll sits between them so the spatial order matches
+		// the axis it names.
+		const safer = registers.includes('safer')
+			? '<button class="reroll-btn" id="reroll-safer" title="Deal the familiar register: conventional grounded directions plus the category standard against named competitors"><span>&larr; Safer hand</span></button>'
+			: '';
+		const bolder = registers.includes('bolder')
+			? '<button class="reroll-btn" id="reroll-bolder" title="Deal foreign forms only, at full commitment"><span>Bolder hand &rarr;</span></button>'
+			: '';
+		return `${safer}<button class="reroll-btn" id="reroll">${die}<span>Re-roll</span></button>${bolder}`;
+	})()}
   ${payload.canon && !payload.canonCard ? '<button id="canon" title="Skip the roll: build the page this category ships, executed impeccably">Play it straight</button>' : ''}
 </footer>
 <script>
@@ -1416,125 +1674,163 @@ ${buildPath?.toggle ? `<div id="bp-confirm" role="dialog" aria-modal="true" aria
 }
 
 const server = http.createServer((req, res) => {
-  if (req.method === 'GET' && req.url === '/') {
-    const pending = nextFile();
-    if (pending && fs.existsSync(pending)) {
-      try { loadRound(fs.readFileSync(pending, 'utf8')); fs.rmSync(pending); } catch { /* keep current round */ }
-    }
-    res.writeHead(200, { 'content-type': 'text/html; charset=utf-8' });
-    res.end(page());
-    return;
-  }
-  if (req.method === 'POST' && req.url === '/heartbeat') {
-    res.writeHead(204); res.end();
-    if (detachedKey) {
-      const now = Date.now();
-      if (!server.lastBeatWrite || now - server.lastBeatWrite > 4000) {
-        server.lastBeatWrite = now;
-        try {
-          const state = JSON.parse(fs.readFileSync(stateFile(detachedKey), 'utf8'));
-          state.lastBeat = now;
-          fs.writeFileSync(stateFile(detachedKey), JSON.stringify(state));
-        } catch { /* state file recreated on next beat */ }
-      }
-    }
-    return;
-  }
-  if (req.method === 'GET' && req.url === '/next-status') {
-    const pending = nextFile();
-    res.writeHead(200, { 'content-type': 'application/json' });
-    res.end(JSON.stringify({ ready: Boolean(pending && fs.existsSync(pending)) }));
-    return;
-  }
-  const imageMatch = req.method === 'GET' && req.url?.match(/^\/img\/(\d+)(?:\?.*)?$/);
-  if (imageMatch) {
-    const abs = localImages[Number(imageMatch[1])];
-    if (!abs || !fs.existsSync(abs)) { res.writeHead(404); res.end(); return; }
-    const type = abs.endsWith('.webp') ? 'image/webp'
-      : abs.endsWith('.png') ? 'image/png'
-      : abs.endsWith('.svg') ? 'image/svg+xml'
-      : abs.endsWith('.gif') ? 'image/gif'
-      : 'image/jpeg';
-    res.writeHead(200, { 'content-type': type });
-    fs.createReadStream(abs).pipe(res);
-    return;
-  }
-  if (req.method === 'POST' && req.url === '/build-path') {
-    let body = '';
-    req.on('data', (chunk) => { body += chunk; });
-    req.on('end', () => {
-      res.writeHead(200, { 'content-type': 'application/json' });
-      res.end('{"ok":true}');
-      let value = null;
-      try { value = JSON.parse(body).value; } catch { /* ignore */ }
-      if (value !== 'comp' && value !== 'code') return;
-      const wasComp = liveBuildPath === 'comp';
-      liveBuildPath = value;
-      // Only a flip TO comp needs the agent mid-round: comps must start
-      // rendering into the declared slots. The reverse is free.
-      if (detachedKey && value === 'comp' && !wasComp) {
-        fs.mkdirSync(QUESTION_DIR, { recursive: true });
-        fs.writeFileSync(flipFile(detachedKey), JSON.stringify({ buildPath: 'comp' }) + '\n');
-      }
-    });
-    return;
-  }
-  if (req.method === 'POST' && req.url === '/answer') {
-    let body = '';
-    req.on('data', (chunk) => { body += chunk; });
-    req.on('end', () => {
-      res.writeHead(200, { 'content-type': 'application/json' });
-      res.end('{"ok":true}');
-      let parsed = {};
-      try { parsed = JSON.parse(body); } catch { /* empty steer */ }
-      const chosen = options.find((o) => o.id === parsed.optionId);
-      const isReroll = parsed.optionId === 'reroll';
-      // A followup round's pick is not terminal: the table stays open for the
-      // next round (--update), exactly like a re-roll. Detached mode only;
-      // the blocking mode has no update channel, so its picks stay terminal.
-      const followupOpen = Boolean(detachedKey) && payload.followup === true && !isReroll;
-      const answer = JSON.stringify({
-        optionId: parsed.optionId ?? null,
-        steer: parsed.steer ?? '',
-        ...(isReroll && (parsed.register === 'safer' || parsed.register === 'bolder') ? { register: parsed.register } : {}),
-        ...(followupOpen ? { followup: true } : {}),
-        ...(chosen?.hero || chosen?.board ? { hero: chosen.hero ?? null, board: chosen.board ?? null } : {}),
-        ...((chosen?.comp ?? chosen?.sketch) ? { comp: chosen.comp ?? chosen.sketch } : {}),
-        ...(liveBuildPath && !isReroll ? { buildPath: liveBuildPath, buildPathFlipped: liveBuildPath !== (buildPathDefault?.value ?? null) } : {}),
-      });
-      if (detachedKey) {
-        fs.mkdirSync(QUESTION_DIR, { recursive: true });
-        fs.writeFileSync(answerFile(detachedKey), answer + '\n');
-      } else {
-        printAnswer(answer);
-      }
-      // A re-roll or followup pick in detached mode keeps the table open: the
-      // client shows a loading hand and reloads when --update delivers the
-      // next round.
-      if (!((isReroll || followupOpen) && detachedKey)) setTimeout(() => process.exit(0), 150);
-    });
-    return;
-  }
-  res.writeHead(404); res.end();
+	if (req.method === 'GET' && req.url === '/') {
+		const pending = nextFile();
+		if (pending && fs.existsSync(pending)) {
+			try {
+				loadRound(fs.readFileSync(pending, 'utf8'));
+				fs.rmSync(pending);
+			} catch {
+				/* keep current round */
+			}
+		}
+		res.writeHead(200, { 'content-type': 'text/html; charset=utf-8' });
+		res.end(page());
+		return;
+	}
+	if (req.method === 'POST' && req.url === '/heartbeat') {
+		res.writeHead(204);
+		res.end();
+		if (detachedKey) {
+			const now = Date.now();
+			if (!server.lastBeatWrite || now - server.lastBeatWrite > 4000) {
+				server.lastBeatWrite = now;
+				try {
+					const state = JSON.parse(fs.readFileSync(stateFile(detachedKey), 'utf8'));
+					state.lastBeat = now;
+					fs.writeFileSync(stateFile(detachedKey), JSON.stringify(state));
+				} catch {
+					/* state file recreated on next beat */
+				}
+			}
+		}
+		return;
+	}
+	if (req.method === 'GET' && req.url === '/next-status') {
+		const pending = nextFile();
+		res.writeHead(200, { 'content-type': 'application/json' });
+		res.end(JSON.stringify({ ready: Boolean(pending && fs.existsSync(pending)) }));
+		return;
+	}
+	const imageMatch = req.method === 'GET' && req.url?.match(/^\/img\/(\d+)(?:\?.*)?$/);
+	if (imageMatch) {
+		const abs = localImages[Number(imageMatch[1])];
+		if (!abs || !fs.existsSync(abs)) {
+			res.writeHead(404);
+			res.end();
+			return;
+		}
+		const type = abs.endsWith('.webp')
+			? 'image/webp'
+			: abs.endsWith('.png')
+				? 'image/png'
+				: abs.endsWith('.svg')
+					? 'image/svg+xml'
+					: abs.endsWith('.gif')
+						? 'image/gif'
+						: 'image/jpeg';
+		res.writeHead(200, { 'content-type': type });
+		fs.createReadStream(abs).pipe(res);
+		return;
+	}
+	if (req.method === 'POST' && req.url === '/build-path') {
+		let body = '';
+		req.on('data', (chunk) => {
+			body += chunk;
+		});
+		req.on('end', () => {
+			res.writeHead(200, { 'content-type': 'application/json' });
+			res.end('{"ok":true}');
+			let value = null;
+			try {
+				value = JSON.parse(body).value;
+			} catch {
+				/* ignore */
+			}
+			if (value !== 'comp' && value !== 'code') return;
+			const wasComp = liveBuildPath === 'comp';
+			liveBuildPath = value;
+			// Only a flip TO comp needs the agent mid-round: comps must start
+			// rendering into the declared slots. The reverse is free.
+			if (detachedKey && value === 'comp' && !wasComp) {
+				fs.mkdirSync(QUESTION_DIR, { recursive: true });
+				fs.writeFileSync(flipFile(detachedKey), JSON.stringify({ buildPath: 'comp' }) + '\n');
+			}
+		});
+		return;
+	}
+	if (req.method === 'POST' && req.url === '/answer') {
+		let body = '';
+		req.on('data', (chunk) => {
+			body += chunk;
+		});
+		req.on('end', () => {
+			res.writeHead(200, { 'content-type': 'application/json' });
+			res.end('{"ok":true}');
+			let parsed = {};
+			try {
+				parsed = JSON.parse(body);
+			} catch {
+				/* empty steer */
+			}
+			const chosen = options.find((o) => o.id === parsed.optionId);
+			const isReroll = parsed.optionId === 'reroll';
+			// A followup round's pick is not terminal: the table stays open for the
+			// next round (--update), exactly like a re-roll. Detached mode only;
+			// the blocking mode has no update channel, so its picks stay terminal.
+			const followupOpen = Boolean(detachedKey) && payload.followup === true && !isReroll;
+			const answer = JSON.stringify({
+				optionId: parsed.optionId ?? null,
+				steer: parsed.steer ?? '',
+				...(isReroll && (parsed.register === 'safer' || parsed.register === 'bolder')
+					? { register: parsed.register }
+					: {}),
+				...(followupOpen ? { followup: true } : {}),
+				...(chosen?.hero || chosen?.board
+					? { hero: chosen.hero ?? null, board: chosen.board ?? null }
+					: {}),
+				...((chosen?.comp ?? chosen?.sketch) ? { comp: chosen.comp ?? chosen.sketch } : {}),
+				...(liveBuildPath && !isReroll
+					? {
+							buildPath: liveBuildPath,
+							buildPathFlipped: liveBuildPath !== (buildPathDefault?.value ?? null)
+						}
+					: {})
+			});
+			if (detachedKey) {
+				fs.mkdirSync(QUESTION_DIR, { recursive: true });
+				fs.writeFileSync(answerFile(detachedKey), answer + '\n');
+			} else {
+				printAnswer(answer);
+			}
+			// A re-roll or followup pick in detached mode keeps the table open: the
+			// client shows a loading hand and reloads when --update delivers the
+			// next round.
+			if (!((isReroll || followupOpen) && detachedKey)) setTimeout(() => process.exit(0), 150);
+		});
+		return;
+	}
+	res.writeHead(404);
+	res.end();
 });
 
 server.listen(portArg, '127.0.0.1', () => {
-  const { port } = server.address();
-  const url = `http://127.0.0.1:${port}/`;
-  if (hasFlag('detached-serve')) {
-    fs.mkdirSync(QUESTION_DIR, { recursive: true });
-    fs.writeFileSync(stateFile(arg('key')), JSON.stringify({ pid: process.pid, port, url }));
-  } else {
-    console.log(`QUESTION URL: ${url}`);
-    console.log('Waiting for the user to choose in the browser (Ctrl-C aborts)...');
-  }
-  if (!hasFlag('no-open')) {
-    openSystemBrowser(url);
-  }
-  if (timeoutSec > 0) {
-    setTimeout(() => {
-      console.log('serve-question: timed out with no answer');
-      process.exit(2);
-    }, timeoutSec * 1000).unref?.();
-  }
+	const { port } = server.address();
+	const url = `http://127.0.0.1:${port}/`;
+	if (hasFlag('detached-serve')) {
+		fs.mkdirSync(QUESTION_DIR, { recursive: true });
+		fs.writeFileSync(stateFile(arg('key')), JSON.stringify({ pid: process.pid, port, url }));
+	} else {
+		console.log(`QUESTION URL: ${url}`);
+		console.log('Waiting for the user to choose in the browser (Ctrl-C aborts)...');
+	}
+	if (!hasFlag('no-open')) {
+		openSystemBrowser(url);
+	}
+	if (timeoutSec > 0) {
+		setTimeout(() => {
+			console.log('serve-question: timed out with no answer');
+			process.exit(2);
+		}, timeoutSec * 1000).unref?.();
+	}
 });

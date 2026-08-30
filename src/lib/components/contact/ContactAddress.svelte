@@ -1,12 +1,12 @@
-<script>
-	import ExLink from '$components/common/ExLink.svelte';
+<script lang="ts">
+	import ExLink from '#lib/components/common/ExLink.svelte';
 
 	/** @type {{ title: string, href?: string, icon: import('svelte').Snippet, children: import('svelte').Snippet }} */
 	let { children, href, icon, title } = $props();
 </script>
 
-<div class="signature-padding flex items-start gap-4 w-full relative flex-1 bg-background hover:bg-card transition-colors">
-
+<div
+	class="signature-padding flex items-start gap-4 w-full relative flex-1 bg-background hover:bg-card transition-colors">
 	<div class="text-muted-foreground shrink-0 pt-0.5">
 		{@render icon?.()}
 	</div>
@@ -28,7 +28,3 @@
 		</div>
 	</div>
 </div>
-
-
-
-

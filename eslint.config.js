@@ -1,10 +1,8 @@
-
 import eslintPluginSvelte from 'eslint-plugin-svelte';
 import globals from 'globals';
 
 export default [
 	...eslintPluginSvelte.configs['flat/recommended'],
-	
 
 	{
 		languageOptions: {

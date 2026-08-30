@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
 	/** @type {{article?: boolean, author: any, twitterUsername: any, image: any, timeToRead?: number}} */
 	let { article = false, author, image, timeToRead = 0, twitterUsername } = $props();
 

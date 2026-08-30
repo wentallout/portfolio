@@ -1,5 +1,5 @@
-<script>
-	import { serializeSchema } from '$lib/utils/seo';
+<script lang="ts">
+	import { serializeSchema } from '#lib/utils/seo.js';
 
 	function generateEntityHash(entityInput) {
 		const entity = String(entityInput || ''); // Ensure input is a string, default to empty if null/undefined

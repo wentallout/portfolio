@@ -1,0 +1,63 @@
+import config from '#lib/config.js';
+import type { RequestHandler } from './$types';
+
+export const GET: RequestHandler = async ({ fetch }) => {
+	const response = await fetch('api/blogs');
+	const blogs = (await response.json()) as Array<{ meta: { title: string; date: string }; path: string }>;
+	const headers = { 'Content-Type': 'application/xml' };
+	const xml = `
+		<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+			<channel>
+				<title>${config.siteTitle}</title>
+				<description>${config.description}</description>
+				<link>${config.siteUrl}</link>
+				<atom:link href="${config.siteUrl}/rss.xml" rel="self" type="application/rss+xml"/>
+				${blogs
+					.map(
+						(blog) => `
+						<item>
+							<title>${blog.meta.title}</title>
+							<link>${config.siteUrl}${blog.path}</link>
+							<guid isPermaLink="true">${config.siteUrl}${blog.path}</guid>
+							<pubDate>${buildRFC822Date(new Date(blog.meta.date).toString())}</pubDate>
+						</item>
+					`
+					)
+					.join('')}
+			</channel>
+		</rss>
+	`.trim();
+	return new Response(xml, { headers });
+}
+function addLeadingZero(num: number | string): string {
+	let s = num.toString();
+	while (s.length < 2) s = '0' + s;
+	return s;
+}
+
+function buildRFC822Date(dateString: string): string {
+	const dayStrings = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
+	const monthStrings = [
+		'Jan',
+		'Feb',
+		'Mar',
+		'Apr',
+		'May',
+		'Jun',
+		'Jul',
+		'Aug',
+		'Sep',
+		'Oct',
+		'Nov',
+		'Dec'
+	];
+	const timeStamp = Date.parse(dateString);
+	const date = new Date(timeStamp);
+	const day = dayStrings[date.getDay()];
+	const dayNumber = addLeadingZero(date.getDate());
+	const month = monthStrings[date.getMonth()];
+	const year = date.getFullYear();
+	const time = `${addLeadingZero(date.getHours())}:${addLeadingZero(date.getMinutes())}:00`;
+	const timezone = date.getTimezoneOffset() === 0 ? 'GMT' : 'BST';
+	return `${day}, ${dayNumber} ${month} ${year} ${time} ${timezone}`;
+}

@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
 	/** @type {{width?: string, height?: string}} */
 	let { width = '5.57em', height = '1em' } = $props();
 </script>

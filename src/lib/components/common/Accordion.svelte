@@ -1,6 +1,6 @@
-<script>
-	import { haptic } from '$lib/actions/haptics';
-	import { CaretDown } from '$lib/assets/icons/icons';
+<script lang="ts">
+	import { haptic } from '#lib/actions/haptics.js';
+	import { CaretDown } from '#lib/assets/icons/icons.js';
 	import { quintOut } from 'svelte/easing';
 	import { slide } from 'svelte/transition';
 
@@ -15,10 +15,10 @@
 <div class="border-grid-b last:!border-b-0 w-full relative bg-background">
 	<button
 		class="w-full signature-padding flex items-center justify-between text-left hover:bg-accent transition-colors group cursor-pointer"
+		aria-expanded={isOpened}
 		onclick={handleToggle}
-		use:haptic={'selection'}
 		type="button"
-		aria-expanded={isOpened}>
+		use:haptic={'selection'}>
 		<span
 			class="text-sm sm:text-base font-medium text-foreground group-hover:text-foreground transition-colors font-sans">
 			{accordionSection}

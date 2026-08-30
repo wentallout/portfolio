@@ -1,0 +1,53 @@
+{
+  "specVersion": "1.0",
+  "host": {
+    "displayName": "Wentallout Portfolio",
+    "identifier": "did:web:wentallout.io.vn"
+  },
+  "entries": [
+    {
+      "identifier": "urn:air:wentallout.io.vn:mcp:portfolio",
+      "displayName": "Portfolio MCP Server",
+      "type": "application/mcp-server-card+json",
+      "url": "https://wentallout.io.vn/.well-known/mcp/server-card.json",
+      "representativeQueries": [
+        "show me your portfolio projects",
+        "what tech stack do you use",
+        "list your recent blog posts"
+      ]
+    },
+    {
+      "identifier": "urn:air:wentallout.io.vn:api:blogs",
+      "displayName": "Blogs API",
+      "type": "application/json",
+      "url": "https://wentallout.io.vn/api/blogs",
+      "representativeQueries": [
+        "search blogs about design systems",
+        "get latest articles on accessibility",
+        "find posts about svelte"
+      ]
+    },
+    {
+      "identifier": "urn:air:wentallout.io.vn:skill:discovery",
+      "displayName": "Agent Skills Index",
+      "type": "application/json",
+      "url": "https://wentallout.io.vn/.well-known/agent-skills/index.json",
+      "representativeQueries": [
+        "what agent skills are available",
+        "discover site capabilities",
+        "list AI integrations"
+      ]
+    },
+    {
+      "identifier": "urn:air:wentallout.io.vn:feed:rss",
+      "displayName": "Blog RSS Feed",
+      "type": "application/rss+xml",
+      "url": "https://wentallout.io.vn/rss.xml",
+      "representativeQueries": [
+        "get RSS feed of blogs",
+        "subscribe to new posts",
+        "latest blog updates"
+      ]
+    }
+  ]
+}

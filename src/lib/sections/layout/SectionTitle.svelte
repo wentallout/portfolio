@@ -1,6 +1,5 @@
-<script>
-	import BlurText from '$lib/components/BlurText.svelte';
-	
+<script lang="ts">
+	import BlurText from '#lib/components/BlurText.svelte';
 
 	/** @type {{sectionTitle?: string, sectionDesc?: string, unsplitAfter?: number}} */
 	let { sectionDesc = '', sectionTitle = '', unsplitAfter = 0 } = $props();
@@ -12,7 +11,7 @@
 		<h2
 			id={sectionTitle.toLowerCase()}
 			class="font-medium tracking-tight text-foreground font-fancy">
-			<BlurText animateBy="words" direction="top" text={sectionTitle} class="font-fancy" />
+			<BlurText class="font-fancy" animateBy="words" direction="top" text={sectionTitle} />
 		</h2>
 	</div>
 

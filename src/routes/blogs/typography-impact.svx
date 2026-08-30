@@ -6,8 +6,8 @@ categories:
 ---
 
 <script>
-    import Image from '$components/common/Image.svelte';
-    import typoDesign from '$blogImages/typoDesign.png';
+    import Image from '#lib/components/common/Image.svelte';
+    import typoDesign from '#lib/assets/images/blogs/typoDesign.png';
 </script>
 
 

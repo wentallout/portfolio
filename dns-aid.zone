@@ -1,0 +1,18 @@
+; DNS-AID records for wentallout.io.vn
+; Publish these at your authoritative DNS provider and enable DNSSEC.
+; Use SVCB/HTTPS ServiceMode with alpn and endpoint params.
+; Keys for experimental params use keyNNNNN per RFC 9460.
+
+; Primary index discovery
+_index._agents.wentallout.io.vn. 3600 IN SVCB 1 wentallout.io.vn. alpn="h2,h3" port=443
+
+; A2A agent endpoint
+_a2a._agents.wentallout.io.vn. 3600 IN SVCB 1 agent.wentallout.io.vn. alpn="a2a" port=443
+
+; MCP endpoint (HTTPS)
+_mcp._agents.wentallout.io.vn. 3600 IN HTTPS 1 mcp.wentallout.io.vn. alpn="h2" port=443
+
+; Catalog pointer (ARD)
+_catalog._agents.wentallout.io.vn. 3600 IN TXT "url=https://wentallout.io.vn/.well-known/ai-catalog.json"
+
+; IMPORTANT: Sign this zone with DNSSEC (DS/DNSKEY at parent) so validating resolvers (Cloudflare 1.1.1.1, Google 8.8.8.8) return AD flag.

@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
 	/** @type {{article?: boolean, datePublished: any, lastUpdated: any, facebookAuthorPage?: string, facebookPage?: string, image: any, squareImage: any, metadescription: any, ogLanguage: any, pageTitle: any, siteTitle: any, url: any}} */
 	let {
 		article = false,

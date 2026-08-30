@@ -1,5 +1,5 @@
-<script>
-	import { haptic } from '$lib/actions/haptics';
+<script lang="ts">
+	import { haptic } from '#lib/actions/haptics.js';
 
 	let {
 		desc = '',
@@ -47,25 +47,16 @@
 					</div>
 				{/if}
 			</div>
-
-			<!-- Action Link -->
-			<div class="pt-6 inline-flex items-center gap-1.5 text-sm text-foreground font-medium">
-				<span
-					class="underline underline-offset-4 decoration-muted-foreground group-hover:decoration-primary group-hover:text-primary transition-all"
-					>View Project</span>
-				<span class="group-hover:translate-x-1 group-hover:text-primary transition-all duration-200"
-					>→</span>
-			</div>
 		</div>
 
 		<!-- Right: Thumbnail Image -->
 		{#if thumbnail}
 			<div class="md:col-span-6 overflow-hidden bg-card aspect-video relative w-full">
 				<img
+					class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
 					alt={projectName}
 					loading="lazy"
-					src={thumbnail}
-					class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+					src={thumbnail} />
 			</div>
 		{/if}
 	</article>

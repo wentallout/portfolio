@@ -1,6 +1,6 @@
-<script>
-	import { haptic } from '$lib/actions/haptics';
-	import { Moon, Sun } from '$lib/assets/icons/icons';
+<script lang="ts">
+	import { haptic } from '#lib/actions/haptics.js';
+	import { Moon, Sun } from '#lib/assets/icons/icons.js';
 	import { mode, toggleMode } from 'mode-watcher';
 	import { fade } from 'svelte/transition';
 </script>

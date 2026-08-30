@@ -121,10 +121,10 @@ Slug
 - Code Syntax Highlighting via [prism-themes](https://github.com/PrismJS/prism-themes)
 - MiniSearch client-side fuzzy search & pagination
 - Comments via [Giscus](https://giscus.app)
+- SEO: https://app.notion.com/p/SEO-AI-Visibility-Audit-Prompt-Library-3c1f96bab4f281e49d3dd0f5a5196344
 
 ## License
 
 [Published under MIT License](https://github.com/wentallout/portfolio/blob/master/LICENSE.md)
 
 [⬆ Back to Top](#portfolio)
-

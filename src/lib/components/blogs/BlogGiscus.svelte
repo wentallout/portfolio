@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
 	import Giscus from '@giscus/svelte';
 
 	let {

@@ -1,11 +1,11 @@
-<script>
-	import SEO from '$components/seo/SEO.svelte';
-	import { META_DESCRIPTIONS, PAGE_TITLES } from '$lib/constants/labels';
-	import FeaturedProject from '$sections/home/Featured.svelte';
-	import GetInTouch from '$sections/home/GetInTouch.svelte';
-	import HeroSection from '$sections/home/HeroSection.svelte';
-	import Services from '$sections/home/ServicesSection.svelte';
-	import WhatIUseSection from '$sections/home/WhatIUseSection.svelte';
+<script lang="ts">
+	import SEO from '#lib/components/seo/SEO.svelte';
+	import { META_DESCRIPTIONS, PAGE_TITLES } from '#lib/constants/labels.js';
+	import FeaturedProject from '#lib/sections/home/Featured.svelte';
+	import GetInTouch from '#lib/sections/home/GetInTouch.svelte';
+	import HeroSection from '#lib/sections/home/HeroSection.svelte';
+	import Services from '#lib/sections/home/ServicesSection.svelte';
+	import WhatIUseSection from '#lib/sections/home/WhatIUseSection.svelte';
 
 	const breadcrumbs = [
 		{
@@ -28,7 +28,3 @@
 <Services />
 <WhatIUseSection />
 <GetInTouch />
-
-
-
-

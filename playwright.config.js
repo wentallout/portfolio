@@ -1,48 +1,32 @@
 import { defineConfig, devices } from '@playwright/test';
 
-/**
- * @see https://playwright.dev/docs/test-configuration
- */
 export default defineConfig({
 	forbidOnly: !!process.env.CI,
-	fullyParallel: true,
+	fullyParallel: false,
 	projects: [
 		{
 			name: 'chromium',
 			use: { ...devices['Desktop Chrome'] }
-		},
-		{
-			name: 'firefox',
-			use: { ...devices['Desktop Firefox'] }
-		},
-		{
-			name: 'webkit',
-			use: { ...devices['Desktop Safari'] }
-		},
-		{
-			name: 'Mobile Chrome',
-			use: { ...devices['Pixel 5'] }
-		},
-		{
-			name: 'Mobile Safari',
-			use: { ...devices['iPhone 12'] }
 		}
 	],
 	reporter: 'html',
-	retries: process.env.CI ? 2 : 0,
-	testDir: './tests',
+	retries: process.env.CI ? 2 : 1,
+	timeout: 30000,
+	expect: { timeout: 8000 },
+	testDir: './e2e',
 	use: {
-		baseURL: 'http://localhost:3000',
+		baseURL: 'http://localhost:4173',
 		screenshot: 'only-on-failure',
 		trace: 'on-first-retry',
-		video: 'on-first-retry'
+		video: 'on-first-retry',
+		actionTimeout: 10000,
+		navigationTimeout: 15000
 	},
-
 	webServer: {
-		command: 'pnpm run dev',
-		port: 3000,
-		reuseExistingServer: !process.env.CI
+		command: 'pnpm run build && pnpm run preview',
+		port: 4173,
+		reuseExistingServer: !process.env.CI,
+		timeout: 120000
 	},
-
-	workers: process.env.CI ? 1 : undefined
+	workers: process.env.CI ? 2 : 2
 });

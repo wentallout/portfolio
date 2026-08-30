@@ -6,10 +6,10 @@ categories:
 ---
 
 <script>
-    import utopia from '$blogImages/utopia.png';
-    import utopiaOutput from '$blogImages/utopiaOutput.png';
+    import utopia from '#lib/assets/images/blogs/utopia.png';
+    import utopiaOutput from '#lib/assets/images/blogs/utopiaOutput.png';
 
-    import Image from '$components/common/Image.svelte';
+    import Image from '#lib/components/common/Image.svelte';
 
 </script>
 

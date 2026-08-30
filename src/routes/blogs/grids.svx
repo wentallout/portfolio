@@ -7,7 +7,7 @@ categories:
 
 <script>
 
-import Image from '$components/common/Image.svelte';
+import Image from '#lib/components/common/Image.svelte';
 </script>
 
 ## Reference

@@ -1,5 +1,5 @@
-<script>
-	import VideoDemoCard from '$components/projects/VideoDemoCard.svelte';
+<script lang="ts">
+	import VideoDemoCard from '#lib/components/projects/VideoDemoCard.svelte';
 
 	const demos = [
 		{
@@ -34,4 +34,3 @@
 		<VideoDemoCard link={demo.link} title={demo.title} vidDemo={demo.vidDemo} />
 	{/each}
 </div>
-

@@ -1,7 +1,7 @@
-<script>
-	import BlogCard from '$components/blogs/BlogCard.svelte';
-	import Breadcrumb from '$components/other/Breadcrumb.svelte';
-	import BlogListContainer from '$sections/blogs/BlogListContainer.svelte';
+<script lang="ts">
+	import BlogCard from '#lib/components/blogs/BlogCard.svelte';
+	import Breadcrumb from '#lib/components/other/Breadcrumb.svelte';
+	import BlogListContainer from '#lib/sections/blogs/BlogListContainer.svelte';
 
 	/** @type {{data: any}} */
 	let { data } = $props();
@@ -17,10 +17,7 @@
 
 	<BlogListContainer>
 		{#each data.blogs as blog (blog.path)}
-			<BlogCard
-				blogLink={blog.path}
-				blogTitle={blog.meta.title}
-				hasTags={false} />
+			<BlogCard blogLink={blog.path} blogTitle={blog.meta.title} hasTags={false} />
 		{/each}
 	</BlogListContainer>
 </div>

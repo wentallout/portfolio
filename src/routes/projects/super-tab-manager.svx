@@ -5,10 +5,10 @@ date: 2024-05-28
 
 <script>
    
-import Image from '$components/common/Image.svelte';
-import changelog from '$lib/assets/images/projects/super-tab-manager/stm1.png';
-import explain from '$lib/assets/images/projects/super-tab-manager/stm2.png';
-import whatitdoes from '$lib/assets/images/projects/super-tab-manager/stm3.png';
+import Image from '#lib/components/common/Image.svelte';
+import changelog from '#lib/assets/images/projects/super-tab-manager/stm1.png';
+import explain from '#lib/assets/images/projects/super-tab-manager/stm2.png';
+import whatitdoes from '#lib/assets/images/projects/super-tab-manager/stm3.png';
 
 </script>
 

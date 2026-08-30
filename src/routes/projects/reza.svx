@@ -5,36 +5,36 @@ date: '2022-09-14'
 <script>
    
    
-    import Image from '$components/common/Image.svelte';
+    import Image from '#lib/components/common/Image.svelte';
 
     //images
-	import thumbnail from '$lib/assets/images/projects/reza/thumbnail.jpg';
+	import thumbnail from '#lib/assets/images/projects/reza/thumbnail.jpg';
    
-    import feature from '$lib/assets/images/projects/reza/feature.png';
-    import role from '$lib/assets/images/projects/reza/role.png';
-    import plan from '$lib/assets/images/projects/reza/plan.png';
-    import goal from '$lib/assets/images/projects/reza/goal.png';
-    import userResearch from '$lib/assets/images/projects/reza/userResearch.png';
-    import persona from '$lib/assets/images/projects/reza/persona.png';
-    import hmw1 from '$lib/assets/images/projects/reza/hmw1.png';
-    import redesign1 from '$lib/assets/images/projects/reza/redesign1.png';
-    import redesign2 from '$lib/assets/images/projects/reza/redesign2.gif';
-    import lofi from '$lib/assets/images/projects/reza/lofi.png';
-    import c1 from '$lib/assets/images/projects/reza/c1.png';
-    import c2 from '$lib/assets/images/projects/reza/c2.png';
-    import l1 from '$lib/assets/images/projects/reza/l1.png';
-    import l2 from '$lib/assets/images/projects/reza/l2.png';
-    import ds1 from '$lib/assets/images/projects/reza/ds1.png';
-    import ds2 from '$lib/assets/images/projects/reza/ds2.png';
-    import ds3 from '$lib/assets/images/projects/reza/ds3.png';
-    import rezaIcon from '$lib/assets/images/projects/reza/rezaIcon.png';
-    import reservationFlow from '$lib/assets/images/projects/reza/reservationFlow.png';
-    import searchFlow from '$lib/assets/images/projects/reza/searchFlow.png';
-    import homeScreen from '$lib/assets/images/projects/reza/homeScreen.png';
-    import searchScreen from '$lib/assets/images/projects/reza/searchScreen.png';
-    import reservationScreen from '$lib/assets/images/projects/reza/reservationScreen.png';
-    import detailScreen from '$lib/assets/images/projects/reza/detailScreen.gif';
-    import notiScreen from '$lib/assets/images/projects/reza/notiScreen.png';
+    import feature from '#lib/assets/images/projects/reza/feature.png';
+    import role from '#lib/assets/images/projects/reza/role.png';
+    import plan from '#lib/assets/images/projects/reza/plan.png';
+    import goal from '#lib/assets/images/projects/reza/goal.png';
+    import userResearch from '#lib/assets/images/projects/reza/userResearch.png';
+    import persona from '#lib/assets/images/projects/reza/persona.png';
+    import hmw1 from '#lib/assets/images/projects/reza/hmw1.png';
+    import redesign1 from '#lib/assets/images/projects/reza/redesign1.png';
+    import redesign2 from '#lib/assets/images/projects/reza/redesign2.gif';
+    import lofi from '#lib/assets/images/projects/reza/lofi.png';
+    import c1 from '#lib/assets/images/projects/reza/c1.png';
+    import c2 from '#lib/assets/images/projects/reza/c2.png';
+    import l1 from '#lib/assets/images/projects/reza/l1.png';
+    import l2 from '#lib/assets/images/projects/reza/l2.png';
+    import ds1 from '#lib/assets/images/projects/reza/ds1.png';
+    import ds2 from '#lib/assets/images/projects/reza/ds2.png';
+    import ds3 from '#lib/assets/images/projects/reza/ds3.png';
+    import rezaIcon from '#lib/assets/images/projects/reza/rezaIcon.png';
+    import reservationFlow from '#lib/assets/images/projects/reza/reservationFlow.png';
+    import searchFlow from '#lib/assets/images/projects/reza/searchFlow.png';
+    import homeScreen from '#lib/assets/images/projects/reza/homeScreen.png';
+    import searchScreen from '#lib/assets/images/projects/reza/searchScreen.png';
+    import reservationScreen from '#lib/assets/images/projects/reza/reservationScreen.png';
+    import detailScreen from '#lib/assets/images/projects/reza/detailScreen.gif';
+    import notiScreen from '#lib/assets/images/projects/reza/notiScreen.png';
 </script>
 
 ## Overview

@@ -1,7 +1,7 @@
-<script>
+<script lang="ts">
 	import { page } from '$app/state';
-	import PrimaryButton from '$components/button/PrimaryButton.svelte';
-	import { House } from '$lib/assets/icons/icons';
+	import PrimaryButton from '#lib/components/button/PrimaryButton.svelte';
+	import { House } from '#lib/assets/icons/icons.js';
 
 	let customMessage = $state('');
 

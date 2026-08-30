@@ -47,25 +47,27 @@
 	--radius-2xl: calc(var(--radius) * 1.8);
 	--radius-3xl: calc(var(--radius) * 2.2);
 	--radius-4xl: calc(var(--radius) * 2.6);
+
+	--font-fancy: 'Nightmare', serif;
 }
 
 @font-face {
 	font-family: 'Inter';
-	src: url('$lib/fonts/InterVariable.woff2') format('woff2');
+	src: url('../lib/fonts/InterVariable.woff2') format('woff2');
 	font-weight: 100 900;
 	font-display: swap;
 }
 
-@font-face {
+/* @font-face {
 	font-family: 'Gambarino';
-	src: url('$lib/fonts/Gambarino-Regular.woff2') format('woff2');
+	src: url('#lib/fonts/Gambarino-Regular.woff2') format('woff2');
 	font-weight: 400;
 	font-display: swap;
-}
+} */
 
 @font-face {
 	font-family: 'Nightmare';
-	src: url('$lib/fonts/BNNightmareRegular.woff2') format('woff2');
+	src: url('../lib/fonts/BNNightmareRegular.woff2') format('woff2');
 	font-weight: 400;
 	font-display: swap;
 }
@@ -215,7 +217,7 @@
 
 .font-fancy,
 .font-stylish {
-	font-family: 'Nightmare', serif;
+	font-family: 'Nightmare', serif !important;
 }
 
 /* Dynamic Blueprint Grid Line Borders */
@@ -359,44 +361,6 @@
 	}
 }
 
-/* Intersection plus tick mark - perfectly centered at 0,0 pixel intersection */
-.grid-plus {
-	position: absolute;
-	color: var(--grid-plus-color);
-	font-family: 'Inter', sans-serif;
-	font-size: 11px;
-	line-height: 1;
-	width: 12px;
-	height: 12px;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	user-select: none;
-	pointer-events: none;
-	z-index: 30;
-}
-
-.grid-plus-tl {
-	top: 0;
-	left: 0;
-	transform: translate(-50%, -50%);
-}
-.grid-plus-tr {
-	top: 0;
-	right: 0;
-	transform: translate(50%, -50%);
-}
-.grid-plus-bl {
-	bottom: 0;
-	left: 0;
-	transform: translate(-50%, 50%);
-}
-.grid-plus-br {
-	bottom: 0;
-	right: 0;
-	transform: translate(50%, 50%);
-}
-
 /* Tooltip styles */
 .tooltip {
 	position: fixed;
@@ -446,5 +410,5 @@
 
 .layout-gutter-bg::before {
 	background-color: var(--muted-foreground);
-	opacity: 0.1;
+	opacity: 0.03;
 }

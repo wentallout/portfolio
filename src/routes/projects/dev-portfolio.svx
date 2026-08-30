@@ -5,20 +5,20 @@ date: 2023-10-07
 
 <script>
 
-import homeDesktop from '$lib/assets/images/projects/dev-portfolio/homeDesktop.png';
-import projectsDesktop from '$lib/assets/images/projects/dev-portfolio/projectsDesktop.png';
-import contactDesktop from '$lib/assets/images/projects/dev-portfolio/contactDesktop.png';
+import homeDesktop from '#lib/assets/images/projects/dev-portfolio/homeDesktop.png';
+import projectsDesktop from '#lib/assets/images/projects/dev-portfolio/projectsDesktop.png';
+import contactDesktop from '#lib/assets/images/projects/dev-portfolio/contactDesktop.png';
 
-import homeMobile from '$lib/assets/images/projects/dev-portfolio/homeMobile.png';
-import projectsMobile from '$lib/assets/images/projects/dev-portfolio/projectsMobile.png';
-import contactMobile from '$lib/assets/images/projects/dev-portfolio/contactMobile.png';
+import homeMobile from '#lib/assets/images/projects/dev-portfolio/homeMobile.png';
+import projectsMobile from '#lib/assets/images/projects/dev-portfolio/projectsMobile.png';
+import contactMobile from '#lib/assets/images/projects/dev-portfolio/contactMobile.png';
 
-import color from '$lib/assets/images/projects/dev-portfolio/color.png';
-import typography from '$lib/assets/images/projects/dev-portfolio/typography.png';
-import other from '$lib/assets/images/projects/dev-portfolio/other.png';
+import color from '#lib/assets/images/projects/dev-portfolio/color.png';
+import typography from '#lib/assets/images/projects/dev-portfolio/typography.png';
+import other from '#lib/assets/images/projects/dev-portfolio/other.png';
 
 
- import Image from '$components/common/Image.svelte';
+ import Image from '#lib/components/common/Image.svelte';
 </script>
 
 ## Design System

@@ -1,5 +1,5 @@
-<script>
-	import Tag from '$components/common/Tag.svelte';
+<script lang="ts">
+	import Tag from '#lib/components/common/Tag.svelte';
 	import { SvelteSet } from 'svelte/reactivity';
 
 	let { data } = $props();

@@ -1,8 +1,8 @@
-<script>
-	import ContactForm from '$components/contact/ContactForm.svelte';
-	import Breadcrumb from '$components/other/Breadcrumb.svelte';
-	import SEO from '$components/seo/SEO.svelte';
-	import { META_DESCRIPTIONS, PAGE_TITLES } from '$lib/constants/labels';
+<script lang="ts">
+	import ContactForm from '#lib/components/contact/ContactForm.svelte';
+	import Breadcrumb from '#lib/components/other/Breadcrumb.svelte';
+	import SEO from '#lib/components/seo/SEO.svelte';
+	import { META_DESCRIPTIONS, PAGE_TITLES } from '#lib/constants/labels.js';
 
 	const breadcrumbs = [
 		{

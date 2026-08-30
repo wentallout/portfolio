@@ -1,8 +1,7 @@
-import { json } from '@sveltejs/kit';
 import type { RequestHandler } from './$types';
 
 export const GET: RequestHandler = async () => {
-	return json({
+	return Response.json({
 		mcp_version: '1.0.0',
 		capabilities: {
 			tools: true,
@@ -16,7 +15,7 @@ export const POST: RequestHandler = async ({ request }) => {
 	const { method, params, id } = body;
 
 	if (method === 'listTools') {
-		return json({
+		return Response.json({
 			jsonrpc: '2.0',
 			id,
 			result: {
@@ -36,7 +35,7 @@ export const POST: RequestHandler = async ({ request }) => {
 
 	if (method === 'callTool') {
 		if (params.name === 'get_portfolio_info') {
-			return json({
+			return Response.json({
 				jsonrpc: '2.0',
 				id,
 				result: {
@@ -51,12 +50,15 @@ export const POST: RequestHandler = async ({ request }) => {
 		}
 	}
 
-	return json({
-		jsonrpc: '2.0',
-		id,
-		error: {
-			code: -32601,
-			message: 'Method not found'
-		}
-	}, { status: 404 });
+	return Response.json(
+		{
+			jsonrpc: '2.0',
+			id,
+			error: {
+				code: -32601,
+				message: 'Method not found'
+			}
+		},
+		{ status: 404 }
+	);
 };

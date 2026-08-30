@@ -13,10 +13,7 @@
 		rootMargin?: string;
 		animationFrom?: AnimSnap;
 		animationTo?: AnimSnap[];
-		easing?:
-			| string
-			| number[]
-			| ((t: number) => number);
+		easing?: string | number[] | ((t: number) => number);
 		onAnimationComplete?: () => void;
 		stepDuration?: number;
 		as?: string;
@@ -73,7 +70,10 @@
 	const fromSnapshot = $derived<AnimSnap>(animationFrom ?? defaultFrom);
 	const toSnapshots = $derived<AnimSnap[]>(animationTo ?? defaultTo);
 
-	function buildKeyframes(from: AnimSnap, steps: AnimSnap[]): Record<string, Array<string | number>> {
+	function buildKeyframes(
+		from: AnimSnap,
+		steps: AnimSnap[]
+	): Record<string, Array<string | number>> {
 		const keys = new Set<string>([...Object.keys(from), ...steps.flatMap((s) => Object.keys(s))]);
 		const out: Record<string, Array<string | number>> = {};
 		keys.forEach((k) => {
@@ -88,7 +88,8 @@
 			if (k === 'y') {
 				props.transform = `translateY(${typeof v === 'number' ? v + 'px' : v})`;
 			} else if (k === 'x') {
-				props.transform = `${props.transform ?? ''} translateX(${typeof v === 'number' ? v + 'px' : v})`.trim();
+				props.transform =
+					`${props.transform ?? ''} translateX(${typeof v === 'number' ? v + 'px' : v})`.trim();
 			} else if (k === 'filter') {
 				props.filter = String(v);
 			} else if (k === 'opacity') {
@@ -129,8 +130,8 @@
 			const targetKeyframes: Record<string, Array<string | number>> = {};
 			for (const [k, frames] of Object.entries(kf)) {
 				if (k === 'y') {
-					targetKeyframes.transform = frames.map((v) =>
-						`translateY(${typeof v === 'number' ? v + 'px' : v})`
+					targetKeyframes.transform = frames.map(
+						(v) => `translateY(${typeof v === 'number' ? v + 'px' : v})`
 					);
 				} else {
 					targetKeyframes[k] = frames;
@@ -166,10 +167,17 @@
 	});
 </script>
 
-<svelte:element this={as} bind:this={containerEl} class="blur-text {className} inline-flex flex-wrap font-[inherit]">
+<svelte:element
+	this={as}
+	bind:this={containerEl}
+	class="blur-text {className} inline-flex flex-wrap font-[inherit]">
 	{#each elements as segment, index (index)}
-		<span bind:this={spanEls[index]} class="inline-block will-change-transform font-[inherit] {className}">
-			{segment === ' ' ? '\u00A0' : segment}{animateBy === 'words' && index < elements.length - 1 ? '\u00A0' : ''}
+		<span
+			bind:this={spanEls[index]}
+			class="inline-block will-change-transform font-[inherit] {className}">
+			{segment === ' ' ? '\u00A0' : segment}{animateBy === 'words' && index < elements.length - 1
+				? '\u00A0'
+				: ''}
 		</span>
 	{/each}
 </svelte:element>

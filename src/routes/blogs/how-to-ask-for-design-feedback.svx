@@ -7,8 +7,8 @@ categories:
 
 <script>
 
-import Image from '$components/common/Image.svelte';
-import designFeedback from '$blogImages/design-feedback.png'
+import Image from '#lib/components/common/Image.svelte';
+import designFeedback from '#lib/assets/images/blogs/design-feedback.png'
 
 </script>
 

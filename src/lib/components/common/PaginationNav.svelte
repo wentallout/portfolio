@@ -1,6 +1,6 @@
-<script>
+<script lang="ts">
 	import { generateNavigationOptions } from '../../utils/generateNavigationOptions';
-	import { ArrowLeft, ArrowRight } from '$lib/assets/icons/icons.js';
+	import { ArrowLeft, ArrowRight } from '#lib/assets/icons/icons.js';
 
 	/** Enum for symbol types */
 	const SymbolType = {
@@ -47,9 +47,7 @@
 			(option.type === 'symbol' &&
 				option.symbol === SymbolType.NEXT_PAGE &&
 				currentPage >= totalPages) ||
-			(option.type === 'symbol' &&
-				option.symbol === SymbolType.PREVIOUS_PAGE &&
-				currentPage <= 1)}
+			(option.type === 'symbol' && option.symbol === SymbolType.PREVIOUS_PAGE && currentPage <= 1)}
 		<span
 			class="inline-flex items-center justify-center min-w-10 h-10 px-3.5 text-sm leading-none border-r border-border shrink-0 select-none transition-colors duration-200 last:border-r-0 {isActive
 				? 'bg-primary text-primary-foreground font-medium'

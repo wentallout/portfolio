@@ -1,16 +1,16 @@
-<script>
-	import BlogCard from '$components/blogs/BlogCard.svelte';
-	import DarkPaginationNav from '$components/common/DarkPaginationNav.svelte';
-	import Breadcrumb from '$components/other/Breadcrumb.svelte';
-	import TextInput from '$components/input/TextInput.svelte';
-	import { MagnifyingGlass } from '$lib/assets/icons/icons';
-	import LoadingBarSpinner from '$lib/assets/icons/LoadingBarSpinner.svelte';
-	import { PAGE_TITLES, SECTION_TITLES } from '$lib/constants/labels';
-	import { blogs } from '$lib/stores/blogStore.svelte.js';
-	import BlogListContainer from '$sections/blogs/BlogListContainer.svelte';
-	import BlogTagsList from '$sections/blogs/BlogTagsList.svelte';
-	import ResourceList from '$sections/blogs/ResourceList.svelte';
-	import SectionTitle from '$sections/layout/SectionTitle.svelte';
+<script lang="ts">
+	import BlogCard from '#lib/components/blogs/BlogCard.svelte';
+	import DarkPaginationNav from '#lib/components/common/DarkPaginationNav.svelte';
+	import Breadcrumb from '#lib/components/other/Breadcrumb.svelte';
+	import TextInput from '#lib/components/input/TextInput.svelte';
+	import { MagnifyingGlass } from '#lib/assets/icons/icons.js';
+	import LoadingBarSpinner from '#lib/assets/icons/LoadingBarSpinner.svelte';
+	import { PAGE_TITLES, SECTION_TITLES } from '#lib/constants/labels.js';
+	import { blogs } from '#lib/stores/blogStore.svelte.js';
+	import BlogListContainer from '#lib/sections/blogs/BlogListContainer.svelte';
+	import BlogTagsList from '#lib/sections/blogs/BlogTagsList.svelte';
+	import ResourceList from '#lib/sections/blogs/ResourceList.svelte';
+	import SectionTitle from '#lib/sections/layout/SectionTitle.svelte';
 	import MiniSearch from 'minisearch';
 	import { onMount } from 'svelte';
 
@@ -161,9 +161,9 @@
 		<!-- Search -->
 		<div class="p-6 bg-background relative">
 			<search
-				role="presentation"
 				onclick={(e) => e.stopPropagation()}
-				onkeydown={(e) => e.stopPropagation()}>
+				onkeydown={(e) => e.stopPropagation()}
+				role="presentation">
 				<TextInput
 					{handleClear}
 					handleOnInput={handleSearchInput}
@@ -178,7 +178,7 @@
 					{#snippet dropdown()}
 						{#if showDropdown && searchTerm !== ''}
 							<div
-								class="absolute top-full left-0 z-50 w-full mt-1 bg-card border border-border shadow-2xl overflow-hidden max-h-96 overflow-y-auto font-sans">
+								class="absolute top-full left-0 z-50 w-full mt-1 bg-card border border-border shadow-2xl overflow-hidden max-h-96 overflow-y-auto min-h-[90dvh]">
 								{#if isSearching}
 									<div
 										class="flex items-center justify-center p-4 gap-2 text-sm text-muted-foreground">

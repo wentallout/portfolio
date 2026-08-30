@@ -1,5 +1,5 @@
-<script>
-	import website from '$lib/config.js';
+<script lang="ts">
+	import website from '#lib/config.js';
 	const { themeColor } = website;
 </script>
 

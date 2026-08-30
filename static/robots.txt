@@ -50,4 +50,7 @@ Disallow: /
 User-agent: *
 Disallow:
 
+Sitemap: https://wentallout.io.vn/sitemap.xml
+Agentmap: https://wentallout.io.vn/.well-known/ai-catalog.json
+
 Content-Signal: ai-train=no, search=yes, ai-input=no

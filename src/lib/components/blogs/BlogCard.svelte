@@ -1,12 +1,7 @@
-<script>
-	import { haptic } from '$lib/actions/haptics';
+<script lang="ts">
+	import { haptic } from '#lib/actions/haptics.js';
 
-	let {
-		blogLink = '',
-		blogTags = [],
-		blogTitle = 'blogTitle',
-		hasTags = true
-	} = $props();
+	let { blogLink = '', blogTags = [], blogTitle = 'blogTitle', hasTags = true } = $props();
 </script>
 
 <a

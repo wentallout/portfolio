@@ -13,30 +13,30 @@ import { fileExists, findConfigFile, hasAnyDependency } from './detect-utils.mjs
 const VITE_CONFIG_RE = /^vite\.config\.(?:js|mjs|cjs|ts|mts|cts)$/;
 
 export function detectViteProject(cwd = process.cwd()) {
-  const configFile = findConfigFile(cwd, VITE_CONFIG_RE);
-  if (configFile) return { configFile, via: 'config' };
-  if (hasAnyDependency(cwd, ['vite'])) return { configFile: null, via: 'package' };
-  // A zero-config Vite app is index.html + package.json, the same pair
-  // roots.mjs treats as an app root.
-  if (fileExists(cwd, 'index.html') && fileExists(cwd, 'package.json')) {
-    return { configFile: null, via: 'zero-config' };
-  }
-  return null;
+	const configFile = findConfigFile(cwd, VITE_CONFIG_RE);
+	if (configFile) return { configFile, via: 'config' };
+	if (hasAnyDependency(cwd, ['vite'])) return { configFile: null, via: 'package' };
+	// A zero-config Vite app is index.html + package.json, the same pair
+	// roots.mjs treats as an app root.
+	if (fileExists(cwd, 'index.html') && fileExists(cwd, 'package.json')) {
+		return { configFile: null, via: 'zero-config' };
+	}
+	return null;
 }
 
 export const viteGeneric = {
-  name: 'vite-generic',
+	name: 'vite-generic',
 
-  detect(cwd) {
-    return detectViteProject(cwd);
-  },
+	detect(cwd) {
+		return detectViteProject(cwd);
+	},
 
-  inject: { kind: 'tag' },
+	inject: { kind: 'tag' },
 
-  source: {
-    extensions: ['.tsx', '.jsx'],
-    preview: 'source',
-    styleMode: 'scoped',
-    commentSyntax: 'jsx',
-  },
+	source: {
+		extensions: ['.tsx', '.jsx'],
+		preview: 'source',
+		styleMode: 'scoped',
+		commentSyntax: 'jsx'
+	}
 };
