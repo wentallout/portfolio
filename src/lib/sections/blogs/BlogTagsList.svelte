@@ -4,16 +4,25 @@
 
 	let { data } = $props();
 
-	const categories = $derived(new SvelteSet(data.blogs.map((blog) => blog.meta.categories).flat()));
+	const tags = $derived(
+		new SvelteSet(
+			data.blogs
+				.map((blog: { meta: { tags?: string[]; categories?: string[] } }) =>
+					blog.meta.tags ?? blog.meta.categories ?? []
+				)
+				.flat()
+				.filter(Boolean)
+		)
+	);
 
-	const uniqueCategories = $derived(Array.from(categories).sort((a, b) => a.localeCompare(b)));
+	const uniqueTags = $derived(Array.from(tags).sort((a, b) => a.localeCompare(b)));
 </script>
 
 <div class="flex flex-wrap gap-2 text-sm font-sans">
-	{#each uniqueCategories as category (category)}
-		<a href="/blogs/category/{category}">
+	{#each uniqueTags as tag (tag)}
+		<a href="/blogs/tags/{tag}">
 			<Tag>
-				{category}
+				{tag}
 			</Tag>
 		</a>
 	{/each}

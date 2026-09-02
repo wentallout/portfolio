@@ -11,9 +11,12 @@ declare namespace App {
 	// interface Stuff {}
 
 	interface Locals {
-		user: {
-			name: string;
-			role: string;
-		};
+		user: { id: string; email: string; name: string; role: string } | null;
+		requestId: string;
+	}
+
+	interface Error {
+		message: string;
+		requestId?: string;
 	}
 }

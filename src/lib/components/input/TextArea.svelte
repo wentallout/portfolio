@@ -1,4 +1,5 @@
 <script lang="ts">
+	import { Textarea } from '#lib/components/ui/textarea/index.js';
 	/** @type {{label?: string, placeholder?: string, name?: string}} */
 	let {
 		label = 'message',
@@ -20,21 +21,17 @@
 
 	<div class="relative w-full">
 		<div
-			class="relative w-full border-grid-all bg-[var(--background)] transition-all duration-200 focus-within:border-[var(--foreground)] group-hover:border-muted-foreground"
+			class="relative w-full border-grid-all bg-[var(--background)] transition-all duration-200 focus-within:border-[var(--foreground)] group-hover:border-muted-foreground has-[[data-slot=textarea]:focus-visible]:border-[var(--foreground)] has-[[data-slot=textarea]:focus-visible]:ring-1 has-[[data-slot=textarea]:focus-visible]:ring-[var(--foreground)]"
 			class:ring-1={isFocused}
 			class:ring-[var(--foreground)]={isFocused}>
-			{#if isFocused}
-
-			{/if}
-
-			<textarea
+			<Textarea
 				id={label}
 				{name}
-				class="w-full h-36 p-4 bg-transparent border-0 border-none outline-none text-sm text-[var(--foreground)] placeholder:text-muted-foreground focus:outline-none focus:ring-0 focus:border-none shadow-none font-sans resize-y block"
+				class="min-h-36 w-full border-0 rounded-none bg-transparent p-4 text-sm text-[var(--foreground)] shadow-none focus-visible:border-0 focus-visible:ring-0 focus-visible:ring-offset-0 font-sans resize-y placeholder:text-muted-foreground"
 				onblur={() => (isFocused = false)}
 				onfocus={() => (isFocused = true)}
 				{placeholder}
-				required></textarea>
+				required />
 		</div>
 	</div>
 </div>

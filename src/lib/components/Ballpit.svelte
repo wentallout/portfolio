@@ -2,7 +2,6 @@
 	import {
 		ACESFilmicToneMapping,
 		AmbientLight,
-		Clock,
 		Color,
 		InstancedMesh,
 		MathUtils,
@@ -17,6 +16,7 @@
 		ShaderChunk,
 		SphereGeometry,
 		SRGBColorSpace,
+		Timer,
 		Vector2,
 		Vector3,
 		WebGLRenderer,
@@ -50,12 +50,14 @@
 		#intersectionObserver?: IntersectionObserver;
 		#resizeTimer?: number;
 		#animationFrameId = 0;
-		#clock = new Clock();
+		#timer = new Timer();
 		#animationState = { elapsed: 0, delta: 0 };
 		#isAnimating = false;
 		#isVisible = false;
 		#boundOnResize = this.#onResize.bind(this);
 		#boundOnVisibility = this.#onVisibilityChange.bind(this);
+		#boundOnContextLost = this.#onContextLost.bind(this);
+		#boundOnContextRestored = this.#onContextRestored.bind(this);
 
 		canvas!: HTMLCanvasElement;
 		camera!: ThreePerspectiveCamera;
@@ -87,6 +89,12 @@
 			});
 			this.renderer.outputColorSpace = SRGBColorSpace;
 			this.renderer.setClearColor(0x000000, 0);
+			// Prevent browser default handling of context lost; we manage restore ourselves.
+			// This also silences noisy CONTEXT_LOST logs in some browsers.
+			this.canvas.addEventListener('webglcontextlost', this.#boundOnContextLost as EventListener);
+			this.canvas.addEventListener('webglcontextrestored', this.#boundOnContextRestored as EventListener);
+			// Timer: let it handle Page Visibility to avoid large deltas after tab hidden
+			if (typeof document !== 'undefined') this.#timer.connect(document);
 			this.resize();
 			this.#initObservers();
 		}
@@ -95,7 +103,16 @@
 			if (!(this.#config.size instanceof Object)) {
 				window.addEventListener('resize', this.#boundOnResize);
 				if (this.#config.size === 'parent' && this.canvas.parentNode) {
-					this.#resizeObserver = new ResizeObserver(this.#boundOnResize);
+					// Use ResizeObserver entry rect to avoid forced reflow from offsetWidth/offsetHeight
+					this.#resizeObserver = new ResizeObserver((entries) => {
+						const e = entries[0];
+						if (e) {
+							// contentRect is already layout-computed, no extra reflow
+							this.resize(e.contentRect.width, e.contentRect.height);
+						} else {
+							this.#boundOnResize();
+						}
+					});
 					this.#resizeObserver.observe(this.canvas.parentNode as Element);
 				}
 			}
@@ -113,21 +130,33 @@
 
 		#onResize() {
 			if (this.#resizeTimer) clearTimeout(this.#resizeTimer);
-			this.#resizeTimer = window.setTimeout(() => this.resize(), 100);
+			// Debounce + schedule on next frame to batch layout reads/writes and avoid forced reflow
+			this.#resizeTimer = window.setTimeout(() => {
+				requestAnimationFrame(() => this.resize());
+			}, 100);
 		}
 
-		resize() {
+		resize(explicitW?: number, explicitH?: number) {
 			let w: number, h: number;
 			if (this.#config.size instanceof Object) {
 				w = this.#config.size.width;
 				h = this.#config.size.height;
+			} else if (explicitW !== undefined && explicitH !== undefined) {
+				// From ResizeObserver – no DOM read, avoids forced reflow
+				w = explicitW;
+				h = explicitH;
 			} else if (this.#config.size === 'parent' && this.canvas.parentNode) {
-				w = (this.canvas.parentNode as HTMLElement).offsetWidth;
-				h = (this.canvas.parentNode as HTMLElement).offsetHeight;
+				// Fallback read – use getBoundingClientRect which batches better than offsetWidth,
+				// but still forces layout; prefer the ResizeObserver path above.
+				const rect = (this.canvas.parentNode as HTMLElement).getBoundingClientRect();
+				w = rect.width;
+				h = rect.height;
 			} else {
 				w = window.innerWidth;
 				h = window.innerHeight;
 			}
+			// Guard against 0 size during hidden/detached state
+			if (w === 0 || h === 0) return;
 			this.size.width = w;
 			this.size.height = h;
 			this.size.ratio = w / h;
@@ -147,7 +176,9 @@
 			const fovRad = (this.camera.fov * Math.PI) / 180;
 			this.size.wHeight = 2 * Math.tan(fovRad / 2) * this.camera.position.length();
 			this.size.wWidth = this.size.wHeight * this.camera.aspect;
-			this.renderer.setSize(this.size.width, this.size.height);
+			// setSize(false) avoids mutating canvas style which can trigger extra reflow;
+			// caller (ResizeObserver) already sized the parent.
+			this.renderer.setSize(this.size.width, this.size.height, false);
 			this.#postprocessing?.setSize?.(this.size.width, this.size.height);
 			let pr = window.devicePixelRatio;
 			if (this.maxPixelRatio && pr > this.maxPixelRatio) pr = this.maxPixelRatio;
@@ -164,26 +195,38 @@
 			}
 		}
 
+		#onContextLost(e: Event) {
+			// Prevent default which would permanently lose context
+			e.preventDefault();
+			this.#stopAnimation();
+		}
+
+		#onContextRestored() {
+			this.resize();
+			if (this.#isAnimating) this.#startAnimation();
+		}
+
 		#startAnimation() {
 			if (this.#isVisible) return;
-			const animateFrame = () => {
+			this.#isVisible = true;
+			// Reset timer base so delta after pause/visibility doesn't spike
+			this.#timer.reset();
+			const animateFrame = (ts: number) => {
 				this.#animationFrameId = requestAnimationFrame(animateFrame);
-				this.#animationState.delta = this.#clock.getDelta();
-				this.#animationState.elapsed += this.#animationState.delta;
+				this.#timer.update(ts);
+				this.#animationState.delta = this.#timer.getDelta();
+				this.#animationState.elapsed = this.#timer.getElapsed();
 				this.onBeforeRender(this.#animationState);
 				this.render();
 				this.onAfterRender(this.#animationState);
 			};
-			this.#isVisible = true;
-			this.#clock.start();
-			animateFrame();
+			this.#animationFrameId = requestAnimationFrame(animateFrame);
 		}
 
 		#stopAnimation() {
 			if (this.#isVisible) {
 				cancelAnimationFrame(this.#animationFrameId);
 				this.#isVisible = false;
-				this.#clock.stop();
 			}
 		}
 
@@ -192,39 +235,75 @@
 		}
 
 		clear() {
-			this.scene.traverse((obj) => {
-				const m = obj as unknown as {
-					isMesh?: boolean;
-					material?: { dispose?: () => void; [k: string]: unknown };
-					geometry?: { dispose?: () => void };
-				};
-				if (m.isMesh && m.material && typeof m.material === 'object') {
-					Object.keys(m.material).forEach((k) => {
-						const p = (m.material as Record<string, unknown>)[k];
-						if (
-							p &&
-							typeof p === 'object' &&
-							typeof (p as { dispose?: () => void }).dispose === 'function'
-						)
-							(p as { dispose: () => void }).dispose();
-					});
-					m.material.dispose?.();
-					m.geometry?.dispose?.();
-				}
-			});
+			// If context is already lost, GPU resources are gone – avoid INVALID_OPERATION:
+			// "object does not belong to this context" by skipping GL deletes.
+			const gl = this.renderer.getContext() as WebGLRenderingContext | WebGL2RenderingContext | null;
+			const contextLost = gl ? (gl as WebGLRenderingContext & { isContextLost?: () => boolean }).isContextLost?.() : false;
+			if (contextLost) {
+				this.scene.clear();
+				return;
+			}
+			try {
+				this.scene.traverse((obj) => {
+					const m = obj as unknown as {
+						isMesh?: boolean;
+						material?: { dispose?: () => void; envMap?: { dispose?: () => void }; [k: string]: unknown };
+						geometry?: { dispose?: () => void };
+					};
+					if (m.isMesh && m.material && typeof m.material === 'object') {
+						// Dispose textures held on material (e.g. envMap) but guard each dispose
+						for (const k of Object.keys(m.material)) {
+							try {
+								const p = (m.material as Record<string, unknown>)[k];
+								if (
+									p &&
+									typeof p === 'object' &&
+									typeof (p as { dispose?: () => void }).dispose === 'function'
+								)
+									(p as { dispose: () => void }).dispose();
+							} catch {}
+						}
+						try {
+							m.material.dispose?.();
+						} catch {}
+						try {
+							m.geometry?.dispose?.();
+						} catch {}
+					}
+				});
+			} catch {}
 			this.scene.clear();
 		}
 
 		dispose() {
+			if (this.isDisposed) return;
 			window.removeEventListener('resize', this.#boundOnResize);
+			if (this.#resizeTimer) clearTimeout(this.#resizeTimer);
 			this.#resizeObserver?.disconnect();
 			this.#intersectionObserver?.disconnect();
 			document.removeEventListener('visibilitychange', this.#boundOnVisibility);
+			this.canvas.removeEventListener('webglcontextlost', this.#boundOnContextLost as EventListener);
+			this.canvas.removeEventListener('webglcontextrestored', this.#boundOnContextRestored as EventListener);
 			this.#stopAnimation();
-			this.clear();
+			this.#timer.disconnect();
+			this.#timer.dispose();
+			try {
+				this.clear();
+			} catch {}
 			this.#postprocessing?.dispose?.();
-			this.renderer.dispose();
-			this.renderer.forceContextLoss();
+			try {
+				this.renderer.dispose();
+			} catch {}
+			// forceContextLoss triggers the CONTEXT_LOST_WEBGL logs you saw. Only force it
+			// if you really need to free GPU immediately (e.g. HMR). Wrap in try/catch and
+			// only call if context is still valid, otherwise it throws INVALID_OPERATION.
+			try {
+				const gl = this.renderer.getContext() as WebGLRenderingContext | null;
+				const isLost = gl
+					? (gl as WebGLRenderingContext & { isContextLost?: () => boolean }).isContextLost?.()
+					: true;
+				if (!isLost) this.renderer.forceContextLoss();
+			} catch {}
 			this.isDisposed = true;
 		}
 	}
@@ -479,9 +558,14 @@ void main() {
 			const roomEnv = new RoomEnvironment();
 			const pmrem = new PMREMGenerator(renderer);
 			const envTexture = pmrem.fromScene(roomEnv).texture;
+			// PMREMGenerator is only needed to bake the env – dispose immediately to free its
+			// internal render targets and avoid the leak that eventually exhausts WebGL contexts.
+			pmrem.dispose();
 			const geometry = new SphereGeometry();
 			const material = new Y({ envMap: envTexture, ...config.materialParams });
 			material.envMapRotation.x = -Math.PI / 2;
+			// Keep a reference for disposal: material.envMap will be cleaned in X.clear()
+			// but we also ensure pmrem resources are freed now.
 			super(geometry, material, config.count);
 			this.config = config;
 			this.physics = new W(config);

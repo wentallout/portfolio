@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { ArrowLineUp } from '#lib/assets/icons/icons.js';
-	import { haptic } from '#lib/actions/haptics.js';
+	import { Button } from '#lib/components/ui/button/index.js';
 
 	/** @type {{showOnPx?: number}} */
 	let { showOnPx = 150 } = $props();
@@ -29,12 +29,13 @@
 
 <svelte:window onscroll={handleOnScroll} />
 
-<button
-	class="fixed right-3 bottom-3 z-50 flex flex-col justify-center items-center aspect-square w-10 rounded-full bg-primary text-primary-foreground shadow-md select-none transition-opacity duration-300 hover:brightness-110 active:opacity-80 {hidden
+<Button
+	variant="default"
+	size="icon"
+	class="fixed right-3 bottom-3 z-50 flex flex-col justify-center items-center rounded-full shadow-md select-none transition-opacity duration-300 hover:brightness-110 active:opacity-80 {hidden
 		? 'opacity-0 invisible'
 		: 'opacity-100 visible'}"
 	onclick={goTop}
-	type="button"
-	use:haptic={'medium'}>
+	type="button">
 	<ArrowLineUp height="16" width="16" />
-</button>
+</Button>

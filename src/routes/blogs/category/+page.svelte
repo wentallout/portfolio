@@ -8,6 +8,6 @@
 
 <Breadcrumb />
 
-<SectionTitle sectionTitle="Blog categories" />
+<SectionTitle sectionTitle="Blog tags" />
 
 <BlogTagsList {data} />

@@ -4,8 +4,10 @@
 	import { CalendarBlank, Pen, Tag as TagIcon } from '#lib/assets/icons/icons.js';
 	import { SvelteDate } from 'svelte/reactivity';
 
-	/** @type {{data: any, hasCategory?: boolean}} */
-	let { data, hasCategory = false } = $props();
+	/** @type {{data: any, hasCategory?: boolean, hasTags?: boolean}} */
+	let { data, hasCategory = false, hasTags = true } = $props();
+	const _hasTags = $derived(hasTags || hasCategory);
+	const _tags = $derived(data.tags ?? data.categories ?? []);
 
 	function formatRelativeTime(dateString) {
 		const date = new SvelteDate(dateString);
@@ -73,12 +75,12 @@
 			<ExLink href="https://www.linkedin.com/in/wentallout/">Dang Khoa (@wentallout)</ExLink>
 		</div>
 
-		{#if hasCategory && data.categories && data.categories.length}
+		{#if _hasTags && _tags && _tags.length}
 			<div class="flex items-center gap-2">
 				<TagIcon color="#9ca3af" height="16" width="16" />
-				{#each data.categories as category (category)}
-					<a class="blueprint-pill" href="/blogs/category/{category}">
-						#{category}
+				{#each _tags as tag (tag)}
+					<a class="blueprint-pill" href="/blogs/tags/{tag}">
+						#{tag}
 					</a>
 				{/each}
 			</div>

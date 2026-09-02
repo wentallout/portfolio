@@ -4,6 +4,7 @@
 	import Breadcrumb from '#lib/components/other/Breadcrumb.svelte';
 	import TextInput from '#lib/components/input/TextInput.svelte';
 	import { MagnifyingGlass } from '#lib/assets/icons/icons.js';
+	import { Button } from '#lib/components/ui/button/index.js';
 	import LoadingBarSpinner from '#lib/assets/icons/LoadingBarSpinner.svelte';
 	import { PAGE_TITLES, SECTION_TITLES } from '#lib/constants/labels.js';
 	import { blogs } from '#lib/stores/blogStore.svelte.js';
@@ -13,22 +14,21 @@
 	import SectionTitle from '#lib/sections/layout/SectionTitle.svelte';
 	import MiniSearch from 'minisearch';
 	import { onMount } from 'svelte';
+	import { getBlogs } from '#lib/remotes/blogs.remote.js';
 
 	const paginate = ({ currentPage, items, pageSize }) => {
 		return items.slice((currentPage - 1) * pageSize, (currentPage - 1) * pageSize + pageSize);
 	};
 
-	let { data } = $props();
-
-	let allBlogs = $derived(data.blogs);
+	const allBlogs = await getBlogs();
 
 	$effect(() => {
 		blogs.all = allBlogs;
 	});
 
 	let searchTerm = $state('');
-	let filteredBlogs = $state([]);
-	let suggestions = $state([]); // For dropdown suggestions
+	let filteredBlogs = $state<any[]>([]);
+	let suggestions = $state<any[]>([]); // For dropdown suggestions
 	let currentPage = $state(1);
 	let pageSize = 42;
 	let isSearching = $state(false);
@@ -40,7 +40,7 @@
 		extractField: (document, fieldName) => {
 			return fieldName.split('.').reduce((doc, key) => doc && doc[key], document);
 		},
-		fields: ['meta.title', 'meta.categories'],
+		fields: ['meta.title', 'meta.tags', 'meta.categories'],
 		idField: 'path', // Use path as unique ID
 		searchOptions: {
 			boost: { 'meta.title': 2 },
@@ -194,8 +194,9 @@
 									<ul class="p-1 m-0 list-none">
 										{#each suggestions.slice(0, 8) as blog, i (blog.path)}
 											<li>
-												<button
-													class="w-full flex items-center p-2.5 gap-2.5 border-none bg-transparent hover:bg-accent focus:bg-accent cursor-pointer text-left transition-colors font-sans text-sm rounded-none {i ===
+												<Button
+													variant="ghost"
+													class="w-full flex items-center p-2.5 gap-2.5 justify-start hover:bg-accent focus:bg-accent text-left font-sans text-sm rounded-none h-auto {i ===
 													selectedIndex
 														? 'bg-muted'
 														: ''}"
@@ -209,7 +210,7 @@
 														<span class="text-foreground text-sm font-medium truncate"
 															>{blog.meta.title}</span>
 													</div>
-												</button>
+												</Button>
 											</li>
 										{/each}
 									</ul>
@@ -223,7 +224,7 @@
 
 		<!-- Tags Blueprint Row -->
 		<div class="p-6 bg-background relative">
-			<BlogTagsList {data} />
+			<BlogTagsList data={{ blogs: allBlogs }} />
 		</div>
 
 		{#if filteredBlogs.length != 0}
@@ -268,7 +269,7 @@
 				{#each paginatedItems as paginatedItem (paginatedItem.path)}
 					<BlogCard
 						blogLink={paginatedItem.path}
-						blogTags={paginatedItem.meta.categories}
+						blogTags={paginatedItem.meta.tags ?? paginatedItem.meta.categories}
 						blogTitle={paginatedItem.meta.title} />
 				{/each}
 			{/if}

@@ -351,6 +351,16 @@
 			clone.style.pointerEvents = 'none';
 			// keep true colors — no invert, add subtle glass gloss
 			clone.style.filter = 'brightness(1.02) contrast(1.04)';
+			// prevent svelte-toc from counting cloned headings (headingSelector=".prose h2,h3,h4")
+			// clones retain .prose class and headings — mark them toc-exclude + strip .prose
+			clone.classList.remove('prose');
+			clone.classList.add('toc-exclude');
+			clone.setAttribute('data-no-shatter', '');
+			clone.setAttribute('aria-hidden', 'true');
+			clone.querySelectorAll('h2,h3,h4').forEach((h) => h.classList.add('toc-exclude'));
+			// also hide from svelte-toc observer by marking wrapper
+			wrapper.setAttribute('data-no-shatter', '');
+			wrapper.setAttribute('aria-hidden', 'true');
 
 			wrapper.appendChild(clone);
 

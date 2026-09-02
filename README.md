@@ -122,6 +122,7 @@ Slug
 - MiniSearch client-side fuzzy search & pagination
 - Comments via [Giscus](https://giscus.app)
 - SEO: https://app.notion.com/p/SEO-AI-Visibility-Audit-Prompt-Library-3c1f96bab4f281e49d3dd0f5a5196344
+- SFXL: https://uppbeat.io/contributors/gfx-sounds?type=sfx
 
 ## License
 

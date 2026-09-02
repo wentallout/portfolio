@@ -3,6 +3,7 @@
 	import { fly, fade } from 'svelte/transition';
 	import { quintOut } from 'svelte/easing';
 	import { haptics, hapticPatterns } from '#lib/actions/haptics.js';
+	import { Button } from '#lib/components/ui/button/index.js';
 
 	let show = $state(false);
 	let timeoutId;
@@ -28,8 +29,10 @@
 </script>
 
 <div class="inline-flex items-center gap-2 relative">
-	<button
-		class="inline-flex items-center gap-1.5 text-muted-foreground hover:text-foreground transition-colors text-sm font-medium group cursor-pointer"
+	<Button
+		variant="ghost"
+		size="sm"
+		class="inline-flex items-center gap-1.5 text-muted-foreground hover:text-foreground group h-auto px-1.5 py-1 text-sm font-medium"
 		aria-label="Copy to clipboard"
 		onclick={copyToClipboard}
 		type="button">
@@ -40,7 +43,7 @@
 				height="14"
 				width="14" />
 		</span>
-	</button>
+	</Button>
 
 	{#if show}
 		<div
