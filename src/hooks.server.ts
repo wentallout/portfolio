@@ -8,6 +8,7 @@ import type { Config } from 'web-sentinel';
 import { createHandler } from 'web-sentinel/hooks';
 import { getTokenFromRequest, verifyToken, isAdminEmail } from './lib/server/auth.js';
 import { createLogger } from './lib/server/logger.js';
+import { ajGlobal, ajStudio, ajLogin, ajCmsWrite } from './lib/server/arcjet.js';
 
 // dev from $app/env — per https://next.svelte.dev/docs/kit/$app-env
 // dev=true on `vite dev`, false in production builds. Use it to allow permissive
@@ -144,10 +145,140 @@ export const handle: Handle = async ({ event, resolve }) => {
 		}
 	}
 
+	// --- Arcjet: DDoS / brute-force / bot protection (only in prod when key set) ---
+	if (!dev && process.env.ARCJET_KEY) {
+		const pathname = event.url.pathname;
+		let aj: typeof ajGlobal | null = null;
+		let requested = 1;
+		if (pathname.startsWith('/studio/login')) {
+			aj = ajLogin;
+		} else if (pathname.startsWith('/studio') || pathname.startsWith('/api/cms')) {
+			// mutation endpoints get stricter token bucket
+			if (event.request.method !== 'GET' && pathname.startsWith('/api/cms')) {
+				aj = ajCmsWrite;
+				requested = 5;
+			} else {
+				aj = ajStudio;
+			}
+		} else {
+			aj = ajGlobal;
+		}
+		if (aj) {
+			try {
+				// @ts-ignore Arcjet protect overload includes { requested } for tokenBucket
+				const decision = await aj.protect(event, requested !== 1 ? { requested } : undefined);
+				// Log Arcjet errors but fail open for availability
+				for (const r of decision.results) {
+					// @ts-ignore isError exists on reason
+					if ((r.reason as unknown as { isError?: () => boolean })?.isError?.()) {
+						logger.warn('arcjet_error', {
+							type: 'arcjet_error',
+							path: pathname,
+							reason: (r.reason as unknown as { message?: string }).message
+						});
+					}
+				}
+				if (decision.isDenied()) {
+					const reason = decision.reason as unknown as {
+						isRateLimit: () => boolean;
+						isBot: () => boolean;
+						isShield: () => boolean;
+					};
+					let status = 403;
+					let message = 'Forbidden';
+					if (reason.isRateLimit()) {
+						status = 429;
+						message = 'Too Many Requests — rate limit exceeded. Try again later.';
+					} else if (reason.isBot()) {
+						status = 403;
+						message = 'Forbidden — automated clients not allowed on this endpoint.';
+					} else if (reason.isShield()) {
+						status = 403;
+						message = 'Forbidden — request blocked by security shield.';
+					}
+					logger.warn('arcjet_block', {
+						type: 'arcjet_block',
+						path: pathname,
+						method: event.request.method,
+						status,
+						reason: message,
+						ip: event.getClientAddress?.() ?? 'unknown'
+					});
+					// Return early with security headers for studio
+					const headers: Record<string, string> = {
+						'content-type': 'text/plain; charset=utf-8',
+						'x-request-id': requestId,
+						'cache-control': 'no-store',
+						'retry-after': status === 429 ? '60' : '0'
+					};
+					if (pathname.startsWith('/studio') || pathname.startsWith('/api/cms')) {
+						headers['x-robots-tag'] = 'noindex, nofollow, noarchive, nosnippet';
+						headers['x-frame-options'] = 'DENY';
+					}
+					return new Response(message, { status, headers });
+				}
+			} catch (e) {
+				// Fail open on Arcjet internal errors — log and continue
+				logger.warn('arcjet_exception', {
+					type: 'arcjet_exception',
+					path: event.url.pathname,
+					error: String((e as Error).message ?? e)
+				});
+			}
+		}
+	}
+
+	// --- Optional IP allowlist for secret CMS (CMS_ALLOWED_IPS comma-separated) ---
+	{
+		const allowIps = (process.env.CMS_ALLOWED_IPS ?? '').trim();
+		if (allowIps && (event.url.pathname.startsWith('/studio') || event.url.pathname.startsWith('/api/cms'))) {
+			const list = allowIps
+				.split(',')
+				.map((s) => s.trim())
+				.filter(Boolean);
+			if (list.length > 0) {
+				const ip = event.getClientAddress?.() ?? event.request.headers.get('x-forwarded-for')?.split(',')[0]?.trim() ?? '';
+				// Allow localhost in dev implicitly even if allowlist set
+				const isLocalhost = ip === '127.0.0.1' || ip === '::1' || ip === '::ffff:127.0.0.1';
+				if (!list.includes(ip) && !(dev && isLocalhost)) {
+					logger.warn('cms_ip_block', {
+						type: 'cms_ip_block',
+						path: event.url.pathname,
+						ip,
+						allowlist: list
+					});
+					return new Response('Not Found', {
+						status: 404,
+						headers: {
+							'content-type': 'text/plain; charset=utf-8',
+							'x-request-id': requestId,
+							'x-robots-tag': 'noindex, nofollow',
+							'cache-control': 'no-store'
+						}
+					});
+				}
+			}
+		}
+	}
+
 	let response: Response;
 	try {
 		const sentinel = dev ? devSentinel : prodSentinel;
 		response = await sentinel({ event, resolve });
+
+		// --- Hardening headers for secret CMS ---
+		if (event.url.pathname.startsWith('/studio') || event.url.pathname.startsWith('/api/cms')) {
+			// Never index, never cache, deny framing
+			response.headers.set('x-robots-tag', 'noindex, nofollow, noarchive, nosnippet, noimageindex');
+			response.headers.set('cache-control', 'no-store, no-cache, must-revalidate, private');
+			response.headers.set('pragma', 'no-cache');
+			response.headers.set('x-frame-options', 'DENY');
+			response.headers.set('referrer-policy', 'same-origin');
+			// Prevent MIME sniffing
+			if (!response.headers.has('x-content-type-options')) {
+				response.headers.set('x-content-type-options', 'nosniff');
+			}
+		}
 
 		// Agent discovery Link headers (RFC 8288) - Only for HTML documents
 		if (response.headers.get('content-type')?.includes('text/html')) {

@@ -48,7 +48,10 @@ Disallow: /
 User-agent: YouBot
 Disallow: /
 User-agent: *
-Disallow:
+Disallow: /studio
+Disallow: /studio/
+Disallow: /api/cms
+Disallow: /api/cms/
 
 Sitemap: https://wentallout.io.vn/sitemap.xml
 Agentmap: https://wentallout.io.vn/.well-known/ai-catalog.json

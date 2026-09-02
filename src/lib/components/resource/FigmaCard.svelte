@@ -27,8 +27,7 @@
 				class="text-base font-medium text-foreground group-hover:text-primary transition-colors line-clamp-2 leading-snug">
 				{title}
 			</h4>
-			<div
-				class="flex items-center justify-between pt-2 text-sm text-muted-foreground font-sans font-medium">
+			<div class="flex items-center justify-between pt-2 text-sm text-muted-foreground font-medium">
 				<span>{desc}</span>
 				<span
 					class="group-hover:translate-x-1 transition-transform duration-200 group-hover:text-primary"

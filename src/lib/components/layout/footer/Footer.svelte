@@ -28,7 +28,7 @@
 	];
 </script>
 
-<footer class="w-full bg-background relative text-sm font-sans overflow-hidden">
+<footer class="w-full bg-background relative text-sm overflow-hidden">
 	<!-- animated dotted background -->
 	<div
 		class="absolute inset-0 z-0 opacity-5 dark:opacity-60 pointer-events-none"
@@ -45,12 +45,11 @@
 	<div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-0 relative z-10">
 		<!-- Column 1: About -->
 		<FooterColumn title="ABOUT">
-			<p
-				class="text-foreground/70 dark:text-foreground/75 leading-relaxed text-sm font-sans font-normal">
+			<p class="leading-relaxed text-sm font-normal">
 				Khoa Nguyen. Tailor-made, high-performance websites for businesses & creators.
 			</p>
 			<a
-				class="inline-block font-medium text-primary underline underline-offset-4 decoration-primary hover:text-primary/80 transition-colors"
+				class="inline-block font-medium text-primary underline underline-offset-4 decoration-primary transition-colors"
 				href="/about">
 				More about me →
 			</a>
@@ -58,7 +57,7 @@
 
 		<!-- Column 2: Navigate -->
 		<FooterColumn title="NAVIGATE">
-			<ul class="space-y-2.5 text-foreground/70 dark:text-foreground/75">
+			<ul class="space-y-2.5">
 				{#each navItems as navItem (navItem.path)}
 					<li>
 						<a
@@ -73,7 +72,7 @@
 
 		<!-- Column 3: Tools & Resources -->
 		<FooterColumn title="TOOLS & RESOURCES">
-			<ul class="space-y-2.5 text-foreground/70 dark:text-foreground/75">
+			<ul class="space-y-2.5">
 				{#each resourceLinks as item (item.href)}
 					<li>
 						{#if item.isExternal}

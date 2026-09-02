@@ -16,30 +16,30 @@
 					Tailor-made Website Design & Frontend Development
 				</h3>
 
-				<ul class="space-y-3 text-sm text-muted-foreground mb-8 font-normal">
+				<ul class="space-y-3 text-base text-muted-foreground mb-8 font-normal">
 					<li class="flex items-center gap-3">
-						<span class="text-foreground">✓</span>
 						<span>High-performing landing pages, product showcases & web applications</span>
 					</li>
 					<li class="flex items-center gap-3">
-						<span class="text-foreground">✓</span>
 						<span
-							>Built from scratch with <strong class="text-foreground font-medium"
-								>SvelteKit, JavaScript, HTML & custom CSS</strong
-							></span>
+							>Built from scratch with
+							<strong class="text-foreground font-medium">
+								SvelteKit, JavaScript, HTML & custom CSS
+							</strong>
+						</span>
 					</li>
 					<li class="flex items-center gap-3">
-						<span class="text-foreground">✓</span>
 						<span
 							><strong class="text-foreground font-medium">Truly Responsive:</strong> Meticulously crafted
 							for mobile, tablet, and widescreen viewports</span>
 					</li>
 					<li class="flex items-center gap-3">
-						<span class="text-foreground">✓</span>
-						<span
-							>Grounded in <strong class="text-foreground font-medium"
-								>thoughtful UX, accessibility, fast loading, and organic SEO</strong
-							></span>
+						<span>
+							Grounded in
+							<strong class="text-foreground font-medium">
+								thoughtful UX, accessibility, fast loading, and organic SEO
+							</strong>
+						</span>
 					</li>
 				</ul>
 			</div>
@@ -59,7 +59,7 @@
 				<h3 class="text-2xl font-medium text-foreground mb-5 tracking-tight">
 					One Point of Contact, End-to-End
 				</h3>
-				<p class="text-sm text-muted-foreground leading-relaxed mb-8 font-normal">
+				<p class="text-base text-muted-foreground leading-relaxed mb-8 font-normal">
 					No communication gaps or handoff delays. I take your project personally from initial UX
 					wireframes to final pixel-perfect deployment.
 				</p>

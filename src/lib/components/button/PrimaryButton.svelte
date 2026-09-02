@@ -35,10 +35,9 @@
 	{type}
 	{href}
 	aria-label={label ? `button for ${label}` : undefined}
-	class="h-auto px-7 py-3 text-sm has-[>svg]:px-7 {className}"
+	class="h-auto px-7 py-3 text-base has-[>svg]:px-7 {className}"
 	onmousedown={handlePointerDown}
-	{...restProps}
->
+	{...restProps}>
 	{@render children?.()}
 	{label}
 </Button>

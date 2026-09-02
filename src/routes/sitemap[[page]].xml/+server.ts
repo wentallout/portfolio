@@ -11,7 +11,7 @@ export const GET: RequestHandler = async ({ params }) => {
 	const projectSlugs = (p as { slug: string }[]).map((r) => r.slug);
 	if (blogSlugs.length > 0 && projectSlugs.length > 0) {
 		return await sitemap.response({
-			excludeRoutePatterns: [/^\/blogs\/tags\/.*/, /^\/blogs\/category\/.*/],
+			excludeRoutePatterns: [/^\/blogs\/tags\/.*/, /^\/blogs\/category\/.*/, /^\/studio(\/.*)?$/, /^\/api\/cms(\/.*)?$/, /^\/api\/arcjet(\/.*)?$/],
 			origin: 'https://wentallout.io.vn',
 			page: (params as { page?: string }).page,
 			paramValues: {

@@ -1,3 +1,8 @@
+<svelte:head>
+	<meta name="robots" content="noindex, nofollow, noarchive, nosnippet" />
+	<meta name="googlebot" content="noindex, nofollow" />
+</svelte:head>
+
 <script lang="ts">
 	import { page } from '$app/state';
 	import { authClient } from '#lib/auth-client.js';

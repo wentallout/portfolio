@@ -14,5 +14,16 @@
 		"noImplicitAny": false,
 		"verbatimModuleSyntax": true
 	},
-	"exclude": ["node_modules/**", "src/service-worker/**/*"]
+	"exclude": [
+		"node_modules/**",
+		".svelte-kit/**",
+		"build/**",
+		"dist/**",
+		".netlify/**",
+		"playwright-report/**",
+		"test-results/**",
+		"coverage/**",
+		"static/**",
+		"src/service-worker/**/*"
+	]
 }

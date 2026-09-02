@@ -20,10 +20,6 @@
 			<div class="text-2xl font-bold mt-1">{data.counts?.projects ?? '—'}</div>
 		</a>
 	</Card.Root>
-	<Card.Root class="rounded-none p-6">
-		<div class="text-sm text-muted-foreground">Storage</div>
-		<div class="text-sm mt-1">Neon Object Storage not available in ap-southeast-1 — uploads fallback to inline/base64 until region supports storage or you configure external bucket.</div>
-	</Card.Root>
 </div>
 
 <div class="mt-8">

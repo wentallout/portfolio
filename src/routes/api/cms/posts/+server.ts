@@ -4,7 +4,8 @@ import type { RequestHandler } from './$types';
 import { neon } from '@neondatabase/serverless';
 import { DATABASE_URL } from '$app/env/private';
 
-export const GET: RequestHandler = async ({ url }) => {
+export const GET: RequestHandler = async ({ url, locals }) => {
+	if (!locals.user || locals.user.role !== 'admin') return json({ error: 'Unauthorized' }, { status: 401 });
 	const q = url.searchParams.get('q')?.trim() ?? '';
 	const status = url.searchParams.get('status');
 	const page = Number(url.searchParams.get('page') ?? '1');

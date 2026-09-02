@@ -45,19 +45,19 @@
 			role: 'Display / Fancy Title',
 			family: 'Nightmare / Nightmare',
 			sample: 'KINTSUGI DESIGN SYSTEM',
-			class: 'font-fancy text-3xl md:text-4xl tracking-wide'
+			class: 'text-3xl md:text-4xl tracking-wide'
 		},
 		{
 			role: 'Section Titles & Headings',
 			family: 'Inter (Sans-serif)',
 			sample: 'Philosophical Foundations',
-			class: 'font-sans font-semibold text-xl md:text-2xl text-foreground'
+			class: 'font-semibold text-xl md:text-2xl text-foreground'
 		},
 		{
 			role: 'Body Text',
 			family: 'Inter (Sans-serif)',
 			sample: 'Embracing imperfection, repair, and golden seams across digital user interfaces.',
-			class: 'font-sans text-sm md:text-base text-foreground/80 leading-relaxed'
+			class: 'text-sm md:text-base text-foreground/80 leading-relaxed'
 		},
 		{
 			role: 'Code & Technical Labels',
@@ -108,7 +108,7 @@
 	<div class="grid grid-cols-1 md:grid-cols-3 border-t">
 		{#each philosophyItems as item (item.title)}
 			<div class="blueprint-card space-y-3">
-				<h3 class="font-sans font-medium text-base text-foreground">{item.title}</h3>
+				<h3 class=" font-medium text-base text-foreground">{item.title}</h3>
 				<p class="text-sm text-muted-foreground leading-relaxed">{item.desc}</p>
 			</div>
 		{/each}
@@ -130,7 +130,7 @@
 					{color.hex}
 				</div>
 				<div>
-					<h4 class="font-sans font-medium text-sm text-foreground">{color.name}</h4>
+					<h4 class=" font-medium text-sm text-foreground">{color.name}</h4>
 					<p class="font-mono text-xs text-primary mt-0.5">{color.token}</p>
 					<p class="text-xs text-muted-foreground mt-2 leading-normal">{color.desc}</p>
 				</div>
@@ -163,7 +163,7 @@
 	<SectionTitle sectionTitle="4. Blueprint Grid & Spacing" />
 
 	<div class="blueprint-card space-y-4">
-		<h3 class="font-sans font-medium text-base text-foreground">
+		<h3 class=" font-medium text-base text-foreground">
 			Gapless Grid System & Intersection Markers
 		</h3>
 		<p class="text-sm text-muted-foreground leading-relaxed">

@@ -60,7 +60,7 @@
 		{data.title}
 	</h1>
 
-	<div class="flex items-center gap-4 flex-wrap text-sm text-muted-foreground font-sans pt-2">
+	<div class="flex items-center gap-4 flex-wrap text-sm text-muted-foreground pt-2">
 		{#if data.date}
 			<div class="flex items-center gap-1.5">
 				<CalendarBlank color="#9ca3af" height="16" width="16" />

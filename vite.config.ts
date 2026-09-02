@@ -20,9 +20,12 @@ export default defineConfig({
 	build: {
 		rollupOptions: { external: ['@resvg/resvg-js'] }
 	},
+
 	plugins: [
 		tailwindcss(),
+
 		sveltekit({
+			inspector: true,
 			extensions: ['.svelte', '.svx'],
 			// @ts-expect-error mdsvex plugin types mismatch with unified versions
 			preprocess: sequence([
@@ -40,7 +43,10 @@ export default defineConfig({
 								target: '_blank'
 							} as unknown as Record<string, unknown>
 						],
-						[rehypeAutolinkHeadings as unknown as never, { behavior: 'wrap' } as unknown as Record<string, unknown>]
+						[
+							rehypeAutolinkHeadings as unknown as never,
+							{ behavior: 'wrap' } as unknown as Record<string, unknown>
+						]
 					],
 					remarkPlugins: [remarkGfm as unknown as never, remarkSectionize as unknown as never]
 				})
@@ -67,7 +73,17 @@ export default defineConfig({
 	optimizeDeps: {
 		exclude: ['mode-watcher', '@giscus/svelte', 'svelte-toc', 'sveltekit-embed', 'saos']
 	},
-	ssr: { noExternal: ['cookie', 'set-cookie-parser', 'gsap', 'split-type', 'motion', /@arcjet\/.*/, 'arcjet'] },
+	ssr: {
+		noExternal: [
+			'cookie',
+			'set-cookie-parser',
+			'gsap',
+			'split-type',
+			'motion',
+			/@arcjet\/.*/,
+			'arcjet'
+		]
+	},
 	test: {
 		projects: [
 			{

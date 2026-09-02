@@ -398,6 +398,7 @@
 	opacity: 0.2;
 	mask-image: url('/seigaiha.svg');
 	mask-size: 56px 28px;
+
 	mask-repeat: repeat;
 	-webkit-mask-image: url('/seigaiha.svg');
 	-webkit-mask-size: 56px 28px;
