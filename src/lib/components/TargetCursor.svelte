@@ -59,13 +59,56 @@ import { get } from 'svelte/store';
 	// Barrel cursor during reload — don't hide default cursor, just swap visuals; never block clicks
 	let unsubscribeReload: (() => void) | null = null;
 
+	// Only a link or button press counts as a "real shoot"
+	const SHOOT_TARGETS = 'a[href], button:not(:disabled), [role="button"]:not([aria-disabled="true"])';
+
 	$effect(() => {
 		if (isMobile || !cursor) return;
+		// crosshair is only visible for 2s after a real shoot
+		let crosshairActive = false;
+		let crosshairHideTimer: ReturnType<typeof setTimeout> | null = null;
+
+		const getCorners = () => cursor.querySelectorAll<HTMLDivElement>('.target-cursor-corner');
+
+		const setCrosshairVisible = (visible: boolean) => {
+			if (!cursor || !dot) return;
+			const corners = getCorners();
+			// don't interfere while reloading — barrel is shown instead
+			if (get(reloading)) return;
+			if (visible) {
+				gsap.to(dot, { opacity: 1, scale: 1, duration: 0.18, overwrite: true });
+				corners.forEach((c) => gsap.to(c, { opacity: 1, scale: 1, duration: 0.18, overwrite: true }));
+			} else {
+				gsap.to(dot, { opacity: 0, scale: 0, duration: 0.15, overwrite: true });
+				corners.forEach((c) => gsap.to(c, { opacity: 0, scale: 0, duration: 0.15, overwrite: true }));
+			}
+		};
+
+		const triggerCrosshair = () => {
+			crosshairActive = true;
+			if (crosshairHideTimer) {
+				clearTimeout(crosshairHideTimer);
+				crosshairHideTimer = null;
+			}
+			setCrosshairVisible(true);
+			crosshairHideTimer = setTimeout(() => {
+				crosshairActive = false;
+				setCrosshairVisible(false);
+				crosshairHideTimer = null;
+			}, 2000);
+		};
+
+		// initially hide crosshair — only shown for 2s after a real shoot
+		const _initialCorners = getCorners();
+		if (dot) gsap.set(dot, { opacity: 0, scale: 0 });
+		_initialCorners.forEach((c) => gsap.set(c, { opacity: 0, scale: 0 }));
+		if (barrelIcon) gsap.set(barrelIcon, { opacity: 0, scale: 0.7, rotation: 0 });
+
 		// subscribe to reloading to swap cursor -> barrel
 		unsubscribeReload?.();
 		unsubscribeReload = reloading.subscribe((isReloadingNow) => {
 			if (!cursor || !dot) return;
-			const corners = cursor.querySelectorAll<HTMLDivElement>('.target-cursor-corner');
+			const corners = getCorners();
 			if (isReloadingNow) {
 				gsap.to(dot, { opacity: 0, scale: 0, duration: 0.15, overwrite: true });
 				corners.forEach((c) => gsap.to(c, { opacity: 0, scale: 0, duration: 0.15, overwrite: true }));
@@ -74,11 +117,16 @@ import { get } from 'svelte/store';
 					gsap.to(barrelIcon, { rotation: 360, duration: 0.9, ease: 'power2.inOut', repeat: -1 });
 				}
 			} else {
-				gsap.to(dot, { opacity: 1, scale: 1, duration: 0.15, overwrite: true });
-				corners.forEach((c) => gsap.to(c, { opacity: 1, scale: 1, duration: 0.15, overwrite: true }));
 				if (barrelIcon) {
 					gsap.killTweensOf(barrelIcon);
 					gsap.to(barrelIcon, { opacity: 0, scale: 0.7, rotation: 0, duration: 0.15, overwrite: true });
+				}
+				if (crosshairActive) {
+					gsap.to(dot, { opacity: 1, scale: 1, duration: 0.15, overwrite: true });
+					corners.forEach((c) => gsap.to(c, { opacity: 1, scale: 1, duration: 0.15, overwrite: true }));
+				} else {
+					gsap.to(dot, { opacity: 0, scale: 0, duration: 0.15, overwrite: true });
+					corners.forEach((c) => gsap.to(c, { opacity: 0, scale: 0, duration: 0.15, overwrite: true }));
 				}
 			}
 		});
@@ -92,7 +140,7 @@ import { get } from 'svelte/store';
 		let targetCornerPositions: { x: number; y: number }[] | null = null;
 		const activeStrength = { current: 0 };
 		let tickerFn: (() => void) | null = null;
-		let spinTl: gsap.core.Timeline;
+		let spinTl: gsap.core.Timeline | undefined;
 
 		const originalCursor = document.body.style.cursor;
 		if (hideDefaultCursor) document.body.style.cursor = 'none';
@@ -164,11 +212,14 @@ import { get } from 'svelte/store';
 		window.addEventListener('mousedown', mouseDown);
 		window.addEventListener('mouseup', mouseUp);
 
-		// Shooting: every left-click globally spawns bullet + dispatches game:shoot (revolver-limited)
+		// Shooting: only on link/button press spawns bullet + 2s crosshair (revolver-limited)
 		let lastShot = 0;
 		const onShootClick = (e: MouseEvent) => {
 			if (!enableShooting) return;
 			if (e.button !== 0) return;
+			// user only actually shoots when pressing a link or button
+			const shootTarget = (e.target as Element)?.closest?.(SHOOT_TARGETS);
+			if (!shootTarget) return;
 			const now = Date.now();
 			if (now - lastShot < 100) return;
 			lastShot = now;
@@ -179,6 +230,9 @@ import { get } from 'svelte/store';
 				gsap.to(cursor, { x: '+=2', duration: 0.06, yoyo: true, repeat: 3, ease: 'power2.out' });
 				return;
 			}
+
+			// only shows the crosshair for 2s when user actually shoots
+			triggerCrosshair();
 
 			// muzzle flash
 			if (dot) {
@@ -349,6 +403,7 @@ import { get } from 'svelte/store';
 		observer.observe(document.body, { childList: true, subtree: true });
 
 		return () => {
+			if (crosshairHideTimer) clearTimeout(crosshairHideTimer);
 			unsubscribeReload?.();
 			observer.disconnect();
 			if (tickerFn) gsap.ticker.remove(tickerFn);

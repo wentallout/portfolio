@@ -25,7 +25,7 @@
 		"lint:stylelint": "stylelint \"src/**/*.{css,svelte}\"",
 		"format": "prettier --ignore-path .gitignore --write --plugin-search-dir=. .",
 		"format:fix": "prettier --ignore-path .gitignore --write --plugin-search-dir=. . && pnpm lint:fix",
-		"ngrok": "ngrok http 4173",
+		"ngrok": "ngrok http 1111",
 		"test": "pnpm exec playwright test",
 		"test:e2e": "pnpm exec playwright test",
 		"test:debug": "pnpm exec playwright test --debug",
@@ -110,6 +110,7 @@
 	"dependencies": {
 		"@arcjet/inspect": "^1.11.0",
 		"@arcjet/sveltekit": "^1.11.0",
+		"@ethercorps/sveltekit-og": "^4.3.0",
 		"@floating-ui/dom": "^1.8.0",
 		"@giscus/svelte": "^3.1.0",
 		"@lucide/svelte": "^1.37.0",

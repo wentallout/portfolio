@@ -1,6 +1,6 @@
-import defaultOgImage from '#lib/assets/images/seo/1200x627.png';
-import defaultOgSquareImage from '#lib/assets/images/seo/400x400.png';
-import defaultTwitterImage from '#lib/assets/images/seo/1200x627.png';
+// Legacy static OG fallbacks (kept for offline/build fallback, not used for SEO now)
+import staticOgImage from '#lib/assets/images/seo/1200x627.png';
+import staticOgSquareImage from '#lib/assets/images/seo/400x400.png';
 
 export const CAL_BOOKING_LINK = 'https://cal.com/wentallout/web';
 
@@ -29,4 +29,16 @@ export const twitterUserId = '1391413398286471168';
 export const twitterUsername = 'wentallout';
 
 export const defaultAlt = 'Khoa Nguyen';
-export { defaultOgImage, defaultOgSquareImage, defaultTwitterImage };
+
+// sveltekit-og dynamic OG URLs — replaces static PNGs
+// See https://sveltekit-og.dev/docs and /og.png route (prerendered) + dynamic /blogs/[slug]/og.png
+export const defaultOgImage = `${siteUrl}/og.png`;
+export const defaultOgSquareImage = `${siteUrl}/og.png`;
+export const defaultTwitterImage = `${siteUrl}/og.png`;
+
+// Helpers for dynamic OG
+export const ogUrlForBlog = (slug: string) => `${siteUrl}/blogs/${slug}/og.png`;
+export const ogUrlForProject = (slug: string) => `${siteUrl}/projects/${slug}/og.png`;
+
+// Keep static fallbacks exported for legacy callers
+export { staticOgImage, staticOgSquareImage };
