@@ -3,6 +3,7 @@
 	import { CaretDown } from '#lib/assets/icons/icons.js';
 	import { quintOut } from 'svelte/easing';
 	import { slide } from 'svelte/transition';
+	import { Button } from '#lib/components/ui/button/index.js';
 
 	/** @type {{accordionSection?: string, accordionText?: string, isOpened?: boolean}} */
 	let { accordionSection = '', accordionText = '', isOpened = $bindable(false) } = $props();
@@ -13,12 +14,12 @@
 </script>
 
 <div class="border-grid-b last:!border-b-0 w-full relative bg-background">
-	<button
-		class="w-full signature-padding flex items-center justify-between text-left hover:bg-accent transition-colors group cursor-pointer"
+	<Button
+		variant="ghost"
+		class="w-full signature-padding flex items-center justify-between text-left hover:bg-accent group h-auto justify-between rounded-none px-0 font-normal"
 		aria-expanded={isOpened}
 		onclick={handleToggle}
-		type="button"
-		use:haptic={'selection'}>
+		type="button">
 		<span
 			class="text-sm sm:text-base font-medium text-foreground group-hover:text-foreground transition-colors font-sans">
 			{accordionSection}
@@ -29,7 +30,7 @@
 				: ''}">
 			<CaretDown height="16" width="16" />
 		</div>
-	</button>
+	</Button>
 
 	{#if isOpened}
 		<div

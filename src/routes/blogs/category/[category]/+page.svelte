@@ -10,8 +10,8 @@
 <div class="w-full bg-background relative">
 	<div class="px-6 py-4 border-grid-b bg-background flex flex-col gap-2">
 		<Breadcrumb minDepth={1} />
-		{#if data.category}
-			<h1 class="text-2xl font-medium text-foreground capitalize">#{data.category}</h1>
+		{#if data.tag ?? data.category}
+			<h1 class="text-2xl font-medium text-foreground capitalize">#{data.tag ?? data.category}</h1>
 		{/if}
 	</div>
 

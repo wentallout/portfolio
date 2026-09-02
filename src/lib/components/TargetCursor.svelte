@@ -1,6 +1,6 @@
 <script lang="ts">
 import { gsap } from 'gsap';
-import { tryShoot, isReloading, reloading } from '#lib/stores/revolver.svelte';
+import { tryShoot, reloading } from '#lib/stores/revolver.svelte.js';
 import { get } from 'svelte/store';
 
 	type Props = {
@@ -174,16 +174,11 @@ import { get } from 'svelte/store';
 			lastShot = now;
 
 			// revolver ammo check — blocks shoot when empty/reloading and auto-triggers reload
+			// Sound is handled globally by SfxProvider listening to `revolver:*` events
 			if (!tryShoot()) {
-				// SOUND HOOK: empty click / reload sound
-				// if (isReloading()) new Audio('/sounds/reload.mp3').play().catch(()=>{});
-				// else new Audio('/sounds/empty.mp3').play().catch(()=>{});
 				gsap.to(cursor, { x: '+=2', duration: 0.06, yoyo: true, repeat: 3, ease: 'power2.out' });
 				return;
 			}
-
-			// SOUND HOOK: play shoot sound here
-			// e.g. new Audio('/sounds/shoot.mp3').play().catch(()=>{});
 
 			// muzzle flash
 			if (dot) {

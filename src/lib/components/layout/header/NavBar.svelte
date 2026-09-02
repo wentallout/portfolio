@@ -1,11 +1,41 @@
 <script lang="ts">
 	import { page } from '$app/state';
 	import ThemeSwitcher from '#lib/components/button/ThemeSwitcher.svelte';
+	import { Button } from '#lib/components/ui/button/index.js';
 	import { haptic } from '#lib/actions/haptics.js';
 
 	import { navItems } from '#lib/config.js';
+	import { authClient } from '#lib/auth-client.js';
+	import { onMount } from 'svelte';
+
+	type NavUser = { id: string; email: string; name: string; role: string } | null | undefined;
+	let { user: serverUser }: { user?: NavUser } = $props();
 
 	let scrollY = $state(0);
+	let clientHasSession = $state(false);
+
+	// Resolve user from prop or page.data (page.data.user comes from +layout.server.ts)
+	const effectiveUser: NavUser = $derived(
+		serverUser ?? (page.data as { user?: NavUser })?.user ?? null
+	);
+
+	// Client fallback: if SSR didn't have user (e.g. verifier exchange pending), check Better Auth session
+	onMount(() => {
+		if (effectiveUser?.role === 'admin' || effectiveUser?.email) return;
+		authClient
+			.getSession()
+			.then((res: unknown) => {
+				const r = res as { data?: { user?: { email?: string } | null; session?: unknown } | null };
+				if (r?.data?.user?.email || r?.data?.session) clientHasSession = true;
+			})
+			.catch(() => {});
+	});
+
+	const showCms = $derived(
+		effectiveUser?.role === 'admin' ||
+			(effectiveUser?.email && effectiveUser?.role !== 'none') ||
+			clientHasSession
+	);
 </script>
 
 <svelte:window bind:scrollY />
@@ -48,8 +78,13 @@
 			</nav>
 		</div>
 
-		<!-- Right: Theme Switcher -->
+		<!-- Right: Actions -->
 		<div class="flex items-center justify-end gap-2">
+			{#if showCms}
+				<Button href="/studio" size="sm" class="cursor-target rounded-none gap-1.5 shadow-sm" aria-label="Open CMS">
+					CMS
+				</Button>
+			{/if}
 			<ThemeSwitcher />
 		</div>
 	</div>

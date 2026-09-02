@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { gsap } from 'gsap';
 	import { onMount } from 'svelte';
-	import { bullets, reloading, maxBullets } from '#lib/stores/revolver.svelte';
+	import { bullets, reloading, maxBullets } from '#lib/stores/revolver.svelte.js';
 
 	let cylinder: HTMLDivElement;
 	let chambers: HTMLDivElement[] = [];

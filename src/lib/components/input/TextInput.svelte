@@ -1,5 +1,7 @@
 <script lang="ts">
 	import { X } from '#lib/assets/icons/icons.js';
+	import { Button } from '#lib/components/ui/button/index.js';
+	import { Input } from '#lib/components/ui/input/index.js';
 
 	let {
 		autoSuggestList = [],
@@ -7,13 +9,26 @@
 		handleClear,
 		icon,
 		inputValue = '',
-		label,
+		label = undefined,
 		list = '',
 		name = '',
 		onkeydown,
 		placeholder = '',
 		type = 'text',
 		dropdown
+	}: {
+		autoSuggestList?: any[];
+		handleOnInput?: (e: Event) => void;
+		handleClear?: () => void;
+		icon?: import('svelte').Snippet;
+		inputValue?: string;
+		label?: string;
+		list?: string;
+		name?: string;
+		onkeydown?: (e: KeyboardEvent) => void;
+		placeholder?: string;
+		type?: string;
+		dropdown?: import('svelte').Snippet;
 	} = $props();
 
 	let isFocused = $state(false);
@@ -30,11 +45,9 @@
 
 	<div class="relative w-full">
 		<div
-			class="flex items-center w-full border-grid-all bg-[var(--background)] relative transition-all duration-200 focus-within:border-[var(--foreground)] group-hover:border-muted-foreground"
+			class="flex items-center w-full border-grid-all bg-[var(--background)] relative transition-all duration-200 focus-within:border-[var(--foreground)] group-hover:border-muted-foreground has-[[data-slot=input]:focus-visible]:border-[var(--foreground)] has-[[data-slot=input]:focus-visible]:ring-1 has-[[data-slot=input]:focus-visible]:ring-[var(--foreground)]"
 			class:ring-1={isFocused}
 			class:ring-[var(--foreground)]={isFocused}>
-			
-
 			{#if icon}
 				<div
 					class="pl-4 pr-1 flex items-center text-muted-foreground group-focus-within:text-foreground transition-colors">
@@ -42,10 +55,10 @@
 				</div>
 			{/if}
 
-			<input
+			<Input
 				id={label}
 				{name}
-				class="w-full h-12 px-3 bg-transparent border-0 border-none outline-none text-sm text-[var(--foreground)] placeholder:text-muted-foreground focus:outline-none focus:ring-0 focus:border-none shadow-none font-sans"
+				class="flex-1 h-12 border-0 rounded-none bg-transparent px-3 text-sm text-[var(--foreground)] shadow-none focus-visible:border-0 focus-visible:ring-0 focus-visible:ring-offset-0 font-sans placeholder:text-muted-foreground"
 				list={list || null}
 				onblur={() => (isFocused = false)}
 				onfocus={() => (isFocused = true)}
@@ -53,17 +66,19 @@
 				{onkeydown}
 				{placeholder}
 				required
-				{type}
+				type={type as any}
 				value={inputValue} />
 
 			{#if inputValue && handleClear}
-				<button
-					class="pr-4 text-muted-foreground hover:text-foreground transition-colors cursor-pointer"
+				<Button
+					variant="ghost"
+					size="icon-sm"
+					class="text-muted-foreground hover:text-foreground shrink-0 mr-1"
 					aria-label="Clear input"
 					onclick={handleClear}
 					type="button">
 					<X height="16" width="16" />
-				</button>
+				</Button>
 			{/if}
 
 			{#if list}

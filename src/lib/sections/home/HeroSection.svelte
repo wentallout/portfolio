@@ -3,6 +3,7 @@
 	import Ballpit from '#lib/components/Ballpit.svelte';
 	import BlurText from '#lib/components/BlurText.svelte';
 	import { CAL_BOOKING_LINK } from '#lib/constants/personal.js';
+	import { Button } from '#lib/components/ui/button/index.js';
 
 	const calBookingLink = CAL_BOOKING_LINK;
 </script>
@@ -68,18 +69,22 @@
 
 				<!-- Action Buttons -->
 				<div class="flex flex-wrap items-center justify-start gap-4">
-					<a
-						class="px-6 py-2.5 bg-primary text-primary-foreground font-medium text-base hover:bg-primary/90 active:scale-95 transition-all duration-200 shadow-md inline-flex items-center gap-2"
-						href={calBookingLink}
-						use:tooltip={{ position: 'top', text: 'Schedule a friendly discovery call' }}>
-						Book a Call
-					</a>
+					<span use:tooltip={{ position: 'top', text: 'Schedule a friendly discovery call' }}>
+						<Button
+							href={calBookingLink}
+							size="lg"
+							class="h-auto px-6 py-2.5 text-base has-[>svg]:px-6">
+							Book a Call
+						</Button>
+					</span>
 
-					<a
-						class="px-6 text-base py-2.5 bg-background border border-border text-foreground font-medium hover:bg-card active:scale-95 transition-all duration-200"
-						href="/projects">
+					<Button
+						href="/projects"
+						variant="outline"
+						size="lg"
+						class="h-auto px-6 py-2.5 text-base has-[>svg]:px-6">
 						My Projects
-					</a>
+					</Button>
 				</div>
 			</div>
 		</div>

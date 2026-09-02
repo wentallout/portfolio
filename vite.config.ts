@@ -46,7 +46,15 @@ export default defineConfig({
 				})
 			]) as never,
 			adapter: adapter({ edge: false }),
-			env: { dir: '.' }
+			env: { dir: '.' },
+			compilerOptions: {
+				experimental: {
+					async: true
+				}
+			},
+			experimental: {
+				remoteFunctions: true
+			}
 		}),
 		Icons({ compiler: 'svelte', defaultClass: 'icon' }),
 		imagetools({

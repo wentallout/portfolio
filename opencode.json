@@ -1,4 +1,11 @@
 {
 	"$schema": "https://opencode.ai/config.json",
-	"lsp": true
+	"lsp": true,
+	"mcp": {
+		"Neon": {
+			"type": "remote",
+			"url": "https://mcp.neon.tech/mcp",
+			"enabled": true
+		}
+	}
 }
