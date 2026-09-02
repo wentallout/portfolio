@@ -3,8 +3,10 @@
 	import PostContainer from '#lib/components/blogs/BlogContainer.svelte';
 	import PostInfo from '#lib/components/blogs/BlogInfo.svelte';
 	import SEO from '#lib/components/seo/SEO.svelte';
+	import { defaultAlt, siteUrl } from '#lib/constants/personal.js';
 	/** @type {{data: any}} */
 	let { data } = $props();
+	const ogUrl = `${siteUrl}/projects/${data.slug}/og.png`;
 </script>
 
 <SEO
@@ -15,6 +17,10 @@
 	datePublished={data.publishedAt ?? data.date}
 	lastUpdated={data.updatedAt ?? data.date}
 	timeToRead={data.readingTime ?? 0}
+	ogImage={{ url: ogUrl, alt: data.title }}
+	ogSquareImage={{ url: ogUrl, alt: defaultAlt }}
+	twitterImage={{ url: ogUrl, alt: data.title }}
+	featuredImage={{ url: ogUrl, caption: data.title, width: 1200, height: 630 }}
 	breadcrumbs={[
 		{ title: 'Home', url: '/' },
 		{ title: 'Projects', url: '/projects' },
@@ -26,11 +32,7 @@
 	<PostInfo {data} />
 
 	<PostContainer>
-		{#if data.contentHtml}
-			{@html data.contentHtml}
-		{:else if data.content}
-			<data.content />
-		{/if}
+		{@html data.contentHtml}
 		{#if data.repoUrl || data.demoUrl || data.techStack?.length}
 			<div class="mt-8 border-t pt-6 space-y-2">
 				{#if data.techStack?.length}<p class="text-sm text-muted-foreground">Stack: {data.techStack.join(' · ')}</p>{/if}

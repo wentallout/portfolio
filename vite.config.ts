@@ -13,12 +13,13 @@ import tailwindcss from '@tailwindcss/vite';
 import { sveltekit } from '@sveltejs/kit/vite';
 import Icons from 'unplugin-icons/vite';
 import { imagetools } from 'vite-imagetools';
+import { rollupWasm, sveltekitOG } from '@ethercorps/sveltekit-og/plugin';
 import { playwright } from '@vitest/browser-playwright';
 import { defineConfig } from 'vitest/config';
 
 export default defineConfig({
 	build: {
-		rollupOptions: { external: ['@resvg/resvg-js'] }
+		rollupOptions: { plugins: [rollupWasm({ esmImport: false })] }
 	},
 
 	plugins: [
@@ -62,6 +63,7 @@ export default defineConfig({
 				remoteFunctions: true
 			}
 		}),
+		sveltekitOG({ esmImport: false }),
 		Icons({ compiler: 'svelte', defaultClass: 'icon' }),
 		imagetools({
 			defaultDirectives: () => {
@@ -69,7 +71,7 @@ export default defineConfig({
 			}
 		})
 	],
-	server: { port: 1111 },
+	server: { port: 1111, allowedHosts: '.ngrok-free.app' },
 	optimizeDeps: {
 		exclude: ['mode-watcher', '@giscus/svelte', 'svelte-toc', 'sveltekit-embed', 'saos']
 	},

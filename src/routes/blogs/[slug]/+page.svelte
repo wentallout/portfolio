@@ -5,10 +5,12 @@
 	import SEO from '#lib/components/seo/SEO.svelte';
 	import { getPostBySlug } from '#lib/remotes/blogs.remote.js';
 	import { page } from '$app/state';
+	import { defaultAlt, siteUrl } from '#lib/constants/personal.js';
 
 	let { params } = $props();
 	const data = await getPostBySlug({ slug: params.slug, preview: page.url.searchParams.get('preview') });
 	const seoDesc = data.seoDescription ?? (data as any).excerpt ?? '';
+	const ogUrl = `${siteUrl}/blogs/${data.slug}/og.png`;
 </script>
 
 <SEO
@@ -19,6 +21,10 @@
 	datePublished={data.publishedAt ?? data.date}
 	lastUpdated={data.updatedAt ?? data.date}
 	timeToRead={data.readingTime ?? 0}
+	ogImage={{ url: ogUrl, alt: data.title }}
+	ogSquareImage={{ url: ogUrl, alt: defaultAlt }}
+	twitterImage={{ url: ogUrl, alt: data.title }}
+	featuredImage={{ url: ogUrl, caption: data.title, width: 1200, height: 630 }}
 	breadcrumbs={[
 		{ title: 'Home', url: '/' },
 		{ title: 'Blogs', url: '/blogs' },
@@ -30,11 +36,7 @@
 	<PostInfo {data} hasTags={true} />
 
 	<PostContainer>
-		{#if data.contentHtml}
-			{@html data.contentHtml}
-		{:else if data.content}
-			<data.content />
-		{/if}
+		{@html data.contentHtml}
 	</PostContainer>
 
 	<Comments category="Blogs" />

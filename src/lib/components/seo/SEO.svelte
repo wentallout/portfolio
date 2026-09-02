@@ -83,6 +83,7 @@
 	const schemaOrgProps = $derived({
 		article,
 		author,
+		entity: author,
 		breadcrumbs,
 		datePublished,
 
