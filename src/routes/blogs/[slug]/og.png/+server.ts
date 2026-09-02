@@ -1,6 +1,5 @@
 import { ImageResponse } from '@ethercorps/sveltekit-og';
 import BlogOg from '#lib/og/BlogOg.svelte';
-import { GoogleFont, resolveFonts } from '@ethercorps/sveltekit-og/fonts';
 import { error } from '@sveltejs/kit';
 import type { RequestHandler } from './$types';
 import { neon } from '@neondatabase/serverless';
@@ -79,22 +78,13 @@ export const GET: RequestHandler = async ({ params }) => {
 		}
 	}
 
-	let fonts: Awaited<ReturnType<typeof resolveFonts>> | undefined;
-	try {
-		fonts = await resolveFonts([new GoogleFont('Inter', { weight: 500, name: 'Inter' })]);
-	} catch {
-		fonts = undefined;
-	}
-
 	return new ImageResponse(
 		BlogOg,
 		{
 			width: 1200,
 			height: 630,
-			...(fonts ? { fonts } : {}),
 			headers: {
-				'Cache-Control': 'public, max-age=3600, s-maxage=3600, stale-while-revalidate=86400',
-				'Content-Type': 'image/png'
+				'Cache-Control': 'public, max-age=3600, s-maxage=3600, stale-while-revalidate=86400'
 			}
 		},
 		{
