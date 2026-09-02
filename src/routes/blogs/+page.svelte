@@ -196,7 +196,7 @@
 											<li>
 												<Button
 													variant="ghost"
-													class="w-full flex items-center p-2.5 gap-2.5 justify-start hover:bg-accent focus:bg-accent text-left font-sans text-sm rounded-none h-auto {i ===
+													class="w-full flex items-center p-2.5 gap-2.5 justify-start hover:bg-accent focus:bg-accent text-left  text-sm rounded-none h-auto {i ===
 													selectedIndex
 														? 'bg-muted'
 														: ''}"
@@ -242,19 +242,19 @@
 		<BlogListContainer>
 			{#if isInitialLoading}
 				<div
-					class="col-span-full flex flex-col items-center justify-center p-12 text-center text-sm text-muted-foreground font-sans gap-2">
+					class="col-span-full flex flex-col items-center justify-center p-12 text-center text-sm text-muted-foreground gap-2">
 					<LoadingBarSpinner />
 					<p>Gathering articles...</p>
 				</div>
 			{:else if isSearching}
 				<div
-					class="col-span-full flex flex-col items-center justify-center p-12 text-center text-sm text-muted-foreground font-sans gap-2">
+					class="col-span-full flex flex-col items-center justify-center p-12 text-center text-sm text-muted-foreground gap-2">
 					<LoadingBarSpinner />
 					<p>Searching articles...</p>
 				</div>
 			{:else if filteredBlogs.length === 0 && searchTerm !== ''}
 				<div
-					class="col-span-full flex flex-col items-center justify-center p-12 text-center text-sm text-muted-foreground font-sans gap-1">
+					class="col-span-full flex flex-col items-center justify-center p-12 text-center text-sm text-muted-foreground gap-1">
 					<p class="text-foreground font-medium">No matching articles found</p>
 					<p class="text-muted-foreground">
 						We couldn't find any articles matching "{searchTerm}". Try searching another topic!
@@ -262,7 +262,7 @@
 				</div>
 			{:else if filteredBlogs.length === 0}
 				<div
-					class="col-span-full flex flex-col items-center justify-center p-12 text-center text-sm text-muted-foreground font-sans">
+					class="col-span-full flex flex-col items-center justify-center p-12 text-center text-sm text-muted-foreground">
 					<p>No articles available at the moment.</p>
 				</div>
 			{:else}

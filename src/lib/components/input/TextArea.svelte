@@ -10,10 +10,10 @@
 	let isFocused = $state(false);
 </script>
 
-<div class="w-full space-y-2 mb-5 font-sans group">
+<div class="w-full space-y-2 mb-5 group">
 	{#if label}
 		<label
-			class="block text-sm font-medium text-muted-foreground uppercase tracking-wider font-sans"
+			class="block text-base font-medium text-muted-foreground uppercase tracking-wider"
 			for={label}>
 			{label}
 		</label>
@@ -27,7 +27,7 @@
 			<Textarea
 				id={label}
 				{name}
-				class="min-h-36 w-full border-0 rounded-none bg-transparent p-4 text-sm text-[var(--foreground)] shadow-none focus-visible:border-0 focus-visible:ring-0 focus-visible:ring-offset-0 font-sans resize-y placeholder:text-muted-foreground"
+				class="min-h-36 w-full border-0 rounded-none bg-transparent p-4 text-base shadow-none focus-visible:border-0 focus-visible:ring-0 focus-visible:ring-offset-0 resize-y"
 				onblur={() => (isFocused = false)}
 				onfocus={() => (isFocused = true)}
 				{placeholder}

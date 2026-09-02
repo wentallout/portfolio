@@ -20,7 +20,7 @@
 {#if showBreadcrumb}
 	<nav
 		id="breadcrumb"
-		class="flex items-center flex-wrap gap-2 text-sm text-muted-foreground font-sans"
+		class="flex items-center flex-wrap gap-2 text-sm text-muted-foreground"
 		aria-label="breadcrumb">
 		{#each crumbs as crumb, i (crumb.href)}
 			{#if i === 0}

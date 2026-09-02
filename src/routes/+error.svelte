@@ -24,8 +24,12 @@
 		}
 	});
 
-	let errorMessage = $derived((page.error as unknown as App.Error & Record<string, unknown>)?.message ?? 'Unknown error');
-	let errorStack = $derived((page.error as unknown as Record<string, unknown>)?.['stack'] as string | undefined);
+	let errorMessage = $derived(
+		(page.error as unknown as App.Error & Record<string, unknown>)?.message ?? 'Unknown error'
+	);
+	let errorStack = $derived(
+		(page.error as unknown as Record<string, unknown>)?.['stack'] as string | undefined
+	);
 	let errorDetails = $derived.by(() => {
 		try {
 			const err = page.error as unknown as Record<string, unknown>;
@@ -41,7 +45,8 @@
 	});
 
 	let prompt = $derived.by(() => {
-		const url = page.url?.href ?? (typeof window !== 'undefined' ? window.location.href : 'unknown');
+		const url =
+			page.url?.href ?? (typeof window !== 'undefined' ? window.location.href : 'unknown');
 		const stack = errorStack ? `\nStack:\n${errorStack}` : '';
 		const details = errorDetails ? `\nExtra details:\n${errorDetails}` : '';
 		return `Fix this SvelteKit error for my portfolio site (wentallout.io.vn):
@@ -112,14 +117,15 @@ Please give a minimal diff fix and explain root cause in 2-3 sentences.`;
 	<div class="w-full bg-background border-grid-all relative">
 		<div class="signature-padding flex flex-col gap-4">
 			<div class="flex items-center gap-3 flex-wrap">
-				<span class="inline-flex items-center px-3 py-1 bg-destructive text-destructive-foreground text-sm font-medium font-mono">
+				<span
+					class="inline-flex items-center px-3 py-1 bg-destructive text-destructive-foreground text-sm font-medium font-mono">
 					{page.status}
 				</span>
 				<h1 class="text-2xl md:text-3xl font-medium tracking-tight text-foreground font-fancy">
 					{page.error?.message ?? `${page.status} Error`}
 				</h1>
 			</div>
-			<p class="text-sm text-muted-foreground font-sans max-w-2xl leading-relaxed">
+			<p class="text-sm text-muted-foreground max-w-2xl leading-relaxed">
 				{customMessage}
 			</p>
 			<div class="flex flex-wrap gap-2 pt-2">
@@ -143,10 +149,11 @@ Please give a minimal diff fix and explain root cause in 2-3 sentences.`;
 			<div class="flex items-center gap-2 text-sm font-medium text-foreground">
 				<TagIcon height="16" width="16" />
 				<span>Detailed error</span>
-				<span class="text-muted-foreground font-normal">— only you see the stack; it’s not sent to the server</span>
+				<span class="text-muted-foreground font-normal"
+					>— only you see the stack; it’s not sent to the server</span>
 			</div>
 
-			<div class="grid gap-3 text-sm font-sans">
+			<div class="grid gap-3 text-sm">
 				<div class="flex flex-col gap-1">
 					<span class="text-muted-foreground text-sm">Status</span>
 					<span class="font-mono text-foreground">{page.status}</span>
@@ -169,21 +176,25 @@ Please give a minimal diff fix and explain root cause in 2-3 sentences.`;
 
 			{#if errorStack}
 				<details class="group bg-background border-grid-all">
-					<summary class="cursor-pointer list-none flex items-center justify-between p-3 text-sm font-medium text-foreground select-none">
+					<summary
+						class="cursor-pointer list-none flex items-center justify-between p-3 text-sm font-medium text-foreground select-none">
 						<span>Stack trace</span>
 						<span class="text-muted-foreground group-open:rotate-180 transition-transform">▾</span>
 					</summary>
-					<pre class="p-3 pt-0 text-sm font-mono text-muted-foreground whitespace-pre-wrap break-words overflow-x-auto max-h-72 overflow-y-auto">{errorStack}</pre>
+					<pre
+						class="p-3 pt-0 text-sm font-mono text-muted-foreground whitespace-pre-wrap break-words overflow-x-auto max-h-72 overflow-y-auto">{errorStack}</pre>
 				</details>
 			{/if}
 
 			{#if errorDetails}
 				<details class="group bg-background border-grid-all">
-					<summary class="cursor-pointer list-none flex items-center justify-between p-3 text-sm font-medium text-foreground select-none">
+					<summary
+						class="cursor-pointer list-none flex items-center justify-between p-3 text-sm font-medium text-foreground select-none">
 						<span>Extra error fields</span>
 						<span class="text-muted-foreground group-open:rotate-180 transition-transform">▾</span>
 					</summary>
-					<pre class="p-3 pt-0 text-sm font-mono text-muted-foreground whitespace-pre-wrap break-words overflow-x-auto">{errorDetails}</pre>
+					<pre
+						class="p-3 pt-0 text-sm font-mono text-muted-foreground whitespace-pre-wrap break-words overflow-x-auto">{errorDetails}</pre>
 				</details>
 			{/if}
 
@@ -191,8 +202,7 @@ Please give a minimal diff fix and explain root cause in 2-3 sentences.`;
 				<button
 					type="button"
 					onclick={copyRaw}
-					class="inline-flex items-center gap-2 px-3 py-2 bg-background border-grid-all hover:bg-accent text-sm font-medium text-foreground transition-colors"
-				>
+					class="inline-flex items-center gap-2 px-3 py-2 bg-background border-grid-all hover:bg-accent text-sm font-medium text-foreground transition-colors">
 					{#if copiedRaw}
 						<Check height="16" width="16" />
 						Copied
@@ -210,28 +220,28 @@ Please give a minimal diff fix and explain root cause in 2-3 sentences.`;
 		<div class="signature-padding flex flex-col gap-4">
 			<div class="flex flex-col gap-1">
 				<h2 class="text-base font-medium text-foreground">Fix with AI</h2>
-				<p class="text-sm text-muted-foreground font-sans leading-relaxed">
-					Copy a ready-made prompt with all error context. Paste it into your AI assistant (Muse Spark, ChatGPT, etc.) for a minimal fix.
+				<p class="text-sm text-muted-foreground leading-relaxed">
+					Copy a ready-made prompt with all error context. Paste it into your AI assistant (Muse
+					Spark, ChatGPT, etc.) for a minimal fix.
 				</p>
 			</div>
-
-			<pre class="p-3 bg-card border-grid-all text-sm font-mono text-muted-foreground whitespace-pre-wrap break-words max-h-72 overflow-y-auto">{prompt}</pre>
 
 			<div class="flex flex-wrap gap-2">
 				<button
 					type="button"
 					onclick={copyPrompt}
-					class="inline-flex items-center gap-2 px-4 py-2 bg-primary text-primary-foreground hover:bg-primary/90 text-sm font-medium transition-colors"
-				>
+					class="inline-flex items-center gap-2 px-4 py-2 bg-primary text-primary-foreground hover:bg-primary/90 text-sm font-medium transition-colors">
 					{#if copiedPrompt}
-						<Check height="16" width="16" />
+						<Check />
 						Copied!
 					{:else}
-						<Copy height="16" width="16" />
+						<Copy />
 						Copy AI fix prompt
 					{/if}
 				</button>
-				<span class="text-sm text-muted-foreground self-center">Prompt includes URL, status, message, stack, and project conventions (Remote Functions in #lib/remotes/, no text-xs)</span>
+				<span class="text-sm text-muted-foreground self-center"
+					>Prompt includes URL, status, message, stack, and project conventions (Remote Functions in
+					#lib/remotes/, no text-xs)</span>
 			</div>
 		</div>
 	</div>

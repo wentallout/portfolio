@@ -36,12 +36,12 @@
 				</h2>
 
 				<!-- Description -->
-				<p class="text-sm text-muted-foreground leading-relaxed font-normal font-sans">
+				<p class="text-base text-muted-foreground leading-relaxed font-normal">
 					{desc}
 				</p>
 
 				{#if output}
-					<div class="mt-4 text-sm text-muted-foreground font-sans">
+					<div class="mt-4 text-base text-muted-foreground">
 						<span class="text-muted-foreground font-medium">Deliverables:</span>
 						{output}
 					</div>

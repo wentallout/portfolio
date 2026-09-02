@@ -17,7 +17,7 @@
 
 	{#if sectionDesc !== ''}
 		<div
-			class="mt-3 max-w-xl text-sm md:text-base text-muted-foreground font-normal leading-relaxed font-sans relative z-10">
+			class="mt-3 max-w-xl text-sm md:text-base text-muted-foreground font-normal leading-relaxed relative z-10">
 			<SectionDesc text={sectionDesc} {unsplitAfter} />
 		</div>
 	{/if}

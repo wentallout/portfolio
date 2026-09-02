@@ -18,7 +18,7 @@
 	const uniqueTags = $derived(Array.from(tags).sort((a, b) => a.localeCompare(b)));
 </script>
 
-<div class="flex flex-wrap gap-2 text-sm font-sans">
+<div class="flex flex-wrap gap-2 text-sm">
 	{#each uniqueTags as tag (tag)}
 		<a href="/blogs/tags/{tag}">
 			<Tag>

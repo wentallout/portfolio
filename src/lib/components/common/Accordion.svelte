@@ -16,12 +16,12 @@
 <div class="border-grid-b last:!border-b-0 w-full relative bg-background">
 	<Button
 		variant="ghost"
-		class="w-full signature-padding flex items-center justify-between text-left hover:bg-accent group h-auto justify-between rounded-none px-0 font-normal"
+		class="w-full p-6 flex items-center justify-between text-left hover:bg-accent group h-auto justify-between rounded-none font-normal"
 		aria-expanded={isOpened}
 		onclick={handleToggle}
 		type="button">
 		<span
-			class="text-sm sm:text-base font-medium text-foreground group-hover:text-foreground transition-colors font-sans">
+			class="text-sm sm:text-base font-medium text-foreground group-hover:text-foreground transition-colors">
 			{accordionSection}
 		</span>
 		<div
@@ -34,7 +34,7 @@
 
 	{#if isOpened}
 		<div
-			class="signature-padding !pt-4 !pb-6 text-sm text-muted-foreground leading-relaxed font-sans border-grid-t bg-muted/30"
+			class="signature-padding !pt-4 !pb-6 text-sm text-muted-foreground leading-relaxed border-grid-t bg-muted/30"
 			transition:slide={{ duration: 250, easing: quintOut }}>
 			{accordionText}
 		</div>

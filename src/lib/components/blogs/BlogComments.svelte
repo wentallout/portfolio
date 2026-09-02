@@ -11,11 +11,11 @@
 <section class="w-full border-grid-b signature-padding bg-background relative">
 	<div class="flex items-center justify-between text-sm mb-6">
 		<span
-			class="uppercase tracking-widest text-sm text-muted-foreground font-medium font-sans flex items-center gap-2">
+			class="uppercase tracking-widest text-sm text-muted-foreground font-medium flex items-center gap-2">
 			<Article color="#9ca3af" height="16" width="16" />
 			DISCUSSION
 		</span>
-		<span class="text-muted-foreground font-sans">COMMENTS</span>
+		<span class="text-muted-foreground">COMMENTS</span>
 	</div>
 
 	<BlogGiscus

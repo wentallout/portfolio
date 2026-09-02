@@ -10,7 +10,7 @@
 	<div class="min-h-screen bg-background text-foreground">
 		<header class="border-b">
 			<div class="mx-auto max-w-6xl flex items-center justify-between px-6 py-4">
-				<a href="/studio" class="font-bold text-lg">Studio CMS</a>
+				<a href="/studio" class="font-bold text-lg">Studio</a>
 				<nav class="flex gap-4 text-sm">
 					<a href="/studio/posts" class="hover:underline">Posts</a>
 					<a href="/studio/projects" class="hover:underline">Projects</a>

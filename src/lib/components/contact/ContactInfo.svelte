@@ -17,34 +17,32 @@
 	});
 </script>
 
-<div class="flex flex-col w-full h-full justify-between relative">
+<div class="flex flex-col w-full h-full justify-between relative text-base">
 	<ContactAddress href="mailto:wentallout@gmail.com" title="Email">
 		{#snippet icon()}
-			<EnvelopeSimple height="20" width="20" />
+			<EnvelopeSimple />
 		{/snippet}
 		<CopyToClipboard textToCopy="wentallout@gmail.com">
-			<span class="text-sm text-muted-foreground font-sans">wentallout@gmail.com</span>
+			<span class="text-muted-foreground">wentallout@gmail.com</span>
 		</CopyToClipboard>
 	</ContactAddress>
 
 	<ContactAddress href="tel:+84929066331" title="Phone / WhatsApp / Zalo / Telegram">
 		{#snippet icon()}
-			<Phone height="20" width="20" />
+			<Phone />
 		{/snippet}
 		<CopyToClipboard textToCopy="(+84)929066331">
-			<span class="text-sm text-muted-foreground font-sans">(+84)929066331</span>
+			<span class="text-muted-foreground">(+84)929066331</span>
 		</CopyToClipboard>
 	</ContactAddress>
 
 	<ContactAddress title="Working hours & timezone">
 		{#snippet icon()}
-			<Clock height="20" width="20" />
+			<Clock />
 		{/snippet}
-		<div class="text-sm text-muted-foreground font-sans">
-			Monday - Friday 9:00 AM to 7:00 PM (ICT)
-		</div>
-		<div class="text-sm text-muted-foreground font-sans">Your local time: {localTime}</div>
-		<div class="text-sm text-muted-foreground font-sans">
+		<div class="text-muted-foreground">Monday - Friday 9:00 AM to 7:00 PM (ICT)</div>
+		<div class="text-muted-foreground">Your local time: {localTime}</div>
+		<div class="text-muted-foreground">
 			My local time (Vietnam): {vietnamTime}
 		</div>
 	</ContactAddress>

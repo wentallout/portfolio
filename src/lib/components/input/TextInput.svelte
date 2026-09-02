@@ -34,11 +34,9 @@
 	let isFocused = $state(false);
 </script>
 
-<div class="w-full space-y-2 mb-5 font-sans group">
+<div class="w-full space-y-2 mb-5 group">
 	{#if label}
-		<label
-			class="block text-sm font-medium text-muted-foreground uppercase tracking-wider font-sans"
-			for={label}>
+		<label class="block font-medium text-muted-foreground uppercase tracking-wider" for={label}>
 			{label}
 		</label>
 	{/if}
@@ -50,7 +48,7 @@
 			class:ring-[var(--foreground)]={isFocused}>
 			{#if icon}
 				<div
-					class="pl-4 pr-1 flex items-center text-muted-foreground group-focus-within:text-foreground transition-colors">
+					class="p-4 flex items-center text-muted-foreground group-focus-within:text-foreground transition-colors">
 					{@render icon?.()}
 				</div>
 			{/if}
@@ -58,7 +56,7 @@
 			<Input
 				id={label}
 				{name}
-				class="flex-1 h-12 border-0 rounded-none bg-transparent px-3 text-sm text-[var(--foreground)] shadow-none focus-visible:border-0 focus-visible:ring-0 focus-visible:ring-offset-0 font-sans placeholder:text-muted-foreground"
+				class="flex-1 h-12 border-0 rounded-none bg-transparent px-3 shadow-none focus-visible:border-0 focus-visible:ring-0 focus-visible:ring-offset-0"
 				list={list || null}
 				onblur={() => (isFocused = false)}
 				onfocus={() => (isFocused = true)}
@@ -73,7 +71,7 @@
 				<Button
 					variant="ghost"
 					size="icon-sm"
-					class="text-muted-foreground hover:text-foreground shrink-0 mr-1"
+					class="shrink-0 mr-1"
 					aria-label="Clear input"
 					onclick={handleClear}
 					type="button">

@@ -22,7 +22,7 @@
 		<div class="sticky top-24 space-y-4">
 			<div class="flex items-center justify-between text-sm pb-3 border-b border-border">
 				<span
-					class="uppercase tracking-widest text-sm text-muted-foreground font-medium font-sans flex items-center gap-2">
+					class="uppercase tracking-widest text-sm text-muted-foreground font-medium flex items-center gap-2">
 					<ListBullets color="currentColor" />
 					TABLE OF CONTENTS
 				</span>
