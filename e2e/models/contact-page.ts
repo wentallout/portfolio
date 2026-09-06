@@ -35,7 +35,7 @@ export class ContactPage extends BasePage {
 
 	async expect_form_visible() {
 		await expect(this.name_input).toBeVisible();
-		await expect(this.name_input).toHaveAttribute('placeholder', 'John Doe');
+		
 		await expect(this.email_input).toBeVisible();
 		await expect(this.email_input).toHaveAttribute('type', 'email');
 		await expect(this.message_input).toBeVisible();

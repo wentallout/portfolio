@@ -1,6 +1,6 @@
 <script lang="ts">
 	import './layout.css';
-	import { goto } from '$app/navigation';
+	import { goto, onNavigate } from '$app/navigation';
 	import Footer from '#lib/components/layout/footer/Footer.svelte';
 	import BottomNav from '#lib/components/layout/bottom/BottomNav.svelte';
 	import NavBar from '#lib/components/layout/header/NavBar.svelte';
@@ -16,6 +16,17 @@ import { ModeWatcher } from 'mode-watcher';
  import { authClient } from '#lib/auth-client.js';
 
 	let { children, data } = $props();
+
+	onNavigate((navigation) => {
+		if (!document.startViewTransition) return;
+
+		return new Promise<void>((resolve) => {
+			document.startViewTransition(async () => {
+				resolve();
+				await navigation.complete;
+			});
+		});
+	});
 
 	onMount(() => {
 		document.documentElement.toggleAttribute('hydrated', true);

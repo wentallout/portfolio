@@ -11,25 +11,46 @@
 	import { Textarea } from '#lib/components/ui/textarea/index.js';
 	import * as Select from '#lib/components/ui/select/index.js';
 
-	let { mode = 'create', post = null, onSaved, entryType = 'post' } = $props<{
+	let {
+		mode = 'create',
+		post = null,
+		onSaved,
+		entryType = 'post'
+	} = $props<{
 		mode: 'create' | 'edit';
 		post?: Record<string, unknown> | null;
 		onSaved?: (id: string) => void;
 		entryType?: 'post' | 'project';
 	}>();
 
-	let title = $state<string>(String(post?.title ?? ''));
-	let slug = $state<string>(String(post?.slug ?? ''));
-	let excerpt = $state<string>(String(post?.excerpt ?? ''));
-	let seoTitle = $state<string>(String((post as any)?.seo_title ?? (post as any)?.seoTitle ?? ''));
-	let seoDescription = $state<string>(String((post as any)?.seo_description ?? (post as any)?.seoDescription ?? ''));
-	let status = $state<string>(String(post?.status ?? 'draft'));
-	let publishedAt = $state<string>(post?.published_at ? String(post?.published_at).slice(0,16) : '');
-	let scheduledAt = $state<string>((post as any)?.scheduled_at ? String((post as any).scheduled_at).slice(0,16) : '');
-	let coverImageUrl = $state<string>(String((post as any)?.cover_image_url ?? (post as any)?.coverImageUrl ?? ''));
+	let title = $derived<string>(String(post?.title ?? ''));
+	let slug = $derived<string>(String(post?.slug ?? ''));
+	let excerpt = $derived<string>(String(post?.excerpt ?? ''));
+	let seoTitle = $derived<string>(
+		String((post as any)?.seo_title ?? (post as any)?.seoTitle ?? '')
+	);
+	let seoDescription = $derived<string>(
+		String((post as any)?.seo_description ?? (post as any)?.seoDescription ?? '')
+	);
+	let status = $derived<string>(String(post?.status ?? 'draft'));
+	let publishedAt = $derived<string>(
+		post?.published_at ? String(post?.published_at).slice(0, 16) : ''
+	);
+	let scheduledAt = $derived<string>(
+		(post as any)?.scheduled_at ? String((post as any).scheduled_at).slice(0, 16) : ''
+	);
+	let coverImageUrl = $state<string>(
+		String((post as any)?.cover_image_url ?? (post as any)?.coverImageUrl ?? '')
+	);
 	let repoUrl = $state<string>(String((post as any)?.repo_url ?? (post as any)?.repoUrl ?? ''));
 	let demoUrl = $state<string>(String((post as any)?.demo_url ?? (post as any)?.demoUrl ?? ''));
-	let techStack = $state<string>(Array.isArray((post as any)?.tech_stack) ? (post as any).tech_stack.join(', ') : Array.isArray((post as any)?.techStack) ? (post as any).techStack.join(', ') : String((post as any)?.tech_stack ?? (post as any)?.techStack ?? ''));
+	let techStack = $state<string>(
+		Array.isArray((post as any)?.tech_stack)
+			? (post as any).tech_stack.join(', ')
+			: Array.isArray((post as any)?.techStack)
+				? (post as any).techStack.join(', ')
+				: String((post as any)?.tech_stack ?? (post as any)?.techStack ?? '')
+	);
 	let saving = $state(false);
 	let message = $state('');
 
@@ -47,15 +68,25 @@
 				width = Math.round(width * scale);
 				height = Math.round(height * scale);
 			}
-			const canvas = typeof OffscreenCanvas !== 'undefined' ? new OffscreenCanvas(width, height) : Object.assign(document.createElement('canvas'), { width, height });
+			const canvas =
+				typeof OffscreenCanvas !== 'undefined'
+					? new OffscreenCanvas(width, height)
+					: Object.assign(document.createElement('canvas'), { width, height });
 			const ctx = (canvas as HTMLCanvasElement).getContext('2d');
 			if (!ctx) return file;
 			ctx.drawImage(bitmap, 0, 0, width, height);
 			bitmap.close?.();
-			const blob: Blob | null = canvas instanceof OffscreenCanvas ? await (canvas as OffscreenCanvas).convertToBlob({ type: 'image/webp', quality: 0.82 }) : await new Promise((res) => (canvas as HTMLCanvasElement).toBlob(res, 'image/webp', 0.82));
+			const blob: Blob | null =
+				canvas instanceof OffscreenCanvas
+					? await (canvas as OffscreenCanvas).convertToBlob({ type: 'image/webp', quality: 0.82 })
+					: await new Promise((res) =>
+							(canvas as HTMLCanvasElement).toBlob(res, 'image/webp', 0.82)
+						);
 			if (!blob || blob.size >= file.size) return file;
 			return new File([blob], file.name.replace(/\.\w+$/, '.webp'), { type: 'image/webp' });
-		} catch { return file; }
+		} catch {
+			return file;
+		}
 	}
 
 	onMount(() => {
@@ -84,14 +115,19 @@
 		} catch {}
 		editor = e;
 		return () => {
-			try { e.destroy(); } catch {}
+			try {
+				e.destroy();
+			} catch {}
 			editor = null;
 		};
 	});
 
 	function autoSlug() {
 		if (mode === 'create' && title && !slug) {
-			slug = title.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
+			slug = title
+				.toLowerCase()
+				.replace(/[^a-z0-9]+/g, '-')
+				.replace(/^-|-$/g, '');
 		}
 	}
 
@@ -113,18 +149,37 @@
 				contentHtml: html,
 				contentMarkdown: md || html,
 				status,
-				publishedAt: publishedAt ? new Date(publishedAt).toISOString() : status === 'published' ? new Date().toISOString() : null,
+				publishedAt: publishedAt
+					? new Date(publishedAt).toISOString()
+					: status === 'published'
+						? new Date().toISOString()
+						: null,
 				scheduledAt: scheduledAt ? new Date(scheduledAt).toISOString() : null,
 				seoTitle: seoTitle || title,
-				seoDescription: seoDescription || excerpt?.slice(0,155) || null,
+				seoDescription: seoDescription || excerpt?.slice(0, 155) || null,
 				coverImageUrl: coverImageUrl || null,
 				type: entryType,
-				...(entryType === 'project' ? { repoUrl: repoUrl || null, demoUrl: demoUrl || null, techStack: techStack ? techStack.split(',').map((s:string)=>s.trim()).filter(Boolean) : [] } : {})
+				...(entryType === 'project'
+					? {
+							repoUrl: repoUrl || null,
+							demoUrl: demoUrl || null,
+							techStack: techStack
+								? techStack
+										.split(',')
+										.map((s: string) => s.trim())
+										.filter(Boolean)
+								: []
+						}
+					: {})
 			};
 			const base = entryType === 'project' ? '/api/cms/projects' : '/api/cms/posts';
 			const url = mode === 'create' ? base : `${base}/${String(post?.id)}`;
 			const method = mode === 'create' ? 'POST' : 'PUT';
-			const res = await fetch(url, { method, headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(payload) });
+			const res = await fetch(url, {
+				method,
+				headers: { 'Content-Type': 'application/json' },
+				body: JSON.stringify(payload)
+			});
 			const j = await res.json();
 			if (!res.ok) throw new Error(j.error ?? 'Save failed');
 			message = 'Saved';
@@ -140,107 +195,149 @@
 
 <div class="space-y-6 w-full">
 	<div class="space-y-6">
+		<div class="grid gap-2">
+			<Label for="post-title" class="text-sm">Title</Label>
+			<Input
+				id="post-title"
+				bind:value={title}
+				oninput={autoSlug}
+				placeholder="Blog title"
+				class="text-sm" />
+		</div>
+
+		<div class="grid grid-cols-1 md:grid-cols-2 gap-4">
 			<div class="grid gap-2">
-				<Label for="post-title" class="text-sm">Title</Label>
-				<Input id="post-title" bind:value={title} oninput={autoSlug} placeholder="Post title" class="text-sm" />
+				<Label for="post-slug" class="text-sm">Slug</Label>
+				<Input id="post-slug" bind:value={slug} placeholder="kebab-case-slug" class="text-sm" />
+				<p class="text-sm text-muted-foreground">Used in URL /blogs/{slug || 'your-slug'}</p>
 			</div>
-
-			<div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-				<div class="grid gap-2">
-					<Label for="post-slug" class="text-sm">Slug</Label>
-					<Input id="post-slug" bind:value={slug} placeholder="kebab-case-slug" class="text-sm" />
-					<p class="text-sm text-muted-foreground">Used in URL /blogs/{slug || 'your-slug'}</p>
-				</div>
-				<div class="grid gap-2">
-					<Label class="text-sm">Status</Label>
-					<Select.Root type="single" bind:value={status}>
-						<Select.Trigger class="text-sm rounded-none">
-							{status ? status.charAt(0).toUpperCase() + status.slice(1) : 'Select status'}
-						</Select.Trigger>
-						<Select.Content class="rounded-none">
-							<Select.Item value="draft" class="text-sm">Draft</Select.Item>
-							<Select.Item value="published" class="text-sm">Published</Select.Item>
-							<Select.Item value="archived" class="text-sm">Archived</Select.Item>
-							<Select.Item value="scheduled" class="text-sm">Scheduled</Select.Item>
-						</Select.Content>
-					</Select.Root>
-				</div>
-			</div>
-
 			<div class="grid gap-2">
-				<Label for="post-excerpt" class="text-sm">Excerpt</Label>
-				<Textarea id="post-excerpt" bind:value={excerpt} rows={3} placeholder="Short description — fallback for SEO if empty" class="text-sm min-h-[80px]" />
+				<Label class="text-sm">Status</Label>
+				<Select.Root type="single" bind:value={status}>
+					<Select.Trigger class="text-sm rounded-none">
+						{status ? status.charAt(0).toUpperCase() + status.slice(1) : 'Select status'}
+					</Select.Trigger>
+					<Select.Content class="rounded-none">
+						<Select.Item value="draft" class="text-sm">Draft</Select.Item>
+						<Select.Item value="published" class="text-sm">Published</Select.Item>
+						<Select.Item value="archived" class="text-sm">Archived</Select.Item>
+						<Select.Item value="scheduled" class="text-sm">Scheduled</Select.Item>
+					</Select.Content>
+				</Select.Root>
 			</div>
+		</div>
 
-			<div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-				<div class="grid gap-2">
-					<Label for="seo-title" class="text-sm">SEO Title</Label>
-					<Input id="seo-title" bind:value={seoTitle} placeholder="Optional — defaults to title" class="text-sm" />
-				</div>
-				<div class="grid gap-2">
-					<Label for="seo-desc" class="text-sm">SEO Description</Label>
-					<Input id="seo-desc" bind:value={seoDescription} placeholder="~155 chars" class="text-sm" />
-				</div>
+		<div class="grid gap-2">
+			<Label for="post-excerpt" class="text-sm">Excerpt</Label>
+			<Textarea
+				id="post-excerpt"
+				bind:value={excerpt}
+				rows={3}
+				placeholder="Short description — fallback for SEO if empty"
+				class="text-sm min-h-[80px]" />
+		</div>
+
+		<div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+			<div class="grid gap-2">
+				<Label for="seo-title" class="text-sm">SEO Title</Label>
+				<Input
+					id="seo-title"
+					bind:value={seoTitle}
+					placeholder="Optional — defaults to title"
+					class="text-sm" />
 			</div>
+			<div class="grid gap-2">
+				<Label for="seo-desc" class="text-sm">SEO Description</Label>
+				<Input id="seo-desc" bind:value={seoDescription} placeholder="~155 chars" class="text-sm" />
+			</div>
+		</div>
 
+		<div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+			<div class="grid gap-2">
+				<Label for="pub-at" class="text-sm">Published At</Label>
+				<Input id="pub-at" type="datetime-local" bind:value={publishedAt} class="text-sm" />
+			</div>
+			<div class="grid gap-2">
+				<Label for="sched-at" class="text-sm">Scheduled At</Label>
+				<Input id="sched-at" type="datetime-local" bind:value={scheduledAt} class="text-sm" />
+			</div>
+			<div class="grid gap-2">
+				<Label for="cover-url" class="text-sm">Cover Image URL</Label>
+				<Input
+					id="cover-url"
+					bind:value={coverImageUrl}
+					placeholder="https://..."
+					class="text-sm" />
+			</div>
+		</div>
+		{#if entryType === 'project'}
 			<div class="grid grid-cols-1 md:grid-cols-3 gap-4">
 				<div class="grid gap-2">
-					<Label for="pub-at" class="text-sm">Published At</Label>
-					<Input id="pub-at" type="datetime-local" bind:value={publishedAt} class="text-sm" />
+					<Label for="repo-url" class="text-sm">Repo URL</Label>
+					<Input
+						id="repo-url"
+						bind:value={repoUrl}
+						placeholder="https://github.com/..."
+						class="text-sm" />
 				</div>
 				<div class="grid gap-2">
-					<Label for="sched-at" class="text-sm">Scheduled At</Label>
-					<Input id="sched-at" type="datetime-local" bind:value={scheduledAt} class="text-sm" />
+					<Label for="demo-url" class="text-sm">Demo URL</Label>
+					<Input id="demo-url" bind:value={demoUrl} placeholder="https://..." class="text-sm" />
 				</div>
 				<div class="grid gap-2">
-					<Label for="cover-url" class="text-sm">Cover Image URL</Label>
-					<Input id="cover-url" bind:value={coverImageUrl} placeholder="https://..." class="text-sm" />
+					<Label for="tech-stack" class="text-sm">Tech Stack (comma)</Label>
+					<Input
+						id="tech-stack"
+						bind:value={techStack}
+						placeholder="Svelte, TypeScript, Tailwind"
+						class="text-sm" />
 				</div>
 			</div>
-			{#if entryType === 'project'}
-				<div class="grid grid-cols-1 md:grid-cols-3 gap-4">
-					<div class="grid gap-2">
-						<Label for="repo-url" class="text-sm">Repo URL</Label>
-						<Input id="repo-url" bind:value={repoUrl} placeholder="https://github.com/..." class="text-sm" />
-					</div>
-					<div class="grid gap-2">
-						<Label for="demo-url" class="text-sm">Demo URL</Label>
-						<Input id="demo-url" bind:value={demoUrl} placeholder="https://..." class="text-sm" />
-					</div>
-					<div class="grid gap-2">
-						<Label for="tech-stack" class="text-sm">Tech Stack (comma)</Label>
-						<Input id="tech-stack" bind:value={techStack} placeholder="Svelte, TypeScript, Tailwind" class="text-sm" />
-					</div>
-				</div>
-			{/if}
-		</div>
+		{/if}
+	</div>
 
 	<div class="space-y-2">
 		<div>
 			<h3 class="text-sm font-medium">Content</h3>
-			<p class="text-sm text-muted-foreground">Edra — slash “/” for commands, drag handle on hover, paste/drop images.</p>
+			<p class="text-sm text-muted-foreground">
+				Edra — slash “/” for commands, drag handle on hover, paste/drop images.
+			</p>
 		</div>
 		<div class="border rounded-none overflow-hidden">
-				{#if editor}
-					<Tiptap {editor}>
-						<Edra.Toolbar class="flex flex-wrap gap-1 p-2 border-b bg-muted/20" />
-						<div class="min-h-[500px] p-4">
-							<Edra.Content class="prose prose-sm dark:prose-invert max-w-none focus:outline-none min-h-[480px] text-sm" />
-						</div>
-					</Tiptap>
-				{:else}
-					<div class="p-8 text-sm text-muted-foreground">Loading editor…</div>
-				{/if}
+			{#if editor}
+				<Tiptap {editor}>
+					<Edra.Toolbar class="flex flex-wrap gap-1 p-2 border-b bg-muted/20" />
+					<div class="min-h-[500px] p-4">
+						<Edra.Content
+							class="prose prose-sm dark:prose-invert max-w-none focus:outline-none min-h-[480px] text-sm" />
+					</div>
+				</Tiptap>
+			{:else}
+				<div class="p-8 text-sm text-muted-foreground">Loading editor…</div>
+			{/if}
 		</div>
 	</div>
 
 	<div class="flex items-center gap-3">
 		<Button onclick={save} disabled={saving} size="default">
-			{saving ? 'Saving…' : mode === 'create' ? (entryType === 'project' ? 'Create project' : 'Create post') : 'Save changes'}
+			{saving
+				? 'Saving…'
+				: mode === 'create'
+					? entryType === 'project'
+						? 'Create project'
+						: 'Create blog'
+					: 'Save changes'}
 		</Button>
 		{#if message}<span class="text-sm text-muted-foreground">{message}</span>{/if}
-		<Button variant="ghost" href={entryType === 'project' ? '/studio/projects' : '/studio/posts'} class="text-sm">Back to list</Button>
+		<Button
+			variant="ghost"
+			href={entryType === 'project' ? '/studio/projects' : '/studio/posts'}
+			class="text-sm">Back to list</Button>
 	</div>
 
-	<p class="text-sm text-muted-foreground">Images: drag/drop, paste (Ctrl+V), or slash “/” → Image. Uploads go to Cloudinary (portfolio/cms) and are stored as CDN URLs. Falls back to inline data URL if Cloudinary not configured.</p>
+	<p class="text-sm text-muted-foreground">
+		Images: drag/drop, paste (Ctrl+V), or slash “/” → Image. Uploads go to Cloudinary
+		(portfolio/cms) and are stored as CDN URLs. Falls back to inline data URL if Cloudinary not
+		configured.
+	</p>
 </div>

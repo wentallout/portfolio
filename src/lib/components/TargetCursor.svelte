@@ -37,7 +37,7 @@ import { get } from 'svelte/store';
 	let cursor: HTMLDivElement;
 	// svelte-ignore non_reactive_update
 	let dot: HTMLDivElement;
-	let bullet: HTMLDivElement;
+	let bullet: HTMLDivElement | undefined = $state();
 	// svelte-ignore non_reactive_update
 	let casing: HTMLDivElement;
 	// svelte-ignore non_reactive_update
@@ -58,9 +58,6 @@ import { get } from 'svelte/store';
 
 	// Barrel cursor during reload — don't hide default cursor, just swap visuals; never block clicks
 	let unsubscribeReload: (() => void) | null = null;
-
-	// Only a link or button press counts as a "real shoot"
-	const SHOOT_TARGETS = 'a[href], button:not(:disabled), [role="button"]:not([aria-disabled="true"])';
 
 	$effect(() => {
 		if (isMobile || !cursor) return;
@@ -212,20 +209,17 @@ import { get } from 'svelte/store';
 		window.addEventListener('mousedown', mouseDown);
 		window.addEventListener('mouseup', mouseUp);
 
-		// Shooting: only on link/button press spawns bullet + 2s crosshair (revolver-limited)
+		// Shooting: every left-click globally spawns bullet + 2s crosshair (revolver-limited)
 		let lastShot = 0;
 		const onShootClick = (e: MouseEvent) => {
 			if (!enableShooting) return;
 			if (e.button !== 0) return;
-			// user only actually shoots when pressing a link or button
-			const shootTarget = (e.target as Element)?.closest?.(SHOOT_TARGETS);
-			if (!shootTarget) return;
 			const now = Date.now();
 			if (now - lastShot < 100) return;
 			lastShot = now;
 
 			// revolver ammo check — blocks shoot when empty/reloading and auto-triggers reload
-			// Sound is handled globally by SfxProvider listening to `revolver:*` events
+			// No audio — fully silent
 			if (!tryShoot()) {
 				gsap.to(cursor, { x: '+=2', duration: 0.06, yoyo: true, repeat: 3, ease: 'power2.out' });
 				return;

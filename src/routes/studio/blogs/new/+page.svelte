@@ -4,5 +4,5 @@
 	import PostEditor from '#lib/components/cms/PostEditor.svelte';
 </script>
 
-<h1 class="text-2xl font-bold">New Blog Post</h1>
+<h1 class="text-2xl font-bold">New Blog</h1>
 <PostEditor mode="create" onSaved={(id)=> goto(`/studio/posts/${id}/edit`)} />
