@@ -74,6 +74,8 @@ import { ModeWatcher } from 'mode-watcher';
 
 		// Better Auth verifier: after OAuth, Neon redirects to /?neon_auth_session_verifier=...
 		const url = new URL(window.location.href);
+		const isStudioRoute =
+			window.location.pathname === '/studio' || window.location.pathname.startsWith('/studio/');
 		if (url.searchParams.has('neon_auth_session_verifier')) {
 			authClient.getSession().then((res: any) => {
 				try {
@@ -87,18 +89,25 @@ import { ModeWatcher } from 'mode-watcher';
 				history.replaceState(null, '', url.pathname + url.search);
 				goto(clean, { replaceState: true });
 			});
-		} else {
-			// No verifier — proactively refresh mirrored cookie (handles page reload after SDK cache was cleared)
-			syncSession();
+		} else if (isStudioRoute) {
+			// Public pages skip Neon get-session: avoids third-party cookie warnings,
+			// extra network on LCP, and bfcache eviction from active connections.
+			// Studio routes still refresh the mirrored cookie.
+			if ('requestIdleCallback' in window) {
+				(requestIdleCallback as (cb: () => void) => void)(() => syncSession());
+			} else {
+				setTimeout(syncSession, 3000);
+			}
 		}
 
-		// Keep-alive: refresh mirrored cookie periodically + on visibility/focus so session never expires
-		// Poll every 10 min; also sync when tab becomes visible — covers background throttling / laptop sleep
-		const interval = window.setInterval(syncSession, 10 * 60 * 1000);
+		// Keep-alive only on studio routes — public pages keep bfcache cacheable.
+		const interval = isStudioRoute ? window.setInterval(syncSession, 10 * 60 * 1000) : 0;
 		const onVisible = () => {
-			if (document.visibilityState === 'visible') syncSession();
+			if (isStudioRoute && document.visibilityState === 'visible') syncSession();
 		};
-		const onFocus = () => syncSession();
+		const onFocus = () => {
+			if (isStudioRoute) syncSession();
+		};
 		document.addEventListener('visibilitychange', onVisible);
 		window.addEventListener('focus', onFocus);
 		const detachGlyphnav = attachGlyphnav(goto, { animatePopState: true, commit: 'before', duration: 250 }).detach;

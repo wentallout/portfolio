@@ -55,8 +55,13 @@
 				<img
 					class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
 					alt={projectName}
-					loading="lazy"
-					src={thumbnail} />
+					decoding="async"
+					fetchpriority={index <= 1 ? 'high' : 'auto'}
+					loading={index <= 1 ? 'eager' : 'lazy'}
+					sizes="(max-width: 768px) 100vw, 50vw"
+					src={thumbnail}
+					width="800"
+					height="450" />
 			</div>
 		{/if}
 	</article>

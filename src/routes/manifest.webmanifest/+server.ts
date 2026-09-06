@@ -19,7 +19,8 @@ export const GET: RequestHandler = async ({ setHeaders }) => {
 		theme_color: themeColor
 	};
 	setHeaders({
-		'content-type': 'application/json'
+		'content-type': 'application/manifest+json',
+		'cache-control': 'public, max-age=86400, stale-while-revalidate=86400'
 	});
 	return new Response(JSON.stringify(manifest));
 };

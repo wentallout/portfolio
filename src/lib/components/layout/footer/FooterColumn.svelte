@@ -4,8 +4,8 @@
 </script>
 
 <div class="signature-padding space-y-4 relative">
-	<h4 class="text-xs font-medium text-muted-foreground uppercase tracking-widest">
+	<h3 class="text-sm font-medium text-muted-foreground uppercase tracking-widest">
 		{title}
-	</h4>
+	</h3>
 	{@render children()}
 </div>
