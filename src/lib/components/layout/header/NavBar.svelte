@@ -7,12 +7,18 @@
 	import { navItems } from '#lib/config.js';
 	import { authClient } from '#lib/auth-client.js';
 	import { onMount } from 'svelte';
+	import FloatingSidebar from '#lib/components/layout/header/FloatingSidebar.svelte';
 
 	type NavUser = { id: string; email: string; name: string; role: string } | null | undefined;
 	let { user: serverUser }: { user?: NavUser } = $props();
 
 	let scrollY = $state(0);
 	let clientHasSession = $state(false);
+
+	// Desktop-only: after scrolling past the hero, show the floating sidebar.
+	// The top bar is intentionally NOT sticky — it scrolls away with the page.
+	const SCROLL_THRESHOLD = 220;
+	const scrolled = $derived(scrollY > SCROLL_THRESHOLD);
 
 	// Resolve user from prop or page.data (page.data.user comes from +layout.server.ts)
 	const effectiveUser: NavUser = $derived(
@@ -40,8 +46,9 @@
 
 <svelte:window bind:scrollY />
 
+<!-- Top bar scrolls away with the page (NOT sticky) — the floating sidebar takes over on scroll -->
 <header
-	class="sticky top-0 z-40 w-full border-grid-b bg-background/85 backdrop-blur-md supports-[backdrop-filter]:bg-background/70 dark:bg-background/80 dark:supports-[backdrop-filter]:bg-background/60 transition-all duration-200 relative overflow-hidden">
+	class="relative top-auto z-30 w-full overflow-hidden border-grid-b bg-background/85 backdrop-blur-md transition-all duration-200 supports-[backdrop-filter]:bg-background/70 dark:bg-background/80 dark:supports-[backdrop-filter]:bg-background/60">
 	<!-- subtle dotted veil — very low opacity + soft wash so text stays AAA contrast in both themes -->
 
 	<div
@@ -59,8 +66,8 @@
 				Khoa Nguyen
 			</a>
 
-			<!-- Desktop Navigation Menu -->
-			<nav class="hidden md:flex items-center gap-6" aria-label="primary menu">
+			<!-- Desktop Navigation Menu: always visible in the top bar (top bar scrolls away) -->
+			<nav class="hidden items-center gap-6 md:flex" aria-label="primary menu">
 				{#each navItems as navItem (navItem.path)}
 					{@const active =
 						navItem.path === '/'
@@ -81,11 +88,16 @@
 		<!-- Right: Actions -->
 		<div class="flex items-center justify-end gap-2">
 			{#if showCms}
-				<Button href="/studio" size="sm" class="cursor-target rounded-none gap-1.5 shadow-sm" aria-label="Open CMS">
-					CMS
+				<Button
+					href="/studio"
+					class="cursor-target rounded-none gap-1.5 shadow-sm"
+					aria-label="Open CMS">
+					Studio
 				</Button>
 			{/if}
 			<ThemeSwitcher />
 		</div>
 	</div>
 </header>
+
+<FloatingSidebar visible={scrolled} />

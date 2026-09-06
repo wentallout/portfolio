@@ -10,7 +10,7 @@
 <div class="grid grid-cols-3 gap-4 mt-8">
 	<Card.Root class="rounded-none p-6 hover:bg-muted/50 transition-colors">
 		<a href="/studio/posts" class="block">
-			<div class="text-sm text-muted-foreground">Blog Posts</div>
+			<div class="text-sm text-muted-foreground">Blogs</div>
 			<div class="text-2xl font-bold mt-1">{data.counts?.posts ?? '—'}</div>
 		</a>
 	</Card.Root>
@@ -25,7 +25,7 @@
 <div class="mt-8">
 	<h2 class="text-lg font-semibold">Quick actions</h2>
 	<div class="flex gap-3 mt-3">
-		<Button href="/studio/posts/new" class="rounded-none">New Blog Post</Button>
+		<Button href="/studio/posts/new" class="rounded-none">New Blog</Button>
 		<Button href="/studio/projects/new" variant="outline" class="rounded-none">New Project</Button>
 	</div>
 </div>

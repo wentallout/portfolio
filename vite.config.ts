@@ -70,7 +70,7 @@ export default defineConfig({
 	],
 	server: { port: 1111, allowedHosts: '.ngrok-free.app' },
 	optimizeDeps: {
-		exclude: ['mode-watcher', '@giscus/svelte', 'svelte-toc', 'sveltekit-embed', 'saos']
+		exclude: ['mode-watcher', '@giscus/svelte', 'svelte-toc']
 	},
 	ssr: {
 		noExternal: [

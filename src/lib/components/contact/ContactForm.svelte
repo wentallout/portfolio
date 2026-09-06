@@ -18,7 +18,7 @@
 			<form name="contact" class="space-y-4 w-full" data-netlify="true" method="post">
 				<input name="form-name" type="hidden" value="contact" />
 
-				<TextInput name="name" label="Name" placeholder="John Doe" type="text">
+				<TextInput name="name" label="Name" type="text">
 					{#snippet icon()}
 						<span>
 							<User />
@@ -26,15 +26,15 @@
 					{/snippet}
 				</TextInput>
 
-				<TextInput name="email" label="Email" placeholder="username@gmail.com" type="email">
+				<TextInput name="email" label="Email" type="email">
 					{#snippet icon()}
 						<span>
 							<At />
-						</span>
+						</span> 
 					{/snippet}
 				</TextInput>
 
-				<TextArea name="message" label="Message" />
+				<TextArea name="message" />
 
 				<div class="pt-2 flex flex-wrap items-center gap-3">
 					<PrimaryButton hapticPattern="success" label="Send message">

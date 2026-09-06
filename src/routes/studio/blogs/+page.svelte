@@ -8,15 +8,15 @@
 	let q = $state(data.q ?? '');
 	let status = $state(data.status ?? '');
 	async function del(id: string) {
-		if (!confirm('Delete this post?')) return;
+		if (!confirm('Delete this blog?')) return;
 		const res = await fetch(`/api/cms/posts/${id}`, { method: 'DELETE' });
 		if (res.ok) items = items.filter((i:any)=>i.id!==id);
 	}
 </script>
 
 <div class="flex items-center justify-between">
-	<h1 class="text-2xl font-bold">Blog Posts ({data.total})</h1>
-	<Button href="/studio/posts/new">New Post</Button>
+	<h1 class="text-2xl font-bold">Blogs ({data.total})</h1>
+	<Button href="/studio/posts/new">New Blog</Button>
 </div>
 
 <form method="GET" class="flex gap-2 mt-4">

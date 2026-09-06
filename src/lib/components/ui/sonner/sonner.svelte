@@ -1,4 +1,5 @@
 <script lang="ts">
+	import { browser } from '$app/environment';
 	import { mode } from "mode-watcher";
 	import { Toaster as Sonner, type ToasterProps as SonnerProps } from "svelte-sonner";
 	import SpinnerIcon from 'phosphor-svelte/lib/Spinner';
@@ -10,6 +11,7 @@
 	let { ...restProps }: SonnerProps = $props();
 </script>
 
+{#if browser}
 <Sonner
 	theme={mode.current}
 	class="toaster group"
@@ -32,3 +34,4 @@
 		<WarningIcon class="size-4" />
 	{/snippet}
 </Sonner>
+{/if}

@@ -32,7 +32,6 @@ export function tryShoot(): boolean {
 	}
 	bulletsStore.set(b - 1);
 	window.dispatchEvent(new CustomEvent('revolver:shoot', { detail: { remaining: b - 1 } }));
-	// SOUND HOOK: shoot sound
 	if (b - 1 === 0) triggerReload();
 	return true;
 }
