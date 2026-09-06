@@ -17,16 +17,20 @@
 			<img
 				class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
 				alt={title}
+				decoding="async"
 				loading="lazy"
+				sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 400px"
 				src={finalThumbnail}
+				width="800"
+				height="450"
 				{title} />
 		</div>
 
 		<div class="signature-padding flex flex-col justify-between flex-1 space-y-2 bg-background">
-			<h4
+			<h3
 				class="text-base font-medium text-foreground group-hover:text-primary transition-colors line-clamp-2 leading-snug">
 				{title}
-			</h4>
+			</h3>
 			<div class="flex items-center justify-between pt-2 text-sm text-muted-foreground font-medium">
 				<span>{desc}</span>
 				<span
