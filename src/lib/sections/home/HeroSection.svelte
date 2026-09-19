@@ -63,9 +63,9 @@
 				<!-- Hero Subtitle -->
 				<p
 					class="text-sm sm:text-base text-muted-foreground max-w-xl font-normal leading-relaxed mb-8 text-pretty">
-					Hi, I'm Khoa Nguyen — a developer based in Ho Chi Minh City. I design and build websites
-					and software for small businesses, with a focus on making things clear, fast, and easy to
-					live with.
+					I'm Khoa Nguyen, a developer based in Ho Chi Minh City. I care about the little things —
+					clear interfaces, fast websites, and software that doesn't make people stop and think
+					about how to use it.
 				</p>
 
 				<!-- Action Buttons -->
