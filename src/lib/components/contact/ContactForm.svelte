@@ -6,6 +6,8 @@
 	import { ArrowCounterClockwise, At, PaperPlaneRight, User } from '#lib/assets/icons/icons.js';
 	import { SECTION_TITLES } from '#lib/constants/labels.js';
 	import SectionTitle from '#lib/sections/layout/SectionTitle.svelte';
+	import { submitContactMessage } from '#lib/remotes/contact.remote.js';
+	import { toast } from 'svelte-sonner';
 	import ContactInfo from './ContactInfo.svelte';
 </script>
 
@@ -15,9 +17,20 @@
 	<div class="grid grid-cols-1 md:grid-cols-2 gap-0 relative items-stretch">
 		<!-- Form Side -->
 		<div class="relative bg-background signature-padding flex flex-col justify-between h-full">
-			<form name="contact" class="space-y-4 w-full" data-netlify="true" method="post">
-				<input name="form-name" type="hidden" value="contact" />
-
+			<form
+				{...submitContactMessage.enhance(async (remoteForm) => {
+					try {
+						if (await remoteForm.submit()) {
+							remoteForm.element.reset();
+							toast.success('Message sent');
+						} else {
+							toast.error('Please check the form fields');
+						}
+					} catch {
+						toast.error('Failed to send message');
+					}
+				})}
+				class="space-y-4 w-full">
 				<TextInput name="name" label="Name" type="text">
 					{#snippet icon()}
 						<span>
@@ -36,8 +49,15 @@
 
 				<TextArea name="message" />
 
+				{#each submitContactMessage.fields.allIssues() ?? [] as issue, i (i)}
+					<p class="text-sm text-destructive">{issue.message}</p>
+				{/each}
+
 				<div class="pt-2 flex flex-wrap items-center gap-3">
-					<PrimaryButton hapticPattern="success" label="Send message">
+					<PrimaryButton
+						disabled={!!submitContactMessage.pending}
+						hapticPattern="success"
+						label="Send message">
 						<PaperPlaneRight color="currentColor" height="16" width="16" />
 					</PrimaryButton>
 

@@ -7,7 +7,6 @@ export class ContactPage extends BasePage {
 	readonly message_input: ReturnType<Page['getByRole']>;
 	readonly send_button: ReturnType<Page['getByRole']>;
 	readonly reset_button: ReturnType<Page['getByRole']>;
-	readonly hidden_form_input: ReturnType<Page['locator']>;
 
 	constructor(page: Page) {
 		super(page);
@@ -16,7 +15,6 @@ export class ContactPage extends BasePage {
 		this.message_input = page.getByRole('textbox', { name: 'Message' });
 		this.send_button = page.getByRole('button', { name: 'Send message' });
 		this.reset_button = page.getByRole('button', { name: 'Reset' });
-		this.hidden_form_input = page.locator('input[name="form-name"][value="contact"]');
 	}
 
 	async goto_contact() {
@@ -41,6 +39,5 @@ export class ContactPage extends BasePage {
 		await expect(this.message_input).toBeVisible();
 		await expect(this.send_button).toBeVisible();
 		await expect(this.reset_button).toBeVisible();
-		await expect(this.hidden_form_input).toBeHidden();
 	}
 }

@@ -162,6 +162,18 @@ export const media = pgTable('media', {
 	createdAt: timestamp('created_at', { withTimezone: true }).notNull().defaultNow()
 });
 
+export const contactMessages = pgTable(
+	'contact_messages',
+	{
+		id: uuid('id').primaryKey().defaultRandom(),
+		name: text('name').notNull(),
+		email: text('email').notNull(),
+		message: text('message').notNull(),
+		createdAt: timestamp('created_at', { withTimezone: true }).notNull().defaultNow()
+	},
+	(t) => [index('contact_messages_created_at_idx').on(t.createdAt)]
+);
+
 // Auth profile mirror (Neon Auth subject -> role). Email not hardcoded in git; set CMS_ADMIN_EMAIL env.
 export const profiles = pgTable('profiles', {
 	id: text('id').primaryKey(), // auth subject
