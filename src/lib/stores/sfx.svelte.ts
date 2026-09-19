@@ -1,125 +1,190 @@
 /**
- * Global SFX system — tiny singleton around HTMLAudioElement.
+ * Global SFX system built on `@rexa-developer/tiks`.
+ * Procedural Web Audio sounds — zero audio files, pure synthesis.
  *
- * NOTE: gunshot sound was removed — `playShoot()` is a no-op kept
- * only for backwards compat so existing `revolver:shoot` listeners
- * don't break.
+ * Zero-maintenance design:
+ * - `SfxProvider` (mounted once in +layout) calls `sfx.init()` + `bindTiks()`.
+ * - A single delegated click listener plays the right sound for every
+ *   button / link / toggle automatically — no per-component edits needed.
+ * - Per-element override: `data-sfx="success|error|warning|pop|swoosh|notify|toggle|click|none"`.
+ * - Opt out: `data-no-sfx` (or `data-sfx="none"`).
+ * - Declarative `data-tiks="..."` attributes also work via `bindTiks()`.
+ * - Any code can fire sounds without importing: `dispatch(window, 'sfx:success')`
+ *   or `window.dispatchEvent(new CustomEvent('sfx:error'))`.
+ *
+ * Backwards compat: `playReload()` / `playShoot()` stay silent no-ops
+ * (gun audio was removed) so old `revolver:*` listeners don't break.
  */
-import reloadSrc from '#lib/assets/sfx/revolver_cylinder_spin.mp3';
+import { tiks } from '@rexa-developer/tiks';
 
-type SfxId = 'reload';
+export type SfxName =
+	| 'click'
+	| 'toggle'
+	| 'success'
+	| 'error'
+	| 'warning'
+	| 'hover'
+	| 'pop'
+	| 'swoosh'
+	| 'notify'
+	| 'none';
 
-const VOLUME = 0.2; // single global volume — 20% — no localStorage
+const STORAGE_KEY = 'sfx-enabled';
+const DEFAULT_VOLUME = 0.3;
 
 class SfxStore {
+	enabled = $state(true);
 	muted = $state(false);
-	volume = $state(VOLUME);
+	volume = $state(DEFAULT_VOLUME);
 	unlocked = $state(false);
+	private ready = false;
 
-	// internal audio references — set by SfxProvider or lazily created
-	private reloadEl: HTMLAudioElement | null = null;
-	private boundUnlock = false;
-
-	constructor() {}
-
-	/** Called once from SfxProvider onMount — wires DOM <audio> refs + preload. */
-	init(reloadEl: HTMLAudioElement) {
-		this.reloadEl = reloadEl;
-		// tune defaults
-		reloadEl.preload = 'auto';
-		reloadEl.volume = this.volume;
-		this.ensureUnlockListener();
-		// reflect muted immediately
-		this.applyMute();
-	}
-
-	private applyMute() {
-		const els = [this.reloadEl].filter(Boolean) as HTMLAudioElement[];
-		for (const el of els) el.muted = this.muted;
-	}
-
-	private ensureUnlockListener() {
-		if (this.boundUnlock || typeof window === 'undefined') return;
-		this.boundUnlock = true;
-		const unlock = () => this.unlock();
-		window.addEventListener('click', unlock, { once: true, capture: true });
-		window.addEventListener('keydown', unlock, { once: true, capture: true });
-		window.addEventListener('touchstart', unlock, { once: true, capture: true });
-		window.addEventListener('pointerdown', unlock, { once: true, capture: true });
-	}
-
-	/** Warm audio elements so subsequent .play() isn't blocked. */
-	unlock() {
-		if (this.unlocked) return;
-		this.unlocked = true;
-		const els = [this.reloadEl].filter(Boolean) as HTMLAudioElement[];
-		for (const el of els) {
-			// play+pause to prime decoder without audible output
-			const p = el.play();
-			if (p) {
-				p.then(() => {
-					el.pause();
-					el.currentTime = 0;
-				}).catch(() => {
-					// still blocked — will succeed on next real gesture via playReload()
-				});
+	constructor() {
+		if (typeof localStorage !== 'undefined') {
+			try {
+				const raw = localStorage.getItem(STORAGE_KEY);
+				if (raw === '0' || raw === 'false') {
+					this.enabled = false;
+					this.muted = true;
+				}
+			} catch {
+				// ignore — sound still works, preference just isn't persisted
 			}
 		}
 	}
 
+	/** Called once from SfxProvider onMount. Safe to call repeatedly. */
+	init(volume = DEFAULT_VOLUME) {
+		if (typeof window === 'undefined' || this.ready) return;
+		this.ready = true;
+		this.volume = volume;
+		tiks.init({
+			theme: 'soft',
+			volume,
+			muted: !this.enabled,
+			respectReducedMotion: true
+		});
+		this.unlocked = true;
+	}
+
+	private get audible(): boolean {
+		return this.ready && this.enabled && !this.muted && typeof window !== 'undefined';
+	}
+
+	private persist() {
+		try {
+			localStorage.setItem(STORAGE_KEY, this.enabled ? '1' : '0');
+		} catch {
+			// ignore
+		}
+	}
+
+	setEnabled(v: boolean) {
+		this.enabled = v;
+		this.muted = !v;
+		if (this.ready) {
+			if (v) tiks.unmute();
+			else tiks.mute();
+		}
+		this.persist();
+	}
+
+	toggleEnabled() {
+		this.setEnabled(!this.enabled);
+	}
+
 	setMuted(v: boolean) {
-		this.muted = v;
-		this.applyMute();
+		this.setEnabled(!v);
 	}
 
 	toggleMuted() {
-		this.setMuted(!this.muted);
+		this.toggleEnabled();
 	}
 
 	setVolume(v: number) {
 		this.volume = Math.min(1, Math.max(0, v));
-		for (const el of [this.reloadEl].filter(Boolean) as HTMLAudioElement[]) {
-			el.volume = this.volume;
+		if (this.ready) tiks.setVolume(this.volume);
+	}
+
+	setTheme(t: 'soft' | 'crisp' | 'arcade' | 'glass') {
+		if (this.ready) tiks.setTheme(t);
+	}
+
+	// --- direct sound methods (explicit use in components) ---
+	click() {
+		if (this.audible) tiks.click();
+	}
+	toggle(on: boolean) {
+		if (this.audible) tiks.toggle(on);
+	}
+	success() {
+		if (this.audible) tiks.success();
+	}
+	error() {
+		if (this.audible) tiks.error();
+	}
+	warning() {
+		if (this.audible) tiks.warning();
+	}
+	hover() {
+		if (this.audible) tiks.hover();
+	}
+	pop() {
+		if (this.audible) tiks.pop();
+	}
+	swoosh() {
+		if (this.audible) tiks.swoosh();
+	}
+	notify() {
+		if (this.audible) tiks.notify();
+	}
+
+	/** Generic play used by the delegated listener + event bridge. */
+	play(name: SfxName, toggleOn = true) {
+		switch (name) {
+			case 'click':
+				this.click();
+				break;
+			case 'toggle':
+				this.toggle(toggleOn);
+				break;
+			case 'success':
+				this.success();
+				break;
+			case 'error':
+				this.error();
+				break;
+			case 'warning':
+				this.warning();
+				break;
+			case 'hover':
+				this.hover();
+				break;
+			case 'pop':
+				this.pop();
+				break;
+			case 'swoosh':
+				this.swoosh();
+				break;
+			case 'notify':
+				this.notify();
+				break;
+			case 'none':
+				break;
 		}
 	}
 
-	// --- lazy fallback when SfxProvider not yet mounted (e.g. direct import in TargetCursor)
-	private ensureEl(id: SfxId): HTMLAudioElement | null {
-		if (typeof window === 'undefined') return null;
-		if (id === 'reload') {
-			if (this.reloadEl) return this.reloadEl;
-			const a = new Audio(reloadSrc);
-			a.preload = 'auto';
-			a.volume = this.volume;
-			a.muted = this.muted;
-			this.reloadEl = a;
-			return a;
-		}
-		return null;
-	}
-
-	play(id: SfxId) {
-		if (this.muted) return;
-		if (id === 'reload') this.playReload();
-	}
-
+	// --- backwards compat (intentionally silent — gun audio removed) ---
 	playShoot() {
-		// gunshot sound removed — intentionally silent
 		return;
 	}
-
 	playReload() {
-		// all gun audio removed — intentionally silent
 		return;
-	}
-
-	get sources() {
-		return { reload: reloadSrc };
 	}
 }
 
 export const sfx = new SfxStore();
 
-// Convenience re-exports for ergonomics
+// Convenience re-exports
 export const playShoot = () => sfx.playShoot();
 export const playReload = () => sfx.playReload();

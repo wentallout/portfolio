@@ -118,6 +118,7 @@
 		"@neon/env": "^1.2.1",
 		"@neondatabase/neon-js": "0.7.0-beta",
 		"@neondatabase/serverless": "^1.1.0",
+		"@rexa-developer/tiks": "^0.3.0",
 		"@tiptap/core": "^3.31.3",
 		"@tiptap/extension-bubble-menu": "^3.31.3",
 		"@tiptap/extension-code-block-lowlight": "^3.31.3",
