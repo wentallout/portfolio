@@ -55,12 +55,14 @@ import { ModeWatcher } from 'mode-watcher';
 			// clamp: at least 1h, at most 30d — "keep me logged in at all times"
 			maxAge = Math.max(60 * 60, Math.min(maxAge, 60 * 60 * 24 * 30));
 			if (!Number.isFinite(maxAge) || maxAge <= 0) maxAge = 60 * 60 * 24 * 7;
-			const secure = window.location.protocol === 'https:' ? '; Secure' : '';
-			const base = `path=/; SameSite=Lax; max-age=${maxAge}${secure}`;
-			const enc = encodeURIComponent(token);
-			document.cookie = `better-auth.session_token=${enc}; ${base}`;
-			document.cookie = `__Secure-better-auth.session_token=${enc}; ${base}`;
-			document.cookie = `neon_auth_token=${enc}; ${base}`;
+			// Cookies are set server-side (HttpOnly) via /api/session — document.cookie
+			// can never carry HttpOnly, which would leave the session token readable by
+			// any injected script (CWE-312).
+			fetch('/api/session', {
+				method: 'POST',
+				headers: { 'content-type': 'application/json' },
+				body: JSON.stringify({ token, maxAge })
+			}).catch(() => {});
 		}
 
 		async function syncSession() {
