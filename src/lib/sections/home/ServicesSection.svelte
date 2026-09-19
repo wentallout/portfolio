@@ -13,7 +13,7 @@
 			class="relative bg-background signature-padding flex flex-col justify-between hover:bg-card transition-all duration-300 h-full overflow-hidden">
 			<div class="relative z-10">
 				<h3 class="text-2xl font-medium text-foreground mb-6 tracking-tight">
-					Tailor-made Website Design & Frontend Development
+					Websites & Applications tailored made for you
 				</h3>
 
 				<ul class="space-y-3 text-base text-muted-foreground mb-8 font-normal">
@@ -21,10 +21,13 @@
 						<span>High-performing landing pages, product showcases & web applications</span>
 					</li>
 					<li class="flex items-center gap-3">
+						<span>Powerful ERP, internal softwares for your business</span>
+					</li>
+					<li class="flex items-center gap-3">
 						<span
 							>Built from scratch with
 							<strong class="text-foreground font-medium">
-								SvelteKit, JavaScript, HTML & custom CSS
+								SvelteKit, TailwindCSS, Supabase, Neon
 							</strong>
 						</span>
 					</li>
@@ -48,7 +51,6 @@
 				class="relative z-10 inline-flex items-center gap-1.5 text-sm text-foreground underline underline-offset-4 decoration-muted-foreground hover:decoration-foreground transition-all font-medium"
 				href={CAL_BOOKING_LINK}>
 				<span>Let's Chat</span>
-				<span>→</span>
 			</a>
 		</div>
 

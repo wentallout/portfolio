@@ -46,7 +46,9 @@
 			tabindex={visible ? 0 : -1}
 			aria-label="Khoa Nguyen — home"
 			aria-current={isActive('/') ? 'page' : undefined}
-			class="flex aspect-square w-full items-center justify-center border-b border-border/70 font-fancy text-sm tracking-tight transition-colors {isActive('/')
+			class="flex aspect-square w-full items-center justify-center border-b border-border/70 font-fancy text-sm tracking-tight transition-colors {isActive(
+				'/'
+			)
 				? 'bg-primary/15 text-primary'
 				: 'text-foreground hover:text-primary'}">
 			KN
@@ -67,15 +69,8 @@
 					: '-translate-x-3 opacity-0 [transform:rotateY(55deg)]'} {active
 					? 'bg-primary/15 text-primary'
 					: 'text-foreground/65 hover:bg-muted hover:text-foreground'}">
-				<!-- active rail — vertical version of the top bar's underline -->
-				<span
-					class="absolute top-2 bottom-2 left-0 w-[2px] bg-primary transition-all duration-300 {active
-						? 'scale-y-100 opacity-100'
-						: 'scale-y-0 opacity-0'}"
-					aria-hidden="true">
-				</span>
 				<Icon width="19" height="19" />
-				<span class="text-sm leading-tight font-normal">{link.title}</span>
+				<span class="text-sm font-normal">{link.title}</span>
 			</a>
 		{/each}
 

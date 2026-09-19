@@ -36,7 +36,7 @@
 
 <div class="w-full space-y-2 mb-5 group">
 	{#if label}
-		<label class="block font-medium text-muted-foreground uppercase tracking-wider" for={label}>
+		<label class="block font-medium text-muted-foreground tracking-wider" for={label}>
 			{label}
 		</label>
 	{/if}
@@ -56,7 +56,7 @@
 			<Input
 				id={label}
 				{name}
-				class="flex-1 h-12 border-0 rounded-none bg-transparent px-3 shadow-none focus-visible:border-0 focus-visible:ring-0 focus-visible:ring-offset-0"
+				class="flex-1 h-13 border-0 rounded-none bg-transparent px-3 shadow-none focus-visible:border-0 focus-visible:ring-0 focus-visible:ring-offset-0"
 				list={list || null}
 				onblur={() => (isFocused = false)}
 				onfocus={() => (isFocused = true)}

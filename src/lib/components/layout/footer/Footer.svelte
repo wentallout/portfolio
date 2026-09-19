@@ -31,7 +31,7 @@
 <footer class="w-full bg-background relative text-sm overflow-hidden">
 	<!-- animated dotted background -->
 	<div
-		class="absolute inset-0 z-0 opacity-5 dark:opacity-60 pointer-events-none"
+		class="absolute inset-0 z-0 opacity-5 dark:opacity-[0.07] pointer-events-none"
 		aria-hidden="true">
 		<DottedBackground
 			bgColor="transparent"

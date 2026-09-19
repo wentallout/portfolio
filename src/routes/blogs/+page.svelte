@@ -14,6 +14,8 @@
 	import SectionTitle from '#lib/sections/layout/SectionTitle.svelte';
 	import MiniSearch from 'minisearch';
 	import { onMount } from 'svelte';
+	import { fade, fly } from 'svelte/transition';
+	import { quintOut } from 'svelte/easing';
 	import { getBlogs } from '#lib/remotes/blogs.remote.js';
 
 	const paginate = ({ currentPage, items, pageSize }) => {
@@ -178,7 +180,9 @@
 					{#snippet dropdown()}
 						{#if showDropdown && searchTerm !== ''}
 							<div
-								class="absolute top-full left-0 z-50 w-full mt-1 bg-card border border-border shadow-2xl overflow-hidden max-h-96 overflow-y-auto min-h-[90dvh]">
+								class="absolute top-full left-0 z-50 w-full mt-1 bg-card border border-border shadow-2xl overflow-hidden max-h-96 overflow-y-auto min-h-[90dvh] origin-top"
+								in:fly={{ y: -4, duration: 150, easing: quintOut }}
+								out:fade={{ duration: 125 }}>
 								{#if isSearching}
 									<div
 										class="flex items-center justify-center p-4 gap-2 text-sm text-muted-foreground">
@@ -254,7 +258,8 @@
 				</div>
 			{:else if filteredBlogs.length === 0 && searchTerm !== ''}
 				<div
-					class="col-span-full flex flex-col items-center justify-center p-12 text-center text-sm text-muted-foreground gap-1">
+					class="col-span-full flex flex-col items-center justify-center p-12 text-center text-sm text-muted-foreground gap-1"
+					in:fly={{ y: 12, duration: 300, easing: quintOut }}>
 					<p class="text-foreground font-medium">No matching articles found</p>
 					<p class="text-muted-foreground">
 						We couldn't find any articles matching "{searchTerm}". Try searching another topic!
@@ -262,16 +267,22 @@
 				</div>
 			{:else if filteredBlogs.length === 0}
 				<div
-					class="col-span-full flex flex-col items-center justify-center p-12 text-center text-sm text-muted-foreground">
+					class="col-span-full flex flex-col items-center justify-center p-12 text-center text-sm text-muted-foreground"
+					in:fly={{ y: 12, duration: 300, easing: quintOut }}>
 					<p>No articles available at the moment.</p>
 				</div>
 			{:else}
-				{#each paginatedItems as paginatedItem (paginatedItem.path)}
-					<BlogCard
-						blogLink={paginatedItem.path}
-						blogTags={paginatedItem.meta.tags ?? paginatedItem.meta.categories}
-						blogTitle={paginatedItem.meta.title} />
-				{/each}
+				{#key currentPage + '-' + filteredBlogs.length}
+					{#each paginatedItems as paginatedItem, i (paginatedItem.path)}
+						<div
+							in:fade={{ duration: 200, delay: Math.min(i, 7) * 30 }}>
+							<BlogCard
+								blogLink={paginatedItem.path}
+								blogTags={paginatedItem.meta.tags ?? paginatedItem.meta.categories}
+								blogTitle={paginatedItem.meta.title} />
+						</div>
+					{/each}
+				{/key}
 			{/if}
 		</BlogListContainer>
 

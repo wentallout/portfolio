@@ -2,7 +2,7 @@
 	import { Textarea } from '#lib/components/ui/textarea/index.js';
 	/** @type {{label?: string, placeholder?: string, name?: string}} */
 	let {
-		label = 'message',
+		label = 'Message',
 		name = '',
 		placeholder = 'Something you want to tell me. Ex: jobs, ideas'
 	} = $props();
@@ -12,9 +12,7 @@
 
 <div class="w-full space-y-2 mb-5 group">
 	{#if label}
-		<label
-			class="block text-base font-medium text-muted-foreground uppercase tracking-wider"
-			for={label}>
+		<label class="block text-base font-medium text-muted-foreground tracking-wider" for={label}>
 			{label}
 		</label>
 	{/if}

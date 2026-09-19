@@ -31,7 +31,7 @@
 
 				<!-- Project Title -->
 				<h2
-					class="text-2xl md:text-2xl font-medium text-foreground mb-2 tracking-tight group-hover:text-primary transition-colors">
+					class="text-2xl font-medium text-foreground tracking-tight group-hover:text-primary transition-colors mb-10">
 					{projectName}
 				</h2>
 
@@ -57,11 +57,11 @@
 					alt={projectName}
 					decoding="async"
 					fetchpriority={index <= 1 ? 'high' : 'auto'}
+					height="450"
 					loading={index <= 1 ? 'eager' : 'lazy'}
 					sizes="(max-width: 768px) 100vw, 50vw"
 					src={thumbnail}
-					width="800"
-					height="450" />
+					width="800" />
 			</div>
 		{/if}
 	</article>

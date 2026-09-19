@@ -201,6 +201,7 @@
 		font-family: 'Inter', sans-serif;
 
 		@apply border-border outline-ring/50;
+		@apply tabular-nums;
 	}
 
 	/* Keyboard focus indicator - clear, consistent, visible in both themes */

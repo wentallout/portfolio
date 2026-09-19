@@ -1,5 +1,7 @@
 <script lang="ts">
 	import { Button } from '#lib/components/ui/button/index.js';
+	import { fly } from 'svelte/transition';
+	import { quintOut } from 'svelte/easing';
 	let { data } = $props();
 	let items = $state(data.items);
 	let uploading = $state(false);
@@ -87,7 +89,7 @@
 </div>
 
 {#if items.length === 0}
-	<p class="text-sm text-muted-foreground mt-8">No media yet. Upload or paste images in the editor — they are auto-saved here.</p>
+	<p class="text-sm text-muted-foreground mt-8" in:fly={{ y: 12, duration: 300, easing: quintOut }}>No media yet. Upload or paste images in the editor — they are auto-saved here.</p>
 {/if}
 
 {#if totalPages > 1}

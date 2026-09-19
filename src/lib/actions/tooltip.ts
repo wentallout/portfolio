@@ -33,6 +33,16 @@ export function tooltip(
 
 	document.body.appendChild(tooltipEl);
 
+	const reduceMotion =
+		typeof window !== 'undefined' &&
+		window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+	const finePointer =
+		typeof window === 'undefined' ||
+		window.matchMedia('(hover: hover) and (pointer: fine)').matches;
+
+	const xTo = gsap.quickTo(tooltipEl, 'x', { duration: 0.18, ease: 'power3.out' });
+	const yTo = gsap.quickTo(tooltipEl, 'y', { duration: 0.18, ease: 'power3.out' });
+
 	let targetX = 0;
 	let targetY = 0;
 
@@ -59,34 +69,36 @@ export function tooltip(
 				targetY = y - offset;
 		}
 
-		gsap.to(tooltipEl, {
-			duration: 0.8,
-			ease: 'elastic.out(1, 0.7)',
-			left: targetX,
-			top: targetY
-		});
+		gsap.set(tooltipEl, { x: targetX, y: targetY });
+		if (reduceMotion || !finePointer) return;
+		xTo(targetX);
+		yTo(targetY);
 	}
 
 	function showTooltip() {
 		tooltipEl.style.visibility = 'visible';
+		gsap.killTweensOf(tooltipEl, 'opacity,scale');
 		gsap.to(tooltipEl, {
-			duration: 0.2,
+			duration: reduceMotion ? 0.01 : 0.2,
 			ease: 'power2.out',
 			opacity: 1,
 			scale: 1,
+			overwrite: true,
 			transformOrigin: 'center center'
 		});
 	}
 
 	function hideTooltip() {
+		gsap.killTweensOf(tooltipEl, 'opacity,scale');
 		gsap.to(tooltipEl, {
-			duration: 0.2,
+			duration: reduceMotion ? 0.01 : 0.15,
 			ease: 'power2.in',
 			onComplete: () => {
 				tooltipEl.style.visibility = 'hidden';
 			},
 			opacity: 0,
-			scale: 0.9
+			scale: 0.97,
+			overwrite: true
 		});
 	}
 
@@ -108,6 +120,7 @@ export function tooltip(
 			node.removeEventListener('mouseenter', handleMouseEnter);
 			node.removeEventListener('mousemove', handleMouseMove);
 			node.removeEventListener('mouseleave', hideTooltip);
+			gsap.killTweensOf(tooltipEl);
 			if (tooltipEl.parentNode) {
 				document.body.removeChild(tooltipEl);
 			}
