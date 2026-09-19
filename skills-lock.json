@@ -7,6 +7,12 @@
       "skillPath": "skills/caveman/SKILL.md",
       "computedHash": "fa7c0951349ae3782a20e55c6d1e72e4c23585b7932bb5e021c17c4f8f055a07"
     },
+    "gsap-frameworks": {
+      "source": "greensock/gsap-skills",
+      "sourceType": "github",
+      "skillPath": "skills/gsap-frameworks/SKILL.md",
+      "computedHash": "08b3917649997d53f94a9831b5db21afafafc89ee3a9a020d2471c69c336bdd6"
+    },
     "impeccable": {
       "source": "pbakaus/impeccable",
       "sourceType": "github",

@@ -50,40 +50,41 @@
 			<div class="max-w-2xl flex flex-col items-start text-left">
 				<!-- Hero Headline with BlurText animation -->
 				<h1
-					class="text-2xl sm:text-2xl md:text-2xl font-medium tracking-tight text-foreground mb-6 leading-[1.05] w-full flex flex-wrap items-baseline gap-x-[0.15em]">
+					class="text-2xl sm:text-2xl md:text-2xl font-medium tracking-tight text-foreground mb-6 leading-[1.05] w-full flex flex-wrap items-baseline gap-x-[0.15em] text-pretty">
 					<BlurText
 						class="text-5xl sm:text-2xl md:text-5xl font-medium tracking-tight leading-[1.1] text-foreground"
 						animateBy="words"
 						direction="top"
 						stepDuration={0.35}
-						text="Crafting products that feel thoughtful & precise"
+						text="I make websites and software people enjoy using."
 						threshold={0.1} />
 				</h1>
 
 				<!-- Hero Subtitle -->
 				<p
 					class="text-sm sm:text-base text-muted-foreground max-w-xl font-normal leading-relaxed mb-8 text-pretty">
-					Hi, I'm Khoa — a developer based in Ho Chi Minh City. I build fast and intuitive web
-					experiences from initial concept to clean production code.
+					Hi, I'm Khoa Nguyen — a developer based in Ho Chi Minh City. I design and build websites
+					and software for small businesses, with a focus on making things clear, fast, and easy to
+					live with.
 				</p>
 
 				<!-- Action Buttons -->
 				<div class="flex flex-wrap items-center justify-start gap-4">
 					<span use:tooltip={{ position: 'top', text: 'Schedule a friendly discovery call' }}>
 						<Button
+							class="h-auto px-6 py-2.5 text-base has-[>svg]:px-6"
 							href={calBookingLink}
-							size="lg"
-							class="h-auto px-6 py-2.5 text-base has-[>svg]:px-6">
-							Book a Call
+							size="lg">
+							Let's talk
 						</Button>
 					</span>
 
 					<Button
+						class="h-auto px-6 py-2.5 text-base has-[>svg]:px-6"
 						href="/projects"
-						variant="outline"
 						size="lg"
-						class="h-auto px-6 py-2.5 text-base has-[>svg]:px-6">
-						My Projects
+						variant="outline">
+						See my work
 					</Button>
 				</div>
 			</div>

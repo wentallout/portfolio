@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { animate } from 'motion';
+	import { gsap } from 'gsap';
 
 	type AnimSnap = Record<string, string | number>;
 
@@ -58,27 +58,34 @@
 
 	const defaultFrom = $derived<AnimSnap>(
 		direction === 'top'
-			? { filter: 'blur(10px)', opacity: 0, y: -50 }
-			: { filter: 'blur(10px)', opacity: 0, y: 50 }
+			? { filter: 'blur(6px)', opacity: 0, y: -12 }
+			: { filter: 'blur(6px)', opacity: 0, y: 12 }
 	);
 
 	const defaultTo = $derived<AnimSnap[]>([
-		{ filter: 'blur(5px)', opacity: 0.5, y: direction === 'top' ? 5 : -5 },
+		{ filter: 'blur(2px)', opacity: 0.6, y: direction === 'top' ? 2 : -2 },
 		{ filter: 'blur(0px)', opacity: 1, y: 0 }
 	]);
 
 	const fromSnapshot = $derived<AnimSnap>(animationFrom ?? defaultFrom);
 	const toSnapshots = $derived<AnimSnap[]>(animationTo ?? defaultTo);
 
-	function buildKeyframes(
-		from: AnimSnap,
-		steps: AnimSnap[]
-	): Record<string, Array<string | number>> {
-		const keys = new Set<string>([...Object.keys(from), ...steps.flatMap((s) => Object.keys(s))]);
-		const out: Record<string, Array<string | number>> = {};
-		keys.forEach((k) => {
-			out[k] = [from[k], ...steps.map((s) => s[k])];
-		});
+	function resolveEase(e: Props['easing']): string {
+		if (typeof e === 'string') return e;
+		return 'power2.out';
+	}
+
+	function toGsapVars(snap: AnimSnap): Record<string, string | number> {
+		const out: Record<string, string | number> = {};
+		for (const [k, v] of Object.entries(snap)) {
+			if (k === 'x' || k === 'y' || k === 'opacity') {
+				out[k] = v;
+			} else if (k === 'filter') {
+				out[k] = String(v);
+			} else {
+				out[k] = v;
+			}
+		}
 		return out;
 	}
 
@@ -113,56 +120,32 @@
 	$effect(() => {
 		if (!inView) return;
 
-		const stepCount = toSnapshots.length + 1;
-		const totalDuration = stepDuration * (stepCount - 1);
-		const times = Array.from({ length: stepCount }, (_, i) =>
-			stepCount === 1 ? 0 : i / (stepCount - 1)
-		);
-
-		const kf = buildKeyframes(fromSnapshot, toSnapshots);
-
-		// Build per-property keyframe arrays with `y` mapped to translateY transform
-		const animations: Array<{ stop: () => void }> = [];
+		const ease = resolveEase(easing);
+		const tweens: Array<gsap.core.Tween> = [];
 
 		spanEls.forEach((el, index) => {
 			if (!el) return;
 
-			const targetKeyframes: Record<string, Array<string | number>> = {};
-			for (const [k, frames] of Object.entries(kf)) {
-				if (k === 'y') {
-					targetKeyframes.transform = frames.map(
-						(v) => `translateY(${typeof v === 'number' ? v + 'px' : v})`
-					);
-				} else {
-					targetKeyframes[k] = frames;
-				}
-			}
+			gsap.set(el, toGsapVars(fromSnapshot));
 
-			const controls = animate(el, targetKeyframes as never, {
-				duration: totalDuration,
-				times,
+			const keyframes = toSnapshots.map((s) => toGsapVars(s));
+			const tween = gsap.to(el, {
+				keyframes,
+				duration: stepDuration * Math.max(1, toSnapshots.length),
 				delay: (index * delay) / 1000,
-				ease: easing as never
+				ease,
+				overwrite: 'auto',
+				onComplete:
+					index === elements.length - 1 && onAnimationComplete
+						? () => onAnimationComplete?.()
+						: undefined
 			});
 
-			if (index === elements.length - 1 && onAnimationComplete) {
-				const finished = (controls as unknown as { finished?: Promise<unknown> }).finished;
-				if (finished && typeof finished.then === 'function') {
-					finished.then(() => onAnimationComplete?.()).catch(() => {});
-				}
-			}
-
-			animations.push({
-				stop: () => {
-					const c = controls as unknown as { stop?: () => void; cancel?: () => void };
-					c.stop?.();
-					c.cancel?.();
-				}
-			});
+			tweens.push(tween);
 		});
 
 		return () => {
-			animations.forEach((a) => a.stop());
+			tweens.forEach((t) => t.kill());
 		};
 	});
 </script>

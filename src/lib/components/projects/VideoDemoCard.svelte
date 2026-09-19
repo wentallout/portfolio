@@ -2,6 +2,16 @@
 	import { fade } from 'svelte/transition';
 
 	let { link = '', title = '', vidDemo = '' } = $props();
+
+	let videoEl: HTMLVideoElement | undefined = $state();
+
+	function play() {
+		videoEl?.play().catch(() => {});
+	}
+
+	function pause() {
+		videoEl?.pause();
+	}
 </script>
 
 <a
@@ -9,16 +19,21 @@
 	aria-label={`link to ${title}`}
 	href={link}
 	rel="noreferrer"
-	target="_blank">
+	target="_blank"
+	onmouseenter={play}
+	onmouseleave={pause}
+	onfocusin={play}
+	onfocusout={pause}>
 	<div class="w-full aspect-video bg-card overflow-hidden relative">
 		<video
+			bind:this={videoEl}
 			class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
 			loop
 			muted
 			playsinline
-			preload="none"
+			preload="metadata"
 			transition:fade={{ duration: 300 }}>
-			<source src={vidDemo} type="video/mp4" />
+			<source src={vidDemo} type="video/webm" />
 		</video>
 	</div>
 

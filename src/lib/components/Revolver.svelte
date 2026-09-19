@@ -90,6 +90,8 @@
 			window.removeEventListener('revolver:reload-start', onReloadStart as EventListener);
 			window.removeEventListener('revolver:reload-done', onReloadStart as EventListener);
 			if (hideTimer) clearTimeout(hideTimer);
+			if (root) gsap.killTweensOf(root);
+			if (cylinder) gsap.killTweensOf(cylinder);
 		};
 	});
 </script>

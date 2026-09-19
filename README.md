@@ -294,6 +294,11 @@ profiles — id (auth subject), email, name, role
 - SEO checklist: https://app.notion.com/p/SEO-AI-Visibility-Audit-Prompt-Library-3c1f96bab4f281e49d3dd0f5a5196344
 - SFX: https://uppbeat.io/contributors/gfx-sounds?type=sfx
 
+
+## Aesthetic
+
+[ui-skills](https://www.ui-skills.com)
+
 ## License
 
 [Published under MIT License](https://github.com/wentallout/portfolio/blob/master/LICENSE.md)
