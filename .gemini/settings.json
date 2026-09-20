@@ -10,6 +10,10 @@
 		"Neon": {
 			"type": "http",
 			"url": "https://mcp.neon.tech/mcp"
+		},
+		"frontendchecklist": {
+			"type": "http",
+			"url": "https://mcp.frontendchecklist.io"
 		}
 	},
 	"general": {

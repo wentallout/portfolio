@@ -60,7 +60,7 @@ export default defineConfig({
 				remoteFunctions: true
 			}
 		}),
-		sveltekitOG(),
+		sveltekitOG({ esmImport: false }),
 		Icons({ compiler: 'svelte', defaultClass: 'icon' }),
 		imagetools({
 			defaultDirectives: () => {
