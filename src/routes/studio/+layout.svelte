@@ -12,7 +12,7 @@
 			<div class="mx-auto max-w-6xl flex items-center justify-between px-6 py-4">
 				<a class="font-bold text-lg" href="/studio">Studio</a>
 				<nav class="flex gap-4 text-sm">
-					<a class="hover:underline" href="/studio/posts">Blogs</a>
+					<a class="hover:underline" href="/studio/blogs">Blogs</a>
 					<a class="hover:underline" href="/studio/projects">Projects</a>
 					<a class="hover:underline" href="/studio/media">Media</a>
 					<a class="text-muted-foreground hover:underline" href="/">↗ View site</a>

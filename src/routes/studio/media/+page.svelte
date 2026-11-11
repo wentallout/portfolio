@@ -94,7 +94,7 @@
 
 {#if totalPages > 1}
 	<div class="flex gap-2 mt-6">
-		{#each Array(totalPages) as _, i}
+		{#each Array(totalPages) as _, i (i)}
 			<Button href={`?page=${i+1}`} variant={data.page === i+1 ? "default" : "outline"} size="sm" class="rounded-none min-w-9">{i+1}</Button>
 		{/each}
 	</div>

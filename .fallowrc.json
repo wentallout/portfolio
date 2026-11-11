@@ -19,8 +19,7 @@
 	},
 	"ignoreDependencies": [
 		"~icons",
-		"@arcjet/sveltekit",
-		"@fontsource-variable/jetbrains-mono",
+		"@arcjet/sveltekit"
 		"@sveltejs/kit",
 		"@tailwindcss/forms",
 		"@tailwindcss/typography",

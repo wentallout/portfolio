@@ -48,7 +48,7 @@
 
 <!-- Top bar scrolls away with the page (NOT sticky) — the floating sidebar takes over on scroll -->
 <header
-	class="relative top-auto z-30 w-full overflow-hidden border-grid-b bg-background/85 backdrop-blur-md transition-all duration-200 supports-[backdrop-filter]:bg-background/70 dark:bg-background/80 dark:supports-[backdrop-filter]:bg-background/60">
+	class="relative top-auto z-30 w-full overflow-hidden border border-border bg-background/90 backdrop-blur-sm transition-colors duration-200 dark:bg-background/85 mb-8 md:mb-12">
 	<!-- subtle dotted veil — very low opacity + soft wash so text stays AAA contrast in both themes -->
 
 	<div

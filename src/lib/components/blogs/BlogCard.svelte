@@ -5,7 +5,7 @@
 </script>
 
 <a
-	class="relative bg-background hover:bg-card signature-padding flex flex-col justify-between transition-all duration-300 group min-h-[220px]"
+	class="relative bg-background hover:bg-card signature-padding flex flex-col justify-between transition-colors duration-300 group min-h-55"
 	href={blogLink}
 	use:haptic={'selection'}>
 	<div>

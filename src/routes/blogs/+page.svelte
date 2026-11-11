@@ -148,17 +148,17 @@
 	let paginatedItems = $derived(paginate({ currentPage, items: filteredBlogs, pageSize }));
 </script>
 
-<div class="w-full bg-background relative">
-	<div class="px-6 py-4 border-grid-b bg-background">
+<div class="flex flex-col gap-10 md:gap-16 w-full">
+	<div class="px-6 py-4 border border-border bg-background">
 		<Breadcrumb minDepth={1} />
 	</div>
 
 	<section
-		class="w-full relative border-grid-b"
+		class="w-full relative border border-border bg-background"
 		onclick={() => (showDropdown = false)}
 		onkeydown={() => (showDropdown = false)}
 		role="presentation">
-		<SectionTitle sectionTitle={SECTION_TITLES.thoughts} />
+		<SectionTitle as="h1" sectionTitle={SECTION_TITLES.thoughts} />
 
 		<!-- Search -->
 		<div class="p-6 bg-background relative">

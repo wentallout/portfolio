@@ -5,13 +5,15 @@
 	import { getKhoaAge } from '#lib/utils/time.js';
 </script>
 
-<div class="w-full bg-background relative">
-	<div class="px-6 py-4 border-grid-b bg-background">
+<div class="flex flex-col gap-10 md:gap-16 w-full">
+	<h1 class="sr-only">About {PROFILE_COPY.profileHeading}</h1>
+
+	<div class="px-6 py-4 border border-border bg-background">
 		<Breadcrumb minDepth={1} />
 	</div>
 
 	<!-- 2-Column Matrix Row -->
-	<div class="grid grid-cols-1 md:grid-cols-2 gap-0 border-grid-b relative items-stretch">
+	<div class="grid grid-cols-1 md:grid-cols-2 gap-0 border border-border bg-background relative items-stretch">
 		<!-- Bio Card -->
 		<div class="signature-padding flex flex-col justify-between relative bg-background h-full">
 			<div>
@@ -69,7 +71,7 @@
 	</div>
 
 	<!-- Bookmarks & Aesthetic Card -->
-	<div class="signature-padding border-grid-b relative bg-background">
+	<div class="signature-padding border border-border relative bg-background">
 		<div class="flex items-center justify-between text-sm mb-4">
 			<span class="text-sm text-muted-foreground font-medium">
 				{PROFILE_COPY.inspirationBadge}

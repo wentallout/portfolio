@@ -27,22 +27,22 @@
 
 <SEO {...seoProps} />
 
-<div class="w-full bg-background relative">
-	<div class="px-6 py-4 border-grid-b bg-background">
+<div class="flex flex-col gap-10 md:gap-16 w-full">
+	<div class="px-6 py-4 border border-border bg-background">
 		<Breadcrumb minDepth={1} />
 	</div>
 
-	<section class="border-grid-b w-full relative">
-		<SectionTitle sectionTitle={SECTION_TITLES.featured} />
+	<section class="w-full relative border border-border bg-background overflow-hidden">
+		<SectionTitle as="h1" sectionTitle={SECTION_TITLES.featured} />
 		<ProjectList />
 	</section>
 
-	<section class="border-grid-b w-full relative">
+	<section class="w-full relative border border-border bg-background overflow-hidden">
 		<SectionTitle sectionTitle={SECTION_TITLES.webDemos} />
 		<VideoDemoList />
 	</section>
 
-	<section class="border-grid-b w-full relative">
+	<section class="w-full relative border border-border bg-background overflow-hidden">
 		<SectionTitle sectionTitle={SECTION_TITLES.codeSnippets} />
 		<SnippetList />
 	</section>

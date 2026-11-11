@@ -10,8 +10,10 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<link rel="manifest" href="/manifest.webmanifest" />
 
-		<!-- Inter + Nightmare self-hosted via @font-face in layout.css (font-display: swap).
-			No Google Fonts request: removes ~960ms render-blocking chain. -->
+		<!-- Two self-hosted fonts via @font-face in layout.css (font-display: swap):
+			1. Plus Jakarta Sans Variable (Clean corporate sans)
+			2. Newsreader Variable (Editorial display serif)
+			Both with full Vietnamese subset support. Zero external render-blocking chains. -->
 		%sveltekit.head%
 	</head>
 

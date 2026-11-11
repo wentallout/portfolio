@@ -9,6 +9,6 @@
 
 <Breadcrumb />
 
-<SectionTitle sectionTitle="Blog tags" />
+<SectionTitle as="h1" sectionTitle="Blog tags" />
 
 <BlogTagsList data={{ blogs }} />

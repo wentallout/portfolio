@@ -11,7 +11,7 @@
 </script>
 
 <div
-	class="bg-background flex flex-col justify-between relative hover:bg-card transition-all duration-300 group h-full">
+	class="bg-background flex flex-col justify-between relative hover:bg-card transition-colors duration-300 group h-full">
 	<ExLink style="display: flex; flex-direction: column; height: 100%; width: 100%;" {href}>
 		<div class="w-full aspect-video overflow-hidden bg-card relative">
 			<img

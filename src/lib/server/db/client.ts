@@ -1,11 +1,7 @@
-import { neon, neonConfig } from '@neondatabase/serverless';
+import { neon } from '@neondatabase/serverless';
 import { drizzle } from 'drizzle-orm/neon-http';
 import { DATABASE_URL } from '$app/env/private';
 import * as schema from './schema.js';
-
-neonConfig.fetchEndpoint = (host) => {
-	return `https://${host}`;
-};
 
 function getDbUrl() {
 	const url = DATABASE_URL;

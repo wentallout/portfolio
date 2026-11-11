@@ -156,12 +156,18 @@ import { get } from 'svelte/store';
 
 		gsap.set(cursor, { rotation: 0 });
 
+		let lastCornerKey = '';
 		tickerFn = () => {
 			if (!targetCornerPositions || !cursor) return;
 			const strength = activeStrength.current;
 			if (strength === 0) return;
 			const cx = gsap.getProperty(cursor, 'x') as number;
 			const cy = gsap.getProperty(cursor, 'y') as number;
+			// corners are locked to the target rect, so once the computed positions stop
+			// changing there is nothing to re-tween — bail out instead of churning tweens
+			const key = `${cx},${cy},${strength},${targetCornerPositions[0].x},${targetCornerPositions[0].y},${targetCornerPositions[2].x},${targetCornerPositions[2].y}`;
+			if (key === lastCornerKey) return;
+			lastCornerKey = key;
 			Array.from(corners).forEach((corner, i) => {
 				const curX = gsap.getProperty(corner, 'x') as number;
 				const curY = gsap.getProperty(corner, 'y') as number;
@@ -185,14 +191,20 @@ import { get } from 'svelte/store';
 		};
 		window.addEventListener('mousemove', moveHandler);
 
+		// elementFromPoint forces a hit test on every scroll event — batch to one per frame
+		let scrollFrame = 0;
 		const scrollHandler = () => {
-			if (!activeTarget || !cursor) return;
-			const mx = gsap.getProperty(cursor, 'x') as number;
-			const my = gsap.getProperty(cursor, 'y') as number;
-			const under = document.elementFromPoint(mx, my);
-			const still =
-				under && (under === activeTarget || under.closest(effectiveSelector) === activeTarget);
-			if (!still) currentLeaveHandler?.();
+			if (scrollFrame) return;
+			scrollFrame = requestAnimationFrame(() => {
+				scrollFrame = 0;
+				if (!activeTarget || !cursor) return;
+				const mx = gsap.getProperty(cursor, 'x') as number;
+				const my = gsap.getProperty(cursor, 'y') as number;
+				const under = document.elementFromPoint(mx, my);
+				const still =
+					under && (under === activeTarget || under.closest(effectiveSelector) === activeTarget);
+				if (!still) currentLeaveHandler?.();
+			});
 		};
 		window.addEventListener('scroll', scrollHandler, { passive: true });
 
@@ -393,11 +405,22 @@ import { get } from 'svelte/store';
 			}
 		};
 		spamTargetClass();
-		const observer = new MutationObserver(spamTargetClass);
+		// coalesce bursts of DOM mutations into one pass per frame
+		let spamFrame = 0;
+		const scheduleSpam = () => {
+			if (spamFrame) return;
+			spamFrame = requestAnimationFrame(() => {
+				spamFrame = 0;
+				spamTargetClass();
+			});
+		};
+		const observer = new MutationObserver(scheduleSpam);
 		observer.observe(document.body, { childList: true, subtree: true });
 
 		return () => {
 			if (crosshairHideTimer) clearTimeout(crosshairHideTimer);
+			if (scrollFrame) cancelAnimationFrame(scrollFrame);
+			if (spamFrame) cancelAnimationFrame(spamFrame);
 			unsubscribeReload?.();
 			observer.disconnect();
 			if (tickerFn) gsap.ticker.remove(tickerFn);
@@ -423,12 +446,12 @@ import { get } from 'svelte/store';
 			bind:this={bullet}
 			class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 opacity-0 pointer-events-none"
 			style="will-change:transform, opacity; width: 5px; height: 14px;">
-			<div class="w-full h-[9px] rounded-[1px]" style="background: linear-gradient(90deg, #854d0e, #facc15 50%, #a16207); box-shadow: inset 0 1px 0 rgba(255,255,255,0.5);"></div>
-			<div class="w-[5px] h-[5px] mx-auto -mt-[1px]" style="background: #e5e7eb; clip-path: polygon(10% 0%, 90% 0%, 50% 100%); box-shadow: 0 1px 2px rgba(0,0,0,0.3);"></div>
+			<div class="w-full h-2.25 rounded-[1px]" style="background: linear-gradient(90deg, #854d0e, #facc15 50%, #a16207); box-shadow: inset 0 1px 0 rgba(255,255,255,0.5);"></div>
+			<div class="w-1.25 h-1.25 mx-auto -mt-0.25" style="background: #e5e7eb; clip-path: polygon(10% 0%, 90% 0%, 50% 100%); box-shadow: 0 1px 2px rgba(0,0,0,0.3);"></div>
 		</div>
 		<div
 			bind:this={casing}
-			class="absolute top-1/2 left-1/2 w-[4px] h-[7px] rounded-[1px] bg-amber-400 opacity-0 pointer-events-none -translate-x-1/2 -translate-y-1/2 border border-amber-700"
+			class="absolute top-1/2 left-1/2 w-1 h-1.75 rounded-[1px] bg-amber-400 opacity-0 pointer-events-none -translate-x-1/2 -translate-y-1/2 border border-amber-700"
 			style="will-change:transform, opacity;">
 		</div>
 		<div
@@ -439,20 +462,20 @@ import { get } from 'svelte/store';
 		<!-- Reload barrel — replaces dot/corners during reload -->
 		<div
 			bind:this={barrelIcon}
-			class="absolute top-1/2 left-1/2 w-[28px] h-[28px] -translate-x-1/2 -translate-y-1/2 pointer-events-none opacity-0 scale-70"
+			class="absolute top-1/2 left-1/2 w-7 h-7 -translate-x-1/2 -translate-y-1/2 pointer-events-none opacity-0 scale-70"
 			style="will-change:transform, opacity;">
 			<div
 				class="absolute inset-0 rounded-full"
 				style="border: 1px solid var(--border); background: color-mix(in oklch, var(--muted) 72%, transparent);">
 			</div>
-			<div class="absolute inset-[3px] rounded-full flex items-center justify-center">
+			<div class="absolute inset-0.75 rounded-full flex items-center justify-center">
 				{#each Array(6) as _, i (i)}
 					<div
-						class="absolute w-[5px] h-[5px] rounded-full"
+						class="absolute w-1.25 h-1.25 rounded-full"
 						style="left:50%; top:50%; transform: translate(-50%,-50%) rotate({i * 60}deg) translateY(-8px); background: color-mix(in oklch, var(--muted-foreground) 70%, transparent); border: 0.5px solid var(--border);">
 					</div>
 				{/each}
-				<div class="w-[5px] h-[5px] rounded-full" style="background: var(--muted-foreground); opacity:0.7;"></div>
+				<div class="w-1.25 h-1.25 rounded-full" style="background: var(--muted-foreground); opacity:0.7;"></div>
 			</div>
 		</div>
 		<div

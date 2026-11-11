@@ -25,9 +25,9 @@
 
 <SEO {...seoProps} />
 
-<div class="w-full bg-background relative">
-	<div class="px-6 py-4 border-grid-b bg-background">
+<div class="flex flex-col gap-10 md:gap-16 w-full">
+	<div class="px-6 py-4 border border-border bg-background">
 		<Breadcrumb minDepth={1} />
 	</div>
-	<ContactForm />
+	<ContactForm as="h1" />
 </div>

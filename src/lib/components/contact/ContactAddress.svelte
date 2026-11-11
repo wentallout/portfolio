@@ -11,7 +11,7 @@
 		{@render icon?.()}
 	</div>
 
-	<div class="flex flex-col gap-1.5 min-w-0 flex-1">
+	<div class="flex flex-col gap-2 min-w-0 flex-1">
 		{#if href}
 			<ExLink {href}>
 				<div class="font-medium text-foreground hover:text-primary transition-colors">
@@ -23,7 +23,7 @@
 				{title}
 			</div>
 		{/if}
-		<div class="text-muted-foreground space-y-1 font-normal">
+		<div class="text-muted-foreground space-y-1.5 font-normal">
 			{@render children?.()}
 		</div>
 	</div>

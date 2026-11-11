@@ -13,7 +13,7 @@
 	{@html schema}
 </svelte:head>
 
-<section class="border-grid-b w-full relative">
+<section class="w-full relative border border-border bg-background overflow-hidden">
 	<SectionTitle sectionTitle={SECTION_TITLES.faq} />
 
 	<div class="w-full relative">

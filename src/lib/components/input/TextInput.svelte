@@ -43,9 +43,9 @@
 
 	<div class="relative w-full">
 		<div
-			class="flex items-center w-full border-grid-all bg-[var(--background)] relative transition-all duration-200 focus-within:border-[var(--foreground)] group-hover:border-muted-foreground has-[[data-slot=input]:focus-visible]:border-[var(--foreground)] has-[[data-slot=input]:focus-visible]:ring-1 has-[[data-slot=input]:focus-visible]:ring-[var(--foreground)]"
+			class="flex items-center w-full border-grid-all bg-background relative transition-[border-color,box-shadow] duration-200 focus-within:border-foreground group-hover:border-muted-foreground has-[[data-slot=input]:focus-visible]:border-foreground has-[[data-slot=input]:focus-visible]:ring-1 has-[[data-slot=input]:focus-visible]:ring-foreground"
 			class:ring-1={isFocused}
-			class:ring-[var(--foreground)]={isFocused}>
+			class:ring-foreground={isFocused}>
 			{#if icon}
 				<div
 					class="p-4 flex items-center text-muted-foreground group-focus-within:text-foreground transition-colors">

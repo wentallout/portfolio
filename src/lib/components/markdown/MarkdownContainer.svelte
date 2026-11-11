@@ -3,6 +3,6 @@
 	let { children } = $props();
 </script>
 
-<div class="prose dark:prose-invert max-w-none">
+<div class="prose dark:prose-invert max-w-none break-words">
 	{@render children?.()}
 </div>

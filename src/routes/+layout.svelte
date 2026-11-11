@@ -9,11 +9,11 @@
 	import TargetCursor from '#lib/components/TargetCursor.svelte';
 	import SfxProvider from '#lib/components/SfxProvider.svelte';
 	import Misc from '#lib/sections/layout/Misc.svelte';
-import { attachGlyphnav } from 'glyphnav/sveltekit';
-import { ModeWatcher } from 'mode-watcher';
- import { Toaster } from '#lib/components/ui/sonner/index.js';
- import { onMount } from 'svelte';
- import { authClient } from '#lib/auth-client.js';
+	// import { attachGlyphnav } from 'glyphnav/sveltekit';
+	import { ModeWatcher } from 'mode-watcher';
+	import { Toaster } from '#lib/components/ui/sonner/index.js';
+	import { onMount } from 'svelte';
+	import { authClient } from '#lib/auth-client.js';
 
 	let { children, data } = $props();
 
@@ -24,12 +24,23 @@ import { ModeWatcher } from 'mode-watcher';
 			document.startViewTransition(async () => {
 				resolve();
 				await navigation.complete;
+				// Let any font face the incoming page needs finish loading before the
+				// browser snapshots it, otherwise the cross-fade paints fallback text.
+				await document.fonts.ready;
 			});
 		});
 	});
 
 	onMount(() => {
 		document.documentElement.toggleAttribute('hydrated', true);
+
+		// Warm the 2 font families used across routes, so no page paints fallback
+		// text while a face is still resolving.
+		void Promise.all([
+			document.fonts.load('400 1rem "Plus Jakarta Sans Variable"'),
+			document.fonts.load('400 1rem "Newsreader Variable"')
+		]);
+
 
 		function getJwtExp(token: string): number | null {
 			try {
@@ -110,7 +121,11 @@ import { ModeWatcher } from 'mode-watcher';
 		};
 		document.addEventListener('visibilitychange', onVisible);
 		window.addEventListener('focus', onFocus);
-		const detachGlyphnav = attachGlyphnav(goto, { animatePopState: true, commit: 'before', duration: 250 }).detach;
+		// const detachGlyphnav = attachGlyphnav(goto, {
+		// 	animatePopState: true,
+		// 	commit: 'before',
+		// 	duration: 250
+		// }).detach;
 		const cleanupKeepAlive = () => {
 			clearInterval(interval);
 			document.removeEventListener('visibilitychange', onVisible);
@@ -150,7 +165,10 @@ import { ModeWatcher } from 'mode-watcher';
 										`${b.meta.title} ${b.meta.description || ''}`.toLowerCase().includes(q)
 									)
 									.slice(0, 5)
-									.map((b: { meta: { title: string }; path: string }) => ({ title: b.meta.title, path: b.path }));
+									.map((b: { meta: { title: string }; path: string }) => ({
+										title: b.meta.title,
+										path: b.path
+									}));
 								return { query, results: matches };
 							} catch (e) {
 								return { error: String(e) };
@@ -237,11 +255,11 @@ import { ModeWatcher } from 'mode-watcher';
 			return () => {
 				controller.abort();
 				cleanupKeepAlive();
-				detachGlyphnav();
+				// detachGlyphnav();
 			};
 		} else if (typeof registerTool === 'function') {
 			// Fallback for older EPP provideContext API
-			// @ts-expect-error - legacy API
+
 			registerTool({
 				tools: [
 					{
@@ -265,28 +283,30 @@ import { ModeWatcher } from 'mode-watcher';
 						execute: async ({ query }) => {
 							const res = await fetch('/api/blogs');
 							const blogs = await res.json();
-							return blogs.filter((b) => b.meta.title.toLowerCase().includes(query.toLowerCase())).slice(0, 5);
+							return blogs
+								.filter((b) => b.meta.title.toLowerCase().includes(query.toLowerCase()))
+								.slice(0, 5);
 						}
 					}
 				]
 			});
 			return () => {
 				cleanupKeepAlive();
-				detachGlyphnav();
+				// detachGlyphnav();
 			};
 		}
 
 		return () => {
 			cleanupKeepAlive();
-			detachGlyphnav();
+			// detachGlyphnav();
 		};
 	});
 </script>
 
-	<ModeWatcher defaultMode="system" />
-	<Toaster position="top-right" richColors closeButton />
-	<SfxProvider />
-	<TargetCursor
+<ModeWatcher defaultMode="system" />
+<Toaster closeButton position="top-right" richColors />
+<SfxProvider />
+<TargetCursor
 	hideDefaultCursor={false}
 	hoverDuration={0.2}
 	parallaxOn={true}
@@ -299,7 +319,7 @@ import { ModeWatcher } from 'mode-watcher';
 <div
 	class="min-h-screen layout-gutter-bg antialiased selection:bg-primary/25 selection:text-primary transition-colors duration-200">
 	<div
-		class="max-w-6xl mx-auto border-grid-l border-grid-r min-h-screen flex flex-col bg-background text-foreground relative mb-16 md:mb-0 transition-colors duration-200">
+		class="max-w-6xl mx-auto px-4 sm:px-6 md:px-8 py-4 sm:py-6 md:py-8 min-h-screen flex flex-col text-foreground relative mb-16 md:mb-0 transition-colors duration-200">
 		<NavBar user={data?.user} />
 
 		<main id="main-content" class="grow w-full relative z-10">

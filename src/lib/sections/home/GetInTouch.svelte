@@ -3,5 +3,7 @@
 	import Faq from '#lib/sections/home/Faq.svelte';
 </script>
 
-<Faq />
-<ContactForm />
+<div class="flex flex-col gap-10 md:gap-16 w-full">
+	<Faq />
+	<ContactForm />
+</div>

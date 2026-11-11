@@ -234,7 +234,7 @@
 				bind:value={excerpt}
 				rows={3}
 				placeholder="Short description — fallback for SEO if empty"
-				class="text-sm min-h-[80px]" />
+				class="text-sm min-h-20" />
 		</div>
 
 		<div class="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -307,9 +307,9 @@
 			{#if editor}
 				<Tiptap {editor}>
 					<Edra.Toolbar class="flex flex-wrap gap-1 p-2 border-b bg-muted/20" />
-					<div class="min-h-[500px] p-4">
+					<div class="min-h-125 p-4">
 						<Edra.Content
-							class="prose prose-sm dark:prose-invert max-w-none focus:outline-none min-h-[480px] text-sm" />
+							class="prose prose-sm dark:prose-invert max-w-none focus:outline-none min-h-120 text-sm" />
 					</div>
 				</Tiptap>
 			{:else}

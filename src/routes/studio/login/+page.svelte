@@ -62,10 +62,10 @@
 		<h1 class="text-2xl font-bold">Studio Login</h1>
 		<p class="text-sm text-muted-foreground mt-2">Sign in with Google. Only the admin email configured in <code>CMS_ADMIN_EMAIL</code> is allowed.</p>
 		{#if error}
-			<p class="mt-4 text-sm text-red-600 border border-red-200 bg-red-50 rounded-none p-3">{error}</p>
+			<p class="mt-4 text-sm text-destructive border border-destructive/40 bg-destructive/10 rounded-none p-3">{error}</p>
 		{/if}
 		{#if msg}
-			<p class="mt-4 text-sm text-amber-600 border border-amber-200 bg-amber-50 rounded-none p-3">{msg}</p>
+			<p class="mt-4 text-sm text-destructive border border-destructive/40 bg-destructive/10 rounded-none p-3">{msg}</p>
 		{/if}
 		<Button onclick={handleGoogle} disabled={loading} class="mt-6 w-full">
 			{loading ? 'Redirecting…' : 'Continue with Google (JS)'}

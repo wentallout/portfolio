@@ -6,12 +6,18 @@
 		"stylelint-declaration-strict-value"
 	],
 	"rules": {
-		"block-opening-brace-newline-before": "always",
-		"a11y/no-outline-none": true,
-		"a11y/selector-pseudo-class-focus": true,
-		"order/order": ["custom-properties", "declarations"],
+		"order/order": [
+			"custom-properties",
+			"declarations"
+		],
 		"color-named": "never",
-		"scale-unlimited/declaration-strict-value": [["/color$/", "z-index", "font-size"]],
+		"scale-unlimited/declaration-strict-value": [
+			[
+				"/color$/",
+				"z-index",
+				"font-size"
+			]
+		],
 		"font-family-name-quotes": "always-where-required",
 		"font-weight-notation": "named-where-possible",
 		"function-url-no-scheme-relative": true,
@@ -20,7 +26,28 @@
 		"plugin/no-low-performance-animation-properties": [
 			true,
 			{
-				"ignoreProperties": ["color", "background-color", "box-shadow"]
+				"ignoreProperties": [
+					"color",
+					"background-color",
+					"box-shadow",
+					"border-color",
+					"text-decoration-color",
+					"outline-color",
+					"fill",
+					"stroke",
+					"border",
+					"border-width"
+				]
+			}
+		],
+		"declaration-property-value-disallowed-list": [
+			{
+				"transition": [
+					"/(^|,|\\s)all(,|\\s|$)/"
+				],
+				"transition-property": [
+					"/(^|,|\\s)all(,|\\s|$)/"
+				]
 			}
 		],
 		"unit-disallowed-list": [],
@@ -30,12 +57,85 @@
 		"property-no-unknown": [
 			true,
 			{
-				"ignoreProperties": ["/^lost-/"]
+				"ignoreProperties": [
+					"/^lost-/"
+				]
 			}
 		],
-		"selector-pseudo-class-no-unknown": [true, { "ignorePseudoClasses": ["global"] }]
+		"selector-pseudo-class-no-unknown": [
+			true,
+			{
+				"ignorePseudoClasses": [
+					"global"
+				]
+			}
+		],
+		"at-rule-no-unknown": [
+			true,
+			{
+				"ignoreAtRules": [
+					"custom-variant",
+					"plugin",
+					"theme",
+					"apply",
+					"source",
+					"tailwind",
+					"variant",
+					"reference",
+					"config",
+					"utility"
+				]
+			}
+		],
+		"at-rule-prelude-no-invalid": [
+			true,
+			{
+				"ignoreAtRules": [
+					"apply",
+					"tailwind",
+					"custom-variant",
+					"plugin",
+					"theme",
+					"config",
+					"variant",
+					"source",
+					"reference",
+					"utility"
+				]
+			}
+		]
 	},
-	"ignoreFiles": ["node_modules/*", "src/assets/**", "build/**", "src/styles/reset.css"],
-	"defaultSeverity": "error",
-	"customSyntax": "postcss-html"
+	"overrides": [
+		{
+			"files": [
+				"**/*.svelte"
+			],
+			"customSyntax": "postcss-html"
+		},
+		{
+			"files": [
+				"src/lib/og/**/*.svelte"
+			],
+			"rules": {
+				"scale-unlimited/declaration-strict-value": null
+			}
+		},
+		{
+			"files": [
+				"src/routes/design-system/**/*.svelte"
+			],
+			"rules": {
+				"scale-unlimited/declaration-strict-value": null
+			}
+		}
+	],
+	"ignoreFiles": [
+		"node_modules/*",
+		"src/assets/**",
+		"build/**",
+		"src/styles/reset.css",
+		"src/lib/components/edra/onedark.css",
+		"src/lib/components/edra/shadcn/editor.css"
+	],
+	"defaultSeverity": "error"
 }

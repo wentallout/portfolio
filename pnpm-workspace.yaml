@@ -2,3 +2,5 @@ allowBuilds:
   core-js: true
   esbuild: true
   svelte-preprocess: true
+minimumReleaseAgeExclude:
+  - '@shadcn/lint@0.2.0'

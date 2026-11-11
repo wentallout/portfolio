@@ -445,9 +445,16 @@
 		}
 	}
 
+	let autoGrowFrame = 0;
+
 	function handleInput(e: Event) {
 		const target = e.target as HTMLTextAreaElement;
-		target.style.height = `${target.scrollHeight}px`;
+		// read scrollHeight once per frame instead of forcing a reflow per keystroke
+		if (autoGrowFrame) cancelAnimationFrame(autoGrowFrame);
+		autoGrowFrame = requestAnimationFrame(() => {
+			autoGrowFrame = 0;
+			target.style.height = `${target.scrollHeight}px`;
+		});
 	}
 </script>
 
@@ -487,7 +494,7 @@
 		aiResponse = '';
 		return false;
 	}}
-	class="bg-popover/75 backdrop-blur-2xl rounded-lg flex max-h-120 max-w-3xl w-full flex-col p-0 transition-[height] duration-500 z-100"
+	class="bg-popover/90 rounded-lg flex max-h-120 max-w-3xl w-full flex-col p-0 transition-[height] duration-500 z-100"
 	options={{
 		strategy: 'absolute',
 		autoPlacement: {
@@ -504,7 +511,7 @@
 	}}
 >
 	{#if aiState === AIState.Idle}
-		<div class="shadow-2xl w-xl border backdrop-blur-2xl rounded-xl flex flex-col overflow-hidden">
+		<div class="shadow-2xl w-xl border rounded-xl flex flex-col overflow-hidden">
 			<!-- Input Area -->
 			<form class="px-3 py-3 flex items-start">
 				<textarea

@@ -31,7 +31,7 @@
 
 				<!-- Project Title -->
 				<h2
-					class="text-2xl font-medium text-foreground tracking-tight group-hover:text-primary transition-colors mb-10">
+					class="text-2xl font-medium text-foreground tracking-tight group-hover:text-primary transition-colors mb-5">
 					{projectName}
 				</h2>
 
@@ -41,7 +41,7 @@
 				</p>
 
 				{#if output}
-					<div class="mt-4 text-base text-muted-foreground">
+					<div class="mt-5 text-base text-muted-foreground">
 						<span class="text-muted-foreground font-medium">Deliverables:</span>
 						{output}
 					</div>

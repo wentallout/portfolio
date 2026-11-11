@@ -42,6 +42,6 @@
 <style>
 	:global(aside.toc),
 	:global(aside.toc > nav > ol > li) {
-		font-size: 0.875rem !important;
+		font-size: var(--text-sm) !important;
 	}
 </style>

@@ -222,7 +222,7 @@
 </script>
 
 <NodeViewWrapper
-	class="my-4! w-full flex flex-col items-center group relative rounded-lg overflow-hidden transition-all duration-200"
+	class="my-4! w-full flex flex-col items-center group relative rounded-lg overflow-hidden transition-colors duration-200"
 	contenteditable={false}
 >
 	{#if isEditing}

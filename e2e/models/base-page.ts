@@ -24,6 +24,15 @@ export class BasePage {
 		await expect(this.page.locator(':root')).toHaveAttribute('hydrated', { timeout: 10000 });
 	}
 
+	/** Click a header link and wait for the client-side navigation to settle. */
+	async navigate_via_header(link_name: RegExp | string, expected_url: RegExp | string) {
+		const link = this.page.locator('header').getByRole('link', { name: link_name }).first();
+		if ((await link.count()) === 0) return;
+		await link.click();
+		await this.hydrated();
+		await expect(this.page).toHaveURL(expected_url);
+	}
+
 	async has_no_horizontal_overflow() {
 		const has_overflow = await this.page.evaluate(() => {
 			const doc = document.documentElement;

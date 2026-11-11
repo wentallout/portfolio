@@ -171,7 +171,7 @@
 				}}
 			>
 				<div
-					class="bg-muted z-20 h-16 w-1 rounded-xl border opacity-0 transition-all group-hover:opacity-100"
+					class="bg-muted z-20 h-16 w-1 rounded-xl border opacity-0 transition-opacity group-hover:opacity-100"
 				></div>
 			</div>
 
@@ -189,7 +189,7 @@
 				}}
 			>
 				<div
-					class="bg-muted z-20 h-16 w-1 rounded-xl border opacity-0 transition-all group-hover:opacity-100"
+					class="bg-muted z-20 h-16 w-1 rounded-xl border opacity-0 transition-opacity group-hover:opacity-100"
 				></div>
 			</div>
 			<div

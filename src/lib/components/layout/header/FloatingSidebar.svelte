@@ -35,8 +35,8 @@
 	aria-hidden={!visible}>
 	<nav
 		aria-label="scrolled section menu"
-		class="relative flex w-[68px] flex-col items-stretch border border-border/80 bg-background/85 shadow-lg shadow-black/5 backdrop-blur-md transition-all duration-500 supports-[backdrop-filter]:bg-background/70 [transform-style:preserve-3d] [transition-timing-function:cubic-bezier(0.22,1,0.36,1)] {visible
-			? 'pointer-events-auto translate-x-0 opacity-100 [transform:rotateY(0deg)]'
+		class="relative flex w-17 flex-col items-stretch border border-border/80 bg-background/95 shadow-lg shadow-black/5 transition-[transform,opacity,background-color] duration-500 [transform-style:preserve-3d] [transition-timing-function:cubic-bezier(0.22,1,0.36,1)] {visible
+			? 'will-change-transform pointer-events-auto translate-x-0 opacity-100 [transform:rotateY(0deg)]'
 			: 'pointer-events-none -translate-x-8 opacity-0 [transform:rotateY(68deg)]'}"
 		style="transform-origin: right center;">
 		<!-- brand cap — this IS the home button, mirroring the "Khoa Nguyen" logo cell of the top bar -->
@@ -64,7 +64,7 @@
 				aria-label={link.title}
 				aria-current={active ? 'page' : undefined}
 				style="transition-delay: {visible ? `${60 + i * 55}ms` : '0ms'}"
-				class="group relative flex aspect-square w-full flex-col items-center justify-center gap-1 border-b border-border/50 px-1 transition-all duration-500 last:border-b-0 [transform-style:preserve-3d] [transition-timing-function:cubic-bezier(0.22,1,0.36,1)] {visible
+				class="group relative flex aspect-square w-full flex-col items-center justify-center gap-1 border-b border-border/50 px-1 transition-[transform,opacity,color,background-color] duration-500 last:border-b-0 [transform-style:preserve-3d] [transition-timing-function:cubic-bezier(0.22,1,0.36,1)] {visible
 					? 'translate-x-0 opacity-100 [transform:rotateY(0deg)]'
 					: '-translate-x-3 opacity-0 [transform:rotateY(55deg)]'} {active
 					? 'bg-primary/15 text-primary'
@@ -74,10 +74,6 @@
 			</a>
 		{/each}
 
-		<!-- docking nub — bridges the rail into the page container's left border -->
-		<span
-			class="absolute top-1/2 -right-[9px] hidden h-px w-[9px] bg-border xl:block"
-			aria-hidden="true">
-		</span>
+		
 	</nav>
 </aside>

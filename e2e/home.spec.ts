@@ -20,8 +20,13 @@ test.describe('Home page /', () => {
 			});
 		});
 
-		test.skip('renders all dynamic hero variants', async () => {
-			// TODO: test different hero props / copy variants
+		test('renders the hero headline and supporting copy', async ({ page }) => {
+			const home_page = new HomePage(page);
+			await home_page.goto_home();
+
+			await expect(page.locator('h1')).toHaveCount(1);
+			await expect(page.locator('h1')).toContainText(/websites/i);
+			await expect(home_page.main_content).toContainText(/Khoa Nguyen/i);
 		});
 	});
 

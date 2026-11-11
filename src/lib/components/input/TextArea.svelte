@@ -19,9 +19,9 @@
 
 	<div class="relative w-full">
 		<div
-			class="relative w-full border-grid-all bg-[var(--background)] transition-all duration-200 focus-within:border-[var(--foreground)] group-hover:border-muted-foreground has-[[data-slot=textarea]:focus-visible]:border-[var(--foreground)] has-[[data-slot=textarea]:focus-visible]:ring-1 has-[[data-slot=textarea]:focus-visible]:ring-[var(--foreground)]"
+			class="relative w-full border-grid-all bg-background transition-[border-color,box-shadow] duration-200 focus-within:border-foreground group-hover:border-muted-foreground has-[[data-slot=textarea]:focus-visible]:border-foreground has-[[data-slot=textarea]:focus-visible]:ring-1 has-[[data-slot=textarea]:focus-visible]:ring-foreground"
 			class:ring-1={isFocused}
-			class:ring-[var(--foreground)]={isFocused}>
+			class:ring-foreground={isFocused}>
 			<Textarea
 				id={label}
 				{name}

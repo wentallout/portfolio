@@ -16,7 +16,7 @@
 
 <!-- 1 font Inter / 1 weight 500 / 2 sizes 40px + 14px -->
 <div
-	style="display:flex;flex-direction:column;width:100%;height:100%;background:#161D22;color:#FAF9F5;font-family:Inter,sans-serif;font-weight:500"
+	style="display:flex;flex-direction:column;width:100%;height:100%;background:#161D22;color:#FAF9F5;font-family:'Plus Jakarta Sans',sans-serif;font-weight:500"
 >
 	<div style="display:flex;width:100%;height:4px;background:#D4AF37"></div>
 	<div style="display:flex;flex-direction:column;flex:1;padding:40px;justify-content:space-between">

@@ -1,5 +1,8 @@
 <script lang="ts">
-	import { generateNavigationOptions } from '../../utils/generateNavigationOptions';
+	import {
+		generateNavigationOptions,
+		type NavigationOption
+	} from '../../utils/generateNavigationOptions';
 	import { ArrowLeft, ArrowRight } from '#lib/assets/icons/icons.js';
 
 	/** Enum for symbol types */
@@ -20,7 +23,7 @@
 	} = $props();
 
 	// Reactive variables using $state rune
-	let options = $state([]);
+	let options = $state<NavigationOption[]>([]);
 	let totalPages = $state(1);
 
 	// Update options and totalPages reactively
@@ -35,13 +38,15 @@
 		});
 	});
 
-	function handleOptionClick(option) {
+	function handleOptionClick(option: NavigationOption) {
 		onsetPage?.({ detail: { page: option.value } });
 	}
 </script>
 
 <div class="flex justify-center items-center bg-card border border-border overflow-hidden">
-	{#each options as option}
+	<!-- `value` is not unique (a PREVIOUS_PAGE symbol reuses the previous page
+	     number), so key on the position instead. -->
+	{#each options as option, index (index)}
 		{@const isActive = option.type === 'number' && option.value === currentPage}
 		{@const isDisabled =
 			(option.type === 'symbol' &&

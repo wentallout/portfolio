@@ -18,13 +18,13 @@
 	];
 </script>
 
-<section class="border-grid-b w-full relative">
+<section class="w-full relative border border-border bg-background overflow-hidden">
 	<SectionTitle sectionTitle={SECTION_TITLES.techStack} />
 
 	<div class="grid grid-cols-1 md:grid-cols-3 gap-0 relative items-stretch">
 		{#each categories as category, i (category.title)}
 			<div
-				class="relative bg-background signature-padding hover:bg-card transition-all duration-300 flex flex-col justify-between h-full">
+				class="relative bg-background signature-padding hover:bg-card transition-colors duration-300 flex flex-col justify-between h-full">
 				<h3 class="text-2xl font-medium text-foreground mb-4 tracking-tight">{category.title}</h3>
 
 				<div class="flex flex-wrap gap-2 mt-4">

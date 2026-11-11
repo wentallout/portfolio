@@ -23,8 +23,11 @@
 </script>
 
 <SEO {...seoProps} />
-<HeroSection />
-<FeaturedProject />
-<Services />
-<WhatIUseSection />
-<GetInTouch />
+
+<div class="flex flex-col gap-10 md:gap-16 w-full">
+	<HeroSection />
+	<FeaturedProject />
+	<Services />
+	<WhatIUseSection />
+	<GetInTouch />
+</div>

@@ -101,19 +101,19 @@
 	class="fixed bottom-3 left-3 z-[9999] pointer-events-none select-none"
 	aria-hidden="true"
 	style="opacity: 0;">
-	<div class="relative w-[52px] h-[52px] flex items-center justify-center">
+	<div class="relative w-13 h-13 flex items-center justify-center">
 		<div
 			class="absolute inset-0 rounded-full"
 			style="border: 1px solid var(--border); background: color-mix(in oklch, var(--muted) 55%, transparent);">
 		</div>
 		<div
 			bind:this={cylinder}
-			class="absolute inset-[3px] rounded-full will-change-transform"
+			class="absolute inset-0.75 rounded-full will-change-transform"
 			style="transform-origin: 50% 50%;">
 			{#each Array(maxBullets) as _, i (i)}
 				<div
 					bind:this={chambers[i]}
-					class="absolute w-[10px] h-[10px] rounded-full flex items-center justify-center"
+					class="absolute w-2.5 h-2.5 rounded-full flex items-center justify-center"
 					style="
 						left: 50%; top: 50%;
 						transform: translate(-50%, -50%) rotate({i * 60}deg) translateY(-15px) rotate(-{i * 60}deg);
@@ -124,14 +124,14 @@
 							: 'background: transparent; border: 1px solid var(--border); opacity: 0.35;'}
 					">
 					{#if !$reloading && i < $bullets}
-						<div class="w-[4px] h-[4px] rounded-full" style="background: var(--foreground); opacity: 0.9;"></div>
+						<div class="w-1 h-1 rounded-full" style="background: var(--foreground); opacity: 0.9;"></div>
 					{:else}
-						<div class="w-[5px] h-[5px] rounded-full" style="background: var(--border);"></div>
+						<div class="w-1.25 h-1.25 rounded-full" style="background: var(--border);"></div>
 					{/if}
 				</div>
 			{/each}
 			<div
-				class="absolute left-1/2 top-1/2 w-[7px] h-[7px] -translate-x-1/2 -translate-y-1/2 rounded-full"
+				class="absolute left-1/2 top-1/2 w-1.75 h-1.75 -translate-x-1/2 -translate-y-1/2 rounded-full"
 				style="background: var(--muted-foreground); opacity: 0.5; border: 1px solid var(--border);">
 			</div>
 		</div>

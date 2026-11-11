@@ -110,7 +110,7 @@
 					<span class="text-sm text-muted-foreground truncate sm:hidden">{snippet.desc}</span>
 				</span>
 				<span
-					class="text-sm text-muted-foreground group-hover:text-foreground group-hover:translate-x-0.5 transition-all duration-200 shrink-0"
+					class="text-sm text-muted-foreground group-hover:text-foreground group-hover:translate-x-0.5 transition-[color,transform] duration-200 shrink-0"
 					aria-hidden="true">↗</span>
 			</a>
 		</li>

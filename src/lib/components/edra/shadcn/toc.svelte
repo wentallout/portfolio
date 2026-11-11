@@ -39,7 +39,7 @@
 					<a
 						href={`#${item.id}`}
 						class={cn(
-							'nodefault text-foreground text-sm text-wrap transition-all duration-500',
+							'nodefault text-foreground text-sm text-wrap transition-colors duration-500',
 							item.isScrolledOver && 'text-muted-foreground italic'
 						)}
 						style={`padding-left: calc(1rem * ${item.level - 1});`}

@@ -4,19 +4,19 @@
 	import SectionTitle from '#lib/sections/layout/SectionTitle.svelte';
 </script>
 
-<section class="border-grid-b w-full relative">
+<section class="w-full relative border border-border bg-background overflow-hidden">
 	<SectionTitle sectionTitle={SECTION_TITLES.services} />
 
 	<div class="grid grid-cols-1 md:grid-cols-2 gap-0 relative items-stretch">
 		<!-- Services Info Card (Blueprint Card) -->
 		<div
-			class="relative bg-background signature-padding flex flex-col justify-between hover:bg-card transition-all duration-300 h-full overflow-hidden">
+			class="relative bg-background signature-padding flex flex-col justify-between hover:bg-card transition-colors duration-300 h-full overflow-hidden">
 			<div class="relative z-10">
-				<h3 class="text-2xl font-medium text-foreground mb-6 tracking-tight">
+				<h3 class="text-2xl font-medium text-foreground mb-5 tracking-tight">
 					Websites & Applications tailored made for you
 				</h3>
 
-				<ul class="space-y-3 text-base text-muted-foreground mb-8 font-normal">
+				<ul class="space-y-3.5 text-base text-muted-foreground mb-6 font-normal">
 					<li class="flex items-center gap-3">
 						<span>High-performing landing pages, product showcases & web applications</span>
 					</li>
@@ -48,7 +48,7 @@
 			</div>
 
 			<a
-				class="relative z-10 inline-flex items-center gap-1.5 text-sm text-foreground underline underline-offset-4 decoration-muted-foreground hover:decoration-foreground transition-all font-medium"
+				class="relative z-10 inline-flex items-center gap-1.5 text-sm text-foreground underline underline-offset-4 decoration-muted-foreground hover:decoration-foreground transition-[color,text-decoration-color] font-medium"
 				href={CAL_BOOKING_LINK}>
 				<span>Let's Chat</span>
 			</a>
@@ -56,18 +56,18 @@
 
 		<!-- Feature Blueprint Box -->
 		<div
-			class="relative bg-background signature-padding flex flex-col justify-between hover:bg-card transition-all duration-300 h-full">
+			class="relative bg-background signature-padding flex flex-col justify-between hover:bg-card transition-colors duration-300 h-full">
 			<div>
 				<h3 class="text-2xl font-medium text-foreground mb-5 tracking-tight">
 					One Point of Contact, End-to-End
 				</h3>
-				<p class="text-base text-muted-foreground leading-relaxed mb-8 font-normal">
+				<p class="text-base text-muted-foreground leading-relaxed mb-6 font-normal">
 					No communication gaps or handoff delays. I take your project personally from initial UX
 					wireframes to final pixel-perfect deployment.
 				</p>
 			</div>
 
-			<div class="grid grid-cols-2 gap-3 pt-6 text-sm text-muted-foreground">
+			<div class="grid grid-cols-2 gap-3 pt-5 text-sm text-muted-foreground">
 				<div class="p-3 bg-card border border-border">
 					<div class="text-muted-foreground text-sm mb-1">01 / DESIGN</div>
 					<div class="font-medium text-foreground">UI/UX & Design Systems</div>

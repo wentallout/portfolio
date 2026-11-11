@@ -28,7 +28,7 @@
 	];
 </script>
 
-<footer class="w-full bg-background relative text-sm overflow-hidden">
+<footer class="w-full bg-background relative text-sm overflow-hidden border border-border mt-8 md:mt-12">
 	<!-- animated dotted background -->
 	<div
 		class="absolute inset-0 z-0 opacity-5 dark:opacity-[0.07] pointer-events-none"
@@ -57,7 +57,7 @@
 
 		<!-- Column 2: Navigate -->
 		<FooterColumn title="NAVIGATE">
-			<ul class="space-y-2.5">
+			<ul class="space-y-3">
 				{#each navItems as navItem (navItem.path)}
 					<li>
 						<a
@@ -72,7 +72,7 @@
 
 		<!-- Column 3: Tools & Resources -->
 		<FooterColumn title="TOOLS & RESOURCES">
-			<ul class="space-y-2.5">
+			<ul class="space-y-3">
 				{#each resourceLinks as item (item.href)}
 					<li>
 						{#if item.isExternal}

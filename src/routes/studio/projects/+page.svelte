@@ -23,7 +23,7 @@
 	<Input name="q" bind:value={q} placeholder="Search title/slug" class="flex-1" />
 	<input type="hidden" name="q" value={q} style="display:none" />
 	<Select.Root type="single" bind:value={status}>
-		<Select.Trigger class="w-[160px] rounded-none text-sm">
+		<Select.Trigger class="w-40 rounded-none text-sm">
 			{status ? status.charAt(0).toUpperCase() + status.slice(1) : 'All statuses'}
 		</Select.Trigger>
 		<Select.Content class="rounded-none">
@@ -68,7 +68,7 @@
 
 {#if totalPages > 1}
 	<div class="flex gap-2 mt-4">
-		{#each Array(totalPages) as _, i}
+		{#each Array(totalPages) as _, i (i)}
 			<Button href={`?page=${i + 1}${data.q ? `&q=${data.q}` : ''}${data.status ? `&status=${data.status}` : ''}`} variant={data.page === i + 1 ? "default" : "outline"} size="sm" class="rounded-none min-w-9">{i + 1}</Button>
 		{/each}
 	</div>

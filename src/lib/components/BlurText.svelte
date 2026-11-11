@@ -41,6 +41,16 @@
 	let containerEl: HTMLElement | undefined = $state();
 	let spanEls: (HTMLSpanElement | undefined)[] = $state([]);
 
+	// SSR-safe: no matchMedia on the server
+	let reduceMotion = $state(false);
+	$effect(() => {
+		const mq = window.matchMedia('(prefers-reduced-motion: reduce)');
+		reduceMotion = mq.matches;
+		const onChange = () => (reduceMotion = mq.matches);
+		mq.addEventListener('change', onChange);
+		return () => mq.removeEventListener('change', onChange);
+	});
+
 	$effect(() => {
 		if (!containerEl) return;
 		const observer = new IntersectionObserver(
@@ -56,15 +66,15 @@
 		return () => observer.disconnect();
 	});
 
+	// Compositor-only defaults: opacity + translateY. Animating `filter: blur()`
+	// repaints every word on every frame, so blur is opt-in via animationFrom/To only.
 	const defaultFrom = $derived<AnimSnap>(
-		direction === 'top'
-			? { filter: 'blur(6px)', opacity: 0, y: -12 }
-			: { filter: 'blur(6px)', opacity: 0, y: 12 }
+		direction === 'top' ? { opacity: 0, y: -12 } : { opacity: 0, y: 12 }
 	);
 
 	const defaultTo = $derived<AnimSnap[]>([
-		{ filter: 'blur(2px)', opacity: 0.6, y: direction === 'top' ? 2 : -2 },
-		{ filter: 'blur(0px)', opacity: 1, y: 0 }
+		{ opacity: 0.6, y: direction === 'top' ? 2 : -2 },
+		{ opacity: 1, y: 0 }
 	]);
 
 	const fromSnapshot = $derived<AnimSnap>(animationFrom ?? defaultFrom);
@@ -123,8 +133,23 @@
 		const ease = resolveEase(easing);
 		const tweens: Array<gsap.core.Tween> = [];
 
+		// will-change is promoted just-in-time and dropped once the last word lands,
+		// so idle words never hold a compositor layer.
+		if (!reduceMotion) {
+			spanEls.forEach((el) => el && gsap.set(el, { willChange: 'transform, opacity' }));
+		}
+
+		const clearWillChange = () => {
+			spanEls.forEach((el) => el && gsap.set(el, { clearProps: 'willChange' }));
+		};
+
 		spanEls.forEach((el, index) => {
 			if (!el) return;
+
+			if (reduceMotion) {
+				gsap.set(el, toGsapVars(toSnapshots[toSnapshots.length - 1]));
+				return;
+			}
 
 			gsap.set(el, toGsapVars(fromSnapshot));
 
@@ -136,13 +161,21 @@
 				ease,
 				overwrite: 'auto',
 				onComplete:
-					index === elements.length - 1 && onAnimationComplete
-						? () => onAnimationComplete?.()
+					index === elements.length - 1
+						? () => {
+								clearWillChange();
+								onAnimationComplete?.();
+							}
 						: undefined
 			});
 
 			tweens.push(tween);
 		});
+
+		if (reduceMotion) {
+			clearWillChange();
+			onAnimationComplete?.();
+		}
 
 		return () => {
 			tweens.forEach((t) => t.kill());
@@ -157,7 +190,7 @@
 	{#each elements as segment, index (index)}
 		<span
 			bind:this={spanEls[index]}
-			class="inline-block will-change-transform font-[inherit] {className}">
+			class="inline-block font-[inherit] {className}">
 			{segment === ' ' ? '\u00A0' : segment}{animateBy === 'words' && index < elements.length - 1
 				? '\u00A0'
 				: ''}

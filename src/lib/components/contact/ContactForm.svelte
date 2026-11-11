@@ -9,10 +9,18 @@
 	import { submitContactMessage } from '#lib/remotes/contact.remote.js';
 	import { toast } from 'svelte-sonner';
 	import ContactInfo from './ContactInfo.svelte';
+
+	/**
+	 * Leading section title renders as <h2> by default. The standalone /contact page
+	 * promotes it to the page-level <h1>; on the home page it must stay an <h2>
+	 * because the hero already owns the <h1>.
+	 */
+	/** @type {{as?: 'h1' | 'h2'}} */
+	let { as = 'h2' } = $props();
 </script>
 
-<section class="w-full relative border-grid-b">
-	<SectionTitle sectionTitle={SECTION_TITLES.getInTouch} />
+<section class="w-full relative border border-border bg-background overflow-hidden">
+	<SectionTitle {as} sectionTitle={SECTION_TITLES.getInTouch} />
 
 	<div class="grid grid-cols-1 md:grid-cols-2 gap-0 relative items-stretch">
 		<!-- Form Side -->
@@ -30,7 +38,7 @@
 						toast.error('Failed to send message');
 					}
 				})}
-				class="space-y-4 w-full">
+				class="space-y-5 w-full">
 				<TextInput name="name" label="Name" type="text">
 					{#snippet icon()}
 						<span>
@@ -53,7 +61,7 @@
 					<p class="text-sm text-destructive">{issue.message}</p>
 				{/each}
 
-				<div class="pt-2 flex flex-wrap items-center gap-3">
+				<div class="pt-3 flex flex-wrap items-center gap-3.5">
 					<PrimaryButton
 						disabled={!!submitContactMessage.pending}
 						hapticPattern="success"

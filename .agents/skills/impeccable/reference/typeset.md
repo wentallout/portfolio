@@ -24,7 +24,7 @@ When a sub-agent tool is available and permitted, run these independently; other
 2. **Mechanical scan:** run:
 
 ```bash
-node .agents/skills/impeccable/scripts/detect.mjs --json --scope type [target files or dirs]
+.agents/skills/impeccable/scripts/impeccable detect --json --scope type [target files or dirs]
 ```
 
 Also inspect dynamic or arbitrary font values the detector cannot interpret. Synthesize both assessments before editing, noting what each caught alone. A clean scan is a floor, not proof of good typography.
@@ -56,6 +56,16 @@ Use the fewest roles and families that make the hierarchy unmistakable. Combine 
 
 Do not make type decorative at the expense of comprehension, or introduce a second family without a clear role it alone can perform.
 
+## Line breaks
+
+After Matthew Butterick's *Practical Typography*, paraphrased; where his numbers differ from these, these stand.
+
+- Set `text-wrap: balance` on headings and short centered blocks, and `text-wrap: pretty` on body copy. Both are progressive: a browser that ignores them keeps its default wrap.
+- `pretty` pulls a word down beside a lone last word. It does not fill the last line, and a two-word tail is fine.
+- In a column too narrow for either to help, edit the copy or widen the column.
+- Break a heading by hand only between phrases, and check the break at every width the heading renders at. A hard break that lands mid-line on a phone is worse than the default wrap.
+- An uneven break can carry meaning: a headline that lands on one word for weight, a poster line, a pull quote. Make it deliberate with a hard break or a wrap set on that element, and keep it rare. The detector's `straggler` and `unbalanced-heading` findings are advisory for this reason; say which breaks are intended.
+
 ## Verify
 
 - Primary, secondary, body, and metadata roles are recognizable without reading the copy.
@@ -74,15 +84,7 @@ When the hierarchy holds, hand off to `$impeccable polish`.
 Every variant declares a coarse `scale` parameter and authors its type ramp against `var(--p-scale, 1)`.
 
 ```json
-{
-	"id": "scale",
-	"kind": "range",
-	"min": 0.85,
-	"max": 1.3,
-	"step": 0.05,
-	"default": 1,
-	"label": "Scale"
-}
+{"id":"scale","kind":"range","min":0.85,"max":1.3,"step":0.05,"default":1,"label":"Scale"}
 ```
 
 Add at most one pairing or weight parameter when it represents a real system choice. Follow [live.md](live.md)'s parameter contract.

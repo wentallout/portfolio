@@ -5,12 +5,14 @@
 	import VideoDemoList from '#lib/sections/projects/VideoDemoList.svelte';
 </script>
 
-<section class="border-grid-b w-full relative">
-	<SectionTitle sectionTitle={SECTION_TITLES.featured} />
-	<ProjectList />
-</section>
+<div class="flex flex-col gap-10 md:gap-16 w-full">
+	<section class="w-full relative border border-border bg-background overflow-hidden">
+		<SectionTitle sectionTitle={SECTION_TITLES.featured} />
+		<ProjectList />
+	</section>
 
-<section class="border-grid-b w-full relative">
-	<SectionTitle sectionTitle={SECTION_TITLES.webDemos} />
-	<VideoDemoList />
-</section>
+	<section class="w-full relative border border-border bg-background overflow-hidden">
+		<SectionTitle sectionTitle={SECTION_TITLES.webDemos} />
+		<VideoDemoList />
+	</section>
+</div>

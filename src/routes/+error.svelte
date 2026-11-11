@@ -129,16 +129,12 @@ Please give a minimal diff fix and explain root cause in 2-3 sentences.`;
 				{customMessage}
 			</p>
 			<div class="flex flex-wrap gap-2 pt-2">
-				<a href="/" rel="external">
-					<PrimaryButton label="Take Me Home">
-						<House height="16" width="16" />
-					</PrimaryButton>
-				</a>
-				<button type="button" onclick={reload} class="inline-flex">
-					<SecondaryButton label="Try Again">
-						<ArrowCounterClockwise height="16" width="16" />
-					</SecondaryButton>
-				</button>
+				<PrimaryButton label="Take Me Home" href="/">
+					<House height="16" width="16" />
+				</PrimaryButton>
+				<SecondaryButton label="Try Again" onclick={reload}>
+					<ArrowCounterClockwise height="16" width="16" />
+				</SecondaryButton>
 			</div>
 		</div>
 	</div>
